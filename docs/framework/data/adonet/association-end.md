@@ -2,12 +2,12 @@
 title: entità finale dell'associazione
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 7fb9b48c5ed832e83f2a1e344d17d9a9797d393b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108290"
 ---
 # <a name="association-end"></a>entità finale dell'associazione
 Un' *finale dell'associazione* identifica le [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) sul uno lato di una [associazione](../../../../docs/framework/data/adonet/association-type.md) e il numero di istanze che possono essere presenti in tale entità finale di un'associazione del tipo di entità. Le entità finali dell'associazione sono definite come parte di un'associazione; un'associazione deve disporre esattamente di due entità finali. [Le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) consentono di navigare da un'estremità dell'associazione a altra.  
@@ -35,5 +35,6 @@ Un' *finale dell'associazione* identifica le [tipo di entità](../../../../docs/
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

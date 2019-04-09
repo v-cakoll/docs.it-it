@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109044"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Procedura: Creare un oggetto RoutedCommand
 Questo esempio viene illustrato come creare una classe personalizzata <xref:System.Windows.Input.RoutedCommand> e come implementare il comando personalizzato tramite la creazione di un <xref:System.Windows.Input.ExecutedRoutedEventHandler> e una <xref:System.Windows.Input.CanExecuteRoutedEventHandler> e il ricollegamento di un <xref:System.Windows.Input.CommandBinding>.  Per altre informazioni sull'esecuzione di comandi, vedere la [Cenni preliminari](commanding-overview.md).  
@@ -48,5 +48,6 @@ Questo esempio viene illustrato come creare una classe personalizzata <xref:Syst
  Quando si fa clic sul pulsante, il <xref:System.Windows.Input.RoutedCommand.Execute%2A> metodo sull'oggetto personalizzato <xref:System.Windows.Input.RoutedCommand> viene chiamato.  Il <xref:System.Windows.Input.RoutedCommand> genera il <xref:System.Windows.Input.CommandManager.PreviewExecuted> e <xref:System.Windows.Input.CommandManager.Executed> eventi indirizzati.  Questi eventi attraversano l'albero degli elementi cercando un <xref:System.Windows.Input.CommandBinding> per questo particolare comando.  Se un <xref:System.Windows.Input.CommandBinding> viene trovato, il <xref:System.Windows.Input.ExecutedRoutedEventHandler> associati <xref:System.Windows.Input.CommandBinding> viene chiamato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Input.RoutedCommand>
-- [Panoramica sull'esecuzione di comandi](commanding-overview.md)
+- [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md)

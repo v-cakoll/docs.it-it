@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109187"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Procedura: Disegnare una linea tratteggiata personalizzata
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce diversi stili di tratteggio elencati nel <xref:System.Drawing.Drawing2D.DashStyle> enumerazione. Se questi stili di tratteggio standard non soddisfano le proprie esigenze, è possibile creare un motivo a tratteggio personalizzati.  
@@ -33,4 +33,5 @@ ms.locfileid: "58410225"
  Creare un modulo di Windows e la gestione del modulo <xref:System.Windows.Forms.Control.Paint> evento. Incollare il codice precedente nel <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+
+- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)

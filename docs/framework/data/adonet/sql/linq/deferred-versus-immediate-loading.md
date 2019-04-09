@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096992"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Caricamento posticipato e immediato
 Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto richiesto. Il *correlati* oggetti non vengono recuperati contemporaneamente. (Per altre informazioni, vedere [eseguire query tra relazioni](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Non è possibile verificare che gli oggetti correlati non siano già stati caricati, perché un tentativo di accedervi produce una richiesta che ne comporta il recupero.  
@@ -34,4 +34,5 @@ Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto
 -   Il metodo <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> per filtrare gli oggetti recuperati per una determinata relazione.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+
+- [Concetti relatici alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

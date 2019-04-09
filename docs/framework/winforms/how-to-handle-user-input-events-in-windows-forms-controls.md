@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Gestire gli eventi Input utente dei controlli Windows Form'
+title: 'Procedura: Gestire eventi di input utente nei controlli Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: 886558eb33ffbbec65917f15f4da16673518dce9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5dc1997dffc53632ce8b36bc5fe89e768871fd0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108667"
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Procedura: Gestire gli eventi Input utente dei controlli Windows Form
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Procedura: Gestire eventi di input utente nei controlli Windows Forms
 In questo esempio viene illustrato come gestire la maggior parte degli eventi di convalida, stato attivo, mouse e tastiera che possono verificarsi in un controllo Windows Form. La casella di testo denominata `TextBoxInput` riceve gli eventi quando è attiva e le informazioni relative a ogni evento vengono scritte nella casella di testo denominata `TextBoxOutput` nell'ordine di generazione degli eventi. L'applicazione include anche un set di caselle di controllo che possono essere usate per filtrare gli eventi da segnalare.  
   
 ## <a name="example"></a>Esempio  
@@ -32,4 +32,5 @@ In questo esempio viene illustrato come gestire la maggior parte degli eventi di
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Input dell'utente in Windows Forms](user-input-in-windows-forms.md)
+
+- [Input dell'utente in Windows Form](user-input-in-windows-forms.md)

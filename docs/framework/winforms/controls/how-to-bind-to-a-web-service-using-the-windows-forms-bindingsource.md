@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Eseguire l'associazione a un servizio Web usando BindingSource Windows Form"
+title: 'Procedura: Binding a un servizio Web tramite BindingSource di Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 597ffbfb44430379e1ca3709aa88e25fc2f22d46
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf5352ff60aabe45473c3c9103e8369597db2e8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106756"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedura: Eseguire l'associazione a un servizio Web usando BindingSource Windows Form
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedura: Binding a un servizio Web tramite BindingSource di Windows Forms
 Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a un servizio Web XML, è possibile usare un componente <xref:System.Windows.Forms.BindingSource>. Questa procedura è simile al binding di un componente <xref:System.Windows.Forms.BindingSource> a un tipo. È necessario creare un proxy lato client contenente i metodi e tipi esposti dal servizio Web. Si genera un proxy lato client direttamente dal servizio Web (asmx) o dal file Web Services Description Language (WSDL). Inoltre, il proxy lato client deve esporre i campi dei tipi complessi usati dal servizio Web come proprietà pubbliche. Quindi si associa <xref:System.Windows.Forms.BindingSource> a uno dei tipi esposti nel proxy del servizio Web.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Per creare ed eseguire il binding a un proxy lato client  
@@ -73,5 +73,6 @@ Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a u
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: Associare un controllo di Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

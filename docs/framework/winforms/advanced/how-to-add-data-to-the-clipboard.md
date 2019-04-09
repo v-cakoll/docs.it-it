@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109096"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Procedura: Aggiungere dati agli Appunti
 Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile usare per interagire con la funzionalità degli Appunti di sistema operativo Windows. Molte applicazioni usano negli Appunti come un archivio temporaneo per i dati. Elaboratori di testo, ad esempio, usare gli Appunti durante le operazioni di taglia e Incolla. Gli Appunti sono anche utili per il trasferimento dei dati da un'applicazione a altra.  
@@ -61,5 +61,6 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Drag-and-Drop Operations and Clipboard Support](drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)
-- [Procedura: Recuperare i dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)
+
+- [Supporto delle operazioni di trascinamento della selezione e degli Appunti](drag-and-drop-operations-and-clipboard-support.md)
+- [Procedura: Recuperare dati dagli Appunti](how-to-retrieve-data-from-the-clipboard.md)

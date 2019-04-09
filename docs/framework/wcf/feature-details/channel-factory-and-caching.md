@@ -2,12 +2,12 @@
 title: Channel factory e memorizzazione nella cache
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106457"
 ---
 # <a name="channel-factory-and-caching"></a>Channel factory e memorizzazione nella cache
 Le applicazioni client WCF utilizzano la classe <xref:System.ServiceModel.ChannelFactory%601> per creare un canale di comunicazione con un servizio WCF.  La creazione di istanze dell'oggetto <xref:System.ServiceModel.ChannelFactory%601> comporta un sovraccarico perché include le seguenti operazioni:  
@@ -25,7 +25,7 @@ Le applicazioni client WCF utilizzano la classe <xref:System.ServiceModel.Channe
 > [!TIP]
 >  Si dispone di un controllo diretto sulla creazione della channel factory quando si utilizza direttamente la classe <xref:System.ServiceModel.ChannelFactory%601>.  
   
- Proxy client WCF generati con [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derivano dalla <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> definisce una proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> statica che definisce il comportamento di memorizzazione nella cache della channel factory. Le impostazioni della cache vengono effettuate per un tipo specifico. Ad esempio, impostando `ClientBase<ITest>.CacheSettings` a uno dei valori definiti di seguito influirà solo quei proxy a/ClientBase di tipo `ITest`. L'impostazione della cache per un oggetto <xref:System.ServiceModel.ClientBase%601> particolare non è più modificabile non appena viene creata la prima istanza di proxy/ClientBase.  
+ Proxy client WCF generati con [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derivano dalla <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> definisce un valore statico <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> proprietà che definisce il comportamento di memorizzazione nella cache di channel factory. Le impostazioni della cache vengono effettuate per un tipo specifico. Ad esempio, impostando `ClientBase<ITest>.CacheSettings` a uno dei valori definiti di seguito influirà solo quei proxy a/ClientBase di tipo `ITest`. L'impostazione della cache per un oggetto <xref:System.ServiceModel.ClientBase%601> particolare non è più modificabile non appena viene creata la prima istanza di proxy/ClientBase.  
   
 ## <a name="specifying-caching-behavior"></a>Specifica del comportamento di memorizzazione nella cache  
  Il comportamento di memorizzazione nella cache viene specificato impostando la proprietà <xref:System.ServiceModel.ClientBase%601.CacheSetting> su uno dei seguenti valori.  
@@ -112,6 +112,7 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
  Nell'esempio precedente, tutte le istanze di `TestClient` utilizzano channel factory diverse. Ciò è utile quando ogni endpoint presenta requisiti di sicurezza diversi e la memorizzazione nella cache non è appropriata.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.ClientBase%601>
 - [Creazione di client](../../../../docs/framework/wcf/building-clients.md)
 - [Client](../../../../docs/framework/wcf/feature-details/clients.md)

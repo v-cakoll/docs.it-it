@@ -2,15 +2,15 @@
 title: 'Concorrenza ottimistica: Panoramica'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 5395134a536969788252524ccd7c2936d3d9e2d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106548"
 ---
 # <a name="optimistic-concurrency-overview"></a>Concorrenza ottimistica: Panoramica
-In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è supportato il controllo della concorrenza ottimistica. Nella tabella seguente vengono descritti i termini applicabili alla concorrenza ottimistica in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta il controllo della concorrenza ottimistica. Nella tabella seguente vengono descritti i termini applicabili alla concorrenza ottimistica in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione:  
   
 |Termini|Descrizione|  
 |-----------|-----------------|  
@@ -18,7 +18,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è suppor
 |conflitto di concorrenza|Situazione in cui due o più utenti tentano contemporaneamente di inviare valori in conflitto a una o più colonne di una riga.|  
 |controllo della concorrenza|Tecnica usata per risolvere i conflitti di concorrenza.|  
 |controllo di concorrenza ottimistica|Tecnica che consente di esaminare se i valori presenti in una riga in altre transazioni sono stati modificati prima di consentire l'invio di modifiche.<br /><br /> Si differenzia *controllo della concorrenza pessimistica*, che blocca il record per evitare conflitti di concorrenza.<br /><br /> *Ottimistica* controllo viene così definito perché considera la possibilità di una transazione interferisca con un'altra improbabile.|  
-|risoluzione dei conflitti|Processo di aggiornamento di un elemento in conflitto mediante la riesecuzione di una query sul database e la risoluzione delle differenze.<br /><br /> Quando un oggetto viene aggiornato, la funzionalità di ricerca delle modifiche di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva i dati seguenti:<br /><br /> -Controllare i valori originariamente eseguita dal database e usato per l'aggiornamento.<br />-I nuovi valori di database dalla query successiva.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] determina quindi se l'oggetto è in conflitto, ovvero se uno o più valori del membro sono stati modificati. Se l'oggetto è in conflitto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] successivamente determina quale dei relativi membri sono in conflitto.<br /><br /> Qualsiasi conflitto fra membri individuato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene aggiunto a un elenco di conflitti.|  
+|risoluzione dei conflitti|Processo di aggiornamento di un elemento in conflitto mediante la riesecuzione di una query sul database e la risoluzione delle differenze.<br /><br /> Quando un oggetto viene aggiornato, la funzionalità di ricerca delle modifiche di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] conserva i dati seguenti:<br /><br /> -Controllare i valori originariamente eseguita dal database e usato per l'aggiornamento.<br />-I nuovi valori di database dalla query successiva.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] determina quindi se l'oggetto è in conflitto (vale a dire, se uno o più dei valori dei membri è stato modificato). Se l'oggetto è in conflitto, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] successivamente determina quale dei relativi membri sono in conflitto.<br /><br /> Qualsiasi conflitto fra membri individuato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene aggiunto a un elenco di conflitti.|  
   
  Nel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modello a oggetti, un' *conflitto di concorrenza ottimistica* si verifica quando vengono soddisfatte entrambe le condizioni seguenti:  
   
@@ -42,7 +42,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è suppor
 |------|-------------|---------------|----------------|  
 |Stato originale|Alfreds|Maria|Sales|  
 |Utente1|Alfred||Marketing|  
-|User2||Mary|Servizio|  
+|User2||Mary|Service|  
   
  È possibile risolvere questo tipo di conflitti in diversi modi. Per altre informazioni, vedere [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
@@ -89,4 +89,5 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è suppor
 -   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

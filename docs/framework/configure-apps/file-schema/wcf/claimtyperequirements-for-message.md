@@ -1,13 +1,13 @@
 ---
-title: <claimTypeRequirements> per <message>
+title: <claimTypeRequirements> for <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
-ms.openlocfilehash: 9cf77f6c026df5f78cc8ae6e6783e91f1c86e282
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106561"
 ---
 # <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements > per \<messaggio >
 Specifica una raccolta di tipi di attestazione obbligatori.  
@@ -17,6 +17,7 @@ Specifica una raccolta di tipi di attestazione obbligatori.
  Nei client federati, questa raccolta contiene l'elenco delle attestazioni obbligatorie e facoltative inviato al servizio token di sicurezza nella richiesta del client per un token rilasciato.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>

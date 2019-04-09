@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 188517104d4163ad1b391c2bab3bc41a2697e63d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8fadca931ca4a57c83257f24e34e847870c9f493
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107484"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>Metodo ICorProfilerInfo3::GetModuleInfo2
 Dato un ID modulo, restituisce il nome file del modulo, l'ID dell'assembly padre del modulo e una maschera di bit che descrive le proprietà del modulo.  
@@ -82,6 +82,7 @@ HRESULT GetModuleInfo2(
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Interfacce di profilatura](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profilatura](../../../../docs/framework/unmanaged-api/profiling/index.md)

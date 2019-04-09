@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50aa116fc1f5377254a8a6a128d0240c57cb52b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086455"
 ---
 # <a name="eapicategories-enumeration"></a>Enumerazione EApiCategories
 Vengono descritte le categorie di funzionalità che l'host può impedire l'esecuzione di codice parzialmente attendibile.  
@@ -46,7 +46,7 @@ typedef enum {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`eAll`|Specifica che tutte le classi gestite e membri che vengono analizzati da altri `EApiCategories` campi essere impedita l'esecuzione di codice parzialmente attendibile.|  
 |`eExternalProcessMgmt`|Specifica che le classi gestite e i membri che consentono la creazione, modifica e l'eliminazione di processi esterni bloccato dall'esecuzione di codice parzialmente attendibile.|  
@@ -75,5 +75,6 @@ typedef enum {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Interfaccia ICLRHostProtectionManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
 - [Enumerazioni di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -3,12 +3,12 @@ title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 38b0522b93c051473d7cdc28ae955cc3b7b58efe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6f1a9474f3f12005df364a6fb84dc63aa1b68e04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108172"
 ---
 # <a name="state"></a>\<state>
 Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.  
@@ -68,16 +68,16 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 |Stato|Descrizione|  
 |-----------|-----------------|  
 |Aborted|L'istanza del flusso di lavoro viene interrotta.|  
-|Completata|L'istanza del flusso di lavoro viene completata.|  
+|Operazione completata|L'istanza del flusso di lavoro viene completata.|  
 |Eliminato|L'istanza del flusso di lavoro viene eliminata.|  
 |Idle|L'istanza del flusso di lavoro è inattiva.|  
 |Persisted|L'istanza del flusso di lavoro è persistente.|  
 |Resumed|L'istanza del flusso di lavoro viene ripresa.|  
-|Started|L'istanza del flusso di lavoro è avviata.|  
+|Avviata|L'istanza del flusso di lavoro è avviata.|  
 |UnhandledException|L'istanza del flusso di lavoro ha rilevato un'eccezione non gestita.|  
-|Unloaded|L'istanza del flusso di lavoro viene scaricata.|  
+|Scaricato|L'istanza del flusso di lavoro viene scaricata.|  
 |Annullato|L'istanza del flusso di lavoro viene annullata.|  
-|Suspended|L'istanza del flusso di lavoro è sospesa.|  
+|Sospeso|L'istanza del flusso di lavoro è sospesa.|  
 |Terminated|L'istanza del flusso di lavoro è terminata.|  
 |Unsuspended|L'istanza del flusso di lavoro non è sospesa.|  
   
@@ -95,8 +95,9 @@ Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

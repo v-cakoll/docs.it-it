@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095867"
 ---
 # <a name="using-sessions"></a>Uso di sessioni
 Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla un gruppo di messaggi in una conversazione. Le sessioni WCF sono differenti dall'oggetto sessione disponibile nelle [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applicazioni, supportano comportamenti diversi e sono controllate in modi diversi. In questo argomento descrive le funzionalità che consentono le sessioni in WCF le applicazioni e come usarli.  
@@ -32,11 +32,11 @@ Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla
   
  Se si ha familiarità con le <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applicazioni e le funzionalità offre, è possibile notare le differenze seguenti tra quel tipo di sessioni e le sessioni WCF:  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] le sessioni sono sempre avviate dal server.  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sono implicitamente non ordinate.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] le sessioni sono implicitamente non ordinate.  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] forniscono un meccanismo di archiviazione dati generale tramite richieste.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] le sessioni forniscono un meccanismo di archiviazione dati generale in tutte le richieste.  
   
  In questo argomento vengono descritti gli argomenti seguenti:  
   
@@ -108,7 +108,7 @@ Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla
 > [!NOTE]
 >  Anche se il comportamento predefinito reca qualche somiglianza con costruttori e distruttori locali, si tratta solo di una somiglianza. Avvio di un'operazione di chiusura o entrambi allo stesso tempo, può essere qualsiasi operazione del servizio WCF. Inoltre, nel caso predefinito, le operazioni di avvio possono essere chiamate qualsiasi numero di volte e in qualsiasi ordine; dopo che la sessione è stata stabilita e associata a un'istanza non vengono create altre sessioni a meno che non venga controllata in modo esplicito la durata dell'istanza del servizio (modificando l'oggetto <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> ). Infine, lo stato viene associato alla sessione e non all'oggetto servizio.  
   
- Ad esempio, il `ICalculatorSession` usato nell'esempio precedente il contratto richiede che il client WCF oggetto prima chiamata di `Clear` operazione prima di qualsiasi altra operazione e che la sessione con questo oggetto client WCF deve terminare quando viene chiamata la `Equals` operazione. Nell'esempio di codice seguente è illustrato un contratto che applica questi requisiti. `Clear` deve essere chiamato per primo per avviare una sessione e tale sessione termina quando viene chiamato `Equals` .  
+ Ad esempio, il `ICalculatorSession` usato nell'esempio precedente il contratto richiede che il client WCF oggetto prima chiamata di `Clear` operazione prima di qualsiasi altra operazione e che la sessione con questo oggetto client WCF deve terminare quando viene chiamata la `Equals` operazione. Nell'esempio di codice seguente è illustrato un contratto che applica questi requisiti. `Clear` deve essere chiamato per primo per avviare una sessione e tale sessione termina quando `Equals` viene chiamato.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
@@ -146,5 +146,6 @@ Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla
 >  In questo caso, MaxConcurrentSessions non produce alcun effetto perché è disponibile una sola "sessione".  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

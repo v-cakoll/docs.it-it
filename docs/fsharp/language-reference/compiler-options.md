@@ -2,22 +2,19 @@
 title: Opzioni del compilatore
 description: Usare F# opzioni della riga di comando del compilatore per controllare la compilazione di F# le App e librerie.
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "53614493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089757"
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
 
 In questo argomento vengono descritte le opzioni della riga di comando del compilatore per il F# compilatore, fsc.exe. L'ambiente di compilazione può essere controllato anche impostando le proprietà del progetto.
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 La tabella seguente illustra le opzioni del compilatore elencate in ordine alfabetico. Alcune delle F# sono simili alle opzioni del compilatore di C# opzioni del compilatore. Se questo è il caso, un collegamento per il C# viene fornito l'argomento relativo alle opzioni del compilatore.
-
-
 
 |Opzione del compilatore|Descrizione|
 |---------------|-----------|

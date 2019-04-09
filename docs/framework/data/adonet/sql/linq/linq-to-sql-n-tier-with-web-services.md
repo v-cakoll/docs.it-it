@@ -2,12 +2,12 @@
 title: Più livelli di LINQ to SQL con Servizi Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107406"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Più livelli di LINQ to SQL con Servizi Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è progettato appositamente per essere utilizzati nel livello intermedio in un livello di accesso a regime di controllo dei dati (DAL), ad esempio un servizio Web. Se il livello di presentazione è una pagina Web ASP.NET, verrà usato il controllo server Web <xref:System.Web.UI.WebControls.LinqDataSource> per gestire il trasferimento dei dati tra l'interfaccia utente e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nel livello intermedio. Se il livello di presentazione non è una pagina ASP.NET, sarà necessario eseguire operazioni aggiuntive nel livello intermedio e nel livello di presentazione in modo da gestire la serializzazione e deserializzazione dei dati.  
@@ -30,12 +30,13 @@ ms.locfileid: "56092722"
  Durante l'inserimento dei dati, il livello di presentazione può costruire un nuovo oggetto e inviarlo al livello intermedio oppure il livello intermedio può costruire l'oggetto in base ai valori forniti dal livello di presentazione. In generale, il recupero e l'inserimento dei dati nelle applicazioni a più livelli non differiscono molto dal processo nelle applicazioni a 2 livelli. Per altre informazioni, vedere [una query sul Database](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) e [Making e inviare le modifiche ai dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Rilevamento delle modifiche per aggiornamenti ed eliminazioni  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta la concorrenza ottimistica basata sui timestamp (anche denominata RowVersions) e sui valori originali. Se le tabelle di database hanno timestamp, gli aggiornamenti e le eliminazioni richiedono operazioni aggiuntive sul livello intermedio o sul livello della presentazione. Tuttavia, se è necessario usare i valori originali per i controlli di concorrenza ottimistica, il livello di presentazione sarà responsabile del rilevamento e dell'invio di tali valori durante l'aggiornamento poiché le modifiche effettuate alle entità nel livello di presentazione non vengono rilevate nel livello intermedio. Infatti, il recupero originale di un'entità e l'eventuale aggiornamento vengono eseguiti in genere da due istanze completamente separate di <xref:System.Data.Linq.DataContext>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta la concorrenza ottimistica basata sui timestamp (anche denominato RowVersions) e sui valori originali. Se le tabelle di database hanno timestamp, gli aggiornamenti e le eliminazioni richiedono operazioni aggiuntive sul livello intermedio o sul livello della presentazione. Tuttavia, se è necessario usare i valori originali per i controlli di concorrenza ottimistica, il livello di presentazione sarà responsabile del rilevamento e dell'invio di tali valori durante l'aggiornamento poiché le modifiche effettuate alle entità nel livello di presentazione non vengono rilevate nel livello intermedio. Infatti, il recupero originale di un'entità e l'eventuale aggiornamento vengono eseguiti in genere da due istanze completamente separate di <xref:System.Data.Linq.DataContext>.  
   
  Maggiore è il numero delle modifiche effettuate dal livello di presentazione, più sono complessi il rilevamento e l'invio delle modifiche al livello intermedio. L'implementazione di un meccanismo per la comunicazione delle modifiche spetta completamente all'applicazione. È necessario solo fornire a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] i valori originali necessari per i controlli di concorrenza ottimistica.  
   
  Per altre informazioni, vedere [recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Applicazioni a più livelli e remote con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Cenni preliminari sul controllo Server Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

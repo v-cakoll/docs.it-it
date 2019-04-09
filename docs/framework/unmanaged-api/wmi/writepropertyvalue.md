@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98103367f497b18f9b8fbd61a37abf9816b8356
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107939"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue (funzione)
 Scrive un numero specificato di byte in una proprietà identificata da un handle di proprietà.
@@ -61,7 +61,7 @@ HRESULT WritePropertyValue (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parametro non è valido. |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Si è verificato un tipo non corrispondente. |
@@ -83,4 +83,5 @@ Per i valori delle proprietà non stringa `lNumBytes` devono avere la dimensione
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [WMI e contatori delle prestazioni (riferimenti alle API non gestite)](index.md)
