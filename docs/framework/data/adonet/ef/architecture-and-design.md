@@ -2,12 +2,12 @@
 title: Architettura e progettazione
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096137"
 ---
 # <a name="architecture-and-design"></a>Architettura e progettazione
 Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.  
@@ -91,10 +91,10 @@ class TopClause : ISqlFragment {
 }  
 ```  
   
-### <a name="symbols"></a>Symbols  
+### <a name="symbols"></a>Simboli  
  Le classi correlate ai simboli e la tabella dei simboli eseguono la ridenominazione degli alias di input, la bidimensionalità degli alias di join e la ridenominazione degli alias di colonna.  
   
- La classe Symbol rappresenta un extent, un'istruzione SELECT annidata o una colonna. Viene usata in sostituzione di un alias effettivo per consentire che venga rinominato dopo essere stato usato e contiene inoltre informazioni aggiuntive relative all'elemento che rappresenta (come il tipo).  
+ La classe Symbol rappresenta un extent, un'istruzione SELECT annidata o una colonna. Viene usata in sostituzione di un alias effettivo per consentire che venga rinominato dopo essere stato usato e contiene inoltre informazioni aggiuntive relative all'artefatto che rappresenta (come il tipo).  
   
 ```  
 class Symbol : ISqlFragment {  
@@ -214,13 +214,13 @@ private bool IsParentAJoin{get}
   
  Per illustrare il reindirizzamento di alias di input, fare riferimento al primo esempio nella [generazione di SQL dagli alberi dei comandi - procedure consigliate](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  In questo esempio "a" deve essere reindirizzato in "b" nella proiezione.  
   
- Quando viene creato un oggetto SqlSelectStatement, l'extent che costituisce l'input per il nodo viene inserito nella proprietà From dell'oggetto SqlSelectStatement. Per rappresentare tale extent, viene creato un oggetto Symbol (<simbolo_b>) in base al nome dell'associazione di input ("b") e "AS " +  <simbolo_b> viene aggiunto alla clausola FROM.  Il simbolo viene inoltre aggiunto alla proprietà FromExtents.  
+ Quando viene creato un oggetto SqlSelectStatement, l'extent che costituisce l'input per il nodo viene inserito nella proprietà From dell'oggetto SqlSelectStatement. Un simbolo (< symbol_b >) viene creato in base al nome dell'associazione di input ("b") per rappresentare tale extent e "AS" + < symbol_b > viene aggiunto alla clausola From.  Il simbolo viene inoltre aggiunto alla proprietà FromExtents.  
   
- Il simbolo viene aggiunto anche alla tabella dei simboli per consentire il collegamento al nome dell'associazione di input ("b", <symbol_b>).  
+ Il simbolo viene aggiunto anche alla tabella dei simboli per collegare il nome dell'associazione di input ("b", < symbol_b >).  
   
  Se un nodo successivo riusa lo stesso oggetto SqlSelectStatement, viene aggiunta una voce alla tabella dei simboli per collegare il rispettivo nome dell'associazione di input al simbolo. In questo esempio, DbProjectExpression con il nome dell'associazione di input di "a" riutilizzerebbe SqlSelectStatement e aggiungere ("a", \< symbol_b >) alla tabella.  
   
- Quando le espressioni fanno riferimento al nome dell'associazione di input del nodo che sta riusando l'oggetto SqlSelectStatement, tale riferimento viene risolto usando la tabella dei simboli nel simbolo reindirizzato corretto. Quando "a" da "a.x" viene risolto durante la visita dell'oggetto DbVariableReferenceExpression che rappresenta "a", verrà risolto nell'oggetto Symbol <symbol_b>.  
+ Quando le espressioni fanno riferimento al nome dell'associazione di input del nodo che sta riusando l'oggetto SqlSelectStatement, tale riferimento viene risolto usando la tabella dei simboli nel simbolo reindirizzato corretto. Quando "a" da "a. x" viene risolto durante la visita l'oggetto DbVariableReferenceExpression che rappresenta "a" it verrà risolto nell'oggetto Symbol < symbol_b >.  
   
 ### <a name="join-alias-flattening"></a>Bidimensionalità degli alias di join  
  Il bidimensionalità degli alias di join viene realizzata durante la visita di un oggetto DbPropertyExpression, come descritto nella sezione intitolata DbPropertyExpression.  
@@ -412,7 +412,8 @@ IsEmpty(inut) = Not Exists(input)
   
  La ridenominazione delle colonne si verifica durante la scrittura di un oggetto Symbol in una stringa. AddDefaultColumns nella prima fase ha determinato se è necessario rinominare un simbolo specifico di una colonna. Nella seconda fase viene eseguita solo la ridenominazione con la verifica che il nome prodotto non crei conflitti con uno dei nomi usati in AllColumnNames  
   
- Per produrre nomi univoci sia per gli alias degli extent che per le colonne, usare <existing_name>_n, in cui n è l'alias più piccolo che non è stato ancora usato. L'elenco globale di tutti gli alias aumenta la necessità di eseguire ridenominazioni a catena.  
+ Per produrre nomi univoci sia per gli alias degli extent che per le colonne, usare < existing_name > n, dove n è l'alias più piccolo che non è stato ancora usato. L'elenco globale di tutti gli alias aumenta la necessità di eseguire ridenominazioni a catena.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Generazione di comandi SQL nel provider di esempio](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 7da0522dae00608ead356484a31d219a67ec4ba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090563"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>Cenni preliminari sul componente ContextMenu (Windows Form)
 > [!IMPORTANT]
@@ -27,6 +27,7 @@ ms.locfileid: "54545673"
  Le proprietà chiave della <xref:System.Windows.Forms.ContextMenu> componente è il <xref:System.Windows.Forms.Menu.MenuItems%2A> proprietà. È possibile aggiungere voci di menu a livello di programmazione creando <xref:System.Windows.Forms.MenuItem> gli oggetti e ad aggiungerle nel <xref:System.Windows.Forms.Menu.MenuItemCollection> del menu di scelta rapida. Poiché gli elementi in un menu di scelta rapida vengono in genere addebitati altri menu di scelta, è più di frequente aggiungerà gli elementi a un menu di scelta rapida copiandoli.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

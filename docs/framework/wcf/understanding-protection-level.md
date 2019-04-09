@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096049"
 ---
 # <a name="understanding-protection-level"></a>Informazioni sul livello di protezione
 La proprietà `ProtectionLevel` è disponibile in molte classi diverse, ad esempio nelle classi <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.OperationContractAttribute>. Tale proprietà controlla la modalità di protezione di una parte del messaggio o dell'intero messaggio. Questo argomento illustra la funzionalità di Windows Communication Foundation (WCF) e il relativo funzionamento.  
@@ -95,6 +95,7 @@ La proprietà `ProtectionLevel` è disponibile in molte classi diverse, ad esemp
  Quando il client chiama il metodo `Price`, durante la ricezione di una risposta dal servizio, verrà generata un'eccezione. Questo avviene perché il client non specifica un `ProtectionLevel` su `ServiceContractAttribute` e pertanto il client utilizza l'impostazione predefinita (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) per tutti i metodi, incluso il metodo `Price`. Il servizio restituisce tuttavia il valore utilizzando il livello <xref:System.Net.Security.ProtectionLevel.Sign> perché il contratto di servizio definisce un solo metodo il cui livello di protezione è impostato su <xref:System.Net.Security.ProtectionLevel.Sign>. In questo caso, il client genererà un errore durante la convalida della risposta dal servizio.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
@@ -104,5 +105,5 @@ La proprietà `ProtectionLevel` è disponibile in molte classi diverse, ad esemp
 - <xref:System.Net.Security.ProtectionLevel>
 - [Protezione dei servizi](../../../docs/framework/wcf/securing-services.md)
 - [Procedura: Impostare la proprietà ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Uso di contratti di messaggio](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Specifica e gestione di errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Utilizzo dei contratti di messaggio](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

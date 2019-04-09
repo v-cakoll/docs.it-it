@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0375fdd6f86ae89171545cfdcb44ac37074084e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093657"
 ---
 # <a name="corgcreference-structure"></a>Struttura COR_GC_REFERENCE
 Contiene informazioni su on oggetto da sottoporre a Garbage Collection.  
@@ -39,7 +39,7 @@ typedef struct _COR_GC_REFERENCE {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`domain`|Puntatore al dominio dell'applicazione a cui appartiene l'oggetto o handle. Il valore può essere `null`.|  
 |`location`|ICorDebugValue o un'interfaccia ICorDebugReferenceValue che corrisponde all'oggetto per essere sottoposto a garbage collection.|  
@@ -73,5 +73,6 @@ typedef struct _COR_GC_REFERENCE {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debug](../../../../docs/framework/unmanaged-api/debugging/index.md)

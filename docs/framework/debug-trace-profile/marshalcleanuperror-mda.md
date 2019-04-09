@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff7286eb104f36ceb5e1d9b30f4a265fb068d3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096589"
 ---
 # <a name="marshalcleanuperror-mda"></a>MDA marshalCleanupError
 L'assistente al debug gestito `marshalCleanupError` viene attivato quando in Common Language Runtime si verifica un errore durante il tentativo di eseguire la pulizia di strutture temporanee e della memoria usata per effettuare il marshalling dei tipi di dati tra limiti del codice gestito e nativo.  
@@ -48,6 +48,7 @@ L'assistente al debug gestito `marshalCleanupError` viene attivato quando in Com
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)

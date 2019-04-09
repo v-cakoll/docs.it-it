@@ -1,19 +1,19 @@
 ---
-title: "Procedura: Creare un'associazione semplice"
+title: 'Procedura: Creare un binding semplice'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - simple binding [WPF], creating
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094385"
 ---
-# <a name="how-to-create-a-simple-binding"></a>Procedura: Creare un'associazione semplice
+# <a name="how-to-create-a-simple-binding"></a>Procedura: Creare un binding semplice
 In questo esempio illustra come creare una semplice <xref:System.Windows.Data.Binding>.  
   
 ## <a name="example"></a>Esempio  
@@ -26,5 +26,6 @@ In questo esempio illustra come creare una semplice <xref:System.Windows.Data.Bi
  La riga evidenziata che contiene il `<TextBlock>` elemento associa quindi il <xref:System.Windows.Controls.TextBlock> controllo il `PersonName` proprietà. Di conseguenza, il <xref:System.Windows.Controls.TextBlock> viene visualizzato con il valore "Joe".  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedure relative](data-binding-how-to-topics.md)

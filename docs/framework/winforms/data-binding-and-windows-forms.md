@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095490"
 ---
 # <a name="data-binding-and-windows-forms"></a>Associazione dati e Windows Form
 Nei Windows Form è possibile effettuare associazioni non solo alle origini dati tradizionali, ma anche a quasi ogni struttura che contiene dati. È possibile effettuare associazioni a una matrice di valori che verranno calcolati in fase di esecuzione, letti da un file o derivati dai valori di altri controlli.  
   
- Inoltre, è possibile associare all'origine dati qualsiasi proprietà di qualunque controllo. Nelil data binding tradizionale viene in genere associata all'origine dati la proprietà relativa alla visualizzazione, ad esempio la proprietà <xref:System.Windows.Forms.Control.Text%2A> di un controllo <xref:System.Windows.Forms.TextBox>. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente anche di impostare anche altre proprietà tramite associazione. È possibile usare l'associazione per effettuare le operazioni riportate di seguito:  
+ Inoltre, è possibile associare all'origine dati qualsiasi proprietà di qualunque controllo. Nelil data binding tradizionale viene in genere associata all'origine dati la proprietà relativa alla visualizzazione, ad esempio la proprietà <xref:System.Windows.Forms.Control.Text%2A> di un controllo <xref:System.Windows.Forms.TextBox>. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] consente anche di impostare anche altre proprietà tramite associazione. È possibile usare l'associazione per eseguire le attività seguenti:  
   
 -   Impostazione della grafica di un controllo immagine.  
   
@@ -43,7 +43,7 @@ Nei Windows Form è possibile effettuare associazioni non solo alle origini dati
 ## <a name="bindingsource-component"></a>Componente BindingSource  
  Per semplificare il data binding, Windows Form consente di associare un'origine dati al componente <xref:System.Windows.Forms.BindingSource> e poi di associare i controlli alla classe <xref:System.Windows.Forms.BindingSource>. È possibile usare la classe <xref:System.Windows.Forms.BindingSource> in scenari di associazione semplice o complessa. In entrambi i casi, la classe <xref:System.Windows.Forms.BindingSource> agisce da intermediaria tra l'origine dati e i controlli associati fornendo la notifica delle modifiche, la gestione della diffusione dei dati e altri servizi.  
   
-## <a name="common-scenarios-that-employ-data-binding"></a>Scenari comuni di utilizzo delil data binding  
+## <a name="common-scenarios-that-employ-data-binding"></a>Scenari comuni di utilizzo del data binding  
  In quasi tutte le applicazioni commerciali vengono usate informazioni che sono lette da origini dati di un determinato tipo, generalmente tramite data binding. Nell'elenco seguente sono illustrati gli scenari più comuni in cui viene usato il data binding per la presentazione e la manipolazione dei dati.  
   
 |Scenario|Descrizione|  
@@ -54,7 +54,8 @@ Nei Windows Form è possibile effettuare associazioni non solo alle origini dati
 |Tabella di ricerca|Un altro scenario comune di presentazione e manipolazione dei dati è rappresentato dalla tabella di ricerca. Nell'ambito della visualizzazione di un'elevata quantità di dati viene spesso usato un controllo <xref:System.Windows.Forms.ComboBox> per visualizzare e manipolare i dati. I dati visualizzati nel controllo <xref:System.Windows.Forms.ComboBox> sono diversi dai dati scritti nel database. Se ad esempio è presente un controllo <xref:System.Windows.Forms.ComboBox> che visualizza i prodotti disponibili in un negozio di alimentari, probabilmente si vorranno visualizzare i nomi dei prodotti, quali pane, latte, uova e così via. Per facilitare tuttavia il recupero delle informazioni all'interno del database e per la normalizzazione del database, le informazioni per i prodotti specifici di un determinato ordine verranno probabilmente archiviate come numeri, ad esempio 501, 603 e così via. In tal modo viene stabilito un collegamento implicito tra il nome comune del prodotto nel controllo <xref:System.Windows.Forms.ComboBox> del form e il relativo numero presente all'interno dell'ordine. Ciò rappresenta in sintesi il principio di funzionamento di una tabella di ricerca. Per altre informazioni, vedere [Procedura: Creare una tabella di ricerca con il componente BindingSource di Windows Form](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.Binding>
-- [Data binding in Windows Form](windows-forms-data-binding.md)
-- [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Data binding di Windows Form](windows-forms-data-binding.md)
+- [Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)

@@ -2,13 +2,19 @@
 title: Amministrazione e diagnostica
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Communication Foundation, diagnostics'
-  - 'Windows Communication Foundation, administration'
-  - 'diagnostics [WCF]'
-  - 'WCF, diagnostics'
-  - 'administration [WCF]'
-  - 'WCF, administration'
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092280"
 ---
 # <a name="administration-and-diagnostics"></a>Amministrazione e diagnostica
 Windows Communication Foundation (WCF) offre un'ampia gamma di funzionalità che consentono di monitorare le varie fasi del ciclo di vita di un'applicazione. È ad esempio possibile utilizzare la configurazione per impostare servizi e client in fase di distribuzione. WCF include un vasto set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione. WCF espone inoltre dati di ispezione di un servizio in fase di esecuzione tramite un provider di Strumentazione gestione Windows (WMI) di WCF. In caso di errore dell'applicazione o di comportamento non corretto, è possibile utilizzare il Registro eventi per controllare se si è verificato qualcosa di grave. È inoltre possibile utilizzare la registrazione messaggi e le tracce per controllare gli eventi end-to-end in corso nell'applicazione. Queste funzionalità aiutano gli sviluppatori e professionisti IT a risolvere i problemi di un'applicazione WCF quando non funzioni correttamente.  
@@ -34,6 +40,7 @@ Windows Communication Foundation (WCF) offre un'ampia gamma di funzionalità che
  WCF fornisce inoltre numerosi strumenti dell'interfaccia utente e della riga di comando che rendono più semplice per poter creare, distribuire e gestire le applicazioni WCF. Per altre informazioni, vedere [strumenti di Windows Communication Foundation](../../../../docs/framework/wcf/tools.md). Ad esempio, è possibile usare la [dello strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) per creare e modificare le impostazioni di configurazione di WCF tramite una procedura guidata, anziché modificare direttamente il codice XML. È anche possibile usare la [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) per visualizzare, raggruppare e filtrare i messaggi di traccia in modo da poter diagnosticare, riparare e verificare i problemi dei servizi WCF.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Configurazione dell'applicazione](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [Distribuzione di servizi](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [Riferimenti per le eccezioni](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
@@ -41,8 +48,8 @@ Windows Communication Foundation (WCF) offre un'ampia gamma di funzionalità che
 - [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Strumento di registrazione ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
+- [Strumento di registrazione di ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [Traccia](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso di Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Uso di Strumentazione gestione Windows (WMI) per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
-- [Strumenti Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)
+- [Windows Communication Foundation Tools](../../../../docs/framework/wcf/tools.md)

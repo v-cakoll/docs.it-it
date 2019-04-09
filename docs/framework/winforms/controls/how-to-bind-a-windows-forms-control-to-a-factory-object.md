@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Associare un controllo di Windows Form a un oggetto Factory'
+title: 'Procedura: Associare un controllo di Windows Forms a un oggetto Factory'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a factory object
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
-ms.openlocfilehash: 57fab57896c4b122f96cea72a5af637c5f5d268a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2de892d94afdfcdc580d20f90fb60ebabf4a9b37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093033"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedura: Associare un controllo di Windows Form a un oggetto Factory
+# <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Procedura: Associare un controllo di Windows Forms a un oggetto Factory
 Quando si compilano controlli che interagiscono con i dati, è a volte necessario associare un controllo a un oggetto o metodo che genera altri oggetti. Tale oggetto o metodo è definito factory. L'origine dati, ad esempio, potrebbe essere il valore restituito da una chiamata al metodo anziché un oggetto in memoria o un tipo. È possibile associare un controllo a tale tipo di origine dati purché l'origine restituisca una raccolta.  
   
  È possibile associare facilmente un controllo a un oggetto factory usando il controllo <xref:System.Windows.Forms.BindingSource>.  
@@ -38,8 +38,9 @@ Quando si compilano controlli che interagiscono con i dati, è a volte necessari
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: Associare un controllo di Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

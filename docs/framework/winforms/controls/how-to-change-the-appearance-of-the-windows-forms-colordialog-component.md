@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Modificare l'aspetto del componente ColorDialog di Windows Form"
+title: "Procedura: Modificare l'aspetto del componente ColorDialog di Windows Forms"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d79139ac3d11d3cd9a7d1bbe1f12e14df83530e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094645"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Procedura: Modificare l'aspetto del componente ColorDialog di Windows Form
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Procedura: Modificare l'aspetto del componente ColorDialog di Windows Forms
 È possibile configurare l'aspetto delle forme Windows <xref:System.Windows.Forms.ColorDialog> componente con un numero di proprietà. La finestra di dialogo include due sezioni, ovvero uno che mostra i colori di base e uno che consente all'utente di definire colori personalizzati.  
   
  La maggior parte delle proprietà limitare colori selezionabili dall'utente nella finestra di dialogo. Se il <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> è impostata su `true`, l'utente può definire colori personalizzati. Il <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> è di proprietà `true` se la finestra di dialogo viene espanso per definire colori personalizzati; in caso contrario, l'utente deve fare clic su un pulsante "Definisci colori personalizzati". Quando la <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> è impostata su `true`, la finestra di dialogo consente di visualizzare tutti i colori disponibili nel set di colori di base. Se il <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> è impostata su `true`, l'utente non è possibile selezionare i colori con dithering; sono possibile selezionare solo colori a tinta unita.  
@@ -50,6 +50,7 @@ ms.locfileid: "57702789"
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [Componente ColorDialog](colordialog-component-windows-forms.md)
-- [Cenni preliminari sul componente ColorDialog](colordialog-component-overview-windows-forms.md)
+- [Panoramica del componente ColorDialog](colordialog-component-overview-windows-forms.md)

@@ -2,12 +2,12 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 9994aff7337dd842e1d70c22ea288d2fda5648d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094502"
 ---
 # <a name="facet"></a>facet
 Oggetto *facet* viene usato per aggiungere dettagli alla definizione di una proprietà di tipo primitivo. Oggetto [proprietà](../../../../docs/framework/data/adonet/property.md) definizione contiene informazioni sul tipo di proprietà, ma spesso sono necessari ulteriori dettagli. Un tipo di entità in un modello concettuale, ad esempio, potrebbe disporre di una proprietà di tipo `String` il cui valore non può essere impostato su null. I facet consentono di specificare questo livello di dettaglio.  
@@ -26,7 +26,7 @@ Oggetto *facet* viene usato per aggiungere dettagli alla definizione di una prop
 |`MaxLength`|Specifica la lunghezza massima del valore della proprietà.|`Binary`, `String`|  
 |`Nullable`|Specifica se la proprietà può avere un valore null.|Tutte le proprietà di tipo primitivo|  
 |`Precision`|Per le proprietà di tipo `Decimal`, specifica il numero di cifre che un valore della proprietà può avere. Per le proprietà di tipo `Time`, `DateTime` e `DateTimeOffset`, specifica il numero di cifre per la parte frazionaria di secondi del valore della proprietà.|`DateTime`, `DateTimeOffset`, `Decimal`, `Time`,|  
-|`Scale`|Specifica il numero di cifre a destra del separatore decimale per il valore della proprietà.|Decimal|  
+|`Scale`|Specifica il numero di cifre a destra del separatore decimale per il valore della proprietà.|Decimale|  
 |`Unicode`|Viene indicato se il valore della proprietà viene archiviato come Unicode.|`String`|  
   
 ## <a name="example"></a>Esempio  
@@ -35,5 +35,6 @@ Oggetto *facet* viene usato per aggiungere dettagli alla definizione di una prop
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -2,12 +2,12 @@
 title: Firma di stored procedure in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094619"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firma di stored procedure in SQL Server
  Un firma digitale è un digest di dati crittografato con la chiave privata del firmatario. La chiave privata garantisce che la firma digitale è univoca per il titolare o il proprietario. È possibile firmare gli assembly, funzioni (ad eccezione delle funzioni inline con valori di tabella), trigger e stored procedure.  
@@ -47,7 +47,7 @@ Se il modulo deve disporre di autorizzazioni a livello di server aggiuntivi:
 >  Un certificato non può concedere autorizzazioni a un utente al quale sono state revocate autorizzazioni usando l'istruzione DENY. DENY ha sempre la precedenza su GRANT e impedisce al chiamante di ereditare autorizzazioni concesse all'utente del certificato.  
   
 ## <a name="external-resources"></a>Risorse esterne  
- Per altre informazioni, vedere le risorse seguenti.  
+ Per altre informazioni, vedere le seguenti risorse.  
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
@@ -55,6 +55,7 @@ Se il modulo deve disporre di autorizzazioni a livello di server aggiuntivi:
 |[Stored procedure con un certificato di firma](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) nella documentazione Online di SQL Server|Viene fornita un'esercitazione per firmare una stored procedure con un certificato.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Protezione delle applicazioni ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Cenni preliminari sulla sicurezza in SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scenari di sicurezza delle applicazioni in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

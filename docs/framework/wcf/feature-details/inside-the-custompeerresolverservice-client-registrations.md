@@ -1,15 +1,15 @@
 ---
-title: 'Custompeerresolverservice: Registrazioni client'
+title: 'In CustomPeerResolverService: registrazioni client'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095789"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Custompeerresolverservice: Registrazioni client
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>In CustomPeerResolverService: registrazioni client
 Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizio resolver tramite la funzione `Register`. Il servizio resolver archivia queste informazioni come record di registrazione. Questo record contiene un identificatore univoco (RegistrationID) e informazioni sull'endpoint (PeerNodeAddress) per il nodo.  
   
 ## <a name="stale-records-and-expiration-time"></a>Record non aggiornati e data di scadenza  
@@ -34,4 +34,5 @@ Ogni nodo della rete pubblica le informazioni sull'endpoint relative nel servizi
  Quando un nodo effettua la registrazione con un servizio resolver, riceve un oggetto <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> dal servizio. La proprietà `RegistrationLifetime` di questo oggetto indica al nodo il tempo a sua disposizione prima che scada la registrazione e venga rimosso dal servizio resolver. Se, ad esempio, `RegistrationLifetime` è pari a 2 minuti, il nodo deve chiamare `Refresh` in meno di 2 minuti per assicurarsi che il record rimanga aggiornato e non venga eliminato. Quando il servizio resolver riceve una richiesta `Refresh`, cerca il record e reimposta la data di scadenza. Refresh restituisce un oggetto <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> con una proprietà `RegistrationLifetime`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Resolver del peer](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

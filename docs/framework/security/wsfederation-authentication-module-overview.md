@@ -3,12 +3,12 @@ title: Panoramica del modulo di autenticazione WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092468"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Panoramica del modulo di autenticazione WSFederation
 Windows Identity Foundation (WIF) include il supporto per l'autenticazione federata nelle applicazioni ASP.NET tramite il modulo di autenticazione WS-Federated (WS-FAM, WS-Federated Authentication Module). Questo argomento aiuta capire come funziona l'autenticazione federata e come usarla.  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
 6.  La relying party estrae le attestazioni del client dal token di sicurezza e prende una decisione relativa all'autorizzazione.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Uso del modulo di autenticazione federata con ASP.NET  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) è un modulo HTTP che consente di aggiungere l'autenticazione federata a un'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. L'autenticazione federata lascia che la logica di autenticazione venga gestita dal servizio token di sicurezza e consente allo sviluppatore di concentrarsi sulla scrittura della logica di business.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) è un modulo HTTP che consente di aggiungere l'autenticazione federata a un [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dell'applicazione. L'autenticazione federata lascia che la logica di autenticazione venga gestita dal servizio token di sicurezza e consente allo sviluppatore di concentrarsi sulla scrittura della logica di business.  
   
  WS-FAM viene configurato per specificare il servizio token di sicurezza a cui devono essere reindirizzate le richieste non autenticate. WIF consente di autenticare un utente in due modi:  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
  ![Diagramma temporale SAM che mostra l'accesso tramite controlli](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Eventi  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> e la relativa classe padre <xref:System.IdentityModel.Services.HttpModuleBase> generano eventi in corrispondenza di varie fasi dell'elaborazione di una richiesta HTTP. È possibile gestire questi eventi nel file `global.asax` dell'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>e la relativa classe padre, <xref:System.IdentityModel.Services.HttpModuleBase>, generare eventi in diverse fasi di elaborazione di una richiesta HTTP. È possibile gestire questi eventi nel file `global.asax` dell'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
 -   L'infrastruttura ASP.NET richiama il metodo <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> del modulo per inizializzare il modulo.  
   
@@ -140,6 +140,7 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

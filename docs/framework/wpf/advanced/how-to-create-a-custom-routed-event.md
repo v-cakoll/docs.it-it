@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091473"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Procedura: Creare un evento indirizzato personalizzato
 Per l'evento personalizzato supportare il routing degli eventi, è necessario registrare un' <xref:System.Windows.RoutedEvent> utilizzando il <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> (metodo). Questo esempio illustra le nozioni di base per la creazione di un evento indirizzato personalizzato.  
@@ -35,6 +35,7 @@ Per l'evento personalizzato supportare il routing degli eventi, è necessario re
  Per un esempio di funzionamento degli eventi di bubbling, vedere [Gestire un evento indirizzato](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
 - [Cenni preliminari sull'input](input-overview.md)
-- [Cenni preliminari sulla modifica di controlli](../controls/control-authoring-overview.md)
+- [Panoramica della creazione di controlli](../controls/control-authoring-overview.md)
