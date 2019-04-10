@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328062"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procedura: Inserire virgolette in una stringa (Windows Form)
 In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di testo. Ad esempio:  
@@ -26,7 +26,7 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Per inserire le virgolette in una stringa nel codice  
   
-1.  In Visual Basic, inserire due virgolette in una riga come virgolette incorporate. Nell'oggetto visivo C# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserire la sequenza di escape \\"come virgolette incorporate. Ad esempio, per creare la stringa precedente, usare il codice seguente.  
+1. In Visual Basic, inserire due virgolette in una riga come virgolette incorporate. Nell'oggetto visivo C# e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], inserire la sequenza di escape \\"come virgolette incorporate. Ad esempio, per creare la stringa precedente, usare il codice seguente.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
   
      -oppure-  
   
-2.  Inserire il carattere ASCII o Unicode per una virgoletta. In Visual Basic, usare il carattere ASCII (34). Nell'oggetto visivo C#, usare il carattere Unicode (\u0022).  
+2. Inserire il carattere ASCII o Unicode per una virgoletta. In Visual Basic, usare il carattere ASCII (34). Nell'oggetto visivo C#, usare il carattere Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ In alcuni casi è possibile racchiudere tra virgolette (" ") una stringa di test
   
      -oppure-  
   
-3.  È anche possibile definire una costante per il carattere e usarlo se necessario.  
+3. È anche possibile definire una costante per il carattere e usarlo se necessario.  
   
     ```vb  
     Const quote As String = """"  

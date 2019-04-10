@@ -2,12 +2,12 @@
 title: Configurazione di una channel factory
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: ec48743deddd52faed31b4a1a0af365909593414
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328075"
 ---
 # <a name="configuration-channel-factory"></a>Configurazione di una channel factory
 In questo esempio viene descritto l'utilizzo di <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. Il <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> consente la gestione centrale della configurazione del client WCF. Può essere anche utile in scenari nei quali la configurazione viene selezionata o modificata dopo la fase di caricamento del dominio dell'applicazione.
@@ -33,15 +33,15 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1.  Aprire Visual Studio 2012 con privilegi di amministratore.
+1. Aprire Visual Studio 2012 con privilegi di amministratore.
 
-2.  Pulsante destro del mouse sulla soluzione ConfigurationChannelFactory (2 progetti) e quindi selezionare **proprietà**.
+2. Pulsante destro del mouse sulla soluzione ConfigurationChannelFactory (2 progetti) e quindi selezionare **proprietà**.
 
-3.  Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.
+3. Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.
 
-4.  Spostare il **Service** all'inizio dell'elenco, il progetto con la **azione 'Start'** e quindi spostare il **Client** progetto dopo la **servizio**progetto, anche con le **azione 'Start'**, in modo che il **Client** progetto viene eseguito dopo il **servizio** progetto.
+4. Spostare il **Service** all'inizio dell'elenco, il progetto con la **azione 'Start'** e quindi spostare il **Client** progetto dopo la **servizio**progetto, anche con le **azione 'Start'**, in modo che il **Client** progetto viene eseguito dopo il **servizio** progetto.
 
-5.  Fare clic su **OK**, quindi premere F5 o CTRL+F5 per eseguire l'esempio.
+5. Fare clic su **OK**, quindi premere F5 o CTRL+F5 per eseguire l'esempio.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

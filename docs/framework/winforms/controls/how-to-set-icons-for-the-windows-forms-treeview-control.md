@@ -12,12 +12,12 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 12b8354890f0ba613b35615dc5cf3a5b3555e7ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328413"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Procedura: Impostare icone per il controllo TreeView di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo può visualizzare le icone accanto a ogni nodo. Le icone vengono posizionate a sinistra del testo del nodo. Per visualizzare queste icone, è necessario associare la visualizzazione struttura ad albero con un <xref:System.Windows.Forms.ImageList> controllo. Per altre informazioni sugli elenchi di immagini, vedere [componente ImageList](imagelist-component-windows-forms.md) e [come: Aggiungere o rimuovere immagini tramite il Windows Form componente ImageList](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
@@ -27,7 +27,7 @@ I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo può visualiz
   
 ### <a name="to-display-images-in-a-tree-view"></a>Per visualizzare le immagini in una visualizzazione albero  
   
-1.  Impostare il <xref:System.Windows.Forms.TreeView> del controllo <xref:System.Windows.Forms.TreeView.ImageList%2A> proprietà esistente <xref:System.Windows.Forms.ImageList> controllo da usare.  
+1. Impostare il <xref:System.Windows.Forms.TreeView> del controllo <xref:System.Windows.Forms.TreeView.ImageList%2A> proprietà esistente <xref:System.Windows.Forms.ImageList> controllo da usare.  
   
      Queste proprietà possono essere impostate nella finestra di progettazione con la finestra proprietà o nel codice.  
   
@@ -43,7 +43,7 @@ I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo può visualiz
     treeView1->ImageList = imageList1;  
     ```  
   
-2.  Impostare il nodo <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> e <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> proprietà. Il <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> proprietà determina l'immagine visualizzata per gli stati di normale ed espanso del nodo e il <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> proprietà determina l'immagine visualizzata per lo stato del nodo selezionato.  
+2. Impostare il nodo <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> e <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> proprietà. Il <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> proprietà determina l'immagine visualizzata per gli stati di normale ed espanso del nodo e il <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> proprietà determina l'immagine visualizzata per lo stato del nodo selezionato.  
   
      Queste proprietà possono essere impostate nel codice o tramite l'Editor TreeNode. Per aprire l'Editor objektu TreeNode, fare clic sui puntini di sospensione ( ![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà nella finestra Proprietà.  
   

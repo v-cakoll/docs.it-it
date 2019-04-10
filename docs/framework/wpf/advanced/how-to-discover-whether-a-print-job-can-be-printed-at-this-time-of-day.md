@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099859"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326866"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedura: Scoprire se è possibile eseguire un processo di stampa a quest'ora del giorno
 Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno proprietà ora di inizio e fine che è possibile impostare per renderli disponibili in determinati momenti del giorno. Questa funzionalità è utilizzabile, ad esempio, per riservare una stampante per l'utilizzo esclusivo di un determinato reparto dopo alle 17.00. Tale reparto avrebbe un'altra coda della stampante di altri reparti di manutenzione utilizzano. La coda per gli altri reparti verrebbe impostata sarà disponibile dopo alle 17.00, anche se coda di quella per il reparto può essere impostata per essere sempre disponibile.  
@@ -29,9 +29,9 @@ Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno propriet�
   
  Esistono due passaggi principali per questo tipo di funzione come indicato di seguito.  
   
-1.  Lettura di <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> e <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> delle proprietà del <xref:System.Printing.PrintQueue> per determinare se l'ora corrente è tra di essi.  
+1. Lettura di <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> e <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> delle proprietà del <xref:System.Printing.PrintQueue> per determinare se l'ora corrente è tra di essi.  
   
-2.  Lettura di <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> e <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> delle proprietà del <xref:System.Printing.PrintSystemJobInfo> per determinare se l'ora corrente è tra di essi.  
+2. Lettura di <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> e <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> delle proprietà del <xref:System.Printing.PrintSystemJobInfo> per determinare se l'ora corrente è tra di essi.  
   
  Ma alcuni problemi sorgono dal fatto che tali proprietà non sono <xref:System.DateTime> oggetti. Sono invece <xref:System.Int32> gli oggetti che esprimono l'ora del giorno come numero di minuti trascorsi dalla mezzanotte. Inoltre, non si tratta mezzanotte nel fuso orario corrente, ma la mezzanotte ora UTC (Coordinated Universal Time).  
   

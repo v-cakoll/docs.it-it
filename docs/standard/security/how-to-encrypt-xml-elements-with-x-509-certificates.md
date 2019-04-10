@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 890216fa8cc9915ffa640b6330994c5f1ee2e611
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327334"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Procedura: Crittografare gli elementi XML con certificati X.509
 È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per crittografare un elemento all'interno di un documento XML.  La crittografia XML consente di scambiare o archiviare dati XML crittografati in modo standard, garantendo un'adeguata protezione dei dati da letture non autorizzate.  Per altre informazioni sullo standard della crittografia XML, vedere la specifica World Wide Web Consortium (W3C) per la crittografia XML disponibile all'indirizzo <https://www.w3.org/TR/xmldsig-core/>.  
@@ -36,43 +36,43 @@ ms.locfileid: "56970974"
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>Per crittografare un elemento XML con un certificato X.509  
   
-1.  Usare lo [Strumento di creazione dei certificati (Makecert.exe)](/windows/desktop/SecCrypto/makecert) per generare un certificato X.509 di test e inserirlo nell'archivio utente locale.  Si deve generare una chiave di scambio e si deve rendere esportabile la chiave. Eseguire il comando seguente:  
+1. Usare lo [Strumento di creazione dei certificati (Makecert.exe)](/windows/desktop/SecCrypto/makecert) per generare un certificato X.509 di test e inserirlo nell'archivio utente locale.  Si deve generare una chiave di scambio e si deve rendere esportabile la chiave. Eseguire il comando seguente:  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  
     ```  
   
-2.  Creare un oggetto <xref:System.Security.Cryptography.X509Certificates.X509Store> e inizializzarlo per aprire l'archivio utente corrente.  
+2. Creare un oggetto <xref:System.Security.Cryptography.X509Certificates.X509Store> e inizializzarlo per aprire l'archivio utente corrente.  
   
      [!code-csharp[HowToEncryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#2)]  
   
-3.  Aprire l'archivio in modalità di sola lettura.  
+3. Aprire l'archivio in modalità di sola lettura.  
   
      [!code-csharp[HowToEncryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#3)]  
   
-4.  Inizializzare un <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> con tutti i certificati dell'archivio.  
+4. Inizializzare un <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> con tutti i certificati dell'archivio.  
   
      [!code-csharp[HowToEncryptXMLElementX509#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#4)]
      [!code-vb[HowToEncryptXMLElementX509#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#4)]  
   
-5.  Enumerare i certificati dell'archivio e trovare il certificato con il nome appropriato.  In questo esempio il certificato è denominato `"CN=XML_ENC_TEST_CERT"`.  
+5. Enumerare i certificati dell'archivio e trovare il certificato con il nome appropriato.  In questo esempio il certificato è denominato `"CN=XML_ENC_TEST_CERT"`.  
   
      [!code-csharp[HowToEncryptXMLElementX509#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#5)]  
   
-6.  Chiudere l'archivio dopo l'individuazione del certificato.  
+6. Chiudere l'archivio dopo l'individuazione del certificato.  
   
      [!code-csharp[HowToEncryptXMLElementX509#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementX509#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#6)]  
   
-7.  Creare un oggetto <xref:System.Xml.XmlDocument> caricando un file XML dal disco.  L'oggetto <xref:System.Xml.XmlDocument> contiene l'elemento XML da crittografare.  
+7. Creare un oggetto <xref:System.Xml.XmlDocument> caricando un file XML dal disco.  L'oggetto <xref:System.Xml.XmlDocument> contiene l'elemento XML da crittografare.  
   
      [!code-csharp[HowToEncryptXMLElementX509#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementX509#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#7)]  
   
-8.  Individuare l'elemento specificato nell'oggetto <xref:System.Xml.XmlDocument> e creare un nuovo oggetto <xref:System.Xml.XmlElement> per rappresentare l'elemento che si vuole crittografare.  In questo esempio l'elemento `"creditcard"` è crittografato.  
+8. Individuare l'elemento specificato nell'oggetto <xref:System.Xml.XmlDocument> e creare un nuovo oggetto <xref:System.Xml.XmlElement> per rappresentare l'elemento che si vuole crittografare.  In questo esempio l'elemento `"creditcard"` è crittografato.  
   
      [!code-csharp[HowToEncryptXMLElementX509#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementX509#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#8)]  

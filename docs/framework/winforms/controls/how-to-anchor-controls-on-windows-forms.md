@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: 28cee4e1aa989ef4df902907c09645a1a0400475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072994"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329778"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Procedura: Agganciare i controlli in Windows Forms
 Se si progetta un form che l'utente può ridimensionare in fase di esecuzione, i controlli sul form devono ridimensionare e riposizionare correttamente. Per ridimensionare i controlli in modo dinamico con il modulo, è possibile usare il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà dei controlli Windows Form. Il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà definisce una posizione di ancoraggio del controllo. Quando un controllo è agganciato a un modulo e il form viene ridimensionato, il controllo gestisce la distanza tra il controllo e la posizione di ancoraggio. Ad esempio, se si dispone di un <xref:System.Windows.Forms.TextBox> controllo è agganciato ai bordi inferiore del form e sinistro, destro, quando il form viene ridimensionato, la <xref:System.Windows.Forms.TextBox> controllo deve essere ridimensionato orizzontalmente in modo che mantiene la stessa distanza dai lati destro e sinistro del form. Inoltre, il controllo si posizionerà verticalmente in modo che il percorso è sempre la stessa distanza dal bordo inferiore del form. Se un controllo è agganciato non e il form viene ridimensionato, viene modificata la posizione del controllo in relazione i bordi del form.  
@@ -29,22 +29,22 @@ Se si progetta un form che l'utente può ridimensionare in fase di esecuzione, i
   
 ### <a name="to-anchor-a-control-on-a-form"></a>Per ancorare un controllo in un form  
   
-1.  Selezionare il controllo che si desidera ancorare.  
+1. Selezionare il controllo che si desidera ancorare.  
   
     > [!NOTE]
     >  È possibile ancorare più controlli contemporaneamente tenendo premuto CTRL, facendo clic su ogni controllo per selezionarla e quindi seguendo il resto di questa procedura.  
   
-2.  Nel **delle proprietà** finestra, fare clic sulla freccia a destra del <xref:System.Windows.Forms.Control.Anchor%2A> proprietà.  
+2. Nel **delle proprietà** finestra, fare clic sulla freccia a destra del <xref:System.Windows.Forms.Control.Anchor%2A> proprietà.  
   
      Viene visualizzato un editor che mostra una croce.  
   
-3.  Per impostare un punto di ancoraggio, fare clic su alto, a sinistra, destra, ovvero nella sezione inferiore della finestra di tra.  
+3. Per impostare un punto di ancoraggio, fare clic su alto, a sinistra, destra, ovvero nella sezione inferiore della finestra di tra.  
   
      I controlli ancorati nella parte superiore e sinistra per impostazione predefinita.  
   
-4.  Per cancellare un lato del controllo che è stato ancorato, fare clic su tale parte della croce.  
+4. Per cancellare un lato del controllo che è stato ancorato, fare clic su tale parte della croce.  
   
-5.  Per chiudere la <xref:System.Windows.Forms.Control.Anchor%2A> editor di proprietà, fare clic su di <xref:System.Windows.Forms.Control.Anchor%2A> nuovo nome della proprietà.  
+5. Per chiudere la <xref:System.Windows.Forms.Control.Anchor%2A> editor di proprietà, fare clic su di <xref:System.Windows.Forms.Control.Anchor%2A> nuovo nome della proprietà.  
   
  Quando il form viene visualizzato in fase di esecuzione, il controllo viene ridimensionato per rimanere posizionato alla stessa distanza dal bordo del form. La distanza dal bordo ancorato rimane sempre lo stesso come distanza definito quando viene posizionato il controllo in Progettazione Windows Form.  
   

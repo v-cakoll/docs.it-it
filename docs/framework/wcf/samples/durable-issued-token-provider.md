@@ -2,12 +2,12 @@
 title: Provider di token rilasciati in modo durevole
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103259"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329752"
 ---
 # <a name="durable-issued-token-provider"></a>Provider di token rilasciati in modo durevole
 Questo esempio illustra come implementare un provider di token rilasciato del client personalizzato.  
@@ -114,7 +114,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
 #### <a name="to-develop-a-custom-token-provider"></a>Per sviluppare un provider di token personalizzato  
   
-1.  Scrivere un provider di token personalizzati.  
+1. Scrivere un provider di token personalizzati.  
   
      L'esempio implementa un provider di token personalizzato che restituisce un token di sicurezza recuperato da una cache.  
   
@@ -133,7 +133,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
     }  
     ```  
   
-2.  Scrivere il gestore di token di sicurezza personalizzato.  
+2. Scrivere il gestore di token di sicurezza personalizzato.  
   
      La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene utilizzata per creare un <xref:System.IdentityModel.Selectors.SecurityTokenProvider> per un <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> specifico che viene passato nel metodo `CreateSecurityTokenProvider`. Viene inoltre utilizzato un gestore del token di sicurezza per creare autenticatori del token e serializzatori del token, che però non vengono presi in esame in questo esempio. Nell'esempio, il gestore del token di sicurezza eredita dalla classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenProvider` per restituire il provider di token personalizzato quando i requisiti del token passati indicano che viene richiesto un token emesso.  
   
@@ -162,7 +162,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
     }  
     ```  
   
-3.  Scrivere una credenziale client personalizzata.  
+3. Scrivere una credenziale client personalizzata.  
   
      La classe delle credenziali di un client viene utilizzata per rappresentare le credenziali configurate per il proxy client e crea il gestore del token di protezione utilizzato per ottenere gli autenticatori del token, i provider di token e i serializzatori di token.  
   
@@ -204,7 +204,7 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
     }  
     ```  
   
-4.  Implementare la cache del token. L'implementazione di esempio utilizza una classe di base astratta tramite la quale utenti di una cache del token specificata interagiscono con la cache.  
+4. Implementare la cache del token. L'implementazione di esempio utilizza una classe di base astratta tramite la quale utenti di una cache del token specificata interagiscono con la cache.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Eseguire il file Setup.cmd per creare i certificati richiesti.  
+1. Eseguire il file Setup.cmd per creare i certificati richiesti.  
   
-2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Assicurarsi che tutti i progetti nella soluzione siano stati generati  (Shared, RSTRSTR, Service, SecurityTokenService e Client).  
+2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Assicurarsi che tutti i progetti nella soluzione siano stati generati  (Shared, RSTRSTR, Service, SecurityTokenService e Client).  
   
-3.  Assicurarsi che Service.exe e SecurityTokenService.exe siano entrambi in esecuzione con privilegi di amministratore.  
+3. Assicurarsi che Service.exe e SecurityTokenService.exe siano entrambi in esecuzione con privilegi di amministratore.  
   
-4.  Eseguire Client.exe.  
+4. Eseguire Client.exe.  
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
-1.  Eseguire Cleanup.cmd nella cartella degli esempi una volta completato l'esempio.  
+1. Eseguire Cleanup.cmd nella cartella degli esempi una volta completato l'esempio.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

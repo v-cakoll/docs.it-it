@@ -2,12 +2,12 @@
 title: Criteri di protezione estesa
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328751"
 ---
 # <a name="extended-protection-policy"></a>Criteri di protezione estesa
 La protezione estesa rappresenta un'iniziativa di sicurezza per la protezione da attacchi di tipo man-in-the-middle (MITM). Un attacco MITM è un rischio per la sicurezza nel quale l'autore dell'attacco rileva le credenziali di un client e le inoltra a un server.  
@@ -26,25 +26,25 @@ La protezione estesa rappresenta un'iniziativa di sicurezza per la protezione da
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Installare Internet Information Services dalla **Pannello di controllo**, **Aggiungi/Rimuovi programmi**, **funzionalità Windows**.  
+1. Installare Internet Information Services dalla **Pannello di controllo**, **Aggiungi/Rimuovi programmi**, **funzionalità Windows**.  
   
-2.  Installare **Windows autenticazione** nelle **le funzionalità di Windows**, **Internet Information Services**, **servizi World Wide Web**,  **Sicurezza**, e **l'autenticazione di Windows**.  
+2. Installare **Windows autenticazione** nelle **le funzionalità di Windows**, **Internet Information Services**, **servizi World Wide Web**,  **Sicurezza**, e **l'autenticazione di Windows**.  
   
-3.  Installare **Windows Communication Foundation HTTP Activation** nelle **funzionalità Windows**, **Microsoft .NET Framework 3.5.1**, e **comunicazione di Windows Foundation HTTP Activation**.  
+3. Installare **Windows Communication Foundation HTTP Activation** nelle **funzionalità Windows**, **Microsoft .NET Framework 3.5.1**, e **comunicazione di Windows Foundation HTTP Activation**.  
   
-4.  In questo esempio il client deve stabilire un canale protetto con il server, di conseguenza è necessario che sia presente un certificato del server che può essere installato da Gestione Internet Information Services.  
+4. In questo esempio il client deve stabilire un canale protetto con il server, di conseguenza è necessario che sia presente un certificato del server che può essere installato da Gestione Internet Information Services.  
   
     1.  Aprire Gestione IIS. Aprire **certificati del Server**, che viene visualizzato il **visualizzazione funzionalità** scheda quando si seleziona il nodo radice (nome del computer).  
   
     2.  Ai fini dimostrativi di questo esempio, creare un certificato autofirmato. Se non si desidera che venga visualizzato un messaggio relativo alla sicurezza del certificato, installare il certificato nell'archivio Autorità di certificazione radice attendibili.  
   
-5.  Aprire il **azioni** riquadro per il sito Web predefinito. Fare clic su **modifica sito**, **associazioni**. Aggiungere HTTPS come tipo, se non già presente, con numero di porta 443. Assegnare il certificato SSL creato nel passaggio precedente.  
+5. Aprire il **azioni** riquadro per il sito Web predefinito. Fare clic su **modifica sito**, **associazioni**. Aggiungere HTTPS come tipo, se non già presente, con numero di porta 443. Assegnare il certificato SSL creato nel passaggio precedente.  
   
-6.  Compilare il servizio. In questo modo viene creata automaticamente una directory virtuale in IIS e vengono copiati i file con estensione dll e svc e il file di configurazione per il servizio da ospitare nel Web.  
+6. Compilare il servizio. In questo modo viene creata automaticamente una directory virtuale in IIS e vengono copiati i file con estensione dll e svc e il file di configurazione per il servizio da ospitare nel Web.  
   
-7.  Aprire Gestione IIS. Fare doppio clic su directory virtuale (**ExtendedProtection**), che è stato creato nel passaggio precedente. Selezionare **Converti in applicazione**.  
+7. Aprire Gestione IIS. Fare doppio clic su directory virtuale (**ExtendedProtection**), che è stato creato nel passaggio precedente. Selezionare **Converti in applicazione**.  
   
-8.  Aprire il **Authentication** modulo in Gestione IIS per questa directory virtuale e abilitare **l'autenticazione di Windows**.  
+8. Aprire il **Authentication** modulo in Gestione IIS per questa directory virtuale e abilitare **l'autenticazione di Windows**.  
   
 9. Aprire **impostazioni avanzate** sotto **l'autenticazione di Windows** per questa directory virtuale e impostarlo su **necessari**.  
   

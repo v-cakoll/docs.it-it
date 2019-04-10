@@ -12,29 +12,29 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: cf5352ff60aabe45473c3c9103e8369597db2e8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106756"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331000"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Procedura: Binding a un servizio Web tramite BindingSource di Windows Forms
 Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a un servizio Web XML, è possibile usare un componente <xref:System.Windows.Forms.BindingSource>. Questa procedura è simile al binding di un componente <xref:System.Windows.Forms.BindingSource> a un tipo. È necessario creare un proxy lato client contenente i metodi e tipi esposti dal servizio Web. Si genera un proxy lato client direttamente dal servizio Web (asmx) o dal file Web Services Description Language (WSDL). Inoltre, il proxy lato client deve esporre i campi dei tipi complessi usati dal servizio Web come proprietà pubbliche. Quindi si associa <xref:System.Windows.Forms.BindingSource> a uno dei tipi esposti nel proxy del servizio Web.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Per creare ed eseguire il binding a un proxy lato client  
   
-1.  Creare un Windows Form nella directory scelta, con uno spazio dei nomi appropriato.  
+1. Creare un Windows Form nella directory scelta, con uno spazio dei nomi appropriato.  
   
-2.  Aggiungere un componente <xref:System.Windows.Forms.BindingSource> al form.  
+2. Aggiungere un componente <xref:System.Windows.Forms.BindingSource> al form.  
   
-3.  Aprire il prompt dei comandi di [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] e passare alla stessa directory in cui si trova il form.  
+3. Aprire il prompt dei comandi di [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] e passare alla stessa directory in cui si trova il form.  
   
-4.  Tramite lo strumento WSDL immettere `wsdl` e l'URL del file asmx o WSDL per il servizio Web, seguito dallo spazio dei nomi dell'applicazione e, facoltativamente, dal linguaggio in uso.  
+4. Tramite lo strumento WSDL immettere `wsdl` e l'URL del file asmx o WSDL per il servizio Web, seguito dallo spazio dei nomi dell'applicazione e, facoltativamente, dal linguaggio in uso.  
   
      Esempio di codice seguente usa il servizio Web disponibile all'indirizzo `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Ad esempio, per C# digitare `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` e per Visual Basic digitare `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Passando il percorso come argomento allo strumento WSDL, verrà generato un proxy lato client nella stessa directory e nello stesso spazio dei nomi dell'applicazione, nel linguaggio specificato. Se si usa Visual Studio, aggiungere il file al progetto.  
   
-5.  Selezionare un tipo nel proxy lato client a cui eseguire il binding.  
+5. Selezionare un tipo nel proxy lato client a cui eseguire il binding.  
   
      In genere si tratta di un tipo restituito da un metodo offerto dal servizio Web. I campi del tipo scelto devono essere esposti come proprietà pubbliche ai fini dell'associazione.  
   
@@ -42,7 +42,7 @@ Per associare un controllo Windows Form ai risultati ottenuti dalla chiamata a u
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#4)]  
   
-6.  Impostare la proprietà <xref:System.Windows.Forms.BindingSource.DataSource%2A> di <xref:System.Windows.Forms.BindingSource> sul tipo desiderato contenuto nel proxy lato client del servizio Web.  
+6. Impostare la proprietà <xref:System.Windows.Forms.BindingSource.DataSource%2A> di <xref:System.Windows.Forms.BindingSource> sul tipo desiderato contenuto nel proxy lato client del servizio Web.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#2)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#2)]

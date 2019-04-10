@@ -2,12 +2,12 @@
 title: Accesso al servizio da un Web browser (Guida rapida di WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330324"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accesso al servizio da un Web browser (Guida rapida di WCF Data Services)
 
@@ -18,16 +18,16 @@ Questa è la seconda attività di avvio rapido di WCF Data Services. In questa a
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Per richiedere il documento di servizio predefinito usando Internet Explorer
 
-1.  In Internet Explorer dal **degli strumenti** dal menu **Opzioni Internet**, fare clic sul **contenuto** scheda, fare clic su **impostazioni**e deselezionare  **Attivare la visualizzazione di lettura feed**.
+1. In Internet Explorer dal **degli strumenti** dal menu **Opzioni Internet**, fare clic sul **contenuto** scheda, fare clic su **impostazioni**e deselezionare  **Attivare la visualizzazione di lettura feed**.
 
      In questo modo viene disabilitata la lettura dei feed. Se non si disabilita questa funzionalità, anziché visualizzare i dati XML non elaborati, il browser considererà il documento con codifica AtomPub restituito come un feed XML.
 
     > [!NOTE]
     > Se nel browser non è possibile visualizzare il feed come dati XML non elaborati, dovrebbe ancora essere possibile visualizzarlo come codice sorgente per la pagina.
 
-2.  In Visual Studio, premere il **F5** tasto per avviare il debug dell'applicazione.
+2. In Visual Studio, premere il **F5** tasto per avviare il debug dell'applicazione.
 
-3.  Aprire un browser sul computer locale. Nella barra degli indirizzi digitare l'URI seguente:
+3. Aprire un browser sul computer locale. Nella barra degli indirizzi digitare l'URI seguente:
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ Questa è la seconda attività di avvio rapido di WCF Data Services. In questa a
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Per accedere alle risorse del set di entità da un browser
 
-1.  Nella barra dell'indirizzo del browser immettere l'URI seguente:
+1. Nella barra dell'indirizzo del browser immettere l'URI seguente:
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ Questa è la seconda attività di avvio rapido di WCF Data Services. In questa a
 
      Verrà restituito un set di tutti i clienti inclusi nel database Northwind di esempio.
 
-2.  Nella barra dell'indirizzo del browser immettere l'URI seguente:
+2. Nella barra dell'indirizzo del browser immettere l'URI seguente:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ Questa è la seconda attività di avvio rapido di WCF Data Services. In questa a
 
      Verrà restituita un'istanza di entità per il cliente specifico, `ALFKI`.
 
-3.  Nella barra dell'indirizzo del browser immettere l'URI seguente:
+3. Nella barra dell'indirizzo del browser immettere l'URI seguente:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ Questa è la seconda attività di avvio rapido di WCF Data Services. In questa a
 
      Verrà attraversata la relazione tra clienti e ordini per restituire un set di tutti gli ordini per il cliente specifico `ALFKI`.
 
-4.  Nella barra dell'indirizzo del browser immettere l'URI seguente:
+4. Nella barra dell'indirizzo del browser immettere l'URI seguente:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
@@ -78,4 +78,4 @@ L'accesso di WCF Data Services da un Web browser, con il browser invia HTTP GET 
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso alle risorse di un servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Accesso alle risorse dei servizi dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)

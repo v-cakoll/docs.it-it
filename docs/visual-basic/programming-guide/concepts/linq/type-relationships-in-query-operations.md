@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822336"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327633"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relazioni tra i tipi nelle operazioni di query (Visual Basic)
 Le variabili usate nella [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operazioni sono fortemente tipizzate e devono essere compatibili tra loro. Tipizzazione forte viene usata nell'origine dati, nella query stessa e nell'esecuzione della query. Nella figura seguente identifica i termini usati per descrivere un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. Per altre informazioni sulle parti di una query, vedere [operazioni di Query (Visual Basic) base](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -49,11 +49,11 @@ Le variabili usate nella [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]
   
  Le relazioni seguenti disponibili in entrambi gli esempi di codice precedenti, se i tipi sono determinati in modo implicito o esplicito.  
   
-1.  Il tipo degli elementi nell'origine dati, `names`, è il tipo della variabile di intervallo, `name`, nella query.  
+1. Il tipo degli elementi nell'origine dati, `names`, è il tipo della variabile di intervallo, `name`, nella query.  
   
-2.  Il tipo dell'oggetto che sia selezionata `name`, determina il tipo della variabile di query, `mNames`. Di seguito `name` è una stringa, in modo che la variabile di query è IEnumerable (Of String) in Visual Basic.  
+2. Il tipo dell'oggetto che sia selezionata `name`, determina il tipo della variabile di query, `mNames`. Di seguito `name` è una stringa, in modo che la variabile di query è IEnumerable (Of String) in Visual Basic.  
   
-3.  La query definita nella `mNames` viene eseguita nel `For Each` ciclo. Il ciclo scorre il risultato dell'esecuzione della query. In quanto `mNames`, quando eseguita, restituisce una sequenza di stringhe, la variabile di iterazione del ciclo, `nm`, inoltre è una stringa.  
+3. La query definita nella `mNames` viene eseguita nel `For Each` ciclo. Il ciclo scorre il risultato dell'esecuzione della query. In quanto `mNames`, quando eseguita, restituisce una sequenza di stringhe, la variabile di iterazione del ciclo, `nm`, inoltre è una stringa.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Query che restituiscono un campo da elementi selezionati  
  L'esempio seguente mostra un [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] operazione che restituisce una sequenza che contiene solo una parte di ogni elemento selezionato dall'origine dati di query. La query accetta una raccolta di `Customer` oggetti come origine dati e solo progetti i `Name` proprietà nel risultato. Poiché il nome del cliente è una stringa, la query produce una sequenza di stringhe come output.  
@@ -72,11 +72,11 @@ Next
   
  Le relazioni tra le variabili sono simili a quelle nell'esempio più semplice.  
   
-1.  Il tipo degli elementi nell'origine dati, `customers`, è il tipo della variabile di intervallo, `cust`, nella query. In questo esempio, il tipo è `Customer`.  
+1. Il tipo degli elementi nell'origine dati, `customers`, è il tipo della variabile di intervallo, `cust`, nella query. In questo esempio, il tipo è `Customer`.  
   
-2.  Il `Select` istruzione restituisce il `Name` proprietà di ciascuno `Customer` oggetto anziché l'intero oggetto. In quanto `Name` è una stringa, la variabile di query `custNames`, anche in questo caso sarà IEnumerable (Of String), non di `Customer`.  
+2. Il `Select` istruzione restituisce il `Name` proprietà di ciascuno `Customer` oggetto anziché l'intero oggetto. In quanto `Name` è una stringa, la variabile di query `custNames`, anche in questo caso sarà IEnumerable (Of String), non di `Customer`.  
   
-3.  In quanto `custNames` rappresenta una sequenza di stringhe, il `For Each` variabile di iterazione del ciclo, `custName`, deve essere una stringa.  
+3. In quanto `custNames` rappresenta una sequenza di stringhe, il `For Each` variabile di iterazione del ciclo, `custName`, deve essere una stringa.  
   
  Senza l'inferenza del tipo locale, nell'esempio precedente sarebbe più complicata da scrivere e capire, come illustrato nell'esempio seguente.  
   
@@ -110,11 +110,11 @@ Next
   
  Anche se non è possibile specificare i tipi per tutte le variabili nell'esempio precedente, le relazioni rimangono invariati.  
   
-1.  Il tipo degli elementi nell'origine dati anche in questo caso è il tipo della variabile di intervallo nella query. In questo esempio `cust` è un'istanza di `Customer`.  
+1. Il tipo degli elementi nell'origine dati anche in questo caso è il tipo della variabile di intervallo nella query. In questo esempio `cust` è un'istanza di `Customer`.  
   
-2.  Poiché il `Select` istruzione produce un tipo anonimo, la variabile di query, `nameCityQuery`, deve essere tipizzata in modo implicito come un tipo anonimo. Un tipo anonimo non ha alcun nome utilizzabile e pertanto non è possibile specificare in modo esplicito.  
+2. Poiché il `Select` istruzione produce un tipo anonimo, la variabile di query, `nameCityQuery`, deve essere tipizzata in modo implicito come un tipo anonimo. Un tipo anonimo non ha alcun nome utilizzabile e pertanto non è possibile specificare in modo esplicito.  
   
-3.  Il tipo della variabile di iterazione nel `For Each` ciclo è di tipo anonimo creato nel passaggio 2. Poiché il tipo ha un nome utilizzabile, il tipo della variabile di iterazione del ciclo deve essere determinato in modo implicito.  
+3. Il tipo della variabile di iterazione nel `For Each` ciclo è di tipo anonimo creato nel passaggio 2. Poiché il tipo ha un nome utilizzabile, il tipo della variabile di iterazione del ciclo deve essere determinato in modo implicito.  
   
 ## <a name="see-also"></a>Vedere anche
 

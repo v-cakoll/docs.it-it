@@ -2,28 +2,28 @@
 title: Utilizzo di WorkflowIdentity e controllo delle versioni
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 64abab815c523abce88b00515239155499de9c4c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708171"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327490"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Utilizzo di WorkflowIdentity e controllo delle versioni
-<xref:System.Activities.WorkflowIdentity> offre agli sviluppatori di applicazioni flusso di lavoro un modo per associare un nome e un elemento <xref:System.Version> a una definizione del flusso di lavoro. Consente inoltre di associare queste informazioni a un'istanza persistente del flusso di lavoro. Queste informazioni di identità possono essere usate dagli sviluppatori di applicazioni flusso di lavoro per scenari quali l'esecuzione affiancata di più versioni di una definizione del flusso di lavoro e costituiscono un elemento fondamentale per altre funzionalità come l'aggiornamento dinamico. In questo argomento viene fornita una panoramica sull'utilizzo di <xref:System.Activities.WorkflowIdentity> con hosting <xref:System.Activities.WorkflowApplication>. Per informazioni sull'esecuzione side-by-side delle definizioni del flusso di lavoro in un servizio del flusso di lavoro, vedere [Side-by-Side più versioni in WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Per informazioni sull'aggiornamento dinamico, vedere [aggiornamento dinamico](dynamic-update.md).  
+<xref:System.Activities.WorkflowIdentity> fornisce un modo per flusso di lavoro agli sviluppatori di applicazioni per associare un nome e un <xref:System.Version> con una definizione del flusso di lavoro e per ottenere queste informazioni da associare a un'istanza del flusso di lavoro persistente. Queste informazioni di identità possono essere usate dagli sviluppatori di applicazioni flusso di lavoro per scenari quali l'esecuzione affiancata di più versioni di una definizione del flusso di lavoro e costituiscono un elemento fondamentale per altre funzionalità come l'aggiornamento dinamico. In questo argomento viene fornita una panoramica sull'utilizzo di <xref:System.Activities.WorkflowIdentity> con hosting <xref:System.Activities.WorkflowApplication>. Per informazioni sull'esecuzione side-by-side delle definizioni del flusso di lavoro in un servizio del flusso di lavoro, vedere [Side-by-Side più versioni in WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Per informazioni sull'aggiornamento dinamico, vedere [aggiornamento dinamico](dynamic-update.md).  
   
 ## <a name="in-this-topic"></a>Contenuto dell'argomento  
   
 -   [Uso di WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [Esecuzione side-by-side usando WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
+    -   [Esecuzione affiancata usando WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
   
--   [Aggiornamento del database di persistenza di 4 di .NET Framework per supportare il controllo delle versioni del flusso di lavoro](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+-   [Aggiornamento del database di persistenza di .NET Framework 4 per supportare il controllo delle versioni del flusso di lavoro](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [Per aggiornare lo schema del database](using-workflowidentity-and-versioning.md#ToUpgrade)  
+    -   [Per aggiornare lo schema di database](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> Uso di WorkflowIdentity  
- Per usare <xref:System.Activities.WorkflowIdentity>, creare un'istanza, configurarla e associarla a un'istanza di <xref:System.Activities.WorkflowApplication>. L'istanza di <xref:System.Activities.WorkflowIdentity> contiene tre informazioni di identificazione. Le proprietà <xref:System.Activities.WorkflowIdentity.Name%2A> e <xref:System.Activities.WorkflowIdentity.Version%2A> contengono un nome e un oggetto <xref:System.Version> e sono obbligatorie, mentre la proprietà <xref:System.Activities.WorkflowIdentity.Package%2A> è facoltativa e può essere usata per specificare una stringa aggiuntiva che contiene informazioni quali il nome dell'assembly o altre informazioni desiderate. Un oggetto <xref:System.Activities.WorkflowIdentity> è univoco se una qualsiasi delle tre relative proprietà è diversa da un altro oggetto <xref:System.Activities.WorkflowIdentity>.  
+ Per usare <xref:System.Activities.WorkflowIdentity>, creare un'istanza, configurarla e associarla a un'istanza di <xref:System.Activities.WorkflowApplication>. L'istanza di <xref:System.Activities.WorkflowIdentity> contiene tre informazioni di identificazione. <xref:System.Activities.WorkflowIdentity.Name%2A> e <xref:System.Activities.WorkflowIdentity.Version%2A> contengono un nome e una <xref:System.Version> e sono necessari, e <xref:System.Activities.WorkflowIdentity.Package%2A> è facoltativo e può essere utilizzato per specificare una stringa aggiuntiva che contiene informazioni quali nome dell'assembly o altre informazioni desiderate. Un oggetto <xref:System.Activities.WorkflowIdentity> è univoco se una qualsiasi delle tre relative proprietà è diversa da un altro oggetto <xref:System.Activities.WorkflowIdentity>.  
   
 > [!IMPORTANT]
 >  <xref:System.Activities.WorkflowIdentity> non deve contenere eventuali informazioni identificabili personalmente (PII). Le informazioni su <xref:System.Activities.WorkflowIdentity> usate per creare un'istanza vengono generate a tutti i servizi di rilevamento configurati in vari punti del ciclo di vita di attività dal runtime. La verifica di WF non ha alcun meccanismo per nascondere i PII (dati riservati dell'utente). Di conseguenza, un'istanza di <xref:System.Activities.WorkflowIdentity> non deve contenere dati di PII poiché verrebbe generata dal runtime nei record di rilevamento e può essere visibile agli utenti con accesso alla visualizzazione dei record di rilevamento.  
@@ -76,9 +76,9 @@ wfApp.Load(instanceId);
   
  Quando viene eseguito il codice precedente, viene generata la seguente eccezione <xref:System.Activities.VersionMismatchException>.  
   
- **WorkflowIdentity ("MortgageWorkflow v1; Versione = 1.0.0.0") dell'istanza caricata non corrisponde WorkflowIdentity (" MortgageWorkflow v2; Versione = 2.0.0.0") della definizione del flusso di lavoro specificata. L'istanza può essere caricata mediante una definizione diversa o aggiornata tramite aggiornamento dinamico.**  
+ **L'oggetto WorkflowIdentity (" MortgageWorkflow v1; Version= 1.0.0.0 ") dell'istanza caricata non corrisponde all'oggetto WorkflowIdentity (" MortgageWorkflow v2; Version= 2.0.0.0 ") della definizione del flusso di lavoro fornita. L'istanza può essere caricata mediante una definizione diversa o aggiornata mediante l'aggiornamento automatico.**  
 ### <a name="SxS"></a> Esecuzione side-by-side usando WorkflowIdentity  
- <xref:System.Activities.WorkflowIdentity> può essere usato per facilitare l'esecuzione di più versioni di un flusso di lavoro affiancate. Uno scenario comune consiste nella modifica dei requisiti aziendali in un flusso di lavoro di lunga durata. Molte istanze di un flusso di lavoro potrebbero essere in esecuzione quando una versione aggiornata viene distribuita. L'applicazione host può essere configurata per usare la definizione aggiornata del flusso di lavoro all'avvio di nuove istanze. È responsabilità dell'applicazione host fornire la definizione del flusso di lavoro corretta quando vengono riprese le istanze. <xref:System.Activities.WorkflowIdentity> può essere usato per identificare e fornire la definizione corrispondente del flusso di lavoro quando vengono riprese le istanze del flusso di lavoro.  
+ <xref:System.Activities.WorkflowIdentity> può essere usato per facilitare l'esecuzione di più versioni di un flusso di lavoro side-by-side. Uno scenario comune consiste nella modifica dei requisiti aziendali in un flusso di lavoro di lunga durata. Molte istanze di un flusso di lavoro potrebbero essere in esecuzione quando una versione aggiornata viene distribuita. L'applicazione host può essere configurata per usare la definizione aggiornata del flusso di lavoro all'avvio di nuove istanze. È responsabilità dell'applicazione host fornire la definizione del flusso di lavoro corretta quando vengono riprese le istanze. <xref:System.Activities.WorkflowIdentity> può essere utilizzato per identificare e fornire la definizione del flusso di lavoro corrispondente quando vengono riprese le istanze del flusso di lavoro.  
   
  Per recuperare l'oggetto <xref:System.Activities.WorkflowIdentity> di un'istanza persistente del flusso di lavoro, viene usato il metodo <xref:System.Activities.WorkflowApplication.GetInstance%2A>. Il metodo <xref:System.Activities.WorkflowApplication.GetInstance%2A> accetta l'oggetto <xref:System.Activities.WorkflowApplication.Id%2A> dell'istanza persistente del flusso di lavoro e l'oggetto <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> contenente l'istanza persistente e restituisce un oggetto <xref:System.Activities.WorkflowApplicationInstance>. Un oggetto <xref:System.Activities.WorkflowApplicationInstance> contiene informazioni su un'istanza persistente del flusso di lavoro, incluso il relativo oggetto <xref:System.Activities.WorkflowIdentity> associato. Questo oggetto <xref:System.Activities.WorkflowIdentity> associato può essere usato dall'host per fornire la definizione del flusso di lavoro corretta durante il caricamento e la ripresa dell'istanza del flusso di lavoro.  
   
@@ -143,17 +143,17 @@ wfApp.Load(instance);
   
  Se un'applicazione flusso di lavoro [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] tenta un'operazione di persistenza che usa il nuovo controllo delle versioni in un database di persistenza che non è stato aggiornato mediante lo script fornito, viene generata l'eccezione <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> con un messaggio simile al seguente.  
   
- **L'elemento SqlWorkflowInstanceStore ha una versione del database di '4.0.0.0'. Impossibile eseguire InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' in relazione a questa versione di database.  Aggiornare il database a '4.5.0.0'.**  
+ **L'elemento SqlWorkflowInstanceStore ha una versione di database di '4.0.0.0'. Impossibile eseguire InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' in relazione a questa versione di database.  Aggiornare il database a '4.5.0.0'.**  
 ### <a name="ToUpgrade"></a> Per aggiornare lo schema del database  
   
-1.  Aprire SQL Server Management Studio e connettersi al server di database di persistenza, ad esempio **. \SQLEXPRESS**.  
+1. Aprire SQL Server Management Studio e connettersi al server di database di persistenza, ad esempio **. \SQLEXPRESS**.  
   
-2.  Scegliere **aperto**, **File** dal **File** menu. Passare alla cartella seguente: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
+2. Scegliere **aperto**, **File** dal **File** menu. Passare alla cartella seguente: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
   
-3.  Selezionare **Sqlworkflowinstancestoreschemaupgrade** e fare clic su **Open**.  
+3. Selezionare **Sqlworkflowinstancestoreschemaupgrade** e fare clic su **Open**.  
   
-4.  Selezionare il nome del database di persistenza nel **database disponibili** elenco a discesa.  
+4. Selezionare il nome del database di persistenza nel **database disponibili** elenco a discesa.  
   
-5.  Scegli **Execute** dalle **Query** menu.  
+5. Scegli **Execute** dalle **Query** menu.  
   
  Quando la query viene completata, lo schema di database verrà aggiornato e, se necessario, è possibile visualizzare l'identità predefinita del flusso di lavoro assegnata alle istanze persistenti del flusso di lavoro. Espandere il database di persistenza nella **database** nodo delle **Esplora oggetti**e quindi espandere il **viste** nodo. Fare doppio clic su **System.Activities.DurableInstancing.Instances** e scegliere **seleziona le prime 1000 righe**. Scorrere fino alla fine delle colonne e notare che esistono sei ulteriori colonne aggiunte alla vista: **IdentityName**, **IdentityPackage**, **compilare**, **principali**, **secondaria**, e **revisione**. Eventuali flussi di lavoro persistenti avranno un valore pari **NULL** per questi campi, che rappresenta un'identità null del flusso di lavoro.

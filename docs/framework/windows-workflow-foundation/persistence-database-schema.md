@@ -2,12 +2,12 @@
 title: Schema di database di persistenza
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331065"
 ---
 # <a name="persistence-database-schema"></a>Schema di database di persistenza
 In questo argomento vengono descritte le visualizzazioni pubbliche supportate dall'archivio di istanze del flusso di lavoro SQL.  
@@ -30,8 +30,8 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 |ExecutionStatus|Nvarchar(450)|Indica lo stato di esecuzione corrente del flusso di lavoro. Includono gli stati possibili **Executing**, **Idle**, **Closed**.|  
 |IsInitialized|Bit|Indica se l'istanza del flusso di lavoro è stata inizializzata. Un'istanza del flusso di lavoro inizializzata è stata salvata in modo permanente almeno una volta.|  
 |IsSuspended|Bit|Indica se l'istanza del flusso di lavoro è stata sospesa.|  
-|IsCompleted|Bit|Indica se l'esecuzione dell'istanza del flusso di lavoro è stata completata. **Nota:** Iif il **InstanceCompletionAction** è impostata su **DeleteAll**, le istanze vengono rimosse dalla visualizzazione al completamento.|  
-|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà dei dati.<br /><br /> -0-Nessuna codifica<br />-1-GzipStream|  
+|IsCompleted|Bit|Indica se l'esecuzione dell'istanza del flusso di lavoro è stata completata. **Nota:**  IIf il **InstanceCompletionAction** è impostata su **DeleteAll**, le istanze vengono rimosse dalla visualizzazione al completamento.|  
+|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà dei dati.<br /><br /> -0-Nessuna codifica<br />-   1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Contiene le proprietà dei dati dell'istanza serializzata che saranno restituiti all'esecuzione del flusso di lavoro quando l'istanza viene caricata.<br /><br /> Ogni proprietà primitiva è un tipo CLR nativo e indica che non sono necessari assembly speciali per deserializzare il BLOB.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Contiene le proprietà dei dati dell'istanza serializzata che non vengono restituiti all'esecuzione del flusso di lavoro quando l'istanza viene caricata.<br /><br /> Ogni proprietà primitiva è un tipo CLR nativo e indica che non sono necessari assembly speciali per deserializzare il BLOB.|  
 |ReadWriteComplexDataProperties|Varbinary(max)|Contiene le proprietà dei dati dell'istanza serializzata che saranno restituiti all'esecuzione del flusso di lavoro quando l'istanza viene caricata.<br /><br /> Un deserializzatore richiederebbe la conoscenza di tutti i tipi di oggetti archiviati in questo BLOB.|  
@@ -53,16 +53,16 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|Chiave primaria per questa visualizzazione.|  
 |SiteName|Nvarchar(max)|Rappresenta il nome del sito che contiene il servizio del flusso di lavoro (ad esempio **sito Web predefinito**).|  
-|RelativeServicePath|Nvarchar(max)|Rappresenta il percorso virtuale relativo del sito che punta al servizio flusso di lavoro (ad esempio  **/app1/PurchaseOrderService.svc**).|  
-|RelativeApplicationPath|Nvarchar(max)|Rappresenta il percorso virtuale relativo del sito che punta a un'applicazione contenente il servizio flusso di lavoro (ad esempio **/app1**).|  
-|ServiceName|Nvarchar(max)|Rappresenta il nome del servizio flusso di lavoro (ad esempio **PurchaseOrderService**).|  
+|RelativeServicePath|Nvarchar(max)|Rappresenta il percorso virtuale relativo del sito che punta al servizio flusso di lavoro (e.g.  **/app1/PurchaseOrderService.svc**).|  
+|RelativeApplicationPath|Nvarchar(max)|Rappresenta il percorso virtuale relativo del sito che punta a un'applicazione contenente il servizio flusso di lavoro (e.g. **/app1**).|  
+|ServiceName|Nvarchar(max)|Rappresenta il nome del servizio flusso di lavoro (e.g. **PurchaseOrderService**).|  
 |ServiceNamespace|Nvarchar(max)|Rappresenta lo spazio dei nomi del servizio flusso di lavoro (ad esempio **MyCompany**).|  
   
- La visualizzazione ServiceDeployments contiene inoltre un trigger di eliminazione. Gli utenti con autorizzazioni appropriate possono eseguire istruzioni di eliminazione a fronte di questa visualizzazione per la rimozione di voci di ServiceDeployment dal database. Notare che:  
+ La visualizzazione ServiceDeployments contiene inoltre un trigger di eliminazione. Gli utenti con autorizzazioni appropriate possono eseguire istruzioni di eliminazione a fronte di questa visualizzazione per la rimozione di voci di ServiceDeployment dal database. Come si può notare:  
   
-1.  L'eliminazione di voci da questa visualizzazione consuma molte risorse, in quanto è necessario bloccare l'intero database prima dell'esecuzione di questa operazione. Ciò è necessario per evitare lo scenario in cui un'istanza del flusso di lavoro potrebbe fare riferimento a una voce di ServiceDeployment inesistente. Procedere all'eliminazione da questa visualizzazione solo durante i periodi di inattività o manutenzione.  
+1. L'eliminazione di voci da questa visualizzazione consuma molte risorse, in quanto è necessario bloccare l'intero database prima dell'esecuzione di questa operazione. Ciò è necessario per evitare lo scenario in cui un'istanza del flusso di lavoro potrebbe fare riferimento a una voce di ServiceDeployment inesistente. Procedere all'eliminazione da questa visualizzazione solo durante i periodi di inattività o manutenzione.  
   
-2.  Qualsiasi tentativo di eliminare una riga di ServiceDeployment cui viene fatto riferimento da voci presenti nella **istanze** visualizzazione comporterà no-op. È possibile eliminare solo righe di ServiceDeployment prive di riferimenti.  
+2. Qualsiasi tentativo di eliminare una riga di ServiceDeployment cui viene fatto riferimento da voci presenti nella **istanze** visualizzazione comporterà no-op. È possibile eliminare solo righe di ServiceDeployment prive di riferimenti.  
   
 ## <a name="instancepromotedproperties-view"></a>Visualizzazione InstancePromotedProperties  
  Il **InstancePromotedProperties** vista contiene informazioni per tutte le proprietà promosse specificate dall'utente. Una proprietà promossa funziona come una proprietà di prima classe che può essere usata da un utente nelle query per recuperare istanze.  Ad esempio, un utente è stato possibile aggiungere la promozione di un PurchaseOrder che archivia sempre il costo di un ordine in cui il **Value1** colonna. Ciò consentirebbe a un utente di eseguire una query per tutti gli ordini di acquisto il cui costo supera un determinato valore.  
@@ -70,7 +70,7 @@ In questo argomento vengono descritte le visualizzazioni pubbliche supportate da
 |Tipo di colonna|Tipo di colonna|Descrizione|  
 |-|-|-|  
 |InstanceId|UniqueIdentifier|ID dell'istanza del flusso di lavoro.|  
-|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà binarie promosse.<br /><br /> -0-Nessuna codifica<br />-1-GZipStream|  
+|EncodingOption|TinyInt|Descrive la codifica usata per serializzare le proprietà binarie promosse.<br /><br /> -0-Nessuna codifica<br />-   1 – GZipStream|  
 |PromotionName|Nvarchar(400)|Nome della promozione associata a questa istanza. PromotionName è necessario per aggiungere contesto alle colonne generiche in questa riga.<br /><br /> Ad esempio, un PromotionName di PurchaseOrder potrebbe indicare che Value1 contiene il costo dell'ordine, Value2 contiene il nome del cliente che ha inserito l'ordine, Value3 contiene l'indirizzo del cliente e così via.|  
 |Value[1-32]|SqlVariant|Value[1-32] contiene valori che possono essere archiviati in una colonna SqlVariant. Una singola promozione non può contenere più di 32 SqlVariant.|  
 |Value[33-64]|Varbinary(max)|Value[33-64] contiene valori serializzati. Ad esempio, Value33 potrebbe contenere un'immagine JPEG di un elemento in fase di acquisto. Una singola promozione non può contenere più di 32 proprietà binarie.|  

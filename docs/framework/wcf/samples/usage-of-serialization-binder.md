@@ -2,12 +2,12 @@
 title: Utilizzo del gestore di associazione della serializzazione
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 5fd90febac8c75df9fa2472e4aab591a5630076e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329843"
 ---
 # <a name="usage-of-serialization-binder"></a>Utilizzo del gestore di associazione della serializzazione
 In questo esempio viene illustrato come utilizzare <xref:System.Runtime.Serialization.SerializationBinder> per modificare la versione di un tipo generico quando è serializzato.  
@@ -24,10 +24,10 @@ In questo esempio viene illustrato come utilizzare <xref:System.Runtime.Serializ
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Per eseguire il client, fare clic sulla soluzione SBGenericsVTS (6 progetti), quindi selezionare **proprietà**.  
+1. Per eseguire il client, fare clic sulla soluzione SBGenericsVTS (6 progetti) e quindi selezionare **proprietà**.  
   
-2.  In **proprietà comuni**selezionare **progetto di avvio**, quindi selezionare **più progetti di avvio**.  
+2. Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi selezionare **progetti di avvio multipli**.  
   
-3.  Selezionare **Server** prima, quindi **Client20** e quindi **Client40**. Selezionare il **avviare** azione per questi tre progetti e lasciare gli altri impostati su **Nessuno**.  
+3. Selezionare **Server** primo, quindi **Client20** e quindi **Client40**. Selezionare il **avviare** azione per questi tre progetti e lasciare i restanti vengono impostati su **None**.  
   
-4.  Fare clic su **OK** e quindi premere F5 per eseguire l'esempio.
+4. Fare clic su **OK** e quindi premere F5 per eseguire l'esempio.

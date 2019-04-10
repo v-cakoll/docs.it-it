@@ -2,12 +2,12 @@
 title: 'Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329388"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato
 Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di dati in assembly compilati, come segue:  
@@ -23,9 +23,9 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>Per esportare metadati per contratti di servizio compilati  
   
-1.  Compilare le implementazioni del contratto di servizio in una o più librerie di classi.  
+1. Compilare le implementazioni del contratto di servizio in una o più librerie di classi.  
   
-2.  Eseguire Svcutil.exe sugli assembly compilati.  
+2. Eseguire Svcutil.exe sugli assembly compilati.  
   
     > [!NOTE]
     >  Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
@@ -36,9 +36,9 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>Per esportare metadati per un servizio compilato  
   
-1.  Compilare l'implementazione del servizio in un assembly eseguibile.  
+1. Compilare l'implementazione del servizio in un assembly eseguibile.  
   
-2.  Creare un file di configurazione per l'eseguibile del servizio e aggiungere una configurazione del servizio.  
+2. Creare un file di configurazione per l'eseguibile del servizio e aggiungere una configurazione del servizio.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,7 +53,7 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
     </configuration>  
     ```  
   
-3.  Eseguire Svcutil.exe sull'eseguibile del servizio compilato utilizzando l'opzione `/serviceName` per specificare il nome di configurazione del servizio.  
+3. Eseguire Svcutil.exe sull'eseguibile del servizio compilato utilizzando l'opzione `/serviceName` per specificare il nome di configurazione del servizio.  
   
     > [!NOTE]
     >  Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  
@@ -64,9 +64,9 @@ Svcutil.exe è in grado di esportare metadati per servizi, contratti e tipi di d
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>Per esportare metadati per contratti dati compilati  
   
-1.  Compilare le implementazioni del contratto dati in una o più librerie di classi.  
+1. Compilare le implementazioni del contratto dati in una o più librerie di classi.  
   
-2.  Eseguire Svcutil.exe sugli assembly compilati utilizzando l'opzione `/dataContract` per specificare che devono essere generati solo i metadati dei contratti dati.  
+2. Eseguire Svcutil.exe sugli assembly compilati utilizzando l'opzione `/dataContract` per specificare che devono essere generati solo i metadati dei contratti dati.  
   
     > [!NOTE]
     >  Potrebbe essere necessario usare l'opzione `/reference` per specificare il percorso del file di eventuali assembly dipendenti.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329349"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Procedura: Proteggere un servizio con credenziali di Windows
 Questo argomento illustra come abilitare la sicurezza del trasporto in un servizio Windows Communication Foundation (WCF) che risiede in un dominio di Windows e viene chiamato dai client nello stesso dominio. Per altre informazioni su questo scenario, vedere [protezione del trasporto con autenticazione di Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Per un'applicazione di esempio, vedere la [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) esempio.  
@@ -30,15 +30,15 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
   
 #### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>Per creare un oggetto WSHttpBinding che usa le credenziali di Windows e la protezione dei messaggio  
   
-1.  Il codice di questa procedura viene inserito all'inizio del metodo `Run` della classe `Test` nel codice del servizio riportato nella sezione Esempio.  
+1. Il codice di questa procedura viene inserito all'inizio del metodo `Run` della classe `Test` nel codice del servizio riportato nella sezione Esempio.  
   
-2.  Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding>.  
+2. Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Impostare la proprietà <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> della classe <xref:System.ServiceModel.WSHttpSecurity> su <xref:System.ServiceModel.SecurityMode.Message>.  
+3. Impostare la proprietà <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> della classe <xref:System.ServiceModel.WSHttpSecurity> su <xref:System.ServiceModel.SecurityMode.Message>.  
   
-4.  Impostare la proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> della classe <xref:System.ServiceModel.MessageSecurityOverHttp> su <xref:System.ServiceModel.MessageCredentialType.Windows>.  
+4. Impostare la proprietà <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> della classe <xref:System.ServiceModel.MessageSecurityOverHttp> su <xref:System.ServiceModel.MessageCredentialType.Windows>.  
   
-5.  Il codice per questa procedura è il seguente:  
+5. Il codice per questa procedura è il seguente:  
   
      [!code-csharp[c_SecureWindowsService#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#1)]
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
@@ -48,19 +48,19 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Per usare un'associazione in un servizio  
   
-1.  Inserire il codice di questa procedura dopo il codice della procedura precedente.  
+1. Inserire il codice di questa procedura dopo il codice della procedura precedente.  
   
-2.  Creare una variabile <xref:System.Type> denominata `contractType` e assegnarle il tipo dell'interfaccia (`ICalculator`). Quando si usa Visual Basic, usare il `GetType` operatore; quando si usa c#, usare il `typeof` (parola chiave).  
+2. Creare una variabile <xref:System.Type> denominata `contractType` e assegnarle il tipo dell'interfaccia (`ICalculator`). Quando si usa Visual Basic, usare il `GetType` operatore; quando si usa c#, usare il `typeof` (parola chiave).  
   
-3.  Creare una seconda variabile <xref:System.Type> denominata `serviceType` e assegnarle il tipo del contratto implementato (`Calculator`).  
+3. Creare una seconda variabile <xref:System.Type> denominata `serviceType` e assegnarle il tipo del contratto implementato (`Calculator`).  
   
-4.  Creare un'istanza della classe <xref:System.Uri> denominata `baseAddress` con l'indirizzo di base del servizio. L'indirizzo di base deve avere uno schema corrispondente al trasporto. In questo caso, lo schema di trasporto è HTTP e l'indirizzo include il particolare Uniform Resource Identifier (URI) "localhost" e una porta (8036) il numero e un indirizzo di base dell'endpoint ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
+4. Creare un'istanza della classe <xref:System.Uri> denominata `baseAddress` con l'indirizzo di base del servizio. L'indirizzo di base deve avere uno schema corrispondente al trasporto. In questo caso, lo schema di trasporto è HTTP e l'indirizzo include il particolare Uniform Resource Identifier (URI) "localhost" e una porta (8036) il numero e un indirizzo di base dell'endpoint ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
-5.  Creare un'istanza della classe <xref:System.ServiceModel.ServiceHost> class con le variabili `serviceType` e `baseAddress`.  
+5. Creare un'istanza della classe <xref:System.ServiceModel.ServiceHost> class con le variabili `serviceType` e `baseAddress`.  
   
-6.  Aggiungere un endpoint al servizio tramite l'interfaccia `contractType`, l'associazione e un nome di endpoint (secureCalculator). Un client deve concatenare l'indirizzo di base e il nome dell'endpoint quando avvia una chiamata al servizio.  
+6. Aggiungere un endpoint al servizio tramite l'interfaccia `contractType`, l'associazione e un nome di endpoint (secureCalculator). Un client deve concatenare l'indirizzo di base e il nome dell'endpoint quando avvia una chiamata al servizio.  
   
-7.  Chiamare il metodo <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> per avviare il servizio. Il codice per questa procedura viene illustrato di seguito:  
+7. Chiamare il metodo <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> per avviare il servizio. Il codice per questa procedura viene illustrato di seguito:  
   
      [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
@@ -74,19 +74,19 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Per usare un'associazione in un client con codice  
   
-1.  Usare lo strumento SvcUtil.exe per generare il codice del proxy tramite i metadati del servizio. Per altre informazioni, vedere [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Il codice proxy generato eredita il <xref:System.ServiceModel.ClientBase%601> (classe), che assicura che ogni client disponga di costruttori necessari, i metodi e proprietà per comunicare con un servizio WCF. In questo esempio, il codice generato include la classe `CalculatorClient` che implementa l'interfaccia `ICalculator`, consentendo la compatibilità con il codice del servizio.  
+1. Usare lo strumento SvcUtil.exe per generare il codice del proxy tramite i metadati del servizio. Per altre informazioni, vedere [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Il codice proxy generato eredita il <xref:System.ServiceModel.ClientBase%601> (classe), che assicura che ogni client disponga di costruttori necessari, i metodi e proprietà per comunicare con un servizio WCF. In questo esempio, il codice generato include la classe `CalculatorClient` che implementa l'interfaccia `ICalculator`, consentendo la compatibilità con il codice del servizio.  
   
-2.  Il codice di questa procedura viene inserito all'inizio del metodo `Main` del programma client.  
+2. Il codice di questa procedura viene inserito all'inizio del metodo `Main` del programma client.  
   
-3.  Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità di sicurezza su `Message` e il tipo di credenziale client su `Windows`. Nell'esempio viene denominata la variabile `clientBinding`.  
+3. Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità di sicurezza su `Message` e il tipo di credenziale client su `Windows`. Nell'esempio viene denominata la variabile `clientBinding`.  
   
-4.  Creare un'istanza della classe <xref:System.ServiceModel.EndpointAddress> denominata `serviceAddress`. Inizializzare l'istanza con l'indirizzo di base concatenato al nome dell'endpoint.  
+4. Creare un'istanza della classe <xref:System.ServiceModel.EndpointAddress> denominata `serviceAddress`. Inizializzare l'istanza con l'indirizzo di base concatenato al nome dell'endpoint.  
   
-5.  Creare un'istanza della classe client generata con le variabili `serviceAddress` e `clientBinding`.  
+5. Creare un'istanza della classe client generata con le variabili `serviceAddress` e `clientBinding`.  
   
-6.  Chiamare il metodo <xref:System.ServiceModel.ClientBase%601.Open%2A>, come mostrato nel codice seguente.  
+6. Chiamare il metodo <xref:System.ServiceModel.ClientBase%601.Open%2A>, come mostrato nel codice seguente.  
   
-7.  Chiamare il servizio e visualizzare i risultati.  
+7. Chiamare il servizio e visualizzare i risultati.  
   
      [!code-csharp[c_secureWindowsClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#1)]
      [!code-vb[c_secureWindowsClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#1)]  
@@ -100,15 +100,15 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
   
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>Per abilitare la protezione del trasferimento in un servizio in un dominio Windows usando la configurazione  
   
-1.  Aggiungere un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento per il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione dell'elemento del file di configurazione.  
+1. Aggiungere un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento per il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione dell'elemento del file di configurazione.  
   
-2.  Aggiungere un <`binding`> elemento per il <`WSHttpBinding`> e impostare il `configurationName` attributo su un valore appropriato all'applicazione.  
+2. Aggiungere un <`binding`> elemento per il <`WSHttpBinding`> e impostare il `configurationName` attributo su un valore appropriato all'applicazione.  
   
-3.  Aggiungere un <`security`> e impostare il `mode` attributo al messaggio.  
+3. Aggiungere un <`security`> e impostare il `mode` attributo al messaggio.  
   
-4.  Aggiungere un <`message`> e impostare il `clientCredentialType` Windows dell'attributo.  
+4. Aggiungere un <`message`> e impostare il `clientCredentialType` Windows dell'attributo.  
   
-5.  Nel file di configurazione del servizio, sostituire la sezione `<bindings>` con il codice seguente. Se si dispone già di un file di configurazione del servizio, vedere [utilizzando le associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+5. Nel file di configurazione del servizio, sostituire la sezione `<bindings>` con il codice seguente. Se si dispone già di un file di configurazione del servizio, vedere [utilizzando le associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
     ```xml  
     <bindings>  
@@ -127,17 +127,17 @@ Questo argomento illustra come abilitare la sicurezza del trasporto in un serviz
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Per usare un'associazione in un client con configurazione  
   
-1.  Usare lo strumento SvcUtil.exe per generare il codice proxy e il file di configurazione tramite i metadati del servizio. Per altre informazioni, vedere [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1. Usare lo strumento SvcUtil.exe per generare il codice proxy e il file di configurazione tramite i metadati del servizio. Per altre informazioni, vedere [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
-2.  Sostituire il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione del file di configurazione generato con il codice di configurazione nella sezione precedente.  
+2. Sostituire il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione del file di configurazione generato con il codice di configurazione nella sezione precedente.  
   
-3.  Il codice procedurale viene inserito all'inizio del metodo `Main` del programma client.  
+3. Il codice procedurale viene inserito all'inizio del metodo `Main` del programma client.  
   
-4.  Creare un'istanza della classe client generata che passi il nome dell'associazione nel file di configurazione come parametro di input.  
+4. Creare un'istanza della classe client generata che passi il nome dell'associazione nel file di configurazione come parametro di input.  
   
-5.  Chiamare il metodo <xref:System.ServiceModel.ClientBase%601.Open%2A>, come mostrato nel codice seguente.  
+5. Chiamare il metodo <xref:System.ServiceModel.ClientBase%601.Open%2A>, come mostrato nel codice seguente.  
   
-6.  Chiamare il servizio e visualizzare i risultati.  
+6. Chiamare il servizio e visualizzare i risultati.  
   
      [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]  
   

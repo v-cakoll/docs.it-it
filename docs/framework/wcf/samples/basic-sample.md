@@ -2,12 +2,12 @@
 title: Esempio di base
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 22d5428da57b2fc8f9b97d4553b86ac2a918f0e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083018"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327971"
 ---
 # <a name="basic-sample"></a>Esempio di base
 In questo esempio viene illustrato come rendere individuabile un servizio e come cercare e chiamare un servizio individuabile. Questo esempio è costituito da due progetti, ovvero il servizio e il client.
@@ -82,15 +82,15 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per altre informazioni, vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Per altre informazioni, vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  In Visual Studio 2012 aprire sln e compilare l'esempio.  
+2. In Visual Studio 2012 aprire sln e compilare l'esempio.  
   
-3.  Eseguire l'applicazione service.exe.  
+3. Eseguire l'applicazione service.exe.  
   
-4.  Dopo aver avviato il servizio, eseguire client.exe.  
+4. Dopo aver avviato il servizio, eseguire client.exe.  
   
-5.  Si osservi che il client è stato in grado di trovare il servizio senza conoscerne l'indirizzo.  
+5. Si osservi che il client è stato in grado di trovare il servizio senza conoscerne l'indirizzo.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

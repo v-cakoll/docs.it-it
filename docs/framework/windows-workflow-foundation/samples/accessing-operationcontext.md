@@ -2,12 +2,12 @@
 title: Accesso a OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327958"
 ---
 # <a name="accessing-operationcontext"></a>Accesso a OperationContext
 Questo esempio viene illustrato come l'attività di messaggistica (<xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.Send>) può essere utilizzato con un'attività di ambiti personalizzata per accedere <xref:System.ServiceModel.OperationContext.Current%2A> e allegare o recuperare un'intestazione di messaggio personalizzata all'interno di un messaggio in ingresso o in uscita.  
@@ -20,13 +20,13 @@ Questo esempio viene illustrato come l'attività di messaggistica (<xref:System.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  In questo esempio viene esposto un servizio flusso di lavoro tramite endpoint HTTP. Per eseguire questo esempio, corretto elenchi ACL URL deve essere aggiunto (vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate), tramite l'esecuzione di Visual Studio come amministratore oppure eseguendo il comando seguente in un prompt dei comandi con privilegi elevati per aggiungere gli ACL appropriati. Assicurarsi che vengono sostituiti il dominio e il nome utente.  
+1. In questo esempio viene esposto un servizio flusso di lavoro tramite endpoint HTTP. Per eseguire questo esempio, corretto elenchi ACL URL deve essere aggiunto (vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate), tramite l'esecuzione di Visual Studio come amministratore oppure eseguendo il comando seguente in un prompt dei comandi con privilegi elevati per aggiungere gli ACL appropriati. Assicurarsi che vengono sostituiti il dominio e il nome utente.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  Una volta aggiunti gli elenchi ACL URL, usare i passaggi seguenti.  
+2. Una volta aggiunti gli elenchi ACL URL, usare i passaggi seguenti.  
   
     1.  Compilare la soluzione.  
   

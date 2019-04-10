@@ -2,19 +2,19 @@
 title: Ambito e visibilità della definizione di attività
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325215"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Ambito e visibilità della definizione di attività
 In modo analogo all'ambito e alla visibilità di un oggetto, per ambito di definizione e visibilità di attività si intende la capacità di altri oggetti o attività di accedere ai membri dell'attività stessa. La definizione di attività viene eseguita tramite le implementazioni seguenti.  
   
-1.  Definizione dei membri (oggetti <xref:System.Activities.Argument>, <xref:System.Activities.Variable> e <xref:System.Activities.ActivityDelegate> e attività figlio) che un'attività espone ai propri utenti.  
+1. Definizione dei membri (oggetti <xref:System.Activities.Argument>, <xref:System.Activities.Variable> e <xref:System.Activities.ActivityDelegate> e attività figlio) che un'attività espone ai propri utenti.  
   
-2.  Implementazione della logica di esecuzione dell'attività.  
+2. Implementazione della logica di esecuzione dell'attività.  
   
  L'implementazione può coinvolgere membri non esposti a utenti dell'attività che costituiscono piuttosto dettagli dell'implementazione.  In modo analogo alla definizione di tipo, il modello di attività consente a un autore di qualificare la visibilità di un membro dell'attività in relazione alla specifica dell'attività da definire.  Tale visibilità consente di controllare aspetti dell'utilizzo del membro, ad esempio l'ambito dei dati.  
   
@@ -27,9 +27,9 @@ In modo analogo all'ambito e alla visibilità di un oggetto, per ambito di defin
 ### <a name="activity-members"></a>Membri dell'attività  
  Il modello di attività definisce gli argomenti, le variabili, i delegati e le attività figlio resi disponibili agli utenti dall'attività stessa. Ciascuno di questi membri può essere dichiarato come `public` o `private`. I membri pubblici vengono configurati dall'utente dell'attività, mentre i membri configurati come `private` usano un'implementazione definita dall'autore dell'attività. Le regole di visibilità per l'ambito dei dati sono le seguenti.  
   
-1.  Membri pubblici e membri pubblici di attività figlio pubbliche possono fare riferimento a variabili pubbliche.  
+1. Membri pubblici e membri pubblici di attività figlio pubbliche possono fare riferimento a variabili pubbliche.  
   
-2.  Membri privati e membri pubblici di attività figlio pubbliche possono fare riferimento ad argomenti e variabili private.  
+2. Membri privati e membri pubblici di attività figlio pubbliche possono fare riferimento ad argomenti e variabili private.  
   
  Un membro che può essere impostato dall'utente di un'attività non deve mai essere reso privato.  
   

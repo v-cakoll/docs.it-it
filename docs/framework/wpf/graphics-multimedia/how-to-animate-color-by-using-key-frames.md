@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: d911b1f14cf71aebf95b566eb710fec8ec9e2a29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e579c4beb757ccf58eb1b9ca1f3852a5b96cac1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095167"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326086"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>Procedura: Aggiungere un'animazione al colore usando fotogrammi chiave
 In questo esempio illustra come animare la <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> usando fotogrammi chiave.  
@@ -22,11 +22,11 @@ In questo esempio illustra come animare la <xref:System.Windows.Media.SolidColor
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.Media.SolidColorBrush.Color%2A> proprietà di un <xref:System.Windows.Media.SolidColorBrush>. Questa animazione usa tre fotogrammi chiave nel modo seguente:  
   
-1.  Durante i primi due secondi, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.LinearColorKeyFrame> classe a modificare gradualmente il colore da verde a rosso. Fotogrammi chiave lineari come <xref:System.Windows.Media.Animation.LinearColorKeyFrame> creano una transizione lineare uniforme tra i valori.  
+1. Durante i primi due secondi, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.LinearColorKeyFrame> classe a modificare gradualmente il colore da verde a rosso. Fotogrammi chiave lineari come <xref:System.Windows.Media.Animation.LinearColorKeyFrame> creano una transizione lineare uniforme tra i valori.  
   
-2.  Alla fine del successivo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> classe per modificare rapidamente il colore da rosso a giallo. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> creano cambiamenti improvvisi tra valori, vale a dire, la modifica di colore in questa parte dell'animazione eseguite più rapidamente e risulta immediatamente evidente.  
+2. Alla fine del successivo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> classe per modificare rapidamente il colore da rosso a giallo. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> creano cambiamenti improvvisi tra valori, vale a dire, la modifica di colore in questa parte dell'animazione eseguite più rapidamente e risulta immediatamente evidente.  
   
-3.  I due secondi finali viene usata un'istanza del <xref:System.Windows.Media.Animation.SplineColorKeyFrame> classe modificare nuovamente il colore, questa volta da giallo a verde. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplineColorKeyFrame> creano una transizione variabile tra i valori a seconda dei valori del <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> proprietà. In questo esempio, il cambio di colore inizia lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
+3. I due secondi finali viene usata un'istanza del <xref:System.Windows.Media.Animation.SplineColorKeyFrame> classe modificare nuovamente il colore, questa volta da giallo a verde. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplineColorKeyFrame> creano una transizione variabile tra i valori a seconda dei valori del <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> proprietà. In questo esempio, il cambio di colore inizia lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
   
  [!code-csharp[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/ColorAnimationUsingKeyFramesExample.cs#coloranimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/coloranimationusingkeyframesexample.vb#coloranimationusingkeyframeswholepage)]

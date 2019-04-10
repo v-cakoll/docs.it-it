@@ -2,12 +2,12 @@
 title: Riallocazione della finestra di progettazione
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328166"
 ---
 # <a name="designer-rehosting"></a>Riallocazione della finestra di progettazione
 La riallocazione della finestra di progettazione è un scenario comune che si riferisce all'hosting dell'area di progettazione flussi di lavoro all'interno di un'applicazione personalizzata. La maggior parte degli utenti dell'applicazione host usa Visual Studio, tuttavia esistono scenari in cui potrebbe essere utile visualizzare la progettazione flussi di lavoro in un'applicazione:  
@@ -114,11 +114,11 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Utilizzo dell'esempio  
   
-1.  Aprire la soluzione Designerrehosting in Visual Studio 2010.  
+1. Aprire la soluzione Designerrehosting in Visual Studio 2010.  
   
-2.  Premere F5 per compilare ed eseguire l'applicazione.  
+2. Premere F5 per compilare ed eseguire l'applicazione.  
   
-3.  Un'applicazione WPF viene avviata con una finestra di progettazione riallocata.  
+3. Un'applicazione WPF viene avviata con una finestra di progettazione riallocata.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

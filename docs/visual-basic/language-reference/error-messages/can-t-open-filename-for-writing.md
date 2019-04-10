@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
-ms.openlocfilehash: 289b024569900b94c9f41fe0f98a817ce907de0f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b92a2c6f3de02a1a31ad131004dd613b15f01f19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325163"
 ---
 # <a name="cant-open-filename-for-writing"></a>Non è possibile aprire '\<nomefile >' per la scrittura
 Impossibile aprire il file specificato per la scrittura, probabilmente perché è già stato aperto.  
@@ -21,12 +21,12 @@ Impossibile aprire il file specificato per la scrittura, probabilmente perché �
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Chiudere il file e riaprirlo.  
+1. Chiudere il file e riaprirlo.  
   
-2.  Controllare le autorizzazioni del file.  
+2. Controllare le autorizzazioni del file.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [Scrittura su file](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Scrittura in file](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

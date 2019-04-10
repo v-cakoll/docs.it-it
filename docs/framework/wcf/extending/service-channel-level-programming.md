@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197197"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329130"
 ---
 # <a name="service-channel-level-programming"></a>Programmazione client a livello di canale
 In questo argomento viene descritto come scrivere un'applicazione del servizio Windows Communication Foundation (WCF) senza usare il <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> e il modello a oggetti associato.  
@@ -18,15 +18,15 @@ In questo argomento viene descritto come scrivere un'applicazione del servizio W
 ## <a name="receiving-messages"></a>Ricezione di messaggi  
  Per prepararsi alla ricezione e all'elaborazione di messaggi, è necessario eseguire i passaggi seguenti:  
   
-1.  Creare un'associazione.  
+1. Creare un'associazione.  
   
-2.  Generare un listener di canale.  
+2. Generare un listener di canale.  
   
-3.  Aprire il listener del canale.  
+3. Aprire il listener del canale.  
   
-4.  Leggere la richiesta e inviare una risposta.  
+4. Leggere la richiesta e inviare una risposta.  
   
-5.  Chiudere tutti gli oggetti canale.  
+5. Chiudere tutti gli oggetti canale.  
   
 #### <a name="creating-a-binding"></a>Creazione di un'associazione  
  Il primo passaggio dell'attesa e della ricezione di messaggi consiste nel creare un'associazione. WCF viene fornito con diverse associazioni incorporate o fornite dal sistema che è possibile utilizzare direttamente creando uno di essi. È inoltre possibile creare un'associazione personalizzata creando un'istanza della classe CustomBinding, operazione che viene eseguita nel codice dell'elenco 1.  
@@ -36,7 +36,7 @@ In questo argomento viene descritto come scrivere un'applicazione del servizio W
 #### <a name="building-a-channellistener"></a>Generazione di un listener di canale.  
  Dopo avere creato un'associazione, si chiama il metodo <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> per generare il listener del canale in cui il parametro di tipo è il canale da creare. In questo esempio si usa <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> perché si desidera ascoltare i messaggi in arrivo in un modello di scambio di messaggi Request/Reply.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> viene utilizzato per ricevere messaggi di richiesta e restituire messaggi di risposta. La chiamata a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> restituisce un elemento <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, utilizzabile per ricevere il messaggio di richiesta e restituire un messaggio di risposta.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> viene usato per la ricezione di messaggi e invio di messaggi di risposta richiesta. La chiamata a <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> restituisce un elemento <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, utilizzabile per ricevere il messaggio di richiesta e restituire un messaggio di risposta.  
   
  Quando si crea il listener, si passa l'indirizzo di rete su cui è in ascolto, in questo caso `http://localhost:8080/channelapp`. In genere, ogni canale del trasporto supporta uno o probabilmente più schemi di indirizzo, ad esempio il trasporto HTTP supporta entrambi gli schemi http e https.  
   

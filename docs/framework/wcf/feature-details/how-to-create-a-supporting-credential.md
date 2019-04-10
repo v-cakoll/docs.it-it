@@ -2,12 +2,12 @@
 title: 'Procedura: Creare una credenziale di supporto'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326047"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procedura: Creare una credenziale di supporto
 È possibile avere uno schema di sicurezza personalizzato che richiede più di una credenziale. Ad esempio, è possibile che un servizio richieda a un client non solo un nome utente e una password, ma anche una credenziale che dimostri che l'utente del client abbia un'età superiore a 18 anni. La seconda credenziale è un *credenziale di supporto*. Questo argomento illustra come implementare tali credenziali in un client Windows Communication Foundation (WCF).  
@@ -68,9 +68,9 @@ ms.locfileid: "59093709"
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Per creare un'associazione personalizzata che includa credenziali di supporto  
   
-1.  Creare un elemento di associazione di sicurezza. Nell'esempio seguente viene creata una classe <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> con la modalità di autenticazione `UserNameForCertificate`. Usare il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
+1. Creare un elemento di associazione di sicurezza. Nell'esempio seguente viene creata una classe <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> con la modalità di autenticazione `UserNameForCertificate`. Usare il metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>.  
   
-2.  Aggiungere il parametro di supporto alla raccolta dei tipi restituita dalla proprietà appropriata (`Endorsing`, `Signed`, `SignedEncrypted` o `SignedEndorsed`). I tipi nello spazio dei nomi <xref:System.ServiceModel.Security.Tokens> includono tipi comunemente usati, ad esempio <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Aggiungere il parametro di supporto alla raccolta dei tipi restituita dalla proprietà appropriata (`Endorsing`, `Signed`, `SignedEncrypted` o `SignedEndorsed`). I tipi nello spazio dei nomi <xref:System.ServiceModel.Security.Tokens> includono tipi comunemente usati, ad esempio <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
   
 ## <a name="example"></a>Esempio  
   

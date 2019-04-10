@@ -2,12 +2,12 @@
 title: Formattazione HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094450"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331039"
 ---
 # <a name="wcf-web-http-formatting"></a>Formattazione HTTP Web WCF
 Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta. Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.  
@@ -15,13 +15,13 @@ Il modello di programmazione HTTP Web WCF consente di determinare in modo dinami
 ## <a name="automatic-formatting"></a>Formattazione automatica  
  Se abilitata, la formattazione automatica sceglie il formato migliore nel quale verrà restituita la risposta, controllando gli elementi seguenti, in ordine:  
   
-1.  i tipi di supporto nell'intestazione Accept del messaggio di richiesta;  
+1. i tipi di supporto nell'intestazione Accept del messaggio di richiesta;  
   
-2.  il valore content-type del messaggio di richiesta;  
+2. il valore content-type del messaggio di richiesta;  
   
-3.  l'impostazione del formato predefinita nell'operazione;  
+3. l'impostazione del formato predefinita nell'operazione;  
   
-4.  l'impostazione del formato predefinita in WebHttpBehavior.  
+4. l'impostazione del formato predefinita in WebHttpBehavior.  
   
  Se il messaggio di richiesta contiene un'intestazione Accept per un tipo che supporta Cerca l'infrastruttura di Windows Communication Foundation (WCF). Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate. Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content-type del messaggio di richiesta. Se non viene specificato alcun valore content-type adatto, viene usata l'impostazione del formato predefinita per l'operazione. Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Quando questa proprietà è impostata su `true`, l'infrastruttura di WCF determina il formato migliore da usare. La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti. La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione. Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
   
