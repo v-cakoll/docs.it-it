@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Enter key [WPF], detecting
 - keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
-ms.openlocfilehash: 1796127d33087a3fd4504d03f175f8afe5323630
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a99da5804bbc31897198b9b6d9e21da9f17dfe26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204614"
 ---
 # <a name="how-to-detect-when-the-enter-key-pressed"></a>Procedura: Rilevare quando il tasto premuto immettere
 Questo esempio viene illustrato come rilevare il momento di <xref:System.Windows.Input.Key.Enter> tasto sulla tastiera.  
@@ -33,5 +33,6 @@ Questo esempio viene illustrato come rilevare il momento di <xref:System.Windows
  [!code-vb[keydown#KeyDownSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Cenni preliminari sull'input](input-overview.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)

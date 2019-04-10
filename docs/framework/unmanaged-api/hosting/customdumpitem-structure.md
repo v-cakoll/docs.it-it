@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185926"
 ---
 # <a name="customdumpitem-structure"></a>Struttura CustomDumpItem
 Viene descritto un elemento da aggiungere a un'immagine personalizzata in segnalazione errori.  
@@ -39,7 +39,7 @@ struct {
   
 ## <a name="members"></a>Membri  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`itemKind`|Un' [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valore che indica il tipo di elemento da aggiungere.|  
 |`pReserved`|Non è attualmente utilizzato. Gli elementi aggiunti all'unione devono essere superiori a dimensioni del puntatore. Se un `struct` è obbligatorio, è necessario allocarla separatamente e su di esso.|  
@@ -57,4 +57,5 @@ struct {
  **Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strutture di hosting](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

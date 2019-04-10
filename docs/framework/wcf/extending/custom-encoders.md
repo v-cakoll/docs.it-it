@@ -2,12 +2,12 @@
 title: Codificatori personalizzati
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190574"
 ---
 # <a name="custom-encoders"></a>Codificatori personalizzati
 In questo argomento verranno illustrate le procedure per creare codificatori personalizzati.  
@@ -50,7 +50,7 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
 ### <a name="pooling"></a>Pooling  
  Ognuna delle implementazioni del codificatore tenta di eseguire il massimo numero possibile di operazioni pooling. La riduzione delle allocazioni è la misura più comunemente adottata per migliorare le prestazioni del codice gestito. Per eseguire queste operazioni di pooling le implementazioni usano la classe `SynchronizedPool`. Il file C# contiene una descrizione delle ottimizzazioni aggiuntive usate da questa classe.  
   
- Le istanze <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> vengono inserite nel pool e reinizializzate per impedire l'allocazione di nuove istanze per ogni messaggio. Per i lettori, un callback `OnClose` richiede il lettore quando viene chiamato `Close()`. Il codificatore ricicla inoltre alcuni oggetti di stato dei messaggi usati durante la costruzione dei messaggi. Le dimensioni di questi pool sono configurabili mediante le proprietà `MaxReadPoolSize` e `MaxWritePoolSize` in ognuna delle tre classi derivata da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ <xref:System.Xml.XmlDictionaryReader> e <xref:System.Xml.XmlDictionaryWriter> istanze sono in pool e reinizializzate per impedire l'allocazione di nuove per ogni messaggio. Per i lettori, un callback `OnClose` richiede il lettore quando viene chiamato `Close()`. Il codificatore ricicla inoltre alcuni oggetti di stato dei messaggi usati durante la costruzione dei messaggi. Le dimensioni di questi pool sono configurabili mediante le proprietà `MaxReadPoolSize` e `MaxWritePoolSize` in ognuna delle tre classi derivata da <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Codifica binaria  
  Quando la codifica binaria usa sessioni, la stringa del dizionario dinamica deve essere comunicata al destinatario del messaggio. Questa operazione viene eseguita anteponendo al messaggio le stringhe del dizionario dinamiche. Il destinatario rimuove le stringhe, le aggiunge alla sessione ed elabora il messaggio. Perché le stringhe del dizionario vengano passate correttamente è necessario che il trasporto venga memorizzato nel buffer.  
@@ -79,9 +79,9 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
   
 -   I metodi principali di questa classe di cui è necessario eseguire l'override sono:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> che accetta un oggetto <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> e lo scrive in un oggetto <xref:System.IO.Stream>.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> che accetta un <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> dell'oggetto e lo scrive in un <xref:System.IO.Stream> oggetto.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> che accetta un oggetto <xref:System.IO.Stream> e una dimensione di intestazione massima e restituisce un oggetto <xref:System.ServiceModel.Channels.Message>.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> che accetta un <xref:System.IO.Stream> oggetto e una dimensione di intestazione massima e restituisce un <xref:System.ServiceModel.Channels.Message> oggetto.  
   
  È il codice scritto in questi metodi che gestisce la conversione tra il protocollo di trasporto standard e la codifica personalizzata.  
   
@@ -92,9 +92,10 @@ In questo argomento verranno illustrate le procedure per creare codificatori per
  Sono disponibili due esempi forniti con WCF che illustrano questo processo con codice di esempio: [Codificatore di messaggi personalizzato: Codificatore di testi personalizzato](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) e [codificatore di messaggi personalizzato: Codificatore di compressione](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>
-- [Panoramica dell'architettura di trasferimento dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Panoramica dell'architettura di trasferimento dei dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
 - [Scelta di un codificatore di messaggi](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [Scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

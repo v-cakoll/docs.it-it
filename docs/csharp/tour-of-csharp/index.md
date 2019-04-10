@@ -1,18 +1,18 @@
 ---
 title: Panoramica di C# | Guida a C#
 description: Introduzione a C# Informazioni di base sul linguaggio.
-ms.date: 08/10/2016
-ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152061"
 ---
 # <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#
 
-C#, pronunciato "See Sharp", è un linguaggio di programmazione semplice, moderno, orientato a oggetti e indipendente dai tipi. C# ha le sue radici nella famiglia di linguaggi C e risulterà immediatamente familiare ai programmatori di C, C++, Java e JavaScript.
+C#, pronunciato "See Sharp", è un linguaggio di programmazione semplice, moderno, orientato a oggetti e indipendente dai tipi. C# ha le sue radici nella famiglia di linguaggi C e risulterà immediatamente familiare ai programmatori di C, C++, Java e JavaScript. Questa panoramica offre una presentazione dei componenti principali del linguaggio. Se si vuole esplorare il linguaggio tramite esempi interattivi, provare le esercitazioni [Introduzione a C# ](../tutorials/intro-to-csharp/index.md).
 
 C# è un linguaggio orientato a oggetti, ma include anche il supporto per la programmazione ***orientata ai componenti***. La progettazione software contemporanea è basata in misura sempre maggiore su componenti software costituiti da pacchetti di funzionalità autonomi e autodescrittivi. L'aspetto chiave di tali componenti è che presentano un modello di programmazione con proprietà, metodi ed eventi. Presentano inoltre attributi che forniscono informazioni dichiarative sul componente. Questi componenti, infine, includono la propria documentazione. C# offre costrutti di linguaggio in grado di supportare direttamente questi concetti. Per questo motivo, C# è un linguaggio estremamente naturale in cui creare e usare componenti software.
 
@@ -43,7 +43,6 @@ Hello, World
 > [!IMPORTANT]
 > Il comando `csc` compila l'intero framework ed è possibile che non sia disponibile su tutte le piattaforme.
 
-
 Il programma "Hello World" inizia con una direttiva `using` che fa riferimento allo spazio dei nomi `System`. Gli spazi dei nomi consentono di organizzare i programmi e le librerie C# in modo gerarchico. Gli spazi dei nomi contengono tipi e altri spazi dei nomi. Lo stazio dei nomi `System`, ad esempio, contiene diversi tipi, come la classe `Console` a cui viene fatto riferimento nel programma, e altri spazi dei nomi, come `IO` e `Collections`. Una direttiva `using` che fa riferimento a un determinato spazio dei nomi consente l'uso non qualificato dei tipi che sono membri di tale spazio dei nomi. Grazie alla direttiva `using`, il programma può usare `Console.WriteLine` come sintassi abbreviata per `System.Console.WriteLine`.
 
 La classe `Hello` dichiarata dal programma "Hello World" ha un solo membro, ovvero il metodo denominato `Main`. Il metodo `Main` viene dichiarato con il modificatore static. Mentre i metodi di istanza possono fare riferimento a una particolare istanza dell'oggetto contenitore usando la parola chiave `this`, i metodi statici operano senza riferimento a un determinato oggetto. Per convenzione, un metodo statico denominato `Main` funge da punto di ingresso di un programma.
@@ -57,7 +56,7 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
 * [Tipi e variabili](types-and-variables.md)
     - Vengono offerte informazioni sui ***tipi valore***, i ***tipi riferimento*** e le ***variabili*** del linguaggio C#.
 * [Espressioni](expressions.md)
-    - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori*** e producono un valore.
+    - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori***. e producono un valore.
 * [Istruzioni](statements.md)
     - Le ***istruzioni*** consentono di esprimere le azioni di un programma.
 * [Classi e oggetti](classes-and-objects.md)
@@ -76,4 +75,4 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
      * Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
 
 > [!div class="step-by-step"]
-> [avanti](program-structure.md)
+> [Successivo](program-structure.md)

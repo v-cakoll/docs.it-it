@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: a36cdf9f8cce935c8310e2ce9ffc79f67d077fe6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225144"
 ---
 # <a name="pack-uris-in-wpf"></a>URI di tipo pack in WPF
 In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] consentono di identificare e caricare i file in molti modi, inclusi i seguenti:  
@@ -38,8 +38,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
 -   L'applicazione del sito di origine.  
   
  Per fornire un meccanismo coerente di identificazione e caricamento di questi tipi di file da queste posizioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sfrutta l'estensibilità del *schema URI di tipo pack*. In questo argomento fornisce una panoramica dello schema, spiega come costruire pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per un'ampia gamma di scenari, illustra absolute e relative [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] e [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] risoluzione, prima che illustrano come usare pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] da entrambi markup e il codice.  
-  
-  
+
 <a name="The_Pack_URI_Scheme"></a>   
 ## <a name="the-pack-uri-scheme"></a>Schema URI di tipo pack  
  Il pacchetto [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] lo schema viene usato per il [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) specifica (OPC), che descrive un modello per organizzare e identificare il contenuto. Gli elementi chiave di questo modello sono pacchetti e parti, in cui un *package* è un contenitore logico per uno o più logica *parti*. La figura seguente illustra questo concetto.  
@@ -81,7 +80,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 <a name="Resource_File_Pack_URIs___Local_Assembly"></a>   
 ## <a name="resource-file-pack-uris"></a>URI di tipo pack di file di risorse  
- File di risorse sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` elementi e sono compilati in assembly. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta la costruzione di pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che può essere utilizzato per identificare i file di risorse che vengono compilati nell'assembly locale o in un assembly a cui viene fatto riferimento dall'assembly locale.  
+ File di risorse sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Resource` elementi e sono compilati in assembly. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta la costruzione di pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] che può essere utilizzato per identificare i file di risorse che vengono compilati nell'assembly locale o in un assembly a cui viene fatto riferimento dall'assembly locale.  
   
 <a name="Local_Assembly_Resource_File"></a>   
 ### <a name="local-assembly-resource-file"></a>File di risorse dell'assembly locale  
@@ -152,7 +151,7 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
  `pack://application:,,,/Subfolder/ContentFile.xaml`  
   
 > [!NOTE]
->  Non è possibile spostarsi su file di contenuto [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]. Il [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schema supporta solo lo spostamento su [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] file che si trovano nel sito di origine.  
+>  [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] i file di contenuto non è possibile spostarsi a. Il [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schema supporta solo lo spostamento su [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] file che si trovano nel sito di origine.  
   
 <a name="The_siteoforigin_____Authority"></a>   
 ## <a name="site-of-origin-pack-uris"></a>URI di tipo pack del sito di origine  
@@ -172,9 +171,9 @@ In Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../..
   
 <a name="Page_Files"></a>   
 ## <a name="page-files"></a>File di paging  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file che sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementi compilati negli assembly nello stesso modo come file di risorse. Di conseguenza [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` gli elementi possono essere identificati usando pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per i file di risorse.  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file che sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` elementi compilati negli assembly nello stesso modo come file di risorse. Di conseguenza [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` gli elementi possono essere identificati usando pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] per i file di risorse.  
   
- I tipi di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file che sono in genere configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` gli elementi hanno uno dei seguenti elementi radice:  
+ I tipi di [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file che sono in genere configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` gli elementi hanno uno dei seguenti elementi radice:  
   
 -   <xref:System.Windows.Window?displayProperty=nameWithType>  
   
@@ -424,4 +423,5 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
  Per una panoramica dei temi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vedere [Styling and Templating](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Vedere anche
-- [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md)
+
+- [File di dati e di risorse dell'applicazione WPF.](wpf-application-resource-content-and-data-files.md)

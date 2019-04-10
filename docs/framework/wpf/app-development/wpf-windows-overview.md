@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166933"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
 Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Foundation (WPF) in windows. Lo scopo principale di una finestra è ospitare contenuto tramite cui visualizzare dati e permettere agli utenti di interagire con i dati. Standalone [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applicazioni forniscono finestre proprie tramite la <xref:System.Windows.Window> classe. Questo argomento vengono presentate <xref:System.Windows.Window> prima di esporre i concetti fondamentali di creazione e gestione delle finestre in applicazioni autonome.  
   
 > [!NOTE]
 >  Ospitate da browser [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] le applicazioni, inclusi [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] e regime [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pagine, non forniscono finestre proprie. Al contrario, vengono ospitate in finestre fornite da [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Visualizzare [panoramica delle applicazioni Browser XAML di WPF](wpf-xaml-browser-applications-overview.md).  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Classe Window  
  La figura seguente illustra le parti costituenti di una finestra:  
@@ -109,9 +108,9 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurazione di una definizione di finestra per MSBuild  
  Modalità di implementazione di finestra determina come viene configurata per [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Per una finestra che viene definita con entrambi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup e code-behind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file di markup sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementi.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file di markup sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` elementi.  
   
--   File code-behind sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementi.  
+-   File code-behind sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` elementi.  
   
  Come illustrato nell'esempio seguente [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] file di progetto.  
   
@@ -130,8 +129,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Durata di una finestra  
  Come con qualsiasi classe, una finestra ha una durata che inizia alla creazione della prima istanza, dopo la quale viene aperta, attivata e disattivata e infine chiusa.  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>Apertura di una finestra  
  Per aprire una finestra, è necessario prima di tutto crearne un'istanza, come mostrato nell'esempio seguente.  
@@ -258,9 +256,8 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- Il <xref:System.Windows.Window.Closing> gestore dell'evento viene passato un <xref:System.ComponentModel.CancelEventArgs>, che implementa il `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà che è impostato su `true` per impedire la chiusura di una finestra.  
+
+ Il <xref:System.Windows.Window.Closing> gestore dell'evento viene passato un <xref:System.ComponentModel.CancelEventArgs>, che implementa il `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà che è impostato su `true` per impedire la chiusura di una finestra.  
   
  Se <xref:System.Windows.Window.Closing> non viene gestita, o viene gestito ma non annullato, la finestra verrà chiusa. Appena prima della chiusura di una finestra in realtà, <xref:System.Windows.Window.Closed> viene generato. A questo punto, non è più possibile impedire la chiusura di una finestra.  
   
@@ -275,7 +272,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 -   La finestra principale dell'applicazione viene chiusa e <xref:System.Windows.Application.ShutdownMode%2A> è <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   Chiamata del metodo <xref:System.Windows.Application.Shutdown%2A>.  
+-   <xref:System.Windows.Application.Shutdown%2A> viene chiamato.  
   
 > [!NOTE]
 >  Una volta chiusa, una finestra non può più essere riaperta.  
@@ -296,7 +293,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
  È anche possibile specificare la posizione iniziale di una <xref:System.Windows.Window> quando viene visualizzato per impostazione il <xref:System.Windows.Window.WindowStartupLocation%2A> proprietà con uno dei seguenti <xref:System.Windows.WindowStartupLocation> valori di enumerazione:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (impostazione predefinita)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (predefinito)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -384,7 +381,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
  Lo stato di una finestra può essere configurato impostando il <xref:System.Windows.Window.WindowState%2A> proprietà, che può avere uno dei seguenti <xref:System.Windows.WindowState> valori di enumerazione:  
   
--   <xref:System.Windows.WindowState.Normal> (impostazione predefinita)  
+-   <xref:System.Windows.WindowState.Normal> (predefinito)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,8 +398,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
  Per modificare l'aspetto dell'area client di una finestra, è necessario aggiungervi contenuto specifico della finestra, come pulsanti, etichette e caselle di testo. Per configurare l'area non client, <xref:System.Windows.Window> fornisce diverse proprietà, tra cui <xref:System.Windows.Window.Icon%2A> per impostare l'icona della finestra e <xref:System.Windows.Window.Title%2A> per impostarne il titolo.  
   
  È anche possibile modificare l'aspetto e il comportamento del bordo dell'area non client configurando la modalità di ridimensionamento di una finestra, lo stile della finestra e se la finestra verrà o meno visualizzata come pulsante sulla barra delle applicazioni del desktop.  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Modalità di ridimensionamento  
  A seconda di <xref:System.Windows.Window.WindowStyle%2A> proprietà, è possibile controllare come (e se) gli utenti possono ridimensionare la finestra. La scelta dello stile di finestra determina se un utente può ridimensionare la finestra trascinandone il bordo con il mouse, se il **Riduci a icona**, **Ingrandisci**, e **ridimensionare** pulsanti vengono visualizzati nell'area non client e, se sono visualizzate, se sono abilitati.  
@@ -413,7 +409,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (impostazione predefinita)  
+-   <xref:System.Windows.ResizeMode.CanResize> (predefinito)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -431,7 +427,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (impostazione predefinita)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (predefinito)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -484,9 +480,10 @@ L'aspetto predefinito di una finestra include un pulsante della barra delle appl
  Le finestre di dialogo sono finestre usate spesso per raccogliere informazioni da un utente in modo da completare una funzione. Ad esempio, quando un utente vuole aprire un file, il **Apri File** nella finestra di dialogo viene visualizzata in genere da un'applicazione per ottenere il nome del file da parte dell'utente. Per altre informazioni, vedere [Cenni preliminari sulle finestre di dialogo](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Panoramica sulle finestre di dialogo](dialog-boxes-overview.md)
+- [Cenni preliminari sulle finestre di dialogo](dialog-boxes-overview.md)
 - [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)

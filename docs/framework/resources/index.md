@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220487"
 ---
 # <a name="resources-in-net-apps"></a>Risorse nelle app .NET
 L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un impiego professionale. Una risorsa è costituita da dati non eseguibili che vengono distribuiti in modo logico con un'applicazione. Una risorsa può essere visualizzata in un'applicazione sotto forma di messaggi di errore o come parte dell'interfaccia utente. Le risorse possono contenere dati in diversi formati, tra cui stringhe, immagini e oggetti persistenti. Per scrivere oggetti persistenti in un file di risorse, è necessario che gli oggetti siano serializzabili. L'archiviazione dei dati in un file di risorse consente di modificare i dati senza ricompilare l'intera applicazione. Inoltre permette di archiviare i dati in un'unica posizione e non è più necessario basarsi sui dati specificati a livello di codice archiviati in più posizioni.  
@@ -62,6 +62,7 @@ In un'applicazione non localizzata, è possibile utilizzare i file di risorse co
 -   La classe <xref:System.Resources.ResXResourceSet> che consente di recuperare tutti gli elementi in un file di risorse XML in memoria.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Concetti di base sulle applicazioni](../../../docs/standard/application-essentials.md)

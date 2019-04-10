@@ -2,15 +2,21 @@
 title: Distribuzione di .NET Framework e delle applicazioni
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], packaging'
-  - 'deploying applications [.NET Framework]'
-  - 'deploying applications [.NET Framework], features'
-  - 'deploying applications [.NET Framework], distribution'
-  - '.NET Framework, deploying'
-  - .NET Framework application deployment
+- deploying applications [.NET Framework], packaging
+- deploying applications [.NET Framework]
+- deploying applications [.NET Framework], features
+- deploying applications [.NET Framework], distribution
+- .NET Framework, deploying
+- .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: 0ff426f051b37830b0161cd0e0e4368a5750c664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124775"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
 Questo articolo consente di iniziare a distribuire .NET Framework con l'applicazione. La maggior parte delle informazioni, sono destinate agli sviluppatori OEM e agli amministratori aziendali. È consigliabile che gli utenti che vogliono installare .NET Framework leggano [Installare .NET Framework](~/docs/framework/install/index.md).  
@@ -24,9 +30,9 @@ Questo articolo consente di iniziare a distribuire .NET Framework con l'applicaz
   
     -   Opzioni del programma di installazione:  
   
-        -   [Programma di installazione Web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
+        -   [programma di installazione Web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
   
-        -   [Programma di installazione offline](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
+        -   [programma di installazione offline](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)  
   
     -   Modalità di installazione:  
   
@@ -36,7 +42,7 @@ Questo articolo consente di iniziare a distribuire .NET Framework con l'applicaz
   
     -   [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
   
-    -   [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+    -   [Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
   
 -   Distribuzione di .NET Framework in un'applicazione client (per gli sviluppatori):   
   
@@ -161,4 +167,5 @@ Questo articolo consente di iniziare a distribuire .NET Framework con l'applicaz
 |[Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Descrive come avviare e rilevare automaticamente il processo di installazione di .NET Framework pur mostrando la propria visualizzazione dello stato di avanzamento dell'installazione.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Guida di sviluppo](../../../docs/framework/development-guide.md)

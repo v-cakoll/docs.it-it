@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 8dca99f5b6cd315b31bbefb9515cde5065601730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: fa69a03d160e7079f532e8e00245a7af3f3a8999
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088743"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegati (Guida per programmatori C#)
 Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tipo che rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. Quando si crea un'istanza di un delegato, è possibile associare l'istanza a qualsiasi metodo con una firma compatibile e un tipo restituito. Tramite l'istanza di delegato è possibile richiamare (o chiamare) il metodo.  
@@ -46,19 +46,18 @@ Un [delegate](../../../csharp/language-reference/keywords/delegate.md) è un tip
   
 -   [Uso dei delegati](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [Quando utilizzare i delegati anziché le interfacce (Guida per programmatori C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+-   [Quando usare i delegati anziché le interfacce (Guida per programmatori C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
--   [Delegati con metodi denominati o metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+-   [Delegati con metodi denominati Metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
 -   [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
 -   [Uso della varianza nei delegati](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
--   [Procedura: Combinare delegati multicast](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+-   [Procedura: Combinare delegati (delegati multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
 -   [Procedura: Dichiarare un delegato, crearne un'istanza e usarlo](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
-  
-  
+
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
 
 Per altre informazioni, vedere [Delegati](~/_csharplang/spec/delegates.md) nella [Specifica del linguaggio C#](../../language-reference/language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.

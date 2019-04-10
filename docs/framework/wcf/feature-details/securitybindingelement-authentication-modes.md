@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119756"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modalità di autenticazione di SecurityBindingElement
 Windows Communication Foundation (WCF) sono disponibili varie modalità con cui i client e servizi l'autenticazione reciproca. È possibile creare elementi di associazione di sicurezza per tali modalità di autenticazione utilizzando metodi statici sulla classe <xref:System.ServiceModel.Channels.SecurityBindingElement> o tramite configurazione. In questo argomento vengono brevemente descritte le 18 modalità di autenticazione.  
@@ -121,5 +121,6 @@ Windows Communication Foundation (WCF) sono disponibili varie modalità con cui 
  In questa modalità di autenticazione il client viene autenticato mediante un token nome utente che a livello SOAP viene considerato come un token di supporto firmato, ovvero un token firmato dalla firma del messaggio. Il servizio viene autenticato tramite un certificato X.509 a livello di trasporto. L'elemento di associazione di sicurezza è un elemento `TransportSecurityBindingElement` restituito dal metodo <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>. In alternativa, impostare l'attributo `authenticationMode` su `UserNameOverTransport`.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - [Procedura: Creare un elemento SecurityBindingElement per una modalità di autenticazione specificata](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
