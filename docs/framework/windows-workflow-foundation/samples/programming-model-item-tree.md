@@ -2,12 +2,12 @@
 title: Programmazione dell'albero degli elementi del modello
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321133"
 ---
 # <a name="programming-model-item-tree"></a>Programmazione dell'albero degli elementi del modello
 Questo esempio viene illustrato come passare il <xref:System.Activities.Presentation.Model.ModelItem> albero tramite associazione dati dichiarativa dalla visualizzazione albero Windows Presentation Foundation (WPF).
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1.  Aprire la soluzione Programmingmodelitemtree in Visual Studio 2010.
+1. Aprire la soluzione Programmingmodelitemtree in Visual Studio 2010.
 
-2.  Compilare la soluzione selezionando **Compila soluzione** dalle **compilazione** menu.
+2. Compilare la soluzione selezionando **Compila soluzione** dalle **compilazione** menu.
 
-3.  Premere F5 per eseguire l'applicazione. Viene quindi visualizzato il form [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
+3. Premere F5 per eseguire l'applicazione. Viene quindi visualizzato il form [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
 
-4.  Fare clic sui **carica WF** pulsante per caricare il <xref:System.Activities.Presentation.Model.ModelItem> e associarlo alla visualizzazione albero.
+4. Fare clic sui **carica WF** pulsante per caricare il <xref:System.Activities.Presentation.Model.ModelItem> e associarlo alla visualizzazione albero.
 
-5.  Facendo clic sui **albero degli elementi del modello di modifica** pulsante esegue il codice precedente per aggiungere un elemento nell'albero e impostare una proprietà.
+5. Facendo clic sui **albero degli elementi del modello di modifica** pulsante esegue il codice precedente per aggiungere un elemento nell'albero e impostare una proprietà.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

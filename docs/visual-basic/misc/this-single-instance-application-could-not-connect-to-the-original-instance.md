@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322654"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Impossibile connettere l'applicazione a istanza singola con l'istanza originale
 Impossibile connettere l'applicazione a istanza singola con l'istanza originale. Alcune possibili cause di questo problema sono le seguenti:  
@@ -22,16 +22,16 @@ Impossibile connettere l'applicazione a istanza singola con l'istanza originale.
   
 ## <a name="to-correct-this-error-when-developing-the-application"></a>Per correggere questo errore quando si sviluppa l'applicazione  
   
-1.  Verificare che l'applicazione non passi allo stato di non reattività.  
+1. Verificare che l'applicazione non passi allo stato di non reattività.  
   
-2.  Verificare che l'applicazione abbia autorizzazioni sufficienti per creare oggetti kernel.  
+2. Verificare che l'applicazione abbia autorizzazioni sufficienti per creare oggetti kernel.  
   
-3.  Riavviare l'istanza originale dell'applicazione.  
+3. Riavviare l'istanza originale dell'applicazione.  
   
-4.  Riavviare il computer per cancellare i processi che stanno usando la risorsa necessaria per la connessione all'istanza originale.  
+4. Riavviare il computer per cancellare i processi che stanno usando la risorsa necessaria per la connessione all'istanza originale.  
   
-5.  Prendere nota delle circostanze in cui si è verificato l'errore e chiamare il Servizio supporto tecnico Microsoft.  
+5. Prendere nota delle circostanze in cui si è verificato l'errore e chiamare il Servizio supporto tecnico Microsoft.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Debugger Basics](/visualstudio/debugger/debugger-basics) (Nozioni di base sul debugger)
+- [Nozioni di base sul debugger](/visualstudio/debugger/debugger-basics)

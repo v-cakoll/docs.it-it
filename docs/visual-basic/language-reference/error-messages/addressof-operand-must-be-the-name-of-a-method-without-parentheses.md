@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: af1ce858108785fa4dac6352c9e80531e86fbb23
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b8c67c2390df91c6a4af66e020365544e6bf369b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813964"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323824"
 ---
 # <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>L'operando 'AddressOf' deve essere il nome di un metodo, senza parentesi
 L'operatore `AddressOf` crea un'istanza di delegato di routine che fa riferimento a una routine specifica. La sintassi è come indicato di seguito.  
@@ -25,9 +25,9 @@ L'operatore `AddressOf` crea un'istanza di delegato di routine che fa riferiment
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Rimuovere le parentesi che racchiudono l'argomento che segue `AddressOf`.  
+1. Rimuovere le parentesi che racchiudono l'argomento che segue `AddressOf`.  
   
-2.  Assicurarsi che l'argomento è un nome di metodo.  
+2. Assicurarsi che l'argomento è un nome di metodo.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095867"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320925"
 ---
 # <a name="using-sessions"></a>Uso di sessioni
 Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla un gruppo di messaggi in una conversazione. Le sessioni WCF sono differenti dall'oggetto sessione disponibile nelle [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applicazioni, supportano comportamenti diversi e sono controllate in modi diversi. In questo argomento descrive le funzionalità che consentono le sessioni in WCF le applicazioni e come usarli.  
@@ -53,9 +53,9 @@ Nelle applicazioni Windows Communication Foundation (WCF), un *sessione* correla
   
  Quando un servizio WCF accetta una sessione client, le seguenti funzionalità sono abilitate per impostazione predefinita:  
   
-1.  Tutte le chiamate tra un oggetto client WCF vengono gestite dalla stessa istanza del servizio.  
+1. Tutte le chiamate tra un oggetto client WCF vengono gestite dalla stessa istanza del servizio.  
   
-2.  Diverse associazioni basate sulla sessione forniscono caratteristiche aggiuntive.  
+2. Diverse associazioni basate sulla sessione forniscono caratteristiche aggiuntive.  
   
 ## <a name="system-provided-session-types"></a>Tipi di sessione forniti dal sistema  
  Un'associazione basata sulla sessione supporta l'associazione predefinita di un'istanza del servizio con una determinata sessione. Tuttavia, associazioni basate sulla sessione diverse supportano funzionalità diverse oltre a consentire il controllo delle istanze basate sulla sessione descritto in precedenza.  

@@ -3,12 +3,12 @@ title: 'Procedura: Eseguire il debug di servizi e applicazioni in grado di ricon
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453391"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321549"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con le funzionalità di traccia WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -59,9 +59,9 @@ ms.locfileid: "49453391"
   
 #### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>Per configurare le funzionalità di traccia di WIF usando il file Web.config  
   
-1.  Aprire il file di configurazione radice **Web.config** o **App.config** nell'editor di Visual Studio facendo doppio clic su di esso in **Esplora soluzioni**. Se la soluzione non dispone di un file di configurazione **Web.config** o **App.config**, aggiungerlo facendo clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni** e scegliendo **Aggiungi**, quindi **Nuovo elemento**. Nella finestra di dialogo **Nuovo elemento** selezionare **File di configurazione dell'applicazione** per **App.config** o **File di configurazione Web** per **Web.config** nell'elenco e fare clic su **OK**.  
+1. Aprire il file di configurazione radice **Web.config** o **App.config** nell'editor di Visual Studio facendo doppio clic su di esso in **Esplora soluzioni**. Se la soluzione non dispone di un file di configurazione **Web.config** o **App.config**, aggiungerlo facendo clic con il pulsante destro del mouse sulla soluzione in **Esplora soluzioni** e scegliendo **Aggiungi**, quindi **Nuovo elemento**. Nella finestra di dialogo **Nuovo elemento** selezionare **File di configurazione dell'applicazione** per **App.config** o **File di configurazione Web** per **Web.config** nell'elenco e fare clic su **OK**.  
   
-2.  Aggiungere le voci di configurazione simili alla seguente al file di configurazione all'interno del nodo **\<configuration>** alla fine del file di configurazione:  
+2. Aggiungere le voci di configurazione simili alla seguente al file di configurazione all'interno del nodo **\<configuration>** alla fine del file di configurazione:  
   
     ```xml  
     <system.diagnostics>  
@@ -76,31 +76,31 @@ ms.locfileid: "49453391"
     </system.diagnostics>  
     ```  
   
-3.  La configurazione precedente indica a WIF di generare eventi di traccia dettagliati e registrarli nel file *WIFTrace.e2e*. Per un elenco completo dei valori per l'opzione **switchValue**, fare riferimento alla tabella Livello di traccia nell'argomento [Configurazione delle funzionalità di traccia](../wcf/diagnostics/tracing/configuring-tracing.md).  
+3. La configurazione precedente indica a WIF di generare eventi di traccia dettagliati e registrarli nel file *WIFTrace.e2e*. Per un elenco completo dei valori per il **switchValue** , fare riferimento alla tabella di livello di traccia nell'argomento seguente: [Configurazione della traccia](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Passaggio 2 - Analizzare i file di traccia di WIF usando lo strumento visualizzatore di tracce dei servizi  
  In questo passaggio si userà lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) per analizzare i log di traccia di WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Per analizzare i log di traccia di WIF con lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe)  
   
-1.  Lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) è incluso in Windows SDK. Se Windows SDK non è ancora installato, è possibile scaricarlo qui: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
+1. Lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) è incluso in Windows SDK. Se è già stato installato il SDK di Windows, è possibile scaricarlo qui: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
-2.  Eseguire lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) In genere è disponibile nella cartella **Bin** del percorso di installazione.  
+2. Eseguire lo strumento visualizzatore di tracce dei servizi (SvcTraceViewer.exe) In genere è disponibile nella cartella **Bin** del percorso di installazione.  
   
-3.  Aprire il file di log di traccia di WIF, ad esempio, WIFTrace.e2e scegliendo **Apri** dal menu **File** oppure usando la scelta rapida da tastiera **CTRL+O**. Il file di log di traccia verrà aperto nel visualizzatore di tracce dei servizi.  
+3. Aprire il file di log di traccia di WIF, ad esempio, WIFTrace.e2e scegliendo **Apri** dal menu **File** oppure usando la scelta rapida da tastiera **CTRL+O**. Il file di log di traccia verrà aperto nel visualizzatore di tracce dei servizi.  
   
-4.  Esaminare le voci nella scheda **Attività**. Ogni voce contiene un numero di attività, il numero di tracce registrate, la durata dell'attività e i timestamp di inizio e fine.  
+4. Esaminare le voci nella scheda **Attività**. Ogni voce contiene un numero di attività, il numero di tracce registrate, la durata dell'attività e i timestamp di inizio e fine.  
   
-5.  Fare clic sulla scheda **Attività**. Nell'area principale dello strumento saranno visibili le voci di traccia dettagliate. Usare l'elenco a discesa del menu **Livello** per filtrare in base a specifici livelli di traccia, ad esempio: **Tutto**, **Avviso**, **Errori**, **Informazioni** e così via.  
+5. Fare clic sulla scheda **Attività**. Nell'area principale dello strumento saranno visibili le voci di traccia dettagliate. Usare la **livello** elenco a discesa del menu per filtrare specifici a livello di traccia, ad esempio: **Tutti i**, **avviso**, **errori**, **informazioni**e così via.  
   
-6.  Fare clic sulle specifiche voci di traccia per esaminare i dettagli nell'area inferiore dello strumento. I dettagli sono disponibili nelle visualizzazioni **Formattato** e **XML** scegliendo le schede corrispondenti.  
+6. Fare clic sulle specifiche voci di traccia per esaminare i dettagli nell'area inferiore dello strumento. I dettagli sono disponibili nelle visualizzazioni **Formattato** e **XML** scegliendo le schede corrispondenti.  
   
 ## <a name="step-3--identify-solutions-to-fix-wif-related-issues"></a>Passaggio 3 - Identificare soluzioni per la risoluzione dei problemi correlati a WIF  
  Questo passaggio illustra come individuare soluzioni per i problemi correlati a WIF identificati mediante il log di traccia WIF e lo strumento visualizzatore di tracce dei servizi. Illustra inoltre il mapping generale delle eccezioni correlate a WIF alle possibili soluzioni o alle azioni necessarie per risolvere il problema.  
   
 #### <a name="to-identify-solutions-to-fix-wif-related-issues"></a>Per identificare soluzioni per correggere i problemi correlati a WIF  
   
-1.  Esaminare la tabella seguente di eccezioni WIF e le azioni necessarie per correggere i problemi.  
+1. Esaminare la tabella seguente di eccezioni WIF e le azioni necessarie per correggere i problemi.  
   
 |**ID errore**|**Messaggio di errore**|**Azione necessaria per correggere l'errore**|  
 |-|-|-|  
@@ -108,4 +108,4 @@ ms.locfileid: "49453391"
   
 ## <a name="related-items"></a>Elementi correlati  
   
--   [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+-   [Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

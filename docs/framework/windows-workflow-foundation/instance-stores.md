@@ -2,12 +2,12 @@
 title: Archivio di istanze
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 7ea29c3604042d773590448e31ce4ea95125ca1f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323330"
 ---
 # <a name="instance-stores"></a>Archivio di istanze
 Un archivio di istanze è un contenitore logico di istanze, ovvero lo spazio in cui vengono archiviati i dati e i metadati dell'istanza. Un archivio di istanze non implica l'archiviazione fisica dedicata e può contenere informazioni durevoli in un database di SQL Server o informazioni sullo stato non durevoli in una memoria. In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è disponibile l'archivio di istanze del flusso di lavoro SQL, vale a dire un'implementazione concreta di un archivio di istanze che consente ai flussi di lavoro di rendere persistenti i dati e i metadati dell'istanza in un database di SQL Server 2005 o di SQL Server 2008. Windows Server AppFabric fornisce inoltre un'implementazione concreta di un archivio di istanze. Per altre informazioni, vedere [Store di Windows Server App Fabric istanza, Query e provider del controllo](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  
@@ -22,10 +22,10 @@ Un archivio di istanze è un contenitore logico di istanze, ovvero lo spazio in 
   
  Nell'elenco seguente sono indicati i passaggi importanti relativi all'interazione dell'host con l'archivio di istanze:  
   
-1.  Ottenere un **InstanceStore** da un provider di persistenza.  
+1. Ottenere un **InstanceStore** da un provider di persistenza.  
 
-2.  Ottenere l'handle per un'istanza chiamando il <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> metodo sul **InstanceStore**.  
+2. Ottenere l'handle per un'istanza chiamando il <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> metodo sul **InstanceStore**.  
   
-3.  Richiamare i comandi sull'handle di istanza chiamando il <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> metodo sul **InstanceStore**.  
+3. Richiamare i comandi sull'handle di istanza chiamando il <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> metodo sul **InstanceStore**.  
   
-4.  Esaminare i <xref:System.Runtime.DurableInstancing.InstanceView> restituito da **Instancestore** per determinare i risultati dei comandi.
+4. Esaminare i <xref:System.Runtime.DurableInstancing.InstanceView> restituito da **Instancestore** per determinare i risultati dei comandi.

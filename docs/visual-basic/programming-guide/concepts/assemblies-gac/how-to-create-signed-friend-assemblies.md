@@ -2,21 +2,21 @@
 title: 'Procedura: Creare assembly Friend firmati (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836740"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324669"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedura: Creare assembly Friend firmati (Visual Basic)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Per creare un assembly firmato e un assembly friend  
   
-1.  Aprire un prompt dei comandi.  
+1. Aprire un prompt dei comandi.  
   
-2.  Eseguire la sequenza di comandi seguente con lo strumento Nome sicuro per generare un keyfile e per visualizzare la relativa chiave pubblica. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2. Eseguire la sequenza di comandi seguente con lo strumento Nome sicuro per generare un keyfile e per visualizzare la relativa chiave pubblica. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Generare una chiave con nome sicuro per questo esempio e archiviarla nel file FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Creare un file di Visual Basic denominato `friend_signed_A` che contiene il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
+3. Creare un file di Visual Basic denominato `friend_signed_A` che contiene il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
   
      Ogni volta che viene eseguito, lo strumento Nome sicuro genera una chiave pubblica nuova. È pertanto necessario sostituire la chiave pubblica nel codice seguente con la chiave pubblica appena generata, come illustrato nell'esempio seguente.  
   
@@ -49,13 +49,13 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
     End Class  
     ```  
   
-4.  Compilare e firmare friend_signed_A usando il comando seguente.  
+4. Compilare e firmare friend_signed_A usando il comando seguente.  
   
     ```console  
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  Creare un file di Visual Basic denominato `friend_signed_B` e contiene il codice seguente. Poiché friend_signed_A specifica che friend_signed_B è un assembly Friend, il codice in friend_signed_B può accedere ai tipi e ai membri `Friend` da friend_signed_A. Il file contiene il codice seguente.  
+5. Creare un file di Visual Basic denominato `friend_signed_B` e contiene il codice seguente. Poiché friend_signed_A specifica che friend_signed_B è un assembly Friend, il codice in friend_signed_B può accedere ai tipi e ai membri `Friend` da friend_signed_A. Il file contiene il codice seguente.  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -69,7 +69,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
     End Module  
     ```  
   
-6.  Compilare e firmare friend_signed_B usando il comando seguente.  
+6. Compilare e firmare friend_signed_B usando il comando seguente.  
   
     ```console  
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
@@ -77,7 +77,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
      Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È possibile impostare in modo esplicito l'assembly utilizzando il `-out` opzione del compilatore. Per altre informazioni, vedere [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
-7.  Eseguire il file friend_signed_B.exe.  
+7. Eseguire il file friend_signed_B.exe.  
   
      Il programma visualizza la stringa "Class1.Test".  
   
@@ -93,4 +93,4 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (strumento nome sicuro)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Concetti di programmazione](../../../../visual-basic/programming-guide/concepts/index.md)

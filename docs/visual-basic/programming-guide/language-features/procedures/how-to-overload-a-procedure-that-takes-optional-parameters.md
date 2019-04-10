@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 070d641d5a8b683ddfe06039117cc4a8507102df
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320229"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procedura: Overload di una routine che accetta parametri facoltativi (Visual Basic)
 Se una routine contiene uno o più [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md) parametri, non è possibile definire una versione di overload corrisponda a uno dei relativi overload impliciti. Per altre informazioni, vedere "Esegue l'overload implicito per i parametri facoltativi" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  
@@ -24,17 +24,17 @@ Se una routine contiene uno o più [facoltativo](../../../../visual-basic/langua
   
 #### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Eseguire l'overload di una routine che accetta un parametro facoltativo  
   
-1.  Scrivere un `Sub` o `Function` istruzione di dichiarazione che include il parametro facoltativo nell'elenco dei parametri. Non usare il `Optional` parola chiave in questa versione di overload.  
+1. Scrivere un `Sub` o `Function` istruzione di dichiarazione che include il parametro facoltativo nell'elenco dei parametri. Non usare il `Optional` parola chiave in questa versione di overload.  
   
-2.  Far precedere il `Sub` o `Function` parola chiave with il [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave).  
+2. Far precedere il `Sub` o `Function` parola chiave with il [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave).  
   
-3.  Scrivere il codice della routine che deve essere eseguita quando il codice chiamante fornisce un argomento facoltativo.  
+3. Scrivere il codice della routine che deve essere eseguita quando il codice chiamante fornisce un argomento facoltativo.  
   
-4.  Terminare la procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
+4. Terminare la procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
   
-5.  Scrivere una seconda istruzione di dichiarazione che è identica alla prima dichiarazione, ma non include il parametro facoltativo nell'elenco dei parametri.  
+5. Scrivere una seconda istruzione di dichiarazione che è identica alla prima dichiarazione, ma non include il parametro facoltativo nell'elenco dei parametri.  
   
-6.  Scrivere il codice della routine che deve essere eseguita quando il codice chiamante non specifica l'argomento facoltativo. Terminare la procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
+6. Scrivere il codice della routine che deve essere eseguita quando il codice chiamante non specifica l'argomento facoltativo. Terminare la procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
   
      Nell'esempio seguente illustra una procedura definita con un parametro facoltativo, un set equivalente di due routine di overload e, infine, esempi di versioni di overload valide e non è valide.  
   
@@ -51,25 +51,25 @@ Se una routine contiene uno o più [facoltativo](../../../../visual-basic/langua
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Eseguire l'overload di una routine che accetta più di un parametro facoltativo  
   
-1.  Stabilisce le combinazioni di argomenti facoltativi forniti accettabili per la logica della routine. Una combinazione inaccettabile potrebbe verificarsi se un parametro facoltativo dipende da un'altra. Ad esempio, se un parametro accetta il nome del personale dell'assistenza e un altro accetta l'età, una combinazione di argomenti che specifica l'età, ma omette il nome è accettabile.  
+1. Stabilisce le combinazioni di argomenti facoltativi forniti accettabili per la logica della routine. Una combinazione inaccettabile potrebbe verificarsi se un parametro facoltativo dipende da un'altra. Ad esempio, se un parametro accetta il nome del personale dell'assistenza e un altro accetta l'età, una combinazione di argomenti che specifica l'età, ma omette il nome è accettabile.  
   
-2.  Per ogni combinazione accettabili di argomenti facoltativi forniti, scrivere un `Sub` o `Function` istruzione di dichiarazione che definisce l'elenco di parametri corrispondenti. Non usare il `Optional` (parola chiave).  
+2. Per ogni combinazione accettabili di argomenti facoltativi forniti, scrivere un `Sub` o `Function` istruzione di dichiarazione che definisce l'elenco di parametri corrispondenti. Non usare il `Optional` (parola chiave).  
   
-3.  In ogni dichiarazione, anteporre il `Sub` o `Function` parola chiave with il [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave).  
+3. In ogni dichiarazione, anteporre il `Sub` o `Function` parola chiave with il [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave).  
   
-4.  Dopo ogni dichiarazione, scrivere il codice che deve essere eseguita quando il codice chiamante fornisce un elenco di argomenti corrispondenti all'elenco dei parametri della dichiarazione della routine.  
+4. Dopo ogni dichiarazione, scrivere il codice che deve essere eseguita quando il codice chiamante fornisce un elenco di argomenti corrispondenti all'elenco dei parametri della dichiarazione della routine.  
   
-5.  Terminare ogni procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
+5. Terminare ogni procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
+- [Procedure](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Parametri facoltativi](./optional-parameters.md)
 - [Matrici di parametri](./parameter-arrays.md)
-- [Overload della routine](./procedure-overloading.md)
+- [Overload delle routine](./procedure-overloading.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
-- [Procedura: Definire più versioni di una stored Procedure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedura: Definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Procedura: Chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md)
 - [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Risoluzione dell'overload](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)

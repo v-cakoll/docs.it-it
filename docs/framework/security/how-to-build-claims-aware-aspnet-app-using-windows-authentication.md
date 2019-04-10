@@ -1,16 +1,16 @@
 ---
-title: "Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni con l'autenticazione di Windows"
+title: "Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione di Windows"
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323668"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni con l'autenticazione di Windows
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione di Windows
 ## <a name="applies-to"></a>Si applica a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,13 +58,13 @@ ms.locfileid: "47198528"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
-1.  Avviare Visual Studio e quindi fare clic su **File**, **Nuovo** e **Progetto**.  
+1. Avviare Visual Studio e quindi fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
+2. Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
   
-3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
+3. In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-4.  Dopo la creazione del progetto **TestApp** fare clic su di esso in **Esplora soluzioni**. Le proprietà del progetto verranno visualizzate nel riquadro **Proprietà** sotto a **Esplora soluzioni**. Impostare la proprietà **Autenticazione di Windows** su **Abilitata**.  
+4. Dopo la creazione del progetto **TestApp** fare clic su di esso in **Esplora soluzioni**. Le proprietà del progetto verranno visualizzate nel riquadro **Proprietà** sotto a **Esplora soluzioni**. Impostare la proprietà **Autenticazione di Windows** su **Abilitata**.  
   
     > [!WARNING]
     >  L'autenticazione di Windows è disabilitata per impostazione predefinita nelle nuove applicazioni ASP.NET, pertanto è necessario abilitarla manualmente.  
@@ -74,7 +74,7 @@ ms.locfileid: "47198528"
   
 #### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Per configurare l'applicazione ASP.NET per le attestazioni usando l'autenticazione di Windows  
   
-1.  Nel file *Default.aspx* del progetto **TestApp** sostituire il markup esistente con il seguente:  
+1. Nel file *Default.aspx* del progetto **TestApp** sostituire il markup esistente con il seguente:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -96,7 +96,7 @@ ms.locfileid: "47198528"
   
      Questo passaggio aggiunge un controllo GridView alla pagina *Default.aspx* che verrà popolato con le attestazioni recuperate dall'autenticazione di Windows.  
   
-2.  Salvare il file *Default.aspx* e quindi aprire il relativo file code-behind denominato *Default.aspx.cs*. Sostituire il codice esistente con quello seguente:  
+2. Salvare il file *Default.aspx* e quindi aprire il relativo file code-behind denominato *Default.aspx.cs*. Sostituire il codice esistente con quello seguente:  
   
     ```csharp  
     using System;  
@@ -119,13 +119,13 @@ ms.locfileid: "47198528"
   
      Il codice sopra riportato visualizzerà le attestazioni relative a un utente autenticato.  
   
-3.  Per modificare il tipo di autenticazione dell'applicazione, modificare il blocco **\<authentication>** nella sezione **\<system.web>** del file *Web.config* radice del progetto in modo che includa solo la voce di configurazione seguente:  
+3. Per modificare il tipo di autenticazione dell'applicazione, modificare il blocco **\<authentication>** nella sezione **\<system.web>** del file *Web.config* radice del progetto in modo che includa solo la voce di configurazione seguente:  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  Modificare infine il blocco **\<authorization>** nella sezione **\<system.web>** dello stesso file *Web.config* per forzare l'autenticazione:  
+4. Modificare infine il blocco **\<authorization>** nella sezione **\<system.web>** dello stesso file *Web.config* per forzare l'autenticazione:  
   
     ```xml  
     <authorization>  
@@ -138,4 +138,4 @@ ms.locfileid: "47198528"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione di Windows  
   
-1.  Premere **F5** per compilare ed eseguire l'applicazione. Verrà visualizzato il file *Default.aspx* e il nome dell'account Windows personale (incluso il nome di dominio) dovrebbe già essere visualizzato come utente autenticato in alto a destra nella pagina. Il contenuto della pagina deve includere una tabella con le attestazioni recuperate dall'account di Windows.
+1. Premere **F5** per compilare ed eseguire l'applicazione. Verrà visualizzato il file *Default.aspx* e il nome dell'account Windows personale (incluso il nome di dominio) dovrebbe già essere visualizzato come utente autenticato in alto a destra nella pagina. Il contenuto della pagina deve includere una tabella con le attestazioni recuperate dall'account di Windows.

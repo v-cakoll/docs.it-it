@@ -4,12 +4,12 @@ description: Ottenere una panoramica generale delle opzioni per lo sviluppo di a
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: 219a562459be7fb1114dfdd9f139c938d1282c5c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 55d80e3d9f464b940d17b13a598bdab57631a8e4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324084"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Processo di sviluppo per le applicazioni basate su Docker
 
@@ -32,7 +32,7 @@ Installando gli strumenti di [Docker Community Edition (CE)](https://www.docker.
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Visual Studio**. Sito ufficiale. \
-  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 - **Visual Studio Code**. Sito ufficiale. \
   [https://code.visualstudio.com/download](https://code.visualstudio.com/download)

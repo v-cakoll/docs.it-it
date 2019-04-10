@@ -2,12 +2,12 @@
 title: Attività di accesso al database
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322602"
 ---
 # <a name="database-access-activities"></a>Attività di accesso al database
 Le attività di accesso al database consentono di accedere a un database all'interno di un flusso di lavoro. Queste attività consentono l'accesso ai database per recuperare o modificare informazioni e utilizzare [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) per accedere al database.  
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Per eseguire Setup.cmd
 
-1.  Aprire un prompt dei comandi.
+1. Aprire un prompt dei comandi.
 
-2.  Passare alla cartella di esempio DbActivities.
+2. Passare alla cartella di esempio DbActivities.
 
-3.  Digitare "Setup. cmd" e premere INVIO.
+3. Digitare "Setup. cmd" e premere INVIO.
 
     > [!NOTE]
     >  Setup.cmd tenta di installare l'esempio nell'istanza di SqlExpress del computer locale. Se si desidera installarlo in un'altra istanza del server SQL, modificare Setup.cmd specificando il nome della nuova istanza.
 
 ##### <a name="to-uninstall-the-sample-database"></a>Per disinstallare il database di esempio
 
-1.  Eseguire Cleanup.cmd dalla cartella di esempio in un prompt dei comandi.
+1. Eseguire Cleanup.cmd dalla cartella di esempio in un prompt dei comandi.
 
 ##### <a name="to-run-the-sample"></a>Per eseguire l'esempio
 
-1.  Aprire la soluzione in Visual Studio 2010
+1. Aprire la soluzione in Visual Studio 2010
 
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
-3.  Per eseguire l'esempio senza debug, premere CTRL+F5.
+3. Per eseguire l'esempio senza debug, premere CTRL+F5.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 0d07c47e64b7eaea80155eabbc50bc2bae0a889c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c34d3988c89e0ce07676e9181200fc039010b50a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834261"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324987"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Procedura: Trasformare XML utilizzando LINQ (Visual Basic)
 [Valori letterali XML](../../../../visual-basic/language-reference/xml-literals/index.md) semplificano Leggi XML da un'origine e lo trasforma in un nuovo formato XML. È possibile sfruttare i vantaggi delle query LINQ per recuperare il contenuto per trasformare o modificare il contenuto in un documento esistente in un nuovo formato XML.  
@@ -21,9 +21,9 @@ ms.locfileid: "58834261"
   
 ### <a name="to-transform-an-xml-document"></a>Per trasformare un documento XML  
   
-1.  Creare un nuovo progetto di Visual Basic in Visual Studio, il **applicazione Console** modello di progetto.  
+1. Creare un nuovo progetto di Visual Basic in Visual Studio, il **applicazione Console** modello di progetto.  
   
-2.  Fare doppio clic sul file Module1.vb creato nel progetto per modificare il codice Visual Basic. Aggiungere il codice seguente per il `Sub Main` del `Module1` modulo. Questo codice crea il documento XML di origine come un <xref:System.Xml.Linq.XDocument> oggetto.  
+2. Fare doppio clic sul file Module1.vb creato nel progetto per modificare il codice Visual Basic. Aggiungere il codice seguente per il `Sub Main` del `Module1` modulo. Questo codice crea il documento XML di origine come un <xref:System.Xml.Linq.XDocument> oggetto.  
   
     ```vb  
     Dim catalog =   
@@ -59,7 +59,7 @@ ms.locfileid: "58834261"
   
      [Procedura: Caricare il documento XML da un File, stringa o Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
   
-3.  Dopo il codice per creare il documento XML di origine, aggiungere il codice seguente per recuperare tutti i \<Book > elementi dall'oggetto e li trasforma in un documento HTML. L'elenco delle \<Book > viene creato con una query LINQ che restituisce una raccolta di elementi <xref:System.Xml.Linq.XElement> gli oggetti che contengono il codice HTML trasformato. È possibile usare espressioni incorporate per inserire i valori dal documento di origine nel nuovo formato XML.  
+3. Dopo il codice per creare il documento XML di origine, aggiungere il codice seguente per recuperare tutti i \<Book > elementi dall'oggetto e li trasforma in un documento HTML. L'elenco delle \<Book > viene creato con una query LINQ che restituisce una raccolta di elementi <xref:System.Xml.Linq.XElement> gli oggetti che contengono il codice HTML trasformato. È possibile usare espressioni incorporate per inserire i valori dal documento di origine nel nuovo formato XML.  
   
      Il documento HTML risultante viene scritto in un file usando il <xref:System.Xml.Linq.XElement.Save%2A> (metodo).  
   
@@ -82,7 +82,7 @@ ms.locfileid: "58834261"
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4.  Dopo aver `Sub Main` dei `Module1`, aggiungere un nuovo metodo (`Sub`) per trasformare un \<descrizione > nodo in formato HTML specificato. Questo metodo viene chiamato dal codice nel passaggio precedente e viene utilizzato per mantenere il formato del \<descrizione > elementi.  
+4. Dopo aver `Sub Main` dei `Module1`, aggiungere un nuovo metodo (`Sub`) per trasformare un \<descrizione > nodo in formato HTML specificato. Questo metodo viene chiamato dal codice nel passaggio precedente e viene utilizzato per mantenere il formato del \<descrizione > elementi.  
   
      Questo metodo sostituisce gli elementi secondari del \<descrizione > elemento con il linguaggio HTML. Il `ReplaceWith` metodo viene utilizzato per mantenere la posizione degli elementi secondari. Il contenuto trasformato del \<descrizione > elemento è incluso in un paragrafo HTML (\<p >) elemento. Il <xref:System.Xml.Linq.XContainer.Nodes%2A> proprietà viene utilizzata per recuperare il contenuto trasformato del \<descrizione > elemento. Questo garantisce che i sottoelementi sono incluse nel contenuto trasformato.  
   
@@ -114,9 +114,9 @@ ms.locfileid: "58834261"
     End Function  
     ```  
   
-5.  Salvare le modifiche.  
+5. Salvare le modifiche.  
   
-6.  Premere F5 per eseguire il codice. Il documento salvato risultante sarà simile al seguente:  
+6. Premere F5 per eseguire il codice. Il documento salvato risultante sarà simile al seguente:  
   
     ```  
     <?xml version="1.0"?>  
@@ -160,6 +160,6 @@ ms.locfileid: "58834261"
 - [Valori letterali XML](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [Modifica di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Procedura: Caricare il documento XML da un File, stringa o Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [Procedura: Caricare XML da un file, da una stringa o da un flusso](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

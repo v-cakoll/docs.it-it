@@ -2,12 +2,12 @@
 title: Risoluzione dei problemi relativi ai messaggi in coda
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463111"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322043"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
 In questa sezione contiene domande frequenti e risoluzione dei problemi per l'uso delle code in Windows Communication Foundation (WCF).  
@@ -96,9 +96,9 @@ In questa sezione contiene domande frequenti e risoluzione dei problemi per l'us
   
  **R:** Il motivo più comune è le autorizzazioni.  
   
-1.  Assicurarsi che il processo `NetMsmqActivator` sia in esecuzione e che all'identità del processo `NetMsmqActivator` sia concessa l'autorizzazione alla lettura e alla scrittura sulla coda.  
+1. Assicurarsi che il processo `NetMsmqActivator` sia in esecuzione e che all'identità del processo `NetMsmqActivator` sia concessa l'autorizzazione alla lettura e alla scrittura sulla coda.  
   
-2.  Se `NetMsmqActivator` sta controllando le code in un computer remoto, assicurarsi che `NetMsmqActivator` non sia in esecuzione con un token di accesso con restrizioni. Per eseguire `NetMsmqActivator` con un token di accesso senza restrizioni:  
+2. Se `NetMsmqActivator` sta controllando le code in un computer remoto, assicurarsi che `NetMsmqActivator` non sia in esecuzione con un token di accesso con restrizioni. Per eseguire `NetMsmqActivator` con un token di accesso senza restrizioni:  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R:** È possibile utilizzare un archivio certificati computer locale con la modalità certificati. È necessario copiare il certificato dall'archivio dei certificati del computer all'archivio dell'utente corrente utilizzando lo snap-in Certificati. Per ottenere lo snap-in Certificati:  
   
-1.  Fare clic su **avviare**, selezionare **eseguito**, digitare `mmc`, fare clic su **OK**.  
+1. Fare clic su **avviare**, selezionare **eseguito**, digitare `mmc`, fare clic su **OK**.  
   
-2.  Nel **Microsoft Management Console**, aprire il **File** dal menu **Aggiungi/Rimuovi Snap-in**.  
+2. Nel **Microsoft Management Console**, aprire il **File** dal menu **Aggiungi/Rimuovi Snap-in**.  
   
-3.  Nel **Aggiungi/Rimuovi Snap-in** finestra di dialogo, fare clic sul **Aggiungi** pulsante.  
+3. Nel **Aggiungi/Rimuovi Snap-in** finestra di dialogo, fare clic sul **Aggiungi** pulsante.  
   
-4.  Nel **Aggiungi Snap-in Standalone** finestra di dialogo selezionare certificati e fare clic su **Add**.  
+4. Nel **Aggiungi Snap-in Standalone** finestra di dialogo selezionare certificati e fare clic su **Add**.  
   
-5.  Nel **certificati** snap-in finestra di dialogo **account dell'utente** e fare clic su **fine**.  
+5. Nel **certificati** snap-in finestra di dialogo **account dell'utente** e fare clic su **fine**.  
   
-6.  Successivamente, aggiungere un secondo snap-in certificati usando i passaggi precedenti, ma questa volta selezionare **account Computer** e fare clic su **successivo**.  
+6. Successivamente, aggiungere un secondo snap-in certificati usando i passaggi precedenti, ma questa volta selezionare **account Computer** e fare clic su **successivo**.  
   
-7.  Selezionare **Computer locale** e fare clic su **fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.  
+7. Selezionare **Computer locale** e fare clic su **fine**. È ora possibile trascinare i certificati dall'archivio del computer all'archivio dell'utente corrente.  
   
  **Q:** Quando il servizio legge da una coda in un altro computer in modalità gruppo di lavoro, viene generata un'eccezione "accesso negato".  
   

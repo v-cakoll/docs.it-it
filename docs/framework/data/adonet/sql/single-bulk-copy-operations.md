@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323369"
 ---
 # <a name="single-bulk-copy-operations"></a>Singole operazioni di copia di massa
 L'approccio più semplice per eseguire un'operazione di copia di massa in SQL Server consiste nell'eseguire una singola operazione in un database. Per impostazione predefinita, un'operazione di copia di massa viene eseguita come operazione isolata: l'operazione di copia avviene in modalità non transazionale, senza la possibilità di eseguirne il rollback.  
@@ -22,19 +22,19 @@ L'approccio più semplice per eseguire un'operazione di copia di massa in SQL Se
   
  In generale, i passaggi per eseguire un'operazione di copia di massa sono i seguenti:  
   
-1.  Connettersi al server di origine per recuperare i dati da copiare. I dati possono provenire anche da altre origini, se possono essere recuperati da un oggetto<xref:System.Data.IDataReader> o <xref:System.Data.DataTable>.  
+1. Connettersi al server di origine per recuperare i dati da copiare. I dati possono provenire anche da altre origini, se possono essere recuperati da un oggetto<xref:System.Data.IDataReader> o <xref:System.Data.DataTable>.  
   
-2.  Connettersi al server di destinazione (a meno che non si desidera **SqlBulkCopy** per stabilire una connessione per l'utente).  
+2. Connettersi al server di destinazione (a meno che non si desidera **SqlBulkCopy** per stabilire una connessione per l'utente).  
   
-3.  Creare un oggetto <xref:System.Data.SqlClient.SqlBulkCopy>, impostando tutte le proprietà necessarie.  
+3. Creare un oggetto <xref:System.Data.SqlClient.SqlBulkCopy>, impostando tutte le proprietà necessarie.  
   
-4.  Impostare il **DestinationTableName** proprietà per indicare la tabella di destinazione per la maggior parte delle operazioni di inserimento.  
+4. Impostare il **DestinationTableName** proprietà per indicare la tabella di destinazione per la maggior parte delle operazioni di inserimento.  
   
-5.  Chiamare uno dei **WriteToServer** metodi.  
+5. Chiamare uno dei **WriteToServer** metodi.  
   
-6.  Facoltativamente, aggiornare le proprietà e chiamare **WriteToServer** nuovamente in base alle esigenze.  
+6. Facoltativamente, aggiornare le proprietà e chiamare **WriteToServer** nuovamente in base alle esigenze.  
   
-7.  Chiamare <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> o eseguire il wrapping delle operazioni di copia di massa all'interno di un'istruzione `Using`.  
+7. Chiamare <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> o eseguire il wrapping delle operazioni di copia di massa all'interno di un'istruzione `Using`.  
   
 > [!CAUTION]
 >  È consigliabile assicurare che la corrispondenza tra i tipi di dati della colonna di origine e quelli di destinazione. Se i tipi di dati non corrispondono, **SqlBulkCopy** tenta di convertire ogni valore di origine per il tipo di dati di destinazione, usando le regole applicate da <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Le conversioni possono influenzare le prestazioni e possono provocare errori imprevisti. Ad esempio, non è sempre possibile convertire un tipo di dati `Double` in `Decimal`.  

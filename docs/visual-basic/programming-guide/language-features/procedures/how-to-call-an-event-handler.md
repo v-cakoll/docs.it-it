@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837767"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320171"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Procedura: Chiamare un gestore eventi in Visual Basic
 Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato un limite di credito o fare clic su, che viene riconosciuto da alcuni componenti del programma e per cui è possibile scrivere codice per rispondere. Un' *gestore dell'evento* è riportato il codice scritto in risposta a un evento.  
@@ -22,17 +22,17 @@ Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato
   
  Quando si verifica l'evento, Visual Basic chiama automaticamente la routine del gestore eventi. Qualsiasi codice che dispone dell'accesso per l'evento può causare la generazione tramite l'esecuzione di un [istruzione RaiseEvent](../../../../visual-basic/language-reference/statements/raiseevent-statement.md).  
   
- È possibile associare più di un gestore eventi con lo stesso evento. In alcuni casi è possibile annullare l'associazione di un gestore da un evento. Per altre informazioni, vedere [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+ È possibile associare più di un gestore eventi con lo stesso evento. In alcuni casi è possibile annullare l'associazione di un gestore da un evento. Per ulteriori informazioni, vedi [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
 ### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>Per chiamare un gestore eventi utilizzano handle e WithEvents  
   
-1.  Assicurarsi che l'evento viene dichiarato con un [istruzione Event](../../../../visual-basic/language-reference/statements/event-statement.md).  
+1. Assicurarsi che l'evento viene dichiarato con un [istruzione Event](../../../../visual-basic/language-reference/statements/event-statement.md).  
   
-2.  Dichiarare una variabile oggetto alla classe o modulo utilizzando la [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) (parola chiave). Il `As` clausola per questa variabile deve specificare la classe che genera l'evento.  
+2. Dichiarare una variabile oggetto alla classe o modulo utilizzando la [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) (parola chiave). Il `As` clausola per questa variabile deve specificare la classe che genera l'evento.  
   
-3.  Nella dichiarazione di gestione di eventi `Sub` routine, aggiungere un' [gestisce](../../../../visual-basic/language-reference/statements/handles-clause.md) clausola che specifica il `WithEvents` variabile e il nome dell'evento.  
+3. Nella dichiarazione di gestione di eventi `Sub` routine, aggiungere un' [gestisce](../../../../visual-basic/language-reference/statements/handles-clause.md) clausola che specifica il `WithEvents` variabile e il nome dell'evento.  
   
-4.  Quando si verifica l'evento, Visual Basic chiama automaticamente il `Sub` procedure. Il codice può usare un `RaiseEvent` istruzione per generare l'evento.  
+4. Quando si verifica l'evento, Visual Basic chiama automaticamente il `Sub` procedure. Il codice può usare un `RaiseEvent` istruzione per generare l'evento.  
   
      L'esempio seguente definisce un evento e un `WithEvents` variabile che fa riferimento alla classe che genera l'evento. La gestione degli eventi `Sub` procedure Usa una `Handles` clausola per specificare la classe che gestisce l'evento.  
   
@@ -40,11 +40,11 @@ Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>Per chiamare un gestore evento mediante AddHandler  
   
-1.  Assicurarsi che l'evento viene dichiarato con un `Event` istruzione.  
+1. Assicurarsi che l'evento viene dichiarato con un `Event` istruzione.  
   
-2.  Eseguire un' [istruzione AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) per connettersi in modo dinamico la gestione degli eventi `Sub` procedure con l'evento.  
+2. Eseguire un' [istruzione AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) per connettersi in modo dinamico la gestione degli eventi `Sub` procedure con l'evento.  
   
-3.  Quando si verifica l'evento, Visual Basic chiama automaticamente il `Sub` procedure. Il codice può usare un `RaiseEvent` istruzione per generare l'evento.  
+3. Quando si verifica l'evento, Visual Basic chiama automaticamente il `Sub` procedure. Il codice può usare un `RaiseEvent` istruzione per generare l'evento.  
   
      L'esempio seguente definisce una `Sub` procedure per gestire il <xref:System.Windows.Forms.Form.Closing> eventi di un form. Quindi, utilizza il [istruzione AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) per associare il `catchClose` routine come gestore eventi per <xref:System.Windows.Forms.Form.Closing>.  
   
@@ -54,9 +54,9 @@ Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
+- [Procedure](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Operatore AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Procedura: Creare una stored Procedure](./how-to-create-a-procedure.md)
+- [Procedura: Creare una routine](./how-to-create-a-procedure.md)
 - [Procedura: Chiamare una routine che non restituisce un valore](./how-to-call-a-procedure-that-does-not-return-a-value.md)

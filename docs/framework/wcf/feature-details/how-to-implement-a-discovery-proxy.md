@@ -1,16 +1,16 @@
 ---
-title: 'Procedura: Implementare un Proxy di individuazione'
+title: 'Procedura: Implementare un proxy di individuazione'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321016"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>Procedura: Implementare un Proxy di individuazione
-In questo argomento viene illustrato come implementare un proxy di individuazione. Per altre informazioni sulle funzionalità di rilevamento in Windows Communication Foundation (WCF), vedere [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). È possibile implementare un proxy di individuazione creando una classe che estende la classe astratta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. In questo esempio vengono definite e utilizzate altre classi di supporto. `OnResolveAsyncResult`, `OnFindAsyncResult` e `AsyncResult`. Queste classi implementano l'interfaccia <xref:System.IAsyncResult>. Per altre informazioni sulle <xref:System.IAsyncResult> visualizzare [interfaccia System. IAsyncResult](xref:System.IAsyncResult).
+# <a name="how-to-implement-a-discovery-proxy"></a>Procedura: Implementare un proxy di individuazione
+In questo argomento viene illustrato come implementare un proxy di individuazione. Per altre informazioni sulle funzionalità di rilevamento in Windows Communication Foundation (WCF), vedere [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). È possibile implementare un proxy di individuazione creando una classe che estende la classe astratta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. In questo esempio vengono definite e utilizzate altre classi di supporto. `OnResolveAsyncResult`, `OnFindAsyncResult`, e `AsyncResult`. Queste classi implementano l'interfaccia <xref:System.IAsyncResult>. Per altre informazioni sulle <xref:System.IAsyncResult> visualizzare [interfaccia System. IAsyncResult](xref:System.IAsyncResult).
 
  In questo argomento l'implementazione di un proxy di individuazione è articolata in tre fasi principali:
 
@@ -22,11 +22,11 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
 
 ### <a name="to-create-a-new-console-application-project"></a>Per creare un nuovo progetto di applicazione console
 
-1.  Start Visual Studio 2012.
+1. Start Visual Studio 2012.
 
-2.  Creare un nuovo progetto applicazione console. Assegnare al progetto il nome `DiscoveryProxy` e assegnare alla soluzione il nome `DiscoveryProxyExample`.
+2. Creare un nuovo progetto applicazione console. Assegnare al progetto il nome `DiscoveryProxy` e assegnare alla soluzione il nome `DiscoveryProxyExample`.
 
-3.  Aggiungere al progetto i riferimenti seguenti
+3. Aggiungere al progetto i riferimenti seguenti
 
     1.  System.ServiceModel.dll
 
@@ -37,9 +37,9 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
 
 ### <a name="to-implement-the-proxydiscoveryservice-class"></a>Per implementare la classe ProxyDiscoveryService
 
-1.  Aggiungere un nuovo file di codice al progetto e denominarlo DiscoveryProxy.cs.
+1. Aggiungere un nuovo file di codice al progetto e denominarlo DiscoveryProxy.cs.
 
-2.  Aggiungere le istruzioni `using` seguenti a DiscoveryProxy.cs.
+2. Aggiungere le istruzioni `using` seguenti a DiscoveryProxy.cs.
 
     ```
     using System;
@@ -49,7 +49,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
     using System.Xml;
     ```
 
-3.  Derivare `DiscoveryProxyService` da <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Applicare l'attributo `ServiceBehavior` alla classe, come illustrato nell'esempio riportato di seguito.
+3. Derivare `DiscoveryProxyService` da <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Applicare l'attributo `ServiceBehavior` alla classe, come illustrato nell'esempio riportato di seguito.
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
     }
     ```
 
-4.  Nella classe `DiscoveryProxy` definire un dizionario per conservare i servizi registrati.
+4. Nella classe `DiscoveryProxy` definire un dizionario per conservare i servizi registrati.
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5.  Definire un costruttore che inizializza il dizionario.
+5. Definire un costruttore che inizializza il dizionario.
 
     ```
     public DiscoveryProxyService()
@@ -77,7 +77,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>Per definire i metodi utilizzati per aggiornare la cache del proxy di individuazione
 
-1.  Implementare il metodo `AddOnlineservice` per aggiungere servizi alla cache. Questo metodo viene chiamato ogni volta che il proxy riceve un messaggio di annuncio.
+1. Implementare il metodo `AddOnlineservice` per aggiungere servizi alla cache. Questo metodo viene chiamato ogni volta che il proxy riceve un messaggio di annuncio.
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-2.  Implementare il metodo `RemoveOnlineService` utilizzato per rimuovere servizi dalla cache.
+2. Implementare il metodo `RemoveOnlineService` utilizzato per rimuovere servizi dalla cache.
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-3.  Implementare i metodi `MatchFromOnlineService`, che tentano di individuare una corrispondenza tra un servizio e un servizio nel dizionario.
+3. Implementare i metodi `MatchFromOnlineService`, che tentano di individuare una corrispondenza tra un servizio e un servizio nel dizionario.
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-4.  Implementare il metodo `PrintDiscoveryMetadata`, che fornisce all'utente l'output di testo della console indicante le operazioni eseguite dal proxy di individuazione.
+4. Implementare il metodo `PrintDiscoveryMetadata`, che fornisce all'utente l'output di testo della console indicante le operazioni eseguite dal proxy di individuazione.
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-5.  Aggiungere le classi AsyncResult seguenti a DiscoveryProxyService. Tali classi vengono utilizzate per distinguere i diversi risultati delle operazioni asincrone.
+5. Aggiungere le classi AsyncResult seguenti a DiscoveryProxyService. Tali classi vengono utilizzate per distinguere i diversi risultati delle operazioni asincrone.
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -225,7 +225,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>Per definire i metodi che implementano la funzionalità del proxy di individuazione
 
-1.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve un messaggio di annuncio online.
+1. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve un messaggio di annuncio online.
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-2.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di un messaggio di annuncio.
+2. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di un messaggio di annuncio.
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-3.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve un messaggio di annuncio offline.
+3. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve un messaggio di annuncio offline.
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-4.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di un messaggio di annuncio offline.
+4. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di un messaggio di annuncio offline.
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-5.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve una richiesta di ricerca.
+5. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve una richiesta di ricerca.
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
     }
     ```
 
-6.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di una richiesta di ricerca.
+6. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di una richiesta di ricerca.
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
             }
     ```
 
-7.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve un messaggio di risoluzione.
+7. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione riceve un messaggio di risoluzione.
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
     }
     ```
 
-8.  Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di un messaggio di risoluzione.
+8. Eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> . Questo metodo viene chiamato quando il proxy di individuazione completa l'elaborazione di un messaggio di risoluzione.
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -323,18 +323,18 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
 
 ### <a name="to-implement-the-asyncresult-class"></a>Per implementare la classe AsyncResult
 
-1.  Definire la classe di base astratta AsyncResult, utilizzata per derivare le varie classi AsyncResult.
+1. Definire la classe di base astratta AsyncResult, utilizzata per derivare le varie classi AsyncResult.
 
-2.  Creare un nuovo file di codice denominato AsyncResult.cs.
+2. Creare un nuovo file di codice denominato AsyncResult.cs.
 
-3.  Aggiungere le istruzioni `using` seguenti a AsyncResult.cs.
+3. Aggiungere le istruzioni `using` seguenti a AsyncResult.cs.
 
     ```
     using System;
     using System.Threading;
     ```
 
-4.  Aggiungere la classe AsyncResult seguente.
+4. Aggiungere la classe AsyncResult seguente.
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -487,9 +487,9 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
 
 ### <a name="to-host-the-discoveryproxy"></a>Per ospitare DiscoveryProxy
 
-1.  Aprire il file Program.cs nel progetto DiscoveryProxyExample.
+1. Aprire il file Program.cs nel progetto DiscoveryProxyExample.
 
-2.  Aggiungere le istruzioni `using` riportate di seguito.
+2. Aggiungere le istruzioni `using` riportate di seguito.
 
     ```
     using System;
@@ -497,7 +497,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
     using System.ServiceModel.Discovery;
     ```
 
-3.  Aggiungere nel metodo `Main()` il codice riportato di seguito. In questo modo viene creata un'istanza della classe `DiscoveryProxy`.
+3. Aggiungere nel metodo `Main()` il codice riportato di seguito. In questo modo viene creata un'istanza della classe `DiscoveryProxy`.
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ In questo argomento viene illustrato come implementare un proxy di individuazion
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4.  Aggiungere quindi il codice seguente per aggiungere un endpoint di individuazione e un endpoint annunci.
+4. Aggiungere quindi il codice seguente per aggiungere un endpoint di individuazione e un endpoint annunci.
 
     ```
     try
@@ -980,6 +980,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Procedura: Implementare un servizio individuabile che esegue la registrazione al Proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Procedura: Implementare un'applicazione Client che usa il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Procedura: Testare il Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [Procedura: Implementare un servizio individuabile per eseguire la registrazione al proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Procedura: Implementare un'applicazione client per usare il proxy di individuazione e cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Procedura: Testare il proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

@@ -2,12 +2,12 @@
 title: Comunicazione asincrona
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593907"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323655"
 ---
 # <a name="asynchronous-communication"></a>Comunicazione asincrona
 Questo esempio viene illustrato come la comunicazione tra due diversi servizi di Windows Workflow Foundation (WF) viene eseguita in modo asincrono per impostazione predefinita.  
@@ -31,13 +31,13 @@ Questo esempio viene illustrato come la comunicazione tra due diversi servizi di
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Fare doppio clic il **AsynchronousCommunication** soluzioni e selezionare **proprietà**.  
+1. Fare doppio clic il **AsynchronousCommunication** soluzioni e selezionare **proprietà**.  
   
-2.  Nelle **proprietà comuni**, selezionare **progetto di avvio**e selezionare **progetti di avvio multipli**.  
+2. Nelle **proprietà comuni**, selezionare **progetto di avvio**e selezionare **progetti di avvio multipli**.  
   
-3.  Spostare **RentalApprovalService** alla prima posizione nell'elenco, seguito da **CreditCheckService**, quindi su **Client**. Impostare il **avviare** azione su tutti e tre i progetti.  
+3. Spostare **RentalApprovalService** alla prima posizione nell'elenco, seguito da **CreditCheckService**, quindi su **Client**. Impostare il **avviare** azione su tutti e tre i progetti.  
   
-4.  Fare clic su **OK**, premere F5 per eseguire l'esempio.  
+4. Fare clic su **OK**, premere F5 per eseguire l'esempio.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

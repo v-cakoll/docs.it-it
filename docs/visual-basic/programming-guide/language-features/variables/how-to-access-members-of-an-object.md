@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819651"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322758"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Procedura: Accedere ai membri di un oggetto (Visual Basic)
 Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è spesso necessario lavorare con i membri di tale oggetto, ad esempio relativi metodi, proprietà, campi ed eventi. Ad esempio, dopo aver creato un nuovo <xref:System.Windows.Forms.Form> dell'oggetto, si potrebbe voler impostare relativi <xref:System.Windows.Forms.Control.Text%2A> proprietà o chiamata relativo <xref:System.Windows.Forms.Control.Focus%2A> (metodo).  
@@ -33,7 +33,7 @@ Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è s
   
 #### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>Per accedere ai membri di un oggetto per cui si conosce il tipo in fase di compilazione  
   
-1.  Dichiarare la variabile oggetto di tipo dell'oggetto che si intende assegnare alla variabile.  
+1. Dichiarare la variabile oggetto di tipo dell'oggetto che si intende assegnare alla variabile.  
   
     ```  
     Dim extraForm As System.Windows.Forms.Form  
@@ -41,7 +41,7 @@ Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è s
   
      Con `Option Strict On`, è possibile assegnare solo <xref:System.Windows.Forms.Form> oggetti (o gli oggetti di un tipo derivato da <xref:System.Windows.Forms.Form>) a `extraForm`. Se è stato definito una classe o struttura con un ampliamento `CType` conversione <xref:System.Windows.Forms.Form>, è anche possibile assegnare tale classe o struttura a `extraForm`.  
   
-2.  Usare l'operatore di accesso ai membri (`.`) tra il nome della variabile oggetto e il nome del membro.  
+2. Usare l'operatore di accesso ai membri (`.`) tra il nome della variabile oggetto e il nome del membro.  
   
     ```  
     extraForm.Show()  
@@ -54,7 +54,7 @@ Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è s
   
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>Per accedere ai membri di un oggetto per cui non si conosce il tipo in fase di compilazione  
   
-1.  Dichiarare la variabile di oggetto di [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Dichiarazione di una variabile come `Object` equivale dichiararla come <xref:System.Object?displayProperty=nameWithType>.)  
+1. Dichiarare la variabile di oggetto di [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Dichiarazione di una variabile come `Object` equivale dichiararla come <xref:System.Object?displayProperty=nameWithType>.)  
   
     ```  
     Dim someControl As Object  
@@ -62,7 +62,7 @@ Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è s
   
      Con `Option Strict On`, è possibile accedere solo i membri che sono definiti nel <xref:System.Object> classe.  
   
-2.  Usare l'operatore di accesso ai membri (`.`) tra il nome della variabile oggetto e il nome del membro.  
+2. Usare l'operatore di accesso ai membri (`.`) tra il nome della variabile oggetto e il nome del membro.  
   
     ```  
     someControl.GetType()  
@@ -77,5 +77,5 @@ Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è s
 - <xref:System.MemberAccessException>
 - [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

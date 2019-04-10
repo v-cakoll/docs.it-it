@@ -18,20 +18,18 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200350"
 ---
 # <a name="threading-model"></a>Modello di threading
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è stato progettato per semplificare il threading. Di conseguenza, la maggior parte delle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli sviluppatori non sarà necessario scrivere un'interfaccia che usa più thread. Poiché i programmi con multithreading sono complessi ed è difficile eseguirne il debug, è preferibile evitarli quando sono disponibili soluzioni a thread singolo.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è progettato per semplificare le difficoltà di threading. Di conseguenza, la maggior parte delle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli sviluppatori non sarà necessario scrivere un'interfaccia che usa più thread. Poiché i programmi con multithreading sono complessi ed è difficile eseguirne il debug, è preferibile evitarli quando sono disponibili soluzioni a thread singolo.  
   
  Nessun indipendentemente dall'architettura, tuttavia, no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework mai saranno in grado di fornire una soluzione a thread singolo per ogni tipo di problema. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] si avvicina, ma ci sono comunque situazioni in cui più thread migliorano [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] delle prestazioni di velocità di risposta o l'applicazione. Dopo aver illustrato alcune nozioni di base, questo documento analizza alcune di queste situazioni per concludere con la descrizione di alcuni aspetti più in dettaglio.  
-  
 
-  
 > [!NOTE]
 >  In questo argomento illustra il threading usando il <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> metodo per le chiamate asincrone. È anche possibile eseguire chiamate asincrone chiamando il <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> metodo, che accettano un' <xref:System.Action> o <xref:System.Func%601> come parametro.  Il <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> metodo restituisce un <xref:System.Windows.Threading.DispatcherOperation> oppure <xref:System.Windows.Threading.DispatcherOperation%601>, che ha un <xref:System.Windows.Threading.DispatcherOperation.Task%2A> proprietà. È possibile usare la `await` parola chiave con il <xref:System.Windows.Threading.DispatcherOperation> o associato <xref:System.Threading.Tasks.Task>. Se è necessario attendere in modo sincrono il <xref:System.Threading.Tasks.Task> restituito da un <xref:System.Windows.Threading.DispatcherOperation> oppure <xref:System.Windows.Threading.DispatcherOperation%601>, chiamare il <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> metodo di estensione.  La chiamata a <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> provoca un deadlock. Per altre informazioni sull'uso di un <xref:System.Threading.Tasks.Task> per eseguire operazioni asincrone, vedere parallelismo delle attività.  Il <xref:System.Windows.Threading.Dispatcher.Invoke%2A> metodo ha anche overload che accettano un' <xref:System.Action> o <xref:System.Func%601> come parametro.  È possibile usare la <xref:System.Windows.Threading.Dispatcher.Invoke%2A> per rendere sincrono un metodo viene chiamato passando un delegato <xref:System.Action> o <xref:System.Func%601>.  
   
@@ -94,12 +92,12 @@ ms.locfileid: "58125681"
   
  Oltre ad aggiornare il testo sul <xref:System.Windows.Controls.Button>, questo gestore è responsabile della pianificazione il primo controllo dei numeri primi tramite l'aggiunta di un delegato per il <xref:System.Windows.Threading.Dispatcher> coda. Dopo che questo gestore eventi ha completato l'elaborazione, a volte il <xref:System.Windows.Threading.Dispatcher> seleziona il delegato per l'esecuzione.  
   
- Come accennato in precedenza <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> è il <xref:System.Windows.Threading.Dispatcher> membro usato per pianificare un delegato per l'esecuzione. In questo caso, scegliamo la <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> priorità. Il <xref:System.Windows.Threading.Dispatcher> esegue questo delegato solo quando non sono presenti eventi importanti per l'elaborazione. La velocità di risposta dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] è più importante del controllo dei numeri. Viene anche passato un nuovo delegato che rappresenta la routine di controllo dei numeri.  
+ Come accennato in precedenza <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> è il <xref:System.Windows.Threading.Dispatcher> membro usato per pianificare un delegato per l'esecuzione. In questo caso, scegliamo la <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> priorità. Il <xref:System.Windows.Threading.Dispatcher> esegue questo delegato solo quando non sono presenti eventi importanti per l'elaborazione. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] la velocità di risposta è più importante del controllo dei numeri. Viene anche passato un nuovo delegato che rappresenta la routine di controllo dei numeri.  
   
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- Questo metodo controlla se il numero dispari successivo è un numero primo. Se si tratta di un numero primo, il metodo aggiorna direttamente la `bigPrime` <xref:System.Windows.Controls.TextBlock> per visualizzare il risultato. Ciò è possibile perché il calcolo viene eseguito nello stesso thread usato per creare il componente. Se avessimo scelto di utilizzare un thread separato per il calcolo, avremmo usare un meccanismo di sincronizzazione più complesso ed eseguire l'aggiornamento nel [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. Questa situazione verrà illustrata più avanti.  
+ Questo metodo controlla se il numero dispari successivo è un numero primo. Se si tratta di un numero primo, il metodo aggiorna direttamente la `bigPrime`<xref:System.Windows.Controls.TextBlock> per visualizzare il risultato. Ciò è possibile perché il calcolo viene eseguito nello stesso thread usato per creare il componente. Se avessimo scelto di utilizzare un thread separato per il calcolo, avremmo usare un meccanismo di sincronizzazione più complesso ed eseguire l'aggiornamento nel [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread. Questa situazione verrà illustrata più avanti.  
   
  Per il codice sorgente completo per questo esempio, vedere il [applicazione Single-Threaded con calcolo a esecuzione prolungata](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -143,9 +141,9 @@ ms.locfileid: "58125681"
 ### <a name="multiple-windows-multiple-threads"></a>Più finestre, più thread  
  Alcuni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni richiedono più finestre di primo livello. È perfettamente accettabile per un solo Thread /<xref:System.Windows.Threading.Dispatcher> combinazione per gestire più finestre, ma in alcuni casi diversi thread le prestazioni migliori. Ciò è particolarmente vero nel caso in cui ci sia la possibilità che una delle finestre monopolizzi il thread.  
   
- Esplora risorse di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] funziona in questo modo. Ogni nuova finestra di Esplora risorse appartiene al processo originale, ma viene creata sotto il controllo di un thread indipendente.  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Esplora funziona in questo modo. Ogni nuova finestra di Esplora risorse appartiene al processo originale, ma viene creata sotto il controllo di un thread indipendente.  
   
- Usando un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> (controllo), è possibile visualizzare le pagine Web. È possibile creare facilmente un semplice [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] sostituire. Si inizia con una funzionalità importante: la possibilità di aprire una nuova finestra. Quando l'utente fa clic sul pulsante "Nuova finestra", viene aperta una copia della finestra in un thread separato. In questo modo, le operazioni a esecuzione prolungata o di blocco in una delle finestre non bloccheranno tutte le altre finestre.  
+ Usando un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame> (controllo), è possibile visualizzare le pagine Web. È possibile creare facilmente un semplice [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] sostituire. Si inizia con una funzionalità importante: la possibilità di aprire una nuova finestra. Quando l'utente fa clic sul pulsante "Nuova finestra", viene aperta una copia della finestra in un thread separato. In questo modo, le operazioni a esecuzione prolungata o di blocco in una delle finestre non bloccheranno tutte le altre finestre.  
   
  In realtà, il modello di browser Web ha un proprio modello di threading complesso. È stato scelto questo esempio perché dovrebbe risultare familiare alla maggior parte dei lettori.  
   
@@ -177,7 +175,7 @@ ms.locfileid: "58125681"
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
- `GetWeatherAsync` userebbe una delle tecniche descritte in precedenza, ad esempio la creazione di un thread in background, per eseguire le attività in modo asincrono, senza bloccare il thread chiamante.  
+ `GetWeatherAsync` Usa una delle tecniche descritte in precedenza, ad esempio la creazione di un thread in background, per svolgere il lavoro in modo asincrono, non stia bloccando il thread chiamante.  
   
  Una delle parti più importanti di questo modello consiste nel chiamare il *NomeMetodo* `Completed` metodo sullo stesso thread che ha chiamato la *MethodName* `Async` cui iniziare. È possibile eseguire questa operazione usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modo piuttosto semplice, archiviando <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>, ma quindi questo caso il componente può essere usato solo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] delle applicazioni, non nel [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] programmi.  
   
@@ -191,7 +189,7 @@ ms.locfileid: "58125681"
   
  ![Screenshot che mostra un oggetto MessageBox con un pulsante OK](./media/threading-model/threading-message-loop.png)  
   
- Un thread deve essere responsabile della finestra di messaggio. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] potrebbe creare un nuovo thread solo per la finestra di messaggio, ma questo thread non sarebbe in grado di disegnare gli elementi disabilitati nella finestra originale (in base a quanto illustrato in precedenza in relazione all'esclusione reciproca). Al contrario, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Usa un sistema di elaborazione dei messaggi annidati. Il <xref:System.Windows.Threading.Dispatcher> classe include un metodo speciale denominato <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, che archivia il punto di esecuzione corrente di un'applicazione, quindi avvia un nuovo ciclo di messaggi. Al termine del ciclo di messaggi annidati, l'esecuzione riprende dopo l'originale <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> chiamare.  
+ Un thread deve essere responsabile della finestra di messaggio. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è stato possibile creare un nuovo thread solo per la finestra di messaggio, ma questo thread non è in grado di disegnare gli elementi disabilitati nella finestra originale (ricordare la discussione precedente esclusione reciproca). Al contrario, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Usa un sistema di elaborazione dei messaggi annidati. Il <xref:System.Windows.Threading.Dispatcher> classe include un metodo speciale denominato <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, che archivia il punto di esecuzione corrente di un'applicazione, quindi avvia un nuovo ciclo di messaggi. Al termine del ciclo di messaggi annidati, l'esecuzione riprende dopo l'originale <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> chiamare.  
   
  In questo caso <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> gestisce il contesto del programma alla chiamata a <xref:System.Windows.MessageBox>.<xref:System.Windows.MessageBox.Show%2A>, e avvia un nuovo ciclo di messaggi per ridisegnare la finestra di sfondo e gestire l'input per la finestra di messaggio. Quando l'utente fa clic su OK e cancella la finestra popup, il ciclo annidato viene interrotto e il controllo riprende dopo la chiamata a <xref:System.Windows.MessageBox.Show%2A>.  
   
@@ -218,4 +216,5 @@ ms.locfileid: "58125681"
  L'attività per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consiste nell'evitare la reentrancy imprevista senza reintrodurre la perdita di memoria, motivo per cui è non bloccano reentrancy ovunque.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Esempio di applicazione a thread singolo con calcolo a esecuzione prolungata](https://go.microsoft.com/fwlink/?LinkID=160038)
+
+- [Applicazione a thread singolo con calcolo a esecuzione prolungata](https://go.microsoft.com/fwlink/?LinkID=160038)

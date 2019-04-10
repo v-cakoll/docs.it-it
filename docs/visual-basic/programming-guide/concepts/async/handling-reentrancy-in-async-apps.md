@@ -2,17 +2,17 @@
 title: Gestione della Reentrancy nelle applicazioni asincrone (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324786"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Gestione della Reentrancy nelle applicazioni asincrone (Visual Basic)
 Quando si include codice asincrono nell'applicazione, è consigliabile prevedere ed evitare la reentrancy, ovvero il reinserimento di un'operazione asincrona prima del suo completamento. Se non vengono identificate e gestite le possibilità di reentrancy, esse possono causare risultati imprevisti.  
   
- **In questo argomento**  
+ **Contenuto dell'argomento**  
   
 -   [Riconoscimento della reentrancy](#BKMK_RecognizingReentrancy)  
   
@@ -24,7 +24,7 @@ Quando si include codice asincrono nell'applicazione, è consigliabile prevedere
   
     -   [Eseguire più operazioni e mettere in coda l'output](#BKMK_RunMultipleOperations)  
   
--   [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample)  
+-   [Revisione ed esecuzione dell'applicazione di esempio](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Per eseguire l'esempio, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.  
@@ -136,7 +136,7 @@ End Sub
   
  Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample). È anche possibile scaricare l'app finita da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET)). Il nome di questo progetto è CancelAndRestart.  
   
-1.  Dichiarare una variabile <xref:System.Threading.CancellationTokenSource>, `cts`, che sia compresa nell'ambito per tutti i metodi.  
+1. Dichiarare una variabile <xref:System.Threading.CancellationTokenSource>, `cts`, che sia compresa nell'ambito per tutti i metodi.  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  In `StartButton_Click` determinare se un'operazione è già in corso. Se il valore di `cts` è `Nothing`, nessuna operazione è già attiva. Se il valore non è `Nothing`, l'operazione che è già in esecuzione viene annullata.  
+2. In `StartButton_Click` determinare se un'operazione è già in corso. Se il valore di `cts` è `Nothing`, nessuna operazione è già attiva. Se il valore non è `Nothing`, l'operazione che è già in esecuzione viene annullata.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  Impostare `cts` su un valore diverso che rappresenti il processo corrente.  
+3. Impostare `cts` su un valore diverso che rappresenti il processo corrente.  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  In fondo `StartButton_Click`, il processo corrente è stato completato, quindi impostare il valore di `cts` al `Nothing`.  
+4. In fondo `StartButton_Click`, il processo corrente è stato completato, quindi impostare il valore di `cts` al `Nothing`.  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>Il metodo AccessTheWebAsync  
  Questo esempio suddivide `AccessTheWebAsync` in due metodi. Il primo metodo, `AccessTheWebAsync`, avvia tutte le attività di download per un gruppo e configura `pendingWork` per il controllo del processo di visualizzazione. Il metodo usa una query LINQ (Language Integrated Query) e <xref:System.Linq.Enumerable.ToArray%2A> per avviare tutte le attività di download contemporaneamente.  
   
- `AccessTheWebAsync` quindi chiama `FinishOneGroupAsync` per attendere il completamento di ogni download e visualizzare la relativa lunghezza.  
+ `AccessTheWebAsync` chiama quindi `FinishOneGroupAsync` per attendere il completamento di ogni download e visualizzare la relativa lunghezza.  
   
- `FinishOneGroupAsync` restituisce un'attività assegnata a `pendingWork` in `AccessTheWebAsync`. Tale valore impedisce l'interruzione da parte di un'altra operazione prima del completamento dell'attività.  
+ `FinishOneGroupAsync` Restituisce un'attività che è stata assegnata `pendingWork` in `AccessTheWebAsync`. Tale valore impedisce l'interruzione da parte di un'altra operazione prima del completamento dell'attività.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a> Download dell'app  
   
-1.  Scaricare il file compresso da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET)).  
+1. Scaricare il file compresso da [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET)).  
   
-2.  Decomprimere il file scaricato e quindi avviare Visual Studio.  
+2. Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
-3.  Nella barra dei menu scegliere **File**, **Apri**, **Progetto/Soluzione**.  
+3. Nella barra dei menu scegliere **File**, **Apri**, **Progetto/Soluzione**.  
   
-4.  Passare alla cartella che contiene il codice di esempio decompresso e quindi aprire il file di soluzione (sln).  
+4. Passare alla cartella che contiene il codice di esempio decompresso e quindi aprire il file di soluzione (sln).  
   
-5.  In **Esplora soluzioni** aprire il menu di scelta rapida del progetto che si vuole eseguire e scegliere **Set as StartUpProject** (Imposta come progetto di avvio).  
+5. In **Esplora soluzioni** aprire il menu di scelta rapida del progetto che si vuole eseguire e scegliere **Set as StartUpProject** (Imposta come progetto di avvio).  
   
-6.  Premere CTRL+F5 per compilare ed eseguire il progetto.  
+6. Premere CTRL+F5 per compilare ed eseguire il progetto.  
   
 ### <a name="BKMK_BuildingTheApp"></a> Compilazione dell'app  
  Nella sezione seguente viene illustrato il codice per compilare l'esempio come app WPF.  
   
 ##### <a name="to-build-a-wpf-app"></a>Per compilare un'applicazione WPF  
   
-1.  Avviare Visual Studio.  
+1. Avviare Visual Studio.  
   
-2.  Nella barra dei menu scegliere **File**, **Nuovo**, **Progetto**.  
+2. Nella barra dei menu scegliere **File**, **Nuovo**, **Progetto**.  
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  Nel **modelli installati** riquadro, espandere **Visual Basic**, quindi espandere **Windows**.  
+3. Nel **modelli installati** riquadro, espandere **Visual Basic**, quindi espandere **Windows**.  
   
-4.  Dall'elenco dei tipi di progetto scegliere **Applicazione WPF**.  
+4. Dall'elenco dei tipi di progetto scegliere **Applicazione WPF**.  
   
-5.  Assegnare al progetto il nome `WebsiteDownloadWPF` e fare clic su **OK**.  
+5. Assegnare al progetto il nome `WebsiteDownloadWPF` e fare clic su **OK**.  
   
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.  
   
-6.  Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .  
+6. Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .  
   
      Se la scheda non è visibile, aprire il menu di scelta rapida per MainWindow.xaml in **Esplora soluzioni** e scegliere **Visualizza codice**.  
   
-7.  Nella visualizzazione **XAML** di MainWindow.xaml sostituire il codice con quello riportato di seguito.  
+7. Nella visualizzazione **XAML** di MainWindow.xaml sostituire il codice con quello riportato di seguito.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      Nella visualizzazione **Progettazione** di MainWindow.xaml viene visualizzata una finestra semplice contenente una casella di testo e un pulsante.  
   
-8.  Aggiunge un riferimento a <xref:System.Net.Http>.  
+8. Aggiunge un riferimento a <xref:System.Net.Http>.  
   
 9. Nelle **Esplora soluzioni**, aprire il menu di scelta rapida per XAML. vb e quindi scegliere **Visualizza codice**.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211926"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] le applicazioni spesso dipendono da file che contengono dati non eseguibili, ad esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], immagini, video e audio. Windows Presentation Foundation (WPF) offre un supporto speciale per la configurazione, l'identificazione e l'utilizzo di questi tipi di file di dati, che vengono chiamati i file di dati dell'applicazione. Questo supporto si basa su un set specifico di tipi di file di dati dell'applicazione, che include:  
@@ -38,8 +38,7 @@ ms.locfileid: "57379198"
  Per fare riferimento a file di dati dell'applicazione, Windows Presentation Foundation (WPF) usa il pacchetto [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] schema, descritto dettagliatamente in [URI di tipo Pack in WPF](pack-uris-in-wpf.md)).  
   
  Questo argomento descrive come configurare e usare i file di dati dell'applicazione.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>File di risorse  
  Se un file di dati deve essere sempre disponibile per un'applicazione, l'unico modo per garantire la disponibilità è compilarlo nell'assembly eseguibile principale dell'applicazione o in uno degli assembly a cui si fa riferimento. Questo tipo di file di dati dell'applicazione è noto come un *file di risorse*.  
@@ -124,7 +123,7 @@ ms.locfileid: "57379198"
  È necessario utilizzare i file di dati quando l'applicazione richiede un set specifico di file di dati che possono essere aggiornati senza dover ricompilare l'assembly che li utilizza.  
   
 ### <a name="configuring-content-files"></a>Configurazione dei file di dati  
- Per aggiungere un file di contenuto a un progetto, un file di dati dell'applicazione deve essere incluso come un `Content` elemento. Inoltre, dato un file di contenuto non è compilato nell'assembly, è necessario impostare il [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` elemento dei metadati per specificare che il file di contenuto viene copiato in un percorso relativo all'assembly compilato. Se si desidera che la risorsa venga copiata nella cartella di output di compilazione ogni volta che viene compilato un progetto, impostare il `CopyToOutputDirectory` elemento dei metadati con il `Always` valore. In caso contrario, è possibile assicurarsi che solo la versione più recente della risorsa viene copiata nella cartella di output di compilazione usando il `PreserveNewest` valore.  
+ Per aggiungere un file di contenuto a un progetto, un file di dati dell'applicazione deve essere incluso come un `Content` elemento. Inoltre, dato un file di contenuto non è compilato nell'assembly, è necessario impostare il [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` elemento dei metadati per specificare che il file di contenuto viene copiato in un percorso relativo all'assembly compilato. Se si desidera che la risorsa venga copiata nella cartella di output di compilazione ogni volta che viene compilato un progetto, impostare il `CopyToOutputDirectory` elemento dei metadati con il `Always` valore. In caso contrario, è possibile assicurarsi che solo la versione più recente della risorsa viene copiata nella cartella di output di compilazione usando il `PreserveNewest` valore.  
   
  Di seguito viene illustrato un file configurato come file di dati, che viene copiato nella cartella dell'output di compilazione solo quando una nuova versione della risorsa viene aggiunta al progetto.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "57379198"
 ### <a name="configuring-site-of-origin-files"></a>Configurazione dei file del sito di origine  
  Se il file del sito di origine sono inesistenti o sconosciuti in fase di compilazione, è necessario usare distribuzione tradizionali meccanismi per assicurare che i file necessari sono disponibili in fase di esecuzione, incluso l'uso di uno il `XCopy` programma della riga di comando o il [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Se in fase di compilazione si conoscono i file da collocare nel sito di origine, ma si desidera comunque evitare una dipendenza esplicita, è possibile aggiungere tali file in un' [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] il progetto come `None` elemento. Come file di contenuto, è necessario impostare il [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` attributo per specificare che il file del sito di origine viene copiato in un percorso relativo all'assembly compilato, specificando la `Always` valore o il `PreserveNewest` valore.  
+ Se in fase di compilazione si conoscono i file da collocare nel sito di origine, ma si desidera comunque evitare una dipendenza esplicita, è possibile aggiungere tali file in un' [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] il progetto come `None` elemento. Come file di contenuto, è necessario impostare il [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` attributo per specificare che il file del sito di origine viene copiato in un percorso relativo all'assembly compilato, specificando il `Always` valore o il `PreserveNewest` valore.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379198"
  Dopo avere modificato il tipo di compilazione di un file di dati dell'applicazione, è necessario ricompilare l'intera applicazione affinché le modifiche vengano applicate. Se ci si limita a compilare l'applicazione, le modifiche non vengono applicate.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [URI di tipo pack in WPF](pack-uris-in-wpf.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841004"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320691"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Procedura dettagliata: Dichiarazione e generazione di eventi (Visual Basic)
 Questa procedura dettagliata illustra come dichiarare e generare eventi per una classe denominata `Widget`. Dopo aver completato i passaggi, è possibile leggere l'argomento complementare [procedura dettagliata: Gestione degli eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), che mostra come usare gli eventi da `Widget` oggetti da fornire informazioni sullo stato in un'applicazione.  
@@ -28,11 +28,11 @@ Questa procedura dettagliata illustra come dichiarare e generare eventi per una 
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Per compilare l'esempio di codice in questo argomento  
   
-1.  Aprire un nuovo progetto applicazione Windows di Visual Basic e creare un form denominato `Form1`.  
+1. Aprire un nuovo progetto applicazione Windows di Visual Basic e creare un form denominato `Form1`.  
   
-2.  Aggiungere due pulsanti e un'etichetta a `Form1`.  
+2. Aggiungere due pulsanti e un'etichetta a `Form1`.  
   
-3.  Assegnare i nomi agli oggetti come illustrato nella tabella seguente.  
+3. Assegnare i nomi agli oggetti come illustrato nella tabella seguente.  
   
     |Oggetto|Proprietà|Impostazione|  
     |------------|--------------|-------------|  
@@ -40,7 +40,7 @@ Questa procedura dettagliata illustra come dichiarare e generare eventi per una 
     |`Button2`|`Text`|Annulla|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  Nel **Project** menu, scegliere **Aggiungi classe** per aggiungere una classe denominata `Widget.vb` al progetto.  
+4. Nel **Project** menu, scegliere **Aggiungi classe** per aggiungere una classe denominata `Widget.vb` al progetto.  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Per dichiarare un evento per la classe di Widget  
   
@@ -57,11 +57,11 @@ Questa procedura dettagliata illustra come dichiarare e generare eventi per una 
   
 #### <a name="to-raise-the-percentdone-event"></a>Per generare l'evento PercentDone  
   
-1.  Per semplificare l'accesso per il `Timer` proprietà utilizzata da questa classe, aggiungere un' `Imports` istruzione all'inizio della sezione delle dichiarazioni di modulo di classe, sopra il `Class Widget` istruzione.  
+1. Per semplificare l'accesso per il `Timer` proprietà utilizzata da questa classe, aggiungere un' `Imports` istruzione all'inizio della sezione delle dichiarazioni di modulo di classe, sopra il `Class Widget` istruzione.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  Aggiungere il codice seguente alla classe `Widget`:  
+2. Aggiungere il codice seguente alla classe `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   

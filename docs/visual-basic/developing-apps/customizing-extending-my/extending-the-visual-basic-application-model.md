@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320145"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estensione del modello di applicazione Visual Basic
 È possibile aggiungere funzionalità al modello dell'applicazione eseguendo l'override di `Overridable` i membri del <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Questa tecnica consente di personalizzare il comportamento del modello dell'applicazione e aggiungere chiamate a metodi personalizzati come l'applicazione si avvia e arresta.  
@@ -32,7 +32,7 @@ ms.locfileid: "58834712"
   
  Se l'applicazione è una normale applicazione (più istanze dell'applicazione) o la prima istanza di un'applicazione a istanza singola, il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metodo viene eseguito il `Overridable` metodi nell'ordine seguente:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Per impostazione predefinita, questo metodo imposta gli stili di visualizzazione, gli stili di visualizzazione di testo e oggetto principal corrente per il thread principale dell'applicazione (se l'applicazione usa l'autenticazione di Windows) e chiama `ShowSplashScreen` se non si specifica `/nosplash` né `-nosplash` viene utilizzato come un argomento della riga di comando.  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Per impostazione predefinita, questo metodo imposta gli stili di visualizzazione, gli stili di visualizzazione di testo e oggetto principal corrente per il thread principale dell'applicazione (se l'applicazione usa l'autenticazione di Windows) e chiama `ShowSplashScreen` se non si specifica `/nosplash` né `-nosplash` viene utilizzato come un argomento della riga di comando.  
   
      La sequenza di avvio dell'applicazione viene annullata se questa funzione restituisce `False`. Ciò può essere utile se non esistono circostanze in cui non eseguire l'applicazione.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "58834712"
   
          Per impostazione predefinita, questo metodo non effettua alcuna operazione. Se si seleziona una schermata iniziale per l'applicazione in Visual Basic **creazione progetti**, la finestra di progettazione esegue l'override di <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodo con un metodo che imposta il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> proprietà in una nuova istanza del modulo a schermata iniziale .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornisce un punto di estendibilità per la generazione di `Startup` evento. La sequenza di avvio dell'applicazione viene interrotta se questa funzione restituisce `False`.  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fornisce un punto di estendibilità per la generazione di `Startup` evento. La sequenza di avvio dell'applicazione viene interrotta se questa funzione restituisce `False`.  
   
      Per impostazione predefinita, questo metodo genera il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> evento. Se il gestore dell'evento imposta il <xref:System.ComponentModel.CancelEventArgs.Cancel> proprietà dell'argomento dell'evento al `True`, il metodo restituisce `False` per annullare l'avvio dell'applicazione.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Fornisce il punto di partenza per quando è pronto per iniziare a eseguire dopo l'inizializzazione viene eseguita l'applicazione principale.  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Fornisce il punto di partenza per quando è pronto per iniziare a eseguire dopo l'inizializzazione viene eseguita l'applicazione principale.  
   
      Per impostazione predefinita, prima che venga attivata il ciclo di messaggi Windows Form, questo metodo chiama il `OnCreateMainForm` (per creare form principale dell'applicazione) e `HideSplashScreen` (per chiudere la schermata iniziale) metodi:  
   
@@ -62,15 +62,15 @@ ms.locfileid: "58834712"
   
          Per impostazione predefinita, questo metodo chiude la schermata iniziale.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Fornisce un modo per personalizzare il comportamento di un'applicazione a istanza singola quando viene avviata un'altra istanza dell'applicazione.  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Fornisce un modo per personalizzare il comportamento di un'applicazione a istanza singola quando viene avviata un'altra istanza dell'applicazione.  
   
      Per impostazione predefinita, questo metodo genera il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> evento.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fornisce un punto di estendibilità per la generazione di `Shutdown` evento. Questo metodo non viene eseguito se si verifica un'eccezione non gestita nell'applicazione principale.  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Fornisce un punto di estendibilità per la generazione di `Shutdown` evento. Questo metodo non viene eseguito se si verifica un'eccezione non gestita nell'applicazione principale.  
   
      Per impostazione predefinita, questo metodo genera il <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> evento.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Eseguito se si verifica un'eccezione non gestita in uno dei metodi sopra elencati.  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Eseguito se si verifica un'eccezione non gestita in uno dei metodi sopra elencati.  
   
      Per impostazione predefinita, questo metodo genera le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> evento fino a quando non è collegato un debugger e l'applicazione gestisce il `UnhandledException` evento.  
   
@@ -100,4 +100,4 @@ ms.locfileid: "58834712"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
-- [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

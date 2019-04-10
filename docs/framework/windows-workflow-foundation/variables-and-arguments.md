@@ -2,12 +2,12 @@
 title: Variabili e argomenti
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717817"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320743"
 ---
 # <a name="variables-and-arguments"></a>Variabili e argomenti
 In Windows Workflow Foundation (WF), le variabili rappresentano l'archiviazione dei dati e gli argomenti rappresentano il flusso di dati da e verso un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  
@@ -63,11 +63,11 @@ Variable<string> var = new Variable<string>
   
  L'esecuzione del flusso di lavoro assicura le seguenti garanzie relativamente agli intervalli di spostamento dei dati all'interno e all'esterno di attività:  
   
-1.  Quando si avvia l'esecuzione di un'attività, vengono calcolati i valori di tutti i relativi argomenti di input e di input/output. Ad esempio, indipendentemente da quando viene chiamato il metodo <xref:System.Activities.Argument.Get%2A>, il valore restituito sarà quello calcolato dal runtime antecedente alla chiamata di `Execute`.  
+1. Quando si avvia l'esecuzione di un'attività, vengono calcolati i valori di tutti i relativi argomenti di input e di input/output. Ad esempio, indipendentemente da quando viene chiamato il metodo <xref:System.Activities.Argument.Get%2A>, il valore restituito sarà quello calcolato dal runtime antecedente alla chiamata di `Execute`.  
   
-2.  Quando viene chiamato il metodo <xref:System.Activities.InOutArgument%601.Set%2A>, il valore viene impostato immediatamente dal runtime.  
+2. Quando viene chiamato il metodo <xref:System.Activities.InOutArgument%601.Set%2A>, il valore viene impostato immediatamente dal runtime.  
   
-3.  Facoltativamente gli argomenti possono avere il proprio <xref:System.Activities.Argument.EvaluationOrder%2A> specificato. <xref:System.Activities.Argument.EvaluationOrder%2A> è un valore in base zero che specifica l'ordine in cui viene valutato l'argomento. Per impostazione predefinita, l'ordine di valutazione dell'argomento non è specificato e corrisponde al valore <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Impostare la proprietà <xref:System.Activities.Argument.EvaluationOrder%2A> su un valore maggiore o uguale a zero per specificare un ordine di valutazione per questo argomento. Windows Workflow Foundation valuta gli argomenti con un ordine di valutazione specificato crescente. Si noti che gli argomenti con un ordine di valutazione non specificato vengono valutati prima di quelli aventi un ordine di valutazione specificato.  
+3. Facoltativamente gli argomenti possono avere il proprio <xref:System.Activities.Argument.EvaluationOrder%2A> specificato. <xref:System.Activities.Argument.EvaluationOrder%2A> è un valore in base zero che specifica l'ordine in cui viene valutato l'argomento. Per impostazione predefinita, l'ordine di valutazione dell'argomento non è specificato e corrisponde al valore <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Impostare la proprietà <xref:System.Activities.Argument.EvaluationOrder%2A> su un valore maggiore o uguale a zero per specificare un ordine di valutazione per questo argomento. Windows Workflow Foundation valuta gli argomenti con un ordine di valutazione specificato crescente. Si noti che gli argomenti con un ordine di valutazione non specificato vengono valutati prima di quelli aventi un ordine di valutazione specificato.  
   
  Un autore di attività può usare un meccanismo fortemente tipizzato per esporre gli argomenti. A tale scopo, vengono dichiarate proprietà di tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> e <xref:System.Activities.InOutArgument%601>. In questo modo un autore di attività può stabilire un contratto specifico sui dati in ingresso o in uscita da un'attività.  
   
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  Le attività che restituiscono un singolo valore possono derivare dagli oggetti  <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601> o <xref:System.Activities.CodeActivity%601>. Queste attività dispongono di un oggetto <xref:System.Activities.OutArgument%601> ben definito denominato <xref:System.Activities.Activity%601.Result%2A> che contiene il valore restituito dell'attività.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>Uso di variabili e argomenti nei flussi di lavoro  
- Nell'esempio seguente viene mostrato come vengono usati variabili e argomenti in un flusso di lavoro. Il flusso di lavoro è una sequenza che dichiara tre variabili: `var1`, `var2` e `var3`. La prima attività nel flusso di lavoro è un'attività `Assign` che assegna il valore di variabile `var1` alla variabile `var2`. Questa attività è seguita da un'attività `WriteLine` che stampa il valore della variabile `var2`. La successiva è un'altra attività `Assign` che assegna il valore di variabile `var2` alla variabile `var3`. Infine è disponibile un'altra attività `WriteLine` che stampa il valore della variabile `var3`. La prima attività `Assign` usa gli oggetti `InArgument<string>` e `OutArgument<string>` che rappresentano in modo esplicito le associazioni per gli argomenti dell'attività. L'oggetto `InArgument<string>` viene usato per <xref:System.Activities.Statements.Assign.Value%2A> in quanto il valore passa nell'attività <xref:System.Activities.Statements.Assign%601> attraverso il relativo argomento <xref:System.Activities.Statements.Assign.Value%2A>; l'oggetto `OutArgument<string>` viene usato per <xref:System.Activities.Statements.Assign.To%2A> in quanto il valore passa dall'argomento <xref:System.Activities.Statements.Assign.To%2A> alla variabile. La seconda attività `Assign` esegue la stessa operazione più compatta, ma con sintassi equivalente che usa cast impliciti. Anche le attività `WriteLine` usano la sintassi compatta.  
+ Nell'esempio seguente viene mostrato come vengono usati variabili e argomenti in un flusso di lavoro. Il flusso di lavoro è una sequenza che dichiara tre variabili: `var1`, `var2` e `var3`. La prima attività nel flusso di lavoro è un'attività `Assign` che assegna il valore di variabile `var1` alla variabile `var2`. Questa attività è seguita da un'attività `WriteLine` che stampa il valore della variabile `var2`. La successiva è un'altra attività `Assign` che assegna il valore di variabile `var2` alla variabile `var3`. Infine è disponibile un'altra attività `WriteLine` che stampa il valore della variabile `var3`. La prima attività `Assign` usa gli oggetti `InArgument<string>` e `OutArgument<string>` che rappresentano in modo esplicito le associazioni per gli argomenti dell'attività. `InArgument<string>` viene usato per <xref:System.Activities.Statements.Assign.Value%2A> perché il valore passa nel <xref:System.Activities.Statements.Assign%601> attività tramite relativo <xref:System.Activities.Statements.Assign.Value%2A> argomento, e `OutArgument<string>` viene usato per <xref:System.Activities.Statements.Assign.To%2A> perché il valore passa il <xref:System.Activities.Statements.Assign.To%2A> argomento nella variabile. La seconda attività `Assign` esegue la stessa operazione più compatta, ma con sintassi equivalente che usa cast impliciti. Anche le attività `WriteLine` usano la sintassi compatta.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  

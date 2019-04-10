@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320058"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
 > [!NOTE]
@@ -148,13 +148,13 @@ ms.locfileid: "59077290"
   
  Per associare una finestra popup con un nuovo elemento padre:  
   
-1.  Creare un provider per la finestra popup. È necessario che la classe della finestra popup sia nota in anticipo.  
+1. Creare un provider per la finestra popup. È necessario che la classe della finestra popup sia nota in anticipo.  
   
-2.  Implementare tutte le proprietà e i pattern come di consueto per tale popup, come se fosse un controllo.  
+2. Implementare tutte le proprietà e i pattern come di consueto per tale popup, come se fosse un controllo.  
   
-3.  Implementare la proprietà <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> in modo che restituisca il valore ottenuto da <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, dove il parametro è l'handle della finestra popup.  
+3. Implementare la proprietà <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> in modo che restituisca il valore ottenuto da <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, dove il parametro è l'handle della finestra popup.  
   
-4.  Implementare <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> per la finestra popup e il relativo elemento padre in modo che la navigazione venga gestita correttamente dall'elemento padre logico agli elementi figlio logici e tra gli elementi figlio di pari livello.  
+4. Implementare <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> per la finestra popup e il relativo elemento padre in modo che la navigazione venga gestita correttamente dall'elemento padre logico agli elementi figlio logici e tra gli elementi figlio di pari livello.  
   
  Quando [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] rileva la finestra popup, riconosce che la navigazione è diversa rispetto all'impostazione predefinita e ignora la finestra popup quando viene rilevata come un figlio del desktop. Al contrario, il nodo sarà raggiungibile solo tramite il frammento.  
   

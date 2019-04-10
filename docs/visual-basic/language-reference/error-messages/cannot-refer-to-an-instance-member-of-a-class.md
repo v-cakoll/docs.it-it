@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322693"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Impossibile fare riferimento a un membro di istanza di una classe all'interno di un metodo condiviso o di un inizializzatore di membri condivisi senza un'istanza esplicita della classe
 Si è provato a fare riferimento a un membro non condiviso di una classe all'interno di una routine condivisa. L'esempio seguente illustra una situazione di questo tipo.  
@@ -37,11 +37,11 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Decidere se il membro venga condiviso tra tutte le istanze della classe o mantenuto singoli per ogni istanza.  
+1. Decidere se il membro venga condiviso tra tutte le istanze della classe o mantenuto singoli per ogni istanza.  
   
-2.  Se si desidera che una singola copia del membro venga condiviso tra tutte le istanze, aggiungere il `Shared` parola chiave per la dichiarazione del membro. Mantenere il `Shared` parola chiave nella dichiarazione di routine.  
+2. Se si desidera che una singola copia del membro venga condiviso tra tutte le istanze, aggiungere il `Shared` parola chiave per la dichiarazione del membro. Mantenere il `Shared` parola chiave nella dichiarazione di routine.  
   
-3.  Se si vuole che ogni istanza per mantenere la propria copia del membro, non specificare `Shared` per la dichiarazione di membro. Rimuovere il `Shared` parola chiave dalla dichiarazione di routine.  
+3. Se si vuole che ogni istanza per mantenere la propria copia del membro, non specificare `Shared` per la dichiarazione di membro. Rimuovere il `Shared` parola chiave dalla dichiarazione di routine.  
   
 ## <a name="see-also"></a>Vedere anche
 
