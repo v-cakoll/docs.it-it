@@ -2,19 +2,19 @@
 title: 'Procedura: Creare un servizio WCF per comunicare tramite WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346366"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedura: Creare un servizio WCF per comunicare tramite WebSockets
 I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  La tecnologia WebSockets viene usata quando <xref:System.ServiceModel.NetHttpBinding> determina che il contratto di servizio definisce un contratto di callback. In questo argomento viene descritto come implementare un servizio e un client WCF in cui viene usato l'oggetto <xref:System.ServiceModel.NetHttpBinding> per comunicare tramite WebSockets.  
   
 ### <a name="define-the-service"></a>Definire il servizio  
   
-1.  Definire un contratto di callback  
+1. Definire un contratto di callback  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
   
      Questo contratto sarà implementato dall'applicazione client per consentire al servizio di restituire i messaggi al client.  
   
-2.  Definire il contratto di servizio e specificare l'interfaccia `IStockQuoteCallback` come contratto di callback.  
+2. Definire il contratto di servizio e specificare l'interfaccia `IStockQuoteCallback` come contratto di callback.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
         }  
     ```  
   
-3.  Implementare il contratto di servizio  
+3. Implementare il contratto di servizio  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
   
      L'operazione del servizio `StartSendingQuotes` viene implementata come chiamata asincrona. Si recupera il canale di callback usando `OperationContext` e, se il canale è aperto, si effettua una chiamata asincrona sul canale di callback.  
   
-4.  Configurare il servizio  
+4. Configurare il servizio  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ I servizi e i client WCF possono usare l'associazione <xref:System.ServiceModel.
   
 ### <a name="define-the-client"></a>Definire il client  
   
-1.  Implementare il contratto di callback.  
+1. Implementare il contratto di callback.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  

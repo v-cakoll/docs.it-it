@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106483"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343588"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedura: Aggiungere controlli a Windows Forms
 La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla superficie del form per definire l'interfaccia utente (UI). Oggetto *controllo* è un componente in un formato utilizzato per visualizzare informazioni o accettare l'input dell'utente. Per altre informazioni sui controlli, vedere [Windows Forms Controls](index.md).  
@@ -24,11 +24,11 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla sup
   
 ### <a name="to-draw-a-control-on-a-form"></a>Per disegnare un controllo in un form  
   
-1.  Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Nel **casella degli strumenti**, fare clic sul controllo da aggiungere al form.  
+2. Nel **casella degli strumenti**, fare clic sul controllo da aggiungere al form.  
   
-3.  Nel form, fare clic su cui l'angolo superiore sinistro del controllo da trovare e trascinare in cui si desidera l'angolo inferiore destro del controllo da individuare.  
+3. Nel form, fare clic su cui l'angolo superiore sinistro del controllo da trovare e trascinare in cui si desidera l'angolo inferiore destro del controllo da individuare.  
   
      Il controllo viene aggiunto al form con il percorso specificato e le dimensioni.  
   
@@ -37,9 +37,9 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla sup
   
 ### <a name="to-drag-a-control-to-a-form"></a>Trascinare un controllo a un form  
   
-1.  Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Aprire il form. Per altre informazioni, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Nel **casella degli strumenti**, scegliere il controllo desiderato e trascinarlo nel form.  
+2. Nel **casella degli strumenti**, scegliere il controllo desiderato e trascinarlo nel form.  
   
      Il controllo viene aggiunto al form nella posizione specificata nella dimensione predefinita.  
   
@@ -53,7 +53,7 @@ La maggior parte dei moduli sono progettati con l'aggiunta di controlli alla sup
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>Per aggiungere un controllo a un form a livello di codice  
   
-1.  Nel metodo che gestisce il pulsante `Click` evento all'interno di classe del modulo, inserire il codice simile al seguente per aggiungere un riferimento alla variabile di controllo, imposta il controllo `Location`e aggiungere il controllo.  
+1. Nel metodo che gestisce il pulsante `Click` evento all'interno di classe del modulo, inserire il codice simile al seguente per aggiungere un riferimento alla variabile di controllo, imposta il controllo `Location`e aggiungere il controllo.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

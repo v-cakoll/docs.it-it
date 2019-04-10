@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345521"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delega e rappresentazione con WCF
 La*rappresentazione* è una tecnica comune utilizzata dai servizi per limitare l'accesso dei client alle risorse del dominio del servizio. Tali risorse possono essere risorse del computer, ad esempio file locali (rappresentazione), o risorse in un'altro computer, ad esempio una condivisione file (delega). Per un'applicazione di esempio, vedere [Rappresentazione di client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Per un esempio di come usare la rappresentazione, vedere [come: Rappresenta un Client in un servizio](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Procedura: configurare un'applicazione per utilizzare una delega vincolata.  
  Prima di utilizzare una delega vincolata, è necessario che il mittente, il destinatario e il controller di dominio siano configurati per raggiungere tale obiettivo. La procedura riportata di seguito elenca i passaggi che consentono la delega vincolata. Per altre informazioni sulle differenze tra la delega e la delega vincolata, vedere la parte che descrive gli argomenti vincolati nella pagina sulle [estensioni Kerberos di Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=100194) .  
   
-1.  Nel controller di dominio, cancellare la casella di controllo **L'account è sensibile e non può essere delegato** selezionata per l'account nel quale viene eseguita l'applicazione del client.  
+1. Nel controller di dominio, cancellare la casella di controllo **L'account è sensibile e non può essere delegato** selezionata per l'account nel quale viene eseguita l'applicazione del client.  
   
-2.  Nel controller di dominio, selezionare la casella di controllo **L'account è attendibile per la delega** selezionata per l'account nel quale viene eseguita l'applicazione del client.  
+2. Nel controller di dominio, selezionare la casella di controllo **L'account è attendibile per la delega** selezionata per l'account nel quale viene eseguita l'applicazione del client.  
   
-3.  Nel controller di dominio, configurare il computer di livello intermedio in modo che sia attendibile per la delega facendo clic sull'opzione **Computer attendibili per la delega** .  
+3. Nel controller di dominio, configurare il computer di livello intermedio in modo che sia attendibile per la delega facendo clic sull'opzione **Computer attendibili per la delega** .  
   
-4.  Nel controller di dominio, configurare il computer di livello intermedio per l'utilizzo della delega vincolata facendo clic sull'opzione **Computer attendibili per la delega solo ai servizi specificati** .  
+4. Nel controller di dominio, configurare il computer di livello intermedio per l'utilizzo della delega vincolata facendo clic sull'opzione **Computer attendibili per la delega solo ai servizi specificati** .  
   
  Per ulteriori dettagli sulla configurazione della delega vincolata, vedere gli argomenti seguenti su MSDN:  
   

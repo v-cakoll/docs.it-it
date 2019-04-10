@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344663"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Procedura: Creare criteri editore
 I fornitori di assembly possono indicare che le applicazioni devono utilizzare una versione più recente di un assembly includendo un file dei criteri editore con l'assembly aggiornato. File dei criteri editore specifica il reindirizzamento di assembly e le impostazioni della codebase e Usa lo stesso formato di un file di configurazione dell'applicazione. File dei criteri editore viene compilato in un assembly e inserito nella global assembly cache.  
   
  Esistono tre passaggi coinvolti nella creazione di un criterio server di pubblicazione:  
   
-1.  Creare un file dei criteri editore.  
+1. Creare un file dei criteri editore.  
   
-2.  Creare un assembly dei criteri editore.  
+2. Creare un assembly dei criteri editore.  
   
-3.  Aggiungere l'assembly dei criteri editore nella global assembly cache.  
+3. Aggiungere l'assembly dei criteri editore nella global assembly cache.  
   
  Lo schema dei criteri dell'editore è descritto nella [reindirizzamento delle versioni degli Assembly](../../../docs/framework/configure-apps/redirect-assembly-versions.md). L'esempio seguente illustra un server di pubblicazione file dei criteri che reindirizza una versione `myAssembly` a altro.  
   
@@ -51,7 +51,7 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Per creare un assembly dei criteri editore  
   
-1.  Digitare il comando seguente al prompt dei comandi:  
+1. Digitare il comando seguente al prompt dei comandi:  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ I fornitori di assembly possono indicare che le applicazioni devono utilizzare u
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Per aggiungere l'assembly dei criteri editore nella global assembly cache  
   
-1.  Digitare il comando seguente al prompt dei comandi:  
+1. Digitare il comando seguente al prompt dei comandi:  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

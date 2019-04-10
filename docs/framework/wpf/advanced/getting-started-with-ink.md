@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343597"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Introduzione a input penna in WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) è una funzionalità di input penna che re
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per usare gli esempi seguenti, innanzitutto [installa Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). È anche utile per sapere come scrivere le app WPF di base. Per informazioni sulla Guida introduttiva a WPF, vedere [procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Per usare gli esempi seguenti, installare innanzitutto [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). È anche utile per sapere come scrivere le app WPF di base. Per informazioni sulla Guida introduttiva a WPF, vedere [procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Guida introduttiva
 
@@ -113,4 +113,4 @@ Tutte le funzionalità WPF è possibile accedere dal codice procedurale. Seguire
 - [Input penna](digital-ink.md)
 - [Raccolta di input penna](collecting-ink.md)
 - [Riconoscimento della grafia](handwriting-recognition.md)
-- [Archiviazione dell'input penna](storing-ink.md)
+- [Memorizzazione dell'input penna](storing-ink.md)

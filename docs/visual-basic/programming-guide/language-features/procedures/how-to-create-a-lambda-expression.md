@@ -5,27 +5,27 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 8754049e493ab23b1e7b01d0f315b00bdebf0378
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841420"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344546"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Procedura: Creare un'espressione Lambda (Visual Basic)
 Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un nome. Un'espressione lambda può essere utilizzata ogni volta che un tipo delegato è valido.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Per creare una funzione di espressione lambda a riga singola  
   
-1.  In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Function`, come illustrato nell'esempio seguente:  
+1. In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Function`, come illustrato nell'esempio seguente:  
   
      `Dim add1 =`   `Function`  
   
-2.  Tra parentesi, direttamente dopo `Function`, digitare i parametri della funzione. Si noti che non si specifica un nome dopo `Function`.  
+2. Tra parentesi, direttamente dopo `Function`, digitare i parametri della funzione. Si noti che non si specifica un nome dopo `Function`.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3.  In seguito l'elenco di parametri, digitare una singola espressione come corpo della funzione. Il valore restituito dall'espressione a è il valore restituito dalla funzione. Non si usa un `As` clausola per specificare il tipo restituito.  
+3. In seguito l'elenco di parametri, digitare una singola espressione come corpo della funzione. Il valore restituito dall'espressione a è il valore restituito dalla funzione. Non si usa un `As` clausola per specificare il tipo restituito.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
@@ -33,21 +33,21 @@ Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un 
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4.  In alternativa, lo stesso risultato avviene nell'esempio seguente:  
+4. In alternativa, lo stesso risultato avviene nell'esempio seguente:  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Per creare una subroutine espressione lambda a riga singola  
   
-1.  In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Sub`, come illustrato nell'esempio seguente.  
+1. In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Sub`, come illustrato nell'esempio seguente.  
   
      `Dim add1 =`   `Sub`  
   
-2.  Tra parentesi, direttamente dopo `Sub`, digitare i parametri della subroutine. Si noti che non si specifica un nome dopo `Sub`.  
+2. Tra parentesi, direttamente dopo `Sub`, digitare i parametri della subroutine. Si noti che non si specifica un nome dopo `Sub`.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3.  In seguito l'elenco di parametri, digitare una singola istruzione come corpo della subroutine.  
+3. In seguito l'elenco di parametri, digitare una singola istruzione come corpo della subroutine.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
@@ -57,17 +57,17 @@ Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un 
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>Per creare una funzione di espressione lambda su più righe  
   
-1.  In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Function`, come illustrato nell'esempio seguente.  
+1. In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Function`, come illustrato nell'esempio seguente.  
   
      `Dim add1 =`   `Function`  
   
-2.  Tra parentesi, direttamente dopo `Function`, digitare i parametri della funzione. Si noti che non si specifica un nome dopo `Function`.  
+2. Tra parentesi, direttamente dopo `Function`, digitare i parametri della funzione. Si noti che non si specifica un nome dopo `Function`.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3.  Premere INVIO. Il `End Function` istruzione viene aggiunta automaticamente.  
+3. Premere INVIO. Il `End Function` istruzione viene aggiunta automaticamente.  
   
-4.  All'interno del corpo della funzione, aggiungere il codice seguente per creare un'espressione e restituire il valore. Non si usa un `As` clausola per specificare il tipo restituito.  
+4. All'interno del corpo della funzione, aggiungere il codice seguente per creare un'espressione e restituire il valore. Non si usa un `As` clausola per specificare il tipo restituito.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
@@ -77,17 +77,17 @@ Oggetto *espressione lambda* è una funzione o subroutine che non dispone di un 
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Per creare una subroutine espressione lambda su più righe  
   
-1.  In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Sub`, come illustrato nell'esempio seguente:  
+1. In qualsiasi situazione in cui è stato utilizzato un tipo delegato, digitare la parola chiave `Sub`, come illustrato nell'esempio seguente:  
   
      `Dim add1 =`   `Sub`  
   
-2.  Tra parentesi, direttamente dopo `Sub`, digitare i parametri della subroutine. Si noti che non si specifica un nome dopo `Sub`.  
+2. Tra parentesi, direttamente dopo `Sub`, digitare i parametri della subroutine. Si noti che non si specifica un nome dopo `Sub`.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3.  Premere INVIO. Il `End Sub` istruzione viene aggiunta automaticamente.  
+3. Premere INVIO. Il `End Sub` istruzione viene aggiunta automaticamente.  
   
-4.  All'interno del corpo della funzione, aggiungere il seguente codice da eseguire quando viene richiamata la subroutine.  
+4. All'interno del corpo della funzione, aggiungere il seguente codice da eseguire quando viene richiamata la subroutine.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   

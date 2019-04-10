@@ -2,12 +2,12 @@
 title: Aggiornamenti flusso personalizzati
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: cd8385194e1f24d246e6fc398462b45bacbe15d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345248"
 ---
 # <a name="custom-stream-upgrades"></a>Aggiornamenti flusso personalizzati
 I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso continuo di byte tra il client e il server. Questo flusso viene realizzato da un oggetto <xref:System.IO.Stream>. In un aggiornamento flusso, il client desidera aggiungere un livello di protocollo facoltativo allo stack di canali e chiede all'altra estremità del canale di comunicazione di farlo. L'aggiornamento flusso consiste nel sostituire l'oggetto <xref:System.IO.Stream> originale con un oggetto aggiornato.  
@@ -19,13 +19,13 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
 ## <a name="how-stream-upgrades-work"></a>Funzionamento degli aggiornamenti flusso  
  Il processo di aggiornamento flusso include quattro componenti.  
   
-1.  Un flusso di aggiornamento *iniziatore* avvia il processo: in fase di esecuzione, può inviare una richiesta a altra estremità della connessione per aggiornare il livello di trasporto del canale.  
+1. Un flusso di aggiornamento *iniziatore* avvia il processo: in fase di esecuzione, può inviare una richiesta a altra estremità della connessione per aggiornare il livello di trasporto del canale.  
   
-2.  Un flusso di aggiornamento *Acceptor* esegue l'aggiornamento: in fase di esecuzione riceve la richiesta di aggiornamento da altra macchina e, se possibile, accetta l'aggiornamento.  
+2. Un flusso di aggiornamento *Acceptor* esegue l'aggiornamento: in fase di esecuzione riceve la richiesta di aggiornamento da altra macchina e, se possibile, accetta l'aggiornamento.  
   
-3.  Un aggiornamento *Provider* crea il *iniziatore* sul client e il *Acceptor* nel server.  
+3. Un aggiornamento *Provider* crea il *iniziatore* sul client e il *Acceptor* nel server.  
   
-4.  Un aggiornamento flusso *elemento di associazione* viene aggiunto alle associazioni sul servizio e il client e crea il provider in fase di esecuzione.  
+4. Un aggiornamento flusso *elemento di associazione* viene aggiunto alle associazioni sul servizio e il client e crea il provider in fase di esecuzione.  
   
  Si noti che, nel caso di più aggiornamenti, iniziatore e acceptor incapsulano macchine a stati da imporre, le cui transizioni di aggiornamento sono valide per ogni avvio.  
   
@@ -42,27 +42,27 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
   
  Per implementare un aggiornamento flusso personalizzato, eseguire le operazioni seguenti. In questa procedura viene implementato un processo di aggiornamento flusso minimo sui computer client e server.  
   
-1.  Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
+1. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
     1.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> per accettare il flusso da aggiornare e restituire il flusso aggiornato. Questo metodo funziona in modo sincrono; sono disponibili metodi analoghi per avviare l'aggiornamento in modo asincrono.  
   
     2.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> per ricercare aggiornamenti aggiuntivi.  
   
-2.  Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
+2. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
     1.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> per accettare il flusso da aggiornare e restituire il flusso aggiornato. Questo metodo funziona in modo sincrono; sono disponibili metodi analoghi per accettare l'aggiornamento in modo asincrono.  
   
     2.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> per determinare se l'aggiornamento richiesto è supportato da questo acceptor di aggiornamento in questo punto del processo di aggiornamento.  
   
-3.  Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Eseguire l'override dei metodi <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> e <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> per restituire istanze dell'acceptor e dell'iniziatore definiti ai passaggi 2 e 1.  
+3. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Eseguire l'override dei metodi <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> e <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> per restituire istanze dell'acceptor e dell'iniziatore definiti ai passaggi 2 e 1.  
   
-4.  Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
+4. Creare una classe che implementi <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
     1.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> sul client e del metodo <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> sul servizio.  
   
     2.  Eseguire l'override del metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> sul client e il metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> sul servizio, per aggiungere l'elemento di associazione di aggiornamento a <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
-5.  Aggiungere il nuovo elemento di associazione di aggiornamento flusso alle associazioni sui computer server e client.  
+5. Aggiungere il nuovo elemento di associazione di aggiornamento flusso alle associazioni sui computer server e client.  
   
 ## <a name="security-upgrades"></a>Aggiornamenti della protezione  
  L'aggiunta di un aggiornamento della protezione è una versione specifica del processo generale di aggiornamento flusso.  
@@ -71,11 +71,11 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
   
  Per gli scenari di sicurezza non soddisfatti dai due elementi di associazione precedenti vengono derivate tre classi `abstract` correlate alla protezione dalle classi di base di iniziatore, acceptor e provider precedenti:  
   
-1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
+1. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
   
-2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
+2. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
   
-3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
+3. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
   
  Il processo di implementazione di un aggiornamento flusso di sicurezza è identico al precedente, con la sola differenza della derivazione da queste tre classi. Eseguire l'override delle proprietà aggiuntive in queste classi, per fornire informazioni sulla protezione al runtime.  
   
@@ -84,13 +84,13 @@ I trasporti orientati al flusso, quali TCP e named pipe, operano su un flusso co
   
  In alternativa, un provider di aggiornamento può supportare più aggiornamenti. Può, ad esempio, essere necessario implementare un provider di aggiornamento flusso personalizzato che supporti sia la protezione che la compressione. Eseguire i passaggi seguenti:  
   
-1.  Sottoclassare <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> per scrivere la classe di provider che crea l'iniziatore e l'acceptor.  
+1. Sottoclassare <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> per scrivere la classe di provider che crea l'iniziatore e l'acceptor.  
   
-2.  Sottoclassare <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> assicurandosi di eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> per restituire i tipi di contenuto per il flusso di compressione e il flusso di sicurezza, in ordine.  
+2. Sottoclassare <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> assicurandosi di eseguire l'override del metodo <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> per restituire i tipi di contenuto per il flusso di compressione e il flusso di sicurezza, in ordine.  
   
-3.  Sottoclassare <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> che comprende i tipi di contenuto personalizzati nel relativo metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+3. Sottoclassare <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> che comprende i tipi di contenuto personalizzati nel relativo metodo <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
-4.  Il flusso verrà aggiornato dopo ogni chiamata a <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> e <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+4. Il flusso verrà aggiornato dopo ogni chiamata a <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> e <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 

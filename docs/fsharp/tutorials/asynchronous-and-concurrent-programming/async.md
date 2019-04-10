@@ -2,12 +2,12 @@
 title: Programmazione asincrona
 description: Informazioni su come F# programmazione asincrona viene eseguita tramite un modello di programmazione a livello di linguaggio naturale per la lingua e facile da usare.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343454"
 ---
 # <a name="async-programming-in-f"></a>Programmazione asincrona in F\#
 
@@ -57,7 +57,7 @@ Inoltre, normal `let`, `use`, e `do` parole chiave possono essere usate insieme 
 
 Come accennato in precedenza, il codice asincrono è una specifica di lavoro da eseguire in un altro contesto che deve essere avviata in modo esplicito. Di seguito sono due modi principali per eseguire questa operazione:
 
-1.  `Async.RunSynchronously` Avvia un flusso di lavoro asincrono in un altro thread e attende il relativo risultato.
+1. `Async.RunSynchronously` Avvia un flusso di lavoro asincrono in un altro thread e attende il relativo risultato.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` avviare un flusso di lavoro asincrono in un altro thread e verrà **non** attende il relativo risultato.
+2. `Async.Start` avviare un flusso di lavoro asincrono in un altro thread e verrà **non** attende il relativo risultato.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ Esistono alcuni altri analogie e differenze da notare.
 
 Al contrario, F# flussi di lavoro asincroni sono più naturalmente annullabile. L'annullamento è un semplice processo in tre fasi.
 
-1.  Creare un nuovo oggetto `CancellationTokenSource`.
-2.  Passare alla funzione in una funzione di partenza.
-3.  Chiamare `Cancel` sul token.
+1. Creare un nuovo oggetto `CancellationTokenSource`.
+2. Passare alla funzione in una funzione di partenza.
+3. Chiamare `Cancel` sul token.
 
 Esempio:
 

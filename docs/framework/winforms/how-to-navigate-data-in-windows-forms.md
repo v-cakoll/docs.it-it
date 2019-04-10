@@ -11,19 +11,19 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345001"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Procedura: Esplorare dati in Windows Forms
 In un'applicazione di Windows, è il modo più semplice per spostarsi tra i record in un'origine dati per associare un <xref:System.Windows.Forms.BindingSource> componente per l'origine dati e quindi associare i controlli per il <xref:System.Windows.Forms.BindingSource>. È quindi possibile utilizzare il metodo di navigazione predefiniti in di <xref:System.Windows.Forms.BindingSource> tali una <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> e <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Usando questi metodi regolerà la <xref:System.Windows.Forms.BindingSource.Position%2A> e <xref:System.Windows.Forms.BindingSource.Current%2A> delle proprietà del <xref:System.Windows.Forms.BindingSource> in modo appropriato. È anche possibile trovare un elemento e impostarlo come elemento corrente, impostando il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Per incrementare la posizione in un'origine dati  
   
-1.  Impostare il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà del <xref:System.Windows.Forms.BindingSource> per i dati associati alla posizione del record su cui spostarsi. Nell'esempio seguente viene illustrato l'utilizzo di <xref:System.Windows.Forms.BindingSource.MoveNext%2A> metodo del <xref:System.Windows.Forms.BindingSource> per incrementare il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà quando il `nextButton` si fa clic. Il <xref:System.Windows.Forms.BindingSource> è associato il `Customers` tabella di un set di dati `Northwind`.  
+1. Impostare il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà del <xref:System.Windows.Forms.BindingSource> per i dati associati alla posizione del record su cui spostarsi. Nell'esempio seguente viene illustrato l'utilizzo di <xref:System.Windows.Forms.BindingSource.MoveNext%2A> metodo del <xref:System.Windows.Forms.BindingSource> per incrementare il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà quando il `nextButton` si fa clic. Il <xref:System.Windows.Forms.BindingSource> è associato il `Customers` tabella di un set di dati `Northwind`.  
   
     > [!NOTE]
     >  Impostando il <xref:System.Windows.Forms.BindingSource.Position%2A> proprietà su un valore di là del primo o ultimo record non produce un errore, come il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] non consentirà di impostare la posizione su un valore esterno ai limiti dell'elenco. Se è importante per sapere se è stato oltrepassato il primo o ultimo record in un'applicazione, includere la logica per verificare se si supera il numero di elementi di dati.  
@@ -33,7 +33,7 @@ In un'applicazione di Windows, è il modo più semplice per spostarsi tra i reco
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Per verificare se sono stati passati alla fine o all'inizio  
   
-1.  Creare un gestore eventi per l'evento <xref:System.Windows.Forms.BindingSource.PositionChanged>. Nel gestore di è possibile verificare se il valore di posizione proposto ha superato il numero di elementi di dati effettivi.  
+1. Creare un gestore eventi per l'evento <xref:System.Windows.Forms.BindingSource.PositionChanged>. Nel gestore di è possibile verificare se il valore di posizione proposto ha superato il numero di elementi di dati effettivi.  
   
      Nell'esempio seguente viene illustrato come è possibile verificare se è stato raggiunto l'ultimo elemento di dati. Nell'esempio, se ci si trova l'ultimo elemento, il **successivo** pulsante nel form è disabilitato.  
   
@@ -45,7 +45,7 @@ In un'applicazione di Windows, è il modo più semplice per spostarsi tra i reco
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Per trovare un elemento e impostarlo come elemento corrente  
   
-1.  Trovare il record che si desidera impostare come elemento corrente. È possibile farlo usando il <xref:System.Windows.Forms.BindingSource.Find%2A> metodo per il <xref:System.Windows.Forms.BindingSource>, se l'origine dati implementa <xref:System.ComponentModel.IBindingList>. Alcuni esempi di dati di origini che implementano <xref:System.ComponentModel.IBindingList> vengono <xref:System.ComponentModel.BindingList%601> e <xref:System.Data.DataView>.  
+1. Trovare il record che si desidera impostare come elemento corrente. È possibile farlo usando il <xref:System.Windows.Forms.BindingSource.Find%2A> metodo per il <xref:System.Windows.Forms.BindingSource>, se l'origine dati implementa <xref:System.ComponentModel.IBindingList>. Alcuni esempi di dati di origini che implementano <xref:System.ComponentModel.IBindingList> vengono <xref:System.ComponentModel.BindingList%601> e <xref:System.Data.DataView>.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  

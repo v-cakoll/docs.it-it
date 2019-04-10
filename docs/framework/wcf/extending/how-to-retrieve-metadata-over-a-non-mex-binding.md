@@ -2,19 +2,19 @@
 title: "Procedura: Recuperare metadati attraverso un'associazione non MEX"
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345950"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedura: Recuperare metadati attraverso un'associazione non MEX
 In questo argomento viene illustrato come recuperare metadati da un endpoint MEX attraverso un'associazione non MEX. Il codice in questo esempio si basa sul [Endpoint di metadati protetto personalizzato](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) esempio.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Per recuperare metadati attraverso un'associazione non MEX  
   
-1.  Determinare l'associazione utilizzata dall'endpoint MEX. Per i servizi Windows Communication Foundation (WCF), è possibile determinare l'associazione MEX accedendo al file di configurazione del servizio. In questo caso, l'associazione MEX è definita nella configurazione del servizio seguente:  
+1. Determinare l'associazione utilizzata dall'endpoint MEX. Per i servizi Windows Communication Foundation (WCF), è possibile determinare l'associazione MEX accedendo al file di configurazione del servizio. In questo caso, l'associazione MEX è definita nella configurazione del servizio seguente:  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
      </bindings>  
     ```  
   
-2.  Nel file di configurazione client, configurare la stessa associazione personalizzata. Qui il client definisce anche un comportamento `clientCredentials` per fornire un certificato da utilizzare per l'autenticazione al servizio quando vengono richiesti metadati dall'endpoint MEX. Quando si utilizza Svcutil.exe per richiedere metadati su un'associazione personalizzata, è necessario aggiungere la configurazione dell'endpoint MEX al file di configurazione per Svcutil.exe (Svcutil.exe.config) e il nome della configurazione dell'endpoint deve corrispondere allo schema URI dell'indirizzo dell'endpoint MEX, come illustrato nel codice seguente:  
+2. Nel file di configurazione client, configurare la stessa associazione personalizzata. Qui il client definisce anche un comportamento `clientCredentials` per fornire un certificato da utilizzare per l'autenticazione al servizio quando vengono richiesti metadati dall'endpoint MEX. Quando si utilizza Svcutil.exe per richiedere metadati su un'associazione personalizzata, è necessario aggiungere la configurazione dell'endpoint MEX al file di configurazione per Svcutil.exe (Svcutil.exe.config) e il nome della configurazione dell'endpoint deve corrispondere allo schema URI dell'indirizzo dell'endpoint MEX, come illustrato nel codice seguente:  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
     </system.serviceModel>  
     ```  
   
-3.  Creare un `MetadataExchangeClient` e chiamare `GetMetadata`. Per eseguire questa operazione, è possibile specificare l'associazione personalizzata nella configurazione oppure nel codice:  
+3. Creare un `MetadataExchangeClient` e chiamare `GetMetadata`. Per eseguire questa operazione, è possibile specificare l'associazione personalizzata nella configurazione oppure nel codice:  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,14 +114,14 @@ In questo argomento viene illustrato come recuperare metadati da un endpoint MEX
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  Creare `WsdlImporter` e chiamare `ImportAllEndpoints`, come illustrato nel codice seguente.  
+4. Creare `WsdlImporter` e chiamare `ImportAllEndpoints`, come illustrato nel codice seguente.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  A questo punto, si ha una raccolta di endpoint del servizio. Per altre informazioni sull'importazione di metadati, vedere [come: Importare metadati negli endpoint servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5. A questo punto, si ha una raccolta di endpoint del servizio. Per altre informazioni sull'importazione di metadati, vedere [come: Importare metadati negli endpoint servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

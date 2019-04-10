@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833313"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344208"
 ---
 # <a name="-libpath"></a>-libpath
 Specifica la posizione degli assembly cui viene fatto riferimento.  
@@ -33,13 +33,13 @@ Specifica la posizione degli assembly cui viene fatto riferimento.
   
  La ricerca dei riferimenti non completi agli assembly viene operata nell'ordine seguente:  
   
-1.  Directory di lavoro corrente, ovvero la directory da cui viene chiamato il compilatore.  
+1. Directory di lavoro corrente, ovvero la directory da cui viene chiamato il compilatore.  
   
-2.  Directory di sistema di Common Language Runtime.  
+2. Directory di sistema di Common Language Runtime.  
   
-3.  Directory specificate dalla `/libpath`.  
+3. Directory specificate dalla `/libpath`.  
   
-4.  Directory specificate dalla variabile di ambiente LIB.  
+4. Directory specificate dalla variabile di ambiente LIB.  
   
  Il `-libpath` opzione si sommano tra loro; specificando che più di una volta aggiunto a eventuali valori precedenti.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343558"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Procedura: Dichiarare una struttura (Visual Basic)
 Iniziare una dichiarazione structure con la [istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md), e terminano con il `End Structure` istruzione. Tra le due istruzioni seguenti è necessario dichiarare almeno *elemento*. Gli elementi possono essere di qualsiasi tipo di dati, ma almeno uno deve essere una variabile non condivisa o un evento e non condiviso.  
@@ -25,7 +25,7 @@ Iniziare una dichiarazione structure con la [istruzione Structure](../../../../v
   
 ### <a name="to-declare-a-structure"></a>Per dichiarare una struttura  
   
-1.  Creazione di inizio e fine delle istruzioni per la struttura.  
+1. Creazione di inizio e fine delle istruzioni per la struttura.  
   
      È possibile specificare il livello di accesso di una struttura con il [pubbliche](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), o [privato](../../../../visual-basic/language-reference/modifiers/private.md) (parola chiave), oppure è possibile lasciare che Per impostazione predefinita `Public`.  
   
@@ -34,7 +34,7 @@ Iniziare una dichiarazione structure con la [istruzione Structure](../../../../v
     End Structure  
     ```  
   
-2.  Aggiungere elementi al corpo della struttura.  
+2. Aggiungere elementi al corpo della struttura.  
   
      Una struttura deve avere almeno un elemento. È necessario dichiarare ogni elemento e specificare un livello di accesso per esso. Se si usa la [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) senza alcuna parola chiave, per impostazione predefinita l'accessibilità `Public`.  
   

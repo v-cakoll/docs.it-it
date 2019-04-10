@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346054"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: Convalida dei dati nel controllo DataGridView di Windows Forms
 Quando si visualizza la funzionalità di immissione dati agli utenti, è spesso necessario convalidare i dati immessi nel form. Il <xref:System.Windows.Forms.DataGridView> classe fornisce un modo pratico per eseguire la convalida prima i dati vengono eseguito il commit nell'archivio dati. È possibile convalidare i dati tramite la gestione di <xref:System.Windows.Forms.DataGridView.CellValidating> evento, che viene generato dal <xref:System.Windows.Forms.DataGridView> quando cambia la cella corrente.  
@@ -35,7 +35,7 @@ Quando si visualizza la funzionalità di immissione dati agli utenti, è spesso 
   
 #### <a name="to-validate-data-entered-in-a-datagridview"></a>Convalidare i dati immessi in un DataGridView  
   
-1.  Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene una <xref:System.Windows.Forms.DataGridView> controllo e un <xref:System.Windows.Forms.BindingSource> componente.  
+1. Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene una <xref:System.Windows.Forms.DataGridView> controllo e un <xref:System.Windows.Forms.BindingSource> componente.  
   
      Esempio di codice seguente fornisce l'inizializzazione di base e include un `Main` (metodo).  
   
@@ -44,7 +44,7 @@ Quando si visualizza la funzionalità di immissione dati agli utenti, è spesso 
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  Implementare un metodo nella definizione di classe del form per gestire i dettagli della connessione al database.  
+2. Implementare un metodo nella definizione di classe del form per gestire i dettagli della connessione al database.  
   
      Questo esempio di codice Usa un `GetData` metodo che restituisce un popolato <xref:System.Data.DataTable> oggetto. Assicurarsi di impostare il `connectionString` variabile su un valore appropriato per il database.  
   
@@ -54,12 +54,12 @@ Quando si visualizza la funzionalità di immissione dati agli utenti, è spesso 
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  Implementare un gestore per il modulo <xref:System.Windows.Forms.Form.Load> evento che inizializza il <xref:System.Windows.Forms.DataGridView> e <xref:System.Windows.Forms.BindingSource> e configura il data binding.  
+3. Implementare un gestore per il modulo <xref:System.Windows.Forms.Form.Load> evento che inizializza il <xref:System.Windows.Forms.DataGridView> e <xref:System.Windows.Forms.BindingSource> e configura il data binding.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  Implementare i gestori per il <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.CellValidating> e <xref:System.Windows.Forms.DataGridView.CellEndEdit> eventi.  
+4. Implementare i gestori per il <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.CellValidating> e <xref:System.Windows.Forms.DataGridView.CellEndEdit> eventi.  
   
      Il <xref:System.Windows.Forms.DataGridView.CellValidating> gestore dell'evento è che consente di determinare se il valore di una cella di `CompanyName` colonna è vuota. Se il valore della cella non viene convalidato, impostare il <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà del <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> classe `true`. In questo modo, il <xref:System.Windows.Forms.DataGridView> controllo per impedire che il cursore di lasciare la cella. Impostare il <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> proprietà della riga su una stringa descrittiva. Verrà visualizzata un'icona di errore con una descrizione comando che contiene il testo dell'errore. Nel <xref:System.Windows.Forms.DataGridView.CellEndEdit> gestore dell'evento, impostare il <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> proprietà della riga su una stringa vuota. Il <xref:System.Windows.Forms.DataGridView.CellEndEdit> evento si verifica solo quando la cella esce dalla modalità di modifica, ma non può fare se convalida ha esito negativo.  
   

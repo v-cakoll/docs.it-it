@@ -2,12 +2,12 @@
 title: Ricerca di individuazione e FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345781"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Ricerca di individuazione e FindCriteria
 Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione. L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete. I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch. Per altre informazioni sui messaggi di individuazione, vedere la [specifica WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -40,9 +40,9 @@ Un'operazione di ricerca dell'individuazione viene inizializzata da un client pe
   
  I criteri di terminazione includono:  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Il tempo massimo di attesa per le risposte dai servizi in una rete. La durata predefinita è 20 secondi.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -Il tempo massimo di attesa per le risposte dai servizi in una rete. La durata predefinita è 20 secondi.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Il numero massimo di risposte da attendere. Se le risposte <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> vengono ricevute prima della scadenza specificata dalla proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, l'operazione di ricerca termina.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -Il numero massimo di risposte da attendere. Se le risposte <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> vengono ricevute prima della scadenza specificata dalla proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, l'operazione di ricerca termina.  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> ha un <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> proprietà della raccolta che contiene qualsiasi replica inviata da servizi corrispondenti sulla rete. Se nessun servizio invia una risposta, la raccolta è vuota. Se uno o più servizi inviano una risposta, ogni replica viene archiviata in un oggetto <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> che contiene l'indirizzo, il contratto e alcune informazioni aggiuntive sul servizio.  

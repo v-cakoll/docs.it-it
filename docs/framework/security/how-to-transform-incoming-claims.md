@@ -3,12 +3,12 @@ title: 'Procedura: Trasformare le attestazioni in ingresso'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344637"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Procedura: Trasformare le attestazioni in ingresso
 ## <a name="applies-to"></a>Si applica a  
@@ -58,19 +58,19 @@ ms.locfileid: "50181631"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
-1.  Avviare Visual Studio come amministratore in modalità con privilegi elevati.  
+1. Avviare Visual Studio come amministratore in modalità con privilegi elevati.  
   
-2.  In Visual Studio fare clic su **File**, **Nuovo** e quindi su **Progetto**.  
+2. In Visual Studio fare clic su **File**, **Nuovo** e quindi su **Progetto**.  
   
-3.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
+3. Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
   
-4.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
+4. In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-5.  Fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
+5. Fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
   
-6.  Verrà visualizzata la finestra **Identity and Access**. In **Providers** (Provider) selezionare **Test your application with the Local Development STS** (Testare l'applicazione con il servizio token di sicurezza per lo sviluppo locale) e quindi fare clic su **Applica**.  
+6. Verrà visualizzata la finestra **Identity and Access**. In **Providers** (Provider) selezionare **Test your application with the Local Development STS** (Testare l'applicazione con il servizio token di sicurezza per lo sviluppo locale) e quindi fare clic su **Applica**.  
   
-7.  Nel file *Default.aspx* sostituire il markup esistente con il seguente e quindi salvare il file:  
+7. Nel file *Default.aspx* sostituire il markup esistente con il seguente e quindi salvare il file:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181631"
     </asp:Content>  
     ```  
   
-8.  Aprire il file code-behind denominato *Default.aspx.cs*. Sostituire il codice esistente con il seguente e quindi salvare il file:  
+8. Aprire il file code-behind denominato *Default.aspx.cs*. Sostituire il codice esistente con il seguente e quindi salvare il file:  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181631"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Per implementare la trasformazione delle attestazioni con un ClaimsAuthenticationManager personalizzato  
   
-1.  In Visual Studio fare clic con il pulsante destro del mouse sulla soluzione, scegliere **Aggiungi** e quindi fare clic su **Nuovo progetto**.  
+1. In Visual Studio fare clic con il pulsante destro del mouse sulla soluzione, scegliere **Aggiungi** e quindi fare clic su **Nuovo progetto**.  
   
-2.  Nella finestra **Aggiungi nuovo progetto** selezionare **Libreria di classi** nell'elenco dei modelli di **Visual C#**, immettere `ClaimsTransformation` e quindi scegliere **OK**. Il nuovo progetto verrà creato nella cartella della soluzione.  
+2. Nella finestra **Aggiungi nuovo progetto** selezionare **Libreria di classi** nell'elenco dei modelli di **Visual C#**, immettere `ClaimsTransformation` e quindi scegliere **OK**. Il nuovo progetto verrà creato nella cartella della soluzione.  
   
-3.  Fare clic con il pulsante destro del mouse su **Riferimenti** nel progetto **ClaimsTransformation** e quindi scegliere **Aggiungi riferimento**.  
+3. Fare clic con il pulsante destro del mouse su **Riferimenti** nel progetto **ClaimsTransformation** e quindi scegliere **Aggiungi riferimento**.  
   
-4.  Nella finestra **Gestione riferimenti** selezionare **System.IdentityModel** e quindi fare clic su **OK**.  
+4. Nella finestra **Gestione riferimenti** selezionare **System.IdentityModel** e quindi fare clic su **OK**.  
   
-5.  Aprire **Class1.cs** oppure, se non esiste, fare clic con il pulsante destro del mouse su **ClaimsTransformation**, scegliere **Aggiungi** e quindi fare clic su **Classe**.  
+5. Aprire **Class1.cs** oppure, se non esiste, fare clic con il pulsante destro del mouse su **ClaimsTransformation**, scegliere **Aggiungi** e quindi fare clic su **Classe**.  
   
-6.  Aggiungere le direttive using seguenti al file di codice:  
+6. Aggiungere le direttive using seguenti al file di codice:  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Aggiungere la classe e il metodo seguenti nel file di codice.  
+7. Aggiungere la classe e il metodo seguenti nel file di codice.  
   
     > [!WARNING]
     >  Il codice seguente è solo a scopo dimostrativo. Assicurarsi di verificare le autorizzazioni previste nel codice di produzione.  
@@ -150,7 +150,7 @@ ms.locfileid: "50181631"
     }  
     ```  
   
-8.  Salvare il file e compilare il progetto **ClaimsTransformation**.  
+8. Salvare il file e compilare il progetto **ClaimsTransformation**.  
   
 9. Nel progetto ASP.NET **TestApp** fare clic con il pulsante destro del mouse su Riferimenti e quindi scegliere **Aggiungi riferimento**.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181631"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione basata su form  
   
-1.  Premere **F5** per compilare ed eseguire l'applicazione. Dovrebbe essere visualizzato il file *Default.aspx*.  
+1. Premere **F5** per compilare ed eseguire l'applicazione. Dovrebbe essere visualizzato il file *Default.aspx*.  
   
-2.  Nella pagina *Default.aspx* dovrebbe essere visualizzata una tabella sotto il titolo **Your Claims** che include le informazioni sulle attestazioni **Issuer**, **OriginalIssuer**, **Type**, **Value** e **ValueType** per l'account usato. L'ultima riga dovrebbe essere come la seguente:  
+2. Nella pagina *Default.aspx* dovrebbe essere visualizzata una tabella sotto il titolo **Your Claims** che include le informazioni sulle attestazioni **Issuer**, **OriginalIssuer**, **Type**, **Value** e **ValueType** per l'account usato. L'ultima riga dovrebbe essere come la seguente:  
   
     ||||||  
     |-|-|-|-|-|  

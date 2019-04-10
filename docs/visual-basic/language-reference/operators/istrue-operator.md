@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344949"
 ---
 # <a name="istrue-operator-visual-basic"></a>Operatore IsTrue (Visual Basic)
 Determina se un'espressione è `True`.  
@@ -24,15 +24,15 @@ Determina se un'espressione è `True`.
 ## <a name="compiler-use-of-istrue"></a>Uso del compilatore di IsTrue  
  Dopo aver definito una classe o struttura, è possibile usare una variabile di quel tipo in un `For`, `If`, `Else If`, o `While` istruzione o in un `When` clausola. In questo caso, il compilatore richiede un operatore che converta il tipo in un `Boolean` valore in modo che è possibile testare una condizione. La ricerca di un operatore appropriato nell'ordine seguente:  
   
-1.  Un operatore di conversione widening nella classe o struttura `Boolean`.  
+1. Un operatore di conversione widening nella classe o struttura `Boolean`.  
   
-2.  Un operatore di conversione widening nella classe o struttura `Boolean?`.  
+2. Un operatore di conversione widening nella classe o struttura `Boolean?`.  
   
-3.  Il `IsTrue` operatore sulla classe o struttura.  
+3. Il `IsTrue` operatore sulla classe o struttura.  
   
-4.  Conversioni verso `Boolean?` che non comporta una conversione da `Boolean` a `Boolean?`.  
+4. Conversioni verso `Boolean?` che non comporta una conversione da `Boolean` a `Boolean?`.  
   
-5.  Un operatore di conversione narrowing nella classe o struttura `Boolean`.  
+5. Un operatore di conversione narrowing nella classe o struttura `Boolean`.  
   
  Se non è stata definita alcuna conversione a `Boolean` o un `IsTrue` (operatore), il compilatore segnalerà un errore.  
   
