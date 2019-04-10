@@ -1,27 +1,27 @@
 ---
-title: 'Procedura: determinare la versione installata di WPF'
+title: 'Procedura: Determinare la versione installata di WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - version [WPF], finding
 ms.assetid: 99971cef-e218-4f9f-a4c1-350332741860
-ms.openlocfilehash: c59fa0d0a4d94c6e6a2ab72a4cd7a3c066649fb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffbd9a4c7f66dff9c8773dff4259551e20aa963d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305676"
 ---
-# <a name="how-to-determine-the-installed-version-of-wpf"></a><span data-ttu-id="78e07-102">Procedura: determinare la versione installata di WPF</span><span class="sxs-lookup"><span data-stu-id="78e07-102">How to: Determine the Installed Version of WPF</span></span>
-<span data-ttu-id="78e07-103">Il numero di versione per la versione attualmente installata di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] si trova nella **Registro di sistema**.</span><span class="sxs-lookup"><span data-stu-id="78e07-103">The version number for the current installed version of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is located in the **Registry**.</span></span>  
+# <a name="how-to-determine-the-installed-version-of-wpf"></a><span data-ttu-id="20bce-102">Procedura: Determinare la versione installata di WPF</span><span class="sxs-lookup"><span data-stu-id="20bce-102">How to: Determine the Installed Version of WPF</span></span>
+<span data-ttu-id="20bce-103">Il numero di versione per la versione attualmente installata di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] si trova nel **registro**.</span><span class="sxs-lookup"><span data-stu-id="20bce-103">The version number for the current installed version of [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is located in the **Registry**.</span></span>  
   
- <span data-ttu-id="78e07-104">Per trovare il numero di versione:</span><span class="sxs-lookup"><span data-stu-id="78e07-104">To find the version number:</span></span>  
+ <span data-ttu-id="20bce-104">Per trovare il numero di versione:</span><span class="sxs-lookup"><span data-stu-id="20bce-104">To find the version number:</span></span>  
   
-1.  <span data-ttu-id="78e07-105">Fare clic sul pulsante **Start** , quindi scegliere **Esegui**.</span><span class="sxs-lookup"><span data-stu-id="78e07-105">On the **Start** menu, click **Run**.</span></span>  
+1. <span data-ttu-id="20bce-105">Fare clic sul pulsante **Start** , quindi scegliere **Esegui**.</span><span class="sxs-lookup"><span data-stu-id="20bce-105">On the **Start** menu, click **Run**.</span></span>  
   
-2.  <span data-ttu-id="78e07-106">In **aprire**, tipo **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="78e07-106">In **Open**, type **regedit.exe**.</span></span>  
+2. <span data-ttu-id="20bce-106">Nelle **aperto**, digitare **regedit.exe**.</span><span class="sxs-lookup"><span data-stu-id="20bce-106">In **Open**, type **regedit.exe**.</span></span>  
   
-3.  <span data-ttu-id="78e07-107">Aprire la chiave seguente:</span><span class="sxs-lookup"><span data-stu-id="78e07-107">Open the following key:</span></span>  
+3. <span data-ttu-id="20bce-107">Aprire la chiave seguente:</span><span class="sxs-lookup"><span data-stu-id="20bce-107">Open the following key:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.0\Setup\Windows Presentation Foundation`  
   
- <span data-ttu-id="78e07-108">Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] il numero di versione viene archiviato nel **versione** valore.</span><span class="sxs-lookup"><span data-stu-id="78e07-108">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] version number is stored in the **Version** value.</span></span>
+ <span data-ttu-id="20bce-108">Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] numero di versione viene archiviato nel **versione** valore.</span><span class="sxs-lookup"><span data-stu-id="20bce-108">The [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] version number is stored in the **Version** value.</span></span>

@@ -2,54 +2,54 @@
 title: Funzionalità SQL Server e ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294899"
 ---
-# <a name="sql-server-features-and-adonet"></a><span data-ttu-id="306c7-102">Funzionalità SQL Server e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="306c7-102">SQL Server Features and ADO.NET</span></span>
-<span data-ttu-id="306c7-103">Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Server indirizzate allo sviluppo di applicazioni di database mediante ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="306c7-103">The topics in this section discuss features in SQL Server that are targeted at developing database applications using ADO.NET.</span></span>  
+# <a name="sql-server-features-and-adonet"></a><span data-ttu-id="d7eee-102">Funzionalità SQL Server e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d7eee-102">SQL Server Features and ADO.NET</span></span>
+<span data-ttu-id="d7eee-103">Negli argomenti di questa sezione vengono illustrate le funzionalità di SQL Server indirizzate allo sviluppo di applicazioni di database mediante ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="d7eee-103">The topics in this section discuss features in SQL Server that are targeted at developing database applications using ADO.NET.</span></span>  
   
- <span data-ttu-id="306c7-104">Per altre informazioni, vedere la documentazione online di SQL Server corrispondente alla versione di SQL Server in uso, come indicato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="306c7-104">For more information, see SQL Server Books Online for the version of SQL Server you are using, as listed in the following table.</span></span>  
+ <span data-ttu-id="d7eee-104">Per altre informazioni, vedere la documentazione online di SQL Server corrispondente alla versione di SQL Server in uso, come indicato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="d7eee-104">For more information, see SQL Server Books Online for the version of SQL Server you are using, as listed in the following table.</span></span>  
   
- **<span data-ttu-id="306c7-105">Documentazione online di SQL Server</span><span class="sxs-lookup"><span data-stu-id="306c7-105">SQL Server Books Online</span></span>**  
+ **<span data-ttu-id="d7eee-105">Documentazione online di SQL Server</span><span class="sxs-lookup"><span data-stu-id="d7eee-105">SQL Server Books Online</span></span>**  
   
-1.  [<span data-ttu-id="306c7-106">Sviluppo (Motore di database)</span><span class="sxs-lookup"><span data-stu-id="306c7-106">Development (Database Engine)</span></span>](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [<span data-ttu-id="d7eee-106">Sviluppo (Motore di database)</span><span class="sxs-lookup"><span data-stu-id="d7eee-106">Development (Database Engine)</span></span>](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
-## <a name="in-this-section"></a><span data-ttu-id="306c7-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="306c7-107">In This Section</span></span>  
- [<span data-ttu-id="306c7-108">Enumerazione di istanze di SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="306c7-108">Enumerating Instances of SQL Server (ADO.NET)</span></span>](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
- <span data-ttu-id="306c7-109">Viene illustrato come enumerare le istanze attive di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="306c7-109">Describes how to enumerate active instances of SQL Server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d7eee-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d7eee-107">In This Section</span></span>  
+ [<span data-ttu-id="d7eee-108">Enumerazione di istanze di SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="d7eee-108">Enumerating Instances of SQL Server (ADO.NET)</span></span>](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
+ <span data-ttu-id="d7eee-109">Viene illustrato come enumerare le istanze attive di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d7eee-109">Describes how to enumerate active instances of SQL Server.</span></span>  
   
- [<span data-ttu-id="306c7-110">Statistiche di provider per SQL Server</span><span class="sxs-lookup"><span data-stu-id="306c7-110">Provider Statistics for SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
- <span data-ttu-id="306c7-111">Viene illustrato il supporto per le statistiche in fase di esecuzione di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="306c7-111">Describes support for obtaining SQL Server run-time statistics.</span></span>  
+ [<span data-ttu-id="d7eee-110">Statistiche di provider per SQL Server</span><span class="sxs-lookup"><span data-stu-id="d7eee-110">Provider Statistics for SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/provider-statistics-for-sql-server.md)  
+ <span data-ttu-id="d7eee-111">Viene illustrato il supporto per le statistiche in fase di esecuzione di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d7eee-111">Describes support for obtaining SQL Server run-time statistics.</span></span>  
   
- [<span data-ttu-id="306c7-112">Connessione alle istanze utente di SQL Server Express</span><span class="sxs-lookup"><span data-stu-id="306c7-112">SQL Server Express User Instances</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- <span data-ttu-id="306c7-113">Viene illustrato il supporto per le istanze utente di SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="306c7-113">Describes support for SQL Server Express user instances.</span></span>  
+ [<span data-ttu-id="d7eee-112">Connessione alle istanze utente di SQL Server Express</span><span class="sxs-lookup"><span data-stu-id="d7eee-112">SQL Server Express User Instances</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ <span data-ttu-id="d7eee-113">Viene illustrato il supporto per le istanze utente di SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="d7eee-113">Describes support for SQL Server Express user instances.</span></span>  
   
- [<span data-ttu-id="306c7-114">Mirroring del database in SQL Server</span><span class="sxs-lookup"><span data-stu-id="306c7-114">Database Mirroring in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
- <span data-ttu-id="306c7-115">Viene illustrata la funzionalità di mirroring del database.</span><span class="sxs-lookup"><span data-stu-id="306c7-115">Describes database mirroring functionality.</span></span>  
+ [<span data-ttu-id="d7eee-114">Mirroring del database in SQL Server</span><span class="sxs-lookup"><span data-stu-id="d7eee-114">Database Mirroring in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/database-mirroring-in-sql-server.md)  
+ <span data-ttu-id="d7eee-115">Viene illustrata la funzionalità di mirroring del database.</span><span class="sxs-lookup"><span data-stu-id="d7eee-115">Describes database mirroring functionality.</span></span>  
   
- [<span data-ttu-id="306c7-116">Integrazione di Common Language Runtime di SQL Server</span><span class="sxs-lookup"><span data-stu-id="306c7-116">SQL Server Common Language Runtime Integration</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
- <span data-ttu-id="306c7-117">Viene descritto come accedere ai dati da un oggetto di database CLR (Common Language Runtime) in SQL Server.</span><span class="sxs-lookup"><span data-stu-id="306c7-117">Describes how data can be accessed from within a common language runtime (CLR) database object in SQL Server.</span></span>  
+ [<span data-ttu-id="d7eee-116">Integrazione di Common Language Runtime di SQL Server</span><span class="sxs-lookup"><span data-stu-id="d7eee-116">SQL Server Common Language Runtime Integration</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)  
+ <span data-ttu-id="d7eee-117">Viene descritto come accedere ai dati da un oggetto di database CLR (Common Language Runtime) in SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d7eee-117">Describes how data can be accessed from within a common language runtime (CLR) database object in SQL Server.</span></span>  
   
- [<span data-ttu-id="306c7-118">Notifiche di query in SQL Server</span><span class="sxs-lookup"><span data-stu-id="306c7-118">Query Notifications in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- <span data-ttu-id="306c7-119">Viene descritta la richiesta di notifica da parte delle applicazioni .NET Framework in SQL Server quando i dati sono modificati.</span><span class="sxs-lookup"><span data-stu-id="306c7-119">Describes how .NET Framework applications can request notification from SQL Server when data has changed.</span></span>  
+ [<span data-ttu-id="d7eee-118">Notifiche di query in SQL Server</span><span class="sxs-lookup"><span data-stu-id="d7eee-118">Query Notifications in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
+ <span data-ttu-id="d7eee-119">Viene descritta la richiesta di notifica da parte delle applicazioni .NET Framework in SQL Server quando i dati sono modificati.</span><span class="sxs-lookup"><span data-stu-id="d7eee-119">Describes how .NET Framework applications can request notification from SQL Server when data has changed.</span></span>  
   
- [<span data-ttu-id="306c7-120">Isolamento dello snapshot in SQL Server</span><span class="sxs-lookup"><span data-stu-id="306c7-120">Snapshot Isolation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
- <span data-ttu-id="306c7-121">Viene descritto il supporto per l'isolamento dello snapshot, un meccanismo di controllo delle versioni delle righe progettato per ridurre i blocchi nelle applicazioni transazionali.</span><span class="sxs-lookup"><span data-stu-id="306c7-121">Describes support for snapshot isolation, a row versioning mechanism designed to reduce blocking in transactional applications.</span></span>  
+ [<span data-ttu-id="d7eee-120">Isolamento dello snapshot in SQL Server</span><span class="sxs-lookup"><span data-stu-id="d7eee-120">Snapshot Isolation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
+ <span data-ttu-id="d7eee-121">Viene descritto il supporto per l'isolamento dello snapshot, un meccanismo di controllo delle versioni delle righe progettato per ridurre i blocchi nelle applicazioni transazionali.</span><span class="sxs-lookup"><span data-stu-id="d7eee-121">Describes support for snapshot isolation, a row versioning mechanism designed to reduce blocking in transactional applications.</span></span>  
   
- [<span data-ttu-id="306c7-122">Supporto SqlClient per disponibilità elevata, ripristino di emergenza</span><span class="sxs-lookup"><span data-stu-id="306c7-122">SqlClient Support for High Availability, Disaster Recovery</span></span>](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
- <span data-ttu-id="306c7-123">Viene descritto il supporto di SqlClient per i gruppi di disponibilità (AlwaysOn) con disponibilità elevata e ripristino di emergenza.</span><span class="sxs-lookup"><span data-stu-id="306c7-123">Describes SqlClient support for high-availability, disaster recovery (AlwaysOn) availability groups.</span></span>  
+ [<span data-ttu-id="d7eee-122">Supporto SqlClient per disponibilità elevata, ripristino di emergenza</span><span class="sxs-lookup"><span data-stu-id="d7eee-122">SqlClient Support for High Availability, Disaster Recovery</span></span>](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ <span data-ttu-id="d7eee-123">Viene descritto il supporto di SqlClient per i gruppi di disponibilità (AlwaysOn) con disponibilità elevata e ripristino di emergenza.</span><span class="sxs-lookup"><span data-stu-id="d7eee-123">Describes SqlClient support for high-availability, disaster recovery (AlwaysOn) availability groups.</span></span>  
   
- [<span data-ttu-id="306c7-124">Supporto SqlClient per LocalDB</span><span class="sxs-lookup"><span data-stu-id="306c7-124">SqlClient Support for LocalDB</span></span>](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
- <span data-ttu-id="306c7-125">Viene descritto il supporto di SqlClient per database LocalDB.</span><span class="sxs-lookup"><span data-stu-id="306c7-125">Describes SqlClient support for LocalDB databases.</span></span>  
+ [<span data-ttu-id="d7eee-124">Supporto SqlClient per LocalDB</span><span class="sxs-lookup"><span data-stu-id="d7eee-124">SqlClient Support for LocalDB</span></span>](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
+ <span data-ttu-id="d7eee-125">Viene descritto il supporto di SqlClient per database LocalDB.</span><span class="sxs-lookup"><span data-stu-id="d7eee-125">Describes SqlClient support for LocalDB databases.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="306c7-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="306c7-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7eee-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d7eee-126">See also</span></span>
 
-- [<span data-ttu-id="306c7-127">Operazioni sui dati SQL Server in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="306c7-127">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [<span data-ttu-id="306c7-128">Recupero e modifica di dati in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="306c7-128">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [<span data-ttu-id="306c7-129">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="306c7-129">LINQ to SQL</span></span>](../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [<span data-ttu-id="306c7-130">SQL Server e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="306c7-130">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)
-- [<span data-ttu-id="306c7-131">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="306c7-131">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="d7eee-127">Operazioni sui dati SQL Server in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d7eee-127">SQL Server Data Operations in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [<span data-ttu-id="d7eee-128">Recupero e modifica di dati in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d7eee-128">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [<span data-ttu-id="d7eee-129">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="d7eee-129">LINQ to SQL</span></span>](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [<span data-ttu-id="d7eee-130">SQL Server e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d7eee-130">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)
+- [<span data-ttu-id="d7eee-131">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="d7eee-131">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
