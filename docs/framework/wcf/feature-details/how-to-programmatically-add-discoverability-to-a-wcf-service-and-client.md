@@ -2,29 +2,29 @@
 title: 'Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336590"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a><span data-ttu-id="7fab9-102">Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice</span><span class="sxs-lookup"><span data-stu-id="7fab9-102">How to: Programmatically Add Discoverability to a WCF Service and Client</span></span>
-<span data-ttu-id="7fab9-103">In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="7fab9-103">This topic explains how to make a Windows Communication Foundation (WCF) service discoverable.</span></span> <span data-ttu-id="7fab9-104">Si basa il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.</span><span class="sxs-lookup"><span data-stu-id="7fab9-104">It is based on the [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) sample.</span></span>  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a><span data-ttu-id="c519b-102">Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice</span><span class="sxs-lookup"><span data-stu-id="c519b-102">How to: Programmatically Add Discoverability to a WCF Service and Client</span></span>
+<span data-ttu-id="c519b-103">In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c519b-103">This topic explains how to make a Windows Communication Foundation (WCF) service discoverable.</span></span> <span data-ttu-id="c519b-104">Si basa il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.</span><span class="sxs-lookup"><span data-stu-id="c519b-104">It is based on the [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) sample.</span></span>  
   
-### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a><span data-ttu-id="7fab9-105">Per configurare l'esempio di servizio indipendente esistente per l'individuazione</span><span class="sxs-lookup"><span data-stu-id="7fab9-105">To configure the existing Self-Host service sample for Discovery</span></span>  
+### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a><span data-ttu-id="c519b-105">Per configurare l'esempio di servizio indipendente esistente per l'individuazione</span><span class="sxs-lookup"><span data-stu-id="c519b-105">To configure the existing Self-Host service sample for Discovery</span></span>  
   
-1.  <span data-ttu-id="7fab9-106">Aprire la soluzione self-hosting in Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="7fab9-106">Open the Self-Host solution in Visual Studio 2012.</span></span> <span data-ttu-id="7fab9-107">L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.</span><span class="sxs-lookup"><span data-stu-id="7fab9-107">The sample is located in the TechnologySamples\Basic\Service\Hosting\SelfHost directory.</span></span>  
+1. <span data-ttu-id="c519b-106">Aprire la soluzione self-hosting in Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="c519b-106">Open the Self-Host solution in Visual Studio 2012.</span></span> <span data-ttu-id="c519b-107">L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.</span><span class="sxs-lookup"><span data-stu-id="c519b-107">The sample is located in the TechnologySamples\Basic\Service\Hosting\SelfHost directory.</span></span>  
   
-2.  <span data-ttu-id="7fab9-108">Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-108">Add a reference to `System.ServiceModel.Discovery.dll` to the service project.</span></span> <span data-ttu-id="7fab9-109">Si può vedere un messaggio di errore che informa che "System.</span><span class="sxs-lookup"><span data-stu-id="7fab9-109">You may see an error message saying "System.</span></span> <span data-ttu-id="7fab9-110">ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="7fab9-110">ServiceModel.Discovery.dll or one of its dependencies requires a later version of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] than the one specified in the project …" If you see this message, right-click the project in the Solution Explorer and choose **Properties**.</span></span> <span data-ttu-id="7fab9-111">Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7fab9-111">In the **Project Properties** window, make sure that the **Target Framework** is [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span>  
+2. <span data-ttu-id="c519b-108">Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`.</span><span class="sxs-lookup"><span data-stu-id="c519b-108">Add a reference to `System.ServiceModel.Discovery.dll` to the service project.</span></span> <span data-ttu-id="c519b-109">Si può vedere un messaggio di errore che informa che "System.</span><span class="sxs-lookup"><span data-stu-id="c519b-109">You may see an error message saying "System.</span></span> <span data-ttu-id="c519b-110">ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="c519b-110">ServiceModel.Discovery.dll or one of its dependencies requires a later version of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] than the one specified in the project …" If you see this message, right-click the project in the Solution Explorer and choose **Properties**.</span></span> <span data-ttu-id="c519b-111">Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c519b-111">In the **Project Properties** window, make sure that the **Target Framework** is [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span>  
   
-3.  <span data-ttu-id="7fab9-112">Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.</span><span class="sxs-lookup"><span data-stu-id="7fab9-112">Open the Service.cs file and add the following `using` statement.</span></span>  
+3. <span data-ttu-id="c519b-112">Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.</span><span class="sxs-lookup"><span data-stu-id="c519b-112">Open the Service.cs file and add the following `using` statement.</span></span>  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  <span data-ttu-id="7fab9-113">Nel metodo `Main()`, all'interno dell'istruzione `using`, aggiungere un'istanza <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> all'host del servizio.</span><span class="sxs-lookup"><span data-stu-id="7fab9-113">In the `Main()` method, inside the `using` statement, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instance to the service host.</span></span>  
+4. <span data-ttu-id="c519b-113">Nel metodo `Main()`, all'interno dell'istruzione `using`, aggiungere un'istanza <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> all'host del servizio.</span><span class="sxs-lookup"><span data-stu-id="c519b-113">In the `Main()` method, inside the `using` statement, add a <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> instance to the service host.</span></span>  
   
     ```csharp  
     public static void Main()  
@@ -40,9 +40,9 @@ ms.locfileid: "59224208"
     }  
     ```  
   
-     <span data-ttu-id="7fab9-114"><xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifica che il servizio a cui è applicato è individuabile.</span><span class="sxs-lookup"><span data-stu-id="7fab9-114">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifies that the service it is applied to is discoverable.</span></span>  
+     <span data-ttu-id="c519b-114"><xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifica che il servizio a cui è applicato è individuabile.</span><span class="sxs-lookup"><span data-stu-id="c519b-114">The <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifies that the service it is applied to is discoverable.</span></span>  
   
-5.  <span data-ttu-id="7fab9-115">Aggiungere <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> all'host del servizio subito dopo il codice che aggiunge <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.</span><span class="sxs-lookup"><span data-stu-id="7fab9-115">Add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the service host right after the code that adds the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.</span></span>  
+5. <span data-ttu-id="c519b-115">Aggiungere <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> all'host del servizio subito dopo il codice che aggiunge <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.</span><span class="sxs-lookup"><span data-stu-id="c519b-115">Add a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the service host right after the code that adds the <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.</span></span>  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -52,19 +52,19 @@ ms.locfileid: "59224208"
     serviceHost.AddServiceEndpoint(new UdpDiscoveryEndpoint());  
     ```  
   
-     <span data-ttu-id="7fab9-116">Questo codice specifica che i messaggi di individuazione devono essere inviati all'endpoint di individuazione UDP standard.</span><span class="sxs-lookup"><span data-stu-id="7fab9-116">This code specifies that discovery messages should be sent to the standard UDP discovery endpoint.</span></span>  
+     <span data-ttu-id="c519b-116">Questo codice specifica che i messaggi di individuazione devono essere inviati all'endpoint di individuazione UDP standard.</span><span class="sxs-lookup"><span data-stu-id="c519b-116">This code specifies that discovery messages should be sent to the standard UDP discovery endpoint.</span></span>  
   
-### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a><span data-ttu-id="7fab9-117">Per creare un'applicazione client che utilizza l'individuazione per chiamare il servizio</span><span class="sxs-lookup"><span data-stu-id="7fab9-117">To create a client application that uses discovery to call the service</span></span>  
+### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a><span data-ttu-id="c519b-117">Per creare un'applicazione client che utilizza l'individuazione per chiamare il servizio</span><span class="sxs-lookup"><span data-stu-id="c519b-117">To create a client application that uses discovery to call the service</span></span>  
   
-1.  <span data-ttu-id="7fab9-118">Aggiungere alla soluzione una nuova applicazione console denominata `DiscoveryClientApp`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-118">Add a new console application to the solution called `DiscoveryClientApp`.</span></span>  
+1. <span data-ttu-id="c519b-118">Aggiungere alla soluzione una nuova applicazione console denominata `DiscoveryClientApp`.</span><span class="sxs-lookup"><span data-stu-id="c519b-118">Add a new console application to the solution called `DiscoveryClientApp`.</span></span>  
   
-2.  <span data-ttu-id="7fab9-119">Aggiungere un riferimento a `System.ServiceModel.dll` e</span><span class="sxs-lookup"><span data-stu-id="7fab9-119">Add a reference to `System.ServiceModel.dll` and</span></span> `System.ServiceModel.Discovery.dll`  
+2. <span data-ttu-id="c519b-119">Aggiungere un riferimento a `System.ServiceModel.dll` e</span><span class="sxs-lookup"><span data-stu-id="c519b-119">Add a reference to `System.ServiceModel.dll` and</span></span> `System.ServiceModel.Discovery.dll`  
   
-3.  <span data-ttu-id="7fab9-120">Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp.</span><span class="sxs-lookup"><span data-stu-id="7fab9-120">Copy the GeneratedClient.cs and App.config files from the existing client project to the new DiscoveryClientApp project.</span></span> <span data-ttu-id="7fab9-121">A tale scopo, fare doppio clic su file nei **Esplora soluzioni**, selezionare **copia**e quindi selezionare il **DiscoveryClientApp** del progetto, fare doppio clic e selezionare **Incollare**.</span><span class="sxs-lookup"><span data-stu-id="7fab9-121">To do this, right-click the files in the **Solution Explorer**, select **Copy**, and then select the **DiscoveryClientApp** project, right-click and select **Paste**.</span></span>  
+3. <span data-ttu-id="c519b-120">Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp.</span><span class="sxs-lookup"><span data-stu-id="c519b-120">Copy the GeneratedClient.cs and App.config files from the existing client project to the new DiscoveryClientApp project.</span></span> <span data-ttu-id="c519b-121">A tale scopo, fare doppio clic su file nei **Esplora soluzioni**, selezionare **copia**e quindi selezionare il **DiscoveryClientApp** del progetto, fare doppio clic e selezionare **Incollare**.</span><span class="sxs-lookup"><span data-stu-id="c519b-121">To do this, right-click the files in the **Solution Explorer**, select **Copy**, and then select the **DiscoveryClientApp** project, right-click and select **Paste**.</span></span>  
   
-4.  <span data-ttu-id="7fab9-122">Aprire Program.cs.</span><span class="sxs-lookup"><span data-stu-id="7fab9-122">Open Program.cs.</span></span>  
+4. <span data-ttu-id="c519b-122">Aprire Program.cs.</span><span class="sxs-lookup"><span data-stu-id="c519b-122">Open Program.cs.</span></span>  
   
-5.  <span data-ttu-id="7fab9-123">Aggiungere le istruzioni `using` riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="7fab9-123">Add the following `using` statements.</span></span>  
+5. <span data-ttu-id="c519b-123">Aggiungere le istruzioni `using` riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="c519b-123">Add the following `using` statements.</span></span>  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ ms.locfileid: "59224208"
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  <span data-ttu-id="7fab9-124">Aggiungere un metodo statico denominato `FindCalculatorServiceAddress()` alla classe `Program`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-124">Add a static method called `FindCalculatorServiceAddress()` to the `Program` class.</span></span>  
+6. <span data-ttu-id="c519b-124">Aggiungere un metodo statico denominato `FindCalculatorServiceAddress()` alla classe `Program`.</span><span class="sxs-lookup"><span data-stu-id="c519b-124">Add a static method called `FindCalculatorServiceAddress()` to the `Program` class.</span></span>  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -80,9 +80,9 @@ ms.locfileid: "59224208"
     }  
     ```  
   
-     <span data-ttu-id="7fab9-125">Questo metodo utilizza l'individuazione per cercare il servizio `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-125">This method uses discovery to search for the `CalculatorService` service.</span></span>  
+     <span data-ttu-id="c519b-125">Questo metodo utilizza l'individuazione per cercare il servizio `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="c519b-125">This method uses discovery to search for the `CalculatorService` service.</span></span>  
   
-7.  <span data-ttu-id="7fab9-126">Creare nel metodo `FindCalculatorServiceAddress` una nuova istanza <xref:System.ServiceModel.Discovery.DiscoveryClient>, passando un elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> al costruttore.</span><span class="sxs-lookup"><span data-stu-id="7fab9-126">Inside the `FindCalculatorServiceAddress` method, create a new <xref:System.ServiceModel.Discovery.DiscoveryClient> instance, passing in a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the constructor.</span></span>  
+7. <span data-ttu-id="c519b-126">Creare nel metodo `FindCalculatorServiceAddress` una nuova istanza <xref:System.ServiceModel.Discovery.DiscoveryClient>, passando un elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> al costruttore.</span><span class="sxs-lookup"><span data-stu-id="c519b-126">Inside the `FindCalculatorServiceAddress` method, create a new <xref:System.ServiceModel.Discovery.DiscoveryClient> instance, passing in a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> to the constructor.</span></span>  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -92,16 +92,16 @@ ms.locfileid: "59224208"
     }  
     ```  
   
-     <span data-ttu-id="7fab9-127">Indica a WCF che il <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.</span><span class="sxs-lookup"><span data-stu-id="7fab9-127">This tells WCF that the <xref:System.ServiceModel.Discovery.DiscoveryClient> class should use the standard UDP discovery endpoint to send and receive discovery messages.</span></span>  
+     <span data-ttu-id="c519b-127">Indica a WCF che il <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.</span><span class="sxs-lookup"><span data-stu-id="c519b-127">This tells WCF that the <xref:System.ServiceModel.Discovery.DiscoveryClient> class should use the standard UDP discovery endpoint to send and receive discovery messages.</span></span>  
   
-8.  <span data-ttu-id="7fab9-128">Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare.</span><span class="sxs-lookup"><span data-stu-id="7fab9-128">On the next line, call the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method and specify a <xref:System.ServiceModel.Discovery.FindCriteria> instance that contains the service contract you want to search for.</span></span> <span data-ttu-id="7fab9-129">In questo caso specificare `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-129">In this case, specify `ICalculator`.</span></span>  
+8. <span data-ttu-id="c519b-128">Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare.</span><span class="sxs-lookup"><span data-stu-id="c519b-128">On the next line, call the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method and specify a <xref:System.ServiceModel.Discovery.FindCriteria> instance that contains the service contract you want to search for.</span></span> <span data-ttu-id="c519b-129">In questo caso specificare `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="c519b-129">In this case, specify `ICalculator`.</span></span>  
   
     ```csharp  
     // Find ICalculatorService endpoints              
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
-9. <span data-ttu-id="7fab9-130">Successivamente alla chiamata a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, verificare se sia disponibile almeno un servizio corrispondente e restituire l'elemento <xref:System.ServiceModel.EndpointAddress> del primo servizio corrispondente.</span><span class="sxs-lookup"><span data-stu-id="7fab9-130">After the call to <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, check to see if there is at least one matching service and return the <xref:System.ServiceModel.EndpointAddress> of the first matching service.</span></span> <span data-ttu-id="7fab9-131">In caso contrario, restituire `null`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-131">Otherwise return `null`.</span></span>  
+9. <span data-ttu-id="c519b-130">Successivamente alla chiamata a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, verificare se sia disponibile almeno un servizio corrispondente e restituire l'elemento <xref:System.ServiceModel.EndpointAddress> del primo servizio corrispondente.</span><span class="sxs-lookup"><span data-stu-id="c519b-130">After the call to <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, check to see if there is at least one matching service and return the <xref:System.ServiceModel.EndpointAddress> of the first matching service.</span></span> <span data-ttu-id="c519b-131">In caso contrario, restituire `null`.</span><span class="sxs-lookup"><span data-stu-id="c519b-131">Otherwise return `null`.</span></span>  
   
     ```csharp  
     if (findResponse.Endpoints.Count > 0)  
@@ -114,7 +114,7 @@ ms.locfileid: "59224208"
     }  
     ```  
   
-10. <span data-ttu-id="7fab9-132">Aggiungere un metodo statico denominato `InvokeCalculatorService` alla classe `Program`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-132">Add a static method named `InvokeCalculatorService` to the `Program` class.</span></span>  
+10. <span data-ttu-id="c519b-132">Aggiungere un metodo statico denominato `InvokeCalculatorService` alla classe `Program`.</span><span class="sxs-lookup"><span data-stu-id="c519b-132">Add a static method named `InvokeCalculatorService` to the `Program` class.</span></span>  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -122,23 +122,23 @@ ms.locfileid: "59224208"
     }  
     ```  
   
-     <span data-ttu-id="7fab9-133">Questo metodo utilizza l'indirizzo endpoint restituito da `FindCalculatorServiceAddress` per chiamare il servizio di calcolo.</span><span class="sxs-lookup"><span data-stu-id="7fab9-133">This method uses the endpoint address returned from `FindCalculatorServiceAddress` to call the calculator service.</span></span>  
+     <span data-ttu-id="c519b-133">Questo metodo utilizza l'indirizzo endpoint restituito da `FindCalculatorServiceAddress` per chiamare il servizio di calcolo.</span><span class="sxs-lookup"><span data-stu-id="c519b-133">This method uses the endpoint address returned from `FindCalculatorServiceAddress` to call the calculator service.</span></span>  
   
-11. <span data-ttu-id="7fab9-134">Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-134">Inside the `InvokeCalculatorService` method, create an instance of the `CalculatorServiceClient` class.</span></span> <span data-ttu-id="7fab9-135">Questa classe è definita per il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.</span><span class="sxs-lookup"><span data-stu-id="7fab9-135">This class is defined by the [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) sample.</span></span> <span data-ttu-id="7fab9-136">È stata generata utilizzando Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="7fab9-136">It was generated using Svcutil.exe.</span></span>  
+11. <span data-ttu-id="c519b-134">Creare all'interno del metodo `InvokeCalculatorService` un'istanza della classe `CalculatorServiceClient`.</span><span class="sxs-lookup"><span data-stu-id="c519b-134">Inside the `InvokeCalculatorService` method, create an instance of the `CalculatorServiceClient` class.</span></span> <span data-ttu-id="c519b-135">Questa classe è definita per il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.</span><span class="sxs-lookup"><span data-stu-id="c519b-135">This class is defined by the [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) sample.</span></span> <span data-ttu-id="c519b-136">È stata generata utilizzando Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="c519b-136">It was generated using Svcutil.exe.</span></span>  
   
     ```csharp  
     // Create a client  
     CalculatorClient client = new CalculatorClient();  
     ```  
   
-12. <span data-ttu-id="7fab9-137">Alla riga successiva impostare l'indirizzo endpoint del client sull'indirizzo endpoint restituito da `FindCalculatorServiceAddress()`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-137">On the next line, set the endpoint address of the client to the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
+12. <span data-ttu-id="c519b-137">Alla riga successiva impostare l'indirizzo endpoint del client sull'indirizzo endpoint restituito da `FindCalculatorServiceAddress()`.</span><span class="sxs-lookup"><span data-stu-id="c519b-137">On the next line, set the endpoint address of the client to the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
   
     ```csharp  
     // Connect to the discovered service endpoint  
     client.Endpoint.Address = endpointAddress;  
     ```  
   
-13. <span data-ttu-id="7fab9-138">Immediatamente dopo il codice per il passaggio precedente, chiamare i metodi esposti dal servizio di calcolo.</span><span class="sxs-lookup"><span data-stu-id="7fab9-138">Immediately after the code for the previous step, call the methods exposed by the calculator service.</span></span>  
+13. <span data-ttu-id="c519b-138">Immediatamente dopo il codice per il passaggio precedente, chiamare i metodi esposti dal servizio di calcolo.</span><span class="sxs-lookup"><span data-stu-id="c519b-138">Immediately after the code for the previous step, call the methods exposed by the calculator service.</span></span>  
   
     ```csharp  
     Console.WriteLine("Invoking CalculatorService at {0}", endpointAddress);  
@@ -167,7 +167,7 @@ ms.locfileid: "59224208"
     client.Close();  
     ```  
   
-14. <span data-ttu-id="7fab9-139">Aggiungere codice al metodo `Main()` nella classe `Program` per chiamare `FindCalculatorServiceAddress`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-139">Add code to the `Main()` method in the `Program` class to call `FindCalculatorServiceAddress`.</span></span>  
+14. <span data-ttu-id="c519b-139">Aggiungere codice al metodo `Main()` nella classe `Program` per chiamare `FindCalculatorServiceAddress`.</span><span class="sxs-lookup"><span data-stu-id="c519b-139">Add code to the `Main()` method in the `Program` class to call `FindCalculatorServiceAddress`.</span></span>  
   
     ```csharp  
     public static void Main()  
@@ -176,7 +176,7 @@ ms.locfileid: "59224208"
     }  
     ```  
   
-15. <span data-ttu-id="7fab9-140">Alla riga successiva chiamare `InvokeCalculatorService()` e passare l'indirizzo endpoint restituito da `FindCalculatorServiceAddress()`.</span><span class="sxs-lookup"><span data-stu-id="7fab9-140">On the next line, call the `InvokeCalculatorService()` and pass in the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
+15. <span data-ttu-id="c519b-140">Alla riga successiva chiamare `InvokeCalculatorService()` e passare l'indirizzo endpoint restituito da `FindCalculatorServiceAddress()`.</span><span class="sxs-lookup"><span data-stu-id="c519b-140">On the next line, call the `InvokeCalculatorService()` and pass in the endpoint address returned from `FindCalculatorServiceAddress()`.</span></span>  
   
     ```csharp  
     if (endpointAddress != null)  
@@ -188,13 +188,13 @@ ms.locfileid: "59224208"
     Console.ReadLine();  
     ```  
   
-### <a name="to-test-the-application"></a><span data-ttu-id="7fab9-141">Per eseguire il test dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="7fab9-141">To test the application</span></span>  
+### <a name="to-test-the-application"></a><span data-ttu-id="c519b-141">Per eseguire il test dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="c519b-141">To test the application</span></span>  
   
-1.  <span data-ttu-id="7fab9-142">Aprire un prompt dei comandi con privilegi elevati ed eseguire Service.exe.</span><span class="sxs-lookup"><span data-stu-id="7fab9-142">Open an elevated command prompt and run Service.exe.</span></span>  
+1. <span data-ttu-id="c519b-142">Aprire un prompt dei comandi con privilegi elevati ed eseguire Service.exe.</span><span class="sxs-lookup"><span data-stu-id="c519b-142">Open an elevated command prompt and run Service.exe.</span></span>  
   
-2.  <span data-ttu-id="7fab9-143">Aprire un prompt dei comandi ed eseguire Discoveryclientapp.exe.</span><span class="sxs-lookup"><span data-stu-id="7fab9-143">Open a command prompt and run Discoveryclientapp.exe.</span></span>  
+2. <span data-ttu-id="c519b-143">Aprire un prompt dei comandi ed eseguire Discoveryclientapp.exe.</span><span class="sxs-lookup"><span data-stu-id="c519b-143">Open a command prompt and run Discoveryclientapp.exe.</span></span>  
   
-3.  <span data-ttu-id="7fab9-144">L'output di service.exe deve essere analogo all'output indicato di seguito.</span><span class="sxs-lookup"><span data-stu-id="7fab9-144">The output from service.exe should look like the following output.</span></span>  
+3. <span data-ttu-id="c519b-144">L'output di service.exe deve essere analogo all'output indicato di seguito.</span><span class="sxs-lookup"><span data-stu-id="c519b-144">The output from service.exe should look like the following output.</span></span>  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ ms.locfileid: "59224208"
     Return: 6.25390869293308  
     ```  
   
-4.  <span data-ttu-id="7fab9-145">L'output di Discoveryclientapp.exe deve essere analogo all'output indicato di seguito.</span><span class="sxs-lookup"><span data-stu-id="7fab9-145">The output from Discoveryclientapp.exe should look like the following output.</span></span>  
+4. <span data-ttu-id="c519b-145">L'output di Discoveryclientapp.exe deve essere analogo all'output indicato di seguito.</span><span class="sxs-lookup"><span data-stu-id="c519b-145">The output from Discoveryclientapp.exe should look like the following output.</span></span>  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
@@ -219,8 +219,8 @@ ms.locfileid: "59224208"
     Press <ENTER> to exit.  
     ```  
   
-## <a name="example"></a><span data-ttu-id="7fab9-146">Esempio</span><span class="sxs-lookup"><span data-stu-id="7fab9-146">Example</span></span>  
- <span data-ttu-id="7fab9-147">Di seguito è riportato un elenco del codice per questo esempio.</span><span class="sxs-lookup"><span data-stu-id="7fab9-147">The following is a listing of the code for this sample.</span></span> <span data-ttu-id="7fab9-148">Poiché questo codice si basa sul [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio, vengono elencati solo i file che sono stati modificati.</span><span class="sxs-lookup"><span data-stu-id="7fab9-148">Because this code is based on the [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) sample, only those files that are changed are listed.</span></span> <span data-ttu-id="7fab9-149">Per altre informazioni sull'esempio self-hosting, vedere [istruzioni di installazione](https://go.microsoft.com/fwlink/?LinkId=145522).</span><span class="sxs-lookup"><span data-stu-id="7fab9-149">For more information about the Self-Host sample, see [Setup Instructions](https://go.microsoft.com/fwlink/?LinkId=145522).</span></span>  
+## <a name="example"></a><span data-ttu-id="c519b-146">Esempio</span><span class="sxs-lookup"><span data-stu-id="c519b-146">Example</span></span>  
+ <span data-ttu-id="c519b-147">Di seguito è riportato un elenco del codice per questo esempio.</span><span class="sxs-lookup"><span data-stu-id="c519b-147">The following is a listing of the code for this sample.</span></span> <span data-ttu-id="c519b-148">Poiché questo codice si basa sul [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio, vengono elencati solo i file che sono stati modificati.</span><span class="sxs-lookup"><span data-stu-id="c519b-148">Because this code is based on the [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) sample, only those files that are changed are listed.</span></span> <span data-ttu-id="c519b-149">Per altre informazioni sull'esempio self-hosting, vedere [istruzioni di installazione](https://go.microsoft.com/fwlink/?LinkId=145522).</span><span class="sxs-lookup"><span data-stu-id="c519b-149">For more information about the Self-Host sample, see [Setup Instructions](https://go.microsoft.com/fwlink/?LinkId=145522).</span></span>  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +340,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a><span data-ttu-id="7fab9-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7fab9-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c519b-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c519b-150">See also</span></span>
 
-- [<span data-ttu-id="7fab9-151">Panoramica di WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="7fab9-151">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [<span data-ttu-id="7fab9-152">Modello a oggetti WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="7fab9-152">WCF Discovery Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
+- [<span data-ttu-id="c519b-151">Panoramica di WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="c519b-151">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [<span data-ttu-id="c519b-152">Modello a oggetti WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="c519b-152">WCF Discovery Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)
