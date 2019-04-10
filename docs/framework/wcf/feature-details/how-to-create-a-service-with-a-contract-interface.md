@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298539"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Procedura: Creare un servizio con un'interfaccia di contratto
 Il modo migliore per creare un contratto Windows Communication Foundation (WCF) consiste nell'usare un'interfaccia. Questo contratto specifica la raccolta e la struttura dei messaggi necessari per accedere alle operazioni offerte dal servizio. Questa interfaccia definisce i tipi di input e output applicando la classe <xref:System.ServiceModel.ServiceContractAttribute> all'interfaccia e la classe <xref:System.ServiceModel.OperationContractAttribute> ai metodi che si desidera esporre.  
@@ -19,13 +19,13 @@ Il modo migliore per creare un contratto Windows Communication Foundation (WCF) 
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>Creazione di un contratto WCF con un'interfaccia  
   
-1.  Creare una nuova interfaccia utilizzando Visual Basic, C#, o qualsiasi altro linguaggio common language runtime.  
+1. Creare una nuova interfaccia utilizzando Visual Basic, C#, o qualsiasi altro linguaggio common language runtime.  
   
-2.  Applicare la classe <xref:System.ServiceModel.ServiceContractAttribute> all'interfaccia.  
+2. Applicare la classe <xref:System.ServiceModel.ServiceContractAttribute> all'interfaccia.  
   
-3.  Definire i metodi nell'interfaccia.  
+3. Definire i metodi nell'interfaccia.  
   
-4.  Applicare il <xref:System.ServiceModel.OperationContractAttribute> classe a ogni metodo che deve essere esposto come parte del contratto pubblico di WCF.  
+4. Applicare il <xref:System.ServiceModel.OperationContractAttribute> classe a ogni metodo che deve essere esposto come parte del contratto pubblico di WCF.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrata un'interfaccia che definisce un contratto di servizio.  

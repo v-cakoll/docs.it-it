@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324201"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: Creare oggetti Graphics per disegnare
 Prima di poter creare linee e forme, il rendering del testo, o visualizzare e manipolare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie di disegno ed è l'oggetto che viene usato per creare immagini grafiche.  
   
  Nell'utilizzo dei grafici sono disponibili due passaggi:  
   
-1.  Creazione di un <xref:System.Drawing.Graphics> oggetto.  
+1. Creazione di un <xref:System.Drawing.Graphics> oggetto.  
   
-2.  Uso di <xref:System.Drawing.Graphics> oggetto per tracciare linee e forme, il rendering del testo, o visualizzare e manipolare immagini.  
+2. Uso di <xref:System.Drawing.Graphics> oggetto per tracciare linee e forme, il rendering del testo, o visualizzare e manipolare immagini.  
   
 ## <a name="creating-a-graphics-object"></a>Creazione di un oggetto Graphics  
  Un oggetto grafico può essere creato in diversi modi.  
@@ -48,11 +48,11 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Per ottenere un riferimento a un oggetto grafico da PaintEventArgs l'evento di disegno  
   
-1.  Dichiarare il <xref:System.Drawing.Graphics> oggetto.  
+1. Dichiarare il <xref:System.Drawing.Graphics> oggetto.  
   
-2.  Assegnare la variabile per fare riferimento il <xref:System.Drawing.Graphics> oggetto passato come parte di <xref:System.Windows.Forms.PaintEventArgs>.  
+2. Assegnare la variabile per fare riferimento il <xref:System.Drawing.Graphics> oggetto passato come parte di <xref:System.Windows.Forms.PaintEventArgs>.  
   
-3.  Inserire codice per disegnare il form o controllo.  
+3. Inserire codice per disegnare il form o controllo.  
   
      Nell'esempio seguente viene illustrato come fare riferimento a un <xref:System.Drawing.Graphics> dall'oggetto di <xref:System.Windows.Forms.PaintEventArgs> nel <xref:System.Windows.Forms.Control.Paint> evento:  
   

@@ -2,23 +2,23 @@
 title: 'Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato'
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 1e90d71d5831ccf262315ebf9c1deb99b386e224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 599f5624b7eb0c32cbcc0a78e6c7f989ce470b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196411"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312423"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>Procedura: Usare Svcutil.exe per convalidare il codice del servizio compilato
 È possibile usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per rilevare errori in configurazioni e le implementazioni del servizio senza ospitare il servizio.  
   
 ### <a name="to-validate-a-service"></a>Per convalidare un servizio  
   
-1.  Compilare il servizio in un file eseguibile e in uno o più assembly dipendenti.  
+1. Compilare il servizio in un file eseguibile e in uno o più assembly dipendenti.  
   
-2.  Aprire un prompt dei comandi SDK.  
+2. Aprire un prompt dei comandi SDK.  
   
-3.  Al prompt dei comandi, avviare lo strumento Svcutil.exe usando il formato seguente. Per altre informazioni sui vari parametri, vedere la sezione convalida del servizio di [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) argomento.  
+3. Al prompt dei comandi, avviare lo strumento Svcutil.exe usando il formato seguente. Per altre informazioni sui vari parametri, vedere la sezione convalida del servizio di [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) argomento.  
   
     ```  
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  

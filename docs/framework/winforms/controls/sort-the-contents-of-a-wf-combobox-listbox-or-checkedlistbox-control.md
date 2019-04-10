@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312579"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Forms
 Controlli Windows Form ordinamento non viene eseguito quando sono associati a dati. Per visualizzare i dati ordinati, utilizzare un'origine dati che supporta l'ordinamento e quindi chiedere l'origine dati di ordinamento. Le origini dati che supportano l'ordinamento sono visualizzazioni dei dati, dati consente di visualizzare i responsabili e matrici ordinate.  
@@ -22,7 +22,7 @@ Controlli Windows Form ordinamento non viene eseguito quando sono associati a da
   
 ### <a name="to-sort-the-list"></a>Per ordinare l'elenco  
   
-1.  Impostare la proprietà `Sorted` su `true`.  
+1. Impostare la proprietà `Sorted` su `true`.  
   
      Questa impostazione Riposiziona tutti gli elementi dell'elenco in base all'ordinamento.  
   

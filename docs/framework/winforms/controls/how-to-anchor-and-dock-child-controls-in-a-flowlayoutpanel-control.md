@@ -7,34 +7,34 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 679333186d9f9b791e5ad9c2e1cb74f69e051a62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 255ac50ae79d6931c9b82b50677c450c0834fdea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329037"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Procedura: Ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel
 Il controllo <xref:System.Windows.Forms.FlowLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Per ancorare e agganciare controlli figlio in un controllo FlowLayoutPanel  
   
-1.  Creare un controllo <xref:System.Windows.Forms.FlowLayoutPanel> nel form.  
+1. Creare un controllo <xref:System.Windows.Forms.FlowLayoutPanel> nel form.  
   
-2.  Impostare il <xref:System.Windows.Forms.Control.Width%2A> del <xref:System.Windows.Forms.FlowLayoutPanel> controllo **300**e impostare relativo <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> per <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. Impostare il <xref:System.Windows.Forms.Control.Width%2A> del <xref:System.Windows.Forms.FlowLayoutPanel> controllo **300**e impostare relativo <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> per <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
-3.  Creare due controlli <xref:System.Windows.Forms.Button> e inserirli nel controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
+3. Creare due controlli <xref:System.Windows.Forms.Button> e inserirli nel controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-4.  Impostare il <xref:System.Windows.Forms.Control.Width%2A> del primo pulsante su **200**.  
+4. Impostare il <xref:System.Windows.Forms.Control.Width%2A> del primo pulsante su **200**.  
   
-5.  Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del secondo pulsante su <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del secondo pulsante su <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     > [!NOTE]
     >  Il secondo pulsante assume la stessa larghezza del primo. Non si adatta alla larghezza del controllo <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-6.  Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del secondo pulsante su `None`. Verrà ripristinata la larghezza originale del pulsante.  
+6. Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del secondo pulsante su `None`. Verrà ripristinata la larghezza originale del pulsante.  
   
-7.  Impostare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> del secondo pulsante su `Left, Right`.  
+7. Impostare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> del secondo pulsante su `Left, Right`.  
   
     > [!IMPORTANT]
     >  Il secondo pulsante assume la stessa larghezza del primo. Non si adatta alla larghezza del controllo <xref:System.Windows.Forms.FlowLayoutPanel>. Di seguito è riportata la regola generale per l'ancoraggio e l'aggancio nel controllo <xref:System.Windows.Forms.FlowLayoutPanel>: per le direzioni del flusso verticale il controllo <xref:System.Windows.Forms.FlowLayoutPanel> calcola la larghezza di una colonna implicita dal controllo figlio più largo presente nella colonna. Tutti gli altri controlli in questa colonna con la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> o <xref:System.Windows.Forms.Control.Dock%2A> vengono allineati o estesi in base alla colonna implicita. Le direzioni del flusso orizzontale si comportano in modo simile. Il controllo <xref:System.Windows.Forms.FlowLayoutPanel> calcola l'altezza di una riga implicita dal controllo figlio più alto presente nella riga e tutti i controlli figlio agganciati o ancorati in questa riga vengono allineati o ridimensionati di conseguenza.  

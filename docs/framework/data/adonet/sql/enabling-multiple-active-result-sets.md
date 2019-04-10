@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304402"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Abilitazione di MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è un servizio che funziona in combinazione con SQL Server per consentire l'esecuzione di più batch in un'unica connessione. Quando MARS è abilitato per l'uso con SQL Server, ciascun oggetto comando usato aggiunge una sessione alla connessione.  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Sono disponibili tre opzioni per la gestione di questo scenario:  
   
-1.  Avviare la transazione dopo aver creato il lettore, affinché non sia parte della transazione. Ogni aggiornamento diventa quindi la propria transazione.  
+1. Avviare la transazione dopo aver creato il lettore, affinché non sia parte della transazione. Ogni aggiornamento diventa quindi la propria transazione.  
   
-2.  Eseguire il commit di tutto il lavoro dopo aver chiuso il lettore. Questa operazione ha il potenziale per un batch sostanziale di aggiornamenti.  
+2. Eseguire il commit di tutto il lavoro dopo aver chiuso il lettore. Questa operazione ha il potenziale per un batch sostanziale di aggiornamenti.  
   
-3.  Non usare MARS, ma una connessione diversa per ciascun oggetto comando come se non si disponesse di MARS.  
+3. Non usare MARS, ma una connessione diversa per ciascun oggetto comando come se non si disponesse di MARS.  
   
 ### <a name="detecting-mars-support"></a>Rilevamento del supporto di MARS  
  L'applicazione può verificare il supporto di MARS mediante la lettura del valore `SqlConnection.ServerVersion`. Il valore massimo deve essere 9 per SQL Server 2005 e 10 per SQL Server 2008.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319859"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Procedura: Aggiungere pannelli a un controllo StatusBar
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "59227795"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>Per aggiungere pannelli a una barra di stato  
   
-1.  In una procedura, creare pannelli della barra di stato vengono aggiunte al <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Specificare le impostazioni delle proprietà per singole pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà.  
+1. In una procedura, creare pannelli della barra di stato vengono aggiunte al <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Specificare le impostazioni delle proprietà per singole pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà.  
   
      Nell'esempio di codice seguente, il percorso impostato per il percorso dell'icona è il **documenti** cartella. Poiché si può presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa in questa cartella, viene usato questo percorso. Questa scelta consente inoltre agli utenti con livelli di accesso di sistema minimi eseguire in modo sicuro l'applicazione. Nell'esempio seguente richiede un modulo con un <xref:System.Windows.Forms.StatusBar> controllo già aggiunto.  
   

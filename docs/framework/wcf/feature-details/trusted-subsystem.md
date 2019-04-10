@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208540"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319365"
 ---
 # <a name="trusted-subsystem"></a>Sottosistema attendibile
 Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web sono progettati per far sì che l'accesso alle risorse aggiuntive (ad esempio database o altri servizi Web) sia incapsulato nella logica di business del servizio Web. Queste risorse devono essere protette da accessi non autorizzati. Nella figura seguente viene illustrato un processo di sottosistema attendibile.  
@@ -19,15 +19,15 @@ Un client accede a uno o più servizi Web distribuiti in una rete. I servizi Web
   
  Nei passaggi seguenti viene descritto il processo di sottosistema attendibile:  
   
-1.  Il client invia una richiesta al sottosistema attendibile, insieme alle credenziali.  
+1. Il client invia una richiesta al sottosistema attendibile, insieme alle credenziali.  
   
-2.  Il sottosistema attendibile autentica e autorizza l'utente.  
+2. Il sottosistema attendibile autentica e autorizza l'utente.  
   
-3.  Il sottosistema attendibile invia un messaggio di richiesta alla risorsa remota. La richiesta è accompagnata dalle credenziali per il sottosistema attendibile (o per l'account del servizio in cui viene eseguito il processo del sottosistema attendibile).  
+3. Il sottosistema attendibile invia un messaggio di richiesta alla risorsa remota. La richiesta è accompagnata dalle credenziali per il sottosistema attendibile (o per l'account del servizio in cui viene eseguito il processo del sottosistema attendibile).  
   
-4.  La risorsa back-end autentica e autorizza il sottosistema attendibile. Elabora quindi la richiesta e invia una risposta al sottosistema attendibile.  
+4. La risorsa back-end autentica e autorizza il sottosistema attendibile. Elabora quindi la richiesta e invia una risposta al sottosistema attendibile.  
   
-5.  Il sottosistema attendibile elabora la risposta e invia la propria risposta al client.  
+5. Il sottosistema attendibile elabora la risposta e invia la propria risposta al client.  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  

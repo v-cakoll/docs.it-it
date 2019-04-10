@@ -2,12 +2,12 @@
 title: "Procedura: Bloccare gli endpoint nell'organizzazione"
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305964"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Procedura: Bloccare gli endpoint nell'organizzazione
 Le aziende di grandi dimensioni spesso richiedono che le applicazioni vengano sviluppate in conformità con i criteri di sicurezza aziendali. L'argomento seguente viene illustrato come sviluppare e installare un validator dell'endpoint client che può essere usato per convalidare tutte le applicazioni client Windows Communication Foundation (WCF) installate nel computer.  
@@ -25,23 +25,23 @@ Le aziende di grandi dimensioni spesso richiedono che le applicazioni vengano sv
   
 ### <a name="to-create-the-endpoint-validator"></a>Creazione del validator dell'endpoint.  
   
-1.  Creare un oggetto <xref:System.ServiceModel.Description.IEndpointBehavior> con i passaggi di convalida desiderati nel metodo <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>. Nel codice seguente ne viene illustrato un esempio. (Il `InternetClientValidatorBehavior` da cui proviene il [convalida di sicurezza](../../../../docs/framework/wcf/samples/security-validation.md) esempio.)  
+1. Creare un oggetto <xref:System.ServiceModel.Description.IEndpointBehavior> con i passaggi di convalida desiderati nel metodo <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>. Nel codice seguente ne viene illustrato un esempio. (Il `InternetClientValidatorBehavior` da cui proviene il [convalida di sicurezza](../../../../docs/framework/wcf/samples/security-validation.md) esempio.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Creare un nuovo oggetto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> che registra il validator dell'endpoint creato nel passaggio 1. Nell'esempio di codice seguente viene illustrata questa operazione. (Il codice originale per questo esempio è disponibile nel [convalida di sicurezza](../../../../docs/framework/wcf/samples/security-validation.md) esempio.)  
+2. Creare un nuovo oggetto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> che registra il validator dell'endpoint creato nel passaggio 1. Nell'esempio di codice seguente viene illustrata questa operazione. (Il codice originale per questo esempio è disponibile nel [convalida di sicurezza](../../../../docs/framework/wcf/samples/security-validation.md) esempio.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Verificare che l'assembly compilato sia firmato con un nome sicuro. Per informazioni dettagliate, vedere il [strumento nome sicuro (SN. Con estensione EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) e i comandi del compilatore per la propria lingua.  
+3. Verificare che l'assembly compilato sia firmato con un nome sicuro. Per informazioni dettagliate, vedere il [strumento nome sicuro (SN. Con estensione EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) e i comandi del compilatore per la propria lingua.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Installazione del validator nel computer di destinazione  
   
-1.  Installare il validator dell'endpoint utilizzando il meccanismo appropriato. In un'azienda, è possibile usare a tale fine Criteri di gruppo e Systems Management Server (SMS).  
+1. Installare il validator dell'endpoint utilizzando il meccanismo appropriato. In un'azienda, è possibile usare a tale fine Criteri di gruppo e Systems Management Server (SMS).  
   
-2.  Installare l'assembly con nome sicuro nella global assembly cache mediante il [Gacutil.exe (strumento Global Assembly Cache)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Installare l'assembly con nome sicuro nella global assembly cache mediante il [Gacutil.exe (strumento Global Assembly Cache)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  Usare i tipi di spazio dei nomi <xref:System.Configuration?displayProperty=nameWithType> per:  
+3. Usare i tipi di spazio dei nomi <xref:System.Configuration?displayProperty=nameWithType> per:  
   
     1.  Aggiungere l'estensione per il [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sezione usando un nome di tipo completo e bloccare l'elemento.  
   

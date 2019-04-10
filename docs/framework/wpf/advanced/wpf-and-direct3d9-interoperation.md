@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307730"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interoperatività di WPF e Direct3D9
 È possibile includere contenuto Direct3D9 in un'applicazione Windows Presentation Foundation (WPF). In questo argomento viene descritto come creare contenuto Direct3D9 in modo che interagisce in modo efficiente con WPF.  
@@ -112,13 +112,13 @@ ms.locfileid: "59199323"
   
  Per evitare la riduzione delle prestazioni, scrivere codice in modo specifico per il caso di utilizzo di più monitor. Nell'elenco seguente illustra un modo per scrivere il codice con più monitor.  
   
-1.  Trovare un punto del <xref:System.Windows.Interop.D3DImage> nello spazio dello schermo con le `Visual.ProjectToScreen` (metodo).  
+1. Trovare un punto del <xref:System.Windows.Interop.D3DImage> nello spazio dello schermo con le `Visual.ProjectToScreen` (metodo).  
   
-2.  Usare il `MonitorFromPoint` metodo GDI per trovare il monitoraggio in cui viene visualizzato il punto.  
+2. Usare il `MonitorFromPoint` metodo GDI per trovare il monitoraggio in cui viene visualizzato il punto.  
   
-3.  Usare il `IDirect3D9::GetAdapterMonitor` metodo per trovare l'adattatore Direct3D9 il monitoraggio si trova.  
+3. Usare il `IDirect3D9::GetAdapterMonitor` metodo per trovare l'adattatore Direct3D9 il monitoraggio si trova.  
   
-4.  Se l'adapter non è quello utilizzato per l'adapter con il buffer nascosto, creare un nuovo buffer nascosto nel nuovo monitor e assegnarla al <xref:System.Windows.Interop.D3DImage> buffer nascosto.  
+4. Se l'adapter non è quello utilizzato per l'adapter con il buffer nascosto, creare un nuovo buffer nascosto nel nuovo monitor e assegnarla al <xref:System.Windows.Interop.D3DImage> buffer nascosto.  
   
 > [!NOTE]
 >  Se il <xref:System.Windows.Interop.D3DImage> gestisce monitoraggi, le prestazioni saranno lente, tranne nel caso di WDDM e `IDirect3D9Ex` nella stessa scheda. Non è possibile migliorare le prestazioni in questa situazione.  

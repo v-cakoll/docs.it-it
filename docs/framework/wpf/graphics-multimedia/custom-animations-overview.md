@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313944"
 ---
 # <a name="custom-animations-overview"></a>Cenni preliminari sulle animazioni personalizzate
 Questo argomento descrive come e quando estendere il sistema di animazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] creando fotogrammi chiave e classi di animazione personalizzati o usando il callback per frame come alternativa al sistema.  
@@ -99,9 +99,9 @@ Questo argomento descrive come e quando estendere il sistema di animazione [!INC
   
  Il paradigma consigliato (usato dalle animazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) consiste nell'usare due livelli di ereditarietà:  
   
-1.  Creare una classe astratta  *\<tipo >* AnimationBase che deriva da <xref:System.Windows.Media.Animation.AnimationTimeline>. Questa classe deve eseguire l'override di <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> (metodo). Deve anche introdurre un nuovo metodo astratto, GetCurrentValueCore ed eseguire l'override <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> in modo che la convalida dei tipi dei parametri di valore di destinazione predefinito e valore di origine predefinito, quindi chiamare GetCurrentValueCore.  
+1. Creare una classe astratta  *\<tipo >* AnimationBase che deriva da <xref:System.Windows.Media.Animation.AnimationTimeline>. Questa classe deve eseguire l'override di <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> (metodo). Deve anche introdurre un nuovo metodo astratto, GetCurrentValueCore ed eseguire l'override <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> in modo che la convalida dei tipi dei parametri di valore di destinazione predefinito e valore di origine predefinito, quindi chiamare GetCurrentValueCore.  
   
-2.  Creare un'altra classe che eredita dalla nuova  *\<tipo >* classe AnimationBase ed esegue l'override di <xref:System.Windows.Freezable.CreateInstanceCore%2A> metodo, il metodo GetCurrentValueCore introdotto, e il <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> proprietà.  
+2. Creare un'altra classe che eredita dalla nuova  *\<tipo >* classe AnimationBase ed esegue l'override di <xref:System.Windows.Freezable.CreateInstanceCore%2A> metodo, il metodo GetCurrentValueCore introdotto, e il <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> proprietà.  
   
  **Approcci alternativi**  
   

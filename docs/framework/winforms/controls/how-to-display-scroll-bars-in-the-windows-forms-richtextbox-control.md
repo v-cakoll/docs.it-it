@@ -6,21 +6,21 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 52c33239524e76bc26b9b2375578aa46bff51bf6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312657"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Procedura: Visualizzare le barre di scorrimento nel controllo RichTextBox di Windows Forms
 Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo vengono visualizzate le barre di scorrimento orizzontale e verticale in base alle esigenze. Vi sono sette i valori possibili per il <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> proprietà del <xref:System.Windows.Forms.RichTextBox> controllo, che sono descritte nella tabella seguente.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Per visualizzare le barre di scorrimento in un controllo RichTextBox  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.Multiline%2A> su `true`. Non verrà visualizzato alcun tipo di barra di scorrimento, tra cui orizzontale, se il <xref:System.Windows.Forms.RichTextBox.Multiline%2A> è impostata su `false`.  
+1. Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.Multiline%2A> su `true`. Non verrà visualizzato alcun tipo di barra di scorrimento, tra cui orizzontale, se il <xref:System.Windows.Forms.RichTextBox.Multiline%2A> è impostata su `false`.  
   
-2.  Impostare il <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> proprietà su un valore appropriato del <xref:System.Windows.Forms.RichTextBoxScrollBars> enumerazione.  
+2. Impostare il <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> proprietà su un valore appropriato del <xref:System.Windows.Forms.RichTextBoxScrollBars> enumerazione.  
   
     |Value|Descrizione|  
     |-----------|-----------------|  
@@ -32,7 +32,7 @@ Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.Ric
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|Viene visualizzato sempre una barra di scorrimento verticale. La barra di scorrimento viene visualizzato in grigio se il testo non supera la lunghezza del controllo.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|Viene sempre visualizzata una barra di scorrimento verticale. Quando delle barre di scorrimento orizzontale consente di visualizzare il <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> è impostata su `false`. Quando il testo non supera la lunghezza del controllo o la larghezza vengono visualizzati in grigio le barre di scorrimento.|  
   
-3.  Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> su un valore appropriato.  
+3. Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> su un valore appropriato.  
   
     |Value|Descrizione|  
     |-----------|-----------------|  

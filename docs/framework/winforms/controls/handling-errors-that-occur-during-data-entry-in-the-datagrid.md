@@ -12,12 +12,12 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9e803b6450fb8c9ade4adde5bf98fb1c3c62c861
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313216"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView di Windows Forms
 Gestione degli errori dall'archivio dati sottostante è una funzionalità necessaria per un'applicazione di immissione dati. I moduli di Windows <xref:System.Windows.Forms.DataGridView> controllo semplifica questa attività tramite l'esposizione di <xref:System.Windows.Forms.DataGridView.DataError> evento, che viene generato quando l'archivio dati rileva una violazione del vincolo o una regola business.  
@@ -35,7 +35,7 @@ Gestione degli errori dall'archivio dati sottostante è una funzionalità necess
   
 #### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a>Per gestire gli errori di immissione di dati nel controllo DataGridView  
   
-1.  Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene una <xref:System.Windows.Forms.DataGridView> controllo e un <xref:System.Windows.Forms.BindingSource> componente.  
+1. Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene una <xref:System.Windows.Forms.DataGridView> controllo e un <xref:System.Windows.Forms.BindingSource> componente.  
   
      Esempio di codice seguente fornisce l'inizializzazione di base e include un `Main` (metodo).  
   
@@ -44,7 +44,7 @@ Gestione degli errori dall'archivio dati sottostante è una funzionalità necess
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#02)]  
   
-2.  Implementare un metodo nella definizione di classe del form per gestire i dettagli della connessione al database.  
+2. Implementare un metodo nella definizione di classe del form per gestire i dettagli della connessione al database.  
   
      Questo esempio di codice Usa un `GetData` metodo che restituisce un popolato <xref:System.Data.DataTable> oggetto. Assicurarsi di impostare il `connectionString` variabile su un valore appropriato per il database.  
   
@@ -54,12 +54,12 @@ Gestione degli errori dall'archivio dati sottostante è una funzionalità necess
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]  
   
-3.  Implementare un gestore per il modulo <xref:System.Windows.Forms.Form.Load> evento che inizializza il <xref:System.Windows.Forms.DataGridView> e <xref:System.Windows.Forms.BindingSource> e configura il data binding.  
+3. Implementare un gestore per il modulo <xref:System.Windows.Forms.Form.Load> evento che inizializza il <xref:System.Windows.Forms.DataGridView> e <xref:System.Windows.Forms.BindingSource> e configura il data binding.  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]  
   
-4.  Gestire le <xref:System.Windows.Forms.DataGridView.DataError> evento sul <xref:System.Windows.Forms.DataGridView>.  
+4. Gestire le <xref:System.Windows.Forms.DataGridView.DataError> evento sul <xref:System.Windows.Forms.DataGridView>.  
   
      Se il contesto dell'errore è un'operazione di commit, visualizzare l'errore in un <xref:System.Windows.Forms.MessageBox>.  
   

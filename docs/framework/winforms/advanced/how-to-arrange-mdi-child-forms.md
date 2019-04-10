@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317233"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>Procedura: Disporre form figlio MDI
 Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovrapponi e Disponi che controllano il layout dei form figlio MDI aperti. È possibile usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> con uno dei valori di enumerazione <xref:System.Windows.Forms.MdiLayout> per ridisporre i form figlio in un form padre MDI.  
@@ -24,7 +24,7 @@ Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovr
   
 ### <a name="to-arrange-child-forms"></a>Per disporre i form figlio  
   
-1.  In un metodo usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> per impostare l'enumerazione <xref:System.Windows.Forms.MdiLayout> per il form padre MDI. Nel seguente esempio viene usato il valore di enumerazione <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> per le finestre figlio del form padre MDI (`Form1`). L'enumerazione viene usata nel codice durante il gestore eventi per il <xref:System.Windows.Forms.Control.Click> eventi del **Cascade Windows** voce di menu.  
+1. In un metodo usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> per impostare l'enumerazione <xref:System.Windows.Forms.MdiLayout> per il form padre MDI. Nel seguente esempio viene usato il valore di enumerazione <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> per le finestre figlio del form padre MDI (`Form1`). L'enumerazione viene usata nel codice durante il gestore eventi per il <xref:System.Windows.Forms.Control.Click> eventi del **Cascade Windows** voce di menu.  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -41,7 +41,7 @@ Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovr
     > [!NOTE]
     >  È anche possibile affiancare le finestre e disporle sotto forma di icona modificando i valori di enumerazione <xref:System.Windows.Forms.MdiLayout> usati.  
   
-2.  Se si usa Visual C#, inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
+2. Se si usa Visual C#, inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

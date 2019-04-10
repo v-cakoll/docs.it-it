@@ -2,12 +2,12 @@
 title: 'Procedura dettagliata: Esecuzione di query tra relazioni (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325371"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Procedura dettagliata: Esecuzione di query tra relazioni (C#)
 Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
@@ -51,16 +51,16 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Per accedere agli oggetti Order usando oggetti Customer  
   
-1.  Modificare il metodo `Main` digitando o incollando il codice seguente nel metodo stesso:  
+1. Modificare il metodo `Main` digitando o incollando il codice seguente nel metodo stesso:  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  Premere F5 per eseguire il debug dell'applicazione.  
+2. Premere F5 per eseguire il debug dell'applicazione.  
   
     > [!NOTE]
     >  È possibile eliminare il codice SQL nella finestra della console impostando come commento `db.Log = Console.Out;`.  
   
-3.  Premere INVIO nella finestra della console per terminare il debug.  
+3. Premere INVIO nella finestra della console per terminare il debug.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Creazione di una visualizzazione fortemente tipizzata del database  
  È molto più facile iniziare con una visualizzazione fortemente tipizzata del database. Applicando la tipizzazione forte all'oggetto <xref:System.Data.Linq.DataContext>, si eviterà di eseguire chiamate a <xref:System.Data.Linq.DataContext.GetTable%2A>. Quando si usa l'oggetto fortemente tipizzato <xref:System.Data.Linq.DataContext>, è possibile usare tabelle fortemente tipizzate in tutte le query.  
@@ -69,21 +69,21 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Per tipizzare fortemente l'oggetto DataContext  
   
-1.  Aggiungere il codice riportato di seguito sopra la dichiarazione della classe `Customer`.  
+1. Aggiungere il codice riportato di seguito sopra la dichiarazione della classe `Customer`.  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  Per usare l'oggetto fortemente tipizzato `Main`, modificare il metodo <xref:System.Data.Linq.DataContext> come segue:  
+2. Per usare l'oggetto fortemente tipizzato `Main`, modificare il metodo <xref:System.Data.Linq.DataContext> come segue:  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  Premere F5 per eseguire il debug dell'applicazione.  
+3. Premere F5 per eseguire il debug dell'applicazione.  
   
      L'output nella finestra della console sarà:  
   
      `ID=WHITC`  
   
-4.  Premere INVIO nella finestra della console per terminare il debug.  
+4. Premere INVIO nella finestra della console per terminare il debug.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Procedura dettagliata seguente ([procedura dettagliata: Gestione dei dati (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  

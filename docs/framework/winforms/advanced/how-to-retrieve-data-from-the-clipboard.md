@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295510"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Procedura: Recuperare dati dagli Appunti
 Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile usare per interagire con la funzionalità degli Appunti di sistema operativo Windows. Molte applicazioni usano negli Appunti come un archivio temporaneo per i dati. Elaboratori di testo, ad esempio, usare gli Appunti durante le operazioni di taglia e Incolla. Gli Appunti sono anche utili per il trasferimento di informazioni da un'applicazione a altra.  
@@ -31,14 +31,14 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Per recuperare i dati dagli Appunti in un formato comune  
   
-1.  Usare la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> (metodo). Facoltativamente, usare la corrispondente `Contains` *formato* metodi per determinare se i dati sono disponibili in un formato particolare. Questi metodi sono disponibili solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Usare la <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, o <xref:System.Windows.Forms.Clipboard.GetText%2A> (metodo). Facoltativamente, usare la corrispondente `Contains` *formato* metodi per determinare se i dati sono disponibili in un formato particolare. Questi metodi sono disponibili solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Per recuperare i dati dagli Appunti in un formato personalizzato  
   
-1.  Usare il <xref:System.Windows.Forms.Clipboard.GetData%2A> metodo con un nome di formato personalizzato. Questo metodo è disponibile solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Usare il <xref:System.Windows.Forms.Clipboard.GetData%2A> metodo con un nome di formato personalizzato. Questo metodo è disponibile solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      È anche possibile usare nomi di formato predefiniti con il <xref:System.Windows.Forms.Clipboard.SetData%2A> (metodo). Per altre informazioni, vedere <xref:System.Windows.Forms.DataFormats>.  
   
@@ -49,7 +49,7 @@ Il <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Per recuperare i dati dagli Appunti in più formati  
   
-1.  Usare il metodo <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. È necessario utilizzare questo metodo per recuperare i dati dagli Appunti in versioni precedenti a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Usare il metodo <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. È necessario utilizzare questo metodo per recuperare i dati dagli Appunti in versioni precedenti a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

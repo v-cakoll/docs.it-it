@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217068"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328673"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Procedura: Definire il ridimensionamento e il posizionamento in una finestra divisa
 I pannelli del <xref:System.Windows.Forms.SplitContainer> controllo si prestano bene a viene ridimensionata e modificati dagli utenti. Tuttavia, vi saranno si vogliano verrà a livello di programmazione della barra di divisione, in cui è posizionato e in che misura può essere spostato.  
@@ -31,7 +31,7 @@ I pannelli del <xref:System.Windows.Forms.SplitContainer> controllo si prestano 
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>Per definire il comportamento di ridimensionamento SplitContainer  
   
-1.  In una procedura, impostare il <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> proprietà sulla dimensione desiderata, in modo da ottenuta il comportamento della barra di divisione 'snap'.  
+1. In una procedura, impostare il <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> proprietà sulla dimensione desiderata, in modo da ottenuta il comportamento della barra di divisione 'snap'.  
   
      Nell'esempio di codice seguente, all'interno del form <xref:System.Windows.Forms.Form.Load> evento, la barra di divisione all'interno di <xref:System.Windows.Forms.SplitContainer> NFS è impostata su jump 10 pixel quando trascinata.  
   

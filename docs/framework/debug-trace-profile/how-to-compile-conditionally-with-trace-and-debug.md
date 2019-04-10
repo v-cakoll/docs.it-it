@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298578"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: Compilare in modo condizionale con traccia e debug
 Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'output di tracciatura che l'output di debug vengono inviati alla finestra di output in Visual Studio. Tuttavia, per includere funzionalità di tracciatura in un'applicazione distribuita, è necessario compilare le applicazioni instrumentate con la direttiva del compilatore **TRACE** abilitata. In questo modo è possibile tracciare il codice da compilare nella versione di rilascio dell'applicazione. Se non si abilita la direttiva **TRACE**, tutto il codice di tracciatura verrà ignorato durante la compilazione e non sarà incluso nel codice eseguibile da distribuire.  
@@ -36,9 +36,9 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Per modificare le impostazioni di compilazione dalla finestra di dialogo delle pagine delle proprietà  
   
-1.  Fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni**.  
+1. Fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni**.  
   
-2.  Scegliere **Proprietà** dal menu di scelta rapida.  
+2. Scegliere **Proprietà** dal menu di scelta rapida.  
   
     -   In Visual Basic fare clic sulla scheda **Compila** nel riquadro sinistro della pagina delle proprietà e quindi fare clic sul pulsante **Opzioni di compilazione avanzate** per visualizzare la finestra di dialogo **Impostazioni del compilatore avanzate**. Selezionare le caselle di controllo per le impostazioni del compilatore che si vogliono attivare. Deselezionare le caselle di controllo per le impostazioni che si vogliono disabilitare.  
   
@@ -46,7 +46,7 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Per compilare il codice instrumentato usando la riga di comando  
   
-1.  Impostare un'opzione del compilatore condizionale sulla riga di comando. Il compilatore includerà il codice di traccia o di debug nell'eseguibile.  
+1. Impostare un'opzione del compilatore condizionale sulla riga di comando. Il compilatore includerà il codice di traccia o di debug nell'eseguibile.  
   
      Ad esempio, l'istruzione del compilatore che segue, immessa sulla riga di comando, includerà il codice di tracciatura in un eseguibile compilato:  
   
@@ -71,7 +71,7 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Per eseguire la compilazione condizionale con #CONST o #define  
   
-1.  Digitare l'istruzione adatta per il linguaggio di programmazione usato all'inizio del file di codice sorgente.  
+1. Digitare l'istruzione adatta per il linguaggio di programmazione usato all'inizio del file di codice sorgente.  
   
     |Linguaggio|Istruzione|Risultato|  
     |--------------|---------------|------------|  

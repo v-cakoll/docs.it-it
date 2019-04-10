@@ -2,12 +2,12 @@
 title: 'Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2d8041bf3efefa085e94636624e92abb573c1820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312046"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi
 Questo esempio viene illustrato il modello basato su elenchi di pubblicazione-sottoscrizione implementato come un programma di Windows Communication Foundation (WCF).  
@@ -112,23 +112,23 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   
-1.  Verificare che sia possibile accedere al servizio usando un browser immettendo l'indirizzo seguente: `http://localhost/servicemodelsamples/service.svc`. In risposta, viene visualizzata un pagina di conferma.  
+1. Verificare che sia possibile accedere al servizio usando un browser immettendo l'indirizzo seguente: `http://localhost/servicemodelsamples/service.svc`. In risposta, viene visualizzata un pagina di conferma.  
   
-2.  Eseguire Client.exe da \Client\Bin.\\, che si trova sotto la cartella specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client. Avviare più client.  
+2. Eseguire Client.exe da \Client\Bin.\\, che si trova sotto la cartella specifica del linguaggio. L'attività del client viene visualizzata nella finestra della console client. Avviare più client.  
   
-3.  Eseguire Datasource.exe da \datasource\bin\\, che si trova sotto la cartella specifica del linguaggio. L'attività dell'origine dati viene visualizzata nella finestra della console. Dopo l'invio delle informazioni al servizio da parte dell'origine dati, è necessario che tali informazioni vengano inviate a ogni client.  
+3. Eseguire Datasource.exe da \datasource\bin\\, che si trova sotto la cartella specifica del linguaggio. L'attività dell'origine dati viene visualizzata nella finestra della console. Dopo l'invio delle informazioni al servizio da parte dell'origine dati, è necessario che tali informazioni vengano inviate a ogni client.  
   
-4.  Se il client, l'origine dati e applicazioni di servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client, l'origine dati e applicazioni di servizio non sono in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   
-1.  Configurare il computer del servizio:  
+1. Configurare il computer del servizio:  
   
     1.  Sul computer del servizio, creare una directory virtuale denominata ServiceModelSamples. Il file batch setupvroot dal [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) può essere utilizzato per creare la directory del disco e una directory virtuale.  
   
@@ -136,21 +136,21 @@ public class PriceChangeEventArgs : EventArgs
   
     3.  Verificare che sia possibile accedere al servizio dal computer client usando un browser.  
   
-2.  Configurare i computer client:  
+2. Configurare i computer client:  
   
     1.  Copiare i file del programma client dalla cartella \client\bin\, nella cartella specifica del linguaggio, all'interno dei computer client.  
   
     2.  In ogni file di configurazione del client modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
   
-3.  Configurare il computer dell'origine dati:  
+3. Configurare il computer dell'origine dati:  
   
     1.  Copiare i file del programma dell'origine dati dalla cartella \datasource\bin\, nella cartella specifica del linguaggio, all'interno del computer dell'origine dati.  
   
     2.  Nel file di configurazione dell'origine dati modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
   
-4.  Nei computer client avviare Client.exe da un prompt dei comandi.  
+4. Nei computer client avviare Client.exe da un prompt dei comandi.  
   
-5.  Nel computer dell'origine dati avviare Datasource.exe da un prompt dei comandi.  
+5. Nel computer dell'origine dati avviare Datasource.exe da un prompt dei comandi.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

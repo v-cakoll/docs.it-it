@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202144"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295952"
 ---
 # <a name="animation-tips-and-tricks"></a>Suggerimenti sulle animazioni
 Quando si lavora con le animazioni in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], esistono una serie di suggerimenti e consigli che è possono apportare le animazioni offrono prestazioni migliori e migliorano.  
@@ -71,9 +71,9 @@ Quando si lavora con le animazioni in [!INCLUDE[TLA2#tla_wpf](../../../../includ
   
  Se si fa clic sul secondo pulsante mentre il primo <xref:System.Windows.Media.Animation.Storyboard> viene riprodotto, è prevedibile il comportamento seguente:  
   
-1.  Il primo storyboard termina e invia il rettangolo torna alla posizione originale, in quanto l'animazione dispone di un <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> di <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
+1. Il primo storyboard termina e invia il rettangolo torna alla posizione originale, in quanto l'animazione dispone di un <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> di <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
   
-2.  Il secondo storyboard viene applicato e viene animato dalla posizione corrente, da 0 a 500.  
+2. Il secondo storyboard viene applicato e viene animato dalla posizione corrente, da 0 a 500.  
   
  **Ma che non viene visualizzata.** Il rettangolo infatti non torna alla posizione originale ma continua a spostarsi a destra. Ciò accade perché la seconda animazione usa il valore corrente della prima animazione come valore iniziale e viene eseguita da tale valore fino a 500. Quando la seconda animazione sostituisce la prima perché il <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> viene usato il <xref:System.Windows.Media.Animation.FillBehavior> della prima animazione non è rilevante.  
   

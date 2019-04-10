@@ -2,12 +2,12 @@
 title: Channel Factory
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: 8e04dd762e0abad7796d90aff5615134ba22539c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0bcaa739a51d168e18c809804b7da6948ab61e9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315530"
 ---
 # <a name="channel-factory"></a>Channel Factory
 In questo esempio viene illustrato in che modo un'applicazione client può creare un canale con la classe <xref:System.ServiceModel.ChannelFactory> anziché un client generato. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -58,15 +58,15 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Si noti che in questo esempio non viene abilitata la pubblicazione di metadati. Per rigenerare il tipo client, è necessario innanzitutto abilitare la pubblicazione dei metadati per questo esempio.  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Si noti che in questo esempio non viene abilitata la pubblicazione di metadati. Per rigenerare il tipo client, è necessario innanzitutto abilitare la pubblicazione dei metadati per questo esempio.  
   
-3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-cross-machine"></a>Per eseguire l'esempio su più computer  
   
-1.  Sostituire "localhost" nel codice seguente con il nome completo del computer che sta eseguendo il servizio.  
+1. Sostituire "localhost" nel codice seguente con il nome completo del computer che sta eseguendo il servizio.  
   
     ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  

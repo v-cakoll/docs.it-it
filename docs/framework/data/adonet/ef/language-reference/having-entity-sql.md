@@ -2,12 +2,12 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 19da828d3c7e7763c3dd9ba0e34da8849f90cf0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7b147a84a43677afa53f7872f8042f1cf44137cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316180"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 Specifica una condizione di ricerca per un gruppo o un'aggregazione.  
@@ -40,9 +40,9 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente vengono usati gli operatori HAVING e GROUP BY per specificare una condizione di ricerca per un gruppo o un'aggregazione. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1.  Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
+2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#HAVING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#having)]  
   

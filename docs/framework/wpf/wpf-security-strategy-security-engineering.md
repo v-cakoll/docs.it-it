@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c840912f755e1d6bf76720ad0178057c50e4cfd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300567"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia di sicurezza WPF - Progettazione della sicurezza
 Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di codice sicuro. Un elemento chiave dell'iniziativa Trustworthy Computing è [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] è una procedura di progettazione usata insieme a processi di progettazione standard per semplificare la generazione di codice sicuro. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] prevede dieci fasi che combinano procedure consigliate con formalizzazione, misurabilità e struttura aggiuntiva, tra cui:  
@@ -47,11 +47,11 @@ Trustworthy Computing è un'iniziativa Microsoft per garantire la produzione di 
   
  A livello generale, la classificazione dei rischi comporta i passaggi principali seguenti, in cui viene usato un negozio di alimentari come esempio:  
   
-1.  **Identificazione degli asset**. Gli asset di un negozio di alimentari potrebbero includere i dipendenti, una cassaforte, i registri di cassa e l'inventario.  
+1. **Identificazione degli asset**. Gli asset di un negozio di alimentari potrebbero includere i dipendenti, una cassaforte, i registri di cassa e l'inventario.  
   
-2.  **Enumerazione dei punti di ingresso**. I punti di ingresso di un negozio di alimentari potrebbero includere gli ingressi anteriore e posteriore, le finestre, la rampa di carico e i condizionatori d'aria.  
+2. **Enumerazione dei punti di ingresso**. I punti di ingresso di un negozio di alimentari potrebbero includere gli ingressi anteriore e posteriore, le finestre, la rampa di carico e i condizionatori d'aria.  
   
-3.  **Esame degli attacchi contro asset e punti di ingresso**. Un possibile attacco potrebbe avere come oggetto la *cassa* del negozio di alimentari attraverso il punto di ingresso *condizionatore d'aria*. L'impianto potrebbe essere smontato per fare passare la cassa attraverso il muro fino all'esterno del negozio.  
+3. **Esame degli attacchi contro asset e punti di ingresso**. Un possibile attacco potrebbe avere come oggetto la *cassa* del negozio di alimentari attraverso il punto di ingresso *condizionatore d'aria*. L'impianto potrebbe essere smontato per fare passare la cassa attraverso il muro fino all'esterno del negozio.  
   
  La classificazione dei rischi viene applicata in tutto [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] e include:  
   

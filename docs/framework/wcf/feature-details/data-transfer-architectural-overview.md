@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315881"
 ---
 # <a name="data-transfer-architectural-overview"></a>Panoramica dell'architettura di trasferimento dei dati
 Windows Communication Foundation (WCF) può essere considerato come un'infrastruttura di messaggistica. Può ricevere messaggi, elaborarli e inviarli a codice utente per ulteriori azioni, oppure può costruire messaggi dai dati forniti dal codice utente e recapitarli a una destinazione. In questo argomento, rivolto agli sviluppatori avanzati, viene illustrata l'architettura per la gestione dei messaggi e dei dati in essi contenuti. Per informazioni più semplici e orientate alle attività su come inviare e ricevere dati, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) può essere considerato come un'infrastru
   
  Affinché ciò sia possibile, è necessario definire un mapping tra l'intera istanza `Message` e un Infoset XML. Questo mapping, di fatto, esiste: WCF Usa lo standard SOAP per definire questo mapping. Quando un'istanza `Message` viene scritta come Infoset XML, l'Infoset risultante è la SOAP envelope valida che contiene il messaggio. Pertanto, `WriteMessage` eseguirebbe in genere i passaggi seguenti:  
   
-1.  Scrivere il tag di apertura dell'elemento SOAP envelope.  
+1. Scrivere il tag di apertura dell'elemento SOAP envelope.  
   
-2.  Scrivere il tag di apertura dell'elemento intestazione SOAP, scrivere tutte le intestazioni e chiudere l'elemento intestazione.  
+2. Scrivere il tag di apertura dell'elemento intestazione SOAP, scrivere tutte le intestazioni e chiudere l'elemento intestazione.  
   
-3.  Scrivere il tag di apertura dell'elemento corpo SOAP.  
+3. Scrivere il tag di apertura dell'elemento corpo SOAP.  
   
-4.  Chiamare `WriteBodyContents` o un metodo equivalente per scrivere il corpo.  
+4. Chiamare `WriteBodyContents` o un metodo equivalente per scrivere il corpo.  
   
-5.  Chiudere gli elementi corpo ed envelope.  
+5. Chiudere gli elementi corpo ed envelope.  
   
  I passaggi precedenti sono strettamente legati allo standard SOAP. Una complicazione deriva dal fatto che esistono più versioni di SOAP. È ad esempio impossibile scrivere correttamente l'elemento SOAP envelope senza sapere qual è la versione SOAP utilizzata. In alcuni casi, inoltre, potrebbe essere auspicabile disattivare completamente questo mapping complesso specifico di SOAP.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) può essere considerato come un'infrastru
   
  A tale fine, viene utilizzata l'interfaccia <xref:System.Xml.IStreamProvider> . L'interfaccia ha un metodo <xref:System.Xml.IStreamProvider.GetStream> che restituisce il flusso da scrivere. La modalità corretta per scrivere il corpo di un messaggio inviato in un flusso in <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> è la seguente:  
   
-1.  Scrivere tutte le informazioni necessarie che precedono il flusso (ad esempio, il tag di apertura XML).  
+1. Scrivere tutte le informazioni necessarie che precedono il flusso (ad esempio, il tag di apertura XML).  
   
-2.  Chiamare l'overload `WriteValue` in <xref:System.Xml.XmlDictionaryWriter> che prende un <xref:System.Xml.IStreamProvider>, con un'implementazione `IStreamProvider` che restituisce il flusso da scrivere.  
+2. Chiamare l'overload `WriteValue` in <xref:System.Xml.XmlDictionaryWriter> che prende un <xref:System.Xml.IStreamProvider>, con un'implementazione `IStreamProvider` che restituisce il flusso da scrivere.  
   
-3.  Scrivere tutte le informazioni dopo il flusso (ad esempio, il tag di chiusura XML).  
+3. Scrivere tutte le informazioni dopo il flusso (ad esempio, il tag di chiusura XML).  
   
  Con questo approccio, il writer XML può scegliere quando chiamare <xref:System.Xml.IStreamProvider.GetStream> e scrivere i dati inviati nel flusso. I writer XML binari e testuali, ad esempio, lo chiameranno immediatamente e scriveranno il contenuto inviato nel flusso tra il tag di inizio e quello di fine. Il writer MTOM può decidere di chiamare <xref:System.Xml.IStreamProvider.GetStream> in un secondo momento, quando è pronto per scrivere la parte appropriata del messaggio.  
   

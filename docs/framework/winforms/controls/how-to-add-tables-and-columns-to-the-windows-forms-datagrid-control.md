@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319911"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Procedura: Aggiungere tabelle e colonne al controllo DataGrid di Windows Forms
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222042"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>Per aggiungere una tabella e una colonna a un DataGrid a livello di codice  
   
-1.  Per visualizzare i dati nella tabella, è innanzitutto necessario associare il <xref:System.Windows.Forms.DataGrid> controllo a un set di dati. Per altre informazioni, vedere [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1. Per visualizzare i dati nella tabella, è innanzitutto necessario associare il <xref:System.Windows.Forms.DataGrid> controllo a un set di dati. Per altre informazioni, vedere [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
     > [!CAUTION]
     >  Quando si specifica a livello di programmazione gli stili di colonna, creare sempre **DataGridColumnStyle** degli oggetti e aggiungerli al **GridColumnStylesCollection** oggetto prima di aggiungere  **DataGridTableStyle** gli oggetti per il **GridTableStylesCollection** oggetto. Quando si aggiunge un oggetto vuoto **DataGridTableStyle** oggetto nella raccolta **DataGridColumnStyle** gli oggetti vengono generati automaticamente per l'utente. Di conseguenza, verrà generata un'eccezione se si tenta di aggiungere nuovi **DataGridColumnStyle** gli oggetti con duplicato **MappingName** valori il **GridColumnStylesCollection**oggetto.  
   
-2.  Dichiarare un nuovo stile di tabella e impostarne il nome di mapping.  
+2. Dichiarare un nuovo stile di tabella e impostarne il nome di mapping.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222042"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  Dichiarare un nuovo stile di colonna e impostare il nome di associazione e altre proprietà.  
+3. Dichiarare un nuovo stile di colonna e impostare il nome di associazione e altre proprietà.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222042"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  Chiamare il **Add** metodo per il **GridColumnStylesCollection** oggetto a cui aggiungere la colonna per lo stile di tabella  
+4. Chiamare il **Add** metodo per il **GridColumnStylesCollection** oggetto a cui aggiungere la colonna per lo stile di tabella  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222042"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  Chiamare il **Add** metodo per il **GridTableStylesCollection** oggetto a cui aggiungere lo stile di tabella per la griglia dei dati.  
+5. Chiamare il **Add** metodo per il **GridTableStylesCollection** oggetto a cui aggiungere lo stile di tabella per la griglia dei dati.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

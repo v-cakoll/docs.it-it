@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306053"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Procedura: Associare un controllo ComboBox o ListBox di Windows Forms ai dati
 È possibile associare il <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.ListBox> ai dati per eseguire attività come l'esplorazione dei dati in un database, immissione di nuovi dati o la modifica dei dati esistenti.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Per associare un controllo ComboBox o ListBox  
   
-1.  Impostare il `DataSource` proprietà a un oggetto origine dati. Origini dati possibili includono una <xref:System.Windows.Forms.BindingSource> associato a dati, una tabella di dati, una vista dati, un set di dati, un vista dati manager, una matrice o qualsiasi classe che implementa il <xref:System.Collections.IList> interfaccia. Per altre informazioni, vedere [origini dati supportate da Windows Form](../data-sources-supported-by-windows-forms.md).  
+1. Impostare il `DataSource` proprietà a un oggetto origine dati. Origini dati possibili includono una <xref:System.Windows.Forms.BindingSource> associato a dati, una tabella di dati, una vista dati, un set di dati, un vista dati manager, una matrice o qualsiasi classe che implementa il <xref:System.Collections.IList> interfaccia. Per altre informazioni, vedere [origini dati supportate da Windows Form](../data-sources-supported-by-windows-forms.md).  
   
-2.  Se esegue il binding a una tabella, impostare il `DisplayMember` proprietà sul nome di una colonna nell'origine dati.  
+2. Se esegue il binding a una tabella, impostare il `DisplayMember` proprietà sul nome di una colonna nell'origine dati.  
   
      \- oppure -  
   

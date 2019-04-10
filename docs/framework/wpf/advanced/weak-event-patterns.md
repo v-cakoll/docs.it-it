@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139256"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316167"
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni, è possibile che i gestori associati alle origini evento non verranno distrutto in combinazione con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicato per determinati eventi e implementando un'interfaccia nei listener per l'evento. Questo schema progettuale è noto come il *modello di eventi deboli*.  
@@ -50,11 +50,11 @@ Nelle applicazioni, è possibile che i gestori associati alle origini evento non
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Usando una classe di gestore di eventi deboli esistente  
   
-1.  Trovare un evento debole esistente di gestione.  
+1. Trovare un evento debole esistente di gestione.  
   
      Per un elenco di gestori di eventi deboli incluse in WPF, vedere la gerarchia di ereditarietà nel <xref:System.Windows.WeakEventManager> classe.  
   
-2.  Utilizzare la gestione degli eventi debole anziché l'associazione dell'evento normale.  
+2. Utilizzare la gestione degli eventi debole anziché l'associazione dell'evento normale.  
   
      Ad esempio, se il codice Usa il modello seguente per sottoscrivere un evento:  
   
@@ -82,7 +82,7 @@ Nelle applicazioni, è possibile che i gestori associati alle origini evento non
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>Usando la classe generica di gestione degli eventi deboli  
   
-1.  Usare il tipo generico <xref:System.Windows.WeakEventManager%602> classe invece l'associazione dell'evento normale.  
+1. Usare il tipo generico <xref:System.Windows.WeakEventManager%602> classe invece l'associazione dell'evento normale.  
   
      Quando si usa <xref:System.Windows.WeakEventManager%602> per registrare i listener di eventi, è specificare l'origine evento e <xref:System.EventArgs> tipo dei parametri di tipo di classe e chiamare <xref:System.Windows.WeakEventManager%602.AddHandler%2A> come illustrato nel codice seguente:  
   
@@ -92,19 +92,19 @@ Nelle applicazioni, è possibile che i gestori associati alle origini evento non
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Creazione di una classe di gestione di eventi deboli personalizzato  
   
-1.  Copiare il modello di classe seguente al progetto.  
+1. Copiare il modello di classe seguente al progetto.  
   
      Questa classe eredita dal <xref:System.Windows.WeakEventManager> classe.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Sostituire il `SomeEventWeakEventManager` nome con il proprio nome.  
+2. Sostituire il `SomeEventWeakEventManager` nome con il proprio nome.  
   
-3.  Sostituire i nomi di tre descritti in precedenza con i nomi corrispondenti per l'evento. (`SomeEvent`, `EventSource`, e `SomeEventEventArgs`)  
+3. Sostituire i nomi di tre descritti in precedenza con i nomi corrispondenti per l'evento. (`SomeEvent`, `EventSource`, e `SomeEventEventArgs`)  
   
-4.  Impostare la visibilità (pubblica / interna / privata) della classe della gestione di eventi deboli per eventi che gestisce la stessa visibilità.  
+4. Impostare la visibilità (pubblica / interna / privata) della classe della gestione di eventi deboli per eventi che gestisce la stessa visibilità.  
   
-5.  Utilizzare la gestione degli eventi debole anziché l'associazione dell'evento normale.  
+5. Utilizzare la gestione degli eventi debole anziché l'associazione dell'evento normale.  
   
      Ad esempio, se il codice Usa il modello seguente per sottoscrivere un evento:  
   

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: b092532e-7346-469f-b9a1-897f9bea4fb7
-ms.openlocfilehash: b42845ab996c0985fe6a48ac588e6d706905faac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9806583fda60f1cb8a5ef2d97f42eba158593f61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322719"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page"></a>Procedura: Aggiungere un controllo a una scheda
 È possibile usare i moduli di Windows <xref:System.Windows.Forms.TabControl> per visualizzare altri controlli in modo organizzato. La procedura seguente viene illustrato come aggiungere un pulsante alla prima scheda. Per informazioni sull'aggiunta di un'icona di parte dell'etichetta di una pagina della scheda, vedere [come: Modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
   
 ### <a name="to-add-a-control-programmatically"></a>Per aggiungere un controllo a livello di codice  
   
-1.  Usare la <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> della raccolta restituita dal metodo di <xref:System.Windows.Forms.Control.Controls%2A> proprietà di <xref:System.Windows.Forms.TabPage>:  
+1. Usare la <xref:System.Windows.Forms.Control.ControlCollection.Add%2A> della raccolta restituita dal metodo di <xref:System.Windows.Forms.Control.Controls%2A> proprietà di <xref:System.Windows.Forms.TabPage>:  
   
      [!code-cpp[TabPageControlCollectionHowToAdd#1](~/samples/snippets/cpp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cpp/add.cpp#1)]
      [!code-csharp[TabPageControlCollectionHowToAdd#1](~/samples/snippets/csharp/VS_Snippets_Winforms/tabpagecontrolcollectionhowtoadd/cs/add.cs#1)]

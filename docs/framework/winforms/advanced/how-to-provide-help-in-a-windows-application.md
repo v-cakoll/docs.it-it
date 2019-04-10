@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129480"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312716"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procedura: Visualizzare la Guida in un'applicazione Windows
 È possibile utilizzare il <xref:System.Windows.Forms.HelpProvider> componente collegare gli argomenti della Guida all'interno di un file della Guida a controlli specifici in un Windows Form. Il file della Guida può essere in formato HTML o HTMLHelp 1. x o versione successiva.  
@@ -23,17 +23,17 @@ ms.locfileid: "59129480"
   
 ### <a name="to-provide-help"></a>Per visualizzare la Guida  
   
-1.  Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.HelpProvider> al form.  
+1. Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.HelpProvider> al form.  
   
      Il componente verrà posizionato sulla barra delle applicazioni in basso in Progettazione Windows Form.  
   
-2.  Nel **delle proprietà** impostare nella finestra di <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> proprietà al file della Guida con estensione chm, col o htm.  
+2. Nel **delle proprietà** impostare nella finestra di <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> proprietà al file della Guida con estensione chm, col o htm.  
   
-3.  Selezionare un altro controllo disponibile nel form e nella **delle proprietà** impostare nella finestra di <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> proprietà.  
+3. Selezionare un altro controllo disponibile nel form e nella **delle proprietà** impostare nella finestra di <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> proprietà.  
   
      Questa è la stringa passata attraverso il <xref:System.Windows.Forms.HelpProvider> componente al file della Guida per richiamare l'argomento della Guida appropriato.  
   
-4.  Nel **proprietà** impostare nella finestra di <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> proprietà su un valore il <xref:System.Windows.Forms.HelpNavigator> enumerazione.  
+4. Nel **proprietà** impostare nella finestra di <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> proprietà su un valore il <xref:System.Windows.Forms.HelpNavigator> enumerazione.  
   
      Questa impostazione determina il modo in cui la proprietà **HelpKeyword** viene passata al sistema della Guida. La tabella seguente elenca le impostazioni possibili e le relative descrizioni.  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ad53700590c3f3683663d306e15fcbe857f625e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160251"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308510"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Procedura: Usare un validator di nome utente e password personalizzato
 Per impostazione predefinita, quando viene utilizzato un nome utente e una password per l'autenticazione, Windows Communication Foundation (WCF) viene utilizzato Windows per convalidare il nome utente e password. Tuttavia, WCF consente agli utente personalizzata nome e una password schemi di autenticazione, noto anche come *validator*. Per incorporare un validator personalizzato di nome utente e password, creare una classe che deriva da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> e configurarla.  
@@ -21,12 +21,12 @@ Per impostazione predefinita, quando viene utilizzato un nome utente e una passw
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>Per creare un validator di nome utente e password personalizzato  
   
-1.  Creare una classe che deriva da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
+1. Creare una classe che deriva da <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
   
      [!code-csharp[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#3)]
      [!code-vb[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#3)]  
   
-2.  Implementare lo schema di autenticazione personalizzato eseguendo l'override del metodo <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>.  
+2. Implementare lo schema di autenticazione personalizzato eseguendo l'override del metodo <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>.  
   
      Non utilizzare il codice contenuto nell'esempio seguente, che esegue l'override del metodo <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>, in un ambiente di produzione. Sostituire il codice con lo schema di convalida di nome utente e password personalizzato, operazione che potrebbe comportare il recupero di coppie di nome utente e password da un database.  
   
@@ -37,7 +37,7 @@ Per impostazione predefinita, quando viene utilizzato un nome utente e una passw
   
 ### <a name="to-configure-a-service-to-use-a-custom-user-name-and-password-validator"></a>Per configurare un servizio per l'utilizzo di un validator di nome utente e password personalizzato  
   
-1.  Configurare un'associazione che utilizza meccanismi di sicurezza a livello di messaggio su qualsiasi trasporto o meccanismi di sicurezza a livello di trasporto su HTTP(S).  
+1. Configurare un'associazione che utilizza meccanismi di sicurezza a livello di messaggio su qualsiasi trasporto o meccanismi di sicurezza a livello di trasporto su HTTP(S).  
   
      Quando si usa la sicurezza dei messaggi, aggiungere una delle associazioni fornite dal sistema, ad esempio un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), o un' [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) che supporta la sicurezza dei messaggi e il `UserName` il tipo di credenziale.  
   
@@ -82,7 +82,7 @@ Per impostazione predefinita, quando viene utilizzato un nome utente e una passw
     </system.serviceModel>  
     ```  
   
-2.  Configurare un comportamento che specifica che un validator personalizzato di nome utente e password viene utilizzato per convalidare coppie di nome utente e password per i token di sicurezza <xref:System.IdentityModel.Tokens.UserNameSecurityToken> in arrivo.  
+2. Configurare un comportamento che specifica che un validator personalizzato di nome utente e password viene utilizzato per convalidare coppie di nome utente e password per i token di sicurezza <xref:System.IdentityModel.Tokens.UserNameSecurityToken> in arrivo.  
   
     1.  Come elemento figlio per il [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, aggiungere un [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento.  
   

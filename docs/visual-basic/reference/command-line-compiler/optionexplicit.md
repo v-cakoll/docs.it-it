@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332391"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Indica al compilatore di segnalare errori se le variabili non vengono dichiarate prima che vengano utilizzate.  
@@ -34,11 +34,11 @@ Indica al compilatore di segnalare errori se le variabili non vengono dichiarate
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Per impostare - optionexplicit nell'IDE di Visual Studio  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
   
-2.  Fare clic sulla scheda **Compila**.  
+2. Fare clic sulla scheda **Compila**.  
   
-3.  Modificare il valore di **Option Explicit** casella.  
+3. Modificare il valore di **Option Explicit** casella.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente viene compilato quando `-optionexplicit-` viene usato.  

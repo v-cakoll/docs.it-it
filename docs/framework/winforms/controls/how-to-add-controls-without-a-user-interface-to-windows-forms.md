@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330103"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Procedura: Aggiungere i controlli senza un'interfaccia utente a Windows Forms
 Un controllo non visivo (o componente) offre funzionalità all'applicazione. A differenza di altri controlli, componenti non forniscono un'interfaccia utente per l'utente e pertanto non sono necessario essere visualizzato nell'area di progettazione di Windows Form. Quando un componente viene aggiunto a un form, finestra di progettazione Windows Form consente di visualizzare una barra delle applicazioni ridimensionabile nella parte inferiore del form in cui vengono visualizzati tutti i componenti. Dopo aver aggiunto un controllo alla barra dei componenti, è possibile selezionare il componente e impostarne le proprietà come si farebbe con qualsiasi altro controllo nel form.  
@@ -29,9 +29,9 @@ Un controllo non visivo (o componente) offre funzionalità all'applicazione. A d
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Per aggiungere un componente a un modulo di Windows  
   
-1.  Aprire il form. Per informazioni dettagliate, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Aprire il form. Per informazioni dettagliate, vedere [Procedura: Visualizzare Windows Form nella finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  Nel **casella degli strumenti**, fare clic su un componente e trascinarla al form.  
+2. Nel **casella degli strumenti**, fare clic su un componente e trascinarla al form.  
   
      Il componente viene visualizzato nella barra dei componenti.  
   
@@ -42,11 +42,11 @@ Un controllo non visivo (o componente) offre funzionalità all'applicazione. A d
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Per aggiungere un componente a un Windows Form a livello di codice  
   
-1.  Creare un'istanza di <xref:System.Windows.Forms.Timer> classe nel codice.  
+1. Creare un'istanza di <xref:System.Windows.Forms.Timer> classe nel codice.  
   
-2.  Impostare il `Interval` proprietà per determinare il tempo tra i segni di graduazione del timer.  
+2. Impostare il `Interval` proprietà per determinare il tempo tra i segni di graduazione del timer.  
   
-3.  Configurare le altre proprietà necessarie per il componente.  
+3. Configurare le altre proprietà necessarie per il componente.  
   
      Il codice seguente illustra la creazione di un <xref:System.Windows.Forms.Timer> con relativo `Interval` set di proprietà.  
   

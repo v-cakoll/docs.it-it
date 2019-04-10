@@ -2,25 +2,25 @@
 title: 'Procedura: Creare un contratto Request/Reply'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327477"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Procedura: Creare un contratto Request/Reply
 Un contratto di tipo request/reply specifica un metodo che restituisce una risposta La replica deve essere inviata e correlata alla richiesta in base ai termini di questo contratto. Anche se il metodo non restituisce alcuna risposta (`void` in C# o `Sub` in Visual Basic), nell'infrastruttura viene creato e inviato un messaggio vuoto al chiamante. Per impedire l'invio di un messaggio di risposta vuoto, utilizzare un contratto unidirezionale per l'operazione.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Per creare un contratto request/reply  
   
-1.  Creare un'interfaccia nel linguaggio di programmazione desiderato.  
+1. Creare un'interfaccia nel linguaggio di programmazione desiderato.  
   
-2.  Applicare l'attributo <xref:System.ServiceModel.ServiceContractAttribute> all'interfaccia.  
+2. Applicare l'attributo <xref:System.ServiceModel.ServiceContractAttribute> all'interfaccia.  
   
-3.  Applicare l'attributo <xref:System.ServiceModel.OperationContractAttribute> a ciascun metodo che i client possono richiamare.  
+3. Applicare l'attributo <xref:System.ServiceModel.OperationContractAttribute> a ciascun metodo che i client possono richiamare.  
   
-4.  Facoltativo. Impostare il valore della proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `true` per impedire l'invio di un messaggio di risposta vuoto. Per impostazione predefinita, tutte le operazioni sono contratti di tipo request/reply.  
+4. Facoltativo. Impostare il valore della proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `true` per impedire l'invio di un messaggio di risposta vuoto. Per impostazione predefinita, tutte le operazioni sono contratti di tipo request/reply.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente è definito un contratto per un servizio calcolatrice che fornisce metodi `Add` e `Subtract`. Il metodo `Multiply` privato non fa parte del contratto perché non è contrassegnato dalla classe <xref:System.ServiceModel.OperationContractAttribute> e quindi non è accessibile ai client.  

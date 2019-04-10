@@ -2,12 +2,12 @@
 title: Comunicazione bidirezionale
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: a74d40fc8c8d4bfb547bd6b21609b59a42891dfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ce0d15bca15fff52ea6c4ab210dd08664e19824
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148941"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298838"
 ---
 # <a name="two-way-communication"></a>Comunicazione bidirezionale
 Questo esempio dimostra come eseguire comunicazioni transazionali bidirezionali in coda su MSQM. In questo esempio viene usata l'associazione `netMsmqBinding`. In questo caso, il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
@@ -218,11 +218,11 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare i nomi degli endpoint nella configurazione client in modo che corrisponda al codice client.  
@@ -231,7 +231,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
   
-1.  Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nella configurazione di esempio seguente:  
+1. Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nella configurazione di esempio seguente:  
   
     ```xml  
     <configuration>  
@@ -266,7 +266,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-2.  La disattivazione della sicurezza per una configurazione client genera quanto segue:  
+2. La disattivazione della sicurezza per una configurazione client genera quanto segue:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -310,14 +310,14 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-3.  Il servizio per questo esempio crea un'associazione in `OrderProcessorService`. Aggiungere una riga di codice dopo la creazione dell'istanza dell'associazione per impostare la modalità di sicurezza su `None`.  
+3. Il servizio per questo esempio crea un'associazione in `OrderProcessorService`. Aggiungere una riga di codice dopo la creazione dell'istanza dell'associazione per impostare la modalità di sicurezza su `None`.  
   
     ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  
   
-4.  Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.  
+4. Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.  
   
     > [!NOTE]
     >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> o della sicurezza del `Message` su `None`.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 32fa3c2ef985de8aeb31ca8c7de8d67ee2ba4a44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306274"
 ---
 # <a name="message-security-certificate"></a>Certificato di sicurezza dei messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza WS-Security con l'autenticazione del certificato X.509 v3 per il client e che richiede l'autenticazione del server utilizzando il certificato X.509 v3 del server. Questo esempio utilizza impostazioni predefinite tali che tutti i messaggi dell'applicazione tra client e server sono firmati e crittografati. In questo esempio si basa sul [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ed è costituito da un programma di console client e una libreria di servizi ospitati da Internet Information Services (IIS). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta.  
@@ -282,40 +282,40 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
   
-1.  Aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore ed eseguire Setup. bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
+1. Aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore ed eseguire Setup. bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
   
     > [!NOTE]
     >  Il file batch Setup. bat è progettato per essere eseguito da un prompt dei comandi di per gli sviluppatori per Visual Studio. e richiede che la variabile di ambiente PATH punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente in un prompt dei comandi di per gli sviluppatori per Visual Studio (2010).  
   
-2.  Verificare l'accesso al servizio usando un browser immettendo l'indirizzo `http://localhost/servicemodelsamples/service.svc`.  
+2. Verificare l'accesso al servizio usando un browser immettendo l'indirizzo `http://localhost/servicemodelsamples/service.svc`.  
   
-3.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+3. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
-1.  Creare una directory sul computer del servizio. Creare un'applicazione virtuale denominata servicemodelsamples per questa directory usando lo strumento di gestione di Internet Information Services (IIS).  
+1. Creare una directory sul computer del servizio. Creare un'applicazione virtuale denominata servicemodelsamples per questa directory usando lo strumento di gestione di Internet Information Services (IIS).  
   
-2.  Copiare i file del programma del servizio da \inetpub\wwwroot\servicemodelsamples nella directory virtuale sul computer del servizio. Assicurarsi di copiare i file nella sottodirectory \bin e copiare inoltre i file Setup.bat, Cleanup.bat e ImportClientCert.bat nel computer del servizio.  
+2. Copiare i file del programma del servizio da \inetpub\wwwroot\servicemodelsamples nella directory virtuale sul computer del servizio. Assicurarsi di copiare i file nella sottodirectory \bin e copiare inoltre i file Setup.bat, Cleanup.bat e ImportClientCert.bat nel computer del servizio.  
   
-3.  Creare una directory sul client del servizio per i file binari del client.  
+3. Creare una directory sul client del servizio per i file binari del client.  
   
-4.  Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
+4. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-5.  Nel server, eseguire **Setup. bat service** in un prompt dei comandi sviluppatori per Visual Studio con privilegi di amministratore. In esecuzione **Setup. bat** con il **servizio** argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
+5. Nel server, eseguire **Setup. bat service** in un prompt dei comandi sviluppatori per Visual Studio con privilegi di amministratore. In esecuzione **Setup. bat** con il **servizio** argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
   
-6.  Modificare Web. config per riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer.  
+6. Modificare Web. config per riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer.  
   
-7.  Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
+7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
-8.  Nel client, eseguire **Setup. bat client** in un prompt dei comandi sviluppatori per Visual Studio con privilegi di amministratore. In esecuzione **Setup. bat** con il **client** argomento crea un certificato client denominato client.com ed Esporta il certificato client in un file denominato CER.  
+8. Nel client, eseguire **Setup. bat client** in un prompt dei comandi sviluppatori per Visual Studio con privilegi di amministratore. In esecuzione **Setup. bat** con il **client** argomento crea un certificato client denominato client.com ed Esporta il certificato client in un file denominato CER.  
   
 9. Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio. Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.  
   

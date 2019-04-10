@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328595"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Procedura: Inserire righe nel database
 Per inserire righe in un database mediante l'aggiunta di oggetti associati [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> raccolta e quindi inviare le modifiche al database. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le modifiche vengono convertite in SQL appropriate `INSERT` comandi.  
@@ -24,11 +24,11 @@ Per inserire righe in un database mediante l'aggiunta di oggetti associati [!INC
   
 ### <a name="to-insert-a-row-into-the-database"></a>Per inserire una riga nel database  
   
-1.  Creare un nuovo oggetto contenente i dati della colonna da inviare.  
+1. Creare un nuovo oggetto contenente i dati della colonna da inviare.  
   
-2.  Aggiungere il nuovo oggetto per il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` raccolta associata alla tabella di destinazione nel database.  
+2. Aggiungere il nuovo oggetto per il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` raccolta associata alla tabella di destinazione nel database.  
   
-3.  Inviare le modifiche al database.  
+3. Inviare le modifiche al database.  
   
 ## <a name="example"></a>Esempio  
  L'esempio di codice seguente consente di creare un nuovo oggetto di tipo `Order` e di popolarlo con i valori corretti. Il nuovo oggetto viene quindi aggiunto alla raccolta `Order`. Infine viene inviata la modifica al database come una nuova riga nella tabella `Orders`.  

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209515"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326892"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Procedura: Aggiungere e rimuovere nodi tramite il controllo TreeView di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo Archivia i nodi di primo livello nel relativo <xref:System.Windows.Forms.TreeView.Nodes%2A> raccolta. Ciascuna <xref:System.Windows.Forms.TreeNode> inoltre dispone di una propria <xref:System.Windows.Forms.TreeNode.Nodes%2A> raccolta per archiviare i relativi nodi figlio. Entrambe le proprietà della raccolta sono di tipo <xref:System.Windows.Forms.TreeNodeCollection>, che fornisce i membri della raccolta standard che consentono di aggiungere, rimuovere e ridisporre i nodi in un singolo livello della gerarchia di nodi.  
   
 ### <a name="to-add-nodes-programmatically"></a>Per aggiungere nodi a livello di codice  
   
-1.  Usare la <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà.  
+1. Usare la <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà.  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -45,7 +45,7 @@ I moduli di Windows <xref:System.Windows.Forms.TreeView> controllo Archivia i no
   
 ### <a name="to-remove-nodes-programmatically"></a>Rimozione di nodi a livello di codice  
   
-1.  Usare la <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà per rimuovere un singolo nodo, o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> metodo per cancellare tutti i nodi.  
+1. Usare la <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> metodo della visualizzazione albero <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà per rimuovere un singolo nodo, o <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> metodo per cancellare tutti i nodi.  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  

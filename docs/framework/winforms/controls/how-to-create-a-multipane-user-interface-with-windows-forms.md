@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315154"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Procedura: Creare un'interfaccia utente a più riquadri con Windows Forms
 Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simile a quello usato in Microsoft Outlook, con un **cartella** elenco, un **messaggi** riquadro e un **anteprima** riquadro. Questa disposizione avviene principalmente tramite l'ancoraggio dei controlli con il modulo.  
@@ -30,7 +30,7 @@ Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simil
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Per creare un'interfaccia utente lo stile di Outlook a livello di codice  
   
-1.  All'interno di un form, dichiarare ogni controllo che è costituito da un'interfaccia utente. Per questo esempio, usare il <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, e <xref:System.Windows.Forms.RichTextBox> controlli per simulare l'interfaccia utente di Microsoft Outlook.  
+1. All'interno di un form, dichiarare ogni controllo che è costituito da un'interfaccia utente. Per questo esempio, usare il <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, e <xref:System.Windows.Forms.RichTextBox> controlli per simulare l'interfaccia utente di Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simil
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Creare una routine che definisce l'interfaccia utente. Il codice seguente imposta le proprietà in modo che il form sarà simile all'interfaccia utente in Microsoft Outlook. Tuttavia, utilizzando gli altri controlli o ancoraggio loro in modo diverso, è estremamente semplice creare altre interfacce utente che sono altrettanto flessibile.  
+2. Creare una routine che definisce l'interfaccia utente. Il codice seguente imposta le proprietà in modo che il form sarà simile all'interfaccia utente in Microsoft Outlook. Tuttavia, utilizzando gli altri controlli o ancoraggio loro in modo diverso, è estremamente semplice creare altre interfacce utente che sono altrettanto flessibile.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ Nella procedura seguente, si creerà un'interfaccia utente a più riquadri simil
     }  
     ```  
   
-3.  In Visual Basic, aggiungere una chiamata alla procedura appena creato nella `New()` procedure. Nell'oggetto visivo C#, aggiungere questa riga di codice al costruttore della classe del form.  
+3. In Visual Basic, aggiungere una chiamata alla procedura appena creato nella `New()` procedure. Nell'oggetto visivo C#, aggiungere questa riga di codice al costruttore della classe del form.  
   
     ```vb  
     ' Add this to the New procedure.  

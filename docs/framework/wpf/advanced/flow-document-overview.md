@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303492"
 ---
 # <a name="flow-document-overview"></a>Cenni preliminari sui documenti dinamici
 I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leggibilità. Anziché essere impostati su un layout predefinito, questi documenti consentono di adattare e ridisporre il contenuto in modo dinamico in base alle variabili in fase di esecuzione, ad esempio, le dimensioni della finestra, la risoluzione del dispositivo e le preferenze facoltative dell'utente. Questi documenti offrono anche funzionalità avanzate del documento, quali paginazione e colonne. Questo argomento offre una panoramica dei documenti dinamici e di come crearli.  
@@ -89,9 +89,9 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  Ai fini del contenuto dinamico, esistono due categorie importanti:  
   
-1.  **Classi derivate da Block**: Chiamato anche "Elementi di contenuto di Block" o semplicemente "elementi Block". Gli elementi che ereditano da <xref:System.Windows.Documents.Block> può essere usato per raggruppare elementi in un elemento padre comune oppure applicare attributi comuni a un gruppo.  
+1. **Classi derivate da Block**: Chiamato anche "Elementi di contenuto di Block" o semplicemente "elementi Block". Gli elementi che ereditano da <xref:System.Windows.Documents.Block> può essere usato per raggruppare elementi in un elemento padre comune oppure applicare attributi comuni a un gruppo.  
   
-2.  **Classi derivate da inline**: Chiamato anche "Elementi di contenuto di Inline" o semplicemente "elementi Inline". Gli elementi che ereditano da <xref:System.Windows.Documents.Inline> o sono contenuti all'interno di un elemento di blocco o un altro elemento Inline. Gli elementi Inline vengono spesso usati come contenitori diretti del contenuto di cui viene eseguito il rendering sullo schermo. Ad esempio, un <xref:System.Windows.Documents.Paragraph> (elemento Block) può contenere un <xref:System.Windows.Documents.Run> (elemento Inline) ma la <xref:System.Windows.Documents.Run> effettivamente contiene il testo che viene eseguito il rendering sullo schermo.  
+2. **Classi derivate da inline**: Chiamato anche "Elementi di contenuto di Inline" o semplicemente "elementi Inline". Gli elementi che ereditano da <xref:System.Windows.Documents.Inline> o sono contenuti all'interno di un elemento di blocco o un altro elemento Inline. Gli elementi Inline vengono spesso usati come contenitori diretti del contenuto di cui viene eseguito il rendering sullo schermo. Ad esempio, un <xref:System.Windows.Documents.Paragraph> (elemento Block) può contenere un <xref:System.Windows.Documents.Run> (elemento Inline) ma la <xref:System.Windows.Documents.Run> effettivamente contiene il testo che viene eseguito il rendering sullo schermo.  
   
  Ogni classe di queste due categorie è descritta brevemente di seguito.  
   

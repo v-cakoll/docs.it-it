@@ -2,12 +2,12 @@
 title: Introduzione a F# in Visual Studio per Mac
 description: Informazioni su come usare F# con Visual Studio per Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604164"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331871"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Introduzione a F# in Visual Studio per Mac
 
@@ -19,7 +19,7 @@ Uno dei progetti più semplici in Visual Studio per Mac è l'applicazione Consol
 
 1. Nel **File** dal menu **nuova soluzione**.
 
-2.  Nella finestra di dialogo Nuovo progetto, sono presenti 2 diversi modelli di applicazione Console.  È disponibile in altro -> .NET che usi .NET Framework.  L'altro modello è disponibile in .NET Core -> App che ha come destinazione .NET Core.  Modello a dovrebbe funzionare allo scopo di questo articolo.
+2. Nella finestra di dialogo Nuovo progetto, sono presenti 2 diversi modelli di applicazione Console.  È disponibile in altro -> .NET che usi .NET Framework.  L'altro modello è disponibile in .NET Core -> App che ha come destinazione .NET Core.  Modello a dovrebbe funzionare allo scopo di questo articolo.
 
 3. Nel gruppo di app console, modificare C# a F# se necessario.  Scegliere il **successivo** pulsante per spostarsi in avanti.  
 

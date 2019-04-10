@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332573"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176683"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Per associare a livello di codice il controllo DataGrid  
   
-1.  Scrivere codice per riempire il set di dati.  
+1. Scrivere codice per riempire il set di dati.  
   
      Se l'origine dati è un set di dati o una vista di dati basato su una tabella di set di dati, aggiungere codice al form per riempire il set di dati.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176683"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  Chiamare il <xref:System.Windows.Forms.DataGrid> del controllo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> passandogli l'origine dati e un membro dati. Se non è necessario passare in modo esplicito un membro dati, passare una stringa vuota.  
+2. Chiamare il <xref:System.Windows.Forms.DataGrid> del controllo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> passandogli l'origine dati e un membro dati. Se non è necessario passare in modo esplicito un membro dati, passare una stringa vuota.  
   
     > [!NOTE]
     >  Se si esegue il binding della griglia per la prima volta, è possibile impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà. Tuttavia, è possibile reimpostare le proprietà dopo che sono stati impostati. Pertanto, è consigliabile usare sempre la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> (metodo).  
@@ -101,7 +101,7 @@ ms.locfileid: "59176683"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (Facoltativo) Aggiungere gli stili tabella appropriata e gli stili di colonna nella griglia. Se non sono presenti stili di tabella, verrà visualizzato nella tabella, ma con una formattazione minima e con tutte le colonne visibili.  
+3. (Facoltativo) Aggiungere gli stili tabella appropriata e gli stili di colonna nella griglia. Se non sono presenti stili di tabella, verrà visualizzato nella tabella, ma con una formattazione minima e con tutte le colonne visibili.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Esempio di configurazione
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6ceea71e4adc4e8c25ca624ca8adb6e08713a93b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332521"
 ---
 # <a name="configuration-sample"></a>Esempio di configurazione
 Questo esempio illustra l'utilizzo di un file di configurazione per rendere individuabile un servizio.  
@@ -261,10 +261,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  In questo esempio utilizza endpoint HTTP e per eseguire questo esempio, corretto elenchi ACL URL devono essere aggiunte vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate. L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. In questo esempio utilizza endpoint HTTP e per eseguire questo esempio, corretto elenchi ACL URL devono essere aggiunte vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate. L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Compilare la soluzione.  
+2. Compilare la soluzione.  
   
-3.  Eseguire il servizio eseguibile dalla directory di compilazione.  
+3. Eseguire il servizio eseguibile dalla directory di compilazione.  
   
-4.  Eseguire il file eseguibile del client. Il client è in grado di individuare il servizio.  
+4. Eseguire il file eseguibile del client. Il client è in grado di individuare il servizio.  

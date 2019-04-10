@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184483"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300957"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilazione di un'applicazione WPF (WPF)
 Applicazioni Windows Presentation Foundation (WPF) possono essere compilate come [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] file eseguibili (.exe), librerie (DLL) o una combinazione di entrambi i tipi di assembly. Questo argomento illustra come compilare applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descrive i passaggi chiave del processo di compilazione.  
@@ -57,11 +57,11 @@ Applicazioni Windows Presentation Foundation (WPF) possono essere compilate come
   
  Durante questo passaggio, le attività dell'elenco vengono eseguite per ogni file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che rappresenta un elemento Build `Page`:  
   
-1.  Il file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene analizzato dal compilatore di markup.  
+1. Il file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene analizzato dal compilatore di markup.  
   
-2.  Una rappresentazione compilata viene creata per tale file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e viene copiata nella cartella obj\Release.  
+2. Una rappresentazione compilata viene creata per tale file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e viene copiata nella cartella obj\Release.  
   
-3.  Una rappresentazione CodeDOM di una nuova classe parziale viene creata e copiata nella cartella obj\Release.  
+3. Una rappresentazione CodeDOM di una nuova classe parziale viene creata e copiata nella cartella obj\Release.  
   
  Viene anche generato un file di codice specifico del linguaggio per ogni file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ad esempio, per una pagina Page1.xaml in un progetto Visual Basic, viene generato un Page1.g.vb; per una pagina Page1.xaml in un progetto c#, viene generato un file Page1.g.cs. Il componente ".g" nel nome del file indica che il file è costituito da codice generato con una dichiarazione di classe parziale per l'elemento di livello superiore del file di markup (ad esempio `Page` o `Window`). La classe viene dichiarata con la `partial` modificatore in c# (`Extends` in Visual Basic) per indicare la presenza di un'altra dichiarazione per la classe altrove, in genere nel code-behind file Page1.xaml.cs.  
   

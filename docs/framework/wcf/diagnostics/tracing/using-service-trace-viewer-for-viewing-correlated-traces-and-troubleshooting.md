@@ -2,12 +2,12 @@
 title: Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329050"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi
 In questo argomento viene illustrato il formato dei dati di traccia, come visualizzarlo e gli approcci che utilizzano Service Trace Viewer per risolvere i problemi dell'applicazione.  
@@ -152,17 +152,17 @@ L'immagine seguente mostra l'attività client WCF elencate in base al momento de
   
  Nel servizio, il modello di attività esegue il mapping ai concetti WCF come indicato di seguito:  
   
-1.  Viene costruito e aperto un ServiceHost (ciò può creare diverse attività correlate all'host, ad esempio, nel caso della protezione).  
+1. Viene costruito e aperto un ServiceHost (ciò può creare diverse attività correlate all'host, ad esempio, nel caso della protezione).  
   
-2.  Viene creata un'attività di ascolto per ogni listener in ServiceHost (con trasferimenti dentro e fuori da Apertura ServiceHost).  
+2. Viene creata un'attività di ascolto per ogni listener in ServiceHost (con trasferimenti dentro e fuori da Apertura ServiceHost).  
   
-3.  Quando il listener rileva una richiesta di comunicazione iniziata dal client, trasferito a un'attività "Receivebytes", in cui vengono elaborati tutti i byte inviati dal client. In questa attività, è possibile vedere qualsiasi errore di connessione che si sia verificato durante l'interazione tra client e servizio.  
+3. Quando il listener rileva una richiesta di comunicazione iniziata dal client, trasferito a un'attività "Receivebytes", in cui vengono elaborati tutti i byte inviati dal client. In questa attività, è possibile vedere qualsiasi errore di connessione che si sia verificato durante l'interazione tra client e servizio.  
   
-4.  Per ogni set di byte ricevuto che corrisponde a un messaggio, viene elaborato in un'attività "Elaborazione messaggio", in cui viene creato l'oggetto del messaggio WCF. In questa attività vengono visualizzati gli errori correlati a una envelope errata o a un messaggio in formato non valido.  
+4. Per ogni set di byte ricevuto che corrisponde a un messaggio, viene elaborato in un'attività "Elaborazione messaggio", in cui viene creato l'oggetto del messaggio WCF. In questa attività vengono visualizzati gli errori correlati a una envelope errata o a un messaggio in formato non valido.  
   
-5.  Quando il messaggio è formato, viene trasferito a un'attività Elaborazione azione. Se `propagateActivity` è impostato su `true` sia nel client che nel servizio, l'ID di questa attività è identico a quello definito nel client e descritto in precedenza. Da questa fase si inizia a beneficiare di correlazione diretta tra gli endpoint, perché tutte le tracce emesse in WCF sono correlati alla richiesta sono in quella stessa attività, tra cui l'elaborazione del messaggio di risposta.  
+5. Quando il messaggio è formato, viene trasferito a un'attività Elaborazione azione. Se `propagateActivity` è impostato su `true` sia nel client che nel servizio, l'ID di questa attività è identico a quello definito nel client e descritto in precedenza. Da questa fase si inizia a beneficiare di correlazione diretta tra gli endpoint, perché tutte le tracce emesse in WCF sono correlati alla richiesta sono in quella stessa attività, tra cui l'elaborazione del messaggio di risposta.  
   
-6.  Per l'azione out-of-process, viene creata un'attività "Codice utente Execute" per isolare le tracce emesse nel codice utente da quelle emesse in WCF. Nell'esempio precedente, la traccia "Servizio invia la risposta Add" viene emessa nell'attività "Esecuzione codice utente" non nell'attività propagata dal client, se applicabile.  
+6. Per l'azione out-of-process, viene creata un'attività "Codice utente Execute" per isolare le tracce emesse nel codice utente da quelle emesse in WCF. Nell'esempio precedente, la traccia "Servizio invia la risposta Add" viene emessa nell'attività "Esecuzione codice utente" non nell'attività propagata dal client, se applicabile.  
   
  Nella figura seguente, la prima attività sulla sinistra è l'attività radice (0000), ed è l'attività predefinita. Le tre attività seguenti interessano l'apertura di ServiceHost. L'attività nella colonna 5 è il listener e le attività rimanenti (da 6 a 8) descrivono l'elaborazione WCF di un messaggio, dall'elaborazione dei byte all'attivazione del codice utente.  
 

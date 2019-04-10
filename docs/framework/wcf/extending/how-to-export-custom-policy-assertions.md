@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306222"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Procedura: Esportare asserzioni di criteri personalizzate
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio. Le applicazioni del servizio possono utilizzare asserzioni di criteri personalizzate nei metadati del servizio per comunicare informazioni sulla personalizzazione di endpoint, associazione e contratto all'applicazione client. È possibile utilizzare Windows Communication Foundation (WCF) per esportare asserzioni in espressioni di criteri allegate alle associazioni WSDL nell'endpoint, l'operazione o soggetti di messaggio, a seconda di funzionalità o requisiti da comunicare.  
@@ -23,28 +23,28 @@ Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoin
   
 ### <a name="to-export-custom-policy-assertions"></a>Per esportare asserzioni di criteri personalizzate  
   
-1.  Implementare l'interfaccia <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> in una classe <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. Nell'esempio di codice seguente viene illustrata l'implementazione di un'asserzione di criteri personalizzata a livello di associazione.  
+1. Implementare l'interfaccia <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> in una classe <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. Nell'esempio di codice seguente viene illustrata l'implementazione di un'asserzione di criteri personalizzata a livello di associazione.  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2.  Inserire l'elemento di associazione nell'associazione dell'endpoint a livello di programmazione o utilizzando un file di configurazione dell'applicazione. Vedere le procedure seguenti.  
+2. Inserire l'elemento di associazione nell'associazione dell'endpoint a livello di programmazione o utilizzando un file di configurazione dell'applicazione. Vedere le procedure seguenti.  
   
 ### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>Per inserire un elemento di associazione utilizzando un file di configurazione dell'applicazione  
   
-1.  Implementare <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> per l'elemento di associazione dell'asserzione di criteri personalizzata.  
+1. Implementare <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> per l'elemento di associazione dell'asserzione di criteri personalizzata.  
   
-2.  Aggiungere l'estensione di elemento di associazione al file di configurazione utilizzando il [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) elemento.  
+2. Aggiungere l'estensione di elemento di associazione al file di configurazione utilizzando il [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) elemento.  
   
-3.  Compilare un'associazione personalizzata utilizzando <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+3. Compilare un'associazione personalizzata utilizzando <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
 ### <a name="to-insert-a-binding-element-programmatically"></a>Per inserire un elemento di associazione a livello di programmazione  
   
-1.  Creare un nuovo elemento <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e aggiungerlo a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+1. Creare un nuovo elemento <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> e aggiungerlo a <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
-2.  Aggiungere l'associazione personalizzata di cui al passaggio 1 a un endpoint nuovo e aggiungere tale nuovo endpoint del servizio all'oggetto <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> chiamando il metodo <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
+2. Aggiungere l'associazione personalizzata di cui al passaggio 1 a un endpoint nuovo e aggiungere tale nuovo endpoint del servizio all'oggetto <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> chiamando il metodo <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>.  
   
-3.  Aprire la <xref:System.ServiceModel.ServiceHost>. Nell'esempio di codice seguente sono mostrati la creazione di un'associazione personalizzata e l'inserimento degli elementi dell'associazione a livello di programmazione.  
+3. Aprire la <xref:System.ServiceModel.ServiceHost>. Nell'esempio di codice seguente sono mostrati la creazione di un'associazione personalizzata e l'inserimento degli elementi dell'associazione a livello di programmazione.  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  

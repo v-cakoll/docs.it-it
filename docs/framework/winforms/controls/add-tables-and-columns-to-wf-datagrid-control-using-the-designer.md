@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329960"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Procedura: Aggiungere tabelle e colonne al controllo DataGrid di Windows Forms usando la finestra di progettazione
 
@@ -27,35 +27,35 @@ ms.locfileid: "59201533"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Per aggiungere una tabella al controllo DataGrid nella finestra di progettazione  
   
-1.  Per visualizzare i dati nella tabella, è innanzitutto necessario associare il <xref:System.Windows.Forms.DataGrid> controllo a un set di dati. Per altre informazioni, vedere [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati tramite la finestra di progettazione](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
+1. Per visualizzare i dati nella tabella, è innanzitutto necessario associare il <xref:System.Windows.Forms.DataGrid> controllo a un set di dati. Per altre informazioni, vedere [Procedura: Associare il controllo DataGrid di Windows Form a un'origine dati tramite la finestra di progettazione](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2.  Selezionare il <xref:System.Windows.Forms.DataGrid> del controllo <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà nella finestra Proprietà, quindi fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto a la proprietà da visualizzare il **raccolta DataGridTableStyle**.  
+2. Selezionare il <xref:System.Windows.Forms.DataGrid> del controllo <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà nella finestra Proprietà, quindi fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto a la proprietà da visualizzare il **raccolta DataGridTableStyle**.  
   
-3.  Nell'editor della raccolta, fare clic su **Add** per inserire uno stile di tabella.  
+3. Nell'editor della raccolta, fare clic su **Add** per inserire uno stile di tabella.  
   
-4.  Fare clic su **OK** per chiudere l'editor della raccolta e quindi riaprirlo facendo clic sul pulsante con puntini di sospensione accanto al <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà.  
+4. Fare clic su **OK** per chiudere l'editor della raccolta e quindi riaprirlo facendo clic sul pulsante con puntini di sospensione accanto al <xref:System.Windows.Forms.DataGrid.TableStyles%2A> proprietà.  
   
      Quando si riapre l'editor della raccolta, tutte le tabelle di dati associate al controllo verranno visualizzato nell'elenco a discesa per il <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà dello stile di tabella.  
   
-5.  Nel **membri** finestra dell'editor della raccolta, scegliere lo stile di tabella.  
+5. Nel **membri** finestra dell'editor della raccolta, scegliere lo stile di tabella.  
   
-6.  Nel **delle proprietà** finestra dell'editor della raccolta, selezionare il <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valore per la tabella che si desidera visualizzare.  
+6. Nel **delle proprietà** finestra dell'editor della raccolta, selezionare il <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> valore per la tabella che si desidera visualizzare.  
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Per aggiungere una colonna per il controllo DataGrid nella finestra di progettazione  
   
-1.  Nel **membri** finestra di **raccolta DataGridTableStyle**, selezionare lo stile tabella appropriata. Nel **delle proprietà** finestra dell'editor della raccolta, selezionare la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> insieme e quindi fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) accanto alla proprietà per visualizzare il **raccolta DataGridColumnStyle**.  
+1. Nel **membri** finestra di **raccolta DataGridTableStyle**, selezionare lo stile tabella appropriata. Nel **delle proprietà** finestra dell'editor della raccolta, selezionare la <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> insieme e quindi fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) accanto alla proprietà per visualizzare il **raccolta DataGridColumnStyle**.  
   
-2.  Nell'editor della raccolta, fare clic su **Add** per inserire uno stile colonna o fare clic sulla freccia in giù accanto a **Add** per specificare un tipo di colonna.  
+2. Nell'editor della raccolta, fare clic su **Add** per inserire uno stile colonna o fare clic sulla freccia in giù accanto a **Add** per specificare un tipo di colonna.  
   
      Nella casella di riepilogo a discesa, è possibile selezionare i <xref:System.Windows.Forms.DataGridTextBoxColumn> o <xref:System.Windows.Forms.DataGridBoolColumn> tipo.  
   
-3.  Fare clic su OK per chiudere la **raccolta DataGridColumnStyle**, quindi aprirlo facendo clic sul pulsante con puntini di sospensione accanto al <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà.  
+3. Fare clic su OK per chiudere la **raccolta DataGridColumnStyle**, quindi aprirlo facendo clic sul pulsante con puntini di sospensione accanto al <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà.  
   
      Quando si riapre l'editor della raccolta, tutte le colonne di dati della tabella di dati associati verranno visualizzati nell'elenco a discesa per il <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> proprietà dello stile di colonna.  
   
-4.  Nel **membri** finestra dell'editor della raccolta, scegliere lo stile della colonna.  
+4. Nel **membri** finestra dell'editor della raccolta, scegliere lo stile della colonna.  
   
-5.  Nel **delle proprietà** finestra dell'editor della raccolta, selezionare il <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> valore per la colonna che si desidera visualizzare.  
+5. Nel **delle proprietà** finestra dell'editor della raccolta, selezionare il <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> valore per la colonna che si desidera visualizzare.  
   
 ## <a name="see-also"></a>Vedere anche
 

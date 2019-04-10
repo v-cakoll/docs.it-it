@@ -2,12 +2,12 @@
 title: 'Attività 3: Creare i riquadri Casella degli strumenti e PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306016"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Attività 3: Creare i riquadri Casella degli strumenti e PropertyGrid
 In questa attività si creerà il **casella degli strumenti** e **PropertyGrid** riquadri e aggiungerle a riallocato [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -16,11 +16,11 @@ In questa attività si creerà il **casella degli strumenti** e **PropertyGrid**
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Per creare la casella degli strumenti e aggiungerla alla griglia  
   
-1.  Aprire il progetto HostingApplication ottenuto seguendo la procedura descritta in [attività 2: Ospitare la finestra di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md).  
+1. Aprire il progetto HostingApplication ottenuto seguendo la procedura descritta in [attività 2: Ospitare la finestra di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md).  
   
-2.  Nel **Esplora soluzioni** riquadro, fare clic sul file MainWindow. XAML e selezionare **Visualizza codice**.  
+2. Nel **Esplora soluzioni** riquadro, fare clic sul file MainWindow. XAML e selezionare **Visualizza codice**.  
   
-3.  Aggiungere un `GetToolboxControl` metodo per il `MainWindow` classe che crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, aggiunge un nuovo **della casella degli strumenti** categoria per il **casella degli strumenti**e assegna la <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipi di attività per tale categoria.  
+3. Aggiungere un `GetToolboxControl` metodo per il `MainWindow` classe che crea un <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, aggiunge un nuovo **della casella degli strumenti** categoria per il **casella degli strumenti**e assegna la <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> tipi di attività per tale categoria.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ In questa attività si creerà il **casella degli strumenti** e **PropertyGrid**
     }  
     ```  
   
-4.  Aggiungere una privata `AddToolbox` metodo per il `MainWindow` classe che inserisce il **della casella degli strumenti** nella colonna sinistra sulla griglia.  
+4. Aggiungere una privata `AddToolbox` metodo per il `MainWindow` classe che inserisce il **della casella degli strumenti** nella colonna sinistra sulla griglia.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ In questa attività si creerà il **casella degli strumenti** e **PropertyGrid**
     }  
     ```  
   
-5.  Aggiungere una chiamata al metodo `AddToolBox` nel costruttore della classe `MainWindow()` come illustrato nel codice seguente.  
+5. Aggiungere una chiamata al metodo `AddToolBox` nel costruttore della classe `MainWindow()` come illustrato nel codice seguente.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ In questa attività si creerà il **casella degli strumenti** e **PropertyGrid**
     }  
     ```  
   
-6.  Premere F5 per compilare ed eseguire la soluzione. Il **casella degli strumenti** contenente le <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> attività devono essere visualizzate.  
+6. Premere F5 per compilare ed eseguire la soluzione. Il **casella degli strumenti** contenente le <xref:System.Activities.Statements.Assign> e <xref:System.Activities.Statements.Sequence> attività devono essere visualizzate.  
   
 ### <a name="to-create-the-propertygrid"></a>Per creare il riquadro PropertyGrid  
   
-1.  Nel **Esplora soluzioni** riquadro, fare clic sul file MainWindow. XAML e selezionare **Visualizza codice**.  
+1. Nel **Esplora soluzioni** riquadro, fare clic sul file MainWindow. XAML e selezionare **Visualizza codice**.  
   
-2.  Aggiungere il `AddPropertyInspector` metodo per il `MainWindow` classe per posizionare il **PropertyGrid** riquadro in colonna all'estremità destra nella griglia.  
+2. Aggiungere il `AddPropertyInspector` metodo per il `MainWindow` classe per posizionare il **PropertyGrid** riquadro in colonna all'estremità destra nella griglia.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ In questa attività si creerà il **casella degli strumenti** e **PropertyGrid**
     }  
     ```  
   
-3.  Aggiungere una chiamata al metodo `AddPropertyInspector` nel costruttore della classe `MainWindow()` come illustrato nel codice seguente.  
+3. Aggiungere una chiamata al metodo `AddPropertyInspector` nel costruttore della classe `MainWindow()` come illustrato nel codice seguente.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ In questa attività si creerà il **casella degli strumenti** e **PropertyGrid**
     }  
     ```  
   
-4.  Premere F5 per compilare ed eseguire la soluzione. Il **casella degli strumenti**, canvas di progettazione del flusso di lavoro, e **PropertyGrid** riquadri devono essere visualizzati e quando si trascina un' <xref:System.Activities.Statements.Assign> attività o un <xref:System.Activities.Statements.Sequence> attività nell'area di progettazione, il griglia delle proprietà è necessario aggiornare a seconda dell'attività evidenziata.  
+4. Premere F5 per compilare ed eseguire la soluzione. Il **casella degli strumenti**, canvas di progettazione del flusso di lavoro, e **PropertyGrid** riquadri devono essere visualizzati e quando si trascina un' <xref:System.Activities.Statements.Assign> attività o un <xref:System.Activities.Statements.Sequence> attività nell'area di progettazione, il griglia delle proprietà è necessario aggiornare a seconda dell'attività evidenziata.  
   
 ## <a name="example"></a>Esempio  
  Il file MainWindow.xaml.cs ora deve contenere il codice seguente.  

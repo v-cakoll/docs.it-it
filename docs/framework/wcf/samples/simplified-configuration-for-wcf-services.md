@@ -2,12 +2,12 @@
 title: Configurazione semplificata per servizi WCF
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 50693062b201c9cf2e0d87f796f3e935e1fd8e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304259"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Configurazione semplificata per servizi WCF
 In questo esempio viene illustrato come implementare e configurare un servizio tipico e un client tramite Windows Communication Foundation (WCF). Questo esempio è la base per tutti gli altri esempi di tecnologia di base.  
@@ -57,11 +57,11 @@ In questo esempio viene illustrato come implementare e configurare un servizio t
   
 ### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Eseguire l'esempio attenendosi ai passaggi seguenti:  
+3. Eseguire l'esempio attenendosi ai passaggi seguenti:  
   
     1.  Fare clic il **Service** del progetto e selezionare **imposta come progetto di avvio**, quindi premere **Ctrl + F5**.  
   

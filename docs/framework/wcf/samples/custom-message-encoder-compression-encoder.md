@@ -2,12 +2,12 @@
 title: 'Codificatore di messaggi personalizzati: Codificatore di compressione'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310499"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificatore di messaggi personalizzati: Codificatore di compressione
 In questo esempio viene illustrato come implementare un codificatore personalizzato utilizzando la piattaforma di Windows Communication Foundation (WCF).  
@@ -39,9 +39,9 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
   
  Come indicato in precedenza, in un codificatore personalizzato vengono implementati molti livelli. Per illustrare meglio la relazione tra i singoli livelli, nell'elenco seguente è fornito un ordine semplificato di eventi per l'avvio del servizio:  
   
-1.  Il server viene avviato.  
+1. Il server viene avviato.  
   
-2.  Le informazioni di configurazione vengono lette.  
+2. Le informazioni di configurazione vengono lette.  
   
     1.  La configurazione del servizio registra il gestore di configurazione personalizzato.  
   
@@ -51,11 +51,11 @@ In questo esempio viene illustrato come implementare un codificatore personalizz
   
     4.  L'elemento di associazione personalizzato crea e restituisce una factory del codificatore di messaggi.  
   
-3.  Un messaggio viene ricevuto.  
+3. Un messaggio viene ricevuto.  
   
-4.  La factory del codificatore di messaggi restituisce un codificatore di messaggi per la lettura del messaggio e la scrittura della risposta.  
+4. La factory del codificatore di messaggi restituisce un codificatore di messaggi per la lettura del messaggio e la scrittura della risposta.  
   
-5.  Il livello del codificatore viene implementato come una class factory. Solo la class factory del codificatore deve essere esposta pubblicamente per il codificatore personalizzato. L'oggetto della factory viene restituito dall'elemento di associazione quando viene creato l'oggetto <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>. I codificatori di messaggi possono operare in modalità di memorizzazione nel buffer o di trasmissione. In questo esempio vengono illustrate entrambe le modalità.  
+5. Il livello del codificatore viene implementato come una class factory. Solo la class factory del codificatore deve essere esposta pubblicamente per il codificatore personalizzato. L'oggetto della factory viene restituito dall'elemento di associazione quando viene creato l'oggetto <xref:System.ServiceModel.ServiceHost> o <xref:System.ServiceModel.ChannelFactory%601>. I codificatori di messaggi possono operare in modalità di memorizzazione nel buffer o di trasmissione. In questo esempio vengono illustrate entrambe le modalità.  
   
  A ogni modalità è associato un metodo `ReadMessage` e un metodo `WriteMessage` sulla classe `MessageEncoder` astratta. La maggior parte del lavoro di codifica si verifica in questi metodi. Nell'esempio viene eseguito il wrapping dei codificatori di testo e di messaggi binari esistenti. In questo modo l'esempio può delegare la lettura e la scrittura della rappresentazione in rete dei messaggi al codificatore interno e il codificatore di compressione può comprimere o decomprimere i risultati. Poiché non è presente una pipeline per la codifica dei messaggi, questo è l'unico modello per l'uso di più codificatori in WCF. Quando il messaggio è stato decompresso, il messaggio risultante viene passato sullo stack affinché venga gestito dallo stack di canali. Durante la compressione, il messaggio compresso risultante viene scritto direttamente nel flusso fornito.  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente:  
+1. Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

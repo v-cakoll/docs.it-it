@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227483"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325826"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Novità di WPF versione 4.5
 <a name="introduction"></a> In questo argomento contiene informazioni sulle funzionalità nuove e migliorate in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versione 4.5.  
@@ -56,9 +56,9 @@ ms.locfileid: "59227483"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>Nuove funzionalità per il VirtualizingPanel  
   
-1.  È possibile specificare se un <xref:System.Windows.Controls.VirtualizingPanel>, ad esempio il <xref:System.Windows.Controls.VirtualizingStackPanel>, consente di visualizzare elementi parziali usando la <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> proprietà associata. Se <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> è impostata su <xref:System.Windows.Controls.ScrollUnit.Item>, il <xref:System.Windows.Controls.VirtualizingPanel> visualizzerà solo gli elementi che sono visibili in modo completo. Se <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> è impostata su <xref:System.Windows.Controls.ScrollUnit.Pixel>, il <xref:System.Windows.Controls.VirtualizingPanel> può visualizzare elementi parzialmente visibili.  
+1. È possibile specificare se un <xref:System.Windows.Controls.VirtualizingPanel>, ad esempio il <xref:System.Windows.Controls.VirtualizingStackPanel>, consente di visualizzare elementi parziali usando la <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> proprietà associata. Se <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> è impostata su <xref:System.Windows.Controls.ScrollUnit.Item>, il <xref:System.Windows.Controls.VirtualizingPanel> visualizzerà solo gli elementi che sono visibili in modo completo. Se <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> è impostata su <xref:System.Windows.Controls.ScrollUnit.Pixel>, il <xref:System.Windows.Controls.VirtualizingPanel> può visualizzare elementi parzialmente visibili.  
   
-2.  È possibile specificare le dimensioni della cache prima e dopo il viewport quando il <xref:System.Windows.Controls.VirtualizingPanel> esegue la virtualizzazione utilizzando la <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> proprietà associata.  La cache è la quantità di spazio sopra o sotto il viewport in cui gli elementi non sono virtualizzati.  È possibile migliorare le prestazioni usando una cache per evitare che vengano generati elementi dell'interfaccia utente quando ne viene eseguito lo scorrimento nella visualizzazione. La cache viene popolata con una priorità inferiore in modo che l'applicazione rimanga reattiva durante l'operazione. Il <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> proprietà determina l'unità di misura utilizzata da <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
+2. È possibile specificare le dimensioni della cache prima e dopo il viewport quando il <xref:System.Windows.Controls.VirtualizingPanel> esegue la virtualizzazione utilizzando la <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> proprietà associata.  La cache è la quantità di spazio sopra o sotto il viewport in cui gli elementi non sono virtualizzati.  È possibile migliorare le prestazioni usando una cache per evitare che vengano generati elementi dell'interfaccia utente quando ne viene eseguito lo scorrimento nella visualizzazione. La cache viene popolata con una priorità inferiore in modo che l'applicazione rimanga reattiva durante l'operazione. Il <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> proprietà determina l'unità di misura utilizzata da <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>Associazione alle proprietà statiche  
@@ -86,11 +86,11 @@ ms.locfileid: "59227483"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>Associazione a tipi che implementano ICustomTypeProvider  
  WPF supporta il data binding a oggetti che implementano <xref:System.Reflection.ICustomTypeProvider>, noto anche come tipi personalizzati.  È possibile utilizzare tipi personalizzati nei casi seguenti.  
   
-1.  Come un <xref:System.Windows.PropertyPath> in un data binding. Ad esempio, il <xref:System.Windows.Data.Binding.Path%2A> proprietà di un <xref:System.Windows.Data.Binding> può fare riferimento a una proprietà di un tipo personalizzato.  
+1. Come un <xref:System.Windows.PropertyPath> in un data binding. Ad esempio, il <xref:System.Windows.Data.Binding.Path%2A> proprietà di un <xref:System.Windows.Data.Binding> può fare riferimento a una proprietà di un tipo personalizzato.  
   
-2.  Come valore del <xref:System.Windows.DataTemplate.DataType%2A> proprietà.  
+2. Come valore del <xref:System.Windows.DataTemplate.DataType%2A> proprietà.  
   
-3.  Come un tipo che determina le colonne generate automaticamente in un <xref:System.Windows.Controls.DataGrid>.  
+3. Come un tipo che determina le colonne generate automaticamente in un <xref:System.Windows.Controls.DataGrid>.  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>Recupero delle informazioni di data binding da un'espressione di associazione  

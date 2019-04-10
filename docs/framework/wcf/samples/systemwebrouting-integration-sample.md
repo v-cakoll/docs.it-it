@@ -2,12 +2,12 @@
 title: Esempio di integrazione di SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 244a7b7b73217086864b16945bc1521a3383aeac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302244"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Esempio di integrazione di SystemWebRouting
 In questo esempio viene descritta l'integrazione del livello di hosting con le classi nello spazio dei nomi <xref:System.Web.Routing>. Le classi nello spazio dei nomi <xref:System.Web.Routing> consentono a un'applicazione di usare URL che non corrispondono direttamente a una risorsa fisica. Uso del routing Web consente allo sviluppatore di creare indirizzi virtuali per il protocollo HTTP che vengono quindi rimappata alla effettivi dei servizi WCF. Ciò si rivela utile quando un servizio WCF deve essere ospitato senza richiedere una risorsa o un file fisico oppure quando l'accesso ai servizi deve essere eseguito con URL che non contengono file con estensioni quali html o aspx. In questo esempio viene descritto come usare la classe <xref:System.Web.Routing.RouteTable> per creare URI virtuali mappati a servizi in esecuzione definiti in global.asax. 
@@ -32,31 +32,31 @@ In questo esempio potrebbe essere già installato nel computer. Verificare la di
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Usa Visual Studio, aprire il file Webroutingintegration.  
+1. Usa Visual Studio, aprire il file Webroutingintegration.  
   
-2.  Per eseguire la soluzione e avviare il server Web di sviluppo, premere F5.  
+2. Per eseguire la soluzione e avviare il server Web di sviluppo, premere F5.  
   
      Verrà aperta la visualizzazione directory per l'esempio. Si noti che non sono presenti file con l'estensione di file svc.  
   
-3.  Nella barra degli indirizzi, aggiungere `movies` all'URL, in modo che venga legge `http://localhost:[port]/movies` e premere INVIO.  
+3. Nella barra degli indirizzi, aggiungere `movies` all'URL, in modo che venga legge `http://localhost:[port]/movies` e premere INVIO.  
   
      Il feed movies verrà visualizzato nel browser.  
   
-4.  Nella barra degli indirizzi, aggiungere `channels` all'URL, ecco le letture `http://localhost:[port]/channels` e premere INVIO.  
+4. Nella barra degli indirizzi, aggiungere `channels` all'URL, ecco le letture `http://localhost:[port]/channels` e premere INVIO.  
   
      Il feed channels verrà visualizzato nel browser.  
   
-5.  Chiudere il browser premendo ALT+F4.  
+5. Chiudere il browser premendo ALT+F4.  
   
      Se il server di sviluppo non viene chiuso, fare doppio clic sull'icona di area di notifica e selezionare **arrestare**.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>Per usare questo esempio ospitato in IIS  
   
-1.  Usa Visual Studio, aprire il file Webroutingintegration.  
+1. Usa Visual Studio, aprire il file Webroutingintegration.  
   
-2.  Premere CTRL+MAIUSC+B per compilare il progetto.  
+2. Premere CTRL+MAIUSC+B per compilare il progetto.  
   
-3.  Creare un'applicazione Web in Gestione Internet Information Services (IIS).  
+3. Creare un'applicazione Web in Gestione Internet Information Services (IIS).  
   
     1.  Fare clic in Gestione IIS, il **sito Web predefinito** e selezionare **aggiungere un'applicazione**.  
   
@@ -66,17 +66,17 @@ In questo esempio potrebbe essere già installato nel computer. Verificare la di
   
     4.  Fare clic su **OK**.  
   
-4.  Avviare l'applicazione, facendo clic all'applicazione Web e selezionando **Gestione applicazioni** e quindi **Sfoglia**.  
+4. Avviare l'applicazione, facendo clic all'applicazione Web e selezionando **Gestione applicazioni** e quindi **Sfoglia**.  
   
-5.  Nella barra degli indirizzi, aggiungere `movies` all'URL, ecco le letture `http://localhost:[port]/movies` e premere INVIO.  
+5. Nella barra degli indirizzi, aggiungere `movies` all'URL, ecco le letture `http://localhost:[port]/movies` e premere INVIO.  
   
      Il feed movies verrà visualizzato nel browser.  
   
-6.  Nella barra degli indirizzi, aggiungere `channels` all'URL, ecco le letture `http://localhost:[port]/channels` e premere INVIO.  
+6. Nella barra degli indirizzi, aggiungere `channels` all'URL, ecco le letture `http://localhost:[port]/channels` e premere INVIO.  
   
      Il feed channels verrà visualizzato nel browser.  
   
-7.  Chiudere il browser premendo ALT+F4.  
+7. Chiudere il browser premendo ALT+F4.  
   
  In questo esempio illustrato come il livello di hosting sia in grado di interagire con le classi nello spazio dei nomi <xref:System.Web.Routing> per l'indirizzamento delle richieste dei servizi ospitati su HTTP.  
   

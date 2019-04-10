@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331702"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Procedura: Nascondere una variabile ereditata (Visual Basic)
 Una classe derivata eredita tutte le definizioni della relativa classe base. Se si desidera definire una variabile utilizzando lo stesso nome di un elemento della classe di base, è possibile nascondere, oppure *shadow*, tale elemento di classe di base quando si definisce la variabile nella classe derivata. In questo caso, il codice nella classe derivata accede la variabile a meno che non venga esplicitamente ignorato il meccanismo di shadowing.  
@@ -25,11 +25,11 @@ Una classe derivata eredita tutte le definizioni della relativa classe base. Se 
   
 ### <a name="to-hide-an-inherited-variable"></a>Per nascondere una variabile ereditata  
   
-1.  Assicurarsi che la variabile di cui che si vuole nascondere è dichiarata a livello di classe (all'esterno di qualsiasi routine). In caso contrario, non è necessaria per nasconderlo.  
+1. Assicurarsi che la variabile di cui che si vuole nascondere è dichiarata a livello di classe (all'esterno di qualsiasi routine). In caso contrario, non è necessaria per nasconderlo.  
   
-2.  All'interno della classe derivata, scrivere un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) dichiarazione di variabile. Usare lo stesso nome della variabile ereditata.  
+2. All'interno della classe derivata, scrivere un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) dichiarazione di variabile. Usare lo stesso nome della variabile ereditata.  
   
-3.  Includere il [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) nella dichiarazione.  
+3. Includere il [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) nella dichiarazione.  
   
      Quando il codice della classe derivata si riferisce al nome della variabile, il compilatore risolve il riferimento alla variabile.  
   
@@ -57,10 +57,10 @@ Una classe derivata eredita tutte le definizioni della relativa classe base. Se 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Differenze tra shadowing e override](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [Procedura: Nascondere una variabile con lo stesso nome di variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [Procedura: Nascondere una variabile con lo stesso nome di un'altra variabile](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Procedura: Accedere a una variabile nascosta da una classe derivata](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

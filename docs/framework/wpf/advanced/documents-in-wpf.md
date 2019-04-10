@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313957"
 ---
 # <a name="documents-in-wpf"></a>Documenti in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un'ampia gamma di funzionalità di documenti che consentono la creazione di contenuti ad alta fedeltà che sono progettato per essere più facilmente accessibile e lettura rispetto alle generazioni precedenti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Oltre a caratteristiche avanzate in termini di funzionalità e qualità, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assicura servizi integrati per la visualizzazione, la creazione di pacchetti e la sicurezza dei documenti. Questo argomento costituisce un'introduzione ai tipi di documenti e alla creazione di pacchetti di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -89,9 +89,9 @@ ms.locfileid: "59169611"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignature  
  Per la sicurezza, un <xref:System.IO.Packaging.PackageDigitalSignature> ("firma digitale") può essere associato alle parti di un pacchetto. Oggetto <xref:System.IO.Packaging.PackageDigitalSignature> incorpora un certificato [509] che fornisce due funzionalità:  
   
-1.  Identifica e autentica l'autore della parte.  
+1. Identifica e autentica l'autore della parte.  
   
-2.  Conferma che la parte non è stata modificata.  
+2. Conferma che la parte non è stata modificata.  
   
  La firma digitale non impedisce che una parte venga modificata, ma un controllo di convalida della firma digitale avrà esito negativo se la parte è stata in qualche modo modificata. L'applicazione potrà quindi intraprendere l'azione appropriata, ad esempio bloccare l'apertura della parte o notificare all'utente che la parte è stata modificata e non è sicura.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169611"
   
  Le relazioni dei pacchetti offrono un metodo individuabile per aggiungere e associare altre informazioni a singole parti o all'intero pacchetto. Le relazioni dei pacchetti vengono usate per due funzioni principali:  
   
-1.  Definizione delle relazioni di dipendenza tra le parti.  
+1. Definizione delle relazioni di dipendenza tra le parti.  
   
-2.  Definizione delle relazioni delle informazioni che aggiungono note o altri dati correlati alla parte.  
+2. Definizione delle relazioni delle informazioni che aggiungono note o altri dati correlati alla parte.  
   
  Oggetto <xref:System.IO.Packaging.PackageRelationship> fornisce un modo rapido e individuabile per definire le dipendenze e aggiungere altre informazioni associate a una parte del pacchetto o il pacchetto nel suo complesso.  
   

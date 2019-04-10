@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 7900b010c460fd112acbe0ef35e6945939377e1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116584"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304285"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Forms
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "59116584"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Per determinare il pannello selezionato  
   
-1.  Nel <xref:System.Windows.Forms.StatusBar.PanelClick> gestore eventi, usare una `Select Case` (in Visual Basic) o `switch case` (Visual C# oppure [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) istruzione per determinare il pannello selezionato esaminando l'indice del pannello selezionato negli argomenti dell'evento.  
+1. Nel <xref:System.Windows.Forms.StatusBar.PanelClick> gestore eventi, usare una `Select Case` (in Visual Basic) o `switch case` (Visual C# oppure [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) istruzione per determinare il pannello selezionato esaminando l'indice del pannello selezionato negli argomenti dell'evento.  
   
      Esempio di codice seguente richiede la presenza, nel form, di un <xref:System.Windows.Forms.StatusBar> (controllo), `StatusBar1`e due <xref:System.Windows.Forms.StatusBarPanel> oggetti `StatusBarPanel1` e `StatusBarPanel2`.  
   

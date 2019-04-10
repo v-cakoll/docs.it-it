@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301334"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Procedura: Impostare le descrizioni comando per i controlli in un Windows Form in fase di progettazione
 È possibile impostare un <xref:System.Windows.Forms.ToolTip> stringa nel codice o nella finestra di progettazione Windows Form. Per altre informazioni sul <xref:System.Windows.Forms.ToolTip> componente, vedere [Cenni preliminari sul componente ToolTip](tooltip-component-overview-windows-forms.md).  
@@ -24,9 +24,9 @@ ms.locfileid: "59157605"
   
 ### <a name="to-set-a-tooltip-programmatically"></a>Per impostare una descrizione comandi a livello di codice  
   
-1.  Aggiungere il controllo che verrà visualizzata la descrizione comando.  
+1. Aggiungere il controllo che verrà visualizzata la descrizione comando.  
   
-2.  Usare il <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metodo di <xref:System.Windows.Forms.ToolTip> componente.  
+2. Usare il <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metodo di <xref:System.Windows.Forms.ToolTip> componente.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ ms.locfileid: "59157605"
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>Per impostare una descrizione comando nella finestra di progettazione  
   
-1.  Aggiungere un componente <xref:System.Windows.Forms.ToolTip> al form.  
+1. Aggiungere un componente <xref:System.Windows.Forms.ToolTip> al form.  
   
-2.  Selezionare il controllo che consente di visualizzare la descrizione comando o aggiungerlo al form.  
+2. Selezionare il controllo che consente di visualizzare la descrizione comando o aggiungerlo al form.  
   
-3.  Nel **proprietà** impostare nella finestra di **descrizione comando su ToolTip1** valore da una stringa di testo appropriata.  
+3. Nel **proprietà** impostare nella finestra di **descrizione comando su ToolTip1** valore da una stringa di testo appropriata.  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>Per rimuovere una descrizione comandi a livello di codice  
   
-1.  Usare il <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metodo di <xref:System.Windows.Forms.ToolTip> componente.  
+1. Usare il <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metodo di <xref:System.Windows.Forms.ToolTip> componente.  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ ms.locfileid: "59157605"
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>Per rimuovere una descrizione comando nella finestra di progettazione  
   
-1.  Selezionare il controllo che visualizza la descrizione comando.  
+1. Selezionare il controllo che visualizza la descrizione comando.  
   
-2.  Nel **delle proprietà** finestra, eliminare il testo nel **descrizione comando su ToolTip1**.  
+2. Nel **delle proprietà** finestra, eliminare il testo nel **descrizione comando su ToolTip1**.  
 
 ## <a name="see-also"></a>Vedere anche
 

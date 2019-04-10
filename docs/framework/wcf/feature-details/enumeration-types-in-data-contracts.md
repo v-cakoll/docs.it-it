@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309641"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Tipi di enumerazioni nei contratti dati
 Le enumerazioni possono essere espresse nel modello del contratto dati. In questo argomento vengono esaminati molti esempi che spiegano il modello di programmazione.  
@@ -79,11 +79,11 @@ Le enumerazioni possono essere espresse nel modello del contratto dati. In quest
   
  I passaggi seguenti si applicano all'invio del valore dell'enumerazione di un flag:  
   
-1.  Tentare di individuare un membro dell'enumerazione (a cui è applicato l'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>) associato al valore numerico. Se disponibile, inviare un elenco che contenga solo quel membro.  
+1. Tentare di individuare un membro dell'enumerazione (a cui è applicato l'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>) associato al valore numerico. Se disponibile, inviare un elenco che contenga solo quel membro.  
   
-2.  Tentare di suddividere il valore numerico in una somma tale che vi siano membri dell'enumerazione (ai quali è applicato l'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>) associati a ogni parte della somma. Inviare l'elenco di tutti questi membri. Si noti che il *algoritmo greedy* viene usato per trovare tale somma, e pertanto non c'è garanzia che tale somma venga trovata anche se è presente. Per evitare questo problema, verificare che i valori numerici dei membri dell'enumerazione siano potenze di due.  
+2. Tentare di suddividere il valore numerico in una somma tale che vi siano membri dell'enumerazione (ai quali è applicato l'attributo <xref:System.Runtime.Serialization.EnumMemberAttribute>) associati a ogni parte della somma. Inviare l'elenco di tutti questi membri. Si noti che il *algoritmo greedy* viene usato per trovare tale somma, e pertanto non c'è garanzia che tale somma venga trovata anche se è presente. Per evitare questo problema, verificare che i valori numerici dei membri dell'enumerazione siano potenze di due.  
   
-3.  Se i due passaggi precedenti hanno esito negativo e il valore numerico è diverso da zero, generare un'eccezione <xref:System.Runtime.Serialization.SerializationException>. Se il valore numerico è zero, inviare l'elenco vuoto.  
+3. Se i due passaggi precedenti hanno esito negativo e il valore numerico è diverso da zero, generare un'eccezione <xref:System.Runtime.Serialization.SerializationException>. Se il valore numerico è zero, inviare l'elenco vuoto.  
   
 ### <a name="example"></a>Esempio  
  L'esempio di enumerazione seguente può essere usato in un'operazione di flag.  

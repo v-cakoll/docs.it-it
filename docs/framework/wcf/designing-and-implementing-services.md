@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216417"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319677"
 ---
 # <a name="designing-and-implementing-services"></a>Progettazione e implementazione di servizi
 Questa sezione illustra come definire e implementare contratti WCF. Un contratto di servizio specifica quale endpoint comunica con il mondo esterno. A un livello più concreto, è un'istruzione su un set di messaggi specifici organizzati in modelli di scambio di messaggi di base (MEP, Message Exchange Pattern) quali, ad esempio, request/reply, unidirezionale e duplex. Se un contratto di servizio è un set logicamente correlato di scambi di messaggi, un'operazione di servizio è un singolo scambio di messaggi. Un'operazione `Hello` deve, ad esempio, accettare un messaggio (quindi il chiamante può annunciare il saluto) e può o non può restituire un messaggio (a seconda del livello di cortesia dell'operazione).  
@@ -38,13 +38,13 @@ Questa sezione illustra come definire e implementare contratti WCF. Un contratto
   
  Un contratto di ordine di acquisto può, ad esempio, includere un'operazione `CreateOrder` che accetta un input di tipi di informazioni sull'ordine e restituisce informazioni sull'esito positivo o negativo, incluso un identificatore di ordine. Può inoltre includere un'operazione `GetOrderStatus` che accetta un identificatore di ordine e restituisce informazioni sullo stato dell'ordine. Un contratto di servizio di questo tipo specificherebbe:  
   
-1.  Che il contratto di ordine di acquisto è costituito da operazioni `CreateOrder` e `GetOrderStatus`.  
+1. Che il contratto di ordine di acquisto è costituito da operazioni `CreateOrder` e `GetOrderStatus`.  
   
-2.  Che le operazioni hanno specificato messaggi di input e di output.  
+2. Che le operazioni hanno specificato messaggi di input e di output.  
   
-3.  I dati che questi messaggi possono contenere.  
+3. I dati che questi messaggi possono contenere.  
   
-4.  Istruzioni categoriali sull'infrastruttura di comunicazione necessaria per elaborare correttamente i messaggi. Questi dettagli includono, ad esempio, indicazioni sulla necessità della protezione, e sui tipi di sicurezza eventualmente necessari, per stabilire una corretta comunicazione.  
+4. Istruzioni categoriali sull'infrastruttura di comunicazione necessaria per elaborare correttamente i messaggi. Questi dettagli includono, ad esempio, indicazioni sulla necessità della protezione, e sui tipi di sicurezza eventualmente necessari, per stabilire una corretta comunicazione.  
   
  Per comunicare questo tipo di informazioni ad altre applicazioni su molte piattaforme (incluse piattaforme non Microsoft), i contratti di servizio XML vengono pubblicamente espressi in formati XML standard, ad esempio [Web Services Description Language](https://go.microsoft.com/fwlink/?LinkId=94952) ( WSDL) e [XML Schema](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD), tra gli altri. Gli sviluppatori operanti su molte piattaforme possono usare queste informazioni pubbliche sui contratti per creare applicazioni che possano comunicare con il servizio, perché comprendono il linguaggio della specifica e perché tali linguaggi sono progettati per consentire l'interoperabilità descrivendo i tipi, i formati e i protocolli pubblici supportati dal servizio. Per altre informazioni su come WCF gestisce questo tipo di informazioni, vedere [metadati](../../../docs/framework/wcf/feature-details/metadata.md).  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300307"
 ---
 # <a name="iclrtaskreset-method"></a>Metodo ICLRTask::Reset
 Indica a common language runtime (CLR) che l'host ha completato un'attività e consente a CLR di riutilizzare l'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) per rappresentare un'altra attività.  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>Note  
  CLR possono essere riciclati creato in precedenza `ICLRTask` istanze per evitare l'overhead di creazione più volte nuove istanze ogni volta che necessaria una nuova attività. L'host abilita questa funzionalità chiamando `ICLRTask::Reset` invece di [ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) quando è stata completata un'attività. L'elenco seguente riepiloga il normale ciclo di vita di un `ICLRTask` istanza:  
   
-1.  Il runtime crea un nuovo `ICLRTask` istanza.  
+1. Il runtime crea un nuovo `ICLRTask` istanza.  
   
-2.  Il runtime chiama [GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) per ottenere un riferimento all'attività host corrente.  
+2. Il runtime chiama [GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) per ottenere un riferimento all'attività host corrente.  
   
-3.  Il runtime chiama [SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) per associare la nuova istanza di attività dell'host.  
+3. Il runtime chiama [SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) per associare la nuova istanza di attività dell'host.  
   
-4.  L'attività viene eseguita e completata.  
+4. L'attività viene eseguita e completata.  
   
-5.  L'host elimina le attività chiamando `ICLRTask::ExitTask`.  
+5. L'host elimina le attività chiamando `ICLRTask::ExitTask`.  
   
  `Reset` Modifica questo scenario in due modi. Nel passaggio 5 precedente, l'host chiama `Reset` reimpostare l'attività a uno stato originario e quindi consente di disaccoppiare il `ICLRTask` istanza da essa associati [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) istanza. Se si desidera, può anche memorizzare nella cache dell'host di `IHostTask` istanza per il riutilizzo. Nel passaggio 1 precedente, il ricicla `ICLRTask` dalla cache invece di crearne una nuova istanza.  
   

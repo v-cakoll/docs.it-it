@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325590"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procedura: Aggiungere istruzioni di traccia al codice dell'applicazione
 I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'output nei listener: **Scrivere**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, e **esito negativo**. Questi metodi possono essere suddivisi in due categorie: **Scrivere**, **WriteLine**, e **esito negativo** tutti generano output in modo non condizionale, mentre **WriteIf**, **WriteLineIf**e  **L'asserzione** verificano una condizione booleana e scrivono o non scrivono sul valore della condizione. **WriteIf** e **WriteLineIf** generano output se la condizione è `true` e **Assert** genera output se la condizione è `false`.  
@@ -29,7 +29,7 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
   
 ### <a name="to-write-a-complete-line"></a>Per scrivere una riga completa  
   
-1.  Chiamare il metodo <xref:System.Diagnostics.Trace.WriteLine%2A> o <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
+1. Chiamare il metodo <xref:System.Diagnostics.Trace.WriteLine%2A> o <xref:System.Diagnostics.Trace.WriteLineIf%2A>.  
   
      Un ritorno a capo viene aggiunto alla fine del messaggio restituito da questo metodo, quindi il messaggio successivo restituito da **Write**, **WriteIf**, **WriteLine** o **WriteLineIf** inizierà nella riga seguente:  
   
@@ -48,7 +48,7 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
   
 ### <a name="to-write-a-partial-line"></a>Per scrivere una riga parzialmente eseguita  
   
-1.  Chiamare il metodo <xref:System.Diagnostics.Trace.Write%2A> o <xref:System.Diagnostics.Trace.WriteIf%2A>.  
+1. Chiamare il metodo <xref:System.Diagnostics.Trace.Write%2A> o <xref:System.Diagnostics.Trace.WriteIf%2A>.  
   
      Il messaggio successivo di **Write**, **WriteIf**, **WriteLine** o **WriteLineIf** inizierà sulla stessa riga del messaggio dell’istruzione **Write** o **WriteIf**:  
   
@@ -69,7 +69,7 @@ I metodi usati più spesso per la traccia sono i metodi per la scrittura dell'ou
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Per verificare che determinate condizioni esistano prima o dopo l'esecuzione di un metodo  
   
-1.  Chiamare il metodo <xref:System.Diagnostics.Trace.Assert%2A>.  
+1. Chiamare il metodo <xref:System.Diagnostics.Trace.Assert%2A>.  
   
     ```vb  
     Dim i As Integer = 4  

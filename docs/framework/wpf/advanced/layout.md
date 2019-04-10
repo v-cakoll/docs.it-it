@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330493"
 ---
 # <a name="layout"></a>Layout
 Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La capacità di identificare correttamente i casi in cui vengono eseguiti calcoli del layout è essenziale per la creazione di interfacce utente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -64,17 +64,17 @@ Questo argomento descrive il sistema di layout di [!INCLUDE[TLA#tla_winclient](.
   
  Ogni volta che un elemento figlio <xref:System.Windows.UIElement> cambia posizione, ha la possibilità di attivare un nuovo passaggio dal sistema di layout. Di conseguenza, è importante identificare gli eventi che possono richiamare il sistema di layout, perché una chiamata non necessaria può causare scarse prestazioni dell'applicazione. Di seguito viene descritto il processo avviato quando viene richiamato il sistema di layout.  
   
-1.  Un elemento figlio <xref:System.Windows.UIElement> inizia il processo di layout con la misurazione delle relative proprietà principali.  
+1. Un elemento figlio <xref:System.Windows.UIElement> inizia il processo di layout con la misurazione delle relative proprietà principali.  
   
-2.  Le proprietà definite su di ridimensionamento <xref:System.Windows.FrameworkElement> vengono valutate, ad esempio <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Le proprietà definite su di ridimensionamento <xref:System.Windows.FrameworkElement> vengono valutate, ad esempio <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-viene applicata logica specifica, ad esempio <xref:System.Windows.Controls.Dock> direzione o impilamento <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-viene applicata logica specifica, ad esempio <xref:System.Windows.Controls.Dock> direzione o impilamento <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Il contenuto viene disposto dopo la misurazione di tutti gli elementi figlio.  
+4. Il contenuto viene disposto dopo la misurazione di tutti gli elementi figlio.  
   
-5.  Il <xref:System.Windows.Controls.Panel.Children%2A> raccolta viene disegnata sullo schermo.  
+5. Il <xref:System.Windows.Controls.Panel.Children%2A> raccolta viene disegnata sullo schermo.  
   
-6.  Il processo viene nuovamente richiamato qualora aggiuntiva <xref:System.Windows.Controls.Panel.Children%2A> vengono aggiunti alla raccolta, una <xref:System.Windows.FrameworkElement.LayoutTransform%2A> viene applicato, o <xref:System.Windows.UIElement.UpdateLayout%2A> viene chiamato il metodo.  
+6. Il processo viene nuovamente richiamato qualora aggiuntiva <xref:System.Windows.Controls.Panel.Children%2A> vengono aggiunti alla raccolta, una <xref:System.Windows.FrameworkElement.LayoutTransform%2A> viene applicato, o <xref:System.Windows.UIElement.UpdateLayout%2A> viene chiamato il metodo.  
   
  Questo processo e il modo in cui viene richiamato vengono descritti con maggiori dettagli nelle sezioni seguenti.  
   

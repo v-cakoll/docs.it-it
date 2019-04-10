@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227314"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312163"
 ---
 # <a name="how-to-enable-streaming"></a>Procedura: Abilitare il flusso
 Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasferimenti con flusso o memorizzati nel buffer. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
   
 ### <a name="to-stream-data"></a>Per trasferire dati con flusso  
   
-1.  Per trasferire dati con flusso, `OperationContract` per il servizio deve soddisfare due requisiti:  
+1. Per trasferire dati con flusso, `OperationContract` per il servizio deve soddisfare due requisiti:  
   
     1.  Il parametro che contiene i dati da inviare in un flusso deve essere il solo parametro del metodo. Ad esempio, se il messaggio di input è quello da trasmettere, l'operazione deve avere esattamente un parametro di input. Allo stesso modo, se deve essere trasmesso il messaggio di output, l'operazione deve avere esattamente un solo parametro di output o un solo valore restituito.  
   
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
   
      L'operazione `GetStream` riceve alcuni dati di input memorizzati nel buffer come `string`, che è memorizzata nel buffer, e restituisce `Stream`, trasferito con flusso. Viceversa, `UploadStream` accetta uno `Stream` (trasmesso) e restituisce un `bool` (memorizzato nel buffer). `EchoStream` accetta e restituisce `Stream` ed è riportato un esempio di un'operazione il cui input e i messaggi di output vengono entrambi trasmessi. Infine, `GetReversedStream` non prende input e restituisce un `Stream` (trasmesso).  
   
-2.  La trasmissione deve essere attivata nell'associazione. Impostare una proprietà `TransferMode`, che può prendere uno dei valori seguenti:  
+2. La trasmissione deve essere attivata nell'associazione. Impostare una proprietà `TransferMode`, che può prendere uno dei valori seguenti:  
   
     1.  `Buffered`,  
   
@@ -60,14 +60,14 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  
   
-3.  Le operazioni `GetStream`, `UploadStream` e `EchoStream` riguardano entrambe l'invio diretto di dati da un file o il salvataggio diretto dei dati ricevuti in un file. Il codice seguente riguarda `GetStream`.  
+3. Le operazioni `GetStream`, `UploadStream` e `EchoStream` riguardano entrambe l'invio diretto di dati da un file o il salvataggio diretto dei dati ricevuti in un file. Il codice seguente riguarda `GetStream`.  
   
      [!code-csharp[c_HowTo_EnableStreaming#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#4)]
      [!code-vb[c_HowTo_EnableStreaming#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#4)]  
   
 ### <a name="writing-a-custom-stream"></a>Scrittura di un flusso personalizzato  
   
-1.  Per eseguire un'elaborazione speciale su ogni blocco di flusso di dati quando viene inviato o ricevuto, derivare una classe del flusso personalizzato da <xref:System.IO.Stream>. Come esempio di flusso personalizzato, il codice riportato di seguito contiene un metodo `GetReversedStream` e una classe `ReverseStream`.  
+1. Per eseguire un'elaborazione speciale su ogni blocco di flusso di dati quando viene inviato o ricevuto, derivare una classe del flusso personalizzato da <xref:System.IO.Stream>. Come esempio di flusso personalizzato, il codice riportato di seguito contiene un metodo `GetReversedStream` e una classe `ReverseStream`.  
   
      `GetReversedStream` Crea e restituisce una nuova istanza della `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge dall'oggetto `ReverseStream`. Il metodo `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Questo metodo non inverte l'intero contenuto del file, ma un blocco di byte alla volta. In questo esempio viene illustrato come eseguire l'elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
   

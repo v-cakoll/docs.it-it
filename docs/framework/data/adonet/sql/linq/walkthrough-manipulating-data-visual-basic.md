@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 34049f113ce9da0ed1c4cc63fd53093a0775bbad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306495"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Procedura dettagliata: Modifica dei dati (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'aggiunta, la modifica e l'eliminazione dei dati in un database. Si utilizzerà una copia del database di esempio Northwind per aggiungere un cliente, modificare il nome di un cliente ed eliminare un ordine.  
@@ -55,28 +55,28 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
-1.  Scegliere **Nuovo progetto** dal menu **File**di Visual Studio.  
+1. Scegliere **Nuovo progetto** dal menu **File**di Visual Studio.  
   
-2.  Nel **tipi di progetto** nel riquadro le **nuovo progetto** nella finestra di dialogo fare clic su **Visual Basic**.  
+2. Nel **tipi di progetto** nel riquadro le **nuovo progetto** nella finestra di dialogo fare clic su **Visual Basic**.  
   
-3.  Nel riquadro **Modelli** fare clic su **Applicazione console**.  
+3. Nel riquadro **Modelli** fare clic su **Applicazione console**.  
   
-4.  Nel **Name** , digitare **LinqDataManipulationApp**.  
+4. Nel **Name** , digitare **LinqDataManipulationApp**.  
   
-5.  Fare clic su **OK**.  
+5. Fare clic su **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Aggiunta di riferimenti e direttive LINQ  
  In questa procedura dettagliata vengono usati assembly che potrebbero non essere installati per impostazione predefinita nel progetto. Se `System.Data.Linq` non è elencato come riferimento nel progetto (fare clic su **Mostra tutti i file** nelle **Esplora soluzioni** ed espandere la **riferimenti** nodo), aggiungerlo come spiegato nella la procedura seguente.  
   
 #### <a name="to-add-systemdatalinq"></a>Per aggiungere System.Data.Linq  
   
-1.  Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
+1. Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
   
-2.  Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
+2. Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
   
      L'assembly verrà aggiunto al progetto.  
   
-3.  Nell'editor del codice, aggiungere la seguente direttiva sopra **Module1**:  
+3. Nell'editor del codice, aggiungere la seguente direttiva sopra **Module1**:  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -85,9 +85,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Per aggiungere il file di codice di Northwind al progetto  
   
-1.  Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
+1. Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
   
-2.  Nel **Aggiungi elemento esistente** finestra di dialogo, passare a c:\linqtest2\northwind.vb e quindi fare clic su **Add**.  
+2. Nel **Aggiungi elemento esistente** finestra di dialogo, passare a c:\linqtest2\northwind.vb e quindi fare clic su **Add**.  
   
      Il file northwind.vb viene aggiunto al progetto.  
   
@@ -96,11 +96,11 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>Per impostare e testare la connessione al database  
   
-1.  Digitare o incollare il codice che segue in `Sub Main`:  
+1. Digitare o incollare il codice che segue in `Sub Main`:  
   
      [!code-vb[DLinqWalk3VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#2)]  
   
-2.  A questo punto premere F5 per eseguire il test dell'applicazione.  
+2. A questo punto premere F5 per eseguire il test dell'applicazione.  
   
      Oggetto **Console** verrà visualizzata la finestra.  
   
@@ -113,11 +113,11 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-add-a-new-customer-entity-object"></a>Per aggiungere un nuovo oggetto dell'entità Customer  
   
-1.  Creare un nuovo oggetto `Customer` aggiungendo il codice riportato di seguito prima di `Console.ReadLine` in `Sub Main`:  
+1. Creare un nuovo oggetto `Customer` aggiungendo il codice riportato di seguito prima di `Console.ReadLine` in `Sub Main`:  
   
      [!code-vb[DLinqWalk3VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#3)]  
   
-2.  Premere F5 per eseguire il debug della soluzione.  
+2. Premere F5 per eseguire il debug della soluzione.  
   
      Di seguito sono riportati i risultati visualizzati nella finestra della console:  
   
@@ -129,7 +129,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
      Notare che la nuova riga non è visualizzata nei risultati. I nuovi dati non sono ancora stati inviati al database.  
   
-3.  Premere INVIO nella **Console** finestra per arrestare il debug.  
+3. Premere INVIO nella **Console** finestra per arrestare il debug.  
   
 ## <a name="updating-an-entity"></a>Aggiornamento di un'entità  
  Nei passaggi seguenti si recupererà un oggetto `Customer` e si modificherà una delle relative proprietà.  
@@ -156,15 +156,15 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-submit-changes-to-the-database"></a>Per inviare le modifiche al database  
   
-1.  Inserire il codice seguente sopra `Console.ReadLine`:  
+1. Inserire il codice seguente sopra `Console.ReadLine`:  
   
      [!code-vb[DLinqWalk3VB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#6)]  
   
-2.  Inserire il codice seguente dopo `SubmitChanges` per mostrare gli effetti precedenti e successivi all'invio delle modifiche:  
+2. Inserire il codice seguente dopo `SubmitChanges` per mostrare gli effetti precedenti e successivi all'invio delle modifiche:  
   
      [!code-vb[DLinqWalk3VB#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#7)]  
   
-3.  Premere F5 per eseguire il debug della soluzione.  
+3. Premere F5 per eseguire il debug della soluzione.  
   
      Viene visualizzata la finestra di console come segue:  
   
@@ -181,7 +181,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
     Customer ID: RICAR  
     ```  
   
-4.  Premere INVIO nella **Console** finestra per arrestare il debug.  
+4. Premere INVIO nella **Console** finestra per arrestare il debug.  
   
 > [!NOTE]
 >  Dopo avere aggiunto il nuovo oggetto Customer mediante l'invio delle modifiche, non sarà possibile eseguire nuovamente questa soluzione così com'è, poiché non è possibile aggiungere di nuovo lo stesso oggetto Customer. Per eseguire nuovamente la soluzione, modificare il valore dell'ID dell'oggetto Customer da aggiungere.  

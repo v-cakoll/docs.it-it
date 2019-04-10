@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300606"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procedura: Determinare il figlio MDI attivo
 In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo stato attivo del form figlio attualmente attivo. Si supponga, ad esempio, che si vuole copiare negli Appunti il testo selezionato dalla casella di testo del form figlio. È necessario creare una routine che copia il testo selezionato negli Appunti mediante il <xref:System.Windows.Forms.Control.Click> evento della voce di menu copia il menu di modifica standard.  
@@ -27,7 +27,7 @@ In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo s
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Per determinare il figlio MDI attivo (per copiare il testo negli Appunti)  
   
-1.  All'interno di un metodo, copiare il testo del controllo attivo del form figlio attivo negli Appunti.  
+1. All'interno di un metodo, copiare il testo del controllo attivo del form figlio attivo negli Appunti.  
   
     > [!NOTE]
     >  Questo esempio si presuppone esista un form padre MDI (`Form1`) che dispone di uno o più finestre figlio MDI che contiene un <xref:System.Windows.Forms.RichTextBox> controllo. Per altre informazioni, vedere [creazione di form padre MDI](how-to-create-mdi-parent-forms.md).  

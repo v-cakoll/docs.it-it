@@ -11,12 +11,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: 4de6ed4436f6a1769d178508210ed20e0162f647
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc4d43ef9181f1a290d37c137b4fc6f7f16588b7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332053"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Procedura: Filtrare i risultati della Query utilizzando LINQ (Visual Basic)
 Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul database ed eseguire query.  
@@ -29,41 +29,41 @@ Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul datab
   
 ### <a name="to-create-a-connection-to-a-database"></a>Per creare una connessione a un database  
   
-1.  In Visual Studio, aprire **Esplora Server**/**Database Explorer** facendo **Esplora Server**/**Database Esplora** nella **visualizzazione** menu.  
+1. In Visual Studio, aprire **Esplora Server**/**Database Explorer** facendo **Esplora Server**/**Database Esplora** nella **visualizzazione** menu.  
   
-2.  Fare doppio clic su **connessioni dati** nelle **Esplora Server**/**Esplora Database** e quindi fare clic su **Aggiungi connessione**.  
+2. Fare doppio clic su **connessioni dati** nelle **Esplora Server**/**Esplora Database** e quindi fare clic su **Aggiungi connessione**.  
   
-3.  Specificare una connessione valida al database di esempio Northwind.  
+3. Specificare una connessione valida al database di esempio Northwind.  
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Per aggiungere un progetto che contiene un file LINQ to SQL  
   
-1.  In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**. Selezionare Visual Basic **Windows Forms Application** come tipo di progetto.  
+1. In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**. Selezionare Visual Basic **Windows Forms Application** come tipo di progetto.  
   
-2.  Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare il **classi LINQ to SQL** modello di elemento.  
+2. Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare il **classi LINQ to SQL** modello di elemento.  
   
-3.  Denominare il file `northwind.dbml`. Fare clic su **Aggiungi**. Verrà visualizzata la finestra di Object Relational Designer (O/R Designer) per il file Northwind. dbml.  
+3. Denominare il file `northwind.dbml`. Fare clic su **Aggiungi**. Verrà visualizzata la finestra di Object Relational Designer (O/R Designer) per il file Northwind. dbml.  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>Per aggiungere tabelle a query a O/R Designer  
   
-1.  Nelle **Esplora Server**/**Esplora Database**, espandere la connessione al database Northwind. Espandere la **tabelle** cartella.  
+1. Nelle **Esplora Server**/**Esplora Database**, espandere la connessione al database Northwind. Espandere la **tabelle** cartella.  
   
      Se è stato chiuso O/R Designer, è possibile riaprirlo facendo doppio clic sul file Northwind. dbml aggiunti in precedenza.  
   
-2.  Fare clic nella tabella Customers e trascinarla nel riquadro sinistro della finestra di progettazione. Fare clic nella tabella Orders e trascinarla nel riquadro sinistro della finestra di progettazione.  
+2. Fare clic nella tabella Customers e trascinarla nel riquadro sinistro della finestra di progettazione. Fare clic nella tabella Orders e trascinarla nel riquadro sinistro della finestra di progettazione.  
   
      La finestra di progettazione crea nuovi `Customer` e `Order` oggetti per il progetto. Si noti che la finestra di progettazione automaticamente rileva le relazioni tra le tabelle e crea figlio le proprietà per gli oggetti correlati. Ad esempio, IntelliSense mostrerà che il `Customer` oggetto ha un `Orders` proprietà per tutti gli ordini correlati a tale cliente.  
   
-3.  Salvare le modifiche e chiudere la finestra di progettazione.  
+3. Salvare le modifiche e chiudere la finestra di progettazione.  
   
-4.  Salvare il progetto.  
+4. Salvare il progetto.  
   
 ### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Per aggiungere il codice per eseguire query sul database e visualizzare i risultati  
   
-1.  Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.DataGridView> controllo nel Form di Windows predefinito per il progetto, Form1.  
+1. Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.DataGridView> controllo nel Form di Windows predefinito per il progetto, Form1.  
   
-2.  Fare doppio clic su Form1 per aggiungere il codice per il `Load` eventi del form.  
+2. Fare doppio clic su Form1 per aggiungere il codice per il `Load` eventi del form.  
   
-3.  Quando si aggiungono tabelle alla finestra di Progettazione relazionale oggetti, la finestra di progettazione aggiunge un <xref:System.Data.Linq.DataContext> oggetto per il progetto. Questo oggetto contiene il codice che è necessario disporre per accedere a tali tabelle, oltre ai singoli oggetti e raccolte per ogni tabella. Il <xref:System.Data.Linq.DataContext> oggetto per il progetto viene denominato in base al nome del file. dbml. Per questo progetto, il <xref:System.Data.Linq.DataContext> oggetto è denominato `northwindDataContext`.  
+3. Quando si aggiungono tabelle alla finestra di Progettazione relazionale oggetti, la finestra di progettazione aggiunge un <xref:System.Data.Linq.DataContext> oggetto per il progetto. Questo oggetto contiene il codice che è necessario disporre per accedere a tali tabelle, oltre ai singoli oggetti e raccolte per ogni tabella. Il <xref:System.Data.Linq.DataContext> oggetto per il progetto viene denominato in base al nome del file. dbml. Per questo progetto, il <xref:System.Data.Linq.DataContext> oggetto è denominato `northwindDataContext`.  
   
      È possibile creare un'istanza di <xref:System.Data.Linq.DataContext> nel codice e query nelle tabelle specificate dalla finestra di Progettazione relazionale oggetti.  
   
@@ -71,9 +71,9 @@ Language-Integrated Query (LINQ) semplifica accedere alle informazioni sul datab
   
      [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]  
   
-4.  Premere F5 per eseguire il progetto e visualizzare i risultati.  
+4. Premere F5 per eseguire il progetto e visualizzare i risultati.  
   
-5.  Di seguito sono alcuni altri filtri che è possibile provare.  
+5. Di seguito sono alcuni altri filtri che è possibile provare.  
   
      [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
   

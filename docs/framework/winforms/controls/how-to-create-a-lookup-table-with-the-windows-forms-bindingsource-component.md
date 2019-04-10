@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181480"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321900"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedura: Creare una tabella di ricerca con il componente BindingSource di Windows Forms
 Una tabella di ricerca è una tabella di dati che include una colonna che mostra i dati presenti nei record di una tabella correlata. Nelle procedure seguenti sarà usato un controllo <xref:System.Windows.Forms.ComboBox> per visualizzare il campo che include la relazione di chiave esterna dalla tabella padre alla tabella figlio.  
@@ -49,21 +49,21 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
 ### <a name="to-create-the-user-interface"></a>Per creare l'interfaccia utente  
   
-1.  Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.ComboBox> controllo nel form.  
+1. Dal **casella degli strumenti**, trascinare un <xref:System.Windows.Forms.ComboBox> controllo nel form.  
   
      Il controllo mostrerà una colonna della tabella padre.  
   
-2.  Trascinare altri controlli per visualizzare i dettagli disponibili nella tabella figlio. La scelta dei controlli dovrebbe dipendere dal formato dei dati nella tabella. Per altre informazioni, vedere [Controlli di Windows Form per funzione](windows-forms-controls-by-function.md).  
+2. Trascinare altri controlli per visualizzare i dettagli disponibili nella tabella figlio. La scelta dei controlli dovrebbe dipendere dal formato dei dati nella tabella. Per altre informazioni, vedere [Controlli di Windows Form per funzione](windows-forms-controls-by-function.md).  
   
-3.  Trascinare un controllo <xref:System.Windows.Forms.BindingNavigator> nel form, per permettere di esplorare i dati nella tabella figlio.  
+3. Trascinare un controllo <xref:System.Windows.Forms.BindingNavigator> nel form, per permettere di esplorare i dati nella tabella figlio.  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>Per connettersi ai dati e associarli ai controlli  
   
-1.  Selezionare <xref:System.Windows.Forms.ComboBox> e fare clic sul glifo Smart Task per visualizzare la finestra di dialogo Smart Task.  
+1. Selezionare <xref:System.Windows.Forms.ComboBox> e fare clic sul glifo Smart Task per visualizzare la finestra di dialogo Smart Task.  
   
-2.  Selezionare **Usa elementi associati a dati**.  
+2. Selezionare **Usa elementi associati a dati**.  
   
-3.  Fare clic sulla freccia accanto alla casella di riepilogo a discesa **Origine dati**. Se un'origine dati è stata configurata in precedenza per il progetto o il form, sarà visualizzata. In caso contrario, completare i passaggi seguenti. In questo esempio sono usate le tabelle Customers e Orders del database di esempio Northwind e tali tabelle sono indicate tra parentesi.  
+3. Fare clic sulla freccia accanto alla casella di riepilogo a discesa **Origine dati**. Se un'origine dati è stata configurata in precedenza per il progetto o il form, sarà visualizzata. In caso contrario, completare i passaggi seguenti. In questo esempio sono usate le tabelle Customers e Orders del database di esempio Northwind e tali tabelle sono indicate tra parentesi.  
   
     1.  Fare clic su **Aggiungi origine dati progetto** per connettersi ai dati e creare un'origine dati.  
   
@@ -81,15 +81,15 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
     8.  Scegliere **Fine**.  
   
-4.  Nella casella di riepilogo a discesa **Visualizza membro** selezionare il nome di colonna (ad esempio, ContactName) da visualizzare nella casella combinata.  
+4. Nella casella di riepilogo a discesa **Visualizza membro** selezionare il nome di colonna (ad esempio, ContactName) da visualizzare nella casella combinata.  
   
-5.  Nella casella di riepilogo a discesa **Membro valore** selezionare la colonna (ad esempio, CustomerID) per eseguire la ricerca nella tabella figlio.  
+5. Nella casella di riepilogo a discesa **Membro valore** selezionare la colonna (ad esempio, CustomerID) per eseguire la ricerca nella tabella figlio.  
   
-6.  Nella casella di riepilogo a discesa **Valore selezionato** passare a **Origini dati del progetto** e al set di dati appena creato che include le tabelle padre e figlio. Selezionare la stessa proprietà della tabella figlio che corrisponde al Membro valore della tabella padre (ad esempio, Orders.CustomerID). I componenti appropriati per <xref:System.Windows.Forms.BindingSource>, set di dati e adattatori di tabelle saranno creati e aggiunti al form.  
+6. Nella casella di riepilogo a discesa **Valore selezionato** passare a **Origini dati del progetto** e al set di dati appena creato che include le tabelle padre e figlio. Selezionare la stessa proprietà della tabella figlio che corrisponde al Membro valore della tabella padre (ad esempio, Orders.CustomerID). I componenti appropriati per <xref:System.Windows.Forms.BindingSource>, set di dati e adattatori di tabelle saranno creati e aggiunti al form.  
   
-7.  Associare il controllo <xref:System.Windows.Forms.BindingNavigator> a <xref:System.Windows.Forms.BindingSource> della tabella figlio (ad esempio, `OrdersBindingSource`).  
+7. Associare il controllo <xref:System.Windows.Forms.BindingNavigator> a <xref:System.Windows.Forms.BindingSource> della tabella figlio (ad esempio, `OrdersBindingSource`).  
   
-8.  Associare i controlli diversi dal controllo <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.BindingNavigator> ai campi di dettagli da <xref:System.Windows.Forms.BindingSource> della tabella figlio (ad esempio, `OrdersBindingSource`) da visualizzare.  
+8. Associare i controlli diversi dal controllo <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.BindingNavigator> ai campi di dettagli da <xref:System.Windows.Forms.BindingSource> della tabella figlio (ad esempio, `OrdersBindingSource`) da visualizzare.  
   
 ## <a name="see-also"></a>Vedere anche
 

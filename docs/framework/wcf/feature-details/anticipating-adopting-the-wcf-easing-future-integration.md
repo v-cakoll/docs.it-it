@@ -2,12 +2,12 @@
 title: "Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura"
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124800"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316336"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura
 Se si utilizzano oggi ASP.NET e si prevede l'utilizzo di WCF in futuro, questo argomento fornisce indicazioni per garantire che i nuovi servizi Web ASP.NET funzionerà anche con le applicazioni WCF.  
@@ -34,9 +34,9 @@ public interface IEcho
 ## <a name="data-representation"></a>Rappresentazione dei dati  
  Il codice XML in cui l'oggetto <xref:System.Xml.Serialization.XmlSerializer> serializza un tipo è per impostazione predefinita semanticamente identico al codice XML in cui l'oggetto <xref:System.Runtime.Serialization.DataContractSerializer> serializza un tipo, purché lo spazio dei nomi del codice XML sia stato definito in modo esplicito. Quando si definisce un tipo di dati per l'uso con i servizi Web ASP.NET in previsione di WCF adozione in futuro, eseguire le operazioni seguenti:  
   
-1.  Definire il tipo utilizzando classi .NET Framework anziché l'XML Schema.  
+1. Definire il tipo utilizzando classi .NET Framework anziché l'XML Schema.  
   
-2.  Aggiungere solo gli attributi <xref:System.SerializableAttribute> e <xref:System.Xml.Serialization.XmlRootAttribute> alla classe, utilizzando quest'ultimo per definire in modo esplicito lo spazio dei nomi del tipo. Evitare di aggiungere attributi aggiuntivi dallo spazio dei nomi <xref:System.Xml.Serialization> per controllare la modalità di conversione della classe .NET Framework in XML.  
+2. Aggiungere solo gli attributi <xref:System.SerializableAttribute> e <xref:System.Xml.Serialization.XmlRootAttribute> alla classe, utilizzando quest'ultimo per definire in modo esplicito lo spazio dei nomi del tipo. Evitare di aggiungere attributi aggiuntivi dallo spazio dei nomi <xref:System.Xml.Serialization> per controllare la modalità di conversione della classe .NET Framework in XML.  
   
  Tramite questo approccio è possibile convertire successivamente le classi .NET in contratti di dati aggiungendo gli attributi <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> senza modificare in modo significativo il codice XML nel quale le classi vengono serializzate per la trasmissione. I tipi utilizzati nei messaggi dai servizi Web ASP.NET potranno essere in grado di essere elaborati come contratti dati da applicazioni WCF, cede il controllo, tra gli altri vantaggi, prestazioni migliori in applicazioni WCF.  
   

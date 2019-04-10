@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314230"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Forms
 È talvolta utile esaminare tutti i nodi in un form Windows <xref:System.Windows.Forms.TreeView> controllo per eseguire calcoli sui valori del nodo. Questa operazione può essere eseguita usando una routine ricorsiva (metodo ricorsivo in C# e C++) che esegue l'iterazione in ogni nodo in ogni raccolta dell'albero.  
@@ -24,9 +24,9 @@ ms.locfileid: "59199713"
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Per eseguire l'iterazione in tutti i nodi di un controllo TreeView  
   
-1.  Creare una routine ricorsiva (metodo ricorsivo in C# e C++) che verifica ogni nodo.  
+1. Creare una routine ricorsiva (metodo ricorsivo in C# e C++) che verifica ogni nodo.  
   
-2.  Chiamare la routine.  
+2. Chiamare la routine.  
   
      Nell'esempio seguente viene illustrato come stampare ogni <xref:System.Windows.Forms.TreeNode> dell'oggetto <xref:System.Windows.Forms.TreeNode.Text%2A> proprietà:  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331806"
 ---
 # <a name="securing-clients"></a>Protezione di client
 In Windows Communication Foundation (WCF), il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. Per altre informazioni sulla creazione di un servizio sicuro, vedere [Securing Services](../../../docs/framework/wcf/securing-services.md).  
@@ -33,9 +33,9 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
 ## <a name="setting-a-client-credential"></a>Impostazione di una credenziale client  
  L'impostazione di una credenziale client in un client è costituita da due passaggi:  
   
-1.  Determinare il *tipo di credenziale client* richiede il servizio. Questa operazione viene eseguita tramite uno dei due metodi seguenti. In primo luogo, se si dispone della documentazione proveniente dal creatore del servizio, è necessario specificare il tipo di credenziale client (se presente) richiesto dal servizio. Quindi, se si dispone solo di un file di configurazione generato dallo strumento Svcutil.exe, è possibile esaminare le singole associazioni per determinare il tipo di credenziale richiesto.  
+1. Determinare il *tipo di credenziale client* richiede il servizio. Questa operazione viene eseguita tramite uno dei due metodi seguenti. In primo luogo, se si dispone della documentazione proveniente dal creatore del servizio, è necessario specificare il tipo di credenziale client (se presente) richiesto dal servizio. Quindi, se si dispone solo di un file di configurazione generato dallo strumento Svcutil.exe, è possibile esaminare le singole associazioni per determinare il tipo di credenziale richiesto.  
   
-2.  Specificare una credenziale client effettiva. La credenziale client effettiva viene chiamata un *valore della credenziale client* per distinguerla dal tipo. Se, ad esempio, il tipo di credenziale client specifica un certificato, è necessario fornire un certificato X.509 emesso da un'autorità di certificazione che il servizio considera attendibile.  
+2. Specificare una credenziale client effettiva. La credenziale client effettiva viene chiamata un *valore della credenziale client* per distinguerla dal tipo. Se, ad esempio, il tipo di credenziale client specifica un certificato, è necessario fornire un certificato X.509 emesso da un'autorità di certificazione che il servizio considera attendibile.  
   
 ### <a name="determining-the-client-credential-type"></a>Determinazione del tipo di credenziale client  
  Se si ha la configurazione lo strumento Svcutil.exe generato del file, esaminare i [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione per determinare il tipo di credenziale client è obbligatorio. All'interno della sezione esistono elementi di associazione che specificano i requisiti di sicurezza. In particolare, esaminare il \<sicurezza > elemento di ogni associazione. L'elemento include l'attributo `mode` che è possibile impostare su uno dei tre valori seguenti, `Message`, `Transport` o `TransportWithMessageCredential`. Il valore dell'attributo determina la modalità che a sua volta determina quale degli elementi figlio è significativo.  

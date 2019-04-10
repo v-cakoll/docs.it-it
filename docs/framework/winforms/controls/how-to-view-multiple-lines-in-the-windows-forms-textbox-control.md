@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324188"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procedura: Visualizzare più righe nel controllo TextBox di Windows Forms
 Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.TextBox> controllo Visualizza una singola riga di testo e non sono visualizzate le barre di scorrimento. Se il testo è maggiore dello spazio disponibile, è visibile solo una parte del testo. È possibile modificare questo comportamento predefinito impostando la <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, e <xref:System.Windows.Forms.TextBox.ScrollBars%2A> proprietà sui valori appropriati.  
@@ -29,9 +29,9 @@ Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.Tex
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Per visualizzare più righe nel controllo TextBox  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.TextBox.Multiline%2A> su `true`. Se <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> è `true` (impostazione predefinita), quindi il testo nel controllo verrà visualizzato come uno o più paragrafi; in caso contrario, verrà visualizzato un elenco, in cui alcune righe potrebbero essere ritagliata in base al bordo del controllo.  
+1. Impostare la proprietà <xref:System.Windows.Forms.TextBox.Multiline%2A> su `true`. Se <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> è `true` (impostazione predefinita), quindi il testo nel controllo verrà visualizzato come uno o più paragrafi; in caso contrario, verrà visualizzato un elenco, in cui alcune righe potrebbero essere ritagliata in base al bordo del controllo.  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.TextBox.ScrollBars%2A> su un valore appropriato.  
+2. Impostare la proprietà <xref:System.Windows.Forms.TextBox.ScrollBars%2A> su un valore appropriato.  
   
     |Value|Descrizione|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.Tex
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Utilizzare questo valore se si desidera visualizzare un elenco di righe, alcuni dei quali può essere più lungo rispetto alla larghezza del <xref:System.Windows.Forms.TextBox> controllo.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|Utilizzare questo valore se l'elenco potrebbe essere più lungo dell'altezza del controllo.|  
   
-3.  Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> su un valore appropriato.  
+3. Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> su un valore appropriato.  
   
     |Value|Descrizione|  
     |-----------|-----------------|  

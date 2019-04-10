@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314217"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Procedura: Ereditare dalla classe Control
 Se si desidera creare un controllo completamente personalizzato da usare in un Form di Windows, è necessario ereditare dal <xref:System.Windows.Forms.Control> classe. Durante l'eredità dal <xref:System.Windows.Forms.Control> classe richiede che si esegue la pianificazione e implementazione più, nonché è la più vasta gamma di opzioni. Quando si eredita da <xref:System.Windows.Forms.Control>, si ereditano le funzionalità di base che consentono di attivare i controlli. La funzionalità riguardante il <xref:System.Windows.Forms.Control> classe gestisce l'input dell'utente tramite tastiera e mouse, definisce i limiti e le dimensioni del controllo, fornisce un handle di windows e fornisce la gestione dei messaggi e sicurezza. Non incorpora nessun disegno, che in questo caso è il rendering reale dell'interfaccia grafica del controllo, e non consente di incorporare alcuna funzionalità di interazione utente specifica. È necessario fornire tutti questi aspetti tramite codice personalizzato.  
@@ -23,25 +23,25 @@ Se si desidera creare un controllo completamente personalizzato da usare in un F
   
 ### <a name="to-create-a-custom-control"></a>Per creare un controllo personalizzato  
   
-1.  Creare una nuova **Applicazione Windows** o un progetto **Libreria di controllo Windows**.  
+1. Creare una nuova **Applicazione Windows** o un progetto **Libreria di controllo Windows**.  
   
-2.  Scegliere **Aggiungi classe** dal menu **Progetto**.  
+2. Scegliere **Aggiungi classe** dal menu **Progetto**.  
   
-3.  Nella finestra di dialogo **Aggiungi nuovo elemento**, fare clic su **Controllo personalizzato**.  
+3. Nella finestra di dialogo **Aggiungi nuovo elemento**, fare clic su **Controllo personalizzato**.  
   
      Un nuovo controllo personalizzato viene aggiunto al progetto.  
   
-4.  Premere F7 per aprire l'**Editor di codice** per il controllo personalizzato.  
+4. Premere F7 per aprire l'**Editor di codice** per il controllo personalizzato.  
   
-5.  Individuare il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo, che sarà vuoto, ad eccezione di una chiamata al <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe di base.  
+5. Individuare il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo, che sarà vuoto, ad eccezione di una chiamata al <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe di base.  
   
-6.  Modificare il codice per incorporare il disegno personalizzato desiderato per il controllo.  
+6. Modificare il codice per incorporare il disegno personalizzato desiderato per il controllo.  
   
      Per informazioni sul codice di scrittura per eseguire il rendering della grafica dei controlli, vedere [Disegno e rendering di controlli personalizzati](custom-control-painting-and-rendering.md).  
   
-7.  Implementare eventuali metodi, proprietà o eventi personalizzati da incorporare nel controllo.  
+7. Implementare eventuali metodi, proprietà o eventi personalizzati da incorporare nel controllo.  
   
-8.  Salvare ed eseguire il test del controllo.  
+8. Salvare ed eseguire il test del controllo.  
   
 ## <a name="see-also"></a>Vedere anche
 

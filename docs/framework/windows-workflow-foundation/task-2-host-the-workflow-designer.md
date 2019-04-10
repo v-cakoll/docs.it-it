@@ -2,12 +2,12 @@
 title: 'Attività 2: Ospitare Progettazione flussi di lavoro'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299267"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Attività 2: Ospitare Progettazione flussi di lavoro
 In questo argomento viene descritta la procedura per l'hosting di un'istanza di [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in un'applicazione Windows Presentation Foundation (WPF).  
@@ -16,19 +16,19 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
   
 ### <a name="to-host-the-workflow-designer"></a>Per ospitare la finestra di progettazione del flusso di lavoro  
   
-1.  Aprire il progetto HostingApplication creato in [attività 1: Creare una nuova applicazione Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
+1. Aprire il progetto HostingApplication creato in [attività 1: Creare una nuova applicazione Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
-2.  Regolare le dimensioni della finestra per semplificare l'uso di [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A questo scopo, selezionare **MainWindow** nella finestra di progettazione, premere F4 per visualizzare i **proprietà** finestra e, nella **Layout** sezione non esiste, impostare il **larghezza** su un valore pari a 600 e il **altezza** su un valore di 350.  
+2. Regolare le dimensioni della finestra per semplificare l'uso di [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. A questo scopo, selezionare **MainWindow** nella finestra di progettazione, premere F4 per visualizzare i **proprietà** finestra e, nella **Layout** sezione non esiste, impostare il **larghezza** su un valore pari a 600 e il **altezza** su un valore di 350.  
   
-3.  Impostare il nome della griglia selezionando il **griglia** pannello nella finestra di progettazione (fare clic sulla casella all'interno del **MainWindow**) e impostando il **nome** proprietà nella parte superiore del  **Proprietà** finestra su "grid1".  
+3. Impostare il nome della griglia selezionando il **griglia** pannello nella finestra di progettazione (fare clic sulla casella all'interno del **MainWindow**) e impostando il **nome** proprietà nella parte superiore del  **Proprietà** finestra su "grid1".  
   
-4.  Nel **delle proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto al `ColumnDefinitions` per aprire il **Editor della raccolta** nella finestra di dialogo.  
+4. Nel **delle proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto al `ColumnDefinitions` per aprire il **Editor della raccolta** nella finestra di dialogo.  
   
-5.  Nel **Editor della raccolta** della finestra di dialogo fare clic sui **Add** tre volte per inserire tre colonne nel layout. La prima colonna conterrà il **della casella degli strumenti**, mentre la seconda ospiterà il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e la terza colonna verrà utilizzata per il controllo proprietà.  
+5. Nel **Editor della raccolta** della finestra di dialogo fare clic sui **Add** tre volte per inserire tre colonne nel layout. La prima colonna conterrà il **della casella degli strumenti**, mentre la seconda ospiterà il [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e la terza colonna verrà utilizzata per il controllo proprietà.  
   
-6.  Impostare il `Width` proprietà della colonna centrale sul valore "4 *".  
+6. Impostare il `Width` proprietà della colonna centrale sul valore "4 *".  
   
-7.  Fare clic su **OK** per salvare le modifiche. Il seguente codice XAML viene aggiunto al file MainWindow.xaml:  
+7. Fare clic su **OK** per salvare le modifiche. Il seguente codice XAML viene aggiunto al file MainWindow.xaml:  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ In questo argomento viene descritta la procedura per l'hosting di un'istanza di 
     </Grid>  
     ```  
   
-8.  Nelle **Esplora soluzioni**, fare doppio clic su MainWindow. XAML e selezionare **Visualizza codice**. Modificare il codice attenendosi ai passaggi seguenti:  
+8. Nelle **Esplora soluzioni**, fare doppio clic su MainWindow. XAML e selezionare **Visualizza codice**. Modificare il codice attenendosi ai passaggi seguenti:  
   
     1.  Aggiungere gli spazi dei nomi seguenti:  
   

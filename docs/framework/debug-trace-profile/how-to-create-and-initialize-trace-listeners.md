@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321055"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: Creare e inizializzare listener di traccia
 Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> inviano messaggi a oggetti detti listener, che li ricevono e li elaborano. Uno di questi listener, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, viene creato e inizializzato automaticamente quando si abilita la traccia o il debug. Se si vuole indirizzare l'output di <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> a origini aggiuntive, è necessario creare e inizializzare listener di traccia aggiuntivi.  
@@ -29,7 +29,7 @@ Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:S
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Per creare e usare un listener di traccia tramite un file di configurazione  
   
-1.  Dichiarare il listener di traccia nel file di configurazione dell'applicazione. Se il listener che si sta creando richiede altri oggetti, dichiarare anche tali oggetti. L'esempio seguente mostra come creare un listener denominato `myListener` che scrive nel file di testo `TextWriterOutput.log`.  
+1. Dichiarare il listener di traccia nel file di configurazione dell'applicazione. Se il listener che si sta creando richiede altri oggetti, dichiarare anche tali oggetti. L'esempio seguente mostra come creare un listener denominato `myListener` che scrive nel file di testo `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:S
     </configuration>  
     ```  
   
-2.  Usare la classe <xref:System.Diagnostics.Trace> nel codice per scrivere un messaggio nei listener di traccia.  
+2. Usare la classe <xref:System.Diagnostics.Trace> nel codice per scrivere un messaggio nei listener di traccia.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

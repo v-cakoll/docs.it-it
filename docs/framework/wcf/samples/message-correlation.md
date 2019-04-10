@@ -2,12 +2,12 @@
 title: Correlazione dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ed6fc8f5d16ae2d604cdbdf4659ecfaaa83bfa02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333275"
 ---
 # <a name="message-correlation"></a>Correlazione dei messaggi
 Questo esempio viene illustrato come un'applicazione di Accodamento messaggi (MSMQ) può inviare un messaggio MSMQ a un servizio Windows Communication Foundation (WCF) e come i messaggi possono essere correlati tra applicazioni mittenti e riceventi in uno scenario di richiesta/risposta. In questo esempio viene utilizzata l'associazione msmqIntegrationBinding. Il servizio in questo caso è un'applicazione console self-hosted che consente di osservare il servizio che riceve i messaggi in coda. k  
@@ -271,9 +271,9 @@ static void DisplayOrderStatus()
 
 ### <a name="to-setup-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
+2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
     1.  Aprire Server Manager in Visual Studio 2012.
 
@@ -285,23 +285,23 @@ static void DisplayOrderStatus()
 
     5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
-3.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Per eseguire l'esempio in una configurazione con singolo computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Per eseguire l'esempio in una configurazione con singolo computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer
 
-1.  Copiare i file del programma servizio dalla cartella \service\bin\, presente nella cartella specifica del linguaggio, nel computer del servizio.
+1. Copiare i file del programma servizio dalla cartella \service\bin\, presente nella cartella specifica del linguaggio, nel computer del servizio.
 
-2.  Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.
+2. Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.
 
-3.  Nel file Client.exe.config modificare orderQueueName per specificare il nome del computer del servizio anziché ".".
+3. Nel file Client.exe.config modificare orderQueueName per specificare il nome del computer del servizio anziché ".".
 
-4.  Nel file Service.exe.config modificare l'indirizzo dell'endpoint del client e specificare il nome del computer client anziché ".".
+4. Nel file Service.exe.config modificare l'indirizzo dell'endpoint del client e specificare il nome del computer client anziché ".".
 
-5.  Sul computer del servizio eseguire Service.exe da un prompt dei comandi.
+5. Sul computer del servizio eseguire Service.exe da un prompt dei comandi.
 
-6.  Sul computer client avviare Client.exe da un prompt dei comandi.
+6. Sul computer client avviare Client.exe da un prompt dei comandi.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

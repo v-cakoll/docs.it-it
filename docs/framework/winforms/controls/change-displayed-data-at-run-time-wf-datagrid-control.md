@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315855"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Procedura: Modificare i dati visualizzati in fase di esecuzione nel controllo DataGrid di Windows Forms
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175604"
   
 ### <a name="to-change-data-programmatically"></a>Per modificare i dati a livello di codice  
   
-1.  Specificare la tabella desiderata di <xref:System.Data.DataSet> oggetto e il valore desiderato di righe e campo dalla tabella e impostare la cella uguale a quello nuovo.  
+1. Specificare la tabella desiderata di <xref:System.Data.DataSet> oggetto e il valore desiderato di righe e campo dalla tabella e impostare la cella uguale a quello nuovo.  
   
     > [!NOTE]
     >  Per specificare la tabella prima di <xref:System.Data.DataSet> o la prima riga della tabella, usare 0.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175604"
   
 ### <a name="to-change-the-datasource-programmatically"></a>Per modificare l'origine dati a livello di codice  
   
-1.  Impostare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> al nome dell'origine dati e della tabella che si desidera associare al metodo.  
+1. Impostare il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> al nome dell'origine dati e della tabella che si desidera associare al metodo.  
   
      Nell'esempio seguente viene illustrato come modificare l'origine dati utilizzando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo a un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] controllo dati (adoPubsAuthors) che è connessa alla tabella Authors nel database Pubs.  
   

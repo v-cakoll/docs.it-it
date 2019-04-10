@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132587"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328777"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a un punto usando fotogrammi chiave
 Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> classe per animare un <xref:System.Windows.Point>.  
@@ -22,11 +22,11 @@ Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.Point
 ## <a name="example"></a>Esempio  
  L'esempio seguente sposta un'ellisse lungo un tracciato triangolare. L'esempio Usa la <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.Media.EllipseGeometry.Center%2A> proprietà di un <xref:System.Windows.Media.EllipseGeometry>. Questa animazione usa tre fotogrammi chiave nel modo seguente:  
   
-1.  Il primo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.LinearPointKeyFrame> classe per spostare l'ellisse lungo un tracciato a una velocità costante dalla posizione iniziale. Fotogrammi chiave lineari come <xref:System.Windows.Media.Animation.LinearPointKeyFrame> creano un'interpolazione lineare uniforme tra i valori.  
+1. Il primo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.LinearPointKeyFrame> classe per spostare l'ellisse lungo un tracciato a una velocità costante dalla posizione iniziale. Fotogrammi chiave lineari come <xref:System.Windows.Media.Animation.LinearPointKeyFrame> creano un'interpolazione lineare uniforme tra i valori.  
   
-2.  Alla fine del successivo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> classe per spostare rapidamente l'ellisse alla lungo il percorso alla posizione successiva. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> creano salti improvvisi tra valori.  
+2. Alla fine del successivo mezzo secondo viene usata un'istanza del <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> classe per spostare rapidamente l'ellisse alla lungo il percorso alla posizione successiva. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> creano salti improvvisi tra valori.  
   
-3.  I due secondi finali viene usata un'istanza del <xref:System.Windows.Media.Animation.SplinePointKeyFrame> classe per riportare l'ellisse alla posizione iniziale. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplinePointKeyFrame> creano una transizione variabile tra i valori a seconda dei valori del <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> proprietà. In questo esempio, l'animazione inizia a spostarsi lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
+3. I due secondi finali viene usata un'istanza del <xref:System.Windows.Media.Animation.SplinePointKeyFrame> classe per riportare l'ellisse alla posizione iniziale. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplinePointKeyFrame> creano una transizione variabile tra i valori a seconda dei valori del <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> proprietà. In questo esempio, l'animazione inizia a spostarsi lentamente, quindi accelera in modo esponenziale verso la fine del segmento temporale.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]

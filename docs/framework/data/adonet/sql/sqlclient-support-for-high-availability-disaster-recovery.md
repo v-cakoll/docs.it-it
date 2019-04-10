@@ -2,12 +2,12 @@
 title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307606"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) per i gruppi di disponibilità AlwaysOn, con disponibilità elevata e ripristino di emergenza.  La funzionalità gruppi di disponibilità AlwaysOn è stato aggiunto a SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione Online di SQL Server.  
@@ -27,9 +27,9 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
   
  A livello di programmazione è possibile modificare queste parole chiave della stringa di connessione con:  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  L'impostazione `MultiSubnetFailover` al `true` non è obbligatorio con [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] o versioni successive.
@@ -59,9 +59,9 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
   
  Se il routing di sola lettura non è attivo, la connessione a un percorso di replica secondaria avrà esito negativo nelle seguenti situazioni:  
   
-1.  Se il percorso di replica secondaria non è configurato per accettare connessioni.  
+1. Se il percorso di replica secondaria non è configurato per accettare connessioni.  
   
-2.  Se un'applicazione usa `ApplicationIntent=ReadWrite` (illustrato di seguito) e il percorso di replica secondaria è configurato per l'accesso di sola lettura.  
+2. Se un'applicazione usa `ApplicationIntent=ReadWrite` (illustrato di seguito) e il percorso di replica secondaria è configurato per l'accesso di sola lettura.  
   
  <xref:System.Data.SqlClient.SqlDependency> non è supportata nelle repliche secondarie di sola lettura.  
   
@@ -86,11 +86,11 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
 ## <a name="read-only-routing"></a>Routing di sola lettura  
  Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
   
-1.  È necessario connettersi a un listener gruppo di disponibilità di un gruppo di disponibilità AlwaysOn.  
+1. È necessario connettersi a un listener gruppo di disponibilità di un gruppo di disponibilità AlwaysOn.  
   
-2.  La parola chiave della stringa di connessione `ApplicationIntent` deve essere impostata su `ReadOnly`.  
+2. La parola chiave della stringa di connessione `ApplicationIntent` deve essere impostata su `ReadOnly`.  
   
-3.  Il gruppo di disponibilità deve essere configurato dall'amministratore del database in modo da abilitare il routing di sola lettura.  
+3. Il gruppo di disponibilità deve essere configurato dall'amministratore del database in modo da abilitare il routing di sola lettura.  
   
  È possibile che più connessioni che usano il routing di sola lettura non si connettano tutte alla stessa replica di sola lettura. Le modifiche apportate alla sincronizzazione del database o alla configurazione del routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per accertarsi che tutte le richieste di sola lettura si connettano alla stessa replica di sola lettura, non passare un listener gruppo di disponibilità alla parola chiave della stringa di connessione `Data Source`. Specificare invece il nome dell'istanza di sola lettura.  
   

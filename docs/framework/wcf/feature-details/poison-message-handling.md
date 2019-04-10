@@ -2,12 +2,12 @@
 title: Gestione dei messaggi non elaborabili
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305026"
 ---
 # <a name="poison-message-handling"></a>Gestione dei messaggi non elaborabili
 Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero massimo di tentativi di recapito all'applicazione. Questa situazione può insorgere quando un'applicazione basata sulla coda non è in grado di elaborare un messaggio a causa di errori. Per far fronte a richieste di affidabilità, un'applicazione in coda riceve messaggi nell'ambito di una transazione. Se la transazione nella quale è stato ricevuto un messaggio in coda viene interrotta, il messaggio resta nella coda, quindi viene eseguito un nuovo tentativo nell'ambito di una nuova transazione. Se il problema che ha determinato l'interruzione della transazione non viene risolto, l'applicazione ricevente può rimanere bloccata in una successione continua di ricezioni e interruzioni dello stesso messaggio fino al raggiungimento del numero massimo di tentativi di recapito. Ne consegue l'impossibilità di elaborare il messaggio.  
@@ -66,17 +66,17 @@ Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero
   
  L'applicazione potrebbe richiedere una forma di gestione automatica dei messaggi non elaborabili per spostare tali messaggi in una coda apposita affinché il servizio possa accedere al resto dei messaggi presenti nella coda. L'unico scenario in cui viene utilizzato il meccanismo di gestione degli errori per rimanere in attesa delle eccezioni di messaggi non elaborabili si verifica quanto la proprietà <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> è impostata su <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Nell'esempio di messaggio non elaborabile per Accodamento messaggi 3.0 viene illustrato questo comportamento. Di seguito vengono descritti i passaggi necessari per gestire i messaggi non elaborabili, comprese le procedure consigliate:  
   
-1.  Assicurarsi che le impostazioni dei messaggi non elaborabili rispettino i requisiti dell'applicazione. Quando si modificano le impostazioni, verificare di aver compreso le differenze tra [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] per quanto riguarda le funzionalità di Accodamento messaggi.  
+1. Assicurarsi che le impostazioni dei messaggi non elaborabili rispettino i requisiti dell'applicazione. Quando si modificano le impostazioni, verificare di aver compreso le differenze tra [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] per quanto riguarda le funzionalità di Accodamento messaggi.  
   
-2.  Se necessario, implementare `IErrorHandler` per gestire gli errori di messaggi non elaborabili. Poiché l'impostazione di `ReceiveErrorHandling` su `Fault` richiede un meccanismo manuale per rimuovere dalla coda il messaggio non elaborabile o per correggere un problema collegato esterno, l'utilizzo tipico consiste nell'implementare `IErrorHandler` quando `ReceiveErrorHandling` è impostato su `Fault`, come illustrato nel codice seguente.  
+2. Se necessario, implementare `IErrorHandler` per gestire gli errori di messaggi non elaborabili. Poiché l'impostazione di `ReceiveErrorHandling` su `Fault` richiede un meccanismo manuale per rimuovere dalla coda il messaggio non elaborabile o per correggere un problema collegato esterno, l'utilizzo tipico consiste nell'implementare `IErrorHandler` quando `ReceiveErrorHandling` è impostato su `Fault`, come illustrato nel codice seguente.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  Creare un attributo `PoisonBehaviorAttribute` che possa essere utilizzato dal comportamento del servizio. Il comportamento installa `IErrorHandler` nel dispatcher. Vedere l'esempio di codice seguente.  
+3. Creare un attributo `PoisonBehaviorAttribute` che possa essere utilizzato dal comportamento del servizio. Il comportamento installa `IErrorHandler` nel dispatcher. Vedere l'esempio di codice seguente.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  Assicurarsi che il servizio sia annotato con l'attributo del comportamento non elaborabile.  
+4. Assicurarsi che il servizio sia annotato con l'attributo del comportamento non elaborabile.  
 
  Inoltre, se `ReceiveErrorHandling` è impostato su `Fault`, in `ServiceHost` si verificherà un errore in presenza di un messaggio non elaborabile. È possibile associare l'evento di errore e arrestare il servizio, adottare azioni correttive e riavviare. Ad esempio, è possibile notare `LookupId` in <xref:System.ServiceModel.MsmqPoisonMessageException> propagato in `IErrorHandler` e quando si verifica un errore nell'host del servizio, è possibile utilizzare l'API `System.Messaging` per ricevere il messaggio dalla coda tramite `LookupId`, rimuovere il messaggio dalla coda e archiviarlo in un archivio esterno o in un'altra coda. È quindi possibile riavviare il `ServiceHost` per riprendere l'elaborazione normale. Il [messaggi non elaborabili in MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) illustra questo comportamento.  
   

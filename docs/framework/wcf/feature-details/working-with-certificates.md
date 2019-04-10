@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331715"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.  
@@ -90,13 +90,13 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Per compilare una catena di trust con il cmdlet New-SelfSignedCertificate  
   
-1.  Creare un certificato (autofirmato) dell'autorità radice temporanea usando il cmdlet New-SelfSignedCertificate. Salvare la chiave privata su disco.  
+1. Creare un certificato (autofirmato) dell'autorità radice temporanea usando il cmdlet New-SelfSignedCertificate. Salvare la chiave privata su disco.  
   
-2.  Utilizzare il nuovo certificato per rilasciare un altro certificato contenente la chiave pubblica.  
+2. Utilizzare il nuovo certificato per rilasciare un altro certificato contenente la chiave pubblica.  
   
-3.  Importare il certificato dell'autorità radice nell'archivio Autorità di certificazione radice attendibili.  
+3. Importare il certificato dell'autorità radice nell'archivio Autorità di certificazione radice attendibili.  
   
-4.  Per istruzioni dettagliate, vedere [come: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Per istruzioni dettagliate, vedere [come: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Scelta del certificato da utilizzare  
  Quando si utilizzano i certificati spesso sorgono dubbi su quale certificato scegliere e sul motivo per cui sceglierlo. La soluzione a questi dubbi varia a seconda che la programmazione riguardi un client o un servizio. Le informazioni seguenti rappresentano una linea guida generale e non forniscono una risposta esauriente a questi dubbi.  

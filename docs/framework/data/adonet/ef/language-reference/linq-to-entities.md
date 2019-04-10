@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304584"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che consente agli sviluppatori di scrivere query sul modello concettuale di Entity Framework usando Visual Basic o Visual C#. Le query su Entity Framework sono rappresentate da query ad albero dei comandi, eseguite sul contesto dell'oggetto. LINQ to Entities consente di convertire query LINQ (Language Integrated Query) in query ad albero dei comandi, eseguire le query su Entity Framework e restituire oggetti che possono essere usati sia da Entity Framework sia da LINQ. Di seguito viene descritto il processo di creazione ed esecuzione di una query LINQ to Entities:  
   
-1.  Costruire un'istanza di <xref:System.Data.Objects.ObjectQuery%601> da <xref:System.Data.Objects.ObjectContext>.  
+1. Costruire un'istanza di <xref:System.Data.Objects.ObjectQuery%601> da <xref:System.Data.Objects.ObjectContext>.  
   
-2.  Comporre una query LINQ to Entities in C# o Visual Basic usando l'istanza di <xref:System.Data.Objects.ObjectQuery%601>.  
+2. Comporre una query LINQ to Entities in C# o Visual Basic usando l'istanza di <xref:System.Data.Objects.ObjectQuery%601>.  
   
-3.  Convertire gli operatori e le espressioni di query standard LINQ in alberi dei comandi.  
+3. Convertire gli operatori e le espressioni di query standard LINQ in alberi dei comandi.  
   
-4.  Eseguire la query, nella rappresentazione ad albero dei comandi, sull'origine dati. Tutte le eccezioni generate nell'origine dati durante l'esecuzione vengono passate direttamente al client.  
+4. Eseguire la query, nella rappresentazione ad albero dei comandi, sull'origine dati. Tutte le eccezioni generate nell'origine dati durante l'esecuzione vengono passate direttamente al client.  
   
-5.  Restituire i risultati della query al client.  
+5. Restituire i risultati della query al client.  
   
 ## <a name="constructing-an-objectquery-instance"></a>Costruzione di un'istanza di ObjectQuery  
  La classe generica <xref:System.Data.Objects.ObjectQuery%601> rappresenta una query che restituisce una raccolta di zero o più entità tipizzate. Una query di oggetto viene in genere costruita da un contesto dell'oggetto esistente anziché manualmente e appartiene sempre a tale contesto dell'oggetto. Il contesto fornisce le informazioni relative a connessione e metadati necessarie per comporre ed eseguire la query. La classe generica <xref:System.Data.Objects.ObjectQuery%601> implementa l'interfaccia generica <xref:System.Linq.IQueryable%601>, i cui metodi del generatore consentono la compilazione incrementale delle query LINQ. È inoltre possibile consentire al compilatore di dedurre il tipo di entità tramite la parola chiave `var` di C# (`Dim` in Visual Basic, con inferenza di tipi locale abilitata).  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299306"
 ---
 # <a name="transport-quotas"></a>Quote dei trasporti
 Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una connessione sta utilizzando risorse eccessive. Una quota è un limite che impedisce l'utilizzo di risorse aggiuntive quando il valore della quota viene superato. Le quote dei trasporti impediscono attacchi di tipo Denial of Service (DoS) volutamente dannosi o non intenzionali.  
@@ -100,9 +100,9 @@ Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una c
 |`ReceiveTimeout`|x|x|x|  
 |`SendTimeout`|x|x|x|  
   
-1.  La quota del trasporto `MaxBufferSize` è disponibile solo nell'associazione `BasicHttp`. Le associazioni `WSHttp` sono valide per scenari che non supportano modalità di trasporto con flussi.  
+1. La quota del trasporto `MaxBufferSize` è disponibile solo nell'associazione `BasicHttp`. Le associazioni `WSHttp` sono valide per scenari che non supportano modalità di trasporto con flussi.  
   
-2.  Le quote del trasporto `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` sono combinate in un'unica quota denominata `MaxConnections`.  
+2. Le quote del trasporto `MaxPendingConnections` e `MaxOutboundConnectionsPerEndpoint` sono combinate in un'unica quota denominata `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Controllo delle quote del trasporto dalla configurazione.  
  La configurazione dell'applicazione può impostare le stesse quote del trasporto utilizzate per accedere direttamente alle proprietà in un'associazione. Nei file di configurazione, il nome di una quota del trasporto inizia sempre con una lettera minuscola. La proprietà `CloseTimeout` in un'associazione corrisponde all'impostazione `closeTimeout` nella configurazione e la proprietà `MaxConnections` in un'associazione corrisponde all'impostazione `maxConnections` nella configurazione.  

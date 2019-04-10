@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 564e9e424b8b82e8837a0a58cb8c11389920c297
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294808"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedura: Creare un flusso di lavoro della macchina a stati
 I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate. In questo argomento illustra la creazione di un flusso di lavoro che vengono usate sia attività incorporate, ad esempio la <xref:System.Activities.Statements.StateMachine> attività e le attività personalizzate dal precedente [come: Creare un'attività](how-to-create-an-activity.md) argomento. Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
@@ -23,31 +23,31 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 ### <a name="to-create-the-workflow"></a>Per creare il flusso di lavoro  
   
-1.  Fare doppio clic su **NumberGuessWorkflowActivities** nelle **Esplora soluzioni** e selezionare **Add**, **nuovo elemento**.  
+1. Fare doppio clic su **NumberGuessWorkflowActivities** nelle **Esplora soluzioni** e selezionare **Add**, **nuovo elemento**.  
   
-2.  Nel **Installed**, **elementi comuni** nodo, seleziona **flusso di lavoro**. Selezionare **impegno** dalle **flusso di lavoro** elenco.  
+2. Nel **Installed**, **elementi comuni** nodo, seleziona **flusso di lavoro**. Selezionare **impegno** dalle **flusso di lavoro** elenco.  
   
-3.  Tipo di `StateMachineNumberGuessWorkflow` nella **Name** casella e fare clic su **Add**.  
+3. Tipo di `StateMachineNumberGuessWorkflow` nella **Name** casella e fare clic su **Add**.  
   
-4.  Trascinare un **StateMachine** attività dal **macchina a stati** sezione del **della casella degli strumenti** e rilasciarla il **Rilascia attività qui** etichetta nel area di progettazione del flusso di lavoro.  
+4. Trascinare un **StateMachine** attività dal **macchina a stati** sezione del **della casella degli strumenti** e rilasciarla il **Rilascia attività qui** etichetta nel area di progettazione del flusso di lavoro.  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>Per creare variabili e argomenti del flusso di lavoro  
   
-1.  Fare doppio clic su **Statemachinenumberguessworkflow** nelle **Esplora soluzioni** per visualizzare il flusso di lavoro nella finestra di progettazione, se non è già visualizzato.  
+1. Fare doppio clic su **Statemachinenumberguessworkflow** nelle **Esplora soluzioni** per visualizzare il flusso di lavoro nella finestra di progettazione, se non è già visualizzato.  
   
-2.  Fare clic su **argomenti** sul lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare i **argomenti** riquadro.  
+2. Fare clic su **argomenti** sul lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare i **argomenti** riquadro.  
   
-3.  Fare clic su **Crea argomento**.  
+3. Fare clic su **Crea argomento**.  
   
-4.  Tipo `MaxNumber` nella **nome** , quindi selezionare **nel** dal **direzione** elenco a discesa, seleziona **Int32** dal **Tipo di argomento** elenco a discesa e quindi premere INVIO per salvare l'argomento.  
+4. Tipo `MaxNumber` nella **nome** , quindi selezionare **nel** dal **direzione** elenco a discesa, seleziona **Int32** dal **Tipo di argomento** elenco a discesa e quindi premere INVIO per salvare l'argomento.  
   
-5.  Fare clic su **Crea argomento**.  
+5. Fare clic su **Crea argomento**.  
   
-6.  Tipo `Turns` nella **Name** finestra che si trova sotto appena aggiunta `MaxNumber` argomento, selezionare **Out** dal **direzione** dall'elenco a discesa, seleziona  **Int32** dal **tipo di argomento** elenco a discesa e quindi premere INVIO.  
+6. Tipo `Turns` nella **Name** finestra che si trova sotto appena aggiunta `MaxNumber` argomento, selezionare **Out** dal **direzione** dall'elenco a discesa, seleziona  **Int32** dal **tipo di argomento** elenco a discesa e quindi premere INVIO.  
   
-7.  Fare clic su **argomenti** sul lato sinistro inferiore dell'ActivityDesigner per chiudere la **argomenti** riquadro.  
+7. Fare clic su **argomenti** sul lato sinistro inferiore dell'ActivityDesigner per chiudere la **argomenti** riquadro.  
   
-8.  Fare clic su **variabili** sul lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare i **variabili** riquadro.  
+8. Fare clic su **variabili** sul lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare i **variabili** riquadro.  
   
 9. Fare clic su **creare variabile**.  
   
@@ -64,14 +64,14 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 ### <a name="to-add-the-workflow-activities"></a>Per aggiungere le attività del flusso di lavoro  
   
-1.  Fare clic su **State1** per selezionarlo. Nel **finestra delle proprietà**, modificare il **DisplayName** a `Initialize Target`.  
+1. Fare clic su **State1** per selezionarlo. Nel **finestra delle proprietà**, modificare il **DisplayName** a `Initialize Target`.  
   
     > [!TIP]
     >  Se il **finestra delle proprietà** non è visualizzato, selezionare **finestra delle proprietà** dal **visualizzazione** menu.  
   
-2.  Fare doppio clic su appena rinominata **Initialize Target** stato nella finestra di progettazione del flusso di lavoro per espanderlo.  
+2. Fare doppio clic su appena rinominata **Initialize Target** stato nella finestra di progettazione del flusso di lavoro per espanderlo.  
   
-3.  Trascinare un **assegnare** attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarla il **voce** sezione dello stato. Tipo `Target` nella **al** finestra e l'espressione seguente nella **immettere un'espressione c#** o **immettere un'espressione VB** casella.  
+3. Trascinare un **assegnare** attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarla il **voce** sezione dello stato. Tipo `Target` nella **al** finestra e l'espressione seguente nella **immettere un'espressione c#** o **immettere un'espressione VB** casella.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,15 +84,15 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     > [!TIP]
     >  Se il **casella degli strumenti** finestra non viene visualizzata, selezionare **della casella degli strumenti** dal **visualizzazione** menu.  
   
-4.  Tornare al complessiva dello stato di visualizzazione della macchina nella finestra di progettazione del flusso di lavoro facendo clic **StateMachine** sulla barra di navigazione visualizzato nella parte superiore della finestra di progettazione del flusso di lavoro.  
+4. Tornare al complessiva dello stato di visualizzazione della macchina nella finestra di progettazione del flusso di lavoro facendo clic **StateMachine** sulla barra di navigazione visualizzato nella parte superiore della finestra di progettazione del flusso di lavoro.  
   
-5.  Trascinare un **lo stato** attività dalle **macchina a stati** sezione del **della casella degli strumenti** nella finestra di progettazione del flusso di lavoro e passarla sul **Initialize Target** lo stato. Si noti che verranno visualizzati quattro triangoli intorno al **Initialize Target** lo stato quando il nuovo stato viene posizionato sopra di essa. Rilasciare il nuovo stato sul triangolo che si trova immediatamente sotto il **Initialize Target** dello stato. Questo posizionare il nuovo stato sul flusso di lavoro e crea una transizione dal **Initialize Target** stato al nuovo stato.  
+5. Trascinare un **lo stato** attività dalle **macchina a stati** sezione del **della casella degli strumenti** nella finestra di progettazione del flusso di lavoro e passarla sul **Initialize Target** lo stato. Si noti che verranno visualizzati quattro triangoli intorno al **Initialize Target** lo stato quando il nuovo stato viene posizionato sopra di essa. Rilasciare il nuovo stato sul triangolo che si trova immediatamente sotto il **Initialize Target** dello stato. Questo posizionare il nuovo stato sul flusso di lavoro e crea una transizione dal **Initialize Target** stato al nuovo stato.  
   
-6.  Fare clic su **State1** per selezionarlo, modificare il **DisplayName** a `Enter Guess`, quindi fare doppio clic sullo stato nella finestra di progettazione del flusso di lavoro per espanderlo.  
+6. Fare clic su **State1** per selezionarlo, modificare il **DisplayName** a `Enter Guess`, quindi fare doppio clic sullo stato nella finestra di progettazione del flusso di lavoro per espanderlo.  
   
-7.  Trascinare un **WriteLine** attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarla il **voce** sezione dello stato.  
+7. Trascinare un **WriteLine** attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarla il **voce** sezione dello stato.  
   
-8.  Digitare l'espressione seguente nella **testo** finestra proprietà delle **WriteLine**.  
+8. Digitare l'espressione seguente nella **testo** finestra proprietà delle **WriteLine**.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -183,7 +183,7 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
   
 ### <a name="to-build-the-workflow"></a>Per compilare il flusso di lavoro  
   
-1.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
+1. Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
      Per istruzioni su come eseguire il flusso di lavoro, vedere l'argomento successivo, [come: Eseguire un flusso di lavoro](how-to-run-a-workflow.md). Se sono già state completate le [come: Eseguire un flusso di lavoro](how-to-run-a-workflow.md) passaggio con uno stile diverso del flusso di lavoro e si desidera eseguirlo tramite il lavoro macchina a stati da questo passaggio, andare direttamente al [per compilare ed eseguire l'applicazione](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) sezione [come: Eseguire un flusso di lavoro](how-to-run-a-workflow.md).  
   

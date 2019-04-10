@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189313"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304734"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGrid (Windows Form)
 > [!NOTE]
@@ -35,10 +35,9 @@ ms.locfileid: "59189313"
   
  Se <xref:System.Windows.Forms.DataGrid> è associato a dati con più tabelle correlate e se è abilitata l'esplorazione della griglia, la griglia visualizzerà degli espansori in ogni riga. Con un espansore, l'utente può spostarsi da una tabella padre a una tabella figlio. Facendo clic su un nodo, viene visualizzata la tabella figlio e, facendo clic su un pulsante Indietro, viene visualizzata la tabella padre originale. In questo modo, nella griglia vengono visualizzate le relazioni gerarchiche tra le tabelle.  
   
- Lo screenshot seguente mostra che un DataGrid associato a dati con più tabelle.  
+ Lo screenshot seguente mostra che un DataGrid associato a dati con più tabelle:  
   
- ![DataGrid associato a dati con più tabelle](./media/vbcontrol1.gif "vbControl1")  
-DataGrid associato a dati con più tabelle  
+ ![Un'app di Windows Form che mostra un DataGrid associato a dati con più tabelle.](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  <xref:System.Windows.Forms.DataGrid> può fornire un'interfaccia utente per un set di dati, la navigazione tra tabelle correlate e funzionalità avanzate di formattazione e modifica.  
   
@@ -94,15 +93,16 @@ DataGrid associato a dati con più tabelle
   
  Quando il controllo <xref:System.Windows.Forms.DataGrid> visualizza una tabella e la proprietà <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> è impostata su `true`, i dati possono essere ripristinati facendo clic sulle intestazioni di colonna. L'utente può inoltre aggiungere righe e modificare le celle.  
   
- Le relazioni tra un set di tabelle vengono visualizzate per gli utenti usando una struttura di navigazione padre/figlio. Le tabelle padre sono il livello più elevato di dati e le tabelle figlio sono le tabelle di dati derivate dai singoli elenchi delle tabelle padre. Gli espansori vengono visualizzati in ogni riga padre che contiene una tabella figlio. Facendo clic su un espansore, viene generato un elenco di collegamenti Web alle tabelle figlio. Quando l'utente seleziona un collegamento, viene visualizzata la tabella figlio. Facendo clic sull'icona che consente di mostrare o nascondere le righe padre (![Icona che consente di mostrare o nascondere le righe padre](./media/vbicon.gif "vbIcon")), le informazioni sulla tabella padre verranno nascoste oppure visualizzate, se l'utente le aveva in precedenza nascoste. L'utente può fare clic su un pulsante Indietro per tornare alla tabella visualizzata in precedenza.  
+ Le relazioni tra un set di tabelle vengono visualizzate per gli utenti usando una struttura di navigazione padre/figlio. Le tabelle padre sono il livello più elevato di dati e le tabelle figlio sono le tabelle di dati derivate dai singoli elenchi delle tabelle padre. Gli espansori vengono visualizzati in ogni riga padre che contiene una tabella figlio. Facendo clic su un espansore, viene generato un elenco di collegamenti Web alle tabelle figlio. Quando l'utente seleziona un collegamento, viene visualizzata la tabella figlio. Facendo clic sul pulsante (icona Mostra/Nascondi padre righe![Icona Mostra/Nascondi](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) è possibile nascondere le informazioni relative alla tabella padre o causare se l'utente aveva in precedenza nascoste. L'utente può fare clic su un pulsante Indietro per tornare alla tabella visualizzata in precedenza.  
   
 ## <a name="columns-and-rows"></a>Colonne e righe  
  <xref:System.Windows.Forms.DataGrid> è costituito da una raccolta di oggetti <xref:System.Windows.Forms.DataGridTableStyle> che sono contenuti nella proprietà <xref:System.Windows.Forms.DataGrid.TableStyles%2A> dell'oggetto <xref:System.Windows.Forms.DataGrid>. Uno stile tabella può contenere una raccolta di oggetti <xref:System.Windows.Forms.DataGridColumnStyle> contenuti nella proprietà <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> di <xref:System.Windows.Forms.DataGridTableStyle>. È possibile modificare il <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> delle proprietà utilizzando l'editor della raccolta accessibili tramite il **proprietà** finestra.  
   
  Qualsiasi <xref:System.Windows.Forms.DataGridTableStyle> associato al controllo <xref:System.Windows.Forms.DataGrid> è accessibile tramite <xref:System.Windows.Forms.GridTableStylesCollection>. <xref:System.Windows.Forms.GridTableStylesCollection> può essere modificato nella finestra di progettazione con l'editor della raccolta <xref:System.Windows.Forms.DataGridTableStyle> o a livello di codice tramite la proprietà <xref:System.Windows.Forms.DataGrid.TableStyles%2A> del controllo <xref:System.Windows.Forms.DataGrid>.  
-  
- ![Oggetti inclusi nel controllo DataGrid](./media/vbcolumns1.gif "vbColumns1")  
-La figura seguente mostra gli oggetti inclusi nel controllo DataGrid.  
+
+ La figura seguente mostra gli oggetti inclusi nel controllo DataGrid:
+
+ ![Diagramma che mostra gli oggetti inclusi nel controllo DataGrid.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  Gli stili tabella e gli stili colonna vengono sincronizzati con gli oggetti <xref:System.Data.DataTable> e gli oggetti <xref:System.Data.DataColumn> impostandone le proprietà `MappingName` sulle proprietà <xref:System.Data.DataTable.TableName%2A> e <xref:System.Data.DataColumn.ColumnName%2A> appropriate. Quando un oggetto <xref:System.Windows.Forms.DataGridTableStyle> senza stili colonna viene aggiunto a un controllo <xref:System.Windows.Forms.DataGrid> associato a un'origine dati valida e la proprietà <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> dello stile tabella viene impostata su una proprietà <xref:System.Data.DataTable.TableName%2A> valida, viene creata una raccolta di oggetti <xref:System.Windows.Forms.DataGridColumnStyle> per tale stile tabella. Per ogni <xref:System.Data.DataColumn> trovato nella raccolta <xref:System.Data.DataTable.Columns%2A> di <xref:System.Data.DataTable>, un corrispondente <xref:System.Windows.Forms.DataGridColumnStyle> viene aggiunto a <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> è possibile accedere mediante il <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> proprietà del <xref:System.Windows.Forms.DataGridTableStyle>. Le colonne possono essere aggiunte o eliminate dalla griglia applicando il metodo <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> o <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> a <xref:System.Windows.Forms.GridColumnStylesCollection>. Per altre informazioni, vedere [Procedura: Aggiungere tabelle e colonne per i Windows Form di controllo DataGrid](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) e [come: Eliminare o nascondere colonne nel Windows Form controllo DataGrid](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   

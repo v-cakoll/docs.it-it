@@ -2,12 +2,12 @@
 title: Trasferimento
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145041"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311019"
 ---
 # <a name="transfer"></a>Trasferimento
 In questo argomento viene descritto il trasferimento nel modello di traccia di attività di Windows Communication Foundation (WCF).  
@@ -42,21 +42,21 @@ In questo argomento viene descritto il trasferimento nel modello di traccia di a
 ## <a name="activity-transfer-sequence"></a>Sequenza di trasferimento di attività  
  Una sequenza di trasferimento di attività ben formata comprende i passaggi seguenti.  
   
-1.  Iniziare una nuova attività, che consiste nel selezionare un nuovo gAId.  
+1. Iniziare una nuova attività, che consiste nel selezionare un nuovo gAId.  
   
-2.  Emettere una traccia di trasferimento a quel nuovo gAId dall'ID attività corrente  
+2. Emettere una traccia di trasferimento a quel nuovo gAId dall'ID attività corrente  
   
-3.  Impostare il nuovo ID in TLS  
+3. Impostare il nuovo ID in TLS  
   
-4.  Emettere una traccia di inizio per indicare l'inizio della nuova attività.  
+4. Emettere una traccia di inizio per indicare l'inizio della nuova attività.  
   
-5.  Il ritorno all'attività originale è costituito dai passaggi seguenti:  
+5. Il ritorno all'attività originale è costituito dai passaggi seguenti:  
   
-6.  Emettere una traccia di trasferimento al gAId originale  
+6. Emettere una traccia di trasferimento al gAId originale  
   
-7.  Emettere una traccia di interruzione per indicare la fine della nuova attività  
+7. Emettere una traccia di interruzione per indicare la fine della nuova attività  
   
-8.  Impostare TLS sul vecchio gAId.  
+8. Impostare TLS sul vecchio gAId.  
   
  Nell'esempio di codice seguente viene illustrato come procedere. In questo esempio si presuppone che venga effettuata una chiamata di blocco durante il trasferimento alla nuova attività e sono incluse tracce di sospensione/ripresa.  
   

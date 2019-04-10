@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213350"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314659"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)
 Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *associazioni* per rappresentare le relazioni di chiave esterna nel database.  
@@ -53,15 +53,15 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Per accedere agli oggetti Order usando oggetti Customer  
   
-1.  Modificare il metodo `Sub Main` digitando o incollando il codice seguente nel metodo stesso:  
+1. Modificare il metodo `Sub Main` digitando o incollando il codice seguente nel metodo stesso:  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  Premere F5 per eseguire il debug dell'applicazione.  
+2. Premere F5 per eseguire il debug dell'applicazione.  
   
      Nella finestra di messaggio vengono visualizzati due nomi, mentre nella finestra della console viene riportato il codice SQL generato.  
   
-3.  Chiudere la finestra di messaggio per interrompere il debug.  
+3. Chiudere la finestra di messaggio per interrompere il debug.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Creazione di una visualizzazione fortemente tipizzata del database  
  È molto più facile iniziare con una visualizzazione fortemente tipizzata del database. Applicando la tipizzazione forte all'oggetto <xref:System.Data.Linq.DataContext>, si eviterà di eseguire chiamate a <xref:System.Data.Linq.DataContext.GetTable%2A>. Quando si usa l'oggetto fortemente tipizzato <xref:System.Data.Linq.DataContext>, è possibile usare tabelle fortemente tipizzate in tutte le query.  
@@ -70,23 +70,23 @@ Questa procedura dettagliata viene illustrato come utilizzare [!INCLUDE[vbtecdli
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Per tipizzare fortemente l'oggetto DataContext  
   
-1.  Aggiungere il codice riportato di seguito sopra la dichiarazione della classe `Customer`.  
+1. Aggiungere il codice riportato di seguito sopra la dichiarazione della classe `Customer`.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  Modificare `Sub Main` per usare l'oggetto fortemente tipizzato <xref:System.Data.Linq.DataContext> come segue:  
+2. Modificare `Sub Main` per usare l'oggetto fortemente tipizzato <xref:System.Data.Linq.DataContext> come segue:  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  Premere F5 per eseguire il debug dell'applicazione.  
+3. Premere F5 per eseguire il debug dell'applicazione.  
   
      L'output nella finestra della console sarà:  
   
      `ID=WHITC`  
   
-4.  Premere INVIO nella finestra Console per chiudere l'applicazione.  
+4. Premere INVIO nella finestra Console per chiudere l'applicazione.  
   
-5.  Nel **File** menu, fare clic su **Salva tutto** se si desidera salvare questa applicazione.  
+5. Nel **File** menu, fare clic su **Salva tutto** se si desidera salvare questa applicazione.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Procedura dettagliata seguente ([procedura dettagliata: Gestione dei dati (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) viene illustrato come modificare i dati. Per tale procedura dettagliata non è necessario avere salvato le due procedure dettagliate di questa serie già completate.  

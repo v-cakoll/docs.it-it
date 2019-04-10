@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 0136fa7c3a51a7d64340c6251e9f5eb63017ffd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 62642651516274a27c44abfc19e94dc529690ea9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304545"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Procedura: Configurare un client WCF per interagire con servizi WSE 3.0
 I client Windows Communication Foundation (WCF) sono compatibili a livello di transito con Web Services Enhancements 3.0 per i servizi Microsoft .NET (WSE) quando i client WCF vengono configurati per usare la versione dell'agosto 2004 della specifica WS-Addressing.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Per configurare un client WCF che interagisca con il servizio Web WSE 3.0  
   
-1.  Eseguire la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per creare un client WCF per il servizio Web WSE 3.0.  
+1. Eseguire la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per creare un client WCF per il servizio Web WSE 3.0.  
   
      Per un servizio Web WSE viene creata una classe client WCF.  
   
      Per informazioni dettagliate sulla creazione di un client WCF, vedere il [come: Creare un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
-2.  Creare una classe che rappresenta un'associazione che può comunicare con i servizi Web WSE 3.0.  
+2. Creare una classe che rappresenta un'associazione che può comunicare con i servizi Web WSE 3.0.  
   
      La classe seguente fa parte di [interoperabilità con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) esempio.  
   
@@ -48,7 +48,7 @@ I client Windows Communication Foundation (WCF) sono compatibili a livello di tr
          [!code-csharp[c_WCFClientToWSEService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#2)]
          [!code-vb[c_WCFClientToWSEService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#2)]  
   
-3.  Nel codice dell'applicazione client, aggiungere il codice per impostare le proprietà dell'associazione.  
+3. Nel codice dell'applicazione client, aggiungere il codice per impostare le proprietà dell'associazione.  
   
      Esempio di codice seguente specifica che il client WCF deve utilizzare l'autenticazione e protezione dei messaggi come definito da WSE 3.0 `AnonymousForCertificate` asserzione di sicurezza turnkey. Sono inoltre necessarie sessioni protette e chiavi derivate.  
   

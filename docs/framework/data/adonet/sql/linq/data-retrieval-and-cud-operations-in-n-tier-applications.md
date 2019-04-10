@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209814"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318429"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)
 Quando si serializzano oggetti entità, ad esempio Customers o Orders, in un client di una rete, tali entità vengono disconnesse dal relativo contesto dati. Il contesto dati non rileva più le modifiche o le associazioni con gli altri oggetti, il che non rappresenta un problema se i client leggono solo i dati. È inoltre relativamente semplice consentire ai client di aggiungere nuove righe in un database. Tuttavia, se l'applicazione richiede che i client siano in grado di aggiornare o eliminare i dati, sarà necessario associare le entità a un nuovo contesto dati prima di chiamare <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Inoltre, se si usa un controllo della concorrenza ottimistica con i valori originali, sarà necessario anche un modo per fornire al database l'entità originale e l'entità come modificata. I metodi `Attach` vengono forniti per consentire l'inserimento delle entità in un nuovo contesto dati dopo essere stati disconnessi.  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>Stato  
  Dopo aver associato un oggetto entità all'istanza <xref:System.Data.Linq.DataContext>, lo stato dell'oggetto diventa `PossiblyModified`. Sono disponibili tre modalità per forzare un oggetto associato in modo da essere considerato `Modified`.  
   
-1.  Associarlo come non modificato e quindi modificare direttamente i campi.  
+1. Associarlo come non modificato e quindi modificare direttamente i campi.  
   
-2.  Associarlo con l'overload <xref:System.Data.Linq.Table%601.Attach%2A> che accetta le istanze dell'oggetto originale e corrente. In questo modo alla funzionalità di ricerca delle modifiche vengono forniti i valori vecchi e nuovi per rilevare automaticamente i campi modificati.  
+2. Associarlo con l'overload <xref:System.Data.Linq.Table%601.Attach%2A> che accetta le istanze dell'oggetto originale e corrente. In questo modo alla funzionalità di ricerca delle modifiche vengono forniti i valori vecchi e nuovi per rilevare automaticamente i campi modificati.  
   
-3.  Associarlo con l'overload <xref:System.Data.Linq.Table%601.Attach%2A> che accetta un secondo parametro booleano (impostato su true). In questo modo la funzionalità di ricerca delle modifiche considererà l'oggetto modificato senza dover richiedere i valori originali. In questo approccio l'oggetto deve avere un campo di versione/timestamp.  
+3. Associarlo con l'overload <xref:System.Data.Linq.Table%601.Attach%2A> che accetta un secondo parametro booleano (impostato su true). In questo modo la funzionalità di ricerca delle modifiche considererà l'oggetto modificato senza dover richiedere i valori originali. In questo approccio l'oggetto deve avere un campo di versione/timestamp.  
   
  Per altre informazioni, vedere [stati di oggetti e rilevamento delle modifiche](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   

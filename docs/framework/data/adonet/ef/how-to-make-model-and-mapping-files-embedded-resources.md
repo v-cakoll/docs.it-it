@@ -2,12 +2,12 @@
 title: 'Procedura: Definire i file di modello e di mapping come risorse incorporate'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: b00ccdd0a1fc1cb22cf7cc0d0a3177dcc0e8017f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eae3681664ab1fd095487a7b7ed395302faf2588
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329531"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Procedura: Definire i file di modello e di mapping come risorse incorporate
 Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] consente di distribuire file di modello e il mapping come risorse incorporate di un'applicazione. L'assembly con i file di mapping e di modello incorporati deve essere caricato nello stesso dominio applicazione della connessione dell'entità. Per altre informazioni, vedere [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md) (Stringhe di connessione). Gli strumenti [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] incorporano i file di modello e di mapping per impostazione predefinita. Quando si definiscono manualmente i file di modello e di mapping, utilizzare questa procedura per assicurarsi che i file vengano distribuiti come risorse incorporate insieme all'applicazione [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
@@ -17,13 +17,13 @@ Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] consente di di
   
 ### <a name="to-embed-model-and-mapping-files"></a>Per incorporare i file di modello e di mapping  
   
-1.  Nelle **Esplora soluzioni**, selezionare il file concettuale (CSDL).  
+1. Nelle **Esplora soluzioni**, selezionare il file concettuale (CSDL).  
   
-2.  Nel **delle proprietà** riquadro, impostare **azione di compilazione** al **risorsa incorporata**.  
+2. Nel **delle proprietà** riquadro, impostare **azione di compilazione** al **risorsa incorporata**.  
   
-3.  Ripetere i passaggi 1 e 2 per il file di archiviazione (.ssdl) e il file di mapping (.msl).  
+3. Ripetere i passaggi 1 e 2 per il file di archiviazione (.ssdl) e il file di mapping (.msl).  
   
-4.  In **Esplora soluzioni**, fare doppio clic sul file app. config e quindi modificare il `Metadata` parametri nel `connectionString` attributo basato su uno dei formati seguenti:  
+4. In **Esplora soluzioni**, fare doppio clic sul file app. config e quindi modificare il `Metadata` parametri nel `connectionString` attributo basato su uno dei formati seguenti:  
   
     -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   

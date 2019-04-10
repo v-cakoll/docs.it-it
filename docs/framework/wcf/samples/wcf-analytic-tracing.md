@@ -2,12 +2,12 @@
 title: Traccia analitica WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229173"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332313"
 ---
 # <a name="wcf-analytic-tracing"></a>Traccia analitica WCF
 Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche che Windows Communication Foundation (WCF) scrive in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Le tracce analitiche hanno lo scopo di semplificare la visibilità all'interno dei servizi senza un'elevata riduzione delle prestazioni. In questo esempio viene illustrato come utilizzare il <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API per scrivere eventi che si integrano con i servizi WCF.  
@@ -43,31 +43,31 @@ Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di 
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Usa Visual Studio 2012, aprire il file della soluzione Wcfanalytictracingextensibility.  
+1. Usa Visual Studio 2012, aprire il file della soluzione Wcfanalytictracingextensibility.  
   
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Per eseguire la soluzione, premere CTRL+F5.  
+3. Per eseguire la soluzione, premere CTRL+F5.  
   
      Nel Web browser, fare clic su **Calculator**. L'URI del documento WSDL per il servizio viene visualizzato nel browser. Copiare l'URI.  
   
-4.  Eseguire il client di prova WCF (WcfTestClient.exe).  
+4. Eseguire il client di prova WCF (WcfTestClient.exe).  
   
      Il client di prova WCF (WcfTestClient.exe) si trova in `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. La directory di installazione di Visual Studio 2012 impostazione predefinita è `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5.  All'interno del client di test WCF, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.  
+5. All'interno del client di test WCF, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.  
   
      Aggiungere l'indirizzo dell'endpoint nella casella di input.  
   
-6.  Fare clic su **OK** per chiudere la finestra di dialogo.  
+6. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
      Il servizio ICalculator viene aggiunto nel riquadro sinistro sotto **progetti di servizi**.  
   
-7.  Aprire l'applicazione Visualizzatore eventi.  
+7. Aprire l'applicazione Visualizzatore eventi.  
   
      Prima di richiamare il servizio, avviare Visualizzatore eventi e assicurarsi che il registro eventi sia in ascolto per rilevare eventi creati dal servizio WCF.  
   
-8.  Dal **avviare** dal menu **strumenti di amministrazione**e quindi **Visualizzatore eventi**. Abilitare la **analitico** e **Debug** i log.  
+8. Dal **avviare** dal menu **strumenti di amministrazione**e quindi **Visualizzatore eventi**. Abilitare la **analitico** e **Debug** i log.  
   
 9. Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **Server applicazioni-applicazioni**, selezionare **View**e quindi **Visualizza registri analitici e Debug**.  
   
@@ -97,13 +97,13 @@ Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di 
   
 #### <a name="to-clean-up-optional"></a>Per eseguire la pulizia (facoltativo)  
   
-1.  Aprire **Visualizzatore eventi**.  
+1. Aprire **Visualizzatore eventi**.  
   
-2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.  
+2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.  
   
-3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**e quindi **analitiche**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.  
+3. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**e quindi **analitiche**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.  
   
-4.  Fare clic su **cancellare** per cancellare gli eventi.  
+4. Fare clic su **cancellare** per cancellare gli eventi.  
   
 ## <a name="known-issue"></a>Problema noto  
  È un problema noto durante il **Visualizzatore eventi** potrebbe non essere possibile decodificare gli eventi ETW. Viene visualizzato un messaggio di errore con la dicitura: "La descrizione per l'ID evento \<id > dall'origine Microsoft-Windows Server applicazioni-applicazioni nebyla nalezena. Il componente che ha generato l'evento non è installato nel computer locale oppure l'installazione è danneggiata. È possibile installare o ripristinare il componente nel computer locale." Se si verifica questo errore, selezionare **Refresh** dalle **azioni** menu. L'evento dovrebbe procedere alla decodifica in modo corretto.  

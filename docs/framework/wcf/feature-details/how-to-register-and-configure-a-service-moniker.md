@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313580"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Procedura: Registrare e configurare un moniker del servizio
 Prima di usare il moniker del servizio Windows Communication Foundation (WCF) all'interno di un'applicazione COM con un contratto tipizzato, è necessario registrare i tipi con attributi necessari con COM e configurare l'applicazione COM e il moniker con il binding richiesto configurazione.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Per registrare i tipi con attributi necessari con COM  
   
-1.  Usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per recuperare il contratto dei metadati dal servizio WCF. Questo genera il codice sorgente per un assembly client WCF e un file di configurazione dell'applicazione client.  
+1. Usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per recuperare il contratto dei metadati dal servizio WCF. Questo genera il codice sorgente per un assembly client WCF e un file di configurazione dell'applicazione client.  
   
-2.  Assicurarsi che i tipi nell'assembly siano contrassegnati come `ComVisible`. A tale scopo, aggiungere l'attributo seguente al file AssemblyInfo.cs nel progetto di Visual Studio.  
+2. Assicurarsi che i tipi nell'assembly siano contrassegnati come `ComVisible`. A tale scopo, aggiungere l'attributo seguente al file AssemblyInfo.cs nel progetto di Visual Studio.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Compilare il client WCF gestito come un assembly con nome sicuro. Ciò richiede una firma con una coppia di chiavi di crittografia. Per altre informazioni, vedere [firma un Assembly con un nome sicuro](https://go.microsoft.com/fwlink/?LinkId=94874) nella Guida per gli sviluppatori .NET.  
+3. Compilare il client WCF gestito come un assembly con nome sicuro. Ciò richiede una firma con una coppia di chiavi di crittografia. Per altre informazioni, vedere [firma un Assembly con un nome sicuro](https://go.microsoft.com/fwlink/?LinkId=94874) nella Guida per gli sviluppatori .NET.  
   
-4.  Usare lo strumento di registrazione degli assembly (Regasm.exe) con l'opzione `/tlb`, per registrare i tipi nell'assembly con COM.  
+4. Usare lo strumento di registrazione degli assembly (Regasm.exe) con l'opzione `/tlb`, per registrare i tipi nell'assembly con COM.  
   
-5.  Usare lo strumento della cache di assembly globale (Gacutil.exe) per aggiungere l'assembly alla cache di assembly globale.  
+5. Usare lo strumento della cache di assembly globale (Gacutil.exe) per aggiungere l'assembly alla cache di assembly globale.  
   
     > [!NOTE]
     >  La firma e l'aggiunta dell'assembly alla cache di assembly globale sono passaggi facoltativi, che possono però semplificare il processo di caricamento dell'assembly dal percorso corretto in fase di esecuzione.  

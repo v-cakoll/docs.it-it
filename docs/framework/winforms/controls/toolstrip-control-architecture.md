@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296212"
 ---
 # <a name="toolstrip-control-architecture"></a>Architettura del controllo ToolStrip
 Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripItem> classi forniscono un sistema flessibile ed estendibile per la visualizzazione degli elementi della barra degli strumenti, stato e menu. Tutte queste classi sono contenute nel <xref:System.Windows.Forms> dello spazio dei nomi e sono tutti in genere vengono denominati con il prefisso "ToolStrip" (ad esempio <xref:System.Windows.Forms.ToolStripOverflow>) o con il suffisso "Strisce" (, ad esempio <xref:System.Windows.Forms.MenuStrip>).  
@@ -121,19 +121,19 @@ Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripI
 #### <a name="toolstripcontainer-support-of-inheritance"></a>ToolStripContainer supporto dell'ereditarietà  
  Il <xref:System.Windows.Forms.ToolStripContainer> controllo supporta scenari di ereditarietà limitati, simili all'esempio seguente:  
   
-1.  Creare una nuova applicazione Windows Forms.  
+1. Creare una nuova applicazione Windows Forms.  
   
-2.  Aggiungere un tipo <xref:System.Windows.Forms.ToolStripContainer> al form.  
+2. Aggiungere un tipo <xref:System.Windows.Forms.ToolStripContainer> al form.  
   
-3.  Impostare il modificatore di accesso dei <xref:System.Windows.Forms.ToolStripContainer> al `public` o `protected`.  
+3. Impostare il modificatore di accesso dei <xref:System.Windows.Forms.ToolStripContainer> al `public` o `protected`.  
   
-4.  Aggiungere qualsiasi combinazione di <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.ContextMenuStrip> controlli per il <xref:System.Windows.Forms.ToolStripPanel> aree del <xref:System.Windows.Forms.ToolStripContainer>.  
+4. Aggiungere qualsiasi combinazione di <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, e <xref:System.Windows.Forms.ContextMenuStrip> controlli per il <xref:System.Windows.Forms.ToolStripPanel> aree del <xref:System.Windows.Forms.ToolStripContainer>.  
   
-5.  Compilare il progetto.  
+5. Compilare il progetto.  
   
-6.  Aggiungere un form che eredita dal form prima.  
+6. Aggiungere un form che eredita dal form prima.  
   
-7.  Selezionare il controllo ereditato <xref:System.Windows.Forms.ToolStripContainer> nel form.  
+7. Selezionare il controllo ereditato <xref:System.Windows.Forms.ToolStripContainer> nel form.  
   
 #### <a name="inherited-behavior-of-child-controls"></a>Ereditato il comportamento dei controlli figlio  
  Dopo aver completato i passaggi precedenti, ereditato si verifica quanto segue:  

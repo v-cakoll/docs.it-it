@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303141"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta
 Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in una visualizzazione denominata padre/figlio o master/dettagli Si tratta di uno scenario di data binding in cui i dati provenienti dalla stessa origine vengono visualizzati in due controlli. Se si modifica la selezione in un controllo, automaticamente vengono modificati anche i dati visualizzati nel secondo controllo. Ad esempio, il primo controllo può contenere un elenco di clienti e il secondo un elenco di ordini correlati al cliente selezionato nel primo controllo.  
@@ -30,28 +30,28 @@ Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in
   
 ### <a name="to-cache-the-current-child-position"></a>Per memorizzare nella cache la posizione corrente della tabella figlio  
   
-1.  Dichiarare una variabile Integer per archiviare la posizione dell'elenco figlio e una variabile booleana per archiviare se memorizzare nella cache la posizione della tabella figlio.  
+1. Dichiarare una variabile Integer per archiviare la posizione dell'elenco figlio e una variabile booleana per archiviare se memorizzare nella cache la posizione della tabella figlio.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Gestire l'evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> dell'associazione e individuare un oggetto <xref:System.ComponentModel.ListChangedType> di <xref:System.ComponentModel.ListChangedType.Reset>.  
+2. Gestire l'evento <xref:System.Windows.Forms.CurrencyManager.ListChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> dell'associazione e individuare un oggetto <xref:System.ComponentModel.ListChangedType> di <xref:System.ComponentModel.ListChangedType.Reset>.  
   
-3.  Controllare la posizione corrente dell'oggetto <xref:System.Windows.Forms.CurrencyManager>. Se è maggiore del primo elemento dell'elenco, in genere 0, salvarlo in una variabile.  
+3. Controllare la posizione corrente dell'oggetto <xref:System.Windows.Forms.CurrencyManager>. Se è maggiore del primo elemento dell'elenco, in genere 0, salvarlo in una variabile.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> dell'elenco padre per l'oggetto CurrencyManager padre. Nel gestore impostare il valore booleano per indicare che non si tratta di uno scenario di memorizzazione nella cache. Se si verifica l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>, la modifica all'elemento padre sarà una modifica alla posizione dell'elenco e non una modifica al valore dell'elemento.  
+4. Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> dell'elenco padre per l'oggetto CurrencyManager padre. Nel gestore impostare il valore booleano per indicare che non si tratta di uno scenario di memorizzazione nella cache. Se si verifica l'evento <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>, la modifica all'elemento padre sarà una modifica alla posizione dell'elenco e non una modifica al valore dell'elemento.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>Per reimpostare la posizione dell'elemento figlio  
   
-1.  Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> del binding figlio.  
+1. Gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> per l'oggetto <xref:System.Windows.Forms.CurrencyManager> del binding figlio.  
   
-2.  Reimpostare la posizione della tabella figlio sulla posizione memorizzata nella cache salvata nella procedura precedente.  
+2. Reimpostare la posizione della tabella figlio sulla posizione memorizzata nella cache salvata nella procedura precedente.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
@@ -64,17 +64,17 @@ Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in
   
  Per testare l'esempio di codice, eseguire la procedura seguente:  
   
-1.  Eseguire l'esempio.  
+1. Eseguire l'esempio.  
   
-2.  Verificare che la casella di controllo **Memorizza nella cache e reimposta posizione** sia selezionata.  
+2. Verificare che la casella di controllo **Memorizza nella cache e reimposta posizione** sia selezionata.  
   
-3.  Fare clic sul pulsante **Cancella campo padre** per provocare una modifica in un campo della tabella padre. Notare che la riga selezionata nella tabella figlio non cambia.  
+3. Fare clic sul pulsante **Cancella campo padre** per provocare una modifica in un campo della tabella padre. Notare che la riga selezionata nella tabella figlio non cambia.  
   
-4.  Chiudere ed eseguire nuovamente l'esempio. È necessario eseguire questa procedura perché la reimpostazione si verifica solo in seguito alla prima modifica nella riga padre.  
+4. Chiudere ed eseguire nuovamente l'esempio. È necessario eseguire questa procedura perché la reimpostazione si verifica solo in seguito alla prima modifica nella riga padre.  
   
-5.  Deselezionare la casella di controllo **Memorizza nella cache e reimposta posizione**.  
+5. Deselezionare la casella di controllo **Memorizza nella cache e reimposta posizione**.  
   
-6.  Fare clic sul pulsante **Cancella campo padre**. Notare che la riga selezionata nella tabella figlio diventa la prima riga.  
+6. Fare clic sul pulsante **Cancella campo padre**. Notare che la riga selezionata nella tabella figlio diventa la prima riga.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  

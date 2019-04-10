@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323252"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che possono verificarsi durante l'implementazione di [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  Un  Attenersi alla procedura riportata di seguito per questo scenario avanzato:  
   
-1.  Nel file con estensione dbml modificare la proprietà impostando il flag <xref:System.Data.Linq.ITable.IsReadOnly%2A> su `True`.  
+1. Nel file con estensione dbml modificare la proprietà impostando il flag <xref:System.Data.Linq.ITable.IsReadOnly%2A> su `True`.  
   
-2.  Aggiungere una classe parziale. Creare un costruttore con i parametri per i membri di sola lettura.  
+2. Aggiungere una classe parziale. Creare un costruttore con i parametri per i membri di sola lettura.  
   
-3.  Esaminare il valore <xref:System.Data.Linq.Mapping.UpdateCheck> predefinito (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) per determinare se questo valore è corretto per l'applicazione.  
+3. Esaminare il valore <xref:System.Data.Linq.Mapping.UpdateCheck> predefinito (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) per determinare se questo valore è corretto per l'applicazione.  
   
     > [!CAUTION]
     >  Se si usa il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in Visual Studio, possono essere sovrascritte le modifiche.  

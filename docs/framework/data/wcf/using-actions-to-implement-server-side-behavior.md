@@ -2,12 +2,12 @@
 title: Utilizzo di azioni per implementare il comportamento lato server
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294938"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Utilizzo di azioni per implementare il comportamento lato server
 
@@ -40,11 +40,11 @@ Le azioni OData consentono di implementare un comportamento che agisce su una ri
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Questa interfaccia consente di eseguire un'azione di WCF Data Services. Quando si implementa IDataServiceInvokable, si è responsabili di tre operazioni:  
   
-1.  Acquisizione e marshalling potenziale dei parametri  
+1. Acquisizione e marshalling potenziale dei parametri  
   
-2.  Distribuzione dei parametri nel codice che implementa effettivamente l'azione quando viene chiamato Invoke()  
+2. Distribuzione dei parametri nel codice che implementa effettivamente l'azione quando viene chiamato Invoke()  
   
-3.  Archiviazione dei risultati restituiti da Invoke() in modo da poter essere recuperati mediante GetResult()  
+3. Archiviazione dei risultati restituiti da Invoke() in modo da poter essere recuperati mediante GetResult()  
   
  I parametri possono essere passati come token poiché è possibile scrivere un provider di servizi dati da usare con i token che rappresentano le risorse. In tal caso, potrebbe essere necessario convertire (effettuare il marshalling) i token in risorse effettive prima della distribuzione all'azione effettiva. Dopo il marshalling del parametro, è necessario che venga impostato uno stato modificabile in modo tale che tutte le modifiche alla risorsa, che si verificano quando l'azione viene richiamata, vengano salvate e scritte su disco.  
   

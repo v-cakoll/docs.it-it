@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327100"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Procedura: Specificare valori di credenziali client
 Utilizza Windows Communication Foundation (WCF), il servizio può specificare come un client viene autenticato nel servizio. Ad esempio, un servizio può stabilire che il client venga autenticato con un certificato.  
   
 ### <a name="to-determine-the-client-credential-type"></a>Per determinare il tipo di credenziale client  
   
-1.  Recuperare i metadati dall'endpoint dei metadati di servizio. I metadati sono in genere costituiti da due file: il codice client del linguaggio di programmazione selezionato (l'impostazione predefinita è Visual C#) e un file di configurazione XML. Un modo per recuperare i metadati consiste nell'utilizzare lo strumento Svcutil.exe per restituire il codice e la configurazione client. Per altre informazioni, vedere [recupero di metadati](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) e [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+1. Recuperare i metadati dall'endpoint dei metadati di servizio. I metadati sono in genere costituiti da due file: il codice client del linguaggio di programmazione selezionato (l'impostazione predefinita è Visual C#) e un file di configurazione XML. Un modo per recuperare i metadati consiste nell'utilizzare lo strumento Svcutil.exe per restituire il codice e la configurazione client. Per altre informazioni, vedere [recupero di metadati](../../../docs/framework/wcf/feature-details/retrieving-metadata.md) e [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
-2.  Aprire il file di configurazione XML. Se si utilizza lo strumento Svcutil.exe, il nome predefinito del file è Output.config.  
+2. Aprire il file di configurazione XML. Se si utilizza lo strumento Svcutil.exe, il nome predefinito del file è Output.config.  
   
-3.  Trovare il  **\<sicurezza >** elemento con il **modalità** attributo (**< modalità di sicurezza =** `MessageOrTransport` **>** in cui `MessageOrTransport` è impostato su una delle modalità di sicurezza.  
+3. Trovare il  **\<sicurezza >** elemento con il **modalità** attributo (**< modalità di sicurezza =** `MessageOrTransport` **>** in cui `MessageOrTransport` è impostato su una delle modalità di sicurezza.  
   
-4.  Trovare l'elemento figlio che corrisponda al valore della modalità. Ad esempio, se la modalità è impostata su **messaggi**, trovare il  **\<messaggio >** elemento contenuto nel  **\<sicurezza >** elemento.  
+4. Trovare l'elemento figlio che corrisponda al valore della modalità. Ad esempio, se la modalità è impostata su **messaggi**, trovare il  **\<messaggio >** elemento contenuto nel  **\<sicurezza >** elemento.  
   
-5.  Si noti il valore assegnato per il **clientCredentialType** attributo. Il valore effettivo dipende dalla modalità utilizzata, trasporto o messaggio.  
+5. Si noti il valore assegnato per il **clientCredentialType** attributo. Il valore effettivo dipende dalla modalità utilizzata, trasporto o messaggio.  
   
  Nel codice XML seguente viene mostrata la configurazione di un client per cui viene utilizzata la sicurezza dei messaggi e viene richiesto un certificato per autenticare il client.  
   
@@ -43,11 +43,11 @@ Utilizza Windows Communication Foundation (WCF), il servizio può specificare co
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>Per specificare il valore delle credenziali client nel client nel codice  
   
-1.  Usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il codice e la configurazione dal servizio.  
+1. Usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il codice e la configurazione dal servizio.  
   
-2.  Creare un'istanza del client WCF usando il codice generato.  
+2. Creare un'istanza del client WCF usando il codice generato.  
   
-3.  Nella classe del client impostare la proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> della classe <xref:System.ServiceModel.ClientBase%601> su un valore appropriato. In questo esempio la proprietà viene impostata su un certificato X.509 utilizzando il metodo <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> della classe <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
+3. Nella classe del client impostare la proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> della classe <xref:System.ServiceModel.ClientBase%601> su un valore appropriato. In questo esempio la proprietà viene impostata su un certificato X.509 utilizzando il metodo <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> della classe <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
   
      [!code-csharp[c_TcpService#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#4)]
      [!code-vb[c_TcpService#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#4)]  
@@ -56,13 +56,13 @@ Utilizza Windows Communication Foundation (WCF), il servizio può specificare co
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-configuration"></a>Per specificare il valore delle credenziali client nel client nella configurazione  
   
-1.  Aggiungere un [ \<comportamento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento per il [ \<comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento.  
+1. Aggiungere un [ \<comportamento >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento per il [ \<comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento.  
   
-2.  Aggiungere un [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento per il [ \<comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento. Avere cura di impostare l'attributo `name` obbligatorio su un valore appropriato.  
+2. Aggiungere un [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento per il [ \<comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento. Avere cura di impostare l'attributo `name` obbligatorio su un valore appropriato.  
   
-3.  Aggiungere un [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) elemento per il [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento.  
+3. Aggiungere un [ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) elemento per il [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento.  
   
-4.  Impostare gli attributi seguenti sui valori appropriati: `storeLocation`, `storeName`, `x509FindType` e `findValue`, come illustrato nel codice seguente. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+4. Impostare gli attributi seguenti sui valori appropriati: `storeLocation`, `storeName`, `x509FindType` e `findValue`, come illustrato nel codice seguente. Per altre informazioni sui certificati, vedere [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
     ```xml  
     <behaviors>  
@@ -79,7 +79,7 @@ Utilizza Windows Communication Foundation (WCF), il servizio può specificare co
     </behaviors>  
     ```  
   
-5.  Quando si configura il client, specificare il comportamento impostando l'attributo `behaviorConfiguration` dell'elemento `<endpoint>`, come illustrato nel codice seguente. L'elemento endpoint è figlio di [ \<client >](../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento. Specificare inoltre il nome della configurazione dell'associazione impostando l'attributo `bindingConfiguration` sull'associazione per il client. Se si utilizza un file di configurazione generato, il nome dell'associazione viene generato automaticamente. In questo esempio il nome è `"tcpBindingWithCredential"`.  
+5. Quando si configura il client, specificare il comportamento impostando l'attributo `behaviorConfiguration` dell'elemento `<endpoint>`, come illustrato nel codice seguente. L'elemento endpoint è figlio di [ \<client >](../../../docs/framework/configure-apps/file-schema/wcf/client.md) elemento. Specificare inoltre il nome della configurazione dell'associazione impostando l'attributo `bindingConfiguration` sull'associazione per il client. Se si utilizza un file di configurazione generato, il nome dell'associazione viene generato automaticamente. In questo esempio il nome è `"tcpBindingWithCredential"`.  
   
     ```xml  
     <client>  

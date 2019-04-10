@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191991"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300866"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procedura dettagliata: Data binding in applicazioni ibride
 Associazione di un'origine dati a un controllo è essenziale per fornire agli utenti l'accesso ai dati sottostanti, se si usa [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa procedura dettagliata illustra come usare l'associazione dati in applicazioni ibride che includono entrambe [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlli.  
@@ -49,23 +49,23 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 #### <a name="to-create-and-set-up-the-project"></a>Per creare e impostare il progetto  
   
-1.  Creare un progetto di applicazione WPF denominato `WPFWithWFAndDatabinding`.  
+1. Creare un progetto di applicazione WPF denominato `WPFWithWFAndDatabinding`.  
   
-2.  In Esplora soluzioni aggiungere riferimenti agli assembly seguenti.  
+2. In Esplora soluzioni aggiungere riferimenti agli assembly seguenti.  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  Aprire MainWindow. XAML nel [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
+3. Aprire MainWindow. XAML nel [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  Nel <xref:System.Windows.Window> elemento, aggiungere il codice seguente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mapping degli spazi dei nomi.  
+4. Nel <xref:System.Windows.Window> elemento, aggiungere il codice seguente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mapping degli spazi dei nomi.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  Denominare il valore predefinito <xref:System.Windows.Controls.Grid> elemento `mainGrid` assegnando il <xref:System.Windows.FrameworkElement.Name%2A> proprietà.  
+5. Denominare il valore predefinito <xref:System.Windows.Controls.Grid> elemento `mainGrid` assegnando il <xref:System.Windows.FrameworkElement.Name%2A> proprietà.  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
@@ -120,44 +120,44 @@ Associazione di un'origine dati a un controllo è essenziale per fornire agli ut
   
 #### <a name="to-add-the-data-source"></a>Per aggiungere l'origine dati  
   
-1.  Dal **Data** dal menu **Aggiungi nuova origine dati**.  
+1. Dal **Data** dal menu **Aggiungi nuova origine dati**.  
   
-2.  Nel **configurazione guidata origine dati**, creare una connessione al database Northwind usando un set di dati. Per altre informazioni, vedere [Procedura: Connettersi ai dati in un Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
+2. Nel **configurazione guidata origine dati**, creare una connessione al database Northwind usando un set di dati. Per altre informazioni, vedere [Procedura: Connettersi ai dati in un Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
   
-3.  Quando viene richiesto per il **configurazione guidata origine dati**, salvare la stringa di connessione come `NorthwindConnectionString`.  
+3. Quando viene richiesto per il **configurazione guidata origine dati**, salvare la stringa di connessione come `NorthwindConnectionString`.  
   
-4.  Quando viene chiesto di scegliere gli oggetti di database, selezionare la `Customers` e `Orders` tabelle e il nome di set di dati generato `NorthwindDataSet`.  
+4. Quando viene chiesto di scegliere gli oggetti di database, selezionare la `Customers` e `Orders` tabelle e il nome di set di dati generato `NorthwindDataSet`.  
   
 ## <a name="binding-to-the-data-source"></a>Associazione all'origine dati  
  Il <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> componente fornisce un'interfaccia uniforme per l'origine dati dell'applicazione. L'associazione all'origine dati è implementata nel file code-behind.  
   
 #### <a name="to-bind-to-the-data-source"></a>Per associare l'origine dati  
   
-1.  Aprire il file code-behind, denominato MainWindow.xaml.vb o MainWindow.xaml.cs.  
+1. Aprire il file code-behind, denominato MainWindow.xaml.vb o MainWindow.xaml.cs.  
   
-2.  Copiare il codice seguente nel `MainWindow` definizione di classe.  
+2. Copiare il codice seguente nel `MainWindow` definizione di classe.  
   
      Questo codice dichiara il <xref:System.Windows.Forms.BindingSource> componente e le classi helper associate che si connettono al database.  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
-3.  Copiare il seguente codice nel costruttore.
+3. Copiare il seguente codice nel costruttore.
 
      Questo codice crea e inizializza il <xref:System.Windows.Forms.BindingSource> componente.
 
      [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4.  Aprire MainWindow.xaml.
+4. Aprire MainWindow.xaml.
 
-5.  Nella visualizzazione progettazione o XAML, selezionare il <xref:System.Windows.Window> elemento.
+5. Nella visualizzazione progettazione o XAML, selezionare il <xref:System.Windows.Window> elemento.
 
-6.  Nella finestra Proprietà scegliere il **eventi** scheda.
+6. Nella finestra Proprietà scegliere il **eventi** scheda.
 
-7.  Fare doppio clic il <xref:System.Windows.FrameworkElement.Loaded> evento.
+7. Fare doppio clic il <xref:System.Windows.FrameworkElement.Loaded> evento.
 
-8.  Copiare il codice seguente nel <xref:System.Windows.FrameworkElement.Loaded> gestore dell'evento.
+8. Copiare il codice seguente nel <xref:System.Windows.FrameworkElement.Loaded> gestore dell'evento.
 
      Questo codice assegna il <xref:System.Windows.Forms.BindingSource> componente come contesto dei dati e popola la `Customers` e `Orders` oggetti adattatore.
 

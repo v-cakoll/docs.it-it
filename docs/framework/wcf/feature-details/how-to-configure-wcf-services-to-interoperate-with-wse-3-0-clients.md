@@ -2,19 +2,19 @@
 title: 'Procedura: Configurare servizi WCF per interagire con client WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177294"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303895"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Procedura: Configurare servizi WCF per interagire con client WSE 3.0
 Servizi Windows Communication Foundation (WCF) sono compatibili a livello di transito con Web Services Enhancements 3.0 per i client Microsoft .NET (WSE) quando i servizi WCF sono configurati per usare la versione di agosto 2004 della specifica WS-Addressing.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>Per consentire a un servizio WCF di interagire con i client WSE 3.0  
   
-1.  Definire un'associazione personalizzata per il servizio WCF.  
+1. Definire un'associazione personalizzata per il servizio WCF.  
   
      Per specificare l'utilizzo della versione dell'agosto 2004 della specifica WS-Addressing per la codifica dei messaggi, è necessario creare un'associazione personalizzata.  
   
@@ -44,7 +44,7 @@ Servizi Windows Communication Foundation (WCF) sono compatibili a livello di tra
         > [!NOTE]
         >  Quando si utilizza SOAP 1.2, impostare l'attributo `messageVersion` su <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
-2.  Specificare l'utilizzo dell'associazione personalizzata da parte del servizio.  
+2. Specificare l'utilizzo dell'associazione personalizzata da parte del servizio.  
   
     1.  Impostare il `binding` attributo del [ \<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento `customBinding`.  
   

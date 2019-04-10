@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328335"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione (Windows Form)
 Se si usa moduli di Windows <xref:System.Windows.Forms.PictureBox> controllo in un form, è possibile impostare il <xref:System.Windows.Forms.PictureBox.SizeMode%2A> proprietà in modo da:  
@@ -33,7 +33,7 @@ Se si usa moduli di Windows <xref:System.Windows.Forms.PictureBox> controllo in 
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Per impostare la proprietà in fase di esecuzione  
   
-1.  Impostare <xref:System.Windows.Forms.PictureBox.SizeMode%2A> al <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (impostazione predefinita), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, o <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> significa che l'immagine viene posizionato nell'angolo superiore sinistro del controllo; Se l'immagine è superiore a quello del controllo, vengono ritagliati i bordi inferiore e destro. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> significa che l'immagine viene centrata all'interno del controllo; Se l'immagine è superiore a quello del controllo, vengono tagliati bordi esterni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> significa che le dimensioni del controllo vengano regolata per le dimensioni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> è l'opposto e significa che le dimensioni dell'immagine sono regolata per le dimensioni del controllo.  
+1. Impostare <xref:System.Windows.Forms.PictureBox.SizeMode%2A> al <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (impostazione predefinita), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, o <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> significa che l'immagine viene posizionato nell'angolo superiore sinistro del controllo; Se l'immagine è superiore a quello del controllo, vengono ritagliati i bordi inferiore e destro. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> significa che l'immagine viene centrata all'interno del controllo; Se l'immagine è superiore a quello del controllo, vengono tagliati bordi esterni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> significa che le dimensioni del controllo vengano regolata per le dimensioni dell'immagine. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> è l'opposto e significa che le dimensioni dell'immagine sono regolata per le dimensioni del controllo.  
   
      Nell'esempio seguente, il percorso impostato per la posizione dell'immagine è la cartella documenti. Questa operazione viene eseguita, perché si presume che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. L'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.PictureBox> controllo già aggiunto.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315348"
 ---
 # <a name="data-contract-surrogates"></a>Surrogati del contratto dati
 Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello del contratto dati. È progettata per la personalizzazione e la sostituzione dei tipi nelle situazioni in cui gli utenti desiderano modificare il modo in cui un tipo viene serializzato, deserializzato o proiettato nei metadati. Un surrogato può essere utilizzato, ad esempio, quando un contratto dati non è stato specificato per il tipo, i campi e le proprietà non sono contrassegnati con l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> o gli utenti desiderano creare dinamicamente variazioni dello schema.  
@@ -141,15 +141,15 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Per implementare serializzazione e deserializzazione  
   
-1.  Creare un'istanza di <xref:System.ServiceModel.ServiceHost> per il servizio. Per istruzioni dettagliate, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Creare un'istanza di <xref:System.ServiceModel.ServiceHost> per il servizio. Per istruzioni dettagliate, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-2.  Per ogni <xref:System.ServiceModel.Description.ServiceEndpoint> dell'host del servizio specificato, cercare il rispettivo elemento <xref:System.ServiceModel.Description.OperationDescription>.  
+2. Per ogni <xref:System.ServiceModel.Description.ServiceEndpoint> dell'host del servizio specificato, cercare il rispettivo elemento <xref:System.ServiceModel.Description.OperationDescription>.  
   
-3.  Esaminare i comportamenti dell'operazione per stabilire se viene trovata un'istanza di <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
+3. Esaminare i comportamenti dell'operazione per stabilire se viene trovata un'istanza di <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
   
-4.  Se viene trovato un elemento <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>, impostarne la proprietà <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> su un'istanza nuova del surrogato. Se non viene trovato alcun elemento <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>, creare un'istanza nuova e impostare il membro <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> del nuovo comportamento su una nuova istanza del surrogato.  
+4. Se viene trovato un elemento <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>, impostarne la proprietà <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> su un'istanza nuova del surrogato. Se non viene trovato alcun elemento <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>, creare un'istanza nuova e impostare il membro <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> del nuovo comportamento su una nuova istanza del surrogato.  
   
-5.  Infine, aggiungere questo nuovo comportamento ai comportamenti dell'operazione correnti, come nell'esempio seguente:  
+5. Infine, aggiungere questo nuovo comportamento ai comportamenti dell'operazione correnti, come nell'esempio seguente:  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
@@ -158,19 +158,19 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Per implementare un surrogato per l'importazione dei metadati  
   
-1.  Importare i metadati utilizzando la classe <xref:System.ServiceModel.Description.WsdlImporter>.  
+1. Importare i metadati utilizzando la classe <xref:System.ServiceModel.Description.WsdlImporter>.  
   
-2.  Utilizzare il metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> per verificare se è stato definito un elemento <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
+2. Utilizzare il metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> per verificare se è stato definito un elemento <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-3.  Se il metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> restituisce `false`, creare un nuovo elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> e impostarne la proprietà <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> su una nuova istanza della classe <xref:System.Runtime.Serialization.ImportOptions>. In caso contrario, utilizzare l'unità di importazione restituita dal parametro `out` del metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
+3. Se il metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> restituisce `false`, creare un nuovo elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> e impostarne la proprietà <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> su una nuova istanza della classe <xref:System.Runtime.Serialization.ImportOptions>. In caso contrario, utilizzare l'unità di importazione restituita dal parametro `out` del metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
   
-4.  Se per l'elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> non sono definite istanze della classe <xref:System.Runtime.Serialization.ImportOptions>, impostare la proprietà affinché sia una nuova istanza della classe <xref:System.Runtime.Serialization.ImportOptions>.  
+4. Se per l'elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> non sono definite istanze della classe <xref:System.Runtime.Serialization.ImportOptions>, impostare la proprietà affinché sia una nuova istanza della classe <xref:System.Runtime.Serialization.ImportOptions>.  
   
-5.  Impostare la proprietà <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> di <xref:System.Runtime.Serialization.ImportOptions> dell'elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> su una nuova istanza del surrogato.  
+5. Impostare la proprietà <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> di <xref:System.Runtime.Serialization.ImportOptions> dell'elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> su una nuova istanza del surrogato.  
   
-6.  Aggiungere l'elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> alla raccolta restituita dalla proprietà <xref:System.ServiceModel.Description.MetadataExporter.State%2A> di <xref:System.ServiceModel.Description.WsdlImporter> (ereditato dalla classe <xref:System.ServiceModel.Description.MetadataExporter>).  
+6. Aggiungere l'elemento <xref:System.Runtime.Serialization.XsdDataContractImporter> alla raccolta restituita dalla proprietà <xref:System.ServiceModel.Description.MetadataExporter.State%2A> di <xref:System.ServiceModel.Description.WsdlImporter> (ereditato dalla classe <xref:System.ServiceModel.Description.MetadataExporter>).  
   
-7.  Utilizzare il metodo <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> di <xref:System.ServiceModel.Description.WsdlImporter> per importare tutti i contratti dati all'interno dello schema. Durante l'ultimo passaggio, viene generato codice dagli schemi caricati chiamando il surrogato.  
+7. Utilizzare il metodo <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> di <xref:System.ServiceModel.Description.WsdlImporter> per importare tutti i contratti dati all'interno dello schema. Durante l'ultimo passaggio, viene generato codice dagli schemi caricati chiamando il surrogato.  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
@@ -179,15 +179,15 @@ Il contratto dati *surrogato* è una funzionalità avanzata basata sul modello d
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Per utilizzare un surrogato per l'esportazione dei metadati  
   
-1.  Creare un nuovo elemento <xref:System.ServiceModel.Description.WsdlExporter> oppure utilizzare il parametro `wsdlExporter` passato al metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
+1. Creare un nuovo elemento <xref:System.ServiceModel.Description.WsdlExporter> oppure utilizzare il parametro `wsdlExporter` passato al metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>.  
   
-2.  Utilizzare la funzione <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> per verificare se è stato definito un elemento <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+2. Utilizzare la funzione <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> per verificare se è stato definito un elemento <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
   
-3.  Se <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> restituisce `false`, creare un nuovo elemento <xref:System.Runtime.Serialization.XsdDataContractExporter> con gli schemi XML generati da <xref:System.ServiceModel.Description.WsdlExporter> e aggiungerlo alla raccolta restituita dalla proprietà <xref:System.ServiceModel.Description.MetadataExporter.State%2A> dell'elemento <xref:System.ServiceModel.Description.WsdlExporter>. In caso contrario, utilizzare l'unità di esportazione restituita dal parametro `out` del metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
+3. Se <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> restituisce `false`, creare un nuovo elemento <xref:System.Runtime.Serialization.XsdDataContractExporter> con gli schemi XML generati da <xref:System.ServiceModel.Description.WsdlExporter> e aggiungerlo alla raccolta restituita dalla proprietà <xref:System.ServiceModel.Description.MetadataExporter.State%2A> dell'elemento <xref:System.ServiceModel.Description.WsdlExporter>. In caso contrario, utilizzare l'unità di esportazione restituita dal parametro `out` del metodo <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>.  
   
-4.  Se per l'elemento <xref:System.Runtime.Serialization.XsdDataContractExporter> non sono definite istanze della classe <xref:System.Runtime.Serialization.ExportOptions>, impostare la proprietà <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> su una nuova istanza della classe <xref:System.Runtime.Serialization.ExportOptions>.  
+4. Se per l'elemento <xref:System.Runtime.Serialization.XsdDataContractExporter> non sono definite istanze della classe <xref:System.Runtime.Serialization.ExportOptions>, impostare la proprietà <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> su una nuova istanza della classe <xref:System.Runtime.Serialization.ExportOptions>.  
   
-5.  Impostare la proprietà <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> di <xref:System.Runtime.Serialization.ExportOptions> dell'elemento <xref:System.Runtime.Serialization.XsdDataContractExporter> su una nuova istanza del surrogato. I passaggi successivi per l'esportazione dei metadati non richiedono modifiche.  
+5. Impostare la proprietà <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> di <xref:System.Runtime.Serialization.ExportOptions> dell'elemento <xref:System.Runtime.Serialization.XsdDataContractExporter> su una nuova istanza del surrogato. I passaggi successivi per l'esportazione dei metadati non richiedono modifiche.  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320470"
 ---
 # <a name="adorners-overview"></a>Cenni preliminari sugli strumenti decorativi visuali
 Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.FrameworkElement>, usato per fornire indicazioni visive a un utente. Tra l'altro, è possibile usare gli strumenti decorativi per aggiungere handle funzionali agli elementi o fornire informazioni sullo stato relative a un controllo.  
@@ -74,9 +74,9 @@ Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.Framework
 ## <a name="adorning-a-single-uielement"></a>Decorazione di un singolo UIElement  
  Per associare uno strumento decorativo a un determinato <xref:System.Windows.UIElement>, seguire questa procedura:  
   
-1.  Chiamare il metodo statico <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per ottenere un <xref:System.Windows.Documents.AdornerLayer> dell'oggetto per il <xref:System.Windows.UIElement> da decorare. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> risale la struttura ad albero visuale, iniziando in corrispondenza di specificato <xref:System.Windows.UIElement>e restituisce il primo livello dello strumento decorativo trovato. (se non viene trovato alcun livello dello strumento decorativo, il metodo restituisce null).  
+1. Chiamare il metodo statico <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per ottenere un <xref:System.Windows.Documents.AdornerLayer> dell'oggetto per il <xref:System.Windows.UIElement> da decorare. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> risale la struttura ad albero visuale, iniziando in corrispondenza di specificato <xref:System.Windows.UIElement>e restituisce il primo livello dello strumento decorativo trovato. (se non viene trovato alcun livello dello strumento decorativo, il metodo restituisce null).  
   
-2.  Chiamare il <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodo a cui associare lo strumento decorativo visuale di destinazione <xref:System.Windows.UIElement>.  
+2. Chiamare il <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodo a cui associare lo strumento decorativo visuale di destinazione <xref:System.Windows.UIElement>.  
   
  Nell'esempio seguente viene associato un SimpleCircleAdorner (illustrato in precedenza) a un <xref:System.Windows.Controls.TextBox> denominate *myTextBox*.  
   
@@ -90,9 +90,9 @@ Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.Framework
 ## <a name="adorning-the-children-of-a-panel"></a>Decorazione degli elementi figlio di un elemento Panel  
  Per associare uno strumento decorativo agli elementi figlio di un <xref:System.Windows.Controls.Panel>, seguire questa procedura:  
   
-1.  Chiamare il `static` metodo <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per trovare un livello dello strumento decorativo per l'elemento cui figli rappresentino da decorare.  
+1. Chiamare il `static` metodo <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> per trovare un livello dello strumento decorativo per l'elemento cui figli rappresentino da decorare.  
   
-2.  Enumerare gli elementi figlio dell'elemento padre e chiamata di <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodo per associare uno strumento decorativo a ogni elemento figlio.  
+2. Enumerare gli elementi figlio dell'elemento padre e chiamata di <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodo per associare uno strumento decorativo a ogni elemento figlio.  
   
  Nell'esempio seguente viene associato un SimpleCircleAdorner (illustrato in precedenza) per gli elementi figlio di un <xref:System.Windows.Controls.StackPanel> denominate *myStackPanel*.  
   

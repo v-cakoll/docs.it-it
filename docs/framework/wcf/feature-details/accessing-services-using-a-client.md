@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314880"
 ---
 # <a name="accessing-services-using-a-client"></a>Accesso ai servizi tramite client
 Le applicazioni client devono creare, configurare e usare oggetti client o canale WCF per comunicare con i servizi. Il [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) argomento fornisce una panoramica degli oggetti e passaggi coinvolti nella creazione di oggetti client e il canale di base e il relativo utilizzo.  
@@ -83,11 +83,11 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
   
  Se si usa l'approccio esplicito, l'applicazione deve eseguire i passaggi seguenti nell'ordine rappresentato:  
   
-1.  Chiamare <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (o una versione asincrona).  
+1. Chiamare <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> o <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (o una versione asincrona).  
   
-2.  Quando gli inizializzatori restituiscono un valore, chiamare il metodo <xref:System.ServiceModel.ICommunicationObject.Open%2A> sull'oggetto <xref:System.ServiceModel.IClientChannel> o sull'oggetto <xref:System.ServiceModel.IClientChannel> restituito dalla proprietà <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>.  
+2. Quando gli inizializzatori restituiscono un valore, chiamare il metodo <xref:System.ServiceModel.ICommunicationObject.Open%2A> sull'oggetto <xref:System.ServiceModel.IClientChannel> o sull'oggetto <xref:System.ServiceModel.IClientChannel> restituito dalla proprietà <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>.  
   
-3.  Chiamare le operazioni.  
+3. Chiamare le operazioni.  
   
  È consigliabile che le applicazioni di alta qualità controllino il processo dell'interfaccia utente adottando l'approccio esplicito.  
   

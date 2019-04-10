@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: c68327bb0fb747cdf38d61e944401db9f3af22a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b0773b4c41b77fe43a5b7fba994778ae18c16c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325007"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Procedura: Personalizzare celle e colonne nel controllo DataGridView di Windows Forms estendendone il comportamento e l'aspetto
 Il controllo <xref:System.Windows.Forms.DataGridView> offre diversi metodi per personalizzare l'aspetto e il comportamento mediante proprietà, eventi e classi correlate. In alcune situazioni è possibile che i requisiti relativi alle celle non possano essere soddisfatti mediante le funzioni fornite. In questi casi per estendere le funzionalità è possibile creare una propria classe <xref:System.Windows.Forms.DataGridViewCell> personalizzata.  
@@ -35,24 +35,24 @@ Il controllo <xref:System.Windows.Forms.DataGridView> offre diversi metodi per p
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>Per personalizzare celle e colonne nel controllo DataGridView  
   
-1.  Derivare una nuova classe di cella, denominata `DataGridViewRolloverCell`, dal tipo <xref:System.Windows.Forms.DataGridViewTextBoxCell>.  
+1. Derivare una nuova classe di cella, denominata `DataGridViewRolloverCell`, dal tipo <xref:System.Windows.Forms.DataGridViewTextBoxCell>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#201)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#201)]  
     [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#202)]
     [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#202)]  
   
-2.  Eseguire l'override del metodo <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> nella classe `DataGridViewRolloverCell` . Eseguire l'override chiamando prima l'implementazione della classe di base, che gestisce la funzionalità della casella di testo inserita, quindi usando il metodo <xref:System.Windows.Forms.Control.PointToClient%2A> del controllo per trasformare la posizione del cursore (coordinate dello schermo) nelle coordinate dell'area client <xref:System.Windows.Forms.DataGridView>. Se le coordinate del mouse rientrano nei contorni della cella, disegnare il rettangolo interno.  
+2. Eseguire l'override del metodo <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> nella classe `DataGridViewRolloverCell` . Eseguire l'override chiamando prima l'implementazione della classe di base, che gestisce la funzionalità della casella di testo inserita, quindi usando il metodo <xref:System.Windows.Forms.Control.PointToClient%2A> del controllo per trasformare la posizione del cursore (coordinate dello schermo) nelle coordinate dell'area client <xref:System.Windows.Forms.DataGridView>. Se le coordinate del mouse rientrano nei contorni della cella, disegnare il rettangolo interno.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
   
-3.  Eseguire l'override dei metodi <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> e <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> nella classe `DataGridViewRolloverCell` per forzare le celle a ridisegnarsi all'ingresso o all'uscita del mouse.  
+3. Eseguire l'override dei metodi <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> e <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> nella classe `DataGridViewRolloverCell` per forzare le celle a ridisegnarsi all'ingresso o all'uscita del mouse.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#220)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#220)]  
   
-4.  Derivare una nuova classe, denominata `DataGridViewRolloverCellColumn`, dal tipo <xref:System.Windows.Forms.DataGridViewColumn>. Nel costruttore assegnare un nuovo oggetto `DataGridViewRolloverCell` alla relativa proprietà <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A>.  
+4. Derivare una nuova classe, denominata `DataGridViewRolloverCellColumn`, dal tipo <xref:System.Windows.Forms.DataGridViewColumn>. Nel costruttore assegnare un nuovo oggetto `DataGridViewRolloverCell` alla relativa proprietà <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  

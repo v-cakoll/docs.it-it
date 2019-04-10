@@ -2,12 +2,12 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 63363df6d5af2f9f160b0cec5d209c2fc2cc1e10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114309"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307210"
 ---
 # <a name="pooling"></a>Pooling
 In questo esempio viene illustrato come estendere Windows Communication Foundation (WCF) per supportare il pooling degli oggetti. L'esempio illustra come creare un attributo sintatticamente e semanticamente simile alla funzionalità dell'attributo `ObjectPoolingAttribute` di Enterprise Services. Il pool degli oggetti può fornire una spinta notevole alle prestazioni di un'applicazione. Tuttavia, può avere l'effetto contrario se non utilizzato correttamente. Il pool degli oggetti consente di ridurre il sovraccarico dovuto alla creazione continua di oggetti frequentemente utilizzati che richiedono un'inizializzazione estesa. Tuttavia, se una chiamata a un metodo su un oggetto del pool richiede una quantità considerevole di tempo, il pool degli oggetti mette in coda richieste aggiuntive appena viene raggiunta la dimensione del pool massima. Pertanto può non riuscire a soddisfare richieste di creazione di oggetti generando un'eccezione di timeout.  
@@ -237,11 +237,11 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Se si usa Svcutil.exe per rigenerare la configurazione di questo esempio, assicurarsi di modificare il nome dell'endpoint nella configurazione client in modo che corrisponda al codice client.  

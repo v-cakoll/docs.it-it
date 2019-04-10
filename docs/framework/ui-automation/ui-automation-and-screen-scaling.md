@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194064"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332689"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automazione interfaccia utente e ridimensionamento dello schermo
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194064"
   
  La soluzione è costituita da due parti.  
   
-1.  Innanzitutto, occorre fare in modo che l'applicazione client usi valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]. A tale scopo, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` all'avvio. In codice gestito, la dichiarazione seguente rende disponibile questa funzione.  
+1. Innanzitutto, occorre fare in modo che l'applicazione client usi valori [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]. A tale scopo, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` all'avvio. In codice gestito, la dichiarazione seguente rende disponibile questa funzione.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Questa funzione rende compatibile con dpi, vale a dire che tutte le finestre appartenenti al processo verranno ridimensionate l'intero processo. Nel [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), ad esempio, le quattro finestre che costituiscono il rettangolo di evidenziazione si trovano in corrispondenza delle coordinate fisiche ottenute da automazione interfaccia utente, non delle coordinate logiche. Se il codice di esempio non sono compatibili con dpi, l'evidenziazione verrebbe disegnata in corrispondenza delle coordinate logiche sul desktop, con la conseguenza di un posizionamento errato in un ambiente non a 96 dpi.  
   
-2.  Per ottenere coordinate del cursore, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. Nell'esempio riportato di seguito viene illustrato come dichiarare e usare questa funzione.  
+2. Per ottenere coordinate del cursore, chiamare la funzione [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. Nell'esempio riportato di seguito viene illustrato come dichiarare e usare questa funzione.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  

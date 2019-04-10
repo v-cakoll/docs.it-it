@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331650"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Il nome di variabile di intervallo può essere dedotto solo da un nome semplice o completo senza argomenti
 Un elemento di programmazione che accetta uno o più argomenti è incluso in una query LINQ. Il compilatore è in grado di dedurre una variabile di intervallo da tale elemento di programmazione.  
@@ -21,7 +21,7 @@ Un elemento di programmazione che accetta uno o più argomenti è incluso in una
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Specificare un nome di variabile esplicito per l'elemento di programmazione, come illustrato nel codice seguente:  
+1. Specificare un nome di variabile esplicito per l'elemento di programmazione, come illustrato nel codice seguente:  
   
 ```  
 Dim query = From var1 In collection1   

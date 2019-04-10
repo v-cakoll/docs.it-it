@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194812"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320132"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Panoramica delle applicazioni browser XAML di WPF
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194812"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Debug di applicazioni XBAP che utilizzano HostScript  
  Se l'applicazione XBAP utilizza il <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> oggetto per comunicare con la finestra HTML, sono disponibili due impostazioni che è necessario specificare per l'esecuzione e il debug dell'applicazione in Visual Studio. L'applicazione deve disporre dell'accesso al sito di origine ed è necessario avviare l'applicazione con la pagina HTML che contiene l'applicazione XBAP. Nei passaggi seguenti viene descritto come controllare queste due impostazioni:  
   
-1.  In Visual Studio aprire le proprietà del progetto.  
+1. In Visual Studio aprire le proprietà del progetto.  
   
-2.  Nella scheda **Sicurezza** fare clic su **Avanzate**.  
+2. Nella scheda **Sicurezza** fare clic su **Avanzate**.  
   
      Verrà visualizzata la finestra di dialogo Impostazioni di sicurezza avanzate.  
   
-3.  Verificare che la casella di controllo **Concedi all'applicazione accesso al proprio sito di origine** sia selezionata, quindi fare clic su **OK**.  
+3. Verificare che la casella di controllo **Concedi all'applicazione accesso al proprio sito di origine** sia selezionata, quindi fare clic su **OK**.  
   
-4.  Nella scheda **Debug** selezionare l'opzione **Avvia il browser con URL** e specificare l'URL della pagina HTML che contiene l'applicazione XBAP.  
+4. Nella scheda **Debug** selezionare l'opzione **Avvia il browser con URL** e specificare l'URL della pagina HTML che contiene l'applicazione XBAP.  
   
-5.  In Internet Explorer fare clic su **Strumenti**, quindi selezionare **Opzioni Internet**.  
+5. In Internet Explorer fare clic su **Strumenti**, quindi selezionare **Opzioni Internet**.  
   
      Viene visualizzata la finestra di dialogo Opzioni Internet.  
   
-6.  Fare clic sulla scheda **Avanzate**.  
+6. Fare clic sulla scheda **Avanzate**.  
   
-7.  Nell'elenco **Impostazioni** in **Sicurezza** selezionare la casella di controllo **Consenti l'esecuzione di contenuto attivo in file in Risorse del computer**.  
+7. Nell'elenco **Impostazioni** in **Sicurezza** selezionare la casella di controllo **Consenti l'esecuzione di contenuto attivo in file in Risorse del computer**.  
   
-8.  Fare clic su **OK**.  
+8. Fare clic su **OK**.  
   
      Le modifiche avranno effetto dopo il riavvio di Internet Explorer.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194812"
 ### <a name="creating-a-full-trust-xbap"></a>Creazione di un'applicazione XBAP con attendibilità totale  
  Se per l'applicazione XBAP è richiesta l'attendibilità totale, è possibile modificare il progetto per abilitare questa autorizzazione. Nei passaggi seguenti viene descritto come abilitare l'attendibilità totale:  
   
-1.  In Visual Studio aprire le proprietà del progetto.  
+1. In Visual Studio aprire le proprietà del progetto.  
   
-2.  Nella scheda **Sicurezza** selezionare l'opzione **È un'applicazione completamente attendibile**.  
+2. Nella scheda **Sicurezza** selezionare l'opzione **È un'applicazione completamente attendibile**.  
   
  Questa impostazione determina le modifiche seguenti:  
   

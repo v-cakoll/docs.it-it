@@ -2,12 +2,12 @@
 title: 'Procedura: Specificare campi di archiviazione privati'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: e0928b2f2e817c8cc936f7aa1190229842a121a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302452"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>Procedura: Specificare campi di archiviazione privati
 Usare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> proprietà di <xref:System.Data.Linq.Mapping.DataAttribute> attributo per definire il nome di un campo di archiviazione sottostante.  
@@ -16,9 +16,9 @@ Usare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xr
   
 ### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>Per specificare il nome di un campo di archiviazione sottostante  
   
-1.  Aggiungere la proprietà <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> all'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
+1. Aggiungere la proprietà <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> all'attributo <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
-2.  Assegnare il nome del campo come valore della proprietà <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
+2. Assegnare il nome del campo come valore della proprietà <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 

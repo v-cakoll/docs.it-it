@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115271"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294665"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Raggruppamento di messaggi in coda in una sessione
 Windows Communication Foundation (WCF) fornisce una sessione che consente di raggruppare un set di messaggi correlati affinché vengano elaborati da un'unica applicazione ricevente. I messaggi appartenenti a una sessione devono appartenere alla stessa transazione. Poiché tutti i messaggi appartengono alla stessa transazione, se l'elaborazione di un messaggio non riesce viene eseguito il rollback dell'intera sessione. Le sessioni presentano comportamenti simili relativamente alle code di messaggi non recapitabili e alle code di messaggi non elaborabili. La proprietà di durata (TTL, Time To Live) impostata in un'associazione in coda configurata per una determinata sessione viene applicata all'intera sessione. Se allo scadere del TTL è stata inviata solo una parte dei messaggi, l'intera sessione viene inserita nella coda di messaggi non recapitabili. Analogamente, quando risulta impossibile inviare a un'applicazione alcuni messaggi di una sessione contenuti nella coda dell'applicazione, l'intera sessione viene inserita nella coda di messaggi non elaborabili (se disponibile).  
@@ -24,49 +24,49 @@ Windows Communication Foundation (WCF) fornisce una sessione che consente di rag
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Per configurare l'utilizzo di sessioni in un contratto di servizio  
   
-1.  Definire un contratto di servizio che richieda una sessione. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationContractAttribute> e specificare:  
+1. Definire un contratto di servizio che richieda una sessione. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationContractAttribute> e specificare:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Poiché questi metodi non restituiscono alcun dato, contrassegnare le operazioni del contratto come unidirezionali. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationContractAttribute> e specificare:  
+2. Poiché questi metodi non restituiscono alcun dato, contrassegnare le operazioni del contratto come unidirezionali. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationContractAttribute> e specificare:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  Implementare il contratto di servizio e specificare la modalità `InstanceContextMode``PerSession`. Ciò comporta la creazione di un'unica istanza del servizio per ogni sessione.  
+3. Implementare il contratto di servizio e specificare la modalità `InstanceContextMode``PerSession`. Ciò comporta la creazione di un'unica istanza del servizio per ogni sessione.  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Per ogni operazione del servizio è necessario specificare una transazione. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationBehaviorAttribute>. L'operazione che completa la transazione deve inoltre impostare la proprietà `TransactionAutoComplete` su `true`.  
+4. Per ogni operazione del servizio è necessario specificare una transazione. A tale scopo, utilizzare l'attributo <xref:System.ServiceModel.OperationBehaviorAttribute>. L'operazione che completa la transazione deve inoltre impostare la proprietà `TransactionAutoComplete` su `true`.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Configurare un endpoint che utilizza l'associazione `NetMsmqBinding` fornita dal sistema.  
+5. Configurare un endpoint che utilizza l'associazione `NetMsmqBinding` fornita dal sistema.  
   
-6.  Creare una coda transazionale utilizzando lo spazio dei nomi <xref:System.Messaging>. Tale coda può anche essere creata tramite il sistema di accodamento dei messaggi (MSMQ) o la console MMC. In tal caso, creare una coda transazionale.  
+6. Creare una coda transazionale utilizzando lo spazio dei nomi <xref:System.Messaging>. Tale coda può anche essere creata tramite il sistema di accodamento dei messaggi (MSMQ) o la console MMC. In tal caso, creare una coda transazionale.  
   
-7.  Creare un host del servizio mediante la classe <xref:System.ServiceModel.ServiceHost>.  
+7. Creare un host del servizio mediante la classe <xref:System.ServiceModel.ServiceHost>.  
   
-8.  Aprire l'host del servizio per rendere disponibile il servizio.  
+8. Aprire l'host del servizio per rendere disponibile il servizio.  
   
 9. Chiudere l'host del servizio.  
   
 #### <a name="to-set-up-a-client"></a>Per configurare un client  
   
-1.  Creare un ambito di transazione per scrivere nella coda transazionale.  
+1. Creare un ambito di transazione per scrivere nella coda transazionale.  
   
-2.  Creare il client WCF usando il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dello strumento.  
+2. Creare il client WCF usando il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dello strumento.  
   
-3.  Inviare l'ordine.  
+3. Inviare l'ordine.  
   
-4.  Chiudere il client WCF.  
+4. Chiudere il client WCF.  
   
 ## <a name="example"></a>Esempio  
   

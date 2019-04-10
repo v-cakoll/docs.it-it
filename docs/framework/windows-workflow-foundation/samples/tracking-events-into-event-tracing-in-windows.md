@@ -2,12 +2,12 @@
 title: Eventi di rilevamento in Traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166530"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300645"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventi di rilevamento in Traccia eventi per Windows
 In questo esempio viene illustrato come abilitare la traccia in un servizio del flusso di lavoro Windows Workflow Foundation (WF) e creare gli eventi di rilevamento in Event Tracing for Windows (ETW). Per creare record di rilevamento del flusso di lavoro in ETW, nell'esempio viene usato il partecipante del rilevamento ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -39,33 +39,33 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio del 
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1.  Con Visual Studio 2010, aprire il file della soluzione Etwtrackingparticipantsample.
+1. Con Visual Studio 2010, aprire il file della soluzione Etwtrackingparticipantsample.
 
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
-3.  Per eseguire la soluzione, premere F5.
+3. Per eseguire la soluzione, premere F5.
 
      Per impostazione predefinita, il servizio è in ascolto sulla porta 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4.  Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], aprire il client di WCF.
+4. Usando [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], aprire il client di WCF.
 
      Il client di prova WCF (WcfTestClient.exe) si trova nel \<cartella di installazione di Visual Studio 2010 > cartella \Common7\IDE\.
 
      La cartella di installazione di Visual Studio 2010 predefinita è c:\Programmi\Microsoft Visual Studio 10.0.
 
-5.  Nel client di prova WCF selezionare **aggiunta di un servizio** dalle **File** menu.
+5. Nel client di prova WCF selezionare **aggiunta di un servizio** dalle **File** menu.
 
      Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è `http://localhost:53797/SampleWorkflowService.xamlx`.
 
-6.  Aprire l'applicazione Visualizzatore eventi.
+6. Aprire l'applicazione Visualizzatore eventi.
 
      Prima di richiamare il servizio, avviare Visualizzatore eventi dal **avviare** dal menu **eseguito** e digitare `eventvwr.exe`. Assicurarsi che il registro eventi sia in ascolto di eventi di rilevamento creati dal servizio flusso di lavoro.
 
-7.  Nella visualizzazione albero del Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, e **Microsoft**. Fare doppio clic su **Microsoft** e selezionare **View** e quindi **Visualizza registri analitici e Debug** per abilitare l'analisi e i registri di debug
+7. Nella visualizzazione albero del Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, e **Microsoft**. Fare doppio clic su **Microsoft** e selezionare **View** e quindi **Visualizza registri analitici e Debug** per abilitare l'analisi e i registri di debug
 
      Verificare che il **Visualizza registri analitici e Debug** opzione è selezionata.
 
-8.  Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro** per abilitare il **analitico** log.
+8. Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**,  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Attiva registro** per abilitare il **analitico** log.
 
 9. Eseguire il test del servizio tramite il client di prova WCF facendo doppio clic su `GetData`.
 
@@ -123,13 +123,13 @@ In questo esempio viene illustrato come abilitare la traccia in un servizio del 
 
 #### <a name="to-clean-up-optional"></a>Per eseguire la pulizia (facoltativo)
 
-1.  Aprire Visualizzatore eventi.
+1. Aprire Visualizzatore eventi.
 
-2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.
+2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.
 
-3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.
+3. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.
 
-4.  Scegliere il **cancellare** opzione per cancellare gli eventi.
+4. Scegliere il **cancellare** opzione per cancellare gli eventi.
 
 ## <a name="known-issue"></a>Problema noto
 

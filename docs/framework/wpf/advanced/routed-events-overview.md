@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330454"
 ---
 # <a name="routed-events-overview"></a>Cenni preliminari sugli eventi indirizzati
 Questo argomento descrive il concetto di eventi indirizzati in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. L'argomento definisce la terminologia correlata agli eventi indirizzati, descrive in che modo questi eventi sono indirizzati lungo un albero di elementi, riepiloga le modalità di gestione degli eventi indirizzati e spiega come creare eventi indirizzati personalizzati.
@@ -204,17 +204,17 @@ Bubbling e tunneling degli eventi di input
   
  L'ordine di elaborazione degli eventi è il seguente:  
   
-1.  `PreviewMouseDown` (tunneling) sull'elemento radice.  
+1. `PreviewMouseDown` (tunneling) sull'elemento radice.  
   
-2.  `PreviewMouseDown` (tunneling) sull'elemento intermedio 1 #.  
+2. `PreviewMouseDown` (tunneling) sull'elemento intermedio 1 #.  
   
-3.  `PreviewMouseDown` (tunneling) sull'elemento di origine #2.  
+3. `PreviewMouseDown` (tunneling) sull'elemento di origine #2.  
   
-4.  `MouseDown` (bubbling) sull'elemento di origine #2.  
+4. `MouseDown` (bubbling) sull'elemento di origine #2.  
   
-5.  `MouseDown` (bubbling) sull'elemento intermedio 1 #.  
+5. `MouseDown` (bubbling) sull'elemento intermedio 1 #.  
   
-6.  `MouseDown` (bubbling) sull'elemento radice.  
+6. `MouseDown` (bubbling) sull'elemento radice.  
   
  Un delegato di un gestore di eventi indirizzati fornisce riferimenti a due oggetti: l'oggetto che ha generato l'evento e quello su cui è stato richiamato il gestore. L'oggetto in cui è stato richiamato il gestore è quello indicato dal parametro `sender`. L'oggetto in cui prima è stato generato l'evento viene segnalato dal <xref:System.Windows.RoutedEventArgs.Source%2A> proprietà nei dati dell'evento. Un evento indirizzato può comunque essere generato e gestito dallo stesso oggetto, nel qual caso `sender` e <xref:System.Windows.RoutedEventArgs.Source%2A> sono identici (questo è il caso con i passaggi 3 e 4 nell'evento l'elaborazione di esempio di elenco).  
   

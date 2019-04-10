@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314412"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperatività di WPF e Win32
 Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, se si ha una grande quantità di codice [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], può essere più efficace riutilizzare tale codice.  
@@ -58,15 +58,15 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>Hosting di contenuto WPF in una finestra Microsoft Win32  
  La chiave per l'hosting di un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] su una [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] finestra è il <xref:System.Windows.Interop.HwndSource> classe. Questa classe esegue il wrapping del contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in una finestra [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], consentendo di incorporare il contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] come finestra figlio. Nell'approccio che segue, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono combinati in un'unica applicazione.  
   
-1.  Implementare il contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (elemento radice del contenuto) come classe gestita. In genere, la classe eredita da una delle classi che possono contenere più elementi figlio e/o utilizzata come un elemento radice, ad esempio <xref:System.Windows.Controls.DockPanel> o <xref:System.Windows.Controls.Page>. Nei passaggi successivi questa classe è detta classe contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e le istanze della classe sono dette oggetti contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+1. Implementare il contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (elemento radice del contenuto) come classe gestita. In genere, la classe eredita da una delle classi che possono contenere più elementi figlio e/o utilizzata come un elemento radice, ad esempio <xref:System.Windows.Controls.DockPanel> o <xref:System.Windows.Controls.Page>. Nei passaggi successivi questa classe è detta classe contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e le istanze della classe sono dette oggetti contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-2.  Implementare un'applicazione [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] con [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Se si parte da un'applicazione [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] non gestita esistente, in genere è possibile consentire la chiamata al codice gestito modificando le impostazioni del progetto in modo da includere il flag del compilatore `/clr` (l'ambito completo degli elementi necessari per supportare la compilazione `/clr` non viene illustrato in questo argomento).  
+2. Implementare un'applicazione [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] con [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Se si parte da un'applicazione [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] non gestita esistente, in genere è possibile consentire la chiamata al codice gestito modificando le impostazioni del progetto in modo da includere il flag del compilatore `/clr` (l'ambito completo degli elementi necessari per supportare la compilazione `/clr` non viene illustrato in questo argomento).  
   
-3.  Impostare il modello di threading su apartment a thread singolo (STA, Single Threaded Apartment). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Usa questo modello di threading.  
+3. Impostare il modello di threading su apartment a thread singolo (STA, Single Threaded Apartment). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Usa questo modello di threading.  
   
-4.  Gestire la notifica WM_CREATE nella procedura di finestra.  
+4. Gestire la notifica WM_CREATE nella procedura di finestra.  
   
-5.  All'interno del gestore (o di una funzione chiamata dal gestore) eseguire queste operazioni:  
+5. All'interno del gestore (o di una funzione chiamata dal gestore) eseguire queste operazioni:  
   
     1.  Creare una nuova <xref:System.Windows.Interop.HwndSource> oggetto HWND della finestra padre come relativo `parent` parametro.  
   
@@ -76,11 +76,11 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
   
     4.  Il <xref:System.Windows.Interop.HwndSource> oggetto <xref:System.Windows.Interop.HwndSource.Handle%2A> proprietà contiene l'handle di finestra (HWND). Per ottenere un HWND utilizzabile nella parte non gestita dell'applicazione, eseguire il cast di `Handle.ToPointer()` a un HWND.  
   
-6.  Implementare una classe gestita che include un campo statico contenente un riferimento all'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa classe consente di ottenere un riferimento al [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oggetto contenuto dalle [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] codice, ma più importante, impedisce il <xref:System.Windows.Interop.HwndSource> sottoporre inavvertitamente sottoposto a garbage collection.  
+6. Implementare una classe gestita che include un campo statico contenente un riferimento all'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Questa classe consente di ottenere un riferimento al [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oggetto contenuto dalle [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] codice, ma più importante, impedisce il <xref:System.Windows.Interop.HwndSource> sottoporre inavvertitamente sottoposto a garbage collection.  
   
-7.  Ricevere notifiche dall'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associando un gestore a uno o più eventi dell'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+7. Ricevere notifiche dall'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associando un gestore a uno o più eventi dell'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-8.  Comunicare con l'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando il riferimento archiviato nel campo statico per impostare proprietà, chiamare metodi e così via.  
+8. Comunicare con l'oggetto contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando il riferimento archiviato nel campo statico per impostare proprietà, chiamare metodi e così via.  
   
 > [!NOTE]
 >  Tutte le attività di definizione della classe contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], o alcune di esse, per il primo passaggio in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] possono essere eseguite usando la classe parziale predefinita della classe contenuto, se si genera un assembly separato e quindi vi si fa riferimento. Anche se si include in genere un <xref:System.Windows.Application> oggetti come parte della compilazione il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in un assembly, non comporta l'utilizzo che <xref:System.Windows.Application> come parte dell'interoperatività, è sufficiente utilizzare uno o più classi radice per [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] file definiti per l'applicazione e fare riferimento alle relative classi parziali. La parte restante della procedura è essenzialmente simile a quella appena descritta.  
@@ -91,17 +91,17 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>Hosting di una finestra Microsoft Win32 in WPF  
  La chiave per l'hosting di un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] finestra all'interno di altri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è contenuto il <xref:System.Windows.Interop.HwndHost> classe. Questa classe esegue il wrapping della finestra in un elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che può essere aggiunto a un albero degli elementi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Interop.HwndHost> supporta inoltre [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] che consentono di eseguire attività come l'elaborazione dei messaggi per la finestra ospitata. La procedura di base è la seguente:  
   
-1.  Creare un albero degli elementi per un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (tramite codice o markup). Trovare un punto adatto e consentito nell'albero degli elementi in cui il <xref:System.Windows.Interop.HwndHost> implementazione può essere aggiunto come elemento figlio. Nei restanti passaggi questo elemento viene chiamato elemento di riserva.  
+1. Creare un albero degli elementi per un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (tramite codice o markup). Trovare un punto adatto e consentito nell'albero degli elementi in cui il <xref:System.Windows.Interop.HwndHost> implementazione può essere aggiunto come elemento figlio. Nei restanti passaggi questo elemento viene chiamato elemento di riserva.  
   
-2.  Derivativo <xref:System.Windows.Interop.HwndHost> per creare un oggetto che contiene il [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] contenuto.  
+2. Derivativo <xref:System.Windows.Interop.HwndHost> per creare un oggetto che contiene il [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] contenuto.  
   
-3.  Nella classe host, eseguire l'override di <xref:System.Windows.Interop.HwndHost> metodo <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Restituire l'oggetto HWND della finestra ospitata. Può essere necessario eseguire il wrapping dei controlli effettivi come finestra figlio della finestra restituita. Il wrapping dei controlli in una finestra host offre un modo semplice per consentire al contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di ricevere notifiche dai controlli. Questa tecnica aiuta a correggere alcuni problemi di [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] relativi alla gestione dei messaggi in corrispondenza del limite del controllo ospitato.  
+3. Nella classe host, eseguire l'override di <xref:System.Windows.Interop.HwndHost> metodo <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Restituire l'oggetto HWND della finestra ospitata. Può essere necessario eseguire il wrapping dei controlli effettivi come finestra figlio della finestra restituita. Il wrapping dei controlli in una finestra host offre un modo semplice per consentire al contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di ricevere notifiche dai controlli. Questa tecnica aiuta a correggere alcuni problemi di [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] relativi alla gestione dei messaggi in corrispondenza del limite del controllo ospitato.  
   
-4.  Eseguire l'override di <xref:System.Windows.Interop.HwndHost> metodi <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A>. Lo scopo è quello di eseguire la pulizia e rimuovere i riferimenti al contenuto ospitato, in particolare se sono stati creati riferimenti a oggetti non gestiti.  
+4. Eseguire l'override di <xref:System.Windows.Interop.HwndHost> metodi <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A>. Lo scopo è quello di eseguire la pulizia e rimuovere i riferimenti al contenuto ospitato, in particolare se sono stati creati riferimenti a oggetti non gestiti.  
   
-5.  Nel file code-behind creare un'istanza della classe di hosting del controllo e impostarla come figlio dell'elemento di riserva. In genere si utilizzerebbe un gestore eventi, ad esempio <xref:System.Windows.FrameworkElement.Loaded>, oppure utilizzare il costruttore di classe parziale. È però anche possibile aggiungere il contenuto di interoperatività tramite un comportamento di runtime.  
+5. Nel file code-behind creare un'istanza della classe di hosting del controllo e impostarla come figlio dell'elemento di riserva. In genere si utilizzerebbe un gestore eventi, ad esempio <xref:System.Windows.FrameworkElement.Loaded>, oppure utilizzare il costruttore di classe parziale. È però anche possibile aggiungere il contenuto di interoperatività tramite un comportamento di runtime.  
   
-6.  Elaborare i messaggi della finestra selezionati, ad esempio le notifiche dei controlli. Ci sono due approcci. Entrambi offrono un accesso identico al flusso di messaggi, quindi la scelta dipende per lo più dalle esigenze di programmazione.  
+6. Elaborare i messaggi della finestra selezionati, ad esempio le notifiche dei controlli. Ci sono due approcci. Entrambi offrono un accesso identico al flusso di messaggi, quindi la scelta dipende per lo più dalle esigenze di programmazione.  
   
     -   Messaggio di implementare l'elaborazione di tutti i messaggi (non solo i messaggi di chiusura) nell'override della <xref:System.Windows.Interop.HwndHost> metodo <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
@@ -109,7 +109,7 @@ Questo argomento fornisce una panoramica dell'interoperatività tra codice [!INC
   
     -   Non è possibile elaborare i messaggi di finestre che sono esterne al processo utilizzando <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
-7.  Comunicare con la finestra ospitata usando platform invoke per chiamare la funzione `SendMessage` non gestita.  
+7. Comunicare con la finestra ospitata usando platform invoke per chiamare la funzione `SendMessage` non gestita.  
   
  Questi passaggi consentono di creare un'applicazione che funziona con l'input del mouse. È possibile aggiungere il supporto della tabulazione per la finestra ospitata implementando il <xref:System.Windows.Interop.IKeyboardInputSink> interfaccia.  
   

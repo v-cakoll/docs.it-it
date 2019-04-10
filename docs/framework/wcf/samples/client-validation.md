@@ -2,12 +2,12 @@
 title: Convalida client
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 637b6bd26407feb3213503310396a20bf1c8bdcd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9659c262377af76294c52d1be97146923bc91b71
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315127"
 ---
 # <a name="client-validation"></a>Convalida client
 I servizi pubblicano spesso metadati per consentire la generazione e configurazione automatica di tipi di proxy client. Quando il servizio non è considerato attendibile, le applicazioni client devono convalidare che i metadati siano conformi ai criteri dell'applicazione client riguardanti la sicurezza, le transazioni, il tipo di contratto di servizio e così via. Nell'esempio seguente viene dimostrato come scrivere un comportamento dell'endpoint client che convalida l'endpoint del servizio per garantire che quest'ultimo possa essere usato senza rischi.  
@@ -18,37 +18,37 @@ I servizi pubblicano spesso metadati per consentire la generazione e configurazi
   
 ### <a name="to-build-the-sample"></a>Per compilare l'esempio  
   
-1.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
   
-1.  Aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore ed eseguire Setup. bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
+1. Aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore ed eseguire Setup. bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
   
-2.  Eseguire l'applicazione di servizio da \service\bin\Debug.  
+2. Eseguire l'applicazione di servizio da \service\bin\Debug.  
   
-3.  Eseguire l'applicazione client da \client\bin\Debug. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+3. Eseguire l'applicazione client da \client\bin\Debug. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-5.  Rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
+5. Rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
-1.  Nel server, in un prompt dei comandi sviluppatori per Visual Studio eseguire con privilegi di amministratore, digitare `setup.bat service`. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
+1. Nel server, in un prompt dei comandi sviluppatori per Visual Studio eseguire con privilegi di amministratore, digitare `setup.bat service`. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
   
-2.  Modificare App.config sul server per riflettere il nome del nuovo certificato, Vale a dire, modificare il `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) elemento per il nome di dominio completo del computer.  
+2. Modificare App.config sul server per riflettere il nome del nuovo certificato, Vale a dire, modificare il `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) elemento per il nome di dominio completo del computer.  
   
-3.  Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
+3. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
-4.  Sul client, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore e digitare `setup.bat client`. In esecuzione `setup.bat` con il `client` argomento crea un certificato client denominato Client.com ed Esporta il certificato client in un file denominato CER.  
+4. Sul client, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi di amministratore e digitare `setup.bat client`. In esecuzione `setup.bat` con il `client` argomento crea un certificato client denominato Client.com ed Esporta il certificato client in un file denominato CER.  
   
-5.  Nel file client.cs modificare il valore dell'indirizzo dell'endpoint MEX e il `findValue` per impostare il certificato del server predefinito in modo che corrisponda al nuovo indirizzo del servizio. Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server. Ricompilare il file.  
+5. Nel file client.cs modificare il valore dell'indirizzo dell'endpoint MEX e il `findValue` per impostare il certificato del server predefinito in modo che corrisponda al nuovo indirizzo del servizio. Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server. Ricompilare il file.  
   
-6.  Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.  
+6. Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.  
   
-7.  Sul client, eseguire Importservicecert. bat in un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.  
+7. Sul client, eseguire Importservicecert. bat in un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.  
   
-8.  Nel server, eseguire importclientcert. bat in un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine - TrustedPeople.  
+8. Nel server, eseguire importclientcert. bat in un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. In questo modo viene importato il certificato del client dal file Client.cer nell'archivio LocalMachine - TrustedPeople.  
   
 9. Nel computer del servizio compilare il progetto di servizio in Visual Studio ed eseguire service.exe.  
   

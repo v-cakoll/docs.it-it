@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196892"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322589"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedura: Usare lo strumento di configurazione del modello di servizi di COM+
 Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strumento della riga di comando per la configurazione del modello di servizi COM+ (ComSvcConfig.exe) per configurare le interfacce dell'applicazione da esporre come servizi Web.  
@@ -19,11 +19,11 @@ Dopo aver selezionato una modalità di hosting appropriata, utilizzare lo strume
   
  Quando si utilizza ComSvcConfig.exe su un computer con Windows 7, attenersi alla procedura riportata di seguito per configurare un servizio Web al fine di utilizzare l'ultima versione del modello di servizi (attualmente v4.5):  
   
-1.  Impostare la chiave del Registro di sistema `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` su un valore DWORD di 0x00000001  
+1. Impostare la chiave del Registro di sistema `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` su un valore DWORD di 0x00000001  
   
-2.  Eseguire comsvcconfig.exe  
+2. Eseguire comsvcconfig.exe  
   
-3.  Ripristinare la chiave del Registro di sistema aggiunta nel passaggio 1 sul valore originale o eliminarla se non esiste.  
+3. Ripristinare la chiave del Registro di sistema aggiunta nel passaggio 1 sul valore originale o eliminarla se non esiste.  
   
 > [!IMPORTANT]
 >  Il ripristino di questa chiave del Registro di sistema è importante. Si tratta di una chiave di compatibilità. Se non si ripristina, questa modifica può causare problemi ad altre applicazioni .NET in esecuzione nel computer.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327854"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerazioni sul layout per l'elemento WindowsFormsHost
 Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento interagisce con il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistema di layout.  
@@ -84,13 +84,13 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
 ### <a name="sizing-algorithm"></a>Algoritmo di ridimensionamento  
  Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento Usa la procedura seguente per ridimensionare il controllo ospitato:  
   
-1.  Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> esegue l'override di elemento di <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metodi.  
+1. Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> esegue l'override di elemento di <xref:System.Windows.FrameworkElement.MeasureOverride%2A> e <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metodi.  
   
-2.  Per determinare le dimensioni del controllo ospitato, il <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metodo chiama il controllo ospitato <xref:System.Windows.Forms.Control.GetPreferredSize%2A> metodo con un vincolo tradotto dal vincolo del passato per il <xref:System.Windows.FrameworkElement.MeasureOverride%2A> (metodo).  
+2. Per determinare le dimensioni del controllo ospitato, il <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metodo chiama il controllo ospitato <xref:System.Windows.Forms.Control.GetPreferredSize%2A> metodo con un vincolo tradotto dal vincolo del passato per il <xref:System.Windows.FrameworkElement.MeasureOverride%2A> (metodo).  
   
-3.  Il <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metodo tenta di impostare il controllo ospitato per il vincolo delle dimensioni specificato.  
+3. Il <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metodo tenta di impostare il controllo ospitato per il vincolo delle dimensioni specificato.  
   
-4.  Se il controllo ospitato <xref:System.Windows.Forms.Control.Size%2A> proprietà corrisponde al vincolo specificato, il controllo ospitato venga ridimensionato al vincolo.  
+4. Se il controllo ospitato <xref:System.Windows.Forms.Control.Size%2A> proprietà corrisponde al vincolo specificato, il controllo ospitato venga ridimensionato al vincolo.  
   
  Se il <xref:System.Windows.Forms.Control.Size%2A> proprietà non corrisponde al vincolo specificato, il controllo ospitato non supporta il ridimensionamento continuo. Ad esempio, il <xref:System.Windows.Forms.MonthCalendar> controllo consente solo dimensioni discrete. Le dimensioni consentite per questo controllo costituiti da numeri interi, che rappresenta il numero di mesi, per altezza e larghezza. In casi come questo, il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento si comporta come segue:  
   

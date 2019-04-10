@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115729"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320886"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati usando la finestra di progettazione
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115729"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Per associare il controllo DataGrid a una singola tabella nella finestra di progettazione  
   
-1.  Impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> all'oggetto che contiene gli elementi di dati da associare alla proprietà.  
+1. Impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> all'oggetto che contiene gli elementi di dati da associare alla proprietà.  
   
-2.  Se l'origine dati è un set di dati, impostare il <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà sul nome della tabella a cui associarsi.  
+2. Se l'origine dati è un set di dati, impostare il <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà sul nome della tabella a cui associarsi.  
   
-3.  Se l'origine dati è un set di dati o una vista di dati basato su una tabella di set di dati, aggiungere codice al form per riempire il set di dati.  
+3. Se l'origine dati è un set di dati o una vista di dati basato su una tabella di set di dati, aggiungere codice al form per riempire il set di dati.  
   
      Il codice esatto che è usare dipende in cui il set di dati stia ottenendo i dati. In genere se il set di dati viene popolato direttamente da un database, si chiama il `Fill` metodo di un adattatore di dati, come nell'esempio di codice seguente, che consente di popolare un set di dati denominato `DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115729"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Facoltativo) Aggiungere gli stili tabella appropriata e gli stili di colonna nella griglia.  
+4. (Facoltativo) Aggiungere gli stili tabella appropriata e gli stili di colonna nella griglia.  
   
      Se non sono presenti stili di tabella, verrà visualizzato nella tabella, ma con una formattazione minima e con tutte le colonne visibili.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Per associare il controllo DataGrid a più tabelle in un set di dati nella finestra di progettazione  
   
-1.  Impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> all'oggetto che contiene gli elementi di dati da associare alla proprietà.  
+1. Impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> all'oggetto che contiene gli elementi di dati da associare alla proprietà.  
   
-2.  Se il set di dati contiene tabelle correlate (vale a dire, se contiene un oggetto relazione), impostare il <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà sul nome della tabella padre.  
+2. Se il set di dati contiene tabelle correlate (vale a dire, se contiene un oggetto relazione), impostare il <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà sul nome della tabella padre.  
   
-3.  Scrivere codice per riempire il set di dati.  
+3. Scrivere codice per riempire il set di dati.  
   
 ## <a name="see-also"></a>Vedere anche
 

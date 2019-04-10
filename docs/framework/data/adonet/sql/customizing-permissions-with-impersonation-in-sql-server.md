@@ -2,12 +2,12 @@
 title: Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326970"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Personalizzazione delle autorizzazioni con rappresentazione in SQL Server
 In molte applicazioni vengono usate le stored procedure per accedere ai dati, basandosi sul concatenamento delle proprietà per restringere l'accesso alle tabelle di base. È possibile concedere autorizzazioni EXECUTE sulle stored procedure, revocando o negando le autorizzazioni sulle tabelle di base. SQL Server non verifica le autorizzazioni del chiamante se il proprietario della stored procedure coincide con quello delle tabelle. Il concatenamento delle proprietà non funziona se i proprietari degli oggetti sono diversi oppure se si usano istruzioni SQL dinamiche.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  L'uso di una clausola EXECUTE AS in una stored procedure implica tre passaggi:  
   
-1.  Creazione di un utente proxy nel database non mappato a un account di accesso. Questo passaggio non è necessario ma risulta utile durante la gestione delle autorizzazioni.  
+1. Creazione di un utente proxy nel database non mappato a un account di accesso. Questo passaggio non è necessario ma risulta utile durante la gestione delle autorizzazioni.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Concessione delle autorizzazioni necessarie all'utente proxy.  
+1. Concessione delle autorizzazioni necessarie all'utente proxy.  
   
-2.  Aggiunta della clausola EXECUTE AS alla stored procedure o alla funzione definita dall'utente.  
+2. Aggiunta della clausola EXECUTE AS alla stored procedure o alla funzione definita dall'utente.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

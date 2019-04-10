@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146445"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304519"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Procedura: Aggiungere icone delle applicazioni alla barra delle applicazioni con il componente NotifyIcon di Windows Forms
 I moduli di Windows <xref:System.Windows.Forms.NotifyIcon> componente consente di visualizzare una singola icona nell'area di notifica dello stato della barra delle applicazioni. Per visualizzare le icone più nell'area di stato, è necessario disporre di più <xref:System.Windows.Forms.NotifyIcon> componenti nel form. Per impostare l'icona visualizzata per un controllo, usare il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. È anche possibile scrivere codice <xref:System.Windows.Forms.NotifyIcon.DoubleClick> gestore dell'evento in modo che si verifica un evento quando l'utente fa doppio clic sull'icona. Ad esempio, si è stato possibile visualizzare una finestra di dialogo per l'utente debba configurare il processo in background rappresentato dall'icona.  
@@ -28,11 +28,11 @@ I moduli di Windows <xref:System.Windows.Forms.NotifyIcon> componente consente d
   
 ### <a name="to-set-the-icon"></a>Per impostare l'icona  
   
-1.  Assegnare un valore per il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. Il valore deve essere di tipo `System.Drawing.Icon` e possono essere caricati da un file con estensione ico. È possibile specificare il file dell'icona nel codice o facendo clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà nel  **Le proprietà** finestra e quindi selezionare il file nei **Open** finestra di dialogo visualizzata.  
+1. Assegnare un valore per il <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà. Il valore deve essere di tipo `System.Drawing.Icon` e possono essere caricati da un file con estensione ico. È possibile specificare il file dell'icona nel codice o facendo clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.NotifyIcon.Icon%2A> proprietà nel  **Le proprietà** finestra e quindi selezionare il file nei **Open** finestra di dialogo visualizzata.  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.NotifyIcon.Visible%2A> su `true`.  
+2. Impostare la proprietà <xref:System.Windows.Forms.NotifyIcon.Visible%2A> su `true`.  
   
-3.  Impostare il <xref:System.Windows.Forms.NotifyIcon.Text%2A> proprietà da una stringa di descrizione appropriata.  
+3. Impostare il <xref:System.Windows.Forms.NotifyIcon.Text%2A> proprietà da una stringa di descrizione appropriata.  
   
      Nell'esempio di codice seguente, il percorso impostato per il percorso dell'icona è il **documenti** cartella. Poiché si può presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows sarà inclusa in questa cartella, viene usato questo percorso. Anche questa scelta consente agli utenti con livelli di accesso di sistema minimi eseguire in modo sicuro l'applicazione. Nell'esempio seguente richiede un modulo con un <xref:System.Windows.Forms.NotifyIcon> controllo già aggiunto. È inoltre necessario un file di icona denominato `Icon.ico`.  
   

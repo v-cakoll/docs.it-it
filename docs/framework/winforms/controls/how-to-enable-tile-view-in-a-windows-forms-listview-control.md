@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 0d47eddbc1d9a4efc7f1e4644136ac6621088396
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14eb21fa0285275e510b865c5cee7d1fc82fd0fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326996"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Procedura: Abilitare la visualizzazione affiancata in un controllo ListView di Windows Forms
 La funzionalità di visualizzazione affiancata del controllo <xref:System.Windows.Forms.ListView>, è possibile fornire un equilibrio visivo tra informazioni grafiche e testuali. Le informazioni testuali visualizzate per un elemento nella visualizzazione affiancata corrisponde alle informazioni della colonna definite per la visualizzazione dettagli. La visualizzazione affiancata viene usata in combinazione con le funzionalità di raggruppamento o segno di inserimento nel controllo <xref:System.Windows.Forms.ListView>.  
@@ -32,7 +32,7 @@ La funzionalità di visualizzazione affiancata del controllo <xref:System.Window
   
 ### <a name="to-set-tile-view-programmatically"></a>Per impostare la visualizzazione affiancata a livello di codice  
   
-1.  Usare l'enumerazione <xref:System.Windows.Forms.View> del controllo <xref:System.Windows.Forms.ListView>.  
+1. Usare l'enumerazione <xref:System.Windows.Forms.View> del controllo <xref:System.Windows.Forms.ListView>.  
   
     ```vb  
     ListView1.View = View.Tile  

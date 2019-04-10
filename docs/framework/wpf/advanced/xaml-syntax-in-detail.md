@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298890"
 ---
 # <a name="xaml-syntax-in-detail"></a>Descrizione dettagliata della sintassi XAML
 In questo argomento definisce le condizioni che vengono usate per descrivere gli elementi della sintassi XAML. Questi termini vengono utilizzati spesso in tutto il resto della presente documentazione, sia per la documentazione di WPF in modo specifico e per gli altri modelli che usano XAML o i concetti di base XAML abilitati per il supporto del linguaggio XAML a livello di System. Xaml. In questo argomento consente di espandere la terminologia di base introdotta nell'argomento [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md).  
@@ -99,11 +99,11 @@ In questo argomento definisce le condizioni che vengono usate per descrivere gli
   
  Il valore dell'attributo viene inserito uno dei seguenti, utilizzando questo ordine di elaborazione:  
   
-1.  Se il processore XAML rileva una parentesi graffa o un elemento oggetto che deriva da <xref:System.Windows.Markup.MarkupExtension>, quindi l'estensione di markup di cui viene fatto riferimento viene valutato per primo anziché il valore sotto forma di stringa di elaborazione e l'oggetto restituito dall'estensione di markup viene utilizzato come il valore. In molti casi l'oggetto restituito da un'estensione di markup sarà un riferimento a un oggetto esistente, o un'espressione che rinvia la valutazione fino alla fase di esecuzione, non è un oggetto appena creata un'istanza.  
+1. Se il processore XAML rileva una parentesi graffa o un elemento oggetto che deriva da <xref:System.Windows.Markup.MarkupExtension>, quindi l'estensione di markup di cui viene fatto riferimento viene valutato per primo anziché il valore sotto forma di stringa di elaborazione e l'oggetto restituito dall'estensione di markup viene utilizzato come il valore. In molti casi l'oggetto restituito da un'estensione di markup sarà un riferimento a un oggetto esistente, o un'espressione che rinvia la valutazione fino alla fase di esecuzione, non è un oggetto appena creata un'istanza.  
   
-2.  Se la proprietà è dichiarata con un oggetto con attributi <xref:System.ComponentModel.TypeConverter>, o il tipo di valore di tale proprietà viene dichiarato con un oggetto con attributi <xref:System.ComponentModel.TypeConverter>, il valore di stringa dell'attributo viene inviato al convertitore di tipi come input una conversione e il convertitore restituirà un nuova istanza dell'oggetto.  
+2. Se la proprietà è dichiarata con un oggetto con attributi <xref:System.ComponentModel.TypeConverter>, o il tipo di valore di tale proprietà viene dichiarato con un oggetto con attributi <xref:System.ComponentModel.TypeConverter>, il valore di stringa dell'attributo viene inviato al convertitore di tipi come input una conversione e il convertitore restituirà un nuova istanza dell'oggetto.  
   
-3.  Se è presente alcun <xref:System.ComponentModel.TypeConverter>, viene tentata una conversione diretta per il tipo di proprietà. Questo livello finale è una conversione diretta in corrispondenza del valore native del parser tra tipi primitivi del linguaggio XAML, o un controllo per i nomi delle costanti denominate in un'enumerazione (parser accede quindi i valori corrispondenti).  
+3. Se è presente alcun <xref:System.ComponentModel.TypeConverter>, viene tentata una conversione diretta per il tipo di proprietà. Questo livello finale è una conversione diretta in corrispondenza del valore native del parser tra tipi primitivi del linguaggio XAML, o un controllo per i nomi delle costanti denominate in un'enumerazione (parser accede quindi i valori corrispondenti).  
   
 #### <a name="enumeration-attribute-values"></a>Valori di attributo di enumerazione  
  Enumerazioni in XAML vengono elaborate in modo intrinseco dal parser XAML e i membri di un'enumerazione devono essere specificati, specificando il nome della stringa di una delle costanti denominate dell'enumerazione.  

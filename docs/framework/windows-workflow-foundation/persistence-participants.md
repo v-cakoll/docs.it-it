@@ -2,31 +2,31 @@
 title: Partecipanti di persistenza
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115895"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316362"
 ---
 # <a name="persistence-participants"></a>Partecipanti di persistenza
 Un partecipante di persistenza può far parte di un'operazione di persistenza (Save o Load) attivata da un'applicazione host. Il [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] viene fornito con due classi astratte **PersistenceParticipant** e **PersistenceIOParticipant**, che è possibile usare per creare un partecipante di persistenza. Un partecipante di persistenza deriva da una di queste classi, implementa i metodi di interesse, quindi aggiunge un'istanza della classe alla raccolta <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L'applicazione host può cercare tali estensioni del flusso di lavoro quando rende persistente un'istanza del flusso di lavoro e richiamare metodi appropriati sui partecipanti di persistenza in momenti appropriati.  
   
  Nell'elenco seguente vengono descritte le attività eseguite dal sottosistema di persistenza in fasi diverse dell'operazione Persist (Save). I partecipanti di persistenza vengono usati nella terza e quarta fase. Se il partecipante è un partecipante dei / o (un partecipante di persistenza che fa parte anche nelle operazioni dei / o), il partecipante viene usato anche nella sesta fase.  
   
-1.  Raccoglie i valori predefiniti, inclusi lo stato del flusso di lavoro, i segnalibri, le variabili mappate e il timestamp.  
+1. Raccoglie i valori predefiniti, inclusi lo stato del flusso di lavoro, i segnalibri, le variabili mappate e il timestamp.  
   
-2.  Raccoglie tutti i partecipanti di persistenza aggiunti alla raccolta di estensioni associata all'istanza del flusso di lavoro.  
+2. Raccoglie tutti i partecipanti di persistenza aggiunti alla raccolta di estensioni associata all'istanza del flusso di lavoro.  
   
-3.  Richiama il metodo <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> implementato da tutti i partecipanti di persistenza.  
+3. Richiama il metodo <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> implementato da tutti i partecipanti di persistenza.  
   
-4.  Richiama il metodo <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> implementato da tutti i partecipanti di persistenza.  
+4. Richiama il metodo <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> implementato da tutti i partecipanti di persistenza.  
   
-5.  Rende persistente o salva il flusso di lavoro nell'archivio di persistenza.  
+5. Rende persistente o salva il flusso di lavoro nell'archivio di persistenza.  
   
-6.  Richiama il <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metodo su tutti i partecipanti di persistenza i/o. Se il partecipante non è un partecipante dei / o, questa attività viene ignorata. Se l'episodio di persistenza è transazionale, la transazione viene fornita nella proprietà Transaction.Current.  
+6. Richiama il <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metodo su tutti i partecipanti di persistenza i/o. Se il partecipante non è un partecipante dei / o, questa attività viene ignorata. Se l'episodio di persistenza è transazionale, la transazione viene fornita nella proprietà Transaction.Current.  
   
-7.  Attende il completamento di tutti i partecipanti di persistenza. Se tutti i partecipanti riescono a rendere persistenti i dati dell'istanza, esegue il commit della transazione.  
+7. Attende il completamento di tutti i partecipanti di persistenza. Se tutti i partecipanti riescono a rendere persistenti i dati dell'istanza, esegue il commit della transazione.  
   
  Un partecipante di persistenza deriva dal **PersistenceParticipant** classe e può implementare il **CollectValues** e **MapValues** metodi. Un partecipante di persistenza i/o deriva dal **PersistenceIOParticipant** classe e può implementare il **BeginOnSave** metodo oltre all'implementazione di **CollectValues**e **MapValues** metodi.  
   
@@ -34,15 +34,15 @@ Un partecipante di persistenza può far parte di un'operazione di persistenza (S
   
  Nell'elenco seguente vengono descritte le attività eseguite dal sottosistema di persistenza in fasi diverse dell'operazione Load. I partecipanti di persistenza vengono usati nella quarta fase. I partecipanti dei / o di persistenza (partecipanti di persistenza che fanno parte anche nelle operazioni dei / o) vengono inoltre usati nella terza fase.  
   
-1.  Raccoglie tutti i partecipanti di persistenza aggiunti alla raccolta di estensioni associata all'istanza del flusso di lavoro.  
+1. Raccoglie tutti i partecipanti di persistenza aggiunti alla raccolta di estensioni associata all'istanza del flusso di lavoro.  
   
-2.  Carica il flusso di lavoro dall'archivio di persistenza.  
+2. Carica il flusso di lavoro dall'archivio di persistenza.  
   
-3.  Richiama il <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> su tutti i partecipanti di persistenza i/o e attende che tutti i partecipanti di persistenza per il completamento. Se l'episodio di persistenza è transazionale, la transazione viene fornita nell'oggetto Transaction.Current.  
+3. Richiama il <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> su tutti i partecipanti di persistenza i/o e attende che tutti i partecipanti di persistenza per il completamento. Se l'episodio di persistenza è transazionale, la transazione viene fornita nell'oggetto Transaction.Current.  
   
-4.  Carica l'istanza del flusso di lavoro in memoria in base ai dati recuperati dall'archivio di persistenza.  
+4. Carica l'istanza del flusso di lavoro in memoria in base ai dati recuperati dall'archivio di persistenza.  
   
-5.  Richiama il metodo <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> su ogni partecipante di persistenza.  
+5. Richiama il metodo <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> su ogni partecipante di persistenza.  
   
  Un partecipante di persistenza deriva dal **PersistenceParticipant** classe e può implementare il **PublishValues** (metodo). Un partecipante di persistenza i/o deriva dal **PersistenceIOParticipant** classe e può implementare il **BeginOnLoad** metodo oltre all'implementazione di **PublishValues**metodo.  
   

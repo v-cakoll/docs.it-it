@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298331"
 ---
 # <a name="brush-transformation-overview"></a>Cenni preliminari sulle proprietà di trasformazione Brush
 La classe Brush sono disponibili due proprietà di trasformazione: <xref:System.Windows.Media.Brush.Transform%2A> e <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Le proprietà consentono di ruotare, ridimensionare, inclinare e traslare il contenuto di un pennello. Questo argomento descrive le differenze tra le due proprietà e contiene gli esempi di uso.  
@@ -29,15 +29,15 @@ La classe Brush sono disponibili due proprietà di trasformazione: <xref:System.
   
  Quando si applica una trasformazione a un pennello <xref:System.Windows.Media.Brush.RelativeTransform%2A> proprietà, tale trasformazione viene applicata al pennello prima che l'output viene eseguito il mapping all'area disegnata. L'elenco seguente indica l'ordine in base al quale il contenuto di un pennello viene elaborato e trasformato.  
   
-1.  Elaborare il contenuto del pennello. Per un <xref:System.Windows.Media.GradientBrush>, ciò significa che determina l'area della sfumatura. Per un <xref:System.Windows.Media.TileBrush>, il <xref:System.Windows.Media.TileBrush.Viewbox%2A> viene eseguito il mapping per il <xref:System.Windows.Media.TileBrush.Viewport%2A>. Questo diventa l'output del pennello.  
+1. Elaborare il contenuto del pennello. Per un <xref:System.Windows.Media.GradientBrush>, ciò significa che determina l'area della sfumatura. Per un <xref:System.Windows.Media.TileBrush>, il <xref:System.Windows.Media.TileBrush.Viewbox%2A> viene eseguito il mapping per il <xref:System.Windows.Media.TileBrush.Viewport%2A>. Questo diventa l'output del pennello.  
   
-2.  Proiettare l'output del pennello sul rettangolo di trasformazione 1 x 1.  
+2. Proiettare l'output del pennello sul rettangolo di trasformazione 1 x 1.  
   
-3.  Applicare il pennello <xref:System.Windows.Media.Brush.RelativeTransform%2A>, se presente.  
+3. Applicare il pennello <xref:System.Windows.Media.Brush.RelativeTransform%2A>, se presente.  
   
-4.  Proiettare l'output trasformato sull'area da disegnare.  
+4. Proiettare l'output trasformato sull'area da disegnare.  
   
-5.  Applicare il pennello <xref:System.Windows.Media.Transform>, se presente.  
+5. Applicare il pennello <xref:System.Windows.Media.Transform>, se presente.  
   
  Poiché il <xref:System.Windows.Media.Brush.RelativeTransform%2A> viene applicata mentre l'output del pennello viene mappato a un rettangolo 1 x 1, il centro della trasformazione e valori di offset sembrano essere relativi. Ad esempio, se è stato usato un <xref:System.Windows.Media.RotateTransform> per ruotare il pennello output di 45 gradi intorno al relativo centro, si assegnerebbe il <xref:System.Windows.Media.RotateTransform> una <xref:System.Windows.Media.RotateTransform.CenterX%2A> pari a 0,5 e una <xref:System.Windows.Media.RotateTransform.CenterY%2A> pari a 0,5.  
   
@@ -61,19 +61,19 @@ La classe Brush sono disponibili due proprietà di trasformazione: <xref:System.
   
  Si noti che l'immagine è distorta anche se il pennello <xref:System.Windows.Media.TileBrush.Stretch%2A> è stata impostata su <xref:System.Windows.Media.Stretch.UniformToFill>. Infatti, la trasformazione relativa viene applicata dopo il pennello <xref:System.Windows.Media.TileBrush.Viewbox%2A> viene eseguito il mapping al relativo <xref:System.Windows.Media.TileBrush.Viewport%2A>. L'elenco seguente descrive tutti i passaggi del processo.  
   
-1.  Il contenuto del pennello di progetto (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) sulla relativa tessera di base (<xref:System.Windows.Media.TileBrush.Viewport%2A>) con il pennello <xref:System.Windows.Media.TileBrush.Stretch%2A> impostazione.  
+1. Il contenuto del pennello di progetto (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) sulla relativa tessera di base (<xref:System.Windows.Media.TileBrush.Viewport%2A>) con il pennello <xref:System.Windows.Media.TileBrush.Stretch%2A> impostazione.  
   
      ![Allungare l'oggetto Viewbox per adattarlo al viewport](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  Proiettare la tessera di base sul rettangolo di trasformazione 1 x 1.  
+2. Proiettare la tessera di base sul rettangolo di trasformazione 1 x 1.  
   
      ![Eseguire il mapping del viewport al rettangolo di trasformazione](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  Applicare il <xref:System.Windows.Media.RotateTransform>.  
+3. Applicare il <xref:System.Windows.Media.RotateTransform>.  
   
      ![Applicare la trasformazione relativa](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  Proiettare la tessera di base trasformata sull'area da disegnare.  
+4. Proiettare la tessera di base trasformata sull'area da disegnare.  
   
      ![Proiettare il pennello trasformato nell'area di output](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   

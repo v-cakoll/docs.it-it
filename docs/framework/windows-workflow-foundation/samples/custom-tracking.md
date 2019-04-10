@@ -2,12 +2,12 @@
 title: Rilevamento personalizzato
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161845"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307633"
 ---
 # <a name="custom-tracking"></a>Rilevamento personalizzato
 Nell'esempio viene illustrato come creare un partecipante di rilevamento personalizzato e scrivere il contenuto dei dati di rilevamento nella console. Nell'esempio viene inoltre illustrato come generare oggetti <xref:System.Activities.Tracking.CustomTrackingRecord> popolati con dati definiti dall'utente. Il partecipante di rilevamento basato su console filtra gli oggetti <xref:System.Activities.Tracking.TrackingRecord> generati dal flusso di lavoro usando un oggetto profilo di rilevamento creato nel codice.
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1.  Con Visual Studio 2010, aprire il file della soluzione Customtrackingsample.
+1. Con Visual Studio 2010, aprire il file della soluzione Customtrackingsample.
 
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
-3.  Per eseguire la soluzione, premere CTRL+F5.
+3. Per eseguire la soluzione, premere CTRL+F5.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

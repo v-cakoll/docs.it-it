@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172187"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311045"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Procedura: Eseguire un disegno personalizzato di un controllo ToolStrip
 Ai controlli <xref:System.Windows.Forms.ToolStrip> sono associate le classi di rendering (disegno) seguenti:  
@@ -107,11 +107,11 @@ Ai controlli <xref:System.Windows.Forms.ToolStrip> sono associate le classi di r
   
 ### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>Per modificare il rendering di tutti i controlli ToolStrip nell'applicazione  
   
-1.  Usare la proprietà <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> per scegliere uno dei renderer forniti.  
+1. Usare la proprietà <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> per scegliere uno dei renderer forniti.  
   
-2.  Usare <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> per assegnare un renderer personalizzato.  
+2. Usare <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> per assegnare un renderer personalizzato.  
   
-3.  Accertarsi che <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> sia impostata sul valore predefinito di <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
+3. Accertarsi che <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> sia impostata sul valore predefinito di <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>Per disattivare i colori di Microsoft Office in tutta l'applicazione  
   

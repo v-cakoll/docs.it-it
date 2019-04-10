@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: ed3a7dc23050412082fb10fabf6b1d5a4507973e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299982"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Procedura dettagliata: Creazione di un controllo composito con Visual Basic
 I controlli compositi consentono di creare e riutilizzare interfacce grafiche personalizzate. Un controllo composito è sostanzialmente un componente con rappresentazione visiva. Può essere composto da uno o più controlli per Windows Forms, componenti o blocchi di codice in grado di estenderne le funzionalità convalidando l'input dell'utente, modificando le proprietà della visualizzazione o effettuando altre attività richieste dall'autore. I controlli compositi possono essere inseriti in Windows Forms al pari degli altri controlli. Nella prima parte di questa procedura verrà creato un controllo composito semplice denominato `ctlClock`. Nella seconda parte, le funzionalità di `ctlClock` verranno estese mediante ereditarietà.  
@@ -31,31 +31,31 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 #### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>Per creare la libreria di controlli ctlClockLib e il controllo ctlClock  
   
-1.  Scegliere **Nuovo** dal menu **File**, quindi selezionare **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.  
+1. Scegliere **Nuovo** dal menu **File**, quindi selezionare **Progetto** per aprire la finestra di dialogo **Nuovo progetto**.  
   
-2.  Nell'elenco dei progetti Visual Basic, selezionare la **libreria di controlli Windows** modello di progetto, digitare `ctlClockLib` nel **Name** casella e quindi fare clic su **OK**.  
+2. Nell'elenco dei progetti Visual Basic, selezionare la **libreria di controlli Windows** modello di progetto, digitare `ctlClockLib` nel **Name** casella e quindi fare clic su **OK**.  
   
      Per impostazione predefinita il nome del progetto, `ctlClockLib`, verrà assegnato anche allo spazio dei nomi radice. Lo spazio dei nomi radice viene utilizzato per qualificare i nomi dei componenti dell'assembly. Se, ad esempio, due assembly forniscono componenti denominati `ctlClock`, è possibile specificare il `ctlClock` componente usando `ctlClockLib.ctlClock.`  
   
-3.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **UserControl1.vb**, quindi fare clic su **Rinomina**. Modificare il nome file in `ctlClock.vb`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice "UserControl1".  
+3. In Esplora soluzioni fare clic con il pulsante destro del mouse su **UserControl1.vb**, quindi fare clic su **Rinomina**. Modificare il nome file in `ctlClock.vb`. Scegliere il pulsante **Sì** quando richiesto per rinominare tutti i riferimenti all'elemento di codice "UserControl1".  
   
     > [!NOTE]
     >  Per impostazione predefinita, un controllo composito eredita il <xref:System.Windows.Forms.UserControl> classe fornita dal sistema. Il <xref:System.Windows.Forms.UserControl> classe fornisce le funzionalità richieste da tutti i controlli compositi e implementa proprietà e metodi standard.  
   
-4.  Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
+4. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
   
 ## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>Aggiunta di componenti e controlli Windows al controllo composito  
  L'interfaccia visiva è parte integrante del controllo composito e viene implementata mediante l'aggiunta di uno o più controlli Windows nell'area di progettazione. Nella procedura riportata di seguito i controlli Windows verranno incorporati nel controllo composito e verrà scritto il codice per l'implementazione delle funzionalità.  
   
 #### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>Per aggiungere al controllo composito un oggetto Label e un oggetto Timer  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClock.vb**, quindi scegliere **Progettazione viste**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClock.vb**, quindi scegliere **Progettazione viste**.  
   
-2.  Nella Casella degli strumenti espandere il nodo **Controlli comuni** e fare doppio clic su **Etichetta**.  
+2. Nella Casella degli strumenti espandere il nodo **Controlli comuni** e fare doppio clic su **Etichetta**.  
   
      Oggetto <xref:System.Windows.Forms.Label> controllo denominato `Label1` viene aggiunto al controllo nell'area di progettazione.  
   
-3.  Nella finestra di progettazione fare clic su **Label1**. Nella finestra Proprietà impostare le seguenti proprietà:  
+3. Nella finestra di progettazione fare clic su **Label1**. Nella finestra Proprietà impostare le seguenti proprietà:  
   
     |Proprietà|Modificare in|  
     |--------------|---------------|  
@@ -64,17 +64,17 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
-4.  Nella **Casella degli strumenti** espandere il nodo **Componenti**, quindi fare doppio clic su **Timer**.  
+4. Nella **Casella degli strumenti** espandere il nodo **Componenti**, quindi fare doppio clic su **Timer**.  
   
      Poiché un <xref:System.Windows.Forms.Timer> è un componente, non dispone di alcuna rappresentazione visiva in fase di esecuzione. non verrà visualizzato insieme ai controlli nell'area di progettazione bensì in Progettazione componenti, una barra delle applicazioni disposta nella parte inferiore dell'area di progettazione.  
   
-5.  In Progettazione componenti fare clic su **Timer1**e quindi impostare il <xref:System.Windows.Forms.Timer.Interval%2A> proprietà `1000` e il <xref:System.Windows.Forms.Timer.Enabled%2A> proprietà `True`.  
+5. In Progettazione componenti fare clic su **Timer1**e quindi impostare il <xref:System.Windows.Forms.Timer.Interval%2A> proprietà `1000` e il <xref:System.Windows.Forms.Timer.Enabled%2A> proprietà `True`.  
   
      Il <xref:System.Windows.Forms.Timer.Interval%2A> proprietà controlla la frequenza con cui scatta il componente timer. Ogni volta che `Timer1` scatta, viene eseguito il codice nell'evento `Timer1_Tick`. L'intervallo rappresenta i millesimi di secondo che intercorrono tra uno scatto e l'altro.  
   
-6.  In Progettazione componenti fare doppio clic su **Timer1** per passare all'evento `Timer1_Tick` di `ctlClock`.  
+6. In Progettazione componenti fare doppio clic su **Timer1** per passare all'evento `Timer1_Tick` di `ctlClock`.  
   
-7.  Modificare il codice in modo che risulti simile al seguente. Assicurarsi di cambiare il modificatore di accesso da `Private` a `Protected`.  
+7. Modificare il codice in modo che risulti simile al seguente. Assicurarsi di cambiare il modificatore di accesso da `Private` a `Protected`.  
   
     ```vb  
     Protected Sub Timer1_Tick(ByVal sender As Object, ByVal e As _  
@@ -86,7 +86,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
      Questo codice determinerà la visualizzazione dell'ora corrente in `lblDisplay`. Poiché l'intervallo di `Timer1` è stato impostato su `1000`, l'evento verrà generato ogni mille millesimi di secondo, aggiornando quindi l'ora corrente ogni secondo.  
   
-8.  Modificare il metodo in modo che sia sottoponibile a override. Per ulteriori informazioni, vedere la sezione "Eredità da un controllo utente" riportata di seguito.  
+8. Modificare il metodo in modo che sia sottoponibile a override. Per ulteriori informazioni, vedere la sezione "Eredità da un controllo utente" riportata di seguito.  
   
     ```vb  
     Protected Overridable Sub Timer1_Tick(ByVal sender As Object, ByVal _  
@@ -100,11 +100,11 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>Per aggiungere una proprietà al controllo composito  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su c**tlClock.vb**, quindi scegliere **Visualizza codice**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su c**tlClock.vb**, quindi scegliere **Visualizza codice**.  
   
      Verrà visualizzato l'editor del codice per il controllo.  
   
-2.  Individuare l'istruzione `Public Class ctlClock`. Sotto tale riga, aggiungere il seguente codice.  
+2. Individuare l'istruzione `Public Class ctlClock`. Sotto tale riga, aggiungere il seguente codice.  
   
     ```vb  
     Private colFColor as Color  
@@ -113,7 +113,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
      Queste istruzioni consentono di creare le variabili private da utilizzare per la memorizzazione dei valori delle proprietà che verranno create.  
   
-3.  Sotto le dichiarazioni delle variabili del passaggio 2 inserire il seguente codice.  
+3. Sotto le dichiarazioni delle variabili del passaggio 2 inserire il seguente codice.  
   
     ```vb  
     ' Declares the name and type of the property.  
@@ -144,24 +144,24 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
      Nel codice riportato in precedenza vengono create due proprietà personalizzate, `ClockForeColor` e `ClockBackColor`, disponibili agli utenti successivi del controllo mediante l'utilizzo dell'istruzione `Property`. Le istruzioni `Get` e `Set` consentono di archiviare e recuperare il valore della proprietà e di inserire il codice per implementare le funzionalità appropriate per la proprietà.  
   
-4.  Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
+4. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
   
 ## <a name="testing-the-control"></a>Test del controllo  
  I controlli non sono progetti autonomi e devono pertanto essere inseriti in un contenitore. Eseguire il test del comportamento del controllo in fase di esecuzione e sperimentare le proprietà con **UserControl Test Container**. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>Per eseguire il test del controllo  
   
-1.  Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5.  
+1. Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5.  
   
-2.  Nella griglia della proprietà di Test Container, selezionare la proprietà `ClockBackColor`, quindi fare clic sulla freccia a discesa per visualizzare la tavolozza dei colori.  
+2. Nella griglia della proprietà di Test Container, selezionare la proprietà `ClockBackColor`, quindi fare clic sulla freccia a discesa per visualizzare la tavolozza dei colori.  
   
-3.  Scegliere un colore facendovi clic sopra.  
+3. Scegliere un colore facendovi clic sopra.  
   
      Il colore di sfondo del controllo cambierà in base al colore selezionato.  
   
-4.  Usare una sequenza di eventi simile per verificare il corretto funzionamento della proprietà `ClockForeColor`.  
+4. Usare una sequenza di eventi simile per verificare il corretto funzionamento della proprietà `ClockForeColor`.  
   
-5.  Per chiudere la finestra **UserControl Test Container**, scegliere **Chiudi**.  
+5. Per chiudere la finestra **UserControl Test Container**, scegliere **Chiudi**.  
   
      In questa sezione e in quelle precedenti è stato illustrato come combinare componenti e controlli Windows con codici e package per aggiungere funzionalità personalizzate al modulo di un controllo composito. Si è inoltre appreso come esporre le proprietà del controllo composito e come eseguire il test del controllo dopo averlo completato. Nella sezione successiva verranno fornite informazioni sulla modalità di creazione di un controllo composito ereditato utilizzando `ctlClock` come base.  
   
@@ -172,19 +172,19 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 #### <a name="to-create-the-inherited-control"></a>Per creare il controllo ereditato  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClockLib**, scegliere **Aggiungi**, quindi **Controllo utente**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClockLib**, scegliere **Aggiungi**, quindi **Controllo utente**.  
   
      Viene aperta la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-2.  Selezionare il modello **Controllo utente ereditato**.  
+2. Selezionare il modello **Controllo utente ereditato**.  
   
-3.  Nella casella **Nome** digitare `ctlAlarmClock.vb` e quindi fare clic su **Aggiungi**.  
+3. Nella casella **Nome** digitare `ctlAlarmClock.vb` e quindi fare clic su **Aggiungi**.  
   
      Viene visualizzata la finestra di dialogo **Selezione ereditarietà**.  
   
-4.  In **Nome componente** fare doppio clic su **ctlClock**.  
+4. In **Nome componente** fare doppio clic su **ctlClock**.  
   
-5.  In Esplora soluzioni scorrere i progetti correnti.  
+5. In Esplora soluzioni scorrere i progetti correnti.  
   
     > [!NOTE]
     >  Nel progetto corrente è stato aggiunto il file denominato **ctlAlarmClock.vb**.  
@@ -194,9 +194,9 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 ##### <a name="to-add-properties-to-your-composite-control"></a>Per aggiungere proprietà al controllo composito  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock**, quindi scegliere **Visualizza codice**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock**, quindi scegliere **Visualizza codice**.  
   
-2.  Individuare la dichiarazione di classe per il controllo ctlAlarmClock, visualizzato come `Public Class ctlAlarmClock`.  Inserire il codice seguente nella dichiarazione di classe.  
+2. Individuare la dichiarazione di classe per il controllo ctlAlarmClock, visualizzato come `Public Class ctlAlarmClock`.  Inserire il codice seguente nella dichiarazione di classe.  
   
     ```vb  
     Private dteAlarmTime As Date  
@@ -226,11 +226,11 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 ##### <a name="to-add-the-label-control"></a>Per aggiungere il controllo label  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock** e scegliere **Visualizza finestra di progettazione**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock** e scegliere **Visualizza finestra di progettazione**.  
   
      Nella finestra principale viene aperta la finestra di progettazione per `ctlAlarmClock`.  
   
-2.  Fare clic su `lblDisplay` (parte visualizzata del controllo) e osservare la finestra Proprietà.  
+2. Fare clic su `lblDisplay` (parte visualizzata del controllo) e osservare la finestra Proprietà.  
   
     > [!NOTE]
     >  Tutte le proprietà sono presenti ma inattive, ossia visualizzate in grigio. Ciò indica che le proprietà sono native di `lblDisplay` e non è possibile accedervi né modificarle nella finestra Proprietà. Per impostazione predefinita i controlli contenuti in un controllo composito sono `Private` e le relative proprietà non sono accessibili.  
@@ -238,9 +238,9 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
     > [!NOTE]
     >  Se si desidera che gli utenti successivi del controllo composito abbiano accesso ai relativi controlli interni, dichiararli come `Public` o `Protected`. Sarà così possibile impostare e modificare le proprietà dei controlli contenuti nel controllo composito mediante il codice appropriato.  
   
-3.  Aggiungere un <xref:System.Windows.Forms.Label> controllo al controllo composito.  
+3. Aggiungere un <xref:System.Windows.Forms.Label> controllo al controllo composito.  
   
-4.  Usando il mouse, trascinare il <xref:System.Windows.Forms.Label> controllo immediatamente di sotto della visualizzazione. Nella finestra Proprietà impostare le seguenti proprietà:  
+4. Usando il mouse, trascinare il <xref:System.Windows.Forms.Label> controllo immediatamente di sotto della visualizzazione. Nella finestra Proprietà impostare le seguenti proprietà:  
   
     |Proprietà|Impostazione|  
     |--------------|-------------|  
@@ -254,15 +254,15 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 ##### <a name="to-override-the-timer1tick-method-of-ctlclock"></a>Per eseguire l'override del metodo Timer1_Tick di ctlClock  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock.vb**, quindi scegliere **Visualizza codice**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock.vb**, quindi scegliere **Visualizza codice**.  
   
-2.  Individuare l'istruzione `Private blnAlarmSet As Boolean`. e aggiungere subito dopo la seguente istruzione.  
+2. Individuare l'istruzione `Private blnAlarmSet As Boolean`. e aggiungere subito dopo la seguente istruzione.  
   
     ```vb  
     Dim blnColorTicker as Boolean  
     ```  
   
-3.  Individuare l'istruzione `End Class` nella parte inferiore della pagina. Prima dell'istruzione `End Class` aggiungere il seguente codice.  
+3. Individuare l'istruzione `End Class` nella parte inferiore della pagina. Prima dell'istruzione `End Class` aggiungere il seguente codice.  
   
     ```vb  
     Protected Overrides Sub Timer1_Tick(ByVal sender As Object, ByVal e _  
@@ -307,11 +307,11 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 ##### <a name="to-implement-the-shutoff-method"></a>Per implementare il metodo di disattivazione  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock.vb**, quindi scegliere **Visualizza finestra di progettazione**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlAlarmClock.vb**, quindi scegliere **Visualizza finestra di progettazione**.  
   
-2.  Nella finestra di progettazione fare doppio clic sul controllo **lblAlarm**. Nell'**editor di codice** verrà visualizzata la riga `Private Sub lblAlarm_Click`.  
+2. Nella finestra di progettazione fare doppio clic sul controllo **lblAlarm**. Nell'**editor di codice** verrà visualizzata la riga `Private Sub lblAlarm_Click`.  
   
-3.  Modificare il metodo in modo che risulti simile al seguente codice.  
+3. Modificare il metodo in modo che risulti simile al seguente codice.  
   
     ```vb  
     Private Sub lblAlarm_Click(ByVal sender As Object, ByVal e As _  
@@ -323,7 +323,7 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
     End Sub  
     ```  
   
-4.  Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
+4. Scegliere **Salva tutto** dal menu **File** per salvare il progetto.  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>Utilizzo del controllo ereditato in un modulo  
  È possibile testare il controllo ereditato esattamente come si esegue il controllo di classe di base, `ctlClock`: Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5. Per altre informazioni, vedere [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
@@ -332,23 +332,23 @@ I controlli compositi consentono di creare e riutilizzare interfacce grafiche pe
   
 ##### <a name="to-build-and-add-your-control-to-a-test-form"></a>Per compilare e aggiungere il controllo a un modulo di test  
   
-1.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClockLib**, quindi scegliere **Compila**.  
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse su **ctlClockLib**, quindi scegliere **Compila**.  
   
-2.  Scegliere **Aggiungi** dal menu **File**e quindi fare clic su **Nuovo progetto**.  
+2. Scegliere **Aggiungi** dal menu **File**e quindi fare clic su **Nuovo progetto**.  
   
-3.  Aggiungere un nuovo progetto **Applicazione Windows** alla soluzione e denominarlo `Test`.  
+3. Aggiungere un nuovo progetto **Applicazione Windows** alla soluzione e denominarlo `Test`.  
   
      Il progetto **Test** verrà aggiunto a Esplora soluzioni.  
   
-4.  In Esplora soluzioni fare clic con il pulsante destro del mouse sul nodo di progetto `Test`, quindi scegliere **Aggiungi riferimento** per visualizzare la finestra di dialogo **Aggiungi riferimento**.  
+4. In Esplora soluzioni fare clic con il pulsante destro del mouse sul nodo di progetto `Test`, quindi scegliere **Aggiungi riferimento** per visualizzare la finestra di dialogo **Aggiungi riferimento**.  
   
-5.  Scegliere la scheda **Progetti**. Il progetto **ctlClockLib** verrà elencato in **Nome progetto**. Fare doppio clic su **ctlClockLib** per aggiungere il riferimento al progetto di test.  
+5. Scegliere la scheda **Progetti**. Il progetto **ctlClockLib** verrà elencato in **Nome progetto**. Fare doppio clic su **ctlClockLib** per aggiungere il riferimento al progetto di test.  
   
-6.  In Esplora soluzioni fare clic con il pulsante destro del mouse su **Test**, quindi scegliere **Compila**.  
+6. In Esplora soluzioni fare clic con il pulsante destro del mouse su **Test**, quindi scegliere **Compila**.  
   
-7.  Nella **Casella degli strumenti** espandere il nodo **Componenti ctlClockLib**.  
+7. Nella **Casella degli strumenti** espandere il nodo **Componenti ctlClockLib**.  
   
-8.  Fare doppio clic su **ctlAlarmClock** per aggiungere un'istanza di `ctlAlarmClock` al modulo.  
+8. Fare doppio clic su **ctlAlarmClock** per aggiungere un'istanza di `ctlAlarmClock` al modulo.  
   
 9. Nel **casella degli strumenti**individuare e fare doppio clic su **DateTimePicker** per aggiungere un <xref:System.Windows.Forms.DateTimePicker> controllo al form e quindi aggiungere un <xref:System.Windows.Forms.Label> facendo doppio clic sui **etichetta**.  
   

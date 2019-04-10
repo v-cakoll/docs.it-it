@@ -2,12 +2,12 @@
 title: Associazione dati in un client Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 2687e406743a8f503175a8775b25c76630aea9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1bc6dd2ef981115068cbd4cd491a14fea70d7e3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223173"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305442"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Associazione dati in un client Windows Presentation Foundation
 In questo esempio viene illustrato come usare un'associazione dati in un client Windows Presentation Foundation (WPF). L'esempio Usa un servizio Windows Communication Foundation (WCF) che genera casualmente una matrice di album da restituire al client. Ogni album è dotato di un nome, di un prezzo e di un elenco di tracce. Le tracce dell'album sono dotate di un nome e di una durata. Le informazioni restituite dal servizio viene automaticamente associate all'interfaccia utente (UI) fornito dal client Windows Presentation Foundation (WPF).  
@@ -67,11 +67,11 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

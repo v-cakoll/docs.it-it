@@ -2,12 +2,12 @@
 title: Esempio relativo all'individuazione di ambiti
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 553a7adbe2d6daf29d4acf76990503df09c3bff1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328088"
 ---
 # <a name="discovery-with-scopes-sample"></a>Esempio relativo all'individuazione di ambiti
 In questo esempio viene illustrato come utilizzare gli ambiti per suddividere in categorie gli endpoint individuabili e come utilizzare <xref:System.ServiceModel.Discovery.DiscoveryClient> per eseguire una ricerca asincrona per gli endpoint. Nel servizio questo esempio mostra come personalizzare l'individuazione per ogni endpoint aggiungendo un comportamento di individuazione dell'endpoint e utilizzandolo per aggiungere un ambito all'endpoint. Viene inoltre illustrato come controllare l'individuabilità dell'endpoint. Nel client l'esempio illustra come i client possono creare un <xref:System.ServiceModel.Discovery.DiscoveryClient> e ottimizzare i parametri di ricerca per includere gli ambiti aggiungendo ambiti a <xref:System.ServiceModel.Discovery.FindCriteria>. Questo esempio mostra anche come i client possono limitare le risposte aggiungendo un criterio di chiusura.  
@@ -20,13 +20,13 @@ In questo esempio viene illustrato come utilizzare gli ambiti per suddividere in
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Visualizzare [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate. L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile sostituire dominio e nome utente per gli argomenti seguenti se il comando non funziona perché è: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Questo esempio usa endpoint HTTP e per eseguirlo è necessario aggiungere elenchi di controllo di accesso (ACL) agli URL appropriati. Visualizzare [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate. L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile sostituire dominio e nome utente per gli argomenti seguenti se il comando non funziona perché è: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Compilare la soluzione.  
+2. Compilare la soluzione.  
   
-3.  Eseguire il servizio eseguibile dalla directory di compilazione.  
+3. Eseguire il servizio eseguibile dalla directory di compilazione.  
   
-4.  Eseguire il file eseguibile del client. Il client è in grado di individuare il servizio.  
+4. Eseguire il file eseguibile del client. Il client è in grado di individuare il servizio.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

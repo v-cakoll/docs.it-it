@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c25c012798adcf90c652beb91a7550406e5f8ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321432"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Procedura: Raggruppare elementi in un controllo ListView di Windows Forms usando la finestra di progettazione
 La caratteristica di raggruppamento del <xref:System.Windows.Forms.ListView> controllo consente di visualizzare insiemi di elementi correlati in gruppi. Questi gruppi vengono separati nella schermata dalle intestazioni del gruppo orizzontali che contengono i titoli di gruppo. È possibile usare <xref:System.Windows.Forms.ListView> gruppi per semplificare lo spostamento di elenchi di grandi dimensioni più facili raggruppando gli elementi in ordine alfabetico, per data o da qualsiasi altra forma di raggruppamento logico. L'immagine seguente mostra alcuni elementi raggruppati.  
@@ -29,21 +29,21 @@ La caratteristica di raggruppamento del <xref:System.Windows.Forms.ListView> con
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>Per aggiungere o rimuovere gruppi nella finestra di progettazione  
   
-1.  Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto alla il <xref:System.Windows.Forms.ListView.Groups%2A> proprietà.  
+1. Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto alla il <xref:System.Windows.Forms.ListView.Groups%2A> proprietà.  
   
      Il **Editor della raccolta ListViewGroup** viene visualizzata.  
   
-2.  Per aggiungere un gruppo, scegliere il **Add** pulsante. È quindi possibile impostare le proprietà del nuovo gruppo, ad esempio la <xref:System.Windows.Forms.ListViewGroup.Header%2A> e <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> proprietà. Per rimuovere un gruppo, selezionarlo e scegliere il **rimuovere** pulsante.  
+2. Per aggiungere un gruppo, scegliere il **Add** pulsante. È quindi possibile impostare le proprietà del nuovo gruppo, ad esempio la <xref:System.Windows.Forms.ListViewGroup.Header%2A> e <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> proprietà. Per rimuovere un gruppo, selezionarlo e scegliere il **rimuovere** pulsante.  
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>Assegnare elementi ai gruppi nella finestra di progettazione  
   
-1.  Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto alla il <xref:System.Windows.Forms.ListView.Items%2A> proprietà.  
+1. Nel **delle proprietà** finestra, fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto alla il <xref:System.Windows.Forms.ListView.Items%2A> proprietà.  
   
      Il **Editor della raccolta ListViewItem** viene visualizzata.  
   
-2.  Per aggiungere un nuovo elemento, scegliere il **Add** pulsante. È quindi possibile impostare le proprietà del nuovo elemento, ad esempio la <xref:System.Windows.Forms.ListViewItem.Text%2A> e <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> proprietà.  
+2. Per aggiungere un nuovo elemento, scegliere il **Add** pulsante. È quindi possibile impostare le proprietà del nuovo elemento, ad esempio la <xref:System.Windows.Forms.ListViewItem.Text%2A> e <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> proprietà.  
   
-3.  Selezionare il <xref:System.Windows.Forms.ListViewItem.Group%2A> proprietà e scegliere un gruppo di nell'elenco a discesa.  
+3. Selezionare il <xref:System.Windows.Forms.ListViewItem.Group%2A> proprietà e scegliere un gruppo di nell'elenco a discesa.  
   
 ## <a name="see-also"></a>Vedere anche
 

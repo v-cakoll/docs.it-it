@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320071"
 ---
 # <a name="structured-navigation-overview"></a>Cenni preliminari sulla navigazione strutturata
 Contenuto che può essere ospitato da un' [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], una <xref:System.Windows.Controls.Frame>, o una <xref:System.Windows.Navigation.NavigationWindow> è composto da pagine che possono essere identificate da pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] e la navigazione da collegamenti ipertestuali. La struttura della pagine e i modi in cui è possibile spostarsi tra di esse, definiti dai collegamenti ipertestuali, costituiscono una topologia di navigazione. Tale topologia è adatta a vari tipi di applicazioni, in particolare a quelli che consentono di spostarsi tra documenti. Per tali applicazioni, l'utente può spostarsi da una pagina all'altra senza che una pagina disponga di informazioni sull'altra.  
@@ -134,9 +134,9 @@ Contenuto che può essere ospitato da un' [!INCLUDE[TLA#tla_xbap](../../../../in
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Restituzione del risultato dell'attività e dei dati dell'attività da un'attività a una pagina chiamante  
  Al termine dell'uso della pagina chiamata da parte dell'utente, indicato in questo esempio dalla pressione dei pulsanti OK o Annulla, è necessaria la restituzione della pagina chiamata. Dal momento che la pagina chiamante ha usato la pagina chiamata per raccogliere dati dall'utente, la pagina chiamante richiede due tipi di informazioni:  
   
-1.  Se l'utente ha annullato la pagina chiamante (premendo il pulsante OK o il pulsante Annulla in questo esempio). Ciò consente alla pagina chiamante di determinare se elaborare i dati che la pagina chiamante ha raccolto dall'utente.  
+1. Se l'utente ha annullato la pagina chiamante (premendo il pulsante OK o il pulsante Annulla in questo esempio). Ciò consente alla pagina chiamante di determinare se elaborare i dati che la pagina chiamante ha raccolto dall'utente.  
   
-2.  I dati immessi dall'utente.  
+2. I dati immessi dall'utente.  
   
  Per informazioni, tornare <xref:System.Windows.Navigation.PageFunction%601> implementa il <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> (metodo). Il codice seguente illustra come chiamarlo.  
   

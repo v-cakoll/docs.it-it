@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331676"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Procedura: Eliminare righe dal database
 È possibile eliminare righe in un database rimuovendo il corrispondente [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oggetti dall'insieme alla tabella correlata. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le modifiche vengono convertite SQL appropriate `DELETE` comandi.  
@@ -32,11 +32,11 @@ ms.locfileid: "59213298"
   
 ### <a name="to-delete-a-row-in-the-database"></a>Per eliminare una riga dal database  
   
-1.  Eseguire una query sul database per la riga da eliminare.  
+1. Eseguire una query sul database per la riga da eliminare.  
   
-2.  Chiamare il metodo <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
+2. Chiamare il metodo <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>.  
   
-3.  Inviare le modifiche al database.  
+3. Inviare le modifiche al database.  
   
 ## <a name="example"></a>Esempio  
  Nel primo esempio di codice viene eseguita una query sul database per ottenere dettagli relativi all'ordine N. 11000, questi dettagli relativi all'ordine vengono contrassegnati per l'eliminazione e tali modifiche vengono inviate al database.  

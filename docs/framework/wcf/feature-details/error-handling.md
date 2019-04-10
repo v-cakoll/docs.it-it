@@ -2,12 +2,12 @@
 title: Gestione degli errori
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136435"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300281"
 ---
 # <a name="error-handling"></a>Gestione degli errori
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestione degli errori in Windows Communication Foundation  
@@ -34,15 +34,15 @@ ms.locfileid: "59136435"
   
  Con IErrorHandler è possibile controllare in modo esplicito il comportamento dell'applicazione quando viene generata un'eccezione. È possibile:  
   
-1.  Decidere se inviare o meno un errore al client  
+1. Decidere se inviare o meno un errore al client  
   
-2.  Sostituire un'eccezione con un errore  
+2. Sostituire un'eccezione con un errore  
   
-3.  Sostituire un errore con un altro errore  
+3. Sostituire un errore con un altro errore  
   
-4.  Eseguire la registrazione o la traccia  
+4. Eseguire la registrazione o la traccia  
   
-5.  Eseguire altre attività personalizzate  
+5. Eseguire altre attività personalizzate  
   
  È possibile installare un gestore degli errori personalizzato aggiungendolo alla proprietà ErrorHandlers dei dispatcher del canale per il servizio.  I gestori degli errori possono essere più di uno, nel qual caso vengono chiamati nell'ordine in cui vengono aggiunti alla raccolta.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: c450de0eb3eead3a2d3b21c3635caa71d92ce07f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325059"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Panoramica sulle associazioni di Windows Communication Foundation
 Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli di comunicazione necessarie per connettersi all'endpoint di un servizio Windows Communication Foundation (WCF). Ogni endpoint in un servizio WCF richiede un'associazione essere specificato bene. Questo argomento descrive i tipi dei dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in WCF e come specificare un'associazione per un endpoint.  
@@ -50,9 +50,9 @@ Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli d
 ## <a name="using-bindings"></a>Uso di associazioni  
  L'utilizzo di associazioni comporta due passaggi di base:  
   
-1.  Selezionare o definire un'associazione. Il metodo più semplice è scegliere una delle associazioni fornite dal sistema incluse con WCF e usarlo con le impostazioni predefinite. È inoltre possibile scegliere un'associazione fornita dal sistema e reimpostarne i valori delle proprietà per adattarli ai propri requisiti. In alternativa, è possibile creare un'associazione personalizzata o un'associazione definita dall'utente, per avere un grado più elevato di controllo e personalizzazione.  
+1. Selezionare o definire un'associazione. Il metodo più semplice è scegliere una delle associazioni fornite dal sistema incluse con WCF e usarlo con le impostazioni predefinite. È inoltre possibile scegliere un'associazione fornita dal sistema e reimpostarne i valori delle proprietà per adattarli ai propri requisiti. In alternativa, è possibile creare un'associazione personalizzata o un'associazione definita dall'utente, per avere un grado più elevato di controllo e personalizzazione.  
   
-2.  Creare un endpoint che usa l'associazione selezionata o definita.  
+2. Creare un endpoint che usa l'associazione selezionata o definita.  
   
 ## <a name="code-and-configuration"></a>Codice e configurazione  
  È possibile definire associazioni in due modi, tramite il codice o la configurazione. Questi due approcci non variano a seconda che si stia usando un'associazione fornita dal sistema o un'associazione personalizzata. In generale, l'uso del codice garantisce il controllo completo sulla definizione di un'associazione in fase di progettazione. Usando la configurazione, d'altra parte, consente a un amministratore di sistema o l'utente di un servizio WCF o un client per modificare i parametri di un'associazione senza dover ricompilare l'applicazione di servizio. Questa flessibilità è spesso opportuno poiché non è possibile stimare i requisiti specifici del computer in cui è necessario distribuire un'applicazione WCF. Se l'associazione e le informazioni di indirizzo vengono tenute fuori dal codice, esse possono cambiare senza che sia necessario ricompilare o ridistribuire l'applicazione. Si noti che le associazioni definite in codice vengono create dopo le associazioni specificate in configurazione, il che consente alle associazioni definite nel codice di sovrascrivere qualsiasi associazione definita nella configurazione.  

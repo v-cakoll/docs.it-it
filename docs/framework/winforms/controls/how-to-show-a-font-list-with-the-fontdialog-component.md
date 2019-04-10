@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307323"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Procedura: Visualizzare un elenco di tipi di carattere con il componente FontDialog
 Il [FontDialog](fontdialog-component-windows-forms.md) componente consente agli utenti di selezionare un tipo di carattere, nonché modificarne la visualizzazione, ad esempio il peso e dimensioni.  
@@ -27,11 +27,11 @@ Il [FontDialog](fontdialog-component-windows-forms.md) componente consente agli 
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>Selezionare le proprietà del tipo di carattere utilizzando il componente FontDialog  
   
-1.  Visualizzare la finestra di dialogo tramite il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (metodo).  
+1. Visualizzare la finestra di dialogo tramite il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (metodo).  
   
-2.  Usare il <xref:System.Windows.Forms.DialogResult> proprietà per determinare come è stata chiusa la finestra di dialogo.  
+2. Usare il <xref:System.Windows.Forms.DialogResult> proprietà per determinare come è stata chiusa la finestra di dialogo.  
   
-3.  Usare il <xref:System.Windows.Forms.FontDialog.Font%2A> proprietà da impostare il tipo di carattere desiderato.  
+3. Usare il <xref:System.Windows.Forms.FontDialog.Font%2A> proprietà da impostare il tipo di carattere desiderato.  
   
      Nell'esempio seguente, il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Click> gestore eventi apre un <xref:System.Windows.Forms.FontDialog> componente. Quando un tipo di carattere è selezionata e l'utente sceglie **OK**, il <xref:System.Windows.Forms.FontDialog.Font%2A> proprietà di un <xref:System.Windows.Forms.TextBox> controllo nel form è impostato per il tipo di carattere selezionato. L'esempio presuppone che il form contenga un <xref:System.Windows.Forms.Button> (controllo), una <xref:System.Windows.Forms.TextBox> (controllo) e un <xref:System.Windows.Forms.FontDialog> componente.  
   

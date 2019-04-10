@@ -2,40 +2,40 @@
 title: Rilevamento SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146341"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308926"
 ---
 # <a name="sql-tracking"></a>Rilevamento SQL
 In questo esempio viene illustrato come scrivere un partecipante del rilevamento SQL personalizzato che scrive record di rilevamento in un database SQL. Windows Workflow Foundation (WF) fornisce per ottenere visibilità nell'esecuzione di un'istanza del flusso di lavoro di rilevamento del flusso di lavoro. Il runtime di rilevamento crea record di rilevamento del flusso di lavoro durante l'esecuzione di quest'ultimo. Per altre informazioni sul rilevamento del flusso di lavoro, vedere [flusso di lavoro di rilevamento e traccia](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1.  Verificare di avere installato SQL Server 2008, SQL Server 2008 Express o una versione più recente. Gli script impacchettati con l'esempio presuppongono l'uso di un'istanza di SQL Express sul computer locale. Se si dispone di un'istanza diversa, modificare gli script correlati al database prima di eseguire l'esempio.
+1. Verificare di avere installato SQL Server 2008, SQL Server 2008 Express o una versione più recente. Gli script impacchettati con l'esempio presuppongono l'uso di un'istanza di SQL Express sul computer locale. Se si dispone di un'istanza diversa, modificare gli script correlati al database prima di eseguire l'esempio.
 
-2.  Creare il database di rilevamento di SQL Server eseguendo Trackingsetup.cmd nella directory degli script (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Verrà creato un database denominato TrackingSample.
+2. Creare il database di rilevamento di SQL Server eseguendo Trackingsetup.cmd nella directory degli script (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Verrà creato un database denominato TrackingSample.
 
     > [!NOTE]
     >  Lo script crea il database nell'istanza predefinita di SQL Express. Se si desidera installarlo in un'istanza di database diversa, modificare lo script Trackingsetup.cmd.  
   
-3.  Aprire Sqltrackingsample in Visual Studio 2010.  
+3. Aprire Sqltrackingsample in Visual Studio 2010.  
   
-4.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
+4. Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-5.  Premere F5 per eseguire l'applicazione.  
+5. Premere F5 per eseguire l'applicazione.  
   
      Viene aperta la finestra del browser in cui viene mostrata la visualizzazione directory per l'applicazione.  
   
-6.  Nel browser fare clic su StockPriceService.xamlx.  
+6. Nel browser fare clic su StockPriceService.xamlx.  
   
-7.  Nel browser viene visualizzata la pagina StockPriceService contenente l'indirizzo WSDL del servizio locale. Copiare questo indirizzo.  
+7. Nel browser viene visualizzata la pagina StockPriceService contenente l'indirizzo WSDL del servizio locale. Copiare questo indirizzo.  
   
      Un esempio dell'indirizzo WSDL del servizio locale è `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8.  Tramite [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], eseguire il client di prova WCF (WcfTestClient.exe). che si trova nella directory Microsoft Visual Studio 10.0\Common7\IDE.  
+8. Tramite [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], eseguire il client di prova WCF (WcfTestClient.exe). che si trova nella directory Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. Nel client di prova WCF fare clic sui **File** dal menu **Aggiungi servizio**. Incollare l'indirizzo del servizio locale nella casella di testo. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
@@ -45,7 +45,7 @@ In questo esempio viene illustrato come scrivere un partecipante del rilevamento
   
 #### <a name="to-uninstall-the-sample"></a>Per disinstallare l'esempio  
   
-1.  Eseguire lo script Trackingcleanup.cmd nella directory di esempio (\WF\Basic\Tracking\SqlTracking).  
+1. Eseguire lo script Trackingcleanup.cmd nella directory di esempio (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
     >  Trackingcleanup.cmd tenta di eliminare il database nel computer locale SQL Express. Se si usa un'altra istanza di SQL Server, modificare Trackingcleanup.cmd.

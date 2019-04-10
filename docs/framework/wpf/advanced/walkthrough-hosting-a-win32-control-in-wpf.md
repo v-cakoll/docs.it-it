@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307704"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo Win32 in WPF
 Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si dispone di un investimento sostanziale nel codice Win32, potrebbe essere più efficace riutilizzare almeno parte di tale codice nell'applicazione WPF anziché riscriverlo completamente. WPF fornisce un meccanismo semplice per l'hosting di una finestra Win32, in una pagina WPF.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) fornisce un ambiente completo per la creaz
   
  La procedura di hosting base è la seguente:  
   
-1.  Implementare una pagina WPF per contenere la finestra. Una tecnica consiste nel creare un <xref:System.Windows.Controls.Border> elemento riservare una sezione della pagina per la finestra ospitata.  
+1. Implementare una pagina WPF per contenere la finestra. Una tecnica consiste nel creare un <xref:System.Windows.Controls.Border> elemento riservare una sezione della pagina per la finestra ospitata.  
   
-2.  Implementare una classe per ospitare il controllo che eredita da <xref:System.Windows.Interop.HwndHost>.  
+2. Implementare una classe per ospitare il controllo che eredita da <xref:System.Windows.Interop.HwndHost>.  
   
-3.  In questa classe, eseguire l'override di <xref:System.Windows.Interop.HwndHost> membro della classe <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. In questa classe, eseguire l'override di <xref:System.Windows.Interop.HwndHost> membro della classe <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Creare la finestra ospitata come elemento figlio della finestra che contiene la pagina WPF. Sebbene la programmazione WPF convenzionale non è necessario eseguire in modo esplicito di usarla, la pagina di hosting è una finestra con un handle (HWND). Si riceve l'oggetto HWND della pagina tramite il `hwndParent` parametro il <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> (metodo). La finestra ospitata deve essere creata come elemento figlio dell'oggetto HWND.  
+4. Creare la finestra ospitata come elemento figlio della finestra che contiene la pagina WPF. Sebbene la programmazione WPF convenzionale non è necessario eseguire in modo esplicito di usarla, la pagina di hosting è una finestra con un handle (HWND). Si riceve l'oggetto HWND della pagina tramite il `hwndParent` parametro il <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> (metodo). La finestra ospitata deve essere creata come elemento figlio dell'oggetto HWND.  
   
-5.  Dopo aver creato la finestra host, restituire l'oggetto HWND della finestra ospitata. Se si desidera ospitare uno o più controlli Win32, in genere crea una finestra host come elemento figlio dell'oggetto HWND e verificare gli elementi figlio di controlli della finestra host. Il wrapping dei controlli in una finestra host offre un modo semplice per la pagina WPF ricevere le notifiche dai controlli, che illustra alcuni problemi di Win32 particolari con le notifiche oltre il limite HWND.  
+5. Dopo aver creato la finestra host, restituire l'oggetto HWND della finestra ospitata. Se si desidera ospitare uno o più controlli Win32, in genere crea una finestra host come elemento figlio dell'oggetto HWND e verificare gli elementi figlio di controlli della finestra host. Il wrapping dei controlli in una finestra host offre un modo semplice per la pagina WPF ricevere le notifiche dai controlli, che illustra alcuni problemi di Win32 particolari con le notifiche oltre il limite HWND.  
   
-6.  Gestire i messaggi selezionati inviati alla finestra host, ad esempio notifiche dai controlli figlio. È possibile ottenere questo risultato in due modi.  
+6. Gestire i messaggi selezionati inviati alla finestra host, ad esempio notifiche dai controlli figlio. È possibile ottenere questo risultato in due modi.  
   
     -   Se si preferisce gestire i messaggi nella classe di hosting, eseguire l'override di <xref:System.Windows.Interop.HwndHost.WndProc%2A> metodo di <xref:System.Windows.Interop.HwndHost> classe.  
   
     -   Se si preferisce che l'applicazione WPF che gestiscono i messaggi, gestire le <xref:System.Windows.Interop.HwndHost> classe <xref:System.Windows.Interop.HwndHost.MessageHook> eventi nel code-behind. Questo evento si verifica per ogni messaggio ricevuto dalla finestra ospitata. Se si sceglie questa opzione, è necessario comunque eseguire l'override <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ma è necessario solo un'implementazione minima.  
   
-7.  Eseguire l'override di <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A> metodi <xref:System.Windows.Interop.HwndHost>. È necessario eseguire l'override di questi metodi per soddisfare il <xref:System.Windows.Interop.HwndHost> contratto, ma si potrebbe essere necessario solo fornire un'implementazione minima.  
+7. Eseguire l'override di <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> e <xref:System.Windows.Interop.HwndHost.WndProc%2A> metodi <xref:System.Windows.Interop.HwndHost>. È necessario eseguire l'override di questi metodi per soddisfare il <xref:System.Windows.Interop.HwndHost> contratto, ma si potrebbe essere necessario solo fornire un'implementazione minima.  
   
-8.  Nel file code-behind, creare un'istanza della classe di hosting del controllo e impostarla come figlio di <xref:System.Windows.Controls.Border> elemento che deve ospitare la finestra.  
+8. Nel file code-behind, creare un'istanza della classe di hosting del controllo e impostarla come figlio di <xref:System.Windows.Controls.Border> elemento che deve ospitare la finestra.  
   
 9. Comunicare con la finestra ospitata inviando a tale [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] messaggi e gestendo i messaggi dalle relative finestre figlio, ad esempio le notifiche inviate mediante controlli.  
   

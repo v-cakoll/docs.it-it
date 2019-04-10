@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8904eff39b7278b2a185cc5e2f738ece1e8e88e4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306508"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Procedura: Ordinare e filtrare i dati ADO.NET con il componente BindingSource di Windows Forms
 È possibile esporre l'ordinamento e filtro funzionalità del <xref:System.Windows.Forms.BindingSource> controllare tramite il <xref:System.Windows.Forms.BindingSource.Sort%2A> e <xref:System.Windows.Forms.BindingSource.Filter%2A> proprietà. È possibile applicare un ordinamento semplice quando l'origine dati sottostante è un <xref:System.ComponentModel.IBindingList>, ed è possibile applicare il filtro e ordinamento avanzato quando l'origine dati è un <xref:System.ComponentModel.IBindingListView>. Il <xref:System.Windows.Forms.BindingSource.Sort%2A> proprietà richiede standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sintassi: una stringa che rappresenta il nome di una colonna di dati nell'origine dati aggiungendo `ASC` o `DESC` per indicare se deve essere ordinato l'elenco in ordine crescente o decrescente. È possibile impostare l'ordinamento avanzato o più colonne di ordinamento separando ogni colonna con una virgola come separatore. Il <xref:System.Windows.Forms.BindingSource.Filter%2A> proprietà accetta un'espressione stringa.  
@@ -37,9 +37,9 @@ ms.locfileid: "59163254"
   
 ### <a name="to-sort-data-with-the-bindingsource"></a>Per ordinare i dati con BindingSource  
   
-1.  Impostare il <xref:System.Windows.Forms.BindingSource.Sort%2A> proprietà sul nome di colonna desiderato aggiungendo `ASC` o `DESC` per indicare l'ordine crescente o decrescente.  
+1. Impostare il <xref:System.Windows.Forms.BindingSource.Sort%2A> proprietà sul nome di colonna desiderato aggiungendo `ASC` o `DESC` per indicare l'ordine crescente o decrescente.  
   
-2.  Separare più colonne con una virgola.  
+2. Separare più colonne con una virgola.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  

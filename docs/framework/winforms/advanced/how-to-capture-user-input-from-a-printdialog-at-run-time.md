@@ -11,21 +11,21 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: c1b0a7e66a4c2050ea5b92a55a39ea46a7b762c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2aaf988f362baf9cd80eb16e4a08f7f65a5077bb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311422"
 ---
 # <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Procedura: Acquisire l'input dell'utente da un componente PrintDialog in fase di esecuzione
 Mentre è possibile impostare le opzioni relative alla stampa in fase di progettazione, talvolta si desidera modificare queste opzioni in fase di esecuzione, probabilmente a causa di scelte effettuate dall'utente. È possibile acquisire l'input dell'utente per la stampa di un documento usando il <xref:System.Windows.Forms.PrintDialog> e il <xref:System.Drawing.Printing.PrintDocument> componenti.  
   
 ### <a name="to-change-print-options-programmatically"></a>Per modificare le opzioni di stampa a livello di codice  
   
-1.  Aggiungere un <xref:System.Windows.Forms.PrintDialog> e un <xref:System.Drawing.Printing.PrintDocument> al form.  
+1. Aggiungere un <xref:System.Windows.Forms.PrintDialog> e un <xref:System.Drawing.Printing.PrintDocument> al form.  
   
-2.  Impostare il <xref:System.Windows.Forms.PrintDialog.Document%2A> proprietà del <xref:System.Windows.Forms.PrintDialog> per il <xref:System.Drawing.Printing.PrintDocument> aggiunto al form.  
+2. Impostare il <xref:System.Windows.Forms.PrintDialog.Document%2A> proprietà del <xref:System.Windows.Forms.PrintDialog> per il <xref:System.Drawing.Printing.PrintDocument> aggiunto al form.  
   
     ```vb  
     PrintDialog1.Document = PrintDocument1  
@@ -39,7 +39,7 @@ Mentre è possibile impostare le opzioni relative alla stampa in fase di progett
     printDialog1->Document = PrintDocument1;  
     ```  
   
-3.  Visualizzare il <xref:System.Windows.Forms.PrintDialog> componente usando la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (metodo).  
+3. Visualizzare il <xref:System.Windows.Forms.PrintDialog> componente usando la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (metodo).  
   
     ```vb  
     PrintDialog1.ShowDialog()  
@@ -53,7 +53,7 @@ Mentre è possibile impostare le opzioni relative alla stampa in fase di progett
     printDialog1->ShowDialog();  
     ```  
   
-4.  Le scelte dell'utente stampa nella finestra di dialogo verranno copiate il <xref:System.Drawing.Printing.PrinterSettings> proprietà del <xref:System.Drawing.Printing.PrintDocument> componente.  
+4. Le scelte dell'utente stampa nella finestra di dialogo verranno copiate il <xref:System.Drawing.Printing.PrinterSettings> proprietà del <xref:System.Drawing.Printing.PrintDocument> componente.  
   
 ## <a name="see-also"></a>Vedere anche
 

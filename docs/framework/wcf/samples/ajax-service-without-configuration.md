@@ -2,12 +2,12 @@
 title: Servizio AJAX senza configurazione
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 0a8c75136af728c2110affe224fe8bf6c47fc1eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f5ebc952fcc6c2ca4c7272a90dc1929d4b4a0eae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191783"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331611"
 ---
 # <a name="ajax-service-without-configuration"></a>Servizio AJAX senza configurazione
 Questo esempio viene illustrato come utilizzare Windows Communication Foundation (WCF) per creare un servizio base di ASP.NET Asynchronous JavaScript and XML (AJAX) (un servizio che è possibile accedere usando codice JavaScript da un client browser Web) senza utilizzare alcuna configurazione Impostazioni. Il servizio usa sintassi speciale nel file con estensione svc per abilitare automaticamente un endpoint AJAX.  
@@ -41,11 +41,11 @@ Questo esempio viene illustrato come utilizzare Windows Communication Foundation
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di eseguire le istruzioni di installazione nella [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di eseguire le istruzioni di installazione nella [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Compilare la soluzione Xmlajaxservice come descritto in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Compilare la soluzione Xmlajaxservice come descritto in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Passare a `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` (non aprire Configfreeclientpage nel browser dalla directory del progetto).  
+3. Passare a `http://localhost/ServiceModelSamples/ConfigFreeClientPage.aspx` (non aprire Configfreeclientpage nel browser dalla directory del progetto).  
   
 > [!NOTE]
 >  Quando si esegue questo esempio, assicurarsi che Autenticazione anonima e Autenticazione Windows non siano abilitate simultaneamente per la cartella ServiceModelSamples in IIS. Se così dovesse essere, disabilitare l'autenticazione Windows. Dopo aver eseguito l'esempio, abilitare l'autenticazione Windows ed eseguire "iisreset".  

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: c104798fa3ef0e8b9dc43ad9cc68599b71de4011
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 53b6c809103a2a32d544b8317164a5fa3aa81596
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140491"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300554"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Procedura: Creare un servizio che richiede sessioni
 Le sessioni creano un stato condiviso tra due o più endpoint che abilita funzionalità utili quali i callback, la sicurezza multihop e le associazioni tra istanze di client e servizi. Per altre informazioni sulle sessioni nelle applicazioni Windows Communication Foundation (WCF), vedere [utilizzando le sessioni](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Per specificare che un contratto richiede l'associazione per supportare sessioni  
   
-1.  Creare un contratto di servizio con almeno un'operazione. Per un esempio di come creare un contratto di servizio, vedere [come: Definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
+1. Creare un contratto di servizio con almeno un'operazione. Per un esempio di come creare un contratto di servizio, vedere [come: Definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
   
-2.  Modificare la classe <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> che dichiara il contratto impostando la proprietà <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> su uno dei seguenti elementi:  
+2. Modificare la classe <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> che dichiara il contratto impostando la proprietà <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> su uno dei seguenti elementi:  
   
     -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Se questo contratto deve essere eseguito all'interno di una sessione.  
   
@@ -27,7 +27,7 @@ Le sessioni creano un stato condiviso tra due o più endpoint che abilita funzio
   
     -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Se questo contratto non deve essere eseguito all'interno di una sessione.  
   
-3.  Configurare l'endpoint del servizio per l'utilizzo di un'associazione che supporti sessioni. Nell'esempio di configurazione seguente viene illustrato l'utilizzo di <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, che supporta una sessione di WS`-`ReliableMessaging.  
+3. Configurare l'endpoint del servizio per l'utilizzo di un'associazione che supporti sessioni. Nell'esempio di configurazione seguente viene illustrato l'utilizzo di <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>, che supporta una sessione di WS`-`ReliableMessaging.  
   
      [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]   
   

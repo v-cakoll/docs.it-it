@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540754"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332508"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedura: Associare dati utilizzando un'origine dati di progetto (WCF Data Services)
 
@@ -23,11 +23,11 @@ ms.locfileid: "54540754"
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Usare un'origine dati del progetto in una finestra WPF
 
-1.  In Visual Studio in un progetto WPF aggiungere un riferimento al servizio dati Northwind. Per altre informazioni, vedere [Procedura: Aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. In Visual Studio in un progetto WPF aggiungere un riferimento al servizio dati Northwind. Per altre informazioni, vedere [Procedura: Aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
-2.  Nel **Zdroje dat** finestra, espandere il `Customers` nodo il **NorthwindEntities** origine dati del progetto.
+2. Nel **Zdroje dat** finestra, espandere il `Customers` nodo il **NorthwindEntities** origine dati del progetto.
 
-3.  Fare clic sul **CustomerID** elemento, scegliere **ComboBox** dall'elenco e trascinare il **CustomerID** elemento dal **clienti** nodo per il finestra di progettazione.
+3. Fare clic sul **CustomerID** elemento, scegliere **ComboBox** dall'elenco e trascinare il **CustomerID** elemento dal **clienti** nodo per il finestra di progettazione.
 
      Nel file XAML per la finestra verranno creati gli elementi oggetto seguenti:
 
@@ -37,7 +37,7 @@ ms.locfileid: "54540754"
 
     -   Oggetto <xref:System.Windows.Controls.Label>.
 
-4.  Trascinare il **ordini** proprietà di navigazione nella finestra di progettazione.
+4. Trascinare il **ordini** proprietà di navigazione nella finestra di progettazione.
 
      Nel file XAML per la finestra verranno creati gli elementi oggetto aggiuntivi seguenti:
 
@@ -45,18 +45,18 @@ ms.locfileid: "54540754"
 
     -   Un controllo <xref:System.Windows.Controls.DataGrid> con associazione a dati denominato `ordersDataGrid`.
 
-5.  (Facoltativo) Trascinare gli elementi aggiuntivi dal **clienti** nodo nella finestra di progettazione.
+5. (Facoltativo) Trascinare gli elementi aggiuntivi dal **clienti** nodo nella finestra di progettazione.
 
-6.  Aprire la tabella codici per il form e aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):
+6. Aprire la tabella codici per il form e aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  Nella classe parziale che definisce il form aggiungere il codice seguente per creare un'istanza di <xref:System.Data.Objects.ObjectContext> e definire la costante `customerID`.
+7. Nella classe parziale che definisce il form aggiungere il codice seguente per creare un'istanza di <xref:System.Data.Objects.ObjectContext> e definire la costante `customerID`.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  Nella finestra di progettazione selezionare la finestra.
+8. Nella finestra di progettazione selezionare la finestra.
 
     > [!NOTE]
     > Assicurarsi di selezionare la finestra stessa anziché il contenuto incluso nella finestra. Se si seleziona la finestra, il **Name** casella di testo nella parte superiore della **proprietà** finestra deve contenere il nome della finestra.
@@ -76,9 +76,9 @@ ms.locfileid: "54540754"
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>Usare un'origine dati del progetto in un modulo di Windows
 
-1.  Nel **Zdroje dat** finestra, espandere il **clienti** nodo il **NorthwindEntities** origine dati del progetto.
+1. Nel **Zdroje dat** finestra, espandere il **clienti** nodo il **NorthwindEntities** origine dati del progetto.
 
-2.  Fare clic sul **CustomerID** elemento, scegliere **ComboBox** dall'elenco e trascinare il **CustomerID** elemento dal **clienti** nodo per il finestra di progettazione.
+2. Fare clic sul **CustomerID** elemento, scegliere **ComboBox** dall'elenco e trascinare il **CustomerID** elemento dal **clienti** nodo per il finestra di progettazione.
 
      Nel form verranno creati i controlli seguenti:
 
@@ -90,23 +90,23 @@ ms.locfileid: "54540754"
 
     -   Oggetto <xref:System.Windows.Forms.Label>.
 
-3.  Trascinare il **ordini** proprietà di navigazione al form.
+3. Trascinare il **ordini** proprietà di navigazione al form.
 
-4.  Verrà creato il controllo `ordersBindingSource` con la proprietà <xref:System.Windows.Forms.BindingSource.DataSource%2A> impostata su `customersBindingSource` e la proprietà <xref:System.Windows.Forms.BindingSource.DataMember%2A> impostata su `Customers`. Nel form verrà inoltre creato il controllo con associazione a dati `ordersDataGridView`, accompagnato da un controllo etichetta con il titolo appropriato.
+4. Verrà creato il controllo `ordersBindingSource` con la proprietà <xref:System.Windows.Forms.BindingSource.DataSource%2A> impostata su `customersBindingSource` e la proprietà <xref:System.Windows.Forms.BindingSource.DataMember%2A> impostata su `Customers`. Nel form verrà inoltre creato il controllo con associazione a dati `ordersDataGridView`, accompagnato da un controllo etichetta con il titolo appropriato.
 
-5.  (Facoltativo) Trascinare gli elementi aggiuntivi dal **clienti** nodo nella finestra di progettazione.
+5. (Facoltativo) Trascinare gli elementi aggiuntivi dal **clienti** nodo nella finestra di progettazione.
 
-6.  Aprire la tabella codici per il form e aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):
+6. Aprire la tabella codici per il form e aggiungere le istruzioni `using` seguenti (`Imports` in Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
 
-7.  Nella classe parziale che definisce il form aggiungere il codice seguente per creare un'istanza di <xref:System.Data.Objects.ObjectContext> e definire la costante `customerID`.
+7. Nella classe parziale che definisce il form aggiungere il codice seguente per creare un'istanza di <xref:System.Data.Objects.ObjectContext> e definire la costante `customerID`.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  Nella finestra di progettazione dei form fare doppio clic sul form.
+8. Nella finestra di progettazione dei form fare doppio clic sul form.
 
      Verrà visualizzata la tabella codici per il form e verrà creato il metodo che gestisce l'evento `Load` per il form.
 

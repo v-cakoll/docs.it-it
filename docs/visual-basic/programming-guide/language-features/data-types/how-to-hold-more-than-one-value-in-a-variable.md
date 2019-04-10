@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332261"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedura: Inserire più valori in una variabile (Visual Basic)
 Una variabile contiene più di un valore se si dichiara che questo sia di un *tipo di dati composito*.  
@@ -25,9 +25,9 @@ Una variabile contiene più di un valore se si dichiara che questo sia di un *ti
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Per inserire più valori in una variabile  
   
-1.  Determinare a quale tipo di dati composito da usare per la variabile.  
+1. Determinare a quale tipo di dati composito da usare per la variabile.  
   
-2.  Se non è già stato definito il tipo di dati compositi, definirlo in modo che la variabile può usarlo.  
+2. Se non è già stato definito il tipo di dati compositi, definirlo in modo che la variabile può usarlo.  
   
     -   Definire una struttura con un [istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
@@ -35,11 +35,11 @@ Una variabile contiene più di un valore se si dichiara che questo sia di un *ti
   
     -   Definire una classe con un [istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  Dichiarare la variabile con un `Dim` istruzione.  
+3. Dichiarare la variabile con un `Dim` istruzione.  
   
-4.  Seguire il nome della variabile con un `As` clausola.  
+4. Seguire il nome della variabile con un `As` clausola.  
   
-5.  Seguire il `As` parola chiave con il nome del tipo di dati compositi appropriato.  
+5. Seguire il `As` parola chiave con il nome del tipo di dati compositi appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
 

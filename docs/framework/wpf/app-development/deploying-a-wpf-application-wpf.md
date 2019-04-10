@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320652"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Distribuzione di un'applicazione WPF (WPF)
 Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, devono essere distribuiti. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e .NET Framework include varie tecnologie di distribuzione. che vengono usate per distribuire specifici tipi di applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Questo argomento offre una breve panoramica delle singole tecnologie di distribuzione e di come vengono usate in relazione ai requisiti di distribuzione di ogni tipo di applicazione [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -102,9 +102,9 @@ Dopo che le applicazioni Windows Presentation Foundation (WPF) sono compilate, d
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] possono essere distribuiti ai client che usano una delle tecniche di distribuzione. Tuttavia, è consigliabile [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] in quanto fornisce le funzionalità seguenti:  
   
-1.  Aggiornamenti automatici quando viene pubblicata una nuova versione.  
+1. Aggiornamenti automatici quando viene pubblicata una nuova versione.  
   
-2.  Elevazione dei privilegi per l'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] in esecuzione con attendibilità totale.  
+2. Elevazione dei privilegi per l'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] in esecuzione con attendibilità totale.  
   
  Per impostazione predefinita, ClickOnce pubblica i file dell'applicazione con l'estensione deploy. Questa impostazione può risultare problematica, ma può essere disabilitata. Per altre informazioni, vedere [Problemi relativi alla configurazione del server e del client nelle distribuzioni ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   

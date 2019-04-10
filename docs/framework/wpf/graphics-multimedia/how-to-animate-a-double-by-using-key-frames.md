@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208780"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305585"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a un oggetto double usando i fotogrammi chiave
 In questo esempio illustra come animare il valore di una proprietà che accetta un <xref:System.Double> usando fotogrammi chiave.  
@@ -22,11 +22,11 @@ In questo esempio illustra come animare il valore di una proprietà che accetta 
 ## <a name="example"></a>Esempio  
  L'esempio seguente sposta un rettangolo in una schermata. L'esempio Usa il <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> classe per animare la <xref:System.Windows.Media.TranslateTransform.X%2A> proprietà di un <xref:System.Windows.Media.TranslateTransform> applicato a un <xref:System.Windows.Shapes.Rectangle>. Questa animazione, ripetuta all'infinito, usa tre fotogrammi chiave nel modo seguente:  
   
-1.  Durante i primi tre secondi, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> classe per spostare il rettangolo lungo un tracciato a una velocità costante dalla posizione iniziale alla posizione 500. Fotogrammi chiave lineari come <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> creano una transizione lineare uniforme tra i valori.  
+1. Durante i primi tre secondi, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> classe per spostare il rettangolo lungo un tracciato a una velocità costante dalla posizione iniziale alla posizione 500. Fotogrammi chiave lineari come <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> creano una transizione lineare uniforme tra i valori.  
   
-2.  Alla fine del quarto secondo, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> classe per spostare rapidamente il rettangolo alla posizione successiva. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> creano salti improvvisi tra valori. In questo esempio, il rettangolo si trova in corrispondenza della posizione iniziale e improvvisamente appare nella posizione 500.  
+2. Alla fine del quarto secondo, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> classe per spostare rapidamente il rettangolo alla posizione successiva. Fotogrammi chiave discreti come <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> creano salti improvvisi tra valori. In questo esempio, il rettangolo si trova in corrispondenza della posizione iniziale e improvvisamente appare nella posizione 500.  
   
-3.  Nei due secondi finali, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> classe per riportare il rettangolo alla posizione iniziale. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> creano una transizione variabile tra i valori a seconda del valore del <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> proprietà. In questo esempio, il rettangolo inizia a spostarsi lentamente e quindi accelera in modo esponenziale verso la fine del segmento temporale.  
+3. Nei due secondi finali, viene utilizzata un'istanza di <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> classe per riportare il rettangolo alla posizione iniziale. Ad esempio i fotogrammi chiave spline <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> creano una transizione variabile tra i valori a seconda del valore del <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> proprietà. In questo esempio, il rettangolo inizia a spostarsi lentamente e quindi accelera in modo esponenziale verso la fine del segmento temporale.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]

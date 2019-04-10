@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205017"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315192"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Procedura: Accedere al Document Object Model HTML gestito
 È possibile accedere a Document Object Model (DOM) HTML gestito da due tipi di applicazione:  
@@ -24,26 +24,26 @@ ms.locfileid: "59205017"
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Per accedere a DOM da un'applicazione Windows Forms  
   
-1.  Ospitare un controllo <xref:System.Windows.Forms.WebBrowser> nell'applicazione Windows Form e verificare la presenza dell'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>. Per altre informazioni su come ospitare i controlli e verificare gli eventi, vedere [Eventi](../../../standard/events/index.md).  
+1. Ospitare un controllo <xref:System.Windows.Forms.WebBrowser> nell'applicazione Windows Form e verificare la presenza dell'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>. Per altre informazioni su come ospitare i controlli e verificare gli eventi, vedere [Eventi](../../../standard/events/index.md).  
   
-2.  Recuperare la classe <xref:System.Windows.Forms.HtmlDocument> per la pagina corrente accedendo alla proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A> del controllo <xref:System.Windows.Forms.WebBrowser>.  
+2. Recuperare la classe <xref:System.Windows.Forms.HtmlDocument> per la pagina corrente accedendo alla proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A> del controllo <xref:System.Windows.Forms.WebBrowser>.  
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Per accedere a DOM da una classe UserControl ospitata in Internet Explorer  
   
-1.  Creare una classe personalizzata derivata dalla classe <xref:System.Windows.Forms.UserControl>. Per altre informazioni, vedere [Procedura: Modificare controlli compositi](how-to-author-composite-controls.md).  
+1. Creare una classe personalizzata derivata dalla classe <xref:System.Windows.Forms.UserControl>. Per altre informazioni, vedere [Procedura: Modificare controlli compositi](how-to-author-composite-controls.md).  
   
-2.  Inserire il codice seguente nel gestore eventi Load per la classe <xref:System.Windows.Forms.UserControl> personalizzata:  
+2. Inserire il codice seguente nel gestore eventi Load per la classe <xref:System.Windows.Forms.UserControl> personalizzata:  
   
  [!code-csharp[AccessHTMLDOMControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
  [!code-vb[AccessHTMLDOMControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
   
 ## <a name="robust-programming"></a>Programmazione efficiente  
   
-1.  Quando si usa DOM tramite il controllo <xref:System.Windows.Forms.WebBrowser>, è consigliabile attendere sempre finché si verifica l'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> prima di provare ad accedere alla proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A> del controllo <xref:System.Windows.Forms.WebBrowser>. L'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> viene generato dopo il caricamento dell'intero documento. Se si usa DOM prima che l'evento sia generato, si rischia di causare un'eccezione di runtime.  
+1. Quando si usa DOM tramite il controllo <xref:System.Windows.Forms.WebBrowser>, è consigliabile attendere sempre finché si verifica l'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> prima di provare ad accedere alla proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A> del controllo <xref:System.Windows.Forms.WebBrowser>. L'evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> viene generato dopo il caricamento dell'intero documento. Se si usa DOM prima che l'evento sia generato, si rischia di causare un'eccezione di runtime.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
   
-1.  L'applicazione o la classe <xref:System.Windows.Forms.UserControl> richiederà l'attendibilità totale per accedere a DOM HTML gestito. Se si distribuisce un'applicazione Windows Form con [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], è possibile richiedere l'attendibilità totale con l'elevazione delle autorizzazioni o la distribuzione di applicazioni attendibili. Per informazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
+1. L'applicazione o la classe <xref:System.Windows.Forms.UserControl> richiederà l'attendibilità totale per accedere a DOM HTML gestito. Se si distribuisce un'applicazione Windows Form con [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], è possibile richiedere l'attendibilità totale con l'elevazione delle autorizzazioni o la distribuzione di applicazioni attendibili. Per informazioni, vedere [Protezione di applicazioni ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
 ## <a name="see-also"></a>Vedere anche
 

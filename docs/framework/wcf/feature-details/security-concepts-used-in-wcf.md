@@ -2,12 +2,12 @@
 title: Concetti relativi alla sicurezza usati in WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295549"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Concetti relativi alla sicurezza usati in WCF
 Sicurezza di Windows Communication Foundation (WCF) viene generata su concetti già in uso e distribuita in varie infrastrutture di sicurezza.  
@@ -34,15 +34,15 @@ Sicurezza di Windows Communication Foundation (WCF) viene generata su concetti g
 ## <a name="access-control-mechanisms"></a>Meccanismi del controllo di accesso  
  WCF fornisce numerosi modi per controllare l'accesso a un servizio o un'operazione, tra i quali:  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  Provider di appartenenze ASP.NET  
+2. Provider di appartenenze ASP.NET  
   
-3.  Provider di ruoli ASP.NET  
+3. Provider di ruoli ASP.NET  
   
-4.  Gestione autorizzazioni  
+4. Gestione autorizzazioni  
   
-5.  Modello di identità  
+5. Modello di identità  
   
  Per altre informazioni su questi argomenti, vedere [meccanismi di controllo di accesso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   

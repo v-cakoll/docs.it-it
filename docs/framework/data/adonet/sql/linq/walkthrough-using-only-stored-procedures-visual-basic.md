@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314828"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Usare solo stored procedure (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati usando solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  
@@ -62,15 +62,15 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
-1.  Scegliere **Nuovo progetto** dal menu **File**di Visual Studio.  
+1. Scegliere **Nuovo progetto** dal menu **File**di Visual Studio.  
   
-2.  Nel riquadro **Tipi progetto** della finestra di dialogo **Nuovo progetto** espandere **Visual Basic**, quindi fare clic su **Windows**  
+2. Nel riquadro **Tipi progetto** della finestra di dialogo **Nuovo progetto** espandere **Visual Basic**, quindi fare clic su **Windows**  
   
-3.  Nel riquadro **Modelli** scegliere **Applicazione Windows Form**.  
+3. Nel riquadro **Modelli** scegliere **Applicazione Windows Form**.  
   
-4.  Nel **Name** , digitare **SprocOnlyApp**.  
+4. Nel **Name** , digitare **SprocOnlyApp**.  
   
-5.  Fare clic su **OK**.  
+5. Fare clic su **OK**.  
   
      Verrà aperto Progettazione Windows Form.  
   
@@ -79,11 +79,11 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-add-systemdatalinqdll"></a>Per aggiungere System.Data.Linq.dll  
   
-1.  Nelle **Esplora soluzioni**, fare clic su **Mostra tutti i file**.  
+1. Nelle **Esplora soluzioni**, fare clic su **Mostra tutti i file**.  
   
-2.  Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
+2. Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
   
-3.  Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
+3. Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
   
      L'assembly verrà aggiunto al progetto.  
   
@@ -92,9 +92,9 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Per aggiungere il file di codice di Northwind al progetto  
   
-1.  Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
+1. Nel **Project** menu, fare clic su **Aggiungi elemento esistente**.  
   
-2.  Nel **Aggiungi elemento esistente** finestra di dialogo, passare a c:\linqtest3\northwind.vb e quindi fare clic su **Add**.  
+2. Nel **Aggiungi elemento esistente** finestra di dialogo, passare a c:\linqtest3\northwind.vb e quindi fare clic su **Add**.  
   
      Il file northwind.vb viene aggiunto al progetto.  
   
@@ -103,11 +103,11 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-create-the-database-connection"></a>Per creare la connessione al database  
   
-1.  Nelle **Esplora soluzioni**, fare doppio clic su **Form1.vb**, quindi fare clic su **Visualizza codice**.  
+1. Nelle **Esplora soluzioni**, fare doppio clic su **Form1.vb**, quindi fare clic su **Visualizza codice**.  
   
      `Class Form1` viene visualizzata nell'editor del codice.  
   
-2.  Digitare il codice riportato di seguito nel blocco di codice `Form1`.  
+2. Digitare il codice riportato di seguito nel blocco di codice `Form1`.  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
@@ -116,42 +116,42 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-set-up-the-user-interface"></a>Per impostare l'interfaccia utente  
   
-1.  Tornare a di Windows Form della finestra di progettazione (**Form1.vb]**).  
+1. Tornare a di Windows Form della finestra di progettazione (**Form1.vb]**).  
   
-2.  Scegliere **Casella degli strumenti** dal menu **Visualizza**.  
+2. Scegliere **Casella degli strumenti** dal menu **Visualizza**.  
   
      Verrà aperta la Casella degli strumenti.  
   
     > [!NOTE]
     >  Scegliere il **Nascondi automaticamente** puntina da disegno per tenere aperta la casella degli strumenti mentre si eseguono i rimanenti passaggi in questa sezione.  
   
-3.  Trascinare due pulsanti, due caselle di testo e due etichette dalla casella degli strumenti **Form1**.  
+3. Trascinare due pulsanti, due caselle di testo e due etichette dalla casella degli strumenti **Form1**.  
   
      Disporre i controlli come raffigurato nell'illustrazione. Espandere **Form1** in modo che i controlli di adattarsi con facilità.  
   
-4.  Fare doppio clic su **Label1**, quindi fare clic su **proprietà**.  
+4. Fare doppio clic su **Label1**, quindi fare clic su **proprietà**.  
   
-5.  Modifica il **testo** proprietà dal **Label1** al **Enter OrderID:**.  
+5. Modifica il **testo** proprietà dal **Label1** al **Enter OrderID:**.  
   
-6.  Nello stesso modo per **Label2**, modificare il **testo** proprietà dal **Label2** al **Enter CustomerID:**.  
+6. Nello stesso modo per **Label2**, modificare il **testo** proprietà dal **Label2** al **Enter CustomerID:**.  
   
-7.  Nello stesso modo, modificare il **testo** proprietà per **Button1** al **Order Details**.  
+7. Nello stesso modo, modificare il **testo** proprietà per **Button1** al **Order Details**.  
   
-8.  Modifica il **testo** proprietà per **Button2** al **Order History**.  
+8. Modifica il **testo** proprietà per **Button2** al **Order History**.  
   
      Ampliare i controlli pulsante in modo che tutto il testo sia visibile.  
   
 #### <a name="to-handle-button-clicks"></a>Per gestire i clic sui pulsanti  
   
-1.  Fare doppio clic su **Order Details** sul **Form1** per creare il `Button1` gestore eventi e aprire l'editor di codice.  
+1. Fare doppio clic su **Order Details** sul **Form1** per creare il `Button1` gestore eventi e aprire l'editor di codice.  
   
-2.  Digitare il codice riportato di seguito nel gestore eventi `Button1`:  
+2. Digitare il codice riportato di seguito nel gestore eventi `Button1`:  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3.  A questo punto fare doppio clic su **Button2** su Form1 per creare il `Button2` gestore eventi e aprire l'editor di codice.  
+3. A questo punto fare doppio clic su **Button2** su Form1 per creare il `Button2` gestore eventi e aprire l'editor di codice.  
   
-4.  Digitare il codice riportato di seguito nel gestore eventi `Button2`:  
+4. Digitare il codice riportato di seguito nel gestore eventi `Button2`:  
   
      [!code-vb[DLinqWalk4VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#3)]  
   
@@ -160,33 +160,33 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
   
-1.  Premere F5 per avviare il debug.  
+1. Premere F5 per avviare il debug.  
   
      Viene visualizzato Form1.  
   
-2.  Nel **Enter OrderID** , digitare **10249** e quindi fare clic su **Order Details**.  
+2. Nel **Enter OrderID** , digitare **10249** e quindi fare clic su **Order Details**.  
   
      I prodotti inclusi nell'ordine 10249 vengono elencati in una finestra di messaggio.  
   
      Fare clic su **OK** per chiudere la finestra di messaggio.  
   
-3.  Nel **Enter CustomerID** , digitare `ALFKI`, quindi fare clic su **Order History**.  
+3. Nel **Enter CustomerID** , digitare `ALFKI`, quindi fare clic su **Order History**.  
   
      In una finestra di messaggio viene elencata la cronologia degli ordini per il cliente ALFKI.  
   
      Fare clic su **OK** per chiudere la finestra di messaggio.  
   
-4.  Nel **Enter OrderID** , digitare `123`, quindi fare clic su **Order Details**.  
+4. Nel **Enter OrderID** , digitare `123`, quindi fare clic su **Order Details**.  
   
      Viene visualizzata una finestra di messaggio con l'indicazione che non è stato trovato alcun risultato.  
   
      Fare clic su **OK** per chiudere la finestra di messaggio.  
   
-5.  Nel **Debug** menu, fare clic su **arrestare il debug**.  
+5. Nel **Debug** menu, fare clic su **arrestare il debug**.  
   
      La sessione di debug viene chiusa.  
   
-6.  Se si al termine delle prove, è possibile fare clic su **Chiudi progetto** nel **File** menu e salvare il progetto quando viene richiesto.  
+6. Se si al termine delle prove, è possibile fare clic su **Chiudi progetto** nel **File** menu e salvare il progetto quando viene richiesto.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Questo progetto può essere migliorato apportandovi alcune modifiche. Ad esempio, è possibile elencare le stored procedure disponibili in una casella di riepilogo, in modo che l'utente possa selezionare quella da eseguire. È inoltre possibile trasmettere l'output dei rapporti a un file di testo.  

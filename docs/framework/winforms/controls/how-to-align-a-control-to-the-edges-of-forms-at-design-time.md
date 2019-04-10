@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140894"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331864"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Procedura: Allineare un controllo ai bordi dei moduli in fase di progettazione
 È possibile allineare un controllo per il bordo dei form impostando la <xref:System.Windows.Forms.Control.Dock%2A>. che designa la posizione del controllo nel form. La proprietà <xref:System.Windows.Forms.Control.Dock%2A> può essere impostata su uno dei valori riportati di seguito:  
@@ -31,15 +31,15 @@ ms.locfileid: "59140894"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Per impostare la proprietà Dock del controllo in fase di progettazione  
   
-1.  Nella finestra di progettazione Windows Form, selezionare il controllo.  
+1. Nella finestra di progettazione Windows Form, selezionare il controllo.  
   
-2.  Nel **delle proprietà** fare clic sulla casella di elenco a discesa accanto al <xref:System.Windows.Forms.Control.Dock%2A> proprietà.  
+2. Nel **delle proprietà** fare clic sulla casella di elenco a discesa accanto al <xref:System.Windows.Forms.Control.Dock%2A> proprietà.  
   
      Un'interfaccia grafica che rappresenta le sei possibili <xref:System.Windows.Forms.Control.Dock%2A> impostazioni viene visualizzata.  
   
-3.  Scegliere l'impostazione appropriata.  
+3. Scegliere l'impostazione appropriata.  
   
-4.  Il controllo verrà ancorato nel modo specificato dall'impostazione.  
+4. Il controllo verrà ancorato nel modo specificato dall'impostazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

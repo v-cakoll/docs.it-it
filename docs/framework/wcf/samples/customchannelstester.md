@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: c91632c1967645b4319bca14be66fb0052ad741f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192825"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312670"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` è uno strumento che può essere usato per testare le implementazioni del canale personalizzato in un set di contratti di servizio predefiniti. È possibile selezionare il set di contratti di servizio e passarlo allo strumento usando un file XML. Lo strumento genera quindi il servizio e il client che esercitano le implementazioni del canale personalizzate durante lo scambio di messaggi.  
   
 ### <a name="to-build-the-tool"></a>Per compilare lo strumento  
   
-1.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  La compilazione della soluzione genera tre file: CustomChannelsTester.exe, testspec. XML e samplerun. cmd. Il file samplerun. cmd ha una riga di comando di esempio che illustra come usare questo strumento per testare il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio.  
+2. La compilazione della soluzione genera tre file: CustomChannelsTester.exe, testspec. XML e samplerun. cmd. Il file samplerun. cmd ha una riga di comando di esempio che illustra come usare questo strumento per testare il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) esempio.  
   
 ### <a name="to-run-the-tool"></a>Per eseguire lo strumento  
   

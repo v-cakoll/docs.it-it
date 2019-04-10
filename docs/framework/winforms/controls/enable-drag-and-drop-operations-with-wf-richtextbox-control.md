@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: e61f7743d984d99b1c6811cb1980b97705c304a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310278"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Procedura: Abilitare operazioni di trascinamento con il controllo RichTextBox di Windows Forms
 Le operazioni di trascinamento della selezione del controllo <xref:System.Windows.Forms.RichTextBox> di Windows Form vengono eseguite gestendo gli eventi <xref:System.Windows.Forms.RichTextBox.DragEnter> e <xref:System.Windows.Forms.RichTextBox.DragDrop> . Quindi, le operazioni di trascinamento della selezione risultano molto semplici con il controllo <xref:System.Windows.Forms.RichTextBox> .  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Per abilitare le operazioni di trascinamento in un controllo RichTextBox  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> del controllo <xref:System.Windows.Forms.RichTextBox> su `true`.  
+1. Impostare la proprietà <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> del controllo <xref:System.Windows.Forms.RichTextBox> su `true`.  
   
-2.  Scrivere il codice nel gestore eventi per l'evento <xref:System.Windows.Forms.RichTextBox.DragEnter> . Usare un'istruzione `if` per assicurarsi che i dati trascinati siano di un tipo accettabile (in questo caso, testo). La proprietà <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> può essere impostata su uno qualsiasi dei valori dell'enumerazione <xref:System.Windows.Forms.DragDropEffects> .  
+2. Scrivere il codice nel gestore eventi per l'evento <xref:System.Windows.Forms.RichTextBox.DragEnter> . Usare un'istruzione `if` per assicurarsi che i dati trascinati siano di un tipo accettabile (in questo caso, testo). La proprietà <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> può essere impostata su uno qualsiasi dei valori dell'enumerazione <xref:System.Windows.Forms.DragDropEffects> .  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -76,7 +76,7 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  Scrivere codice per gestire l'evento <xref:System.Windows.Forms.RichTextBox.DragDrop> . Usare il metodo <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> per recuperare i dati trascinati.  
+3. Scrivere codice per gestire l'evento <xref:System.Windows.Forms.RichTextBox.DragDrop> . Usare il metodo <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> per recuperare i dati trascinati.  
   
      Nell'esempio seguente il codice imposta la proprietà <xref:System.Windows.Forms.RichTextBox.Text%2A> del controllo <xref:System.Windows.Forms.RichTextBox> uguale ai dati trascinati. Se il testo è già presente nel controllo <xref:System.Windows.Forms.RichTextBox> , il testo trascinato viene inserito nel punto di inserimento.  
   
@@ -154,11 +154,11 @@ Le operazioni di trascinamento della selezione del controllo <xref:System.Window
   
 ### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>Per testare la funzionalità di trascinamento della selezione nell'applicazione  
   
-1.  Salvare e compilare l'applicazione. Durante l'esecuzione, eseguire WordPad.  
+1. Salvare e compilare l'applicazione. Durante l'esecuzione, eseguire WordPad.  
   
      WordPad è un editor di testo installato da Windows che consente operazioni di trascinamento della selezione. È accessibile premendo **Start** , selezionando **Esegui**e digitando `WordPad` nella casella di testo della finestra di dialogo **Esegui** , quindi facendo clic su **OK**.  
   
-2.  Una volta aperto WordPad, digitare una stringa di testo al suo interno. Usando il mouse, selezionare il testo e quindi trascinarlo sul controllo <xref:System.Windows.Forms.RichTextBox> nell'applicazione Windows.  
+2. Una volta aperto WordPad, digitare una stringa di testo al suo interno. Usando il mouse, selezionare il testo e quindi trascinarlo sul controllo <xref:System.Windows.Forms.RichTextBox> nell'applicazione Windows.  
   
      Quando si passa il mouse sul controllo <xref:System.Windows.Forms.RichTextBox> (e, di conseguenza, si genera l'evento <xref:System.Windows.Forms.RichTextBox.DragEnter> ), il puntatore del mouse cambia ed è possibile rilasciare il testo selezionato nel controllo <xref:System.Windows.Forms.RichTextBox> .  
   

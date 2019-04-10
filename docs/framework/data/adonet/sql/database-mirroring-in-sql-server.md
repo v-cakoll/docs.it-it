@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325696"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
 Il mirroring del database in SQL Server consente di mantenere una copia, o mirror, di un database di SQL Server in un server di standby. Il mirroring assicura che siano sempre disponibili due copie separate dei dati per assicurare un'elevata disponibilità e una ridondanza completa dei dati. Il provider di dati .NET per SQL Server fornisce il supporto implicito per il mirroring del database. Pertanto, una volta configurato il provider per un database SQL Server, lo sviluppatore non dovrà eseguire alcuna operazione né scrivere codice. L'oggetto <xref:System.Data.SqlClient.SqlConnection> supporta inoltre una modalità di connessione esplicita che consente di specificare il nome di un server partner di failover in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  La sequenza di eventi semplificata indicata di seguito si verifica per un oggetto <xref:System.Data.SqlClient.SqlConnection> destinato a un database configurato per il mirroring:  
   
-1.  L'applicazione client esegue correttamente la connessione al database principale e il server restituisce il nome del server partner, che viene successivamente inserito nella cache del client.  
+1. L'applicazione client esegue correttamente la connessione al database principale e il server restituisce il nome del server partner, che viene successivamente inserito nella cache del client.  
   
-2.  Se si verifica un errore nel server contenente il database principale o se viene interrotta la connettività, lo stato della connessione e lo stato della transazione andranno perduti. L'applicazione client tenta di ristabilire una connessione al database principale ma si verificherà un errore.  
+2. Se si verifica un errore nel server contenente il database principale o se viene interrotta la connettività, lo stato della connessione e lo stato della transazione andranno perduti. L'applicazione client tenta di ristabilire una connessione al database principale ma si verificherà un errore.  
   
-3.  A questo punto, l'applicazione client tenta di ristabilire una connessione al database mirror nel server partner in modo trasparente. Se viene eseguita correttamente, la connessione viene reindirizzata al database mirror, che diventa il nuovo database principale.  
+3. A questo punto, l'applicazione client tenta di ristabilire una connessione al database mirror nel server partner in modo trasparente. Se viene eseguita correttamente, la connessione viene reindirizzata al database mirror, che diventa il nuovo database principale.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Definizione del partner di failover nella stringa di connessione  
  Se si specifica il nome di un server partner di failover nella stringa di connessione, il client tenterà una connessione al partner di failover in modo trasparente se il database principale non è disponibile quando l'applicazione client si connette per la prima volta.  

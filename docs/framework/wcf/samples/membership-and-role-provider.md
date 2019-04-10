@@ -2,12 +2,12 @@
 title: Provider di appartenenza e di ruoli
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 195940bea9c0fc8b26b6b49eadc1927ff156c514
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176943"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330090"
 ---
 # <a name="membership-and-role-provider"></a>Provider di appartenenza e di ruoli
 Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che modo un servizio può utilizzare i provider di appartenenza e di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] per autenticare e autorizzare i client.  
@@ -118,9 +118,9 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Per compilare l'edizione c# o Visual Basic .NET della soluzione, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1. Per compilare l'edizione c# o Visual Basic .NET della soluzione, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-2.  Assicurarsi di aver configurato il [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
+2. Assicurarsi di aver configurato il [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
     >  Se si sta eseguendo SQL Server Express Edition, il nome del server è .\SQLEXPRESS. Questo server deve essere utilizzato quando si configura il database dei servizi per le applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] e nella stringa di connessione di Web.config.  
@@ -128,35 +128,35 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
     > [!NOTE]
     >  L'account del processo di lavoro [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] deve disporre delle autorizzazioni sul database creato in questo passaggio. Utilizzare l'utilità sqlcmd o SQL Server Management Studio per questo scopo.  
   
-3.  Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.  
+3. Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni indicate di seguito.  
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer  
   
-1.  Verificare che il percorso includa la cartella in cui si trova Makecert.exe.  
+1. Verificare che il percorso includa la cartella in cui si trova Makecert.exe.  
   
-2.  Eseguire Setup. bat dalla cartella di installazione dell'esempio in un prompt dei comandi di per gli sviluppatori per Visual Studio eseguire con privilegi di amministratore. In questo modo vengono installati i certificati dei servizi necessari per l'esecuzione dell'esempio.  
+2. Eseguire Setup. bat dalla cartella di installazione dell'esempio in un prompt dei comandi di per gli sviluppatori per Visual Studio eseguire con privilegi di amministratore. In questo modo vengono installati i certificati dei servizi necessari per l'esecuzione dell'esempio.  
   
-3.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+3. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
-1.  Creare una directory sul computer del servizio. Creare un'applicazione virtuale denominata servicemodelsamples per questa directory usando lo strumento di gestione di Internet Information Services (IIS).  
+1. Creare una directory sul computer del servizio. Creare un'applicazione virtuale denominata servicemodelsamples per questa directory usando lo strumento di gestione di Internet Information Services (IIS).  
   
-2.  Copiare i file del programma del servizio da \inetpub\wwwroot\servicemodelsamples nella directory virtuale sul computer del servizio. Assicurarsi di copiare i file nella sottodirectory \bin e i file Setup.bat, GetComputerName.vbs e Cleanup.bat nel computer del servizio.  
+2. Copiare i file del programma del servizio da \inetpub\wwwroot\servicemodelsamples nella directory virtuale sul computer del servizio. Assicurarsi di copiare i file nella sottodirectory \bin e i file Setup.bat, GetComputerName.vbs e Cleanup.bat nel computer del servizio.  
   
-3.  Creare una directory sul client del servizio per i file binari del client.  
+3. Creare una directory sul client del servizio per i file binari del client.  
   
-4.  Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
+4. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-5.  Nel server, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire `setup.bat service`. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
+5. Nel server, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire `setup.bat service`. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
   
-6.  Modificare Web. config per riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer.  
+6. Modificare Web. config per riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), che corrisponde al nome di dominio completo del computer.  
   
-7.  Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
+7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
-8.  Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.  
+8. Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.  
   
 9. Sul client, aprire un prompt dei comandi per gli sviluppatori per Visual Studio con privilegi amministrativi ed eseguire Importservicecert. In questo modo viene importato il certificato del servizio dal file Service.cer nell'archivio CurrentUser - TrustedPeople.  
   

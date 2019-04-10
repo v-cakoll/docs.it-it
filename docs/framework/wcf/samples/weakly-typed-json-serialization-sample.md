@@ -2,12 +2,12 @@
 title: Esempio di serializzazione JSON con tipizzazione debole
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 13c51c416c6efad9a168999b0751cb9c1d88baba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303687"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Esempio di serializzazione JSON con tipizzazione debole
 Quando si serializza un tipo definito dall'utente in un formato di trasmissione specificato o si deserializza un formato di trasmissione in un tipo definito dall'utente, il tipo definito dall'utente specificato deve essere disponibile sia nel servizio che nel client. Per eseguire questa operazione, in genere l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato ai tipi definiti dall'utente e l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> viene applicato ai relativi membri. Questo meccanismo viene applicato anche quando si lavora con gli oggetti JavaScript Object Notation (JSON), come descritto nell'argomento [come: Serializzare e deserializzare dati JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -125,11 +125,11 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Compilare la soluzione WeaklyTypedJson.sln come descritto in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Compilare la soluzione WeaklyTypedJson.sln come descritto in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Eseguire la soluzione.  
+3. Eseguire la soluzione.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

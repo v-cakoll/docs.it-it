@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169741"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317298"
 ---
 # <a name="application-settings-for-custom-controls"></a>Impostazioni delle applicazioni per i controlli personalizzati
 È necessario completare alcune attività per consentire ai controlli personalizzati la possibilità di mantenere le impostazioni dell'applicazione quando i controlli sono ospitati nelle applicazioni di terze parti.  
@@ -22,9 +22,9 @@ ms.locfileid: "59169741"
   
  Inoltre, è necessario implementare quanto segue in ordine per le impostazioni dell'applicazione per i controlli personalizzati per il corretto funzionamento in fase di progettazione di ambienti, ad esempio Visual Studio:  
   
-1.  Una classe di impostazioni dell'applicazione personalizzata con un costruttore che accetta un <xref:System.ComponentModel.IComponent> come un singolo parametro. Utilizzare questa classe per salvare e caricare tutte le impostazioni dell'applicazione. Quando si crea una nuova istanza di questa classe, passare il controllo personalizzato usando il costruttore.  
+1. Una classe di impostazioni dell'applicazione personalizzata con un costruttore che accetta un <xref:System.ComponentModel.IComponent> come un singolo parametro. Utilizzare questa classe per salvare e caricare tutte le impostazioni dell'applicazione. Quando si crea una nuova istanza di questa classe, passare il controllo personalizzato usando il costruttore.  
   
-2.  Creare questa classe di impostazioni personalizzati dopo il controllo è stato creato e inserito in un form, ad esempio il modulo <xref:System.Windows.Forms.Form.Load> gestore dell'evento.  
+2. Creare questa classe di impostazioni personalizzati dopo il controllo è stato creato e inserito in un form, ad esempio il modulo <xref:System.Windows.Forms.Form.Load> gestore dell'evento.  
   
  Per istruzioni sulla creazione di una classe di impostazioni personalizzate, vedere [come: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md).  
   

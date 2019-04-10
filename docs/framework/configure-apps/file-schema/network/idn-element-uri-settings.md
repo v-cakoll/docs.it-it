@@ -2,12 +2,12 @@
 title: <idn> Elemento (impostazioni Uri)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321757"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN > (impostazioni Uri)
 Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un nome di dominio.  
@@ -50,13 +50,13 @@ Specifica se l'analisi IDN (Internationalized Domain Name) viene applicato a un 
   
  Per abilitare il supporto per IRI, sono necessarie le due modifiche seguenti:  
   
-1.  Aggiungere la riga seguente al file Machine. config nella directory di .NET Framework 2.0  
+1. Aggiungere la riga seguente al file Machine. config nella directory di .NET Framework 2.0  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Specificare se si desidera applicare l'analisi IDN (Internationalized Domain Name) al nome di dominio e se devono essere applicati le regole di analisi IRI. A questo scopo, è possibile usare il file machine.config o il file app.config.  
+2. Specificare se si desidera applicare l'analisi IDN (Internationalized Domain Name) al nome di dominio e se devono essere applicati le regole di analisi IRI. A questo scopo, è possibile usare il file machine.config o il file app.config.  
   
  Esistono tre possibili valori per IDN a seconda del server DNS che vengono usati:  
   

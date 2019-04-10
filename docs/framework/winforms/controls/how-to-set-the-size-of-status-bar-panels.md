@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: c6c9d6570e9b5c2f6d4eee0262c3d90e29e4b493
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131060"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311903"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>Procedura: Impostare la dimensione dei pannelli della barra di stato
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59131060"
   
 ### <a name="to-set-the-size-of-a-panel"></a>Per impostare le dimensioni di un controllo panel  
   
-1.  In una procedura, impostare il <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Width%2A> delle proprietà (o qualsiasi subset al suo interno) per la barra di stato pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà del <xref:System.Windows.Forms.StatusBarPanel> raccolta.  
+1. In una procedura, impostare il <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Width%2A> delle proprietà (o qualsiasi subset al suo interno) per la barra di stato pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà del <xref:System.Windows.Forms.StatusBarPanel> raccolta.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  

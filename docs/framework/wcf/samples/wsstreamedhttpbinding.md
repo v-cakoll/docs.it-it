@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 2c672f6f90de874a487ec3e2f2d8ad5c7bbc9809
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: de0c5683b081ecebf2168ffb5d6a2768fdd0a1fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164814"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313983"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 Nell'esempio viene illustrato come creare un'associazione progettata per supportare scenari basati sul flusso quando viene utilizzato il trasporto HTTP.  
@@ -26,7 +26,7 @@ Nell'esempio viene illustrato come creare un'associazione progettata per support
   
  I passaggi per creare e configurare una nuova associazione standard sono i seguenti.  
   
-1.  Creazione di una nuova associazione standard  
+1. Creazione di una nuova associazione standard  
   
      Le associazioni standard in Windows Communication Foundation (WCF), ad esempio basicHttpBinding e netTcpBinding configurare i trasporti sottostanti e stack di canali per i requisiti specifici. In questo esempio, `WSStreamedHttpBinding` configura lo stack di canali per supportare il flusso. Per impostazione predefinita, WS-Security e la messaggistica affidabile non vengono aggiunti allo stack di canali perché entrambi le funzionalità non sono supportate dal flusso. La nuova associazione viene implementata nella classe `WSStreamedHttpBinding` che deriva da <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` contiene i seguenti elementi di associazione: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> e <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. La classe fornisce un metodo `CreateBindingElements()` per configurare lo stack dell'associazione risultante, come illustrato nell'esempio di codice seguente.  
   
@@ -50,7 +50,7 @@ Nell'esempio viene illustrato come creare un'associazione progettata per support
     }  
     ```  
   
-2.  Aggiunta del supporto di configurazione  
+2. Aggiunta del supporto di configurazione  
   
      Per esporre il trasporto tramite la configurazione l'esempio implementa altre due classi: `WSStreamedHttpBindingConfigurationElement` e `WSStreamedHttpBindingSection`. La classe `WSStreamedHttpBindingSection` è un <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> che espone `WSStreamedHttpBinding` al sistema di configurazione WCF. La maggior parte dell'implementazione viene delegata a `WSStreamedHttpBindingConfigurationElement` che deriva da <xref:System.ServiceModel.Configuration.StandardBindingElement>. La classe `WSStreamedHttpBindingConfigurationElement` è dotata delle proprietà che corrispondono alle proprietà di `WSStreamedHttpBinding` e funzioni che consentono di eseguire il mapping di ogni elemento di configurazione a un'associazione.  
   
@@ -86,21 +86,21 @@ Nell'esempio viene illustrato come creare un'associazione progettata per support
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente.  
+1. Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assicurarsi di avere eseguito i passaggi elencati in [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Assicurarsi di avere eseguito i passaggi elencati in [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Assicurarsi di avere eseguito il [istruzioni di installazione certificato Server Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3. Assicurarsi di avere eseguito il [istruzioni di installazione certificato Server Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
   
-4.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Per eseguire l'esempio in una configurazione tra più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Per eseguire l'esempio in una configurazione tra più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-6.  Quando viene visualizzata la finestra client, digitare "Esempio.txt." Nella directory dovrebbe essere presente una "Copia di Esempio.txt".  
+6. Quando viene visualizzata la finestra client, digitare "Esempio.txt." Nella directory dovrebbe essere presente una "Copia di Esempio.txt".  
   
 ## <a name="the-wsstreamedhttpbinding-sample-service"></a>Esempio di servizio WSStreamedHttpBinding  
  L'esempio di servizio che utilizza `WSStreamedHttpBinding` si trova nella sottodirectory del servizio. L'implementazione di `OperationContract` utilizza un `MemoryStream` per recuperare tutti i dati dal flusso in ingresso prima di restituire `MemoryStream`. L'esempio di servizio è ospitato da Internet Information Services (IIS).  

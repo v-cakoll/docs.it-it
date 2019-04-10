@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166010"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311662"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Procedura: Disporre oggetti su più livelli in Windows Forms
 Quando si crea un'interfaccia utente complessa, o di lavoro con un form MDI (interfaccia), spesso si desidera sia form e controlli figlio per creare più complesse interfacce utente (UI) di livello. Per spostare e tenere traccia di controlli e finestre all'interno del contesto di un gruppo, è modificare l'ordine z. *Ordine Z* è disposizione visiva di controlli in un form lungo l'asse z del form (profondità). La finestra nella parte superiore dello z-order si sovrappone a tutte le altre finestre. Tutte le altre finestre si sovrappongono la finestra nella parte inferiore dello z-order.  
@@ -27,9 +27,9 @@ Quando si crea un'interfaccia utente complessa, o di lavoro con un form MDI (int
   
 ### <a name="to-layer-controls-at-design-time"></a>Per i controlli dei livelli in fase di progettazione  
   
-1.  Selezionare un controllo che si desidera di livello.  
+1. Selezionare un controllo che si desidera di livello.  
   
-2.  Nel **formato** dal menu **ordine**, quindi fare clic su **porta in primo piano** o **porta in secondo piano**.  
+2. Nel **formato** dal menu **ordine**, quindi fare clic su **porta in primo piano** o **porta in secondo piano**.  
   
 ### <a name="to-layer-controls-programmatically"></a>Per i controlli dei livelli a livello di codice  
   

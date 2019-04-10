@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b9b17c1457a920aa3e05f5fd839e6ffdc0c6fee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eb5c05a88c12b5124c77b0d0a7f834b405dd289f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144365"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304623"
 ---
 # <a name="corbindtoruntime-function"></a>Funzione CorBindToRuntime
 Consente l'host non gestiti di caricare common language runtime (CLR) in un processo.  
@@ -73,9 +73,9 @@ HRESULT CorBindToRuntime (
   
  È possibile modificare il flusso in due modi:  
   
-1.  Modificando la <xref:System.Threading.ExecutionContext> le impostazioni per sopprimere il flusso in un singolo thread (vedere la <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, <xref:System.Security.SecurityContext.SuppressFlow%2A>, e <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> metodi).  
+1. Modificando la <xref:System.Threading.ExecutionContext> le impostazioni per sopprimere il flusso in un singolo thread (vedere la <xref:System.Threading.ExecutionContext.SuppressFlow%2A>, <xref:System.Security.SecurityContext.SuppressFlow%2A>, e <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A> metodi).  
   
-2.  Modificando la modalità predefinita del processo per la modalità di compatibilità di versione 1, in cui il <xref:System.Security.Principal.WindowsIdentity> oggetto non passa attraverso punti asincroni, qualsiasi indipendentemente il <xref:System.Threading.ExecutionContext> impostazioni sul thread corrente. Come si modifica la modalità predefinita varia a seconda se si usa un file eseguibile gestito o un'interfaccia di hosting non gestita per caricamento di CLR:  
+2. Modificando la modalità predefinita del processo per la modalità di compatibilità di versione 1, in cui il <xref:System.Security.Principal.WindowsIdentity> oggetto non passa attraverso punti asincroni, qualsiasi indipendentemente il <xref:System.Threading.ExecutionContext> impostazioni sul thread corrente. Come si modifica la modalità predefinita varia a seconda se si usa un file eseguibile gestito o un'interfaccia di hosting non gestita per caricamento di CLR:  
   
     1.  Per gli eseguibili gestiti, è necessario impostare il `enabled` attributo del [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) elemento `true`.  
   

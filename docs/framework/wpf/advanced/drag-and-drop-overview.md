@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301399"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
@@ -181,11 +181,11 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Per specificare che un elemento è un obiettivo di rilascio, si imposta la proprietà <xref:System.Windows.UIElement.AllowDrop%2A> su `true`. Gli eventi dell'obiettivo di rilascio verranno quindi generati nell'elemento per poterli gestire. Durante un'operazione di trascinamento della selezione, nell'obiettivo di rilascio si verifica la sequenza di eventi seguente:  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> oppure <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> oppure <xref:System.Windows.DragDrop.Drop>  
   
  L'evento <xref:System.Windows.DragDrop.DragEnter> si verifica quando i dati vengono trascinati entro il limite dell'obiettivo di rilascio. In genere si gestisce questo evento per fornire un'anteprima degli effetti dell'operazione di trascinamento e rilascio, se appropriato per l'applicazione. Non impostare la proprietà <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> nell'evento <xref:System.Windows.DragDrop.DragEnter>, perché verrà sovrascritta nell'evento <xref:System.Windows.DragDrop.DragOver>.  
   

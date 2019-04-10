@@ -2,12 +2,12 @@
 title: Esempio di sicurezza di individuazione
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160764"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318403"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). Questo esempio supporta sia la [specifica Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e il [versione 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -60,11 +60,11 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Eseguire lo script Setup. bat da un prompt dei comandi di per gli sviluppatori per Visual Studio. Nell'esempio vengono usati certificati per firmare e verificare i messaggi. Lo script crea i certificati usando Makecert.exe, quindi li installa usando Certmgr.exe. Lo script deve essere eseguito con i privilegi di amministratore.  
+1. Eseguire lo script Setup. bat da un prompt dei comandi di per gli sviluppatori per Visual Studio. Nell'esempio vengono usati certificati per firmare e verificare i messaggi. Lo script crea i certificati usando Makecert.exe, quindi li installa usando Certmgr.exe. Lo script deve essere eseguito con i privilegi di amministratore.  
   
-2.  Per compilare ed eseguire l'esempio, aprire il file sln in Visual Studio e scegli **Ricompila tutto**. Aggiornare le proprietà della soluzione per avviare più progetti: selezionare **avviare** per tutti i progetti tranne DiscoverySecureChannels. Eseguire la soluzione in modo normale.  
+2. Per compilare ed eseguire l'esempio, aprire il file sln in Visual Studio e scegli **Ricompila tutto**. Aggiornare le proprietà della soluzione per avviare più progetti: selezionare **avviare** per tutti i progetti tranne DiscoverySecureChannels. Eseguire la soluzione in modo normale.  
   
-3.  Dopo aver completato l'esempio, eseguire lo script Cleanup.bat per rimuovere i certificati creati per questo esempio.  
+3. Dopo aver completato l'esempio, eseguire lo script Cleanup.bat per rimuovere i certificati creati per questo esempio.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

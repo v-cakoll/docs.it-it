@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822908"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332326"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Procedura dettagliata: Chiamata delle API di Windows (Visual Basic)
 Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del sistema operativo Windows. Usarli per eseguire attività quando è difficile scrivere procedure equivalente personalizzato. Ad esempio, Windows fornisce una funzione denominata `FlashWindowEx` che consente di apportare passare alternativamente dalla chiaro e scuro sfumatura barra del titolo per un'applicazione.  
@@ -34,16 +34,16 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 #### <a name="to-declare-a-dll-procedure"></a>Per dichiarare una routine DLL  
   
-1.  Determinare il nome della funzione da chiamare, oltre a relativi argomenti, i tipi di argomento e restituiscono valore, così come il nome e percorso della DLL che lo contiene.  
+1. Determinare il nome della funzione da chiamare, oltre a relativi argomenti, i tipi di argomento e restituiscono valore, così come il nome e percorso della DLL che lo contiene.  
   
     > [!NOTE]
     >  Per informazioni complete sull'API di Windows, vedere la documentazione di Win32 SDK dell'API di Windows SDK di piattaforma. Per altre informazioni sulle costanti che usano le API di Windows, esaminare i file di intestazione, ad esempio incluso con il SDK della piattaforma Windows. h.  
   
-2.  Aprire un nuovo progetto applicazione Windows facendo clic **New** nel **File** menu e scegliendo **progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+2. Aprire un nuovo progetto applicazione Windows facendo clic **New** nel **File** menu e scegliendo **progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  Selezionare **applicazioni Windows** dall'elenco dei modelli di progetto Visual Basic. Viene visualizzato il nuovo progetto.  
+3. Selezionare **applicazioni Windows** dall'elenco dei modelli di progetto Visual Basic. Viene visualizzato il nuovo progetto.  
   
-4.  Aggiungere il codice seguente `Declare` funzionare alla classe o modulo in cui si desidera usare la DLL:  
+4. Aggiungere il codice seguente `Declare` funzionare alla classe o modulo in cui si desidera usare la DLL:  
   
      [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
@@ -71,38 +71,38 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 ###### <a name="to-declare-constants-for-windows-api-calls"></a>Per dichiarare le costanti per le chiamate API di Windows  
   
-1.  Consultare la documentazione per la funzione di Windows che si sta chiamando. Determinare il nome di costanti utilizzate e il nome del file con estensione h che contiene i valori numerici per queste costanti.  
+1. Consultare la documentazione per la funzione di Windows che si sta chiamando. Determinare il nome di costanti utilizzate e il nome del file con estensione h che contiene i valori numerici per queste costanti.  
   
-2.  Usare un editor di testo, ad esempio Blocco note, per visualizzare il contenuto del file di intestazione (h) e trovare i valori associati alle costanti in uso. Ad esempio, il `MessageBox` API Usa la costante `MB_ICONQUESTION` per mostrare un punto interrogativo nella finestra di messaggio. La definizione per `MB_ICONQUESTION` in winuser. H e viene visualizzato come segue:  
+2. Usare un editor di testo, ad esempio Blocco note, per visualizzare il contenuto del file di intestazione (h) e trovare i valori associati alle costanti in uso. Ad esempio, il `MessageBox` API Usa la costante `MB_ICONQUESTION` per mostrare un punto interrogativo nella finestra di messaggio. La definizione per `MB_ICONQUESTION` in winuser. H e viene visualizzato come segue:  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  Aggiungere equivalente `Const` istruzioni per la classe o un modulo per rendere disponibili per l'applicazione le costanti. Ad esempio:  
+3. Aggiungere equivalente `Const` istruzioni per la classe o un modulo per rendere disponibili per l'applicazione le costanti. Ad esempio:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>Chiamare la routine DLL  
   
-1.  Aggiungere un pulsante denominato `Button1` di avvio del modulo per il progetto e quindi fare doppio clic per visualizzare il relativo codice. Il gestore eventi per il pulsante viene visualizzato.  
+1. Aggiungere un pulsante denominato `Button1` di avvio del modulo per il progetto e quindi fare doppio clic per visualizzare il relativo codice. Il gestore eventi per il pulsante viene visualizzato.  
   
-2.  Aggiungere il codice per il `Click` gestore eventi per il pulsante è stato aggiunto, per chiamare la routine e fornire gli argomenti appropriati:  
+2. Aggiungere il codice per il `Click` gestore eventi per il pulsante è stato aggiunto, per chiamare la routine e fornire gli argomenti appropriati:  
   
      [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
-3.  Eseguire il progetto premendo F5. Viene visualizzata la finestra di messaggio con entrambe **Yes** e **No** pulsanti di risposta. Fare clic su uno.  
+3. Eseguire il progetto premendo F5. Viene visualizzata la finestra di messaggio con entrambe **Yes** e **No** pulsanti di risposta. Fare clic su uno.  
   
 #### <a name="data-marshaling"></a>Marshalling dei dati  
  Visual Basic converte automaticamente i tipi di dati dei parametri e valori restituiti per le chiamate API di Windows, ma è possibile usare il `MarshalAs` attributo specificare in modo esplicito i tipi di dati non gestiti che prevede un'API. Per altre informazioni sul marshalling di interoperabilità, vedere [marshalling di interoperabilità](../../../framework/interop/interop-marshaling.md).  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Usare Declare e MarshalAs in una chiamata API  
   
-1.  Determinare il nome della funzione da chiamare, gli argomenti, i tipi di dati e restituiscono valori.  
+1. Determinare il nome della funzione da chiamare, gli argomenti, i tipi di dati e restituiscono valori.  
   
-2.  Per semplificare l'accesso per il `MarshalAs` dell'attributo, aggiungere un `Imports` istruzione all'inizio del codice per la classe o modulo, come nell'esempio seguente:  
+2. Per semplificare l'accesso per il `MarshalAs` dell'attributo, aggiungere un `Imports` istruzione all'inizio del codice per la classe o modulo, come nell'esempio seguente:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-3.  Aggiungere un prototipo di funzione per la funzione importata alla classe o modulo si utilizza e si applica il `MarshalAs` ai parametri dell'attributo o valore restituito. Nell'esempio seguente, una chiamata API che prevede che il tipo `void*` viene sottoposto a marshalling come `AsAny`:  
+3. Aggiungere un prototipo di funzione per la funzione importata alla classe o modulo si utilizza e si applica il `MarshalAs` ai parametri dell'attributo o valore restituito. Nell'esempio seguente, una chiamata API che prevede che il tipo `void*` viene sottoposto a marshalling come `AsAny`:  
   
      [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
@@ -113,27 +113,27 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
   
 #### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Per chiamare un'API di Windows usando l'attributo DllImport  
   
-1.  Aprire un nuovo progetto applicazione Windows facendo clic **New** nel **File** menu e scegliendo **progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
+1. Aprire un nuovo progetto applicazione Windows facendo clic **New** nel **File** menu e scegliendo **progetto**. Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-2.  Selezionare **applicazioni Windows** dall'elenco dei modelli di progetto Visual Basic. Viene visualizzato il nuovo progetto.  
+2. Selezionare **applicazioni Windows** dall'elenco dei modelli di progetto Visual Basic. Viene visualizzato il nuovo progetto.  
   
-3.  Aggiungere un pulsante denominato `Button2` al form di avvio.  
+3. Aggiungere un pulsante denominato `Button2` al form di avvio.  
   
-4.  Fare doppio clic su `Button2` per aprire la visualizzazione codice per il form.  
+4. Fare doppio clic su `Button2` per aprire la visualizzazione codice per il form.  
   
-5.  Per semplificare l'accesso al `DllImport`, aggiungere un `Imports` istruzione all'inizio del codice per la classe di form di avvio:  
+5. Per semplificare l'accesso al `DllImport`, aggiungere un `Imports` istruzione all'inizio del codice per la classe di form di avvio:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-6.  Dichiarare una funzione vuota prima la `End Class` istruzione per il modulo e il nome di funzione `MoveFile`.  
+6. Dichiarare una funzione vuota prima la `End Class` istruzione per il modulo e il nome di funzione `MoveFile`.  
   
-7.  Si applicano i `Public` e `Shared` modificatori di dichiarazione di funzione e impostare i parametri per `MoveFile` basata sugli argomenti alla funzione API Windows Usa:  
+7. Si applicano i `Public` e `Shared` modificatori di dichiarazione di funzione e impostare i parametri per `MoveFile` basata sugli argomenti alla funzione API Windows Usa:  
   
      [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      La funzione può avere qualsiasi nome di procedura valida; il `DllImport` attributo specifica il nome nella DLL. Gestisce anche il marshalling di interoperabilità per i parametri e valori restituiti, quindi è possibile scegliere tipi di dati di Visual Studio che sono simili ai dati dei tipi utilizzati dall'API.  
   
-8.  Applicare il `DllImport` attributo per la funzione vuota. Il primo parametro è il nome e il percorso della DLL che contiene la funzione che si sta chiamando. Non devi specificare il percorso del file che si trovano nella directory di sistema Windows. Il secondo parametro è un argomento denominato che specifica il nome della funzione nell'API di Windows. In questo esempio, il `DllImport` attributo impone che le chiamate a `MoveFile` deve essere inoltrato al `MoveFileW` in KERNEL32. DLL. Il `MoveFileW` metodo consente di copiare un file dal percorso `src` sul percorso `dst`.  
+8. Applicare il `DllImport` attributo per la funzione vuota. Il primo parametro è il nome e il percorso della DLL che contiene la funzione che si sta chiamando. Non devi specificare il percorso del file che si trovano nella directory di sistema Windows. Il secondo parametro è un argomento denominato che specifica il nome della funzione nell'API di Windows. In questo esempio, il `DllImport` attributo impone che le chiamate a `MoveFile` deve essere inoltrato al `MoveFileW` in KERNEL32. DLL. Il `MoveFileW` metodo consente di copiare un file dal percorso `src` sul percorso `dst`.  
   
      [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
@@ -151,7 +151,7 @@ Le API Windows sono librerie a collegamento dinamico (DLL) che fanno parte del s
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
 - [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)

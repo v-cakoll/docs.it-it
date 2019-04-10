@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298909"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
 La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in corso. È possibile aggiungere strumentazione di traccia e debug all'applicazione .NET Framework quando la si sviluppa e usare tale strumentazione sia mentre si sviluppa l'applicazione sia dopo la distribuzione. È possibile usare le classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> per registrare le informazioni sugli errori e sull'esecuzione dell'applicazione in log, file di testo o altri dispositivi per un'analisi successiva.  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>Fasi di traccia del codice  
  La traccia del codice comprende tre fasi:  
   
-1.  **Strumentazione**: il codice di traccia viene aggiunto all'applicazione.  
+1. **Strumentazione**: il codice di traccia viene aggiunto all'applicazione.  
   
-2.  **Traccia**: il codice di traccia scrive le informazioni nella destinazione specificata.  
+2. **Traccia**: il codice di traccia scrive le informazioni nella destinazione specificata.  
   
-3.  **Analisi**: le informazioni di traccia vengono valutate per identificare e comprendere i problemi dell'applicazione.  
+3. **Analisi**: le informazioni di traccia vengono valutate per identificare e comprendere i problemi dell'applicazione.  
   
  Durante lo sviluppo, tutti i metodi di output di traccia e debug scrivono informazioni nella finestra di output di Visual Studio per impostazione predefinita. In un'applicazione distribuita, i metodi scrivono le informazioni di traccia nelle destinazioni specificate. Per altre informazioni su come specificare una destinazione di output per la traccia o il debug, vedere [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>Per usare la traccia in un'applicazione  
   
-1.  Determinare l'output di traccia che si desidera ricevere dopo aver distribuito l'applicazione.  
+1. Determinare l'output di traccia che si desidera ricevere dopo aver distribuito l'applicazione.  
   
-2.  Creare un set di opzioni. Per altre informazioni, vedere [Procedura: Configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Creare un set di opzioni. Per altre informazioni, vedere [Procedura: Configurare opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-3.  Aggiungere istruzioni di traccia al codice dell'applicazione.  
+3. Aggiungere istruzioni di traccia al codice dell'applicazione.  
   
-4.  Determinare dove si desidera visualizzare l'output di traccia e aggiungere i listener appropriati. Per altre informazioni, vedere [Creazione e inizializzazione di listener di traccia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. Determinare dove si desidera visualizzare l'output di traccia e aggiungere i listener appropriati. Per altre informazioni, vedere [Creazione e inizializzazione di listener di traccia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5.  Eseguire il test e il debug dell'applicazione e del codice di traccia contenuto.  
+5. Eseguire il test e il debug dell'applicazione e del codice di traccia contenuto.  
   
-6.  Compilare l'applicazione nel codice eseguibile usando una delle procedure seguenti:  
+6. Compilare l'applicazione nel codice eseguibile usando una delle procedure seguenti:  
   
     -   Usare il menu **Compila** con la pagina **Debug** della finestra di dialogo **Pagine delle proprietà** in **Esplora soluzioni**. Usare questa opzione quando si esegue la compilazione in Visual Studio.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Usare le direttive del compilatore **Trace** e **Debug** per il metodo di compilazione dalla riga di comando. Per altre informazioni, vedere [Compilazione condizionale con analisi e debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Usare questa opzione quando si compila dalla riga di comando.  
   
-7.  Se si verifica un problema in fase di esecuzione, attivare l'opzione di traccia appropriata. Per altre informazioni, vedere [Configurazione delle opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Se si verifica un problema in fase di esecuzione, attivare l'opzione di traccia appropriata. Per altre informazioni, vedere [Configurazione delle opzioni di traccia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
      Il codice di traccia scrive i messaggi di traccia in una destinazione specificata, ad esempio sullo schermo, in un file di testo o in un log eventi. Il tipo di listener incluso nella raccolta **Trace.Listeners** determina la destinazione.  
   
-8.  Analizzare i messaggi di traccia per identificare e comprendere il problema nell'applicazione.  
+8. Analizzare i messaggi di traccia per identificare e comprendere il problema nell'applicazione.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>Strumentazione della traccia e applicazioni distribuite  
  Quando si crea un'applicazione distribuita, può risultare difficile testare l'applicazione nel modo in cui verrà usata. Pochi team di sviluppo sono in grado di verificare tutte le possibili combinazioni di sistemi operativi o Web browser (incluse tutte le opzioni di lingua localizzate) o di simulare l'elevato numero di utenti che accederanno all'applicazione contemporaneamente. In questi casi, non è possibile verificare in che modo risponderà un'applicazione distribuita in caso di volumi elevati, installazioni diverse e comportamenti univoci degli utenti finali. Numerose parti di un'applicazione distribuita, inoltre, non dispongono di un'interfaccia utente con cui è possibile interagire direttamente o visualizzare l'attività di tali parti.  

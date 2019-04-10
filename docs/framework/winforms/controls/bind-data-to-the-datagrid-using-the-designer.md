@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321848"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Associare dati al controllo DataGridView di Windows Forms usando la finestra di progettazione
 È possibile usare la finestra di progettazione per la connessione una <xref:System.Windows.Forms.DataGridView> controllo alle origini dati di molti tipi diversi, tra cui database, oggetti business o i servizi Web. Quando si associa il controllo a un'origine dati tramite la finestra di progettazione, il controllo viene automaticamente associato a un <xref:System.Windows.Forms.BindingSource> componente che rappresenta l'origine dati. Inoltre vengono generate automaticamente colonne nel controllo, in modo corrispondente alle informazioni di schema fornite dall'origine dati.  
@@ -27,19 +27,19 @@ ms.locfileid: "59200233"
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>Per associare il controllo a un'origine dati  
   
-1.  Fare clic sul glifo dello smart tag (![glifo Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell'angolo superiore destro del <xref:System.Windows.Forms.DataGridView> controllo.  
+1. Fare clic sul glifo dello smart tag (![glifo Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell'angolo superiore destro del <xref:System.Windows.Forms.DataGridView> controllo.  
   
-2.  Fare clic sulla freccia a discesa dell'opzione **Scegli origine dati**.  
+2. Fare clic sulla freccia a discesa dell'opzione **Scegli origine dati**.  
   
-3.  Se il progetto non contiene già un'origine dati, fare clic su **Aggiungi origine dati progetto** e seguire i passaggi indicati dalla procedura guidata.  
+3. Se il progetto non contiene già un'origine dati, fare clic su **Aggiungi origine dati progetto** e seguire i passaggi indicati dalla procedura guidata.  
   
      Per altre informazioni, vedere [Configurazione guidata origine dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). La nuova origine dati sarà visualizzata nella finestra di riepilogo a discesa **Scegli origine dati**. Se la nuova origine dati contiene un solo membro, ad esempio una singola tabella di database, il controllo verrà associato automaticamente a tale membro. In caso contrario, andare al passaggio successivo.  
   
-4.  Espandere i nodi **Altre origini dati** e **Origini dati del progetto** se non sono ancora espansi e quindi selezionare l'origine dati a cui associare il controllo.  
+4. Espandere i nodi **Altre origini dati** e **Origini dati del progetto** se non sono ancora espansi e quindi selezionare l'origine dati a cui associare il controllo.  
   
-5.  Se l'origine dati contiene più di un membro, ad esempio se è stato creato un <xref:System.Data.DataSet?displayProperty=nameWithType> che contiene più tabelle, espandere l'origine dati e quindi selezionare il membro specifico da associare.  
+5. Se l'origine dati contiene più di un membro, ad esempio se è stato creato un <xref:System.Data.DataSet?displayProperty=nameWithType> che contiene più tabelle, espandere l'origine dati e quindi selezionare il membro specifico da associare.  
   
-6.  Per creare una relazione master/dettaglio, nelle **Scegli origine dati** finestra di riepilogo a discesa per un secondo <xref:System.Windows.Forms.DataGridView> controllare, espandere il <xref:System.Windows.Forms.BindingSource> creato per la tabella padre e quindi selezionare la tabella figlio correlata dall'elenco illustrato.  
+6. Per creare una relazione master/dettaglio, nelle **Scegli origine dati** finestra di riepilogo a discesa per un secondo <xref:System.Windows.Forms.DataGridView> controllare, espandere il <xref:System.Windows.Forms.BindingSource> creato per la tabella padre e quindi selezionare la tabella figlio correlata dall'elenco illustrato.  
   
     > [!NOTE]
     >  Se il progetto include già un'origine dati, è possibile anche usare la finestra **Origini dati** per creare un modulo dati. Per altre informazioni, vedere [Finestra Origini dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).  

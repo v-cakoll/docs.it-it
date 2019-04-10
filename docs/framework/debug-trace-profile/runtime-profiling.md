@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306391"
 ---
 # <a name="runtime-profiling"></a>Profilatura runtime
 La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi scenario di sviluppo o distribuzione. Questa sezione è destinata agli sviluppatori e agli amministratori di sistema che vogliono raccogliere le informazioni sulle prestazioni delle applicazioni.  
@@ -28,19 +28,19 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Per eseguire Perfmon.exe in Windows Vista e versioni successive  
   
-1.  Al prompt dei comandi digitare **perfmon**. Viene visualizzata la console di **Performance Monitor** .  
+1. Al prompt dei comandi digitare **perfmon**. Viene visualizzata la console di **Performance Monitor** .  
   
-2.  Nella cartella **Strumenti di monitoraggio** fare clic su **Performance Monitor**.  
+2. Nella cartella **Strumenti di monitoraggio** fare clic su **Performance Monitor**.  
   
-3.  Nella barra degli strumenti di Performance Monitor fare clic sull'icona **Aggiungi** (il segno di addizione), se presente. Se non è presente, fare clic con il pulsante destro del mouse nella finestra di monitoraggio e selezionare l'opzione **Aggiungi contatori** .  
+3. Nella barra degli strumenti di Performance Monitor fare clic sull'icona **Aggiungi** (il segno di addizione), se presente. Se non è presente, fare clic con il pulsante destro del mouse nella finestra di monitoraggio e selezionare l'opzione **Aggiungi contatori** .  
   
      Viene aperta la finestra di dialogo **Aggiungi contatori** . La casella di riepilogo **Contatori disponibili** visualizza gli oggetti prestazione disponibili. Esistono diversi oggetti predefiniti per le applicazioni .NET Framework, inclusi quelli per la gestione della memoria (**Memoria CLR .NET**), per l'interoperabilità (**Interoperabilità CLR .NET**), per la gestione delle eccezioni (**Eccezioni CLR .NET**) e per il multithreading (**LocksAndThreads CLR .NET**). Ogni oggetto prestazione include diversi contatori delle prestazioni singoli. Per un elenco dei contatori delle prestazioni disponibili in Performance Monitor, vedere [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
-4.  Selezionare la casella di controllo accanto al nome di un oggetto prestazione per visualizzare l'elenco dei singoli contatori delle prestazioni che supporta.  
+4. Selezionare la casella di controllo accanto al nome di un oggetto prestazione per visualizzare l'elenco dei singoli contatori delle prestazioni che supporta.  
   
-5.  Fare clic sul contatore delle prestazioni da visualizzare:  
+5. Fare clic sul contatore delle prestazioni da visualizzare:  
   
-6.  Nella casella di riepilogo **Istanze dell'oggetto selezionato** fare clic su **\<Tutte le istanze>** per specificare che si vuole monitorare il contatore delle prestazioni per Common Language Runtime globalmente, cioè a livello di sistema.  
+6. Nella casella di riepilogo **Istanze dell'oggetto selezionato** fare clic su **\<Tutte le istanze>** per specificare che si vuole monitorare il contatore delle prestazioni per Common Language Runtime globalmente, cioè a livello di sistema.  
   
      -oppure-  
   

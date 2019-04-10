@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331897"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Procedura dettagliata: Creazione di oggetti COM con Visual Basic
 Quando si creano nuove applicazioni o componenti, è consigliabile creare gli assembly di .NET Framework. Tuttavia, Visual Basic semplifica per esporre un componente di .NET Framework a COM. In questo modo è possibile fornire nuovi componenti per la suite di applicazioni precedenti che richiedono i componenti COM. Questa procedura dettagliata illustra come usare Visual Basic per esporre [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] oggetti come oggetti COM, con e senza il modello di classe COM.  
@@ -27,61 +27,61 @@ Quando si creano nuove applicazioni o componenti, è consigliabile creare gli as
   
 ### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>Per creare un oggetto COM usando il modello di classe COM  
   
-1.  Aprire un nuovo progetto di applicazione di Windows dal **File** menu, fare clic su **nuovo progetto**.  
+1. Aprire un nuovo progetto di applicazione di Windows dal **File** menu, fare clic su **nuovo progetto**.  
   
-2.  Nel **nuovo progetto** nella finestra di dialogo il **tipi di progetto** campo, verificare che Windows sia selezionato. Selezionare **libreria di classi** dalle **modelli** elenco e quindi fare clic su **OK**. Viene visualizzato il nuovo progetto.  
+2. Nel **nuovo progetto** nella finestra di dialogo il **tipi di progetto** campo, verificare che Windows sia selezionato. Selezionare **libreria di classi** dalle **modelli** elenco e quindi fare clic su **OK**. Viene visualizzato il nuovo progetto.  
   
-3.  Selezionare **Aggiungi nuovo elemento** dalle **progetto** menu. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
+3. Selezionare **Aggiungi nuovo elemento** dalle **progetto** menu. Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-4.  Selezionare **classe COM** dalle **modelli** elenco e quindi fare clic su **Add**. Visual Basic consente di aggiungere una nuova classe e configura il nuovo progetto per l'interoperabilità COM.  
+4. Selezionare **classe COM** dalle **modelli** elenco e quindi fare clic su **Add**. Visual Basic consente di aggiungere una nuova classe e configura il nuovo progetto per l'interoperabilità COM.  
   
-5.  Aggiungere il codice, ad esempio proprietà, metodi ed eventi della classe COM.  
+5. Aggiungere il codice, ad esempio proprietà, metodi ed eventi della classe COM.  
   
-6.  Selezionare **Compila ClassLibrary1** dalle **compilazione** menu. Visual Basic compilato l'assembly e registra l'oggetto COM con il sistema operativo.  
+6. Selezionare **Compila ClassLibrary1** dalle **compilazione** menu. Visual Basic compilato l'assembly e registra l'oggetto COM con il sistema operativo.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>Creazione di oggetti COM senza il modello classe COM  
  È anche possibile creare una classe COM anziché manualmente usando il modello di classe COM. Questa procedura è utile quando si lavora dalla riga di comando o se si desidera maggiore controllo sul modo in cui sono definiti gli oggetti COM.  
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>Per configurare il progetto per generare un oggetto COM  
   
-1.  Aprire un nuovo progetto di applicazione di Windows dal **File** menu, fare clic su **NewProject**.  
+1. Aprire un nuovo progetto di applicazione di Windows dal **File** menu, fare clic su **NewProject**.  
   
-2.  Nel **nuovo progetto** nella finestra di dialogo il **tipi di progetto** campo, verificare che Windows sia selezionato. Selezionare **libreria di classi** dalle **modelli** elenco e quindi fare clic su **OK**. Viene visualizzato il nuovo progetto.  
+2. Nel **nuovo progetto** nella finestra di dialogo il **tipi di progetto** campo, verificare che Windows sia selezionato. Selezionare **libreria di classi** dalle **modelli** elenco e quindi fare clic su **OK**. Viene visualizzato il nuovo progetto.  
   
-3.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**. Il **Progettazione progetti** viene visualizzato.  
+3. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà**. Il **Progettazione progetti** viene visualizzato.  
   
-4.  Fare clic sulla scheda **Compila**.  
+4. Fare clic sulla scheda **Compila**.  
   
-5.  Selezionare il **Registra per interoperabilità COM** casella di controllo.  
+5. Selezionare il **Registra per interoperabilità COM** casella di controllo.  
   
 #### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>Per configurare il codice nella classe per creare un oggetto COM  
   
-1.  Nelle **Esplora soluzioni**, fare doppio clic su **Class1.vb** per visualizzare il relativo codice.  
+1. Nelle **Esplora soluzioni**, fare doppio clic su **Class1.vb** per visualizzare il relativo codice.  
   
-2.  Rinominare la classe come `ComClass1`.  
+2. Rinominare la classe come `ComClass1`.  
   
-3.  Aggiungere le costanti seguenti al `ComClass1`. Si archivierà le costanti di identificatore univoco globale (GUID) che sono necessari affinché gli oggetti COM.  
+3. Aggiungere le costanti seguenti al `ComClass1`. Si archivierà le costanti di identificatore univoco globale (GUID) che sono necessari affinché gli oggetti COM.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
-4.  Scegliere **Crea GUID** dal menu **Strumenti**. Nella finestra di dialogo **Crea GUID** fare clic su **Formato del Registro di sistema** e quindi fare clic su **Copia**. Fare clic su **Esci**.  
+4. Scegliere **Crea GUID** dal menu **Strumenti**. Nella finestra di dialogo **Crea GUID** fare clic su **Formato del Registro di sistema** e quindi fare clic su **Copia**. Fare clic su **Esci**.  
   
-5.  Sostituire la stringa vuota per il `ClassId` con il GUID, rimuovendo le iniziali e finali dalle parentesi graffe. Ad esempio, se il GUID fornito da Guidgen è `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` quindi il codice deve apparire come segue.  
+5. Sostituire la stringa vuota per il `ClassId` con il GUID, rimuovendo le iniziali e finali dalle parentesi graffe. Ad esempio, se il GUID fornito da Guidgen è `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` quindi il codice deve apparire come segue.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6.  Ripetere i passaggi precedenti per il `InterfaceId` e `EventsId` costanti, come nell'esempio seguente.  
+6. Ripetere i passaggi precedenti per il `InterfaceId` e `EventsId` costanti, come nell'esempio seguente.  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     >  Assicurarsi che i GUID siano nuovi e univoci. in caso contrario, il componente COM potrebbero essere in conflitto con altri componenti COM.  
   
-7.  Aggiungere il `ComClass` dell'attributo `ComClass1`, che specifica il GUID per l'ID della classe, l'ID di interfaccia e gli ID di eventi come nell'esempio seguente:  
+7. Aggiungere il `ComClass` dell'attributo `ComClass1`, che specifica il GUID per l'ID della classe, l'ID di interfaccia e gli ID di eventi come nell'esempio seguente:  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
-8.  Classi COM devono avere un costruttore `Public Sub New()` costruttore o classe non registrerà correttamente. Aggiungere un costruttore senza parametri alla classe:  
+8. Classi COM devono avere un costruttore `Public Sub New()` costruttore o classe non registrerà correttamente. Aggiungere un costruttore senza parametri alla classe:  
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   

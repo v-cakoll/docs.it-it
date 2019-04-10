@@ -5,33 +5,33 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320002"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Guida rapida alla risoluzione dei problemi di WCF
 In questo argomento viene elencata una serie di problemi noti rilevati dai clienti durante lo sviluppo di client e servizi WCF. Se il problema rilevato non presente in questo elenco, si consiglia di configurare la traccia del servizio. In tal modo verrà generato un file di traccia che è possibile visualizzare con il visualizzatore dei file di traccia e verranno ricevute informazioni dettagliate sulle eccezioni che si possono verificare nel servizio. Per altre informazioni sulla configurazione della traccia, vedere: [Configurazione della traccia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Per altre informazioni sul Visualizzatore dei file di traccia, vedere: [Strumento Visualizzatore di tracce (SvcTraceViewer.exe) del servizio](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [Dopo aver installato Windows 7 e IIS, quando tenta di passare a un servizio WCF viene visualizzato il messaggio di errore seguente: Errore HTTP 404.3 – non trovato](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [Dopo aver installato Windows 7 e IIS, quando tenta di passare a un servizio WCF viene visualizzato il messaggio di errore seguente: Errore HTTP 404.3 – non trovato](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      Errore HTTP 404.3 - La pagina richiesta non può essere servita a causa della configurazione estensioni. Se la pagina è uno script, aggiungere un gestore. Se il file deve essere scaricato, aggiungere una mappa MIME. Errore dettagliato InformationModule StaticFileModule.  
   
-2.  [A volte viene restituita un'eccezione MessageSecurityException alla seconda richiesta se il client è inattivo per un periodo di tempo dopo la prima richiesta. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [A volte viene restituita un'eccezione MessageSecurityException alla seconda richiesta se il client è inattivo per un periodo di tempo dopo la prima richiesta. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Il servizio rifiuta nuovi client se sta interagendo già con 10 client. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [Il servizio rifiuta nuovi client se sta interagendo già con 10 client. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [È possibile caricare la configurazione del servizio da una posizione diversa dal file di configurazione dell'applicazione WCF?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [È possibile caricare la configurazione del servizio da una posizione diversa dal file di configurazione dell'applicazione WCF?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [Il servizio e il client funzionano correttamente, ma quando il client è in un altro computer non funzionano più. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [Il servizio e il client funzionano correttamente, ma quando il client è in un altro computer non funzionano più. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Quando genera un'eccezione FaultException\<eccezione > in cui il tipo è un'eccezione, viene restituito sempre un tipo FaultException generale sul client e non il tipo generico. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [Quando genera un'eccezione FaultException\<eccezione > in cui il tipo è un'eccezione, viene restituito sempre un tipo FaultException generale sul client e non il tipo generico. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [Sembra che le operazioni unidirezionali e request-reply vengano restituite approssimativamente alla stessa velocità quando la risposta non contiene dati. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [Sembra che le operazioni unidirezionali e request-reply vengano restituite approssimativamente alla stessa velocità quando la risposta non contiene dati. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [Utilizzando un certificato X.509 con il servizio viene generata un'eccezione System.Security.Cryptography.CryptographicException. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [Utilizzando un certificato X.509 con il servizio viene generata un'eccezione System.Security.Cryptography.CryptographicException. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
 9. [In seguito alla modifica del primo parametro di un'operazione di passaggio da lettere maiuscole a lettere minuscole, il client genera un'eccezione. Qual è il problema?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 4558a5b26903fb53c60fccf3df806f7cf67f9845
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311487"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Procedura: Chiamare funzioni di database personalizzate
 In questo argomento viene descritto come chiamare funzioni personalizzate definite nel database dall'interno di query LINQ to Entities.  
@@ -21,17 +21,17 @@ In questo argomento viene descritto come chiamare funzioni personalizzate defini
   
 ### <a name="to-call-custom-functions-that-are-defined-in-the-database"></a>Per chiamare funzioni personalizzate definite nel database  
   
-1.  Creare una funzione personalizzata nel database.  
+1. Creare una funzione personalizzata nel database.  
   
      Per altre informazioni sulla creazione di funzioni personalizzate in SQL Server, vedere [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
-2.  Dichiarare una funzione nel linguaggio Store Schema Definition Language (SSDL) del file .edmx. Il nome della funzione deve essere identico a quello della funzione dichiarata nel database.  
+2. Dichiarare una funzione nel linguaggio Store Schema Definition Language (SSDL) del file .edmx. Il nome della funzione deve essere identico a quello della funzione dichiarata nel database.  
   
      Per altre informazioni, vedere [Function. Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
-3.  Aggiungere un metodo corrispondente a una classe nel codice dell'applicazione e applicare un <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> al metodo. Si noti che i parametri <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> dell'attributo sono rispettivamente il nome dello spazio dei nomi del modello concettuale e il nome della funzione nel modello concettuale. La risoluzione del nome della funzione per LINQ rileva la distinzione tra maiuscole e minuscole.  
+3. Aggiungere un metodo corrispondente a una classe nel codice dell'applicazione e applicare un <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> al metodo. Si noti che i parametri <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> e <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> dell'attributo sono rispettivamente il nome dello spazio dei nomi del modello concettuale e il nome della funzione nel modello concettuale. La risoluzione del nome della funzione per LINQ rileva la distinzione tra maiuscole e minuscole.  
   
-4.  Chiamare il metodo in una query LINQ to Entities.  
+4. Chiamare il metodo in una query LINQ to Entities.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene mostrato come chiamare una funzione di database personalizzata dall'interno una query LINQ to Entities. Nell'esempio viene usato il modello School. Per informazioni sul modello School, vedere [creazione del Database di esempio School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) e [genera il File con estensione edmx School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  

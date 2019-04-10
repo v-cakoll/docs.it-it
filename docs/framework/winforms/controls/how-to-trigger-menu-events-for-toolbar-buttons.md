@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228354"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303986"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Procedura: Attivare eventi di menu per i pulsanti della barra degli strumenti
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "59228354"
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>Per gestire l'evento Click in una barra degli strumenti  
   
-1.  In una procedura, aggiungere i pulsanti della barra degli strumenti per la <xref:System.Windows.Forms.ToolBar> controllo.  
+1. In una procedura, aggiungere i pulsanti della barra degli strumenti per la <xref:System.Windows.Forms.ToolBar> controllo.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "59228354"
        }  
     ```  
   
-2.  Aggiungere un gestore eventi per il <xref:System.Windows.Forms.ToolBar> del controllo <xref:System.Windows.Forms.ToolBar.ButtonClick> evento. Usare un'istruzione case di passaggio e <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe per determinare il pulsante della barra degli strumenti che è stato fatto clic. Verrà visualizzata una finestra di messaggio appropriata.  
+2. Aggiungere un gestore eventi per il <xref:System.Windows.Forms.ToolBar> del controllo <xref:System.Windows.Forms.ToolBar.ButtonClick> evento. Usare un'istruzione case di passaggio e <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> classe per determinare il pulsante della barra degli strumenti che è stato fatto clic. Verrà visualizzata una finestra di messaggio appropriata.  
   
     > [!NOTE]
     >  In questo esempio la finestra di messaggio viene usata esclusivamente come segnaposto. È possibile aggiungere altro codice da eseguire quando vengono selezionati i pulsanti della barra degli strumenti.  

@@ -2,12 +2,12 @@
 title: Reliable Secure Profile
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: 98e12e2cbe57313981c863307d3bb65ce88f6589
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e1895da0805a5282fc328b0c8d48d7042a1e5784
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331572"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 Questo esempio viene illustrato come creare WCF e [Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). In questo esempio illustra l'implementazione di un [Crea connessione](https://go.microsoft.com/fwlink/?LinkId=178141) canale che può essere composti insieme a messaggi affidabili e, facoltativamente, un canale sicuro per creare un'associazione sicura affidabile basata sulla specifica RSP.  
@@ -26,16 +26,16 @@ Questo esempio viene illustrato come creare WCF e [Reliable Secure Profile](http
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Aprire il **ReliableSecureProfile** soluzione.  
+1. Aprire il **ReliableSecureProfile** soluzione.  
   
-2.  Fare clic il **Service** del progetto **Esplora soluzioni**, selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, viene avviato l'host del servizio.  
+2. Fare clic il **Service** del progetto **Esplora soluzioni**, selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, viene avviato l'host del servizio.  
   
-3.  Fare clic il **Client** del progetto **Esplora soluzioni**, selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, il client viene avviato.  
+3. Fare clic il **Client** del progetto **Esplora soluzioni**, selezionare **Debug**, **Avvia nuova istanza** dal menu di scelta rapida. In questo modo, il client viene avviato.  
   
-4.  Digitare qualsiasi stringa nel messaggio di richiesta nella finestra della console client e fare clic su INVIO. In questo modo, la stringa di input viene inviata al servizio, che calcola un hash di tale stringa.  
+4. Digitare qualsiasi stringa nel messaggio di richiesta nella finestra della console client e fare clic su INVIO. In questo modo, la stringa di input viene inviata al servizio, che calcola un hash di tale stringa.  
   
-5.  Visualizzare il risultato nelle finestre del client quando il servizio richiama l'operazione del contratto di callback duplex per visualizzare il risultato nella finestra della console client. Nel servizio si verifica un ritardo intenzionale per simulare il completamento di un'operazione lunga di elaborazione dei dati.  
+5. Visualizzare il risultato nelle finestre del client quando il servizio richiama l'operazione del contratto di callback duplex per visualizzare il risultato nella finestra della console client. Nel servizio si verifica un ritardo intenzionale per simulare il completamento di un'operazione lunga di elaborazione dei dati.  
   
-6.  Il monitoraggio del traffico HTTP (da parte di strumenti per il monitoraggio della rete online quali Network Monitor, Fiddler e così via) mostra che tra il client e il servizio viene creata una sequenza per la comunicazione come stabilito da Reliable Secure Profile. Viene inoltre illustrato come il client esegue il polling del servizio con richieste "Crea connessione". Quando il servizio è pronto per restituire la richiesta elaborata, utilizza il canale di supporto dell'ultima richiesta "Crea connessione" per la restituzione dei risultati.  
+6. Il monitoraggio del traffico HTTP (da parte di strumenti per il monitoraggio della rete online quali Network Monitor, Fiddler e così via) mostra che tra il client e il servizio viene creata una sequenza per la comunicazione come stabilito da Reliable Secure Profile. Viene inoltre illustrato come il client esegue il polling del servizio con richieste "Crea connessione". Quando il servizio è pronto per restituire la richiesta elaborata, utilizza il canale di supporto dell'ultima richiesta "Crea connessione" per la restituzione dei risultati.  
   
-7.  Premere INVIO nella finestra della console del servizio per chiudere il servizio. Premere INVIO nella finestra della console client per chiudere il client.
+7. Premere INVIO nella finestra della console del servizio per chiudere il servizio. Premere INVIO nella finestra della console client per chiudere il client.

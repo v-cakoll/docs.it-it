@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: c03398e897bae16dbe90ed2ce00b8412f47f0549
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1dedc6d771e75acd0d657bb5430c178428c0f0ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230824"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312683"
 ---
 # <a name="duplex"></a>Duplex
 Nell'esempio duplex viene illustrato come definire e implementare un contratto duplex. Una comunicazione duplex ha luogo quando un client stabilisce una sessione con un servizio e fornisce a quest'ultimo un canale usabile per inviare messaggi al client. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). Un contratto duplex è definito come una coppia di interfacce: un'interfaccia principale dal client al servizio e un'interfaccia di callback dal servizio al client. In questo esempio, l'interfaccia `ICalculatorDuplex` consente al client di eseguire operazioni matematiche, calcolando il risultato in una sessione. Il servizio restituisce i risultati sull'interfaccia `ICalculatorDuplexCallback`. Poiché occorre definire un contesto per correlare il set di messaggi scambiati fra il client e il servizio, i contratti duplex richiedono una sessione.  
@@ -163,11 +163,11 @@ client.Close();
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione c#, C++ o Visual Basic .NET della soluzione, seguire le istruzioni in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione c#, C++ o Visual Basic .NET della soluzione, seguire le istruzioni in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
     >  Quando si esegue il client in una configurazione tra più computer, assicurarsi di sostituire "localhost" sia la `address` attributo del [ \<endpoint > di \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento e il `clientBaseAddress` attributo del [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento del [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elemento con il nome del computer appropriato, come illustrato di seguito:  

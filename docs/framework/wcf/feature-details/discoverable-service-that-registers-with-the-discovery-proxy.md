@@ -2,36 +2,36 @@
 title: 'Procedura: Implementare un servizio individuabile per eseguire la registrazione al proxy di individuazione'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302191"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: Implementare un servizio individuabile per eseguire la registrazione al proxy di individuazione
 Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [come: Implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è stato implementato un proxy di individuazione. In questo argomento, si crea un servizio WCF che invia messaggi di annuncio (`Hello` e `Bye`) al proxy di individuazione, in modo da registrare e annullare la registrazione di se stesso con il proxy di individuazione.
 
 ### <a name="to-define-the-service-contract"></a>Per definire il contratto di servizio
 
-1.  Aggiungere un nuovo progetto applicazione console denominato `DiscoveryProxyExample` alla soluzione `Service`.
+1. Aggiungere un nuovo progetto applicazione console denominato `DiscoveryProxyExample` alla soluzione `Service`.
 
-2.  Aggiungere riferimenti agli assembly riportati di seguito:
+2. Aggiungere riferimenti agli assembly riportati di seguito:
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  Aggiungere al progetto una nuova classe denominata `CalculatorService`.
+3. Aggiungere al progetto una nuova classe denominata `CalculatorService`.
 
-4.  Aggiungere le istruzioni using seguenti.
+4. Aggiungere le istruzioni using seguenti.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  Definire il contratto di servizio all'interno di CalculatorService.cs.
+5. Definire il contratto di servizio all'interno di CalculatorService.cs.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
     }
     ```
 
-6.  Implementare inoltre il contratto di servizio all'interno di CalculatorService.cs.
+6. Implementare inoltre il contratto di servizio all'interno di CalculatorService.cs.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
 
 ### <a name="to-host-the-service"></a>Per ospitare il servizio
 
-1.  Aprire il file Program.cs generato in fase di creazione del progetto.
+1. Aprire il file Program.cs generato in fase di creazione del progetto.
 
-2.  Aggiungere le istruzioni using seguenti.
+2. Aggiungere le istruzioni using seguenti.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
     using System.ServiceModel.Discovery;
     ```
 
-3.  Nel metodo `Main()` aggiungere il codice seguente:
+3. Nel metodo `Main()` aggiungere il codice seguente:
 
     ```csharp
     // Define the base address of the service

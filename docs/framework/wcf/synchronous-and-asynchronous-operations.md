@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297707"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operazioni sincrone e asincrone
 In questo argomento vengono illustrate l'implementazione e la chiamata delle operazioni del servizio asincrone.  
@@ -49,11 +49,11 @@ In questo argomento vengono illustrate l'implementazione e la chiamata delle ope
 ### <a name="implementing-an-asynchronous-service-operation"></a>Implementazione di un'operazione del servizio asincrona  
  Le operazioni asincrone possono essere implementate tramite uno dei tre metodi seguenti:  
   
-1.  Modello asincrono basato su attività  
+1. Modello asincrono basato su attività  
   
-2.  Modello asincrono basato su eventi  
+2. Modello asincrono basato su eventi  
   
-3.  Modello asincrono IAsyncResult  
+3. Modello asincrono IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>Modello asincrono basato su attività  
  Il modello asincrono basato su attività è la modalità preferita per implementare le operazioni asincrone dal momento che è il più semplice. Per usare questo metodo, implementare semplicemente l'operazione del servizio e specificare un tipo restituito Task\<T>, dove T è il tipo restituito dall'operazione logica. Ad esempio:  

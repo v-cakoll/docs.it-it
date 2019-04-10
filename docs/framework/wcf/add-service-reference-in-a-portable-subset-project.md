@@ -2,12 +2,12 @@
 title: Aggiungere un riferimento al servizio in un progetto di subset portabili
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316726"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Aggiungere un riferimento al servizio in un progetto di subset portabili
 Progetti di subset portabili consentono ai programmatori di assembly .NET gestire un unico albero di origine e di sistema di compilazione supportando comunque più implementazioni di .NET (desktop, Silverlight, Windows Phone e XBOX). Progetti di subset portabili fanno riferimento solo a librerie portabili .NET che sono un assembly di .NET framework che può essere usato in qualsiasi implementazione di .NET.  
@@ -15,21 +15,21 @@ Progetti di subset portabili consentono ai programmatori di assembly .NET gestir
 ## <a name="add-service-reference-details"></a>Dettagli relativi a Aggiungi riferimento al servizio  
  Quando si aggiunge un riferimento al servizio in un progetto di subset portabili, si applicano le limitazioni seguenti:  
   
-1.  Per l'oggetto <xref:System.Xml.Serialization.XmlSerializer> sono consentite solo le codifiche letterali. Le codifiche SOAP generano un errore durante l'importazione.  
+1. Per l'oggetto <xref:System.Xml.Serialization.XmlSerializer> sono consentite solo le codifiche letterali. Le codifiche SOAP generano un errore durante l'importazione.  
   
-2.  Per i servizi che utilizzano gli scenari <xref:System.Runtime.Serialization.DataContractSerializer>, viene fornito un surrogato del contratto dati per assicurarsi che i tipi riutilizzati provengano solo dal subset portabile.  
+2. Per i servizi che utilizzano gli scenari <xref:System.Runtime.Serialization.DataContractSerializer>, viene fornito un surrogato del contratto dati per assicurarsi che i tipi riutilizzati provengano solo dal subset portabile.  
   
-3.  Gli endpoint che si basano su associazioni non supporte nelle librerie portabili (tutte le associazioni tranne <xref:System.ServiceModel.BasicHttpBinding>, l'oggetto <xref:System.ServiceModel.WSHttpBinding> senza flusso di transazione, le sessioni affidabili o la codifica MTOM e le associazioni personalizzate equivalenti) vengono ignorati.  
+3. Gli endpoint che si basano su associazioni non supporte nelle librerie portabili (tutte le associazioni tranne <xref:System.ServiceModel.BasicHttpBinding>, l'oggetto <xref:System.ServiceModel.WSHttpBinding> senza flusso di transazione, le sessioni affidabili o la codifica MTOM e le associazioni personalizzate equivalenti) vengono ignorati.  
   
-4.  Le intestazioni dei messaggi vengono eliminate da tutte le descrizioni dei messaggi in tutte le operazioni prima dell'importazione.  
+4. Le intestazioni dei messaggi vengono eliminate da tutte le descrizioni dei messaggi in tutte le operazioni prima dell'importazione.  
   
-5.  Gli attributi non portabili <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> e <xref:System.ServiceModel.TransactionFlowAttribute> vengono rimossi dal codice del proxy client generato.  
+5. Gli attributi non portabili <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> e <xref:System.ServiceModel.TransactionFlowAttribute> vengono rimossi dal codice del proxy client generato.  
   
-6.  Le proprietà non portabili ProtectionLevel, SessionMode, IsInitiating, IsTerminating vengono rimosse dagli oggetti <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> e <xref:System.ServiceModel.FaultContractAttribute>.  
+6. Le proprietà non portabili ProtectionLevel, SessionMode, IsInitiating, IsTerminating vengono rimosse dagli oggetti <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> e <xref:System.ServiceModel.FaultContractAttribute>.  
   
-7.  Tutte le operazioni del servizio vengono create come operazioni asincrone nel proxy client.  
+7. Tutte le operazioni del servizio vengono create come operazioni asincrone nel proxy client.  
   
-8.  I costruttori client generati che utilizzano i tipi non portabili vengono rimossi.  
+8. I costruttori client generati che utilizzano i tipi non portabili vengono rimossi.  
   
 9. Un'istanza dell'oggetto <xref:System.Net.CookieContainer> viene esposta nel client generato.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: be0847d1837ec85ed9d82dc7cc879d0cffa19cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f127a1a74643c975aea73b24896c098b365aa327
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156221"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327542"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>Procedura: Designare un pulsante Windows Forms come pulsante di annullamento usando la finestra di progettazione
 In qualsiasi forma di Windows, è possibile designare un <xref:System.Windows.Forms.Button> controllo pulsante di annullamento. Ogni volta che l'utente preme il tasto ESC, indipendentemente da quale altro controllo sul form ha lo stato attivo, viene scelto un pulsante Annulla. Il pulsante di annullamento viene in genere programmate per consentire all'utente di abbandonare un'operazione senza il commit di alcuna azione.  
@@ -20,9 +20,9 @@ In qualsiasi forma di Windows, è possibile designare un <xref:System.Windows.Fo
   
 ### <a name="to-designate-the-cancel-button"></a>Per designare il pulsante Annulla  
   
-1.  Selezionare il form in cui risiede il pulsante.  
+1. Selezionare il form in cui risiede il pulsante.  
   
-2.  Nel **delle proprietà** finestra, impostare il modulo <xref:System.Windows.Forms.Form.CancelButton%2A> proprietà per il <xref:System.Windows.Forms.Button> nome del controllo.  
+2. Nel **delle proprietà** finestra, impostare il modulo <xref:System.Windows.Forms.Form.CancelButton%2A> proprietà per il <xref:System.Windows.Forms.Button> nome del controllo.  
   
 ## <a name="see-also"></a>Vedere anche
 

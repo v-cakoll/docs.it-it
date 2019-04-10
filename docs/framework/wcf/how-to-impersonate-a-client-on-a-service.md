@@ -9,12 +9,12 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 0c414d0af033d9d703fcf947d008aeefcef5b876
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d58f25f279bf2baa1caa7744cea94b909f48866f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310577"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Procedura: Rappresentare un client in un servizio
 Rappresentazione di un client in un servizio Windows Communication Foundation (WCF) consente al servizio eseguire azioni per conto del client. Per le azioni soggette ai controlli dell'elenco di controllo di accesso (ACL), ad esempio l'accesso a directory e file in un computer o l'accesso a un database SQL Server, il controllo ACL si basa sull'account utente del client. In questo argomento vengono illustrati i passaggi di base necessari che consentono a un client in un dominio Windows di impostare un livello di rappresentazione di client. Per un esempio pratico, vedere [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Per altre informazioni sulla rappresentazione di client, vedere [delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -24,20 +24,20 @@ Rappresentazione di un client in un servizio Windows Communication Foundation (W
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Per consentire la rappresentazione di un client da un token di Windows memorizzato nella cache in un servizio  
   
-1.  Creare il servizio. Per un'esercitazione su questa procedura di base, vedere [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).  
+1. Creare il servizio. Per un'esercitazione su questa procedura di base, vedere [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
-2.  Utilizzare un'associazione che utilizza l'autenticazione di Windows e che crea una sessione, ad esempio <xref:System.ServiceModel.NetTcpBinding> o <xref:System.ServiceModel.WSHttpBinding>.  
+2. Utilizzare un'associazione che utilizza l'autenticazione di Windows e che crea una sessione, ad esempio <xref:System.ServiceModel.NetTcpBinding> o <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Quando si crea l'implementazione dell'interfaccia del servizio, applicare la classe <xref:System.ServiceModel.OperationBehaviorAttribute> al metodo che richiede la rappresentazione del client. Impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> su <xref:System.ServiceModel.ImpersonationOption.Required>.  
+3. Quando si crea l'implementazione dell'interfaccia del servizio, applicare la classe <xref:System.ServiceModel.OperationBehaviorAttribute> al metodo che richiede la rappresentazione del client. Impostare la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> su <xref:System.ServiceModel.ImpersonationOption.Required>.  
   
      [!code-csharp[c_SimpleImpersonation#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#2)]
      [!code-vb[c_SimpleImpersonation#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#2)]  
   
 ### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a>Per impostare il livello di rappresentazione consentito nel client  
   
-1.  Creare un codice client del servizio tramite [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Per altre informazioni, vedere [accesso ai servizi tramite Client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1. Creare un codice client del servizio tramite [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Per altre informazioni, vedere [accesso ai servizi tramite Client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
   
-2.  Dopo aver creato il client di WCF, impostare il <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> proprietà del <xref:System.ServiceModel.Security.WindowsClientCredential> classe a una del <xref:System.Security.Principal.TokenImpersonationLevel> valori di enumerazione.  
+2. Dopo aver creato il client di WCF, impostare il <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> proprietà del <xref:System.ServiceModel.Security.WindowsClientCredential> classe a una del <xref:System.Security.Principal.TokenImpersonationLevel> valori di enumerazione.  
   
     > [!NOTE]
     >  Per usare <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, deve essere usata l'autenticazione Kerberos negoziata, a volte denominata *multifase* o *in più passaggi* . Per una descrizione di come implementarla, vedere [procedure consigliate per la sicurezza](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 900a955173c28c7b86fce73e418561ed437719c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 410fc0134046c5fa7e05bfcd38ce6818244a0a54
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307873"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Procedura: Creare tasti di scelta per i controlli Windows Forms usando la finestra di progettazione
 Un' *chiave di accesso* è un carattere di sottolineato nel testo di un menu, voce di menu o l'etichetta di un controllo, ad esempio un pulsante. Consente all'utente di "fare clic su" un pulsante premendo il tasto ALT in combinazione con la chiave di accesso predefinite. Ad esempio, se un pulsante viene eseguita una procedura per stampare un form e pertanto relativo `Text` proprietà è impostata su "Stampa", aggiungendo una e commerciale (&) prima della lettera "P", la lettera "P" per essere sottolineati nel testo del pulsante in fase di esecuzione. L'utente può eseguire il comando associato al pulsante premendo ALT + P. Non è possibile avere una chiave di accesso per un controllo che non può ricevere lo stato attivo.  
@@ -30,7 +30,7 @@ Un' *chiave di accesso* è un carattere di sottolineato nel testo di un menu, vo
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Per creare una chiave di accesso per un controllo  
   
-1.  Nel **delle proprietà** impostare nella finestra di `Text` proprietà in una stringa che include una e commerciale (&) alla lettera che sarà la chiave di accesso. Ad esempio, per impostare la lettera "P" come chiave di accesso, digitare **conf** nella griglia.  
+1. Nel **delle proprietà** impostare nella finestra di `Text` proprietà in una stringa che include una e commerciale (&) alla lettera che sarà la chiave di accesso. Ad esempio, per impostare la lettera "P" come chiave di accesso, digitare **conf** nella griglia.  
   
 ## <a name="see-also"></a>Vedere anche
 

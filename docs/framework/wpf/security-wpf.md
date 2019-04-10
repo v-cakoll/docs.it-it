@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193668"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313567"
 ---
 # <a name="security-wpf"></a>Sicurezza (WPF)
 <a name="introduction"></a> Durante lo sviluppo di Windows Presentation Foundation (WPF) applicazioni autonome e ospitate da browser, è necessario considerare il modello di sicurezza. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applicazioni autonome vengono eseguite con autorizzazioni senza restrizioni ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** set di autorizzazioni), se distribuite mediante Windows Installer (MSI), XCopy, o [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Non è supportata la distribuzione di applicazioni WPF autonome e parzialmente attendibili con ClickOnce. Tuttavia, un'applicazione host di attendibilità totale può creare una relazione di trust parziale <xref:System.AppDomain> usando il modello di componente aggiuntivo di .NET Framework. Per altre informazioni, vedere [Cenni preliminari sui componenti aggiuntivi di WPF](./app-development/wpf-add-ins-overview.md).  
@@ -103,15 +103,15 @@ ms.locfileid: "59193668"
   
  La raccolta delle funzionalità che possono essere protette in questo modo viene configurata su una base per ogni area per il **Internet**, **Intranet**, **dei siti attendibili**, e  **Siti con restrizioni** zone. La procedura seguente descrive come configurare le impostazioni di sicurezza:  
   
-1.  Aprire il **Pannello di controllo**.  
+1. Aprire il **Pannello di controllo**.  
   
-2.  Fare clic su **rete e Internet** e quindi fare clic su **Opzioni Internet**.  
+2. Fare clic su **rete e Internet** e quindi fare clic su **Opzioni Internet**.  
   
      Viene visualizzata la finestra di dialogo Opzioni Internet.  
   
-3.  Nel **sicurezza** scheda, selezionare l'area per configurare le impostazioni di sicurezza.  
+3. Nel **sicurezza** scheda, selezionare l'area per configurare le impostazioni di sicurezza.  
   
-4.  Scegliere il **livello personalizzato** pulsante.  
+4. Scegliere il **livello personalizzato** pulsante.  
   
      Il **impostazioni di sicurezza** verrà visualizzata la finestra di dialogo ed è possibile configurare le impostazioni di sicurezza per l'area selezionata.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310356"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Procedura: Usare provider di appartenenza ASP.NET
 Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è una funzionalità che consente agli sviluppatori di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] di creare siti Web che consentono agli utenti di creare combinazioni di nome utente e password univoche. Con questa funzionalità qualsiasi utente può stabilire un account nel sito e accedere in modo esclusivo al sito e ai relativi servizi. Si tratta di una funzionalità in contrasto con la protezione di Windows, in base alla quale è necessario che gli utenti dispongano di un account in un dominio Windows. Qualsiasi utente che fornisca le credenziali (ovvero nome utente e password) può utilizzare il sito e i relativi servizi.  
@@ -27,13 +27,13 @@ Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md
   
 ### <a name="to-configure-the-membership-provider"></a>Per configurare il provider di appartenenza  
   
-1.  Nel file Web. config, sotto il <`system.web`> elemento, creare un <`membership`> elemento.  
+1. Nel file Web. config, sotto il <`system.web`> elemento, creare un <`membership`> elemento.  
   
-2.  Sotto l'elemento `<membership>`, creare un elemento `<providers>`.  
+2. Sotto l'elemento `<membership>`, creare un elemento `<providers>`.  
   
-3.  Come finestra figlio di <`providers`> elemento, aggiungere un `<clear />` elemento per svuotare la raccolta di provider.  
+3. Come finestra figlio di <`providers`> elemento, aggiungere un `<clear />` elemento per svuotare la raccolta di provider.  
   
-4.  Sotto il `<clear />` elemento, creare un <`add`> elemento con gli attributi seguenti impostati sui valori appropriati: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, e `passwordFormat`. L'attributo `name` viene utilizzato in seguito come valore nel file di configurazione. Nell'esempio seguente viene impostato su `SqlMembershipProvider`.  
+4. Sotto il `<clear />` elemento, creare un <`add`> elemento con gli attributi seguenti impostati sui valori appropriati: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, e `passwordFormat`. L'attributo `name` viene utilizzato in seguito come valore nel file di configurazione. Nell'esempio seguente viene impostato su `SqlMembershipProvider`.  
   
      Nell'esempio che segue viene illustrata la sezione di configurazione.  
   
@@ -58,13 +58,13 @@ Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Per configurare la sicurezza del servizio per accettare la combinazione di nome utente/password  
   
-1.  Nel file di configurazione, sotto il [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, aggiungere un [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
+1. Nel file di configurazione, sotto il [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento, aggiungere un [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento.  
   
-2.  Aggiungere un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) alla sezione delle associazioni. Per altre informazioni sulla creazione di un elemento di binding WCF, vedere [come: Specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2. Aggiungere un [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) alla sezione delle associazioni. Per altre informazioni sulla creazione di un elemento di binding WCF, vedere [come: Specificare un'associazione al servizio nella configurazione](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-3.  Impostare l'attributo `mode` dell'elemento `<security>` su `Message`.  
+3. Impostare l'attributo `mode` dell'elemento `<security>` su `Message`.  
   
-4.  Impostare il `clientCredentialType` attributo del <`message`> elemento `UserName`. Viene in questo modo specificato che un nome utente e una password saranno utilizzati come credenziale del client.  
+4. Impostare il `clientCredentialType` attributo del <`message`> elemento `UserName`. Viene in questo modo specificato che un nome utente e una password saranno utilizzati come credenziale del client.  
   
      Nell'esempio seguente viene illustrato il codice di configurazione per l'associazione.  
   
@@ -85,22 +85,22 @@ Il provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Per configurare un servizio affinché utilizzi il provider di appartenenza  
   
-1.  Come elemento figlio per il `<system.serviceModel>` elemento, aggiungere un' [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
+1. Come elemento figlio per il `<system.serviceModel>` elemento, aggiungere un' [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento  
   
-2.  Aggiungere un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) per la <`behaviors`> elemento.  
+2. Aggiungere un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) per la <`behaviors`> elemento.  
   
-3.  Aggiungere un [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e impostare il `name` attributo su un valore appropriato.  
+3. Aggiungere un [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e impostare il `name` attributo su un valore appropriato.  
   
-4.  Aggiungere un [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) per la <`behavior`> elemento.  
+4. Aggiungere un [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) per la <`behavior`> elemento.  
   
-5.  Aggiungere un [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) per il `<serviceCredentials>` elemento.  
+5. Aggiungere un [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) per il `<serviceCredentials>` elemento.  
   
-6.  Impostare l'attributo `userNamePasswordValidationMode` su `MembershipProvider`.  
+6. Impostare l'attributo `userNamePasswordValidationMode` su `MembershipProvider`.  
   
     > [!IMPORTANT]
     >  Se il `userNamePasswordValidationMode` valore non è impostato, WCF Usa l'autenticazione di Windows anziché il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] provider di appartenenze.  
   
-7.  Impostare l'attributo `membershipProviderName` sul nome del provider (specificato al momento di aggiungere il provider nella prima procedura in questo argomento). Nell'esempio seguente viene illustrato il frammento `<serviceCredentials>` fino a questo punto.  
+7. Impostare l'attributo `membershipProviderName` sul nome del provider (specificato al momento di aggiungere il provider nella prima procedura in questo argomento). Nell'esempio seguente viene illustrato il frammento `<serviceCredentials>` fino a questo punto.  
   
     ```xml  
     <behaviors>  

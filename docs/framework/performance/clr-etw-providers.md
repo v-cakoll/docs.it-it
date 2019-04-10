@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302621"
 ---
 # <a name="clr-etw-providers"></a>Provider ETW di CLR
 Common Language Runtime (CLR) dispone di due provider, ovvero il provider di runtime e quello di rundown.  
@@ -58,7 +58,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Raccolta dei dati ETW tramite provider di runtime e rundown  
  L'esempio seguente illustra come usare il provider di rundown di CLR in modo che la risoluzione di simboli dei processi gestiti abbia un impatto minimo, indipendentemente dal fatto che i processi abbiano inizio o fine all'interno o all'esterno della finestra profilata.  
   
-1.  Attivare la registrazione ETW tramite il provider di runtime di CLR:  
+1. Attivare la registrazione ETW tramite il provider di runtime di CLR:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
      Il log verrà salvato nel file clr1.etl.  
   
-2.  Per arrestare la profilatura mentre il processo è ancora in esecuzione, avviare il provider di rundown per acquisire gli eventi `DCEnd`:  
+2. Per arrestare la profilatura mentre il processo è ancora in esecuzione, avviare il provider di rundown per acquisire gli eventi `DCEnd`:  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ Common Language Runtime (CLR) dispone di due provider, ovvero il provider di run
   
      In questo modo, la raccolta di eventi `DCEnd` potrà avviare una sessione di rundown. La raccolta di tutti gli eventi può richiedere un tempo di attesa compreso fra 30 e 60 secondi. Il log verrà salvato nel file clr1.et2.  
   
-3.  Disattivare tutta la profilatura ETW:  
+3. Disattivare tutta la profilatura ETW:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Unire i profili per creare un unico file di log:  
+4. Unire i profili per creare un unico file di log:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

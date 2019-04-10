@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318806"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Procedura: Selezionare le stampanti connesse al computer dell'utente in Windows Form
 Spesso gli utenti vogliono scegliere una stampante diversa da quella predefinita. È possibile consentire agli utenti di selezionare una stampante tra quelle attualmente installate usando il componente <xref:System.Windows.Forms.PrintDialog> . Tramite il componente <xref:System.Windows.Forms.PrintDialog> , l'oggetto <xref:System.Windows.Forms.DialogResult> del componente <xref:System.Windows.Forms.PrintDialog> viene acquisito e usato per selezionare la stampante.  
@@ -23,7 +23,7 @@ Spesso gli utenti vogliono scegliere una stampante diversa da quella predefinita
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>Per selezionare una stampante e stampare un file  
   
-1.  Selezionare la stampante da usare tramite il <xref:System.Windows.Forms.PrintDialog> componente.  
+1. Selezionare la stampante da usare tramite il <xref:System.Windows.Forms.PrintDialog> componente.  
   
      Nell'esempio di codice seguente vengono gestiti due eventi. Nel primo, un <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Click> evento, il <xref:System.Windows.Forms.PrintDialog> viene creata un'istanza di classe e la stampante selezionata dall'utente viene acquisita nella <xref:System.Windows.Forms.DialogResult> proprietà.  
   
