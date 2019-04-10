@@ -3,12 +3,12 @@ title: Uso di LINQ
 description: Questa esercitazione illustra come generare sequenze con LINQ, come scrivere i metodi da usare nelle query LINQ e come distinguere le modalità di valutazione eager e lazy.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679654"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815586"
 ---
 # <a name="working-with-linq"></a>Uso di LINQ
 
@@ -115,7 +115,7 @@ Il compilatore converte le istruzioni LINQ scritte con la sintassi di query nell
 
 Andare avanti ed eseguire l'esempio che si è creato finora. Verranno visualizzate le 52 carte del mazzo. Può essere molto utile eseguire questo esempio in un debugger per osservare come vengono eseguiti i metodi `Suits()` e `Ranks()`. È possibile vedere chiaramente che in ogni sequenza ciascuna stringa viene generata solo quando è necessario.
 
-![Finestra della console con l'applicazione che scrive 52 carte](./media/working-with-linq/console.png)
+![Una finestra della console con l'app che scrive 52 carte.](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>Modifica dell'ordine
 
