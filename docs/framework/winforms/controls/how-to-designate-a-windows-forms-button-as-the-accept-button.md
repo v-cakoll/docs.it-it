@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: 1e24e410681b03a92c8c48b187dde569eccdc1c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e608bb2cb4635ef1d29fd7a0aff3ac95fcd9af5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309823"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="81559-102">Procedura: Designare un pulsante Windows Forms come pulsante di conferma</span><span class="sxs-lookup"><span data-stu-id="81559-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
-<span data-ttu-id="81559-103">In qualsiasi forma di Windows, è possibile designare un <xref:System.Windows.Forms.Button> controllo pulsante di conferma, noto anche come pulsante predefinito.</span><span class="sxs-lookup"><span data-stu-id="81559-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="81559-104">Ogni volta che l'utente preme il tasto INVIO, viene scelto il pulsante predefinito indipendentemente da quale altro controllo sul form ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="81559-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="a95bb-102">Procedura: Designare un pulsante Windows Forms come pulsante di conferma</span><span class="sxs-lookup"><span data-stu-id="a95bb-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
+<span data-ttu-id="a95bb-103">In qualsiasi forma di Windows, è possibile designare un <xref:System.Windows.Forms.Button> controllo pulsante di conferma, noto anche come pulsante predefinito.</span><span class="sxs-lookup"><span data-stu-id="a95bb-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="a95bb-104">Ogni volta che l'utente preme il tasto INVIO, viene scelto il pulsante predefinito indipendentemente da quale altro controllo sul form ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="a95bb-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="81559-105">Le eccezioni a questo si verifica se il controllo con lo stato attivo è un altro pulsante, in tal caso, verrà fatto clic sul pulsante con lo stato attivo, o una casella di testo su più righe o un controllo personalizzato che intercetta il tasto INVIO.</span><span class="sxs-lookup"><span data-stu-id="81559-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
+>  <span data-ttu-id="a95bb-105">Le eccezioni a questo si verifica se il controllo con lo stato attivo è un altro pulsante, in tal caso, verrà fatto clic sul pulsante con lo stato attivo, o una casella di testo su più righe o un controllo personalizzato che intercetta il tasto INVIO.</span><span class="sxs-lookup"><span data-stu-id="a95bb-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
   
-### <a name="to-designate-the-accept-button"></a><span data-ttu-id="81559-106">Per designare il pulsante accept</span><span class="sxs-lookup"><span data-stu-id="81559-106">To designate the accept button</span></span>  
+### <a name="to-designate-the-accept-button"></a><span data-ttu-id="a95bb-106">Per designare il pulsante accept</span><span class="sxs-lookup"><span data-stu-id="a95bb-106">To designate the accept button</span></span>  
   
-1.  <span data-ttu-id="81559-107">Impostare la maschera <xref:System.Windows.Forms.Form.AcceptButton%2A> proprietà appropriata <xref:System.Windows.Forms.Button> controllo.</span><span class="sxs-lookup"><span data-stu-id="81559-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
+1. <span data-ttu-id="a95bb-107">Impostare la maschera <xref:System.Windows.Forms.Form.AcceptButton%2A> proprietà appropriata <xref:System.Windows.Forms.Button> controllo.</span><span class="sxs-lookup"><span data-stu-id="a95bb-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  
@@ -49,11 +49,11 @@ ms.locfileid: "59222146"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="81559-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="81559-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a95bb-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a95bb-108">See also</span></span>
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
-- [<span data-ttu-id="81559-109">Panoramica del controllo Button</span><span class="sxs-lookup"><span data-stu-id="81559-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
-- [<span data-ttu-id="81559-110">Modalità di selezione di un controllo Button Windows Form</span><span class="sxs-lookup"><span data-stu-id="81559-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
-- [<span data-ttu-id="81559-111">Procedura: Rispondere alla selezione dei pulsanti Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81559-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="81559-112">Procedura: Designare un pulsante Windows Forms come pulsante di annullamento</span><span class="sxs-lookup"><span data-stu-id="81559-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
-- [<span data-ttu-id="81559-113">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="81559-113">Button Control</span></span>](button-control-windows-forms.md)
+- [<span data-ttu-id="a95bb-109">Panoramica del controllo Button</span><span class="sxs-lookup"><span data-stu-id="a95bb-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
+- [<span data-ttu-id="a95bb-110">Modalità di selezione di un controllo Button Windows Form</span><span class="sxs-lookup"><span data-stu-id="a95bb-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
+- [<span data-ttu-id="a95bb-111">Procedura: Rispondere alla selezione dei pulsanti Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a95bb-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="a95bb-112">Procedura: Designare un pulsante Windows Forms come pulsante di annullamento</span><span class="sxs-lookup"><span data-stu-id="a95bb-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [<span data-ttu-id="a95bb-113">Controllo Button</span><span class="sxs-lookup"><span data-stu-id="a95bb-113">Button Control</span></span>](button-control-windows-forms.md)
