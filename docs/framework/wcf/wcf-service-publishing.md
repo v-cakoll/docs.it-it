@@ -2,12 +2,12 @@
 title: Pubblicazione servizio WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441437"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299722"
 ---
 # <a name="wcf-service-publishing"></a>Pubblicazione servizio WCF
 
@@ -35,13 +35,13 @@ Pubblicazione servizio WCF supporta la pubblicazione di servizi WCF creati dal s
 
 Per distribuire un'implementazione del servizio, eseguire la procedura seguente:
 
-1.  Aprire Visual Studio con privilegi elevati (fare clic sul file eseguibile e scegliere **Esegui come amministratore** per aprirlo).  Se si utilizza IIS 7.0 o versione successiva, assicurarsi che è stato installato il componente "Compatibilità Metabase di IIS e IIS 6 Configuration" con "Windows attiva o Disattiva funzionalità di" nel Pannello di controllo.
+1. Aprire Visual Studio con privilegi elevati (fare clic sul file eseguibile e scegliere **Esegui come amministratore** per aprirlo).  Se si utilizza IIS 7.0 o versione successiva, assicurarsi che è stato installato il componente "Compatibilità Metabase di IIS e IIS 6 Configuration" con "Windows attiva o Disattiva funzionalità di" nel Pannello di controllo.
 
-2.  Aprire un progetto di servizio, selezionare **compilare** > **pubblica \<nome progetto >** dal menu principale oppure fare clic sul progetto in **Esplora**e fare clic su **Publish**.
+2. Aprire un progetto di servizio, selezionare **compilare** > **pubblica \<nome progetto >** dal menu principale oppure fare clic sul progetto in **Esplora**e fare clic su **Publish**.
 
-3.  Il **pubblica** verrà visualizzata la finestra. Fare clic su di **...** . per specificare la posizione di destinazione in cui distribuire il servizio. È possibile scegliere di distribuire l'applicazione in IIS locale, File System o sito FTP. Se si distribuisce l'applicazione per IIS locale, è possibile selezionare il sito Web e creare l'applicazione web, facendo i **Crea nuova applicazione Web** in alto a destra.
+3. Il **pubblica** verrà visualizzata la finestra. Fare clic su di **...** . per specificare la posizione di destinazione in cui distribuire il servizio. È possibile scegliere di distribuire l'applicazione in IIS locale, File System o sito FTP. Se si distribuisce l'applicazione per IIS locale, è possibile selezionare il sito Web e creare l'applicazione web, facendo i **Crea nuova applicazione Web** in alto a destra.
 
-4.  Dopo aver fatto clic **pubblica** nella finestra principale di Visual Studio distribuisce l'applicazione nel percorso di destinazione specificata e copia i file Web. config, con estensione svc e all'assembly nella directory di destinazione. . Il nome del file con estensione svc sarà "ProjectName". Dopo che il servizio viene pubblicato correttamente, è possibile trovare un collegamenti consigliati nella finestra Output di Visual Studio, che presenta un aspetto simile a "connessione a `http://localhost/WebApplicationFolderName...`". Premere CTRL e fare clic sul collegamento per aprire una pagina del browser in Visual Studio per visualizzare la struttura di directory del servizio.
+4. Dopo aver fatto clic **pubblica** nella finestra principale di Visual Studio distribuisce l'applicazione nel percorso di destinazione specificata e copia i file Web. config, con estensione svc e all'assembly nella directory di destinazione. . Il nome del file con estensione svc sarà "ProjectName". Dopo che il servizio viene pubblicato correttamente, è possibile trovare un collegamenti consigliati nella finestra Output di Visual Studio, che presenta un aspetto simile a "connessione a `http://localhost/WebApplicationFolderName...`". Premere CTRL e fare clic sul collegamento per aprire una pagina del browser in Visual Studio per visualizzare la struttura di directory del servizio.
 
      Se non è possibile collegarsi al sito, è possibile che il browser di directory non sia abilitato in IIS. Seguire i suggerimenti nella sezione "Possibili operazioni" per abilitarlo. In alternativa, è possibile digitare direttamente `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` per visualizzare la pagina del servizio.
 
@@ -76,5 +76,5 @@ Se si sceglie di distribuire l'applicazione nel sito Web IIS locale, è possibil
 ## <a name="see-also"></a>Vedere anche
 
 - [Modelli di Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
-- [Host del servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Client di prova WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Host servizio WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Client di test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

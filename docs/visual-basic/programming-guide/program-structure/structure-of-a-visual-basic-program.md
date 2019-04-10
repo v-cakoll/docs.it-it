@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295770"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struttura di un programma Visual Basic
 Un programma Visual Basic è composto da blocchi di compilazione standard. Oggetto *soluzione* è costituito da uno o più progetti. Oggetto *progetto* a sua volta può contenere uno o più assembly. Ciascuna *assembly* viene compilato da uno o più file di origine. Oggetto *file di origine* fornisce la definizione e implementazione di classi, strutture, moduli e interfacce che contengono infine tutto il codice.  
@@ -22,11 +22,11 @@ Un programma Visual Basic è composto da blocchi di compilazione standard. Ogget
 ## <a name="file-level-programming-elements"></a>Elementi di programmazione a livello di file  
  Quando si avvia un progetto o un file e aprire l'editor di codice, viene visualizzato un codice già in uso e nell'ordine corretto. Qualsiasi codice che si scrive deve seguire la sequenza seguente:  
   
-1.  `Option` Istruzioni  
+1. `Option` istruzioni  
   
-2.  `Imports` Istruzioni  
+2. `Imports` istruzioni  
   
-3.  `Namespace` istruzioni e gli elementi a livello di spazio dei nomi  
+3. `Namespace` istruzioni e gli elementi a livello di spazio dei nomi  
   
  Se si immettono istruzioni in un ordine diverso, possono causare errori di compilazione.  
   
@@ -64,11 +64,11 @@ Un programma Visual Basic è composto da blocchi di compilazione standard. Ogget
   
 -   [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   

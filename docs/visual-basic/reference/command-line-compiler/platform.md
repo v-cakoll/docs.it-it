@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301165"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Consente di specificare la versione di Common Language Runtime (CLR) in grado di eseguire il file di output.  
@@ -68,9 +68,9 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>Impostare - piattaforma nell'IDE di Visual Studio  
   
-1.  Nelle **Esplora soluzioni**, scegliere il progetto, aprire il **Project** menu e quindi fare clic su **proprietà**.  
+1. Nelle **Esplora soluzioni**, scegliere il progetto, aprire il **Project** menu e quindi fare clic su **proprietà**.  
   
-2.  Nel **compilare** scheda, selezionare o deselezionare il **preferisci 32 bit** casella di controllo, o, nel **CPU destinazione** scegliere un valore.  
+2. Nel **compilare** scheda, selezionare o deselezionare il **preferisci 32 bit** casella di controllo, o, nel **CPU destinazione** scegliere un valore.  
   
      Per altre informazioni, vedere [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   

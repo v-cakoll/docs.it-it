@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831434"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301230"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipi generici in Visual Basic (Visual Basic)
 Un *tipo generico* è un singolo elemento di programmazione che si adatta per eseguire la stessa funzionalità per diversi tipi di dati. Quando si definisce una classe o una routine generica, non è necessario definire una versione distinta per ogni tipo di dati per il quale si vuole eseguire tale funzionalità.  
@@ -83,15 +83,15 @@ Un *tipo generico* è un singolo elemento di programmazione che si adatta per es
 ## <a name="advantages-of-generic-types"></a>Vantaggi dei tipi generici  
  Un tipo generico serve come base per dichiarare molti elementi di programmazione diversi, ognuno dei quali opera su un tipo di dati specifico. Le alternative a un tipo generico sono:  
   
-1.  Un singolo tipo che opera sul tipo di dati `Object` .  
+1. Un singolo tipo che opera sul tipo di dati `Object` .  
   
-2.  Un set di versioni *specifiche del tipo* , ognuna codificata individualmente e che opera su un tipo di dati specifico, ad esempio `String`, `Integer`o un tipo definito dall'utente come `customer`.  
+2. Un set di versioni *specifiche del tipo* , ognuna codificata individualmente e che opera su un tipo di dati specifico, ad esempio `String`, `Integer`o un tipo definito dall'utente come `customer`.  
   
  Un tipo generico offre i vantaggi seguenti rispetto a queste alternative:  
   
 -   **Indipendenza dai tipi.** I tipi generici applicano il controllo dei tipi in fase di compilazione. I tipi basati su `Object` accettano qualsiasi tipo di dati ed è necessario scrivere codice per verificare se un tipo di dati di input è accettabile. Con i tipi generici, il compilatore può intercettare i tipi non corrispondenti prima della fase di esecuzione.  
   
--   **Prestazioni.** I tipi generici non devono eseguire il *boxing* e l' *unboxing* dei dati, perché ognuno è specializzato per un solo tipo di dati. Le operazioni basate su `Object` devono eseguire il boxing dei tipi di dati di input per convertirli in `Object` e l'unboxing dei dati destinati all'output. Il boxing e l'unboxing riducono le prestazioni.  
+-   **Prestazioni.** I tipi generici non devono eseguire il *boxing* e l' *unboxinging* dei dati, perché ognuno è specializzato per un solo tipo di dati. Le operazioni basate su `Object` devono eseguire il boxing dei tipi di dati di input per convertirli in `Object` e l'unboxing dei dati destinati all'output. Il boxing e l'unboxing riducono le prestazioni.  
   
      I tipi basati su `Object` sono anche ad associazione tardiva, il che significa che l'accesso ai membri richiede codice aggiuntivo in fase di esecuzione. Anche questo riduce le prestazioni.  
   
@@ -156,6 +156,6 @@ Un *tipo generico* è un singolo elemento di programmazione che si adatta per es
 - [Tipi di dati](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Covarianza e controvarianza](../../concepts/covariance-contravariance/index.md)
-- [Iteratori](../../../../visual-basic/programming-guide/concepts/iterators.md)
+- [Iterators](../../../../visual-basic/programming-guide/concepts/iterators.md)

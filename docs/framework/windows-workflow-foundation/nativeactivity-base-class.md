@@ -2,12 +2,12 @@
 title: Classe di base NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 40eff2e597763fd492b3051df1a91622e7a60672
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296589"
 ---
 # <a name="nativeactivity-base-class"></a>Classe di base NativeActivity
 
@@ -18,7 +18,7 @@ ms.locfileid: "48842035"
 
 -   Recupero e impostazione di argomenti e variabili.
 
--   Pianificazione delle attività figlio con il metodo <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+-   Pianificazione delle attività figlio con <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
 
 -   Interruzione dell'esecuzione di attività tramite il metodo <xref:System.Activities.NativeActivityContext.Abort%2A>.
 
@@ -34,28 +34,28 @@ ms.locfileid: "48842035"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Per creare un'attività personalizzata che eredita da NativeActivity
 
-1.  Aprire Visual Studio 2010.
+1. OpenVisual Studio 2010.
 
-2.  Selezionare **File**, **nuove**e quindi **progetto**. Selezionare **Workflow 4.0** sotto **Visual c#** nel **tipi di progetto** finestra e selezionare il **v2010** nodo. Selezionare **libreria di attività** nel **modelli** finestra. Assegnare al nuovo progetto il nome HelloActivity.
+2. Selezionare **File**, **nuove**e quindi **progetto**. Selezionare **Workflow 4.0** sotto **Visual c#** nel **tipi di progetto** finestra e selezionare il **v2010** nodo. Selezionare **libreria di attività** nel **modelli** finestra. Assegnare al nuovo progetto il nome HelloActivity.
 
-3.  Fare doppio clic su Activity1.xaml nel progetto HelloActivity e selezionare **Elimina**.
+3. Fare doppio clic su Activity1.xaml nel progetto HelloActivity e selezionare **Elimina**.
 
-4.  Pulsante destro del mouse sul progetto HelloActivity e selezionare **Add**e quindi **classe**. Assegnare alla nuova classe il nome HelloActivity.cs.
+4. Pulsante destro del mouse sul progetto HelloActivity e selezionare **Add**e quindi **classe**. Assegnare alla nuova classe il nome HelloActivity.cs.
 
-5.  Nel file HelloActivity.cs aggiungere le seguenti istruzioni `using`.
+5. Nel file HelloActivity.cs aggiungere le seguenti istruzioni `using`.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Assicurarsi che la nuova classe erediti dall'oggetto <xref:System.Activities.NativeActivity> aggiungendo una classe base alla dichiarazione di classe.
+6. Assicurarsi che la nuova classe erediti dall'oggetto <xref:System.Activities.NativeActivity> aggiungendo una classe base alla dichiarazione di classe.
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7.  Aggiungere la funzionalità alla classe aggiungendo un metodo <xref:System.Activities.NativeActivity.Execute%2A>.
+7. Aggiungere la funzionalità alla classe aggiungendo un metodo <xref:System.Activities.NativeActivity.Execute%2A>.
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,7 +64,7 @@ ms.locfileid: "48842035"
     }
     ```
 
-8.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.CacheMetadata%2A> e chiamare il metodo Add appropriato per inviare al runtime del flusso di lavoro le informazioni sulle variabili, gli argomenti, gli elementi figlio e i delegati dell'attività personalizzata. Per altre informazioni, vedere la classe <xref:System.Activities.NativeActivityMetadata>.
+8. Eseguire l'override del metodo <xref:System.Activities.NativeActivity.CacheMetadata%2A> e chiamare il metodo Add appropriato per inviare al runtime del flusso di lavoro le informazioni sulle variabili, gli argomenti, gli elementi figlio e i delegati dell'attività personalizzata. Per altre informazioni, vedere la classe <xref:System.Activities.NativeActivityMetadata>.
 
 9. Usare l'oggetto <xref:System.Activities.NativeActivityContext> per pianificare un segnalibro. Per informazioni dettagliate sulla creazione, pianificazione e ripresa di un segnalibro, vedere <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A>.
 

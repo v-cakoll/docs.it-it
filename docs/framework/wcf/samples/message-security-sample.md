@@ -2,12 +2,12 @@
 title: Esempio sulla sicurezza dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: a4835f8f276786aa87506bc2be2a2bba534f4166
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302959"
 ---
 # <a name="message-security-sample"></a>Esempio sulla sicurezza dei messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza `basicHttpBinding` e la sicurezza del messaggio. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio di calcolatrice.  
@@ -112,42 +112,42 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Per eseguire l'esempio sullo stesso computer  
   
-1.  Eseguire Setup.bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
+1. Eseguire Setup.bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
   
     > [!NOTE]
     >  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di SDK di Windows. e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK. Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.  
   
-2.  Eseguire l'applicazione di servizio da \service\bin.  
+2. Eseguire l'applicazione di servizio da \service\bin.  
   
-3.  Eseguire l'applicazione client da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+3. Eseguire l'applicazione client da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-5.  Rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
+5. Rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
   
 ### <a name="to-run-the-sample-across-machines"></a>Per eseguire l'esempio tra più computer  
   
-1.  Creare una directory sul computer del servizio per i file binari del servizio.  
+1. Creare una directory sul computer del servizio per i file binari del servizio.  
   
-2.  Copiare i file di programma del servizio nella directory del server. Copiare anche i file Setup.bat, Cleanup.bat e ImportClientCert.bat nel server.  
+2. Copiare i file di programma del servizio nella directory del server. Copiare anche i file Setup.bat, Cleanup.bat e ImportClientCert.bat nel server.  
   
-3.  Creare una directory sul client del servizio per i file binari del client.  
+3. Creare una directory sul client del servizio per i file binari del client.  
   
-4.  Copiare i file di programma del client nella directory del client sul computer del client e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
+4. Copiare i file di programma del client nella directory del client sul computer del client e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-5.  Eseguire `setup.bat service` sul server. In esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e consente di esportare il certificato del servizio in un file denominato CER.  
+5. Eseguire `setup.bat service` sul server. In esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e consente di esportare il certificato del servizio in un file denominato CER.  
   
-6.  Modifica Service.exe.config per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) che corrisponde al nome di dominio completo del computer. Modificare anche il valore dell'indirizzo di base per specificare un nome di computer completo anziché localhost`.`  
+6. Modifica Service.exe.config per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) che corrisponde al nome di dominio completo del computer. Modificare anche il valore dell'indirizzo di base per specificare un nome di computer completo anziché localhost`.`  
   
-7.  Copiare il file Service.cer dalla directory del servizio alla directory del client sul computer client.  
+7. Copiare il file Service.cer dalla directory del servizio alla directory del client sul computer client.  
   
-8.  Eseguire `setup.bat client` sul client. Quando si esegue `setup.bat` con l'argomento `client` viene creato un certificato client denominato client.com che viene esportato in un file denominato Client.cer.  
+8. Eseguire `setup.bat client` sul client. Quando si esegue `setup.bat` con l'argomento `client` viene creato un certificato client denominato client.com che viene esportato in un file denominato Client.cer.  
   
 9. Nel file Client.exe.config nel computer client, modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio. Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server. Modificare anche il `findValue` attributo del [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) al nuovo nome del certificato del servizio che è il nome di dominio completo del server.  
   

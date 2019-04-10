@@ -2,12 +2,12 @@
 title: 'Procedura: Visualizzare errori di convalida in una finestra di progettazione riallocata'
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: 8f70b190042d167741bbadc4e1645756fe5b830d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512567"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310200"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Procedura: Visualizzare errori di convalida in una finestra di progettazione riallocata
 In questo argomento viene descritto come recuperare e pubblicare errori di convalida in un [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] riallocato. Viene in tal modo fornita la procedura per confermare che un flusso di lavoro in una finestra di progettazione riallocata è valido.  
@@ -16,7 +16,7 @@ In questo argomento viene descritto come recuperare e pubblicare errori di conva
   
 ### <a name="implement-the-ivalidationerrorservice-interface"></a>Implementare l'interfaccia IValidationErrorService  
   
-1.  Di seguito è riportato un esempio di codice per un'implementazione semplice che scriverà gli errori di convalida nel log di debug.  
+1. Di seguito è riportato un esempio di codice per un'implementazione semplice che scriverà gli errori di convalida nel log di debug.  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -38,7 +38,7 @@ In questo argomento viene descritto come recuperare e pubblicare errori di conva
   
 ### <a name="publishing-to-the-editing-context"></a>Pubblicazione del contesto di modifica  
   
-1.  Di seguito è riportato il codice per la pubblicazione nel contesto di modifica.  
+1. Di seguito è riportato il codice per la pubblicazione nel contesto di modifica.  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297252"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Accesso ai servizi tramite client WCF
 
@@ -20,11 +20,11 @@ Dopo aver creato un servizio, il passaggio successivo consiste nel creare un pro
 
  Di seguito sono indicati i passaggi di base per la creazione di un client WCF:
 
-1.  Compilare il codice del servizio.
+1. Compilare il codice del servizio.
 
-2.  Generare il proxy client WCF.
+2. Generare il proxy client WCF.
 
-3.  Creare un'istanza del proxy client WCF.
+3. Creare un'istanza del proxy client WCF.
 
 Il proxy client WCF può essere generato manualmente utilizzando Service Model Metadata Utility Tool (SvcUtil.exe) per altre informazioni, vedere [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Il proxy client WCF può essere generato anche in Visual Studio usando il **Aggiungi riferimento al servizio** funzionalità. Per generare il proxy client WCF usando l'uno o l'altro metodo, è necessario che il servizio sia in esecuzione. Se il servizio è self-hosted, è necessario eseguire l'host. Se il servizio è ospitato in IIS/WAS, non è necessario effettuare nessun'altra operazione.
 
@@ -188,12 +188,12 @@ Quando si verificano questi tipi di eccezioni, il modo migliore per risolvere il
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Procedura: Servizi di accesso con un contratto Duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Procedura: Accedere ai servizi con un contratto duplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Procedura: Chiamare operazioni del servizio in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Procedura: Accedere ai servizi con un contratto unidirezionale e i contratti Request / Reply](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Procedura: Accedere a WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Procedura: Accedere ai servizi con contratti unidirezionali e Request/Reply](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Procedura: Accedere a un servizio WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Informazioni sul codice client generato](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Procedura: Migliorare l'avvio tempo di applicazioni Client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Procedura: Migliorare il tempo di avvio di applicazioni client WCF usando XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Specifica del comportamento in fase di esecuzione dei client](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Configurazione dei comportamenti client](../../../docs/framework/wcf/configuring-client-behaviors.md)

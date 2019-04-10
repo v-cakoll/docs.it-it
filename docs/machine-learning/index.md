@@ -1,14 +1,14 @@
 ---
 title: Guida ai contenuti su ML.NET
 description: Informazioni su come creare soluzioni di intelligenza artificiale personalizzate e integrarle nelle applicazioni .NET usando ML.NET.
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231331"
 ---
 # <a name="mlnet-content-guide"></a>Guida ai contenuti su ML.NET
 
@@ -33,7 +33,11 @@ L'esercitazione [Analizzare il sentiment usando un modello di classificazione bi
 
 L'esercitazione [Prevedere i prezzi usando un modello di regressione](./tutorials/taxi-fare.md) illustra come compilare un'app predittiva che usa diversi fattori dei dati cronologici per determinare la risposta.
 
-L'esercitazione [Classificare i fiori di iris in base alle caratteristiche](./tutorials/iris-clustering.md) illustra come usare un modello di clustering per analizzare il set di dati Iris. 
+L'esercitazione [Classificare i fiori di iris in base alle caratteristiche](./tutorials/iris-clustering.md) illustra come usare un modello di clustering per analizzare il set di dati Iris.
+
+[Creare un sistema di raccomandazione di film con a ML.NET](./tutorials/movie-recommmendation.md) illustra come creare un'app per consigliare i film agli utenti in base alla loro cronologia.
+
+[Build an ML.NET custom image classifier with TensorFlow](./tutorials/image-classification.md) (Creare un classificatore di immagini personalizzato ML.NET con TensorFlow): illustra come ripetere il training di un modello Tensorflow esistente per creare un classificatore di immagini personalizzato usando ML.NET.
 
 ## <a name="how-to-guide"></a>Guida pratica
 
@@ -46,7 +50,6 @@ L'articolo [Glossario di Machine Learning](./resources/glossary.md) contiene le 
 L'articolo [Attività di Machine Learning](./resources/tasks.md) descrive attività come la classificazione e il rilevamento anomalie. 
 
 L'articolo [Trasformazioni di dati](./resources/transforms.md) descrive le funzionalità di preparazione dei dati in ML.NET.
-
 
 ## <a name="api-reference"></a>API (riferimento)
 

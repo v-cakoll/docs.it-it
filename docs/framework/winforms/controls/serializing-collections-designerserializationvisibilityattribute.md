@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 04eb56fe78aa2d9ef5ab0daae4ba1c873cfc2b26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 791b2ea1497b8b884d066894e925785fd1bb6f7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097759"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305208"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Procedura dettagliata: Serializzazione di raccolte di tipi standard tramite DesignerSerializationVisibilityAttribute
 I controlli personalizzati a volte esporrà una raccolta come una proprietà. Questa procedura dettagliata illustra come usare il <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> classe per controllare la serializzazione di una raccolta in fase di progettazione. Applicando la <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valore alla proprietà della raccolta assicura che la proprietà sarà serializzata.  
@@ -36,15 +36,15 @@ I controlli personalizzati a volte esporrà una raccolta come una proprietà. Qu
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Per creare un controllo con una raccolta serializzabile  
   
-1.  Creare un progetto libreria di controlli di Windows denominato `SerializationDemoControlLib`. Per altre informazioni, vedere [modello di libreria di controllo di Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
+1. Creare un progetto libreria di controlli di Windows denominato `SerializationDemoControlLib`. Per altre informazioni, vedere [modello di libreria di controllo di Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  Rinominare `UserControl1` a `SerializationDemoControl`. Per altre informazioni, vedere [rinominare un simbolo di codice e refactoring](/visualstudio/ide/reference/rename).  
+2. Rinominare `UserControl1` a `SerializationDemoControl`. Per altre informazioni, vedere [rinominare un simbolo di codice e refactoring](/visualstudio/ide/reference/rename).  
   
-3.  Nel **delle proprietà** finestra, impostare il valore della <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> proprietà `10`.  
+3. Nel **delle proprietà** finestra, impostare il valore della <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> proprietà `10`.  
   
-4.  Sul posto un <xref:System.Windows.Forms.TextBox> controllare il `SerializationDemoControl`.  
+4. Sul posto un <xref:System.Windows.Forms.TextBox> controllare il `SerializationDemoControl`.  
   
-5.  Selezionare il controllo <xref:System.Windows.Forms.TextBox>. Nel **proprietà** finestra, impostare le proprietà seguenti.  
+5. Selezionare il controllo <xref:System.Windows.Forms.TextBox>. Nel **proprietà** finestra, impostare le proprietà seguenti.  
   
     |Proprietà|Modificare in|  
     |--------------|---------------|  
@@ -53,13 +53,13 @@ I controlli personalizzati a volte esporrà una raccolta come una proprietà. Qu
     |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
-6.  Nel **Editor di codice**, dichiarare un campo di matrice di stringhe denominato `stringsValue` in `SerializationDemoControl`.  
+6. Nel **Editor di codice**, dichiarare un campo di matrice di stringhe denominato `stringsValue` in `SerializationDemoControl`.  
   
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
      [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
   
-7.  Definire le `Strings` proprietà di `SerializationDemoControl`.  
+7. Definire le `Strings` proprietà di `SerializationDemoControl`.  
   
 > [!NOTE]
 >  Il <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valore viene usato per abilitare la serializzazione della raccolta.  
@@ -68,11 +68,11 @@ I controlli personalizzati a volte esporrà una raccolta come una proprietà. Qu
  [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
  [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
   
-1.  Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5.  
+1. Per compilare il progetto ed eseguire il controllo in **UserControl Test Container**, premere F5.  
   
-2.  Trovare il `Strings` proprietà nel <xref:System.Windows.Forms.PropertyGrid> delle **UserControl Test Container**. Fare clic sui `Strings` proprietà, quindi fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) per aprire la **Editor della raccolta String**.  
+2. Trovare il `Strings` proprietà nel <xref:System.Windows.Forms.PropertyGrid> delle **UserControl Test Container**. Fare clic sui `Strings` proprietà, quindi fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) per aprire la **Editor della raccolta String**.  
   
-3.  Immettere più stringhe nel **Editor della raccolta String**. È necessario separarli premendo il tasto INVIO alla fine di ogni stringa. Fare clic su **OK** dopo aver immesso le stringhe.  
+3. Immettere più stringhe nel **Editor della raccolta String**. È necessario separarli premendo il tasto INVIO alla fine di ogni stringa. Fare clic su **OK** dopo aver immesso le stringhe.  
   
 > [!NOTE]
 >  Vengono visualizzate le stringhe immesse nella <xref:System.Windows.Forms.TextBox> del `SerializationDemoControl`.  
@@ -82,24 +82,24 @@ I controlli personalizzati a volte esporrà una raccolta come una proprietà. Qu
   
 #### <a name="to-serialize-a-collection"></a>Per serializzare una raccolta  
   
-1.  Aggiungere un progetto di applicazione di Windows per la soluzione. Denominare il progetto `SerializationDemoControlTest`.  
+1. Aggiungere un progetto di applicazione di Windows per la soluzione. Denominare il progetto `SerializationDemoControlTest`.  
   
-2.  Nel **casella degli strumenti**, individuare la scheda denominata **Componenti SerializationDemoControlLib**. In questa scheda, si noterà il `SerializationDemoControl`. Per altre informazioni, vedere [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+2. Nel **casella degli strumenti**, individuare la scheda denominata **Componenti SerializationDemoControlLib**. In questa scheda, si noterà il `SerializationDemoControl`. Per altre informazioni, vedere [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-3.  Sul posto un `SerializationDemoControl` sul form.  
+3. Sul posto un `SerializationDemoControl` sul form.  
   
-4.  Trovare il `Strings` proprietà il **proprietà** finestra. Fare clic sui `Strings` proprietà, quindi fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) per aprire la **Editor della raccolta String**.  
+4. Trovare il `Strings` proprietà il **proprietà** finestra. Fare clic sui `Strings` proprietà, quindi fare clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) per aprire la **Editor della raccolta String**.  
   
-5.  Digitare più stringhe nel **Editor della raccolta String**. È necessario separarli premendo il tasto INVIO alla fine di ogni stringa. Fare clic su **OK** dopo aver immesso le stringhe.  
+5. Digitare più stringhe nel **Editor della raccolta String**. È necessario separarli premendo il tasto INVIO alla fine di ogni stringa. Fare clic su **OK** dopo aver immesso le stringhe.  
   
 > [!NOTE]
 >  Vengono visualizzate le stringhe immesse nella <xref:System.Windows.Forms.TextBox> del `SerializationDemoControl`.  
   
-1.  In **Esplora soluzioni** fare clic sul pulsante **Mostra tutti i file**.  
+1. In **Esplora soluzioni** fare clic sul pulsante **Mostra tutti i file**.  
   
-2.  Aprire il **Form1** nodo. In cui è presente un file denominato **Form1.Designer.cs** oppure **Form1**. Si tratta del file in cui il **finestra di progettazione Windows Form** genera codice che rappresenta lo stato della fase di progettazione del form e i relativi controlli figlio. Aprire il file nell'**editor di codice**.  
+2. Aprire il **Form1** nodo. In cui è presente un file denominato **Form1.Designer.cs** oppure **Form1**. Si tratta del file in cui il **finestra di progettazione Windows Form** genera codice che rappresenta lo stato della fase di progettazione del form e i relativi controlli figlio. Aprire il file nell'**editor di codice**.  
   
-3.  Aprire l'area denominata **codice generato da Progettazione Form di Windows** e individuare la sezione **serializationDemoControl1**. Di sotto di questa etichetta è il codice che rappresenta lo stato serializzato del controllo. Le stringhe digitato nel passaggio 5 vengono visualizzate in un'assegnazione al `Strings` proprietà. Gli esempi di codice seguente in c# e Visual Basic, visualizzare codice simile a ciò che viene visualizzato se digitato le stringhe "rosso", "arancione" e "giallo".  
+3. Aprire l'area denominata **codice generato da Progettazione Form di Windows** e individuare la sezione **serializationDemoControl1**. Di sotto di questa etichetta è il codice che rappresenta lo stato serializzato del controllo. Le stringhe digitato nel passaggio 5 vengono visualizzate in un'assegnazione al `Strings` proprietà. Gli esempi di codice seguente in c# e Visual Basic, visualizzare codice simile a ciò che viene visualizzato se digitato le stringhe "rosso", "arancione" e "giallo".  
   
     ```csharp  
     this.serializationDemoControl1.Strings = new string[] {  
@@ -112,7 +112,7 @@ I controlli personalizzati a volte esporrà una raccolta come una proprietà. Qu
     Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}  
     ```
   
-4.  Nel **Editor di codice**, modificare il valore della <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> sul `Strings` proprietà <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.  
+4. Nel **Editor di codice**, modificare il valore della <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> sul `Strings` proprietà <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.  
   
     ```csharp  
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]  

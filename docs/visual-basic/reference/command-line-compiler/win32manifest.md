@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300798"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifica un file manifesto dell'applicazione Win32 definito dall'utente da incorporare nel file eseguibile di tipo PE di un progetto.  
@@ -38,9 +38,9 @@ Identifica un file manifesto dell'applicazione Win32 definito dall'utente da inc
   
  L'applicazione sarà soggetta alla virtualizzazione se viene soddisfatta una delle condizioni seguenti:  
   
-1.  Si utilizza il `-nowin32manifest` opzione e si specifica un manifesto in una fase successiva della compilazione o come parte di un file di risorse di Windows (res) usando il `-win32resource` opzione.  
+1. Si utilizza il `-nowin32manifest` opzione e si specifica un manifesto in una fase successiva della compilazione o come parte di un file di risorse di Windows (res) usando il `-win32resource` opzione.  
   
-2.  Si indica un manifesto personalizzato che non specifica un livello di esecuzione richiesto.  
+2. Si indica un manifesto personalizzato che non specifica un livello di esecuzione richiesto.  
   
  Visual Studio crea un file manifesto predefinito e lo memorizza nelle directory di debug e versione insieme al file eseguibile. È possibile visualizzare o modificare il file app. manifest predefinito facendo **Visualizza impostazioni di controllo dell'account utente** nel **applicazione** scheda Progettazione progetti. Per altre informazioni, vedere [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   

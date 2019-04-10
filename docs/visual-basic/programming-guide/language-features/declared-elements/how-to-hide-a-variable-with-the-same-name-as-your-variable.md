@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826678"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296186"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Procedura: Nascondere una variabile con lo stesso nome di variabile (Visual Basic)
 È possibile nascondere una variabile dal *shadowing* , vale a dire che ridefinirla con una variabile avente lo stesso nome. È possibile nascondere la variabile che si desidera nascondere in due modi:  
@@ -30,7 +30,7 @@ ms.locfileid: "58826678"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>Per nascondere una variabile per lo shadowing tramite l'ambito  
   
-1.  Determinare l'area di definizione della variabile che si desidera nascondere e definire un'area secondaria in cui si desidera ridefinirla con la variabile.  
+1. Determinare l'area di definizione della variabile che si desidera nascondere e definire un'area secondaria in cui si desidera ridefinirla con la variabile.  
   
     |Area della variabile|Area secondaria consentita per la ridefinizione|  
     |-----------------------|-------------------------------------------|  
@@ -39,9 +39,9 @@ ms.locfileid: "58826678"
   
      Non è possibile ridefinire una variabile della procedura in un blocco all'interno di tale routine, ad esempio un `If`... `End If` costruzione o una `For` ciclo.  
   
-2.  Se non esiste già, creare l'area secondaria.  
+2. Se non esiste già, creare l'area secondaria.  
   
-3.  In aree secondarie, scrivere un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) dichiara la variabile ombreggiatura.  
+3. In aree secondarie, scrivere un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) dichiara la variabile ombreggiatura.  
   
      Quando il codice all'interno l'area secondaria fa riferimento al nome della variabile, il compilatore risolve il riferimento alla variabile ombreggiatura.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "58826678"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Per nascondere una variabile per lo shadowing tramite eredità  
   
-1.  Assicurarsi che la variabile di cui che si vuole nascondere è dichiarata in una classe e a livello di classe (all'esterno di qualsiasi routine). In caso contrario, è possibile eseguire lo shadowing tramite l'ereditarietà.  
+1. Assicurarsi che la variabile di cui che si vuole nascondere è dichiarata in una classe e a livello di classe (all'esterno di qualsiasi routine). In caso contrario, è possibile eseguire lo shadowing tramite l'ereditarietà.  
   
-2.  Definire una classe derivata dalla classe della variabile se non ne esiste già.  
+2. Definire una classe derivata dalla classe della variabile se non ne esiste già.  
   
-3.  All'interno della classe derivata, scrivere un `Dim` istruzione di dichiarazione di variabile. Includere il [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) nella dichiarazione.  
+3. All'interno della classe derivata, scrivere un `Dim` istruzione di dichiarazione di variabile. Includere il [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) nella dichiarazione.  
   
      Quando il codice della classe derivata si riferisce al nome della variabile, il compilatore risolve il riferimento alla variabile.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58826678"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti a elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Differenze tra shadowing e override](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Procedura: Nascondere una variabile ereditata](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)

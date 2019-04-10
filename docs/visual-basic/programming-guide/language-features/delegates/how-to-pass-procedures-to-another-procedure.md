@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818475"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305247"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Procedura: Passare una routine a un'altra routine in Visual Basic
 In questo esempio viene illustrato come usare i delegati per passare una routine a un'altra routine.  
@@ -21,25 +21,25 @@ In questo esempio viene illustrato come usare i delegati per passare una routine
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Creare il delegato e le procedure corrispondente  
   
-1.  Creare un delegato denominato `MathOperator`.  
+1. Creare un delegato denominato `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2.  Creare una stored procedure denominata `AddNumbers` con parametri e il valore restituito che corrispondono a quelle di `MathOperator`, in modo che le firme corrispondono.  
+2. Creare una stored procedure denominata `AddNumbers` con parametri e il valore restituito che corrispondono a quelle di `MathOperator`, in modo che le firme corrispondono.  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3.  Creare una stored procedure denominata `SubtractNumbers` con una firma corrispondente `MathOperator`.  
+3. Creare una stored procedure denominata `SubtractNumbers` con una firma corrispondente `MathOperator`.  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4.  Creare una routine denominata `DelegateTest` che accetta un delegato come parametro.  
+4. Creare una routine denominata `DelegateTest` che accetta un delegato come parametro.  
   
      Questa procedura può accettare un riferimento a `AddNumbers` oppure `SubtractNumbers`, in quanto le relative firme corrispondono il `MathOperator` firma.  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5.  Creare una stored procedure denominata `Test` che chiama `DelegateTest` una volta con il delegato `AddNumbers` come parametro e nuovamente con il delegato per `SubtractNumbers` come parametro.  
+5. Creare una stored procedure denominata `Test` che chiama `DelegateTest` una volta con il delegato `AddNumbers` come parametro e nuovamente con il delegato per `SubtractNumbers` come parametro.  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
@@ -50,4 +50,4 @@ In questo esempio viene illustrato come usare i delegati per passare una routine
 - [Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Operatore AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Istruzione Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Procedura: Richiamare un metodo delegato](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [Procedura: Chiamare un metodo delegato](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

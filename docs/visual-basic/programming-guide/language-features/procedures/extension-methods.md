@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296238"
 ---
 # <a name="extension-methods-visual-basic"></a>Metodi di estensione (Visual Basic)
 I metodi di estensione consentono agli sviluppatori di aggiungere funzionalità personalizzate ai tipi di dati che sono già definiti senza creare un nuovo tipo derivato. I metodi di estensione consentono di scrivere un metodo che può essere chiamato come se fosse un metodo di istanza del tipo esistente.  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Precedenza nei metodi di estensione  
  Quando due metodi di estensione che hanno firme identiche sono nell'ambito e accessibili, verrà richiamato quello con priorità più alta. Precedenza di un metodo di estensione è basata sul meccanismo utilizzato per portare il metodo nell'ambito. Nell'elenco seguente mostra la gerarchia di precedenza, dal maggiore al minore.  
   
-1.  Metodi di estensione definiti all'interno del modulo corrente.  
+1. Metodi di estensione definiti all'interno del modulo corrente.  
   
-2.  Metodi di estensione definiti all'interno di dati tipi nella spazio dei nomi corrente o uno qualsiasi dei relativi elementi padre, gli spazi dei nomi figlio con precedenza maggiore rispetto a spazi dei nomi padre.  
+2. Metodi di estensione definiti all'interno di dati tipi nella spazio dei nomi corrente o uno qualsiasi dei relativi elementi padre, gli spazi dei nomi figlio con precedenza maggiore rispetto a spazi dei nomi padre.  
   
-3.  Metodi di estensione definiti in qualsiasi importazione di tipo nel file corrente.  
+3. Metodi di estensione definiti in qualsiasi importazione di tipo nel file corrente.  
   
-4.  Metodi di estensione definiti in qualsiasi importazione dello spazio dei nomi nel file corrente.  
+4. Metodi di estensione definiti in qualsiasi importazione dello spazio dei nomi nel file corrente.  
   
-5.  Metodi di estensione definiti in qualsiasi importazione di tipi a livello di progetto.  
+5. Metodi di estensione definiti in qualsiasi importazione di tipi a livello di progetto.  
   
-6.  Metodi di estensione definiti in qualsiasi importazione dello spazio dei nomi a livello di progetto.  
+6. Metodi di estensione definiti in qualsiasi importazione dello spazio dei nomi a livello di progetto.  
   
  Se la precedenza non risolve l'ambiguità, è possibile usare il nome completo per specificare il metodo che si sta chiamando. Se il `Print` metodo nell'esempio precedente viene definito in un modulo denominato `StringExtensions`, specificare il nome completo viene `StringExtensions.Print(example)` invece di `example.Print()`.  
   
@@ -183,5 +183,5 @@ End Module
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Parametri facoltativi](./optional-parameters.md)
 - [Matrici di parametri](./parameter-arrays.md)
-- [Panoramica degli attributi](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Cenni preliminari sugli attributi](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

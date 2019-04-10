@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: f82a548c820aec7d2ae13c30a67d778fc167a8b6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299111"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Le costanti devono essere di tipo intrinseco o enumerato, non di tipo classe, struttura, parametro di tipo o matrice
 Si è provato a dichiarare una costante come una classe, struttura o tipo di matrice o come un parametro di tipo definito da un tipo generico che lo contiene.  
@@ -23,9 +23,9 @@ Si è provato a dichiarare una costante come una classe, struttura o tipo di mat
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Dichiarare la costante come funzione intrinseca o `Enum` tipo.  
+1. Dichiarare la costante come funzione intrinseca o `Enum` tipo.  
   
-2.  Una costante può anche essere, ad esempio un valore speciale `True`, `False`, o `Nothing`. Il compilatore considera i valori predefiniti di tipo intrinseco appropriato.  
+2. Una costante può anche essere, ad esempio un valore speciale `True`, `False`, o `Nothing`. Il compilatore considera i valori predefiniti di tipo intrinseco appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Risoluzione dell'overload di funzioni (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: e7e80704da9657dccfbfea548df074a95327cdc1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0248fdd3f3ba6afb5c7edca740d9aad3ca74bd03
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302517"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Risoluzione dell'overload di funzioni (Entity SQL)
 In questo argomento viene descritto come vengono risolte le funzioni [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -16,13 +16,13 @@ In questo argomento viene descritto come vengono risolte le funzioni [!INCLUDE[e
   
  In una situazione di questo tipo, è necessario applicare i criteri seguenti per determinare la funzione a cui una determinata espressione fa riferimento. Questi criteri vengono applicati in sequenza. Il primo criterio che si applica solo a un'unica funzione rappresenta la funzione risolta.  
   
-1.  **Numero di parametro**. La funzione ha lo stesso numero di parametri specificato nell'espressione.  
+1. **Numero di parametro**. La funzione ha lo stesso numero di parametri specificato nell'espressione.  
   
-2.  **Corrispondenza esatta del tipo**. Ogni tipo di argomento della funzione corrisponde esattamente al tipo di parametro o è costituito dal valore letterale Null.  
+2. **Corrispondenza esatta del tipo**. Ogni tipo di argomento della funzione corrisponde esattamente al tipo di parametro o è costituito dal valore letterale Null.  
   
-3.  **Corrispondenza del sottotipo**. Ogni tipo di argomento della funzione corrisponde esattamente al tipo di parametro o è un sottotipo del tipo di parametro oppure l'argomento è costituito dal valore letterale Null. Nel caso in cui diverse funzioni differiscano solo nel numero di conversioni dei sottotipi richieste, la funzione con il minor numero di conversioni dei sottotipi è la funzione risolta.  
+3. **Corrispondenza del sottotipo**. Ogni tipo di argomento della funzione corrisponde esattamente al tipo di parametro o è un sottotipo del tipo di parametro oppure l'argomento è costituito dal valore letterale Null. Nel caso in cui diverse funzioni differiscano solo nel numero di conversioni dei sottotipi richieste, la funzione con il minor numero di conversioni dei sottotipi è la funzione risolta.  
   
-4.  **Corrispondenza del sottotipo o promozione del tipo**. Ogni tipo di argomento della funzione corrisponde esattamente al tipo di parametro o è un sottotipo del tipo di parametro o può essere promosso al tipo di parametro oppure l'argomento è costituito dal valore letterale Null. Anche in questo caso, se diverse funzioni differiscono solo nel numero di promozioni e di conversioni dei sottotipi, la funzione con il minor numero di promozioni e di conversioni dei sottotipi è la funzione risolta.  
+4. **Corrispondenza del sottotipo o promozione del tipo**. Ogni tipo di argomento della funzione corrisponde esattamente al tipo di parametro o è un sottotipo del tipo di parametro o può essere promosso al tipo di parametro oppure l'argomento è costituito dal valore letterale Null. Anche in questo caso, se diverse funzioni differiscono solo nel numero di promozioni e di conversioni dei sottotipi, la funzione con il minor numero di promozioni e di conversioni dei sottotipi è la funzione risolta.  
   
  Se nessuno di questi criteri consente la selezione di una singola funzione, l'espressione di chiamata della funzione è ambigua.  
   

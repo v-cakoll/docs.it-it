@@ -2,12 +2,12 @@
 title: Traccia ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 964c8fbe04f61ebf7a68e1bf36f9efdaab841e7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300684"
 ---
 # <a name="etw-tracing"></a>Traccia ETW
 In questo esempio viene illustrato come implementare la traccia End-to-End (E2E) utilizzando il sistema Event Tracing for Windows (ETW) e il `ETWTraceListener` fornito in questo esempio. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) e comprende la traccia ETW.  
@@ -80,22 +80,22 @@ Logman stop Wcf
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
     >  Per utilizzare i comandi RegisterProvider.bat, SetupETW.bat e CleanupETW.bat comandi, è necessario aver eseguito l'accesso con un account Administrator locale. Se si utilizza [!INCLUDE[wv](../../../../includes/wv-md.md)] o versione successiva, sarà inoltre necessario eseguire il prompt dei comandi con privilegi elevati. A tale scopo, fare doppio clic sull'icona del prompt, quindi fare clic su **Esegui come amministratore**.  
   
-3.  Prima di eseguire l'esempio, eseguire RegisterProvider.bat nel client e nel server. In questo modo viene configurato il file ETWTracingSampleLog.etl risultante per generare tracce che possono essere lette da Service Trace Viewer. Questo file si trova nella cartella C:\log. Se questa cartella non esiste, deve essere creata o non verranno generate tracce. Eseguire quindi SetupETW.bat sui computer client e server per avviare la sessione di traccia ETW. Il file SetupETW.bat si trova nella cartella CS\Client.  
+3. Prima di eseguire l'esempio, eseguire RegisterProvider.bat nel client e nel server. In questo modo viene configurato il file ETWTracingSampleLog.etl risultante per generare tracce che possono essere lette da Service Trace Viewer. Questo file si trova nella cartella C:\log. Se questa cartella non esiste, deve essere creata o non verranno generate tracce. Eseguire quindi SetupETW.bat sui computer client e server per avviare la sessione di traccia ETW. Il file SetupETW.bat si trova nella cartella CS\Client.  
   
-4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Una volta completato l'esempio, eseguire CleanupETW.bat per completare la creazione del file ETWTracingSampleLog.etl.  
+5. Una volta completato l'esempio, eseguire CleanupETW.bat per completare la creazione del file ETWTracingSampleLog.etl.  
   
-6.  Aprire il file ETWTracingSampleLog.etl da Service Trace Viewer. Verrà richiesto di salvare il file binario formattato come un file .svclog.  
+6. Aprire il file ETWTracingSampleLog.etl da Service Trace Viewer. Verrà richiesto di salvare il file binario formattato come un file .svclog.  
   
-7.  In Service Trace Viewer aprire il file .svclog creato per visualizzare le tracce ETW e ServiceModel.  
+7. In Service Trace Viewer aprire il file .svclog creato per visualizzare le tracce ETW e ServiceModel.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

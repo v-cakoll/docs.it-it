@@ -2,12 +2,12 @@
 title: 'Procedura: Caricare e scaricare gli assembly (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
-ms.openlocfilehash: 07c8370d7aeb5171f991ddf24bf473f787408f2d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: efd8ddbe45323e1f80cec54379d61b5aa8a435cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297383"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Procedura: Caricare e scaricare gli assembly (Visual Basic)
 Gli assembly cui il programma fa riferimento verranno caricati automaticamente in fase di compilazione, ma è anche possibile caricare assembly specifici nel dominio dell'applicazione corrente in fase di esecuzione. Per altre informazioni, vedere [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -18,14 +18,14 @@ Gli assembly cui il programma fa riferimento verranno caricati automaticamente i
   
 ### <a name="to-load-an-assembly-into-an-application-domain"></a>Per caricare un assembly in un dominio dell'applicazione  
   
-1.  Usare uno dei numerosi metodi di caricamento contenuti nelle classi <xref:System.AppDomain> e <xref:System.Reflection>. Per altre informazioni, vedere [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
+1. Usare uno dei numerosi metodi di caricamento contenuti nelle classi <xref:System.AppDomain> e <xref:System.Reflection>. Per altre informazioni, vedere [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
   
 ### <a name="to-unload-an-application-domain"></a>Per scaricare un dominio dell'applicazione  
   
-1.  Non è possibile scaricare un singolo assembly senza scaricare tutti i domini dell'applicazione che lo contengono. Per scaricare i domini dell'applicazione, usare il metodo `Unload` da <xref:System.AppDomain>. Per altre informazioni, vedere [Procedura: Scaricare un dominio dell'applicazione](../../../../framework/app-domains/how-to-unload-an-application-domain.md).  
+1. Non è possibile scaricare un singolo assembly senza scaricare tutti i domini dell'applicazione che lo contengono. Per scaricare i domini dell'applicazione, usare il metodo `Unload` da <xref:System.AppDomain>. Per altre informazioni, vedere [Procedura: Scaricare un dominio dell'applicazione](../../../../framework/app-domains/how-to-unload-an-application-domain.md).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Concetti di programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Assembly in .NET](../../../../standard/assembly/index.md)
 - [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

@@ -2,12 +2,12 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 581a18b75d6028089e96b97dc5adeb2d3986c088
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302946"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 Specifica i gruppi nei quali devono essere inseriti gli oggetti restituiti da un'espressione ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) di query.  
@@ -62,9 +62,9 @@ GROUP BY 1   -- BAD, a constant is not allowed
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore GROUP BY per specificare i gruppi in cui gli oggetti vengono restituiti da una query. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1.  Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
+2. Passare la query seguente come argomento al metodo `ExecutePrimitiveTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   

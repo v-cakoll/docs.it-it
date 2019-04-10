@@ -2,12 +2,12 @@
 title: 'Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827747"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301113"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: Unire contenuto da file non analoghi (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ In questo esempio viene illustrato come eseguire un join di dati da due file con
   
 ## <a name="to-create-the-data-files"></a>Per creare i file di dati
   
-1.  Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID studente e le colonne da 2 a 5 sono i punteggi dei test.  
+1. Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID studente e le colonne da 2 a 5 sono i punteggi dei test.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ In questo esempio viene illustrato come eseguire un join di dati da due file con
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copiare le righe seguenti in un file denominato names.csv e salvarlo nella cartella del progetto. Il file rappresenta un foglio di calcolo che contiene il cognome, il nome e l'ID degli studenti.  
+2. Copiare le righe seguenti in un file denominato names.csv e salvarlo nella cartella del progetto. Il file rappresenta un foglio di calcolo che contiene il cognome, il nome e l'ID degli studenti.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -131,4 +131,4 @@ Creare e compilare un progetto destinato a una delle opzioni seguenti:
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+- [LINQ e le directory dei File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

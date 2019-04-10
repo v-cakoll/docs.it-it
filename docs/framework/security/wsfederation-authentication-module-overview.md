@@ -3,12 +3,12 @@ title: Panoramica del modulo di autenticazione WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310252"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Panoramica del modulo di autenticazione WSFederation
 Windows Identity Foundation (WIF) include il supporto per l'autenticazione federata nelle applicazioni ASP.NET tramite il modulo di autenticazione WS-Federated (WS-FAM, WS-Federated Authentication Module). Questo argomento aiuta capire come funziona l'autenticazione federata e come usarla.  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
   
  ![Scenario di autenticazione di federazione](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Un client nel dominio di trust Fabrikam invia una richiesta a un'applicazione relying party nel dominio di trust Contoso.  
+1. Un client nel dominio di trust Fabrikam invia una richiesta a un'applicazione relying party nel dominio di trust Contoso.  
   
-2.  La relying party reindirizza il client a un servizio token di sicurezza nel dominio di trust Contoso. Questo servizio token di sicurezza non conosce il client.  
+2. La relying party reindirizza il client a un servizio token di sicurezza nel dominio di trust Contoso. Questo servizio token di sicurezza non conosce il client.  
   
-3.  Il servizio token di sicurezza di Contoso reindirizza il client a un servizio token di sicurezza nel dominio di trust Fabrikam, con cui il dominio di trust Contoso ha una relazione di trust.  
+3. Il servizio token di sicurezza di Contoso reindirizza il client a un servizio token di sicurezza nel dominio di trust Fabrikam, con cui il dominio di trust Contoso ha una relazione di trust.  
   
-4.  Il servizio token di sicurezza di Fabrikam verifica l'identità del client e rilascia un token di sicurezza al servizio token di sicurezza di Contoso.  
+4. Il servizio token di sicurezza di Fabrikam verifica l'identità del client e rilascia un token di sicurezza al servizio token di sicurezza di Contoso.  
   
-5.  Il servizio token di sicurezza di Contoso usa il token di Fabrikam per creare un proprio token che può essere usato dalla relying party e lo invia alla relying party.  
+5. Il servizio token di sicurezza di Contoso usa il token di Fabrikam per creare un proprio token che può essere usato dalla relying party e lo invia alla relying party.  
   
-6.  La relying party estrae le attestazioni del client dal token di sicurezza e prende una decisione relativa all'autorizzazione.  
+6. La relying party estrae le attestazioni del client dal token di sicurezza e prende una decisione relativa all'autorizzazione.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Uso del modulo di autenticazione federata con ASP.NET  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) è un modulo HTTP che consente di aggiungere l'autenticazione federata a un [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] dell'applicazione. L'autenticazione federata lascia che la logica di autenticazione venga gestita dal servizio token di sicurezza e consente allo sviluppatore di concentrarsi sulla scrittura della logica di business.  
   
  WS-FAM viene configurato per specificare il servizio token di sicurezza a cui devono essere reindirizzate le richieste non autenticate. WIF consente di autenticare un utente in due modi:  
   
-1.  Reindirizzamento passivo: Quando un utente non autenticato prova ad accedere a una risorsa protetta e si vuole semplicemente reindirizzarlo a un servizio token di sicurezza senza richiedere una pagina di accesso, si tratta dell'approccio corretto. Il servizio token di sicurezza verifica l'identità dell'utente e rilascia un token di sicurezza contenente le attestazioni appropriate per l'utente. Per questa opzione è necessario aggiungere WS-FAM nella pipeline dei moduli HTTP. È possibile usare Identity and Access Tool per Visual Studio 2012 per modificare il file di configurazione dell'applicazione per usare WS-FAM e stabilire la federazione con un servizio token di sicurezza. Per altre informazioni, vedere [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md) (Identity and Access Tool per Visual Studio 2012).  
+1. Reindirizzamento passivo: Quando un utente non autenticato prova ad accedere a una risorsa protetta e si vuole semplicemente reindirizzarlo a un servizio token di sicurezza senza richiedere una pagina di accesso, si tratta dell'approccio corretto. Il servizio token di sicurezza verifica l'identità dell'utente e rilascia un token di sicurezza contenente le attestazioni appropriate per l'utente. Per questa opzione è necessario aggiungere WS-FAM nella pipeline dei moduli HTTP. È possibile usare Identity and Access Tool per Visual Studio 2012 per modificare il file di configurazione dell'applicazione per usare WS-FAM e stabilire la federazione con un servizio token di sicurezza. Per altre informazioni, vedere [Identity and Access Tool for Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md) (Identity and Access Tool per Visual Studio 2012).  
   
-2.  È possibile chiamare il metodo <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> o il metodo <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> dal code-behind per una pagina di accesso nell'applicazione relying party.  
+2. È possibile chiamare il metodo <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> o il metodo <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> dal code-behind per una pagina di accesso nell'applicazione relying party.  
   
  Nel reindirizzamento passivo tutte le comunicazioni avvengono tramite risposta/reindirizzamento dal client (in genere un browser). È possibile aggiungere WS-FAM alla pipeline HTTP dell'applicazione, dove controlla le richieste utente non autenticate e reindirizza gli utenti al servizio token di sicurezza specificato.  
   

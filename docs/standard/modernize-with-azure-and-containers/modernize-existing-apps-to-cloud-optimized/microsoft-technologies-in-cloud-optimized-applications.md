@@ -4,12 +4,12 @@ description: Modernizzare le applicazioni .NET esistenti con contenitori Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296251"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologie Microsoft nelle applicazioni ottimizzato per il cloud
 
@@ -25,9 +25,9 @@ Nell'elenco seguente vengono descritti strumenti, tecnologie e soluzioni che son
 
 -   **Monitoraggio, i dati di telemetria, registrazione e controllo**: La capacità di monitoraggio e controllo delle applicazioni e i contenitori in esecuzione nel cloud è fondamentale per qualsiasi applicazione ottimizzato per il Cloud. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) e [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) sono i principali strumenti di Microsoft che forniscono il monitoraggio e il controllo per le app ottimizzato per il Cloud.
 
--   **Provisioning**: Strumenti di automazione consentono di effettuare il provisioning dell'infrastruttura e distribuire un'applicazione in più ambienti (produzione, test, staging). Gestione configurazione di un'applicazione e dell'ambiente, è possibile usare strumenti quali Chef e Puppet. Questo livello può anche essere implementato usando approcci più semplici e diretti. Ad esempio, è possibile distribuisce direttamente usando l'interfaccia della riga (Azure CLI) degli strumenti, quindi usare la distribuzione continua e rilasciare le pipeline di gestione [servizi di Azure DevOps](https://visualstudio.microsoft.com/team-services/).
+-   **Provisioning**: Strumenti di automazione consentono di effettuare il provisioning dell'infrastruttura e distribuire un'applicazione in più ambienti (produzione, test, staging). Gestione configurazione di un'applicazione e dell'ambiente, è possibile usare strumenti quali Chef e Puppet. Questo livello può anche essere implementato usando approcci più semplici e diretti. Ad esempio, è possibile distribuisce direttamente usando l'interfaccia della riga (Azure CLI) degli strumenti, quindi usare la distribuzione continua e rilasciare le pipeline di gestione [servizi di Azure DevOps](https://azure.microsoft.com/services/devops/).
 
--   **Application Lifecycle Management**: [Servizi di Azure DevOps](https://visualstudio.microsoft.com/team-services/) e altri strumenti, come Jenkins, vengono compilati automazione i server che consentono di implementare pipeline CI/CD, tra cui la gestione del rilascio.
+-   **Application Lifecycle Management**: [Servizi di Azure DevOps](https://azure.microsoft.com/services/devops/) e altri strumenti, come Jenkins, vengono compilati automazione i server che consentono di implementare pipeline CI/CD, tra cui la gestione del rilascio.
 
 Le sezioni successive di questo capitolo e le procedure dettagliate correlate, concentrarsi in modo specifico sui dettagli sul livello di runtime (contenitori Windows). Il materiale sussidiario descrive i modi in cui è possibile distribuire i contenitori di Windows in Windows Server 2016 (e versioni successive) macchine virtuali e istanze di contenitore di Azure. Illustra anche le piattaforme PaaS più avanzate, ad esempio servizio App di Azure e dell'agente di orchestrazione come Azure Service Fabric e Azure Kubernetes Service.
 

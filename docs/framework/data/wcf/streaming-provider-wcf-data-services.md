@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298877"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
@@ -28,15 +28,15 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
   
  La configurazione di un servizio dati per supportare il flusso di dati binari richiede l'esecuzione dei passaggi seguenti:  
   
-1.  Assegnare una o più entità del modello di dati come entry di collegamento multimediale. Queste entità non devono includere dati binari da trasmettere. Qualsiasi proprietà binaria di un'entità viene sempre restituita nell'elemento entry sotto forma di dati binari codificati in base 64.  
+1. Assegnare una o più entità del modello di dati come entry di collegamento multimediale. Queste entità non devono includere dati binari da trasmettere. Qualsiasi proprietà binaria di un'entità viene sempre restituita nell'elemento entry sotto forma di dati binari codificati in base 64.  
   
-2.  Implementare l'interfaccia T:System.Data.Services.Providers.IDataServiceStreamProvider.  
+2. Implementare l'interfaccia T:System.Data.Services.Providers.IDataServiceStreamProvider.  
   
-3.  Definire un servizio dati che implementi l'interfaccia <xref:System.IServiceProvider>. Il servizio dati usa l'implementazione <xref:System.IServiceProvider.GetService%2A> per accedere all'implementazione del provider di dati di flusso. Questo metodo restituisce l'implementazione del provider di flusso appropriata.  
+3. Definire un servizio dati che implementi l'interfaccia <xref:System.IServiceProvider>. Il servizio dati usa l'implementazione <xref:System.IServiceProvider.GetService%2A> per accedere all'implementazione del provider di dati di flusso. Questo metodo restituisce l'implementazione del provider di flusso appropriata.  
   
-4.  Abilitare flussi di messaggi di grandi dimensioni nella configurazione dell'applicazione Web.  
+4. Abilitare flussi di messaggi di grandi dimensioni nella configurazione dell'applicazione Web.  
   
-5.  Abilitare accesso alle risorse binarie sul server o in un'origine dati.  
+5. Abilitare accesso alle risorse binarie sul server o in un'origine dati.  
   
  Gli esempi in questo argomento sono basati su un campione di servizio di foto, discusso in dettaglio nel post di flusso [serie Provider di flusso di Data Services: Implementazione di un Provider di flusso (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Il codice sorgente per questo servizio di esempio è disponibile nel [pagina di esempio di servizio dati foto di flusso](https://go.microsoft.com/fwlink/?LinkID=198988) su MSDN Code Gallery.  
   

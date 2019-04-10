@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081489"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298474"
 ---
 # <a name="getting-started-with-net-native"></a>Introduzione di .NET Native
 È possibile seguire le stesse procedure sia che si stia scrivendo una nuova app di Windows per Windows 10 sia che si stia migrando un'app di Windows Store esistente. Per creare un'app [!INCLUDE[net_native](../../../includes/net-native-md.md)] , seguire questa procedura:  
   
-1.  [Sviluppare un'app UWP (Universal Windows Platform) per Windows 10](#Step1)e testare le build di debug dell'app per verificarne il corretto funzionamento.  
+1. [Sviluppare un'app UWP (Universal Windows Platform) per Windows 10](#Step1)e testare le build di debug dell'app per verificarne il corretto funzionamento.  
   
-2.  [Gestire la reflection aggiuntiva e l'uso della serializzazione](#Step2).  
+2. [Gestire la reflection aggiuntiva e l'uso della serializzazione](#Step2).  
   
-3.  [Distribuire e testare le build di rilascio dell'app](#Step3).  
+3. [Distribuire e testare le build di rilascio dell'app](#Step3).  
   
-4.  [Risolvere manualmente i metadati mancanti](#Step4)e ripetere il [passaggio 3](#Step3) finché non vengono risolti tutti i problemi.  
+4. [Risolvere manualmente i metadati mancanti](#Step4)e ripetere il [passaggio 3](#Step3) finché non vengono risolti tutti i problemi.  
   
 > [!NOTE]
 >  Se si sta migrando un'app di Windows Store esistente a [!INCLUDE[net_native](../../../includes/net-native-md.md)], consultare [Migrazione dell'app di Windows Store a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
@@ -29,9 +29,9 @@ ms.locfileid: "59081489"
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Passaggio 1: Sviluppare e testare le build di debug dell'app UWP  
  Per sviluppare una nuova app ed eseguire la migrazione di un'app esistente, si segue lo stesso processo usato per una qualsiasi app di Windows.  
   
-1.  Creare un nuovo progetto UWP in Visual Studio usando il modello dell'app di Windows universale per Visual C# o Visual Basic. Per impostazione predefinita, tutte le applicazioni UWP sono destinate a CoreCLR e le relative build di rilascio vengono compilate usando la catena di strumenti .NET Native.  
+1. Creare un nuovo progetto UWP in Visual Studio usando il modello dell'app di Windows universale per Visual C# o Visual Basic. Per impostazione predefinita, tutte le applicazioni UWP sono destinate a CoreCLR e le relative build di rilascio vengono compilate usando la catena di strumenti .NET Native.  
   
-2.  Sono presenti alcuni problemi noti di compatibilità tra i progetti di app UWP compilati con o senza la catena di strumenti .NET Native. Per altre informazioni, vedere la [guida alla migrazione](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) .  
+2. Sono presenti alcuni problemi noti di compatibilità tra i progetti di app UWP compilati con o senza la catena di strumenti .NET Native. Per altre informazioni, vedere la [guida alla migrazione](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) .  
   
  Ora è possibile scrivere codice C# o Visual Basic rispetto alla superficie di attacco [!INCLUDE[net_native](../../../includes/net-native-md.md)] da eseguire nel sistema locale (o nel simulatore).  
   

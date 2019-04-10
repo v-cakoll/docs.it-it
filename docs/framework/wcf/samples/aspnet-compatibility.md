@@ -2,12 +2,12 @@
 title: Compatibilità con ASP.NET
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 521ab07d2a747927a7b26c38221f59de736990b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304221"
 ---
 # <a name="aspnet-compatibility"></a>Compatibilità con ASP.NET
 In questo esempio viene illustrato come abilitare la modalità di compatibilità ASP.NET in Windows Communication Foundation (WCF). Servizi in esecuzione nella compatibilità ASP.NET partecipano completamente la pipeline dell'applicazione ASP.NET di modalità e può rendere usano le funzionalità ASP.NET, ad esempio l'autorizzazione file/URL, lo stato della sessione e <xref:System.Web.HttpContext> classe. Il <xref:System.Web.HttpContext> classe consente l'accesso ai cookie, le sessioni e altre funzionalità ASP.NET. Questa modalità richiede che le associazioni usino il trasporto HTTP e che il servizio stesso debba essere ospitato in IIS.  
@@ -19,13 +19,13 @@ In questo esempio viene illustrato come abilitare la modalità di compatibilità
   
 Per eseguire questo esempio è necessario un pool di applicazioni di [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Per creare un nuovo pool di applicazioni o modificare il pool di applicazioni predefinito, attenersi alla procedura seguente.  
 
-1.  Aprire il **Pannello di controllo**.  Aprire il **strumenti di amministrazione** applet sotto il **sistema e sicurezza** intestazione. Aprire il **Internet Information Services (IIS) Manager** applet.  
+1. Aprire il **Pannello di controllo**.  Aprire il **strumenti di amministrazione** applet sotto il **sistema e sicurezza** intestazione. Aprire il **Internet Information Services (IIS) Manager** applet.  
 
-2.  Espandere il treeview nel **connessioni** riquadro. Selezionare il **pool di applicazioni** nodo.  
+2. Espandere il treeview nel **connessioni** riquadro. Selezionare il **pool di applicazioni** nodo.  
 
-3.  Per impostare il pool di applicazioni predefinito da utilizzare [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (che potrebbe causare problemi di incompatibilità con i siti esistenti), fare doppio clic il **DefaultAppPool** voce di elenco e selezionare **le impostazioni di base...** . Impostare il **.Net Framework versione** pull-down **.Net Framework v4.0.30128** (o versioni successive).  
+3. Per impostare il pool di applicazioni predefinito da utilizzare [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (che potrebbe causare problemi di incompatibilità con i siti esistenti), fare doppio clic il **DefaultAppPool** voce di elenco e selezionare **le impostazioni di base...** . Impostare il **.Net Framework versione** pull-down **.Net Framework v4.0.30128** (o versioni successive).  
 
-4.  Per creare un nuovo pool di applicazioni che utilizza [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (per mantenere la compatibilità per le altre applicazioni), fare doppio clic il **pool di applicazioni** nodo e selezionare **Aggiungi Pool di applicazioni...** . Denominare il nuovo pool di applicazioni e impostare il **.Net Framework versione** pull-down **.Net Framework v4.0.30128** (o versione successiva). Dopo che esegue l'installazione i passaggi di seguito, fare doppio clic il **ServiceModelSamples** dell'applicazione e selezionare **Gestisci applicazione**, **impostazioni avanzate...** . Impostare il **Pool di applicazioni** al nuovo pool di applicazioni.  
+4. Per creare un nuovo pool di applicazioni che utilizza [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (per mantenere la compatibilità per le altre applicazioni), fare doppio clic il **pool di applicazioni** nodo e selezionare **Aggiungi Pool di applicazioni...** . Denominare il nuovo pool di applicazioni e impostare il **.Net Framework versione** pull-down **.Net Framework v4.0.30128** (o versione successiva). Dopo che esegue l'installazione i passaggi di seguito, fare doppio clic il **ServiceModelSamples** dell'applicazione e selezionare **Gestisci applicazione**, **impostazioni avanzate...** . Impostare il **Pool di applicazioni** al nuovo pool di applicazioni.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -119,13 +119,13 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Dopo aver compilato la soluzione, eseguire Setup.bat per configurare l'applicazione ServiceModelSamples in [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. La directory ServiceModelSamples verrà ora visualizzata come applicazione [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
+3. Dopo aver compilato la soluzione, eseguire Setup.bat per configurare l'applicazione ServiceModelSamples in [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. La directory ServiceModelSamples verrà ora visualizzata come applicazione [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
   
-4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

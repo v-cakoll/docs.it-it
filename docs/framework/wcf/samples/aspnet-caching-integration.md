@@ -2,12 +2,12 @@
 title: Integrazione della memorizzazione nella cache di ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309472"
 ---
 # <a name="aspnet-caching-integration"></a>Integrazione della memorizzazione nella cache di ASP.NET
 In questo esempio viene descritto come usare la cache di output ASP.NET con il modello di programmazione HTTP Web WCF. In questo argomento viene illustrata la funzionalità di integrazione della cache di output ASP.NET.  
@@ -34,31 +34,31 @@ In questo esempio viene descritto come usare la cache di output ASP.NET con il m
 ## <a name="to-run-the-sample"></a>Per eseguire l'esempio  
  L'esempio è costituito da tre progetti:  
   
--   **Servizio**: progetto Web che include un servizio WCF HTTP ospitato in ASP.NET.  
+-   **Servizio**: Un progetto di applicazione Web che include un servizio WCF HTTP ospitato in ASP.NET.  
   
--   **Client**: un progetto di applicazione console che effettua chiamate al servizio.  
+-   **Client**: Progetto di applicazione console che effettua chiamate al servizio.  
   
--   **Common**: una libreria condivisa che contiene il tipo Customer usato dal servizio e client.  
+-   **Common**: Una libreria condivisa che contiene il tipo Customer usato dal servizio e client.  
   
  Quando viene eseguita l'applicazione console Client, il client effettua richieste al servizio e scrive le informazioni pertinenti dalle risposte nella finestra della console.  
   
 #### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
   
-1.  Aprire la soluzione per l'esempio relativo all'integrazione della memorizzazione nella cache di ASP.NET.  
+1. Aprire la soluzione per l'esempio relativo all'integrazione della memorizzazione nella cache di ASP.NET.  
   
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Se il **Esplora soluzioni** finestra non è già aperta, premere CTRL + W + S.  
+3. Se il **Esplora soluzioni** finestra non è già aperta, premere CTRL + W + S.  
   
-4.  Dal **Esplora soluzioni** a destra fare clic sulla **Service** del progetto e selezionare **Avvia nuova istanza**. Verrà avviato il server di sviluppo ASP.NET che ospita il servizio.  
+4. Dal **Esplora soluzioni** a destra fare clic sulla **Service** del progetto e selezionare **Avvia nuova istanza**. Verrà avviato il server di sviluppo ASP.NET che ospita il servizio.  
   
-5.  Dal **Esplora soluzioni** a destra fare clic sulla **Client** del progetto e selezionare **Avvia nuova istanza**.  
+5. Dal **Esplora soluzioni** a destra fare clic sulla **Client** del progetto e selezionare **Avvia nuova istanza**.  
   
-6.  Verrà visualizzata la finestra della console client in cui sono inclusi l'URI del servizio in esecuzione e l'URI della pagina della Guida HTML per il servizio in esecuzione. In qualsiasi momento è possibile visualizzare la pagina della Guida HTML digitando l'URI della pagina della Guida in un browser.  
+6. Verrà visualizzata la finestra della console client in cui sono inclusi l'URI del servizio in esecuzione e l'URI della pagina della Guida HTML per il servizio in esecuzione. In qualsiasi momento è possibile visualizzare la pagina della Guida HTML digitando l'URI della pagina della Guida in un browser.  
   
-7.  Durante l'esecuzione dell'esempio, il client scrive lo stato dell'attività corrente.  
+7. Durante l'esecuzione dell'esempio, il client scrive lo stato dell'attività corrente.  
   
-8.  Premere un tasto qualsiasi per chiudere l'applicazione console client.  
+8. Premere un tasto qualsiasi per chiudere l'applicazione console client.  
   
 9. Premere MAIUSC+F5 per interrompere il debug del servizio.  
   

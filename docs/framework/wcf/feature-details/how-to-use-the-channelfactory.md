@@ -1,27 +1,27 @@
 ---
-title: 'Procedura: usare ChannelFactory'
+title: 'Procedura: Usare ChannelFactory'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
-ms.openlocfilehash: b407c76c86c7b4c988da5280d76c91969c155841
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d542a3dcae514e75194b49c23a8dec5dd7e8c3b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298851"
 ---
-# <a name="how-to-use-the-channelfactory"></a>Procedura: usare ChannelFactory
+# <a name="how-to-use-the-channelfactory"></a>Procedura: Usare ChannelFactory
 La classe generica <xref:System.ServiceModel.ChannelFactory%601> viene usata in scenari avanzati che richiedono la creazione di una channel factory utilizzabile per creare più di un canale.  
   
 ### <a name="to-create-and-use-the-channelfactory-class"></a>Per creare e usare la classe ChannelFactory  
   
-1.  Compilare ed eseguire un servizio Windows Communication Foundation (WCF). Per altre informazioni, vedere [progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md), [configurazione di servizi](../../../../docs/framework/wcf/configuring-services.md), e [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).  
+1. Compilare ed eseguire un servizio Windows Communication Foundation (WCF). Per altre informazioni, vedere [progettazione e implementazione di servizi](../../../../docs/framework/wcf/designing-and-implementing-services.md), [configurazione di servizi](../../../../docs/framework/wcf/configuring-services.md), e [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).  
   
-2.  Utilizzare il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il contratto (interfaccia) per il client.  
+2. Usare la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) per generare il contratto (interfaccia) per il client.  
   
-3.  Nel codice client, usare la classe <xref:System.ServiceModel.ChannelFactory%601> per creare più listener endpoint.  
+3. Nel codice client, usare la classe <xref:System.ServiceModel.ChannelFactory%601> per creare più listener endpoint.  
   
 ## <a name="example"></a>Esempio  
  [!code-csharp[c_HowToUseChannelFactory#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtousechannelfactory/cs/source.cs#1)]

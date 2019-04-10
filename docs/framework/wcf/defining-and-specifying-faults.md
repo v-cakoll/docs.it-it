@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079331"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299331"
 ---
 # <a name="defining-and-specifying-faults"></a>Definizione e specifica degli errori
 Gli errori SOAP forniscono informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In questo argomento viene illustrato quando e come definire il contenuto di un errore personalizzato e specificare quali operazioni possono restituire tale contenuto. Per altre informazioni sul modo in cui un servizio o un client duplex può inviare tali errori e il modo in cui un'applicazione client o servizio gestisce questi errori, vedere [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Per una panoramica di gestione degli errori nelle applicazioni Windows Communication Foundation (WCF), vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -21,11 +21,11 @@ Gli errori SOAP forniscono informazioni sulla condizione di errore da un servizi
 ## <a name="overview"></a>Panoramica  
  Gli errori SOAP dichiarati sono quelli in cui un'operazione presenta un <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> che specifica un tipo di errore SOAP personalizzato. Gli errori SOAP non dichiarati sono quelli che non vengono specificati nel contratto per un'operazione. In questo argomento viene illustrato come identificare tali condizioni di errore e creare un contratto di errore per il servizio che i client possono usare per gestire correttamente tali condizioni di errore quando vengono segnalate dagli errori SOAP personalizzati. Le attività di base sono descritte di seguito, in ordine progressivo:  
   
-1.  Definire le condizioni di errore che un client del servizio deve conoscere.  
+1. Definire le condizioni di errore che un client del servizio deve conoscere.  
   
-2.  Definire il contenuto personalizzato degli errori SOAP per tali condizioni di errore.  
+2. Definire il contenuto personalizzato degli errori SOAP per tali condizioni di errore.  
   
-3.  Contrassegnare le operazioni in modo che gli specifici errori SOAP generati vengano esposti ai client in WSDL.  
+3. Contrassegnare le operazioni in modo che gli specifici errori SOAP generati vengano esposti ai client in WSDL.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definizione delle condizioni di errore che i client devono conoscere  
  Gli errori SOAP sono messaggi descritti pubblicamente che contengono informazioni sugli errori per una particolare operazione. Poiché vengono descritti insieme ad altri messaggi dell'operazione in WSDL, i client sono al corrente di tali errori e, pertanto, sono pronti a gestirli quando richiamano un'operazione. Tuttavia, poiché i servizi WCF sono scritti in codice gestito, decidere quale errore condizioni nel codice gestito devono essere convertite in errori e restituite al client offre la possibilità di separare le condizioni di errore e i bug del servizio dall'errore formale sostenute con un client.  

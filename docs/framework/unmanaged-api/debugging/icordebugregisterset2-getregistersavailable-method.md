@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309420"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>Metodo ICorDebugRegisterSet2::GetRegistersAvailable
 Ottiene una matrice di byte che fornisce una bitmap di registri disponibili.  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>Note  
  I valori dell'enumerazione CorDebugRegister specificano i registri di microprocessori diversi. I cinque bit superiore di ogni valore sono l'indice nel `availableRegChunks` matrice di byte. I tre bit inferiore di ogni valore di identificare la posizione del bit all'interno del byte indicizzata. Dato un `CorDebugRegister` valore che specifica un determinato registro, la posizione del registro nella maschera è determinato come segue:  
   
-1.  Estrarre necessaria per accedere al corretto byte in corrispondenza dell'indice di `availableRegChunks` matrice:  
+1. Estrarre necessaria per accedere al corretto byte in corrispondenza dell'indice di `availableRegChunks` matrice:  
   
      `CorDebugRegister` valore >> 3  
   
-2.  Estrarre la posizione del bit all'interno del byte indicizzata, in cui il bit zero è il bit meno significativo:  
+2. Estrarre la posizione del bit all'interno del byte indicizzata, in cui il bit zero è il bit meno significativo:  
   
      `CorDebugRegister` valore di & amp;7  
   

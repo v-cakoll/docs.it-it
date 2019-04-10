@@ -2,12 +2,12 @@
 title: Endpoint SOAP e HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307444"
 ---
 # <a name="soap-and-http-endpoints"></a>Endpoint SOAP e HTTP
 In questo esempio viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il formato "Plain Old XML" (POX) usando il modello di programmazione Web WCF. Vedere le [servizio HTTP di base](../../../../docs/framework/wcf/samples/basic-http-service.md) esempio per altri dettagli sul binding HTTP per il servizio. Questo esempio si concentra sui dettagli che riguardano l'esposizione dello stesso servizio su SOAP e HTTP tramite associazioni diverse.  
@@ -28,7 +28,7 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC e
   
 -   L'endpoint ~/service.svc/soap che consente ai client di accedere al servizio usando SOAP sull'associazione HTTP.  
   
- L'endpoint HTTP viene configurato con un endpoint standard<`webHttp`> con `helpEnabled` impostato su `true`. Di conseguenza, il servizio espone una pagina della Guida basata su XHTML in corrispondenza di ~/service.svc/http/help che i client basati su HTTP possono usare per accedere al servizio.  
+ L'endpoint HTTP è configurato con una <`webHttp`> endpoint standard che ha `helpEnabled` impostato su `true`. Di conseguenza, il servizio espone una pagina della Guida basata su XHTML in corrispondenza di ~/service.svc/http/help che i client basati su HTTP possono usare per accedere al servizio.  
   
  Il progetto client viene illustrato l'accesso al servizio tramite un proxy SOAP (generato tramite **Aggiungi riferimento al servizio**) e l'accesso del servizio utilizzando <xref:System.Net.WebClient>.  
   
@@ -36,21 +36,21 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC e
   
 #### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
   
-1.  Aprire la soluzione per l'esempio relativo agli endpoint SOAP e HTTP.  
+1. Aprire la soluzione per l'esempio relativo agli endpoint SOAP e HTTP.  
   
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-3.  Se non è già aperto, premere CTRL + W, S per aprire la **Esplora soluzioni** finestra.  
+3. Se non è già aperto, premere CTRL + W, S per aprire la **Esplora soluzioni** finestra.  
   
-4.  Dal **Esplora soluzioni** finestra, fare doppio clic sul **servizio** del progetto e posizionare il cursore sul **Debug** opzione del menu di scelta rapida in modo che il **Avvia nuovo Istanza** menu di scelta rapida viene visualizzata. Fare clic su **Avvia nuova istanza**. Verrà avviato il server di sviluppo ASP.NET che ospita il servizio.  
+4. Dal **Esplora soluzioni** finestra, fare doppio clic sul **servizio** del progetto e posizionare il cursore sul **Debug** opzione del menu di scelta rapida in modo che il **Avvia nuovo Istanza** menu di scelta rapida viene visualizzata. Fare clic su **Avvia nuova istanza**. Verrà avviato il server di sviluppo ASP.NET che ospita il servizio.  
   
-5.  Da Esplora soluzioni, fare clic sul progetto Client e posizionare il cursore sul **eseguire il Debug** opzione di menu di scelta rapida in modo che le **Avvia nuova istanza** menu di scelta rapida viene visualizzata. Fare clic su **Avvia nuova istanza**.  
+5. Da Esplora soluzioni, fare clic sul progetto Client e posizionare il cursore sul **eseguire il Debug** opzione di menu di scelta rapida in modo che le **Avvia nuova istanza** menu di scelta rapida viene visualizzata. Fare clic su **Avvia nuova istanza**.  
   
-6.  Verrà visualizzata la finestra della console client in cui sono inclusi l'URI del servizio in esecuzione e l'URI della pagina della Guida HTML per il servizio in esecuzione. In qualsiasi momento è possibile visualizzare la pagina della Guida HTML digitando l'URI della pagina della Guida in un browser.  
+6. Verrà visualizzata la finestra della console client in cui sono inclusi l'URI del servizio in esecuzione e l'URI della pagina della Guida HTML per il servizio in esecuzione. In qualsiasi momento è possibile visualizzare la pagina della Guida HTML digitando l'URI della pagina della Guida in un browser.  
   
-7.  Durante l'esecuzione dell'esempio, il client scrive lo stato dell'attività corrente.  
+7. Durante l'esecuzione dell'esempio, il client scrive lo stato dell'attività corrente.  
   
-8.  Premere un tasto qualsiasi per chiudere l'applicazione console client.  
+8. Premere un tasto qualsiasi per chiudere l'applicazione console client.  
   
 9. Premere MAIUSC+F5 per interrompere il debug del servizio.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304233"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Poiché la chiamata non può essere attesa, l'esecuzione del metodo corrente continua prima del completamento della chiamata
 Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrente continuerà prima del completamento della chiamata. È possibile applicare l'operatore "Await" al risultato della chiamata.  
@@ -95,13 +95,13 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
 ## <a name="example"></a>Esempio  
  Nell'applicazione Windows Presentation Foundation (WPF) seguente sono inclusi i metodi dell'esempio precedente. L'applicazione viene configurata con i passaggi riportati di seguito.  
   
-1.  Creare un'applicazione WPF e denominarla `AsyncWarning`.  
+1. Creare un'applicazione WPF e denominarla `AsyncWarning`.  
   
-2.  Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .  
+2. Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .  
   
      Se la scheda non è visibile, aprire il menu di scelta rapida per MainWindow.xaml in **Esplora soluzioni**, quindi scegliere **Visualizza codice**.  
   
-3.  Sostituire il codice nella visualizzazione **XAML** di MainWindow.xaml con quello riportato di seguito.  
+3. Sostituire il codice nella visualizzazione **XAML** di MainWindow.xaml con quello riportato di seguito.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -117,9 +117,9 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
   
      Una finestra semplice con un pulsante e una casella di testo viene visualizzata nella visualizzazione **Progettazione** di MainWindow.xaml.  
   
-     Per altre informazioni sulla finestra di progettazione XAML, vedere [Creazione di un'interfaccia utente tramite la finestra di progettazione XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Per informazioni su come compilare una semplice interfaccia utente, vedere la "per creare un'applicazione WPF" e "per progettare una finestra WPF MainWindow semplice" sezioni di [procedura dettagliata: Accesso al Web con Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+     Per altre informazioni sulla finestra di progettazione XAML, vedere [Creazione di un'interfaccia utente tramite la finestra di progettazione XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Per informazioni su come compilare una semplice interfaccia utente, vedere le sezioni "Per creare un'applicazione WPF" e "Per progettare una finestra WPF MainWindow semplice"di [Procedura dettagliata: Accesso al Web con Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-4.  Sostituire il codice in MainWindow.xaml.vb con quello riportato di seguito.  
+4. Sostituire il codice in MainWindow.xaml.vb con quello riportato di seguito.  
   
     ```vb  
     Class MainWindow   
@@ -199,7 +199,7 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
     ' Exiting the Click event handler.  
     ```  
   
-5.  Premere il tasto F5 per eseguire il programma e quindi scegliere il pulsante **Start** .  
+5. Premere il tasto F5 per eseguire il programma e quindi scegliere il pulsante **Start** .  
   
      L'output previsto viene visualizzato alla fine del codice.  
   

@@ -2,19 +2,19 @@
 title: 'Procedura: Suddividere un File in molti file usando i gruppi (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306313"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Procedura: Suddividere un File in molti file usando i gruppi (LINQ) (Visual Basic)
 Questo esempio illustra un modo per unire il contenuto di due file e creare quindi un set di nuovi file in cui i dati sono organizzati in modo diverso.  
   
 ### <a name="to-create-the-data-files"></a>Per creare i file di dati  
   
-1.  Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
+1. Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Questo esempio illustra un modo per unire il contenuto di due file e creare quin
     Garcia, Debra  
     ```  
   
-2.  Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto: Si noti che i due file hanno alcuni nomi in comune.  
+2. Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto: Si noti che i due file hanno alcuni nomi in comune.  
   
     ```  
     Liu, Jinghao  
@@ -121,4 +121,4 @@ End Class
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+- [LINQ e le directory dei File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

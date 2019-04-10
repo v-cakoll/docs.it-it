@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302582"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Procedura dettagliata: Implementazione IEnumerable(Of T) in Visual Basic
 Il <xref:System.Collections.Generic.IEnumerable%601> interfaccia è implementata da classi che possono restituire una sequenza di valori di un elemento alla volta. Il vantaggio di restituzione di dati è un elemento in un momento non è necessario caricare il set completo di dati in memoria sul relativo utilizzo. È sufficiente usare quantità di memoria sufficiente per caricare un singolo elemento dai dati. Le classi che implementano il `IEnumerable(T)` interfaccia può essere usata con `For Each` cicli o query LINQ.  
@@ -29,13 +29,13 @@ Il <xref:System.Collections.Generic.IEnumerable%601> interfaccia è implementata
   
 **Creare il progetto della classe enumerable**
 
-1.  In Visual Basic nel **File** dal menu **New** e quindi fare clic su **progetto**.
+1. In Visual Basic nel **File** dal menu **New** e quindi fare clic su **progetto**.
 
-1.  Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Libreria di classi** nel riquadro **Modelli**. Nella casella **Nome** digitare `StreamReaderEnumerable` e quindi fare clic su **OK**. Viene visualizzato il nuovo progetto.
+1. Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**. Selezionare **Libreria di classi** nel riquadro **Modelli**. Nella casella **Nome** digitare `StreamReaderEnumerable` e quindi fare clic su **OK**. Viene visualizzato il nuovo progetto.
 
-1.  Nelle **Esplora soluzioni**, fare doppio clic su file Class1.vb e fare clic su **rinominare**. Rinominare il file `StreamReaderEnumerable.vb` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `StreamReaderEnumerable`. Questa classe implementerà l'interfaccia `IEnumerable(Of String)`.
+1. Nelle **Esplora soluzioni**, fare doppio clic su file Class1.vb e fare clic su **rinominare**. Rinominare il file `StreamReaderEnumerable.vb` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `StreamReaderEnumerable`. Questa classe implementerà l'interfaccia `IEnumerable(Of String)`.
 
-1.  Pulsante destro del mouse sul progetto StreamReaderEnumerable, scegliere **Add**, quindi fare clic su **nuovo elemento**. Selezionare il **classe** modello. Nel **Name** , digitare `StreamReaderEnumerator.vb` e fare clic su **OK**.
+1. Pulsante destro del mouse sul progetto StreamReaderEnumerable, scegliere **Add**, quindi fare clic su **nuovo elemento**. Selezionare il **classe** modello. Nel **Name** , digitare `StreamReaderEnumerator.vb` e fare clic su **OK**.
 
  La prima classe nel progetto è la classe enumerable e verrà implementata il `IEnumerable(Of String)` interfaccia. Questa interfaccia generica implementa il <xref:System.Collections.IEnumerable> interfaccia e fa in modo che i consumer di questa classe possono accedere a valori tipizzati come `String`.  
   

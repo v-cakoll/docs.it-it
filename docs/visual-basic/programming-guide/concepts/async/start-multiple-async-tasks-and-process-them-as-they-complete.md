@@ -2,12 +2,12 @@
 title: Avviare più attività asincrone ed elaborarle quando vengono completate (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 8af97658465aa8f82fe3cd01013282c767eb4ba8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309654"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Avviare più attività asincrone ed elaborarle quando vengono completate (Visual Basic)
 Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, è possibile avviare più attività contemporaneamente ed elaborarle una ad una quando vengono completate, invece che nell'ordine in cui vengono avviate.  
@@ -20,19 +20,19 @@ Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType
 ## <a name="downloading-the-example"></a>Download dell'esempio  
  È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.  
   
-1.  Decomprimere il file scaricato e quindi avviare Visual Studio.  
+1. Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
-2.  Nella barra dei menu scegliere **File**, **Apri**, **Progetto/Soluzione**.  
+2. Nella barra dei menu scegliere **File**, **Apri**, **Progetto/Soluzione**.  
   
-3.  Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e quindi aprire il file di soluzione (con estensione sln) per AsyncFineTuningVB.  
+3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e quindi aprire il file di soluzione (con estensione sln) per AsyncFineTuningVB.  
   
-4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **ProcessTasksAsTheyFinish** e quindi scegliere **Imposta come progetto di avvio**.  
+4. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **ProcessTasksAsTheyFinish** e quindi scegliere **Imposta come progetto di avvio**.  
   
-5.  Premere F5 per eseguire il progetto.  
+5. Premere F5 per eseguire il progetto.  
   
      Premere CTRL + F5 per eseguire il progetto senza eseguire il debug.  
   
-6.  Eseguire il progetto più volte per verificare che le lunghezze scaricate non siano sempre nello stesso ordine.  
+6. Eseguire il progetto più volte per verificare che le lunghezze scaricate non siano sempre nello stesso ordine.  
   
  Se non si vuole scaricare il progetto, è possibile esaminare il file MainWindow.xaml.vb alla fine di questo argomento.  
   
@@ -210,4 +210,4 @@ End Class
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione)
+- [Esempio asincrono: Ottimizzazione dell'applicazione](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

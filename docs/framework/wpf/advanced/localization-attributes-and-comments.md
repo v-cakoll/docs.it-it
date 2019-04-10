@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301854"
 ---
 # <a name="localization-attributes-and-comments"></a>Attributi e commenti di localizzazione
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] commenti di localizzazione sono proprietà all'interno [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] codice sorgente, dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] commenti di localizzazione contengono due set di informazioni: gli attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
@@ -19,13 +19,13 @@ ms.locfileid: "59092916"
 ## <a name="localization-comments"></a>Commenti di localizzazione  
  Se gli autori dell'applicazione di markup necessitano di elementi specifici nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], ad esempio vincoli relativi alla lunghezza del testo, alla famiglia o alle dimensioni del carattere, possono trasmettere queste informazioni ai localizzatori con commenti nel codice [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]. Il processo di aggiunta di commenti al codice sorgente è il seguente:  
   
-1.  Lo sviluppatore dell'applicazione aggiunge i commenti di localizzazione al codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
+1. Lo sviluppatore dell'applicazione aggiunge i commenti di localizzazione al codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   
-2.  Durante il processo di compilazione, nel file con estensione proj è possibile specificare se mantenere i commenti di localizzazione in formato libero nell'assembly, se rimuoverne una parte o se rimuoverli tutti. I commenti rimossi vengono inseriti in un file separato. Per indicare la scelta si usa un tag `LocalizationDirectivesToLocFile`, ad esempio:  
+2. Durante il processo di compilazione, nel file con estensione proj è possibile specificare se mantenere i commenti di localizzazione in formato libero nell'assembly, se rimuoverne una parte o se rimuoverli tutti. I commenti rimossi vengono inseriti in un file separato. Per indicare la scelta si usa un tag `LocalizationDirectivesToLocFile`, ad esempio:  
   
      `<LocalizationDirectivesToLocFile>` *predefinito* `</LocalizationDirectivesToLocFile>`  
   
-3.  I valori che è possibile assegnare sono:  
+3. I valori che è possibile assegnare sono:  
   
     -   **None**: sia i commenti che gli attributi rimangono nell'assembly e non viene generato alcun file separato.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "59092916"
   
     -   **All**: dall'assembly vengono rimossi sia i commenti che gli attributi, che vengono inseriti entrambi in un LocFile separato.  
   
-4.  Se le risorse localizzabili vengono estratte da [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], l'API di localizzazione di [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] rispetta gli attributi di localizzabilità.  
+4. Se le risorse localizzabili vengono estratte da [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], l'API di localizzazione di [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] rispetta gli attributi di localizzabilità.  
   
-5.  I file dei commenti di localizzazione, nei quali sono contenuti solo commenti in formato libero, vengono incorporati al processo di localizzazione in un secondo momento.  
+5. I file dei commenti di localizzazione, nei quali sono contenuti solo commenti in formato libero, vengono incorporati al processo di localizzazione in un secondo momento.  
   
  L'esempio seguente illustra come aggiungere commenti di localizzazione a un file [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)].  
   

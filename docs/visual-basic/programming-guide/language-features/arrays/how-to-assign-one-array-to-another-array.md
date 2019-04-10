@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303090"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedura: Assegnare una matrice a un'altra matrice (Visual Basic)
 Poiché le matrici sono gli oggetti, è possibile usarli nelle istruzioni di assegnazione, come altri tipi di oggetto. Una variabile di matrice contiene un puntatore ai dati che costituiscono gli elementi della matrice e le informazioni di classificazione e la lunghezza e un'assegnazione di copia solo questo puntatore.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Per assegnare una matrice a un'altra matrice  
   
-1.  Assicurarsi che le due matrici hanno la stessa classificazione (numero di dimensioni) e tipi di dati compatibile.  
+1. Assicurarsi che le due matrici hanno la stessa classificazione (numero di dimensioni) e tipi di dati compatibile.  
   
-2.  Utilizzare un'istruzione di assegnazione standard per assegnare l'array di origine nella matrice di destinazione. Non seguire i nomi delle matrici tra parentesi.  
+2. Utilizzare un'istruzione di assegnazione standard per assegnare l'array di origine nella matrice di destinazione. Non seguire i nomi delle matrici tra parentesi.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -47,4 +47,4 @@ Poiché le matrici sono gli oggetti, è possibile usarli nelle istruzioni di ass
 - [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Conversioni di matrice](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Conversioni di matrici](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

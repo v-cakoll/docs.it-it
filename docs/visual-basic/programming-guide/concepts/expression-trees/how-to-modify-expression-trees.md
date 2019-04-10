@@ -2,23 +2,23 @@
 title: 'Procedura: Modificare alberi delle espressioni (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: c53983c6dfc601a7e8e32ad020f5f7feb66cfe04
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a9b94cbd7bf24b0cc8efcfc66d8c5e7df4e27307
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834335"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305325"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Procedura: Modificare alberi delle espressioni (Visual Basic)
 In questo argomento viene illustrato come modificare un albero delle espressioni. Gli alberi delle espressioni non sono modificabili, il che significa che non possono essere modificati direttamente. Per modificare un albero delle espressioni, è necessario creare una copia dell'albero esistente e solo in seguito apportare le modifiche necessarie. È possibile usare la classe <xref:System.Linq.Expressions.ExpressionVisitor> per attraversare un albero delle espressioni esistente e copiare ogni nodo visitato.  
   
 ### <a name="to-modify-an-expression-tree"></a>Per modificare un albero delle espressioni  
   
-1.  Creare un nuovo progetto **Applicazione console**.  
+1. Creare un nuovo progetto **Applicazione console**.  
   
-2.  Aggiungere un `Imports` istruzione del file per il `System.Linq.Expressions` dello spazio dei nomi.  
+2. Aggiungere un `Imports` istruzione del file per il `System.Linq.Expressions` dello spazio dei nomi.  
   
-3.  Aggiungere la classe `AndAlsoModifier` al progetto.  
+3. Aggiungere la classe `AndAlsoModifier` al progetto.  
   
     ```vb  
     Public Class AndAlsoModifier  
@@ -46,9 +46,9 @@ In questo argomento viene illustrato come modificare un albero delle espressioni
   
      La classe eredita la classe <xref:System.Linq.Expressions.ExpressionVisitor> ed è specializzata per modificare le espressioni che rappresentano operazioni `AND` condizionali. Modifica tali operazioni da un'operazione `AND` condizionale a un'operazione `OR` condizionale. A tale scopo, la classe esegue l'override del metodo <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> del tipo di base, perché le espressioni `AND` condizionali sono rappresentate come espressioni binarie. Se l'espressione che viene passata al metodo `VisitBinary` rappresenta un'operazione `AND` condizionale, il codice costruisce una nuova espressione che contiene l'operatore condizionale `OR` anziché l'operatore condizionale `AND`. Se l'espressione che viene passata a `VisitBinary` non rappresenta un'operazione `AND` condizionale, il metodo rimanda all'implementazione della classe base. I metodi della classe base costruiscono nodi uguali agli alberi delle espressione passati, ma i sottoalberi dei nodi vengono sostituiti con gli alberi delle espressioni che vengono generati in modo ricorsivo dal visitatore.  
   
-4.  Aggiungere un `Imports` istruzione del file per il `System.Linq.Expressions` dello spazio dei nomi.  
+4. Aggiungere un `Imports` istruzione del file per il `System.Linq.Expressions` dello spazio dei nomi.  
   
-5.  Aggiungere il codice per il `Main` metodo nel file Module1.vb per creare un albero delle espressioni e passarlo al metodo a cui verrà modificato in modo.  
+5. Aggiungere il codice per il `Main` metodo nel file Module1.vb per creare un albero delle espressioni e passarlo al metodo a cui verrà modificato in modo.  
   
     ```vb  
     Dim expr As Expression(Of Func(Of String, Boolean)) = _  
@@ -68,7 +68,7 @@ In questo argomento viene illustrato come modificare un albero delle espressioni
   
      Il codice crea un'espressione che contiene un'operazione `AND` condizionale. Viene quindi creata un'istanza della classe `AndAlsoModifier` e l'espressione viene passata al metodo `Modify` della classe. Sia l'albero delle espressioni originale che quello modificato vengono inclusi nell'output per illustrare le modifiche.  
   
-6.  Compilare l'applicazione ed eseguirla.  
+6. Compilare l'applicazione ed eseguirla.  
   
 ## <a name="see-also"></a>Vedere anche
 

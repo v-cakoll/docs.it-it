@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID67
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
-ms.openlocfilehash: ceacb5d83fcfc9fcbd341cc5d9579c4e2e181353
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1d7fc769a0a2d0f8474c0a72a5600b84c8396201
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310057"
 ---
 # <a name="too-many-files"></a>Troppi file.
 Più file creati nella directory radice superiore a quello permesso del sistema operativo o sono stati aperti più file rispetto al numero specificato nella **file =** nel file CONFIG. File di SYS.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Se il programma è apertura, chiusura o il salvataggio dei file nella directory radice, modificare il programma in modo che utilizzi una sottodirectory.  
+1. Se il programma è apertura, chiusura o il salvataggio dei file nella directory radice, modificare il programma in modo che utilizzi una sottodirectory.  
   
-2.  Aumentare il numero di file specificati nella **file =** nel file CONFIG. SYS file, quindi riavviare il computer.  
+2. Aumentare il numero di file specificati nella **file =** nel file CONFIG. SYS file, quindi riavviare il computer.  
   
 ## <a name="see-also"></a>Vedere anche
 

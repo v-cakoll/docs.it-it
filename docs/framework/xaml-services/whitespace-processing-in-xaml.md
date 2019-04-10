@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102232"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294925"
 ---
 # <a name="white-space-processing-in-xaml"></a>Elaborazione degli spazi vuoti in XAML
 Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo deve essere elaborato da un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] l'implementazione del processore. In questo argomento vengono illustrate queste regole del linguaggio XAML, Illustra inoltre la gestione degli spazi vuoti aggiuntivi definita dal [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementazione del processore XAML e writer XAML per la serializzazione.  
@@ -25,15 +25,15 @@ Le regole del linguaggio per XAML di stato che lo spazio vuoto significativo dev
 ## <a name="white-space-normalization"></a>Normalizzazione degli spazi vuoti  
  Per impostazione predefinita la normalizzazione di spazi vuoti seguente si verifica quando un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processi di processore un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file:  
   
-1.  I caratteri di avanzamento riga inseriti tra i caratteri dell'Asia orientale vengono rimossi. Per una definizione dei "caratteri dell'Asia orientale", vedere la sezione relativa più avanti in questo argomento.  
+1. I caratteri di avanzamento riga inseriti tra i caratteri dell'Asia orientale vengono rimossi. Per una definizione dei "caratteri dell'Asia orientale", vedere la sezione relativa più avanti in questo argomento.  
   
-2.  Tutti i caratteri di spazio vuoto (spazio, avanzamento riga, scheda) vengono convertiti in spazi.  
+2. Tutti i caratteri di spazio vuoto (spazio, avanzamento riga, scheda) vengono convertiti in spazi.  
   
-3.  Tutti gli spazi consecutivi vengono eliminati e sostituiti da un unico spazio.  
+3. Tutti gli spazi consecutivi vengono eliminati e sostituiti da un unico spazio.  
   
-4.  Uno spazio immediatamente successivo al tag di inizio viene eliminato.  
+4. Uno spazio immediatamente successivo al tag di inizio viene eliminato.  
   
-5.  Uno spazio immediatamente precedente al tag di fine viene eliminato.  
+5. Uno spazio immediatamente precedente al tag di fine viene eliminato.  
   
  L'"impostazione predefinita" corrisponde allo stato indicato dal valore predefinito dell'attributo [XML:space](xml-space-handling-in-xaml.md) .  
   

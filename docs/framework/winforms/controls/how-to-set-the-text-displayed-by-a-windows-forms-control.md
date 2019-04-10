@@ -21,23 +21,23 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: e9bf2077f10648dbe3ebf214bbbf9546cbb398c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308523"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: Impostare il testo visualizzato da un controllo di Windows Forms
 I controlli Windows Form in genere visualizzano il testo relativo alla funzione principale del controllo. Un controllo <xref:System.Windows.Forms.Button>, ad esempio, solitamente visualizza una didascalia indicante l'azione che verrà eseguita quando si sceglie il pulsante. Per tutti i controlli, il testo può essere impostato o restituito mediante la proprietà <xref:System.Windows.Forms.Control.Text%2A>. È possibile modificare il tipo di carattere usando la proprietà <xref:System.Windows.Forms.Control.Font%2A>. È anche possibile impostare il testo nella finestra di progettazione.  Vedere anche [come: Creare le chiavi di accesso per Windows Form usando la finestra di progettazione di controlli](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [come: Impostare il testo visualizzato da un Windows Form mediante la finestra di progettazione](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [come: Impostare l'immagine visualizzata da un Windows Form mediante la finestra di progettazione](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Per impostare il testo visualizzato da un controllo a livello di codice  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.Control.Text%2A> su una stringa.  
+1. Impostare la proprietà <xref:System.Windows.Forms.Control.Text%2A> su una stringa.  
   
      Per creare un tasto di scelta sottolineato, includere una e commerciale (&) alla lettera che sarà la chiave di accesso.  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.Control.Font%2A> su un oggetto di tipo <xref:System.Drawing.Font>.  
+2. Impostare la proprietà <xref:System.Windows.Forms.Control.Font%2A> su un oggetto di tipo <xref:System.Drawing.Font>.  
   
     ```vb  
     Button1.Text = "Click here to save changes"  

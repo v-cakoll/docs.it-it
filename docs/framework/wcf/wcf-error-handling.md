@@ -2,21 +2,21 @@
 title: Gestione errori WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306287"
 ---
 # <a name="wcf-error-handling"></a>Gestione errori WCF
 Gli errori rilevati da un'applicazione WCF appartengono a uno dei seguenti tre gruppi:  
   
-1.  errori di comunicazione  
+1. errori di comunicazione  
   
-2.  errori di proxy/canale  
+2. errori di proxy/canale  
   
-3.  errori di applicazione  
+3. errori di applicazione  
   
  Gli errori di comunicazione si verificano quando una rete non è disponibile, un client utilizza un indirizzo errato o l'host del servizio non è in ascolto dei messaggi in arrivo. Errori di questo tipo vengono restituiti al client come <xref:System.ServiceModel.CommunicationException> o <xref:System.ServiceModel.CommunicationException> (classi derivate).  
   
@@ -47,4 +47,4 @@ Gli errori rilevati da un'applicazione WCF appartengono a uno dei seguenti tre g
   
 2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- Per altre informazioni, vedere <xref:System.ServiceModel.ServiceHost>.
+ Per altre informazioni, vedere <xref:System.ServiceModel.ServiceHost>

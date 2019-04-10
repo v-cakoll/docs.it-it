@@ -8,52 +8,52 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112567"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295432"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Procedura: Configurare le credenziali in un servizio federativo
 In Windows Communication Foundation (WCF), la creazione di un servizio federato includono le procedure principali seguenti:  
   
-1.  Configurazione di un oggetto <xref:System.ServiceModel.WSFederationHttpBinding> o di un'associazione personalizzata simile. Per altre informazioni sulla creazione di un'associazione appropriata, vedere [come: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1. Configurazione di un oggetto <xref:System.ServiceModel.WSFederationHttpBinding> o di un'associazione personalizzata simile. Per altre informazioni sulla creazione di un'associazione appropriata, vedere [come: Creare una classe WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
-2.  Configurazione della classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>, che controlla come vengono autenticati i token emessi presentati al servizio.  
+2. Configurazione della classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>, che controlla come vengono autenticati i token emessi presentati al servizio.  
   
  In questo argomento vengono fornite informazioni dettagliate sul secondo passaggio. Per altre informazioni sull'uso di un servizio federato, vedere [federazione](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Per impostare le proprietà di IssuedTokenServiceCredential nel codice  
   
-1.  Utilizzare la proprietà <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> della classe <xref:System.ServiceModel.Description.ServiceCredentials> per restituire un riferimento a un'istanza di <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>. L'accesso alla proprietà viene eseguito dalla proprietà <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> della classe <xref:System.ServiceModel.ServiceHostBase>.  
+1. Utilizzare la proprietà <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> della classe <xref:System.ServiceModel.Description.ServiceCredentials> per restituire un riferimento a un'istanza di <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>. L'accesso alla proprietà viene eseguito dalla proprietà <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> della classe <xref:System.ServiceModel.ServiceHostBase>.  
   
-2.  Se devono essere autenticati token autocertificati, ad esempio schede <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>, impostare la proprietà `true` su [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Il valore predefinito è `false`.  
+2. Se devono essere autenticati token autocertificati, ad esempio schede <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>, impostare la proprietà `true` su [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Il valore predefinito è `false`.  
   
-3.  Popolare la raccolta restituita dalla proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> con istanze della classe <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Ogni istanza rappresenta un emittente da cui il servizio autenticherà i token.  
+3. Popolare la raccolta restituita dalla proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> con istanze della classe <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Ogni istanza rappresenta un emittente da cui il servizio autenticherà i token.  
   
     > [!NOTE]
     >  A differenza della raccolta lato client restituita dalla proprietà <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>, la raccolta dei certificati noti non è una raccolta con chiave. Il servizio accetta i token emessi dai certificati specificati indipendentemente dall'indirizzo del client che ha inviato il messaggio contenente il token emesso (salvo gli ulteriori limiti descritti più avanti in questo argomento).  
   
-4.  Impostare la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> su uno dei valori dell'enumerazione <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Questa operazione può essere eseguita solo nel codice. Il valore predefinito è <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
+4. Impostare la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> su uno dei valori dell'enumerazione <xref:System.ServiceModel.Security.X509CertificateValidationMode>. Questa operazione può essere eseguita solo nel codice. Il valore predefinito è <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
   
-5.  Se la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> viene impostata su <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, assegnare un'istanza della classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> personalizzata alla proprietà <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>.  
+5. Se la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> viene impostata su <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, assegnare un'istanza della classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> personalizzata alla proprietà <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>.  
   
-6.  Se la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> viene impostata su `ChainTrust` o su `PeerOrChainTrust`, impostare la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> su un valore appropriato ottenuto dall'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. Si noti che la modalità di revoca non viene utilizzata nelle modalità di convalida `PeerTrust` e `Custom`.  
+6. Se la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> viene impostata su `ChainTrust` o su `PeerOrChainTrust`, impostare la proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> su un valore appropriato ottenuto dall'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>. Si noti che la modalità di revoca non viene utilizzata nelle modalità di convalida `PeerTrust` e `Custom`.  
   
-7.  Se necessario, assegnare un'istanza di una classe <xref:System.IdentityModel.Tokens.SamlSerializer> personalizzata alla proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A>. Per l'analisi delle asserzioni SAML personalizzate, ad esempio, è necessario un serializzatore SAML (Security Assertions Markup Language).  
+7. Se necessario, assegnare un'istanza di una classe <xref:System.IdentityModel.Tokens.SamlSerializer> personalizzata alla proprietà <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A>. Per l'analisi delle asserzioni SAML personalizzate, ad esempio, è necessario un serializzatore SAML (Security Assertions Markup Language).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a>Per impostare le proprietà di IssuedTokenServiceCredential nella configurazione  
   
-1.  Creare un `<issuedTokenAuthentication>` elemento come figlio di un <`serviceCredentials`> elemento.  
+1. Creare un `<issuedTokenAuthentication>` elemento come figlio di un <`serviceCredentials`> elemento.  
   
-2.  Impostare l'attributo `allowUntrustedRsaIssuers` dell'elemento `<issuedTokenAuthentication>` su `true` in caso di autenticazione di un token autocertificato, ad esempio una scheda [!INCLUDE[infocard](../../../../includes/infocard-md.md)].  
+2. Impostare l'attributo `allowUntrustedRsaIssuers` dell'elemento `<issuedTokenAuthentication>` su `true` in caso di autenticazione di un token autocertificato, ad esempio una scheda [!INCLUDE[infocard](../../../../includes/infocard-md.md)].  
   
-3.  Creare un elemento `<knownCertificates>` come figlio dell'elemento `<issuedTokenAuthentication>`.  
+3. Creare un elemento `<knownCertificates>` come figlio dell'elemento `<issuedTokenAuthentication>`.  
   
-4.  Creare zero o più elementi `<add>`come figli dell'elemento`<knownCertificates>`e specificare come individuare il certificato utilizzando gli attributi `storeLocation`, `storeName`, `x509FindType`,, findValue`findValue`e .  
+4. Creare zero o più elementi `<add>`come figli dell'elemento`<knownCertificates>`e specificare come individuare il certificato utilizzando gli attributi `storeLocation`, `storeName`, `x509FindType`,, findValue`findValue`e .  
   
-5.  Se necessario, impostare il `samlSerializer` attributo del <`issuedTokenAuthentication`> elemento per il nome del tipo personalizzato <xref:System.IdentityModel.Tokens.SamlSerializer> classe.  
+5. Se necessario, impostare il `samlSerializer` attributo del <`issuedTokenAuthentication`> elemento per il nome del tipo personalizzato <xref:System.IdentityModel.Tokens.SamlSerializer> classe.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono impostate le proprietà di <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> nel codice.  

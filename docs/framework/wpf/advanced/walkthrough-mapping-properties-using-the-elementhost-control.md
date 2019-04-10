@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 3fe3f00950fdfdf92c3f95dc42b27cc9110e0c95
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300918"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Procedura dettagliata: Mapping di proprietà tramite il controllo ElementHost
 
@@ -43,9 +43,9 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 ### <a name="to-create-the-project"></a>Per creare il progetto
 
-1.  Creare un **App di Windows. Forms** progetto denominato `PropertyMappingWithElementHost`.
+1. Creare un **App di Windows. Forms** progetto denominato `PropertyMappingWithElementHost`.
 
-2.  Nelle **Esplora soluzioni**, aggiungere i riferimenti ai seguenti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assembly.
+2. Nelle **Esplora soluzioni**, aggiungere i riferimenti ai seguenti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assembly.
 
     -   PresentationCore
 
@@ -55,16 +55,16 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
     -   WindowsFormsIntegration
 
-3.  Copiare il codice seguente nella parte superiore del `Form1` file di codice.
+3. Copiare il codice seguente nella parte superiore del `Form1` file di codice.
 
      [!code-csharp[PropertyMappingWithElementHost#10](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
 
-4.  Aprire `Form1` in Progettazione Windows Form. Fare doppio clic sul form per aggiungere un gestore eventi per il <xref:System.Windows.Forms.Form.Load> evento.
+4. Aprire `Form1` in Progettazione Windows Form. Fare doppio clic sul form per aggiungere un gestore eventi per il <xref:System.Windows.Forms.Form.Load> evento.
 
-5.  Tornare alla finestra di progettazione Windows Form e aggiungere un gestore eventi per il form <xref:System.Windows.Forms.Control.Resize> evento. Per altre informazioni, vedere [Procedura: Creare i gestori eventi utilizzando la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
+5. Tornare alla finestra di progettazione Windows Form e aggiungere un gestore eventi per il form <xref:System.Windows.Forms.Control.Resize> evento. Per altre informazioni, vedere [Procedura: Creare i gestori eventi utilizzando la finestra di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
 
-6.  Dichiarare un <xref:System.Windows.Forms.Integration.ElementHost> campo il `Form1` classe.
+6. Dichiarare un <xref:System.Windows.Forms.Integration.ElementHost> campo il `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#16](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
@@ -75,7 +75,7 @@ Il <xref:System.Windows.Forms.Integration.ElementHost> controllo fornisce mappin
 
 ### <a name="to-define-new-property-mappings"></a>Per definire nuovi mapping delle proprietà
 
-1.  Copiare il codice seguente nella definizione per il `Form1` classe.
+1. Copiare il codice seguente nella definizione per il `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
@@ -84,7 +84,7 @@ Il <xref:System.Windows.Forms.Integration.ElementHost> controllo fornisce mappin
 
      Il `OnMarginChange` metodo converte il <xref:System.Windows.Forms.Control.Margin%2A> proprietà per il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> proprietà.
 
-2.  Copiare il codice seguente nella definizione per il `Form1` classe.
+2. Copiare il codice seguente nella definizione per il `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
@@ -125,7 +125,7 @@ Rimuovere un mapping delle proprietà predefinito chiamando il <xref:System.Wind
 
 ## <a name="initialize-your-property-mappings"></a>Inizializzare i mapping delle proprietà
 
-1.  Copiare il codice seguente nella definizione per il `Form1` classe.
+1. Copiare il codice seguente nella definizione per il `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
@@ -138,7 +138,7 @@ Rimuovere un mapping delle proprietà predefinito chiamando il <xref:System.Wind
 
     -   Assegna i valori iniziali alle proprietà mappate.
 
-2.  Premere F5 per compilare ed eseguire l'applicazione.
+2. Premere F5 per compilare ed eseguire l'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 

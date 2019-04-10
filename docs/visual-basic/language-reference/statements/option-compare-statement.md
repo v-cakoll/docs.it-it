@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834075"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300632"
 ---
 # <a name="option-compare-statement"></a>Istruzione Option Compare
 Dichiara il metodo di confronto predefinito da usare durante il confronto dei dati di tipo stringa.  
@@ -65,11 +65,11 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>Per impostare Option Compare nell'IDE  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
-2.  Fare clic sulla scheda **Compila**.  
+2. Fare clic sulla scheda **Compila**.  
   
-3.  Impostare il valore di **Option Compare** casella.  
+3. Impostare il valore di **Option Compare** casella.  
   
  Quando si crea un progetto, il **Option Compare** impostazione nel **compilare** scheda è impostata sul **Option Compare** impostazione nel **opzioni** finestra di dialogo. Per modificare questa impostazione, scegliere il **degli strumenti** menu, fare clic su **opzioni**. Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**, quindi fare clic su **Impostazioni predefinite di Visual Basic**. L'impostazione predefinita iniziale in **le impostazioni predefinite di Visual Basic** viene **binario**.  
   
@@ -100,4 +100,4 @@ Option Compare { Binary | Text }
 - [Operatore Like](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Funzioni stringa](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)

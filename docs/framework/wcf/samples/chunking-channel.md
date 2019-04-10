@@ -2,12 +2,12 @@
 title: Chunking del canale
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073819"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302699"
 ---
 # <a name="chunking-channel"></a>Chunking del canale
 Quando si inviano messaggi di grandi dimensioni tramite Windows Communication Foundation (WCF), è spesso utile per limitare la quantità di memoria utilizzata per memorizzare nel buffer i messaggi. Una possibile soluzione è di trasmettere il corpo del messaggio (presupponendo che il grosso dei dati è contenuto nel corpo). Tuttavia alcuni protocolli richiedono la memorizzazione nel buffer del messaggio intero. Due esempi sono rappresentati dai protocolli di messaggistica affidabile e di sicurezza. Un'altra possibile soluzione è di suddividere il messaggio in messaggi più piccoli, chiamati blocchi, inviare quei blocchi uno alla volta e ricostruire il messaggio originale sul lato ricevente. L'applicazione stessa può eseguire questa suddivisione in blocchi e ricostruzione oppure può usare un canale personalizzato per eseguire queste operazioni. Nell'esempio relativo al canale per la suddivisione in blocchi viene illustrato come è possibile usare un protocollo personalizzato o un canale su più livelli per suddividere in blocchi e ricostruire i messaggi di grandi dimensioni.  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  Al successivo livello inferiore, il `ChunkingChannel` si basa su molti componenti per implementare il protocollo per la suddivisione in blocchi. Per l'invio, il canale usa un oggetto <xref:System.Xml.XmlDictionaryWriter> personalizzato chiamato `ChunkingWriter` che esegue la vera e propria suddivisione in blocchi. `ChunkingWriter` Usa il canale interno direttamente per inviare i blocchi. L'uso di un `XmlDictionaryWriter` personalizzato consente di inviare i blocchi mentre viene scritto il corpo del messaggio originale. Questo significa che non viene memorizzato nel buffer l'intero messaggio originale.  
   
- ![Chunking canale](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![Diagramma che mostra il suddivisione in blocchi canale di trasmissione architettura.](./media/chunking-channel/chunking-channel-send.gif)  
   
  Per la ricezione, `ChunkingChannel` esegue il pull dei messaggi dal canale interno e li consegna a un oggetto <xref:System.Xml.XmlDictionaryReader> personalizzato denominato `ChunkingReader`, che ricostruisce il messaggio originale dai blocchi in arrivo. `ChunkingChannel` esegue il wrapping di questo `ChunkingReader` in un oggetto personalizzato `Message` chiamato implementazione `ChunkingMessage` e restituisce il messaggio al livello superiore. Questa combinazione di `ChunkingReader` e `ChunkingMessage` consente di ricostruire il corpo del messaggio originale mentre viene letto dal livello superiore, invece di dover memorizzare nel buffer l'intero corpo del messaggio originale. `ChunkingReader` dispone di una coda in cui memorizza nel buffer in ingresso blocchi fino a un numero massimo configurabile di blocchi memorizzati. Quando questo limite massimo viene raggiunto, il lettore attende che i messaggi vengano svuotati dalla coda dal livello superiore (operazione eseguita semplicemente leggendo il corpo del messaggio originale) o fino a raggiungere il timeout di ricezione massimo.  
   
- ![Chunking canale](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![Diagramma che mostra il canale di suddivisione in blocchi l'architettura di ricezione.](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>Modello di programmazione per la suddivisione in blocchi  
  Gli sviluppatori del servizio possono specificare quali messaggi devono essere suddivisi in blocchi applicando l'attributo `ChunkingBehavior` alle operazioni all'interno del contratto. L'attributo espone una proprietà `AppliesTo` che consente allo sviluppatore di specificare se la suddivisione in blocchi si applica al messaggio di input, al messaggio di output o a entrambi. Nell'esempio seguente viene illustrato l'uso dell'attributo `ChunkingBehavior`:  
@@ -309,19 +309,19 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente.  
+1. Installare [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 usando il comando seguente.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Eseguire prima Service.exe quindi Client.exe e controllare l'output di entrambe le finestre della console.  
+5. Eseguire prima Service.exe quindi Client.exe e controllare l'output di entrambe le finestre della console.  
   
  Quando si esegue l'esempio, viene visualizzato l'output seguente:  
   

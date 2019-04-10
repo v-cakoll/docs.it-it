@@ -2,12 +2,12 @@
 title: Uso di endpoint standard
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304610"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso di endpoint standard
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1.  Usa Visual Studio 2012, aprire il file standardEndpoints.
+1. Usa Visual Studio 2012, aprire il file standardEndpoints.
 
-2.  Consentire l'avvio di più progetti.
+2. Consentire l'avvio di più progetti.
 
     1.  Nelle **Esplora soluzioni**, fare doppio clic su soluzione Standard Endpoints, quindi selezionare **proprietà**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          In questo modo si specifica che il progetto Client viene eseguito dopo il progetto Service.
 
-3.  Per eseguire la soluzione, premere F5.
+3. Per eseguire la soluzione, premere F5.
 
 > [!NOTE]
 > Se questi passaggi risolve il problema, assicurarsi che l'ambiente è stato configurato correttamente, usando la procedura seguente:

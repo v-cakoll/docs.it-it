@@ -2,12 +2,12 @@
 title: Rilevamento visivo del flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296459"
 ---
 # <a name="visual-workflow-tracking"></a>Rilevamento visivo del flusso di lavoro
 In questo esempio viene illustrato come scrivere un'applicazione visiva di rilevamento flusso di lavoro usando la funzionalità di debug disponibile tramite [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
@@ -19,17 +19,17 @@ In questo esempio viene illustrato come scrivere un'applicazione visiva di rilev
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1.  Aprire il file Workflowsimulator sln dalla directory di esempio in Visual Studio 2010.
+1. Aprire il file Workflowsimulator sln dalla directory di esempio in Visual Studio 2010.
 
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
-3.  Premere CTRL + F5 per eseguire l'esempio. Viene visualizzato il file Workflow.xaml in una finestra di progettazione del flusso di lavoro riallocata.
+3. Premere CTRL + F5 per eseguire l'esempio. Viene visualizzato il file Workflow.xaml in una finestra di progettazione del flusso di lavoro riallocata.
 
-4.  Scegliere il **File** menu e selezionare **Esegui flusso di lavoro...** .
+4. Scegliere il **File** menu e selezionare **Esegui flusso di lavoro...** .
 
-5.  Come si noterà, l'attività attualmente in esecuzione è evidenziata come descritto in precedenza e i record di rilevamento vengono visualizzati sul lato destro della finestra dell'applicazione.
+5. Come si noterà, l'attività attualmente in esecuzione è evidenziata come descritto in precedenza e i record di rilevamento vengono visualizzati sul lato destro della finestra dell'applicazione.
 
-6.  Una volta completato il flusso di lavoro, è possibile fare clic su qualsiasi record di rilevamento per controllare l'attività alla quale corrisponde.
+6. Una volta completato il flusso di lavoro, è possibile fare clic su qualsiasi record di rilevamento per controllare l'attività alla quale corrisponde.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: b10876c22d2f6dd5832baa0d498db7c4205a3fcb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816291"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299137"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Procedura: Velocizzare l'accesso a un oggetto con un percorso di qualificazione lungo (Visual Basic)
 Se si accede di frequente un oggetto che richiede un percorso di qualificazione dei diversi metodi e proprietà, è possibile velocizzare il codice non ripetendo il percorso di qualificazione.  
@@ -22,13 +22,13 @@ Se si accede di frequente un oggetto che richiede un percorso di qualificazione 
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Per velocizzare l'accesso tramite l'assegnazione a una variabile a un oggetto di qualificazione  
   
-1.  Dichiarare una variabile del tipo di oggetto cui si accede di frequente. Specificare il percorso di qualificazione nella parte di inizializzazione della dichiarazione.  
+1. Dichiarare una variabile del tipo di oggetto cui si accede di frequente. Specificare il percorso di qualificazione nella parte di inizializzazione della dichiarazione.  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Usare la variabile per accedere ai membri dell'oggetto.  
+2. Usare la variabile per accedere ai membri dell'oggetto.  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -38,13 +38,13 @@ Se si accede di frequente un oggetto che richiede un percorso di qualificazione 
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Per velocizzare l'accesso a un oggetto qualificazione usando una clausola With... Blocco End With  
   
-1.  Inserire il percorso di qualificazione in un `With` istruzione.  
+1. Inserire il percorso di qualificazione in un `With` istruzione.  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Accedere ai membri dell'oggetto all'interno di `With` blocca, in precedenza il `End With` istruzione.  
+2. Accedere ai membri dell'oggetto all'interno di `With` blocca, in precedenza il `End With` istruzione.  
   
     ```  
         .Text = "Test"  

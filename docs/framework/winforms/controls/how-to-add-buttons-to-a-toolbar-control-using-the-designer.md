@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084024"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306196"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Procedura: Aggiungere pulsanti a un controllo ToolBar usando la finestra di progettazione
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "59084024"
   
 ### <a name="to-add-buttons-at-design-time"></a>Per aggiungere i pulsanti in fase di progettazione  
   
-1.  Selezionare il controllo <xref:System.Windows.Forms.ToolBar>.  
+1. Selezionare il controllo <xref:System.Windows.Forms.ToolBar>.  
   
-2.  Nel **delle proprietà** finestra, fare clic sul <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà per selezionarlo, quindi fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) per aprire la **insieme ToolBarButton**.  
+2. Nel **delle proprietà** finestra, fare clic sul <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà per selezionarlo, quindi fare clic sul **puntini di sospensione** (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png " vbEllipsesButton")) per aprire la **insieme ToolBarButton**.  
   
-3.  Usare la **Add** e **rimuovere** pulsanti per aggiungere e rimuovere pulsanti dal <xref:System.Windows.Forms.ToolBar> controllo.  
+3. Usare la **Add** e **rimuovere** pulsanti per aggiungere e rimuovere pulsanti dal <xref:System.Windows.Forms.ToolBar> controllo.  
   
-4.  Configurare le proprietà dei pulsanti in singoli il **proprietà** finestra visualizzata nel riquadro a destra dell'editor. Nella tabella seguente mostra alcune proprietà importanti da considerare.  
+4. Configurare le proprietà dei pulsanti in singoli il **proprietà** finestra visualizzata nel riquadro a destra dell'editor. Nella tabella seguente mostra alcune proprietà importanti da considerare.  
   
     |Proprietà|Descrizione|  
     |--------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "59084024"
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|La stringa di testo visualizzata dal pulsante.|  
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|Il testo visualizzato come descrizione comando del pulsante.|  
   
-5.  Fare clic su **OK** per chiudere la finestra di dialogo e creare i pannelli specificati.  
+5. Fare clic su **OK** per chiudere la finestra di dialogo e creare i pannelli specificati.  
   
 ## <a name="see-also"></a>Vedere anche
 

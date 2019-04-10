@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304779"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procedura: Aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Forms
 Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:System.Windows.Forms.ToolStrip> controllo specifico per la navigazione e modifica dei controlli sul form che vengono associati ai dati.  
@@ -24,21 +24,21 @@ Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Per aggiungere carica, Salva e Annulla i pulsanti per il componente di BindingNavigator  
   
-1.  Aggiungere un oggetto <xref:System.Windows.Forms.TextBox> al form.  
+1. Aggiungere un oggetto <xref:System.Windows.Forms.TextBox> al form.  
   
-2.  Associarlo a un <xref:System.Windows.Forms.BindingSource>, che è associato a un'origine dati. In questo esempio il <xref:System.Windows.Forms.BindingSource> è associato a un database.  
+2. Associarlo a un <xref:System.Windows.Forms.BindingSource>, che è associato a un'origine dati. In questo esempio il <xref:System.Windows.Forms.BindingSource> è associato a un database.  
   
-3.  Una volta generato il set di dati e tabella la scheda, trascinare un <xref:System.Windows.Forms.BindingNavigator> controllo al form.  
+3. Una volta generato il set di dati e tabella la scheda, trascinare un <xref:System.Windows.Forms.BindingNavigator> controllo al form.  
   
-4.  Impostare il <xref:System.Windows.Forms.BindingNavigator> del controllo <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> proprietà di <xref:System.Windows.Forms.BindingSource> nel form di cui è associato ai controlli.  
+4. Impostare il <xref:System.Windows.Forms.BindingNavigator> del controllo <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> proprietà di <xref:System.Windows.Forms.BindingSource> nel form di cui è associato ai controlli.  
   
-5.  Selezionare il controllo <xref:System.Windows.Forms.BindingNavigator>.  
+5. Selezionare il controllo <xref:System.Windows.Forms.BindingNavigator>.  
   
-6.  Fare clic sul glifo dello smart tag (![glifo Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) in modo che il **le attività di BindingNavigator** finestra di dialogo e selezionare **Modifica elementi**.  
+6. Fare clic sul glifo dello smart tag (![glifo Smart Tag](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) in modo che il **le attività di BindingNavigator** finestra di dialogo e selezionare **Modifica elementi**.  
   
      Il **Editor della raccolta Items** viene visualizzata.  
   
-7.  Nel **Editor della raccolta Items**, completare le operazioni seguenti:  
+7. Nel **Editor della raccolta Items**, completare le operazioni seguenti:  
   
     1.  Aggiungi un <xref:System.Windows.Forms.ToolStripSeparator> e tre <xref:System.Windows.Forms.ToolStripButton> selezionando il tipo appropriato di elementi <xref:System.Windows.Forms.ToolStripItem> e facendo clic sui **Add** pulsante.  
   
@@ -50,7 +50,7 @@ Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:
   
     5.  Fare clic su **OK** per chiudere la finestra di dialogo. Vengono aggiunti i pulsanti per il <xref:System.Windows.Forms.ToolStrip>.  
   
-8.  Fare clic sulla forma e scegliere **Visualizza codice**.  
+8. Fare clic sulla forma e scegliere **Visualizza codice**.  
   
 9. Nell'Editor di codice, trovare la riga di codice che carica i dati nell'adattatore di tabella. Questo codice è stato generato quando si configura il data binding nel passaggio 2. Il codice dovrebbe essere simile al seguente: `TableAdapterName.Fill(DataSetName.TableName)`. Si verifica più probabilmente avere il formato <xref:System.Windows.Forms.Form.Load> evento.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 4b83e841db1afc898c5c3c99ed4186fd264ed2ef
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 65e332d229da8fe51ad9c3e9850603471b1dfb12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994520"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307236"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Procedura: Suddividere in blocchi i dati serializzati
 
@@ -26,23 +26,23 @@ ms.locfileid: "45994520"
 
 Due problemi che si verificano durante l'invio di set di dati di grandi dimensioni nei messaggi del servizio Web sono:  
   
-1.  Un working set (memoria) di grandi dimensioni, dovuti alla memorizzazione dei dati nel buffer da parte del motore di serializzazione.  
+1. Un working set (memoria) di grandi dimensioni, dovuti alla memorizzazione dei dati nel buffer da parte del motore di serializzazione.  
   
-2.  Consumo di larghezza di banda non controllato, dovuto all'ingrandimento del 33 percento successivo alla codifica Base64.  
+2. Consumo di larghezza di banda non controllato, dovuto all'ingrandimento del 33 percento successivo alla codifica Base64.  
   
  Per risolvere questi problemi, implementare l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> per controllare la serializzazione e la deserializzazione. In particolare, implementare i metodi <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> per suddividere i dati.  
   
 ### <a name="to-implement-server-side-chunking"></a>Per implementare il chunking lato server  
   
-1.  Sul server, il metodo Web deve disattivare la memorizzazione nel buffer ASP.NET e restituire un tipo che implementi <xref:System.Xml.Serialization.IXmlSerializable>.  
+1. Sul server, il metodo Web deve disattivare la memorizzazione nel buffer ASP.NET e restituire un tipo che implementi <xref:System.Xml.Serialization.IXmlSerializable>.  
   
-2.  Il tipo che implementa <xref:System.Xml.Serialization.IXmlSerializable>, suddivide i dati nel metodo <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>.  
+2. Il tipo che implementa <xref:System.Xml.Serialization.IXmlSerializable>, suddivide i dati nel metodo <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>.  
   
 ### <a name="to-implement-client-side-processing"></a>Per implementare l'elaborazione lato client  
   
-1.  Modificare il metodo Web sul proxy client in modo che restituisca il tipo che implementa <xref:System.Xml.Serialization.IXmlSerializable>. È possibile usare <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> per eseguire automaticamente questa procedura ma tale operazione non viene mostrata in questo argomento.  
+1. Modificare il metodo Web sul proxy client in modo che restituisca il tipo che implementa <xref:System.Xml.Serialization.IXmlSerializable>. È possibile usare <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> per eseguire automaticamente questa procedura ma tale operazione non viene mostrata in questo argomento.  
   
-2.  Implementare il metodo <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> per leggere il flusso di dati suddiviso e scrivere i byte su disco. Questa implementazione genera inoltre eventi relativi allo stato di avanzamento che possono essere utilizzati da un controllo grafico, ad esempio un indicatore di stato.  
+2. Implementare il metodo <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> per leggere il flusso di dati suddiviso e scrivere i byte su disco. Questa implementazione genera inoltre eventi relativi allo stato di avanzamento che possono essere utilizzati da un controllo grafico, ad esempio un indicatore di stato.  
   
 ## <a name="example"></a>Esempio  
 Nell'esempio di codice riportato di seguito viene mostrato il metodo Web sul client che disattiva la memorizzazione nel buffer ASP.NET. L'esempio mostra inoltre l'implementazione lato client dell'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> che suddivide i dati nel metodo <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>.  

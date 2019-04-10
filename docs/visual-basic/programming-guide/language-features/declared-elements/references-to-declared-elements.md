@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296706"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Riferimenti a elementi dichiarati (Visual Basic)
 Quando il codice fa riferimento a un elemento dichiarato, il compilatore Visual Basic corrisponde al nome nel riferimento alla dichiarazione appropriata di tale nome. Se più di un elemento viene dichiarato con lo stesso nome, è possibile controllare quale di questi elementi è a cui fa riferimento *qualificazione* il relativo nome.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Per accedere a un elemento dichiarato dal relativo nome completo della classe  
   
-1.  Determinare il percorso in cui è stato definito l'elemento. Potrebbe trattarsi di uno spazio dei nomi o anche una gerarchia di spazi dei nomi. Nello spazio dei nomi di livello più basso, l'elemento deve essere incluso in un modulo, classe o struttura.  
+1. Determinare il percorso in cui è stato definito l'elemento. Potrebbe trattarsi di uno spazio dei nomi o anche una gerarchia di spazi dei nomi. Nello spazio dei nomi di livello più basso, l'elemento deve essere incluso in un modulo, classe o struttura.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Determinare il percorso di qualificazione in base alla posizione dell'elemento di destinazione. Iniziare con lo spazio dei nomi di livello più alto, procedere con lo spazio dei nomi di livello più basso e terminare con il modulo, classe o struttura che contiene l'elemento di destinazione. Ogni elemento nel percorso deve contenere l'elemento che lo segue.  
+2. Determinare il percorso di qualificazione in base alla posizione dell'elemento di destinazione. Iniziare con lo spazio dei nomi di livello più alto, procedere con lo spazio dei nomi di livello più basso e terminare con il modulo, classe o struttura che contiene l'elemento di destinazione. Ogni elemento nel percorso deve contenere l'elemento che lo segue.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Preparare la stringa di qualificazione per l'elemento di destinazione. Inserire un punto (`.`) dopo ogni elemento nel percorso. L'applicazione deve avere accesso a ogni elemento nella stringa di qualificazione.  
+3. Preparare la stringa di qualificazione per l'elemento di destinazione. Inserire un punto (`.`) dopo ogni elemento nel percorso. L'applicazione deve avere accesso a ogni elemento nella stringa di qualificazione.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Scrivere l'espressione o istruzione di assegnazione che fa riferimento all'elemento di destinazione in modo normale.  
+4. Scrivere l'espressione o istruzione di assegnazione che fa riferimento all'elemento di destinazione in modo normale.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Anteporre al nome di elemento di destinazione con la stringa di qualificazione. Il nome deve seguire immediatamente il punto (`.`) che segue il modulo, classe o struttura che contiene l'elemento.  
+5. Anteporre al nome di elemento di destinazione con la stringa di qualificazione. Il nome deve seguire immediatamente il punto (`.`) che segue il modulo, classe o struttura che contiene l'elemento.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  Il compilatore Usa la stringa di qualificazione per individuare una dichiarazione di non crittografata e non ambigua a cui può trovare il riferimento all'elemento di destinazione.  
+6. Il compilatore Usa la stringa di qualificazione per individuare una dichiarazione di non crittografata e non ambigua a cui può trovare il riferimento all'elemento di destinazione.  
   
  Potrebbe anche essere necessario qualificare un riferimento al nome, se l'applicazione può accedere a più di un elemento di programmazione che ha lo stesso nome. Ad esempio, il <xref:System.Windows.Forms> e <xref:System.Web.UI.WebControls> spazi dei nomi di entrambi contengono una `Label` classe (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> e <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Se l'applicazione Usa entrambi o se definisce il proprio `Label` (classe), è necessario distinguere i diversi `Label` oggetti. Includere l'alias di importazione o dello spazio dei nomi nella dichiarazione di variabile. Nell'esempio seguente usa l'alias di importazione.  
   
@@ -195,7 +195,7 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Nomi di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Caratteristiche di elementi dichiarati](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
 - [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)

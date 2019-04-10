@@ -2,12 +2,12 @@
 title: 'Procedura: Pubblicare metadati per un servizio usando un file di configurazione'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295536"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procedura: Pubblicare metadati per un servizio usando un file di configurazione
 Questo è uno dei due argomenti che illustrano la pubblicazione di metadati per un servizio Windows Communication Foundation (WCF). Esistono due modi per specificare come un servizio dovrebbe pubblicare metadati: usando un file di configurazione o il codice. In questo argomento viene illustrato come pubblicare metadati per un servizio usando un file di configurazione.  
@@ -92,15 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Per pubblicare metadati per un servizio WCF usando un file di configurazione dell'applicazione  
   
-1.  Nel file App.config, dopo l'elemento di chiusura `</services>`, creare un elemento `<behaviors>`.  
+1. Nel file App.config, dopo l'elemento di chiusura `</services>`, creare un elemento `<behaviors>`.  
 
-2.  Nell'elemento `<behaviors>` aggiungere un elemento `<serviceBehaviors>`.  
+2. Nell'elemento `<behaviors>` aggiungere un elemento `<serviceBehaviors>`.  
 
-3.  Aggiungere un elemento `<behavior>` all'elemento `<serviceBehaviors>` e specificare un valore per l'attributo `name` dell'elemento `<behavior>`.  
+3. Aggiungere un elemento `<behavior>` all'elemento `<serviceBehaviors>` e specificare un valore per l'attributo `name` dell'elemento `<behavior>`.  
 
-4.  Aggiungere un elemento `<serviceMetadata>` all'elemento `<behavior>`. Impostare l'attributo `httpGetEnabled` su `true` e l'attributo `policyVersion` su Policy15. `httpGetEnabled` consente al servizio di rispondere alle richieste di metadati eseguite da una richiesta HTTP GET. `policyVersion` indica al servizio di conformarsi a WS-Policy 1.5 per la generazione di metadati.  
+4. Aggiungere un elemento `<serviceMetadata>` all'elemento `<behavior>`. Impostare l'attributo `httpGetEnabled` su `true` e l'attributo `policyVersion` su Policy15. `httpGetEnabled` consente al servizio di rispondere alle richieste di metadati eseguite da una richiesta HTTP GET. `policyVersion` indica al servizio di conformarsi a WS-Policy 1.5 per la generazione di metadati.  
 
-5.  Aggiungere un attributo `behaviorConfiguration` all'elemento `<service>` e specificare l'attributo `name` dell'elemento `<behavior>` aggiunto al passaggio 1, come illustrato nell'esempio di codice seguente.  
+5. Aggiungere un attributo `behaviorConfiguration` all'elemento `<service>` e specificare l'attributo `name` dell'elemento `<behavior>` aggiunto al passaggio 1, come illustrato nell'esempio di codice seguente.  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  Aggiungere uno o più elementi `<endpoint>` con il contratto impostato su `IMetadataExchange`, come illustrato nell'esempio di codice seguente.  
+6. Aggiungere uno o più elementi `<endpoint>` con il contratto impostato su `IMetadataExchange`, come illustrato nell'esempio di codice seguente.  
   
     ```xml  
     <services>  
@@ -138,7 +138,7 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  Per gli endpoint dei metadati aggiunti nel passaggio precedente, impostare l'attributo `binding` su uno dei valori seguenti:  
+7. Per gli endpoint dei metadati aggiunti nel passaggio precedente, impostare l'attributo `binding` su uno dei valori seguenti:  
   
     -   `mexHttpBinding` per la pubblicazione HTTP.  
   
@@ -148,7 +148,7 @@ namespace Metadata.Samples
   
     -   `mexTcpBinding` per la pubblicazione TCP.  
   
-8.  Per gli endpoint dei metadati aggiunti in un passaggio precedente, impostare l'indirizzo su:  
+8. Per gli endpoint dei metadati aggiunti in un passaggio precedente, impostare l'indirizzo su:  
   
     -   Una stringa vuota, per usare l'indirizzo di base dell'applicazione host come punto di pubblicazione, se l'indirizzo di base corrisponde all'associazione di metadati.  
   
@@ -162,7 +162,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>Per usare endpoint predefiniti  
   
-1.  Per configurare metadati in un servizio che usa endpoint predefiniti, specificare <xref:System.ServiceModel.Description.ServiceMetadataBehavior> nel file di configurazione come nell'esempio precedente, senza però specificare alcun endpoint. Il file di configurazione sarà quindi simile al seguente.  
+1. Per configurare metadati in un servizio che usa endpoint predefiniti, specificare <xref:System.ServiceModel.Description.ServiceMetadataBehavior> nel file di configurazione come nell'esempio precedente, senza però specificare alcun endpoint. Il file di configurazione sarà quindi simile al seguente.  
   
     ```xml  
     <configuration>  

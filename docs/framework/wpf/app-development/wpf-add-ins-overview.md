@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304805"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 <a name="Introduction"></a> .NET Framework include un modello di componente aggiuntivo che gli sviluppatori possono usare per creare applicazioni che supportano l'estendibilità mediante componenti aggiuntivi. Questo modello consente di creare componenti aggiuntivi che si integrano con le funzionalità dell'applicazione estendendole. In alcuni scenari, le applicazioni devono anche visualizzare le interfacce utente fornite dai componenti aggiuntivi. In questo argomento viene illustrato come WPF integra il modello di componente aggiuntivo .NET Framework per consentire questi scenari, l'architettura sottostante, i vantaggi e le relative limitazioni.  
@@ -73,7 +73,7 @@ ms.locfileid: "59091616"
 ## <a name="wpf-add-ins"></a>Componenti aggiuntivi WPF  
  WPF, in combinazione con il modello .NET Framework aggiuntivo, consente di soddisfare un'ampia gamma di scenari che richiedono l'hosting di applicazioni per visualizzare le interfacce utente dai componenti aggiuntivi. In particolare, questi scenari vengono gestiti da WPF con i due modelli di programmazione seguenti:  
   
-1.  **Componente aggiuntivo che restituisce un'interfaccia utente**. Un componente aggiuntivo restituisce un'interfaccia utente all'applicazione host tramite una chiamata al metodo, come definito dal contratto. Questo scenario viene usato nei casi seguenti:  
+1. **Componente aggiuntivo che restituisce un'interfaccia utente**. Un componente aggiuntivo restituisce un'interfaccia utente all'applicazione host tramite una chiamata al metodo, come definito dal contratto. Questo scenario viene usato nei casi seguenti:  
   
     -   L'aspetto di un'interfaccia utente che viene restituita da un componente aggiuntivo è dipenda da dati o condizioni che esiste solo in fase di esecuzione, ad esempio in modo dinamico i report generati.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091616"
   
     -   Il componente aggiuntivo principalmente esegue un servizio per l'applicazione host e segnala lo stato all'applicazione host con un'interfaccia utente.  
   
-2.  **Componente aggiuntivo che costituisce un'interfaccia utente**. Un componente aggiuntivo è un'interfaccia utente, come definito dal contratto. Questo scenario viene usato nei casi seguenti:  
+2. **Componente aggiuntivo che costituisce un'interfaccia utente**. Un componente aggiuntivo è un'interfaccia utente, come definito dal contratto. Questo scenario viene usato nei casi seguenti:  
   
     -   Un componente aggiuntivo non fornisce alcun servizio eccetto la sua visualizzazione, come nel caso di un annuncio.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091616"
   
  I tipi WPF UI non sono utilizzabili in remoto. Per risolvere il problema, WPF offre il modello di componente aggiuntivo .NET Framework per abilitare creati dai componenti aggiuntivi di WPF UI a essere visualizzate dalle applicazioni host. Questo supporto è fornito da WPF da due tipi: i <xref:System.AddIn.Contract.INativeHandleContract> interfaccia e due metodi statici implementati dal <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. A livello generale, questi tipi e metodi vengono usati nel modo seguente:  
   
-1.  WPF richiede che le interfacce utente fornite dai componenti aggiuntivi siano classi che derivano direttamente o indirettamente da <xref:System.Windows.FrameworkElement>, ad esempio forme, controlli, controlli utente, pannelli di layout e pagine.  
+1. WPF richiede che le interfacce utente fornite dai componenti aggiuntivi siano classi che derivano direttamente o indirettamente da <xref:System.Windows.FrameworkElement>, ad esempio forme, controlli, controlli utente, pannelli di layout e pagine.  
   
-2.  Ogni volta che il contratto dichiara che un'interfaccia utente verrà passata tra il componente aggiuntivo e l'applicazione host, è necessario dichiararla come un <xref:System.AddIn.Contract.INativeHandleContract> (non un <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> è una rappresentazione utilizzabile in remoto il componente aggiuntivo dell'interfaccia utente di cui può essere passato attraverso limiti di isolamento.  
+2. Ogni volta che il contratto dichiara che un'interfaccia utente verrà passata tra il componente aggiuntivo e l'applicazione host, è necessario dichiararla come un <xref:System.AddIn.Contract.INativeHandleContract> (non un <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> è una rappresentazione utilizzabile in remoto il componente aggiuntivo dell'interfaccia utente di cui può essere passato attraverso limiti di isolamento.  
   
-3.  Prima di essere passato dal dominio applicazione del componente aggiuntivo, un <xref:System.Windows.FrameworkElement> viene fornito come un <xref:System.AddIn.Contract.INativeHandleContract> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+3. Prima di essere passato dal dominio applicazione del componente aggiuntivo, un <xref:System.Windows.FrameworkElement> viene fornito come un <xref:System.AddIn.Contract.INativeHandleContract> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-4.  Dopo essere passati al dominio dell'applicazione host, il <xref:System.AddIn.Contract.INativeHandleContract> devono essere convertiti come un <xref:System.Windows.FrameworkElement> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
+4. Dopo essere passati al dominio dell'applicazione host, il <xref:System.AddIn.Contract.INativeHandleContract> devono essere convertiti come un <xref:System.Windows.FrameworkElement> chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
   
  La modalità <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, e <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> vengono usati dipende dallo scenario specifico. Le sezioni seguenti forniscono informazioni dettagliate per ogni modello di programmazione.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091616"
 ## <a name="add-in-returns-a-user-interface"></a>Componente aggiuntivo che restituisce un'interfaccia utente  
  Per un componente aggiuntivo restituire un'interfaccia utente a un'applicazione host, è necessario quanto segue:  
   
-1.  L'applicazione host, il componente aggiuntivo e pipeline devono essere creati, come descritto da .NET Framework [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentazione.  
+1. L'applicazione host, il componente aggiuntivo e pipeline devono essere creati, come descritto da .NET Framework [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentazione.  
   
-2.  Il contratto deve implementare <xref:System.AddIn.Contract.IContract> e, per restituire un'interfaccia utente, il contratto deve dichiarare un metodo con un valore restituito di tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Il contratto deve implementare <xref:System.AddIn.Contract.IContract> e, per restituire un'interfaccia utente, il contratto deve dichiarare un metodo con un valore restituito di tipo <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  L'interfaccia utente che viene passato tra il componente aggiuntivo e l'applicazione host deve derivare direttamente o indirettamente da <xref:System.Windows.FrameworkElement>.  
+3. L'interfaccia utente che viene passato tra il componente aggiuntivo e l'applicazione host deve derivare direttamente o indirettamente da <xref:System.Windows.FrameworkElement>.  
   
-4.  L'interfaccia utente restituito dal componente aggiuntivo deve essere convertito da un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> prima di oltrepassare il limite di isolamento.  
+4. L'interfaccia utente restituito dal componente aggiuntivo deve essere convertito da un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> prima di oltrepassare il limite di isolamento.  
   
-5.  L'interfaccia utente che viene restituito deve essere convertito da un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> dopo aver oltrepassato il limite di isolamento.  
+5. L'interfaccia utente che viene restituito deve essere convertito da un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> dopo aver oltrepassato il limite di isolamento.  
   
-6.  L'applicazione host Visualizza l'oggetto restituito <xref:System.Windows.FrameworkElement>.  
+6. L'applicazione host Visualizza l'oggetto restituito <xref:System.Windows.FrameworkElement>.  
   
  Per un esempio che illustra come implementare un componente aggiuntivo che restituisce un'interfaccia utente, vedere [creare un componente aggiuntivo che restituisce un'interfaccia utente](how-to-create-an-add-in-that-returns-a-ui.md).  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091616"
 ## <a name="add-in-is-a-user-interface"></a>Componente aggiuntivo che costituisce un'interfaccia utente  
  Quando un componente aggiuntivo è un'interfaccia utente, è necessario quanto segue:  
   
-1.  L'applicazione host, il componente aggiuntivo e pipeline devono essere creati, come descritto da .NET Framework [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentazione.  
+1. L'applicazione host, il componente aggiuntivo e pipeline devono essere creati, come descritto da .NET Framework [componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) documentazione.  
   
-2.  L'interfaccia del contratto per il componente aggiuntivo deve implementare <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. L'interfaccia del contratto per il componente aggiuntivo deve implementare <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Il componente aggiuntivo che viene passato all'applicazione host deve derivare direttamente o indirettamente da <xref:System.Windows.FrameworkElement>.  
+3. Il componente aggiuntivo che viene passato all'applicazione host deve derivare direttamente o indirettamente da <xref:System.Windows.FrameworkElement>.  
   
-4.  Il componente aggiuntivo deve essere convertito da un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> prima di oltrepassare il limite di isolamento.  
+4. Il componente aggiuntivo deve essere convertito da un <xref:System.Windows.FrameworkElement> a un <xref:System.AddIn.Contract.INativeHandleContract> prima di oltrepassare il limite di isolamento.  
   
-5.  Il componente aggiuntivo deve essere convertito da un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> dopo aver oltrepassato il limite di isolamento.  
+5. Il componente aggiuntivo deve essere convertito da un <xref:System.AddIn.Contract.INativeHandleContract> a un <xref:System.Windows.FrameworkElement> dopo aver oltrepassato il limite di isolamento.  
   
-6.  L'applicazione host Visualizza l'oggetto restituito <xref:System.Windows.FrameworkElement>.  
+6. L'applicazione host Visualizza l'oggetto restituito <xref:System.Windows.FrameworkElement>.  
   
  Per un esempio che illustra come implementare un componente aggiuntivo che costituisce un'interfaccia utente, vedere [creare un componente aggiuntivo che costituisce un'interfaccia utente](how-to-create-an-add-in-that-is-a-ui.md).  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091616"
   
  Il passaggio successivo consiste nello specificare gli assembly della pipeline e l'assembly del componente aggiuntivo come file di contenuto [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] eseguendo questa procedura:  
   
-1.  Includere l'assembly della pipeline e del componente aggiuntivo nel progetto facendo clic con il pulsante destro del mouse su ogni cartella della pipeline in Esplora soluzioni e scegliendo **Includi nel progetto**.  
+1. Includere l'assembly della pipeline e del componente aggiuntivo nel progetto facendo clic con il pulsante destro del mouse su ogni cartella della pipeline in Esplora soluzioni e scegliendo **Includi nel progetto**.  
   
-2.  Impostare il valore per **Azione di compilazione** di ogni assembly della pipeline e del componente aggiuntivo su **Contenuto** nella finestra **Proprietà**.  
+2. Impostare il valore per **Azione di compilazione** di ogni assembly della pipeline e del componente aggiuntivo su **Contenuto** nella finestra **Proprietà**.  
   
  Il passaggio finale consiste nel configurare il manifesto dell'applicazione per includere i file di assembly della pipeline e il file di assembly del componente aggiuntivo per il download. I file devono trovarsi all'interno di cartelle nella radice della cartella contenuta nella cache [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] occupata dall'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. La configurazione può essere effettuata in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] eseguendo questa procedura:  
   
-1.  Fare clic con il pulsante destro del mouse sul progetto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], scegliere **Proprietà**, fare clic su **Pubblica** e quindi fare clic sul pulsante **File applicazione**.  
+1. Fare clic con il pulsante destro del mouse sul progetto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], scegliere **Proprietà**, fare clic su **Pubblica** e quindi fare clic sul pulsante **File applicazione**.  
   
-2.  Nella finestra di dialogo **File applicazione** impostare il valore di **Stato pubblicazione** di ogni DLL della pipeline e del componente aggiuntivo su **Includi (Auto)** e impostare il valore di **Gruppo di download** per ogni DLL della pipeline e del componente aggiuntivo su **(Obbligatorio)**.  
+2. Nella finestra di dialogo **File applicazione** impostare il valore di **Stato pubblicazione** di ogni DLL della pipeline e del componente aggiuntivo su **Includi (Auto)** e impostare il valore di **Gruppo di download** per ogni DLL della pipeline e del componente aggiuntivo su **(Obbligatorio)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uso della pipeline e del componente aggiuntivo dalla base dell'applicazione  
  Quando la pipeline e il componente aggiuntivo sono configurati per la distribuzione [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], vengono scaricati nella stessa cartella della cache [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] in cui si trova l'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Per usare la pipeline e il componente aggiuntivo dall'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], il codice [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve ottenerli dalla base dell'applicazione. I diversi tipi e membri del modello di componente aggiuntivo .NET Framework per l'uso di pipeline e componenti aggiuntivi forniscono uno speciale supporto per questo scenario. In primo luogo, il percorso è identificato dal <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valore di enumerazione. Questo valore viene usato con gli overload dei membri pertinenti del componente aggiuntivo per l'uso delle pipeline, che includono quanto segue:  

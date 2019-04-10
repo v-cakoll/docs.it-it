@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308614"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Istruzione Option Explicit (Visual Basic)
 Forza la dichiarazione esplicita di tutte le variabili in un file o è consentito dichiarare implicite delle variabili.  
@@ -47,11 +47,11 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Per impostare Option Explicit nell'IDE  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
-2.  Fare clic sulla scheda **Compila**.  
+2. Fare clic sulla scheda **Compila**.  
   
-3.  Impostare il valore di **Option Explicit** casella.  
+3. Impostare il valore di **Option Explicit** casella.  
   
  Quando si crea un nuovo progetto, il **Option Explicit** impostazione nel **compilare** scheda è impostata sul **Option Explicit** impostazione nel **VB valore predefinito è**finestra di dialogo. Per l'accesso di **valore predefinito è VB** finestra di dialogo il **strumenti** dal menu fare clic su **opzioni**. Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**, quindi fare clic su **Impostazioni predefinite di Visual Basic**. L'impostazione predefinita iniziale in **le impostazioni predefinite di Visual Basic** è `On`.  
   
@@ -71,7 +71,7 @@ Option Explicit { On | Off }
 - [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

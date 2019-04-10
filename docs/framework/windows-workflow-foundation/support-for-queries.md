@@ -2,27 +2,27 @@
 title: Supporto per le query
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307951"
 ---
 # <a name="support-for-queries"></a>Supporto per le query
 L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà note nell'archivio. Gli utenti possono eseguire query per le istanze basate su queste proprietà. Nell'elenco seguente sono contenute alcune di queste proprietà note:  
   
--   **Nome del sito.** Nome del sito Web che contiene il servizio.  
+-   **Site Name.** Nome del sito Web che contiene il servizio.  
   
--   **Percorso relativo dell'applicazione.** Percorso dell'applicazione relativo al sito Web.  
+-   **Relative Application Path.** Percorso dell'applicazione relativo al sito Web.  
   
--   **Percorso relativo del servizio.** Percorso del servizio relativo all'applicazione.  
+-   **Relative Service Path.** Percorso del servizio relativo all'applicazione.  
   
--   **Nome del servizio.** Nome del servizio.  
+-   **Service Name.** Nome del servizio.  
   
--   **Servizio Namespace.** Nome dello spazio dei nomi utilizzato dal servizio.  
+-   **Service Namespace.** Nome dello spazio dei nomi utilizzato dal servizio.  
   
--   **Computer corrente.**  
+-   **Current Machine.**  
   
 -   **Ultimo macchina**. Computer su cui l'istanza del servizio flusso di lavoro è stata eseguita l'ultima volta.  
   
@@ -39,25 +39,25 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
 ### <a name="the-instances-view"></a>Visualizzazione Instances  
  La visualizzazione Instances contiene i campi seguenti:  
   
-1.  **Id**  
+1. **Id**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
-10. **LastMachine**  
+10. **Last Machine.**  
   
 11. **ExecutionStatus**  
   
@@ -80,23 +80,23 @@ L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà not
 ### <a name="the-servicedeployments-view"></a>Visualizzazione ServiceDeployments  
  La visualizzazione ServiceDeployments contiene i campi seguenti:  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Visualizzazione InstancePromotedProperties  
  La visualizzazione InstancePromotedProperties contiene i campi seguenti. Per informazioni dettagliate sulle proprietà innalzate di livello, vedere la [Store estendibilità](store-extensibility.md) argomento.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Valore #** (un intervallo di campi da **Value1** al **Value64**).
+4. **Valore #** (un intervallo di campi da **Value1** al **Value64**).

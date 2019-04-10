@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816816"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308484"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace o il tipo specificato nelle istruzioni 'Imports a livello di progetto\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata
 Namespace o il tipo specificato nelle istruzioni 'Imports a livello di progetto\<nomeelementoqualificato >' non contiene alcun membro pubblico o non è stata trovata. Assicurarsi che lo spazio dei nomi o il tipo sia definito e contenga almeno un membro pubblico. Assicurarsi che il nome di alias non contenga altri alias.  
@@ -31,16 +31,16 @@ Namespace o il tipo specificato nelle istruzioni 'Imports a livello di progetto\
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Aprire il **creazione progetti** e passare alle **riferimento** pagina.  
+1. Aprire il **creazione progetti** e passare alle **riferimento** pagina.  
   
-2.  Nel **spazi dei nomi importati** sezione, verificare che l'elemento contenitore è accessibile dal progetto.  
+2. Nel **spazi dei nomi importati** sezione, verificare che l'elemento contenitore è accessibile dal progetto.  
   
-3.  Verificare che l'elemento contenitore espone ad almeno uno `Public` membro.  
+3. Verificare che l'elemento contenitore espone ad almeno uno `Public` membro.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Pagina Riferimenti, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [Riferimenti (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

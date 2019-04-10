@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309680"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Procedura: Hosting di un servizio WCF in WAS
 Questo argomento descrive i passaggi di base necessari per creare un servizio Windows Communication Foundation (WCF) ospitato in Internet Information Services (IIS). Questo argomento presuppone la conoscenza di IIS e la comprensione dello strumento di gestione IIS per creare e gestire applicazioni IIS. Per altre informazioni su IIS vedere [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un servizio WCF che viene eseguito nell'ambiente IIS sfrutta appieno le funzionalità IIS, quali il riciclo dei processi, interruzione dell'inattività, il monitoraggio dello stato di processo e attivazione basata su messaggi. Questa opzione di hosting richiede che IIS sia configurato correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. È possibile utilizzare l'hosting IIS solo con un trasporto HTTP.  
@@ -21,28 +21,28 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Per creare un servizio ospitato da IIS  
   
-1.  Confermare che IIS sia installato e in esecuzione nel computer. Per altre informazioni sull'installazione e configurazione di IIS vedere [Installing and Configuring IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. Confermare che IIS sia installato e in esecuzione nel computer. Per altre informazioni sull'installazione e configurazione di IIS vedere [Installing and Configuring IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  Creare una nuova cartella per i file dell'applicazione denominata "IISHostedCalcService", assicurarsi che [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] abbia accesso al contenuto della cartella e utilizzare lo strumento di gestione IIS per creare una nuova applicazione IIS situata fisicamente in questa directory dell'applicazione. Quando si crea un alias per la directory dell'applicazione utilizzare "IISHostedCalc".  
+2. Creare una nuova cartella per i file dell'applicazione denominata "IISHostedCalcService", assicurarsi che [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] abbia accesso al contenuto della cartella e utilizzare lo strumento di gestione IIS per creare una nuova applicazione IIS situata fisicamente in questa directory dell'applicazione. Quando si crea un alias per la directory dell'applicazione utilizzare "IISHostedCalc".  
   
-3.  Creare un nuovo file "service.svc" nella directory dell'applicazione. Modificare questo file aggiungendo il codice seguente @ServiceHost elemento.  
+3. Creare un nuovo file "service.svc" nella directory dell'applicazione. Modificare questo file aggiungendo il codice seguente @ServiceHost elemento.  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
     ```  
   
-4.  Creare una sottodirectory App_Code all'interno della directory dell'applicazione.  
+4. Creare una sottodirectory App_Code all'interno della directory dell'applicazione.  
   
-5.  Creare un file di codice denominato Service.cs nella sottodirectory App_Code.  
+5. Creare un file di codice denominato Service.cs nella sottodirectory App_Code.  
   
-6.  Aggiungere le istruzioni using riportate di seguito all'inizio del file Service.cs.  
+6. Aggiungere le istruzioni using riportate di seguito all'inizio del file Service.cs.  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-7.  Aggiungere la seguente dichiarazione dello spazio dei nomi dopo le istruzioni using.  
+7. Aggiungere la seguente dichiarazione dello spazio dei nomi dopo le istruzioni using.  
   
     ```csharp  
     namespace Microsoft.ServiceModel.Samples  
@@ -50,7 +50,7 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
     }  
     ```  
   
-8.  Definire il contratto di servizio all'interno della dichiarazione dello spazio dei nomi come mostrato nel codice seguente.  
+8. Definire il contratto di servizio all'interno della dichiarazione dello spazio dei nomi come mostrato nel codice seguente.  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  

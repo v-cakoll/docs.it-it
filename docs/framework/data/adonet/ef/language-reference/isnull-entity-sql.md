@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 894d3ab91623aa4246bf7735fb1b7d04e066825a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: aaecce3ff74d64b8e07b31329ced5b5e581fca5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295094"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Consente di determinare se un'espressione di query è null.  
@@ -59,9 +59,9 @@ select c from LOB.Customer as c where c.DOB is not null
 ## <a name="example"></a>Esempio  
  Nell'esempio [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query Usa l'operatore IS NOT NULL per determinare se un'espressione di query non è null. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
   
-1.  Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Attenersi alla procedura di [come: Eseguire una Query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
+2. Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :  
   
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   

@@ -2,12 +2,12 @@
 title: Architettura e progettazione
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096137"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307574"
 ---
 # <a name="architecture-and-design"></a>Architettura e progettazione
 Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  Il modello che viene seguito per la visita di questi nodi è il seguente:  
   
-1.  Visitare l'input relazionale e ottenere l'oggetto SqlSelectStatement risultante. L'input in un nodo relazionale potrebbe essere uno degli elementi seguenti:  
+1. Visitare l'input relazionale e ottenere l'oggetto SqlSelectStatement risultante. L'input in un nodo relazionale potrebbe essere uno degli elementi seguenti:  
   
     -   Un nodo relazionale che include un extent, ad esempio un oggetto DbScanExpression. Quando si visita un nodo di questo tipo, viene restituito un oggetto SqlSelectStatement.  
   
     -   Un'espressione dell'operazione di impostazione, ad esempio UNION ALL. Il risultato deve essere racchiuso tra parentesi e inserito nella clausola FROM di un nuovo oggetto SqlSelectStatement.  
   
-2.  Controllare se il nodo corrente può essere aggiunto all'oggetto SqlSelectStatement prodotto dall'input. Questa procedura viene descritta nella sezione intitolata Raggruppamento di espressioni nelle istruzioni SQL. Se non può essere aggiunto,  
+2. Controllare se il nodo corrente può essere aggiunto all'oggetto SqlSelectStatement prodotto dall'input. Questa procedura viene descritta nella sezione intitolata Raggruppamento di espressioni nelle istruzioni SQL. Se non può essere aggiunto,  
   
     -   Visualizzare l'oggetto SqlSelectStatement corrente.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   Inserire il nuovo oggetto in cima allo stack.  
   
-3.  Reindirizzare l'associazione di espressioni di input nel simbolo corretto dall'input. Queste informazioni si trovano nell'oggetto SqlSelectStatement.  
+3. Reindirizzare l'associazione di espressioni di input nel simbolo corretto dall'input. Queste informazioni si trovano nell'oggetto SqlSelectStatement.  
   
-4.  Aggiungere un nuovo ambito SymbolTable.  
+4. Aggiungere un nuovo ambito SymbolTable.  
   
-5.  Visitare la parte non di input dell'espressione, ad esempio Projection e Predicate.  
+5. Visitare la parte non di input dell'espressione, ad esempio Projection e Predicate.  
   
-6.  Visualizzare tutti gli oggetti aggiunti agli stack globali.  
+6. Visualizzare tutti gli oggetti aggiunti agli stack globali.  
   
  Non esiste un diretto equivalente di DbSkipExpression in SQL. Logicamente viene convertito in:  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  Elaborare quindi gli input uno alla volta. Per ogni input:  
   
-1.  Visitare l'input.  
+1. Visitare l'input.  
   
-2.  Completare l'elaborazione del risultato della visita dell'input chiamando il metodo ProcessJoinInputResult, responsabile della gestione della tabella dei simboli, dopo aver visitato un figlio di un'espressione di join e possibilmente aver completato l'oggetto SqlSelectStatement prodotto dal figlio. Il risultato del figlio potrebbe essere uno dei seguenti:  
+2. Completare l'elaborazione del risultato della visita dell'input chiamando il metodo ProcessJoinInputResult, responsabile della gestione della tabella dei simboli, dopo aver visitato un figlio di un'espressione di join e possibilmente aver completato l'oggetto SqlSelectStatement prodotto dal figlio. Il risultato del figlio potrebbe essere uno dei seguenti:  
   
     -   Un oggetto SqlSelectStatement diverso da quello al quale verrà aggiunto il padre. In questo caso, può essere necessario completarlo aggiungendo colonne predefinite. Se l'input è un join, è necessario creare un nuovo simbolo di join. In caso contrario, creare un simbolo normale.  
   

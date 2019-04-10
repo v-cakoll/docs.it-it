@@ -3,12 +3,12 @@ title: 'Procedura: Abilitare la traccia WIF'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310265"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Procedura: Abilitare la traccia WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -55,19 +55,19 @@ ms.locfileid: "54605168"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
-1.  Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
+1. Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
+2. Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
   
-3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
+3. In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-4.  Fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
+4. Fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
   
-5.  Verrà visualizzata la finestra **Identity and Access**. In **Providers** (Provider) selezionare **Test your application with the Local Development STS** (Testare l'applicazione con il servizio token di sicurezza per lo sviluppo locale) e quindi fare clic su **Applica**.  
+5. Verrà visualizzata la finestra **Identity and Access**. In **Providers** (Provider) selezionare **Test your application with the Local Development STS** (Testare l'applicazione con il servizio token di sicurezza per lo sviluppo locale) e quindi fare clic su **Applica**.  
   
-6.  Creare una nuova cartella denominata **registri** nella radice del **c:** unità, ad esempio illustrato: **C:\Logs.**  
+6. Creare una nuova cartella denominata **registri** nella radice del **c:** unità, ad esempio illustrato: **C:\Logs.**  
   
-7.  Aggiungere l'elemento **\<system.diagnostics>** seguente al file di configurazione *Web.config* subito dopo l'elemento di chiusura **\</configSections>**, come illustrato:  
+7. Aggiungere l'elemento **\<system.diagnostics>** seguente al file di configurazione *Web.config* subito dopo l'elemento di chiusura **\</configSections>**, come illustrato:  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605168"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>Per testare il corretto funzionamento della traccia per l'applicazione ASP.NET abilitata per WIF  
   
-1.  Eseguire la soluzione premendo **F5**. Dovrebbe essere visualizzata la home page predefinita di ASP.NET e l'autenticazione dovrebbe avvenire automaticamente con il nome utente *Terry*, ovvero l'utente predefinito restituito dal servizio token di sicurezza per lo sviluppo.  
+1. Eseguire la soluzione premendo **F5**. Dovrebbe essere visualizzata la home page predefinita di ASP.NET e l'autenticazione dovrebbe avvenire automaticamente con il nome utente *Terry*, ovvero l'utente predefinito restituito dal servizio token di sicurezza per lo sviluppo.  
   
-2.  Chiudere la finestra del browser e passare quindi alla cartella **C:\logs**. Aprire il file **C:\logs\WIF.xml** con un editor di testo.  
+2. Chiudere la finestra del browser e passare quindi alla cartella **C:\logs**. Aprire il file **C:\logs\WIF.xml** con un editor di testo.  
   
-3.  Controllare il file **WIF.xml** e verificare che contenga voci che iniziano con **\<E2ETraceEvent>**. Queste tracce conterranno elementi **\<TraceRecord >** con le descrizioni per l'attività di traccia, ad esempio **Convalida di SecurityToken**.
+3. Controllare il file **WIF.xml** e verificare che contenga voci che iniziano con **\<E2ETraceEvent>**. Queste tracce conterranno elementi **\<TraceRecord >** con le descrizioni per l'attività di traccia, ad esempio **Convalida di SecurityToken**.

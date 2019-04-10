@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_FileExceedsMaximumSize
 ms.assetid: 61747a9c-e460-424b-a365-73cdba9dd428
-ms.openlocfilehash: 6b8a7682e2764910551cfd9730e82293d1b2ca1a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 587b35282c7e78da1fdf4ccf9d08214e5665119c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026679"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298604"
 ---
 # <a name="unable-to-write-to-log-file-because-writing-to-it-would-cause-it-to-exceed-maximumsize-value"></a>Impossibile scrivere nel file di log. Verrebbe superato il valore MaximumSize
 La classe <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> non è riuscita a scrivere nel file di log perché:  
@@ -22,11 +22,11 @@ La classe <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> non è riusc
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Archiviare i log esistenti e rimuoverli dal computer per consentire all'oggetto <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> di creare nuovi log.  
+1. Archiviare i log esistenti e rimuoverli dal computer per consentire all'oggetto <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> di creare nuovi log.  
   
-2.  Modificare il valore della proprietà <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> per consentire log di dimensioni maggiori.  
+2. Modificare il valore della proprietà <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> per consentire log di dimensioni maggiori.  
   
-3.  Impostare la proprietà <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> su <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages> per eliminare i messaggi senza avviso se il log è troppo grande.  
+3. Impostare la proprietà <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> su <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages> per eliminare i messaggi senza avviso se il log è troppo grande.  
   
 ## <a name="see-also"></a>Vedere anche
 

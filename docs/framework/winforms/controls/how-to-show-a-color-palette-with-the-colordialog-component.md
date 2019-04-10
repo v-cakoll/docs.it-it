@@ -14,23 +14,23 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: fcaf5da9958cf66fb63bd753dc94cba9c10f62f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 587b2c3a502ec8a1cb2f4f7c0d981baa0f18ead6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096036"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298019"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Procedura: Visualizzare una tavolozza dei colori con il componente ColorDialog
 Il [ColorDialog](colordialog-component-windows-forms.md) componente Visualizza una tavolozza di colori e restituisce una proprietà che contiene il colore selezionato dall'utente.  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>Per scegliere un colore con il componente ColorDialog  
   
-1.  Visualizzare la finestra di dialogo tramite il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (metodo).  
+1. Visualizzare la finestra di dialogo tramite il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> (metodo).  
   
-2.  Usare il <xref:System.Windows.Forms.DialogResult> proprietà per determinare come è stata chiusa la finestra di dialogo.  
+2. Usare il <xref:System.Windows.Forms.DialogResult> proprietà per determinare come è stata chiusa la finestra di dialogo.  
   
-3.  Usare la <xref:System.Windows.Forms.ColorDialog.Color%2A> proprietà del <xref:System.Windows.Forms.ColorDialog> componenti su cui impostare il colore scelto.  
+3. Usare la <xref:System.Windows.Forms.ColorDialog.Color%2A> proprietà del <xref:System.Windows.Forms.ColorDialog> componenti su cui impostare il colore scelto.  
   
      Nell'esempio seguente, il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Click> gestore eventi apre un <xref:System.Windows.Forms.ColorDialog> componente. Quando un colore è selezionata e l'utente sceglie **OK**, il <xref:System.Windows.Forms.Button> colore di sfondo del controllo è impostato sul colore scelto. L'esempio presuppone che il form contenga un <xref:System.Windows.Forms.Button> controllo e un <xref:System.Windows.Forms.ColorDialog> componente.  
   

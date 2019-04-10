@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086807"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305956"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procedura: Implementare la convalida con il controllo DataGrid
 Il <xref:System.Windows.Controls.DataGrid> controllo consente di eseguire la convalida a livello di cella e di riga. Con la convalida a livello di cella, si convalidano le singole proprietà di un oggetto dati associato quando un utente aggiorna un valore. Con la convalida a livello di riga, si convalidano gli oggetti di tutti i dati quando un utente esegue il commit delle modifiche a una riga. È anche possibile fornire feedback visivo personalizzato per gli errori di convalida o usare il feedback visivo predefinito che il <xref:System.Windows.Controls.DataGrid> fornisce controllo.  
@@ -42,14 +42,14 @@ Il <xref:System.Windows.Controls.DataGrid> controllo consente di eseguire la con
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Per convalidare più valori in una singola riga  
   
-1.  Implementare un <xref:System.Windows.Controls.ValidationRule> sottoclasse che controlla più proprietà dell'oggetto dati associato. Nel <xref:System.Windows.Controls.ValidationRule.Validate%2A> eseguire il cast di implementazione del metodo, il `value` valore del parametro da un <xref:System.Windows.Data.BindingGroup> istanza. È quindi possibile accedere all'oggetto dati attraverso il <xref:System.Windows.Data.BindingGroup.Items%2A> proprietà.  
+1. Implementare un <xref:System.Windows.Controls.ValidationRule> sottoclasse che controlla più proprietà dell'oggetto dati associato. Nel <xref:System.Windows.Controls.ValidationRule.Validate%2A> eseguire il cast di implementazione del metodo, il `value` valore del parametro da un <xref:System.Windows.Data.BindingGroup> istanza. È quindi possibile accedere all'oggetto dati attraverso il <xref:System.Windows.Data.BindingGroup.Items%2A> proprietà.  
   
      L'esempio seguente illustra questo processo di convalida se il `StartDate` valore della proprietà per un `Course` oggetto è precedente relativo `EndDate` valore della proprietà.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Aggiungere la regola di convalida per il <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> raccolta. Il <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> proprietà fornisce accesso diretto al <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> proprietà di un <xref:System.Windows.Data.BindingGroup> istanza che raggruppa tutte le associazioni utilizzate dal controllo.  
+2. Aggiungere la regola di convalida per il <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> raccolta. Il <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> proprietà fornisce accesso diretto al <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> proprietà di un <xref:System.Windows.Data.BindingGroup> istanza che raggruppa tutte le associazioni utilizzate dal controllo.  
   
      L'esempio seguente imposta il <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> proprietà in XAML. Il <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> è impostata su <xref:System.Windows.Controls.ValidationStep.UpdatedValue> in modo che la convalida viene eseguita solo dopo aver aggiornato l'oggetto dati associato.  
   

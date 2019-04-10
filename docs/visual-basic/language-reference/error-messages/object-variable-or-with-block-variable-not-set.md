@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831657"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297928"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Variabile oggetto o variabile del blocco With non impostata
 Riferimento a una variabile oggetto non valido.   L'errore può essere determinato da numerose cause:  
@@ -36,7 +36,7 @@ Riferimento a una variabile oggetto non valido.   L'errore può essere determina
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Impostare `Option Strict` a `On` aggiungendo il codice seguente all'inizio del file:  
+1. Impostare `Option Strict` a `On` aggiungendo il codice seguente all'inizio del file:  
   
 ```vb  
 Option Strict On  
@@ -44,13 +44,13 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  Se non si vuole abilitare `Option Strict`, il codice per tutte le variabili che sono stati specificati senza un tipo di ricerca (`Dim x` invece di `Dim x As String`) e aggiungere il tipo desiderato alla dichiarazione.  
+2. Se non si vuole abilitare `Option Strict`, il codice per tutte le variabili che sono stati specificati senza un tipo di ricerca (`Dim x` invece di `Dim x As String`) e aggiungere il tipo desiderato alla dichiarazione.  
   
-3.  Assicurarsi che invece non si fa riferimento a una variabile oggetto che è stata impostata su `Nothing`.  Eseguire ricerche nel codice per la parola chiave `Nothing`e modificare il codice in modo che l'oggetto non è impostato su `Nothing` fino a quando non dopo che si è fatto riferimento.  
+3. Assicurarsi che invece non si fa riferimento a una variabile oggetto che è stata impostata su `Nothing`.  Eseguire ricerche nel codice per la parola chiave `Nothing`e modificare il codice in modo che l'oggetto non è impostato su `Nothing` fino a quando non dopo che si è fatto riferimento.  
   
-4.  Assicurarsi che tutte le variabili di matrice vengono dimensionate prima di accedervi. È possibile assegnare una dimensione al momento della creazione della matrice (`Dim x(5) As String` invece di `Dim x() As String`), oppure usare il `ReDim` parola chiave per impostare le dimensioni della matrice prima che si accede.  
+4. Assicurarsi che tutte le variabili di matrice vengono dimensionate prima di accedervi. È possibile assegnare una dimensione al momento della creazione della matrice (`Dim x(5) As String` invece di `Dim x() As String`), oppure usare il `ReDim` parola chiave per impostare le dimensioni della matrice prima che si accede.  
   
-5.  Assicurarsi che il `With` blocco viene inizializzato tramite l'esecuzione di `With` punto di ingresso di istruzione.  
+5. Assicurarsi che il `With` blocco viene inizializzato tramite l'esecuzione di `With` punto di ingresso di istruzione.  
   
 ## <a name="see-also"></a>Vedere anche
 

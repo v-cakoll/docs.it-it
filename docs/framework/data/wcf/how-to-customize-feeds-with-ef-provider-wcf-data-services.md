@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 186b921f508b1a4b05e766c4f1a3c9e65de04722
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 38550b3b7d6fd7c6808db174017499ec71685140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299852"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Procedura: Personalizzare i feed con il Provider di Entity Framework (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Consente di personalizzare la serializzazione Atom in una risposta del servizio dati in modo che le proprietà di un'entità possano essere mappate agli elementi inutilizzati definiti nel protocollo AtomPub. In questo argomento viene illustrato come definire attributi di mapping per i tipi di entità in un modello di dati definito in un file con estensione edmx tramite il provider di Entity Framework. Per altre informazioni, vedere [personalizzazione di Feed](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
@@ -19,21 +19,21 @@ ms.locfileid: "59089289"
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Per modificare manualmente il file Northwind.edmx per aggiungere attributi di personalizzazione dei feed  
   
-1.  In **Esplora soluzioni**, fare doppio clic il `Northwind.edmx` del file e quindi fare clic su **Apri con**.  
+1. In **Esplora soluzioni**, fare doppio clic il `Northwind.edmx` del file e quindi fare clic su **Apri con**.  
   
-2.  Nel **Apri con - Northwind** finestra di dialogo **Editor XML**, quindi fare clic su **OK**.  
+2. Nel **Apri con - Northwind** finestra di dialogo **Editor XML**, quindi fare clic su **OK**.  
   
-3.  Individuare l'elemento `ConceptualModels` e sostituire il tipo di entità `Customers` esistente con l'elemento seguente che contiene gli attributi per il mapping della personalizzazione dei feed:  
+3. Individuare l'elemento `ConceptualModels` e sostituire il tipo di entità `Customers` esistente con l'elemento seguente che contiene gli attributi per il mapping della personalizzazione dei feed:  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  Salvare le modifiche e chiudere il file Northwind.edmx.  
+4. Salvare le modifiche e chiudere il file Northwind.edmx.  
   
-5.  (Facoltativo) Fare clic sul file Northwind edmx e quindi fare clic su **Esegui strumento personalizzato**.  
+5. (Facoltativo) Fare clic sul file Northwind edmx e quindi fare clic su **Esegui strumento personalizzato**.  
   
      Il file del livello di oggetti verrà rigenerato, poiché potrebbe essere necessario.  
   
-6.  Ricompilare il progetto.  
+6. Ricompilare il progetto.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio precedente per l'URI `http://myservice/Northwind.svc/Customers('ALFKI')` viene restituito il risultato seguente.  

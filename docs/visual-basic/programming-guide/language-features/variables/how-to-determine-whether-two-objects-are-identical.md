@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295036"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Procedura: Determinare se due oggetti sono identici (Visual Basic)
 In Visual Basic, due riferimenti a variabili sono considerati identici se i relativi puntatori sono gli stessi, vale a dire, se entrambe le variabili puntano alla stessa istanza di classe in memoria. Ad esempio, in un'applicazione Windows Forms, si potrebbe voler eseguire un confronto per determinare se l'istanza corrente (`Me`) è quello utilizzato per una particolare istanza, ad esempio `Form2`.  
@@ -22,9 +22,9 @@ In Visual Basic, due riferimenti a variabili sono considerati identici se i rela
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>Per determinare se due oggetti sono identici  
   
-1.  Configurare un `Boolean` espressione da testare i due oggetti.  
+1. Configurare un `Boolean` espressione da testare i due oggetti.  
   
-2.  Nell'espressione test, usare il `Is` operatore con i due oggetti come operandi.  
+2. Nell'espressione test, usare il `Is` operatore con i due oggetti come operandi.  
   
      `Is` Restituisce `True` se gli oggetti puntano alla stessa istanza di classe.  
   
@@ -33,9 +33,9 @@ In Visual Basic, due riferimenti a variabili sono considerati identici se i rela
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>Per determinare se due oggetti non sono identici  
   
-1.  Configurare un `Boolean` espressione da testare i due oggetti.  
+1. Configurare un `Boolean` espressione da testare i due oggetti.  
   
-2.  Nell'espressione test, usare il `IsNot` operatore con i due oggetti come operandi.  
+2. Nell'espressione test, usare il `IsNot` operatore con i due oggetti come operandi.  
   
      `IsNot` Restituisce `True` se gli oggetti non puntano alla stessa istanza di classe.  
   
@@ -52,7 +52,7 @@ In Visual Basic, due riferimenti a variabili sono considerati identici se i rela
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Operatore Is](../../../../visual-basic/language-reference/operators/is-operator.md)

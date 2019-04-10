@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310187"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limita le conversioni di tipo di dati implicite per solo conversioni di ampliamento, non consente l'associazione tardiva e la tipizzazione implicita che comporta un `Object` tipo.  
@@ -69,9 +69,9 @@ Option Strict { On | Off }
   
 -   [Operatore +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [Operatore \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = (Operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [Operatore /= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 -   [Tipo di dati Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
@@ -97,9 +97,9 @@ Option Strict { On | Off }
 |Tipo di dati specificato?|Inizializzatore specificato?|Esempio|Risultato|  
 |---|---|---|---|  
 |No|No|`Dim qty`|Se `Option Strict` è disabilitato (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
-|No|Sì|`Dim qty = 5`|Se `Option Infer` è abilitato (impostazione predefinita), alla variabile viene assegnato il tipo di dati dell'inizializzatore. Visualizzare [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
-|Sì|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Per altre informazioni, vedere [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Sì|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
+|No|Yes|`Dim qty = 5`|Se `Option Infer` è abilitato (impostazione predefinita), alla variabile viene assegnato il tipo di dati dell'inizializzatore. Visualizzare [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
+|Yes|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Per altre informazioni, vedere [istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md).|  
+|Yes|Yes|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
   
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Quando non è presente un'istruzione Option Strict  
  Se il codice sorgente non contiene un `Option Strict` istruzione, il **Option strict** impostazione il [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) viene usato. Il **pagina compilazione** dispone di impostazioni che consentono un maggiore controllo delle condizioni che generano un errore.  
@@ -109,18 +109,18 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Per impostare Option Strict nell'IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
-2.  Nel **Compile** scheda, impostare il valore **Option Strict** casella.  
+2. Nel **Compile** scheda, impostare il valore **Option Strict** casella.  
   
 ### <a name="conditions"></a> Per impostare le configurazioni di avviso nell'IDE  
  Quando si usa la [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) anziché un `Option Strict` istruzione, si ha un maggiore controllo delle condizioni che generano errori. Il **configurazioni avvisi** sezione il **pagina compilazione** dispone di impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione quando `Option Strict` si trova in. Queste impostazioni sono le seguenti:  
   
 -   **Conversione implicita**  
   
--   **Binding tardivo. La chiamata potrebbe non riuscire in fase di esecuzione.**  
+-   **Associazione tardiva: la chiamata potrebbe avere esito negativo al runtime**  
   
--   **Tipo implicito. Verrà utilizzato oggetto.**  
+-   **Tipo implicito: presunto oggetto**  
   
  Quando si imposta **Option Strict** su **On**, tutte e tre queste impostazioni di configurazione degli avvisi vengono impostate su **Errore**. Quando si imposta **Option Strict** su **Off**, tutte e tre le impostazioni vengono impostate su **Nessuno**.  
   
@@ -153,11 +153,11 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Pagina Compilazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Compilazione (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Procedura: Accedere ai membri di un oggetto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Espressioni incorporate in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

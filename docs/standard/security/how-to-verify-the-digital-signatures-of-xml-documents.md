@@ -16,53 +16,53 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307769"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedura: Verificare le firme digitali dei documenti XML
 È possibile usare le classi nello spazio dei nomi <xref:System.Security.Cryptography.Xml> per verificare i dati XML firmati con una firma digitale. Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma. Per altre informazioni sullo standard XMLDSIG, vedere la specifica World Wide Web Consortium (W3C) al <https://www.w3.org/TR/xmldsig-core/>.
   
- L'esempio di codice nella procedura mostra come verificare una firma digitale XML contenuta in un elemento <`Signature`>.  L'esempio recupera una chiave pubblica RSA da un contenitore di chiavi, quindi usa la chiave per verificare la firma.  
+ L'esempio di codice in questa procedura viene illustrato come verificare una firma digitale XML contenuta un <`Signature`> elemento.  L'esempio recupera una chiave pubblica RSA da un contenitore di chiavi, quindi usa la chiave per verificare la firma.  
   
  Per informazioni su come creare una firma digitale che può essere verificata utilizzando questa tecnica, vedere [come: Firmare documenti XML con firme digitali](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Per verificare la firma digitale di un documento XML  
   
-1.  Per verificare il documento, è necessario usare la stessa chiave asimmetrica usata per la firma.  Creare un oggetto <xref:System.Security.Cryptography.CspParameters> e specificare il nome del contenitore di chiavi usato per la firma.  
+1. Per verificare il documento, è necessario usare la stessa chiave asimmetrica usata per la firma.  Creare un oggetto <xref:System.Security.Cryptography.CspParameters> e specificare il nome del contenitore di chiavi usato per la firma.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#2)]  
   
-2.  Recuperare la chiave pubblica usando la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La chiave viene caricata automaticamente dal contenitore di chiavi in base al nome quando si passa l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore della classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  
+2. Recuperare la chiave pubblica usando la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La chiave viene caricata automaticamente dal contenitore di chiavi in base al nome quando si passa l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore della classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#3)]  
   
-3.  Creare un oggetto <xref:System.Xml.XmlDocument> caricando un file XML dal disco.  L'oggetto <xref:System.Xml.XmlDocument> contiene il documento XML firmato da verificare.  
+3. Creare un oggetto <xref:System.Xml.XmlDocument> caricando un file XML dal disco.  L'oggetto <xref:System.Xml.XmlDocument> contiene il documento XML firmato da verificare.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#4)]  
   
-4.  Creare un nuovo oggetto <xref:System.Security.Cryptography.Xml.SignedXml> e passare a esso l'oggetto <xref:System.Xml.XmlDocument>.  
+4. Creare un nuovo oggetto <xref:System.Security.Cryptography.Xml.SignedXml> e passare a esso l'oggetto <xref:System.Xml.XmlDocument>.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#5)]  
   
-5.  Trovare l'elemento <`signature`> e creare un nuovo oggetto <xref:System.Xml.XmlNodeList>.  
+5. Trovare il <`signature`> elemento e creare un nuovo <xref:System.Xml.XmlNodeList> oggetto.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#6)]  
   
-6.  Caricare i dati XML del primo elemento <`signature`> nell'oggetto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+6. Caricare i dati XML del primo <`signature`> nell'elemento di <xref:System.Security.Cryptography.Xml.SignedXml> oggetto.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#7)]  
   
-7.  Controllare la firma usando il metodo <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A> e la chiave pubblica RSA.  Il metodo restituisce un valore booleano che indica l'esito positivo o negativo.  
+7. Controllare la firma usando il metodo <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A> e la chiave pubblica RSA.  Il metodo restituisce un valore booleano che indica l'esito positivo o negativo.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  

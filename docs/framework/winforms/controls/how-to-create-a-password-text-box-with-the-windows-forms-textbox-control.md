@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300983"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Forms
 Una casella della password è una casella di testo di Windows Form che consente di visualizzare caratteri segnaposto mentre un utente digita una stringa.  
   
 ### <a name="to-create-a-password-text-box"></a>Per creare una casella di testo password  
   
-1.  Impostare il <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà del <xref:System.Windows.Forms.TextBox> controllo a un carattere specifico.  
+1. Impostare il <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà del <xref:System.Windows.Forms.TextBox> controllo a un carattere specifico.  
   
      Il <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà specifica il carattere visualizzato nella casella di testo. Ad esempio, se si desidera che gli asterischi visualizzati nella casella della password, specificare * per il <xref:System.Windows.Forms.TextBox.PasswordChar%2A> proprietà nella finestra Proprietà. Quindi, indipendentemente dal fatto che un utente digita nella casella di testo di carattere, viene visualizzato un asterisco.  
   
-2.  (Facoltativo) Impostare il <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> proprietà. La proprietà determina il numero di caratteri può essere digitato nella casella di testo. Se viene superata la lunghezza massima, il sistema emette un segnale acustico e la casella di testo non accetta ulteriori caratteri. Si noti che non è possibile eseguire questa operazione come la lunghezza massima di una password possono essere utilizzata da pirati informatici che tentano di indovinare la password.  
+2. (Facoltativo) Impostare il <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> proprietà. La proprietà determina il numero di caratteri può essere digitato nella casella di testo. Se viene superata la lunghezza massima, il sistema emette un segnale acustico e la casella di testo non accetta ulteriori caratteri. Si noti che non è possibile eseguire questa operazione come la lunghezza massima di una password possono essere utilizzata da pirati informatici che tentano di indovinare la password.  
   
      Esempio di codice seguente viene illustrato come inizializzare una casella di testo che accetta una stringa fino a 14 caratteri e visualizza un asterisco al posto della stringa. Il `InitializeMyControl` procedure non verrà eseguiti automaticamente; deve essere chiamato.  
   
