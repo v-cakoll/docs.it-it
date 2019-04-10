@@ -2,12 +2,12 @@
 title: Processo di acquisto aziendale
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313333"
 ---
 # <a name="corporate-purchase-process"></a>Processo di acquisto aziendale
 In questo esempio viene illustrato come creare un semplice processo di acquisto basato su richieste di proposte (RDP) con la selezione automatica della proposta migliore. Vengono combinati gli oggetti <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> e <xref:System.Activities.Statements.ForEach%601>, nonché un'attività personalizzata per creare un flusso di lavoro che rappresenta il processo.
@@ -50,25 +50,25 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ## <a name="description-of-the-process"></a>Descrizione del processo  
  In questo esempio viene illustrata un'implementazione di un programma di Windows Workflow Foundation (WF) per raccogliere le proposte dei fornitori per una società generica.  
   
-1.  Un dipendente della società X crea una richiesta di proposta (RDP).  
+1. Un dipendente della società X crea una richiesta di proposta (RDP).  
   
     1.  Il dipendente digita il titolo e la descrizione della RDP.  
   
     2.  Il dipendente seleziona i fornitori a cui desidera richiedere di inviare proposte.  
   
-2.  Il dipendente invia la proposta.  
+2. Il dipendente invia la proposta.  
   
     1.  Viene creata un'istanza del flusso di lavoro.  
   
     2.  Il flusso di lavoro attende che tutti i fornitori inviino le proposte.  
   
-3.  Una volta ricevute tutte le proposte, il flusso di lavoro scorre tutte le proposte ricevute e seleziona la migliore.  
+3. Una volta ricevute tutte le proposte, il flusso di lavoro scorre tutte le proposte ricevute e seleziona la migliore.  
   
     1.  A ogni fornitore è assegnata una valutazione (in questo esempio l'elenco di valutazioni viene archiviato in VendorRepository.cs).  
   
     2.  Il valore totale della proposta è determinato da (valore digitato dal fornitore) * (valutazione registrata del fornitore) / 100.  
   
-4.  Il richiedente originale può vedere tutte le proposte inviate. La proposta migliore viene presentata in una sezione speciale del rapporto.  
+4. Il richiedente originale può vedere tutte le proposte inviate. La proposta migliore viene presentata in una sezione speciale del rapporto.  
   
 ## <a name="process-definition"></a>Definizione del processo  
  Nella logica principale dell'esempio viene usata un'attività <xref:System.Activities.Statements.ParallelForEach%601> che attende le offerte di ogni fornitore (tramite un'attività personalizzata che crea un segnalibro) e registra la proposta del fornitore come RDP (tramite un'attività <xref:System.Activities.Statements.InvokeMethod>).  
@@ -78,9 +78,9 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 ## <a name="projects-in-this-sample"></a>Progetti di questo esempio  
  In questo esempio sono contenuti i progetti seguenti.  
   
-|Project|Descrizione|  
+|Progetto|Descrizione|  
 |-------------|-----------------|  
-|Common|Oggetti entità usati all'interno del processo (Richiesta di proposta, Fornitore e Proposta del fornitore).|  
+|Comuni|Oggetti entità usati all'interno del processo (Richiesta di proposta, Fornitore e Proposta del fornitore).|  
 |WfDefinition|Definizione del processo (come programma [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) e dell'host (`PurchaseProcessHost`) usati dalle applicazioni client per la creazione e l'uso di istanze del flusso di lavoro del processo di acquisto.|  
 |WebClient|Applicazione client [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
 |WinFormsClient|Applicazione client Windows Form che consente agli utenti di creare e partecipare alle istanze del processo di acquisto. Viene usato un host creato in modo personalizzato per interagire con il motore del flusso di lavoro.|  
@@ -99,7 +99,7 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
 |XmlPersistenceParticipant.cs|Oggetto <xref:System.Activities.Persistence.PersistenceParticipant> personalizzato che salva un'istanza di richiesta di proposta in un file XML.|  
 |AsyncResult.cs/CompletedAsyncResult.cs|Classi di supporto per l'implementazione del modello asincrono nei componenti della persistenza.|  
   
-### <a name="common"></a>Common  
+### <a name="common"></a>Comuni  
  Nella tabella seguente è contenuta una descrizione delle classi più importanti del progetto Common.  
   
 |Classe|Descrizione|  
@@ -143,15 +143,15 @@ In questo esempio viene illustrato come creare un semplice processo di acquisto 
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Con Visual Studio 2010, aprire il file della soluzione Purchaseprocess.  
+1. Con Visual Studio 2010, aprire il file della soluzione Purchaseprocess.  
   
-2.  Per eseguire il progetto WebClient, aprire **Esplora soluzioni** e fare doppio clic il **Client Web** progetto. Selezionare **imposta come progetto di avvio**.  
+2. Per eseguire il progetto WebClient, aprire **Esplora soluzioni** e fare doppio clic il **Client Web** progetto. Selezionare **imposta come progetto di avvio**.  
   
-3.  Per eseguire il progetto Winformsclient, aprire **Esplora soluzioni** e fare doppio clic il **Winformsclient** progetto. Selezionare **imposta come progetto di avvio**.  
+3. Per eseguire il progetto Winformsclient, aprire **Esplora soluzioni** e fare doppio clic il **Winformsclient** progetto. Selezionare **imposta come progetto di avvio**.  
   
-4.  Per compilare la soluzione, premere CTRL+MAIUSC+B.  
+4. Per compilare la soluzione, premere CTRL+MAIUSC+B.  
   
-5.  Per eseguire la soluzione, premere CTRL+F5.  
+5. Per eseguire la soluzione, premere CTRL+F5.  
   
 ### <a name="web-client-options"></a>Opzioni del progetto WebClient  
   

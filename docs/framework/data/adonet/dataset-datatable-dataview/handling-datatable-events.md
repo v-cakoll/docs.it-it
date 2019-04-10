@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312826"
 ---
 # <a name="handling-datatable-events"></a>Gestione di eventi DataTable
 Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che possono essere elaborati da un'applicazione. Nella tabella seguente vengono descritti gli eventi di `DataTable`.  
@@ -47,21 +47,21 @@ Nell'oggetto <xref:System.Data.DataTable> sono disponibili diversi eventi che po
 ## <a name="sequence-of-operations"></a>Sequenza delle operazioni  
  Di seguito è riportata la sequenza delle operazioni che si verificano quando una `DataRow` viene aggiunta, modificata o eliminata:  
   
-1.  Creare il record proposto e applicare eventuali modifiche.  
+1. Creare il record proposto e applicare eventuali modifiche.  
   
-2.  Verificare i vincoli per le colonne non espressioni.  
+2. Verificare i vincoli per le colonne non espressioni.  
   
-3.  Generare gli eventi `RowChanging` o `RowDeleting` come applicabile.  
+3. Generare gli eventi `RowChanging` o `RowDeleting` come applicabile.  
   
-4.  Impostare il record proposto come record corrente.  
+4. Impostare il record proposto come record corrente.  
   
-5.  Aggiornare gli eventuali indici associati.  
+5. Aggiornare gli eventuali indici associati.  
   
-6.  Generare gli eventi `ListChanged` per gli oggetti `DataView` associati e gli eventi `PropertyChanged` per gli oggetti `DataRowView` associati.  
+6. Generare gli eventi `ListChanged` per gli oggetti `DataView` associati e gli eventi `PropertyChanged` per gli oggetti `DataRowView` associati.  
   
-7.  Valutare tutte le colonne espressioni, ma rimandare la verifica della presenza di vincoli su queste colonne.  
+7. Valutare tutte le colonne espressioni, ma rimandare la verifica della presenza di vincoli su queste colonne.  
   
-8.  Generare gli eventi `ListChanged` per gli oggetti `DataView` associati e gli eventi `PropertyChanged` per gli oggetti `DataRowView` associati interessati dalle valutazioni delle colonne espressioni.  
+8. Generare gli eventi `ListChanged` per gli oggetti `DataView` associati e gli eventi `PropertyChanged` per gli oggetti `DataRowView` associati interessati dalle valutazioni delle colonne espressioni.  
   
 9. Generare gli eventi `RowChanged` o `RowDeleted` come applicabile.  
   

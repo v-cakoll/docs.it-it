@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314457"
 ---
 # <a name="how-to-use-data-protection"></a>Procedura: Usare la protezione dati
 .NET Framework fornisce l'accesso a Data Protection API (DPAPI), che permette di crittografare dati usando informazioni dell'account utente o del computer corrente.  L'uso di DPAPI permette di attenuare il problema complesso correlato alla generazione e all'archiviazione esplicite di una chiave crittografica.  
@@ -34,25 +34,25 @@ ms.locfileid: "54698392"
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Per crittografare i dati in memoria mediante la protezione dei dati  
   
-1.  Chiamare il metodo <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> statico durante il passaggio di una matrice di byte da crittografare, l'entropia e l'ambito di protezione della memoria.  
+1. Chiamare il metodo <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> statico durante il passaggio di una matrice di byte da crittografare, l'entropia e l'ambito di protezione della memoria.  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Per decrittografare i dati in memoria mediante la protezione dei dati  
   
-1.  Chiamare il metodo <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> statico durante il passaggio di una matrice di byte da decrittografare e l'ambito di protezione della memoria.  
+1. Chiamare il metodo <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> statico durante il passaggio di una matrice di byte da decrittografare e l'ambito di protezione della memoria.  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Per crittografare dati in un file o un flusso mediante la protezione dei dati  
   
-1.  Creare l'entropia casuale.  
+1. Creare l'entropia casuale.  
   
-2.  Chiamare il metodo <xref:System.Security.Cryptography.ProtectedData.Protect%2A> statico durante il passaggio di una matrice di byte da crittografare, l'entropia e l'ambito di protezione dei dati.  
+2. Chiamare il metodo <xref:System.Security.Cryptography.ProtectedData.Protect%2A> statico durante il passaggio di una matrice di byte da crittografare, l'entropia e l'ambito di protezione dei dati.  
   
-3.  Scrivere i dati crittografati in un file o un flusso.  
+3. Scrivere i dati crittografati in un file o un flusso.  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Per decrittografare i dati da un file o un flusso mediante la protezione dati  
   
-1.  Leggere i dati crittografati da un file o un flusso.  
+1. Leggere i dati crittografati da un file o un flusso.  
   
-2.  Chiamare il metodo <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> statico durante il passaggio di una matrice di byte da decrittografare e l'ambito di protezione dei dati.  
+2. Chiamare il metodo <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> statico durante il passaggio di una matrice di byte da decrittografare e l'ambito di protezione dei dati.  
   
 ## <a name="example"></a>Esempio  
  L'esempio di codice seguente mostra le due forme di crittografia e decrittografia.  Prima di tutto, l'esempio di codice crittografa e quindi decrittografa una matrice in memoria di byte.  Quindi, l'esempio di codice crittografa una copia di una matrice di byte, la salva in un file, carica i dati di nuovo dal file e quindi li decrittografa.  L'esempio mostra i dati originali, i dati crittografati e i dati decrittografati.  

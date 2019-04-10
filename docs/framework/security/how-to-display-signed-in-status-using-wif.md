@@ -3,12 +3,12 @@ title: 'Procedura: Visualizzare lo stato di accesso effettuato con WIF'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 7d3d23dc1f2e081c0a7c53fbdfaef749c9729fd4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584403"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311032"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Procedura: Visualizzare lo stato di accesso effettuato con WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -56,48 +56,48 @@ ms.locfileid: "48584403"
   
 #### <a name="to-install-the-identity-and-access-extension"></a>Per installare l'estensione Identity and Access  
   
-1.  Avviare Visual Studio come amministratore in modalità con privilegi elevati.  
+1. Avviare Visual Studio come amministratore in modalità con privilegi elevati.  
   
-2.  In Visual Studio fare clic su **Strumenti** e quindi su **Gestione estensioni**. Verrà visualizzata la finestra **Gestione estensioni**.  
+2. In Visual Studio fare clic su **Strumenti** e quindi su **Gestione estensioni**. Verrà visualizzata la finestra **Gestione estensioni**.  
   
-3.  In **Gestione estensioni** fare clic su **Estensioni online** nel menu a sinistra e quindi selezionare **Visual Studio Gallery**.  
+3. In **Gestione estensioni** fare clic su **Estensioni online** nel menu a sinistra e quindi selezionare **Visual Studio Gallery**.  
   
-4.  Nell'angolo superiore destro di **Gestione estensioni** cercare *Identity and Access*.  
+4. Nell'angolo superiore destro di **Gestione estensioni** cercare *Identity and Access*.  
   
-5.  L'elemento **Identity and Access** verrà visualizzato nei risultati della ricerca. Fare clic su di esso e quindi su **Scarica**.  
+5. L'elemento **Identity and Access** verrà visualizzato nei risultati della ricerca. Fare clic su di esso e quindi su **Scarica**.  
   
-6.  Verrà visualizzata la finestra di dialogo **Scarica e installa** . Se si accettano le condizioni di licenza, fare clic su **Installa**.  
+6. Verrà visualizzata la finestra di dialogo **Scarica e installa** . Se si accettano le condizioni di licenza, fare clic su **Installa**.  
   
-7.  Al termine dell'installazione dell'estensione **Identity and Access**, riavviare Visual Studio in modalità amministratore.  
+7. Al termine dell'installazione dell'estensione **Identity and Access**, riavviare Visual Studio in modalità amministratore.  
   
 ## <a name="step-2--create-a-relying-party-aspnet-application"></a>Passaggio 2: creare un'applicazione ASP.NET relying party  
  Questo passaggio descrive come creare un'applicazione Web Form ASP.NET relying party che verrà integrata con WIF.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
-1.  Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
+1. Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
+2. Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
   
-3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
+3. In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Passaggio 3: abilitare il servizio token di sicurezza per lo sviluppo locale per autenticare gli utenti  
  Questo passaggio descrive come abilitare il servizio token di sicurezza per lo sviluppo locale nell'applicazione. Il servizio token di sicurezza per lo sviluppo locale viene abilitato tramite l'estensione Identity and Access per Visual Studio.  
   
 #### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>Per abilitare il servizio token di sicurezza per lo sviluppo locale nell'applicazione ASP.NET  
   
-1.  In Visual Studio fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
+1. In Visual Studio fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
   
-2.  Verrà visualizzata la finestra **Identity and Access**. In **Providers** (Provider) selezionare **Test your application with the Local Development STS** (Testare l'applicazione con il servizio token di sicurezza per lo sviluppo locale) e quindi fare clic su **Applica**.  
+2. Verrà visualizzata la finestra **Identity and Access**. In **Providers** (Provider) selezionare **Test your application with the Local Development STS** (Testare l'applicazione con il servizio token di sicurezza per lo sviluppo locale) e quindi fare clic su **Applica**.  
   
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>Passaggio 4: modificare l'applicazione ASP.NET per visualizzare lo stato di accesso  
  Questo passaggio descrive come modificare l'applicazione ASP.NET per visualizzare in modo dinamico se l'utente corrente ha effettuato l'accesso. Una volta configurato il provider del servizio token di sicurezza, WIF gestisce le attestazioni in ingresso. È ora necessario configurare il codice dell'applicazione per visualizzare il risultato dell'autenticazione.  
   
 #### <a name="to-display-sign-in-status"></a>Per visualizzare lo stato di accesso  
   
-1.  In Visual Studio aprire il file **Default.aspx** nel progetto **TestApp**.  
+1. In Visual Studio aprire il file **Default.aspx** nel progetto **TestApp**.  
   
-2.  Sostituire il markup esistente nel file **Default.aspx** con il seguente:  
+2. Sostituire il markup esistente nel file **Default.aspx** con il seguente:  
   
     ```  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -114,12 +114,12 @@ ms.locfileid: "48584403"
     </html>  
     ```  
   
-3.  Salvare **Default.aspx** e quindi aprire il file code-behind denominato **Default.aspx.cs**.  
+3. Salvare **Default.aspx** e quindi aprire il file code-behind denominato **Default.aspx.cs**.  
   
     > [!NOTE]
     >  Il file **Default.aspx.cs** potrebbe essere nascosto sotto **Default.aspx** in Esplora soluzioni. Se **Default.aspx.cs** non è visibile, espandere **Default.aspx** facendo clic sul triangolo accanto.  
   
-4.  Sostituire il codice esistente nel file **Default.aspx.cs** con il seguente:  
+4. Sostituire il codice esistente nel file **Default.aspx.cs** con il seguente:  
   
     ```csharp  
     using System;  
@@ -144,13 +144,13 @@ ms.locfileid: "48584403"
     }  
     ```  
   
-5.  Salvare **Default.aspx.cs** e compilare l'applicazione.  
+5. Salvare **Default.aspx.cs** e compilare l'applicazione.  
   
 ## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>Passaggio 5: testare l'integrazione tra WIF e l'applicazione ASP.NET  
  Questo passaggio descrive la procedura per testare l'integrazione tra WIF e l'applicazione ASP.NET.  
   
 #### <a name="to-test-the-integration-between-wif-and-aspnet"></a>Per testare l'integrazione tra WIF e ASP.NET  
   
-1.  In Visual Studio premere **F5** per avviare il debug dell'applicazione. Se non vengono rilevati errori, verrà aperta una nuova finestra del browser.  
+1. In Visual Studio premere **F5** per avviare il debug dell'applicazione. Se non vengono rilevati errori, verrà aperta una nuova finestra del browser.  
   
-2.  Si può notare che il browser reindirizza automaticamente la richiesta al servizio token di sicurezza e quindi apre la pagina Default.aspx. Se WIF è configurato correttamente, nel sito dovrebbe essere visualizzato il messaggio seguente: **"You are signed in"** (Accesso eseguito).
+2. Si può notare che il browser reindirizza automaticamente la richiesta al servizio token di sicurezza e quindi apre la pagina Default.aspx. Se WIF è configurato correttamente, deve visitare il sito verrà visualizzato il testo seguente: **"Si è connessi"**.

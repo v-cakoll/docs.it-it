@@ -2,12 +2,12 @@
 title: Tipi restituiti asincroni (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313281"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipi restituiti asincroni (Visual Basic)
 I metodi asincroni hanno tre possibili tipi restituiti: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> e void. In Visual Basic il tipo restituito void è scritto come routine [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Per altre informazioni sui metodi asincroni, vedere [programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` viene chiamato e atteso usando un'istruzione await invece di un'espressione await, simile all'istruzione chiamante per un metodo sincrono `Sub` o che restituisce void. L'applicazione di un `Await` operatore in questo caso non produce alcun valore.  
+ `Task_MethodAsync` viene chiamato e atteso usando un'istruzione await invece di un'espressione await, simile all'istruzione di chiamata per un oggetto sincrono `Sub` o un metodo che restituisce void. L'applicazione di un `Await` operatore in questo caso non produce alcun valore.  
   
  Il codice seguente chiama e attende il metodo `Task_MethodAsync`.  
   
@@ -150,23 +150,23 @@ End Sub
   
  Per eseguire il progetto, effettuare i passaggi seguenti:  
   
-1.  Avviare Visual Studio.  
+1. Avviare Visual Studio.  
   
-2.  Nella barra dei menu scegliere **File**, **Nuovo**, **Progetto**.  
+2. Nella barra dei menu scegliere **File**, **Nuovo**, **Progetto**.  
   
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
-3.  Nel **Installed**, **modelli** categoria, scegliere **Visual Basic**e quindi scegliere **Windows**. Dall'elenco dei tipi di progetto scegliere **Applicazione WPF**.  
+3. Nel **Installed**, **modelli** categoria, scegliere **Visual Basic**e quindi scegliere **Windows**. Dall'elenco dei tipi di progetto scegliere **Applicazione WPF**.  
   
-4.  Immettere `AsyncReturnTypes` come nome del progetto e scegliere **OK**.  
+4. Immettere `AsyncReturnTypes` come nome del progetto e scegliere **OK**.  
   
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.  
   
-5.  Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .  
+5. Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .  
   
      Se la scheda non è visibile, aprire il menu di scelta rapida per MainWindow.xaml in **Esplora soluzioni** e quindi scegliere **Apri**.  
   
-6.  Nella finestra **XAML** di MainWindow.xaml sostituire il codice con quello seguente.  
+6. Nella finestra **XAML** di MainWindow.xaml sostituire il codice con quello seguente.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      Nella finestra di **progettazione**di MainWindow.xaml verrà visualizzata una finestra contenente una casella di testo e un pulsante.  
   
-7.  Nelle **Esplora soluzioni**, aprire il menu di scelta rapida per XAML. vb e quindi scegliere **Visualizza codice**.  
+7. Nelle **Esplora soluzioni**, aprire il menu di scelta rapida per XAML. vb e quindi scegliere **Visualizza codice**.  
   
-8.  Sostituire il codice in MainWindow.xaml.vb con quello riportato di seguito.  
+8. Sostituire il codice in MainWindow.xaml.vb con quello riportato di seguito.  
   
     ```vb  
     Class MainWindow  

@@ -2,12 +2,12 @@
 title: Gestione dei messaggi non elaborabili in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 4555a6d322cbf9ca43aca0f93bc6eafe021fa569
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846227"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316466"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Gestione dei messaggi non elaborabili in MSMQ 4,0
 Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili in un servizio. In questo esempio si basa sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usato l'oggetto `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -23,19 +23,19 @@ Questo esempio dimostra come eseguire la gestione dei messaggi non elaborabili i
 ## <a name="msmq-v40-poison-handling-sample"></a>Esempio di gestione dei messaggi non elaborabili di MSMQ v4.0
  In [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ fornisce una funzionalità di coda secondaria non elaborabile che può essere usata per archiviare i messaggi non elaborabili. Questo esempio dimostra la procedura consigliata per gestire i messaggi non elaborabili usando [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- Il rilevamento dei messaggi non elaborabili in [!INCLUDE[wv](../../../../includes/wv-md.md)] è piuttosto sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
+ Il rilevamento dei messaggi non elaborabili in [!INCLUDE[wv](../../../../includes/wv-md.md)] è piuttosto sofisticato. Il rilevamento è agevolato da 3 proprietà. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> è il numero di volte che un determinato messaggio viene riletto dalla coda e inviato all'applicazione per l'elaborazione. Un messaggio viene riletto dalla coda quando è inserito di nuovo nella coda perché non può essere inviato all'applicazione o l'applicazione esegue il rollback della transazione nell'operazione del servizio. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> è il numero di volte in cui che il messaggio viene spostato nella coda di tentativi. Quando viene raggiunto <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A>, il messaggio viene spostato nella coda di tentativi. La proprietà <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> è l'intervallo di tempo dopo il quale il messaggio viene spostato dalla coda di tentativi alla coda principale. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> viene reimpostato su 0. Viene eseguito un nuovo tentativo per il messaggio. Se tutti i tentativi di leggere il messaggio non sono riusciti, il messaggio è contrassegnato come non elaborabile.
 
  Una volta il messaggio è contrassegnato come non elaborabile, viene gestito in base alle impostazioni nell'enumerazione <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Per reiterare i valori possibili:
 
--   Fault (impostazione predefinita): per determinare l'errore del listener e anche dell'host del servizio.
+-   Errore (impostazione predefinita): Errore del listener e anche l'host del servizio.
 
--   Drop: per rilasciare il messaggio.
+-   Rilascio: Per eliminare il messaggio.
 
--   Move: per spostare il messaggio nella coda secondaria di messaggi non elaborabili. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   Sposta: Per spostare il messaggio nella coda secondaria dei messaggi non elaborabili. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Reject: per rifiutare il messaggio, rispedendolo alla coda di messaggi non recapitabili del mittente. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   Reject: Per rifiutare il messaggio, l'invio del messaggio alla coda del mittente. Questo valore è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
- Nell'esempio viene mostrato l'uso della disposizione `Move` per il messaggio non elaborabile. `Move` determina lo spostamento del messaggio nella coda secondaria non elaborabile.
+ Nell'esempio viene mostrato l'uso della disposizione `Move` per il messaggio non elaborabile. `Move` fa sì che il messaggio da spostare nella coda secondaria dei messaggi non elaborabili.
 
  Il contratto di servizio è `IOrderProcessor`che definisce un servizio unidirezionale adatto per l'uso con le code.
 
@@ -273,9 +273,9 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
+2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
     1.  Aprire Server Manager in Visual Studio 2012.
 
@@ -287,15 +287,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
-3.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Per eseguire l'esempio in una configurazione singola o tra computer, modificare i nomi di coda per riflettere il nome host effettivo anziché localhost e seguire le istruzioni riportate in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Per eseguire l'esempio in una configurazione singola o tra computer, modificare i nomi di coda per riflettere il nome host effettivo anziché localhost e seguire le istruzioni riportate in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non appartiene a un dominio, si riceve l'errore seguente: "Il certificato interno del servizio di accodamento messaggi non esiste".
+ Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza. Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`. Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio. Se si esegue questo esempio in un computer che non fa parte di un dominio, viene visualizzato l'errore seguente: "Interno accodamento dell'utente messaggi certificati non esiste".
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro
 
-1.  Se il computer non appartiene a un dominio, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e livello di protezione su `None` come illustrato nella configurazione di esempio seguente:
+1. Se il computer non appartiene a un dominio, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e livello di protezione su `None` come illustrato nella configurazione di esempio seguente:
 
     ```xml
     <bindings>
@@ -309,12 +309,12 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      Verificare che l'endpoint sia associato al binding impostando l'attributo bindingConfiguration dell'endpoint.
 
-2.  Assicurarsi di modificare la configurazione in PoisonMessageServer, sul server e sul client prima che di eseguire l'esempio.
+2. Assicurarsi di modificare la configurazione in PoisonMessageServer, sul server e sul client prima che di eseguire l'esempio.
 
     > [!NOTE]
     >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.  
   
-3.  Affinché Metadata Exchange funzioni, registriamo un URL con associazione HTTP. Ciò richiede che il servizio venga eseguito in una finestra di comando elevata. In caso contrario, si verifica un'eccezione, ad esempio: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Affinché Metadata Exchange funzioni, registriamo un URL con associazione HTTP. Ciò richiede che il servizio venga eseguito in una finestra di comando elevata. In caso contrario, si verifica un'eccezione, ad esempio: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

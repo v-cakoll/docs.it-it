@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832281"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312241"
 ---
 # <a name="overload-resolution-visual-basic"></a>Risoluzione dell'overload (Visual Basic)
 Quando il compilatore Visual Basic rileva una chiamata a una routine definito in numerose versioni di overload, il compilatore deve decidere quale overload da chiamare. A tale scopo, seguire questa procedura:  
   
-1.  **Accessibilità.** Elimina tutti gli overload con un livello di accesso che impedisce che il codice chiamante viene chiamata.  
+1. **Accessibilità.** Elimina tutti gli overload con un livello di accesso che impedisce che il codice chiamante viene chiamata.  
   
-2.  **Numero di parametri.** Elimina qualsiasi overload che definisce un numero di parametri diverso rispetto a quello fornito nella chiamata.  
+2. **Numero di parametri.** Elimina qualsiasi overload che definisce un numero di parametri diverso rispetto a quello fornito nella chiamata.  
   
-3.  **Tipi di dati di parametro.** Il compilatore assegna la priorità di metodi di istanza rispetto ai metodi di estensione. Se viene trovato alcun metodo di istanza che richiede solo di ampliamento per rispondere alla chiamata di procedura, vengono eliminati tutti i metodi di estensione e il compilatore continua con solo i candidati dei metodi di istanza. Se non viene trovato alcun metodo di tale istanza, continua con l'istanza sia i metodi di estensione.  
+3. **Tipi di dati di parametro.** Il compilatore assegna la priorità di metodi di istanza rispetto ai metodi di estensione. Se viene trovato alcun metodo di istanza che richiede solo di ampliamento per rispondere alla chiamata di procedura, vengono eliminati tutti i metodi di estensione e il compilatore continua con solo i candidati dei metodi di istanza. Se non viene trovato alcun metodo di tale istanza, continua con l'istanza sia i metodi di estensione.  
   
      In questo passaggio elimina alcun overload per il quale i tipi di dati degli argomenti di chiamata non convertibili nei tipi di parametro definiti in overload.  
   
-4.  **Conversioni di Narrowing.** Elimina qualsiasi overload che richiede una conversione narrowing dai tipi di argomento chiamante per i tipi di parametro definiti. Ciò è vero se il controllo del tipo di opzione ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) viene `On` o `Off`.  
+4. **Conversioni di Narrowing.** Elimina qualsiasi overload che richiede una conversione narrowing dai tipi di argomento chiamante per i tipi di parametro definiti. Ciò è vero se il controllo del tipo di opzione ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) viene `On` o `Off`.  
   
-5.  **Widening minimi.** Il compilatore prende in considerazione gli overload rimanenti nelle coppie. Per ogni coppia, confronta i tipi di dati dei parametri definiti. Se i tipi in uno degli overload tutti vengano ampliati ai tipi corrispondenti in altra, il compilatore consente di eliminare quest'ultimo. Vale a dire, viene mantenuto l'overload che richiede una quantità minima di ampliamento.  
+5. **Widening minimi.** Il compilatore prende in considerazione gli overload rimanenti nelle coppie. Per ogni coppia, confronta i tipi di dati dei parametri definiti. Se i tipi in uno degli overload tutti vengano ampliati ai tipi corrispondenti in altra, il compilatore consente di eliminare quest'ultimo. Vale a dire, viene mantenuto l'overload che richiede una quantità minima di ampliamento.  
   
-6.  **Singola candidato.** Vengono presi in considerazione gli overload nelle coppie finché l'unico overload rimane impostato su e la chiamata a tale overload viene risolta. Se il compilatore non è possibile ridurre gli overload a uno solo, viene generato un errore.  
+6. **Singola candidato.** Vengono presi in considerazione gli overload nelle coppie finché l'unico overload rimane impostato su e la chiamata a tale overload viene risolta. Se il compilatore non è possibile ridurre gli overload a uno solo, viene generato un errore.  
   
  Nella figura seguente viene illustrato il processo che determina quale versione di un set di versioni di overload da chiamare.  
   
@@ -62,12 +62,12 @@ Quando il compilatore Visual Basic rileva una chiamata a una routine definito in
 
 - [Parametri facoltativi](./optional-parameters.md)
 - [Matrici di parametri](./parameter-arrays.md)
-- [Overload della routine](./procedure-overloading.md)
+- [Overload delle routine](./procedure-overloading.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
-- [Procedura: Definire più versioni di una stored Procedure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedura: Definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Procedura: Chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md)
-- [Procedura: Overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md)
-- [Overload](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Metodi di estensione](./extension-methods.md)

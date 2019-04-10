@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091330"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312098"
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 È possibile utilizzare Traccia eventi per Windows (ETW) per registrare eventi CLR (Common Language Runtime). Tramite i seguenti strumenti si possono creare e visualizzare tracce:  
@@ -45,7 +45,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Per acquisire eventi ETW CLR tramite Logman  
   
-1.  Al prompt dei comandi, digitare:  
+1. Al prompt dei comandi, digitare:  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
@@ -61,7 +61,7 @@ Provider                                 GUID
   
     -   Il parametro `-ct perf` specifica che la funzione `QueryPerformanceCounter` verrà utilizzata per registrare il timestamp per ogni evento.  
   
-2.  Per interrompere la registrazione degli eventi, digitare:  
+2. Per interrompere la registrazione degli eventi, digitare:  
   
      `logman stop clrevents -ets`  
   
@@ -69,13 +69,13 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>Per acquisire eventi ETW CLR tramite Xperf  
   
-1.  Al prompt dei comandi, digitare:  
+1. Al prompt dei comandi, digitare:  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
      dove il GUID è il GUID del provider ETW CLR e `0x1CCBD:5` traccia qualsiasi evento appartenente al livello 5 (verbose) e ai livelli inferiori.  
   
-2.  Per interrompere la traccia, digitare:  
+2. Per interrompere la traccia, digitare:  
   
      `Xperf -stop clr`  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826015"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316271"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Procedura: Confrontare una stringa con un modello (Visual Basic)
 Se si desidera determinare se un'espressione del [tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md) soddisfa un modello, è possibile utilizzare il [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -68,11 +68,11 @@ Se si desidera determinare se un'espressione del [tipo di dati String](../../../
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Per confrontare un carattere nell'espressione stringa rispetto a un elenco di caratteri o nessun carattere  
   
-1.  Chiamare il `Like` operatore due volte sulla stessa espressione di tipo string e connettere le due chiamate con il [operatore o](../../../../visual-basic/language-reference/operators/or-operator.md) o il [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1. Chiamare il `Like` operatore due volte sulla stessa espressione di tipo string e connettere le due chiamate con il [operatore o](../../../../visual-basic/language-reference/operators/or-operator.md) o il [OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  Nella stringa di modello per i primi `Like` clausola, includere l'elenco di caratteri racchiusi tra parentesi quadre (`[ ]`).  
+2. Nella stringa di modello per i primi `Like` clausola, includere l'elenco di caratteri racchiusi tra parentesi quadre (`[ ]`).  
   
-3.  Nella stringa di modello per il secondo `Like` clausola, non inserire qualsiasi carattere in corrispondenza della posizione in questione.  
+3. Nella stringa di modello per il secondo `Like` clausola, non inserire qualsiasi carattere in corrispondenza della posizione in questione.  
   
      L'esempio seguente verifica il numero di telefono a 7 cifre `phoneNum` per esattamente tre cifre numeriche, seguita da uno spazio, un segno meno (`–`), un periodo (`.`), o nessun carattere affatto, seguita da quattro cifre.  
   

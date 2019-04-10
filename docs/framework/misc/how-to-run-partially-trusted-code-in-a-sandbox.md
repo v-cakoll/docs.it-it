@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104858"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316531"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -48,7 +48,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>Per eseguire un'applicazione in un ambiente sandbox  
   
-1.  Creare il set di autorizzazioni da concedere all'applicazione non attendibile. L'autorizzazione minima che è possibile concedere è <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. È anche possibile concedere autorizzazioni aggiuntive che si ritengono sicure per il codice non attendibile, ad esempio <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Il codice seguente crea un nuovo set di autorizzazioni con solo l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
+1. Creare il set di autorizzazioni da concedere all'applicazione non attendibile. L'autorizzazione minima che è possibile concedere è <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. È anche possibile concedere autorizzazioni aggiuntive che si ritengono sicure per il codice non attendibile, ad esempio <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Il codice seguente crea un nuovo set di autorizzazioni con solo l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      Il metodo <xref:System.Security.SecurityManager.GetStandardSandbox%2A> restituisce un set di autorizzazioni `Internet` o un set di autorizzazioni `LocalIntranet`, a seconda dell'area nell'evidenza. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Crea anche le autorizzazioni di identità per alcuni degli oggetti evidenza passati come riferimenti.  
   
-2.  Firmare l'assembly contenente la classe host (in questo esempio `Sandboxer`) che chiama il codice non attendibile. Aggiungere l'oggetto <xref:System.Security.Policy.StrongName> usato per firmare l'assembly alla matrice <xref:System.Security.Policy.StrongName> del parametro `fullTrustAssemblies` della chiamata a <xref:System.AppDomain.CreateDomain%2A>. La classe host deve essere eseguita come completamente attendibile per consentire l'esecuzione del codice parzialmente attendibile o per offrire servizi per l'applicazione parzialmente attendibile. Ecco come viene letto l'oggetto <xref:System.Security.Policy.StrongName> di un assembly:  
+2. Firmare l'assembly contenente la classe host (in questo esempio `Sandboxer`) che chiama il codice non attendibile. Aggiungere l'oggetto <xref:System.Security.Policy.StrongName> usato per firmare l'assembly alla matrice <xref:System.Security.Policy.StrongName> del parametro `fullTrustAssemblies` della chiamata a <xref:System.AppDomain.CreateDomain%2A>. La classe host deve essere eseguita come completamente attendibile per consentire l'esecuzione del codice parzialmente attendibile o per offrire servizi per l'applicazione parzialmente attendibile. Ecco come viene letto l'oggetto <xref:System.Security.Policy.StrongName> di un assembly:  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      Non è necessario aggiungere gli assembly .NET Framework, come mscorlib e System. dll, all'elenco di elementi completamente attendibili, in quanto vengono caricati come completamente attendibili dalla Global Assembly Cache.  
   
-3.  Inizializzare il parametro <xref:System.AppDomainSetup> del metodo <xref:System.AppDomain.CreateDomain%2A>. Con questo parametro, è possibile controllare numerose impostazioni del nuovo oggetto <xref:System.AppDomain>. La proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> è un'impostazione importante e deve essere diversa dalla proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> per l'oggetto <xref:System.AppDomain> dell'applicazione host. Se le impostazioni di <xref:System.AppDomainSetup.ApplicationBase%2A> corrispondono, l'applicazione parzialmente attendibile può fare in modo che l'applicazione host carichi (come completamente attendibile) un'eccezione definita, che può quindi essere sfruttata. Questo è un altro motivo per cui non è consigliabile l'uso di un elemento catch (eccezione). Impostando la base dell'applicazione dell'host in modo diverso dalla base dell'applicazione in modalità sandbox, è possibile ridurre il rischio di exploit.  
+3. Inizializzare il parametro <xref:System.AppDomainSetup> del metodo <xref:System.AppDomain.CreateDomain%2A>. Con questo parametro, è possibile controllare numerose impostazioni del nuovo oggetto <xref:System.AppDomain>. La proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> è un'impostazione importante e deve essere diversa dalla proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> per l'oggetto <xref:System.AppDomain> dell'applicazione host. Se le impostazioni di <xref:System.AppDomainSetup.ApplicationBase%2A> corrispondono, l'applicazione parzialmente attendibile può fare in modo che l'applicazione host carichi (come completamente attendibile) un'eccezione definita, che può quindi essere sfruttata. Questo è un altro motivo per cui non è consigliabile l'uso di un elemento catch (eccezione). Impostando la base dell'applicazione dell'host in modo diverso dalla base dell'applicazione in modalità sandbox, è possibile ridurre il rischio di exploit.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4.  Chiamare l'overload del metodo <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> per creare il dominio dell'applicazione usando i parametri specificati.  
+4. Chiamare l'overload del metodo <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> per creare il dominio dell'applicazione usando i parametri specificati.  
   
      La firma per il metodo è la seguente:  
   
@@ -106,7 +106,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5.  Caricare il codice nell'oggetto <xref:System.AppDomain> sandbox creato. Questa operazione può essere eseguita nei due modi seguenti.  
+5. Caricare il codice nell'oggetto <xref:System.AppDomain> sandbox creato. Questa operazione può essere eseguita nei due modi seguenti.  
   
     -   Chiamare il metodo <xref:System.AppDomain.ExecuteAssembly%2A> per l'assembly.  
   
@@ -130,13 +130,13 @@ AppDomain.CreateDomain( string friendlyName,
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6.  Annullare il wrapping dell'istanza del nuovo dominio in un riferimento in questo dominio. Questo riferimento viene usato per eseguire codice non attendibile.  
+6. Annullare il wrapping dell'istanza del nuovo dominio in un riferimento in questo dominio. Questo riferimento viene usato per eseguire codice non attendibile.  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7.  Chiamare il metodo `ExecuteUntrustedCode` nell'istanza della classe `Sandboxer` appena creata.  
+7. Chiamare il metodo `ExecuteUntrustedCode` nell'istanza della classe `Sandboxer` appena creata.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  

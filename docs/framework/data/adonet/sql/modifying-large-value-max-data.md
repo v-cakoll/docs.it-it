@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 417afd5f614aee8db0aeec2377973ad894e04384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119301"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317103"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modifica di dati con valori elevati (massimi) in ADO.NET
 I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la dimensione massima di 8 kilobyte (KB) per le righe. In SQL Server viene fornito un identificatore `max` per i tipi di dati `varchar`, `nvarchar` e `varbinary` per consentire l'archiviazione di valori di dimensioni pari a 2^32 byte. Nelle colonne di tabelle e nelle variabili Transact-SQL possono essere specificati tipi di dati `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. In ADO.NET i tipi di dati `max` possono essere recuperati da un `DataReader` e possono inoltre essere specificati come parametri di input e di output senza richiedere una gestione speciale. Per tipi di dati `varchar` di grandi dimensioni, è possibile recuperare e aggiornare i dati in modo incrementale.  
@@ -21,7 +21,7 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
   
  **Documentazione online di SQL Server**  
   
-1.  [Utilizzo di tipi di dati per valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Utilizzo di tipi di dati per valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrizioni per i tipi di valori di grandi dimensioni  
  Le seguenti restrizioni si applicano ai tipi di dati `max` e non ai tipi di dati di dimensioni minori:  

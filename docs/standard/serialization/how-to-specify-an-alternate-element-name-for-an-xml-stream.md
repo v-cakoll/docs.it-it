@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465477"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317792"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Procedura: Specificare un nome di elemento alternativo per un flusso XML
   
@@ -25,21 +25,21 @@ Tramite l'utilizzo di <xref:System.Xml.Serialization.XmlSerializer>, è possibil
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Per creare un flusso XML con un nome dell'elemento alternativo  
   
-1.  Creare un'istanza della classe <xref:System.Xml.Serialization.XmlElementAttribute>.  
+1. Creare un'istanza della classe <xref:System.Xml.Serialization.XmlElementAttribute>.  
   
-2.  Impostare <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> di <xref:System.Xml.Serialization.XmlElementAttribute> su "BookID".  
+2. Impostare <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> di <xref:System.Xml.Serialization.XmlElementAttribute> su "BookID".  
   
-3.  Creare un'istanza della classe <xref:System.Xml.Serialization.XmlAttributes>.  
+3. Creare un'istanza della classe <xref:System.Xml.Serialization.XmlAttributes>.  
   
-4.  Aggiungere l'oggetto `XmlElementAttribute` alla raccolta a cui si accede tramite la proprietà <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> di <xref:System.Xml.Serialization.XmlAttributes>.  
+4. Aggiungere l'oggetto `XmlElementAttribute` alla raccolta a cui si accede tramite la proprietà <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> di <xref:System.Xml.Serialization.XmlAttributes>.  
   
-5.  Creare un'istanza della classe <xref:System.Xml.Serialization.XmlAttributeOverrides>.  
+5. Creare un'istanza della classe <xref:System.Xml.Serialization.XmlAttributeOverrides>.  
   
-6.  Aggiungere `XmlAttributes` a <xref:System.Xml.Serialization.XmlAttributeOverrides> e passare il tipo dell'oggetto da sottoporre a override e il nome del membro da sottoporre a override.  
+6. Aggiungere `XmlAttributes` a <xref:System.Xml.Serialization.XmlAttributeOverrides> e passare il tipo dell'oggetto da sottoporre a override e il nome del membro da sottoporre a override.  
   
-7.  Creare un'istanza della classe `XmlSerializer` con `XmlAttributeOverrides`.  
+7. Creare un'istanza della classe `XmlSerializer` con `XmlAttributeOverrides`.  
   
-8.  Creare un'istanza della classe `Book` e serializzarla o deserializzarla.  
+8. Creare un'istanza della classe `Book` e serializzarla o deserializzarla.  
   
 ## <a name="example"></a>Esempio  
   

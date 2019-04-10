@@ -2,35 +2,35 @@
 title: Cenni preliminari sul flusso di messaggi
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312644"
 ---
 # <a name="message-flow-overview"></a>Cenni preliminari sul flusso di messaggi
 In un sistema distribuito che contiene servizi interconnessi è necessario determinare relazioni causali tra i servizi. È importante comprendere i vari componenti che appartengono a un flusso di richiesta per supportare scenari critici, ad esempio monitoraggio dello stato, risoluzione dei problemi e analisi della causa radice. Per abilitare la correlazione di tracce tra i vari servizi, in .NET Framework 4 è stato aggiunto supporto tramite le funzionalità seguenti:
 
--   Traccia analitica: funzionalità di traccia a prestazioni elevate e verbosità ridotta impostata in base a Event Tracing for Windows (ETW).
+-   Traccia analitica: A prestazioni elevate e verbosità ridotta funzionalità di traccia Event Tracing for Windows (ETW).
 
--   Modello di attività end-to-end per i servizi WCF/WF: questa funzionalità supporta la correlazione di tracce generate dagli spazi dei nomi <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel>.
+-   Modello di attività end-to-end per i servizi WCF/WF: Questa funzionalità supporta la correlazione di tracce generate dal <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> gli spazi dei nomi.
 
--   Rilevamento ETW per WF: questa funzionalità usa record di rilevamento generati dai servizi WF per fornire visibilità nello stato corrente e in quello di avanzamento del flusso di lavoro.
+-   Rilevamento ETW per WF: Questa funzionalità Usa record di rilevamento generati dai servizi WF per fornire visibilità nello stato corrente e lo stato di avanzamento del flusso di lavoro.
 
  Gli errori registrati in un record di rilevamento o di traccia possono essere usati per individuare difetti del codice o messaggi in formato non corretto. La proprietà ActivityId del nodo relativo alla correlazione nell'intestazione del messaggio dell'evento può essere usata per determinare l'attività in cui si è verificato l'errore. Per abilitare la traccia del flusso di messaggi dall'ID attività, vedere [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). In questo argomento viene illustrato come abilitare la traccia del flusso di messaggi nel progetto creato nell'Esercitazione introduttiva.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Per abilitare la traccia del flusso di messaggi nell'Esercitazione introduttiva
 
-1.  Aprire il Visualizzatore eventi facendo **avviare**, **eseguito**e l'immissione di `eventvwr.exe`.
+1. Aprire il Visualizzatore eventi facendo **avviare**, **eseguito**e l'immissione di `eventvwr.exe`.
 
-2.  Se non è stata abilitata la traccia analitica, espandere **registri applicazioni e servizi**, **Microsoft**, **Windows**, **Server applicazioni-applicazioni** . Selezionare **View**, **mostrano analitici e i registri Debug**. Fare doppio clic su **analitico** e selezionare **Attiva registro**. Lasciare aperto il Visualizzatore eventi in modo che sia possibile visualizzare le tracce.
+2. Se non è stata abilitata la traccia analitica, espandere **registri applicazioni e servizi**, **Microsoft**, **Windows**, **Server applicazioni-applicazioni** . Selezionare **View**, **mostrano analitici e i registri Debug**. Fare doppio clic su **analitico** e selezionare **Attiva registro**. Lasciare aperto il Visualizzatore eventi in modo che sia possibile visualizzare le tracce.
 
-3.  Aprire l'esempio creato nel [esercitazione introduttiva su](../../../../docs/framework/wcf/getting-started-tutorial.md) in Visual Studio 2012. Si noti che è necessario eseguire Visual Studio 2012 come amministratore in modo che sia possibile creare il servizio. Se si dispone di installare gli esempi WCF, è possibile aprire il [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che contiene il progetto completato creato nell'esercitazione.
+3. Aprire l'esempio creato nel [esercitazione introduttiva su](../../../../docs/framework/wcf/getting-started-tutorial.md) in Visual Studio 2012. Si noti che è necessario eseguire Visual Studio 2012 come amministratore in modo che sia possibile creare il servizio. Se si dispone di installare gli esempi WCF, è possibile aprire il [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che contiene il progetto completato creato nell'esercitazione.
 
-4.  Fare doppio clic sul **assistenza** del progetto e selezionare **Add**, **nuovo elemento**. Selezionare **File di configurazione dell'applicazione** e fare clic su **OK**.
+4. Fare doppio clic sul **assistenza** del progetto e selezionare **Add**, **nuovo elemento**. Selezionare **File di configurazione dell'applicazione** e fare clic su **OK**.
 
-5.  Aggiungere il codice seguente al file App.Config creato nel passaggio precedente.
+5. Aggiungere il codice seguente al file App.Config creato nel passaggio precedente.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ In un sistema distribuito che contiene servizi interconnessi è necessario deter
     </system.serviceModel>
     ```
 
-6.  Premere CTRL+F5 per eseguire l'applicazione server senza debug. Eseguire il progetto client facendo clic con il **Client** progetto, quindi selezionando **Debug**, **Avvia nuova istanza**.
+6. Premere CTRL+F5 per eseguire l'applicazione server senza debug. Eseguire il progetto client facendo clic con il **Client** progetto, quindi selezionando **Debug**, **Avvia nuova istanza**.
 
-7.  Per tracciare gli eventi dal client al server, aggiungere il codice seguente al file di configurazione dell'applicazione nel progetto Client.
+7. Per tracciare gli eventi dal client al server, aggiungere il codice seguente al file di configurazione dell'applicazione nel progetto Client.
 
     ```xml
     <diagnostics>
@@ -50,7 +50,7 @@ In un sistema distribuito che contiene servizi interconnessi è necessario deter
     </diagnostics>
     ```
 
-8.  In Program.cs nel client aggiungere l'istruzione Using seguente.
+8. In Program.cs nel client aggiungere l'istruzione Using seguente.
 
     ```csharp
     using System.Diagnostics;

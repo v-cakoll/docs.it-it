@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: fbb8ce974a618349bd4b5e7a2a25a165d91787a7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4832fb80cfbe42c7a1303e0de69f36784711c05a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311058"
 ---
 # <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#ElseIf' deve essere preceduto da un '#If' o '#ElseIf' corrispondente
 `#ElseIf` è una direttiva di compilazione condizionale. Un' `#ElseIf` clausola deve essere preceduta da un oggetto corrispondente `#If` o `#ElseIf` clausola.  
@@ -21,11 +21,11 @@ ms.locfileid: "58832255"
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Verificare che un precedente `#If` oppure `#ElseIf` non sia stata separata da questo `#ElseIf` mediante un blocco di compilazione condizionale o inserita in posizione errata `#End If`.  
+1. Verificare che un precedente `#If` oppure `#ElseIf` non sia stata separata da questo `#ElseIf` mediante un blocco di compilazione condizionale o inserita in posizione errata `#End If`.  
   
-2.  Se il `#ElseIf` è preceduto da un `#Else` direttiva, rimuovere il `#Else` oppure modificarlo in base a un `#ElseIf`.  
+2. Se il `#ElseIf` è preceduto da un `#Else` direttiva, rimuovere il `#Else` oppure modificarlo in base a un `#ElseIf`.  
   
-3.  Se tutti gli altri elementi sono in ordine, aggiungere una direttiva `#If` all'inizio del blocco di compilazione condizionale.  
+3. Se tutti gli altri elementi sono in ordine, aggiungere una direttiva `#If` all'inizio del blocco di compilazione condizionale.  
   
 ## <a name="see-also"></a>Vedere anche
 

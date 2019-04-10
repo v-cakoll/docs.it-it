@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313801"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Procedura: Chiamare un metodo di estensione (Visual Basic)
 I metodi di estensione consentono di aggiungere metodi a una classe esistente. Dopo che un metodo di estensione è dichiarato e inserito nell'ambito, è possibile chiamarlo come metodo di istanza del tipo che estende. Per altre informazioni su come scrivere un metodo di estensione, vedere [come: Scrivere un metodo di estensione](./how-to-write-an-extension-method.md).  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>Per chiamare un metodo di estensione  
   
-1.  Dichiarare una variabile con il tipo di dati del primo parametro del metodo di estensione. Per la `PrintAndPunctuate`, è necessario un <xref:System.String> variabile:  
+1. Dichiarare una variabile con il tipo di dati del primo parametro del metodo di estensione. Per la `PrintAndPunctuate`, è necessario un <xref:System.String> variabile:  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Variabile richiamerà il metodo di estensione che il relativo valore è associato al primo parametro, `aString`. Verrà visualizzata la seguente istruzione chiama `Ready?`.  
+2. Variabile richiamerà il metodo di estensione che il relativo valore è associato al primo parametro, `aString`. Verrà visualizzata la seguente istruzione chiama `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  Dichiarare un'altra variabile string e chiamare nuovamente il metodo per verificare che funziona con qualsiasi stringa.  
+3. Dichiarare un'altra variabile string e chiamare nuovamente il metodo per verificare che funziona con qualsiasi stringa.  
   
     ```  
     Dim example2 = " or not"  
@@ -98,4 +98,4 @@ End Module
 
 - [Procedura: Scrivere un metodo di estensione](./how-to-write-an-extension-method.md)
 - [Metodi di estensione](./extension-methods.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

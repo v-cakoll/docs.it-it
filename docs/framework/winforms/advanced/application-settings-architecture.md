@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099781"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312566"
 ---
 # <a name="application-settings-architecture"></a>Architettura Impostazioni applicazione
 Questo argomento descrive il funzionamento dell'architettura Impostazioni applicazione e ne analizza le funzionalità avanzate, come i raggruppamenti e le chiavi delle impostazioni.  
@@ -100,11 +100,11 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
 ### <a name="settings-serialization"></a>Serializzazione delle impostazioni  
  Quando <xref:System.Configuration.LocalFileSettingsProvider> deve salvare le impostazioni su disco, esegue le azioni seguenti:  
   
-1.  Usa la reflection per esaminare tutte le proprietà definite per il <xref:System.Configuration.ApplicationSettingsBase> trovando quelle che vengono applicate con la classe derivata <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Usa la reflection per esaminare tutte le proprietà definite per il <xref:System.Configuration.ApplicationSettingsBase> trovando quelle che vengono applicate con la classe derivata <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Serializza la proprietà su disco. Innanzitutto tenta di chiamare il <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> oppure <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> su associato al tipo <xref:System.ComponentModel.TypeConverter>. Se il tentativo non riesce, usa la serializzazione XML.  
+2. Serializza la proprietà su disco. Innanzitutto tenta di chiamare il <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> oppure <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> su associato al tipo <xref:System.ComponentModel.TypeConverter>. Se il tentativo non riesce, usa la serializzazione XML.  
   
-3.  Determina quali impostazioni vanno inserite in ciascun file, in base all'attributo dell'impostazione.  
+3. Determina quali impostazioni vanno inserite in ciascun file, in base all'attributo dell'impostazione.  
   
  Se si implementa una propria classe di impostazioni, è possibile usare la <xref:System.Configuration.SettingsSerializeAsAttribute> per contrassegnare un'impostazione per la serializzazione binaria o personalizzata usando il <xref:System.Configuration.SettingsSerializeAs> enumerazione. Per altre informazioni sulla creazione di una propria classe di impostazioni nel codice, vedere [come: Creare le impostazioni dell'applicazione](how-to-create-application-settings.md).  
   

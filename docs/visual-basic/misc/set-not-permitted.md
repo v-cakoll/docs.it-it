@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
-ms.openlocfilehash: ca6887dfe6f168399ea1a06fec3e569406ed24a2
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 231dd322fd0eadb6fa13d58b527c0b047cc0e3f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024911"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315283"
 ---
 # <a name="set-not-permitted"></a>Set non consentito
 Si è provato a modificare una proprietà le cui impostazioni non possono essere configurate in fase di esecuzione oppure possono essere configurate solo in determinate condizioni. Ad esempio, si è tentato di modificare le impostazioni della proprietà `Appearance`, `ControlBox`,`MinButton`o `MaxButton` per il form in fase di esecuzione oppure di impostare la proprietà `Visible` su `False` per l'ultimo sottomenu visibile di un menu padre.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Controllare la proprietà e determinare in quali condizioni è possibile impostarla.  
+1. Controllare la proprietà e determinare in quali condizioni è possibile impostarla.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654575"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920675"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
 
@@ -106,7 +106,7 @@ Le regole dell'operatore `?.` garantiscono che il lato sinistro dell'operatore v
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Se ci si assicura che il lato sinistro venga valutato una sola volta, è anche possibile usare qualsiasi espressione, incluse le chiamate a metodi, nel lato sinistro dell'operatore `?.`
+Se ci si assicura che il lato sinistro venga valutato una sola volta, è anche possibile usare qualsiasi espressione, incluse le chiamate a metodi, sul lato sinistro dell'operatore `?.`
 
 ## <a name="string-interpolation"></a>Interpolazione di stringhe
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Per iniziare a usare l'interpolazione di stringhe, vedere l'esercitazione interattiva [Interpolazione di stringhe in C# ](../tutorials/intro-to-csharp/interpolated-strings.yml), l'articolo [Interpolazione di stringhe](../language-reference/tokens/interpolated.md) e l'esercitazione [Interpolazione di stringhe in C#](../tutorials/string-interpolation.md).
+Per iniziare a usare l'interpolazione di stringhe, vedere l'esercitazione interattiva [Interpolazione di stringhe in C# ](../tutorials/exploration/interpolated-strings.yml), l'articolo [Interpolazione di stringhe](../language-reference/tokens/interpolated.md) e l'esercitazione [Interpolazione di stringhe in C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Filtri eccezioni
 

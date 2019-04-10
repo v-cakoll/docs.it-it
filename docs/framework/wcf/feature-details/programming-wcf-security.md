@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087807"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313320"
 ---
 # <a name="programming-wcf-security"></a>Programmazione delle funzionalità di sicurezza di WCF
 Questo argomento descrive le attività di programmazione fondamentali utilizzate per creare un'applicazione Windows Communication Foundation (WCF) sicuro. Questo argomento descrive solo l'autenticazione, riservatezza e integrità, complessivamente note come *protezione del trasferimento*. In questo argomento non descrive l'autorizzazione (controllo di accesso a risorse o servizi); Per informazioni sull'autorizzazione, vedere [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -25,11 +25,11 @@ Questo argomento descrive le attività di programmazione fondamentali utilizzate
 ## <a name="setting-the-security-mode"></a>Impostazione della modalità di sicurezza  
  Di seguito vengono spiegati i passaggi generali per la programmazione con la modalità di sicurezza in WCF:  
   
-1.  Scegliere fra le associazioni predefinite un'associazione appropriata ai requisiti dell'applicazione. Per un elenco di associazioni disponibili, vedere [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Per impostazione predefinita, quasi tutte le associazioni presentano un meccanismo di sicurezza abilitato. L'unica eccezione è il <xref:System.ServiceModel.BasicHttpBinding> classe (usando la configurazione, il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Scegliere fra le associazioni predefinite un'associazione appropriata ai requisiti dell'applicazione. Per un elenco di associazioni disponibili, vedere [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Per impostazione predefinita, quasi tutte le associazioni presentano un meccanismo di sicurezza abilitato. L'unica eccezione è il <xref:System.ServiceModel.BasicHttpBinding> classe (usando la configurazione, il [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      L'associazione scelta determina il trasporto. Ad esempio, l'associazione <xref:System.ServiceModel.WSHttpBinding> utilizza il protocollo HTTP come trasporto, mentre l'associazione <xref:System.ServiceModel.NetTcpBinding> utilizza il trasporto TCP.  
   
-2.  Selezionare per l'associazione una delle modalità di sicurezza. Si noti che l'insieme delle modalità fra cui è possibile scegliere dipende dall'associazione scelta. Ad esempio, l'associazione <xref:System.ServiceModel.WSDualHttpBinding> non consente di scegliere la sicurezza a livello di trasporto. Analogamente, né l'associazione <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> né l'associazione <xref:System.ServiceModel.NetNamedPipeBinding> consentono di scegliere la sicurezza a livello di messaggio.  
+2. Selezionare per l'associazione una delle modalità di sicurezza. Si noti che l'insieme delle modalità fra cui è possibile scegliere dipende dall'associazione scelta. Ad esempio, l'associazione <xref:System.ServiceModel.WSDualHttpBinding> non consente di scegliere la sicurezza a livello di trasporto. Analogamente, né l'associazione <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> né l'associazione <xref:System.ServiceModel.NetNamedPipeBinding> consentono di scegliere la sicurezza a livello di messaggio.  
   
      Sono disponibili tre opzioni:  
   
@@ -47,9 +47,9 @@ Questo argomento descrive le attività di programmazione fondamentali utilizzate
   
          Questa scelta utilizza il livello di trasporto per proteggere il trasferimento dei messaggi, ognuno dei quali contiene le credenziali dettagliate richieste dagli altri servizi. Ciò combina il vantaggio in termini di prestazioni della sicurezza a livello di trasporto con il vantaggio delle credenziali dettagliate della sicurezza a livello di messaggio. Questa opzione è disponibile per le associazioni seguenti: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> e <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Se si decide di utilizzare la sicurezza a livello di trasporto per il protocollo HTTP (ovvero il protocollo HTTPS), è inoltre necessario configurare l'host con un certificato SSL e quindi abilitare il protocollo SSL su una porta. Per altre informazioni, vedere [protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3. Se si decide di utilizzare la sicurezza a livello di trasporto per il protocollo HTTP (ovvero il protocollo HTTPS), è inoltre necessario configurare l'host con un certificato SSL e quindi abilitare il protocollo SSL su una porta. Per altre informazioni, vedere [protezione del trasporto HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
-4.  Se si utilizza l'associazione <xref:System.ServiceModel.WSHttpBinding> e non occorre stabilire una sessione protetta, impostare la proprietà <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> su `false`.  
+4. Se si utilizza l'associazione <xref:System.ServiceModel.WSHttpBinding> e non occorre stabilire una sessione protetta, impostare la proprietà <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> su `false`.  
   
      Una sessione protetta si verifica quando un client e un servizio creano un canale utilizzando una chiave simmetrica, ovvero quando sia il client sia il server utilizzano la stessa chiave per la durata della conversazione e fino alla chiusura del dialogo.  
   

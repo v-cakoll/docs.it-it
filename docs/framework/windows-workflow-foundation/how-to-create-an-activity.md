@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709016"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315140"
 ---
 # <a name="how-to-create-an-activity"></a>Procedura: Creare un'attività
 
@@ -21,50 +21,50 @@ Le attività sono l'unità principale del comportamento in [!INCLUDE[wf1](../../
 
 ## <a name="create-the-activity-library-project"></a>Creare il progetto di libreria di attività
 
-1.  Aprire Visual Studio e scegli **New** > **Project** dal **File** menu.
+1. Aprire Visual Studio e scegli **New** > **Project** dal **File** menu.
 
-2.  Nel **nuovo progetto** finestra di dialogo, sotto il **installati** categoria, seleziona **Visual c#** > **flusso di lavoro** (o **Visual Basic** > **flusso di lavoro**).
+2. Nel **nuovo progetto** finestra di dialogo, sotto il **installati** categoria, seleziona **Visual c#** > **flusso di lavoro** (o **Visual Basic** > **flusso di lavoro**).
 
     > [!NOTE]
     > Se non viene visualizzato il **flusso di lavoro** categoria del modello, potrebbe essere necessario installare il **Windows Workflow Foundation** componente di Visual Studio. Scegliere il **aperto Visual Studio Installer** collegamento sul lato sinistro delle **nuovo progetto** finestra di dialogo. Il programma di installazione di Visual Studio, selezionare la **singoli componenti** scheda. Quindi, sotto il **attività di sviluppo** categoria, seleziona la **Windows Workflow Foundation** componente. Scegli **Modify** per installare il componente.
 
 3. Selezionare il **libreria di attività** modello di progetto. Tipo di `NumberGuessWorkflowActivities` nella **Name** casella e quindi fare clic su **OK**.
 
-4.  Fare doppio clic su **Activity1.xaml** nelle **Esplora soluzioni** e scegliere **Elimina**. Per confermare scegliere **OK** .
+4. Fare doppio clic su **Activity1.xaml** nelle **Esplora soluzioni** e scegliere **Elimina**. Per confermare scegliere **OK** .
 
 ## <a name="create-the-readint-activity"></a>Creare l'attività ReadInt
 
-1.  Scegli **Aggiungi nuovo elemento** dalle **progetto** menu.
+1. Scegli **Aggiungi nuovo elemento** dalle **progetto** menu.
 
-2.  Nel **Installed** > **elementi comuni** nodo, seleziona **flusso di lavoro**. Selezionare **attività di codice** dalle **flusso di lavoro** elenco.
+2. Nel **Installed** > **elementi comuni** nodo, seleziona **flusso di lavoro**. Selezionare **attività di codice** dalle **flusso di lavoro** elenco.
 
-3.  Tipo di `ReadInt` nella **Name** casella e quindi fare clic su **Add**.
+3. Tipo di `ReadInt` nella **Name** casella e quindi fare clic su **Add**.
 
-4.  Sostituire la definizione dell'attività `ReadInt` esistente con la definizione seguente.
+4. Sostituire la definizione dell'attività `ReadInt` esistente con la definizione seguente.
 
      [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > L'attività `ReadInt` deriva da <xref:System.Activities.NativeActivity%601> anziché <xref:System.Activities.CodeActivity>, che è l'attività predefinita per il modello di attività codice. L'oggetto <xref:System.Activities.CodeActivity%601> può essere usato se l'attività fornisce un singolo risultato, che viene esposto tramite l'argomento <xref:System.Activities.Activity%601.Result%2A>, ma <xref:System.Activities.CodeActivity%601> non supporta l'uso dei segnalibri, quindi viene usato l'oggetto <xref:System.Activities.NativeActivity%601>.
+    > L'attività `ReadInt` deriva da <xref:System.Activities.NativeActivity%601> anziché <xref:System.Activities.CodeActivity>, che è l'attività predefinita per il modello di attività codice. <xref:System.Activities.CodeActivity%601> può essere utilizzato se l'attività fornisce un singolo risultato, che viene esposta tramite il <xref:System.Activities.Activity%601.Result%2A> argomento, ma <xref:System.Activities.CodeActivity%601> non supporta l'uso dei segnalibri, pertanto <xref:System.Activities.NativeActivity%601> viene usato.
 
 ## <a name="create-the-prompt-activity"></a>Creare l'attività Prompt
 
-1.  Premere **Ctrl**+**MAIUSC**+**B** per compilare il progetto. Nella compilazione del progetto, l'attività `ReadInt` in questo progetto può essere usata per compilare l'attività personalizzata tramite questo passaggio.
+1. Premere **Ctrl**+**MAIUSC**+**B** per compilare il progetto. Nella compilazione del progetto, l'attività `ReadInt` in questo progetto può essere usata per compilare l'attività personalizzata tramite questo passaggio.
 
-2.  Scegli **Aggiungi nuovo elemento** dalle **progetto** menu.
+2. Scegli **Aggiungi nuovo elemento** dalle **progetto** menu.
 
-3.  Nel **Installed** > **elementi comuni** nodo, seleziona **flusso di lavoro**. Selezionare **impegno** dalle **flusso di lavoro** elenco.
+3. Nel **Installed** > **elementi comuni** nodo, seleziona **flusso di lavoro**. Selezionare **impegno** dalle **flusso di lavoro** elenco.
 
-4.  Tipo di `Prompt` nella **Name** casella e quindi fare clic su **Add**.
+4. Tipo di `Prompt` nella **Name** casella e quindi fare clic su **Add**.
 
-5.  Fare doppio clic su **prompt. XAML** nelle **Esplora soluzioni** per visualizzarlo nella finestra di progettazione se non è già visualizzato.
+5. Fare doppio clic su **prompt. XAML** nelle **Esplora soluzioni** per visualizzarlo nella finestra di progettazione se non è già visualizzato.
 
-6.  Fare clic su **argomenti** sul lato sinistro inferiore dell'ActivityDesigner per visualizzare i **argomenti** riquadro.
+6. Fare clic su **argomenti** sul lato sinistro inferiore dell'ActivityDesigner per visualizzare i **argomenti** riquadro.
 
-7.  Fare clic su **Crea argomento**.
+7. Fare clic su **Crea argomento**.
 
-8.  Tipo `BookmarkName` nella **nome** , quindi selezionare **nel** dal **direzione** elenco a discesa, seleziona **stringa** dal **Tipo di argomento** elenco a discesa e quindi premere **invio** per salvare l'argomento.
+8. Tipo `BookmarkName` nella **nome** , quindi selezionare **nel** dal **direzione** elenco a discesa, seleziona **stringa** dal **Tipo di argomento** elenco a discesa e quindi premere **invio** per salvare l'argomento.
 
 9. Fare clic su **Crea argomento**.
 
@@ -109,4 +109,4 @@ Per istruzioni su come creare un flusso di lavoro tramite queste attività, vede
 - [Progettazione e implementazione di attività personalizzate](designing-and-implementing-custom-activities.md)
 - [Esercitazione introduttiva](getting-started-tutorial.md)
 - [Procedura: Creare un flusso di lavoro](how-to-create-a-workflow.md)
-- [Uso di ExpressionTextBox in un ActivityDesigner personalizzato](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Utilizzo di ExpressionTextBox in un ActivityDesigner personalizzato](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

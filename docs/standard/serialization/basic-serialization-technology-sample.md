@@ -2,15 +2,15 @@
 title: Esempio di tecnologia di serializzazione di base
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315010"
 ---
 # <a name="basic-serialization-technology-sample"></a>Esempio di tecnologia di serializzazione di base
-[Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
+[Scarica esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
   
  In questo esempio viene illustrata la capacità di Common Language Runtime di serializzare in un flusso il grafico di un oggetto contenuto in memoria. Per la serializzazione, è possibile utilizzare l'oggetto <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Un elenco collegato, contenente dati, viene serializzato in un flusso di file o deserializzato da tale flusso. In entrambi i casi l'elenco viene visualizzato per consentire di esaminare i risultati. L'elenco collegato è di tipo `LinkedList`, un tipo definito in questo esempio.  
   
@@ -18,25 +18,25 @@ ms.locfileid: "54681703"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Per compilare l'esempio utilizzando il prompt dei comandi  
   
-1.  Spostarsi in una delle sottodirectory specifiche del linguaggio della directory Technologies\Serialization\Runtime Serialization\Basic utilizzando il prompt dei comandi.  
+1. Spostarsi in una delle sottodirectory specifiche del linguaggio della directory Technologies\Serialization\Runtime Serialization\Basic utilizzando il prompt dei comandi.  
   
-2.  Dalla riga di comando digitare **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** o **msbuild SerializationVB.sln**, a seconda del linguaggio di programmazione che si vuole usare.  
+2. Dalla riga di comando digitare **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** o **msbuild SerializationVB.sln**, a seconda del linguaggio di programmazione che si vuole usare.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Per compilare l'esempio utilizzando Visual Studio  
   
-1.  Aprire [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], quindi spostarsi in una delle sottodirectory specifiche del linguaggio relative all'esempio.  
+1. Aprire [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], quindi spostarsi in una delle sottodirectory specifiche del linguaggio relative all'esempio.  
   
-2.  Fare doppio clic sull'icona relativa a SerializationCS.sln, SerializationJSL.sln o SerializationVB.sln, a seconda del linguaggio di programmazione che si desidera utilizzare, per aprire il file in Visual Studio.  
+2. Fare doppio clic sull'icona relativa a SerializationCS.sln, SerializationJSL.sln o SerializationVB.sln, a seconda del linguaggio di programmazione che si desidera utilizzare, per aprire il file in Visual Studio.  
   
-3.  Scegliere **Compila soluzione** dal menu **Compila**.  
+3. Scegliere **Compila soluzione** dal menu **Compila**.  
   
  L'applicazione verrà compilata nella sottodirectory predefinita \bin o \bin\Debug.  
   
 ### <a name="to-run-the-sample"></a>Per eseguire l'esempio  
   
-1.  Spostarsi nella directory contenente l'eseguibile compilato.  
+1. Spostarsi nella directory contenente l'eseguibile compilato.  
   
-2.  Dalla riga di comando digitare **Serialization.exe** con i valori di parametro desiderati.  
+2. Dalla riga di comando digitare **Serialization.exe** con i valori di parametro desiderati.  
   
     > [!NOTE]
     >  L'esempio compila un'applicazione console. Per visualizzare l'output dell'applicazione, è necessario avviarla dalla finestra del prompt dei comandi.  
@@ -64,19 +64,19 @@ ms.locfileid: "54681703"
   
 -   Serializzazione in fase di esecuzione  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> - Consente di fare riferimento a un oggetto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  
+    -   <xref:System.Runtime.Serialization.IFormatter> Utilizzato per fare riferimento a un <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> o un <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> oggetto.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> - Consente di serializzare un elenco collegato in un flusso in formato binario. Il formattatore binario utilizza un formato riconosciuto solo dal tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Tuttavia, i dati sono concisi.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Utilizzato per serializzare un elenco collegato a un flusso in un formato binario. Il formattatore binario utilizza un formato riconosciuto solo dal tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Tuttavia, i dati sono concisi.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> - Consente di serializzare un elenco collegato in un flusso in formato SOAP, che è un formato standard.  
+    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Utilizzato per serializzare un elenco collegato a un flusso in formato SOAP. che è un formato standard.  
   
 -   I/O di flusso  
   
-    -   <xref:System.IO.Stream> - Consente di eseguire la serializzazione e la deserializzazione. Il tipo di flusso specifico utilizzato in questo esempio è <xref:System.IO.FileStream>. È tuttavia possibile utilizzare la serializzazione con qualsiasi tipo derivato da <xref:System.IO.Stream>.  
+    -   <xref:System.IO.Stream> Utilizzato per serializzare e deserializzare. Il tipo di flusso specifico utilizzato in questo esempio è <xref:System.IO.FileStream>. È tuttavia possibile utilizzare la serializzazione con qualsiasi tipo derivato da <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File> - Consente di creare oggetti <xref:System.IO.FileStream> per la lettura e la creazione di file su disco.  
+    -   <xref:System.IO.File> Consente di creare <xref:System.IO.FileStream> oggetti per la lettura e la creazione di file su disco.  
   
-    -   <xref:System.IO.FileStream> - Consente di eseguire la serializzazione e la deserializzazione di elenchi collegati.  
+    -   <xref:System.IO.FileStream> Utilizzato per serializzare e deserializzare gli elenchi collegati.  
   
 ## <a name="see-also"></a>Vedere anche
 

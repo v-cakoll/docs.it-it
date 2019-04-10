@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314971"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introduzione a .NET Framework
 
@@ -71,13 +71,13 @@ Per sviluppare app o componenti .NET Framework, eseguire le operazioni seguenti:
 
 2. Selezionare uno o più linguaggi supportati da .NET Framework che si intende usare per lo sviluppo delle app. Sono disponibili numerosi linguaggi, tra cui [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) di Microsoft. Un linguaggio di programmazione che consente di sviluppare app per .NET Framework è conforme alla [specifica CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).
 
-3. Selezionare e installare l'ambiente di sviluppo da usare per creare le app e che supporti uno o più linguaggi di programmazione selezionati. L'ambiente di sviluppo integrato (IDE) Microsoft per le app .NET Framework è [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). È disponibile in numerose edizioni.
+3. Selezionare e installare l'ambiente di sviluppo da usare per creare le app e che supporti uno o più linguaggi di programmazione selezionati. L'ambiente di sviluppo integrato (IDE) Microsoft per le app .NET Framework è [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). È disponibile in numerose edizioni.
 
 Per altre informazioni sullo sviluppo di app destinate a .NET Framework, vedere la [Guida di sviluppo](../development-guide.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-| Titolo | Descrizione |
+| Titolo | Description |
 | ----- |------------ |
 | [Panoramica](overview.md) | Vengono fornite informazioni dettagliate per gli sviluppatori che realizzano app destinate a .NET Framework. |
 | [Guida all'installazione](../install/index.md) | Vengono fornite informazioni sull'installazione di .NET Framework. |  

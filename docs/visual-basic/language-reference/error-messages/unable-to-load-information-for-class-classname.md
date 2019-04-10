@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 049db16875b14bc095e293d2a923917a9ec1d99b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42f31df7f4bc849374d8beb09e17394c3cdd5ec4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318201"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>Impossibile caricare le informazioni per la classe\<NomeClasse >'
 È stato inserito un riferimento a una classe che non è disponibile.  
@@ -21,9 +21,9 @@ ms.locfileid: "58814458"
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Verificare che la classe è definita e che il nome sia stato digitato correttamente.  
+1. Verificare che la classe è definita e che il nome sia stato digitato correttamente.  
   
-2.  Provare ad accedere a uno dei membri dichiarati nel modulo. In alcuni casi l'ambiente di debug non può trovare i membri perché i moduli in cui sono dichiarati non sono ancora stati caricati.  
+2. Provare ad accedere a uno dei membri dichiarati nel modulo. In alcuni casi l'ambiente di debug non può trovare i membri perché i moduli in cui sono dichiarati non sono ancora stati caricati.  
   
 ## <a name="see-also"></a>Vedere anche
 

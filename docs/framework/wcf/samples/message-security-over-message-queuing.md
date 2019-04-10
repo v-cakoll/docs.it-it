@@ -2,12 +2,12 @@
 title: Sicurezza dei messaggi nell'accodamento messaggi
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 9ef2ecfa1dd8557b601fdd6abdc3aba94d20d46c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9e9067c38d86bb74c569b6d648d84c7c9ff6fac6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100418"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318598"
 ---
 # <a name="message-security-over-message-queuing"></a>Sicurezza dei messaggi nell'accodamento messaggi
 In questo esempio viene illustrato come implementare un'applicazione che utilizza WS-Security con l'autenticazione del certificato X.509v3 per il client e che richiede l'autenticazione del server utilizzando il certificato X.509v3 del server su MSMQ. La sicurezza dei messaggi a volte è più efficace per garantire che i messaggi nell'archivio MSMQ siano crittografati e l'applicazione può eseguire direttamente l'autenticazione del messaggio.
@@ -16,9 +16,9 @@ In questo esempio viene illustrato come implementare un'applicazione che utilizz
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
+2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
     1.  Aprire Server Manager in Visual Studio 2012.
 
@@ -30,40 +30,40 @@ In questo esempio viene illustrato come implementare un'applicazione che utilizz
 
     5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
-3.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer
 
-1.  Assicurarsi che il percorso includa la cartella contenente Makecert.exe e FindPrivateKey.exe.
+1. Assicurarsi che il percorso includa la cartella contenente Makecert.exe e FindPrivateKey.exe.
 
-2.  Eseguire Setup.bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+2. Eseguire Setup.bat dalla cartella di installazione dell'esempio. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!NOTE]
     >  Assicurarsi di rimuovere i certificati eseguendo Cleanup.bat una volta completato l'esempio. Negli altri esempi relativi alla sicurezza vengono usati gli stessi certificati.  
   
-3.  Avviare Service.exe da \service\bin.  
+3. Avviare Service.exe da \service\bin.  
   
-4.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+4. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-5.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+5. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
-1.  Copiare i file Setup.bat, Cleanup.bat e ImportClientCert.bat nel computer del servizio.  
+1. Copiare i file Setup.bat, Cleanup.bat e ImportClientCert.bat nel computer del servizio.  
   
-2.  Creare una directory sul client del servizio per i file binari del client.  
+2. Creare una directory sul client del servizio per i file binari del client.  
   
-3.  Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
+3. Copiare i file di programma del client nella directory del client sul computer relativo e i file Setup.bat, Cleanup.bat e ImportServiceCert.bat nel client.  
   
-4.  Eseguire `setup.bat service` sul server. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
+4. Eseguire `setup.bat service` sul server. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
   
-5.  Modifica service.exe.config del servizio in modo da riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer.  
+5. Modifica service.exe.config del servizio in modo da riflettere il nuovo nome del certificato (nelle `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer.  
   
-6.  Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
+6. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
-7.  Eseguire `setup.bat client` sul client. Quando si esegue `setup.bat` con l'argomento `client` viene creato un certificato client denominato client.com che viene esportato in un file denominato Client.cer.  
+7. Eseguire `setup.bat client` sul client. Quando si esegue `setup.bat` con l'argomento `client` viene creato un certificato client denominato client.com che viene esportato in un file denominato Client.cer.  
   
-8.  Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio. Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.  È inoltre necessario modificare il nome di certificato del servizio in modo che corrisponda al nome di dominio completo del computer del servizio (nell'attributo `findValue` dell'elemento `defaultCertificate` di `serviceCertificate` in `clientCredentials`).  
+8. Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio. Tale operazione viene eseguita sostituendo localhost con il nome di dominio completo del server.  È inoltre necessario modificare il nome di certificato del servizio in modo che corrisponda al nome di dominio completo del computer del servizio (nell'attributo `findValue` dell'elemento `defaultCertificate` di `serviceCertificate` in `clientCredentials`).  
   
 9. Copiare il file Client.cer dalla directory del client nella directory del servizio sul server.  
   

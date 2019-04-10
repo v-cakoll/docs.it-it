@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 1bc82fe9ecee577125c4353677fb19cd3a57b0cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837065"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318448"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Procedura: Definire una classe che può fornire funzionalità identiche con tipi di dati diversi (Visual Basic)
 È possibile definire una classe dalla quale creare oggetti in grado di fornire funzionalità identiche su tipi di dati diversi. A questo scopo, specificare uno o più *parametri di tipo* nella definizione. La classe potrà quindi servire come modello per gli oggetti che usano tipi di dati diversi. Una classe definita in questo modo viene denominata *classe generica*.  
@@ -42,13 +42,13 @@ ms.locfileid: "58837065"
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>Per definire una classe con un parametro di tipo  
   
-1.  Definire la classe nel modo normale.  
+1. Definire la classe nel modo normale.  
   
-2.  Aggiungere `(Of` *parametrotipo*`)` subito dopo il nome della classe per specificare il parametro di tipo.  
+2. Aggiungere `(Of` *parametrotipo*`)` subito dopo il nome della classe per specificare il parametro di tipo.  
   
-3.  Se esiste più di un parametro di tipo, creare un elenco separato da virgole all'interno delle parentesi. Non ripetere la parola chiave `Of` .  
+3. Se esiste più di un parametro di tipo, creare un elenco separato da virgole all'interno delle parentesi. Non ripetere la parola chiave `Of` .  
   
-4.  Se le operazioni eseguite dal codice su un parametro di tipo sono diverse da una semplice assegnazione, far seguire il parametro di tipo da una clausola `As` per l'aggiunta di uno o più *vincoli*. Un vincolo garantisce che il tipo fornito per tale parametro di tipo soddisfi un requisito, ad esempio:  
+4. Se le operazioni eseguite dal codice su un parametro di tipo sono diverse da una semplice assegnazione, far seguire il parametro di tipo da una clausola `As` per l'aggiunta di uno o più *vincoli*. Un vincolo garantisce che il tipo fornito per tale parametro di tipo soddisfi un requisito, ad esempio:  
   
     -   Supporta un'operazione, quale `>`, eseguita dal codice  
   
@@ -58,9 +58,9 @@ ms.locfileid: "58837065"
   
      Se non si specifica alcun vincolo, le uniche operazioni e gli unici membri usati dal codice sono quelli supportati dal [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). Per altre informazioni, vedere [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5.  Identificare ogni membro di classi da dichiarare con un tipo fornito e dichiararlo `As` `typeparameter`. Questo vale per l'archiviazione interna, i parametri di routine e i valori restituiti.  
+5. Identificare ogni membro di classi da dichiarare con un tipo fornito e dichiararlo `As` `typeparameter`. Questo vale per l'archiviazione interna, i parametri di routine e i valori restituiti.  
   
-6.  Accertarsi che il codice usi solo operazioni e metodi supportati da qualsiasi tipo di dati che può fornire a `itemType`.  
+6. Accertarsi che il codice usi solo operazioni e metodi supportati da qualsiasi tipo di dati che può fornire a `itemType`.  
   
      Nell'esempio riportato di seguito viene definita una classe che gestisce un elenco molto semplice. L'elenco è contenuto negli `items`della matrice interna e il tipo di dati degli elementi dell'elenco può essere dichiarato dal codice. Un costruttore con parametri consente al codice di impostare il limite superiore di `items`, quindi il costruttore predefinito lo imposta a 9 (per un totale di 10 elementi).  
   
@@ -77,9 +77,9 @@ ms.locfileid: "58837065"
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di dati](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Tipi generici in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Indipendenza del linguaggio e componenti indipendenti dal linguaggio](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [Elenco dei tipi](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Type List](../../../../visual-basic/language-reference/statements/type-list.md)
 - [Procedura: Usare una classe generica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

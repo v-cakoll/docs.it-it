@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712474"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826600"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Principi fondamentali di Garbage Collection
 <a name="top"></a> In Common Language Runtime (CLR) il Garbage Collector funge da gestore di memoria automatico, offrendo i seguenti vantaggi:  
@@ -261,21 +261,19 @@ Garbage Collection contemporanea
   
  La modalità in background elimina le restrizioni di allocazione imposte dalla modalità simultanea, dal momento che durante un'operazione di Garbage Collection in background è possibile eseguire operazioni temporanee. Ciò significa che, durante un'operazione di Garbage Collection di generazione 1, la modalità in background è in grado di rimuovere gli oggetti inutilizzati nelle generazioni temporanee ed anche espandere l'heap in base alle esigenze.  
   
- Nell'illustrazione riportata di seguito viene mostrata l'esecuzione in background di un'operazione di Garbage Collection in un thread dedicato separato in una workstation.  
+La figura seguente illustra l'esecuzione in background di un'operazione di Garbage Collection in un thread dedicato separato su una workstation:
   
- ![Garbage Collection della workstation in background](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-Garbage Collection della workstation in background  
-  
+ ![Diagramma che illustra un'operazione di Garbage Collection in background su una workstation.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [Torna all'inizio](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Garbage Collection del server in background  
  A partire da .NET Framework 4.5, l'operazione di Garbage Collection in background per server è la modalità predefinita per l'operazione di Garbage Collection per server. Per scegliere questa modalità, impostare l'attributo `enabled` dell'[elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) su `true` nello schema di configurazione di runtime. Questa modalità è simile alla modalità in background descritta nella sezione precedente, ma con alcune differenze. La modalità in background dell'operazione di Garbage Collection per workstation usa un thread di Garbage Collection in background dedicato, mentre quella dell'operazione di Garbage Collection per server usa più thread, in genere un thread dedicato per ogni processore logico. A differenza del thread di Garbage Collection in background per workstation, questi thread non scadono.  
   
- Nell'illustrazione riportata di seguito viene mostrata l'esecuzione di un'operazione di Garbage Collection in background in un thread dedicato separato in un server.  
+ La figura seguente illustra l'esecuzione in background di un'operazione di Garbage Collection in un thread dedicato separato su un server:  
   
- ![Garbage Collection del server in background](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-Garbage Collection del server in background  
+ ![Diagramma che illustra un'operazione di Garbage Collection in background su un server.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>Vedere anche
 

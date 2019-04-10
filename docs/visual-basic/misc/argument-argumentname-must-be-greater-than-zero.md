@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
-ms.openlocfilehash: a490887338a474f93d44275d49237ec490c00a4c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9c5e2526a46ae155d304c08e1460f9a61111e251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019154"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312891"
 ---
 # <a name="argument-argumentname-must-be-greater-than-zero"></a>Argomento '\<NomeArgomento >' deve essere maggiore di zero
 Un argomento non è valido perché è minore o uguale a zero.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Controllare l'ortografia degli argomenti nell'espressione. Un nome di variabile scritto in modo non corretto può creare implicitamente una variabile numerica inizializzata su zero.  
+1. Controllare l'ortografia degli argomenti nell'espressione. Un nome di variabile scritto in modo non corretto può creare implicitamente una variabile numerica inizializzata su zero.  
   
-2.  Controllare le operazioni precedenti nelle variabili dell'espressione, specialmente quelle passate alla routine come argomenti da altre routine.  
+2. Controllare le operazioni precedenti nelle variabili dell'espressione, specialmente quelle passate alla routine come argomenti da altre routine.  
   
 ## <a name="see-also"></a>Vedere anche
 

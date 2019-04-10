@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3960a7f87f8ac9a09da7222bd0f7a4a01afc4154
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 8f298a7b036857e783efa128ce45ee8634ce993d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314458"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Procedura: Creare un oggetto WindowsPrincipal
 Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.WindowsPrincipal>, a seconda che il codice debba eseguire ripetutamente la convalida basata sui ruoli o solo una alla volta.  
@@ -27,7 +27,7 @@ Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.Windows
   
 ### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>Per creare un oggetto WindowsPrincipal per una convalida ripetuta  
   
-1.  Chiamare il metodo <xref:System.AppDomain.SetPrincipalPolicy%2A> sull'oggetto <xref:System.AppDomain> restituito dalla proprietà statica <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType>, passando il metodo a un valore di enumerazione <xref:System.Security.Principal.PrincipalPolicy> che indica quale dovrebbero essere i nuovi criteri. I valori supportati sono <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> e <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. Il codice seguente illustra questa chiamata al metodo.  
+1. Chiamare il metodo <xref:System.AppDomain.SetPrincipalPolicy%2A> sull'oggetto <xref:System.AppDomain> restituito dalla proprietà statica <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType>, passando il metodo a un valore di enumerazione <xref:System.Security.Principal.PrincipalPolicy> che indica quale dovrebbero essere i nuovi criteri. I valori supportati sono <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> e <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. Il codice seguente illustra questa chiamata al metodo.  
   
     ```csharp  
     AppDomain.CurrentDomain.SetPrincipalPolicy(  
@@ -39,7 +39,7 @@ Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.Windows
         PrincipalPolicy.WindowsPrincipal)  
     ```  
   
-2.  Con i criteri impostati usare la proprietà statica <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> per richiamare l'entità che incapsula l'utente Windows corrente. Poiché il tipo restituito della proprietà è <xref:System.Security.Principal.IPrincipal>, si deve eseguire il cast del risultato a un tipo <xref:System.Security.Principal.WindowsPrincipal>. Il codice seguente inizializza un nuovo oggetto <xref:System.Security.Principal.WindowsPrincipal> al valore dell'entità associata con il thread corrente.  
+2. Con i criteri impostati usare la proprietà statica <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> per richiamare l'entità che incapsula l'utente Windows corrente. Poiché il tipo restituito della proprietà è <xref:System.Security.Principal.IPrincipal>, si deve eseguire il cast del risultato a un tipo <xref:System.Security.Principal.WindowsPrincipal>. Il codice seguente inizializza un nuovo oggetto <xref:System.Security.Principal.WindowsPrincipal> al valore dell'entità associata con il thread corrente.  
   
     ```csharp  
     WindowsPrincipal myPrincipal =   
@@ -51,11 +51,11 @@ Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.Windows
         CType(Thread.CurrentPrincipal, WindowsPrincipal)   
     ```  
   
-3.  Quando l'oggetto Principal è stato creato, è possibile usare uno dei diversi metodi per convalidarlo.  
+3. Quando l'oggetto Principal è stato creato, è possibile usare uno dei diversi metodi per convalidarlo.  
   
 ### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a>Per creare un oggetto WindowsPrincipal per una singola convalida  
   
-1.  Inizializzare un nuovo oggetto <xref:System.Security.Principal.WindowsIdentity> chiamando il metodo statico <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType>, che sottopone a query l'account Windows corrente e inserisce le informazioni relative all'account in un oggetto Identity appena creato. Il codice seguente crea un nuovo oggetto <xref:System.Security.Principal.WindowsIdentity> e lo inizializza per l'utente autenticato corrente.  
+1. Inizializzare un nuovo oggetto <xref:System.Security.Principal.WindowsIdentity> chiamando il metodo statico <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType>, che sottopone a query l'account Windows corrente e inserisce le informazioni relative all'account in un oggetto Identity appena creato. Il codice seguente crea un nuovo oggetto <xref:System.Security.Principal.WindowsIdentity> e lo inizializza per l'utente autenticato corrente.  
   
     ```csharp  
     WindowsIdentity myIdentity = WindowsIdentity.GetCurrent();  
@@ -65,7 +65,7 @@ Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.Windows
     Dim myIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
     ```  
   
-2.  Creare un nuovo oggetto <xref:System.Security.Principal.WindowsPrincipal> e passargli il valore dell'oggetto <xref:System.Security.Principal.WindowsIdentity> creato nel passaggio precedente.  
+2. Creare un nuovo oggetto <xref:System.Security.Principal.WindowsPrincipal> e passargli il valore dell'oggetto <xref:System.Security.Principal.WindowsIdentity> creato nel passaggio precedente.  
   
     ```csharp  
     WindowsPrincipal myPrincipal = new WindowsPrincipal(myIdentity);  
@@ -75,7 +75,7 @@ Vi sono due metodi per creare un oggetto <xref:System.Security.Principal.Windows
     Dim myPrincipal As New WindowsPrincipal(myIdentity)  
     ```  
   
-3.  Quando l'oggetto Principal è stato creato, è possibile usare uno dei diversi metodi per convalidarlo.  
+3. Quando l'oggetto Principal è stato creato, è possibile usare uno dei diversi metodi per convalidarlo.  
   
 ## <a name="see-also"></a>Vedere anche
 

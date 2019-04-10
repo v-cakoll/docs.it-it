@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 89fcd981dbb5442f6150f539db4c7d404fe8d691
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839847"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315504"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.  
@@ -38,9 +38,9 @@ Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni d
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Per impostare - /optioninfer nell'IDE di Visual Studio  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
-2.  Nel **Compile** scheda, modificare il valore nella **Option infer** casella.  
+2. Nel **Compile** scheda, modificare il valore nella **Option infer** casella.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente compila `test.vb` con l'inferenza del tipo locale abilitata.  
@@ -56,9 +56,9 @@ vbc -optioninfer+ test.vb
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Infer (istruzione)](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Impostazioni predefinite di Visual Basic, Progetti, finestra di dialogo Opzioni](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [Pagina Compilazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Compilazione (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

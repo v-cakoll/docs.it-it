@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314698"
 ---
 # <a name="framework-property-metadata"></a>Metadati delle proprietà del framework
 Per le proprietà degli elementi oggetto considerati situati a livello di framework WPF nell'architettura di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono segnalate le opzioni di metadati delle proprietà del framework. In generale, la designazione a livello di framework WPF implica che funzionalità quali il rendering, il data binding e i miglioramenti del sistema di proprietà vengano gestite dalle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di presentazione di [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] e dai file eseguibili. Questi sistemi eseguono una query sui metadati delle proprietà del framework per determinare le caratteristiche specifiche delle funzionalità di particolari proprietà dell'elemento.  
@@ -48,9 +48,9 @@ Per le proprietà degli elementi oggetto considerati situati a livello di framew
   
  Se si sta creando un <xref:System.Windows.FrameworkPropertyMetadata> dell'istanza, esistono due modi per popolare i metadati con i valori per le proprietà specifiche che comunicano le caratteristiche delle proprietà del framework:  
   
-1.  Usare la <xref:System.Windows.FrameworkPropertyMetadata> firma del costruttore che accetta un `flags` parametro. Questo parametro deve essere riempito con desiderati tutti i valori combinati del <xref:System.Windows.FrameworkPropertyMetadataOptions> flag dell'enumerazione.  
+1. Usare la <xref:System.Windows.FrameworkPropertyMetadata> firma del costruttore che accetta un `flags` parametro. Questo parametro deve essere riempito con desiderati tutti i valori combinati del <xref:System.Windows.FrameworkPropertyMetadataOptions> flag dell'enumerazione.  
   
-2.  Usare una delle firme senza un `flags` parametro e quindi impostare ciascuna proprietà booleana di creazione di report sul <xref:System.Windows.FrameworkPropertyMetadata> a `true` per ogni modifica delle caratteristiche desiderata. In questo caso, è necessario impostare queste proprietà prima della costruzione di qualsiasi elemento con questa proprietà di dipendenza. Le proprietà booleane sono configurate per la lettura e la scrittura, in modo da consentire di popolare i metadati evitando l'inserimento del parametro `flags`; tuttavia, i metadati devono essere contrassegnati come sealed prima che la proprietà venga usata. Il tentativo di impostare le proprietà dopo la richiesta dei metadati sarà pertanto considerato un'operazione non valida.  
+2. Usare una delle firme senza un `flags` parametro e quindi impostare ciascuna proprietà booleana di creazione di report sul <xref:System.Windows.FrameworkPropertyMetadata> a `true` per ogni modifica delle caratteristiche desiderata. In questo caso, è necessario impostare queste proprietà prima della costruzione di qualsiasi elemento con questa proprietà di dipendenza. Le proprietà booleane sono configurate per la lettura e la scrittura, in modo da consentire di popolare i metadati evitando l'inserimento del parametro `flags`; tuttavia, i metadati devono essere contrassegnati come sealed prima che la proprietà venga usata. Il tentativo di impostare le proprietà dopo la richiesta dei metadati sarà pertanto considerato un'operazione non valida.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>Comportamento di unione dei metadati delle proprietà del framework  

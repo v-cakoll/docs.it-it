@@ -10,29 +10,29 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838994"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316453"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri (Visual Basic)
 Se una routine ha un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametro, non è possibile definire una versione di overload che accetta una matrice unidimensionale per la matrice di parametri. Per altre informazioni, vedere "Overloads impliciti per un parametro ParamArray" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Eseguire l'overload di una routine che accetta un numero variabile di parametri  
   
-1.  Verificare che la stored procedure e la chiamata a vantaggi per la logica del codice dal sovraccarico versioni da più di un `ParamArray` parametro. Vedere "Overload e i parametri ParamArray" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  
+1. Verificare che la stored procedure e la chiamata a vantaggi per la logica del codice dal sovraccarico versioni da più di un `ParamArray` parametro. Vedere "Overload e i parametri ParamArray" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  
   
-2.  Determinare i numeri dei valori specificati deve accettare la procedura nella parte variabile all'elenco di parametri. Ciò potrebbe includere il caso di alcun valore e può includere il caso di una matrice unidimensionale.  
+2. Determinare i numeri dei valori specificati deve accettare la procedura nella parte variabile all'elenco di parametri. Ciò potrebbe includere il caso di alcun valore e può includere il caso di una matrice unidimensionale.  
   
-3.  Per ogni numero di valori forniti accettabile, scrivere un `Sub` o `Function` istruzione di dichiarazione che definisce l'elenco di parametri corrispondenti. Non usare la `Optional` o il `ParamArray` parola chiave in questa versione di overload.  
+3. Per ogni numero di valori forniti accettabile, scrivere un `Sub` o `Function` istruzione di dichiarazione che definisce l'elenco di parametri corrispondenti. Non usare la `Optional` o il `ParamArray` parola chiave in questa versione di overload.  
   
-4.  In ogni dichiarazione, anteporre il `Sub` o `Function` parola chiave with il [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave).  
+4. In ogni dichiarazione, anteporre il `Sub` o `Function` parola chiave with il [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) (parola chiave).  
   
-5.  Dopo ogni dichiarazione, scrivere il codice che deve essere eseguita quando il codice chiamante fornisce i valori corrispondenti all'elenco dei parametri della dichiarazione della routine.  
+5. Dopo ogni dichiarazione, scrivere il codice che deve essere eseguita quando il codice chiamante fornisce i valori corrispondenti all'elenco dei parametri della dichiarazione della routine.  
   
-6.  Terminare ogni procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
+6. Terminare ogni procedura con il `End Sub` o `End Function` istruzione nel modo appropriato.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra una procedura definita con un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametro e quindi un set equivalente routine di overload.  
@@ -55,13 +55,13 @@ Se una routine ha un [ParamArray](../../../../visual-basic/language-reference/mo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
+- [Procedure](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Parametri facoltativi](./optional-parameters.md)
 - [Matrici di parametri](./parameter-arrays.md)
-- [Overload della routine](./procedure-overloading.md)
+- [Overload delle routine](./procedure-overloading.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
-- [Procedura: Definire più versioni di una stored Procedure](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Procedura: Definire più versioni di una routine](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Procedura: Chiamare una routine di overload](./how-to-call-an-overloaded-procedure.md)
-- [Procedura: Overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Risoluzione dell'overload](./overload-resolution.md)
+- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Overload Resolution](./overload-resolution.md)

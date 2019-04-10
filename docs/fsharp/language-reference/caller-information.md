@@ -2,12 +2,12 @@
 title: Informazioni sul chiamante
 description: Viene descritto come utilizzare attributi di argomenti informativi sul chiamante per ottenere informazioni sul chiamante da un metodo.
 ms.date: 04/25/2017
-ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890306"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316154"
 ---
 # <a name="caller-information"></a>Informazioni sul chiamante
 
@@ -28,24 +28,22 @@ Nell'esempio seguente viene illustrato come è possibile usare questi attributi 
 ```fsharp
 open System.Diagnostics
 open System.Runtime.CompilerServices
+open System.Runtime.InteropServices
 
 type Tracer() =
     member __.DoTrace(message: string,
-                      [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string,
-                      [<CallerLineNumber>] ?line: int) =
+                      [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
+                      [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
+                      [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
-        match (memberName, path, line) with
-        | Some m, Some p, Some l ->
-            Trace.WriteLine(sprintf "Member name: %s" m)
-            Trace.WriteLine(sprintf "Source file path: %s" p)
-            Trace.WriteLine(sprintf "Source line number: %d" l)
-        | _,_,_ -> ()
+        Trace.WriteLine(sprintf "Member name: %s" memberName)
+        Trace.WriteLine(sprintf "Source file path: %s" path)
+        Trace.WriteLine(sprintf "Source line number: %d" line)
 ```
 
 ## <a name="remarks"></a>Note
 
-Attributi informativi sul chiamante possono essere applicati solo a parametri facoltativi. È necessario fornire un valore esplicito per ciascun parametro facoltativo. Gli attributi di informazioni sul chiamante che il compilatore scrivere il valore appropriato per ciascun parametro facoltativo dotato di un attributo di informazioni sul chiamante.
+Attributi informativi sul chiamante possono essere applicati solo a parametri facoltativi. Gli attributi di informazioni sul chiamante che il compilatore scrivere il valore appropriato per ciascun parametro facoltativo dotato di un attributo di informazioni sul chiamante.
 
 I valori delle informazioni sul chiamante vengono generati come valori letterali in Intermediate Language (IL) in fase di compilazione. A differenza dei risultati del [StackTrace](/dotnet/api/system.diagnostics.stacktrace) proprietà per le eccezioni, i risultati non sono interessati da offuscamento.
 

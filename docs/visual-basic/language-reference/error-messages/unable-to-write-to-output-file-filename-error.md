@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318221"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Impossibile scrivere nel file di output '\<filename >': \<errore >
 Si è verificato un problema durante la creazione del file.  
@@ -31,32 +31,32 @@ Si è verificato un problema durante la creazione del file.
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Ripetere la compilazione del programma, per controllare se l'errore si verifica di nuovo.  
+1. Ripetere la compilazione del programma, per controllare se l'errore si verifica di nuovo.  
   
-2.  Se l'errore si ripresenta, salvare il lavoro e riavviare Visual Studio.  
+2. Se l'errore si ripresenta, salvare il lavoro e riavviare Visual Studio.  
   
-3.  Se l'errore si ripresenta, riavviare il computer.  
+3. Se l'errore si ripresenta, riavviare il computer.  
   
-4.  Se l'errore si ripete, reinstallare Visual Basic.  
+4. Se l'errore si ripete, reinstallare Visual Basic.  
   
-5.  Se l'errore persiste dopo la reinstallazione, inviare una notifica al Servizio supporto tecnico Microsoft.  
+5. Se l'errore persiste dopo la reinstallazione, inviare una notifica al Servizio supporto tecnico Microsoft.  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>Per controllare gli attributi di file in Esplora file  
   
-1.  Aprire la cartella a cui si è interessati.  
+1. Aprire la cartella a cui si è interessati.  
   
-2.  Fare clic sui **viste** icona e scegliere **dettagli**.  
+2. Fare clic sui **viste** icona e scegliere **dettagli**.  
   
-3.  Fare doppio clic sull'intestazione di colonna e scegliere **attributi** nell'elenco a discesa.  
+3. Fare doppio clic sull'intestazione di colonna e scegliere **attributi** nell'elenco a discesa.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Per modificare gli attributi di un file o una cartella  
   
-1.  Nelle **Esplora File**, fare doppio clic su file o della cartella e scegliere **proprietà**.  
+1. Nelle **Esplora File**, fare doppio clic su file o della cartella e scegliere **proprietà**.  
   
-2.  Nel **attributi** sezione del **generali** scheda, deseleziona il **Read-only** casella.  
+2. Nel **attributi** sezione del **generali** scheda, deseleziona il **Read-only** casella.  
   
-3.  Fare clic su **OK**.  
+3. Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

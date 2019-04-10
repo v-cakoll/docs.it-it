@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313477"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>La prima istruzione di questo 'Sub New' deve essere una chiamata esplicita a 'MyBase. New' o 'MyClass. New' perché il '\<nomecostruttore >' nella classe base\<nomeclassebase >' di '\<nomeclassederivata >' è contrassegnato come obsoleto: '\< messaggio di errore >'
 Un costruttore di classe non chiama esplicitamente un costruttore della classe base e il costruttore della classe base implicito è contrassegnato con l'attributo <xref:System.ObsoleteAttribute> e la direttiva di considerarlo come un errore.  
@@ -25,10 +25,10 @@ Un costruttore di classe non chiama esplicitamente un costruttore della classe b
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Esaminare il messaggio di errore tra virgolette e intraprendere l'azione appropriata.  
+1. Esaminare il messaggio di errore tra virgolette e intraprendere l'azione appropriata.  
   
-2.  Includere una chiamata a `MyBase.New()` o `MyClass.New()` come prima istruzione di `Sub New` nella classe derivata.  
+2. Includere una chiamata a `MyBase.New()` o `MyClass.New()` come prima istruzione di `Sub New` nella classe derivata.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Cenni preliminari sugli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -4,12 +4,12 @@ description: Come specificare la composizione di microservizi per un'applicazion
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463527"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920779"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definizione dell'applicazione a più contenitori con docker-compose.yml
 
@@ -433,7 +433,7 @@ Si noti che i valori impostati nell'ambiente di runtime eseguono sempre l'overri
 Se si esplorano Docker e .NET Core sulle origini su Internet, si troveranno Dockerfile che illustrano la semplicità di creazione di un'immagine Docker copiando l'origine in un contenitore. Questi esempi suggeriscono che usando una configurazione semplice è possibile disporre di un'immagine Docker con l'ambiente fornito con l'applicazione. Nell'esempio seguente viene illustrato un Dockerfile semplice in questa ottica.
 
 ```Dockerfile
-FROM microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -446,7 +446,7 @@ Un Dockerfile come questo funzionerà correttamente. Tuttavia è possibile ottim
 
 Nel modello basato su contenitori e microservizi si avviano costantemente contenitori. L'utilizzi tipico dei contenitori non comporta il riavvio di un contenitore in sospensione perché il contenitore è eliminabile. Gli agenti di orchestrazione, ad esempio Kubernetes e Azure Service Fabric, creano semplicemente nuove istanze delle immagini. È quindi necessario ottimizzare precompilando l'applicazione quando viene compilata in modo che il processo di creazione dell'istanza sia più veloce. Quando viene avviato, il contenitore deve essere pronto per l'esecuzione. Non eseguire il ripristino e la compilazione in fase di esecuzione, usando i comandi `dotnet restore` e `dotnet build` dall'interfaccia della riga di comando dotnet, come indicato in molti post di blog su .NET Core e Docker.
 
-Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un framework ottimizzato per i contenitori. Non solo .NET Core è un framework leggero con un footprint della memoria ridotto, il team si è concentrato sulle immagini Docker ottimizzate per i tre scenari principali e le ha pubblicate in un registro dell'hub Docker in *microsoft/dotnet*, a partire dalla versione 2.1:
+Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un framework ottimizzato per i contenitori. Oltre al fatto che .NET Core è un framework leggero con un footprint della memoria ridotto, il team si è concentrato sulle immagini Docker ottimizzate per i tre scenari principali e le ha pubblicate in un registro dell'hub Docker in *dotnet/core*, a partire dalla versione 2.1:
 
 1. **Sviluppo**: la priorità è la possibilità di scorrere e sottoporre a debug rapidamente le modifiche e le dimensioni sono secondarie.
 
@@ -454,11 +454,12 @@ Il team .NET sta lavorando intensamente per rendere .NET Core e ASP.NET Core un 
 
 3. **Produzione**: la priorità è la rapidità di distribuzione e avvio dei contenitori, quindi queste immagini sono limitate ai file binari e al contenuto necessario per eseguire l'applicazione.
 
-A tale scopo, il team .NET offre tre varianti di base in [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (nell'hub Docker):
+A tale scopo, il team .NET offre quattro varianti di base in [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (nell'hub Docker):
 
-1. **SDK**: per gli scenari di sviluppo e compilazione.
-2. **runtime**: per lo scenario di produzione e
-3. **runtime-deps**: per lo scenario di produzione di [applicazioni indipendenti](../../../core/deploying/index.md#self-contained-deployments-scd).
+1. **sdk**: per gli scenari di sviluppo e compilazione
+1. **aspnet**: per gli scenari di produzione di ASP.NET
+1. **runtime**: per gli scenari di produzione di .NET
+1. **runtime-deps**: per gli scenari di produzione di [applicazioni indipendenti](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 Per velocizzare l'avvio, le immagini di runtime impostano anche automaticamente aspnetcore\_urls sulla porta 80 e usano Ngen per creare una cache di immagini native degli assembly.
 

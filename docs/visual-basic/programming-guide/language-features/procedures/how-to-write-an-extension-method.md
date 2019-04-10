@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313762"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Procedura: Scrivere un metodo di estensione (Visual Basic)
 I metodi di estensione consentono di aggiungere metodi a una classe esistente. Il metodo di estensione può essere chiamato come se fosse un'istanza di tale classe.  
   
 ### <a name="to-define-an-extension-method"></a>Per definire un metodo di estensione  
   
-1.  Aprire un'applicazione nuova o esistente di Visual Basic in Visual Studio.  
+1. Aprire un'applicazione nuova o esistente di Visual Basic in Visual Studio.  
   
-2.  Nella parte superiore del file in cui si desidera definire un metodo di estensione, includere l'istruzione import seguente:  
+2. Nella parte superiore del file in cui si desidera definire un metodo di estensione, includere l'istruzione import seguente:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  All'interno di un modulo nell'applicazione nuovo o esistente, inizia con la definizione del metodo con l'attributo di estensione:  
+3. All'interno di un modulo nell'applicazione nuovo o esistente, inizia con la definizione del metodo con l'attributo di estensione:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Dichiarare il metodo in modo normale, ad eccezione del fatto che il tipo del primo parametro deve essere il tipo di dati da estendere.  
+4. Dichiarare il metodo in modo normale, ad eccezione del fatto che il tipo del primo parametro deve essere il tipo di dati da estendere.  
   
     ```  
     <Extension()>   
@@ -87,4 +87,4 @@ End Module
 - [Metodi di estensione](./extension-methods.md)
 - [Istruzione Module](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
-- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -1,5 +1,5 @@
 ---
-title: Stringhe di formato di data e ora personalizzato
+title: Stringhe di formato di data e ora personalizzato - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5f683ff123652e312d4d8dacc614f8a451ccd91
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127394"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838573"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Stringhe di formato di data e ora personalizzato
 
@@ -30,21 +30,21 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 > [!TIP]
 > È possibile scaricare l'[utilità di formattazione](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), un'applicazione che consente di applicare stringhe di formato a valori numerici o data e ora e di visualizzare la stringa di risultato.
 
- Le stringhe di formato data e ora personalizzate possono essere usate sia con valori <xref:System.DateTime> sia con valori <xref:System.DateTimeOffset>.
+Le stringhe di formato data e ora personalizzate possono essere usate sia con valori <xref:System.DateTime> sia con valori <xref:System.DateTimeOffset>.
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
 
 <a name="table"></a> Nelle operazioni di formattazione, le stringhe di formato di data e ora personalizzate possono essere usate con il metodo `ToString` di un'istanza di data e ora o con un metodo che supporta la formattazione composita. Nell'esempio seguente vengono illustrati entrambi gli usi.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
- [!code-vb[Formatting.DateAndTime.Custom#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#17](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
+[!code-vb[Formatting.DateAndTime.Custom#17](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]
 
- Nelle operazioni di analisi, le stringhe di formato di data e ora personalizzate possono essere usate con i metodi <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>. Questi metodi richiedono che una stringa di input sia esattamente conforme a un modello specifico affinché l'operazione di analisi abbia esito positivo. Nell'esempio seguente viene illustrata una chiamata al metodo <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> per analizzare una data che deve includere un giorno, un mese e un anno a due cifre.
+Nelle operazioni di analisi, le stringhe di formato di data e ora personalizzate possono essere usate con i metodi <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> e <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType>. Questi metodi richiedono che una stringa di input sia esattamente conforme a un modello specifico affinché l'operazione di analisi abbia esito positivo. Nell'esempio seguente viene illustrata una chiamata al metodo <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> per analizzare una data che deve includere un giorno, un mese e un anno a due cifre.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#18](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
- [!code-vb[Formatting.DateAndTime.Custom#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
- Nella tabella seguente vengono descritti gli identificatori di formato data e ora personalizzati e viene visualizzata una stringa di risultato prodotta da ogni identificatore di formato. Per impostazione predefinita, le stringhe di risultato riflettono le convenzioni di formattazione delle impostazioni cultura en-US. Se un identificatore di formato specifico produce una stringa di risultato localizzata, nell'esempio vengono anche indicate le impostazioni cultura alle quali si applica la stringa di risultato. Vedere la sezione Note per altre informazioni sull'uso di stringhe di formato di data e ora personalizzate.
+Nella tabella seguente vengono descritti gli identificatori di formato data e ora personalizzati e viene visualizzata una stringa di risultato prodotta da ogni identificatore di formato. Per impostazione predefinita, le stringhe di risultato riflettono le convenzioni di formattazione delle impostazioni cultura en-US. Se un identificatore di formato specifico produce una stringa di risultato localizzata, nell'esempio vengono anche indicate le impostazioni cultura alle quali si applica la stringa di risultato. Per altre informazioni sull'uso di stringhe di formato di data e ora personalizzato, vedere la sezione [Note](#notes).
 
 | Identificatore di formato | Description | Esempi |
 | ---------------------- | ----------------- | -------------- |
@@ -92,285 +92,261 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 |"zzz"|Offset di ore e minuti rispetto a UTC.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "zzz"](#zzzSpecifier).|2009-06-15T13:45:30-07:00 -> -07:00|
 |":"|Separatore dell'ora.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato ":"](#timeSeparator).|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
 |"/"|Separatore di data.<br /><br /> Altre informazioni: [Identificatore di formato personalizzato "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|"*string*"<br /><br /> '*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
+|"*string*"<br /><br /> '*string*'|Delimitatore di stringa letterale.<br /><br /> Altre informazioni: [Valori letterali carattere](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|Definisce il carattere seguente come identificatore di formato personalizzato.<br /><br /> Altre informazioni: [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|
-|&#92;|Carattere di escape.<br /><br /> Altre informazioni: [caratteri letterali](#Literals) e [Uso del carattere di Escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
-|Qualsiasi altro carattere|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br /><br /> Altre informazioni: [caratteri letterali](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
+|&#92;|Carattere di escape.<br /><br /> Altre informazioni: [Valori letterali carattere](#Literals) e [Uso del carattere di escape](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
+|Qualsiasi altro carattere|Il carattere viene copiato nella stringa di risultato senza alcuna modifica.<br /><br /> Altre informazioni: [Valori letterali carattere](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
- Nelle sezioni seguenti vengono fornite altre informazioni su ogni identificatore di formato data e ora personalizzato. Se non specificato diversamente, ogni identificatore genera una rappresentazione di stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o con un valore <xref:System.DateTimeOffset>.
+Nelle sezioni seguenti vengono fornite altre informazioni su ogni identificatore di formato data e ora personalizzato. Se non specificato diversamente, ogni identificatore genera una rappresentazione stringa identica, indipendentemente dal fatto che venga usato con un valore <xref:System.DateTime> o <xref:System.DateTimeOffset>.
 
-<a name="dSpecifier"></a> 
+## <a name="dSpecifier"></a> Identificatore di formato personalizzato "d"
 
-## <a name="the-d-custom-format-specifier"></a>Identificatore di formato personalizzato "d"
- L'identificatore di formato personalizzato "d" rappresenta il giorno del mese come numero compreso tra 1 e 31. Un giorno a una sola cifra viene formattato senza uno zero iniziale.
+L'identificatore di formato personalizzato "d" rappresenta il giorno del mese come numero compreso tra 1 e 31. Un giorno a una sola cifra viene formattato senza uno zero iniziale.
 
- Se l'identificatore di formato "d" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "d". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "d" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "d". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "d" in diverse stringhe di formato.
+L'esempio seguente include l'identificatore di formato personalizzato "d" in diverse stringhe di formato.
 
- [!code-csharp[Formatting.DateAndTime.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
- [!code-vb[Formatting.DateAndTime.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#1)]
+[!code-csharp[Formatting.DateAndTime.Custom#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
+[!code-vb[Formatting.DateAndTime.Custom#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#1)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ddSpecifier"></a> 
+## <a name="ddSpecifier"></a> Identificatore di formato personalizzato "dd"
 
-## <a name="the-dd-custom-format-specifier"></a>Identificatore di formato personalizzato "dd"
- La stringa di formato personalizzata "dd" rappresenta il giorno del mese come numero compreso tra 01 e 31. Un giorno a una sola cifra viene formattato con uno zero iniziale.
+La stringa di formato personalizzata "dd" rappresenta il giorno del mese come numero compreso tra 01 e 31. Un giorno a una sola cifra viene formattato con uno zero iniziale.
 
- L'esempio seguente include l'identificatore di formato personalizzato "dd" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "dd" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
- [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
+[!code-csharp[Formatting.DateAndTime.Custom#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
+[!code-vb[Formatting.DateAndTime.Custom#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="dddSpecifier"></a> 
+## <a name="dddSpecifier"></a> Identificatore di formato personalizzato "ddd"
 
-## <a name="the-ddd-custom-format-specifier"></a>Identificatore di formato personalizzato "ddd"
- L'identificatore di formato personalizzato "ddd" rappresenta il nome abbreviato del giorno della settimana. Il nome abbreviato localizzato del giorno della settimana viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
+L'identificatore di formato personalizzato "ddd" rappresenta il nome abbreviato del giorno della settimana. Il nome abbreviato localizzato del giorno della settimana viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
- L'esempio seguente include l'identificatore di formato personalizzato "ddd" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "ddd" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
- [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
+[!code-csharp[Formatting.DateAndTime.Custom#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
+[!code-vb[Formatting.DateAndTime.Custom#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ddddSpecifier"></a> 
+## <a name="ddddSpecifier"></a> Identificatore di formato personalizzato "dddd"
 
-## <a name="the-dddd-custom-format-specifier"></a>Identificatore di formato personalizzato "dddd"
- L'identificatore di formato personalizzato "dddd" (più qualsiasi numero di identificatori "d" aggiuntivi) rappresenta il nome completo del giorno della settimana. Il nome localizzato del giorno della settimana viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
+L'identificatore di formato personalizzato "dddd" (più qualsiasi numero di identificatori "d" aggiuntivi) rappresenta il nome completo del giorno della settimana. Il nome localizzato del giorno della settimana viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.DayNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
- L'esempio seguente include l'identificatore di formato personalizzato "dddd" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "dddd" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
- [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
+[!code-csharp[Formatting.DateAndTime.Custom#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
+[!code-vb[Formatting.DateAndTime.Custom#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="fSpecifier"></a> 
+## <a name="fSpecifier"></a> Identificatore di formato personalizzato "f"
 
-## <a name="the-f-custom-format-specifier"></a>Identificatore di formato personalizzato "f"
- L'identificatore di formato personalizzato "f" rappresenta la cifra più significativa della frazione di secondi, ovvero i decimi di secondo in un valore di data e ora.
+L'identificatore di formato personalizzato "f" rappresenta la cifra più significativa della frazione di secondi, ovvero i decimi di secondo in un valore di data e ora.
 
- Se l'identificatore di formato "f" viene usato senza altri identificatori di formato, viene interpretato come l'identificatore di formato di data e ora standard "f". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "f" viene usato senza altri identificatori di formato, viene interpretato come l'identificatore di formato di data e ora standard "f". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- Quando si usano identificatori di formato "f" come parte di una stringa di formato fornita al metodo <xref:System.DateTime.ParseExact%2A>, <xref:System.DateTime.TryParseExact%2A>, <xref:System.DateTimeOffset.ParseExact%2A> o <xref:System.DateTimeOffset.TryParseExact%2A>, il numero di identificatori di formato "f" indica il numero di cifre più significative della frazione di secondi che deve essere presente per analizzare correttamente la stringa.
+Quando si usano identificatori di formato "f" come parte di una stringa di formato fornita al metodo <xref:System.DateTime.ParseExact%2A>, <xref:System.DateTime.TryParseExact%2A>, <xref:System.DateTimeOffset.ParseExact%2A> o <xref:System.DateTimeOffset.TryParseExact%2A>, il numero di identificatori di formato "f" indica il numero di cifre più significative della frazione di secondi che deve essere presente per analizzare correttamente la stringa.
 
- L'esempio seguente include l'identificatore di formato personalizzato "f" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "f" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
- [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
+[!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+[!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ffSpecifier"></a> 
+## <a name="ffSpecifier"></a> Identificatore di formato personalizzato "ff"
 
-## <a name="the-ff-custom-format-specifier"></a>Identificatore di formato personalizzato "ff"
- L'identificatore di formato personalizzato "ff" rappresenta le due cifre più significative della frazione di secondi, ovvero i centesimi di secondo in un valore di data e ora.
+L'identificatore di formato personalizzato "ff" rappresenta le due cifre più significative della frazione di secondi, ovvero i centesimi di secondo in un valore di data e ora.
 
- L'esempio seguente include l'identificatore di formato personalizzato "ff" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "ff" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
- [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
+[!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+[!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="fffSpecifier"></a> 
+## <a name="fffSpecifier"></a> Identificatore di formato personalizzato "fff"
 
-## <a name="the-fff-custom-format-specifier"></a>Identificatore di formato personalizzato "fff"
- L'identificatore di formato personalizzato "fff" rappresenta le tre cifre più significative della frazione di secondi, ovvero i millisecondi in un valore di data e ora.
+L'identificatore di formato personalizzato "fff" rappresenta le tre cifre più significative della frazione di secondi, ovvero i millisecondi in un valore di data e ora.
 
- L'esempio seguente include l'identificatore di formato personalizzato "fff" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "fff" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
- [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
+[!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+[!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ffffSpecifier"></a> 
+## <a name="ffffSpecifier"></a> Identificatore di formato personalizzato "ffff"
 
-## <a name="the-ffff-custom-format-specifier"></a>Identificatore di formato personalizzato "ffff"
- L'identificatore di formato personalizzato "ffff" rappresenta le quattro cifre più significative della frazione di secondi, ovvero i decimillesimi di secondo in un valore di data e ora.
+L'identificatore di formato personalizzato "ffff" rappresenta le quattro cifre più significative della frazione di secondi, ovvero i decimillesimi di secondo in un valore di data e ora.
 
- Sebbene sia possibile visualizzare i decimillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT versione 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i decimillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT versione 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="fffffSpecifier"></a> 
+## <a name="fffffSpecifier"></a> Identificatore di formato personalizzato "fffff"
 
-## <a name="the-fffff-custom-format-specifier"></a>Identificatore di formato personalizzato "fffff"
- L'identificatore di formato personalizzato "fffff" rappresenta le cinque cifre più significative della frazione di secondi, ovvero i centomillesimi di secondo in un valore di data e ora.
+L'identificatore di formato personalizzato "fffff" rappresenta le cinque cifre più significative della frazione di secondi, ovvero i centomillesimi di secondo in un valore di data e ora.
 
- Sebbene sia possibile visualizzare i centomillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i centomillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ffffffSpecifier"></a> 
+## <a name="ffffffSpecifier"></a> Identificatore di formato personalizzato "ffffff"
 
-## <a name="the-ffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "ffffff"
- L'identificatore di formato personalizzato "ffffff" rappresenta le sei cifre più significative della frazione di secondi, ovvero i milionesimi di secondo in un valore di data e ora.
+L'identificatore di formato personalizzato "ffffff" rappresenta le sei cifre più significative della frazione di secondi, ovvero i milionesimi di secondo in un valore di data e ora.
 
- Sebbene sia possibile visualizzare i milionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i milionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="fffffffSpecifier"></a> 
+## <a name="fffffffSpecifier"></a> Identificatore di formato personalizzato "fffffff"
 
-## <a name="the-fffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "fffffff"
- L'identificatore di formato personalizzato "fffffff" rappresenta le sette cifre più significative della frazione di secondi, ovvero i decimilionesimi di secondo in un valore di data e ora.
+L'identificatore di formato personalizzato "fffffff" rappresenta le sette cifre più significative della frazione di secondi, ovvero i decimilionesimi di secondo in un valore di data e ora.
 
- Sebbene sia possibile visualizzare i decimilionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i decimilionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="F_Specifier"></a> 
+## <a name="F_Specifier"></a> Identificatore di formato personalizzato "F"
 
-## <a name="the-f-custom-format-specifier"></a>Identificatore di formato personalizzato "F"
- L'identificatore di formato personalizzato "F" rappresenta la cifra più significativa della frazione di secondi, ovvero i decimi di secondo in un valore di data e ora. Se la cifra è zero, non viene prodotta alcuna visualizzazione.
+L'identificatore di formato personalizzato "F" rappresenta la cifra più significativa della frazione di secondi, ovvero i decimi di secondo in un valore di data e ora. Se la cifra è zero, non viene prodotta alcuna visualizzazione.
 
- Se l'identificatore di formato "F" viene usato senza altri identificatori di formato, viene interpretato come l'identificatore di formato di data e ora standard "F". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "F" viene usato senza altri identificatori di formato, viene interpretato come l'identificatore di formato di data e ora standard "F". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- Il numero di identificatoti di formato "F" usati con il metodo <xref:System.DateTime.ParseExact%2A>, <xref:System.DateTime.TryParseExact%2A>, <xref:System.DateTimeOffset.ParseExact%2A> o <xref:System.DateTimeOffset.TryParseExact%2A> indica il numero massimo di cifre più significative della frazione di secondi che possono essere presenti per analizzare correttamente la stringa.
+Il numero di identificatoti di formato "F" usati con il metodo <xref:System.DateTime.ParseExact%2A>, <xref:System.DateTime.TryParseExact%2A>, <xref:System.DateTimeOffset.ParseExact%2A> o <xref:System.DateTimeOffset.TryParseExact%2A> indica il numero massimo di cifre più significative della frazione di secondi che possono essere presenti per analizzare correttamente la stringa.
 
- L'esempio seguente include l'identificatore di formato personalizzato "F" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "F" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
- [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
+[!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+[!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="FF_Specifier"></a> 
+## <a name="FF_Specifier"></a> Identificatore di formato personalizzato "FF"
 
-## <a name="the-ff-custom-format-specifier"></a>Identificatore di formato personalizzato "FF"
- L'identificatore di formato personalizzato "FF" rappresenta le due cifre più significative della frazione di secondi, ovvero i centesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con due zeri non vengono tuttavia visualizzate.
+L'identificatore di formato personalizzato "FF" rappresenta le due cifre più significative della frazione di secondi, ovvero i centesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con due zeri non vengono tuttavia visualizzate.
 
- L'esempio seguente include l'identificatore di formato personalizzato "FF" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "FF" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
- [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
+[!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+[!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="FFF_Specifier"></a> 
+## <a name="FFF_Specifier"></a> Identificatore di formato personalizzato "FFF"
 
-## <a name="the-fff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFF"
- L'identificatore di formato personalizzato "FFF" rappresenta le tre cifre più significative della frazione di secondi, ovvero i millisecondi in un valore di data e ora. Gli zeri finali o le cifre con tre zeri non vengono tuttavia visualizzate.
+L'identificatore di formato personalizzato "FFF" rappresenta le tre cifre più significative della frazione di secondi, ovvero i millisecondi in un valore di data e ora. Gli zeri finali o le cifre con tre zeri non vengono tuttavia visualizzate.
 
- L'esempio seguente include l'identificatore di formato personalizzato "FFF" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "FFF" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
- [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
+[!code-csharp[Formatting.DateAndTime.Custom#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+[!code-vb[Formatting.DateAndTime.Custom#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="FFFF_Specifier"></a> 
+## <a name="FFFF_Specifier"></a> Identificatore di formato personalizzato "FFFF"
 
-## <a name="the-ffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFF"
- L'identificatore di formato personalizzato "FFFF" rappresenta le quattro cifre più significative della frazione di secondi, ovvero i decimillesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con quattro zeri non vengono tuttavia visualizzate.
+L'identificatore di formato personalizzato "FFFF" rappresenta le quattro cifre più significative della frazione di secondi, ovvero i decimillesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con quattro zeri non vengono tuttavia visualizzate.
 
- Sebbene sia possibile visualizzare i decimillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i decimillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="FFFFF_Specifier"></a> 
+## <a name="FFFFF_Specifier"></a> Identificatore di formato personalizzato "FFFFF"
 
-## <a name="the-fffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFFF"
- L'identificatore di formato personalizzato "FFFFF" rappresenta le cinque cifre più significative della frazione di secondi, ovvero i centomillesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con cinque zeri non vengono tuttavia visualizzate.
+L'identificatore di formato personalizzato "FFFFF" rappresenta le cinque cifre più significative della frazione di secondi, ovvero i centomillesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con cinque zeri non vengono tuttavia visualizzate.
 
- Sebbene sia possibile visualizzare i centomillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i centomillesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="FFFFFF_Specifier"></a> 
+## <a name="FFFFFF_Specifier"></a> Identificatore di formato personalizzato "FFFFFF"
 
-## <a name="the-ffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFFFF"
- L'identificatore di formato personalizzato "FFFFFF" rappresenta le sei cifre più significative della frazione di secondi, ovvero i milionesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con sei zeri non vengono visualizzate.
+L'identificatore di formato personalizzato "FFFFFF" rappresenta le sei cifre più significative della frazione di secondi, ovvero i milionesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con sei zeri non vengono visualizzate.
 
- Sebbene sia possibile visualizzare i milionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i milionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="FFFFFFF_Specifier"></a> 
+## <a name="FFFFFFF_Specifier"></a> Identificatore di formato personalizzato "FFFFFFF"
 
-## <a name="the-fffffff-custom-format-specifier"></a>Identificatore di formato personalizzato "FFFFFFF"
- L'identificatore di formato personalizzato "FFFFFFF" rappresenta le sette cifre più significative della frazione di secondi, ovvero i decimilionesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con sette zeri non vengono tuttavia visualizzate.
+L'identificatore di formato personalizzato "FFFFFFF" rappresenta le sette cifre più significative della frazione di secondi, ovvero i decimilionesimi di secondo in un valore di data e ora. Gli zeri finali o le cifre con sette zeri non vengono tuttavia visualizzate.
 
- Sebbene sia possibile visualizzare i decimilionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
+Sebbene sia possibile visualizzare i decimilionesimi di un componente relativo ai secondi di un valore di ora, tale valore potrebbe non essere significativo. La precisione dei valori di data e ora dipende dalla risoluzione del clock di sistema. Nei sistemi operativi Windows NT 3.5 e versioni successive e Windows Vista la risoluzione del clock è di circa 10-15 millisecondi.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="gSpecifier"></a> 
+## <a name="gSpecifier"></a> Identificatore di formato personalizzato "g" o "gg"
 
-## <a name="the-g-or-gg-custom-format-specifier"></a>Identificatore di formato personalizzato "g" o "gg"
- Gli identificatori di formato personalizzati "g" o "gg" (più qualsiasi numero di identificatori "g" aggiuntivi) rappresentano il periodo o l'era, ad esempio D.C. Questo identificatore viene ignorato dall'operazione di formattazione se la data da formattare non è associata a una stringa di periodo o di era.
+Gli identificatori di formato personalizzati "g" o "gg" (più qualsiasi numero di identificatori "g" aggiuntivi) rappresentano il periodo o l'era, ad esempio D.C. Questo identificatore viene ignorato dall'operazione di formattazione se la data da formattare non è associata a una stringa di periodo o di era.
 
- Se l'identificatore di formato "g" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "g". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "g" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "g". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "g" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "g" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
- [!code-vb[Formatting.DateAndTime.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#6)]
+[!code-csharp[Formatting.DateAndTime.Custom#6](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
+[!code-vb[Formatting.DateAndTime.Custom#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#6)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="hSpecifier"></a> 
+## <a name="hSpecifier"></a> Identificatore di formato personalizzato "h"
 
-## <a name="the-h-custom-format-specifier"></a>Identificatore di formato personalizzato "h"
- L'identificatore di formato personalizzato "h" rappresenta l'ora come numero compreso tra 1 e 12, ovvero l'ora rappresentata nell'orario in formato 12 ore in base al quale il conteggio riparte da mezzanotte o da mezzogiorno. Una particolare ora dopo mezzanotte non è distinguibile dalla stessa ora dopo mezzogiorno. L'ora non viene arrotondata e se è costituita da una singola cifra viene formattata senza zero iniziale. Se viene, ad esempio, specificata un'ora equivalente alle 5:43 della mattina o del pomeriggio, tramite questo identificatore di formato personalizzato viene visualizzato "5".
+L'identificatore di formato personalizzato "h" rappresenta l'ora come numero compreso tra 1 e 12, ovvero l'ora rappresentata nell'orario in formato 12 ore in base al quale il conteggio riparte da mezzanotte o da mezzogiorno. Una particolare ora dopo mezzanotte non è distinguibile dalla stessa ora dopo mezzogiorno. L'ora non viene arrotondata e se è costituita da una singola cifra viene formattata senza zero iniziale. Se viene, ad esempio, specificata un'ora equivalente alle 5:43 della mattina o del pomeriggio, tramite questo identificatore di formato personalizzato viene visualizzato "5".
 
- Se l'identificatore di formato "h" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "h" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "h" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "h" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
- [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
+[!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="hhSpecifier"></a> 
+## <a name="hhSpecifier"></a> Identificatore di formato personalizzato "hh"
 
-## <a name="the-hh-custom-format-specifier"></a>Identificatore di formato personalizzato "hh"
- L'identificatore di formato personalizzato "hh" (più qualsiasi numero di identificatori "h" aggiuntivi) rappresenta l'ora come numero compreso tra 01 e 12, ovvero l'ora rappresentata nell'orario in formato 12 ore in base al quale il conteggio riparte da mezzanotte o da mezzogiorno. Una particolare ora dopo mezzanotte non è distinguibile dalla stessa ora dopo mezzogiorno. L'ora non viene arrotondata e se è costituita da una singola cifra viene formattata con uno zero iniziale. Se viene, ad esempio, specificata un'ora equivalente alle 5:43 della mattina o del pomeriggio, tramite questo identificatore di formato viene visualizzato "05".
+L'identificatore di formato personalizzato "hh" (più qualsiasi numero di identificatori "h" aggiuntivi) rappresenta l'ora come numero compreso tra 01 e 12, ovvero l'ora rappresentata nell'orario in formato 12 ore in base al quale il conteggio riparte da mezzanotte o da mezzogiorno. Una particolare ora dopo mezzanotte non è distinguibile dalla stessa ora dopo mezzogiorno. L'ora non viene arrotondata e se è costituita da una singola cifra viene formattata con uno zero iniziale. Se viene, ad esempio, specificata un'ora equivalente alle 5:43 della mattina o del pomeriggio, tramite questo identificatore di formato viene visualizzato "05".
 
- L'esempio seguente include l'identificatore di formato personalizzato "hh" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "hh" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
- [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
+[!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+[!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="H_Specifier"></a> 
+## <a name="H_Specifier"></a> Identificatore di formato personalizzato "H"
 
-## <a name="the-h-custom-format-specifier"></a>Identificatore di formato personalizzato "H"
- L'identificatore di formato personalizzato "H" rappresenta l'ora come numero compreso tra 0 e 23, ovvero l'ora rappresentata nell'orario in formato 24 ore a base zero in base al quale il conteggio riparte da mezzanotte. Un'ora costituita da una singola cifra viene formattata senza zero iniziale.
+L'identificatore di formato personalizzato "H" rappresenta l'ora come numero compreso tra 0 e 23, ovvero l'ora rappresentata nell'orario in formato 24 ore a base zero in base al quale il conteggio riparte da mezzanotte. Un'ora costituita da una singola cifra viene formattata senza zero iniziale.
 
- Se l'identificatore di formato "H" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "H" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "H" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "H" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
- [!code-vb[Formatting.DateAndTime.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#9)]
+[!code-csharp[Formatting.DateAndTime.Custom#9](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
+[!code-vb[Formatting.DateAndTime.Custom#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#9)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="HH_Specifier"></a> 
+## <a name="HH_Specifier"></a> Identificatore di formato personalizzato "HH"
 
-## <a name="the-hh-custom-format-specifier"></a>Identificatore di formato personalizzato "HH"
- L'identificatore di formato personalizzato "HH" (più qualsiasi numero di identificatori "H" aggiuntivi) rappresenta l'ora come numero compreso tra 00 e 23, ovvero l'ora rappresentata nell'orario in formato 24 ore a base zero in base al quale il conteggio riparte da mezzanotte. Un'ora costituita da una singola cifra viene formattata con uno zero iniziale.
+L'identificatore di formato personalizzato "HH" (più qualsiasi numero di identificatori "H" aggiuntivi) rappresenta l'ora come numero compreso tra 00 e 23, ovvero l'ora rappresentata nell'orario in formato 24 ore a base zero in base al quale il conteggio riparte da mezzanotte. Un'ora costituita da una singola cifra viene formattata con uno zero iniziale.
 
- L'esempio seguente include l'identificatore di formato personalizzato "HH" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "HH" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
- [!code-vb[Formatting.DateAndTime.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#10)]
+[!code-csharp[Formatting.DateAndTime.Custom#10](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
+[!code-vb[Formatting.DateAndTime.Custom#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#10)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="KSpecifier"></a> 
+## <a name="KSpecifier"></a> Identificatore di formato personalizzato "K"
 
-## <a name="the-k-custom-format-specifier"></a>Identificatore di formato personalizzato "K"
- L'identificatore di formato personalizzato "K" rappresenta le informazioni sul fuso orario di un valore di data e ora. Quando questo identificatore di formato viene usato con valori <xref:System.DateTime>, la stringa di risultato viene definita dal valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>:
+L'identificatore di formato personalizzato "K" rappresenta le informazioni sul fuso orario di un valore di data e ora. Quando questo identificatore di formato viene usato con valori <xref:System.DateTime>, la stringa di risultato viene definita dal valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>:
 
 -   Per il fuso orario locale (un valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> uguale a <xref:System.DateTimeKind.Local?displayProperty=nameWithType>) questo identificatore è equivalente all'identificatore "zzz" e genera una stringa di risultato che contiene l'offset locale rispetto all'ora UTC (Coordinated Universal Time), ad esempio "-07.00".
 
@@ -378,300 +354,278 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 
 -   Per un'ora di un fuso orario non specificato (un'ora la cui proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> è uguale a <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) il risultato è equivalente a <xref:System.String.Empty?displayProperty=nameWithType>.
 
- Per i valori <xref:System.DateTimeOffset>, l'identificatore di formato "K" è equivalente all'identificatore di formato "zzz" e genera una stringa di risultato che contiene l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC.
+Per i valori <xref:System.DateTimeOffset>, l'identificatore di formato "K" è equivalente all'identificatore di formato "zzz" e genera una stringa di risultato che contiene l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC.
 
- Se l'identificatore di formato "K" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "K" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente mostra la stringa risultante dall'uso dell'identificatore di formato personalizzato "K" con vari valori <xref:System.DateTime> e <xref:System.DateTimeOffset> in un sistema nel fuso orario Pacifico (Stati Uniti).
+L'esempio seguente mostra la stringa risultante dall'uso dell'identificatore di formato personalizzato "K" con vari valori <xref:System.DateTime> e <xref:System.DateTimeOffset> in un sistema nel fuso orario Pacifico (Stati Uniti).
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#12)]
- [!code-vb[Formatting.DateAndTime.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#12)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#12](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#12)]
+[!code-vb[Formatting.DateAndTime.Custom#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#12)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="mSpecifier"></a> 
+## <a name="mSpecifier"></a> Identificatore di formato personalizzato "m"
 
-## <a name="the-m-custom-format-specifier"></a>Identificatore di formato personalizzato "m"
- L'identificatore di formato personalizzato "m" rappresenta i minuti come numero compreso tra 0 e 59. Tali minuti rappresentano il numero intero di minuti passati dall'ultima ora. Un minuto costituito da una singola cifra viene formattato senza zero iniziale.
+L'identificatore di formato personalizzato "m" rappresenta i minuti come numero compreso tra 0 e 59. Tali minuti rappresentano il numero intero di minuti passati dall'ultima ora. Un minuto costituito da una singola cifra viene formattato senza zero iniziale.
 
- Se l'identificatore di formato "m" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "m". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "m" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "m". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "m" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "m" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
- [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
+[!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="mmSpecifier"></a> 
+## <a name="mmSpecifier"></a> Identificatore di formato personalizzato "mm"
 
-## <a name="the-mm-custom-format-specifier"></a>Identificatore di formato personalizzato "mm"
- L'identificatore di formato personalizzato "mm" (più qualsiasi numero di identificatori "m" aggiuntivi) rappresenta i minuti come numero compreso tra 00 e 59. Tali minuti rappresentano il numero intero di minuti passati dall'ultima ora. Un minuto costituito da una singola cifra viene formattato con uno zero iniziale.
+L'identificatore di formato personalizzato "mm" (più qualsiasi numero di identificatori "m" aggiuntivi) rappresenta i minuti come numero compreso tra 00 e 59. Tali minuti rappresentano il numero intero di minuti passati dall'ultima ora. Un minuto costituito da una singola cifra viene formattato con uno zero iniziale.
 
- L'esempio seguente include l'identificatore di formato personalizzato "mm" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "mm" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
- [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
+[!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+[!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="M_Specifier"></a> 
+## <a name="M_Specifier"></a> Identificatore di formato personalizzato "M"
 
-## <a name="the-m-custom-format-specifier"></a>Identificatore di formato personalizzato "M"
- L'identificatore di formato personalizzato "M" rappresenta il mese come numero compreso tra 1 e 12 (o tra 1 e 13 per i calendari con 13 mesi). Un mese a una sola cifra viene formattato senza uno zero iniziale.
+L'identificatore di formato personalizzato "M" rappresenta il mese come numero compreso tra 1 e 12 (o tra 1 e 13 per i calendari con 13 mesi). Un mese a una sola cifra viene formattato senza uno zero iniziale.
 
- Se l'identificatore di formato "M" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "M". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "M" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "M". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "M" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "M" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
- [!code-vb[Formatting.DateAndTime.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
+[!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
+[!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table) 
 
-<a name="MM_Specifier"></a> 
+## <a name="MM_Specifier"></a> Identificatore di formato personalizzato "MM"
 
-## <a name="the-mm-custom-format-specifier"></a>Identificatore di formato personalizzato "MM"
- L'identificatore di formato personalizzato "MM" rappresenta il mese come numero compreso tra 01 e 12 (o tra 1 e 13 per i calendari con 13 mesi). Un mese a una sola cifra viene formattato con uno zero iniziale.
+L'identificatore di formato personalizzato "MM" rappresenta il mese come numero compreso tra 01 e 12 (o tra 1 e 13 per i calendari con 13 mesi). Un mese a una sola cifra viene formattato con uno zero iniziale.
 
- L'esempio seguente include l'identificatore di formato personalizzato "MM" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "MM" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
- [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
+[!code-csharp[Formatting.DateAndTime.Custom#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
+[!code-vb[Formatting.DateAndTime.Custom#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="MMM_Specifier"></a> 
+## <a name="MMM_Specifier"></a> Identificatore di formato personalizzato "MMM"
 
-## <a name="the-mmm-custom-format-specifier"></a>Identificatore di formato personalizzato "MMM"
- L'identificatore di formato personalizzato "MMM" rappresenta il nome abbreviato del mese. Il nome abbreviato localizzato del mese viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
+L'identificatore di formato personalizzato "MMM" rappresenta il nome abbreviato del mese. Il nome abbreviato localizzato del mese viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedMonthNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
- L'esempio seguente include l'identificatore di formato personalizzato "MMM" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "MMM" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
- [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
+[!code-csharp[Formatting.DateAndTime.Custom#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
+[!code-vb[Formatting.DateAndTime.Custom#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="MMMM_Specifier"></a> 
+## <a name="MMMM_Specifier"></a> Identificatore di formato personalizzato "MMMM"
 
-## <a name="the-mmmm-custom-format-specifier"></a>Identificatore di formato personalizzato "MMMM"
- L'identificatore di formato personalizzato "MMMM" rappresenta il nome completo del mese. Il nome localizzato del mese viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
+L'identificatore di formato personalizzato "MMMM" rappresenta il nome completo del mese. Il nome localizzato del mese viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
- L'esempio seguente include l'identificatore di formato personalizzato "MMMM" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "MMMM" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
- [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
+[!code-csharp[Formatting.DateAndTime.Custom#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
+[!code-vb[Formatting.DateAndTime.Custom#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="sSpecifier"></a> 
+## <a name="sSpecifier"></a> Identificatore di formato personalizzato "s"
 
-## <a name="the-s-custom-format-specifier"></a>Identificatore di formato personalizzato "s"
- L'identificatore di formato personalizzato "s" rappresenta i secondi come numero compreso tra 0 e 59. Il risultato rappresenta il numero intero di secondi passati dall'ultimo minuto. Un secondo costituito da una singola cifra viene formattato senza zero iniziale.
+L'identificatore di formato personalizzato "s" rappresenta i secondi come numero compreso tra 0 e 59. Il risultato rappresenta il numero intero di secondi passati dall'ultimo minuto. Un secondo costituito da una singola cifra viene formattato senza zero iniziale.
 
- Se l'identificatore di formato "s" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "s". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "s" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "s". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "s" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "s" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
- [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
+[!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ssSpecifier"></a> 
+## <a name="ssSpecifier"></a> Identificatore di formato personalizzato "ss"
 
-## <a name="the-ss-custom-format-specifier"></a>Identificatore di formato personalizzato "ss"
- L'identificatore di formato personalizzato "ss" (più qualsiasi numero di identificatori "s" aggiuntivi) rappresenta i secondi come numero compreso tra 00 e 59. Il risultato rappresenta il numero intero di secondi passati dall'ultimo minuto. Un secondo costituito da una singola cifra viene formattato con uno zero iniziale.
+L'identificatore di formato personalizzato "ss" (più qualsiasi numero di identificatori "s" aggiuntivi) rappresenta i secondi come numero compreso tra 00 e 59. Il risultato rappresenta il numero intero di secondi passati dall'ultimo minuto. Un secondo costituito da una singola cifra viene formattato con uno zero iniziale.
 
- L'esempio seguente include l'identificatore di formato personalizzato "ss" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "ss" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
- [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
+[!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+[!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="tSpecifier"></a> 
+## <a name="tSpecifier"></a> Identificatore di formato personalizzato "t"
 
-## <a name="the-t-custom-format-specifier"></a>Identificatore di formato personalizzato "t"
- L'identificatore di formato personalizzato "t" rappresenta il primo carattere dell'indicatore AM/PM. L'indicatore localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate. L'indicatore AM viene usato per tutti gli orari da 0:00:00 (mezzanotte) a 11:59:59.999. L'indicatore PM viene usato per tutti gli orari da 12:00:00 (mezzogiorno) a 23:59:59.999.
+L'identificatore di formato personalizzato "t" rappresenta il primo carattere dell'indicatore AM/PM. L'indicatore localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate. L'indicatore AM viene usato per tutti gli orari da 0:00:00 (mezzanotte) a 11:59:59.999. L'indicatore PM viene usato per tutti gli orari da 12:00:00 (mezzogiorno) a 23:59:59.999.
 
- Se l'identificatore di formato "t" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato data e ora standard "t". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "t" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato data e ora standard "t". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "t" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "t" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
- [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
+[!code-csharp[Formatting.DateAndTime.Custom#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Custom#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ttSpecifier"></a> 
+## <a name="ttSpecifier"></a> Identificatore di formato personalizzato "tt"
 
-## <a name="the-tt-custom-format-specifier"></a>Identificatore di formato personalizzato "tt"
- L'identificatore di formato personalizzato "tt" (più qualsiasi numero di identificatori "t" aggiuntivi) rappresenta l'indicatore AM/PM completo. L'indicatore localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate. L'indicatore AM viene usato per tutti gli orari da 0:00:00 (mezzanotte) a 11:59:59.999. L'indicatore PM viene usato per tutti gli orari da 12:00:00 (mezzogiorno) a 23:59:59.999.
+L'identificatore di formato personalizzato "tt" (più qualsiasi numero di identificatori "t" aggiuntivi) rappresenta l'indicatore AM/PM completo. L'indicatore localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A?displayProperty=nameWithType> o <xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate. L'indicatore AM viene usato per tutti gli orari da 0:00:00 (mezzanotte) a 11:59:59.999. L'indicatore PM viene usato per tutti gli orari da 12:00:00 (mezzogiorno) a 23:59:59.999.
 
- Assicurarsi di usare l'identificatore "tt" per le lingue per le quali è necessario mantenere la distinzione tra AM e PM. Un esempio è la lingua giapponese per cui gli indicatori AM e PM differiscono in corrispondenza del secondo carattere anziché del primo.
+Assicurarsi di usare l'identificatore "tt" per le lingue per le quali è necessario mantenere la distinzione tra AM e PM. Un esempio è la lingua giapponese per cui gli indicatori AM e PM differiscono in corrispondenza del secondo carattere anziché del primo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "tt" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "tt" in una stringa di formato personalizzata.
 
- [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
- [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
+[!code-csharp[Formatting.DateAndTime.Custom#8](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+[!code-vb[Formatting.DateAndTime.Custom#8](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="ySpecifier"></a> 
+## <a name="ySpecifier"></a> Identificatore di formato personalizzato "y"
 
-## <a name="the-y-custom-format-specifier"></a>Identificatore di formato personalizzato "y"
- L'identificatore di formato personalizzato "y" rappresenta l'anno come numero a una cifra o a due cifre. Se l'anno ha più di due cifre, nel risultato vengono visualizzate solo le due cifre di ordine inferiore. Se la prima cifra di un anno a due cifre inizia con zero (ad esempio, 2008), il numero viene formattato senza zero iniziale.
+L'identificatore di formato personalizzato "y" rappresenta l'anno come numero a una cifra o a due cifre. Se l'anno ha più di due cifre, nel risultato vengono visualizzate solo le due cifre di ordine inferiore. Se la prima cifra di un anno a due cifre inizia con zero (ad esempio, 2008), il numero viene formattato senza zero iniziale.
 
- Se l'identificatore di formato "y" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "y". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato "y" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard "y". Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- L'esempio seguente include l'identificatore di formato personalizzato "y" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "y" in una stringa di formato personalizzata.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
- [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="yySpecifier"></a> 
+## <a name="yySpecifier"></a> Identificatore di formato personalizzato "yy"
 
-## <a name="the-yy-custom-format-specifier"></a>Identificatore di formato personalizzato "yy"
- L'identificatore di formato personalizzato "yy" rappresenta l'anno come numero a due cifre. Se l'anno ha più di due cifre, nel risultato vengono visualizzate solo le due cifre di ordine inferiore. Se l'anno a due cifre ha meno di due cifre significative, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere due cifre.
+L'identificatore di formato personalizzato "yy" rappresenta l'anno come numero a due cifre. Se l'anno ha più di due cifre, nel risultato vengono visualizzate solo le due cifre di ordine inferiore. Se l'anno a due cifre ha meno di due cifre significative, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere due cifre.
 
- In un'operazione di analisi, un anno a due cifre analizzato usando l'identificatore di formato personalizzato "yy" viene interpretato in base alla proprietà <xref:System.Globalization.Calendar.TwoDigitYearMax%2A?displayProperty=nameWithType> del calendario corrente del provider di formato. Nell'esempio seguente viene analizzata la rappresentazione di stringa di una data con un anno a due cifre usando il calendario gregoriano predefinito delle impostazioni cultura en-US, che, in questo caso, sono le impostazioni cultura correnti. Modifica quindi l'oggetto <xref:System.Globalization.CultureInfo> delle impostazioni cultura correnti per usare un oggetto <xref:System.Globalization.GregorianCalendar> la cui proprietà <xref:System.Globalization.GregorianCalendar.TwoDigitYearMax%2A> è stata modificata.
+In un'operazione di analisi, un anno a due cifre analizzato usando l'identificatore di formato personalizzato "yy" viene interpretato in base alla proprietà <xref:System.Globalization.Calendar.TwoDigitYearMax%2A?displayProperty=nameWithType> del calendario corrente del provider di formato. Nell'esempio seguente viene analizzata la rappresentazione di stringa di una data con un anno a due cifre usando il calendario gregoriano predefinito delle impostazioni cultura en-US, che, in questo caso, sono le impostazioni cultura correnti. Modifica quindi l'oggetto <xref:System.Globalization.CultureInfo> delle impostazioni cultura correnti per usare un oggetto <xref:System.Globalization.GregorianCalendar> la cui proprietà <xref:System.Globalization.GregorianCalendar.TwoDigitYearMax%2A> è stata modificata.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#19](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/parseexact2digityear1.cs#19)]
- [!code-vb[Formatting.DateAndTime.Custom#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/parseexact2digityear1.vb#19)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#19](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/parseexact2digityear1.cs#19)]
+[!code-vb[Formatting.DateAndTime.Custom#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/parseexact2digityear1.vb#19)]
 
- L'esempio seguente include l'identificatore di formato personalizzato "yy" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "yy" in una stringa di formato personalizzata.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
- [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="yyySpecifier"></a> 
+## <a name="yyySpecifier"></a> Identificatore di formato personalizzato "yyy"
 
-## <a name="the-yyy-custom-format-specifier"></a>Identificatore di formato personalizzato "yyy"
- L'identificatore di formato personalizzato "yyy" rappresenta l'anno con un minimo di tre cifre. Se l'anno ha più di tre cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di tre cifre, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere tre cifre.
+L'identificatore di formato personalizzato "yyy" rappresenta l'anno con un minimo di tre cifre. Se l'anno ha più di tre cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di tre cifre, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere tre cifre.
 
 > [!NOTE]
->  Per il calendario buddista tailandese, in cui sono previsti anni di cinque cifre, questo identificatore di formato consente di visualizzare tutte le cifre significative.
+> Per il calendario buddista tailandese, in cui sono previsti anni di cinque cifre, questo identificatore di formato consente di visualizzare tutte le cifre significative.
 
- L'esempio seguente include l'identificatore di formato personalizzato "yyy" in una stringa di formato personalizzata.
+L'esempio seguente include l'identificatore di formato personalizzato "yyy" in una stringa di formato personalizzata.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
- [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="yyyySpecifier"></a> 
+## <a name="yyyySpecifier"></a> Identificatore di formato personalizzato "yyyy"
 
-## <a name="the-yyyy-custom-format-specifier"></a>Identificatore di formato personalizzato "yyyy"
- L'identificatore di formato personalizzato "yyyy" rappresenta l'anno con un minimo di quattro cifre. Se l'anno ha più di quattro cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di quattro cifre, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere quattro cifre.
-
-> [!NOTE]
->  Per il calendario buddista tailandese, in cui sono previsti anni di cinque cifre, questo identificatore di formato visualizza un minimo di quattro cifre.
-
- L'esempio seguente include l'identificatore di formato personalizzato "yyyy" in una stringa di formato personalizzata.
-
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
- [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
-
- [Torna alla tabella](#table)
-
-<a name="yyyyySpecifier"></a> 
-
-## <a name="the-yyyyy-custom-format-specifier"></a>Identificatore di formato personalizzato "yyyyy"
- L'identificatore di formato personalizzato "yyyyy" (più qualsiasi numero di identificatori "y" aggiuntivi) rappresenta l'anno con un minimo di cinque cifre. Se l'anno ha più di cinque cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di cinque cifre, al numero vengono anteposti tanti zeri quanto sono necessari per ottenere cinque cifre.
-
- Se sono presenti identificatori "y" aggiuntivi, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere il numero di identificatori "y".
-
- L'esempio seguente include l'identificatore di formato personalizzato "yyyyy" in una stringa di formato personalizzata.
-
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
- [!code-vb[Formatting.DateAndTime.Custom#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
-
- [Torna alla tabella](#table)
-
-<a name="zSpecifier"></a> 
-
-## <a name="the-z-custom-format-specifier"></a>Identificatore di formato personalizzato "z"
- Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "z" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC (Coordinated Universal Time), misurato in ore. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo non è consigliabile usare l'identificatore di formato "z" con valori <xref:System.DateTime>.
-
- Con valori <xref:System.DateTimeOffset>, questo identificatore di formato rappresenta l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC, in ore.
-
- Lo scarto viene visualizzato sempre con un segno iniziale. Un segno più (+) indica le ore in più e un segno meno (-) le ore in meno rispetto all'ora UTC. Un valore di offset a una sola cifra viene formattato senza uno zero iniziale.
-
- Se l'identificatore di formato "z" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
-
- L'esempio seguente include l'identificatore di formato personalizzato "z" in una stringa di formato personalizzata.
-
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
- [!code-vb[Formatting.DateAndTime.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
-
- [Torna alla tabella](#table)
-
-<a name="zzSpecifier"></a> 
-
-## <a name="the-zz-custom-format-specifier"></a>Identificatore di formato personalizzato "zz"
- Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "zz" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC, misurato in ore. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo, non è consigliabile usare l'identificatore di formato "zz" con valori <xref:System.DateTime>.
-
- Con valori <xref:System.DateTimeOffset>, questo identificatore di formato rappresenta l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC, in ore.
-
- Lo scarto viene visualizzato sempre con un segno iniziale. Un segno più (+) indica le ore in più e un segno meno (-) le ore in meno rispetto all'ora UTC. Un valore di offset di una sola cifra viene formattato con uno zero iniziale.
-
- L'esempio seguente include l'identificatore di formato personalizzato "zz" in una stringa di formato personalizzata.
-
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
- [!code-vb[Formatting.DateAndTime.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
-
- [Torna alla tabella](#table)
-
-<a name="zzzSpecifier"></a> 
-
-## <a name="the-zzz-custom-format-specifier"></a>Identificatore di formato personalizzato "zzz"
- Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "zzz" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC, misurato in ore e minuti. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo, non è consigliabile usare l'identificatore di formato "zzz" con valori <xref:System.DateTime>.
-
- Con valori <xref:System.DateTimeOffset>, questo identificatore di formato rappresenta l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC, in ore e minuti.
-
- Lo scarto viene visualizzato sempre con un segno iniziale. Un segno più (+) indica le ore in più e un segno meno (-) le ore in meno rispetto all'ora UTC. Un valore di offset di una sola cifra viene formattato con uno zero iniziale.
-
- L'esempio seguente include l'identificatore di formato personalizzato "zzz" in una stringa di formato personalizzata.
-
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
- [!code-vb[Formatting.DateAndTime.Custom#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
-
- [Torna alla tabella](#table)
-
-<a name="timeSeparator"></a> 
-
-## <a name="the--custom-format-specifier"></a>Identificatore di formato personalizzato ":"
- L'identificatore di formato personalizzato ":" rappresenta il separatore di ora che viene usato per distinguere ore, minuti e secondi. Il separatore di ora localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
+L'identificatore di formato personalizzato "yyyy" rappresenta l'anno con un minimo di quattro cifre. Se l'anno ha più di quattro cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di quattro cifre, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere quattro cifre.
 
 > [!NOTE]
->  Per modificare il separatore dell'ora per una particolare stringa di data e ora, specificare il carattere separatore all'interno di un delimitatore di stringa letterale. La stringa con formato personalizzato `hh'_'dd'_'ss`, ad esempio, produce una stringa in cui "\_" (carattere di sottolineatura) è sempre usato come separatore dell'ora. Per cambiare il separatore dell'ora per tutte le date per una impostazione cultura, modificare il valore della proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> per l'impostazione cultura attuale oppure creare un'istanza di un oggetto <xref:System.Globalization.DateTimeFormatInfo>, assegnare il carattere alla relativa proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> e chiamare un overload del metodo di formattazione che include un parametro <xref:System.IFormatProvider>.
+> Per il calendario buddista tailandese, in cui sono previsti anni di cinque cifre, questo identificatore di formato visualizza un minimo di quattro cifre.
 
- Se l'identificatore di formato ":" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+L'esempio seguente include l'identificatore di formato personalizzato "yyyy" in una stringa di formato personalizzata.
 
- [Torna alla tabella](#table)
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
-<a name="dateSeparator"></a> 
+[Torna alla tabella](#table)
 
-## <a name="the--custom-format-specifier"></a>Identificatore di formato personalizzato "/"
- L'identificatore di formato personalizzato "/" rappresenta il separatore di data usato per distinguere anni, mesi e giorni. Il separatore di data localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
+## <a name="yyyyySpecifier"></a> Identificatore di formato personalizzato "yyyyy"
+
+L'identificatore di formato personalizzato "yyyyy" (più qualsiasi numero di identificatori "y" aggiuntivi) rappresenta l'anno con un minimo di cinque cifre. Se l'anno ha più di cinque cifre significative, queste vengono incluse nella stringa di risultato. Se l'anno ha meno di cinque cifre, al numero vengono anteposti tanti zeri quanto sono necessari per ottenere cinque cifre.
+
+Se sono presenti identificatori "y" aggiuntivi, al numero vengono anteposti tanti zeri quanti sono necessari per ottenere il numero di identificatori "y".
+
+L'esempio seguente include l'identificatore di formato personalizzato "yyyyy" in una stringa di formato personalizzata.
+
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
+
+[Torna alla tabella](#table)
+
+## <a name="zSpecifier"></a> Identificatore di formato personalizzato "z"
+
+Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "z" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC (Coordinated Universal Time), misurato in ore. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo non è consigliabile usare l'identificatore di formato "z" con valori <xref:System.DateTime>.
+
+Con valori <xref:System.DateTimeOffset>, questo identificatore di formato rappresenta l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC, in ore.
+
+Lo scarto viene visualizzato sempre con un segno iniziale. Un segno più (+) indica le ore in più e un segno meno (-) le ore in meno rispetto all'ora UTC. Un valore di offset a una sola cifra viene formattato senza uno zero iniziale.
+
+Se l'identificatore di formato "z" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
+
+L'esempio seguente include l'identificatore di formato personalizzato "z" in una stringa di formato personalizzata.
+
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#14](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
+[!code-vb[Formatting.DateAndTime.Custom#14](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
+
+[Torna alla tabella](#table)
+
+## <a name="zzSpecifier"></a> Identificatore di formato personalizzato "zz"
+
+Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "zz" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC, misurato in ore. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo, non è consigliabile usare l'identificatore di formato "zz" con valori <xref:System.DateTime>.
+
+Con valori <xref:System.DateTimeOffset>, questo identificatore di formato rappresenta l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC, in ore.
+
+Lo scarto viene visualizzato sempre con un segno iniziale. Un segno più (+) indica le ore in più e un segno meno (-) le ore in meno rispetto all'ora UTC. Un valore di offset di una sola cifra viene formattato con uno zero iniziale.
+
+L'esempio seguente include l'identificatore di formato personalizzato "zz" in una stringa di formato personalizzata.
+
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#14](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
+[!code-vb[Formatting.DateAndTime.Custom#14](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
+
+[Torna alla tabella](#table)
+
+## <a name="zzzSpecifier"></a> Identificatore di formato personalizzato "zzz"
+
+Con valori <xref:System.DateTime>, l'identificatore di formato personalizzato "zzz" rappresenta l'offset con segno del fuso orario del sistema operativo locale rispetto a UTC, misurato in ore e minuti. Non riflette il valore della proprietà <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> di un'istanza. Per questo motivo, non è consigliabile usare l'identificatore di formato "zzz" con valori <xref:System.DateTime>.
+
+Con valori <xref:System.DateTimeOffset>, questo identificatore di formato rappresenta l'offset del valore <xref:System.DateTimeOffset> rispetto a UTC, in ore e minuti.
+
+Lo scarto viene visualizzato sempre con un segno iniziale. Un segno più (+) indica le ore in più e un segno meno (-) le ore in meno rispetto all'ora UTC. Un valore di offset di una sola cifra viene formattato con uno zero iniziale.
+
+L'esempio seguente include l'identificatore di formato personalizzato "zzz" in una stringa di formato personalizzata.
+
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#14](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#14)]
+[!code-vb[Formatting.DateAndTime.Custom#14](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#14)]
+
+[Torna alla tabella](#table)
+
+## <a name="timeSeparator"></a> Identificatore di formato personalizzato ":"
+L'identificatore di formato personalizzato ":" rappresenta il separatore di ora che viene usato per distinguere ore, minuti e secondi. Il separatore di ora localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
 
 > [!NOTE]
->  Per modificare il separatore della data per una particolare stringa di data e ora, specificare il carattere separatore all'interno di un delimitatore di stringa letterale. Ad esempio, la stringa con formato personalizzato `mm'/'dd'/'yyyy` produce una stringa in cui "/" è sempre usato come separatore dell'ora. Per cambiare il separatore della data per tutte le date per una impostazione cultura, modificare il valore della proprietà <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> per l'impostazione cultura attuale oppure creare un'istanza di un oggetto <xref:System.Globalization.DateTimeFormatInfo>, assegnare il carattere alla relativa proprietà <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A> e chiamare un overload del metodo di formattazione che include un parametro <xref:System.IFormatProvider>.
+> Per modificare il separatore dell'ora per una particolare stringa di data e ora, specificare il carattere separatore all'interno di un delimitatore di stringa letterale. La stringa con formato personalizzato `hh'_'dd'_'ss`, ad esempio, produce una stringa in cui "\_" (carattere di sottolineatura) è sempre usato come separatore dell'ora. Per cambiare il separatore dell'ora per tutte le date per una impostazione cultura, modificare il valore della proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> per l'impostazione cultura attuale oppure creare un'istanza di un oggetto <xref:System.Globalization.DateTimeFormatInfo>, assegnare il carattere alla relativa proprietà <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> e chiamare un overload del metodo di formattazione che include un parametro <xref:System.IFormatProvider>.
 
- Se l'identificatore di formato "/" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzato](#UsingSingleSpecifiers) più avanti in questo argomento.
+Se l'identificatore di formato ":" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
 
- [Torna alla tabella](#table)
+[Torna alla tabella](#table)
 
-<a name="Literals"></a> 
+## <a name="dateSeparator"></a> Identificatore di formato personalizzato "/"
 
-## <a name="character-literals"></a>Valori letterali carattere
- I caratteri seguenti in una stringa di formato di data e ora sono riservati e vengono sempre interpretati come caratteri di formattazione o, nel caso di ", ', / e \\, come caratteri speciali.
+L'identificatore di formato personalizzato "/" rappresenta il separatore di data usato per distinguere anni, mesi e giorni. Il separatore di data localizzato appropriato viene recuperato dalla proprietà <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> delle impostazioni cultura correnti o specificate.
+
+> [!NOTE]
+> Per modificare il separatore della data per una particolare stringa di data e ora, specificare il carattere separatore all'interno di un delimitatore di stringa letterale. Ad esempio, la stringa con formato personalizzato `mm'/'dd'/'yyyy` produce una stringa in cui "/" è sempre usato come separatore dell'ora. Per cambiare il separatore della data per tutte le date per una impostazione cultura, modificare il valore della proprietà <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A?displayProperty=nameWithType> per l'impostazione cultura attuale oppure creare un'istanza di un oggetto <xref:System.Globalization.DateTimeFormatInfo>, assegnare il carattere alla relativa proprietà <xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A> e chiamare un overload del metodo di formattazione che include un parametro <xref:System.IFormatProvider>.
+
+Se l'identificatore di formato "/" viene usato senza altri identificatori di formato personalizzati, viene interpretato come l'identificatore di formato di data e ora standard e viene generato un evento <xref:System.FormatException>. Per altre informazioni sull'uso di un singolo identificatore di formato, vedere [Uso di singoli identificatori di formato personalizzati](#UsingSingleSpecifiers) più avanti in questo articolo.
+
+[Torna alla tabella](#table)
+
+## <a name="Literals"></a> Valori letterali carattere
+
+I caratteri seguenti in una stringa di formato di data e ora sono riservati e vengono sempre interpretati come caratteri di formattazione o, nel caso di ", ', / e \\, come caratteri speciali.
 
 ||||||
 |-|-|-|-|-|
@@ -680,67 +634,65 @@ Una stringa di formato di data e ora definisce la rappresentazione di testo di u
 |u|y|l|%|:|
 |/|"|'|\||
 
- Tutti gli altri caratteri vengono sempre interpretati come valori letterali carattere e in un'operazione di formattazione vengono inclusi senza modifiche nella stringa di risultato.  In un'operazione di analisi questi caratteri devono corrispondere esattamente ai caratteri nella stringa di input. Il confronto tiene conto di maiuscole e minuscole.
+Tutti gli altri caratteri vengono sempre interpretati come valori letterali carattere e in un'operazione di formattazione vengono inclusi senza modifiche nella stringa di risultato.  In un'operazione di analisi questi caratteri devono corrispondere esattamente ai caratteri nella stringa di input. Il confronto tiene conto di maiuscole e minuscole.
 
- Nell'esempio seguente i caratteri "PST" (abbreviazione di Pacific Standard Time, Ora solare Pacifico) e "PDT" (abbreviazione di Pacific Daylight Time, Ora legale Pacifico) rappresentano il fuso orario locale in una stringa di formato. Si noti che la stringa è inclusa nella stringa di risultato e che una stringa che include la stringa del fuso orario locale viene analizzata correttamente.
+Nell'esempio seguente i caratteri "PST" (abbreviazione di Pacific Standard Time, Ora solare Pacifico) e "PDT" (abbreviazione di Pacific Daylight Time, Ora legale Pacifico) rappresentano il fuso orario locale in una stringa di formato. Si noti che la stringa è inclusa nella stringa di risultato e che una stringa che include la stringa del fuso orario locale viene analizzata correttamente.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#20](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
- [!code-vb[Formatting.DateAndTime.Custom#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
- Esistono due modi per indicare che determinati caratteri devono essere interpretati come caratteri e non come caratteri riservati, per includerli in una stringa di risultato o eseguirne l'analisi in una stringa di input:
+Esistono due modi per indicare che determinati caratteri devono essere interpretati come caratteri e non come caratteri riservati, per includerli in una stringa di risultato o eseguirne l'analisi in una stringa di input:
 
 - Usando un carattere di escape per ogni carattere riservato. Per altre informazioni, vedere [Uso del carattere di escape](#escape).
-  
-  Nell'esempio seguente i caratteri "pst" (abbreviazione di Pacific Standard Time, Ora solare Pacifico) rappresentano il fuso orario locale in una stringa di formato. Poiché sia "s" che "t" sono stringhe di formato personalizzato, perché siano interpretate come valori letterali carattere è necessario usare un carattere di escape per entrambe.
-  
-  [!code-csharp-interactive[Formatting.DateAndTime.Custom#21](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
-  [!code-vb[Formatting.DateAndTime.Custom#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
+
+Nell'esempio seguente i caratteri "pst" (abbreviazione di Pacific Standard Time, Ora solare Pacifico) rappresentano il fuso orario locale in una stringa di formato. Poiché sia "s" che "t" sono stringhe di formato personalizzato, perché siano interpretate come valori letterali carattere è necessario usare un carattere di escape per entrambe.
+
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - Racchiudendo l'intera stringa tra virgolette o apostrofi. L'esempio seguente è simile a quello precedente, ad eccezione del fatto che "pst" è racchiuso tra virgolette per indicare che l'intera stringa delimitata deve essere interpretata come insieme di valori letterali carattere.
-  
-  [!code-csharp-interactive[Formatting.DateAndTime.Custom#22](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
-  [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-<a name="Notes"></a> 
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>Note
 
-<a name="UsingSingleSpecifiers"></a> 
+### <a name="UsingSingleSpecifiers"></a> Uso di singoli identificatori di formato personalizzati
 
-### <a name="using-single-custom-format-specifiers"></a>Uso di singoli identificatori di formato personalizzato
- Una stringa di formato di data e ora personalizzata è costituita da due o più caratteri. I metodi di formattazione di data e ora interpretano qualsiasi stringa a carattere singolo come stringa di formato di data e ora standard. Se il carattere non viene riconosciuto come identificatore di formato valido, viene generato un evento <xref:System.FormatException>. Una stringa di formato costituita solo dall'identificatore "h" viene ad esempio interpretata come una stringa di formato di data e ora standard. In questo caso specifico, tuttavia, viene generata un'eccezione in quanto non vi è alcun identificatore di formato di data e ora standard "h".
+Una stringa di formato di data e ora personalizzata è costituita da due o più caratteri. I metodi di formattazione di data e ora interpretano qualsiasi stringa a carattere singolo come stringa di formato di data e ora standard. Se il carattere non viene riconosciuto come identificatore di formato valido, viene generato un evento <xref:System.FormatException>. Una stringa di formato costituita solo dall'identificatore "h" viene ad esempio interpretata come una stringa di formato di data e ora standard. In questo caso specifico, tuttavia, viene generata un'eccezione in quanto non vi è alcun identificatore di formato di data e ora standard "h".
 
- Per usare qualsiasi identificatore di formato di data e ora personalizzato come unico identificatore in una stringa di formato (ovvero, per usare l'identificatore di formato personalizzato "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" o "/" da solo), includere uno spazio prima o dopo l'identificatore oppure includere un identificatore di formato percentuale ("%") prima del singolo identificatore di data e ora personalizzato.
+Per usare qualsiasi identificatore di formato di data e ora personalizzato come unico identificatore in una stringa di formato (ovvero, per usare l'identificatore di formato personalizzato "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" o "/" da solo), includere uno spazio prima o dopo l'identificatore oppure includere un identificatore di formato percentuale ("%") prima del singolo identificatore di data e ora personalizzato.
 
- La stringa `%h"` viene ad esempio interpretata come una stringa di formato di data e ora personalizzata che consente di visualizzare l'ora rappresentata dal valore di data e ora corrente. È anche possibile usare la stringa di formato " h" o "h ", sebbene, in questo caso, verrà incluso uno spazio nella stringa di risultato insieme all'ora. Nell'esempio seguente vengono illustrate queste tre stringhe di formato.
+La stringa `%h"` viene ad esempio interpretata come una stringa di formato di data e ora personalizzata che consente di visualizzare l'ora rappresentata dal valore di data e ora corrente. È anche possibile usare la stringa di formato " h" o "h ", sebbene, in questo caso, verrà incluso uno spazio nella stringa di risultato insieme all'ora. Nell'esempio seguente vengono illustrate queste tre stringhe di formato.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
- [!code-vb[Formatting.DateAndTime.Custom#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#16](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/literal1.cs#16)]
+[!code-vb[Formatting.DateAndTime.Custom#16](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/literal1.vb#16)]
 
-<a name="escape"></a> 
+### <a name="escape"></a> Uso del carattere di escape
 
-### <a name="using-the-escape-character"></a>Uso del carattere di escape
- I caratteri "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" o "/" in una stringa di formato vengono interpretati come identificatori di formato personalizzati anziché come caratteri letterali. Per evitare che un carattere venga interpretato come identificatore di formato, è possibile anteporvi una barra rovesciata (\\), che rappresenta il carattere di escape. Il carattere di escape indica che il carattere seguente è un valore letterale carattere che deve essere incluso nella stringa di risultato senza modifiche.
+I caratteri "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" o "/" in una stringa di formato vengono interpretati come identificatori di formato personalizzati anziché come caratteri letterali. Per evitare che un carattere venga interpretato come identificatore di formato, è possibile anteporvi una barra rovesciata (\\), che rappresenta il carattere di escape. Il carattere di escape indica che il carattere seguente è un valore letterale carattere che deve essere incluso nella stringa di risultato senza modifiche.
 
- Per includere una barra rovesciata in una stringa dei risultati, è necessario aggiungere un carattere di escape facendolo quindi precedere da un'altra barra rovesciata (`\\`).
+Per includere una barra rovesciata in una stringa dei risultati, è necessario aggiungere un carattere di escape facendolo quindi precedere da un'altra barra rovesciata (`\\`).
 
 > [!NOTE]
->  Alcuni compilatori, ad esempio i compilatori C++ e C#, possono anche interpretare un singolo carattere barra rovesciata come carattere di escape. Per assicurarsi che una stringa venga interpretata correttamente quando viene eseguita la formattazione, è possibile usare il carattere del valore letterale stringa letterale (carattere @) prima della stringa in C# o aggiungere un altro carattere barra rovesciata prima di ogni barra rovesciata in C# e C++. Nell'esempio C# seguente vengono illustrati entrambi gli approcci.
+> Alcuni compilatori, ad esempio i compilatori C++ e C#, possono anche interpretare un singolo carattere barra rovesciata come carattere di escape. Per assicurarsi che una stringa venga interpretata correttamente quando viene eseguita la formattazione, è possibile usare il carattere del valore letterale stringa letterale (carattere @) prima della stringa in C# o aggiungere un altro carattere barra rovesciata prima di ogni barra rovesciata in C# e C++. Nell'esempio C# seguente vengono illustrati entrambi gli approcci.
 
- Nell'esempio seguente viene usato il carattere di escape per impedire che durante l'operazione di formattazione i caratteri "h" e "m" vengano interpretati come identificatori di formato.
+Nell'esempio seguente viene usato il carattere di escape per impedire che durante l'operazione di formattazione i caratteri "h" e "m" vengano interpretati come identificatori di formato.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/escape1.cs#15)]
- [!code-vb[Formatting.DateAndTime.Custom#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/escape1.vb#15)]
+[!code-csharp-interactive[Formatting.DateAndTime.Custom#15](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/escape1.cs#15)]
+[!code-vb[Formatting.DateAndTime.Custom#15](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/escape1.vb#15)]
 
 ### <a name="control-panel-settings"></a>Impostazioni del Pannello di controllo
- L'impostazione **Opzioni internazionali e della lingua** nel Pannello di controllo influisce sulla stringa di risultato prodotta da un'operazione di formattazione che include molti degli identificatori di formato di data e ora personalizzati. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.DateTimeFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.
 
- Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo> . È possibile usare il costruttore di <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
+L'impostazione **Opzioni internazionali e della lingua** nel Pannello di controllo influisce sulla stringa di risultato prodotta da un'operazione di formattazione che include molti degli identificatori di formato di data e ora personalizzati. Queste impostazioni vengono usate per inizializzare l'oggetto <xref:System.Globalization.DateTimeFormatInfo> associato alle impostazioni cultura del thread corrente, che fornisce i valori usati per definire la formattazione. Computer con impostazioni diverse generano stringhe di risultato diverse.
+
+Se inoltre viene usato il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> per creare un'istanza di un nuovo oggetto <xref:System.Globalization.CultureInfo> che rappresenta le stesse impostazioni cultura delle impostazioni cultura del sistema correnti, le eventuali personalizzazioni definite tramite **Opzioni internazionali e della lingua** nel Pannello di controllo verranno applicate al nuovo oggetto <xref:System.Globalization.CultureInfo> . È possibile usare il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> per creare un oggetto <xref:System.Globalization.CultureInfo> che non rifletta le personalizzazioni di un sistema.
 
 ### <a name="datetimeformatinfo-properties"></a>Proprietà DateTimeFormatInfo
- La formattazione è influenzata dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente, che viene fornito in modo implicito dalle impostazioni cultura del thread correnti o in modo esplicito dal parametro <xref:System.IFormatProvider> del metodo che richiama la formattazione. Per il parametro <xref:System.IFormatProvider>, è necessario specificare un oggetto <xref:System.Globalization.CultureInfo>, che rappresenta determinate impostazioni cultura o un oggetto <xref:System.Globalization.DateTimeFormatInfo>.
 
- La stringa di risultato prodotta da molti degli identificatori di formato di data e ora personalizzati dipende anche dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente. Nell'applicazione può quindi essere modificato il risultato prodotto da alcuni identificatori di formato di data e ora personalizzati modificando la proprietà <xref:System.Globalization.DateTimeFormatInfo> corrispondente. L'identificatore di formato "ddd" aggiunge, ad esempio, un nome di giorno della settimana abbreviato trovato nella matrice di stringhe <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> alla stringa di risultato. In modo analogo, l'identificatore di formato "MMMM" aggiunge alla stringa di risultato un nome del mese completo trovato nella matrice di stringhe <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>.
+La formattazione è influenzata dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente, che viene fornito in modo implicito dalle impostazioni cultura del thread correnti o in modo esplicito dal parametro <xref:System.IFormatProvider> del metodo che richiama la formattazione. Per il parametro <xref:System.IFormatProvider>, è necessario specificare un oggetto <xref:System.Globalization.CultureInfo>, che rappresenta determinate impostazioni cultura o un oggetto <xref:System.Globalization.DateTimeFormatInfo>.
+
+La stringa di risultato prodotta da molti degli identificatori di formato di data e ora personalizzati dipende anche dalle proprietà dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente. Nell'applicazione può quindi essere modificato il risultato prodotto da alcuni identificatori di formato di data e ora personalizzati modificando la proprietà <xref:System.Globalization.DateTimeFormatInfo> corrispondente. L'identificatore di formato "ddd" aggiunge, ad esempio, un nome di giorno della settimana abbreviato trovato nella matrice di stringhe <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> alla stringa di risultato. In modo analogo, l'identificatore di formato "MMMM" aggiunge alla stringa di risultato un nome del mese completo trovato nella matrice di stringhe <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>.
 
 ## <a name="see-also"></a>Vedere anche
 

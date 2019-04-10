@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112749"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314543"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Procedura: Ereditare Windows Form
 La creazione di nuovi Windows Form mediante l'ereditarietà da form di base è un modo semplice di duplicare ciò che è stato creato senza ripetere ogni volta il medesimo processo di creazione di un form.  
@@ -25,9 +25,9 @@ La creazione di nuovi Windows Form mediante l'ereditarietà da form di base è u
   
 ### <a name="to-inherit-a-form-programmatically"></a>Per ereditare un form a livello di codice  
   
-1.  All'interno della classe aggiungere un riferimento allo spazio dei nomi che contiene il form da cui si vuole ereditare.  
+1. All'interno della classe aggiungere un riferimento allo spazio dei nomi che contiene il form da cui si vuole ereditare.  
   
-2.  Nella definizione della classe aggiungere un riferimento al form da cui ereditare. Il riferimento deve includere lo spazio dei nomi che contiene il form, seguito da un punto, quindi il nome del form di base.  
+2. Nella definizione della classe aggiungere un riferimento al form da cui ereditare. Il riferimento deve includere lo spazio dei nomi che contiene il form, seguito da un punto, quindi il nome del form di base.  
   
     ```vb  
     Public Class Form2  

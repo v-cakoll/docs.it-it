@@ -2,12 +2,12 @@
 title: Istruzioni per la configurazione di directory virtuali
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225586"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Istruzioni per la configurazione di directory virtuali
 Gli esempi di Windows Communication Foundation (WCF) devono condividere una directory virtuale comune denominata servicemodelsamples associata viene eseguito il mapping alla cartella %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -59,9 +59,9 @@ Gli esempi di Windows Communication Foundation (WCF) devono condividere una dire
   
 7.  Per impostazione predefinita, le caselle di controllo seguenti sono selezionate:  
   
-    -   **Read**  
+    -   **Lettura**  
   
-    -   **Eseguire gli script (ad esempio, ASP)**  
+    -   **Esecuzione script (ad esempio, ASP)**  
   
 8.  Fare clic su **successivo**, quindi fare clic su **fine** per completare la procedura guidata.  
   
@@ -84,7 +84,7 @@ Gli esempi di Windows Communication Foundation (WCF) devono condividere una dire
   
 2.  Per impostazione predefinita, le caselle di controllo seguenti sono selezionate:  
   
-    -   **Read**  
+    -   **Lettura**  
   
     -   **Registrazione visite**  
   
@@ -191,4 +191,5 @@ Gli esempi di Windows Communication Foundation (WCF) devono condividere una dire
     3.  Nel **gruppo** colonna, verificare che il valore per **ASPNET** è "Users".  
   
 ## <a name="see-also"></a>Vedere anche
-- [Istruzioni per l'hosting su Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+
+- [Istruzioni per l'hosting su IIS (Internet Information Services)](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

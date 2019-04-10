@@ -2,12 +2,12 @@
 title: Servizio router di individuazione
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318767"
 ---
 # <a name="discovery-router-service"></a>Servizio router di individuazione
 In questo esempio viene descritto come inoltrare messaggi di individuazione a un altro endpoint.  
@@ -22,13 +22,13 @@ In questo esempio viene descritto come inoltrare messaggi di individuazione a un
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Compilare l'esempio.  
+1. Compilare l'esempio.  
   
-2.  Eseguire il file eseguibile DiscoveryRouter.  
+2. Eseguire il file eseguibile DiscoveryRouter.  
   
-3.  Eseguire il servizio eseguibile dalla directory di compilazione.  
+3. Eseguire il servizio eseguibile dalla directory di compilazione.  
   
-4.  Eseguire il file eseguibile del client. Il client individua il servizio.  
+4. Eseguire il file eseguibile del client. Il client individua il servizio.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

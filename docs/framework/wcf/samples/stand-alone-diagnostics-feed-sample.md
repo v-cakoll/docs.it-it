@@ -2,12 +2,12 @@
 title: Esempio di feed di diagnostica autonomo
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 841bcd38516251fe1de306cbf52371d027b8cb36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316557"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Esempio di feed di diagnostica autonomo
 Questo esempio viene illustrato come creare un feed di diffusione con Windows Communication Foundation (WCF) RSS/Atom. È un programma "Hello World" di base che illustra le nozioni di base del modello a oggetti e come configurarlo in un servizio Windows Communication Foundation (WCF).  
@@ -76,13 +76,13 @@ foreach (SyndicationItem i in feed.Items)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Verificare di disporre dell'autorizzazione di registrazione indirizzo giusto per HTTP e HTTPS nel computer, come illustrato nel set di istruzioni di installazione in [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verificare di disporre dell'autorizzazione di registrazione indirizzo giusto per HTTP e HTTPS nel computer, come illustrato nel set di istruzioni di installazione in [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Compilare la soluzione.  
+2. Compilare la soluzione.  
   
-3.  Eseguire l'applicazione console.  
+3. Eseguire l'applicazione console.  
   
-4.  Mentre è in esecuzione l'applicazione console, passare a `http://localhost:8000/diagnostics/feed/?format=atom` o `http://localhost:8000/diagnostics/feed/?format=rss` usando un browser che supporta RSS.  
+4. Mentre è in esecuzione l'applicazione console, passare a `http://localhost:8000/diagnostics/feed/?format=atom` o `http://localhost:8000/diagnostics/feed/?format=rss` usando un browser che supporta RSS.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

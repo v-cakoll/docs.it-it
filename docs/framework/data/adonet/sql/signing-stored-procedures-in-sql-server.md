@@ -2,12 +2,12 @@
 title: Firma di stored procedure in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094619"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313918"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firma di stored procedure in SQL Server
  Un firma digitale è un digest di dati crittografato con la chiave privata del firmatario. La chiave privata garantisce che la firma digitale è univoca per il titolare o il proprietario. È possibile firmare gli assembly, funzioni (ad eccezione delle funzioni inline con valori di tabella), trigger e stored procedure.  
@@ -23,25 +23,25 @@ ms.locfileid: "59094619"
   
  Sono disponibili due passaggi necessari per la firma di un modulo:  
   
-1.  Creazione di un certificato tramite l'istruzione `CREATE CERTIFICATE [certificateName]` Transact-SQL. Questa istruzione prevede diverse opzioni per l'impostazione di una data di inizio e una data di fine, nonché di una password. La data di scadenza predefinito è un anno.  
+1. Creazione di un certificato tramite l'istruzione `CREATE CERTIFICATE [certificateName]` Transact-SQL. Questa istruzione prevede diverse opzioni per l'impostazione di una data di inizio e una data di fine, nonché di una password. La data di scadenza predefinito è un anno.  
   
-1.  Firma della stored procedure con il certificato tramite l'istruzione `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` Transact-SQL.  
+1. Firma della stored procedure con il certificato tramite l'istruzione `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` Transact-SQL.  
 
 Una volta il modulo è stato firmato, una o più entità deve essere creato per contenere le autorizzazioni aggiuntive che devono essere associate con il certificato.  
 
 Se il modulo deve disporre di autorizzazioni a livello di database aggiuntive:  
   
-1.  Creazione di un utente del database associato al certificato tramite l'istruzione `CREATE USER [userName] FROM CERTIFICATE [certificateName]` Transact-SQL. Questo utente esiste solo nel database e non è associato a un account di accesso, a meno che un account di accesso sia stato creato anche dallo stesso certificato.  
+1. Creazione di un utente del database associato al certificato tramite l'istruzione `CREATE USER [userName] FROM CERTIFICATE [certificateName]` Transact-SQL. Questo utente esiste solo nel database e non è associato a un account di accesso, a meno che un account di accesso sia stato creato anche dallo stesso certificato.  
   
-1.  Concedere le autorizzazioni a livello di database necessari utente del certificato.  
+1. Concedere le autorizzazioni a livello di database necessari utente del certificato.  
   
 Se il modulo deve disporre di autorizzazioni a livello di server aggiuntivi:  
   
-1.  Copiare il certificato per il `master` database.  
+1. Copiare il certificato per il `master` database.  
  
-1.  Creare un account di accesso associato al certificato usando l'istruzione Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` istruzione.  
+1. Creare un account di accesso associato al certificato usando l'istruzione Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` istruzione.  
   
-1.  Concedere le autorizzazioni necessarie a livello di server l'account di accesso certificato.  
+1. Concedere le autorizzazioni necessarie a livello di server l'account di accesso certificato.  
   
 > [!NOTE]  
 >  Un certificato non può concedere autorizzazioni a un utente al quale sono state revocate autorizzazioni usando l'istruzione DENY. DENY ha sempre la precedenza su GRANT e impedisce al chiamante di ereditare autorizzazioni concesse all'utente del certificato.  

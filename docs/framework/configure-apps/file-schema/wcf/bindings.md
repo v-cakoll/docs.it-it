@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316791"
 ---
 # <a name="bindings"></a>\<le associazioni >
 
@@ -29,15 +29,15 @@ ms.locfileid: "57474722"
   
  L'ordine in cui gli elementi vengono visualizzati nello stack è importante, perché è l'ordine in cui le operazioni vengono applicate al messaggio. L'ordine necessario per gli elementi dello stack è il seguente:  
   
-1.  Transazioni (facoltativo)  
+1. Transazioni (facoltativo)  
   
-2.  Reliable messaging (facoltativo)  
+2. Reliable messaging (facoltativo)  
   
-3.  Sicurezza (facoltativo)  
+3. Sicurezza (facoltativo)  
   
-4.  Codificatore  
+4. Codificatore  
   
-5.  Trasporto  
+5. Trasporto  
   
  Le associazioni personalizzate sono identificate dal relativo attributo `name`. Per altre informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

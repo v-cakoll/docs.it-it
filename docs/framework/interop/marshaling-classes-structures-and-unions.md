@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221277"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890293"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshalling di classi, strutture e unioni
 In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, proprietà ed eventi nonché metodi statici e non statici. Una differenza fondamentale è data dal fatto che le strutture sono tipi di valore e le classi sono tipi di riferimento.  
   
  Nella tabella seguente sono elencate le opzioni di marshalling per le classi, le strutture e le unioni con la descrizione dell'utilizzo e un collegamento all'esempio corrispondente di platform invoke.  
   
-|Tipo|Descrizione|Esempio|  
+|Tipo|Description|Esempio|  
 |----------|-----------------|------------|  
 |Classe per valore.|Passa una classe con membri Integer come parametro in/out, come il case gestito.|SysTime (esempio)|  
 |Struttura per valore.|Passa le strutture come parametri in.|Structures (esempio)|  
@@ -68,7 +68,7 @@ In .NET Framework classi e strutture sono simili. Entrambe possono avere campi, 
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e quattro strutture: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, e **MYARRAYSTRUCT**. Le strutture contengono gli elementi seguenti:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) è una libreria non gestita personalizzata contenente implementazioni per le funzioni elencate in precedenza e quattro strutture: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, e **MYARRAYSTRUCT**. Le strutture contengono gli elementi seguenti:  
   
 ```  
 typedef struct _MYPERSON  
@@ -182,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) è una libreria non gestita personalizzata contenente un'implementazione per la funzione elencata in precedenza e due unioni, **MYUNION** e **MYUNION2**. Le unioni contengono i seguenti elementi:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) è una libreria non gestita personalizzata contenente un'implementazione per la funzione elencata in precedenza e due unioni, **MYUNION** e **MYUNION2**. Le unioni contengono i seguenti elementi:  
   
 ```  
 union MYUNION  
@@ -254,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  L'esempio dimostra come chiamare una funzione nativa usando la classe <xref:System.Runtime.InteropServices.Marshal> e usando codice di tipo unsafe.  
   
- Questo esempio usa funzioni wrapper e operazioni platform invoke definite in [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)), disponibili anche nei file di origine. Vengono usate la funzione `TestOutArrayOfStructs` e la struttura `MYSTRSTRUCT2`. La struttura contiene gli elementi seguenti:  
+ Questo esempio usa funzioni wrapper e operazioni platform invoke definite in [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll), disponibili anche nei file di origine. Vengono usate la funzione `TestOutArrayOfStructs` e la struttura `MYSTRSTRUCT2`. La struttura contiene gli elementi seguenti:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -264,7 +264,7 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- La classe `MyStruct` contiene un oggetto stringa di caratteri ANSI. Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> specifica il formato ANSI. `MyUnsafeStruct` è una struttura contenente un tipo <xref:System.IntPtr> anziché una stringa.  
+ La classe `MyStruct` contiene un oggetto stringa di caratteri ANSI. Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> specifica il formato ANSI. `MyUnsafeStruct`è una struttura contenente un tipo <xref:System.IntPtr> anziché una stringa.  
   
  La classe `LibWrap` contiene il metodo prototipo `TestOutArrayOfStructs` di overload. Se un metodo dichiara un puntatore come parametro, la classe deve essere contrassegnata con la parola chiave `unsafe`. Poiché [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] non può usare codice unsafe, il metodo di overload, il modificatore unsafe e la struttura `MyUnsafeStruct` non sono necessari.  
   

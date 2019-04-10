@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837496"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316622"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Procedura: Modificare il valore di un argomento di routine (Visual Basic)
 Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno dei parametri definiti nella procedura. In alcuni casi, il codice della routine può modificare il valore sottostante a un argomento nel codice chiamante. In altri casi, la routine può modificare solo la copia locale di un argomento.  
@@ -31,13 +31,13 @@ Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno de
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>Per modificare il valore sottostante di un argomento di routine nel codice chiamante  
   
-1.  Nella dichiarazione di routine, specificare [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) per il parametro corrisponde all'argomento.  
+1. Nella dichiarazione di routine, specificare [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) per il parametro corrisponde all'argomento.  
   
-2.  Nel codice chiamante, passare un elemento di programmazione modificabile come argomento.  
+2. Nel codice chiamante, passare un elemento di programmazione modificabile come argomento.  
   
-3.  Nel codice chiamante, non racchiudere l'argomento racchiuso tra parentesi nell'elenco di argomenti.  
+3. Nel codice chiamante, non racchiudere l'argomento racchiuso tra parentesi nell'elenco di argomenti.  
   
-4.  Nel codice della procedura, usare il nome del parametro per assegnare un valore per l'elemento sottostante nel codice chiamante.  
+4. Nel codice della procedura, usare il nome del parametro per assegnare un valore per l'elemento sottostante nel codice chiamante.  
   
  Vedere l'esempio più avanti per una dimostrazione.  
   
@@ -46,13 +46,13 @@ Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno de
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Per modificare la copia di un argomento di routine nel codice della procedura  
   
-1.  Nella dichiarazione di routine, specificare [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) per il parametro corrisponde all'argomento.  
+1. Nella dichiarazione di routine, specificare [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) per il parametro corrisponde all'argomento.  
   
      -oppure-  
   
      Nel codice chiamante, racchiudere l'argomento racchiuso tra parentesi nell'elenco di argomenti. In tal modo Visual Basic per passare l'argomento per valore, anche se il parametro corrispondente specifica `ByRef`.  
   
-2.  Nel codice della procedura, usare il nome del parametro per assegnare un valore per la copia locale dell'argomento. Il valore sottostante nel codice chiamante non viene modificato.  
+2. Nel codice della procedura, usare il nome del parametro per assegnare un valore per la copia locale dell'argomento. Il valore sottostante nel codice chiamante non viene modificato.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente illustra due procedure che accettano una variabile di matrice e operano sui relativi elementi. Il `increase` procedure aggiunge semplicemente uno per ogni elemento. Il `replace` procedure assegna una nuova matrice al parametro `a()` , quindi aggiunge uno per ogni elemento.  
@@ -79,13 +79,13 @@ Quando si chiama una routine, ogni argomento che è fornire corrisponde a uno de
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
+- [Procedure](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)
 - [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)
 - [Differenze tra argomenti modificabili e non modificabili](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Procedura: Proteggere un argomento di routine modifica del valore](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Procedura: Forzare un argomento da passare per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [Passaggio di argomenti in base alla posizione e al nome](./passing-arguments-by-position-and-by-name.md)
+- [Procedura: Impedire la modifica del valore di un argomento di routine](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Procedura: Forzare il passaggio di un argomento per valore](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Passaggio di argomenti per posizione e nome](./passing-arguments-by-position-and-by-name.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

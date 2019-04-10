@@ -3,12 +3,12 @@ title: Rami e cicli - Esercitazione introduttiva su C#
 description: In questa esercitazione su rami e cicli si scriverà codice C# per esplorare la sintassi del linguaggio che supporta cicli e diramazioni condizionali per eseguire ripetutamente istruzioni.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677786"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920948"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informazioni sulla logica condizionale con istruzioni per rami e cicli
 
@@ -249,7 +249,7 @@ Sperimentare e quindi controllare i risultati. Verrà visualizzata una risposta 
 
 È stata completata l'esercitazione "Cicli e rami".
 
-È possibile continuare con l'esercitazione [Interpolazione di stringhe](interpolated-strings-local.md) nell'ambiente di sviluppo.
+È possibile continuare con l'esercitazione [Matrici e raccolte](arrays-and-collections.md) nel proprio ambiente di sviluppo.
 
 Maggiori informazioni su questi concetti sono disponibili in questi argomenti:
 

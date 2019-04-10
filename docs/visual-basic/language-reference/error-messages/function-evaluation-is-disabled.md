@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315777"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>Valutazione della funzione disabilitata a causa del timeout di una valutazione di funzione precedente
 Valutazione della funzione disabilitata a causa del timeout di una valutazione della funzione precedente. Per riabilitare la valutazione della funzione, ripetere l'operazione o riavviare il debug.  
@@ -27,9 +27,9 @@ Valutazione della funzione disabilitata a causa del timeout di una valutazione d
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Se possibile, determinare qual è la valutazione della funzione precedente e che lo ha generato al timeout. In caso contrario, questo errore potrebbe verificarsi nuovamente.  
+1. Se possibile, determinare qual è la valutazione della funzione precedente e che lo ha generato al timeout. In caso contrario, questo errore potrebbe verificarsi nuovamente.  
   
-2.  Passaggio del debugger, oppure interrompere e riavviare il debug.  
+2. Passaggio del debugger, oppure interrompere e riavviare il debug.  
   
 ## <a name="see-also"></a>Vedere anche
 

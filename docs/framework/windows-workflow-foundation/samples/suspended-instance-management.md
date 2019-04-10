@@ -2,12 +2,12 @@
 title: Gestione dell'istanza sospesa
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: d977e058b2de2939d64c91aa9353f6559b3c7013
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319560"
 ---
 # <a name="suspended-instance-management"></a>Gestione dell'istanza sospesa
 In questo esempio viene illustrato come gestire le istanze del flusso di lavoro che sono state sospese.  L'azione predefinita per l'oggetto <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> è `AbandonAndSuspend`. Pertanto, per impostazione predefinita, le eccezioni non gestite generate da un'istanza del flusso di lavoro ospitata nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost> comporteranno l'eliminazione dell'istanza dalla memoria (abbandonata) e la versione durevole/persistente dell'istanza sarà contrassegnata come sospesa. Non sarà possibile eseguire un'istanza del flusso di lavoro sospesa finché non viene annullata la sospensione.
@@ -24,13 +24,13 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio
 
-1.  Per questo esempio è necessario aver abilitato i seguenti componenti di Windows:
+1. Per questo esempio è necessario aver abilitato i seguenti componenti di Windows:
 
     1.  Microsoft Message Queue (MSMQ) Server
 
     2.  SQL Server Express
 
-2.  Impostare il database SQL Server.
+2. Impostare il database SQL Server.
 
     1.  Da un prompt dei comandi di Visual Studio 2010, eseguire "Setup. cmd" dalla directory di esempio SuspendedInstanceManagement, che esegue le operazioni seguenti:
 
@@ -40,7 +40,7 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
 
         3.  Aggiungere IIS APPPOOL\DefaultAppPool e NT AUTHORITY\Network Service al ruolo InstanceStoreUsers definito durante l'impostazione del database per la persistenza.
 
-3.  Impostare la coda del servizio.
+3. Impostare la coda del servizio.
 
     1.  In Visual Studio 2010, fare doppio clic il **SampleWorkflowApp** del progetto e fare clic su **imposta come progetto di avvio**.
 
@@ -56,7 +56,7 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
 
     7.  Selezionare il **sicurezza** scheda e consentire **Everyone** disporre delle autorizzazioni per **Ricevi messaggio**, **Visualizza il messaggio**, e  **Invio messaggio**.
 
-4.  A questo punto, eseguire l'esempio.
+4. A questo punto, eseguire l'esempio.
 
     1.  In Visual Studio 2010, eseguire nuovamente il progetto SampleWorkflowApp senza debug premendo **CTRL+F5**. Nella finestra della console saranno stampati due indirizzi endpoint: uno per l'endpoint dell'applicazione e l'altro per l'oggetto <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Viene quindi creata un'istanza del flusso di lavoro e i record di rilevamento per tale istanza saranno visualizzati nella finestra della console. L'istanza del flusso di lavoro genererà un'eccezione che comporterà la sospensione e l'interruzione dell'istanza.
 
@@ -68,13 +68,13 @@ In questo esempio viene illustrato come gestire le istanze del flusso di lavoro 
 
 #### <a name="to-cleanup-optional"></a>Per eseguire la pulizia (facoltativo)
 
-1.  Aprire la console Gestione computer eseguendo Compmgmt.msc da un prompt dei comandi di `vs2010`.
+1. Aprire la console Gestione computer eseguendo Compmgmt.msc da un prompt dei comandi di `vs2010`.
 
-2.  Espandere **applicazioni e servizi**, **Accodamento**, **code Private**.
+2. Espandere **applicazioni e servizi**, **Accodamento**, **code Private**.
 
-3.  Eliminare il **ReceiveTx** coda.
+3. Eliminare il **ReceiveTx** coda.
 
-4.  Per rimuovere il database di persistenza, eseguire cleanup.cmd.
+4. Per rimuovere il database di persistenza, eseguire cleanup.cmd.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

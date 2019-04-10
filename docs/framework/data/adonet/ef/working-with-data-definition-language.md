@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904369"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313242"
 ---
 # <a name="working-with-data-definition-language"></a>Utilizzo di Data Definition Language
 Inizia con la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] versione 4, il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] supporta il linguaggio di definizione dei dati (DDL). Ciò consente di creare o eliminare un'istanza di database in base alla stringa di connessione e ai metadati del modello di archiviazione (SSDL).  
@@ -36,9 +36,9 @@ Inizia con la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
   
 #### <a name="to-define-a-database-based-on-the-existing-model"></a>Per definire un database in base al modello esistente  
   
-1.  Creare un'applicazione console.  
+1. Creare un'applicazione console.  
   
-2.  Aggiungere un modello esistente all'applicazione.  
+2. Aggiungere un modello esistente all'applicazione.  
   
     1.  Aggiungere un modello vuoto denominato `SchoolModel`. Per creare un modello vuoto, vedere il [come: Creare un File con estensione edmx nuovo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) argomento.  
   
@@ -48,7 +48,7 @@ Inizia con la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
   
     2.  Aprire il file SchoolModel.edmx e incollare il contenuto all'interno dei tag `edmx:Runtime`.  
   
-3.  Aggiungere il codice seguente alla funzione principale. Il codice inizializza la stringa di connessione nel server database, visualizza lo script DDL, crea il database, aggiunge una nuova entità al contesto e salva le modifiche nel database.  
+3. Aggiungere il codice seguente alla funzione principale. Il codice inizializza la stringa di connessione nel server database, visualizza lo script DDL, crea il database, aggiunge una nuova entità al contesto e salva le modifiche nel database.  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

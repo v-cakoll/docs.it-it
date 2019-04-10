@@ -2,25 +2,25 @@
 title: 'Procedura: Richiamare un metodo delegato (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 42d56fca7e1d33c071db2e7e38935aa00caa5b7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676211"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319612"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Procedura: Richiamare un metodo delegato (Visual Basic)
 In questo esempio viene illustrato come associare un metodo con un delegato e quindi richiamare tale metodo tramite il delegato.  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Creare il delegato e le procedure corrispondente  
   
-1.  Creare un delegato denominato `MySubDelegate`.  
+1. Creare un delegato denominato `MySubDelegate`.  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Dichiarare una classe che contiene un metodo con la stessa firma del delegato.  
+2. Dichiarare una classe che contiene un metodo con la stessa firma del delegato.  
   
     ```  
     Class class1  
@@ -30,7 +30,7 @@ In questo esempio viene illustrato come associare un metodo con un delegato e qu
     End Class  
     ```  
   
-3.  Definire un metodo che crea un'istanza del delegato e richiama il metodo associato al delegato chiamando predefiniti `Invoke` (metodo).  
+3. Definire un metodo che crea un'istanza del delegato e richiama il metodo associato al delegato chiamando predefiniti `Invoke` (metodo).  
   
     ```  
     Protected Sub DelegateTest()  

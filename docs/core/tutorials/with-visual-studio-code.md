@@ -4,12 +4,12 @@ description: Informazioni su come creare la prima applicazione .NET Core in C# e
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788336"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890553"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introduzione a C# e Visual Studio Code
 
@@ -91,14 +91,14 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 ## <a name="add-a-class"></a>Aggiungere una classe
 
 1. Per aggiungere una nuova classe, fare clic con il pulsante destro del mouse nell'utilità di esplorazione di VSCode e scegliere **Nuovo file**. Verrà aggiunto un nuovo file alla cartella aperta in VSCode.
-2. Assegnare al file il nome `Class1.cs`. È necessario salvarlo con l'estensione `.cs` alla fine in modo che venga riconosciuto come file csharp.
+2. Assegnare al file il nome `MyClass.cs`. È necessario salvarlo con l'estensione `.cs` alla fine in modo che venga riconosciuto come file csharp.
 3. Aggiungere il codice seguente per creare la prima classe. Assicurarsi di includere lo spazio dei nomi corretto per potervi fare riferimento dal file `Program.cs`.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }
@@ -140,5 +140,5 @@ L'estensione C# di Visual Studio Code può generare gli asset necessari per comp
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Impostazione di Visual Studio Code)
-- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Debug in Visual Studio Code)
+- [Setting up Visual Studio Code (Impostazione di Visual Studio Code)](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Debugging in Visual Studio Code (Debug in Visual Studio Code)](https://code.visualstudio.com/Docs/editor/debugging)

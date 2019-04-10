@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315686"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedenza del valore della proprietà di dipendenza
 <a name="introduction"></a> Questo argomento illustra il modo in cui i meccanismi del sistema di proprietà [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] possono influire sul valore di una proprietà di dipendenza e descrive la precedenza in base alla quale gli aspetti del sistema di proprietà si applicano al valore effettivo di una proprietà.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117760"
 ## <a name="dependency-property-setting-precedence-list"></a>Elenco delle precedenze per l'impostazione delle proprietà di dipendenza  
  Di seguito viene riportato l'ordine definitivo usato dal sistema di proprietà per l'assegnazione dei valori di runtime delle proprietà di dipendenza. La precedenza più elevata viene elencata per prima. Questo elenco si basa su alcuni dei concetti generali espressi in [Panoramica sulle proprietà di dipendenza](dependency-properties-overview.md).  
   
-1.  **Coercizione del sistema di proprietà.** Per informazioni dettagliate sulla coercizione, vedere [Coercizione, animazione e valore di base](#animations) più avanti in questo argomento.  
+1. **Coercizione del sistema di proprietà.** Per informazioni dettagliate sulla coercizione, vedere [Coercizione, animazione e valore di base](#animations) più avanti in questo argomento.  
   
-2.  **Animazioni attive o animazioni con un comportamento di attesa.** Per ottenere qualsiasi effetto pratico, l'animazione di una proprietà deve essere in grado di avere la precedenza sul valore di base (inanimato), anche se quel valore è stato impostato localmente. Per informazioni dettagliate, vedere [Coercizione, animazione e valore di base](#animations) più avanti in questo argomento.  
+2. **Animazioni attive o animazioni con un comportamento di attesa.** Per ottenere qualsiasi effetto pratico, l'animazione di una proprietà deve essere in grado di avere la precedenza sul valore di base (inanimato), anche se quel valore è stato impostato localmente. Per informazioni dettagliate, vedere [Coercizione, animazione e valore di base](#animations) più avanti in questo argomento.  
   
-3.  **Valore locale.** Un valore locale potrebbe essere impostato tramite la praticità della proprietà "wrapper", che equivale anche all'impostazione come elemento di un attributo o una proprietà [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o da una chiamata ai <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] usando una proprietà di un'istanza specifica. Se si imposta un valore locale usando un'associazione o una risorsa, ciascuno di questi elementi dispone della precedenza come se fosse stato impostato un valore diretto.  
+3. **Valore locale.** Un valore locale potrebbe essere impostato tramite la praticità della proprietà "wrapper", che equivale anche all'impostazione come elemento di un attributo o una proprietà [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o da una chiamata ai <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] usando una proprietà di un'istanza specifica. Se si imposta un valore locale usando un'associazione o una risorsa, ciascuno di questi elementi dispone della precedenza come se fosse stato impostato un valore diretto.  
   
-4.  **Proprietà del modello TemplatedParent.** L'elemento dispone di un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> se è stato creato come parte di un modello (un <xref:System.Windows.Controls.ControlTemplate> o <xref:System.Windows.DataTemplate>). Per informazioni dettagliate sulle situazioni in cui viene applicato, vedere [TemplatedParent](#templatedparent) più avanti in questo argomento. All'interno del modello, viene applicata la seguente precedenza:  
+4. **Proprietà del modello TemplatedParent.** L'elemento dispone di un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> se è stato creato come parte di un modello (un <xref:System.Windows.Controls.ControlTemplate> o <xref:System.Windows.DataTemplate>). Per informazioni dettagliate sulle situazioni in cui viene applicato, vedere [TemplatedParent](#templatedparent) più avanti in questo argomento. All'interno del modello, viene applicata la seguente precedenza:  
   
     1.  Attiva dal <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modello.  
   
     2.  Set di proprietà (in genere tramite [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attributi) nel <xref:System.Windows.FrameworkElement.TemplatedParent%2A> modello.  
   
-5.  **Stile implicito.** Si applica solo alla proprietà `Style`. La proprietà `Style` viene riempita da qualsiasi risorsa di stile con una chiave che corrisponde al tipo di quell'elemento. Quella risorsa di stile deve essere presente nella pagina o nell'applicazione. La ricerca per una risorsa di stile implicita non viene eseguita nei temi.  
+5. **Stile implicito.** Si applica solo alla proprietà `Style`. La proprietà `Style` viene riempita da qualsiasi risorsa di stile con una chiave che corrisponde al tipo di quell'elemento. Quella risorsa di stile deve essere presente nella pagina o nell'applicazione. La ricerca per una risorsa di stile implicita non viene eseguita nei temi.  
   
-6.  **Trigger degli stili.** I trigger all'interno di stili da una pagina o un'applicazione (questi stili potrebbero essere stili espliciti o impliciti, ma non derivati dagli stili predefiniti, che hanno una precedenza inferiore).  
+6. **Trigger degli stili.** I trigger all'interno di stili da una pagina o un'applicazione (questi stili potrebbero essere stili espliciti o impliciti, ma non derivati dagli stili predefiniti, che hanno una precedenza inferiore).  
   
-7.  **Trigger dei modelli.** Qualsiasi trigger da un modello all'interno di uno stile oppure un modello applicato direttamente.  
+7. **Trigger dei modelli.** Qualsiasi trigger da un modello all'interno di uno stile oppure un modello applicato direttamente.  
   
-8.  **Setter di stile.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
+8. **Setter di stile.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
   
 9. **Stile (tema) predefiniti.** Per informazioni dettagliate sui casi in cui viene applicato e sul modo in cui gli stili del tema si riferiscono ai modelli all'interno degli stili del tema, vedere [Stili (tema) predefiniti](#themestyles) più avanti in questo argomento. All'interno di uno stile predefinito, viene applicato il seguente ordine di precedenza:  
   

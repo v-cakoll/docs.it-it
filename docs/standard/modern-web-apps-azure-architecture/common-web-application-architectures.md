@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Espl
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826733"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921104"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
 
@@ -263,7 +263,7 @@ networks:
 Il file `docker-compose.yml` fa riferimento a `Dockerfile` nel progetto `Web`. L'oggetto `Dockerfile` viene usato per specificare quale contenitore di base sarà usato e in che modo verrà configurata di conseguenza l'applicazione. In `Dockerfile` di `Web`:
 
 ```
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -273,7 +273,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 
@@ -296,11 +296,11 @@ Se si vuole aggiungere il supporto per Docker all'applicazione tramite Visual St
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Architettura ad anelli**  
 >   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **Schema repository**  
+> - **Schema Repository**  
 >   <https://deviq.com/repository-pattern/>
 > - **Esempio di soluzione con Architettura pulita**  
 >   <https://github.com/ardalis/cleanarchitecture>
-> - **Architecting Microservices e-book** (E-book Progettazione di microservizi)  
+> - **E-book sulla progettazione di microservizi**  
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
