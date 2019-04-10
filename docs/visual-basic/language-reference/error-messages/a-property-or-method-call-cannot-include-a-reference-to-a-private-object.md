@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 0a8d6603bf5c97b966d29f000b21435cec8040d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 04124ca044ad8dbff58f85230d7e10ea336d41e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341478"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>Una chiamata a una proprietà o a un metodo non può includere un riferimento a un oggetto privato, né come argomento né come valore restituito
 Di seguito sono riportate le cause possibili dell'errore:  
@@ -24,7 +24,7 @@ Di seguito sono riportate le cause possibili dell'errore:
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Rimuovere il riferimento.  
+1. Rimuovere il riferimento.  
   
 ## <a name="see-also"></a>Vedere anche
 

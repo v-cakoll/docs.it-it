@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335485"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Procedura: Chiamare una routine di operatore (Visual Basic)
 Si chiama una routine di operatore usando il simbolo di operatore in un'espressione. Nel caso di un operatore di conversione, si chiama il [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) per convertire un valore da un tipo a altro.  
@@ -27,19 +27,19 @@ Si chiama una routine di operatore usando il simbolo di operatore in un'espressi
   
 ### <a name="to-call-an-operator-procedure"></a>Per chiamare una routine di operatore  
   
-1.  Usare il simbolo dell'operatore in un'espressione nel modo normale.  
+1. Usare il simbolo dell'operatore in un'espressione nel modo normale.  
   
-2.  Assicurarsi che i tipi di dati gli operandi sono appropriati per l'operatore e nell'ordine corretto.  
+2. Assicurarsi che i tipi di dati gli operandi sono appropriati per l'operatore e nell'ordine corretto.  
   
-3.  L'operatore contribuisce al valore dell'espressione come previsto.  
+3. L'operatore contribuisce al valore dell'espressione come previsto.  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>Per chiamare una routine di operatore di conversione  
   
-1.  Usare `CType` all'interno di un'espressione.  
+1. Usare `CType` all'interno di un'espressione.  
   
-2.  Assicurarsi che i tipi di dati gli operandi sono appropriati per la conversione e nell'ordine corretto.  
+2. Assicurarsi che i tipi di dati gli operandi sono appropriati per la conversione e nell'ordine corretto.  
   
-3.  `CType` chiama la routine di operatore di conversione e restituisce il valore convertito.  
+3. `CType` chiama la routine di operatore di conversione e restituisce il valore convertito.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea due <xref:System.TimeSpan> strutture, li somma e archivia il risultato in una terza <xref:System.TimeSpan> struttura. Il <xref:System.TimeSpan> struttura definisce le routine di operatore per eseguire l'overload di diversi operatori standard.  
@@ -58,10 +58,10 @@ Si chiama una routine di operatore usando il simbolo di operatore in un'espressi
 - [Routine di operatore](./operator-procedures.md)
 - [Procedura: Definire un operatore](./how-to-define-an-operator.md)
 - [Procedura: Definire un operatore di conversione](./how-to-define-a-conversion-operator.md)
-- [Istruzione Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Procedura: Dichiarare una struttura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Conversioni implicite ed esplicite](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Conversioni di ampliamento e restrizione](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

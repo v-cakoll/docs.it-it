@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336187"
 ---
 # <a name="textelement-content-model-overview"></a>Cenni preliminari sul modello di contenuto TextElement
 Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Documents.TextElement>. Il <xref:System.Windows.Documents.Paragraph> classe è un tipo di <xref:System.Windows.Documents.TextElement>. Un modello di contenuto descrive gli oggetti o gli elementi che possono essere contenuti in altri oggetti o elementi. Questa panoramica riepiloga il modello di contenuto usato per gli oggetti derivati da <xref:System.Windows.Documents.TextElement>. Per altre informazioni, vedere [Cenni preliminari sui documenti dinamici](flow-document-overview.md).  
@@ -27,7 +27,7 @@ Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Do
   
  Come si può notare dal diagramma precedente, gli elementi figlio consentiti per un elemento non vengono necessariamente determinati dal fatto che una classe è derivata dal <xref:System.Windows.Documents.Block> classe o un <xref:System.Windows.Documents.Inline> classe. Ad esempio, un <xref:System.Windows.Documents.Span> (un' <xref:System.Windows.Documents.Inline>-classe derivata) può avere solo <xref:System.Windows.Documents.Inline> elementi figlio, ma una <xref:System.Windows.Documents.Figure> (anche un <xref:System.Windows.Documents.Inline>-classe derivata) può avere solo <xref:System.Windows.Documents.Block> gli elementi figlio. Pertanto, un diagramma è utile per determinare rapidamente quale elemento può essere contenuto in un altro elemento. Ad esempio, è possibile utilizzare il diagramma per determinare la modalità costruire il contenuto del flusso di un <xref:System.Windows.Controls.RichTextBox>.  
   
-1.  Oggetto <xref:System.Windows.Controls.RichTextBox> deve contenere un <xref:System.Windows.Documents.FlowDocument> che a sua volta deve includere un <xref:System.Windows.Documents.Block>-oggetto derivato. Di seguito viene riportato il segmento corrispondente del diagramma precedente.  
+1. Oggetto <xref:System.Windows.Controls.RichTextBox> deve contenere un <xref:System.Windows.Documents.FlowDocument> che a sua volta deve includere un <xref:System.Windows.Documents.Block>-oggetto derivato. Di seguito viene riportato il segmento corrispondente del diagramma precedente.  
   
      ![Diagramma: Regole di contenimento di RichTextBox](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Do
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  In base al diagramma, esistono alcune <xref:System.Windows.Documents.Block> elementi da scegliere, compresi <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, e <xref:System.Windows.Documents.BlockUIContainer> (vedere le classi derivate da Block nel diagramma precedente). Si supponga di volere un <xref:System.Windows.Documents.Table>. In base alla figura precedente, una <xref:System.Windows.Documents.Table> contiene un <xref:System.Windows.Documents.TableRowGroup> contenente <xref:System.Windows.Documents.TableRow> elementi, che contengono <xref:System.Windows.Documents.TableCell> elementi che contengono un <xref:System.Windows.Documents.Block>-oggetto derivato. Di seguito è riportato il segmento corrispondente relativo <xref:System.Windows.Documents.Table> tratto dal diagramma precedente.  
+2. In base al diagramma, esistono alcune <xref:System.Windows.Documents.Block> elementi da scegliere, compresi <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, e <xref:System.Windows.Documents.BlockUIContainer> (vedere le classi derivate da Block nel diagramma precedente). Si supponga di volere un <xref:System.Windows.Documents.Table>. In base alla figura precedente, una <xref:System.Windows.Documents.Table> contiene un <xref:System.Windows.Documents.TableRowGroup> contenente <xref:System.Windows.Documents.TableRow> elementi, che contengono <xref:System.Windows.Documents.TableCell> elementi che contengono un <xref:System.Windows.Documents.Block>-oggetto derivato. Di seguito è riportato il segmento corrispondente relativo <xref:System.Windows.Documents.Table> tratto dal diagramma precedente.  
   
      ![Diagramma: Elemento padre&#47;schema padre&#47;figlio per Table](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ Questo argomento descrive il contenuto supportato per un <xref:System.Windows.Do
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  Anche in questo caso, uno o più <xref:System.Windows.Documents.Block> gli elementi devono essere presenti in un <xref:System.Windows.Documents.TableCell>. Per rendere più chiaro l'esempio, viene inserito del testo nella cella. È possibile farlo usando un <xref:System.Windows.Documents.Paragraph> con un <xref:System.Windows.Documents.Run> elemento. Ecco i segmenti corrispondenti del diagramma che illustra che un <xref:System.Windows.Documents.Paragraph> può richiedere un' <xref:System.Windows.Documents.Inline> elemento e che un <xref:System.Windows.Documents.Run> (un <xref:System.Windows.Documents.Inline> elemento) può accettare solo testo normale.  
+3. Anche in questo caso, uno o più <xref:System.Windows.Documents.Block> gli elementi devono essere presenti in un <xref:System.Windows.Documents.TableCell>. Per rendere più chiaro l'esempio, viene inserito del testo nella cella. È possibile farlo usando un <xref:System.Windows.Documents.Paragraph> con un <xref:System.Windows.Documents.Run> elemento. Ecco i segmenti corrispondenti del diagramma che illustra che un <xref:System.Windows.Documents.Paragraph> può richiedere un' <xref:System.Windows.Documents.Inline> elemento e che un <xref:System.Windows.Documents.Run> (un <xref:System.Windows.Documents.Inline> elemento) può accettare solo testo normale.  
   
      ![Diagramma: Elemento padre&#47;schema padre&#47;figlio per Paragraph](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

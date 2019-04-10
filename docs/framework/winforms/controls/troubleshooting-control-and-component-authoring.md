@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168064"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343415"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Risoluzione dei problemi relativi alla modifica di controlli e componenti
 In questo argomento vengono descritti alcuni problemi comuni che si verificano durante lo sviluppo di componenti e controlli. Per altre informazioni, vedere l'argomento relativo alla [programmazione con i componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -38,9 +38,9 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Per aggiungere un controllo alla casella degli strumenti  
   
-1.  Fare clic con il pulsante destro del mouse nella **casella degli strumenti** e selezionare **Scegli elementi** dal menu di scelta rapida.  
+1. Fare clic con il pulsante destro del mouse nella **casella degli strumenti** e selezionare **Scegli elementi** dal menu di scelta rapida.  
   
-2.  Nella finestra di dialogo **Scegli elementi della Casella degli strumenti** aggiungere il componente:  
+2. Nella finestra di dialogo **Scegli elementi della Casella degli strumenti** aggiungere il componente:  
   
     -   per aggiungere un componente o un controllo di .NET Framework, fare clic sulla scheda **Componenti di .NET Framework**  
   
@@ -48,11 +48,11 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
   
     -   per aggiungere un componente COM o un controllo ActiveX, fare clic sulla scheda **Componenti COM**.  
   
-3.  Se il controllo è indicato nella finestra di dialogo, verificare se è selezionato e quindi fare clic su **OK**.  
+3. Se il controllo è indicato nella finestra di dialogo, verificare se è selezionato e quindi fare clic su **OK**.  
   
      Il controllo viene aggiunto alla **della casella degli strumenti**.  
   
-4.  Se il controllo non è indicato nella finestra di dialogo, eseguire queste operazioni:  
+4. Se il controllo non è indicato nella finestra di dialogo, eseguire queste operazioni:  
   
     1.  Fare clic sul pulsante **Sfoglia**.  
   
@@ -73,15 +73,15 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
   
 #### <a name="to-debug-a-control-or-component"></a>Per eseguire il debug di un controllo o componente  
   
-1.  Scegliere **Compila soluzione** dal menu **Compila** per creare il progetto.  
+1. Scegliere **Compila soluzione** dal menu **Compila** per creare il progetto.  
   
-2.  Scegliere **Aggiungi** dal menu **File**, quindi selezionare **Nuovo progetto** per aggiungere un progetto di test all'applicazione.  
+2. Scegliere **Aggiungi** dal menu **File**, quindi selezionare **Nuovo progetto** per aggiungere un progetto di test all'applicazione.  
   
-3.  Nella finestra di dialogo **Aggiungi nuovo progetto** scegliere **Applicazione Windows** come tipo di progetto.  
+3. Nella finestra di dialogo **Aggiungi nuovo progetto** scegliere **Applicazione Windows** come tipo di progetto.  
   
-4.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** per il nuovo progetto. Nel menu di scelta rapida fare clic su **Aggiungi riferimento** per aggiungere un riferimento al progetto contenente il controllo o il componente.  
+4. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** per il nuovo progetto. Nel menu di scelta rapida fare clic su **Aggiungi riferimento** per aggiungere un riferimento al progetto contenente il controllo o il componente.  
   
-5.  Creare un'istanza del controllo o componente nel progetto di test. Se il componente si trova nella **casella degli strumenti**, è possibile trascinarlo nell'area di progettazione oppure creare l'istanza a livello di codice, come illustrato nell'esempio di codice seguente.  
+5. Creare un'istanza del controllo o componente nel progetto di test. Se il componente si trova nella **casella degli strumenti**, è possibile trascinarlo nell'area di progettazione oppure creare l'istanza a livello di codice, come illustrato nell'esempio di codice seguente.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  

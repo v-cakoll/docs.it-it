@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342091"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Procedura: Ereditare form mediante la finestra di dialogo Selezione ereditarietà
 Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'usare la finestra di dialogo **Selezione ereditarietà**. In questo modo è possibile recuperare e riutilizzare il codice o un'interfaccia utente precedentemente creata in altre soluzioni.  
@@ -23,23 +23,23 @@ Il modo più semplice di ereditare un modulo o un altro oggetto consiste nell'us
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Per creare un Windows Form ereditato da un form esistente usando Selezione ereditarietà  
   
-1.  Scegliere **Aggiungi Windows Form** dal menu **Progetto**.  
+1. Scegliere **Aggiungi Windows Form** dal menu **Progetto**.  
   
      Viene aperta la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-2.  Ricerca il **Form ereditato** modello da searchbox o facendo clic sul **Windows Forms** categoria, selezionarlo e denominarlo nel **nome** casella. Fare clic sul pulsante **Aggiungi** per procedere.  
+2. Ricerca il **Form ereditato** modello da searchbox o facendo clic sul **Windows Forms** categoria, selezionarlo e denominarlo nel **nome** casella. Fare clic sul pulsante **Aggiungi** per procedere.  
   
      Viene aperta la finestra di dialogo **Selezione ereditarietà**. Se il progetto corrente include già form, verranno visualizzati nella finestra di dialogo **Selezione ereditarietà**.  
   
-3.  Per ereditare da un modulo in un altro assembly, fare clic sul pulsante **Sfoglia**.  
+3. Per ereditare da un modulo in un altro assembly, fare clic sul pulsante **Sfoglia**.  
   
-4.  Nella finestra di dialogo **Selezionare un file che contiene un componente da cui ereditare** passare al progetto contenente il form o il modulo desiderato.  
+4. Nella finestra di dialogo **Selezionare un file che contiene un componente da cui ereditare** passare al progetto contenente il form o il modulo desiderato.  
   
-5.  Fare clic sul nome del file EXE o del file DLL per selezionarlo, quindi fare clic sul pulsante **Apri**.  
+5. Fare clic sul nome del file EXE o del file DLL per selezionarlo, quindi fare clic sul pulsante **Apri**.  
   
      Verrà nuovamente visualizzata finestra di dialogo **Selezione ereditarietà**, in cui ora il componente risulta visualizzato unitamente al progetto in cui si trova.  
   
-6.  Selezionare il componente.  
+6. Selezionare il componente.  
   
      Il componente verrà aggiunto al progetto in **Esplora soluzioni**. Se è presente un'interfaccia utente, i controlli che fanno parte del form ereditato saranno contraddistinti un glifo (![Screenshot del simbolo di ereditarietà Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) e, quando selezionato, hanno un bordo che indica il livello di sicurezza con il controllo per il form impostato come superclasse. I comportamenti che corrispondono ai vari livelli di sicurezza sono elencati nella tabella seguente.  
   

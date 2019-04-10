@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 0c23a74f91cd6666a0c4bef5ea67c58430c511b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340438"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Specifica la modalità con cui vengono confrontate le stringhe.  
@@ -38,11 +38,11 @@ Specifica la modalità con cui vengono confrontate le stringhe.
   
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Per impostare - optioncompare nell'IDE di Visual Studio  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
   
-2.  Fare clic sulla scheda **Compila**.  
+2. Fare clic sulla scheda **Compila**.  
   
-3.  Modificare il valore di **Option Compare** casella.  
+3. Modificare il valore di **Option Compare** casella.  
   
 ### <a name="to-set--optioncompare-programmatically"></a>Per impostare a livello di codice - optioncompare  
   

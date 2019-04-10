@@ -2,12 +2,12 @@
 title: Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213389"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341101"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)
 Strumento Visualizzatore di tracce dei servizi Windows Communication Foundation (WCF) consente di analizzare le tracce di diagnostica vengono generate da WCF. Service Trace Viewer offre un modo per unire, visualizzare e filtrare i messaggi di traccia nel log in modo che è possibile diagnosticare, riparare e verificare i problemi del servizio WCF.  
@@ -72,7 +72,7 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
 ##### <a name="to-open-a-trace-file"></a>Per aprire un file di traccia  
   
-1.  Avviare Service Trace Viewer, utilizzare una finestra di comando per passare al percorso di installazione di WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e quindi digitare `SvcTraceViewer.exe`.  
+1. Avviare Service Trace Viewer, utilizzare una finestra di comando per passare al percorso di installazione di WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) e quindi digitare `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Lo strumento Visualizzatore di tracce dei servizi può essere associato a due tipi di file: svclog e stvproj. Per eseguire e annullare la registrazione delle estensioni di file è possibile utilizzare due parametri nella riga di comando.  
@@ -81,14 +81,14 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 >   
 >  /unregister: consente di annullare la registrazione dell'associazione delle estensioni di file "svclog" e "stvproj" a SvcTraceViewer.exe  
   
-1.  All'avvio di Service Trace Viewer, fare clic su **File** e quindi scegliere **Open**. Passare al percorso in cui sono archiviati i file di traccia.  
+1. All'avvio di Service Trace Viewer, fare clic su **File** e quindi scegliere **Open**. Passare al percorso in cui sono archiviati i file di traccia.  
   
-2.  Fare doppio clic sul file di traccia che si desidera aprire.  
+2. Fare doppio clic sul file di traccia che si desidera aprire.  
   
     > [!NOTE]
     >  Premere MAIUSC mentre si fa clic su più file di traccia per selezionarli e aprirli simultaneamente. Lo strumento Visualizzatore di tracce dei servizi consente di unire e visualizzare il contenuto di tutti i file in una visualizzazione unificata. È ad esempio possibile aprire i file di traccia sia del client sia del servizio. Ciò è utile quando nella configurazione sono state attivate le funzionalità di registrazione dei messaggi e di propagazione delle attività. In questo caso la visualizzazione unificata dei contenuti dei file consente infatti di analizzare lo scambio dei messaggi fra client e servizio. È anche possibile trascinare più file nel visualizzatore o usare il **progetto** scheda. Per ulteriori dettagli, vedere la sezione relativa alla gestione dei progetti.  
   
-3.  Per aggiungere file aggiuntivi nella raccolta che è aperta, fare clic su **File** e quindi scegliere **Add**. Nella finestra visualizzata, spostarsi al percorso dei file di traccia e fare doppio clic sul file che si desidera aggiungere.  
+3. Per aggiungere file aggiuntivi nella raccolta che è aperta, fare clic su **File** e quindi scegliere **Add**. Nella finestra visualizzata, spostarsi al percorso dei file di traccia e fare doppio clic sul file che si desidera aggiungere.  
   
 > [!CAUTION]
 >  Non è consigliabile caricare un file di log di traccia di dimensioni superiori a 200 MB. Se si tenta di caricare un file di dimensioni superiori, il processo di caricamento può richiedere molto tempo, a seconda delle risorse del computer. Lo strumento Visualizzatore di tracce dei servizi può non rispondere per molto tempo o può esaurire la memoria del computer. Per evitare che ciò avvenga, è consigliabile configurare la funzionalità di caricamento parziale. Per ulteriori informazioni su questa procedura, vedere la sezione "Caricamento di file di traccia di grandi dimensioni”.  
@@ -154,24 +154,24 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
 ###### <a name="selecting-traces-in-the-graph"></a>Selezione di Tracce nel Grafico  
   
-1.  Fare clic su un blocco del grafico.  
+1. Fare clic su un blocco del grafico.  
   
-2.  Utilizzare i tasti SU e GIÙ per selezionare le tracce adiacenti.  
+2. Utilizzare i tasti SU e GIÙ per selezionare le tracce adiacenti.  
   
-3.  Osservare le informazioni di traccia riportate nel riquadro delle tracce e nel Riquadro dettagli.  
+3. Osservare le informazioni di traccia riportate nel riquadro delle tracce e nel Riquadro dettagli.  
   
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Espansione o compressione dei trasferimenti delle attività  
  Quando l'attività attualmente selezionata trasferisce l'esecuzione a un'altra attività è possibile espandere i trasferimenti delle attività. Ciò consente di seguire i trasferimenti.  
   
  Per espandere o comprimere i trasferimenti delle attività,  
   
-1.  Individuare la traccia di trasferimento con un segno "+" a sinistra dell'icona di trasferimento.  
+1. Individuare la traccia di trasferimento con un segno "+" a sinistra dell'icona di trasferimento.  
   
-2.  Fare clic su "+" oppure premere **Ctrl** e "+" utilizzando la tastiera.  
+2. Fare clic su "+" oppure premere **Ctrl** e "+" utilizzando la tastiera.  
   
-3.  Nel grafico verrà visualizzata l'attività successiva.  
+3. Nel grafico verrà visualizzata l'attività successiva.  
   
-4.  Un "-" viene visualizzato a sinistra dell'icona di trasferimento. Fare clic su di "-" accedere o premere Ctrl e "-", consente di comprimere il trasferimento dell'attività.  
+4. Un "-" viene visualizzato a sinistra dell'icona di trasferimento. Fare clic su di "-" accedere o premere Ctrl e "-", consente di comprimere il trasferimento dell'attività.  
   
 > [!NOTE]
 >  Quando esistono più trasferimenti verso una determinata attività e si espande uno di essi, il sistema visualizza le attività che portano alla nuova attività a partire dall'attività radice. Queste nuove attività sono visualizzate in forma compressa. Per esaminare i dettagli di queste attività è possibile espanderle verticalmente facendo clic sull'icona di espansione posta nell'intestazione del grafico.  
@@ -181,13 +181,13 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
  Per espandere o comprimere verticalmente le attività  
   
-1.  Fare clic sull'icona "+" nell'intestazione di attività per espandere verticalmente l'attività.  
+1. Fare clic sull'icona "+" nell'intestazione di attività per espandere verticalmente l'attività.  
   
-2.  Si noti che nel grafico vengono visualizzate tutte le tracce.  
+2. Si noti che nel grafico vengono visualizzate tutte le tracce.  
   
-3.  Scegliere il "-" sull'icona nell'intestazione di attività per comprimere verticalmente le attività.  
+3. Scegliere il "-" sull'icona nell'intestazione di attività per comprimere verticalmente le attività.  
   
-4.  Si noti che nell'attività sono riportati solo i trasferimenti, i log dei messaggi, le tracce di avviso e di eccezione di maggiore importanza.  
+4. Si noti che nell'attività sono riportati solo i trasferimenti, i log dei messaggi, le tracce di avviso e di eccezione di maggiore importanza.  
   
 ###### <a name="options"></a>Opzioni  
  È possibile selezionare due opzioni di **opzione** menu nella parte visibile del grafico.  
@@ -259,17 +259,17 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 ###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Creazione di un filtro personalizzato tramite la Creazione guidata modelli  
  È possibile fare clic su una traccia esistente e creare un filtro basato sulla struttura della traccia. Questo esempio illustra la creazione di un filtro personalizzato basato sull'ID del thread.  
   
-1.  Nel riquadro di traccia che si trova nella parte superiore destra del visualizzatore, selezionare la traccia contenente l'elemento su cui si desidera basare il filtro.  
+1. Nel riquadro di traccia che si trova nella parte superiore destra del visualizzatore, selezionare la traccia contenente l'elemento su cui si desidera basare il filtro.  
   
-2.  Scegliere il **Crea filtro personalizzato** pulsante nella parte superiore del riquadro delle tracce.  
+2. Scegliere il **Crea filtro personalizzato** pulsante nella parte superiore del riquadro delle tracce.  
   
-3.  Nella finestra di dialogo visualizzata, immettere il nome del filtro. In questo esempio, immettere `Thread ID`. È inoltre possibile fornire una descrizione del filtro.  
+3. Nella finestra di dialogo visualizzata, immettere il nome del filtro. In questo esempio, immettere `Thread ID`. È inoltre possibile fornire una descrizione del filtro.  
   
-4.  Nella visualizzazione albero a sinistra viene visualizzata la struttura del record di traccia selezionato nel passaggio 1. Passare all'elemento per il quale si desidera creare una condizione. In questo esempio, passare all'elemento ThreadID da individuare nella query XPath: /E2ETraceEvent/System/Execution/@ThreadID nodo. Fare doppio clic sull'attributo ThreadID contenuto nella visualizzazione albero. Nella parte destra della finestra di dialogo viene creata un'espressione per l'attributo.  
+4. Nella visualizzazione albero a sinistra viene visualizzata la struttura del record di traccia selezionato nel passaggio 1. Passare all'elemento per il quale si desidera creare una condizione. In questo esempio, passare all'elemento ThreadID da individuare nella query XPath: /E2ETraceEvent/System/Execution/@ThreadID nodo. Fare doppio clic sull'attributo ThreadID contenuto nella visualizzazione albero. Nella parte destra della finestra di dialogo viene creata un'espressione per l'attributo.  
   
-5.  Impostare il parametro per la condizione di ThreadID di tipo None in '{0}'. Questo passaggio fa in modo che il valore ThreadID venga configurato quando il filtro viene applicato. Per ulteriori informazioni, consultare la sezione relativa all'applicazione dei filtri. È possibile definire fino a quattro parametri. Le condizioni vengono combinate mediante l'operatore OR.  
+5. Impostare il parametro per la condizione di ThreadID di tipo None in '{0}'. Questo passaggio fa in modo che il valore ThreadID venga configurato quando il filtro viene applicato. Per ulteriori informazioni, consultare la sezione relativa all'applicazione dei filtri. È possibile definire fino a quattro parametri. Le condizioni vengono combinate mediante l'operatore OR.  
   
-6.  Fare clic su **accettabile** per creare il filtro.  
+6. Fare clic su **accettabile** per creare il filtro.  
   
 > [!NOTE]
 >  I filtri creati tramite la Creazione guidata modelli possono essere modificati solo manualmente. Questa procedura guidata non può essere utilizzata su un filtro già esistente. Inoltre, se si utilizza la Creazione guidata modelli per creare un filtro Xpath, le condizioni di tale filtro vengono combinate tramite l'operatore OR. Di conseguenza, se si desidera impostare un operatore AND, l'espressione del filtro deve essere modificata manualmente.  
@@ -277,20 +277,20 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 ###### <a name="creating-a-custom-filter-manually"></a>Creazione manuale di un filtro personalizzato  
  Il menu Filtri Personalizzati consente di immettere filtri XPath manualmente.  
   
-1.  Nel menu Visualizza, fare clic sui **filtri personalizzati** voce di menu.  
+1. Nel menu Visualizza, fare clic sui **filtri personalizzati** voce di menu.  
   
-2.  Nella finestra di dialogo visualizzata, fare clic su **New.**  
+2. Nella finestra di dialogo visualizzata, fare clic su **New.**  
   
-3.  Specificare almeno il nome e un'espressione Xpath del filtro.  
+3. Specificare almeno il nome e un'espressione Xpath del filtro.  
   
-4.  Fare clic su **OK**.  
+4. Fare clic su **OK**.  
   
 ###### <a name="applying-a-custom-filter"></a>Applicazione di un filtro personalizzato  
  Una volta creato un filtro personalizzato, tale filtro è accessibile tramite la barra degli strumenti di filtro. Selezionare il filtro da applicare nel **Cerca In** campo della barra degli strumenti di filtro. Per utilizzare l'esempio precedente, selezionare "ID thread".  
   
-1.  Specificare il valore desiderato nel **Find What** campo. In questo esempio, immettere l'ID del thread da individuare.  
+1. Specificare il valore desiderato nel **Find What** campo. In questo esempio, immettere l'ID del thread da individuare.  
   
-2.  Fare clic su **Filtra ora**e osservare il risultato dell'operazione.  
+2. Fare clic su **Filtra ora**e osservare il risultato dell'operazione.  
   
  Se il filtro utilizza più parametri, immetterli usando ';' come separatore nel **Find What** campo. Ad esempio, la stringa seguente definisce 3 parametri: ‘1;findValue;text’. Il Visualizzatore applica "1" per il {0} parametro del filtro. 'findValue' e 'text' vengono applicate a {1} e {2} rispettivamente.  
   
@@ -299,21 +299,21 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
   
  Per importare un filtro personalizzato:  
   
-1.  Nel **View** menu, fare clic su **filtri personalizzati**.  
+1. Nel **View** menu, fare clic su **filtri personalizzati**.  
   
-2.  Nella finestra di dialogo visualizzata, scegliere il **importazione** pulsante.  
+2. Nella finestra di dialogo visualizzata, scegliere il **importazione** pulsante.  
   
-3.  Passare al file del filtro personalizzato (con estensione stvcf), fare clic sul file e scegliere il **Open** pulsante.  
+3. Passare al file del filtro personalizzato (con estensione stvcf), fare clic sul file e scegliere il **Open** pulsante.  
   
  Per esportare un filtro personalizzato:  
   
-1.  Nel menu Visualizza, fare clic su **filtri personalizzati**.  
+1. Nel menu Visualizza, fare clic su **filtri personalizzati**.  
   
-2.  Nella finestra di dialogo visualizzata, selezionare il filtro che si desidera esportare.  
+2. Nella finestra di dialogo visualizzata, selezionare il filtro che si desidera esportare.  
   
-3.  Scegliere il **esportare** pulsante.  
+3. Scegliere il **esportare** pulsante.  
   
-4.  Specificare il nome e percorso del file di definizione del filtro personalizzato (con estensione stvcf), quindi scegliere il **salvare** pulsante.  
+4. Specificare il nome e percorso del file di definizione del filtro personalizzato (con estensione stvcf), quindi scegliere il **salvare** pulsante.  
   
 > [!NOTE]
 >  Questi filtri personalizzati possono essere importati ed esportati solo tramite lo strumento Visualizzatore di tracce dei servizi e non possono essere letti con altri strumenti.  
@@ -396,9 +396,9 @@ A partire da .NET Framework 4.8, i controlli casella combinata in alcuni temi a 
 #### <a name="adjusting-partial-loading"></a>Impostazione dell'intervallo di tempo per il caricamento parziale  
  Dopo aver caricato parte del file di traccia, per modificare l'intervallo di tempo relativo al set di dati caricato è possibile regolare la barra degli strumenti della funzionalità di caricamento parziale che si trova nella parte superiore del visualizzatore.  
   
-1.  Utilizzare il mouse per spostare la barra degli strumenti oppure immettere l'ora di inizio e di fine.  
+1. Utilizzare il mouse per spostare la barra degli strumenti oppure immettere l'ora di inizio e di fine.  
   
-2.  Scegliere il **Adjust** pulsante.  
+2. Scegliere il **Adjust** pulsante.  
   
 ## <a name="understanding-trace-icons"></a>Descrizione delle icone di traccia  
  Di seguito è riportato un elenco di icone che utilizza lo strumento Service Trace Viewer il **attività** visualizzazione **Graph** visualizzazione e **traccia** riquadro per rappresentare elementi diversi.  

@@ -2,19 +2,19 @@
 title: 'Procedura: Configurare il rilevamento con WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: dc6a89505c788183ed5d53df986c0f545c0d5533
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336564"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Procedura: Configurare il rilevamento con WorkflowServiceHost
 In questo argomento viene illustrato come configurare il rilevamento di un flusso di lavoro [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ospitato in <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Viene configurato tramite un file Web.config specificando un comportamento del servizio.  
   
 ### <a name="configure-tracking-in-configuration"></a>Configurare il rilevamento nella configurazione  
   
-1.  Aggiungere il <xref:System.Activities.Tracking.EtwTrackingParticipant> tramite la <`behavior`> elemento in un file di configurazione, come illustrato nell'esempio seguente.  
+1. Aggiungere il <xref:System.Activities.Tracking.EtwTrackingParticipant> tramite la <`behavior`> elemento in un file di configurazione, come illustrato nell'esempio seguente.  
   
     ```xml  
     <behaviors>  
@@ -56,7 +56,7 @@ In questo argomento viene illustrato come configurare il rilevamento di un fluss
   
 ### <a name="configure-tracking-in-code"></a>Configurare il rilevamento nel codice  
   
-1.  Aggiungere l'elemento <xref:System.Activities.Tracking.EtwTrackingParticipant> usando il comportamento <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> nel codice, come illustrato nell'esempio riportato di seguito.  
+1. Aggiungere l'elemento <xref:System.Activities.Tracking.EtwTrackingParticipant> usando il comportamento <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> nel codice, come illustrato nell'esempio riportato di seguito.  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  

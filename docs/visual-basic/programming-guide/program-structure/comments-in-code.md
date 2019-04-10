@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814640"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343012"
 ---
 # <a name="comments-in-code-visual-basic"></a>Commenti nel codice (Visual Basic)
 Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Questo simbolo indica al compilatore di Visual Basic per ignorare il testo seguente, o la *commento*. I commenti sono brevi annotazioni descrittive che vengono aggiunte al codice per agevolarne la lettura.  
@@ -54,7 +54,7 @@ Negli esempi di codice viene spesso utilizzato il simbolo di commento (`'`). Que
   
 -   Non è possibile inserire sulla stessa riga una sequenza di continuazione di riga seguita da un commento.  
   
- È possibile aggiungere o rimuovere i simboli di commento per un blocco di codice, selezionare uno o più righe di codice e scegliere il **commento** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) e **Rimuovi commento** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) i pulsanti sul **modifica**  sulla barra degli strumenti.  
+ È possibile aggiungere o rimuovere i simboli di commento per un blocco di codice, selezionare uno o più righe di codice e scegliere il **commento** (![pulsante il commento di Visual Basic in Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) e **Rimuovi commento**  (![Pulsante di rimuovere il commento da Visual Basic in Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) i pulsanti sul **modifica** sulla barra degli strumenti.  
   
 > [!NOTE]
 >  Per aggiungere commenti al codice è possibile anche inserire la parola chiave `REM` prima del testo. Tuttavia, il `'` simbolo e il **commento**/**Rimuovi commento** pulsanti sono più facili da usare e richiedono meno spazio e memoria.  

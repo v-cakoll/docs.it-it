@@ -1,16 +1,16 @@
 ---
-title: "Procedura: Compilare un'applicazione Web ASP.NET MVC in grado di riconoscere attestazioni con WIF"
+title: "Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscere attestazioni con WIF"
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036001"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335667"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Procedura: Compilare un'applicazione Web ASP.NET MVC in grado di riconoscere attestazioni con WIF
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscere attestazioni con WIF
 ## <a name="applies-to"></a>Si applica a  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -53,24 +53,24 @@ ms.locfileid: "48036001"
   
 #### <a name="to-create-simple-aspnet-mvc-application"></a>Per creare un'applicazione MVC ASP.NET semplice  
   
-1.  Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
+1. Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web MVC 3 ASP.NET**.  
+2. Nella finestra **Nuovo progetto** fare clic su **Applicazione Web MVC 3 ASP.NET**.  
   
-3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
+3. In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-4.  Nella finestra di dialogo **Nuovo progetto MVC 3 ASP.NET** selezionare **Applicazione Internet** tra i modelli disponibili, assicurarsi che **Motore di visualizzazione** sia impostato su **Razor** e quindi fare clic su **OK**.  
+4. Nella finestra di dialogo **Nuovo progetto MVC 3 ASP.NET** selezionare **Applicazione Internet** tra i modelli disponibili, assicurarsi che **Motore di visualizzazione** sia impostato su **Razor** e quindi fare clic su **OK**.  
   
-5.  All'apertura del nuovo progetto fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e scegliere **Proprietà**.  
+5. All'apertura del nuovo progetto fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e scegliere **Proprietà**.  
   
-6.  Nella pagina delle proprietà del progetto fare clic sulla scheda **Web** a sinistra e assicurarsi che sia selezionata l'opzione **Usa server Web IIS locale**.  
+6. Nella pagina delle proprietà del progetto fare clic sulla scheda **Web** a sinistra e assicurarsi che sia selezionata l'opzione **Usa server Web IIS locale**.  
   
 ## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
  In questo passaggio si aggiungeranno voci di configurazione al file di configurazione *Web.config* dell'applicazione Web MVC ASP.NET per renderla in grado di riconoscere attestazioni.  
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Per configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
-1.  Aggiungere le definizioni di sezione di configurazione seguenti nel file di configurazione *Web.config*, che definiscono le sezioni di configurazione richieste da Windows Identity Foundation. Aggiungere le definizioni subito dopo l'elemento di apertura **\<configuration>**:  
+1. Aggiungere le definizioni di sezione di configurazione seguenti nel file di configurazione *Web.config*, che definiscono le sezioni di configurazione richieste da Windows Identity Foundation. Aggiungere le definizioni subito dopo l'elemento di apertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "48036001"
     </configSections>  
     ```  
   
-2.  Aggiungere un **elemento \<location>** che consente l'accesso ai metadati di federazione dell'applicazione:  
+2. Aggiungere un **elemento \<location>** che consente l'accesso ai metadati di federazione dell'applicazione:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "48036001"
     </location>  
     ```  
   
-3.  Aggiungere le seguenti voci di configurazione all'interno di elementi **\<system.web>** per negare le autorizzazioni agli utenti, disabilitare l'autenticazione nativa e abilitare WIF per gestire l'autenticazione.  
+3. Aggiungere le seguenti voci di configurazione all'interno di elementi **\<system.web>** per negare le autorizzazioni agli utenti, disabilitare l'autenticazione nativa e abilitare WIF per gestire l'autenticazione.  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "48036001"
     <authentication mode="None" />  
     ```  
   
-4.  Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>**, all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>**. Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
+4. Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>**, all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>**. Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
   
     ```xml  
     <system.identityModel>  
@@ -124,16 +124,16 @@ ms.locfileid: "48036001"
     </system.identityModel.services>  
     ```  
   
-5.  Aggiungere un riferimento all'assembly <xref:System.IdentityModel>.  
+5. Aggiungere un riferimento all'assembly <xref:System.IdentityModel>.  
   
-6.  Compilare la soluzione e assicurarsi che non ci siano errori.  
+6. Compilare la soluzione e assicurarsi che non ci siano errori.  
   
 ## <a name="step-3--test-your-solution"></a>Passaggio 3: eseguire i test sulla soluzione  
  In questo passaggio si testerà l'applicazione Web MVC ASP.NET configurata per l'autenticazione basata sulle attestazioni. Per eseguire un test di base, si aggiungerà codice semplice che visualizza le attestazioni nel token rilasciato dal servizio token di sicurezza.  
   
 #### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Per testare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
-1.  In **Esplora soluzioni** espandere la cartella **Controller** e aprire il file *HomeController.cs* nell'editor. Aggiungere il codice seguente al metodo **Index**:  
+1. In **Esplora soluzioni** espandere la cartella **Controller** e aprire il file *HomeController.cs* nell'editor. Aggiungere il codice seguente al metodo **Index**:  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "48036001"
     }  
     ```  
   
-2.  In **Esplora soluzioni** espandere le cartelle **Visualizzazioni** e **Home** e aprire il file *Index.cshtml* nell'editor. Eliminarne il contenuto e aggiungere il markup seguente:  
+2. In **Esplora soluzioni** espandere le cartelle **Visualizzazioni** e **Home** e aprire il file *Index.cshtml* nell'editor. Eliminarne il contenuto e aggiungere il markup seguente:  
   
     ```html  
     @{  
@@ -212,9 +212,9 @@ ms.locfileid: "48036001"
     </table>  
     ```  
   
-3.  Eseguire la soluzione premendo **F5**.  
+3. Eseguire la soluzione premendo **F5**.  
   
-4.  Dovrebbe essere visualizzata la pagina che mostra le attestazioni nel token emesso dal servizio token di sicurezza.  
+4. Dovrebbe essere visualizzata la pagina che mostra le attestazioni nel token emesso dal servizio token di sicurezza.  
   
 ## <a name="related-items"></a>Elementi correlati  
   

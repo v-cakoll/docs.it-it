@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: f0b80e2be007ff44569365f37a2331f1ecd7a216
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839405"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337968"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>La matrice è fissa o temporaneamente bloccata (Visual Basic)
 Questo errore sono le seguenti cause possibili:  
@@ -22,11 +22,11 @@ Questo errore sono le seguenti cause possibili:
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Rendere la matrice originale dinamica anziché fissa dichiarandolo con `ReDim` (se la matrice viene dichiarata all'interno di una procedura), oppure dichiarandolo senza specificare il numero di elementi (se la matrice viene dichiarata a livello di modulo.  
+1. Rendere la matrice originale dinamica anziché fissa dichiarandolo con `ReDim` (se la matrice viene dichiarata all'interno di una procedura), oppure dichiarandolo senza specificare il numero di elementi (se la matrice viene dichiarata a livello di modulo.  
   
-2.  Determinare se è realmente necessario passare l'elemento, dato che è visibile all'interno di tutte le procedure nel modulo.  
+2. Determinare se è realmente necessario passare l'elemento, dato che è visibile all'interno di tutte le procedure nel modulo.  
   
-3.  Determinare quali blocchi di `Variant` e porvi rimedio.  
+3. Determinare quali blocchi di `Variant` e porvi rimedio.  
   
 ## <a name="see-also"></a>Vedere anche
 

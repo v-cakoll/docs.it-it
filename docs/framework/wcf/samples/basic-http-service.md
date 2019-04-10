@@ -2,12 +2,12 @@
 title: Servizio HTTP di base
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087154"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337110"
 ---
 # <a name="basic-http-service"></a>Servizio HTTP di base
 In questo esempio viene illustrato come implementare un servizio basato su RPC su HTTP, - noto come servizio "POX" (Plain Old XML) usando il modello di programmazione REST di Windows Communication Foundation (WCF). Questo esempio è costituito da due componenti: un servizio HTTP WCF indipendente (Service.cs) e un'applicazione console (Program.cs) che crea il servizio ed effettua chiamate ad esso.  
@@ -27,11 +27,11 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC s
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  Aprire la soluzione per l'esempio relativo al servizio Http di base. Quando si avvia Visual Studio 2012, è necessario eseguire come amministratore per l'esempio venga eseguito correttamente. Eseguire questa operazione facendo clic sull'icona di Visual Studio 2012 e selezionando **Esegui come amministratore** dal menu di scelta rapida.  
+1. Aprire la soluzione per l'esempio relativo al servizio Http di base. Quando si avvia Visual Studio 2012, è necessario eseguire come amministratore per l'esempio venga eseguito correttamente. Eseguire questa operazione facendo clic sull'icona di Visual Studio 2012 e selezionando **Esegui come amministratore** dal menu di scelta rapida.  
   
-2.  Premere CTRL+MAIUSC+B per compilare la soluzione, quindi premere Ctrl+F5 per eseguire il progetto dell'applicazione console senza eseguirne il debug. Verrà visualizzata la finestra della console in cui saranno disponibili gli URI del servizio in esecuzione e della pagina della Guida HTML per il servizio in esecuzione. In qualsiasi momento è possibile visualizzare la pagina della Guida HTML digitando l'URI della pagina della Guida in un browser. Durante l'esecuzione dell'esempio, il client scrive lo stato dell'attività corrente.  
+2. Premere CTRL+MAIUSC+B per compilare la soluzione, quindi premere Ctrl+F5 per eseguire il progetto dell'applicazione console senza eseguirne il debug. Verrà visualizzata la finestra della console in cui saranno disponibili gli URI del servizio in esecuzione e della pagina della Guida HTML per il servizio in esecuzione. In qualsiasi momento è possibile visualizzare la pagina della Guida HTML digitando l'URI della pagina della Guida in un browser. Durante l'esecuzione dell'esempio, il client scrive lo stato dell'attività corrente.  
   
-3.  Premere un tasto qualsiasi per terminare l'esempio.  
+3. Premere un tasto qualsiasi per terminare l'esempio.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

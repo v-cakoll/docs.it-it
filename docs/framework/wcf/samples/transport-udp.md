@@ -2,31 +2,31 @@
 title: 'Trasporto: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332819"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334666"
 ---
 # <a name="transport-udp"></a>Trasporto: UDP
 L'esempio trasporto UDP illustra come implementare unicast e multicast come un trasporto di Windows Communication Foundation (WCF) personalizzato UDP. L'esempio descrive la procedura consigliata per la creazione di un trasporto personalizzato in WCF, utilizzando il framework del canale e le procedure consigliate WCF. I passaggi per creare un trasporto personalizzato sono i seguenti:  
   
-1.  Decidere quale canale [modelli di scambio dei messaggi](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel o IReplyChannel) ChannelFactory e ChannelListener supporteranno. Quindi decidere se si supporteranno le variazioni con sessione di tali interfacce.  
+1. Decidere quale canale [modelli di scambio dei messaggi](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel o IReplyChannel) ChannelFactory e ChannelListener supporteranno. Quindi decidere se si supporteranno le variazioni con sessione di tali interfacce.  
   
-2.  Creare una channel factory e un listener di canale che supportano il modello di scambio dei messaggi.  
+2. Creare una channel factory e un listener di canale che supportano il modello di scambio dei messaggi.  
   
-3.  Assicurarsi che eventuali eccezioni specifiche della rete vengano normalizzate nella classe derivata appropriata di <xref:System.ServiceModel.CommunicationException>.  
+3. Assicurarsi che eventuali eccezioni specifiche della rete vengano normalizzate nella classe derivata appropriata di <xref:System.ServiceModel.CommunicationException>.  
   
-4.  Aggiungere un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento che aggiunge il trasporto personalizzato a uno stack di canali. Per altre informazioni, vedere [aggiunta di un elemento di associazione](#AddingABindingElement).  
+4. Aggiungere un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento che aggiunge il trasporto personalizzato a uno stack di canali. Per altre informazioni, vedere [aggiunta di un elemento di associazione](#AddingABindingElement).  
   
-5.  Aggiungere una sezione di estensione degli elementi di associazione per esporre il nuovo elemento di associazione al sistema di configurazione.  
+5. Aggiungere una sezione di estensione degli elementi di associazione per esporre il nuovo elemento di associazione al sistema di configurazione.  
   
-6.  Aggiungere le estensioni dei metadati per comunicare le funzionalità agli altri endpoint.  
+6. Aggiungere le estensioni dei metadati per comunicare le funzionalità agli altri endpoint.  
   
-7.  Aggiungere un'associazione che preconfigura uno stack di elementi di associazione secondo un profilo ben definito. Per altre informazioni, vedere [aggiunta di un elemento di associazione Standard](#AddingAStandardBinding).  
+7. Aggiungere un'associazione che preconfigura uno stack di elementi di associazione secondo un profilo ben definito. Per altre informazioni, vedere [aggiunta di un elemento di associazione Standard](#AddingAStandardBinding).  
   
-8.  Aggiungere una sezione dell'associazione e un elemento di configurazione dell'associazione per esporre l'associazione al sistema di configurazione. Per altre informazioni, vedere [aggiunta di supporto della configurazione](#AddingConfigurationSupport).  
+8. Aggiungere una sezione dell'associazione e un elemento di configurazione dell'associazione per esporre l'associazione al sistema di configurazione. Per altre informazioni, vedere [aggiunta di supporto della configurazione](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>Modelli di scambio dei messaggi  
@@ -185,9 +185,9 @@ if (soapBinding != null)
   
  Quando si esegue Svcutil.exe, esistono due opzioni per ottenere che Svcutil.exe carichi le estensioni di importazione WSDL:  
   
-1.  Punto Svcutil.exe al file di configurazione utilizzando /SvcutilConfig:\<file >.  
+1. Punto Svcutil.exe al file di configurazione utilizzando /SvcutilConfig:\<file >.  
   
-2.  Aggiungere la sezione di configurazione a Svcutil.exe.config nella stessa directory di Svcutil.exe.  
+2. Aggiungere la sezione di configurazione a Svcutil.exe.config nella stessa directory di Svcutil.exe.  
   
  Il tipo `UdpBindingElementImporter` implementa l'interfaccia `IWsdlImportExtension`. Il metodo `ImportEndpoint` importa l'indirizzo dalla porta WSDL.  
   
@@ -247,9 +247,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Implementare quindi `IPolicyImporterExtension` dalla classe registrata (`UdpBindingElementImporter`). In `ImportPolicy()`, esaminare le asserzioni nello spazio dei nomi appropriato ed elaborare quelle per generare il trasporto e controllare se è multicast. Rimuovere inoltre dall'elenco delle asserzioni di associazione quelle gestite dall'importatore. Anche in questo caso, quando si esegue Svcutil.exe esistono due opzioni per l'integrazione:  
   
-1.  Punto Svcutil.exe al file di configurazione utilizzando /SvcutilConfig:\<file >.  
+1. Punto Svcutil.exe al file di configurazione utilizzando /SvcutilConfig:\<file >.  
   
-2.  Aggiungere la sezione di configurazione a Svcutil.exe.config nella stessa directory di Svcutil.exe.  
+2. Aggiungere la sezione di configurazione a Svcutil.exe.config nella stessa directory di Svcutil.exe.  
   
 <a name="AddingAStandardBinding"></a>   
 ## <a name="adding-a-standard-binding"></a>Aggiunta di un elemento di associazione standard  
@@ -466,11 +466,11 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3.  Fare riferimento alla sezione precedente "UDP Test Service e client".  
+3. Fare riferimento alla sezione precedente "UDP Test Service e client".  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

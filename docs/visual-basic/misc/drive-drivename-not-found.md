@@ -4,25 +4,25 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: 4f55ed9b5de2b96e19bbe78c1cc38baa7fff798f
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9084e885ba98211623781b036e9f7407a44368ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034416"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336505"
 ---
 # <a name="drive-drivename-not-found"></a>Unità '\<NomeUnità >' non trovato
 Non è possibile trovare l'unità. La connessione di rete è stata persa o l'unità a cui si tenta di accedere è offline o non esiste.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Verificare che l'unità sia alimentata.  
+1. Verificare che l'unità sia alimentata.  
   
-2.  Verificare che i cavi che connettono il computer alla rete siano collegati correttamente.  
+2. Verificare che i cavi che connettono il computer alla rete siano collegati correttamente.  
   
-3.  Per accedere a un'unità di rete, verificare l'esistenza di una connessione logica tra il computer e l'unità.  
+3. Per accedere a un'unità di rete, verificare l'esistenza di una connessione logica tra il computer e l'unità.  
   
-4.  Ristabilire la connessione alla rete e riprovare.  
+4. Ristabilire la connessione alla rete e riprovare.  
   
 ## <a name="see-also"></a>Vedere anche
 

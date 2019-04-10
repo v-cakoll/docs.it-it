@@ -2,12 +2,12 @@
 title: 'Procedura: Serializzare e deserializzare dati JSON'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336954"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Procedura: Serializzare e deserializzare dati JSON
 JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che consente scambi rapidi di piccole quantità di dati tra browser client e servizi Web compatibili con AJAX.  
@@ -23,7 +23,7 @@ JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che 
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Per definire il contratto dati per un tipo di persona 
   
-1.  Definire il contratto dati per `Person` collegando l'oggetto <xref:System.Runtime.Serialization.DataContractAttribute> alla classe e l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> ai membri da serializzare. Per altre informazioni sui contratti dati, vedere [progettazione di contratti di servizio](../designing-service-contracts.md).  
+1. Definire il contratto dati per `Person` collegando l'oggetto <xref:System.Runtime.Serialization.DataContractAttribute> alla classe e l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute> ai membri da serializzare. Per altre informazioni sui contratti dati, vedere [progettazione di contratti di servizio](../designing-service-contracts.md).  
   
     ```csharp  
     [DataContract]  
@@ -39,7 +39,7 @@ JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che 
   
 ## <a name="to-serialize-an-instance-of-type-person-to-json"></a>Per serializzare un'istanza di tipo Person in JSON  
   
-1.  Creare un'istanza del tipo `Person`.  
+1. Creare un'istanza del tipo `Person`.  
   
     ```csharp  
     Person p = new Person();  
@@ -47,20 +47,20 @@ JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che 
     p.age = 42;  
     ```  
   
-2.  Serializzare la `Person` oggetto in un flusso di memoria tramite la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+2. Serializzare la `Person` oggetto in un flusso di memoria tramite la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  Utilizzare il metodo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> per scrivere dati JSON nel flusso.  
+3. Utilizzare il metodo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> per scrivere dati JSON nel flusso.  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4.  Visualizzare l'output JSON.  
+4. Visualizzare l'output JSON.  
   
     ```csharp  
     stream1.Position = 0;  
@@ -71,14 +71,14 @@ JSON (JavaScript Object Notation) è un efficiente formato di codifica dati che 
   
 ## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>Per deserializzare un'istanza di tipo Person da JSON  
   
-1.  Deserializzare i dati con codifica JSON in una nuova istanza di `Person` utilizzando il metodo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> di <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+1. Deserializzare i dati con codifica JSON in una nuova istanza di `Person` utilizzando il metodo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> di <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2.  Visualizzare i risultati.  
+2. Visualizzare i risultati.  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  

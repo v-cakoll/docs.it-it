@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130650"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343480"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Procedura: Abilitare il servizio di condivisione delle porte Net.TCP
 Windows Communication Foundation (WCF) usano un servizio Windows denominato il servizio di condivisione porte Net. TCP per semplificare la condivisione delle porte TCP tra più processi. Questo servizio viene installato come parte di WCF, ma il servizio non è abilitato per impostazione predefinita come misura di sicurezza e pertanto è necessario abilitare manualmente prima del primo utilizzo. In questo argomento viene illustrato come configurare il servizio di condivisione delle porte Net TCP usando lo snap-in MMC (Microsoft Management Console).  
@@ -21,15 +21,15 @@ Windows Communication Foundation (WCF) usano un servizio Windows denominato il s
   
 ### <a name="to-enable-the-nettcp-port-sharing-service-using-mmc"></a>Per attivare il servizio di condivisione delle porte Net.TCP tramite MMC  
   
-1.  Dal menu Start, aprire la Console di Gestione servizi aprendo una finestra del prompt dei comandi e digitando `services.msc` o aprendo Esegui e digitando `services.msc` nella casella Apri.  
+1. Dal menu Start, aprire la Console di Gestione servizi aprendo una finestra del prompt dei comandi e digitando `services.msc` o aprendo Esegui e digitando `services.msc` nella casella Apri.  
   
-2.  Nel **Name** colonna dell'elenco dei servizi, fare doppio clic sui **servizio di condivisione porte Net. TCP**e selezionare **proprietà** dal menu di scelta.  
+2. Nel **Name** colonna dell'elenco dei servizi, fare doppio clic sui **servizio di condivisione porte Net. TCP**e selezionare **proprietà** dal menu di scelta.  
   
-3.  Per abilitare l'avvio manuale del servizio, nel **proprietà** finestra selezionare il **generali** della scheda e nella **tipo di avvio** finestra selezionare manuale e quindi fare clic su **Applicare**.  
+3. Per abilitare l'avvio manuale del servizio, nel **proprietà** finestra selezionare il **generali** della scheda e nella **tipo di avvio** finestra selezionare manuale e quindi fare clic su **Applicare**.  
   
-4.  Per avviare il servizio, nell'area dello stato del servizio, scegliere il **avviare** pulsante. Lo stato del servizio dovrebbe ora essere "Avviato".  
+4. Per avviare il servizio, nell'area dello stato del servizio, scegliere il **avviare** pulsante. Lo stato del servizio dovrebbe ora essere "Avviato".  
   
-5.  Per tornare all'elenco dei servizi, scegliere il **OK**e chiudere la Console MMC.  
+5. Per tornare all'elenco dei servizi, scegliere il **OK**e chiudere la Console MMC.  
   
 ## <a name="example"></a>Esempio  
   

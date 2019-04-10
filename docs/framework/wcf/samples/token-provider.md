@@ -2,12 +2,12 @@
 title: Provider di token
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: a0d46419de71cb3504467d1b728fb05f3de0bf45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085759"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336291"
 ---
 # <a name="token-provider"></a>Provider di token
 Questo esempio dimostra come implementare un provider di token personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token di gestione credenziali predefinito. WCF viene inoltre fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:
@@ -109,7 +109,7 @@ Questo esempio dimostra come implementare un provider di token personalizzato. U
 
  La procedura seguente illustra come sviluppare un provider di token personalizzato e integrarlo nel framework di sicurezza di WCF:
 
-1.  Scrivere un provider di token personalizzati.
+1. Scrivere un provider di token personalizzati.
 
      L'esempio implementa un provider di token personalizzato che ottiene nome utente e password. La password deve corrispondere al nome utente. Questo provider di token personalizzato è a mero scopo esemplificativo e non si consiglia di distribuirlo.
 
@@ -128,7 +128,7 @@ Questo esempio dimostra come implementare un provider di token personalizzato. U
     }
     ```
 
-2.  Scrivere il gestore di token di sicurezza personalizzato.
+2. Scrivere il gestore di token di sicurezza personalizzato.
 
      La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene utilizzata per creare <xref:System.IdentityModel.Selectors.SecurityTokenProvider> per il <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> specifico che viene passato nel metodo `CreateSecurityTokenProvider`. Viene inoltre utilizzato un gestore del token di sicurezza per creare autenticatori del token e serializzatori del token, che però non sono trattati in questo esempio. In questo esempio, il gestore del token di sicurezza personalizzato eredita dalla classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenProvider` per restituire il provider di token nome utente personalizzato quando i requisiti del token passati indicano che il provider nome utente è richiesto.
 
@@ -159,7 +159,7 @@ Questo esempio dimostra come implementare un provider di token personalizzato. U
     }
     ```
 
-3.  Scrivere una credenziale client personalizzata.
+3. Scrivere una credenziale client personalizzata.
 
      La classe delle credenziali client viene utilizzata per rappresentare le credenziali configurate per il proxy client e crea un gestore del token di sicurezza utilizzato per ottenere gli autenticatori del token, i provider di token e il serializzatore di token.
 
@@ -184,7 +184,7 @@ Questo esempio dimostra come implementare un provider di token personalizzato. U
     }
     ```
 
-4.  Configurare il client per l'uso della credenziale client personalizzata.
+4. Configurare il client per l'uso della credenziale client personalizzata.
 
      L'esempio elimina la classe della credenziale client predefinita e fornisce la nuova classe della credenziale client affinché il client possa utilizzare la credenziale client personalizzata.
 
@@ -246,44 +246,44 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Per impostare e compilare l'esempio
 
-1.  Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Assicurarsi di avere eseguito il [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Per compilare la soluzione, seguire le istruzioni riportate in [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Per eseguire l'esempio nello stesso computer
 
-1.  Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperta con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
+1. Eseguire Setup. bat dalla cartella di installazione dell'esempio all'interno di un prompt dei comandi di Visual Studio 2012 aperta con privilegi di amministratore. In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.
 
     > [!NOTE]
     >  Il file batch Setup. bat è progettato per essere eseguito dal Prompt dei comandi un Visual Studio 2012. Variabile di ambiente PATH impostata all'interno di punti di Prompt dei comandi di Visual Studio 2012 per la directory che contiene file eseguibili richiesti dallo script Setup. bat.  
   
-2.  Avviare service.exe da service\bin.  
+2. Avviare service.exe da service\bin.  
   
-3.  Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+3. Avviare Client.exe da \client\bin. L'attività del client viene visualizzata nella finestra dell'applicazione console.  
   
-4.  Al prompt del nome utente, digitare un nome utente.  
+4. Al prompt del nome utente, digitare un nome utente.  
   
-5.  Al prompt della password, utilizzare la stessa stringa digitata per il prompt del nome utente.  
+5. Al prompt della password, utilizzare la stessa stringa digitata per il prompt del nome utente.  
   
-6.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer  
   
-1.  Creare una directory sul computer del servizio per i file binari del servizio.  
+1. Creare una directory sul computer del servizio per i file binari del servizio.  
   
-2.  Copiare i file di programma del servizio nella directory del servizio sul computer relativo. Copiare i file Setup.bat e Cleanup.bat nel computer del servizio.  
+2. Copiare i file di programma del servizio nella directory del servizio sul computer relativo. Copiare i file Setup.bat e Cleanup.bat nel computer del servizio.  
   
-3.  È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. Il file Service.exe.config deve essere aggiornato per riflettere il nome del nuovo certificato. È possibile creare il certificato server modificando il file batch Setup.bat. Si noti che il file Setup. bat deve essere eseguito da un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. È necessario impostare la variabile `%SERVER_NAME%` sul nome host completo del computer utilizzato per ospitare il servizio.  
+3. È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer. Il file Service.exe.config deve essere aggiornato per riflettere il nome del nuovo certificato. È possibile creare il certificato server modificando il file batch Setup.bat. Si noti che il file Setup. bat deve essere eseguito da un prompt dei comandi di per gli sviluppatori per Visual Studio aperto con privilegi di amministratore. È necessario impostare la variabile `%SERVER_NAME%` sul nome host completo del computer utilizzato per ospitare il servizio.  
   
-4.  Copiare il certificato server nell'archivio CurrentUser-TrustedPeople del client. Questo passaggio non è necessario quando il certificato server è emesso da un'autorità emittente client attendibile.  
+4. Copiare il certificato server nell'archivio CurrentUser-TrustedPeople del client. Questo passaggio non è necessario quando il certificato server è emesso da un'autorità emittente client attendibile.  
   
-5.  Nel file Service.exe.config sul computer del servizio modificare il valore dell'indirizzo di base per specificare un nome del computer completo anziché localhost.  
+5. Nel file Service.exe.config sul computer del servizio modificare il valore dell'indirizzo di base per specificare un nome del computer completo anziché localhost.  
   
-6.  Sul computer del servizio eseguire service.exe da un prompt dei comandi.  
+6. Sul computer del servizio eseguire service.exe da un prompt dei comandi.  
   
-7.  Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.  
+7. Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.  
   
-8.  Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.  
+8. Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.  
   
 9. Sul computer client avviare `Client.exe` da una finestra del prompt dei comandi.  
   
@@ -291,4 +291,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
-1.  Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
+1. Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  

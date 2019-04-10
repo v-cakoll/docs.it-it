@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: creazione di un'applicazione di crittografia"
+title: "Procedura dettagliata: Creazione di un'applicazione di crittografia"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964711"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341764"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: creazione di un'applicazione di crittografia
+# <a name="walkthrough-creating-a-cryptographic-application"></a>Procedura dettagliata: Creazione di un'applicazione di crittografia
 Questa procedura dettagliata illustra come crittografare e decrittografare il contenuto. Gli esempi di codice sono progettati per un'applicazione Windows Forms. Questa applicazione non illustra situazioni del mondo reale, come l'utilizzo di smart card. Al contrario illustra gli aspetti fondamentali della crittografia e decrittografia.  
   
  Questa procedura dettagliata usa le linee guida seguenti per la crittografia:  
@@ -50,10 +50,10 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
 -   Riferimenti agli spazi dei nomi <xref:System.IO> e <xref:System.Security.Cryptography>.  
   
-## <a name="creating-a-windows-forms-application"></a>Creazione di un'applicazione Windows Form  
+## <a name="creating-a-windows-forms-application"></a>Creazione di un'applicazione Windows Forms  
  La maggior parte degli esempi di codice in questa procedura dettagliata sono progettati per essere gestori di eventi per i controlli pulsante. Nella tabella seguente sono elencati i controlli necessari per l'applicazione di esempio e i relativi nomi richiesti per la corrispondenza con gli esempi di codice.  
   
-|Control|nome|Proprietà di testo (in base alle necessità)|  
+|Control|Nome|Proprietà di testo (in base alle necessità)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Crittografa un file|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Decrittografa un file|  
@@ -88,15 +88,15 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
  Il metodo `EncryptFile` esegue le operazioni seguenti:  
   
-1.  Crea un algoritmo simmetrico <xref:System.Security.Cryptography.RijndaelManaged> per crittografare il contenuto.  
+1. Crea un algoritmo simmetrico <xref:System.Security.Cryptography.RijndaelManaged> per crittografare il contenuto.  
   
-2.  Crea un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> per crittografare la chiave <xref:System.Security.Cryptography.RijndaelManaged>.  
+2. Crea un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> per crittografare la chiave <xref:System.Security.Cryptography.RijndaelManaged>.  
   
-3.  Usa un oggetto <xref:System.Security.Cryptography.CryptoStream> per leggere e crittografare <xref:System.IO.FileStream> del file di origine, in blocchi di byte, in un oggetto <xref:System.IO.FileStream> di destinazione per il file crittografato.  
+3. Usa un oggetto <xref:System.Security.Cryptography.CryptoStream> per leggere e crittografare <xref:System.IO.FileStream> del file di origine, in blocchi di byte, in un oggetto <xref:System.IO.FileStream> di destinazione per il file crittografato.  
   
-4.  Determina le lunghezze della chiave e del vettore di inizializzazione (IV) crittografati e crea matrici di byte dei valori delle relative lunghezze.  
+4. Determina le lunghezze della chiave e del vettore di inizializzazione (IV) crittografati e crea matrici di byte dei valori delle relative lunghezze.  
   
-5.  Scrive la chiave, il vettore di inizializzazione (IV) e i valori delle relative lunghezze nel pacchetto di crittografia.  
+5. Scrive la chiave, il vettore di inizializzazione (IV) e i valori delle relative lunghezze nel pacchetto di crittografia.  
   
  Il pacchetto di crittografia usa il seguente formato:  
   
@@ -127,15 +127,15 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
  Il metodo `Decrypt` esegue le operazioni seguenti:  
   
-1.  Crea un algoritmo simmetrico <xref:System.Security.Cryptography.RijndaelManaged> per decrittografare il contenuto.  
+1. Crea un algoritmo simmetrico <xref:System.Security.Cryptography.RijndaelManaged> per decrittografare il contenuto.  
   
-2.  Legge i primi otto byte del pacchetto crittografato <xref:System.IO.FileStream> in matrici di byte per ottenere le lunghezze della chiave e del vettore di inizializzazione crittografati.  
+2. Legge i primi otto byte del pacchetto crittografato <xref:System.IO.FileStream> in matrici di byte per ottenere le lunghezze della chiave e del vettore di inizializzazione crittografati.  
   
-3.  Estrae la chiave e il vettore di inizializzazione dal pacchetto di crittografia in matrici di byte.  
+3. Estrae la chiave e il vettore di inizializzazione dal pacchetto di crittografia in matrici di byte.  
   
-4.  Crea un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> per decrittografare la chiave <xref:System.Security.Cryptography.RijndaelManaged>.  
+4. Crea un oggetto <xref:System.Security.Cryptography.RSACryptoServiceProvider> per decrittografare la chiave <xref:System.Security.Cryptography.RijndaelManaged>.  
   
-5.  Usa un oggetto <xref:System.Security.Cryptography.CryptoStream> per leggere e decrittografare la sezione del testo crittografato del pacchetto di crittografia <xref:System.IO.FileStream>, in blocchi di byte, nell'oggetto <xref:System.IO.FileStream> per il file decrittografato. Quando questa operazione è terminata, la decrittografia è completata.  
+5. Usa un oggetto <xref:System.Security.Cryptography.CryptoStream> per leggere e decrittografare la sezione del testo crittografato del pacchetto di crittografia <xref:System.IO.FileStream>, in blocchi di byte, nell'oggetto <xref:System.IO.FileStream> per il file decrittografato. Quando questa operazione è terminata, la decrittografia è completata.  
   
  Aggiungere il codice seguente come gestore eventi `Click` per il pulsante `Decrypt File`.  
   
@@ -182,34 +182,34 @@ Questa procedura dettagliata illustra come crittografare e decrittografare il co
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Per creare chiavi, crittografare e decrittografare  
   
-1.  Fare clic sul pulsante `Create Keys`. L'etichetta visualizza il nome della chiave e mostra che è una coppia di chiavi completa.  
+1. Fare clic sul pulsante `Create Keys`. L'etichetta visualizza il nome della chiave e mostra che è una coppia di chiavi completa.  
   
-2.  Fare clic sul pulsante `Export Public Key`. Si noti che l'esportazione dei parametri della chiave pubblica non modifica la chiave corrente.  
+2. Fare clic sul pulsante `Export Public Key`. Si noti che l'esportazione dei parametri della chiave pubblica non modifica la chiave corrente.  
   
-3.  Fare clic sul pulsante `Encrypt File` e selezionare un file.  
+3. Fare clic sul pulsante `Encrypt File` e selezionare un file.  
   
-4.  Fare clic sul pulsante `Decrypt File` e selezionare il file appena crittografato.  
+4. Fare clic sul pulsante `Decrypt File` e selezionare il file appena crittografato.  
   
-5.  Esaminare il file appena decrittografato.  
+5. Esaminare il file appena decrittografato.  
   
-6.  Chiudere l'applicazione e riavviarla per testare il recupero dei contenitori di chiavi persistenti nello scenario successivo.  
+6. Chiudere l'applicazione e riavviarla per testare il recupero dei contenitori di chiavi persistenti nello scenario successivo.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Per crittografare mediante la chiave pubblica  
   
-1.  Fare clic sul pulsante `Import Public Key`. L'etichetta visualizza il nome della chiave e mostra che è solo pubblica.  
+1. Fare clic sul pulsante `Import Public Key`. L'etichetta visualizza il nome della chiave e mostra che è solo pubblica.  
   
-2.  Fare clic sul pulsante `Encrypt File` e selezionare un file.  
+2. Fare clic sul pulsante `Encrypt File` e selezionare un file.  
   
-3.  Fare clic sul pulsante `Decrypt File` e selezionare il file appena crittografato. Questa operazione avrà esito negativo perché si deve avere a disposizione la chiave privata per decrittografare.  
+3. Fare clic sul pulsante `Decrypt File` e selezionare il file appena crittografato. Questa operazione avrà esito negativo perché si deve avere a disposizione la chiave privata per decrittografare.  
   
  Questo scenario illustra una situazione in cui si possiede solo la chiave pubblica per crittografare un file per un'altra persona. In genere quella persona potrebbe mettere a disposizione solo la chiave pubblica e mantenere quella privata per la decrittografia.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>Per decrittografare mediante la chiave privata  
   
-1.  Fare clic sul pulsante `Get Private Key`. L'etichetta visualizza il nome della chiave e mostra se è la coppia di chiavi completa.  
+1. Fare clic sul pulsante `Get Private Key`. L'etichetta visualizza il nome della chiave e mostra se è la coppia di chiavi completa.  
   
-2.  Fare clic sul pulsante `Decrypt File` e selezionare il file appena crittografato. Questa operazione avrà esito positivo perché si possiede la coppia di chiavi completa per decrittografare.  
+2. Fare clic sul pulsante `Decrypt File` e selezionare il file appena crittografato. Questa operazione avrà esito positivo perché si possiede la coppia di chiavi completa per decrittografare.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [servizi crittografici](../../../docs/standard/security/cryptographic-services.md)

@@ -2,12 +2,12 @@
 title: 'Procedura: Riordinare i campi di un File delimitato (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: fbcd880d7bae9d6ad57f4769a5c4b6ef6f0141a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f41a8e38812cf9d3c652fa605febf2511f07a27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339086"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Procedura: Riordinare i campi di un File delimitato (LINQ) (Visual Basic)
 Un file con valori delimitati da virgole (CSV) è un file di testo che spesso viene usato per archiviare dati di un foglio di calcolo o altri dati tabulari rappresentati da righe e colonne. Usando il metodo <xref:System.String.Split%2A> per separare i campi, è molto semplice eseguire una query e modificare i file CSV tramite LINQ. In effetti la stessa tecnica può essere usata per riordinare le parti di qualsiasi riga di testo strutturata, non solo i file CSV.  
@@ -16,7 +16,7 @@ Un file con valori delimitati da virgole (CSV) è un file di testo che spesso vi
   
 ### <a name="to-create-the-data-file"></a>Per creare il file di dati  
   
-1.  Copiare le righe seguenti in un file di testo normale denominato spreadsheet1.csv. Salvare il file nella cartella del progetto.  
+1. Copiare le righe seguenti in un file di testo normale denominato spreadsheet1.csv. Salvare il file nella cartella del progetto.  
   
     ```  
     Adams,Terry,120  
@@ -79,5 +79,5 @@ End Class
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+- [LINQ e le directory dei File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
 - [Procedura: Generare XML da file CSV](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134979"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333678"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventi mouse in Windows Form
 Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizione del puntatore del mouse e lo stato dei pulsanti. Questo argomento descrive in dettaglio come reperire tali informazioni da eventi del mouse e illustra l'ordine in cui gli eventi Click del mouse vengono generati nei controlli Windows Form. Per un elenco e una descrizione di tutti gli eventi del mouse, vedere [Mouse funzionamento dell'Input in Windows Form](how-mouse-input-works-in-windows-forms.md).  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Form)](events-overview-windows-forms.md).  
@@ -36,31 +36,31 @@ Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizio
 ## <a name="standard-click-event-behavior"></a>Comportamento dell'evento Click standard  
  Se si vogliono gestire gli eventi Click del mouse nell'ordine corretto, è necessario conoscere l'ordine in cui gli eventi Click vengono generati nei controlli Windows Form. Tutti i controlli Windows Form generano eventi Click nello stesso ordine quando viene premuto e rilasciato un pulsante del mouse (indipendentemente dal pulsante), fatta eccezione per i singoli controlli segnalati nell'elenco seguente. L'ordine degli eventi generati per un singolo clic del pulsante del mouse è il seguente:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  L'ordine degli eventi generati per un doppio clic del pulsante del mouse è il seguente:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> .  
+1. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-2.  <xref:System.Windows.Forms.Control.Click> .  
+2. <xref:System.Windows.Forms.Control.Click> .  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> .  
+3. <xref:System.Windows.Forms.Control.MouseClick> .  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> .  
+4. <xref:System.Windows.Forms.Control.MouseUp> .  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> .  
+5. <xref:System.Windows.Forms.Control.MouseDown> .  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.Control.SetStyle%2A>, vedere il metodo <xref:System.Windows.Forms.ControlStyles>.  
+6. <xref:System.Windows.Forms.Control.DoubleClick> . Può variare se il controllo in questione ha il bit di stile <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> impostato su `true`. Per altre informazioni sulla modalità di impostazione di un bit <xref:System.Windows.Forms.Control.SetStyle%2A>, vedere il metodo <xref:System.Windows.Forms.ControlStyles>.  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> .  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> .  
+8. <xref:System.Windows.Forms.Control.MouseUp> .  
   
  Per un esempio di codice che illustri l'ordine del mouse fare clic su eventi, vedere [come: L'Input dell'utente di handle di eventi in Windows Form controlli](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
@@ -122,21 +122,21 @@ Quando si gestisce l'input del mouse, in genere si vogliono conoscere la posizio
 ### <a name="painting-behavior-of-toggle-controls"></a>Comportamento del disegno di controlli di attivazione/disattivazione  
  I controlli di attivazione/disattivazione, quali quelli che derivano dalla classe <xref:System.Windows.Forms.ButtonBase>, presentano il seguente comportamento di disegno distintivo in combinazione con eventi Click del mouse:  
   
-1.  L'utente preme il pulsante del mouse.  
+1. L'utente preme il pulsante del mouse.  
   
-2.  Il controllo viene disegnato nello stato premuto.  
+2. Il controllo viene disegnato nello stato premuto.  
   
-3.  Viene generato l'evento <xref:System.Windows.Forms.Control.MouseDown>.  
+3. Viene generato l'evento <xref:System.Windows.Forms.Control.MouseDown>.  
   
-4.  L'utente rilascia il pulsante del mouse.  
+4. L'utente rilascia il pulsante del mouse.  
   
-5.  Il controllo viene disegnato nello stato generato.  
+5. Il controllo viene disegnato nello stato generato.  
   
-6.  Viene generato l'evento <xref:System.Windows.Forms.Control.Click>.  
+6. Viene generato l'evento <xref:System.Windows.Forms.Control.Click>.  
   
-7.  Viene generato l'evento <xref:System.Windows.Forms.Control.MouseClick>.  
+7. Viene generato l'evento <xref:System.Windows.Forms.Control.MouseClick>.  
   
-8.  Viene generato l'evento <xref:System.Windows.Forms.Control.MouseUp>.  
+8. Viene generato l'evento <xref:System.Windows.Forms.Control.MouseUp>.  
   
     > [!NOTE]
     >  Se l'utente sposta il puntatore all'esterno del controllo di attivazione/disattivazione mentre il pulsante del mouse è premuto, ad esempio spostando il mouse dal controllo <xref:System.Windows.Forms.Button> mentre il pulsante è premuto, il controllo di attivazione/disattivazione viene disegnato nello stato generato e si verifica solo l'evento <xref:System.Windows.Forms.Control.MouseUp>. In tale situazione l'evento <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick> non si verificherà.  

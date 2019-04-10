@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974393"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333912"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedura: Passare argomenti a una routine (Visual Basic)
 Quando si chiama una routine, si seguono il nome della routine con un elenco di argomenti racchiuso tra parentesi. Viene fornito un argomento corrispondente a ogni parametro obbligatorio, definisce la procedura e, facoltativamente, è possibile specificare argomenti per il `Optional` parametri. Se non si fornisce un `Optional` parametro nella chiamata, è necessario includere una virgola per contrassegnarne la posizione nell'elenco di argomenti, se viene fornito alcun argomento successivo.  
@@ -27,15 +27,15 @@ Quando si chiama una routine, si seguono il nome della routine con un elenco di 
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Per passare uno o più argomenti a una routine  
   
-1.  Nell'istruzione di chiamata, inserire il nome della routine tra parentesi.  
+1. Nell'istruzione di chiamata, inserire il nome della routine tra parentesi.  
   
-2.  All'interno delle parentesi, inserire un elenco di argomenti. Includere un argomento per ogni parametro obbligatorio, che definisce la routine e gli argomenti, separarli con virgole.  
+2. All'interno delle parentesi, inserire un elenco di argomenti. Includere un argomento per ogni parametro obbligatorio, che definisce la routine e gli argomenti, separarli con virgole.  
   
-3.  Assicurarsi che ogni argomento è un'espressione valida che restituisce un tipo di dati convertibile nel tipo di routine definisce per il parametro corrispondente.  
+3. Assicurarsi che ogni argomento è un'espressione valida che restituisce un tipo di dati convertibile nel tipo di routine definisce per il parametro corrispondente.  
   
-4.  Se un parametro viene definito come [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md), è possibile includerlo nell'elenco di argomenti oppure ometterlo. Se viene omesso, la routine utilizza il valore predefinito definito per tale parametro.  
+4. Se un parametro viene definito come [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md), è possibile includerlo nell'elenco di argomenti oppure ometterlo. Se viene omesso, la routine utilizza il valore predefinito definito per tale parametro.  
   
-5.  Se si omette un argomento per un `Optional` parametro ed è presente un altro parametro dopo di esso nell'elenco dei parametri, è possibile contrassegnare la posizione dell'argomento omesso da una virgola aggiuntiva nell'elenco di argomenti.  
+5. Se si omette un argomento per un `Optional` parametro ed è presente un altro parametro dopo di esso nell'elenco dei parametri, è possibile contrassegnare la posizione dell'argomento omesso da una virgola aggiuntiva nell'elenco di argomenti.  
   
      L'esempio seguente chiama il Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> (funzione).  
   
@@ -49,11 +49,11 @@ Quando si chiama una routine, si seguono il nome della routine con un elenco di 
 
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
-- [Routine Property](./property-procedures.md)
+- [Routine di proprietà](./property-procedures.md)
 - [Routine di operatore](./operator-procedures.md)
 - [Procedura: Definire un parametro per una routine](./how-to-define-a-parameter-for-a-procedure.md)
 - [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)
 - [Routine ricorsive](./recursive-procedures.md)
-- [Overload della routine](./procedure-overloading.md)
+- [Overload delle routine](./procedure-overloading.md)
 - [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Programmazione orientata agli oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)

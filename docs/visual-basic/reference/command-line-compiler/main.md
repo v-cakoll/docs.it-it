@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337240"
 ---
 # <a name="-main"></a>-main
 Specifica la classe o il modulo che contiene la procedura `Sub Main`.  
@@ -37,13 +37,13 @@ Specifica la classe o il modulo che contiene la procedura `Sub Main`.
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Per impostare - principale nell'ambiente di sviluppo integrato di Visual Studio  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
-2.  Fare clic sulla scheda **Applicazione** .  
+2. Fare clic sulla scheda **Applicazione** .  
   
-3.  Assicurarsi che il **Abilita framework applicazione** casella di controllo è deselezionata.  
+3. Assicurarsi che il **Abilita framework applicazione** casella di controllo è deselezionata.  
   
-4.  Modificare il valore di **oggetto di avvio** casella.  
+4. Modificare il valore di **oggetto di avvio** casella.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `T2.vb` e `T3.vb`, specificando che il `Sub Main` sarà disponibili nella procedura di `Test2` classe.  

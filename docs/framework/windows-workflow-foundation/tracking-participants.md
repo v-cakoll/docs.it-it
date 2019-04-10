@@ -2,12 +2,12 @@
 title: Partecipanti del rilevamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340178"
 ---
 # <a name="tracking-participants"></a>Partecipanti del rilevamento
 I partecipanti del rilevamento sono punti di estensibilità che consentono a uno sviluppatore di flussi di lavoro di accedere a oggetti <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e di elaborarli. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] include un partecipante del rilevamento standard che scrive record di rilevamento come eventi di Event Tracing for Windows (ETW). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.  
@@ -81,13 +81,13 @@ I partecipanti del rilevamento sono punti di estensibilità che consentono a uno
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Per abilitare la visualizzazione dei record di rilevamento nel Visualizzatore eventi  
   
-1.  Avviare il Visualizzatore eventi (EVENTVWR.EXE).  
+1. Avviare il Visualizzatore eventi (EVENTVWR.EXE).  
   
-2.  Selezionare **Visualizzatore eventi, registri applicazioni e servizi, Microsoft, Windows, Server applicazioni-applicazioni**.  
+2. Selezionare **Visualizzatore eventi, registri applicazioni e servizi, Microsoft, Windows, Server applicazioni-applicazioni**.  
   
-3.  Pulsante destro del mouse e assicurarsi che **visualizzazione, Visualizza registri analitici e Debug** sia selezionata. In caso contrario, selezionarlo in modo che accanto venga visualizzato il segno di spunta. Ciò consente di visualizzare il **analitico**, **Perf**, e **Debug** i log.  
+3. Pulsante destro del mouse e assicurarsi che **visualizzazione, Visualizza registri analitici e Debug** sia selezionata. In caso contrario, selezionarlo in modo che accanto venga visualizzato il segno di spunta. Ciò consente di visualizzare il **analitico**, **Perf**, e **Debug** i log.  
   
-4.  Fare doppio clic il **analitico** accedere e quindi selezionare **Attiva registro**. Il log sarà disponibile nel file %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
+4. Fare doppio clic il **analitico** accedere e quindi selezionare **Attiva registro**. Il log sarà disponibile nel file %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Partecipante di rilevamento personalizzato  
  L'API del partecipante del rilevamento consente l'estensione del runtime di rilevamento con un partecipante del rilevamento fornito dall'utente che può includere la logica personalizzata per gestire i record di rilevamento creati dall'esecuzione del flusso di lavoro. Per scrivere un partecipante del rilevamento personalizzato, lo sviluppatore deve implementare il metodo `Track` sulla classe <xref:System.Activities.Tracking.TrackingParticipant>. Questo metodo viene chiamato quando un record di rilevamento viene creato dall'esecuzione del flusso di lavoro.  

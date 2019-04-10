@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340789"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Procedura: Sorvegliare da remoto lo stato delle stampanti
 In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere presenti più stampanti non funzionanti a causa di fogli bloccati o carta esaurita o un'altra situazione problematica. Il set completo di proprietà della stampante esposto nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per eseguire una rapida verifica dello stato delle stampanti.  
@@ -24,11 +24,11 @@ In qualsiasi momento in aziende di medie e grandi dimensioni potrebbero essere p
 ## <a name="example"></a>Esempio  
  Di seguito sono indicati i passaggi principali per la creazione di questo tipo di utilità.  
   
-1.  Ottenere un elenco di tutti i server di stampa.  
+1. Ottenere un elenco di tutti i server di stampa.  
   
-2.  Scorrere i server per eseguire una query sulle code di stampa.  
+2. Scorrere i server per eseguire una query sulle code di stampa.  
   
-3.  In ogni passaggio del ciclo del server, scorrere tutte le code del server e leggere tutte le proprietà che potrebbero indicare che la coda attualmente non funziona.  
+3. In ogni passaggio del ciclo del server, scorrere tutte le code del server e leggere tutte le proprietà che potrebbero indicare che la coda attualmente non funziona.  
   
  Il codice seguente è una serie di frammenti di codice. Per semplicità, in questo esempio si presuppone che esista un elenco delimitato da CRLF di server di stampa. La variabile `fileOfPrintServers` è un <xref:System.IO.StreamReader> oggetto per questo file. Poiché ogni nome del server è su una riga, tutte le chiamate di <xref:System.IO.StreamReader.ReadLine%2A> Ottiene il nome del server successivo e sposta il <xref:System.IO.StreamReader>del cursore all'inizio della riga successiva.  
   

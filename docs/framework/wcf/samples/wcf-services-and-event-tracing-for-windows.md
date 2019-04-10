@@ -2,12 +2,12 @@
 title: Servizi WCF e traccia eventi per Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 945daa305db9fe6785e1624e2dbb2e975cd8e94b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 35d0202a3b9cf4060240dc521554644d419a5c23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338969"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servizi WCF e traccia eventi per Windows
 Questo esempio viene illustrato come utilizzare la traccia analitica in Windows Communication Foundation (WCF) per generare eventi di Event Tracing for Windows (ETW). Le tracce analitiche sono eventi generati in punti chiave nello stack di WCF che consentono la risoluzione dei problemi dei servizi WCF nell'ambiente di produzione.
@@ -18,31 +18,31 @@ Questo esempio viene illustrato come utilizzare la traccia analitica in Windows 
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 
-1.  Usa Visual Studio 2012, aprire il file della soluzione Etwanalytictracesample.
+1. Usa Visual Studio 2012, aprire il file della soluzione Etwanalytictracesample.
 
-2.  Per compilare la soluzione, premere CTRL+MAIUSC+B.
+2. Per compilare la soluzione, premere CTRL+MAIUSC+B.
 
-3.  Per eseguire la soluzione, premere CTRL+F5.
+3. Per eseguire la soluzione, premere CTRL+F5.
 
      Nel Web browser, fare clic su **Calculator**. L'URI del documento WSDL per il servizio viene visualizzato nel browser. Copiare l'URI.
 
      Per impostazione predefinita, il servizio avvia l'ascolto delle richieste sulla porta 1378 `http://localhost:1378/Calculator.svc`.
 
-4.  Eseguire il client di prova WCF (WcfTestClient.exe).
+4. Eseguire il client di prova WCF (WcfTestClient.exe).
 
      Il client di prova WCF (WcfTestClient.exe) si trova in `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  La directory di installazione di Visual Studio 2012 impostazione predefinita è `C:\Program Files\Microsoft Visual Studio 10.0`.
 
-5.  All'interno del client di test WCF, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.
+5. All'interno del client di test WCF, aggiungere il servizio selezionando **File**e quindi **Aggiungi servizio**.
 
      Aggiungere l'indirizzo dell'endpoint nella casella di input. Il valore predefinito è `http://localhost:1378/Calculator.svc`.
 
-6.  Aprire l'applicazione Visualizzatore eventi.
+6. Aprire l'applicazione Visualizzatore eventi.
 
      Prima di richiamare il servizio, avviare Visualizzatore eventi e assicurarsi che il registro eventi sia in ascolto per rilevare eventi creati dal servizio WCF.
 
-7.  Dal **avviare** dal menu **strumenti di amministrazione**e quindi **Visualizzatore eventi**.  Abilitare la **analitico** e **Debug** i log.
+7. Dal **avviare** dal menu **strumenti di amministrazione**e quindi **Visualizzatore eventi**.  Abilitare la **analitico** e **Debug** i log.
 
-8.  Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **Server applicazioni-applicazioni**, selezionare **View**e quindi **Visualizza registri analitici e Debug**.
+8. Nella visualizzazione albero in Visualizzatore eventi passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **Server applicazioni-applicazioni**, selezionare **View**e quindi **Visualizza registri analitici e Debug**.
 
      Verificare che il **Visualizza registri analitici e Debug** opzione è selezionata.
 
@@ -52,17 +52,17 @@ Questo esempio viene illustrato come utilizzare la traccia analitica in Windows 
 
 #### <a name="to-test-the-service"></a>Per eseguire il test del servizio
 
-1.  Tornare al client di prova WCF e fare doppio clic su `Divide` e mantenere i valori predefiniti, che specificano un denominatore pari a 0.
+1. Tornare al client di prova WCF e fare doppio clic su `Divide` e mantenere i valori predefiniti, che specificano un denominatore pari a 0.
 
      Se il valore del denominatore è 0, il servizio genererà un errore.
 
-2.  Osservare gli eventi creati dal servizio.
+2. Osservare gli eventi creati dal servizio.
 
      Tornare a Visualizzatore eventi e passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **aggiornare**.
 
      Gli eventi di traccia analitici di WCF verranno visualizzati nel Visualizzatore eventi. Si noti che poiché un errore è stato generato dal servizio, nel Visualizzatori eventi viene visualizzato un evento traccia di errore.
 
-3.  Ripetere i passaggi 1 e 2 con valori di input validi. Il valore del parametro `N2` deve essere un numero diverso da 0.
+3. Ripetere i passaggi 1 e 2 con valori di input validi. Il valore del parametro `N2` deve essere un numero diverso da 0.
 
      Aggiornare il canale analitico per visualizzare gli eventi WCF e osservare come non includano alcun evento di errore.
 
@@ -70,13 +70,13 @@ Questo esempio viene illustrato come utilizzare la traccia analitica in Windows 
 
 #### <a name="to-cleanup-optional"></a>Per eseguire la pulizia (facoltativo)
 
-1.  Aprire Visualizzatore eventi.
+1. Aprire Visualizzatore eventi.
 
-2.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.
+2. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Disattiva registro**.
 
-3.  Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.
+3. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**e quindi  **Server applicazioni-applicazioni**. Fare doppio clic su **analitico** e selezionare **Cancella Log**.
 
-4.  Scegliere il **cancellare** opzione per cancellare gli eventi.
+4. Scegliere il **cancellare** opzione per cancellare gli eventi.
 
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

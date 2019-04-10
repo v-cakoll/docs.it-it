@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342531"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Creazione di un oggetto DataTable da una query (LINQ to DataSet)
 L'associazione dati è un utilizzo comune dell'oggetto <xref:System.Data.DataTable>. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copia i dati dei risultati di una query in un oggetto <xref:System.Data.DataTable> che può essere quindi usato per il data binding. Dopo l'esecuzione delle operazioni sui dati, il nuovo oggetto <xref:System.Data.DataTable> viene nuovamente unito nell'oggetto <xref:System.Data.DataTable> di origine.  
   
  Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> usa il processo seguente per creare <xref:System.Data.DataTable> da una query.  
   
-1.  Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> duplica un oggetto <xref:System.Data.DataTable> della tabella di origine, ovvero un oggetto <xref:System.Data.DataTable> che implementa l'interfaccia <xref:System.Linq.IQueryable%601>. L'oggetto <xref:System.Collections.IEnumerable> di origine viene solitamente generato da una query di espressione o metodo [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
+1. Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> duplica un oggetto <xref:System.Data.DataTable> della tabella di origine, ovvero un oggetto <xref:System.Data.DataTable> che implementa l'interfaccia <xref:System.Linq.IQueryable%601>. L'oggetto <xref:System.Collections.IEnumerable> di origine viene solitamente generato da una query di espressione o metodo [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
   
-2.  Lo schema dell'oggetto <xref:System.Data.DataTable> duplicato viene compilato dalle colonne del primo oggetto <xref:System.Data.DataRow> enumerato nella tabella di origine, mentre il nome della tabella duplicata corrisponde al nome della tabella di origine con l'aggiunta del termine "query" alla fine.  
+2. Lo schema dell'oggetto <xref:System.Data.DataTable> duplicato viene compilato dalle colonne del primo oggetto <xref:System.Data.DataRow> enumerato nella tabella di origine, mentre il nome della tabella duplicata corrisponde al nome della tabella di origine con l'aggiunta del termine "query" alla fine.  
   
-3.  Il contenuto di ogni riga della tabella di origine viene copiato in un nuovo oggetto <xref:System.Data.DataRow>, che viene quindi inserito nella tabella duplicata. Le proprietà <xref:System.Data.DataRow.RowState%2A> e <xref:System.Data.DataRow.RowError%2A> vengono mantenuta durante l'operazione di copia. Se gli oggetti <xref:System.ArgumentException> nell'origine provengono da tabelle diverse, viene generata un'eccezione <xref:System.Data.DataRow>.  
+3. Il contenuto di ogni riga della tabella di origine viene copiato in un nuovo oggetto <xref:System.Data.DataRow>, che viene quindi inserito nella tabella duplicata. Le proprietà <xref:System.Data.DataRow.RowState%2A> e <xref:System.Data.DataRow.RowError%2A> vengono mantenuta durante l'operazione di copia. Se gli oggetti <xref:System.ArgumentException> nell'origine provengono da tabelle diverse, viene generata un'eccezione <xref:System.Data.DataRow>.  
   
-4.  L'oggetto <xref:System.Data.DataTable> duplicato viene restituito dopo che sono stati copiati tutti gli oggetti <xref:System.Data.DataRow> presenti nella tabella di input sottoposta a query. Se la sequenza di origine non contiene oggetti <xref:System.Data.DataRow>, il metodo restituisce un oggetto <xref:System.Data.DataTable> vuoto.  
+4. L'oggetto <xref:System.Data.DataTable> duplicato viene restituito dopo che sono stati copiati tutti gli oggetti <xref:System.Data.DataRow> presenti nella tabella di input sottoposta a query. Se la sequenza di origine non contiene oggetti <xref:System.Data.DataRow>, il metodo restituisce un oggetto <xref:System.Data.DataTable> vuoto.  
   
  Si noti che la chiamata al metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> genererà l'esecuzione della query associata alla tabella di origine.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 4a69cf01519ea21f61e0c142039e4d2fe9a3c0e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343051"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Procedura dettagliata: Creazione di credenziali client e del servizio personalizzate
 In questo argomento viene illustrato come implementare credenziali client e del servizio personalizzate e come utilizzare credenziali personalizzate dal codice dell'applicazione.  
@@ -50,40 +50,40 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
 #### <a name="to-implement-custom-client-credentials"></a>Per implementare le credenziali client personalizzate  
   
-1.  Definire una nuova classe derivata dalla classe <xref:System.ServiceModel.Description.ClientCredentials>.  
+1. Definire una nuova classe derivata dalla classe <xref:System.ServiceModel.Description.ClientCredentials>.  
   
-2.  Facoltativo. Aggiungere nuovi metodi o proprietà per nuovi tipi di credenziali. Se non vengono aggiunti nuovi tipi di credenziali, ignorare questo passaggio. Nell'esempio seguente viene aggiunta una proprietà `CreditCardNumber`.  
+2. Facoltativo. Aggiungere nuovi metodi o proprietà per nuovi tipi di credenziali. Se non vengono aggiunti nuovi tipi di credenziali, ignorare questo passaggio. Nell'esempio seguente viene aggiunta una proprietà `CreditCardNumber`.  
   
-3.  Eseguire l'override del metodo <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> . Questo metodo viene chiamato automaticamente dall'infrastruttura di sicurezza WCF quando viene utilizzata la credenziale client personalizzata. Questo metodo è responsabile della creazione e della restituzione di un'istanza di un'implementazione della classe <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
+3. Eseguire l'override del metodo <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> . Questo metodo viene chiamato automaticamente dall'infrastruttura di sicurezza WCF quando viene utilizzata la credenziale client personalizzata. Questo metodo è responsabile della creazione e della restituzione di un'istanza di un'implementazione della classe <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
     > [!IMPORTANT]
     >  È importante da notare che l'override del metodo <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> viene eseguito per creare un gestore del token di sicurezza personalizzato. Il gestore del token di sicurezza, derivato da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> deve restituire un provider del token di sicurezza personalizzato, derivato da <xref:System.IdentityModel.Selectors.SecurityTokenProvider>, per creare il token di sicurezza effettivo. Se non si segue questo modello per creare token di sicurezza, l'applicazione potrebbe funzionare in modo non corretto quando gli oggetti <xref:System.ServiceModel.ChannelFactory> vengono memorizzati nella cache (comportamento predefinito dei proxy client WCF), provocando un potenziale attacco di tipo elevazione dei privilegi. L'oggetto credenziale personalizzata viene memorizzato nella cache come parte dell'oggetto <xref:System.ServiceModel.ChannelFactory>. L'oggetto <xref:System.IdentityModel.Selectors.SecurityTokenManager> personalizzato viene creato tuttavia a ogni chiamata in modo da limitare la minaccia alla sicurezza se la logica di creazione del token è presente nell'oggetto <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
   
-4.  Eseguire l'override del metodo <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> .  
+4. Eseguire l'override del metodo <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> .  
   
      [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
      [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]  
   
 #### <a name="to-implement-a-custom-client-security-token-manager"></a>Per implementare un gestore del token di sicurezza client personalizzato  
   
-1.  Definire una nuova classe derivata da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+1. Definire una nuova classe derivata da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-2.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per altre informazioni sui provider di token di sicurezza personalizzato, vedere [come: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2. Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per altre informazioni sui provider di token di sicurezza personalizzato, vedere [come: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per altre informazioni sugli autenticatori di token di sicurezza personalizzati, vedere [come: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
+3. Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per altre informazioni sugli autenticatori di token di sicurezza personalizzati, vedere [come: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md).  
   
-4.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per altre informazioni sui token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzati, vedere [come: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4. Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per altre informazioni sui token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzati, vedere [come: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
   
 #### <a name="to-use-a-custom-client-credentials-from-application-code"></a>Per utilizzare credenziali client personalizzate dal codice dell'applicazione  
   
-1.  Creare un'istanza del client generato che rappresenta l'interfaccia del servizio oppure creare un'istanza di <xref:System.ServiceModel.ChannelFactory> che punta a un servizio con il quale si desidera comunicare.  
+1. Creare un'istanza del client generato che rappresenta l'interfaccia del servizio oppure creare un'istanza di <xref:System.ServiceModel.ChannelFactory> che punta a un servizio con il quale si desidera comunicare.  
   
-2.  Rimuovere il comportamento delle credenziali client fornite dal sistema dalla raccolta <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>, alla quale è possibile accedere tramite la proprietà <xref:System.ServiceModel.ChannelFactory.Endpoint%2A>.  
+2. Rimuovere il comportamento delle credenziali client fornite dal sistema dalla raccolta <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>, alla quale è possibile accedere tramite la proprietà <xref:System.ServiceModel.ChannelFactory.Endpoint%2A>.  
   
-3.  Creare una nuova istanza di una classe di credenziali client personalizzate e aggiungerla alla raccolta <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>, alla quale è possibile accedere tramite la proprietà <xref:System.ServiceModel.ChannelFactory.Endpoint%2A>.  
+3. Creare una nuova istanza di una classe di credenziali client personalizzate e aggiungerla alla raccolta <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>, alla quale è possibile accedere tramite la proprietà <xref:System.ServiceModel.ChannelFactory.Endpoint%2A>.  
   
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
@@ -94,15 +94,15 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
 #### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a>Creazione di un gestore di configurazione per credenziali client personalizzate  
   
-1.  Definire una nuova classe derivata da <xref:System.ServiceModel.Configuration.ClientCredentialsElement>.  
+1. Definire una nuova classe derivata da <xref:System.ServiceModel.Configuration.ClientCredentialsElement>.  
   
-2.  Facoltativo. Aggiungere proprietà per tutti i parametri di configurazione aggiuntivi che si desidera esporre tramite la configurazione dell'applicazione. Nell'esempio seguente viene aggiunta una proprietà denominata `CreditCardNumber`.  
+2. Facoltativo. Aggiungere proprietà per tutti i parametri di configurazione aggiuntivi che si desidera esporre tramite la configurazione dell'applicazione. Nell'esempio seguente viene aggiunta una proprietà denominata `CreditCardNumber`.  
   
-3.  Eseguire l'override della proprietà <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> per restituire il tipo di classe di credenziali client personalizzate creata con l'elemento di configurazione.  
+3. Eseguire l'override della proprietà <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> per restituire il tipo di classe di credenziali client personalizzate creata con l'elemento di configurazione.  
   
-4.  Eseguire l'override del metodo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> . Il metodo è responsabile della creazione e restituzione di un'istanza della classe di credenziali personalizzati basata sulle impostazioni caricate dal file di configurazione. Chiamare il metodo <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> di base da questo metodo per recuperare le impostazioni delle credenziali fornite dal sistema caricate nell'istanza delle credenziali client personalizzate.  
+4. Eseguire l'override del metodo <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> . Il metodo è responsabile della creazione e restituzione di un'istanza della classe di credenziali personalizzati basata sulle impostazioni caricate dal file di configurazione. Chiamare il metodo <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> di base da questo metodo per recuperare le impostazioni delle credenziali fornite dal sistema caricate nell'istanza delle credenziali client personalizzate.  
   
-5.  Facoltativo. Se nel passaggio 2 sono state aggiunte altre proprietà, è necessario eseguire l'override della proprietà <xref:System.Configuration.ConfigurationElement.Properties%2A> per registrare le impostazioni di configurazione aggiuntive affinché il framework di configurazione le riconosca. Combinare le proprietà con le proprietà della classe di base per consentire la configurazione delle impostazioni fornite dal sistema tramite questo elemento di configurazione delle credenziali client personalizzate.  
+5. Facoltativo. Se nel passaggio 2 sono state aggiunte altre proprietà, è necessario eseguire l'override della proprietà <xref:System.Configuration.ConfigurationElement.Properties%2A> per registrare le impostazioni di configurazione aggiuntive affinché il framework di configurazione le riconosca. Combinare le proprietà con le proprietà della classe di base per consentire la configurazione delle impostazioni fornite dal sistema tramite questo elemento di configurazione delle credenziali client personalizzate.  
   
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
@@ -111,11 +111,11 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>Per registrare e utilizzare un gestore di configurazione di credenziali client personalizzate nella configurazione dell'applicazione  
   
-1.  Aggiungere un <`extensions`> elemento e un <`behaviorExtensions`> elemento del file di configurazione.  
+1. Aggiungere un <`extensions`> elemento e un <`behaviorExtensions`> elemento del file di configurazione.  
   
-2.  Aggiungere un <`add`> elemento per il <`behaviorExtensions`> e impostare il `name` attributo su un valore appropriato.  
+2. Aggiungere un <`add`> elemento per il <`behaviorExtensions`> e impostare il `name` attributo su un valore appropriato.  
   
-3.  Impostare l'attributo `type` sul nome del tipo completo. Includere inoltre il nome e altri attributi dell'assembly.  
+3. Impostare l'attributo `type` sul nome del tipo completo. Includere inoltre il nome e altri attributi dell'assembly.  
   
     ```xml  
     <system.serviceModel>  
@@ -127,7 +127,7 @@ In questo argomento viene illustrato come implementare credenziali client e del 
     <system.serviceModel>  
     ```  
   
-4.  Dopo aver registrato il gestore di configurazione, l'elemento delle credenziali personalizzate può essere utilizzato nei file di configurazione stesso anziché fornito dal sistema <`clientCredentials`> elemento. È possibile utilizzare sia le proprietà fornite dal sistema che qualsiasi nuova proprietà aggiunta all'implementazione del gestore di configurazione. Nell'esempio seguente viene impostato il valore di una proprietà personalizzata utilizzando l'attributo `creditCardNumber`.  
+4. Dopo aver registrato il gestore di configurazione, l'elemento delle credenziali personalizzate può essere utilizzato nei file di configurazione stesso anziché fornito dal sistema <`clientCredentials`> elemento. È possibile utilizzare sia le proprietà fornite dal sistema che qualsiasi nuova proprietà aggiunta all'implementazione del gestore di configurazione. Nell'esempio seguente viene impostato il valore di una proprietà personalizzata utilizzando l'attributo `creditCardNumber`.  
   
     ```xml  
     <behaviors>  
@@ -141,37 +141,37 @@ In questo argomento viene illustrato come implementare credenziali client e del 
   
 #### <a name="to-implement-custom-service-credentials"></a>Per implementare credenziali del servizio personalizzate  
   
-1.  Definire una nuova classe derivata da <xref:System.ServiceModel.Description.ServiceCredentials>.  
+1. Definire una nuova classe derivata da <xref:System.ServiceModel.Description.ServiceCredentials>.  
   
-2.  Facoltativo. Aggiungere nuove proprietà per fornire API per i nuovi valori delle credenziali che vengono aggiunte. Se non vengono aggiunti nuovi valori delle credenziali, ignorare questo passaggio. Nell'esempio seguente viene aggiunta una proprietà `AdditionalCertificate`.  
+2. Facoltativo. Aggiungere nuove proprietà per fornire API per i nuovi valori delle credenziali che vengono aggiunte. Se non vengono aggiunti nuovi valori delle credenziali, ignorare questo passaggio. Nell'esempio seguente viene aggiunta una proprietà `AdditionalCertificate`.  
   
-3.  Eseguire l'override del metodo <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> . Questo metodo viene chiamato automaticamente dall'infrastruttura WCF quando viene utilizzata la credenziale client personalizzata. Il metodo è responsabile della creazione e della restituzione di un'istanza di un'implementazione della classe <xref:System.IdentityModel.Selectors.SecurityTokenManager>, descritta nella procedura seguente.  
+3. Eseguire l'override del metodo <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> . Questo metodo viene chiamato automaticamente dall'infrastruttura WCF quando viene utilizzata la credenziale client personalizzata. Il metodo è responsabile della creazione e della restituzione di un'istanza di un'implementazione della classe <xref:System.IdentityModel.Selectors.SecurityTokenManager>, descritta nella procedura seguente.  
   
-4.  Facoltativo. Eseguire l'override del metodo <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> . È richiesto solo se si aggiungono nuove proprietà o campi interni all'implementazione delle credenziali client personalizzate.  
+4. Facoltativo. Eseguire l'override del metodo <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> . È richiesto solo se si aggiungono nuove proprietà o campi interni all'implementazione delle credenziali client personalizzate.  
   
      [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
      [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]  
   
 #### <a name="to-implement-a-custom-service-security-token-manager"></a>Per implementare un gestore del token di sicurezza del servizio personalizzato  
   
-1.  Definire una nuova classe derivata dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.  
+1. Definire una nuova classe derivata dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>.  
   
-2.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per altre informazioni sui provider di token di sicurezza personalizzato, vedere [come: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2. Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenProvider> personalizzata. Per altre informazioni sui provider di token di sicurezza personalizzato, vedere [come: Creare un Provider di Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
-3.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per altre informazioni sugli autenticatori di token di sicurezza personalizzati, vedere [come: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) argomento.  
+3. Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> se è necessario creare un'implementazione <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> personalizzata. Per altre informazioni sugli autenticatori di token di sicurezza personalizzati, vedere [come: Creare un autenticatore del Token di sicurezza personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) argomento.  
   
-4.  Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per altre informazioni sui token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzati, vedere [come: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+4. Facoltativo. Eseguire l'override del metodo <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> se è necessario creare un oggetto <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> personalizzato. Per altre informazioni sui token di sicurezza personalizzati e i serializzatori di token di sicurezza personalizzati, vedere [come: Creare un Token personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  
   
 #### <a name="to-use-custom-service-credentials-from-application-code"></a>Per utilizzare credenziali del servizio personalizzate dal codice dell'applicazione  
   
-1.  Creare un'istanza di <xref:System.ServiceModel.ServiceHost>.  
+1. Creare un'istanza di <xref:System.ServiceModel.ServiceHost>.  
   
-2.  Rimuovere il comportamento delle credenziali del servizio fornite dal sistema dalla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>.  
+2. Rimuovere il comportamento delle credenziali del servizio fornite dal sistema dalla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>.  
   
-3.  Creare una nuova istanza della classe di credenziali del servizio personalizzate e aggiungerla alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>.  
+3. Creare una nuova istanza della classe di credenziali del servizio personalizzate e aggiungerla alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>.  
   
      [!code-csharp[c_CustomCredentials#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#6)]
      [!code-vb[c_CustomCredentials#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#6)]  

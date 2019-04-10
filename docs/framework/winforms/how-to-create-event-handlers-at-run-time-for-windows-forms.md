@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343265"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedura: Creare gestori eventi in fase di esecuzione per Windows Forms
 Oltre a creare gli eventi usando Progettazione Windows Form, è anche possibile creare un gestore eventi in fase di esecuzione. Questa azione consente di connettere i gestori eventi in base alle condizioni nel codice in fase di esecuzione invece di connetterli all'avvio iniziale del programma.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Per creare un gestore eventi in fase di esecuzione  
   
-1.  Aprire il form nell'editor di codice in cui si desidera aggiungere un gestore eventi.  
+1. Aprire il form nell'editor di codice in cui si desidera aggiungere un gestore eventi.  
   
-2.  Aggiungere un metodo al modulo con la firma del metodo per l'evento che si desidera gestire.  
+2. Aggiungere un metodo al modulo con la firma del metodo per l'evento che si desidera gestire.  
   
      Ad esempio, se si sta gestendo il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> (controllo), creare un metodo simile al seguente:  
   
@@ -52,11 +52,11 @@ Oltre a creare gli eventi usando Progettazione Windows Form, è anche possibile 
        }  
     ```  
   
-3.  Aggiungere un codice al gestore dell'evento appropriato per l'applicazione.  
+3. Aggiungere un codice al gestore dell'evento appropriato per l'applicazione.  
   
-4.  Stabilire per quale modulo o controllo si desidera creare un gestore eventi.  
+4. Stabilire per quale modulo o controllo si desidera creare un gestore eventi.  
   
-5.  In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento. Ad esempio, il codice seguente specifica il gestore eventi `button1_Click` gestisce il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> controllo:  
+5. In un metodo nella classe del modulo, aggiungere il codice che specifica il gestore eventi per gestire l'evento. Ad esempio, il codice seguente specifica il gestore eventi `button1_Click` gestisce il <xref:System.Windows.Forms.Control.Click> eventi di un <xref:System.Windows.Forms.Button> controllo:  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826171"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334146"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procedura dettagliata: Implementazione dell'ereditarietà con gli oggetti COM (Visual Basic)
 È possibile derivare classi Visual Basic da `Public` classi di oggetti COM, anche quelli creati in versioni precedenti di Visual Basic. Le proprietà e metodi delle classi ereditate dagli oggetti COM possono essere sottoposto a override o overload solo come proprietà e metodi di qualsiasi altra classe base possono essere sottoposto a override o overload. Ereditarietà dagli oggetti COM è utile quando si dispone di una libreria di classi esistenti che non si desidera ricompilare.  
@@ -23,26 +23,26 @@ ms.locfileid: "58826171"
   
 ### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Per creare l'oggetto COM che viene usato in questa procedura dettagliata  
   
-1.  In Visual Basic 6.0, aprire un nuovo progetto di DLL ActiveX. Un progetto denominato `Project1` viene creato. Dispone di una classe denominata `Class1`.  
+1. In Visual Basic 6.0, aprire un nuovo progetto di DLL ActiveX. Un progetto denominato `Project1` viene creato. Dispone di una classe denominata `Class1`.  
   
-2.  Nel **Esplora progetti**, fare doppio clic su **Project1**, quindi fare clic su **Project1 proprietà**. Il **proprietà del progetto** verrà visualizzata la finestra di dialogo.  
+2. Nel **Esplora progetti**, fare doppio clic su **Project1**, quindi fare clic su **Project1 proprietà**. Il **proprietà del progetto** verrà visualizzata la finestra di dialogo.  
   
-3.  Nel **generale** scheda della finestra di **le proprietà del progetto** finestra di dialogo, modificare il nome del progetto digitando `ComObject1` nel **nome progetto** campo.  
+3. Nel **generale** scheda della finestra di **le proprietà del progetto** finestra di dialogo, modificare il nome del progetto digitando `ComObject1` nel **nome progetto** campo.  
   
-4.  Nel **Esplora progetti**, fare doppio clic su `Class1`, quindi fare clic su **proprietà**. Il **proprietà** viene visualizzata la finestra per la classe.  
+4. Nel **Esplora progetti**, fare doppio clic su `Class1`, quindi fare clic su **proprietà**. Il **proprietà** viene visualizzata la finestra per la classe.  
   
-5.  Modifica il `Name` proprietà `MathFunctions`.  
+5. Modifica il `Name` proprietà `MathFunctions`.  
   
-6.  Nel **Esplora progetti**, fare doppio clic su `MathFunctions`, quindi fare clic su **Visualizza codice**. Il **Editor di codice** viene visualizzato.  
+6. Nel **Esplora progetti**, fare doppio clic su `MathFunctions`, quindi fare clic su **Visualizza codice**. Il **Editor di codice** viene visualizzato.  
   
-7.  Aggiungere una variabile locale per contenere il valore della proprietà:  
+7. Aggiungere una variabile locale per contenere il valore della proprietà:  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  Aggiungi proprietà `Let` e la proprietà `Get` routine delle proprietà:  
+8. Aggiungi proprietà `Let` e la proprietà `Get` routine delle proprietà:  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -76,31 +76,31 @@ ms.locfileid: "58826171"
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Usare un oggetto COM con Visual Basic 2005 e versioni successive  
   
-1.  Aprire un nuovo progetto Applicazione Windows in Visual Basic.  
+1. Aprire un nuovo progetto Applicazione Windows in Visual Basic.  
   
-2.  Scegliere **Aggiungi riferimento** dal menu **Progetto**.  
+2. Scegliere **Aggiungi riferimento** dal menu **Progetto**.  
   
      Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
-3.  Nel **COM** scheda, fare doppio clic su `ComObject1` nel **nome componente** elenco e fare clic su **OK**.  
+3. Nel **COM** scheda, fare doppio clic su `ComObject1` nel **nome componente** elenco e fare clic su **OK**.  
   
-4.  Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**.  
+4. Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**.  
   
      Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.  
   
-5.  Nel **modelli** riquadro, fare clic su **classe**.  
+5. Nel **modelli** riquadro, fare clic su **classe**.  
   
      Il nome file predefinito, `Class1.vb`, viene visualizzato nei **nome** campo. Modificare questo campo MathClass e fare clic su **Add**. Verrà creata una classe denominata `MathClass`e verrà visualizzato il codice.  
   
-6.  Aggiungere il codice seguente all'inizio del `MathClass` ereditare dalla classe COM.  
+6. Aggiungere il codice seguente all'inizio del `MathClass` ereditare dalla classe COM.  
   
      [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
-7.  Overload del metodo pubblico della classe di base aggiungendo il codice seguente al `MathClass`:  
+7. Overload del metodo pubblico della classe di base aggiungendo il codice seguente al `MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
-8.  Estendere la classe ereditata aggiungendo il codice seguente al `MathClass`:  
+8. Estendere la classe ereditata aggiungendo il codice seguente al `MathClass`:  
   
      [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
@@ -108,13 +108,13 @@ ms.locfileid: "58826171"
   
 #### <a name="to-test-the-inherited-class"></a>Per eseguire il test sulla classe ereditata  
   
-1.  Aggiungere un pulsante al form di avvio e quindi fare doppio clic per visualizzare il codice.  
+1. Aggiungere un pulsante al form di avvio e quindi fare doppio clic per visualizzare il codice.  
   
-2.  Nel pulsante `Click` routine del gestore eventi, aggiungere il codice seguente per creare un'istanza di `MathClass` e chiamare i metodi di overload:  
+2. Nel pulsante `Click` routine del gestore eventi, aggiungere il codice seguente per creare un'istanza di `MathClass` e chiamare i metodi di overload:  
   
      [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
-3.  Eseguire il progetto premendo F5.  
+3. Eseguire il progetto premendo F5.  
   
  Quando si fa clic sul pulsante nel form, il `AddNumbers` viene chiamato prima di tutto con `Short` numeri, tipo di dati e Visual Basic sceglie il metodo appropriato della classe base. La seconda chiamata a `AddNumbers` viene indirizzata al metodo di overload da `MathClass`. La terza chiamata richiama il `SubtractNumbers` metodo, che estende la classe. La proprietà nella classe di base è impostata e viene visualizzato il valore.  
   
@@ -132,5 +132,5 @@ ms.locfileid: "58826171"
 ## <a name="see-also"></a>Vedere anche
 
 - [Interoperabilità COM nelle applicazioni .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Tipo di dati Short](../../../visual-basic/language-reference/data-types/short-data-type.md)

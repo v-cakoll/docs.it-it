@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization, SOAP
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
-ms.openlocfilehash: dc5c4a68c1fba303937ae126cd5b5d4f7f8107ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfbdda0861a6f2867a2e7003dd7054129fd343b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334523"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Procedura: Serializzare un oggetto come flusso XML con codifica SOAP
   
@@ -22,11 +22,11 @@ ms.locfileid: "54631386"
   
 ### <a name="to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>Per serializzare un oggetto come flusso XML con codifica SOAP  
   
-1.  Creare la classe con lo [strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
+1. Creare la classe con lo [strumento XML Schema Definition (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
   
-2.  Applicare uno o più degli attributi speciali disponibili in `System.Xml.Serialization`. Consultare l'elenco "Attributi per il controllo della serializzazione SOAP codificata".  
+2. Applicare uno o più degli attributi speciali disponibili in `System.Xml.Serialization`. Consultare l'elenco "Attributi per il controllo della serializzazione SOAP codificata".  
   
-3.  Creare un `XmlTypeMapping` creando un nuovo `SoapReflectionImporter` e richiamando il metodo `ImportTypeMapping` con il tipo della classe serializzata.  
+3. Creare un `XmlTypeMapping` creando un nuovo `SoapReflectionImporter` e richiamando il metodo `ImportTypeMapping` con il tipo della classe serializzata.  
   
      L'esempio di codice seguente chiama il metodo `ImportTypeMapping` della classe `SoapReflectionImporter` per creare un `XmlTypeMapping`.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54631386"
         new SoapReflectionImporter().ImportTypeMapping(typeof(Group));
     ```  
   
-4.  Creare un'istanza della classe `XmlSerializer` passando `XmlTypeMapping` al costruttore <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29>.  
+4. Creare un'istanza della classe `XmlSerializer` passando `XmlTypeMapping` al costruttore <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Xml.Serialization.XmlTypeMapping%29>.  
   
     ```vb  
     Dim mySerializer As XmlSerializer = New XmlSerializer(myTypeMapping)  
@@ -52,7 +52,7 @@ ms.locfileid: "54631386"
     XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);  
     ```  
   
-5.  Chiamare il metodo `Serialize` o `Deserialize`.  
+5. Chiamare il metodo `Serialize` o `Deserialize`.  
   
 ## <a name="example"></a>Esempio  
   

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 0eecefd961aed5408e7d02769056dc551e604b02
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340750"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Procedura: Creare un visualizzatore di documenti HTML in una Windows Forms Application
 È possibile usare il <xref:System.Windows.Forms.WebBrowser> controllo per visualizzare e stampare documenti HTML senza fornire la funzionalità completa di un browser Internet. Ciò è utile quando si desidera sfruttare le funzionalità di formattazione del codice HTML, ma non si desidera che gli utenti per caricare le pagine Web arbitrari che possono contenere i controlli Web non attendibili o codice di script potenzialmente dannosi. Si potrebbe voler limitare la capacità del <xref:System.Windows.Forms.WebBrowser> controllare in questo modo, ad esempio, per usarlo come un visualizzatore di posta elettronica HTML o per fornire la Guida in formato HTML nell'applicazione.  
   
 ### <a name="to-create-an-html-document-viewer"></a>Per creare un visualizzatore di documenti HTML  
   
-1.  Impostare il <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> proprietà `false` per impedire il <xref:System.Windows.Forms.WebBrowser> controllo da aprire i file trascinati su di esso.  
+1. Impostare il <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> proprietà `false` per impedire il <xref:System.Windows.Forms.WebBrowser> controllo da aprire i file trascinati su di esso.  
   
      [!code-csharp[WebBrowserMisc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2.  Impostare il <xref:System.Windows.Forms.WebBrowser.Url%2A> proprietà al percorso del file iniziale da visualizzare.  
+2. Impostare il <xref:System.Windows.Forms.WebBrowser.Url%2A> proprietà al percorso del file iniziale da visualizzare.  
   
      [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  

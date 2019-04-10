@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338475"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Procedura: Diagnosticare un processo di stampa problematico
 Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su processi di stampa lenti o che non vengono eseguiti affatto. Il set completo di proprietà di processo di stampa esposto nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per eseguire una rapida diagnosi remota dei processi di stampa.  
@@ -23,7 +23,7 @@ Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su proces
 ## <a name="example"></a>Esempio  
  Di seguito sono indicati i passaggi principali per la creazione di questo tipo di utilità.  
   
-1.  Identificare il processo di stampa oggetto del reclamo dell'utente. Gli utenti spesso non sono in grado di eseguire questa verifica con precisione. Non conoscono i nomi dei server di stampa o delle stampanti. Potrebbero descrivere il percorso della stampante con una terminologia diversa da quella usata durante l'impostazione relativa <xref:System.Printing.PrintQueue.Location%2A> proprietà. È consigliabile quindi generare un elenco dei processi inviati dall'utente. Nel caso ci siano più processi, la comunicazione tra l'utente e l'amministratore del sistema di stampa può essere quindi usata per individuare il processo problematico. Di seguito sono indicati i passaggi secondari.  
+1. Identificare il processo di stampa oggetto del reclamo dell'utente. Gli utenti spesso non sono in grado di eseguire questa verifica con precisione. Non conoscono i nomi dei server di stampa o delle stampanti. Potrebbero descrivere il percorso della stampante con una terminologia diversa da quella usata durante l'impostazione relativa <xref:System.Printing.PrintQueue.Location%2A> proprietà. È consigliabile quindi generare un elenco dei processi inviati dall'utente. Nel caso ci siano più processi, la comunicazione tra l'utente e l'amministratore del sistema di stampa può essere quindi usata per individuare il processo problematico. Di seguito sono indicati i passaggi secondari.  
   
     1.  Ottenere un elenco di tutti i server di stampa.  
   
@@ -33,7 +33,7 @@ Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su proces
   
     4.  In ogni passaggio del ciclo di code, eseguire il ciclo dei processi e raccogliere informazioni di identificazione su quelli che sono stati inviati dall'utente del reclamo.  
   
-2.  Quando viene individuato il processo di stampa problematico, esaminare le proprietà rilevanti per vedere quale potrebbe essere la causa del problema. Ad esempio, se si tratta di un errore di stato del processo oppure la stampante che gestisce la coda è passata alla modalità offline prima della stampa.  
+2. Quando viene individuato il processo di stampa problematico, esaminare le proprietà rilevanti per vedere quale potrebbe essere la causa del problema. Ad esempio, se si tratta di un errore di stato del processo oppure la stampante che gestisce la coda è passata alla modalità offline prima della stampa.  
   
  Il codice riportato di seguito include una serie di esempi di codice. Il primo esempio di codice contiene il ciclo tra le code di stampa. Vedere il passaggio 1c precedente. La variabile `myPrintQueues` è il <xref:System.Printing.PrintQueueCollection> oggetto per il server di stampa corrente.  
   

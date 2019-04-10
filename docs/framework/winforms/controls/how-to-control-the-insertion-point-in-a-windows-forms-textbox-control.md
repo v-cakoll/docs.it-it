@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341322"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms
 Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo riceve lo stato attivo, l'inserimento dell'impostazione predefinita all'interno della casella di testo è a sinistra del testo esistente. L'utente può spostare il punto di inserimento con il mouse o tastiera. Se la casella di testo perde e riacquisisce quindi lo stato attivo, il punto di inserimento sarà ovunque l'utente ultima posizione assegnata.  
@@ -24,9 +24,9 @@ Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo r
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>Per controllare il punto di inserimento in un controllo TextBox  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> su un valore appropriato. Zero inserisce il punto di inserimento immediatamente a sinistra del primo carattere.  
+1. Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> su un valore appropriato. Zero inserisce il punto di inserimento immediatamente a sinistra del primo carattere.  
   
-2.  (Facoltativo) Impostare il <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> proprietà per la lunghezza del testo che si desidera selezionare.  
+2. (Facoltativo) Impostare il <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> proprietà per la lunghezza del testo che si desidera selezionare.  
   
      Il codice seguente restituisce sempre il punto di inserimento su 0. Il `TextBox1_Enter` gestore dell'evento deve essere associato al controllo; per altre informazioni, vedere [creazione di gestori di eventi in Windows Form](../creating-event-handlers-in-windows-forms.md).  
   

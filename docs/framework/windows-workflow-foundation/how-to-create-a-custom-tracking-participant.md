@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Creare un partecipante di rilevamento personalizzati'
+title: 'Procedura: Creare un partecipante del rilevamento personalizzato'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64320a8f4799e79f54348e5381ed2d8ed49d496b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720956"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338176"
 ---
-# <a name="how-to-create-a-custom-tracking-participant"></a>Procedura: Creare un partecipante di rilevamento personalizzati
+# <a name="how-to-create-a-custom-tracking-participant"></a>Procedura: Creare un partecipante del rilevamento personalizzato
 Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'esecuzione del flusso di lavoro. Il runtime del flusso di lavoro genera i record di rilevamento che descrivono gli eventi del ciclo di vita di flusso del lavoro, gli eventi del ciclo di vita delle attività, le riprese dei segnalibri e gli errori. Tali record di rilevamento vengono usati dai partecipanti del rilevamento. Windows Workflow Foundation (WF) include un partecipante del rilevamento standard che scrive record di rilevamento come eventi di Event Tracing for Windows (ETW). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato. In questo passaggio dell'esercitazione viene illustrato come creare un profilo di rilevamento e un partecipante di rilevamento personalizzati che acquisiscono l'output delle attività di `WriteLine` per renderlo visibile all'utente.  
   
 > [!NOTE]
@@ -20,9 +20,9 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
   
 ## <a name="to-create-the-custom-tracking-participant"></a>Per creare un partecipante di rilevamento personalizzato  
   
-1.  Fare doppio clic su **NumberGuessWorkflowHost** nelle **Esplora soluzioni** e scegliere **Add**, **classe**. Tipo `StatusTrackingParticipant` nella **Name** , quindi scegliere **Add**.  
+1. Fare doppio clic su **NumberGuessWorkflowHost** nelle **Esplora soluzioni** e scegliere **Add**, **classe**. Tipo `StatusTrackingParticipant` nella **Name** , quindi scegliere **Add**.  
   
-2.  Aggiungere le seguenti istruzioni `using` (o `Imports`) nella parte superiore del file con le altre istruzioni `using` (o `Imports`).  
+2. Aggiungere le seguenti istruzioni `using` (o `Imports`) nella parte superiore del file con le altre istruzioni `using` (o `Imports`).  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -34,7 +34,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     using System.IO;  
     ```  
   
-3.  Modificare la classe `StatusTrackingParticipant` per fare in modo che erediti da `TrackingParticipant`.  
+3. Modificare la classe `StatusTrackingParticipant` per fare in modo che erediti da `TrackingParticipant`.  
   
     ```vb  
     Public Class StatusTrackingParticipant  
@@ -49,7 +49,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     }  
     ```  
   
-4.  Aggiungere il seguente override del metodo `Track`. Esistono vari tipi di record di rilevamento. In questo caso, si usa l'output delle attività di `WriteLine` contenute nei record di rilevamento delle attività. Se `TrackingRecord` è un `ActivityTrackingRecord` di un'attività `WriteLine`, `Text` di `WriteLine` viene aggiunto a un file denominato dopo l'elemento `InstanceId` del flusso di lavoro. In questa esercitazione, il file viene salvato nella cartella corrente dell'applicazione host.  
+4. Aggiungere il seguente override del metodo `Track`. Esistono vari tipi di record di rilevamento. In questo caso, si usa l'output delle attività di `WriteLine` contenute nei record di rilevamento delle attività. Se `TrackingRecord` è un `ActivityTrackingRecord` di un'attività `WriteLine`, `Text` di `WriteLine` viene aggiunto a un file denominato dopo l'elemento `InstanceId` del flusso di lavoro. In questa esercitazione, il file viene salvato nella cartella corrente dell'applicazione host.  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -96,9 +96,9 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>Per creare il profilo di rilevamento e registrare il partecipante di rilevamento  
   
-1.  Fare doppio clic su **WorkflowHostForm** nelle **Esplora soluzioni** e scegliere **Visualizza codice**.  
+1. Fare doppio clic su **WorkflowHostForm** nelle **Esplora soluzioni** e scegliere **Visualizza codice**.  
   
-2.  Aggiungere la seguente istruzione `using` (o `Imports`) nella parte superiore del file con le altre istruzioni `using` (o `Imports`).  
+2. Aggiungere la seguente istruzione `using` (o `Imports`) nella parte superiore del file con le altre istruzioni `using` (o `Imports`).  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -108,7 +108,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     using System.Activities.Tracking;  
     ```  
   
-3.  Aggiungere il codice seguente a `ConfigureWorkflowApplication` immediatamente dopo il codice che aggiunge `StringWriter` alle estensioni del flusso di lavoro e prima dei gestori del ciclo di vita del flusso di lavoro.  
+3. Aggiungere il codice seguente a `ConfigureWorkflowApplication` immediatamente dopo il codice che aggiunge `StringWriter` alle estensioni del flusso di lavoro e prima dei gestori del ciclo di vita del flusso di lavoro.  
   
     ```vb  
     'Add the custom tracking participant with a tracking profile  
@@ -217,9 +217,9 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
   
 ## <a name="to-display-the-tracking-information"></a>Per visualizzare le informazioni di rilevamento  
   
-1.  Fare doppio clic su **WorkflowHostForm** nelle **Esplora soluzioni** e scegliere **Visualizza codice**.  
+1. Fare doppio clic su **WorkflowHostForm** nelle **Esplora soluzioni** e scegliere **Visualizza codice**.  
   
-2.  Nel gestore `InstanceId_SelectedIndexChanged`, aggiungere il codice seguente subito dopo il codice che cancella la finestra di stato.  
+2. Nel gestore `InstanceId_SelectedIndexChanged`, aggiungere il codice seguente subito dopo il codice che cancella la finestra di stato.  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -312,11 +312,11 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
   
 ## <a name="to-build-and-run-the-application"></a>Per compilare ed eseguire l'applicazione  
   
-1.  Premere CTRL+MAIUSC+B per compilare l'applicazione.  
+1. Premere CTRL+MAIUSC+B per compilare l'applicazione.  
   
-2.  Premere CTRL+F5 per avviare l'applicazione.  
+2. Premere CTRL+F5 per avviare l'applicazione.  
   
-3.  Selezionare un intervallo per il gioco e il tipo di flusso di lavoro per avviare e scegliere **nuova partita**. Immettere una proposta nella **ipotesi** casella e fare clic su **Vai** per inviare il tentativo. Si noti che lo stato del flusso di lavoro viene visualizzato nella finestra di stato. Questo output viene acquisito dalle attività `WriteLine`. Passare a un flusso di lavoro diverso selezionandone uno dal **Id istanza del flusso di lavoro** casella combinata e si noti che lo stato del flusso di lavoro corrente viene rimosso. Passare di nuovo al flusso di lavoro precedente. Notare che lo stato viene ripristinato, in modo simile all'esempio seguente.  
+3. Selezionare un intervallo per il gioco e il tipo di flusso di lavoro per avviare e scegliere **nuova partita**. Immettere una proposta nella **ipotesi** casella e fare clic su **Vai** per inviare il tentativo. Si noti che lo stato del flusso di lavoro viene visualizzato nella finestra di stato. Questo output viene acquisito dalle attività `WriteLine`. Passare a un flusso di lavoro diverso selezionandone uno dal **Id istanza del flusso di lavoro** casella combinata e si noti che lo stato del flusso di lavoro corrente viene rimosso. Passare di nuovo al flusso di lavoro precedente. Notare che lo stato viene ripristinato, in modo simile all'esempio seguente.  
   
     > [!NOTE]
     > Se si passa a un flusso di lavoro che è stato avviato prima dell'abilitazione del rilevamento non viene visualizzato alcuno stato. Tuttavia se si creano tentativi aggiuntivi, lo stato viene salvato in quanto il rilevamento viene così abilitato.  
@@ -332,7 +332,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
 
     Annotare l'ID istanza del flusso di lavoro e giocare fino al completamento.
   
-4.  Aprire Windows Explorer e passare al **NumberGuessWorkflowHost\bin\debug** cartella (o **bin\release** a seconda delle impostazioni di progetto). Si noti che oltre ai file eseguibili di progetto, sono presenti file con nomi file GUID. Identificare quello corrispondente all'ID istanza del flusso di lavoro dal flusso di lavoro completato nel passaggio precedente e aprirlo in Blocco Note. Le informazioni sul rilevamento contengono dati simili al seguente esempio.  
+4. Aprire Windows Explorer e passare al **NumberGuessWorkflowHost\bin\debug** cartella (o **bin\release** a seconda delle impostazioni di progetto). Si noti che oltre ai file eseguibili di progetto, sono presenti file con nomi file GUID. Identificare quello corrispondente all'ID istanza del flusso di lavoro dal flusso di lavoro completato nel passaggio precedente e aprirlo in Blocco Note. Le informazioni sul rilevamento contengono dati simili al seguente esempio.  
   
     ```output
     Please enter a number between 1 and 10

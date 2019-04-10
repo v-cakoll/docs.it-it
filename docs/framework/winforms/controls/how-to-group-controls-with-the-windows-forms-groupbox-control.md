@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335875"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Procedura: Raggruppare i controlli con il controllo GroupBox di Windows Forms
 Windows Form <xref:System.Windows.Forms.GroupBox> controlli vengono utilizzati per raggruppare altri controlli. Esistono tre motivi per i controlli di gruppo:  
@@ -24,13 +24,13 @@ Windows Form <xref:System.Windows.Forms.GroupBox> controlli vengono utilizzati p
   
 ### <a name="to-create-a-group-of-controls"></a>Per creare un gruppo di controlli  
   
-1.  Disegnare un <xref:System.Windows.Forms.GroupBox> controllo in un form.  
+1. Disegnare un <xref:System.Windows.Forms.GroupBox> controllo in un form.  
   
-2.  Aggiungere altri controlli casella di gruppo, creando ciascun all'interno della casella di gruppo.  
+2. Aggiungere altri controlli casella di gruppo, creando ciascun all'interno della casella di gruppo.  
   
      Se si dispone di controlli esistenti che vuoi includere in una casella di gruppo, è possibile selezionare tutti i controlli, li tagliare negli Appunti, selezionare il <xref:System.Windows.Forms.GroupBox> controllare e quindi incollarli nella casella di gruppo. È anche possibile trascinare i controlli nella casella di gruppo.  
   
-3.  Impostare il <xref:System.Windows.Forms.GroupBox.Text%2A> proprietà della casella di gruppo per un titolo appropriato.  
+3. Impostare il <xref:System.Windows.Forms.GroupBox.Text%2A> proprietà della casella di gruppo per un titolo appropriato.  
   
 ## <a name="see-also"></a>Vedere anche
 

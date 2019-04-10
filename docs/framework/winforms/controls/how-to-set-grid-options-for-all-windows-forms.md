@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336057"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedura: Impostare le opzioni della griglia per tutti i Windows Form
 Come si diventa abituati a usare nell'ambiente di sviluppo Visual Studio, è possibile impostare le preferenze per tutti i form e i progetti utilizzati in Progettazione Windows Form.  
@@ -23,9 +23,9 @@ Come si diventa abituati a usare nell'ambiente di sviluppo Visual Studio, è pos
   
 ### <a name="to-set-global-windows-forms-options"></a>Per impostare le opzioni di Windows Form globali  
   
-1.  Dal **degli strumenti** dal menu **opzioni**.  
+1. Dal **degli strumenti** dal menu **opzioni**.  
   
-2.  Nel riquadro sinistro della finestra di **opzioni** nella finestra di dialogo fare clic su **Windows Form Designer**.  
+2. Nel riquadro sinistro della finestra di **opzioni** nella finestra di dialogo fare clic su **Windows Form Designer**.  
   
      Nel riquadro di destra, sotto il **le impostazioni di Layout** intestazione, è possibile impostare il valore predefinito delle impostazioni della griglia per tutti i nuovi form si crea. Queste impostazioni includono le dimensioni della griglia, eventuale blocco dei controlli ad esso e indica se è attiva per impostazione predefinita. Inoltre, è possibile scegliere tra **SnapToGrid** e **guide di allineamento** le modalità di layout. Per altre informazioni sulle guide di allineamento, vedere [procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   

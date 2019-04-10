@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339437"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Procedura: Creare e inizializzare origini di traccia
 La classe <xref:System.Diagnostics.TraceSource> viene utilizzata dalle applicazioni per produrre tracce associabili all'applicazione. <xref:System.Diagnostics.TraceSource> fornisce metodi di traccia che consentono di tracciare con facilità eventi, dati di traccia e generare tracce informative. L'output di traccia da <xref:System.Diagnostics.TraceSource> può essere creato e inizializzato con o senza l'utilizzo di file di configurazione. In questo argomento vengono fornite istruzioni per entrambe le opzioni. È tuttavia consigliabile utilizzare file di configurazione per semplificare la riconfigurazione delle tracce prodotte dalle origini di traccia in fase di esecuzione.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Per creare e inizializzare un'origine di traccia utilizzando un file di configurazione  
   
-1.  Creare un progetto di applicazione console di Visual Studio e sostituire il codice fornito con il codice seguente. Il codice registra errori e avvisi e ne restituisce alcuni sulla console e alcuni nel file myListener creato dalle voci del file di configurazione.  
+1. Creare un progetto di applicazione console di Visual Studio e sostituire il codice fornito con il codice seguente. Il codice registra errori e avvisi e ne restituisce alcuni sulla console e alcuni nel file myListener creato dalle voci del file di configurazione.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  Aggiungere un file di configurazione dell'applicazione al progetto per inizializzare l'origine della traccia denominata `TraceSourceApp` nell'esempio di codice riportato nel passaggio 1.  
+2. Aggiungere un file di configurazione dell'applicazione al progetto per inizializzare l'origine della traccia denominata `TraceSourceApp` nell'esempio di codice riportato nel passaggio 1.  
   
-3.  Sostituire il contenuto del file di configurazione predefinito con le impostazioni seguenti per inizializzare un listener di traccia della console e un listener di traccia del writer di testo per l'origine di traccia creata nel passaggio 1.  
+3. Sostituire il contenuto del file di configurazione predefinito con le impostazioni seguenti per inizializzare un listener di traccia della console e un listener di traccia del writer di testo per l'origine di traccia creata nel passaggio 1.  
   
     ```xml  
     <configuration>  

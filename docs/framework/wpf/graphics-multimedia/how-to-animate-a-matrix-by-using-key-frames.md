@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336798"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Procedura: Aggiungere un'animazione a una matrice usando fotogrammi chiave
 In questo esempio illustra come animare la <xref:System.Windows.Media.MatrixTransform.Matrix%2A> proprietà di un <xref:System.Windows.Media.MatrixTransform> usando fotogrammi chiave.  
@@ -21,11 +21,11 @@ In questo esempio illustra come animare la <xref:System.Windows.Media.MatrixTran
   
  Questa animazione Usa il <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> classe per creare due fotogrammi chiave ed esegue le seguenti operazioni:  
   
-1.  Aggiunge un'animazione prima <xref:System.Windows.Media.Matrix> durante i primi secondi 0,2. Le modifiche di esempio il <xref:System.Windows.Media.Matrix.M11%2A> e <xref:System.Windows.Media.Matrix.M12%2A> delle proprietà del <xref:System.Windows.Media.Matrix>. Questa modifica fa sì che il pulsante per l'estensione e diventare asimmetrici. Nell'esempio viene modificato anche il <xref:System.Windows.Media.Matrix.OffsetX%2A> e <xref:System.Windows.Media.Matrix.OffsetY%2A> proprietà in modo che il pulsante Cambia posizione.  
+1. Aggiunge un'animazione prima <xref:System.Windows.Media.Matrix> durante i primi secondi 0,2. Le modifiche di esempio il <xref:System.Windows.Media.Matrix.M11%2A> e <xref:System.Windows.Media.Matrix.M12%2A> delle proprietà del <xref:System.Windows.Media.Matrix>. Questa modifica fa sì che il pulsante per l'estensione e diventare asimmetrici. Nell'esempio viene modificato anche il <xref:System.Windows.Media.Matrix.OffsetX%2A> e <xref:System.Windows.Media.Matrix.OffsetY%2A> proprietà in modo che il pulsante Cambia posizione.  
   
-2.  Aggiunge un'animazione secondo <xref:System.Windows.Media.Matrix> a 1,0 secondi. Il pulsante si sposta in una posizione diversa mentre il pulsante non è più inclinato o esteso.  
+2. Aggiunge un'animazione secondo <xref:System.Windows.Media.Matrix> a 1,0 secondi. Il pulsante si sposta in una posizione diversa mentre il pulsante non è più inclinato o esteso.  
   
-3.  Si ripete per un periodo illimitato l'animazione.  
+3. Si ripete per un periodo illimitato l'animazione.  
   
 > [!NOTE]
 >  Fotogrammi chiave che derivano dal <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> oggetto creano salti improvvisi tra valori, vale a dire lo spostamento dell'animazione è a scatti.  

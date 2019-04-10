@@ -2,21 +2,21 @@
 title: 'Procedura: Creare assembly Friend non firmati (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819385"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339177"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Procedura: Creare assembly Friend non firmati (Visual Basic)
 In questo esempio viene illustrato come usare assembly Friend e assembly non firmati.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Per creare un assembly e un assembly Friend  
   
-1.  Aprire un prompt dei comandi.  
+1. Aprire un prompt dei comandi.  
   
-2.  Creare un file di Visual Basic denominato `friend_signed_A.` che contiene il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
+2. Creare un file di Visual Basic denominato `friend_signed_A.` che contiene il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
     End Class  
     ```  
   
-3.  Compilare e firmare friend_signed_A usando il comando seguente.  
+3. Compilare e firmare friend_signed_A usando il comando seguente.  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Creare un file di Visual Basic denominato `friend_unsigned_B` che contiene il codice seguente. Poiché friend_unsigned_A specifica che friend_unsigned_B è un assembly Friend, il codice in friend_unsigned_B può accedere ai tipi e ai membri `Friend` da friend_unsigned_A.  
+4. Creare un file di Visual Basic denominato `friend_unsigned_B` che contiene il codice seguente. Poiché friend_unsigned_A specifica che friend_unsigned_B è un assembly Friend, il codice in friend_unsigned_B può accedere ai tipi e ai membri `Friend` da friend_unsigned_A.  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,7 +69,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
     End Module  
     ```  
   
-5.  Compilare friend_signed_B usando il comando seguente.  
+5. Compilare friend_signed_B usando il comando seguente.  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
@@ -77,7 +77,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
   
      Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È possibile impostare in modo esplicito l'assembly utilizzando il `/out` opzione del compilatore.  
   
-6.  Eseguire il file friend_signed_B.exe.  
+6. Eseguire il file friend_signed_B.exe.  
   
      Il programma visualizza due stringhe: "Class1.Test" e "Class2.Test".  
   

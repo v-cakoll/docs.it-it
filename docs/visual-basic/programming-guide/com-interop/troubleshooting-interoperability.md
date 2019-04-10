@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377278"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341192"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Risoluzione dei problemi relativi all'interoperabilità (Visual Basic)
 Durante l'interazione tra COM e il codice gestito del [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], è possibile riscontrare uno o più dei seguenti problemi comuni.  
@@ -42,9 +42,9 @@ Durante l'interazione tra COM e il codice gestito del [!INCLUDE[dnprdnshort](~/i
   
  La ridenominazione può causare due problemi per i consumer dell'oggetto COM.  
   
-1.  I client potrebbero non prevedere i nomi di metodo generato.  
+1. I client potrebbero non prevedere i nomi di metodo generato.  
   
-2.  I nomi di metodo generato nella classe esposta come oggetto COM possono cambiare quando vengono aggiunti nuovi overload per la classe o la relativa classe base. Ciò può provocare problemi di controllo delle versioni.  
+2. I nomi di metodo generato nella classe esposta come oggetto COM possono cambiare quando vengono aggiunti nuovi overload per la classe o la relativa classe base. Ciò può provocare problemi di controllo delle versioni.  
   
  Per risolvere entrambi i problemi, assegnare ogni metodo un nome univoco, invece di usare l'overload, quando si sviluppano oggetti che saranno esposti come oggetti COM.  
   
@@ -133,5 +133,5 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (utilità di esportazione della libreria dei tipi)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [Procedura dettagliata: Implementazione dell'ereditarietà con gli oggetti COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Istruzione Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Global Assembly Cache](../../../framework/app-domains/gac.md)

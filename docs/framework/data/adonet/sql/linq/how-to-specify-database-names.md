@@ -2,12 +2,12 @@
 title: 'Procedura: Specificare nomi di database'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: 1c694678dc3a60cf91dea62f2a17973b396e2b19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335277"
 ---
 # <a name="how-to-specify-database-names"></a>Procedura: Specificare nomi di database
 Usare la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> su un attributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> per specificare il nome di un database quando non viene fornito dalla connessione.  
@@ -16,11 +16,11 @@ Usare la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> su
   
 ### <a name="to-specify-the-name-of-the-database"></a>Per specificare il nome del database  
   
-1.  Aggiungere l'attributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> alla dichiarazione di classe per il database.  
+1. Aggiungere l'attributo <xref:System.Data.Linq.Mapping.DatabaseAttribute> alla dichiarazione di classe per il database.  
   
-2.  Aggiungere la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> all'attributo <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
+2. Aggiungere la proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> all'attributo <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
-3.  Impostare il valore della proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> sul nome che si desidera specificare.  
+3. Impostare il valore della proprietà <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> sul nome che si desidera specificare.  
   
 ## <a name="see-also"></a>Vedere anche
 

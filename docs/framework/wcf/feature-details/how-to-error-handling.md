@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: gestione degli errori'
+title: 'Procedura: Gestione degli errori'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334991"
 ---
-# <a name="how-to-error-handling"></a>Procedura: gestione degli errori
+# <a name="how-to-error-handling"></a>Procedura: Gestione degli errori
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che usa la gestione degli errori. In questo esempio i messaggi vengono indirizzati a un endpoint di destinazione. Se non è possibile recapitare un messaggio a causa di un errore di rete o relativo alle comunicazioni (<xref:System.ServiceModel.CommunicationException>), il messaggio viene nuovamente inviato a un endpoint alternativo.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
   
 ### <a name="implement-error-handling"></a>Implementare la gestione degli errori  
   
-1.  Creare la configurazione del servizio di routing di base specificando l'endpoint servizio esposto dal servizio. Nell'esempio seguente viene definito un solo endpoint servizio usato per ricevere messaggi. Vengono inoltre definiti gli endpoint client usati per inviare messaggi: deadDestination e realDestination. L'endpoint deadDestination contiene un indirizzo che non fa riferimento a un servizio in esecuzione e viene usato per simulare un errore di rete in caso di invio di messaggi a questo endpoint.  
+1. Creare la configurazione del servizio di routing di base specificando l'endpoint servizio esposto dal servizio. Nell'esempio seguente viene definito un solo endpoint servizio usato per ricevere messaggi. Vengono inoltre definiti gli endpoint client usati per inviare messaggi: deadDestination e realDestination. L'endpoint deadDestination contiene un indirizzo che non fa riferimento a un servizio in esecuzione e viene usato per simulare un errore di rete in caso di invio di messaggi a questo endpoint.  
   
     ```xml  
     <services>  
@@ -57,7 +57,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
     </client>  
     ```  
   
-2.  Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Ai fini di questo esempio, viene usato un filtro MatchAll per individuare la corrispondenza con tutti i messaggi ricevuti dal servizio di routing.  
+2. Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  Ai fini di questo esempio, viene usato un filtro MatchAll per individuare la corrispondenza con tutti i messaggi ricevuti dal servizio di routing.  
   
     ```xml  
     <filters>  
@@ -66,7 +66,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
     </filters>  
     ```  
   
-3.  Definire l'elenco di endpoint di backup che contiene gli endpoint a cui viene inviato un messaggio in caso di un errore di rete o relativo alle comunicazioni in fase di invio all'endpoint di destinazione primario. Nell'esempio seguente viene definito un elenco di backup che contiene un endpoint. È tuttavia possibile specificare più endpoint in un elenco di backup.  
+3. Definire l'elenco di endpoint di backup che contiene gli endpoint a cui viene inviato un messaggio in caso di un errore di rete o relativo alle comunicazioni in fase di invio all'endpoint di destinazione primario. Nell'esempio seguente viene definito un elenco di backup che contiene un endpoint. È tuttavia possibile specificare più endpoint in un elenco di backup.  
   
      Se l'elenco di backup contiene più endpoint, in caso si verifichi un errore di rete o relativo alle comunicazioni, il servizio di routing tenta di inviare il messaggio al primo endpoint dell'elenco. Se si verifica un errore di rete o relativo alle comunicazioni in fase di invio a questo endpoint, il servizio di routing tenta di inviare il messaggio all'endpoint successivo contenuto nell'elenco. Il servizio continua a inviare il messaggio a ogni endpoint nell'elenco di endpoint di backup finché il messaggio non viene ricevuto correttamente, tutti gli endpoint di backup non restituiscono un errore di rete o relativo alle comunicazioni oppure il messaggio non viene inviato e l'endpoint restituisce un errore non di rete e non relativo alle comunicazioni.  
   
@@ -78,7 +78,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
     </backupLists>  
     ```  
   
-4.  Definire la tabella dei filtri, che associa il filtro all'endpoint deadDestination e all'elenco di endpoint di backup.  Il servizio di routing tenta in primo luogo di inviare il messaggio all'endpoint di destinazione associato al filtro. Poiché deadDestination contiene un indirizzo che non fa riferimento a un servizio in esecuzione, viene generato un errore di rete. Il servizio di routing tenta quindi di inviare il messaggio all'endpoint specificato in backupEndpointlist.  
+4. Definire la tabella dei filtri, che associa il filtro all'endpoint deadDestination e all'elenco di endpoint di backup.  Il servizio di routing tenta in primo luogo di inviare il messaggio all'endpoint di destinazione associato al filtro. Poiché deadDestination contiene un indirizzo che non fa riferimento a un servizio in esecuzione, viene generato un errore di rete. Il servizio di routing tenta quindi di inviare il messaggio all'endpoint specificato in backupEndpointlist.  
   
     ```xml  
     <filterTables>  
@@ -92,7 +92,7 @@ In questo argomento vengono descritti i passaggi di base necessari per creare un
           </filterTables>  
     ```  
   
-5.  Per valutare i messaggi in ingresso rispetto al filtro contenuto nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.  Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio.  
+5. Per valutare i messaggi in ingresso rispetto al filtro contenuto nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.  L'esempio seguente illustra l'associazione di "filterTable1" agli endpoint servizio.  
   
     ```xml  
     <behaviors>  

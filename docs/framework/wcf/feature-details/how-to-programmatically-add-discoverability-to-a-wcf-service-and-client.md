@@ -2,29 +2,29 @@
 title: 'Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336590"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedura: Aggiungere individuazione a un client e un servizio WCF a livello di codice
 In questo argomento viene illustrato come rendere individuabile un servizio Windows Communication Foundation (WCF). Si basa il [self-hosting](https://go.microsoft.com/fwlink/?LinkId=145523) esempio.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Per configurare l'esempio di servizio indipendente esistente per l'individuazione  
   
-1.  Aprire la soluzione self-hosting in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Aprire la soluzione self-hosting in Visual Studio 2012. L'esempio si trova nella directory TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Si può vedere un messaggio di errore che informa che "System. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**. Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Aggiungere al progetto di servizio un riferimento a `System.ServiceModel.Discovery.dll`. Si può vedere un messaggio di errore che informa che "System. ServiceModel.Discovery.dll o una delle relative dipendenze richiede una versione successiva del [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rispetto a quella specificata nel progetto... " Se viene visualizzato questo messaggio, fare clic sul progetto in Esplora soluzioni e scegliere **proprietà**. Nel **proprietà progetto** finestra, assicurarsi che il **Framework di destinazione** è [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
-3.  Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.  
+3. Aprire il file Service.cs e aggiungere l'istruzione `using` seguente.  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  Nel metodo `Main()`, all'interno dell'istruzione `using`, aggiungere un'istanza <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> all'host del servizio.  
+4. Nel metodo `Main()`, all'interno dell'istruzione `using`, aggiungere un'istanza <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> all'host del servizio.  
   
     ```csharp  
     public static void Main()  
@@ -42,7 +42,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
      <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> specifica che il servizio a cui è applicato è individuabile.  
   
-5.  Aggiungere <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> all'host del servizio subito dopo il codice che aggiunge <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
+5. Aggiungere <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> all'host del servizio subito dopo il codice che aggiunge <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -56,15 +56,15 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>Per creare un'applicazione client che utilizza l'individuazione per chiamare il servizio  
   
-1.  Aggiungere alla soluzione una nuova applicazione console denominata `DiscoveryClientApp`.  
+1. Aggiungere alla soluzione una nuova applicazione console denominata `DiscoveryClientApp`.  
   
-2.  Aggiungere un riferimento a `System.ServiceModel.dll` e `System.ServiceModel.Discovery.dll`  
+2. Aggiungere un riferimento a `System.ServiceModel.dll` e `System.ServiceModel.Discovery.dll`  
   
-3.  Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare doppio clic su file nei **Esplora soluzioni**, selezionare **copia**e quindi selezionare il **DiscoveryClientApp** del progetto, fare doppio clic e selezionare **Incollare**.  
+3. Copiare i file GeneratedClient.cs e App.config dal progetto client esistente al nuovo progetto DiscoveryClientApp. A tale scopo, fare doppio clic su file nei **Esplora soluzioni**, selezionare **copia**e quindi selezionare il **DiscoveryClientApp** del progetto, fare doppio clic e selezionare **Incollare**.  
   
-4.  Aprire Program.cs.  
+4. Aprire Program.cs.  
   
-5.  Aggiungere le istruzioni `using` riportate di seguito.  
+5. Aggiungere le istruzioni `using` riportate di seguito.  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  Aggiungere un metodo statico denominato `FindCalculatorServiceAddress()` alla classe `Program`.  
+6. Aggiungere un metodo statico denominato `FindCalculatorServiceAddress()` alla classe `Program`.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -82,7 +82,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
      Questo metodo utilizza l'individuazione per cercare il servizio `CalculatorService`.  
   
-7.  Creare nel metodo `FindCalculatorServiceAddress` una nuova istanza <xref:System.ServiceModel.Discovery.DiscoveryClient>, passando un elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> al costruttore.  
+7. Creare nel metodo `FindCalculatorServiceAddress` una nuova istanza <xref:System.ServiceModel.Discovery.DiscoveryClient>, passando un elemento <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> al costruttore.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -94,7 +94,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
      Indica a WCF che il <xref:System.ServiceModel.Discovery.DiscoveryClient> classe deve utilizzare l'endpoint di individuazione UDP standard per inviare e ricevere messaggi di individuazione.  
   
-8.  Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare. In questo caso specificare `ICalculator`.  
+8. Alla riga successiva, chiamare il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> e specificare un'istanza <xref:System.ServiceModel.Discovery.FindCriteria> che contiene il contratto di servizio che si desiderare cercare. In questo caso specificare `ICalculator`.  
   
     ```csharp  
     // Find ICalculatorService endpoints              
@@ -190,11 +190,11 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
   
 ### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
   
-1.  Aprire un prompt dei comandi con privilegi elevati ed eseguire Service.exe.  
+1. Aprire un prompt dei comandi con privilegi elevati ed eseguire Service.exe.  
   
-2.  Aprire un prompt dei comandi ed eseguire Discoveryclientapp.exe.  
+2. Aprire un prompt dei comandi ed eseguire Discoveryclientapp.exe.  
   
-3.  L'output di service.exe deve essere analogo all'output indicato di seguito.  
+3. L'output di service.exe deve essere analogo all'output indicato di seguito.  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ In questo argomento viene illustrato come rendere individuabile un servizio Wind
     Return: 6.25390869293308  
     ```  
   
-4.  L'output di Discoveryclientapp.exe deve essere analogo all'output indicato di seguito.  
+4. L'output di Discoveryclientapp.exe deve essere analogo all'output indicato di seguito.  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339385"
 ---
 # <a name="how-to-set-the-security-mode"></a>Procedura: Impostare la modalità di sicurezza
 Sicurezza di Windows Communication Foundation (WCF) dispone di tre modalità di sicurezza comuni che si trovano nelle associazioni predefinite più: il trasporto e messaggio "trasporto con credenziali del messaggio". Esistono inoltre due modalità aggiuntive disponibili soltanto in due associazioni specifiche: la modalità "Solo credenziale a livello di trasporto" ("TransportCredentialOnly") dell'associazione <xref:System.ServiceModel.BasicHttpBinding> e la modalità "Entrambi" ("Both") dell'associazione <xref:System.ServiceModel.NetMsmqBinding>. Tuttavia, questo argomento descrive solo le tre modalità di sicurezza generali, ovvero: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> e <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -25,9 +25,9 @@ Sicurezza di Windows Communication Foundation (WCF) dispone di tre modalità di 
   
 ### <a name="to-set-the-security-mode-in-code"></a>Per impostare la modalità di sicurezza in codice  
   
-1.  Creare un'istanza della classe di associazione in uso. Per un elenco di associazioni predefinite, vedere [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). In questo esempio viene creata un'istanza della classe <xref:System.ServiceModel.WSHttpBinding>  
+1. Creare un'istanza della classe di associazione in uso. Per un elenco di associazioni predefinite, vedere [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). In questo esempio viene creata un'istanza della classe <xref:System.ServiceModel.WSHttpBinding>  
   
-2.  Impostare la proprietà `Mode` dell'oggetto restituito dalla proprietà `Security`.  
+2. Impostare la proprietà `Mode` dell'oggetto restituito dalla proprietà `Security`.  
   
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
      [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ Sicurezza di Windows Communication Foundation (WCF) dispone di tre modalità di 
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
      [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
   
-3.  La modalità può anche essere impostata nel costruttore dell'associazione, come mostrato nel codice seguente.  
+3. La modalità può anche essere impostata nel costruttore dell'associazione, come mostrato nel codice seguente.  
   
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
@@ -52,35 +52,35 @@ Sicurezza di Windows Communication Foundation (WCF) dispone di tre modalità di 
   
 #### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Per impostare la proprietà ClientCredentialType quando si imposta la modalità "Transport"  
   
-1.  Creare un'istanza dell'associazione.  
+1. Creare un'istanza dell'associazione.  
   
-2.  Impostare la proprietà `Mode` su `Transport`.  
+2. Impostare la proprietà `Mode` su `Transport`.  
   
-3.  Impostare la proprietà `ClientCredential` su un valore appropriato. Nell'esempio di codice seguente la proprietà viene impostata su `Windows`.  
+3. Impostare la proprietà `ClientCredential` su un valore appropriato. Nell'esempio di codice seguente la proprietà viene impostata su `Windows`.  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
 #### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>Per impostare la proprietà ClientCredentialType quando si imposta la modalità "Message"  
   
-1.  Creare un'istanza dell'associazione.  
+1. Creare un'istanza dell'associazione.  
   
-2.  Impostare la proprietà `Mode` su `Message`.  
+2. Impostare la proprietà `Mode` su `Message`.  
   
-3.  Impostare la proprietà `ClientCredential` su un valore appropriato. Nell'esempio di codice seguente la proprietà viene impostata su `Certificate`.  
+3. Impostare la proprietà `ClientCredential` su un valore appropriato. Nell'esempio di codice seguente la proprietà viene impostata su `Certificate`.  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Per impostare la modalità e la proprietà ClientCredentialType in configurazione  
   
-1.  Aggiungere un elemento di binding appropriato per il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento del file di configurazione. L'esempio seguente aggiunge un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.  
+1. Aggiungere un elemento di binding appropriato per il [ \<associazioni >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elemento del file di configurazione. L'esempio seguente aggiunge un [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.  
   
-2.  Aggiungere un `<binding>` e impostare il `name` attributo su un valore appropriato.  
+2. Aggiungere un `<binding>` e impostare il `name` attributo su un valore appropriato.  
   
-3.  Aggiungere un `<security>` elemento e impostare il `mode` attributo `Message`, `Transport`, o `TransportWithMessageCredential`.  
+3. Aggiungere un `<security>` elemento e impostare il `mode` attributo `Message`, `Transport`, o `TransportWithMessageCredential`.  
   
-4.  Se si imposta la modalità su `Transport`, aggiungere un elemento `<transport>` e impostare l'attributo `clientCredential` su un valore appropriato.  
+4. Se si imposta la modalità su `Transport`, aggiungere un elemento `<transport>` e impostare l'attributo `clientCredential` su un valore appropriato.  
   
      Nell'esempio seguente, la modalità viene impostata su "`Transport"`, quindi l'attributo `clientCredentialType` dell'elemento `<transport>` viene impostato su "`Windows"`.  
   

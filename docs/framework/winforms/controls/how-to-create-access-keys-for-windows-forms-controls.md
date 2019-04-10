@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141635"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334458"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Procedura: Creare tasti di scelta per i controlli Windows Forms
 Un' *chiave di accesso* è un carattere di sottolineato nel testo di un menu, voce di menu o l'etichetta di un controllo, ad esempio un pulsante. Con una chiave di accesso, l'utente può "fare clic su" un pulsante premendo il tasto ALT in combinazione con la chiave di accesso predefinite. Ad esempio, se un pulsante viene eseguita una procedura per stampare un form e pertanto relativo `Text` proprietà è impostata su "Stampa", aggiungendo una e commerciale prima che la lettera "P", la lettera "P" per essere sottolineati nel testo del pulsante in fase di esecuzione. L'utente può eseguire il comando associato al pulsante premendo ALT + P. Non è possibile avere una chiave di accesso per un controllo che non può ricevere lo stato attivo.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Per creare una chiave di accesso per un controllo  
   
-1.  Impostare il `Text` proprietà in una stringa che include una e commerciale (&) alla lettera che sarà lo scelta rapida.  
+1. Impostare il `Text` proprietà in una stringa che include una e commerciale (&) alla lettera che sarà lo scelta rapida.  
   
     ```vb  
     ' Set the letter "P" as an access key.  

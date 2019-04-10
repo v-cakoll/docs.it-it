@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341907"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedura: Eliminare una risorsa di sistema (Visual Basic)
 È possibile usare un `Using` blocco per garantire che il sistema elimina una risorsa quando il codice esce dal blocco. Ciò è utile se si usa una risorsa di sistema che utilizza una grande quantità di memoria o che altri componenti inoltre desiderano utilizzare.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Per eliminare una connessione al database quando il codice ha finito di usarlo  
   
-1.  Assicurarsi di includere l'appropriato [istruzione Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per la connessione al database all'inizio del file di origine (in questo caso, <xref:System.Data.SqlClient>).  
+1. Assicurarsi di includere l'appropriato [istruzione Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per la connessione al database all'inizio del file di origine (in questo caso, <xref:System.Data.SqlClient>).  
   
-2.  Creare un `Using` blocco con i `Using` e `End Using` istruzioni. All'interno del blocco, inserire il codice che gestisce la connessione al database.  
+2. Creare un `Using` blocco con i `Using` e `End Using` istruzioni. All'interno del blocco, inserire il codice che gestisce la connessione al database.  
   
-3.  Dichiarare la connessione e crearne un'istanza come parte di `Using` istruzione.  
+3. Dichiarare la connessione e crearne un'istanza come parte di `Using` istruzione.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  

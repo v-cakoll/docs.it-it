@@ -2,12 +2,12 @@
 title: Attività ExternalizedPolicy in .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706371"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338280"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Attività ExternalizedPolicy in .NET Framework 4.5
 
@@ -66,21 +66,21 @@ In questo esempio contiene due applicazioni client: ImperativeCodeClientSample e
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Eseguire l'applicazione ImperativeCodeClientSample
 
-1.  Se si utilizza Visual Studio, aprire il *Policy4sample.sln* file della soluzione.
+1. Se si utilizza Visual Studio, aprire il *Policy4sample.sln* file della soluzione.
 
-2.  Nella **Esplora soluzioni**, fare doppio clic il **ImperativeCodeClientSample** del progetto e quindi selezionare **imposta come progetto di avvio**.
+2. Nella **Esplora soluzioni**, fare doppio clic il **ImperativeCodeClientSample** del progetto e quindi selezionare **imposta come progetto di avvio**.
 
-3.  Per eseguire il progetto, premere **Ctrl**+**F5**.
+3. Per eseguire il progetto, premere **Ctrl**+**F5**.
 
 ### <a name="run-the-designerclientsample-application"></a>Eseguire l'applicazione DesignerClientSample
 
-1.  Se si utilizza Visual Studio, aprire il *Policy4sample.sln* file della soluzione.
+1. Se si utilizza Visual Studio, aprire il *Policy4sample.sln* file della soluzione.
 
-2.  Nella **Esplora soluzioni**, fare doppio clic il **DesignerClientSample** del progetto e quindi selezionare **imposta come progetto di avvio**.
+2. Nella **Esplora soluzioni**, fare doppio clic il **DesignerClientSample** del progetto e quindi selezionare **imposta come progetto di avvio**.
 
-3.  Premere **Ctrl**+**MAIUSC**+**B** per compilare il progetto.
+3. Premere **Ctrl**+**MAIUSC**+**B** per compilare il progetto.
 
-4.  Premere **Ctrl**+**F5** per eseguire il progetto.
+4. Premere **Ctrl**+**F5** per eseguire il progetto.
 
 > [!IMPORTANT]
 > È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.

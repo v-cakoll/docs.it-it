@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334926"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: Controllo delle versioni dei contratti dati
 In questo argomento vengono elencate le procedure consigliate per la creazione di contratti dati che possono evolvere facilmente nel tempo. Per altre informazioni sui contratti dati, vedere gli argomenti in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -50,21 +50,21 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
   
  È necessario attenersi esattamente ad alcune linee guida per inviare versioni nuove di un tipo quando ne è previsto uno precedente o inviare un tipo obsoleto quando ne è previsto uno nuovo. Altre linee guida non sono strettamente necessarie, ma sono elencate perché potrebbero essere interessate dagli sviluppi futuri del controllo delle versioni sullo schema.  
   
-1.  Non controllare le versioni dei contratti dati in base all'ereditarietà del tipo. Per creare versioni più recenti, modificare il contratto dati su un tipo esistente o creare un nuovo tipo non correlato.  
+1. Non controllare le versioni dei contratti dati in base all'ereditarietà del tipo. Per creare versioni più recenti, modificare il contratto dati su un tipo esistente o creare un nuovo tipo non correlato.  
   
-2.  L'utilizzo dell'ereditarietà insieme ai contratti dati è consentito, purché l'ereditarietà non venga usata come un meccanismo di controllo delle versioni e vengano seguite determinate regole. Se un tipo deriva da un determinato tipo di base, non è possibile fare in modo che derivi da un tipo di base diverso in una versione futura (a meno che abbia lo stesso contratto dati). Esiste un'unica eccezione a questa condizione: è possibile inserire un tipo nella gerarchia tra un tipo di contratto dati e il relativo tipo di base, ma solo se non contiene membri dati con nomi identici a quelli di altri membri in qualsiasi possibile versione degli altri tipi nella gerarchia. In generale, l'uso di membri dati con nomi identici a livelli diversi della stessa gerarchia di ereditarietà può causare gravi problemi di controllo delle versioni e deve essere evitato.  
+2. L'utilizzo dell'ereditarietà insieme ai contratti dati è consentito, purché l'ereditarietà non venga usata come un meccanismo di controllo delle versioni e vengano seguite determinate regole. Se un tipo deriva da un determinato tipo di base, non è possibile fare in modo che derivi da un tipo di base diverso in una versione futura (a meno che abbia lo stesso contratto dati). Esiste un'unica eccezione a questa condizione: è possibile inserire un tipo nella gerarchia tra un tipo di contratto dati e il relativo tipo di base, ma solo se non contiene membri dati con nomi identici a quelli di altri membri in qualsiasi possibile versione degli altri tipi nella gerarchia. In generale, l'uso di membri dati con nomi identici a livelli diversi della stessa gerarchia di ereditarietà può causare gravi problemi di controllo delle versioni e deve essere evitato.  
   
-3.  A partire dalla prima versione di un contratto dati, implementare sempre <xref:System.Runtime.Serialization.IExtensibleDataObject> per attivare le sequenze di andata e ritorno. Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Se sono state rilasciate una o più versioni di un tipo senza implementare questa interfaccia, è necessario implementarla nella prossima versione del tipo.  
+3. A partire dalla prima versione di un contratto dati, implementare sempre <xref:System.Runtime.Serialization.IExtensibleDataObject> per attivare le sequenze di andata e ritorno. Per altre informazioni, vedere [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Se sono state rilasciate una o più versioni di un tipo senza implementare questa interfaccia, è necessario implementarla nella prossima versione del tipo.  
   
-4.  Nelle versioni più recenti, non modificare il nome o lo spazio dei nomi del contratto dati. Se si modifica il nome o lo spazio dei nomi del tipo sottostante il contratto dati, assicurarsi di mantenere il nome e lo spazio dei nomi del contratto dati usando i meccanismi adatti, ad esempio la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>. Per altre informazioni sulla denominazione, vedere [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4. Nelle versioni più recenti, non modificare il nome o lo spazio dei nomi del contratto dati. Se si modifica il nome o lo spazio dei nomi del tipo sottostante il contratto dati, assicurarsi di mantenere il nome e lo spazio dei nomi del contratto dati usando i meccanismi adatti, ad esempio la proprietà <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> di <xref:System.Runtime.Serialization.DataContractAttribute>. Per altre informazioni sulla denominazione, vedere [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
-5.  Nelle versioni più recenti, non modificare i nomi di qualsiasi membro dati. Se si modifica il nome del campo, della proprietà o dell'evento sottostante il membro dati, usare la proprietà `Name` di <xref:System.Runtime.Serialization.DataMemberAttribute> per mantenere il nome del membro dati esistente.  
+5. Nelle versioni più recenti, non modificare i nomi di qualsiasi membro dati. Se si modifica il nome del campo, della proprietà o dell'evento sottostante il membro dati, usare la proprietà `Name` di <xref:System.Runtime.Serialization.DataMemberAttribute> per mantenere il nome del membro dati esistente.  
   
-6.  Nelle versioni più recenti, non modificare il tipo di qualsiasi campo, proprietà o evento sottostante un membro dati in modo tale che il contratto dati risultante per quel membro dati venga modificato. Tenere presente che i tipi di interfaccia sono equivalenti a <xref:System.Object> per l'identificazione del contratto dati previsto.  
+6. Nelle versioni più recenti, non modificare il tipo di qualsiasi campo, proprietà o evento sottostante un membro dati in modo tale che il contratto dati risultante per quel membro dati venga modificato. Tenere presente che i tipi di interfaccia sono equivalenti a <xref:System.Object> per l'identificazione del contratto dati previsto.  
   
-7.  Nelle versioni più recenti, non modificare l'ordine dei membri dati esistenti impostando la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> dell'attributo <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+7. Nelle versioni più recenti, non modificare l'ordine dei membri dati esistenti impostando la proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> dell'attributo <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
-8.  Nelle versioni più recenti, possono essere aggiunti nuovi membri dati. Questa operazione deve essere eseguita osservando le regole seguenti:  
+8. Nelle versioni più recenti, possono essere aggiunti nuovi membri dati. Questa operazione deve essere eseguita osservando le regole seguenti:  
   
     1.  La proprietà <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> deve essere sempre impostata sul valore predefinito `false`.  
   

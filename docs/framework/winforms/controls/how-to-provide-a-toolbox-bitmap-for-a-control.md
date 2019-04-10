@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Specificare una Bitmap nella casella degli strumenti per un controllo'
+title: 'Procedura: Specificare una bitmap nella casella degli strumenti per un controllo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: 9072f96bd6e3485e759ed72819229b3f0c33d641
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337708"
 ---
-# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Procedura: Specificare una Bitmap nella casella degli strumenti per un controllo
+# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Procedura: Specificare una bitmap nella casella degli strumenti per un controllo
 Se si desidera avere un'icona speciale per il controllo vengono visualizzati nei **casella degli strumenti**, è possibile specificare una particolare immagine usando il <xref:System.Drawing.ToolboxBitmapAttribute>. Questa classe è un *attributo*, un tipo speciale di classe che è possibile allegare ad altre classi. Per altre informazioni sugli attributi, vedere [Cenni preliminari sugli attributi (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) per Visual Basic o [attributi (c#)](../../../csharp/programming-guide/concepts/attributes/index.md) per c#.  
   
  Uso di <xref:System.Drawing.ToolboxBitmapAttribute>, è possibile specificare una stringa che indica il percorso e il nome di una bitmap di 16x16 pixel. Questa bitmap viene quindi visualizzata accanto al controllo quando è aggiunta alla **Casella degli strumenti**. È inoltre possibile specificare un <xref:System.Type>, nel qual caso viene caricata la bitmap associata a tale tipo. Se si specificano sia un <xref:System.Type> e con una stringa, il controllo ricerca una risorsa immagine con il nome specificato dal parametro della stringa nell'assembly che contiene il tipo specificato da di <xref:System.Type> parametro.  
   
 ### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Per specificare una bitmap della casella degli strumenti per il controllo  
   
-1.  Aggiungere il <xref:System.Drawing.ToolboxBitmapAttribute> alla dichiarazione di classe del controllo prima di `Class` (parola chiave) per visual Basic e sopra la dichiarazione di classe per Visual c#.  
+1. Aggiungere il <xref:System.Drawing.ToolboxBitmapAttribute> alla dichiarazione di classe del controllo prima di `Class` (parola chiave) per visual Basic e sopra la dichiarazione di classe per Visual c#.  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -58,7 +58,7 @@ Se si desidera avere un'icona speciale per il controllo vengono visualizzati nei
     }  
     ```  
   
-2.  Ricompilare il progetto.  
+2. Ricompilare il progetto.  
   
     > [!NOTE]
     >  La bitmap non viene visualizzata nella casella degli strumenti per i controlli e i componenti generati automaticamente. Per visualizzare la bitmap, ricaricare il controllo usando la finestra di dialogo **Scegli elementi della casella degli strumenti**. Per altre informazioni, vedere [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830370"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334601"
 ---
 # <a name="-delaysign"></a>-delaysign
 Specifica se l'assembly avrà firma completa o parziale.  
@@ -37,11 +37,11 @@ Specifica se l'assembly avrà firma completa o parziale.
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Per impostare - delaysign nell'ambiente di sviluppo integrato di Visual Studio  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
   
-2.  Fare clic sulla scheda **Firma**.  
+2. Fare clic sulla scheda **Firma**.  
   
-3.  Impostare il valore di **solo firma ritardata** casella.  
+3. Impostare il valore di **solo firma ritardata** casella.  
   
 ## <a name="see-also"></a>Vedere anche
 

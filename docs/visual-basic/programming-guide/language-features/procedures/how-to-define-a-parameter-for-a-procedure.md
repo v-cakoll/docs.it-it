@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333834"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procedura: Definire un parametro per una routine (Visual Basic)
 Oggetto *parametro* consente di passare un valore per la procedura quando si chiama il codice chiama. Ciascun parametro viene dichiarato per una procedura simile a quello si dichiara una variabile, che specifica il nome e tipo di dati. Specificare inoltre il meccanismo di passaggio e indica se il parametro è facoltativo.  
@@ -22,17 +22,17 @@ Oggetto *parametro* consente di passare un valore per la procedura quando si chi
   
 ### <a name="to-define-a-procedure-parameter"></a>Per definire un parametro di routine  
   
-1.  Nella dichiarazione di routine, aggiungere il nome del parametro all'elenco di parametri della stored procedure, separandolo dalle altri parametri con virgole.  
+1. Nella dichiarazione di routine, aggiungere il nome del parametro all'elenco di parametri della stored procedure, separandolo dalle altri parametri con virgole.  
   
-2.  Decidere il tipo di dati del parametro.  
+2. Decidere il tipo di dati del parametro.  
   
-3.  Seguire il nome del parametro con un `As` clausola per specificare il tipo di dati.  
+3. Seguire il nome del parametro con un `As` clausola per specificare il tipo di dati.  
   
-4.  Decidere il meccanismo di passaggio desiderato per il parametro. In genere si passa un parametro per valore, a meno che non si desidera essere in grado di modificare il relativo valore nel codice chiamante alla routine.  
+4. Decidere il meccanismo di passaggio desiderato per il parametro. In genere si passa un parametro per valore, a meno che non si desidera essere in grado di modificare il relativo valore nel codice chiamante alla routine.  
   
-5.  Anteporre il nome del parametro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oppure [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) per specificare il meccanismo di passaggio. Per altre informazioni, vedere [differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Anteporre il nome del parametro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oppure [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) per specificare il meccanismo di passaggio. Per altre informazioni, vedere [differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Se il parametro è facoltativo, anteporre il meccanismo di passaggio [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) e seguire il tipo di dati del parametro con un segno di uguale (`=`) e un valore predefinito.  
+6. Se il parametro è facoltativo, anteporre il meccanismo di passaggio [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) e seguire il tipo di dati del parametro con un segno di uguale (`=`) e un valore predefinito.  
   
      L'esempio seguente definisce la struttura di un `Sub` routine con tre parametri. Le prime due sono necessari e il terzo è facoltativo. Le dichiarazioni dei parametri sono separate nell'elenco dei parametri da una virgola.  
   
@@ -54,12 +54,12 @@ Oggetto *parametro* consente di passare un valore per la procedura quando si chi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine](./index.md)
+- [Procedure](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
 - [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)
 - [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)
 - [Routine ricorsive](./recursive-procedures.md)
-- [Overload della routine](./procedure-overloading.md)
+- [Overload delle routine](./procedure-overloading.md)
 - [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Programmazione orientata agli oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)

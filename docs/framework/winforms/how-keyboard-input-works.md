@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342173"
 ---
 # <a name="how-keyboard-input-works"></a>Funzionamento dell'input da tastiera
 Windows Forms elabora gli input della tastiera generando eventi di tastiera in risposta ai messaggi di Windows. La maggioranza delle applicazioni Windows Forms elabora gli input della tastiera tramite la gestione dei relativi eventi. Tuttavia è necessario conoscere il funzionano dei messaggi della tastiera per poter implementare scenari più avanzati di input dalla tastiera, ad esempio l'intercettazione dei tasti prima che raggiungano un controllo. Questo argomento descrive i tipi di dati di tasti che Windows Forms riconosce e fornisce una panoramica del modo in cui vengono instradati i messaggi della tastiera. Per informazioni sugli eventi della tastiera, vedere [Utilizzo degli eventi di tastiera](using-keyboard-events.md).  
@@ -22,13 +22,13 @@ Windows Forms elabora gli input della tastiera generando eventi di tastiera in r
 ## <a name="order-of-keyboard-events"></a>Ordine degli eventi di tastiera  
  Come indicato in precedenza, ci sono 3 eventi correlati alla tastiera che possono verificarsi in un controllo. La sequenza seguente illustra l'ordine generale degli eventi:  
   
-1.  L'utente preme il tasto "a", il tasto viene pre-elaborato, inviato e un <xref:System.Windows.Forms.Control.KeyDown> evento si verifica.  
+1. L'utente preme il tasto "a", il tasto viene pre-elaborato, inviato e un <xref:System.Windows.Forms.Control.KeyDown> evento si verifica.  
   
-2.  L'utente tiene premuto il tasto "a", il tasto viene pre-elaborato, inviato e un <xref:System.Windows.Forms.Control.KeyPress> evento si verifica.  
+2. L'utente tiene premuto il tasto "a", il tasto viene pre-elaborato, inviato e un <xref:System.Windows.Forms.Control.KeyPress> evento si verifica.  
   
      Questo evento si verifica più volte quando l'utente tiene premuto un tasto.  
   
-3.  L'utente rilascia il tasto "a", il tasto viene pre-elaborato, inviato e un <xref:System.Windows.Forms.Control.KeyUp> evento si verifica.  
+3. L'utente rilascia il tasto "a", il tasto viene pre-elaborato, inviato e un <xref:System.Windows.Forms.Control.KeyUp> evento si verifica.  
   
 ## <a name="preprocessing-keys"></a>Pre-elaborazione dei tasti  
  Come gli altri messaggi, i messaggi della tastiera vengono elaborati nel <xref:System.Windows.Forms.Control.WndProc%2A> metodo di un form o controllo. Tuttavia, prima della tastiera vengono elaborati i messaggi, il <xref:System.Windows.Forms.Control.PreProcessMessage%2A> metodo chiama uno o più metodi che possono essere sostituiti per gestire le chiavi di caratteri speciali e i tasti fisici. È possibile eseguire l'override di questi metodi per rilevare e filtrare alcuni tasti prima che i messaggi vengano elaborati dal controllo. La tabella seguente mostra l'azione che viene eseguita e il relativo metodo correlato che si verifica, nell'ordine in cui il metodo si verifica.  

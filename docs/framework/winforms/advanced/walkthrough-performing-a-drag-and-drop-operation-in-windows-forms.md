@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340724"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Procedura dettagliata: Esecuzione di un'operazione di trascinamento della selezione in Windows Form
 Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni basate su Windows è necessario gestire una serie di eventi, in particolare il <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, e <xref:System.Windows.Forms.Control.DragDrop> eventi. Usando le informazioni disponibili negli argomenti di questi eventi, è possibile facilitare le operazioni di trascinamento della selezione.  
@@ -28,7 +28,7 @@ Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni 
   
 #### <a name="to-start-a-drag-operation"></a>Per avviare un'operazione di trascinamento  
   
-1.  Nel <xref:System.Windows.Forms.Control.MouseDown> evento per il controllo in cui inizierà il trascinamento, usare il `DoDragDrop` metodo per impostare i dati da trascinare e l'effetto consentito il trascinamento avrà. Per altre informazioni, vedere <xref:System.Windows.Forms.DragEventArgs.Data%2A> e <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. Nel <xref:System.Windows.Forms.Control.MouseDown> evento per il controllo in cui inizierà il trascinamento, usare il `DoDragDrop` metodo per impostare i dati da trascinare e l'effetto consentito il trascinamento avrà. Per altre informazioni, vedere <xref:System.Windows.Forms.DragEventArgs.Data%2A> e <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
      L'esempio seguente illustra come avviare un'operazione di trascinamento. Il controllo in cui inizia il trascinamento è un <xref:System.Windows.Forms.Button> (controllo), i dati trascinati è la stringa che rappresenta il <xref:System.Windows.Forms.Control.Text%2A> proprietà del <xref:System.Windows.Forms.Button> controllo e gli effetti consentiti sono la copia o spostamento.  
   
@@ -57,9 +57,9 @@ Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni 
   
 #### <a name="to-perform-a-drop"></a>Per eseguire un rilascio  
   
-1.  Impostare il <xref:System.Windows.Forms.Control.AllowDrop%2A> proprietà su true.  
+1. Impostare il <xref:System.Windows.Forms.Control.AllowDrop%2A> proprietà su true.  
   
-2.  Nel `DragEnter` evento per il controllo in cui verrà eseguito il rilascio, assicurarsi che i dati trascinati siano di un tipo accettabile (in questo caso, <xref:System.Windows.Forms.Control.Text%2A>). Il codice imposta quindi l'effetto che verrà eseguito quando viene eseguito il rilascio in un valore di <xref:System.Windows.Forms.DragDropEffects> enumerazione. Per altre informazioni, vedere <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. Nel `DragEnter` evento per il controllo in cui verrà eseguito il rilascio, assicurarsi che i dati trascinati siano di un tipo accettabile (in questo caso, <xref:System.Windows.Forms.Control.Text%2A>). Il codice imposta quindi l'effetto che verrà eseguito quando viene eseguito il rilascio in un valore di <xref:System.Windows.Forms.DragDropEffects> enumerazione. Per altre informazioni, vedere <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -85,7 +85,7 @@ Per eseguire operazioni di trascinamento e rilascio all'interno di applicazioni 
     > [!NOTE]
     >  È possibile definire il proprio <xref:System.Windows.Forms.DataFormats> specificando il proprio oggetto come i <xref:System.Object> parametro del <xref:System.Windows.Forms.DataObject.SetData%2A> (metodo). Assicurarsi, in tal caso, che l'oggetto specificato sia serializzabile. Per altre informazioni, vedere <xref:System.Runtime.Serialization.ISerializable>.  
   
-3.  Nel <xref:System.Windows.Forms.Control.DragDrop> evento per il controllo in cui verrà eseguito il rilascio, usare il <xref:System.Windows.Forms.DataObject.GetData%2A> metodo per recuperare i dati trascinati. Per altre informazioni, vedere <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. Nel <xref:System.Windows.Forms.Control.DragDrop> evento per il controllo in cui verrà eseguito il rilascio, usare il <xref:System.Windows.Forms.DataObject.GetData%2A> metodo per recuperare i dati trascinati. Per altre informazioni, vedere <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      Nell'esempio seguente, un <xref:System.Windows.Forms.TextBox> è il controllo che viene trascinato per (in cui verrà eseguito il rilascio). Il codice imposta la <xref:System.Windows.Forms.Control.Text%2A> proprietà del <xref:System.Windows.Forms.TextBox> controllare uguale ai dati trascinati.  
   

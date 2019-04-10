@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338072"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base con minime complessità. Verranno create una classe di entità per la modellazione della tabella Customers nel database Northwind di esempio, quindi una semplice query per elencare i clienti residenti nell'area londinese.  
@@ -46,32 +46,32 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Per creare una soluzione LINQ to SQL  
   
-1.  Scegliere **Nuovo progetto** dal menu **File**.  
+1. Scegliere **Nuovo progetto** dal menu **File**.  
   
-2.  Nel **tipi di progetto** riquadro della finestra di **nuovo progetto** nella finestra di dialogo fare clic su **Visual Basic**.  
+2. Nel **tipi di progetto** riquadro della finestra di **nuovo progetto** nella finestra di dialogo fare clic su **Visual Basic**.  
   
-3.  Nel riquadro **Modelli** fare clic su **Applicazione console**.  
+3. Nel riquadro **Modelli** fare clic su **Applicazione console**.  
   
-4.  Nel **Name** , digitare **LinqConsoleApp**.  
+4. Nel **Name** , digitare **LinqConsoleApp**.  
   
-5.  Fare clic su **OK**.  
+5. Fare clic su **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Aggiunta di riferimenti e direttive LINQ  
  In questa procedura dettagliata vengono usati assembly che potrebbero non essere installati per impostazione predefinita nel progetto. Se `System.Data.Linq` non è elencato come riferimento nel progetto (fare clic su **Mostra tutti i file** nelle **Esplora soluzioni** ed espandere la **riferimenti** nodo), aggiungerlo come spiegato nella la procedura seguente.  
   
 #### <a name="to-add-systemdatalinq"></a>Per aggiungere System.Data.Linq  
   
-1.  Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
+1. Nelle **Esplora soluzioni**, fare doppio clic su **riferimenti**, quindi fare clic su **Aggiungi riferimento**.  
   
-2.  Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
+2. Nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, fare clic sull'assembly e quindi fare clic su **OK**.  
   
      L'assembly verrà aggiunto al progetto.  
   
-3.  Anche nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, scorrere fino alla e fare clic su Forms e quindi fare clic su **OK**.  
+3. Anche nel **Aggiungi riferimento** finestra di dialogo, fare clic su **.NET**, scorrere fino alla e fare clic su Forms e quindi fare clic su **OK**.  
   
      Questo assembly, che supporta la finestra di messaggio nella procedura dettagliata, viene aggiunto al progetto.  
   
-4.  Aggiungere la seguente direttiva sopra a `Module1`:  
+4. Aggiungere la seguente direttiva sopra a `Module1`:  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
@@ -128,22 +128,22 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 #### <a name="to-execute-the-query"></a>Per eseguire la query  
   
-1.  Digitare o incollare il codice seguente alla fine del metodo `Sub Main` dopo la descrizione della query:  
+1. Digitare o incollare il codice seguente alla fine del metodo `Sub Main` dopo la descrizione della query:  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  ‎Premere F5 per eseguire il debug dell'applicazione.  
+2. ‎Premere F5 per eseguire il debug dell'applicazione.  
   
     > [!NOTE]
     >  Se l'applicazione genera un errore di run-time, vedere la sezione Risoluzione dei problemi dei [apprendimento tramite procedure dettagliate](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
      Nella finestra di messaggio viene visualizzato un elenco di sei clienti. Nella finestra della console verrà visualizzato il codice SQL generato.  
   
-3.  Fare clic su **OK** per chiudere la finestra del messaggio.  
+3. Fare clic su **OK** per chiudere la finestra del messaggio.  
   
      L'applicazione verrà chiusa.  
   
-4.  Nel menu **File** fare clic su **Salva tutto**.  
+4. Nel menu **File** fare clic su **Salva tutto**.  
   
      Questa applicazione sarà necessaria se si continua con la successiva procedura dettagliata.  
   

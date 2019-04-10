@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: cb43536f941ea7a6e1a48e78046089636360eef5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342550"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Procedura: Eseguire il rendering delle immagini con GDI+
 È possibile usare [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] per il rendering delle immagini presenti sotto forma di file nelle applicazioni. Eseguire questa operazione creando un nuovo oggetto di un <xref:System.Drawing.Image> classe (, ad esempio <xref:System.Drawing.Bitmap>), creando una <xref:System.Drawing.Graphics> dell'oggetto che fa riferimento all'area di disegno da usare e chiamando il <xref:System.Drawing.Graphics.DrawImage%2A> metodo del <xref:System.Drawing.Graphics> oggetto. L'immagine verrà disegnata sulla superficie da disegno rappresentata dalla classe della grafica. È possibile usare l'editor di immagini per creare e modificare i file di immagine in fase di progettazione ed eseguire su di loro il rendering con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in fase di esecuzione. Per altre informazioni, vedere [Image Editor for Icons](/cpp/windows/image-editor-for-icons) (Editor di immagini per le icone).  
   
 ### <a name="to-render-an-image-with-gdi"></a>Per eseguire il rendering di un'immagine con GDI+  
   
-1.  Creare un oggetto che rappresenti l'immagine che si desidera visualizzare. Questo oggetto deve essere un membro di una classe che eredita da <xref:System.Drawing.Image>, ad esempio <xref:System.Drawing.Bitmap> o <xref:System.Drawing.Imaging.Metafile>. Esempio:  
+1. Creare un oggetto che rappresenti l'immagine che si desidera visualizzare. Questo oggetto deve essere un membro di una classe che eredita da <xref:System.Drawing.Image>, ad esempio <xref:System.Drawing.Bitmap> o <xref:System.Drawing.Imaging.Metafile>. Esempio:  
   
     ```vb  
     ' Uses the System.Environment.GetFolderPath to get the path to the   
@@ -47,7 +47,7 @@ ms.locfileid: "59079448"
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2.  Creare un <xref:System.Drawing.Graphics> oggetto che rappresenta la superficie di disegno da usare. Per altre informazioni, vedere [Procedura: Creare oggetti Graphics per disegnare](how-to-create-graphics-objects-for-drawing.md).  
+2. Creare un <xref:System.Drawing.Graphics> oggetto che rappresenta la superficie di disegno da usare. Per altre informazioni, vedere [Procedura: Creare oggetti Graphics per disegnare](how-to-create-graphics-objects-for-drawing.md).  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
@@ -67,7 +67,7 @@ ms.locfileid: "59079448"
     Graphics^ g = button1->CreateGraphics();  
     ```  
   
-3.  Chiamare il <xref:System.Drawing.Graphics.DrawImage%2A> dell'oggetto di grafica per eseguire il rendering dell'immagine. È necessario specificare l'immagine da disegnare e le coordinate in cui deve essere disegnata.  
+3. Chiamare il <xref:System.Drawing.Graphics.DrawImage%2A> dell'oggetto di grafica per eseguire il rendering dell'immagine. È necessario specificare l'immagine da disegnare e le coordinate in cui deve essere disegnata.  
   
     ```vb  
     g.DrawImage(myBitmap, 1, 1)  

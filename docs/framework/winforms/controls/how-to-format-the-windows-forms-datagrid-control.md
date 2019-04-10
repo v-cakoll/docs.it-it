@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147901"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336122"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Procedura: Formattare il controllo DataGrid di Windows Forms
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147901"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Per stabilire uno stile predefinito per il controllo DataGrid  
   
-1.  Impostare le proprietà seguenti come appropriato:  
+1. Impostare le proprietà seguenti come appropriato:  
   
     |Proprietà|Descrizione|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147901"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Per impostare lo stile di tabella e colonna di una tabella di dati a livello di codice  
   
-1.  Creare un nuovo stile di tabella e impostare le relative proprietà.  
+1. Creare un nuovo stile di tabella e impostare le relative proprietà.  
   
-2.  Creare uno stile colonna e impostare le relative proprietà.  
+2. Creare uno stile colonna e impostare le relative proprietà.  
   
-3.  Aggiungere lo stile della colonna alla raccolta di stili colonna stili di tabella.  
+3. Aggiungere lo stile della colonna alla raccolta di stili colonna stili di tabella.  
   
-4.  Aggiungere lo stile della tabella alla raccolta di stili di tabella della griglia dei dati.  
+4. Aggiungere lo stile della tabella alla raccolta di stili di tabella della griglia dei dati.  
   
-5.  Nell'esempio seguente, creare un'istanza di una nuova <xref:System.Windows.Forms.DataGridTableStyle> e impostare il <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà.  
+5. Nell'esempio seguente, creare un'istanza di una nuova <xref:System.Windows.Forms.DataGridTableStyle> e impostare il <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> proprietà.  
   
-6.  Creare una nuova istanza di un **GridColumnStyle** e impostare relativo **MappingName** (e alcune altre proprietà di layout e la visualizzazione).  
+6. Creare una nuova istanza di un **GridColumnStyle** e impostare relativo **MappingName** (e alcune altre proprietà di layout e la visualizzazione).  
   
-7.  Ripetere i passaggi da 2 a 6 per ogni stile di colonna che si desidera creare.  
+7. Ripetere i passaggi da 2 a 6 per ogni stile di colonna che si desidera creare.  
   
      Nell'esempio seguente viene illustrato come un <xref:System.Windows.Forms.DataGridTextBoxColumn> viene creato, poiché un nome da visualizzare nella colonna. È inoltre necessario aggiungere lo stile della colonna per il <xref:System.Windows.Forms.GridColumnStylesCollection> dello stile di tabella, e si aggiunge lo stile di tabella per il <xref:System.Windows.Forms.GridTableStylesCollection> la griglia dei dati.  
   

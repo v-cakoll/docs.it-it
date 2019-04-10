@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336655"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: Creazione di un'applicazione Windows ad accesso facilitato
 La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda. Molti governi hanno norme relative all'accessibilità per l'acquisto del software. Il logo Certified for Windows include requisiti di accessibilità. È stato stimato che solo negli Stati Uniti risiedono 30 milioni di persone, molte delle quali potenziali clienti, interessate all'accessibilità del software.  
@@ -158,7 +158,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Per abilitare la modalità contrasto elevato in modo efficace  
   
-1.  Creare un metodo per impostare i colori dell'etichetta sui colori di sistema.  
+1. Creare un metodo per impostare i colori dell'etichetta sui colori di sistema.  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     }  
     ```  
   
-2.  Chiamare la routine `SetColorScheme`nel costruttore del form (`Public Sub New()` in Visual Basic e `public class Form1` in Visual C#). Per accedere al costruttore in Visual Basic, sarà necessario espandere l'area con l'etichetta **Codice generato da Progettazione Windows Form**.  
+2. Chiamare la routine `SetColorScheme`nel costruttore del form (`Public Sub New()` in Visual Basic e `public class Form1` in Visual C#). Per accedere al costruttore in Visual Basic, sarà necessario espandere l'area con l'etichetta **Codice generato da Progettazione Windows Form**.  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     }  
     ```  
   
-3.  Creare una routine evento, con la firma appropriata, per rispondere all'evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
+3. Creare una routine evento, con la firma appropriata, per rispondere all'evento <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>.  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     }  
     ```  
   
-4.  Aggiungere il codice al costruttore del form, dopo la chiamata a `InitializeComponents`, per associare la routine evento all'evento di sistema. Questo metodo chiama la routine `SetColorScheme`.  
+4. Aggiungere il codice al costruttore del form, dopo la chiamata a `InitializeComponents`, per associare la routine evento all'evento di sistema. Questo metodo chiama la routine `SetColorScheme`.  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     }  
     ```  
   
-5.  Aggiungere il codice al metodo <xref:System.Windows.Forms.Control.Dispose%2A> del form, prima della chiamata al metodo <xref:System.Windows.Forms.Control.Dispose%2A> della classe base, per rilasciare l'evento quando l'applicazione si chiude. Per accedere al metodo <xref:System.Windows.Forms.Control.Dispose%2A> in Visual Basic, sarà necessario espandere l'area con l'etichetta Codice generato da Progettazione Windows Form.  
+5. Aggiungere il codice al metodo <xref:System.Windows.Forms.Control.Dispose%2A> del form, prima della chiamata al metodo <xref:System.Windows.Forms.Control.Dispose%2A> della classe base, per rilasciare l'evento quando l'applicazione si chiude. Per accedere al metodo <xref:System.Windows.Forms.Control.Dispose%2A> in Visual Basic, sarà necessario espandere l'area con l'etichetta Codice generato da Progettazione Windows Form.  
   
     > [!NOTE]
     >  Il codice dell'evento di sistema esegue un thread separato dall'applicazione principale. Se non si rilascia l'evento, il codice associato all'evento verrà eseguito anche dopo la chiusura del programma.  
@@ -281,38 +281,38 @@ La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda
     }  
     ```  
   
-6.  Premere F5 per eseguire l'applicazione.  
+6. Premere F5 per eseguire l'applicazione.  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>Comunicazione di informazioni importanti con mezzi diversi dai segnali acustici.  
  In questa applicazione, nessuna informazione viene comunicata solo mediante segnali acustici. Se si usano i segnagli acustici nell'applicazione, è necessario comunicare le informazioni anche con altri mezzi.  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Per fornire informazioni con mezzi diversi dai segnali acustici  
   
-1.  Far lampeggiare la barra del titolo usando la funzione FlashWindow dell'API Windows. Per un esempio di come chiamare funzioni API Windows, vedere [procedura dettagliata: Chiamata delle API di Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1. Far lampeggiare la barra del titolo usando la funzione FlashWindow dell'API Windows. Per un esempio di come chiamare funzioni API Windows, vedere [procedura dettagliata: Chiamata delle API di Windows](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  L'utente potrebbe aver abilitato il servizio Segnali visivi di Windows, che farà lampeggiare la finestra anche quando i suoni di sistema vengono riprodotti tramite l'altoparlante predefinito del computer.  
   
-2.  Visualizzare le informazioni importanti in una finestra non modale in modo che l'utente rispondere a esse.  
+2. Visualizzare le informazioni importanti in una finestra non modale in modo che l'utente rispondere a esse.  
   
-3.  Visualizzare una finestra di messaggio che acquisisce lo stato attivo della tastiera. Evitare questo metodo se è possibile che l'utente stia digitando.  
+3. Visualizzare una finestra di messaggio che acquisisce lo stato attivo della tastiera. Evitare questo metodo se è possibile che l'utente stia digitando.  
   
-4.  Visualizzare un indicatore di stato nell'area di notifica dello stato della barra delle applicazioni. Per i dettagli, vedere [Aggiunta di icone alla barra delle applicazioni mediante il componente NotifyIcon di Windows Form](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4. Visualizzare un indicatore di stato nell'area di notifica dello stato della barra delle applicazioni. Per i dettagli, vedere [Aggiunta di icone alla barra delle applicazioni mediante il componente NotifyIcon di Windows Form](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Verifica dell'applicazione  
  Prima di distribuire l'applicazione, è consigliabile testare le funzionalità di accessibilità implementate.  
   
 #### <a name="to-test-accessibility-features"></a>Per testare le funzionalità di accessibilità  
   
-1.  Per testare l'accesso tramite tastiera, scollegare il mouse ed esplorare l'interfaccia utente per ogni funzionalità solo con la tastiera. Assicurarsi che tutte le attività possano essere eseguite solo con la tastiera.  
+1. Per testare l'accesso tramite tastiera, scollegare il mouse ed esplorare l'interfaccia utente per ogni funzionalità solo con la tastiera. Assicurarsi che tutte le attività possano essere eseguite solo con la tastiera.  
   
-2.  Per testare il supporto del contrasto elevato, scegliere l'icona Accesso facilitato nel Pannello di controllo. Fare clic sulla scheda Schermo e selezionare la casella di controllo Usa Contrasto elevato. Spostarsi tra tutti gli elementi dell'interfaccia utente per verificare che siano state applicate le modifiche al colore e al tipo di carattere. Assicurarsi anche non siano state inserite immagini o motivi dietro il testo.  
+2. Per testare il supporto del contrasto elevato, scegliere l'icona Accesso facilitato nel Pannello di controllo. Fare clic sulla scheda Schermo e selezionare la casella di controllo Usa Contrasto elevato. Spostarsi tra tutti gli elementi dell'interfaccia utente per verificare che siano state applicate le modifiche al colore e al tipo di carattere. Assicurarsi anche non siano state inserite immagini o motivi dietro il testo.  
   
     > [!NOTE]
     >  Windows NT 4 non dispone dell'icona Accesso facilitato nel Pannello di controllo. Quindi questa procedura per cambiare l'impostazione SystemInformation.HighContrast non funziona in Windows NT 4.  
   
-3.  Per testare l'accessibilità di un'applicazione, sono facilmente disponibili altri strumenti.  
+3. Per testare l'accessibilità di un'applicazione, sono facilmente disponibili altri strumenti.  
   
-4.  Per testare l'esposizione dello stato attivo della tastiera, eseguire Lente di ingrandimento. Per aprirla, fare clic sul menu **Start**, scegliere **Programmi**, **Accessori**, **Accessibilità**, quindi fare clic su **Lente di ingrandimento**. Spostarsi nell'interfaccia utente usando sia il mouse che il tasto TAB. Assicurarsi che tutti gli spostamenti vengano registrati correttamente in **Lente di ingrandimento**.  
+4. Per testare l'esposizione dello stato attivo della tastiera, eseguire Lente di ingrandimento. Per aprirla, fare clic sul menu **Start**, scegliere **Programmi**, **Accessori**, **Accessibilità**, quindi fare clic su **Lente di ingrandimento**. Spostarsi nell'interfaccia utente usando sia il mouse che il tasto TAB. Assicurarsi che tutti gli spostamenti vengano registrati correttamente in **Lente di ingrandimento**.  
   
-5.  Per testare l'esposizione degli elementi dello schermo, eseguire Controlla e usare sia il mouse che il tasto TAB per raggiungere ogni elemento. Assicurarsi che le informazioni presentate nei campi Nome, Stato, Ruolo, Posizione e Valore della finestra Controlla abbiano senso per l'utente per ogni oggetto dell'interfaccia utente.
+5. Per testare l'esposizione degli elementi dello schermo, eseguire Controlla e usare sia il mouse che il tasto TAB per raggiungere ogni elemento. Assicurarsi che le informazioni presentate nei campi Nome, Stato, Ruolo, Posizione e Valore della finestra Controlla abbiano senso per l'utente per ogni oggetto dell'interfaccia utente.

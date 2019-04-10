@@ -2,19 +2,19 @@
 title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828966"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341270"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo  
   
-1.  Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
+1. Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
     Garcia, Debra  
     ```  
   
-2.  Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.  
+2. Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.  
   
     ```  
     Liu, Jinghao  
@@ -168,4 +168,4 @@ End Class
 ## <a name="see-also"></a>Vedere anche
 
 - [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
+- [LINQ e le directory dei File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

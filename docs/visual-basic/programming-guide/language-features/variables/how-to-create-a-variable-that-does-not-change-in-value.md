@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823324"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342934"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Procedura: Creare una variabile che non cambia di valore (Visual Basic)
 Il concetto di una variabile che non cambia il relativo valore potrebbe sembrare contraddittorio. Ma esistono situazioni in cui una costante non è fattibile e risulta utile avere una variabile con un valore fisso. In tal caso è possibile definire una variabile membro con il [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) (parola chiave).  
@@ -25,7 +25,7 @@ Il concetto di una variabile che non cambia il relativo valore potrebbe sembrare
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Per creare una variabile che non cambia di valore  
   
-1.  A livello di modulo, dichiarare una variabile membro con il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)e includere le [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) (parola chiave).  
+1. A livello di modulo, dichiarare una variabile membro con il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)e includere le [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) (parola chiave).  
   
     ```  
     Dim ReadOnly timeStarted  
@@ -33,7 +33,7 @@ Il concetto di una variabile che non cambia il relativo valore potrebbe sembrare
   
      È possibile specificare `ReadOnly` solo su una variabile membro. Ciò significa che è necessario definire la variabile a livello di modulo, di fuori di qualsiasi routine.  
   
-2.  Se è possibile calcolare il valore in un'unica istruzione in fase di compilazione, usare una clausola di inizializzazione nel `Dim` istruzione. Seguire le [come](../../../../visual-basic/language-reference/statements/as-clause.md) clausola con un segno di uguale (`=`), seguita da un'espressione. Assicurarsi che il compilatore può valutare questa espressione a un valore costante.  
+2. Se è possibile calcolare il valore in un'unica istruzione in fase di compilazione, usare una clausola di inizializzazione nel `Dim` istruzione. Seguire le [come](../../../../visual-basic/language-reference/statements/as-clause.md) clausola con un segno di uguale (`=`), seguita da un'espressione. Assicurarsi che il compilatore può valutare questa espressione a un valore costante.  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  

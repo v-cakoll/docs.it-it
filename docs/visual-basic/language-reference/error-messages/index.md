@@ -7,26 +7,26 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c326b781222429d68ec4385d95507a6ba99eafcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338137"
 ---
 # <a name="error-messages-visual-basic"></a>Messaggi di errore (Visual Basic)
 Quando si scrive, compila o esegue un'applicazione Visual Basic, possono verificarsi i tipi di errori seguenti:  
   
-1.  Errori in fase di progettazione, che si verificano quando si scrive un'applicazione in Visual Studio.  
+1. Errori in fase di progettazione, che si verificano quando si scrive un'applicazione in Visual Studio.  
   
-2.  Errori in fase di compilazione, che si verificano quando si compila un'applicazione in Visual Studio o da un prompt dei comandi.  
+2. Errori in fase di compilazione, che si verificano quando si compila un'applicazione in Visual Studio o da un prompt dei comandi.  
   
-3.  Errori di runtime, che si verificano quando si esegue un'applicazione in Visual Studio o come file eseguibile autonomo.  
+3. Errori di runtime, che si verificano quando si esegue un'applicazione in Visual Studio o come file eseguibile autonomo.  
   
  Per altre informazioni sulla risoluzione di problemi specifici, vedere [Risorse aggiuntive per i programmatori Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Errori di runtime  
- Se un'applicazione Visual Basic tenta di eseguire un'azione che non è possibile eseguire il sistema, si verifica un errore di run-time e Visual Basic genera un `Exception` oggetto. Visual Basic può generare errori personalizzati di tutti i dati digitare, tra cui `Exception` oggetti, usando il `Throw` istruzione. Un'applicazione può identificare l'errore visualizzando il numero e il messaggio di errore di un'eccezione rilevata. Se non viene rilevato alcun errore, l'applicazione termina.  
+ Se un'applicazione Visual Basic tenta di eseguire un'azione che non è possibile eseguire il sistema, si verifica un errore di run-time e Visual Basic genera un `Exception` oggetto. Visual Basic può generare errori personalizzati di qualsiasi dato digitare, tra cui `Exception` oggetti, tramite il `Throw` istruzione. Un'applicazione può identificare l'errore visualizzando il numero e il messaggio di errore di un'eccezione rilevata. Se non viene rilevato alcun errore, l'applicazione termina.  
   
  Il codice può intercettare e analizzare errori di runtime. Se si include il codice che genera l'errore in un blocco `Try`, è possibile rilevare qualsiasi errore generato all'interno di un blocco `Catch` corrispondente. Per informazioni su come intercettare gli errori di runtime e gestirli nel codice, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

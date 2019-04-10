@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342479"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Procedura: Creare form figlio MDI
 Form figlio MDI sono un elemento essenziale [le applicazioni di interfaccia a documenti multipli (MDI)](multiple-document-interface-mdi-applications.md), come il centro di interazione dell'utente sono elencati i moduli.  
@@ -26,17 +26,17 @@ Form figlio MDI sono un elemento essenziale [le applicazioni di interfaccia a do
   
 ### <a name="to-create-mdi-child-forms"></a>Per creare form figlio MDI  
   
-1.  Creare un nuovo progetto Windows Form. Nella **le proprietà di Windows** per il form, impostare relativo <xref:System.Windows.Forms.Form.IsMdiContainer%2A> proprietà `true`e il relativo `WindowsState` proprietà `Maximized`.  
+1. Creare un nuovo progetto Windows Form. Nella **le proprietà di Windows** per il form, impostare relativo <xref:System.Windows.Forms.Form.IsMdiContainer%2A> proprietà `true`e il relativo `WindowsState` proprietà `Maximized`.  
   
      Il form viene così designato come contenitore MDI per le finestre figlio.  
   
-2.  Dalla `Toolbox` trascinare un controllo <xref:System.Windows.Forms.MenuStrip> nel form. Impostare relativi `Text` proprietà **File**.  
+2. Dalla `Toolbox` trascinare un controllo <xref:System.Windows.Forms.MenuStrip> nel form. Impostare relativi `Text` proprietà **File**.  
   
-3.  Fare clic sui puntini di sospensione (...) accanto al **elementi** proprietà e fare clic su **Add** per aggiungere voci di menu ToolStrip figlio strumento due. Impostare il `Text` proprietà per questi elementi per **New** e **finestra**.  
+3. Fare clic sui puntini di sospensione (...) accanto al **elementi** proprietà e fare clic su **Add** per aggiungere voci di menu ToolStrip figlio strumento due. Impostare il `Text` proprietà per questi elementi per **New** e **finestra**.  
   
-4.  Nelle **Esplora soluzioni**, fare clic sul progetto, scegliere **Add**, quindi selezionare **Aggiungi nuovo elemento**.  
+4. Nelle **Esplora soluzioni**, fare clic sul progetto, scegliere **Add**, quindi selezionare **Aggiungi nuovo elemento**.  
   
-5.  Nel **Aggiungi nuovo elemento** finestra di dialogo **Windows Form** (in Visual Basic o Visual c#) o **Windows Forms Application (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) dal  **I modelli** riquadro. Nel **Name** casella, come nome del form **Form2**. Scegliere il **Open** pulsante per aggiungere il form al progetto.  
+5. Nel **Aggiungi nuovo elemento** finestra di dialogo **Windows Form** (in Visual Basic o Visual c#) o **Windows Forms Application (.NET)** (in [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) dal  **I modelli** riquadro. Nel **Name** casella, come nome del form **Form2**. Scegliere il **Open** pulsante per aggiungere il form al progetto.  
   
     > [!NOTE]
     >  Il form figlio MDI creato in questo passaggio è un Windows Form standard. Dispone pertanto di una proprietà <xref:System.Windows.Forms.Form.Opacity%2A> che consente di controllare la trasparenza del form. La proprietà <xref:System.Windows.Forms.Form.Opacity%2A>, tuttavia, è stata progettata per le finestre di primo livello. Per evitare problemi di disegno, non usarla con i form figlio MDI.  
@@ -45,13 +45,13 @@ Form figlio MDI sono un elemento essenziale [le applicazioni di interfaccia a do
   
      Il **finestra di progettazione Windows Form** visualizzata **Form2**.  
   
-6.  Dal **casella degli strumenti**, trascinare un **RichTextBox** controllo al form.  
+6. Dal **casella degli strumenti**, trascinare un **RichTextBox** controllo al form.  
   
-7.  Nel **proprietà** impostare nella finestra il `Anchor` proprietà **superiore sinistra** e la `Dock` proprietà **riempire**.  
+7. Nel **proprietà** impostare nella finestra il `Anchor` proprietà **superiore sinistra** e la `Dock` proprietà **riempire**.  
   
      In questo modo il controllo <xref:System.Windows.Forms.RichTextBox> riempirà completamente l'area del form figlio MDI, anche quando viene ridimensionato.  
   
-8.  Fare doppio clic il **New** voce di menu per creare un <xref:System.Windows.Forms.Control.Click> relativo gestore eventi.  
+8. Fare doppio clic il **New** voce di menu per creare un <xref:System.Windows.Forms.Control.Click> relativo gestore eventi.  
   
 9. Inserire codice simile al seguente per creare un nuovo form figlio MDI quando l'utente sceglie il **New** voce di menu.  
   

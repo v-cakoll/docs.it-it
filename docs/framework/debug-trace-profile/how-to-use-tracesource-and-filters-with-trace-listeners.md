@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d51092aebad340a7549acef248d009518314505d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6805385ec21deb8748354647ab0f09b3a51353fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338579"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procedura: Usare TraceSource e filtri con listener di traccia
 Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di traccia avanzato. Il sistema di base è invariato: i messaggi di traccia vengono inviati tramite commutatori ai listener, che inviano i dati a un supporto di output associato. Una delle differenze principali per la versione 2.0 è che le tracce possono essere avviate tramite istanze della classe <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> è progettata per operare come un sistema di traccia avanzato e può essere usato al posto dei metodi statici delle versioni precedenti <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> delle classi di traccia. Le classi note <xref:System.Diagnostics.Trace> e <xref:System.Diagnostics.Debug> esistono ancora, ma la procedura consigliata prevede l'uso della classe <xref:System.Diagnostics.TraceSource> per la traccia.  
@@ -30,7 +30,7 @@ Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di tr
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>Per creare e inizializzare l'origine di traccia  
   
-1.  Il primo passaggio per la strumentazione di un'applicazione con la traccia consiste nel creare un'origine di traccia. Nei progetti di grandi dimensioni con vari componenti, è possibile creare un'origine di traccia separata per ogni componente. La procedura consigliata consiste nell'usare il nome dell'applicazione per il nome dell'origine di traccia, in modo che sia più semplice mantenere separate le diverse tracce. Il codice seguente crea una nuova origine di traccia (`mySource)`) e chiama un metodo (`Activity1`) che analizza gli eventi.  I messaggi di traccia vengono scritti dal listener di traccia predefinito.  
+1. Il primo passaggio per la strumentazione di un'applicazione con la traccia consiste nel creare un'origine di traccia. Nei progetti di grandi dimensioni con vari componenti, è possibile creare un'origine di traccia separata per ogni componente. La procedura consigliata consiste nell'usare il nome dell'applicazione per il nome dell'origine di traccia, in modo che sia più semplice mantenere separate le diverse tracce. Il codice seguente crea una nuova origine di traccia (`mySource)`) e chiama un metodo (`Activity1`) che analizza gli eventi.  I messaggi di traccia vengono scritti dal listener di traccia predefinito.  
   
     ```csharp
     using System;  
@@ -62,7 +62,7 @@ Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di tr
   
 ### <a name="to-create-and-initialize-trace-listeners-and-filters"></a>Per creare e inizializzare listener di traccia e filtri  
   
-1.  Il codice nella prima procedura non identifica alcun listener di traccia o filtro a livello di codice. Con questo codice i messaggi di traccia vengono scritti semplicemente nel listener di traccia predefinito. Per configurare listener di traccia specifici e i relativi filtri associati, modificare il file di configurazione corrispondente al nome dell'applicazione. In questo file, è possibile aggiungere o rimuovere un listener, impostare le proprietà e il filtro per un listener o rimuovere i listener. L'esempio di file di configurazione seguente mostra come inizializzare un listener di traccia della console e un listener di traccia del writer di testo per l'origine di traccia creata nella procedura precedente. Oltre alla configurazione dei listener di traccia, il file di configurazione crea filtri per entrambi i listener nonché un'opzione di origine per l'origine di traccia. Per l'aggiunta dei listener di analisi sono illustrate due tecniche: aggiunta del listener direttamente nell'origine di analisi e aggiunta di un listener alla raccolta dei listener condivisi e quindi aggiunta di quest'ultimo in base al nome all'origine di analisi. I filtri identificati per i due listener vengono inizializzati con livelli di origine differenti. Di conseguenza, alcuni messaggi vengono scritti da uno solo dei due listener.  
+1. Il codice nella prima procedura non identifica alcun listener di traccia o filtro a livello di codice. Con questo codice i messaggi di traccia vengono scritti semplicemente nel listener di traccia predefinito. Per configurare listener di traccia specifici e i relativi filtri associati, modificare il file di configurazione corrispondente al nome dell'applicazione. In questo file, è possibile aggiungere o rimuovere un listener, impostare le proprietà e il filtro per un listener o rimuovere i listener. L'esempio di file di configurazione seguente mostra come inizializzare un listener di traccia della console e un listener di traccia del writer di testo per l'origine di traccia creata nella procedura precedente. Oltre alla configurazione dei listener di traccia, il file di configurazione crea filtri per entrambi i listener nonché un'opzione di origine per l'origine di traccia. Per l'aggiunta dei listener di analisi sono illustrate due tecniche: aggiunta del listener direttamente nell'origine di analisi e aggiunta di un listener alla raccolta dei listener condivisi e quindi aggiunta di quest'ultimo in base al nome all'origine di analisi. I filtri identificati per i due listener vengono inizializzati con livelli di origine differenti. Di conseguenza, alcuni messaggi vengono scritti da uno solo dei due listener.  
   
     ```xml  
     <configuration>  
@@ -99,7 +99,7 @@ Una delle nuove funzionalità di .NET Framework versione 2.0 è un sistema di tr
   
 ### <a name="to-change-the-level-at-which-a-listener-writes-a-trace-message"></a>Per modificare il livello in cui un listener scrive un messaggio di traccia  
   
-1.  Il file di configurazione inizializza le impostazioni dell'origine di traccia nel momento in cui l'applicazione viene inizializzata. Per modificare queste impostazioni, è necessario modificare il file di configurazione e riavviare l'applicazione o aggiornare l'applicazione a livello di codice usando il metodo <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>. L'applicazione può modificare dinamicamente le proprietà impostate dal file di configurazione per eseguire l'override delle eventuali impostazioni specificate dall'utente.  È possibile, ad esempio, assicurarsi che i messaggi critici vengano sempre inviati a un file di testo, indipendentemente dalle impostazioni di configurazione correnti.  
+1. Il file di configurazione inizializza le impostazioni dell'origine di traccia nel momento in cui l'applicazione viene inizializzata. Per modificare queste impostazioni, è necessario modificare il file di configurazione e riavviare l'applicazione o aggiornare l'applicazione a livello di codice usando il metodo <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>. L'applicazione può modificare dinamicamente le proprietà impostate dal file di configurazione per eseguire l'override delle eventuali impostazioni specificate dall'utente.  È possibile, ad esempio, assicurarsi che i messaggi critici vengano sempre inviati a un file di testo, indipendentemente dalle impostazioni di configurazione correnti.  
   
     ```csharp
     using System;  

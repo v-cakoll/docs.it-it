@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335320"
 ---
 # <a name="the-ink-threading-model"></a>Modello di threading dell'input penna
 Uno dei vantaggi dell'input penna su un Tablet PC è che presenta notevoli analogie con la scrittura con una carta e penna regolare.  A tale scopo, la penna del tablet PC raccoglie i dati di input con una frequenza molto più elevato rispetto a un mouse ed esegue il rendering dell'input penna mentre l'utente scrive.  Thread dell'interfaccia utente dell'applicazione non è sufficiente per la raccolta dei dati della penna e rendering di input penna, perché può essere bloccato.  Per risolvere il problema, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione utilizza due thread aggiuntivi quando l'utente scrive tramite input penna.  
@@ -38,7 +38,7 @@ Uno dei vantaggi dell'input penna su un Tablet PC è che presenta notevoli analo
   
  ![Modello di threading nel disegno di un tratto. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Azioni che si verificano mentre l'utente lo disegna  
+1. Azioni che si verificano mentre l'utente lo disegna  
   
     1.  Quando l'utente consente di disegnare un tratto, i punti dello stilo sono disponibili in sul thread di penna.  Plug-in dello stilo, tra cui il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, accettare i punti dello stilo sul thread di penna e ha la possibilità di modificarli prima di <xref:System.Windows.Controls.InkCanvas> li riceve.  
   
@@ -46,7 +46,7 @@ Uno dei vantaggi dell'input penna su un Tablet PC è che presenta notevoli analo
   
     3.  Il <xref:System.Windows.Controls.InkCanvas> riceve i punti dello stilo sul thread UI.  
   
-2.  Azioni che si verificano dopo che l'utente termina il tratto  
+2. Azioni che si verificano dopo che l'utente termina il tratto  
   
     1.  Quando l'utente completa il disegno del tratto, la <xref:System.Windows.Controls.InkCanvas> crea un' <xref:System.Windows.Ink.Stroke> dell'oggetto e lo aggiunge al <xref:System.Windows.Controls.InkPresenter>, che in modo statico ne esegue il rendering.  
   
@@ -61,13 +61,13 @@ Uno dei vantaggi dell'input penna su un Tablet PC è che presenta notevoli analo
   
  Nel diagramma precedente, il comportamento seguente viene eseguita:  
   
-1.  `StylusPlugin1` Modifica i valori per x e y.  
+1. `StylusPlugin1` Modifica i valori per x e y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> riceve i punti dello stilo modificato e ne esegue il rendering nel thread di rendering dinamico.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> riceve i punti dello stilo modificato e ne esegue il rendering nel thread di rendering dinamico.  
   
-3.  `StylusPlugin2` riceve i punti dello stilo modificato e ulteriore modifica i valori per x e y.  
+3. `StylusPlugin2` riceve i punti dello stilo modificato e ulteriore modifica i valori per x e y.  
   
-4.  L'applicazione raccoglie i punti dello stilo e, quando l'utente completa del tratto, in modo statico viene eseguito il rendering del tratto.  
+4. L'applicazione raccoglie i punti dello stilo e, quando l'utente completa del tratto, in modo statico viene eseguito il rendering del tratto.  
   
  Si supponga che `stylusPlugin1` limita i punti dello stilo a un rettangolo e `stylusPlugin2` converte i punti dello stilo a destra.  Nello scenario precedente, il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> riceve i punti dello stilo limitato, ma non i punti dello stilo tradotti.  Quando l'utente lo disegna, entro i limiti del rettangolo di rendering del tratto, ma il tratto non sembra essere tradotto fino a quando l'utente solleva la penna.  
   
@@ -83,15 +83,15 @@ Uno dei vantaggi dell'input penna su un Tablet PC è che presenta notevoli analo
   
  ![Diagramma di threading dell'input penna](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  L'utente inizia il tratto.  
+1. L'utente inizia il tratto.  
   
     1.  Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> crea la struttura ad albero visuale.  
   
-2.  L'utente lo disegna il tratto.  
+2. L'utente lo disegna il tratto.  
   
     1.  Il <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> compila la struttura ad albero visuale.  
   
-3.  L'utente termina il tratto.  
+3. L'utente termina il tratto.  
   
     1.  Il <xref:System.Windows.Controls.InkPresenter> aggiunge il tratto alla relativa struttura ad albero visuale.  
   

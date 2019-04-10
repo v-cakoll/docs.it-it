@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335628"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Forms usando la finestra di progettazione
 Dati tabulari spesso sono presentati in un formato simile a di contabilità in cui le righe alterne hanno colori di sfondo diversi. Questo formato permette agli utenti di individuare più facilmente le celle di ogni riga, soprattutto nelle tabelle estese in larghezza con molte colonne.  
@@ -27,13 +27,13 @@ Dati tabulari spesso sono presentati in un formato simile a di contabilità in c
   
 ### <a name="define-styles-for-alternating-rows"></a>Definire gli stili per le righe alterne  
   
-1.  Selezionare il <xref:System.Windows.Forms.DataGridView> controllo nella finestra di progettazione.  
+1. Selezionare il <xref:System.Windows.Forms.DataGridView> controllo nella finestra di progettazione.  
   
-2.  Nel **delle proprietà** finestra, fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> proprietà.  
+2. Nel **delle proprietà** finestra, fare clic sul pulsante con puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> proprietà.  
   
-3.  Nel **Generatore CellStyle** finestra di dialogo, definire lo stile, impostando le proprietà e utilizzare il **anteprima** riquadro per confermare le scelte effettuate. Gli stili specificati vengono usati per tutte le altre righe visualizzata nel controllo, inizia con il secondo.  
+3. Nel **Generatore CellStyle** finestra di dialogo, definire lo stile, impostando le proprietà e utilizzare il **anteprima** riquadro per confermare le scelte effettuate. Gli stili specificati vengono usati per tutte le altre righe visualizzata nel controllo, inizia con il secondo.  
   
-4.  Per definire gli stili per le righe rimanenti, ripetere i passaggi 2 e 3 mediante il <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> proprietà.  
+4. Per definire gli stili per le righe rimanenti, ripetere i passaggi 2 e 3 mediante il <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> proprietà.  
   
     > [!NOTE]
     >  Le celle vengono visualizzate utilizzando gli stili ereditati da più proprietà. Per altre informazioni sull'ereditarietà degli stili, vedere [stili della cella nel controllo DataGridView Windows Form](cell-styles-in-the-windows-forms-datagridview-control.md).  

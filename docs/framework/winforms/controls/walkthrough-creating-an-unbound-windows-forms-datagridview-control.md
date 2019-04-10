@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343468"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Procedura dettagliata: Creazione di un controllo DataGridView di Windows Forms non associato
 Spesso è possibile visualizzare i dati in formato tabulare che provengono da un database. È possibile, ad esempio visualizzare il contenuto di una matrice di stringhe bidimensionale. Il <xref:System.Windows.Forms.DataGridView> classe fornisce un modo semplice e altamente personalizzabile per visualizzare i dati senza associazione a un'origine dati. Questa procedura dettagliata illustra come popolare un <xref:System.Windows.Forms.DataGridView> controllare e gestire l'aggiunta e l'eliminazione di righe in modalità "associata". Per impostazione predefinita, l'utente può aggiungere nuove righe. Per impedire l'aggiunta delle righe, impostare il <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> è di proprietà `false`.  
@@ -27,19 +27,19 @@ Spesso è possibile visualizzare i dati in formato tabulare che provengono da un
   
 #### <a name="to-use-an-unbound-datagridview-control"></a>Usare un controllo DataGridView non associato  
   
-1.  Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene le seguenti dichiarazioni di variabili e `Main` (metodo).  
+1. Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene le seguenti dichiarazioni di variabili e `Main` (metodo).  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  Implementare un `SetupLayout` metodo nella definizione di classe del form per impostare il layout del form.  
+2. Implementare un `SetupLayout` metodo nella definizione di classe del form per impostare il layout del form.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  Creare un `SetupDataGridView` metodo per impostare il <xref:System.Windows.Forms.DataGridView> colonne e le proprietà.  
+3. Creare un `SetupDataGridView` metodo per impostare il <xref:System.Windows.Forms.DataGridView> colonne e le proprietà.  
   
      Questo metodo aggiunge innanzitutto il <xref:System.Windows.Forms.DataGridView> controllo del modulo <xref:System.Windows.Forms.Control.Controls%2A> raccolta. Successivamente, il numero di colonne da visualizzare viene impostato utilizzando il <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> proprietà. Lo stile predefinito per le intestazioni di colonna è impostato, impostando il <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, e <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> le proprietà del <xref:System.Windows.Forms.DataGridViewCellStyle> restituito dal <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> proprietà.  
   
@@ -48,14 +48,14 @@ Spesso è possibile visualizzare i dati in formato tabulare che provengono da un
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  Creare un `PopulateDataGridView` metodo a cui aggiungere righe di <xref:System.Windows.Forms.DataGridView> controllo.  
+4. Creare un `PopulateDataGridView` metodo a cui aggiungere righe di <xref:System.Windows.Forms.DataGridView> controllo.  
   
      Ogni riga rappresenta una classe song e le informazioni associate.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  Con i metodi di utilità posto, è possibile collegare i gestori eventi.  
+5. Con i metodi di utilità posto, è possibile collegare i gestori eventi.  
   
      Verranno gestiti i **Add** e **eliminare** degli pulsanti <xref:System.Windows.Forms.Control.Click> eventi, il modulo <xref:System.Windows.Forms.Form.Load> evento e il <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.CellFormatting> evento.  
   

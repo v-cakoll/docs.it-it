@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160979"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335719"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Architettura di input per l'interoperabilità tra Windows Form e WPF
 Interoperatività tra il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] necessario dispongano di entrambe le tecnologie dell'elaborazione dell'input da tastiera appropriato. In questo argomento viene descritto come tali tecnologie implementano da tastiera e con elaborazione dei messaggi per consentire l'interoperabilità senza problemi in applicazioni ibride.  
@@ -57,13 +57,13 @@ Interoperatività tra il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
 ### <a name="surrogate-windows-forms-message-loop"></a>Ciclo di messaggi di surrogato Windows Form  
  Per impostazione predefinita, il <xref:System.Windows.Forms.Application?displayProperty=nameWithType> classe contiene il ciclo di messaggi principale per [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] applicazioni. Durante l'interoperabilità, la [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] messaggio ciclo non elabora i messaggi. Pertanto, questa logica deve essere riprodotti. Il gestore per il <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> evento esegue i passaggi seguenti:  
   
-1.  Filtra il messaggio usando la <xref:System.Windows.Forms.IMessageFilter> interfaccia.  
+1. Filtra il messaggio usando la <xref:System.Windows.Forms.IMessageFilter> interfaccia.  
   
-2.  Le chiamate di <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> (metodo).  
+2. Le chiamate di <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> (metodo).  
   
-3.  Converte e invia il messaggio, se necessario.  
+3. Converte e invia il messaggio, se necessario.  
   
-4.  Passa il messaggio al controllo host, se nessun altro controllo elabora il messaggio.  
+4. Passa il messaggio al controllo host, se nessun altro controllo elabora il messaggio.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>Implementazione IKeyboardInputSink  
  Il ciclo di messaggi di surrogati gestisce la gestione della tastiera. Pertanto, il <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> metodo è l'unico <xref:System.Windows.Interop.IKeyboardInputSink> membro che richiede un'implementazione nel <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe.  
@@ -72,11 +72,11 @@ Interoperatività tra il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
   
  Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> implementazione del <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> metodo esegue i passaggi seguenti:  
   
-1.  Trova il primo o ultimo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo contenuta il <xref:System.Windows.Forms.Integration.WindowsFormsHost> controllo e che può ricevere lo stato attivo. La scelta del controllo dipende dalle informazioni di attraversamento.  
+1. Trova il primo o ultimo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo contenuta il <xref:System.Windows.Forms.Integration.WindowsFormsHost> controllo e che può ricevere lo stato attivo. La scelta del controllo dipende dalle informazioni di attraversamento.  
   
-2.  Imposta lo stato attivo al controllo e restituisce `true`.  
+2. Imposta lo stato attivo al controllo e restituisce `true`.  
   
-3.  Se nessun controllo può ricevere lo stato attivo, restituisce `false`.  
+3. Se nessun controllo può ricevere lo stato attivo, restituisce `false`.  
   
 ### <a name="windowsformshost-registration"></a>Registrazione WindowsFormsHost  
  Quando l'handle della finestra per un <xref:System.Windows.Forms.Integration.WindowsFormsHost> controllo viene creato, il <xref:System.Windows.Forms.Integration.WindowsFormsHost> controllo chiama un metodo statico interno che registra la propria presenza per il ciclo di messaggi.  

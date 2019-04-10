@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: ca505b062be8c60c1dd9b08fead4855eb1eb4cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103844"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342461"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Procedura dettagliata: Uso del controllo MaskedTextBox
 Le attività illustrate nella procedura dettagliata sono le seguenti:  
@@ -31,15 +31,15 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Per aggiungere un controllo MaskedTextBox al form  
   
-1.  Aprire il form in cui si desidera posizionare la <xref:System.Windows.Forms.MaskedTextBox> controllo.  
+1. Aprire il form in cui si desidera posizionare la <xref:System.Windows.Forms.MaskedTextBox> controllo.  
   
-2.  Trascinare un <xref:System.Windows.Forms.MaskedTextBox> controllare dal **casella degli strumenti** al form.  
+2. Trascinare un <xref:System.Windows.Forms.MaskedTextBox> controllare dal **casella degli strumenti** al form.  
   
-3.  Il pulsante destro del controllo e scegliere **proprietà**. Nel **delle proprietà** finestra, seleziona la **maschera** proprietà e fare clic sul **...**  pulsante (puntini di sospensione) accanto al nome della proprietà.  
+3. Il pulsante destro del controllo e scegliere **proprietà**. Nel **delle proprietà** finestra, seleziona la **maschera** proprietà e fare clic sul **...**  pulsante (puntini di sospensione) accanto al nome della proprietà.  
   
-4.  Nel **maschera di Input** finestra di dialogo, seleziona la **data breve** mask e fare clic su **OK**.  
+4. Nel **maschera di Input** finestra di dialogo, seleziona la **data breve** mask e fare clic su **OK**.  
   
-5.  Nel **delle proprietà** set finestra la <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> proprietà `true`. Questa proprietà fa sì che un breve segnale acustico ogni volta che l'utente prova a un carattere che viola la definizione della maschera di input.  
+5. Nel **delle proprietà** set finestra la <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> proprietà `true`. Questa proprietà fa sì che un breve segnale acustico ogni volta che l'utente prova a un carattere che viola la definizione della maschera di input.  
   
  Per un riepilogo dei caratteri che supporta la proprietà Mask, vedere la sezione Osservazioni del <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà.  
   
@@ -47,9 +47,9 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
   
 #### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Aggiungere una descrizione comandi per l'input mask rifiutati  
   
-1.  Tornare al **casella degli strumenti** e aggiungere un <xref:System.Windows.Forms.ToolTip> al form.  
+1. Tornare al **casella degli strumenti** e aggiungere un <xref:System.Windows.Forms.ToolTip> al form.  
   
-2.  Creare un gestore eventi per il <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> evento che genera il <xref:System.Windows.Forms.ToolTip> quando si verifica un errore di input. Il fumetto suggerimento rimane visibile per cinque secondi o fino a quando non viene selezionato dall'utente.  
+2. Creare un gestore eventi per il <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> evento che genera il <xref:System.Windows.Forms.ToolTip> quando si verifica un errore di input. Il fumetto suggerimento rimane visibile per cinque secondi o fino a quando non viene selezionato dall'utente.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,7 +82,7 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
   
 #### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Aggiungere una descrizione comandi per tipi di dati non valido  
   
-1.  Il modulo <xref:System.Windows.Forms.Form.Load> gestore eventi, assegnare un <xref:System.Type> oggetto che rappresenta il <xref:System.DateTime> digitare per il <xref:System.Windows.Forms.MaskedTextBox> del controllo <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> proprietà:  
+1. Il modulo <xref:System.Windows.Forms.Form.Load> gestore eventi, assegnare un <xref:System.Type> oggetto che rappresenta il <xref:System.DateTime> digitare per il <xref:System.Windows.Forms.MaskedTextBox> del controllo <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> proprietà:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ Le attività illustrate nella procedura dettagliata sono le seguenti:
     End Sub  
     ```  
   
-2.  Aggiungere un gestore eventi per l'evento <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>:  
+2. Aggiungere un gestore eventi per l'evento <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>:  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  

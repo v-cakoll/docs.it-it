@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342232"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Procedura: Associare dati al controllo MaskedTextBox
 È possibile associare dati a un <xref:System.Windows.Forms.MaskedTextBox> controllare esattamente come per qualsiasi altro controllo Windows Form. Tuttavia, se il formato dei dati nel database non corrisponde al formato previsto dalla definizione della maschera, è necessario riformattare i dati. La procedura seguente viene illustrato come eseguire questa operazione usando il <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventi del <xref:System.Windows.Forms.Binding> classe per visualizzare il numero di telefono separati e phone campi di estensione database in un solo campo modificabile.  
@@ -24,15 +24,15 @@ ms.locfileid: "59090602"
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Per associare dati a un controllo MaskedTextBox  
   
-1.  Creare un nuovo progetto Windows Form.  
+1. Creare un nuovo progetto Windows Form.  
   
-2.  Trascinare due <xref:System.Windows.Forms.TextBox> controlli nel form; denominarle `FirstName` e `LastName`.  
+2. Trascinare due <xref:System.Windows.Forms.TextBox> controlli nel form; denominarle `FirstName` e `LastName`.  
   
-3.  Trascinare un <xref:System.Windows.Forms.MaskedTextBox> controllo nel form; denominarlo `PhoneMask`.  
+3. Trascinare un <xref:System.Windows.Forms.MaskedTextBox> controllo nel form; denominarlo `PhoneMask`.  
   
-4.  Impostare il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà di `PhoneMask` a `(000) 000-0000 x9999`.  
+4. Impostare il <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> proprietà di `PhoneMask` a `(000) 000-0000 x9999`.  
   
-5.  Aggiungere che lo spazio dei nomi seguente importa il modulo.  
+5. Aggiungere che lo spazio dei nomi seguente importa il modulo.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "59090602"
     Imports System.Data.SqlClient  
     ```  
   
-6.  Fare clic sulla forma e scegliere **Visualizza codice**. Questo codice viene inserito in un punto qualsiasi nella classe del form.  
+6. Fare clic sulla forma e scegliere **Visualizza codice**. Questo codice viene inserito in un punto qualsiasi nella classe del form.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "59090602"
     End Sub  
     ```  
   
-7.  Aggiungere gestori eventi per il <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventi da combinare e separare le `PhoneNumber` e `Extension` campi dal limite <xref:System.Data.DataSet>.  
+7. Aggiungere gestori eventi per il <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventi da combinare e separare le `PhoneNumber` e `Extension` campi dal limite <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "59090602"
     End Sub  
     ```  
   
-8.  Aggiungere due <xref:System.Windows.Forms.Button> controlli al form. Denominarle `previousButton` e `nextButton`. Fare doppio clic su ogni pulsante per aggiungere un <xref:System.Windows.Forms.Control.Click> gestore dell'evento e inserire i gestori eventi, come illustrato nell'esempio di codice seguente.  
+8. Aggiungere due <xref:System.Windows.Forms.Button> controlli al form. Denominarle `previousButton` e `nextButton`. Fare doppio clic su ogni pulsante per aggiungere un <xref:System.Windows.Forms.Control.Click> gestore dell'evento e inserire i gestori eventi, come illustrato nell'esempio di codice seguente.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

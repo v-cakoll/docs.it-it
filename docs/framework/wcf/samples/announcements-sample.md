@@ -2,12 +2,12 @@
 title: Esempio di annunci
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094554"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333977"
 ---
 # <a name="announcements-sample"></a>Esempio di annunci
 In questo esempio viene illustrato come utilizzare la funzionalità degli annunci della funzionalità di individuazione. Gli annunci consentono ai servizi di inviare messaggi di annuncio contenenti i metadati relativi al servizio. Per impostazione predefinita, viene inviato un annuncio Hello all'avvio del servizio e un annuncio Bye all'arresto del servizio. Questi annunci possono essere trasmessi tramite multicast oppure inviati da punto a punto. Questo esempio è costituito da due progetti, ovvero il servizio e il client.  
@@ -68,15 +68,15 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>Per usare questo esempio  
   
-1.  In questo esempio utilizza endpoint HTTP e per eseguire questo esempio, corretto elenchi ACL URL devono essere aggiunte vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate. L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. In questo esempio utilizza endpoint HTTP e per eseguire questo esempio, corretto elenchi ACL URL devono essere aggiunte vedere [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) per informazioni dettagliate. L'esecuzione del comando seguente con privilegi elevati consente di aggiungere gli elenchi di controllo di accesso appropriati. È possibile che si desideri sostituire il dominio e il nome utente per gli argomenti seguenti quando il comando non funziona nella forma originale. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Compilare la soluzione.  
+2. Compilare la soluzione.  
   
-3.  Eseguire l'applicazione client.exe.  
+3. Eseguire l'applicazione client.exe.  
   
-4.  Eseguire l'applicazione service.exe. Si noti che il client riceve un annuncio online.  
+4. Eseguire l'applicazione service.exe. Si noti che il client riceve un annuncio online.  
   
-5.  Chiudere l'applicazione service.exe. Si noti che il client riceve un annuncio offline.  
+5. Chiudere l'applicazione service.exe. Si noti che il client riceve un annuncio offline.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

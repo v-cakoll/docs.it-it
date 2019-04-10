@@ -2,12 +2,12 @@
 title: "Procedura: Scrivere un'estensione per ServiceContractGenerator"
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 104f65f76429701dbf02c1c7a5d737e50b080394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340620"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Procedura: Scrivere un'estensione per ServiceContractGenerator
 In questo argomento viene illustrato come scrivere un'estensione per la classe <xref:System.ServiceModel.Description.ServiceContractGenerator>. A tal fine è necessario implementare l'interfaccia <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> su un comportamento di operazione oppure l'interfaccia <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> su un comportamento di contratto. In questo argomento viene illustrato come implementare l'interfaccia <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> in un comportamento di contratto.  
@@ -16,7 +16,7 @@ In questo argomento viene illustrato come scrivere un'estensione per la classe <
   
 ### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>Scrivere un'estensione per ServiceContractGenerator  
   
-1.  Implementare <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Per modificare il contratto di servizio generato, utilizzare l'istanza <xref:System.ServiceModel.Description.ServiceContractGenerationContext> passata nel metodo <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>.  
+1. Implementare <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Per modificare il contratto di servizio generato, utilizzare l'istanza <xref:System.ServiceModel.Description.ServiceContractGenerationContext> passata nel metodo <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29>.  
   
     ```  
     public void GenerateContract(ServiceContractGenerationContext context)  
@@ -26,7 +26,7 @@ In questo argomento viene illustrato come scrivere un'estensione per la classe <
     }  
     ```  
   
-2.  Implementare <xref:System.ServiceModel.Description.IWsdlImportExtension> nella stessa classe. Il metodo <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> consente di elaborare un'estensione WSDL specifica (annotazioni WSDL in questo caso) mediante l'aggiunta di un'estensione di generazione del codice all'istanza <xref:System.ServiceModel.Description.ContractDescription> importata.  
+2. Implementare <xref:System.ServiceModel.Description.IWsdlImportExtension> nella stessa classe. Il metodo <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> consente di elaborare un'estensione WSDL specifica (annotazioni WSDL in questo caso) mediante l'aggiunta di un'estensione di generazione del codice all'istanza <xref:System.ServiceModel.Description.ContractDescription> importata.  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -60,7 +60,7 @@ In questo argomento viene illustrato come scrivere un'estensione per la classe <
             }  
     ```  
   
-3.  Aggiungere l'unità di importazione WSDL alla configurazione del client.  
+3. Aggiungere l'unità di importazione WSDL alla configurazione del client.  
   
     ```xml  
     <metadata>  
@@ -70,7 +70,7 @@ In questo argomento viene illustrato come scrivere un'estensione per la classe <
     </metadata>  
     ```  
   
-4.  Nel codice client creare `MetadataExchangeClient` e chiamare `GetMetadata`.  
+4. Nel codice client creare `MetadataExchangeClient` e chiamare `GetMetadata`.  
   
     ```  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
@@ -78,13 +78,13 @@ In questo argomento viene illustrato come scrivere un'estensione per la classe <
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
-5.  Creare un `WsdlImporter` e chiamare `ImportAllContracts`.  
+5. Creare un `WsdlImporter` e chiamare `ImportAllContracts`.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-6.  Creare `ServiceContractGenerator` e chiamare `GenerateServiceContractType` per ogni contratto.  
+6. Creare `ServiceContractGenerator` e chiamare `GenerateServiceContractType` per ogni contratto.  
   
     ```  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
@@ -96,7 +96,7 @@ In questo argomento viene illustrato come scrivere un'estensione per la classe <
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> viene chiamato automaticamente per ogni comportamento del contratto in un determinato contratto che implementa <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Questo metodo può quindi modificare l'oggetto <xref:System.ServiceModel.Description.ServiceContractGenerationContext> passato. In questo esempio vengono aggiunti commenti.  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> viene chiamato automaticamente per ogni comportamento del contratto in un determinato contratto che implementa <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>. Questo metodo può quindi modificare l'oggetto <xref:System.ServiceModel.Description.ServiceContractGenerationContext> passato. In questo esempio vengono aggiunti commenti.  
   
 ## <a name="see-also"></a>Vedere anche
 

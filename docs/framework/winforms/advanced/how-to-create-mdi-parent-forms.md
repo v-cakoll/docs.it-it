@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216314"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338657"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Procedura: Creare form padre MDI
 > [!IMPORTANT]
@@ -20,20 +20,20 @@ ms.locfileid: "59216314"
   
 ### <a name="to-create-an-mdi-parent-form-at-design-time"></a>Per creare un form padre MDI in fase di progettazione  
   
-1.  Creare un progetto Applicazione Windows.  
+1. Creare un progetto Applicazione Windows.  
   
-2.  Nel **le proprietà** impostare nella finestra di <xref:System.Windows.Forms.Form.IsMdiContainer%2A> proprietà **true**.  
+2. Nel **le proprietà** impostare nella finestra di <xref:System.Windows.Forms.Form.IsMdiContainer%2A> proprietà **true**.  
   
      Il form viene così designato come contenitore MDI per le finestre figlio.  
   
     > [!NOTE]
     >  Quando si impostano le proprietà nella finestra **Proprietà**, se si vuole è anche possibile impostare la proprietà `WindowState` su **Ingrandita** per semplificare la modifica delle finestre figlio MDI ingrandendo il form padre. Inoltre, tenere presente che il bordo del form padre MDI applica il colore del sistema (impostato nel Pannello di controllo del sistema Windows) e non il colore di sfondo impostato con la proprietà <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType>.  
   
-3.  Dalla **Casella degli strumenti** trascinare un controllo **MenuStrip** nel form. Creare una voce di menu di primo livello con la proprietà **Testo** impostata su **&File** con voci di sottomenu chiamate **&Nuovo** e **&Chiudi**. Creare anche una voce di menu di primo livello chiamata **&Finestra**.  
+3. Dalla **Casella degli strumenti** trascinare un controllo **MenuStrip** nel form. Creare una voce di menu di primo livello con la proprietà **Testo** impostata su **&File** con voci di sottomenu chiamate **&Nuovo** e **&Chiudi**. Creare anche una voce di menu di primo livello chiamata **&Finestra**.  
   
      Il primo menu crea e nasconde le voci di menu al runtime, mentre il secondo tiene traccia delle finestre figlio MDI aperte. A questo punto è stata creata una finestra padre MDI.  
   
-4.  Premere **F5** per eseguire l'applicazione. Per informazioni sulla creazione di finestre usate all'interno del form padre MDI figlio MDI, vedere [come: Creare form figlio MDI](how-to-create-mdi-child-forms.md).  
+4. Premere **F5** per eseguire l'applicazione. Per informazioni sulla creazione di finestre usate all'interno del form padre MDI figlio MDI, vedere [come: Creare form figlio MDI](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

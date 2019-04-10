@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823493"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338566"
 ---
 # <a name="option-infer-statement"></a>Option Infer (istruzione)
 Abilita l'uso dell'inferenza del tipo di variabile locale nelle variabili dichiaranti.  
@@ -63,11 +63,11 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Per impostare Option Infer nell'IDE  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.  
   
-2.  Fare clic sulla scheda **Compila**.  
+2. Fare clic sulla scheda **Compila**.  
   
-3.  Impostare il valore di **Option infer** casella.  
+3. Impostare il valore di **Option infer** casella.  
   
  Quando si crea un nuovo progetto, il **Option Infer** impostazione nel **compilare** scheda è impostata sul **Option Infer** impostazione nel **valore predefinito è VB** finestra di dialogo. Per l'accesso di **valore predefinito è VB** finestra di dialogo il **strumenti** dal menu fare clic su **opzioni**. Nella finestra di dialogo **Opzioni** espandere **Progetti e soluzioni**, quindi fare clic su **Impostazioni predefinite di Visual Basic**. L'impostazione predefinita iniziale in **le impostazioni predefinite di Visual Basic** è `On`.  
   
@@ -101,7 +101,7 @@ Option Infer { On | Off }
 - [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
 - [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Impostazioni predefinite di Visual Basic, Progetti, finestra di dialogo Opzioni](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

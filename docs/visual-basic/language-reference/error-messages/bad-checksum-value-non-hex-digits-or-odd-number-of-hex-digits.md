@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 211f07e7c9dbc7e0583272d46c493ad99628d283
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340308"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Valore checksum non valido. Cifre esadecimali non presenti o in numero dispari
 Un valore di checksum include cifre esadecimali non valide o un numero di cifre dispari.  
@@ -25,13 +25,13 @@ Un valore di checksum include cifre esadecimali non valide o un numero di cifre 
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Se il file di origine Visual Basic viene generato da ASP.NET, riavviare la compilazione del progetto.  
+1. Se il file di origine Visual Basic viene generato da ASP.NET, riavviare la compilazione del progetto.  
   
-2.  Se l'avviso persiste dopo il riavvio, reinstallare ASP.NET e riprovare a eseguire la compilazione.  
+2. Se l'avviso persiste dopo il riavvio, reinstallare ASP.NET e riprovare a eseguire la compilazione.  
   
-3.  Se l'avviso persiste ancora o non si usa ASP.NET, raccogliere informazioni sulla situazione contingente e informare il Servizio Supporto Tecnico Clienti Microsoft.  
+3. Se l'avviso persiste ancora o non si usa ASP.NET, raccogliere informazioni sulla situazione contingente e informare il Servizio Supporto Tecnico Clienti Microsoft.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica di ASP.NET](/aspnet/overview)
-- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

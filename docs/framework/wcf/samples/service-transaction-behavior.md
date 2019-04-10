@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183638"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339944"
 ---
 # <a name="service-transaction-behavior"></a>Comportamento delle transazioni di un servizio
 In questo esempio vengono illustrati l'uso di una transazione coordinata dal client e le impostazioni di ServiceBehaviorAttribute e OperationBehaviorAttribute per controllare il comportamento delle transazioni di un servizio. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) che implementa un servizio Calcolatrice, ma è stato esteso per mantenere un registro sul server delle operazioni eseguite in una tabella di database e un totale per le operazioni della calcolatrice parziale con stato. Le scritture rese permanenti nella tabella del registro sul server dipendono dal risultato di una transazione coordinata dal client: se la transazione client non viene completata, la transazione del servizio Web assicura che non venga eseguito il commit degli aggiornamenti al database.  
@@ -206,17 +206,17 @@ Creating new service instance...
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Verificare di avere installato SQL Server 2005 Express Edition o SQL Server 2005. Nel file App.config del servizio, può essere impostato il database `connectionString` oppure le interazioni del database possono essere disabilitate impostando il valore `usingSql` di appSettings su `false`.  
+1. Verificare di avere installato SQL Server 2005 Express Edition o SQL Server 2005. Nel file App.config del servizio, può essere impostato il database `connectionString` oppure le interazioni del database possono essere disabilitate impostando il valore `usingSql` di appSettings su `false`.  
   
-2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
  Se si esegue l'esempio tra più computer, è necessario configurare il Microsoft Distributed Transaction Coordinator (MSDTC) per abilitare il flusso delle transazioni di rete e utilizzare lo strumento WsatConfig.exe per abilitare la rete per le transazioni Windows Communication Foundation (WCF) supporto tecnico.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Per configurare Microsoft Distributed Transaction Coordinator (MSDTC) allo scopo di supportare l'esecuzione dell'esempio tra diversi computer  
   
-1.  Nel computer del servizio configurare MSDTC per consentire le transazioni di rete in ingresso.  
+1. Nel computer del servizio configurare MSDTC per consentire le transazioni di rete in ingresso.  
   
     1.  Dal **avviare** menu, passare alla **Pannello di controllo**, quindi **strumenti di amministrazione**e quindi **Servizi componenti**.  
   
@@ -230,7 +230,7 @@ Creating new service instance...
   
     6.  Fare clic su **OK** per chiudere la finestra di dialogo.  
   
-2.  Nel computer del servizio e nel computer client configurare Windows Firewall per includere Microsoft Distributed Transaction Coordinator (MSDTC) nell'elenco delle applicazioni accettate:  
+2. Nel computer del servizio e nel computer client configurare Windows Firewall per includere Microsoft Distributed Transaction Coordinator (MSDTC) nell'elenco delle applicazioni accettate:  
   
     1.  Eseguire l'applicazione Windows Firewall dal Pannello di controllo.  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  Fare clic su **OK** per chiudere la **Aggiungi programma** la finestra di dialogo e fare clic su **OK** per chiudere l'applet Windows Firewall.  
   
-3.  Nel computer client configurare MSDTC per consentire le transazioni di rete in uscita.  
+3. Nel computer client configurare MSDTC per consentire le transazioni di rete in uscita.  
   
     1.  Dal **avviare** menu, passare alla **Pannello di controllo**, quindi **strumenti di amministrazione**e quindi **Servizi componenti**.  
   

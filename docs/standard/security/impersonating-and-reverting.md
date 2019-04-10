@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6ce153d52f9142801a7cdc7bb2e6a1770ab0b69
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338410"
 ---
 # <a name="impersonating-and-reverting"></a>Rappresentazione e ripristino
 Talvolta può essere necessario ottenere un token di account Windows per rappresentare un account Windows. Può essere necessario, ad esempio, che l'applicazione basata su ASP.NET agisca per conto di più utenti in momenti diversi. L'applicazione potrebbe accettare un token che rappresenta un amministratore da Internet Information Services (IIS), rappresentare tale utente, eseguire un'operazione e ripristinare l'identità precedente. In seguito potrebbe accettare un token da IIS che rappresenta un utente con meno diritti, eseguire un'operazione e di nuovo il ripristino.  
   
  Nelle situazioni in cui l'applicazione deve rappresentare un account Windows che non è stato associato al thread corrente da IIS, è necessario recuperare il token di tale account e usarlo per attivare l'account. A tale scopo, è possibile eseguire queste attività:  
   
-1.  Recuperare un token di un account per un particolare utente eseguendo una chiamata al metodo **LogonUser** non gestito. Questo metodo non si trova nella libreria di classi base di .NET Framework, ma nel file **advapi32.dll** non gestito. L'accesso ai metodi nel codice non gestito è un'operazione avanzata che non rientra nell'ambito di questo argomento. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md). Per altre informazioni sul metodo **LogonUser** e su **advapi32.dll**, vedere la documentazione di Platform SDK.  
+1. Recuperare un token di un account per un particolare utente eseguendo una chiamata al metodo **LogonUser** non gestito. Questo metodo non si trova nella libreria di classi base di .NET Framework, ma nel file **advapi32.dll** non gestito. L'accesso ai metodi nel codice non gestito è un'operazione avanzata che non rientra nell'ambito di questo argomento. Per altre informazioni, vedere [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md). Per altre informazioni sul metodo **LogonUser** e su **advapi32.dll**, vedere la documentazione di Platform SDK.  
   
-2.  Creare una nuova istanza della classe **WindowsIdentity**, passando il token. Il codice seguente illustra questa chiamata, dove `hToken` rappresenta un token di Windows.  
+2. Creare una nuova istanza della classe **WindowsIdentity**, passando il token. Il codice seguente illustra questa chiamata, dove `hToken` rappresenta un token di Windows.  
   
     ```csharp  
     WindowsIdentity impersonatedIdentity = new WindowsIdentity(hToken);  
@@ -36,7 +36,7 @@ Talvolta può essere necessario ottenere un token di account Windows per rappres
     Dim impersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Iniziare la rappresentazione creando una nuova istanza della classe <xref:System.Security.Principal.WindowsImpersonationContext> e inizializzandola con il metodo <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> della classe inizializzata, come mostrato nel codice seguente.  
+3. Iniziare la rappresentazione creando una nuova istanza della classe <xref:System.Security.Principal.WindowsImpersonationContext> e inizializzandola con il metodo <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> della classe inizializzata, come mostrato nel codice seguente.  
   
     ```csharp  
     WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate();  
@@ -46,7 +46,7 @@ Talvolta può essere necessario ottenere un token di account Windows per rappres
     WindowsImpersonationContext myImpersonation = impersonatedIdentity.Impersonate()  
     ```  
   
-4.  Quando la rappresentazione non è più necessaria, chiamare il metodo <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> per ripristinare la rappresentazione, come mostrato nel codice seguente.  
+4. Quando la rappresentazione non è più necessaria, chiamare il metodo <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> per ripristinare la rappresentazione, come mostrato nel codice seguente.  
   
     ```csharp  
     myImpersonation.Undo();  
