@@ -2,12 +2,12 @@
 title: Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172523"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Mapping fra gli endpoint di servizio e l'indirizzamento delle code
 Questo argomento descrive come i client indirizzano i servizi che leggono da code e il mapping fra gli endpoint di servizio e le code. Come promemoria, la figura seguente illustra il modello di distribuzione classica di Windows Communication Foundation (WCF) in coda la distribuzione di applicazioni.  
@@ -105,4 +105,5 @@ Questo argomento descrive come i client indirizzano i servizi che leggono da cod
  Si noti che non è possibile utilizzare l'indirizzamento net.msmq:// con l'associazione `MsmqIntegrationBinding`. Poiché `MsmqIntegrationBinding` supporta Freeform formato nome indirizzamento di MSMQ, è possibile usare un servizio WCF che usa questa associazione per l'uso di funzionalità dell'elenco di distribuzione e il multicast in MSMQ. Un'eccezione è la specifica dell'elemento `CustomDeadLetterQueue` quando si utilizza l'associazione `MsmqIntegrationBinding`. Analogamente al caso di specifica dell'elemento quando si utilizza l'associazione `NetMsmqBinding`, tale elemento deve presentare il formato net.msmq://.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Hosting Web di un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+
+- [Sito Web che ospita un'applicazione in coda](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114270"
 ---
 # <a name="using-keyboard-events"></a>Utilizzo degli eventi di tastiera
 La maggioranza dei programmi di Windows Form elabora gli input della tastiera tramite gestione dei relativi eventi. Questo argomento fornisce una panoramica degli eventi di tastiera, inclusi dettagli su quando usare ogni evento e sui dati forniti per ogni evento.  Vedere anche [Cenni preliminari sui gestori eventi (Windows Form)](event-handlers-overview-windows-forms.md) e [Cenni preliminari sugli eventi (Windows Form)](events-overview-windows-forms.md).  
@@ -39,6 +39,7 @@ La maggioranza dei programmi di Windows Form elabora gli input della tastiera tr
 |<xref:System.Windows.Forms.Control.KeyUp>|L'evento viene generato quando un utente rilascia un tasto fisico.|Il gestore per <xref:System.Windows.Forms.Control.KeyUp> riceve:<br /><br /> <ul><li>Un parametro <xref:System.Windows.Forms.KeyEventArgs>:<br /><br /> <ul><li>Che fornisce la proprietà <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (che specifica un tasto fisico).</li><li>La proprietà <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> (MAIUSC, CTRL o ALT).</li><li>La proprietà <xref:System.Globalization.SortKey.KeyData%2A>, che combina il codice tasto e il modificatore.</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Vedere anche
-- [Input da tastiera in un'applicazione Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+
+- [Input da tastiera in un'applicazione Windows Form](keyboard-input-in-a-windows-forms-application.md)
 - [Funzionamento dell'input da tastiera](how-keyboard-input-works.md)
 - [Input del mouse in un'applicazione Windows Forms](mouse-input-in-a-windows-forms-application.md)
