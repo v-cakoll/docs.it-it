@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159744"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481119"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -232,13 +232,13 @@ Un'associazione personalizzata viene costruita usando uno dei <xref:System.Servi
 
 - Segue un elemento di associazione di sicurezza facoltativo che fornisce funzionalità di sicurezza quali, ad esempio, autorizzazione, autenticazione, protezione e riservatezza. Gli elementi di associazione di sicurezza seguenti sono forniti da Windows Communication Foundation (WCF):
 
-    - <xref:System.ServiceModel.Channels.SecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 
 - Seguono i modelli di messaggio facoltativi specificati dagli elementi di associazione:
 
@@ -246,35 +246,35 @@ Un'associazione personalizzata viene costruita usando uno dei <xref:System.Servi
 
 - Quindi gli elementi di associazione di trasporto facoltativi di aggiornamenti/helper:
 
-    - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+  - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
 - Segue quindi un elemento di associazione obbligatorio di codifica dei messaggi. È possibile usare un trasporto proprio o una delle associazioni di codifica del messaggio seguenti:
 
-    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
 - Segue infine un elemento di trasporto obbligatorio. È possibile usare un trasporto personalizzato o usare uno degli elementi forniti da Windows Communication Foundation (WCF) di associazione del trasporto:
 
-    - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
 
-    - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+  - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
 
-    - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 
 Nella tabella seguente viene fornito un riepilogo delle opzioni per ogni livello.
 
