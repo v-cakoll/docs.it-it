@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325709"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedura: Creare, inizializzare e configurare opzioni di traccia
 Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output di traccia.  
@@ -31,9 +31,9 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>Per creare e inizializzare un'opzione di traccia  
   
-1.  Definire un'opzione di tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> o <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> e impostare il nome e la descrizione dell'opzione.  
+1. Definire un'opzione di tipo <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> o <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> e impostare il nome e la descrizione dell'opzione.  
   
-2.  Configurare l'opzione di traccia. Per altre informazioni, vedere [Configurazione delle opzioni di traccia](#configure).  
+2. Configurare l'opzione di traccia. Per altre informazioni, vedere [Configurazione delle opzioni di traccia](#configure).  
   
      Il codice seguente crea due opzioni, una per ogni tipo:  
   
@@ -71,9 +71,9 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
 #### <a name="to-configure-trace-switches"></a>Per configurare opzioni di traccia  
   
-1.  Per usare le opzioni di traccia, è necessario prima di tutto crearle e inserirle nel codice, come descritto nella sezione [Creazione e inizializzazione di un'opzione di traccia](#create).  
+1. Per usare le opzioni di traccia, è necessario prima di tutto crearle e inserirle nel codice, come descritto nella sezione [Creazione e inizializzazione di un'opzione di traccia](#create).  
   
-2.  Se il progetto non contiene un file di configurazione (app.config o Web.config), scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
+2. Se il progetto non contiene un file di configurazione (app.config o Web.config), scegliere **Aggiungi nuovo elemento** dal menu **Progetto**.  
   
     -   **Visual Basic:** Nel **Aggiungi nuovo elemento** finestra di dialogo, scegliere **File di configurazione dell'applicazione**.  
   
@@ -88,7 +88,7 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
          Una volta compilato il progetto, il file app.config viene copiato nella cartella di output del progetto e rinominato *nomeapplicazione*.exe.config.  
   
-3.  Dopo il tag `<configuration>`, ma prima del tag `</configuration>`, aggiungere il codice XML appropriato per la configurazione delle opzioni. Gli esempi seguenti illustrano un oggetto **BooleanSwitch** con una proprietà **DisplayName** di `DataMessageSwitch` e un oggetto **TraceSwitch** con una proprietà **DisplayName** di `TraceLevelSwitch`.  
+3. Dopo il tag `<configuration>`, ma prima del tag `</configuration>`, aggiungere il codice XML appropriato per la configurazione delle opzioni. Gli esempi seguenti illustrano un oggetto **BooleanSwitch** con una proprietà **DisplayName** di `DataMessageSwitch` e un oggetto **TraceSwitch** con una proprietà **DisplayName** di `TraceLevelSwitch`.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
   
      In questa configurazione entrambe le opzioni sono disabilitate.  
   
-4.  Se è necessario attivare un **BooleanSwitch**, come `DataMessagesSwitch` illustrato nell'esempio precedente, impostare **Value** su qualsiasi intero diverso da 0.  
+4. Se è necessario attivare un **BooleanSwitch**, come `DataMessagesSwitch` illustrato nell'esempio precedente, impostare **Value** su qualsiasi intero diverso da 0.  
   
-5.  Se è necessario attivare un **TraceSwitch**, come `TraceLevelSwitch` illustrato nell'esempio precedente, impostare **Value** sul livello appropriato (da 1 a 4).  
+5. Se è necessario attivare un **TraceSwitch**, come `TraceLevelSwitch` illustrato nell'esempio precedente, impostare **Value** sul livello appropriato (da 1 a 4).  
   
-6.  Aggiungere commenti al file CONFIG in modo che l'utente possa comprendere chiaramente quali valori modificare per configurare correttamente le opzioni.  
+6. Aggiungere commenti al file CONFIG in modo che l'utente possa comprendere chiaramente quali valori modificare per configurare correttamente le opzioni.  
   
      L'esempio seguente mostra come può apparire il codice finale, comprensivo di commenti:  
   
