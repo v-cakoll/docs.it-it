@@ -3,12 +3,12 @@ title: Panoramica di C# | Guida a C#
 description: Introduzione a C# Informazioni di base sul linguaggio.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152061"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481093"
 ---
 # <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#
 
@@ -52,27 +52,27 @@ L'output del programma viene prodotto dal metodo `WriteLine` della classe `Conso
 Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del linguaggio C#.  Gli argomenti seguenti offrono una panoramica degli elementi del linguaggio C#. Queste panoramiche offrono informazioni di base su tutti gli elementi del linguaggio C# e forniscono le informazioni necessarie per approfondire le caratteristiche di questi ultimi:
 
 * [Struttura del programma](program-structure.md)
-    - Vengono descritti i concetti organizzativi chiave di C#: ***programmi***, ***spazi dei nomi***, ***tipi***, ***membri*** e ***assembly***.
+  - Vengono descritti i concetti organizzativi chiave di C#: ***programmi***, ***spazi dei nomi***, ***tipi***, ***membri*** e ***assembly***.
 * [Tipi e variabili](types-and-variables.md)
-    - Vengono offerte informazioni sui ***tipi valore***, i ***tipi riferimento*** e le ***variabili*** del linguaggio C#.
+  - Vengono offerte informazioni sui ***tipi valore***, i ***tipi riferimento*** e le ***variabili*** del linguaggio C#.
 * [Espressioni](expressions.md)
-    - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori***. e producono un valore.
+  - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori***. e producono un valore.
 * [Istruzioni](statements.md)
-    - Le ***istruzioni*** consentono di esprimere le azioni di un programma.
+  - Le ***istruzioni*** consentono di esprimere le azioni di un programma.
 * [Classi e oggetti](classes-and-objects.md)
-    - Le ***classi*** sono i tipi C# più importanti. Gli ***oggetti*** sono istanze di una classe. Le classi vengono create usando ***membri***, descritti più avanti in questo argomento.
+  - Le ***classi*** sono i tipi C# più importanti. Gli ***oggetti*** sono istanze di una classe. Le classi vengono create usando ***membri***, descritti più avanti in questo argomento.
 * [Struct](structs.md)
-    - Le ***struct*** sono strutture dati che, a differenza delle classi, sono tipi valore.
+  - Le ***struct*** sono strutture dati che, a differenza delle classi, sono tipi valore.
 * [Matrici](arrays.md)
-    - Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati.
+  - Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati.
 * [Interfacce](interfaces.md)
-    - Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.
+  - Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.
 * [Enumerazioni](enums.md)
-    - Un ***tipo enum*** è un tipo valore distinto con un set di costanti denominate.
+  - Un ***tipo enum*** è un tipo valore distinto con un set di costanti denominate.
 * [Delegati](delegates.md)
-    - Un ***tipo delegato*** rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. I delegati consentono di trattare i metodi come entità che è possibile assegnare a variabili e passare come parametri. I delegati sono simili al concetto di puntatori a funzione disponibili in altri linguaggi. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati agli oggetti e indipendenti dai tipi.
+  - Un ***tipo delegato*** rappresenta riferimenti ai metodi con un elenco di parametri e un tipo restituito particolari. I delegati consentono di trattare i metodi come entità che è possibile assegnare a variabili e passare come parametri. I delegati sono simili al concetto di puntatori a funzione disponibili in altri linguaggi. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati agli oggetti e indipendenti dai tipi.
 * [Attributi](attributes.md)
-     * Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
+  * Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
 
 > [!div class="step-by-step"]
 > [Successivo](program-structure.md)
