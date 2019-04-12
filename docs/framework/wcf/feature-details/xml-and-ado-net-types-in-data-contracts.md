@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: b5d9c3362ebd69e587d58104e7ebc9d9e96a9020
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073962"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Tipi XML e ADO.NET nei contratti dati
 Il modello di contratto dati di Windows Communication Foundation (WCF) supporta alcuni tipi che rappresentano XML direttamente. Quando questi tipi vengono serializzati in XML, il serializzatore scrive il contenuto XML di questi tipi senza ulteriore elaborazione. I tipi supportati sono <xref:System.Xml.XmlElement>, matrici di <xref:System.Xml.XmlNode> (ma non il tipo `XmlNode` stesso) e tipi che implementano <xref:System.Xml.Serialization.IXmlSerializable>. I tipi <xref:System.Data.DataSet> e <xref:System.Data.DataTable>, nonché i dataset tipizzati, vengono comunemente usati nella programmazione dei database. Questi tipi implementano l'interfaccia `IXmlSerializable` e sono pertanto serializzabili nel modello del contratto dati. Alcune considerazioni speciali per questi tipi sono elencate alla fine di questo argomento.  
@@ -146,7 +146,7 @@ Il modello di contratto dati di Windows Communication Foundation (WCF) supporta 
  Le stesse regole della dichiarazione di elemento globale si applicano ai tipi di dataset legacy. Si noti che `XmlRootAttribute` non può eseguire l'override delle dichiarazioni di elemento globale aggiunte tramite codice personalizzato o aggiunte a `XmlSchemaSet` usando il metodo del provider dello schema o tramite `GetSchema` per i tipi di dataset legacy.  
   
 ### <a name="ixmlserializable-element-types"></a>Tipi di elemento IXmlSerializable  
- I tipi di elemento `IXmlSerializable` hanno la proprietà `IsAny` impostata su `true` o il relativo metodo del provider dello schema restituisce `null`.  
+ `IXmlSerializable` tipi di elemento hanno entrambi il `IsAny` impostata su `true` o avere il metodo del provider dello schema restituiti `null`.  
   
  La serializzazione e deserializzazione di un tipo di elemento è molto simile alla serializzazione e deserializzazione di un tipo di contenuto. Esistono tuttavia alcune importanti differenze:  
   
@@ -158,7 +158,7 @@ Il modello di contratto dati di Windows Communication Foundation (WCF) supporta 
   
 -   Quando si serializza un tipo di elemento al primo livello senza specificare il nome e lo spazio dei nomi principali in fase di creazione, i metodi <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> e <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> essenzialmente non eseguono alcuna operazione e il metodo <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> chiama `WriteXml`. In questo caso, l'oggetto serializzato non può essere Null e non può essere assegnato in modo polimorfico. Inoltre, il mantenimento dell'oggetto grafico non può essere abilitato e `NetDataContractSerializer` non può essere usato.  
   
--   Quando si deserializza un tipo di elemento al primo livello senza specificare il nome e lo spazio dei nomi radice in fase di costruzione, il metodo <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> restituisce `true` se riesce a trovare l'inizio di qualsiasi elemento. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> con il parametro `verifyObjectName` impostato su `true` si comporta allo stesso modo di `IsStartObject` prima di leggere effettivamente l'oggetto. `ReadObject` passa quindi il controllo al metodo `ReadXml`.  
+-   Quando si deserializza un tipo di elemento al primo livello senza specificare il nome e lo spazio dei nomi radice in fase di costruzione, il metodo <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> restituisce `true` se riesce a trovare l'inizio di qualsiasi elemento. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> con il `verifyObjectName` parametro è impostato su `true` si comporta nello stesso modo `IsStartObject` prima di leggere effettivamente l'oggetto. `ReadObject` quindi passa il controllo a `ReadXml` (metodo).  
   
  Lo schema esportato per i tipi di elemento è lo stesso del tipo `XmlElement`, come illustrato in una sezione precedente, con l'eccezione che il metodo del provider dello schema può aggiungere qualsiasi altro schema a <xref:System.Xml.Schema.XmlSchemaSet> come con i tipi di contenuto. L'uso dell'attributo `XmlRootAttribute` con i tipi di elemento non è consentito e le dichiarazioni di elemento globale non vengono mai generate per questi tipi.  
   
@@ -203,7 +203,8 @@ Il modello di contratto dati di Windows Communication Foundation (WCF) supporta 
  Il supporto per i dataset tipizzati nel modello del contratto dati è limitato. I dataset tipizzati possono essere serializzati e deserializzati e possono esportare il proprio schema. Tuttavia, l’importazione dello schema del contratto dati non è in grado di generare nuovi tipi di dataset tipizzati dallo schema, in quanto può solo riusare quelli esistenti. E’ possibile far riferimento a un dataset tipizzato esistente usando l’opzione `/r` in Svcutil.exe. Se si tenta di usare Svcutil.exe senza l’opzione `/r` in un servizio che usa un dataset tipizzato, viene automaticamente selezionato un serializzatore alternativo (XmlSerializer). Se è necessario usare il DataContractSerializer e generare dataset dallo schema, è possibile usare la seguente procedura: generare i tipi di dataset tipizzati (usando lo strumento Xsd.exe con l’opzione `/d` nel servizio), compilare i tipi, quindi farvi riferimento usando l’opzione `/r` in Svcutil.exe.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>
-- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
