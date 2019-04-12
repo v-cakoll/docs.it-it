@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
-ms.openlocfilehash: 559857ab647d6a1e6d2ae7ffcc344e7583b48553
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1deb5bcc29e43720929951764d1fcfeee8e89f8c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066173"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517395"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>Procedura: Associare dati a elementi Windows Presentation Foundation (WCF Data Services)
 Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile associare elementi Windows Presentation Foundation (WPF), ad esempio un <xref:System.Windows.Controls.ListBox> oppure <xref:System.Windows.Controls.ComboBox> a un'istanza di <xref:System.Data.Services.Client.DataServiceCollection%601>, che gestisce gli eventi generati dai controlli per mantenere la <xref:System.Data.Services.Client.DataServiceContext> sincronizzato con le modifiche apportate ai dati nei controlli. Per altre informazioni, vedere [associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
@@ -23,21 +23,21 @@ Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], è possibile as
 ## <a name="example"></a>Esempio  
  L'esempio seguente è tratto dalla pagina code-behind per una pagina XAML (Extensible Application Markup Language) che definisce la finestra `SalesOrders` in WPF. Quando la finestra viene caricata, viene creato un oggetto <xref:System.Data.Services.Client.DataServiceCollection%601> in base al risultato di una query che restituisce i clienti filtrati per paese. Tutte le pagine di questo risultato di paging vengono caricate insieme agli ordini correlati e vengono associate alla proprietà <xref:System.Windows.FrameworkElement.DataContext%2A> dell'oggetto <xref:System.Windows.Controls.StackPanel> che rappresenta il controllo di layout radice per la finestra WPF. Per altre informazioni, vedere [caricamento di contenuto posticipato](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
   
- [!code-csharp[Astoria Northwind Client#BindPagedData](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf3.xaml.cs#bindpageddata)]
- [!code-vb[Astoria Northwind Client#BindPagedData](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml.vb#bindpageddata)]  
+ [!code-csharp[Astoria Northwind Client#BindPagedData](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf3.xaml.cs#bindpageddata)]
+ [!code-vb[Astoria Northwind Client#BindPagedData](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf3.xaml.vb#bindpageddata)]  
   
 ## <a name="example"></a>Esempio  
  Nel codice XAML seguente viene definita la finestra `SalesOrders` in WPF per l'esempio precedente.  
   
- [!code-xaml[Astoria Northwind Client#BindPagedDataXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml#bindpageddataxaml)]  
+ [!code-xaml[Astoria Northwind Client#BindPagedDataXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf3.xaml#bindpageddataxaml)]  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente è tratto dalla pagina code-behind per una pagina XAML (Extensible Application Markup Language) che definisce la finestra `SalesOrders` in WPF. Quando la finestra viene caricata, viene creato un oggetto <xref:System.Data.Services.Client.DataServiceCollection%601> in base al risultato di una query che restituisce i clienti con gli oggetti correlati filtrati per paese. Questo risultato viene associato alla proprietà <xref:System.Windows.FrameworkElement.DataContext%2A> dell'oggetto <xref:System.Windows.Controls.StackPanel> che rappresenta il controllo di layout radice per la finestra WPF.  
   
- [!code-csharp[Astoria Northwind Client#WpfDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#wpfdatabinding)]
- [!code-vb[Astoria Northwind Client#WpfDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml.vb#wpfdatabinding)]  
+ [!code-csharp[Astoria Northwind Client#WpfDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#wpfdatabinding)]
+ [!code-vb[Astoria Northwind Client#WpfDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml.vb#wpfdatabinding)]  
   
 ## <a name="example"></a>Esempio  
  Nel codice XAML seguente viene definita la finestra `SalesOrders` in WPF per l'esempio precedente.  
   
- [!code-xaml[Astoria Northwind Client#WpfDataBindingXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml#wpfdatabindingxaml)]
+ [!code-xaml[Astoria Northwind Client#WpfDataBindingXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml#wpfdatabindingxaml)]

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298877"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517590"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provider di flusso (WCF Data Services)
 Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono rappresentare flussi audio e video, immagini, file documento o altri tipi di elementi multimediali binari. Quando un'entità del modello di dati include una o più proprietà binarie, il servizio dati restituisce tali dati binari codificati in base 64 all'interno dell'elemento entry presente nel feed di risposta. Poiché il caricamento e serializzazione di dati binari di grandi dimensioni in questo modo può influire sulle prestazioni, la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definisce un meccanismo per recuperare dati binari indipendentemente dell'entità a cui appartiene. Questa operazione viene eseguita separando i dati binari dall'entità in uno o più flussi di dati.  
@@ -46,7 +46,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
  **Provider di Entity Framework**  
  Per indicare che un'entità è un elemento entry di collegamento multimediale, aggiungere l'attributo `HasStream` alla definizione del tipo di entità nel modello concettuale, come nell'esempio seguente:  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  È inoltre necessario aggiungere lo spazio dei nomi `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` all'entità o alla radice del file con estensione edmx o csdl che definisce il modello di dati.  
   
@@ -55,7 +55,7 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
  **Provider di reflection**  
  Per indicare che un'entità è un elemento entry di collegamento multimediale, aggiungere <xref:System.Data.Services.Common.HasStreamAttribute> alla classe che definisce il tipo di entità nel provider di reflection.  
   
- **Provider di servizi dati personalizzati**  
+ **Provider del servizio dati personalizzato**  
  Quando si usano provider di servizi personalizzati, si implementa l'interfaccia <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> per definire i metadati per il servizio dati. Per altre informazioni, vedere [provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Si indica che un flusso di risorse binarie appartiene a un oggetto <xref:System.Data.Services.Providers.ResourceType> impostando la proprietà <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> su `true` nell'oggetto <xref:System.Data.Services.Providers.ResourceType> che rappresenta il tipo di entità, un elemento entry di collegamento multimediale.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implementazione dell'interfaccia IDataServiceStreamProvider  
@@ -74,8 +74,8 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
 ## <a name="creating-the-streaming-data-service"></a>Creazione del servizio dati di flusso  
  Per fornire al runtime di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] l'accesso all'implementazione <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, il servizio dati creato deve implementare anche l'interfaccia <xref:System.IServiceProvider>. Nell'esempio seguente viene illustrato come implementare il metodo <xref:System.IServiceProvider.GetService%2A> per restituire un'istanza della classe `PhotoServiceStreamProvider` che implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  Per informazioni generali su come creare un servizio dati, vedere [configurazione del servizio dati](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
@@ -129,4 +129,4 @@ Un servizio dati può esporre dati Large Object Binary. Tali dati binari possono
 
 - [Provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Provider di servizi dati personalizzati](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [Uso di dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [Utilizzo di dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
