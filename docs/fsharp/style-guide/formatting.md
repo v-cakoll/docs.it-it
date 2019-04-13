@@ -2,12 +2,12 @@
 title: F#linee guida per la formattazione del codice
 description: Per ulteriori linee guida per la formattazione, vedere F# codice.
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093619"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553862"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#linee guida per la formattazione del codice
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-Per qualsiasi operatore personalizzato che inizia con `*`, è necessario aggiungere uno spazio vuoto all'inizio della definizione per evitare ambiguità un compilatore. Per questo motivo, è consigliabile che è sufficiente racchiudere le definizioni di tutti gli operatori con un singolo carattere di spazio vuoto.
+Per qualsiasi operatore personalizzato che inizia con `*` e che dispone di più di un carattere, è necessario aggiungere uno spazio vuoto all'inizio della definizione per evitare ambiguità un compilatore. Per questo motivo, è consigliabile che è sufficiente racchiudere le definizioni di tutti gli operatori con un singolo carattere di spazio vuoto.
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>Racchiudere le frecce di parametro di funzione con uno spazio vuoto
 
