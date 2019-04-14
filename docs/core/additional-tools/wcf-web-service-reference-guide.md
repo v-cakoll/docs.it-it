@@ -4,12 +4,12 @@ description: Panoramica dello strumento Microsoft WCF Web Service Reference Prov
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197074"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Usare lo strumento WCF Web Service Reference Provider
 
@@ -54,7 +54,6 @@ Verrà visualizzata la pagina **Servizi connessi** come illustrato nell'immagine
     
     3c. Fare clic sul pulsante **Avanti** per aprire le pagine **Opzioni tipi di dati** e **Opzioni client**. In alternativa, fare clic sul pulsante **Fine** per usare le opzioni predefinite.
 
-
 4. Il modulo **Opzioni tipi di dati** consente di ridefinire le impostazioni di configurazione del riferimento al servizio generato:
 
 ![Scheda Opzioni tipi di dati di Visual Studio per .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ Verrà visualizzata la pagina **Servizi connessi** come illustrato nell'immagine
 È possibile che si verifichi un ritardo durante il caricamento delle informazioni, a seconda del numero di dipendenze del progetto e di altri fattori relativi alle prestazioni di sistema. Il pulsante **Fine** è disabilitato durante il caricamento, a meno che la casella di controllo **Riutilizza tipi in assembly di riferimento** non sia selezionata.
 
 5. Fare clic su **Fine** al termine dell'operazione.
-
 
 Durante la visualizzazione dello stato, lo strumento:
 

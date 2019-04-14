@@ -4,12 +4,12 @@ description: Informazioni su come creare un'applicazione .NET Core che supporta 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076809"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creare un'applicazione .NET Core con i plug-in
 
@@ -111,8 +111,6 @@ IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
     return CreateCommands(pluginAssembly);
 }).ToList();
 ```
-
-
 
 Quindi sostituire il commento `// Output the loaded commands` con il frammento di codice seguente:
 

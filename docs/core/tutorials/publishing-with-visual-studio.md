@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: ae202d8102d470e4260394f427e861750d4f0ee6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110266"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Pubblicare l'applicazione .NET Core Hello World con Visual Studio 2017
 
@@ -25,7 +25,6 @@ Per pubblicare ed eseguire l'applicazione:
 1. Fare clic con il pulsante destro del mouse sul progetto **HelloWorld**, non sulla soluzione HelloWorld, e scegliere **Pubblica** dal menu. È anche possibile scegliere **Pubblica HelloWorld** dal menu principale **Compila** di Visual Studio.
 
    ![Menu di scelta rapida Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
-
 
    ![Finestra Pubblica di Visual Studio](media/publishing-with-visual-studio/publish-settings-window.png)
 
