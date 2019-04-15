@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342455"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: Creazione di listener di log personalizzati (Visual Basic)
 Questa procedura spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.  
@@ -37,23 +37,23 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Per assegnare un nome sicuro all'assembly di listener di log  
   
-1.  Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
+1. Selezionare un progetto in **Esplora soluzioni**. Scegliere **Proprietà** dal menu **Progetto**.   
   
-2.  Fare clic sulla scheda **Firma**.  
+2. Fare clic sulla scheda **Firma**.  
   
-3.  Selezionare la casella **Firma assembly**.  
+3. Selezionare la casella **Firma assembly**.  
   
-4.  Selezionare **\<Nuovo>** dall'elenco a discesa **Scegli un file chiave con nome sicuro**.  
+4. Selezionare **\<Nuovo>** dall'elenco a discesa **Scegli un file chiave con nome sicuro**.  
   
      Si aprirà la finestra di dialogo **Crea chiave con nome sicuro** .  
   
-5.  Specificare un nome per il file di chiave nella casella **Nome file di chiave**.  
+5. Specificare un nome per il file di chiave nella casella **Nome file di chiave**.  
   
-6.  Digitare una password nelle caselle **Immettere la password** e **Conferma password**.  
+6. Digitare una password nelle caselle **Immettere la password** e **Conferma password**.  
   
-7.  Fare clic su **OK**.  
+7. Fare clic su **OK**.  
   
-8.  Ricompilare l'applicazione.  
+8. Ricompilare l'applicazione.  
   
 ## <a name="adding-the-listener"></a>Aggiungere il listener  
  Ora che l'assembly ha un nome sicuro è necessario determinare il nome sicuro del listener in modo che `My.Application.Log` usi il listener di log.  
@@ -74,7 +74,7 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>Per aggiungere il listener a My.Application.Log  
   
-1.  Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni** e scegliere **Apri**.  
+1. Fare clic con il pulsante destro del mouse su app.config in **Esplora soluzioni** e scegliere **Apri**.  
   
      -oppure-  
   
@@ -86,17 +86,17 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
   
     3.  Fare clic su **Aggiungi**.  
   
-2.  Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
+2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
-3.  Aggiungere l'elemento seguente alla sezione `<listeners>`:  
+3. Aggiungere l'elemento seguente alla sezione `<listeners>`:  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
+4. Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
-5.  Aggiungere l'elemento seguente alla sezione `<sharedListeners>` :  
+5. Aggiungere l'elemento seguente alla sezione `<sharedListeners>` :  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338488"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opzioni del compilatore C#)
 L'opzione **-debug** indica al compilatore di generare informazioni di debug e di inserirle nel file o nei file di output.  
@@ -32,7 +32,7 @@ L'opzione **-debug** indica al compilatore di generare informazioni di debug e d
  `full` &#124; `pdbonly`  
  Specifica il tipo di informazioni di debug generate dal compilatore. L'argomento completo, effettivo se non si specifica **-debug:pdbonly**, consente di allegare un debugger al programma in esecuzione. Specificando pdbonly si consente il debug del codice sorgente quando il programma viene avviato nel debugger, ma l'assembler viene visualizzato solo se il programma in esecuzione è allegato al debugger.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Usare questa opzione per creare build di debug. Se non si specifica **-debug**, **-debug+** o **-debug:full**, non sarà possibile eseguire il debug del file di output del programma.  
   
  Se si usa **-debug:full**, tenere presente che influisce sulla velocità e sulle dimensioni del codice ottimizzato JIT. In grado minore, **-debug:full** influisce sulla qualità del codice. Per la generazione di codice di rilascio, è consigliabile usare **-debug:pdbonly** o non usare alcun file PDB.  
@@ -46,13 +46,13 @@ L'opzione **-debug** indica al compilatore di generare informazioni di debug e d
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Fare clic su **Avanzate** .  
+3. Fare clic su **Avanzate** .  
   
-4.  Modificare la proprietà **Informazioni di Debug**.  
+4. Modificare la proprietà **Informazioni di Debug**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   

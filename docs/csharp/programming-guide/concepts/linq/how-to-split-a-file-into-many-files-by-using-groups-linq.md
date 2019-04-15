@@ -2,19 +2,19 @@
 title: 'Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: bba3cf5e1e6d4aa7b88ddbb7f3454be511982f74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626050"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337370"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)
 Questo esempio illustra un modo per unire il contenuto di due file e creare quindi un set di nuovi file in cui i dati sono organizzati in modo diverso.  
   
 ### <a name="to-create-the-data-files"></a>Per creare i file di dati  
   
-1.  Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
+1. Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Questo esempio illustra un modo per unire il contenuto di due file e creare quin
     Garcia, Debra  
     ```  
   
-2.  Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto: Si noti che i due file hanno alcuni nomi in comune.  
+2. Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto: Si noti che i due file hanno alcuni nomi in comune.  
   
     ```  
     Liu, Jinghao  

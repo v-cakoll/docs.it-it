@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626004"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343571"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusione o importazione di schemi XML
 Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:redefine />`. Questi elementi dello schema fanno riferimento ad altri schemi XML che possono essere usati per integrare la struttura dello schema che li include o importa. Nell'API del modello SOM (Schema Object Model), a questi elementi sono associate le classi <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> e <xref:System.Xml.Schema.XmlSchemaRedefine>.  
@@ -26,15 +26,15 @@ Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:
   
  L'esempio di codice consente di includere lo schema dell'indirizzo eseguendo i passaggi seguenti.  
   
-1.  Aggiunge lo schema del cliente e lo schema dell'indirizzo a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi li compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione degli schemi vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Aggiunge lo schema del cliente e lo schema dell'indirizzo a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi li compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione degli schemi vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera gli oggetti <xref:System.Xml.Schema.XmlSchema> compilati per gli schemi del cliente e dell'indirizzo dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che gli schemi sono stati compilati, è possibile accedere alle proprietà del set PSCI (Post-Schema-Compilation-Infoset).  
+2. Recupera gli oggetti <xref:System.Xml.Schema.XmlSchema> compilati per gli schemi del cliente e dell'indirizzo dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che gli schemi sono stati compilati, è possibile accedere alle proprietà del set PSCI (Post-Schema-Compilation-Infoset).  
   
-3.  Crea un oggetto <xref:System.Xml.Schema.XmlSchemaImport>, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> dell'elemento import sullo spazio dei nomi dello schema dell'indirizzo, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> dell'elemento import sull'oggetto <xref:System.Xml.Schema.XmlSchema> dello schema dell'indirizzo e aggiunge l'elemento import alla proprietà <xref:System.Xml.Schema.XmlSchema.Includes%2A> dello schema del cliente.  
+3. Crea un oggetto <xref:System.Xml.Schema.XmlSchemaImport>, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> dell'elemento import sullo spazio dei nomi dello schema dell'indirizzo, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> dell'elemento import sull'oggetto <xref:System.Xml.Schema.XmlSchema> dello schema dell'indirizzo e aggiunge l'elemento import alla proprietà <xref:System.Xml.Schema.XmlSchema.Includes%2A> dello schema del cliente.  
   
-4.  Rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> dello schema del cliente usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
+4. Rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> dello schema del cliente usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
   
-5.  Infine, usando la proprietà <xref:System.Xml.Schema.XmlSchema.Includes%2A> dello schema del cliente, scrive in modo ricorsivo nella console tutti gli schemi importati nello schema del cliente. La proprietà <xref:System.Xml.Schema.XmlSchema.Includes%2A> fornisce l'accesso a tutti gli elementi include, import o redefine aggiunti a uno schema.  
+5. Infine, usando la proprietà <xref:System.Xml.Schema.XmlSchema.Includes%2A> dello schema del cliente, scrive in modo ricorsivo nella console tutti gli schemi importati nello schema del cliente. La proprietà <xref:System.Xml.Schema.XmlSchema.Includes%2A> fornisce l'accesso a tutti gli elementi include, import o redefine aggiunti a uno schema.  
   
  Di seguito è riportato l'esempio di codice completo e gli schemi del cliente e dell'indirizzo scritti nella console.  
   
@@ -101,9 +101,9 @@ Uno schema XML può contenere elementi `<xs:import />`, `<xs:include />` e `<xs:
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

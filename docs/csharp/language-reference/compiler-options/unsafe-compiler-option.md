@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4a8f7d099b2cd3c1b4331c87f853b617fef505ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337331"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (opzioni del compilatore C#)
 L'opzione del compilatore **-unsafe** consente la compilazione del codice che usa la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
@@ -23,16 +23,16 @@ L'opzione del compilatore **-unsafe** consente la compilazione del codice che us
 -unsafe  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per altre informazioni sul codice unsafe, vedere [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Selezionare la casella di controllo **Consenti codice unsafe**.  
+3. Selezionare la casella di controllo **Consenti codice unsafe**.  
   
 ### <a name="to-add-this-option-in-a-csproj-file"></a>Per aggiungere questa opzione in un file csproj
 

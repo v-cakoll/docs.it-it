@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683664"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338709"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regole per l'inferenza dello schema per tipi di nodo e struttura
 In questo argomento viene descritto in che modo il processo di inferenza converte in una struttura XSD (XML Schema Definition Language) i tipi di nodo di un documento XML.  
@@ -18,21 +18,21 @@ In questo argomento viene descritto in che modo il processo di inferenza convert
 ## <a name="element-inference-rules"></a>Regole di inferenza dell'elemento  
  Contenuto della sezione vengono descritte le regole di inferenza per le dichiarazioni dell'elemento. Vengono inferite otto strutture di dichiarazioni dell'elemento:  
   
-1.  Elemento di tipo semplice  
+1. Elemento di tipo semplice  
   
-2.  Elemento vuoto  
+2. Elemento vuoto  
   
-3.  Elemento vuoto con attributi  
+3. Elemento vuoto con attributi  
   
-4.  Elemento con attributi e contenuto semplice  
+4. Elemento con attributi e contenuto semplice  
   
-5.  Elemento con una sequenza di elementi figlio  
+5. Elemento con una sequenza di elementi figlio  
   
-6.  Elemento con una sequenza di elementi figlio e attributi  
+6. Elemento con una sequenza di elementi figlio e attributi  
   
-7.  Elemento con una sequenza di opzioni di elementi figlio  
+7. Elemento con una sequenza di opzioni di elementi figlio  
   
-8.  Elemento con una sequenza di opzioni di elementi figlio e attributi  
+8. Elemento con una sequenza di opzioni di elementi figlio e attributi  
   
 > [!NOTE]
 >  Tutte le dichiarazioni `complexType` sono inferite come tipi anonimi. L'unico elemento globale inferito è l'elemento radice, tutti gli altri elementi sono locali.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494369"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336837"
 ---
 # <a name="how-to-start-services"></a>Procedura: Avviare servizi
 Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene chiamato il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> per la classe del servizio. In genere, il metodo <xref:System.ServiceProcess.ServiceBase.OnStart%2A> definisce le operazioni utili che verranno eseguite dal servizio. Dopo l'avvio, un servizio rimane attivo fino a quando non viene sospeso o arrestato manualmente.  
@@ -27,16 +27,16 @@ Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene c
   
 ### <a name="to-specify-how-a-service-should-start"></a>Per specificare come avviare un servizio  
   
-1.  Dopo aver creato il servizio, aggiungere i programmi di installazione necessari. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1. Dopo aver creato il servizio, aggiungere i programmi di installazione necessari. Per altre informazioni, vedere [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Nella finestra di progettazione fare clic sul programma di installazione per il servizio in uso.  
+2. Nella finestra di progettazione fare clic sul programma di installazione per il servizio in uso.  
   
-3.  Nella finestra **Proprietà** impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su uno dei valori seguenti:  
+3. Nella finestra **Proprietà** impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su uno dei valori seguenti:  
   
     |Per installare il servizio|Impostare questo valore|  
     |----------------------------------|--------------------|  
     |Al riavvio del computer|**Automatico**|  
-    |Quando un'azione esplicita dell'utente avvia il servizio|**Manual**|  
+    |Quando un'azione esplicita dell'utente avvia il servizio|**Manuale**|  
   
     > [!TIP]
     >  Per impedire del tutto l'avvio del servizio, è possibile impostare la proprietà <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> su **Disabled**. Ciò può essere utile se si prevede di dover riavviare un server più volte e si vuole risparmiare tempo evitando l'avvio dei servizi che verrebbero normalmente avviati.  
@@ -48,15 +48,15 @@ Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene c
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Per avviare manualmente un servizio da Esplora server  
   
-1.  In **Esplora server** aggiungere il server desiderato, se non è già elencato. Per altre informazioni, vedere Procedura: accedere e inizializzare Esplora server/Esplora database.  
+1. In **Esplora server** aggiungere il server desiderato, se non è già elencato. Per altre informazioni, vedere Procedura: accedere e inizializzare Esplora server/Esplora database.  
   
-2.  Espandere il nodo **Servizi** e quindi individuare il servizio che si vuole avviare.  
+2. Espandere il nodo **Servizi** e quindi individuare il servizio che si vuole avviare.  
   
-3.  Fare clic con il pulsante destro del mouse sul nome del servizio e quindi scegliere **Avvia**.  
+3. Fare clic con il pulsante destro del mouse sul nome del servizio e quindi scegliere **Avvia**.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>Per avviare manualmente un servizio da Gestione controllo servizi  
   
-1.  Aprire **Gestione controllo servizi** eseguendo una delle operazioni seguenti:  
+1. Aprire **Gestione controllo servizi** eseguendo una delle operazioni seguenti:  
   
     -   In Windows XP e 2000 Professional fare clic con il pulsante destro del mouse su **Risorse del computer** e quindi scegliere **Gestisci**. Nella finestra di dialogo visualizzata espandere il nodo **Servizi e applicazioni**.  
   
@@ -69,15 +69,16 @@ Dopo l'installazione di un servizio, è necessario avviarlo. Con l'avvio viene c
   
      Il servizio dovrebbe essere a questo punto elencato nella sezione **Servizi** della finestra.  
   
-2.  Fare clic con il pulsante destro del mouse sul servizio dopo averlo selezionato nell'elenco e quindi scegliere **Avvia**.  
+2. Fare clic con il pulsante destro del mouse sul servizio dopo averlo selezionato nell'elenco e quindi scegliere **Avvia**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>Per avviare manualmente un servizio da codice  
   
-1.  Creare un'istanza della classe <xref:System.ServiceProcess.ServiceController> e configurarla per interagire con il servizio che si vuole amministrare.  
+1. Creare un'istanza della classe <xref:System.ServiceProcess.ServiceController> e configurarla per interagire con il servizio che si vuole amministrare.  
   
-2.  Chiamare il metodo <xref:System.ServiceProcess.ServiceController.Start%2A> per avviare il servizio.  
+2. Chiamare il metodo <xref:System.ServiceProcess.ServiceController.Start%2A> per avviare il servizio.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Procedura: Creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

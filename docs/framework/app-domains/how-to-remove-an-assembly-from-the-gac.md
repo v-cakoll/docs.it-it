@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a8077125ac99fa1d8f5b22ac3864fcc17213fa6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff00e2f1d266243f0453f004564f2ed802d26c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639635"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338722"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedura: Rimuovere un assembly dalla Global Assembly Cache
 Esistono due modi per rimuovere un assembly dalla Global Assembly Cache (GAC):  
@@ -29,7 +29,7 @@ Esistono due modi per rimuovere un assembly dalla Global Assembly Cache (GAC):
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>Rimozione di un assembly con Gacutil.exe  
   
-1.  Al prompt dei comandi digitare il seguente comando:  
+1. Al prompt dei comandi digitare il seguente comando:  
   
      **gacutil –u** \<*nome assembly*>  
   
@@ -46,12 +46,13 @@ gacutil -u hello
   
 ### <a name="removing-an-assembly-with-windows-installer"></a>Rimozione di un assembly con Windows Installer  
   
-1.  In **Programmi e funzionalità** nel **Pannello di controllo** selezionare l'app da disinstallare. Se il pacchetto di installazione ha inserito assembly nella GAC, questi saranno rimossi da Windows Installer se non vengono usati da altre applicazioni.  
+1. In **Programmi e funzionalità** nel **Pannello di controllo** selezionare l'app da disinstallare. Se il pacchetto di installazione ha inserito assembly nella GAC, questi saranno rimossi da Windows Installer se non vengono usati da altre applicazioni.  
   
     > [!NOTE]
     >  Windows Installer mantiene un conteggio dei riferimenti per gli assembly installati nella GAC. La rimozione di un assembly dalla Global Assembly Cache avviene solo quando il conteggio dei riferimenti raggiunge zero. Ciò indica che non viene usato da altre applicazioni installate da un pacchetto di Windows Installer.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+
+- [Utilizzo di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Procedura: Installare un assembly nella Global Assembly Cache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)
 - [Gacutil.exe (strumento Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

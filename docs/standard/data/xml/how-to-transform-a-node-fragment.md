@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: trasformare un frammento di nodo'
+title: 'Procedura: Trasformare un frammento di nodo'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345170"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>Procedura: trasformare un frammento di nodo
+# <a name="how-to-transform-a-node-fragment"></a>Procedura: Trasformare un frammento di nodo
 Quando si trasformano i dati contenuti in un oggetto <xref:System.Xml.XmlDocument> o in un oggetto <xref:System.Xml.XPath.XPathDocument>, le trasformazioni XSLT si applicano a un documento completo. In altre parole, se viene passato un nodo diverso dal nodo radice del documento, il processo di trasformazione accederà comunque a tutti i nodi nel documento caricato. Per trasformare un frammento di nodo, è necessario creare un oggetto contenente solo il frammento di nodo e passare tale oggetto al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="procedures"></a>Procedure  
   
 #### <a name="to-transform-a-node-fragment"></a>Per trasformare un frammento di nodo  
   
-1.  Creare un oggetto contenente il documento di origine.  
+1. Creare un oggetto contenente il documento di origine.  
   
-2.  Individuare il frammento di nodo da trasformare.  
+2. Individuare il frammento di nodo da trasformare.  
   
-3.  Creare un oggetto separato con il frammento di nodo.  
+3. Creare un oggetto separato con il frammento di nodo.  
   
-4.  Passare il frammento di nodo al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+4. Passare il frammento di nodo al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente un frammento di nodo viene trasformato e il risultato viene visualizzato sulla console.  
@@ -49,4 +49,4 @@ Quando si trasformano i dati contenuti in un oggetto <xref:System.Xml.XmlDocumen
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [Utilizzo della classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337695"
 ---
 # <a name="applying-attributes"></a>Applicazione di attributi
 Usare il processo seguente per applicare un attributo a un elemento del codice.  
   
-1.  Definire un nuovo attributo o usare un attributo esistente importando lo spazio dei nomi da .NET Framework.  
+1. Definire un nuovo attributo o usare un attributo esistente importando lo spazio dei nomi da .NET Framework.  
   
-2.  Applicare l'attributo dell'elemento di codice posizionandolo immediatamente prima dell'elemento.  
+2. Applicare l'attributo dell'elemento di codice posizionandolo immediatamente prima dell'elemento.  
   
      Ogni linguaggio ha una propria sintassi di attributo. In C++ e C#, l'attributo è racchiuso tra parentesi quadre e separato dall'elemento da spazi vuoti, che possono includere un'interruzione di riga. In Visual Basic, l'attributo è racchiuso tra parentesi acute e deve essere nella stessa riga logica. Se si desidera un'interruzione di riga, è possibile usare il carattere di continuazione di riga.
   
-3.  Specificare i parametri posizionali e i parametri denominati per l'attributo.  
+3. Specificare i parametri posizionali e i parametri denominati per l'attributo.  
   
      I parametri posizionali sono necessari e devono precedere eventuali parametri denominati. Corrispondono ai parametri di uno dei costruttori dell'attributo. I parametri denominati sono facoltativi e corrispondono a proprietà dell'attributo di lettura/scrittura. In C++ e C# specificare `name`=`value` per ciascun parametro facoltativo, in cui `name` è il nome della proprietà. In Visual Basic specificare `name`:=`value`.  
   

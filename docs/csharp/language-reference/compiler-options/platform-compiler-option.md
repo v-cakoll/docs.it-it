@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341504"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opzioni del compilatore C#)
 Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'assembly.  
@@ -60,11 +60,11 @@ Specifica la versione di Common Language Runtime (CLR) in grado di eseguire l'as
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Modificare la proprietà **Piattaforma di destinazione** e, per i progetti destinati a .NET Framework 4.5, selezionare o deselezionare la casella di controllo **Preferisci 32 bit**.  
+3. Modificare la proprietà **Piattaforma di destinazione** e, per i progetti destinati a .NET Framework 4.5, selezionare o deselezionare la casella di controllo **Preferisci 32 bit**.  
   
  **Si noti che -platform** non è disponibile nell'ambiente di sviluppo di Visual C# Express.  
   

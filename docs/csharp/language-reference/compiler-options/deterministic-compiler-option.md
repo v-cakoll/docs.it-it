@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499847"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480664"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Fa sì che il compilatore generi un assembly il cui output byte per byte è identico in tutte le compilazioni se si usano input identici. 
+Fa sì che il compilatore generi un assembly il cui output byte per byte è identico in tutte le compilazioni se si usano input identici.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,7 +26,7 @@ Fa sì che il compilatore generi un assembly il cui output byte per byte è iden
 -deterministic
 ```
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Per impostazione predefinita, l'output del compilatore che deriva da un determinato set di input è univoco, poiché il compilatore aggiunge un timestamp e un GUID generato da numeri casuali. L'opzione `-deterministic` si usa per generare un *assembly deterministico* il cui contenuto binario è identico in tutte le compilazioni purché l'input rimanga lo stesso.
 
@@ -37,22 +37,22 @@ Il compilatore considera i seguenti input al fine del determinismo:
 - La versione precisa del compilatore in uso e i relativi assembly di riferimento.
 - Il percorso della directory corrente.
 - Il contenuto binario di tutti i file passati in modo esplicito al compilatore direttamente o indirettamente, tra cui:
-    - File di origine
-    - Assembly a cui viene fatto riferimento
-    - Moduli a cui viene fatto riferimento
-    - Risorse
-    - Il file di chiave con nome sicuro
-    - @ file di risposta
-    - Analizzatori
-    - Set di regole
-    - File aggiuntivi che possono essere usati dagli analizzatori
+  - File di origine
+  - Assembly a cui viene fatto riferimento
+  - Moduli a cui viene fatto riferimento
+  - Risorse
+  - Il file di chiave con nome sicuro
+  - @ file di risposta
+  - Analizzatori
+  - Set di regole
+  - File aggiuntivi che possono essere usati dagli analizzatori
 - Le impostazioni cultura correnti (per la lingua in cui vengono generati la diagnostica e i messaggi di eccezione).
 - La codifica predefinita (o la tabella codici corrente) se non è specificata la codifica.
 - L'esistenza, non esistenza e contenuto dei file nei percorsi di ricerca del compilatore (specificati, ad esempio, da `/lib` o `/recurse`).
 - La piattaforma CLR in cui viene eseguito il compilatore.
 - Il valore di `%LIBPATH%`, che può influenzare il caricamento delle dipendenze dell'analizzatore.
 
-Quando le origini sono disponibili pubblicamente, la compilazione deterministica può essere usata per stabilire se un file binario viene compilato da un'origine attendibile. Può anche essere utile in un sistema di compilazione continua per determinare se è necessario eseguire le istruzioni di compilazione che dipendono dalle modifiche apportate a un file binario. 
+Quando le origini sono disponibili pubblicamente, la compilazione deterministica può essere usata per stabilire se un file binario viene compilato da un'origine attendibile. Può anche essere utile in un sistema di compilazione continua per determinare se è necessario eseguire le istruzioni di compilazione che dipendono dalle modifiche apportate a un file binario.
 
 ## <a name="see-also"></a>Vedere anche
 
