@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf7e1b0c3ef3c1e1c26e4dd308ae2326777b38da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151034"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Linee guida per la creazione di componenti per l'esecuzione affiancata di più versioni
 Per creare applicazioni o componenti gestiti progettati per l'esecuzione affiancata, seguire le indicazioni generali riportate di seguito.  
@@ -63,5 +63,6 @@ Per creare applicazioni o componenti gestiti progettati per l'esecuzione affianc
  Lo [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) consente di sostituire un assembly solo quando il numero di versione del file è più recente. Windows Installer in genere non esegue l'installazione su un assembly a meno che il numero di versione dell'assembly non sia superiore.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esecuzione side-by-side](../../../docs/framework/deployment/side-by-side-execution.md)
 - [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

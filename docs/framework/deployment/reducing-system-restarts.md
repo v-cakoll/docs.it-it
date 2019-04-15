@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4affda0abdf46d298e6f1dac87b6a17a7a2e857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218451"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
 Il programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa [Gestione riavvio](https://go.microsoft.com/fwlink/?LinkId=231425) per evitare, quando possibile, i riavvii del sistema durante l'installazione. Se il programma di installazione dell'app installa .NET Framework, può interagire con la Gestione riavvio per sfruttare i vantaggi di questa funzionalità. Per altre informazioni, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -35,6 +35,7 @@ Richiesta di chiusura delle app .NET Framework in uso
  Se si usa un programma di installazione concatenata, ma non si vuole visualizzare una finestra di messaggio personalizzata per la chiusura delle app, è possibile usare le opzioni `/showrmui` e `/passive` della riga di comando quando si concatena il processo di installazione di .NET Framework. Quando si usano queste opzioni insieme, il programma di installazione visualizza la finestra di messaggio per la chiusura delle app, che è possibile chiudere per evitare un riavvio del sistema. Questa finestra di messaggio ha lo stesso comportamento in modo passivo della finestra di messaggio visualizzata nell'interfaccia utente completa. Per il set completo delle opzioni della riga di comando per .NET Framework ridistribuibile, vedere [Guida alla distribuzione per sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Distribuzione](../../../docs/framework/deployment/index.md)
 - [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

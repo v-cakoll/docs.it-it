@@ -4,12 +4,12 @@ description: Procedure consigliate per la creazione di pacchetti con NuGet per l
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198179"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +46,7 @@ Le dipendenze dei pacchetti NuGet sono illustrate in dettaglio nell'articolo [Di
 
 Un pacchetto NuGet supporta numerose [proprietà dei metadati](/nuget/reference/nuspec). La tabella seguente contiene i principali metadati che deve offrire ogni pacchetto in NuGet.org:
 
-| Nome proprietà MSBuild              | Nome nuspec              | Descrizione  |
+| Nome proprietà MSBuild              | Nome nuspec              | Description  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Identificatore del pacchetto. Un prefisso dell'identificatore può essere riservato se soddisfa i [criteri](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Versione del pacchetto NuGet. Per altre informazioni, vedere [Versione dei pacchetti NuGet](./versioning.md#nuget-package-version).             |
@@ -119,7 +119,6 @@ Lo svantaggio dell'incorporamento di file di simboli è che aumentano le dimensi
 > I pacchetti di simboli (`*.snupkg`) rappresentano una buona esperienza di debug on demand per gli sviluppatori perché non fanno aumentare le dimensioni del pacchetto principale né interferiscono con le prestazioni del ripristino per gli utenti che non intendono eseguire il debug del pacchetto NuGet.
 >
 > L'unico inconveniente è costituito dal fatto che l'utente dovrà individuare e configurare, una sola volta, il server di simboli NuGet nel proprio IDE per acquisire i file di simboli. È previsto che Visual Studio 2019 consenta di specificare il server di simboli di NuGet.org come una delle opzioni predefinite. 
-
 
 >[!div class="step-by-step"]
 >[Precedente](strong-naming.md)

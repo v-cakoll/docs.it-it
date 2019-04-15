@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200545"
 ---
 # <a name="proxy-configuration"></a>Configurazione proxy
 Un server proxy gestisce le richieste di risorse del client. Un proxy può restituire una risorsa richiesta dalla cache o inoltrare la richiesta al server in cui risiede la risorsa. I proxy possono migliorare le prestazioni della rete riducendo il numero di richieste inviate ai server remoti. I proxy possono essere usati anche per limitare l'accesso alle risorse.  
@@ -55,9 +55,9 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
   
 |Impostazione di attributo, proprietà o file di configurazione|Description|  
 |--------------------------------------------------------|-----------------|  
-|`proxyaddress` o <xref:System.Net.WebProxy.Address>|Indirizzo del proxy da usare.|  
-|`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal>|Valore che controlla se il proxy viene ignorato per gli indirizzi locali.|  
-|`bypasslist` o <xref:System.Net.WebProxy.BypassArrayList>|Descrive con espressioni regolari un set di indirizzi che ignorano il proxy.|  
+|`proxyaddress` oppure <xref:System.Net.WebProxy.Address>|Indirizzo del proxy da usare.|  
+|`bypassonlocal` oppure <xref:System.Net.WebProxy.BypassProxyOnLocal>|Valore che controlla se il proxy viene ignorato per gli indirizzi locali.|  
+|`bypasslist` oppure <xref:System.Net.WebProxy.BypassArrayList>|Descrive con espressioni regolari un set di indirizzi che ignorano il proxy.|  
 |`usesystemdefault`|Controlla se le impostazioni del proxy statico (indirizzo proxy, elenco di esclusione e opzione che specifica se ignorare il proxy per indirizzi locali) devono essere lette dalle impostazioni del proxy di Internet Explorer per l'utente. Se questo valore è impostato su `true`, verranno usate le impostazioni del proxy statico di Internet Explorer. In .NET Framework 2.0 quando questo valore è impostato su `true`, le impostazioni del proxy di Internet Explorer non vengono sostituite dalle altre impostazioni del proxy specificate nel file di configurazione. In .NET Framework 1.1 le impostazioni del proxy di Internet Explorer possono essere sostituite dalle altre impostazioni del proxy specificate nel file di configurazione.<br /><br /> Se questo valore è `false` o non impostato, le impostazioni del proxy statico possono essere specificate nella configurazione e sostituiranno le impostazioni del proxy di Internet Explorer. Questo valore deve essere impostato su `false` o non deve essere impostato anche per abilitare i proxy adattivi.|  
   
  L'esempio seguente illustra una configurazione tipica di un proxy statico.  
@@ -76,6 +76,7 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>
 - [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)

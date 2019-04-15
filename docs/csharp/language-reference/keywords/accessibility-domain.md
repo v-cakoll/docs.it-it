@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 241fe7714bfd3dd3fd37f7ac83a836f89b4951bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141752"
 ---
 # <a name="accessibility-domain-c-reference"></a>Dominio di accessibilità (Riferimenti per C#)
 Il dominio di accessibilità di un membro specifica in quali sezioni del programma è possibile fare riferimento a un membro. Se il membro è annidato all'interno di un altro tipo, il suo dominio di accessibilità viene determinato dal [livello di accessibilità](../../../csharp/language-reference/keywords/accessibility-levels.md) del membro e dal dominio di accessibilità del tipo contenitore.  
@@ -26,6 +26,7 @@ Il dominio di accessibilità di un membro specifica in quali sezioni del program
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Riferimenti per C#](../../../csharp/language-reference/index.md)
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)

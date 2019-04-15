@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d67b2fac0c1d55bfa5594e90998d9613de4ad271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 575d77524e567ba55f7cd9222d690fcee25d3f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102869"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Mitigazione: Frame PNG in oggetti icona
 A partire da .NET Framework 4.6, il metodo <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> converte correttamente le icone con i frame PNG in oggetti <xref:System.Drawing.Bitmap> .  
@@ -35,4 +35,5 @@ A partire da .NET Framework 4.6, il metodo <xref:System.Drawing.Icon.ToBitmap%2A
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+
+- [Modifiche di ridestinazione](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

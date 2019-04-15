@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e7cdd4ae030dfe9f1bc383092e041fd1f0739212
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: d9e1cd8d346a48fafc89367bddf923167a620889
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234200"
 ---
 ### <a name="coerceisselectionboxhighlighted"></a>CoerceIsSelectionBoxHighlighted
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761343"
 |Versione|4.6|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
-

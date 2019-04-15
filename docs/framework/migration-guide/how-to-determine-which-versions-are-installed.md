@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176306"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedura: Determinare le versioni di .NET Framework installate
 
@@ -37,7 +37,6 @@ Gli utenti possono [installare](https://docs.microsoft.com/dotnet/framework/inst
 >
 > Per altre informazioni sulle versioni, vedere [Versioni e dipendenze di .NET Framework](versions-and-dependencies.md).
 
-
 Per ottenere un elenco delle versioni di .NET Framework installate in un computer, accedere al Registro di sistema. È possibile usare l'editor del Registro di sistema per visualizzare il Registro di sistema o eseguire una query tramite codice:
  
 - Trovare le versioni di .NET Framework più recenti (4.5 e successive): 
@@ -54,7 +53,6 @@ Per ottenere un elenco delle versioni di CLR installate in un computer, usare un
 - [Eseguire una query tramite codice nella classe Environment](#clr_b)  
 
 Per informazioni sul rilevamento degli aggiornamenti installati per ogni versione di .NET Framework, vedere [Procedura: Determinare gli aggiornamenti di .NET Framework installati](how-to-determine-which-net-framework-updates-are-installed.md). 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>Trovare le versioni di .NET Framework più recenti (4.5 e successive)
 
@@ -171,7 +169,6 @@ L'esempio seguente illustra come trovare le versioni .NET Framework da 1 a 4 ins
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>Trovare le versioni di CLR
   
 <a name="clr_a"></a> 
@@ -208,8 +205,6 @@ Usare lo [strumento della versione CLR (Clrver.exe)](../tools/clrver-exe-clr-ver
    - Per l'identificatore della versione secondaria (ad esempio, *0* per la versione 4.0), usare la proprietà <xref:System.Version.Minor%2A?displayProperty=nameWithType>.
 
    - Per l'intera stringa di versione (ad esempio, *4.0.30319.18010*), usare il metodo <xref:System.Version.ToString%2A?displayProperty=nameWithType>. Questo metodo restituisce un valore singolo che riflette la versione del runtime che esegue il codice. Non restituisce le versioni di assembly o altre versioni del runtime che potrebbero essere installate nel computer.
-
-
 
 L'esempio seguente usa la proprietà <xref:System.Environment.Version%2A?displayProperty=nameWithType> per recuperare le informazioni sulla versione di CLR:
 

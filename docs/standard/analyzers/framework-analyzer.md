@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197651"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
 
@@ -114,7 +114,6 @@ Se si usano istanze di <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> non 
 
 Altre informazioni: [A3075: Elaborazione DTD non sicura nel codice XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Non usare algoritmi di crittografia vulnerabili
 
 Gli algoritmi di crittografia si danneggiano nel tempo man mano che gli attacchi diventano più evoluti. In base al tipo e all'applicazione di questo algoritmo di crittografia, un'ulteriore riduzione dell'efficacia della crittografia può consentire agli utenti malintenzionati di leggere e manomettere i messaggi cifrati, falsificare le firme digitali, alterare il contenuto con hash o danneggiare in altro modo qualsiasi sistema crittografico basato su questo algoritmo. Per la crittografia, usare un algoritmo AES (AES-256, AES 192 e AES-128 sono accettabili) con una lunghezza di chiave maggiore di o uguale a 128 bit. Per l'hash, usare una funzione hash della famiglia SHA-2, ad esempio SHA-2 512, SHA-2 384 o SHA-2 256.
@@ -134,5 +133,3 @@ Esiste un attacco che rende fattibile a livello di calcolo l'interruzione di que
 **Gravità:** Avviso
 
 Informazioni aggiuntive: [CA5351: Non usare algoritmi di crittografia violati](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

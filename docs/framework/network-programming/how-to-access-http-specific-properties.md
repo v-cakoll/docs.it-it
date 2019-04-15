@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: da696e40248a077e6b8e32e077509bc8a0b589b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176592"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Procedura: Accedere a proprietà specifiche di HTTP
 Questo esempio mostra come disattivare il comportamento **Keep-alive** di HTTP e ottenere il numero di versione del protocollo dal server Web.  
@@ -50,6 +50,7 @@ HttpWResp.Close();
 -   Riferimenti allo spazio dei nomi **System.Net**.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Accesso a Internet con un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
 - [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
 - [HTTP](../../../docs/framework/network-programming/http.md)

@@ -1,6 +1,6 @@
 ---
 title: Parola chiave namespace - Riferimenti per C#
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148759"
 ---
 # <a name="namespace-c-reference"></a>namespace (Riferimenti per C#)
 
@@ -22,21 +22,21 @@ La parola chiave `namespace` è usata per dichiarare un ambito che contiene un s
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 All'interno di uno spazio dei nomi è possibile dichiarare nessuno o più di uno dei tipi elencati di seguito:
 
 - un altro spazio dei nomi
 
-- [class](class.md)
+- [classe](class.md)
 
-- [interface](interface.md)
+- [interfaccia](interface.md)
 
 - [struct](struct.md)
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [delegato](delegate.md)
 
 Il compilatore aggiunge uno spazio dei nomi predefinito indipendentemente dal fatto che venga dichiarato o meno uno spazio dei nomi in modo esplicito in un file di origine C#. Questo spazio dei nomi senza nome, talvolta chiamato spazio dei nomi globale, è presente in ogni file. Qualsiasi identificatore nello spazio dei nomi globale può essere usato all'interno di uno spazio dei nomi denominato.
 
@@ -72,4 +72,5 @@ Per altre informazioni sull'uso degli spazi dei nomi, vedere gli argomenti segue
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Parole chiave per gli spazi dei nomi](namespace-keywords.md)
-- [using](using.md)
+- [utilizzo](using-directive.md)
+- [using static](using-static.md)

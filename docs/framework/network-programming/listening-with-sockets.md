@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109954"
 ---
 # <a name="listening-with-sockets"></a>attesa con socket
 I socket listener o server aprono una porta in rete e quindi attendono che un client si connetta alla porta. Anche se esistono altre famiglie di indirizzi di rete e protocolli, questo esempio mostra come creare un servizio remoto per una rete TCP/IP.  
@@ -60,8 +60,9 @@ listener.Listen(100);
  Il metodo **Listen** accetta un singolo parametro che specifica il numero di connessioni in sospeso consentito in **Socket** prima che venga restituito un errore di server occupato al client che si connette. In questo caso, vengono inseriti fino a 100 client nella coda di connessione prima che venga restituita una risposta di server occupato al client numero 101.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Uso di un socket server sincrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Uso di socket client](../../../docs/framework/network-programming/using-client-sockets.md)
 - [Procedura: Creare un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [Socket](../../../docs/framework/network-programming/sockets.md)
+- [socket](../../../docs/framework/network-programming/sockets.md)

@@ -2,12 +2,12 @@
 title: Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella versione 3.5 SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0105cc762696c54a65cd06b3ffcb5fb4c8530a41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216717"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Modifiche apportate all'autenticazione NTLM per HttpWebRequest nella versione 3.5 SP1
 In .NET Framework 3.5 SP1 e versioni successive sono state apportate modifiche per la sicurezza che influiscono sul modo in cui l'autenticazione integrata di Windows viene gestita da <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> e dalle classi correlate nello spazio dei nomi System.Net. Queste modifiche possono avere effetto sulle applicazioni che usano queste classi per eseguire richieste Web e ricevere risposte in cui viene usata l'autenticazione integrata di Windows basata su NTLM. Possono inoltre influire sulle applicazioni client e sui server Web configurati per l'utilizzo dell'autenticazione integrata di Windows.  
@@ -51,6 +51,7 @@ In .NET Framework 3.5 SP1 e versioni successive sono state apportate modifiche p
  Una soluzione alternativa meno sicura consiste nel disabilitare il controllo di loopback, come descritto in <https://support.microsoft.com/kb/896861>. Questa operazione ha l'effetto di disabilitare la protezione contro attacchi di tipo reflection. È pertanto preferibile limitare l'impostazione di nomi alternativi a quelli che si presume vengano effettivamente usati dal computer.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
 - <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

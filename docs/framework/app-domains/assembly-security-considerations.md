@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218070"
 ---
 # <a name="assembly-security-considerations"></a>Considerazioni sulla sicurezza degli assembly
 <a name="top"></a> Quando si compila un assembly, è possibile specificare un set di autorizzazioni necessarie per consentirne l'esecuzione. Se sussistano o meno le autorizzazioni per l'utilizzo di un assembly lo si evince dalle evidenze.  
@@ -63,6 +63,7 @@ ms.locfileid: "54589571"
  Poiché nomi sicuri e firme create tramite [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) garantiscono l'integrità, è possibile basare i criteri di sicurezza dall'accesso di codice su queste due evidenze degli assembly. I nomi sicuri e le firme create attraverso [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md) garantiscono l'integrità tramite firme digitali e certificati. Tutte le tecnologie menzionate (verifica hash, denominazioni sicure e firme create mediante [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md)) contribuiscono a garantire che l'assembly non sia stato alterato in alcun modo.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (strumento per la firma)](../../../docs/framework/tools/signtool-exe.md)

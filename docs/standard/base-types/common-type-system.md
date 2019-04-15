@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096264"
 ---
 # <a name="common-type-system"></a>Common Type System
 Common Type System definisce le modalità di dichiarazione, utilizzo e gestione dei tipi in Common Language Runtime e rappresenta una parte importante del supporto runtime per l'integrazione di più linguaggi. Le funzioni assolte dal sistema di tipi comuni sono le seguenti:  
@@ -41,7 +41,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 -   [Tipi in .NET](#types_in_the_net_framework)  
   
--   [Definizioni di tipo](#type_definitions)  
+-   [Definizioni dei tipi](#type_definitions)  
   
 -   [Membri dei tipi](#type_members)  
   
@@ -165,9 +165,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
   
 > [!NOTE]
 >  Non è necessario utilizzare questi metodi per i delegati dei gestori di eventi nei linguaggi C#, C++ e Visual Basic perché questi linguaggi forniscono la sintassi per l'aggiunta e la rimozione dei gestori di eventi.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Definizioni dei tipi  
  Una definizione di tipo include gli elementi seguenti:  
@@ -226,9 +224,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
  Un tipo può ereditare valori e comportamenti da un altro tipo. Common Type System non consente ai tipi di ereditare da più di un tipo base.  
   
  Un tipo può implementare un numero indefinito di interfacce. Per implementare un'interfaccia un tipo deve implementare tutti i membri virtuali di tale interfaccia. Un metodo virtuale può essere implementato da un tipo derivato e può essere richiamato in modo statico o dinamico.  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>Membri dei tipi  
  Il runtime consente di definire membri del tipo per specificare il comportamento e lo stato di un tipo. I membri dei tipi includono gli elementi seguenti:  
@@ -290,9 +286,7 @@ Common Type System definisce le modalità di dichiarazione, utilizzo e gestione 
  I tipi annidati sono tipi membri di altri tipi. I tipi annidati devono essere strettamente collegati ai rispettivi tipi contenitori e non devono essere utilizzati come tipi generici. I tipi annidati risultano utili quando il tipo dichiarante utilizza e crea istanze del tipo annidato e quando il loro utilizzo non viene esposto in membri pubblici.  
   
  Per alcuni sviluppatori i tipi annidati possono generare confusione e dovrebbero essere visibili pubblicamente solo in casi di assoluta necessità. In una libreria progettata correttamente è improbabile che gli sviluppatori debbano utilizzare tipi annidati per creare istanze di oggetti o dichiarare variabili.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Caratteristiche dei membri dei tipi  
  In Common Type System i membri dei tipi possono disporre di caratteristiche diverse, anche se non è necessario che i linguaggi le supportino tutte. Nella tabella riportata di seguito vengono descritte le caratteristiche dei membri.  

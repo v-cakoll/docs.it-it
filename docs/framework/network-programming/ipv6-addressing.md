@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121953"
 ---
 # <a name="ipv6-addressing"></a>Indirizzamento IPv6
 La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. Uno dei motivi di uno spazio indirizzi così grande è la possibilità di suddividere gli indirizzi disponibili in una gerarchia di domini di routing che riflettono la topologia di Internet. Un altro motivo è poter eseguire il mapping degli indirizzi delle schede (o interfacce) di rete che connettono i dispositivi alla rete. IPv6 è automaticamente in grado di risolvere gli indirizzi al livello inferiore, ovvero a livello di interfaccia di rete, e include anche funzionalità di configurazione automatica.  
@@ -73,5 +73,6 @@ La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. U
  In generale, un nodo ha sempre un indirizzo locale rispetto al collegamento. Può avere anche un indirizzo locale rispetto al sito e uno o più indirizzi globali.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
-- [Socket](../../../docs/framework/network-programming/sockets.md)
+
+- [protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [socket](../../../docs/framework/network-programming/sockets.md)

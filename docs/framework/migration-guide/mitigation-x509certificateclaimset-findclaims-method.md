@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccc24cd494866c087860144f1720988ccfc2dfa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e3b3645d9fc00087e163b9200edb5fbcf0dbbd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217211"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigazione: metodo X509CertificateClaimSet.FindClaims
 A partire dalle app destinate a [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], il metodo <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> tenterà di far corrispondere l'argomento `claimType` con tutte le voci DNS nel relativo campo SAN.  
@@ -37,4 +37,5 @@ A partire dalle app destinate a [!INCLUDE[net_v461](../../../includes/net-v461-m
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+
+- [Modifiche di ridestinazione](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)

@@ -2,12 +2,12 @@
 title: Cache PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182481"
 ---
 # <a name="pnrp-caches"></a>Cache PNRP
 Le cache PNRP (Peer Name Resolution Protocol) sono raccolte locali di endpoint peer selezionati tramite algoritmo e mantenuti disponibili nel peer.  
@@ -36,4 +36,5 @@ Le cache PNRP (Peer Name Resolution Protocol) sono raccolte locali di endpoint p
  I peer possono registrare l'interesse a ricevere oggetti da altri peer. Quando viene aggiornato un oggetto, l'applicazione di collaborazione riceve una notifica e il nuovo oggetto viene passato a tutti i sottoscrittori dell'applicazione. Ad esempio, un peer in un'applicazione di chat di gruppo può registrare l'interesse a ricevere informazioni dell'applicazione, che invierà quindi al peer tutti i record di chat come dati dell'applicazione.  Ciò consente di monitorare l'attività di chat all'interno del cloud.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.PeerToPeer>

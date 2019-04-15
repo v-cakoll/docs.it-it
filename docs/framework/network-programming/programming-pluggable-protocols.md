@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
-ms.openlocfilehash: 1becdc227995064a3f34d712834ab358cc41754b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072341"
 ---
 # <a name="programming-pluggable-protocols"></a>programmazione di protocolli di collegamento
 Le classi astratte <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> rappresentano la base per i protocolli di collegamento. Tramite la derivazione di classi specifiche del protocollo da <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse>, un'applicazione può richiedere i dati da una risorsa Internet e leggere la risposta senza specificare il protocollo usato.  
@@ -32,6 +32,7 @@ Le classi astratte <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> 
  Per sfruttare i protocolli di collegamento, i discendenti <xref:System.Net.WebRequest> devono fornire una transazione di richiesta e risposta predefinita che non richiede l'impostazione di proprietà specifiche del protocollo. Ad esempio, la classe <xref:System.Net.HttpWebRequest> che implementa la classe <xref:System.Net.WebRequest> per il protocollo HTTP, fornisce una richiesta `GET` per impostazione predefinita e restituisce una <xref:System.Net.HttpWebResponse> che contiene il flusso restituito dal server Web.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Derivazione da WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
 - [Derivazione da WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
 - [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)

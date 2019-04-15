@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9c2a8eca3f4498906cf703ff3b8ffb7336ff7a1b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234434"
 ---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap converte correttamente le icone con frame PNG in oggetti Bitmap
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761071"
 |Versione|4.6|
 |Tipo|Ridestinazione|
 |API interessate|<ul><li><xref:System.Drawing.Icon.ToBitmap?displayProperty=nameWithType></li></ul>|
-
