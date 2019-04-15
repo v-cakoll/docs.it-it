@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677747"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314113"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Procedura: Ricevere notifiche di eccezioni first-chance
 L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.AppDomain> consente di ricevere una notifica in cui si informa che è stata generata un'eccezione, prima che Common Language Runtime inizi a cercare gestori di eccezioni .
@@ -31,17 +31,17 @@ L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>Per visualizzare notifiche di eccezioni first-chance nel dominio dell'applicazione predefinito
 
-1.  Definire un gestore dell'evento per l'evento <xref:System.AppDomain.FirstChanceException> usando una funzione lambda e collegarlo all'evento. In questo esempio il gestore dell'evento stampa il nome del dominio dell'applicazione in cui l'evento è stato gestito e la proprietà <xref:System.Exception.Message%2A> dell'eccezione.
+1. Definire un gestore dell'evento per l'evento <xref:System.AppDomain.FirstChanceException> usando una funzione lambda e collegarlo all'evento. In questo esempio il gestore dell'evento stampa il nome del dominio dell'applicazione in cui l'evento è stato gestito e la proprietà <xref:System.Exception.Message%2A> dell'eccezione.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]
 
-2.  Generare un'eccezione e rilevarla. Prima che il runtime individui il gestore di eccezioni, viene generato l'evento <xref:System.AppDomain.FirstChanceException> che visualizza un messaggio. Questo messaggio è seguito dal messaggio visualizzato dal gestore di eccezioni.
+2. Generare un'eccezione e rilevarla. Prima che il runtime individui il gestore di eccezioni, viene generato l'evento <xref:System.AppDomain.FirstChanceException> che visualizza un messaggio. Questo messaggio è seguito dal messaggio visualizzato dal gestore di eccezioni.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]
 
-3.  Generare un'eccezione senza rilevarla. Prima che il runtime cerchi un gestore di eccezioni, viene generato l'evento <xref:System.AppDomain.FirstChanceException> che visualizza un messaggio. Poiché non è presente alcun gestore di eccezioni, l'applicazione viene chiusa.
+3. Generare un'eccezione senza rilevarla. Prima che il runtime cerchi un gestore di eccezioni, viene generato l'evento <xref:System.AppDomain.FirstChanceException> che visualizza un messaggio. Poiché non è presente alcun gestore di eccezioni, l'applicazione viene chiusa.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]
@@ -56,12 +56,12 @@ L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>Per ricevere notifiche di eccezioni first-chance in un dominio dell'applicazione creato
 
-1.  Definire un gestore dell'evento per l'evento <xref:System.AppDomain.FirstChanceException>. Questo esempio usa un metodo `static` (`Shared` in Visual Basic) che stampa il nome del dominio dell'applicazione in cui l'evento viene gestito e la proprietà <xref:System.Exception.Message%2A> dell'eccezione.
+1. Definire un gestore dell'evento per l'evento <xref:System.AppDomain.FirstChanceException>. Questo esempio usa un metodo `static` (`Shared` in Visual Basic) che stampa il nome del dominio dell'applicazione in cui l'evento viene gestito e la proprietà <xref:System.Exception.Message%2A> dell'eccezione.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]
 
-2.  Creare un dominio dell'applicazione e aggiungere il gestore dell'evento all'evento <xref:System.AppDomain.FirstChanceException> per il dominio dell'applicazione. In questo esempio il dominio dell'applicazione è denominato `AD1`.
+2. Creare un dominio dell'applicazione e aggiungere il gestore dell'evento all'evento <xref:System.AppDomain.FirstChanceException> per il dominio dell'applicazione. In questo esempio il dominio dell'applicazione è denominato `AD1`.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
@@ -70,17 +70,17 @@ L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>Per visualizzare notifiche di eccezioni first-chance nel dominio dell'applicazione
 
-1.  Creare un oggetto `Worker` nel dominio dell'applicazione creato nella procedura precedente. La classe `Worker` deve essere pubblica e deve derivare da <xref:System.MarshalByRefObject>, come illustrato nell'esempio completo alla fine di questo articolo.
+1. Creare un oggetto `Worker` nel dominio dell'applicazione creato nella procedura precedente. La classe `Worker` deve essere pubblica e deve derivare da <xref:System.MarshalByRefObject>, come illustrato nell'esempio completo alla fine di questo articolo.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]
 
-2.  Chiamare un metodo dell'oggetto `Worker` che genera un'eccezione. In questo esempio il metodo `Thrower` viene chiamato due volte. La prima volta, poiché l'argomento del metodo è `true`, il metodo rileva la propria eccezione. La seconda volta, l'argomento è `false` e il metodo `Main()` rileva l'eccezione nel dominio dell'applicazione predefinito.
+2. Chiamare un metodo dell'oggetto `Worker` che genera un'eccezione. In questo esempio il metodo `Thrower` viene chiamato due volte. La prima volta, poiché l'argomento del metodo è `true`, il metodo rileva la propria eccezione. La seconda volta, l'argomento è `false` e il metodo `Main()` rileva l'eccezione nel dominio dell'applicazione predefinito.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]
 
-3.  Inserire codice nel metodo `Thrower` per controllare se il metodo gestisce la propria eccezione.
+3. Inserire codice nel metodo `Thrower` per controllare se il metodo gestisce la propria eccezione.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
@@ -103,4 +103,5 @@ L'evento <xref:System.AppDomain.FirstChanceException> della classe <xref:System.
 -   Questo esempio è un'applicazione della riga di comando. Per compilare ed eseguire questo codice in Visual Studio, aggiungere il codice C# `Console.ReadLine();` (in Visual Basic, `Console.ReadLine()`) alla fine di `Main()`, per impedire che la finestra di comando si chiuda prima di poter leggere l'output.
 
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.AppDomain.FirstChanceException>

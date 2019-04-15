@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643767"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314932"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedura: Visualizzare i millisecondi nei valori di data e ora
 I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.DateTime.ToString?displayProperty=nameWithType>, includono le ore, i minuti e i secondi di un valore di ora, ma ne escludono il componente dei millisecondi. Questo argomento descrive come includere un componente millisecondi di una data e un'ora nelle stringhe di data e ora formattate.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Per visualizzare il componente millisecondi di un valore DateTime  
   
-1.  Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
+1. Se si usa la rappresentazione di stringa di una data, convertirla in un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> tramite il metodo statico <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
   
-2.  Per estrarre la rappresentazione di stringa del componente dei millisecondi di un'ora, chiamare il metodo <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%2A> del valore di data e ora e passare il modello di formato personalizzato `fff` o `FFF` da solo o con altri identificatori di formato personalizzato come parametro `format`.  
+2. Per estrarre la rappresentazione di stringa del componente dei millisecondi di un'ora, chiamare il metodo <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%2A> del valore di data e ora e passare il modello di formato personalizzato `fff` o `FFF` da solo o con altri identificatori di formato personalizzato come parametro `format`.  
   
 ## <a name="example"></a>Esempio  
  L'esempio visualizza il componente dei millisecondi di un valore <xref:System.DateTime> e di un valore <xref:System.DateTimeOffset> alla console, sia da solo sia incluso in una stringa di data e ora più lunga.  
@@ -57,4 +57,4 @@ I metodi di formattazione di data e ora predefiniti, ad esempio <xref:System.Dat
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

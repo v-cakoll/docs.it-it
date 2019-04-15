@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 19dd15fdd7e818e0619647205f2369a55f3bc2b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: b82d21a7de4f596afb5e41487221498dd5ca9f98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528539"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326632"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con qualsiasi raccolta <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, senza l'utilizzo di un'API o un provider LINQ intermedio, come per [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) o [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md). È possibile usare LINQ per eseguire una query su qualsiasi raccolta enumerabile, ad esempio <xref:System.Collections.Generic.List%601>, <xref:System.Array> o <xref:System.Collections.Generic.Dictionary%602>. La raccolta può essere definita dall'utente o restituita da un'API di .NET Framework.  
@@ -16,11 +16,11 @@ Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con
   
  Le query LINQ offrono anche tre vantaggi principali rispetto ai cicli `foreach` tradizionali:  
   
-1.  Sono più brevi e leggibili, soprattutto quando si filtrano più condizioni.  
+1. Sono più brevi e leggibili, soprattutto quando si filtrano più condizioni.  
   
-2.  Forniscono funzioni potenti di filtro, ordinamento e raggruppamento con un codice dell'applicazione minimo.  
+2. Forniscono funzioni potenti di filtro, ordinamento e raggruppamento con un codice dell'applicazione minimo.  
   
-3.  Possono essere trasferiti in altre origini dati con modifiche minime o nulle.  
+3. Possono essere trasferiti in altre origini dati con modifiche minime o nulle.  
   
  In generale, più è complessa l'operazione da eseguire sui dati, maggiore sarà il vantaggio che si potrà trarre dall'uso di LINQ rispetto alle tecniche di iterazione tradizionali.  
   
@@ -39,8 +39,8 @@ Il termine "LINQ to Objects" si riferisce all'utilizzo diretto di query LINQ con
  [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  Viene illustrato come eseguire una query su un oggetto ArrayList in C#.  
   
- [Procedura: Aggiungere metodi personalizzati per le query LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [Procedura: Aggiungere metodi personalizzati per query LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  Spiega come estendere il set di metodi utilizzabili per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.  
   
- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  Vengono specificati collegamenti ad argomenti che descrivono LINQ e offrono esempi di codice per l'esecuzione di query.

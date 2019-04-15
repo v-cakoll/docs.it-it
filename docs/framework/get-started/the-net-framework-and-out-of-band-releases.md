@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654562"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330444"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework e rilascio fuori programma
 
@@ -23,26 +23,26 @@ L'evoluzione di .NET Framework includerà diverse piattaforme, tra cui app Windo
 ## <a name="how-oob-packages-are-distributed"></a>Modalità di distribuzione dei pacchetti fuori banda
 I rilasci fuori banda per i componenti principali di Common Language Runtime (CLR) vengono forniti tramite [NuGet](https://www.nuget.org/), ovvero uno strumento di gestione pacchetti per .NET. NuGet consente di cercare e aggiungere facilmente librerie ai progetti .NET Framework da Esplora soluzioni in Visual Studio. NuGet è incluso in tutte le edizioni di Visual Studio a partire da Visual Studio 2012. Per verificare se NuGet è installato, cercare **Gestione pacchetti NuGet** nel menu **Strumenti** di Visual Studio. Se non è installato:
 
-1.  Nella barra dei menu di Visual Studio scegliere **Strumenti**, **Estensioni e aggiornamenti** (in Visual Studio 2010, scegliere **Gestione estensioni**).
+1. Nella barra dei menu di Visual Studio scegliere **Strumenti**, **Estensioni e aggiornamenti** (in Visual Studio 2010, scegliere **Gestione estensioni**).
 
      Verrà visualizzata la finestra di dialogo **Estensioni e aggiornamenti**.
 
-2.  Scegliere **Online** e **Gestione pacchetti NuGet**, quindi fare clic su **Scarica**.
+2. Scegliere **Online** e **Gestione pacchetti NuGet**, quindi fare clic su **Scarica**.
 
-3.  Al termine del download, riavviare Visual Studio.
+3. Al termine del download, riavviare Visual Studio.
 
  Per istruzioni di installazione dettagliate, vedere [Installazione di NuGet](/nuget/install-nuget-client-tools) nel sito Web NuGet Docs. Per altre informazioni su NuGet, vedere la [documentazione di NuGet](/nuget).
 
 ## <a name="using-a-nuget-oob-package"></a>Utilizzo di un pacchetto NuGet fuori banda
  Dopo aver installato NuGet, sarà possibile cercare e aggiungere riferimenti ai pacchetti NuGet utilizzando Esplora soluzioni di Visual Studio:
 
-1.  Aprire il menu di scelta rapida per il progetto in Visual Studio, quindi scegliere **Gestisci pacchetti NuGet**. Questa opzione è disponibile anche nel menu **Progetto**.
+1. Aprire il menu di scelta rapida per il progetto in Visual Studio, quindi scegliere **Gestisci pacchetti NuGet**. Questa opzione è disponibile anche nel menu **Progetto**.
 
-2.  Nel riquadro sinistro scegliere **Online**.
+2. Nel riquadro sinistro scegliere **Online**.
 
-3.  Se si desidera usare i pacchetti della versione provvisoria, nell'elenco a discesa del riquadro centrale scegliere **Includi versione provvisoria** anziché **Solo stabile**.
+3. Se si desidera usare i pacchetti della versione provvisoria, nell'elenco a discesa del riquadro centrale scegliere **Includi versione provvisoria** anziché **Solo stabile**.
 
-4.  Nel riquadro di destra usare la casella **Cerca** per individuare il pacchetto che si desidera usare. Alcuni pacchetti Microsoft sono identificati dal logo Microsoft .NET Framework e in tutti Microsoft viene identificato come editore.
+4. Nel riquadro di destra usare la casella **Cerca** per individuare il pacchetto che si desidera usare. Alcuni pacchetti Microsoft sono identificati dal logo Microsoft .NET Framework e in tutti Microsoft viene identificato come editore.
 
  ![Screenshot che illustra la gestione dei pacchetti NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 

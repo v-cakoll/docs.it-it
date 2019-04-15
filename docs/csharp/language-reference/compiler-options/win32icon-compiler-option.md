@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: e4558084357c8ce07004a8ed71aef586a707f1a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591747"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317453"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (opzioni del compilatore C#)
 Con l'opzione **-win32icon** viene inserito un file con estensione ico nel file di output, che assume l'aspetto desiderato in Esplora file.  
@@ -28,18 +28,18 @@ Con l'opzione **-win32icon** viene inserito un file con estensione ico nel file 
  `filename`  
  Il file con estensione ico da aggiungere al file di output.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un file con estensione ico può essere creato mediante il [compilatore di risorse](/windows/desktop/menurc/resource-compiler). Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .ico.  
   
  Vedere [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (per fare riferimento a un file di risorse di .NET Framework) o a [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (per associarlo). Vedere [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) per importare un file con estensione res.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
+2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
-3.  Modificare la proprietà **Icona dell'applicazione**.  
+3. Modificare la proprietà **Icona dell'applicazione**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
   

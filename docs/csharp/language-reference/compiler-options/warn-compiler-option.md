@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499869"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315803"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (opzioni del compilatore C#)
 L'opzione **-warn** specifica il livello di avviso da visualizzare nel compilatore.  
@@ -40,7 +40,7 @@ L'opzione **-warn** specifica il livello di avviso da visualizzare nel compilato
 |3|Visualizza gli avvisi di livello 2 oltre ad alcuni avvisi meno gravi, ad esempio gli avvisi relativi alle espressioni che restituiscono sempre `true` o `false`.|  
 |4 (impostazione predefinita)|Visualizza tutti gli avvisi di livello 3 oltre ad avvisi informativi.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Per ottenere informazioni su un errore o un avviso, è possibile cercare il codice di errore nell'indice della Guida. Per altri modi per ottenere informazioni su un errore o un avviso, vedere [Errori del compilatore C#](../../../csharp/language-reference/compiler-messages/index.md).  
   
  Usare [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) per considerare tutti gli avvisi come errori. Usare [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) per disabilitare avvisi specifici.  
@@ -49,11 +49,11 @@ L'opzione **-warn** specifica il livello di avviso da visualizzare nel compilato
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Modificare la proprietà **Livello avvisi**.  
+3. Modificare la proprietà **Livello avvisi**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   

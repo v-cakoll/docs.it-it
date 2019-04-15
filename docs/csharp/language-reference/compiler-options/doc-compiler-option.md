@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333600"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (opzioni del compilatore C#)
 L'opzione **-doc** consente di inserire commenti per la documentazione in un file XML.  
@@ -32,7 +32,7 @@ L'opzione **-doc** consente di inserire commenti per la documentazione in un fil
  `file`  
  File di output in XML, con i commenti presenti nei file del codice sorgente della compilazione.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Nei file del codice sorgente è possibile elaborare e aggiungere al file XML i commenti di documentazione che precedono quanto segue:  
   
 -   Tipi definiti dall'utente, ad esempio una [classe](../../../csharp/language-reference/keywords/class.md), un [delegato](../../../csharp/language-reference/keywords/delegate.md) o un'[interfaccia](../../../csharp/language-reference/keywords/interface.md)  
@@ -52,11 +52,11 @@ L'opzione **-doc** consente di inserire commenti per la documentazione in un fil
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagina **Proprietà** del progetto.  
+1. Aprire la pagina **Proprietà** del progetto.  
   
-2.  Fare clic sulla scheda **Generazione**.  
+2. Fare clic sulla scheda **Generazione**.  
   
-3.  Modificare la proprietà **File di documentazione XML**.  
+3. Modificare la proprietà **File di documentazione XML**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   

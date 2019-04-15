@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319404"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opzioni del compilatore C#)
 L'opzione **-lib** specifica la posizione degli assembly a cui si fa riferimento tramite l'opzione [-reference (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -31,16 +31,16 @@ L'opzione **-lib** specifica la posizione degli assembly a cui si fa riferimento
  `dir2`  
  Una o più directory aggiuntive in cui effettuare la ricerca dei riferimenti agli assembly. Separare i nomi delle directory aggiuntive con una virgola, senza inserire spazi.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  La ricerca dei riferimenti non completi agli assembly viene operata nell'ordine seguente:  
   
-1.  Directory di lavoro corrente, ovvero la directory da cui viene chiamato il compilatore.  
+1. Directory di lavoro corrente, ovvero la directory da cui viene chiamato il compilatore.  
   
-2.  Directory di sistema di Common Language Runtime.  
+2. Directory di sistema di Common Language Runtime.  
   
-3.  Directory specificate da **-lib**.  
+3. Directory specificate da **-lib**.  
   
-4.  Directory specificate dalla variabile di ambiente LIB.  
+4. Directory specificate dalla variabile di ambiente LIB.  
   
  Per specificare un riferimento a un assembly, usare **-reference**.  
   
@@ -52,11 +52,11 @@ L'opzione **-lib** specifica la posizione degli assembly a cui si fa riferimento
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  
   
-2.  Fare clic sulla pagina delle proprietà **Percorso riferimenti**.  
+2. Fare clic sulla pagina delle proprietà **Percorso riferimenti**.  
   
-3.  Modificare il contenuto della casella di riepilogo.  
+3. Modificare il contenuto della casella di riepilogo.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   

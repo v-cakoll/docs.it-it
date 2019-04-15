@@ -3,12 +3,12 @@ title: Distribuire il modello ML.NET in Funzioni di Azure
 description: Fornire il modello di Machine Learning per l'analisi del sentiment ML.NET per le previsioni tramite Internet usando Funzioni di Azure
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: db29e37660665b02ab93a07b37418f0c4c20a608
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330636"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>Procedura: Usare il modello ML.NET in Funzioni di Azure
 
@@ -21,8 +21,8 @@ Questa procedura e l'esempio correlato usano attualmente **ML.NET versione 0.10*
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" e "Sviluppo di Azure" installato. 
-- [Strumenti di Funzioni di Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
+- [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" e "Sviluppo di Azure" installato. 
+- [Strumenti per Funzioni di Azure](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - Modello con training preliminare. 
     - Usare l'[esercitazione sull'analisi del sentiment con ML.NET](../tutorials/sentiment-analysis.md) per creare il proprio modello.

@@ -2,12 +2,12 @@
 title: -target:winmdobj (opzioni del compilatore C#)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608966"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319300"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (opzioni del compilatore C#)
 Se si usa l'opzione del compilatore **-target:winmdobj**, viene creato un file intermedio con estensione winmdobj che è possibile convertire in un file binario di Windows Runtime (con estensione winmd). Il file con estensione winmd può quindi essere utilizzato dai programmi C++ e JavaScript, oltre ai programmi di linguaggi gestiti.  
@@ -18,7 +18,7 @@ Se si usa l'opzione del compilatore **-target:winmdobj**, viene creato un file i
 -target:winmdobj  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'impostazione **winmdobj** segnala al compilatore che è richiesto un modulo intermedio. In risposta, Visual Studio consente di compilare la libreria di classi C# come file con estensione winmdobj. Il file con estensione winmdobj può quindi essere inserito dallo strumento di esportazione <xref:Microsoft.Build.Tasks.WinMDExp> per produrre un file di metadati Windows (winmd). Il file con estensione winmd contiene il codice della libreria originale e i metadati di WinMD utilizzati da JavaScript o C++ e da Windows Runtime.  
   
  L'output di un file compilato usando l'opzione del compilatore **-target:winmdobj** è progettato per essere usato solo come input dell'utilità di esportazione WimMDExp. Al file con estensione winmdobj non viene fatto riferimento direttamente.  
@@ -29,11 +29,11 @@ Se si usa l'opzione del compilatore **-target:winmdobj**, viene creato un file i
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Per impostare l'opzione del compilatore nell'IDE di Visual Studio per un'applicazione Windows Store  
   
-1.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.  
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.  
   
-2.  Scegliere la scheda **Applicazione**.  
+2. Scegliere la scheda **Applicazione**.  
   
-3.  Nell'elenco **Tipo di output** scegliere **File WinMD**.  
+3. Nell'elenco **Tipo di output** scegliere **File WinMD**.  
   
      L'opzione **File WinMD** è disponibile solo per i modelli di applicazione [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   

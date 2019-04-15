@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642831"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324475"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Procedura: Annullare un'attività e i relativi figli
 Questi esempi mostrano come eseguire le attività seguenti:  
   
-1.  Creare e avviare un'attività annullabile.  
+1. Creare e avviare un'attività annullabile.  
   
-2.  Passare un token di annullamento al delegato dell'utente e, facoltativamente, all'istanza dell'attività.  
+2. Passare un token di annullamento al delegato dell'utente e, facoltativamente, all'istanza dell'attività.  
   
-3.  Rilevare e rispondere alla richiesta di annullamento nel delegato dell'utente.  
+3. Rilevare e rispondere alla richiesta di annullamento nel delegato dell'utente.  
   
-4.  Facoltativamente, indicare nel thread chiamante che l'attività è stata annullata.  
+4. Facoltativamente, indicare nel thread chiamante che l'attività è stata annullata.  
   
  Il thread chiamante non forza la fine dell'attività, ma segnala solo che è richiesto l'annullamento. Se l'attività è già in esecuzione, è responsabilità del delegato dell'utente rilevare la richiesta e rispondervi nel modo appropriato. Se l'annullamento viene richiesto prima dell'esecuzione dell'attività, il delegato dell'utente non viene mai eseguito e l'oggetto attività passa allo stato annullato.  
   

@@ -2,12 +2,12 @@
 title: Creazione del documento Office Open XML di origine (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 0fe5463ae95374542482f768eee2bc694e2c5dd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b36d119eb2da7445649b8db1132b7deea2c684c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635845"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322394"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Creazione del documento Office Open XML di origine (C#)
 In questo argomento viene illustrato come creare il documento WordprocessingML di Office Open XML usato in altri esempi di questa esercitazione. Seguendo queste istruzioni, l'output ottenuto sarà uguale a quello indicato in ogni esempio.  
@@ -20,9 +20,9 @@ In questo argomento viene illustrato come creare il documento WordprocessingML d
   
 #### <a name="to-create-the-wordprocessingml-document"></a>Per creare il documento WordprocessingML  
   
-1.  Creare un nuovo documento di Microsoft Word.  
+1. Creare un nuovo documento di Microsoft Word.  
   
-2.  Incollare il testo seguente nel nuovo documento:  
+2. Incollare il testo seguente nel nuovo documento:  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ In questo argomento viene illustrato come creare il documento WordprocessingML d
     Hello World  
     ```  
   
-3.  Formattare la prima riga con lo stile "Intestazione 1".  
+3. Formattare la prima riga con lo stile "Intestazione 1".  
   
-4.  Selezionare le righe contenenti codice C#. La prima riga inizia con la parola chiave `using`. L'ultima riga corrisponde all'ultima parentesi graffa di chiusura. Formattare le righe con il tipo di carattere Courier. Formattarle con un nuovo stile, da denominare "Code".  
+4. Selezionare le righe contenenti codice C#. La prima riga inizia con la parola chiave `using`. L'ultima riga corrisponde all'ultima parentesi graffa di chiusura. Formattare le righe con il tipo di carattere Courier. Formattarle con un nuovo stile, da denominare "Code".  
   
-5.  Infine, selezionare l'intera riga che contiene l'output e formattarla con lo stile `Code`.  
+5. Infine, selezionare l'intera riga che contiene l'output e formattarla con lo stile `Code`.  
   
-6.  Salvare il documento e denominarlo SampleDoc.docx.  
+6. Salvare il documento e denominarlo SampleDoc.docx.  
   
     > [!NOTE]
     >  Se si usa Microsoft Word 2003, selezionare **Documento di Word 2007** nell'elenco a discesa **Tipo file**.  

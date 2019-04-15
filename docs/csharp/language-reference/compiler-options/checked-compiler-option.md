@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333938"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (opzioni del compilatore C#)
 L'opzione **-checked** specifica se un'istruzione di calcolo di interi che risulta in un valore non incluso nell'intervallo dei tipi di dati e nell'ambito di una parola chiave [checked](../../../csharp/language-reference/keywords/checked.md) o [unchecked](../../../csharp/language-reference/keywords/unchecked.md) genera un'eccezione in fase di esecuzione.  
@@ -24,7 +24,7 @@ L'opzione **-checked** specifica se un'istruzione di calcolo di interi che risul
 -checked[+ | -]  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Un'istruzione di calcolo di interi inclusa nell'ambito di una parola chiave `checked` o `unchecked` non è soggetta all'opzione **-checked**.  
   
  Se un'istruzione di calcolo di interi che non è compresa nell'ambito di una parola chiave `checked` o `unchecked` risulta in un valore non incluso nell'intervallo del tipo di dati e l'opzione **-checked+** (o **-checked**) viene usata nella compilazione, tale istruzione genera un'eccezione in fase di esecuzione. Se l'opzione **-checked-** viene usata nella compilazione, tale istruzione non genera un'eccezione in fase di esecuzione.  
@@ -35,13 +35,13 @@ L'opzione **-checked** specifica se un'istruzione di calcolo di interi che risul
  
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Aprire la pagine **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Fare clic su **Avanzate** .  
+3. Fare clic su **Avanzate** .  
   
-4.  Modificare la proprietà **Controlla overflow/underflow aritmetico**.  
+4. Modificare la proprietà **Controlla overflow/underflow aritmetico**.  
   
  Per accedere all'opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   

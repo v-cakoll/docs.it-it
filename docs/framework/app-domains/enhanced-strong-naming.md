@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319872"
 ---
 # <a name="enhanced-strong-naming"></a>Denominazione sicura avanzata
 Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'identificazione degli assembly. È una firma digitale a chiave pubblica che in genere si usa per verificare l'integrità dei dati passati da un autore (firmatario) a un destinatario (verificatore). Questa firma viene usata come identità univoca per un assembly e garantisce che i riferimenti all'assembly non siano ambigui. L'assembly è firmato come parte del processo di compilazione e quindi verificato quando viene caricato.  
@@ -41,25 +41,25 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
 ### <a name="signing-with-sha-2-without-key-migration"></a>Firma con SHA-2, senza migrazione delle chiavi  
  Eseguire i comandi seguenti da una finestra del prompt dei comandi per firmare un assembly senza eseguire la migrazione di una firma con nome sicuro:  
   
-1.  Generare la nuova chiave di identità, se necessario.  
+1. Generare la nuova chiave di identità, se necessario.  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Estrarre la chiave pubblica di identità e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.  
+2. Estrarre la chiave pubblica di identità e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Ritardare la firma dell'assembly con il file della chiave pubblica di identità.  
+3. Ritardare la firma dell'assembly con il file della chiave pubblica di identità.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Firmare di nuovo l'assembly con la coppia di chiavi di identità completa.  
+4. Firmare di nuovo l'assembly con la coppia di chiavi di identità completa.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
 ### <a name="signing-with-sha-2-with-key-migration"></a>Firma con SHA-2, con migrazione delle chiavi  
  Eseguire i comandi seguenti da una finestra del prompt dei comandi per firmare un assembly con una firma con nome sicuro migrata.  
   
-1.  Generare una coppia di chiavi di identità e firma, se necessario.  
+1. Generare una coppia di chiavi di identità e firma, se necessario.  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  Estrarre la chiave pubblica di firma e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.  
+2. Estrarre la chiave pubblica di firma e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Estrarre la chiave pubblica di identità, che determina l'algoritmo hash che genera una controfirma.  
+3. Estrarre la chiave pubblica di identità, che determina l'algoritmo hash che genera una controfirma.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  Generare i parametri per un attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> e allegare l'attributo all'assembly.  
+4. Generare i parametri per un attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> e allegare l'attributo all'assembly.  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'
     )]
     ```
   
-5.  Ritardare la firma dell'assembly con la chiave pubblica di identità.  
+5. Ritardare la firma dell'assembly con la chiave pubblica di identità.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Firmare completamente l'assembly con la coppia di chiavi di firma.  
+6. Firmare completamente l'assembly con la coppia di chiavi di firma.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

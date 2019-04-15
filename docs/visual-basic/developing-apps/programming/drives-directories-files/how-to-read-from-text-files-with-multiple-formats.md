@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334302"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Procedura: Leggere da file di testo con più formati in Visual Basic
 L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log. È possibile elaborare un file con più formati usando il metodo `PeekChars` per determinare il formato di ogni riga durante l'analisi del file.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Per analizzare un file di testo con più formati  
   
-1.  Aggiungere un file di testo denominato testfile.txt al progetto. Aggiungere quanto segue al file di testo.  
+1. Aggiungere un file di testo denominato testfile.txt al progetto. Aggiungere quanto segue al file di testo.  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,19 +34,19 @@ L'oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> consente di analiz
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  Definire il formato previsto e il formato usato al momento della segnalazione dell'errore. L'ultima voce in ogni matrice è -1, pertanto si presuppone che l'ultimo campo sia di larghezza variabile. Tale occorrenza si verifica quando l'ultima voce nella matrice è minore o uguale a 0.  
+2. Definire il formato previsto e il formato usato al momento della segnalazione dell'errore. L'ultima voce in ogni matrice è -1, pertanto si presuppone che l'ultimo campo sia di larghezza variabile. Tale occorrenza si verifica quando l'ultima voce nella matrice è minore o uguale a 0.  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3.  Creare un nuovo oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, specificando la larghezza e il formato.  
+3. Creare un nuovo oggetto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, specificando la larghezza e il formato.  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4.  Scorrere le righe, verificando il formato prima della lettura.  
+4. Scorrere le righe, verificando il formato prima della lettura.  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5.  Scrivere gli errori nella console.  
+5. Scrivere gli errori nella console.  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   

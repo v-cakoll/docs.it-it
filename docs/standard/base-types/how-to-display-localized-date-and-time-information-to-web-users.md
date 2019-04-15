@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320158"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni di analisi e formattazione di valori di data e ora non devono essere basate su un formato predefinito, che molto spesso corrisponde al formato delle impostazioni cultura locali del server Web, durante l'interazione con l'utente. Al contrario, i Web Form che gestiscono stringhe di data e ora immesse dall'utente devono analizzare le stringhe tramite le impostazioni cultura preferite dell'utente. Analogamente, i dati di data e ora devono essere visualizzati all'utente in un formato conforme alle impostazioni cultura dell'utente stesso. In questo argomento viene illustrato come eseguire questa operazione.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Per analizzare stringhe di data e ora immesse dall'utente  
   
-1.  Determinare se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> è popolata. In caso contrario, andare al passaggio 6.  
+1. Determinare se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> è popolata. In caso contrario, andare al passaggio 6.  
   
-2.  Se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è popolata, recuperarne il primo elemento. Il primo elemento indica la lingua e l'area geografica predefinite o preferite dell'utente.  
+2. Se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è popolata, recuperarne il primo elemento. Il primo elemento indica la lingua e l'area geografica predefinite o preferite dell'utente.  
   
-3.  Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura preferite dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura preferite dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Chiamare il metodo `TryParse` o `Parse` del tipo <xref:System.DateTime> o <xref:System.DateTimeOffset> per provare la conversione. Usare un overload del metodo `TryParse` o `Parse` con un parametro `provider` e passare uno degli oggetti seguenti:  
+4. Chiamare il metodo `TryParse` o `Parse` del tipo <xref:System.DateTime> o <xref:System.DateTimeOffset> per provare la conversione. Usare un overload del metodo `TryParse` o `Parse` con un parametro `provider` e passare uno degli oggetti seguenti:  
   
     -   Oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
   
     -   Oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> dell'oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
   
-5.  Se la conversione non riesce, ripetere i passaggi da 2 a 4 per ogni elemento rimanente nella matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Se la conversione non riesce, ripetere i passaggi da 2 a 4 per ogni elemento rimanente nella matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Se la conversione continua a non riuscire o se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è vuota, analizzare la stringa usando le impostazioni cultura inglese non dipendenti da paese/area geografica, restituite dalla proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Se la conversione continua a non riuscire o se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è vuota, analizzare la stringa usando le impostazioni cultura inglese non dipendenti da paese/area geografica, restituite dalla proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Per analizzare la data e l'ora locali della richiesta dell'utente  
   
-1.  Aggiungere un controllo <xref:System.Web.UI.WebControls.HiddenField> a un Web Form.  
+1. Aggiungere un controllo <xref:System.Web.UI.WebControls.HiddenField> a un Web Form.  
   
-2.  Creare una funzione JavaScript che gestisce l'evento `onClick` di un pulsante `Submit` scrivendo la data e l'ora correnti e la differenza di fuso orario locale rispetto all'ora Coordinated Universal Time (UTC) nella proprietà <xref:System.Web.UI.WebControls.HiddenField.Value%2A>. Usare un delimitatore, ad esempio un punto e virgola, per separare i due componenti della stringa.  
+2. Creare una funzione JavaScript che gestisce l'evento `onClick` di un pulsante `Submit` scrivendo la data e l'ora correnti e la differenza di fuso orario locale rispetto all'ora Coordinated Universal Time (UTC) nella proprietà <xref:System.Web.UI.WebControls.HiddenField.Value%2A>. Usare un delimitatore, ad esempio un punto e virgola, per separare i due componenti della stringa.  
   
-3.  Usare l'evento <xref:System.Web.UI.Control.PreRender> del Web Form per inserire la funzione nel flusso di output HTML passando il testo dello script al metodo <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Usare l'evento <xref:System.Web.UI.Control.PreRender> del Web Form per inserire la funzione nel flusso di output HTML passando il testo dello script al metodo <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Connettere il gestore eventi all'evento `onClick` del pulsante `Submit` specificando il nome della funzione JavaScript nell'attributo `OnClientClick` del pulsante `Submit`.  
+4. Connettere il gestore eventi all'evento `onClick` del pulsante `Submit` specificando il nome della funzione JavaScript nell'attributo `OnClientClick` del pulsante `Submit`.  
   
-5.  Creare un gestore per l'evento <xref:System.Web.UI.WebControls.Button.Click> del pulsante `Submit`.  
+5. Creare un gestore per l'evento <xref:System.Web.UI.WebControls.Button.Click> del pulsante `Submit`.  
   
-6.  Nel gestore eventi determinare se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> è popolata. In caso contrario, andare al passaggio 14.  
+6. Nel gestore eventi determinare se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> è popolata. In caso contrario, andare al passaggio 14.  
   
-7.  Se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è popolata, recuperarne il primo elemento. Il primo elemento indica la lingua e l'area geografica predefinite o preferite dell'utente.  
+7. Se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è popolata, recuperarne il primo elemento. Il primo elemento indica la lingua e l'area geografica predefinite o preferite dell'utente.  
   
-8.  Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura preferite dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+8. Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura preferite dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
 9. Passare la stringa assegnata alla proprietà <xref:System.Web.UI.WebControls.HiddenField.Value%2A> al metodo <xref:System.String.Split%2A> per archiviare la rappresentazione di stringa della data e dell'ora locali dell'utente e la rappresentazione di stringa della differenza di fuso orario locale dell'utente in elementi di matrice separati.  
   
@@ -115,5 +115,5 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
 
 - [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)

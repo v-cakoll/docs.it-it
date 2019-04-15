@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 92d5faa870623b5b7d7d1bad16ad0f1ba3f1bf76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320032"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (opzioni del compilatore C#)
 L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal compilatore per ridurre le dimensioni del file di output e aumentarne la velocità e l'efficienza.  
@@ -28,7 +28,7 @@ L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal comp
 -optimize[+ | -]  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  **-optimize** comunica poi a Common Language Runtime di ottimizzare il codice in fase di esecuzione.  
   
  Per impostazione predefinita, le ottimizzazioni sono disabilitate. Per abilitarle, specificare **-optimize+**.  
@@ -41,11 +41,11 @@ L'opzione **-optimize** abilita o disabilita le ottimizzazioni eseguite dal comp
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Modificare la proprietà **Ottimizza codice**.  
+3. Modificare la proprietà **Ottimizza codice**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.  
   

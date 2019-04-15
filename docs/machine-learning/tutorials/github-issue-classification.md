@@ -4,12 +4,12 @@ description: Informazioni su come usare ML.NET in uno scenario di classificazion
 ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: fc21a37fe585ed4b9880ec86ee26815e0668108c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318780"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Esercitazione: Usare ML.NET in uno scenario di classificazione multiclasse per classificare i problemi di GitHub
 
@@ -39,7 +39,7 @@ L'esempio è un'app console che usa ML.NET per il training di un modello che cla
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
+* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
 
 * Il [file separato da tabulazioni dei problemi di Github (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * Il [file di test separato da tabulazioni dei problemi di Github (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).

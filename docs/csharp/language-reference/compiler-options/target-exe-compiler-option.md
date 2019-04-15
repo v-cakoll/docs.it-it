@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331312"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (opzioni del compilatore C#)
 L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EXE), applicazione console.  
@@ -24,7 +24,7 @@ L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EX
 -target:exe  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'opzione **-target:exe** è attiva per impostazione predefinita. Il file eseguibile verrà creato con estensione .exe.  
   
  Usare [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) per creare l'eseguibile di un programma Windows.  
@@ -37,11 +37,11 @@ L'opzione **-target:exe** indica al compilatore di creare un file eseguibile (EX
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
+2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
-3.  Modificare la proprietà **Tipo di output**.  
+3. Modificare la proprietà **Tipo di output**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: b56a421dd7b34bf006e1e6609bbb8ecc5f56e0bf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316024"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Procedura: Usare lo spazio dei nomi My (Guida per programmatori C#)
 Lo spazio dei nomi <xref:Microsoft.VisualBasic.MyServices> (`My` in Visual Basic) consente di accedere in modo semplice e intuitivo a numerose classi .NET Framework, permettendo di scrivere codice che interagisce con il computer, l'applicazione, le impostazioni, le risorse e così via. Anche se originariamente progettato per l'uso con Visual Basic, lo spazio dei nomi `MyServices` può essere usato nelle applicazioni C#.  
@@ -22,9 +22,9 @@ Lo spazio dei nomi <xref:Microsoft.VisualBasic.MyServices> (`My` in Visual Basic
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Per aggiungere un riferimento alla libreria di Visual Basic  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** e scegliere **Aggiungi riferimento**.  
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo **Riferimenti** e scegliere **Aggiungi riferimento**.  
   
-2.  Nella finestra di dialogo **Riferimenti** visualizzata scorrere l'elenco e selezionare Microsoft.VisualBasic.dll.  
+2. Nella finestra di dialogo **Riferimenti** visualizzata scorrere l'elenco e selezionare Microsoft.VisualBasic.dll.  
   
      È anche possibile includere la riga seguente nella sezione `using` all'inizio del programma.  
   

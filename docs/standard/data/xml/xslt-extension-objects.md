@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320418"
 ---
 # <a name="xslt-extension-objects"></a>Oggetti di estensione XSLT
 Gli oggetti di estensione vengono usati per estendere la funzionalità dei fogli di stile. Gli oggetti di estensione sono gestiti dalla classe <xref:System.Xml.Xsl.XsltArgumentList>.  
@@ -32,11 +32,11 @@ Gli oggetti di estensione vengono usati per estendere la funzionalità dei fogli
   
 ### <a name="to-use-an-xslt-extension-object"></a>Per usare un oggetto di estensione XSLT  
   
-1.  Creare un tipo <xref:System.Xml.Xsl.XsltArgumentList> e aggiungere l'oggetto di estensione usando il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Creare un tipo <xref:System.Xml.Xsl.XsltArgumentList> e aggiungere l'oggetto di estensione usando il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Chiamare l'oggetto di estensione dal foglio di stile.  
+2. Chiamare l'oggetto di estensione dal foglio di stile.  
   
-3.  Passare l'oggetto <xref:System.Xml.Xsl.XsltArgumentList> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+3. Passare l'oggetto <xref:System.Xml.Xsl.XsltArgumentList> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 

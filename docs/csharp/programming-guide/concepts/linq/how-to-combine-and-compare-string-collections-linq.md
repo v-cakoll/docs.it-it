@@ -2,19 +2,19 @@
 title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514777"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323746"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo  
   
-1.  Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
+1. Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
     Garcia, Debra  
     ```  
   
-2.  Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.  
+2. Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.  
   
     ```  
     Liu, Jinghao  

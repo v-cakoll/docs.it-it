@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc36c926ba81de8a59ff3af69719bec6b7370efc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322992"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Informazioni sull'aumento di velocità in PLINQ
 L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query LINQ to Objects mediante l'esecuzione di delegati di query in parallelo in computer multicore. PLINQ assicura le prestazioni migliori quando l'elaborazione di ogni elemento in una raccolta di origine è indipendente, senza stati condivisi tra i singoli delegati. Tali operazioni sono comuni in LINQ to Objects e PLINQ e spesso vengono definite "*squisitamente parallele*" perché si prestano facilmente alla pianificazione su più thread. Tuttavia, non tutte le query sono costituite interamente da operazioni squisitamente parallele. Nella maggior parte dei casi una query implica alcuni operatori che non possono essere parallelizzati o che rallentano l'esecuzione parallela. Anche in caso di query che sono tutte squisitamente parallele, PLINQ deve comunque partizionare l'origine dati e pianificare il lavoro sui thread, unendo in genere i risultati al termine della query. Tutte queste operazioni incrementano i costi di calcolo della parallelizzazione, che vengono definiti *sovraccarico*. Per ottenere prestazioni ottimali in una query PLINQ, l'obiettivo è ottimizzare le parti squisitamente parallele e ridurre al minimo quelle che comportano un sovraccarico. Questo articolo fornisce informazioni che consentono di scrivere query PLINQ che siano il più efficaci possibile producendo comunque risultati corretti.  
@@ -23,7 +23,7 @@ L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query L
 ## <a name="factors-that-impact-plinq-query-performance"></a>Fattori che influiscono sulle prestazioni delle query PLINQ  
  Nelle sezioni successive sono elencati alcuni dei fattori più importanti che influiscono sulle prestazioni delle query parallele. Si tratta di istruzioni generali che da sole non sono sufficienti per stimare le prestazioni delle query in tutti i casi. Come sempre, è importante misurare le prestazioni effettive di query specifiche in computer con una gamma di configurazioni e carichi rappresentativi.  
   
-1.  Costo di calcolo del lavoro complessivo.  
+1. Costo di calcolo del lavoro complessivo.  
   
      Per ottenere un aumento della velocità, una query PLINQ deve avere abbastanza lavoro squisitamente parallelo da compensare il sovraccarico. Il lavoro può essere espresso come il costo di calcolo di ogni delegato moltiplicato per il numero di elementi nella raccolta di origine. Supponendo che un'operazione possa essere parallelizzata, quanto più è onerosa dal punto di vista del calcolo, maggiore sarà la possibilità di aumento della velocità. Ad esempio, se una funzione impiega un millisecondo per essere eseguita, una query sequenziale su 1000 elementi richiederà un secondo per eseguire questa operazione, mentre una query parallela in un computer con quattro core potrebbe richiedere solo 250 millisecondi. Il risultato è un aumento della velocità di 750 millisecondi. Se la funzione impiega un secondo per essere eseguita per ogni elemento, l'aumento della velocità potrebbe essere di 750 secondi. Se il delegato è molto costoso, PLINQ potrebbe assicurare un aumento della velocità significativo con solo alcuni elementi nella raccolta di origine. Al contrario, le raccolte di origine di dimensioni ridotte con delegati semplici non costituiscono in genere una scelta valida per PLINQ.  
   
@@ -47,23 +47,23 @@ L'obiettivo principale di PLINQ consiste nel velocizzare l'esecuzione di query L
                  select num; //not as good for PLINQ  
     ```  
   
-2.  Numero di core logici nel sistema (grado di parallelismo).  
+2. Numero di core logici nel sistema (grado di parallelismo).  
   
      Questo punto è un ovvio corollario della sezione precedente. Le query squisitamente parallele vengono eseguite più velocemente nei computer con più core perché il lavoro può essere suddiviso tra più thread simultanei. L'aumento di velocità totale dipende dalla percentuale di lavoro complessivo della query parallelizzabile. Tuttavia, non bisogna partire dal presupposto che tutte le query verranno eseguite a velocità raddoppiata in un computer con otto core rispetto a uno con quattro core. In fase di ottimizzazione delle query per ottenere prestazioni di livello più elevato, è importante misurare i risultati effettivi nei computer con diversi numeri di core. Questo punto è strettamente correlato al primo: sono richiesti set di dati più grandi per sfruttare i vantaggi offerti da maggiori risorse di elaborazione.  
   
-3.  Numero e tipo di operazioni.  
+3. Numero e tipo di operazioni.  
   
      PLINQ fornisce l'operatore AsOrdered per situazioni in cui è necessario mantenere l'ordine degli elementi nella sequenza di origine. L'ordinamento prevede un costo, che tuttavia è in genere limitato. Anche GroupBy e le operazioni di join comportano un sovraccarico. PLINQ assicura le prestazioni migliori quando è consentito elaborare gli elementi nella raccolta di origine in qualsiasi ordine e passarli all'operatore successivo non appena sono pronti. Per altre informazioni, vedere [Conservazione dell'ordine in PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
   
-4.  Formato di esecuzione della query.  
+4. Formato di esecuzione della query.  
   
      Se si archiviano i risultati di una query chiamando ToArray o ToList, i risultati di tutti i thread paralleli devono essere uniti in un'unica struttura di dati. Ciò comporta un costo di calcolo inevitabile. Analogamente, se si scorrono i risultati usando un ciclo foreach (For Each in Visual Basic), i risultati dei thread di lavoro devono essere serializzati sul thread dell'enumeratore. Ma se si vogliono semplicemente eseguire operazioni basate sul risultato di ogni thread, è possibile usare il metodo ForAll per eseguire questa attività su più thread.  
   
-5.  Tipo di opzioni di unione.  
+5. Tipo di opzioni di unione.  
   
      PLINQ può essere configurato per il buffering dell'output e la relativa visualizzazione in blocchi o tutto in una volta dopo che è stato prodotto l'intero set di risultati oppure per lo streaming dei singoli risultati mano a mano che vengono prodotti. Nel primo caso il tempo di esecuzione complessivo diminuisce, mentre nel secondo il risultato è una riduzione della latenza tra gli elementi restituiti.  Mentre le opzioni di unione non hanno sempre un impatto significativo sulle prestazioni complessive delle query, possono incidere sulle prestazioni percepite dal momento che controllano quanto tempo deve attendere un utente per vedere i risultati. Per altre informazioni, vedere [Opzioni di unione in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
-6.  Tipo di partizionamento.  
+6. Tipo di partizionamento.  
   
      In alcuni casi una query PLINQ su una raccolta di origine indicizzabile può comportare un carico di lavoro non equilibrato. Quando ciò si verifica, potrebbe essere possibile aumentare le prestazioni delle query creando un partitioner personalizzato. Per altre informazioni, vedere [Partitioner personalizzati per PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: ed7f88b20e4d519e67c8ef7b9f74909a38ea9c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327646"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 È possibile usare gli oggetti `My.Application.Log` e `My.Log` per registrare informazioni sugli eventi che si verificano nell'applicazione. Questa procedura dettagliata mostra come eseguire l'override delle impostazioni predefinite e fare in modo che l'oggetto `Log` scriva le informazioni in altri listener di log.  
@@ -22,7 +22,7 @@ ms.locfileid: "58829317"
   
 ### <a name="to-add-listeners"></a>Per aggiungere listener  
   
-1.  Fare clic con il pulsante destro del mouse sul file app.config in **Esplora soluzioni** , quindi scegliere **Apri**.  
+1. Fare clic con il pulsante destro del mouse sul file app.config in **Esplora soluzioni** , quindi scegliere **Apri**.  
   
      \- oppure -  
   
@@ -34,9 +34,9 @@ ms.locfileid: "58829317"
   
     3.  Fare clic su **Aggiungi**.  
   
-2.  Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
+2. Individuare la sezione `<listeners>` all'interno della sezione `<source>` con l'attributo `name` "DefaultSource" che si trova nella sezione `<sources>` . La sezione `<sources>` si trova nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
-3.  Aggiungere gli elementi seguenti alla sezione `<listeners>` .  
+3. Aggiungere gli elementi seguenti alla sezione `<listeners>` .  
   
     ```xml  
     <!-- Uncomment to connect the application file log. -->  
@@ -51,11 +51,11 @@ ms.locfileid: "58829317"
     <!-- <add name="Console" /> -->  
     ```  
   
-4.  Rimuovere il commento dai listener di log per i quali si vuole ricevere i messaggi di `Log` .  
+4. Rimuovere il commento dai listener di log per i quali si vuole ricevere i messaggi di `Log` .  
   
-5.  Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
+5. Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` all'interno della sezione di primo livello `<configuration>` .  
   
-6.  Aggiungere gli elementi seguenti alla sezione `<sharedListeners>` .  
+6. Aggiungere gli elementi seguenti alla sezione `<sharedListeners>` .  
   
     ```xml  
     <add name="FileLog"  
@@ -86,7 +86,7 @@ ms.locfileid: "58829317"
          initializeData="true" />  
     ```  
   
-7.  Il contenuto del file app.config dovrebbe essere simile al codice XML seguente.  
+7. Il contenuto del file app.config dovrebbe essere simile al codice XML seguente.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -147,9 +147,9 @@ ms.locfileid: "58829317"
   
 ### <a name="to-reconfigure-a-listener"></a>Per riconfigurare un listener  
   
-1.  Individuare l'elemento `<add>` del listener nella sezione `<sharedListeners>` .  
+1. Individuare l'elemento `<add>` del listener nella sezione `<sharedListeners>` .  
   
-2.  L'attributo `type` fornisce il nome del tipo di listener. Questo tipo deve ereditare dalla classe <xref:System.Diagnostics.TraceListener> . Usare il tipo con nome sicuro per assicurarsi di usare il tipo corretto. Per altre informazioni, vedere la sezione seguente "Per aggiungere riferimenti a un tipo con nome sicuro".  
+2. L'attributo `type` fornisce il nome del tipo di listener. Questo tipo deve ereditare dalla classe <xref:System.Diagnostics.TraceListener> . Usare il tipo con nome sicuro per assicurarsi di usare il tipo corretto. Per altre informazioni, vedere la sezione seguente "Per aggiungere riferimenti a un tipo con nome sicuro".  
   
      Di seguito sono riportati alcuni esempi di listener che si possono usare.  
   
@@ -163,17 +163,17 @@ ms.locfileid: "58829317"
   
      Per sapere dove gli altri tipi di listener di log scrivono le informazioni, consultare la documentazione relativa al tipo di listener desiderato.  
   
-3.  Quando crea l'oggetto listener di log, l'applicazione passa l'attributo `initializeData` come parametro del costruttore. Il significato dell'attributo `initializeData` dipende dal listener di traccia.  
+3. Quando crea l'oggetto listener di log, l'applicazione passa l'attributo `initializeData` come parametro del costruttore. Il significato dell'attributo `initializeData` dipende dal listener di traccia.  
   
-4.  Dopo aver creato il listener di log, l'applicazione imposta le proprietà del listener. Tali proprietà sono definite dagli altri attributi contenuti nell'elemento `<add>` . Per altre informazioni sulle proprietà di un determinato listener, consultare la documentazione relativa al tipo di listener corrispondente.  
+4. Dopo aver creato il listener di log, l'applicazione imposta le proprietà del listener. Tali proprietà sono definite dagli altri attributi contenuti nell'elemento `<add>` . Per altre informazioni sulle proprietà di un determinato listener, consultare la documentazione relativa al tipo di listener corrispondente.  
   
 ### <a name="to-reference-a-strongly-named-type"></a>Per aggiungere riferimenti a un tipo con nome sicuro  
   
-1.  Per assicurarsi di usare il tipo di listener di log appropriato, usare il nome di tipo completo e il nome di assembly sicuro. La sintassi di un tipo con nome sicuro è la seguente:  
+1. Per assicurarsi di usare il tipo di listener di log appropriato, usare il nome di tipo completo e il nome di assembly sicuro. La sintassi di un tipo con nome sicuro è la seguente:  
   
      \<*nome tipo*>, \<*nome assembly*>, \<*numero versione*>, \<*impostazioni cultura*>, \<*nome sicuro*>  
   
-2.  L'esempio di codice seguente mostra come determinare il tipo con nome sicuro per un tipo completo, in questo caso "System.Diagnostics.FileLogTraceListener".  
+2. L'esempio di codice seguente mostra come determinare il tipo con nome sicuro per un tipo completo, in questo caso "System.Diagnostics.FileLogTraceListener".  
   
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   
@@ -188,4 +188,4 @@ ms.locfileid: "58829317"
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
 - [Procedura: Scrivere informazioni sugli eventi in un file di testo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [Procedura: Scrivere nel registro eventi di un'applicazione](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [Procedura: Scrivere nel log eventi di un'applicazione](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

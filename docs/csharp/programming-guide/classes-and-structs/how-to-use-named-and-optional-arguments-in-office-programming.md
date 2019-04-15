@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3ecea9d55ef61d2158da0dabeca22a58460b3bea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313970"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office (Guida per programmatori C#)
 Gli argomenti denominati e gli argomenti facoltativi, introdotti in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], migliorano la praticità, la flessibilità e la leggibilità nella programmazione C#. Queste funzionalità, poi, semplificano notevolmente l'accesso alle interfacce COM, quali le API di automazione di Microsoft Office.  
@@ -25,59 +25,59 @@ Gli argomenti denominati e gli argomenti facoltativi, introdotti in [!INCLUDE[cs
   
 ### <a name="to-create-a-new-console-application"></a>Per creare un nuovo progetto di applicazione console  
   
-1.  Avviare Visual Studio.  
+1. Avviare Visual Studio.  
   
-2.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
+2. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-3.  Nel riquadro **Categorie di modelli** espandere **Visual C#** e quindi fare clic su **Windows**.  
+3. Nel riquadro **Categorie di modelli** espandere **Visual C#** e quindi fare clic su **Windows**.  
   
-4.  Verificare che nella parte superiore del riquadro **Modelli** sia visualizzato **.NET Framework 4** nella casella **Framework di destinazione**.  
+4. Verificare che nella parte superiore del riquadro **Modelli** sia visualizzato **.NET Framework 4** nella casella **Framework di destinazione**.  
   
-5.  Nel riquadro **Modelli** fare clic su **Applicazione console**.  
+5. Nel riquadro **Modelli** fare clic su **Applicazione console**.  
   
-6.  Digitare un nome per il progetto nel campo **Nome**.  
+6. Digitare un nome per il progetto nel campo **Nome**.  
   
-7.  Fare clic su **OK**.  
+7. Fare clic su **OK**.  
   
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.  
   
 ### <a name="to-add-a-reference"></a>Per aggiungere un riferimento  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e quindi scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
-2.  Nella pagina **.NET** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente**.  
+2. Nella pagina **.NET** selezionare **Microsoft.Office.Interop.Word** nell'elenco **Nome componente**.  
   
-3.  Fare clic su **OK**.  
+3. Fare clic su **OK**.  
   
 ### <a name="to-add-necessary-using-directives"></a>Per aggiungere le direttive using necessarie  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Program.cs** e quindi fare clic su **Visualizza codice**.  
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul file **Program.cs** e quindi fare clic su **Visualizza codice**.  
   
-2.  Aggiungere le seguenti direttive `using` all'inizio del file di codice.  
+2. Aggiungere le seguenti direttive `using` all'inizio del file di codice.  
   
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]  
   
 ### <a name="to-display-text-in-a-word-document"></a>Per visualizzare il testo in un documento di Word  
   
-1.  Nella classe `Program` in Program.cs aggiungere il metodo seguente per creare un'applicazione di Word e un documento di Word. Il metodo [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) dispone di quattro parametri facoltativi. Questo esempio usa i relativi valori predefiniti. Non sono pertanto necessari argomenti nell'istruzione di chiamata.  
+1. Nella classe `Program` in Program.cs aggiungere il metodo seguente per creare un'applicazione di Word e un documento di Word. Il metodo [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) dispone di quattro parametri facoltativi. Questo esempio usa i relativi valori predefiniti. Non sono pertanto necessari argomenti nell'istruzione di chiamata.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]  
   
-2.  Aggiungere il codice seguente alla fine del metodo per definire il punto in cui visualizzare del testo nel documento e quale testo visualizzare.  
+2. Aggiungere il codice seguente alla fine del metodo per definire il punto in cui visualizzare del testo nel documento e quale testo visualizzare.  
   
      [!code-csharp[csProgGuideNamedAndOptional#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#7)]  
   
 ### <a name="to-run-the-application"></a>Per eseguire l'applicazione  
   
-1.  Aggiungere a Main l'istruzione riportata di seguito.  
+1. Aggiungere a Main l'istruzione riportata di seguito.  
   
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]  
   
-2.  Premere CTRL+F5 per eseguire il progetto. Verrà visualizzato un documento di Word contenente il testo specificato.  
+2. Premere CTRL+F5 per eseguire il progetto. Verrà visualizzato un documento di Word contenente il testo specificato.  
   
 ### <a name="to-change-the-text-to-a-table"></a>Per convertire il testo in una tabella  
   
-1.  Usare il metodo `ConvertToTable` per racchiudere il testo in una tabella. Il metodo ha 16 parametri facoltativi. IntelliSense racchiude tra parentesi quadre i parametri facoltativi, come mostrato nell'immagine seguente.  
+1. Usare il metodo `ConvertToTable` per racchiudere il testo in una tabella. Il metodo ha 16 parametri facoltativi. IntelliSense racchiude tra parentesi quadre i parametri facoltativi, come mostrato nell'immagine seguente.  
   
      ![Elenco dei parametri del metodo ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
@@ -89,15 +89,15 @@ Gli argomenti denominati e gli argomenti facoltativi, introdotti in [!INCLUDE[cs
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]  
   
-2.  Premere CTRL+F5 per eseguire il progetto.  
+2. Premere CTRL+F5 per eseguire il progetto.  
   
 ### <a name="to-experiment-with-other-parameters"></a>Per provare a usare altri parametri  
   
-1.  Per modificare la tabella in modo che contenga una colonna e tre righe, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi premere CTRL+F5.  
+1. Per modificare la tabella in modo che contenga una colonna e tre righe, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi premere CTRL+F5.  
   
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]  
   
-2.  Per specificare un formato predefinito per la tabella, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi premere CTRL+F5. Il formato può corrispondere a qualsiasi costante [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).  
+2. Per specificare un formato predefinito per la tabella, sostituire l'ultima riga in `DisplayInWord` con l'istruzione seguente, quindi premere CTRL+F5. Il formato può corrispondere a qualsiasi costante [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]  
   

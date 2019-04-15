@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203389"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322082"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
 Il polimorfismo è spesso definito il terzo pilastro della programmazione orientata a oggetti, dopo l'incapsulamento e l'ereditarietà. Polimorfismo è una parola che deriva dal greco e significa "multiforme". Il polimorfismo presenta due aspetti distinti:  
@@ -22,9 +22,9 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
   
  I metodi virtuali consentono di usare gruppi di oggetti correlati in modo uniforme. Si supponga ad esempio di avere un'applicazione di disegno che consenta a un utente di creare vari tipi di forme in un'area di disegno. In fase di compilazione non è possibile sapere i tipi specifici di forme che l'utente creerà. L'applicazione deve tuttavia tenere traccia di tutti i vari tipi di forme create e deve aggiornarli in risposta alle azioni del mouse dell'utente. È possibile usare il polimorfismo per risolvere questo problema in due passaggi di base:  
   
-1.  Creare una gerarchia di classi nella quale ogni classe della forma specifica deriva da una classe base comune.  
+1. Creare una gerarchia di classi nella quale ogni classe della forma specifica deriva da una classe base comune.  
   
-2.  Usare un metodo virtuale per richiamare il metodo adatto su qualsiasi classe derivata tramite una sola chiamata al metodo della classe base.  
+2. Usare un metodo virtuale per richiamare il metodo adatto su qualsiasi classe derivata tramite una sola chiamata al metodo della classe base.  
   
  Prima di tutto, creare una classe base denominata `Shape` e delle classi derivate quali `Rectangle`, `Circle` e `Triangle`. Definire nella classe `Shape` un metodo virtuale denominato `Draw` ed eseguirne l'override in ogni classe derivata per disegnare la particolare forma che la classe rappresenta. Creare un oggetto `List<Shape>` e aggiungervi un cerchio, un triangolo e un rettangolo. Per aggiornare l'area di disegno, usare un ciclo [foreach](../../../csharp/language-reference/keywords/foreach-in.md) per scorrere l'elenco e chiamare il metodo `Draw` su ogni oggetto `Shape` nell'elenco. Anche se ogni oggetto nella lista è dichiarato di tipo `Shape`, sarà il tipo della fase di esecuzione (la versione del metodo di cui è stato eseguito l'override in ogni classe derivata) che verrà richiamato.  
   
@@ -99,7 +99,7 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Classi e membri delle classi astratti e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Eventi](../../../csharp/programming-guide/events/index.md)
 - [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)

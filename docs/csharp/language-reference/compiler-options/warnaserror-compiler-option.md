@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329103"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (opzioni del compilatore C#)
 L'opzione **-warnaserror+** considera tutti gli avvisi come errori  
@@ -24,7 +24,7 @@ L'opzione **-warnaserror+** considera tutti gli avvisi come errori
 -warnaserror[+ | -][:warning-list]  
 ```  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  I messaggi che in genere vengono segnalati come avvisi sono invece segnalati come errori e il processo di compilazione viene interrotto (non viene compilato alcun file di output).  
   
  Per impostazione predefinita, l'opzione **-warnaserror-** è attiva e fa in modo che gli avvisi non impediscano la generazione di un file di output. **-warnaserror**, che equivale a **-warnaserror+**, fa in modo che gli avvisi vengano considerati errori.  
@@ -35,11 +35,11 @@ L'opzione **-warnaserror+** considera tutti gli avvisi come errori
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Modificare la proprietà **Considera gli avvisi come errori**.  
+3. Modificare la proprietà **Considera gli avvisi come errori**.  
   
  Per impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>.  
   

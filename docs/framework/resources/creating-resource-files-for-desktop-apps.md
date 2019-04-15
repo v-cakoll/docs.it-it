@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313658"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Creare i file di risorse per le app .NET
 
@@ -31,7 +31,7 @@ ms.locfileid: "56442139"
 
 - Creare un file di risorse binario con estensione resources a livello di codice. È quindi possibile incorporare il file in un file eseguibile o in una libreria dell'applicazione tramite un compilatore del linguaggio. In alternativa, è possibile incorporare il file di risorse in un assembly satellite tramite [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Per altre informazioni, vedere la sezione [Risorse in file con estensione resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
-- Usare [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) per creare un file di risorse e includerlo nel progetto. Visual Studio è dotato di un editor di risorse che consente di aggiungere, eliminare e modificare risorse. In fase di compilazione il file di risorse viene automaticamente convertito in un file binario con estensione resources e incorporato in un assembly dell'applicazione o in un assembly satellite. Per altre informazioni, vedere la sezione [File di risorse in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
+- Usare [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) per creare un file di risorse e includerlo nel progetto. Visual Studio è dotato di un editor di risorse che consente di aggiungere, eliminare e modificare risorse. In fase di compilazione il file di risorse viene automaticamente convertito in un file binario con estensione resources e incorporato in un assembly dell'applicazione o in un assembly satellite. Per altre informazioni, vedere la sezione [File di risorse in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>Risorse in file di testo
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> Poiché i file con estensione resx devono essere costituiti da codice XML ben formato in un formato predefinito, non è consigliabile usare i file con estensione resx manualmente, specialmente se tali file contengono risorse diverse da stringhe. [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) offre invece un'interfaccia trasparente per la creazione e la modifica di file con estensione resx. Per altre informazioni, vedere la sezione [File di risorse in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). È anche possibile creare e modificare i file con estensione resx a livello di codice. Per altre informazioni, vedere [Uso dei file RESX a livello di codice](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+> Poiché i file con estensione resx devono essere costituiti da codice XML ben formato in un formato predefinito, non è consigliabile usare i file con estensione resx manualmente, specialmente se tali file contengono risorse diverse da stringhe. [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) offre invece un'interfaccia trasparente per la creazione e la modifica di file con estensione resx. Per altre informazioni, vedere la sezione [File di risorse in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). È anche possibile creare e modificare i file con estensione resx a livello di codice. Per altre informazioni, vedere [Uso dei file RESX a livello di codice](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>Risorse nei file con estensione resources
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>File di risorse in Visual Studio
 
-Quando si aggiunge un file di risorse a un progetto di [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), Visual Studio crea un file con estensione resx nella directory del progetto. In Visual Studio sono disponibili editor di risorse che consentono di aggiungere stringhe, immagini e oggetti binari. Poiché gli editor vengono progettati per gestire solo dati statici, non possono essere usati per archiviare oggetti a livello di codice, ma è necessario scrivere i dati degli oggetti in un file con estensione resx o resources a livello di codice. Per altre informazioni, vedere [Uso dei file RESX a livello di codice](../../../docs/framework/resources/working-with-resx-files-programmatically.md) e la sezione [Risorse in file con estensione resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
+Quando si aggiunge un file di risorse a un progetto di [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), Visual Studio crea un file con estensione resx nella directory del progetto. In Visual Studio sono disponibili editor di risorse che consentono di aggiungere stringhe, immagini e oggetti binari. Poiché gli editor vengono progettati per gestire solo dati statici, non possono essere usati per archiviare oggetti a livello di codice, ma è necessario scrivere i dati degli oggetti in un file con estensione resx o resources a livello di codice. Per altre informazioni, vedere [Uso dei file RESX a livello di codice](../../../docs/framework/resources/working-with-resx-files-programmatically.md) e la sezione [Risorse in file con estensione resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
 Se si aggiungono risorse localizzate, assegnarvi lo stesso nome di file radice del file di risorse principale. È necessario designare anche le impostazioni cultura nel nome del file. Se ad esempio si aggiunge un file di risorse denominato Resources.resx, è possibile creare anche file di risorse denominati Resources.en-US.resx e Resources.fr-FR.resx per le risorse localizzate rispettivamente per le impostazioni cultura inglesi (Stati Uniti) e francesi (Francia). È necessario designare anche le impostazioni cultura predefinite dell'applicazione. Si tratta delle impostazioni cultura di cui si usano le risorse se non è possibile trovare le risorse localizzate per impostazioni cultura particolari. Per specificare le impostazioni cultura predefinite, in Esplora soluzioni in Visual Studio fare clic con il pulsante destro del mouse sul nome del progetto, scegliere Applicazione, fare clic su **Informazioni assembly**e selezionare la lingua e le impostazioni cultura appropriate nell'elenco **Lingua neutra**.
 

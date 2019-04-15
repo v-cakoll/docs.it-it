@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 245e00402196ab2a8c5998e9515205bb6f37cce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f9eb4c9e0eb92712b5ea1a4feef24f2bb95d70b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828407"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335459"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Procedura: Scrivere testo in file della directory Documenti in Visual Basic
 L'oggetto `My.Computer.FileSystem.SpecialDirectories` consente di accedere a directory speciali, ad esempio alla directory **Documenti**.  
@@ -21,11 +21,11 @@ L'oggetto `My.Computer.FileSystem.SpecialDirectories` consente di accedere a dir
   
 #### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>Per scrivere nuovo testo nei file della directory Documenti  
   
-1.  Usare la proprietà `My.Computer.FileSystem.SpecialDirectories.MyDocuments` per specificare il percorso.  
+1. Usare la proprietà `My.Computer.FileSystem.SpecialDirectories.MyDocuments` per specificare il percorso.  
   
      [!code-vb[VbFileIOWrite#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#1)]  
   
-2.  Usare il metodo `WriteAllText` per scrivere testo nel file indicato.  
+2. Usare il metodo `WriteAllText` per scrivere testo nel file indicato.  
   
      [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   

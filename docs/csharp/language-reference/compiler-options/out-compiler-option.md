@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362357"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331299"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opzioni del compilatore C#)
 L'opzione **-out** specifica il nome del file di output.  
@@ -49,11 +49,11 @@ L'opzione **-out** specifica il nome del file di output.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
+2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
-3.  Modificare la proprietà **Nome assembly**.  
+3. Modificare la proprietà **Nome assembly**.  
   
      Per impostare l'opzione del compilatore a livello di codice: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> è una proprietà di sola lettura caratterizzata dalla combinazione del tipo di progetto (file eseguibile, libreria e così via) e del nome dell'assembly. Per impostare il nome del file di output sarà necessario modificare una o entrambe queste proprietà.  
   

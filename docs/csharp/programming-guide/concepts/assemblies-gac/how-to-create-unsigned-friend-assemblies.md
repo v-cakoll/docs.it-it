@@ -2,21 +2,21 @@
 title: 'Procedura: Creare assembly Friend non firmati (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 5b376266581def9bdd4315ccbee04b71b7c8bc08
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365061"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318234"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Procedura: Creare assembly Friend non firmati (C#)
 In questo esempio viene illustrato come usare assembly Friend e assembly non firmati.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Per creare un assembly e un assembly Friend  
   
-1.  Aprire un prompt dei comandi.  
+1. Aprire un prompt dei comandi.  
   
-2.  Creare un file C# denominato `friend_unsigned_A.` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_unsigned_B come assembly Friend.  
+2. Creare un file C# denominato `friend_unsigned_A.` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_unsigned_B come assembly Friend.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
     }  
     ```  
   
-3.  Compilare e firmare friend_unsigned_A usando il comando seguente.  
+3. Compilare e firmare friend_unsigned_A usando il comando seguente.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  Creare un file C# denominato `friend_unsigned_B` contenente il codice seguente. Poiché friend_unsigned_A specifica che friend_unsigned_B è un assembly Friend, il codice in friend_unsigned_B può accedere ai tipi e ai membri `internal` da friend_unsigned_A.  
+4. Creare un file C# denominato `friend_unsigned_B` contenente il codice seguente. Poiché friend_unsigned_A specifica che friend_unsigned_B è un assembly Friend, il codice in friend_unsigned_B può accedere ai tipi e ai membri `internal` da friend_unsigned_A.  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,7 +75,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
     }  
     ```  
   
-5.  Compilare friend_unsigned_B usando il comando seguente.  
+5. Compilare friend_unsigned_B usando il comando seguente.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
   
      Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con estensione exe o dll) usando il compilatore `/out`. Per altre informazioni, vedere [/out (Opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Eseguire il file friend_unsigned_B.exe.  
+6. Eseguire il file friend_unsigned_B.exe.  
   
      Il programma stampa due stringhe: "Class1.Test" e "Class2.Test".  
   

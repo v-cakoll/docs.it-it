@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592221"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330116"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedura: Gestire più eventi mediante le relative proprietà
 Per utilizzare le proprietà evento è necessario definire queste proprietà nella classe tramite cui vengono generati gli eventi e, successivamente, impostarne i delegati nelle classi mediante cui vengono gestiti gli eventi. Per implementare più proprietà evento in una classe, la classe deve archiviare e mantenere internamente il delegato definito per ogni evento. Uno degli approcci più comuni consiste nell'implementare una raccolta di delegati indicizzata da una chiave evento.  
@@ -30,15 +30,15 @@ Per utilizzare le proprietà evento è necessario definire queste proprietà nel
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>Per gestire più eventi mediante le relative proprietà  
   
-1.  Definire una raccolta di delegati all'interno della classe che genera gli eventi.  
+1. Definire una raccolta di delegati all'interno della classe che genera gli eventi.  
   
-2.  Definire una chiave per ogni evento.  
+2. Definire una chiave per ogni evento.  
   
-3.  Definire le proprietà evento nella classe che genera gli eventi.  
+3. Definire le proprietà evento nella classe che genera gli eventi.  
   
-4.  Usare la raccolta di delegati per implementare i metodi delle funzioni di accesso add e remove per le proprietà evento.  
+4. Usare la raccolta di delegati per implementare i metodi delle funzioni di accesso add e remove per le proprietà evento.  
   
-5.  Usare le proprietà evento pubbliche per aggiungere e rimuovere i delegati dei gestori eventi nelle classi che gestiscono gli eventi.  
+5. Usare le proprietà evento pubbliche per aggiungere e rimuovere i delegati dei gestori eventi nelle classi che gestiscono gli eventi.  
   
 ## <a name="example"></a>Esempio  
  L'esempio C# seguente implementa le proprietà evento `MouseDown` e `MouseUp`, usando un oggetto <xref:System.ComponentModel.EventHandlerList> per archiviare il delegato di ogni evento. Le parole chiave dei costrutti delle proprietà evento sono riportate in grassetto.  

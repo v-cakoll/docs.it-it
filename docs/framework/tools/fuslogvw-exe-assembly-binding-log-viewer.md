@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329518"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
 Il Visualizzatore log associazione assembly consente di visualizzare i dettagli relativi alle associazioni di assembly. Queste informazioni facilitano la diagnosi delle cause dell'impossibilità di individuare un assembly in fase di esecuzione. Questi errori sono generalmente dovuti alla distribuzione di un assembly nel percorso errato, a un'immagine nativa che non è più valida o a una mancata corrispondenza di numeri di versione o impostazioni cultura. L'impossibilità da parte di Common Language Runtime di individuare un assembly produce generalmente un'eccezione <xref:System.TypeLoadException> nell'applicazione.  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>Per modificare la visualizzazione del percorso del file di log  
   
-1.  Selezionare il pulsante di opzione **Predefinito** per visualizzare gli errori di associazione per tutti i tipi di applicazione. Per impostazione predefinita, le voci di log vengono archiviate in directory specifiche per utente su disco, nella cache wininet.  
+1. Selezionare il pulsante di opzione **Predefinito** per visualizzare gli errori di associazione per tutti i tipi di applicazione. Per impostazione predefinita, le voci di log vengono archiviate in directory specifiche per utente su disco, nella cache wininet.  
   
-2.  Selezionare il pulsante di opzione **Personalizzato** per visualizzare gli errori di associazione in una directory personalizzata specificata. È necessario specificare il percorso personalizzato in cui il runtime deve archiviare i log impostando il percorso di log personalizzato su un nome di directory valido nella finestra di dialogo **Impostazioni log**. Tale directory deve essere pulita e contenere solo file generati dal runtime. Se contiene un file eseguibile che genera un errore da registrare, l'errore non verrà registrato poiché lo strumento cercherà di creare una directory con lo stesso nome del file eseguibile. Inoltre, il tentativo di esecuzione di un eseguibile dal percorso del log avrà esito negativo.  
+2. Selezionare il pulsante di opzione **Personalizzato** per visualizzare gli errori di associazione in una directory personalizzata specificata. È necessario specificare il percorso personalizzato in cui il runtime deve archiviare i log impostando il percorso di log personalizzato su un nome di directory valido nella finestra di dialogo **Impostazioni log**. Tale directory deve essere pulita e contenere solo file generati dal runtime. Se contiene un file eseguibile che genera un errore da registrare, l'errore non verrà registrato poiché lo strumento cercherà di creare una directory con lo stesso nome del file eseguibile. Inoltre, il tentativo di esecuzione di un eseguibile dal percorso del log avrà esito negativo.  
   
     > [!NOTE]
     >  È preferibile usare il percorso di associazione predefinito anziché quello personalizzato. Il runtime archivia il percorso di associazione predefinito nella cache wininet ed effettua la pulizia automaticamente. Se si specifica un percorso di associazione personalizzato la pulizia dovrà essere eseguita manualmente.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Per visualizzare i dettagli relativi a un errore specifico  
   
-1.  Nel visualizzatore selezionare il nome dell'applicazione dalla voce desiderata.  
+1. Nel visualizzatore selezionare il nome dell'applicazione dalla voce desiderata.  
   
-2.  Fare clic sul pulsante **Visualizza file di log**. In alternativa è possibile fare doppio clic sulla voce selezionata.  
+2. Fare clic sul pulsante **Visualizza file di log**. In alternativa è possibile fare doppio clic sulla voce selezionata.  
   
      Vengono visualizzati i seguenti dettagli relativi all'errore di associazione selezionato:  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>Per eliminare una singola voce dal log  
   
-1.  Selezionare una voce nel visualizzatore.  
+1. Selezionare una voce nel visualizzatore.  
   
-2.  Fare clic sul pulsante **Elimina voce**.  
+2. Fare clic sul pulsante **Elimina voce**.  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Per eliminare tutte le voci dal log  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>Per impostare un percorso di log personalizzato  
   
-1.  Selezionare il pulsante di opzione **Attiva percorso personalizzato log**.  
+1. Selezionare il pulsante di opzione **Attiva percorso personalizzato log**.  
   
-2.  Immettere il percorso nella casella di testo **Percorso personalizzato log**.  
+2. Immettere il percorso nella casella di testo **Percorso personalizzato log**.  
   
 > [!NOTE]
 >  Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.  
@@ -221,14 +221,15 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Per abilitare la registrazione per le app eseguite nel contenitore delle app Windows  
   
-1.  Abilitare un percorso di log personalizzato come descritto nella procedura precedente. Per impostazione predefinita, le app eseguite nel contenitore delle app Windows dispongono di accesso limitato al disco rigido. La directory specificata disporrà di accesso in lettura/scrittura su tutte le app nel contenitore.  
+1. Abilitare un percorso di log personalizzato come descritto nella procedura precedente. Per impostazione predefinita, le app eseguite nel contenitore delle app Windows dispongono di accesso limitato al disco rigido. La directory specificata disporrà di accesso in lettura/scrittura su tutte le app nel contenitore.  
   
-2.  Selezionare la casella di controllo **Abilita registrazione immersiva**.  
+2. Selezionare la casella di controllo **Abilita registrazione immersiva**.  
   
     > [!NOTE]
     >  Questa casella è abilitata solo in Windows 8 o versioni successive.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.TypeLoadException>
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)

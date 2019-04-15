@@ -2,21 +2,21 @@
 title: 'Procedura: Creare assembly Friend firmati (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325202"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procedura: Creare assembly Friend firmati (C#)
 In questo esempio viene illustrato come usare assembly Friend e assembly con nomi sicuri. È necessario che entrambi i tipi di assembly abbiano un nome sicuro. Gli assembly in questo esempio usano le stesse chiavi. È comunque possibile usare chiavi diverse per i due assembly.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Per creare un assembly firmato e un assembly friend  
   
-1.  Aprire un prompt dei comandi.  
+1. Aprire un prompt dei comandi.  
   
-2.  Eseguire la sequenza di comandi seguente con lo strumento Nome sicuro per generare un keyfile e per visualizzare la relativa chiave pubblica. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
+2. Eseguire la sequenza di comandi seguente con lo strumento Nome sicuro per generare un keyfile e per visualizzare la relativa chiave pubblica. Per altre informazioni, vedere [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Generare una chiave con nome sicuro per questo esempio e archiviarla nel file FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Creare un file C# denominato `friend_signed_A` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
+3. Creare un file C# denominato `friend_signed_A` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
   
      Ogni volta che viene eseguito, lo strumento Nome sicuro genera una chiave pubblica nuova. È pertanto necessario sostituire la chiave pubblica nel codice seguente con la chiave pubblica appena generata, come illustrato nell'esempio seguente.  
   
@@ -51,13 +51,13 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
     }  
     ```  
   
-4.  Compilare e firmare friend_signed_A usando il comando seguente.  
+4. Compilare e firmare friend_signed_A usando il comando seguente.  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Creare un file C# denominato `friend_signed_B` contenente il codice seguente. Poiché friend_signed_A specifica che friend_signed_B è un assembly Friend, il codice in friend_signed_B può accedere ai tipi e ai membri `internal` da friend_signed_A. Il file contiene il codice seguente.  
+5. Creare un file C# denominato `friend_signed_B` contenente il codice seguente. Poiché friend_signed_A specifica che friend_signed_B è un assembly Friend, il codice in friend_signed_B può accedere ai tipi e ai membri `internal` da friend_signed_A. Il file contiene il codice seguente.  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,7 +73,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
     }  
     ```  
   
-6.  Compilare e firmare friend_signed_B usando il comando seguente.  
+6. Compilare e firmare friend_signed_B usando il comando seguente.  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -81,7 +81,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
      Il nome dell'assembly generato dal compilatore deve corrispondere al nome dell'assembly Friend passato all'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. È necessario specificare in modo esplicito il nome dell'assembly di output (con estensione exe o dll) usando il compilatore `/out`.  Per altre informazioni, vedere [/out (Opzioni del compilatore C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-7.  Eseguire il file friend_signed_B.exe.  
+7. Eseguire il file friend_signed_B.exe.  
   
      Il programma stampa la stringa "Class1.Test".  
   

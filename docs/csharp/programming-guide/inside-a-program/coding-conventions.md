@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55716a9955d12ef3a926efe352a0078044de9990
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326801"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenzioni di codifica C# (Guida per programmatori C#)
  Le convenzioni di codifica hanno gli scopi seguenti:  
@@ -135,7 +135,7 @@ ms.locfileid: "54614120"
   
 ### <a name="-and-124124-operators"></a>Operatori && e &#124;&#124;  
   
--   Per evitare eccezioni e migliorare le prestazioni ignorando i confronti non necessari, usare [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) invece di [&](../../../csharp/language-reference/operators/and-operator.md) e [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) invece di [&#124;](../../../csharp/language-reference/operators/or-operator.md) quando si eseguono confronti, come illustrato nell'esempio seguente.  
+-   Per evitare eccezioni e migliorare le prestazioni ignorando i confronti non necessari, usare [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) invece di [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) e [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) invece di [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) quando si eseguono confronti, come illustrato nell'esempio seguente.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -198,5 +198,5 @@ ms.locfileid: "54614120"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Convenzioni di scrittura codice di Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
+- [Convenzioni di codifica di Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Linee guida per la generazione di codice sicuro](../../../standard/security/secure-coding-guidelines.md)

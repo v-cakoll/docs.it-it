@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5424eac20992d87542bd8a9a27d5775483d64a60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbde11672dc17f80a45defc0a55bcf841e83c324
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325072"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigazione: deserializzazione di oggetti tra domini app
 In alcuni casi, quando in un'applicazione vengono utilizzati due o più domini applicazione con diverse basi di applicazione, il tentativo di deserializzare gli oggetti nel contesto di chiamata logico dei domini applicazione comporta la generazione di un'eccezione.  
@@ -17,15 +17,15 @@ In alcuni casi, quando in un'applicazione vengono utilizzati due o più domini a
 ## <a name="diagnosing-the-issue"></a>Diagnostica del problema  
  Il problema si presenta con la sequenza di condizioni seguente:  
   
-1.  In un'applicazione vengono utilizzati due o più domini applicazione con basi di applicazione diverse.  
+1. In un'applicazione vengono utilizzati due o più domini applicazione con basi di applicazione diverse.  
   
-2.  Alcuni tipi vengono aggiunti esplicitamente all'oggetto <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> chiamando un metodo come <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> o <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>. Questi tipi non vengono contrassegnati come serializzabili e non sono archiviati nella Global Assembly Cache.  
+2. Alcuni tipi vengono aggiunti esplicitamente all'oggetto <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> chiamando un metodo come <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType> o <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>. Questi tipi non vengono contrassegnati come serializzabili e non sono archiviati nella Global Assembly Cache.  
   
-3.  Successivamente, tramite il codice in esecuzione nel dominio applicazione non predefinito viene effettuato il tentativo di lettura di un valore da un file di configurazione o di utilizzo di XML per deserializzare un oggetto.  
+3. Successivamente, tramite il codice in esecuzione nel dominio applicazione non predefinito viene effettuato il tentativo di lettura di un valore da un file di configurazione o di utilizzo di XML per deserializzare un oggetto.  
   
-4.  Per leggere da un file di configurazione o deserializzare l'oggetto, tramite un oggetto <xref:System.Xml.XmlReader> viene effettuato il tentativo di accesso al sistema di configurazione.  
+4. Per leggere da un file di configurazione o deserializzare l'oggetto, tramite un oggetto <xref:System.Xml.XmlReader> viene effettuato il tentativo di accesso al sistema di configurazione.  
   
-5.  Se il sistema di configurazione non è già stato inizializzato, deve completare la relativa inizializzazione. Ciò significa, ad esempio, che tramite il runtime deve essere creato un percorso stabile per un sistema di configurazione nel modo seguente:  
+5. Se il sistema di configurazione non è già stato inizializzato, deve completare la relativa inizializzazione. Ciò significa, ad esempio, che tramite il runtime deve essere creato un percorso stabile per un sistema di configurazione nel modo seguente:  
   
     1.  Vengono cercate le evidenze per il dominio applicazione non predefinito.  
   
@@ -35,18 +35,19 @@ In alcuni casi, quando in un'applicazione vengono utilizzati due o più domini a
   
     4.  Come parte del contratto di dominio applicazione in .NET Framework, anche il contenuto del contesto di chiamata logico deve essere sottoposto a marshalling attraverso i limiti del dominio applicazione.  
   
-6.  Poiché i tipi presenti nel contesto di chiamata logico non possono essere risolti nel dominio applicazione predefinito, viene generata un'eccezione.  
+6. Poiché i tipi presenti nel contesto di chiamata logico non possono essere risolti nel dominio applicazione predefinito, viene generata un'eccezione.  
   
 ## <a name="mitigation"></a>Mitigazione  
  Per risolvere questo problema, effettuare le operazioni seguenti:  
   
-1.  Individuare la chiamata a `get_Evidence` nello stack di chiamate quando viene generata l'eccezione. L'eccezione può essere una qualsiasi di un subset di eccezioni, incluse <xref:System.IO.FileNotFoundException> e <xref:System.Runtime.Serialization.SerializationException>.  
+1. Individuare la chiamata a `get_Evidence` nello stack di chiamate quando viene generata l'eccezione. L'eccezione può essere una qualsiasi di un subset di eccezioni, incluse <xref:System.IO.FileNotFoundException> e <xref:System.Runtime.Serialization.SerializationException>.  
   
-2.  Identificare la posizione nell'applicazione in cui nessun oggetto viene aggiunto al contesto di chiamata logico e aggiungere il codice seguente:  
+2. Identificare la posizione nell'applicazione in cui nessun oggetto viene aggiunto al contesto di chiamata logico e aggiungere il codice seguente:  
   
     ```  
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+
+- [Modifiche in fase di esecuzione](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
