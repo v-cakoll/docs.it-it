@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ac929a8b3e9a7d56122f5699c51819ad483d1f5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235614"
+---
 ### <a name="binaryformatter-can-fail-to-find-type-from-loadfrom-context"></a>BinaryFormatter potrebbe non trovare il tipo dal contesto LoadFrom
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versione|4.5|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType></li></ul>|
-

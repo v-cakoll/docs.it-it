@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2dd97fcce13ed1ac7baf4cd02f5881d31d7a9c4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235488"
+---
 ### <a name="xslt-forward-compat-now-works"></a>La compatibilità con le versioni successive di XSLT ora funziona
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versione|4.5|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType></li></ul>|
-

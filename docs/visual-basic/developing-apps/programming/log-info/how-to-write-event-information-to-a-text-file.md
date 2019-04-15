@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819034"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312715"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Procedura: Scrivere informazioni sugli eventi in un file di testo (Visual Basic)
 È possibile usare gli oggetti `My.Application.Log` e `My.Log` per registrare informazioni sugli eventi che si verificano nell'applicazione. Questo esempio illustra come usare il metodo `My.Application.Log.WriteEntry` per registrare le informazioni di traccia in un file di log.  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>Per aggiungere e configurare il listener di log del file  
   
-1.  Fare clic con il pulsante destro del mouse sul file app.config in **Esplora soluzioni** , quindi scegliere **Apri**.  
+1. Fare clic con il pulsante destro del mouse sul file app.config in **Esplora soluzioni** , quindi scegliere **Apri**.  
   
      \- oppure -  
   
@@ -30,19 +30,19 @@ ms.locfileid: "58819034"
   
     3.  Fare clic su **Aggiungi**.  
   
-2.  Individuare la sezione `<listeners>` nel file di configurazione dell'applicazione.  
+2. Individuare la sezione `<listeners>` nel file di configurazione dell'applicazione.  
   
      La sezione \<listeners> si trova nella sezione \<source> con l'attributo del nome "DefaultSource" annidato sotto la sezione \<system.diagnostics>, a sua volta annidata sotto la sezione \<configuration> di primo livello.  
   
-3.  Aggiungere l'elemento seguente alla sezione `<listeners>` :  
+3. Aggiungere l'elemento seguente alla sezione `<listeners>` :  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` annidata sotto la sezione `<configuration>` di primo livello.  
+4. Individuare la sezione `<sharedListeners>` nella sezione `<system.diagnostics>` annidata sotto la sezione `<configuration>` di primo livello.  
   
-5.  Aggiungere l'elemento seguente alla sezione `<sharedListeners>` :  
+5. Aggiungere l'elemento seguente alla sezione `<sharedListeners>` :  
   
     ```xml  
     <add name="FileLogListener"   

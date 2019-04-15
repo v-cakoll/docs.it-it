@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604301"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305338"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Procedura: Annullare una query PLINQ
 Gli esempi seguenti descrivono due modi per annullare una query PLINQ. Il primo esempio descrive come annullare una query costituita principalmente da attraversamento di dati. Il secondo esempio descrive come annullare una query che contiene una funzione utente onerosa dal punto di vista delle risorse di calcolo.  
@@ -34,9 +34,9 @@ Gli esempi seguenti descrivono due modi per annullare una query PLINQ. Il primo 
   
  Le indicazioni generali sull'annullamento sono le seguenti:  
   
-1.  Se si esegue l'annullamento dei delegati dell'utente, è necessario indicare a PLINQ l'oggetto <xref:System.Threading.CancellationToken> esterno e generare un oggetto <xref:System.OperationCanceledException>(externalCT).  
+1. Se si esegue l'annullamento dei delegati dell'utente, è necessario indicare a PLINQ l'oggetto <xref:System.Threading.CancellationToken> esterno e generare un oggetto <xref:System.OperationCanceledException>(externalCT).  
   
-2.  Se si verifica l'annullamento e non vengono generate altre eccezioni, è necessario gestire un oggetto <xref:System.OperationCanceledException> invece di un oggetto <xref:System.AggregateException>.  
+2. Se si verifica l'annullamento e non vengono generate altre eccezioni, è necessario gestire un oggetto <xref:System.OperationCanceledException> invece di un oggetto <xref:System.AggregateException>.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra come gestire l'annullamento in presenza di una funzione onerosa dal punto di vista delle risorse di calcolo nel codice utente.  

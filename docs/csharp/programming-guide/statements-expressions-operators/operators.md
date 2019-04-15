@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307468"
 ---
 # <a name="operators-c-programming-guide"></a>Operatori (Guida per programmatori C#)
 
@@ -63,13 +63,13 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|identità|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negazione|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negazione logica|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Negazione logica|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negazione bit per bit|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Pre-incremento|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Pre-decremento|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Convertire in modo esplicito x nel tipo T|  
   
- **Operatori di moltiplicazione**  
+ **Operatori moltiplicativi**  
   
 |Espressione|Description|  
 |----------------|-----------------|  
@@ -77,7 +77,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Divisione|  
 |[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Resto|  
   
- **Operatori di addizione**  
+ **Operatori additivi**  
   
 |Espressione|Description|  
 |----------------|-----------------|  
@@ -107,7 +107,7 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |Espressione|Description|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Uguale|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Non uguaglianza|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Diverso|  
   
  **Operatori logici, condizionali e Null**  
   
@@ -116,8 +116,8 @@ Nel linguaggio C# un *operatore* è un elemento del programma che si applica a u
 |AND logico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND Integer bit per bit, AND logico booleano|  
 |XOR logico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR Integer bit per bit, XOR logico booleano|  
 |OR logico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR Integer bit per bit, OR logico booleano|  
-|AND condizionale|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Restituisce y solo se x è true|  
-|OR condizionale|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Restituisce y solo se x è false|  
+|AND condizionale|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Restituisce y solo se x è true|  
+|OR condizionale|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Restituisce y solo se x è false|  
 |Null-coalescing|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) s|Restituisce y se x è Null; in caso contrario x|  
 |Condizionale|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Restituisce y se x è true, z se x è false|  
   

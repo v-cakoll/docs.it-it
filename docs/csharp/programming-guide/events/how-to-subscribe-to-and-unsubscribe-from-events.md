@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4d06899303110d0b06729f2a02c47b9096bec724
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306599"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedura: Sottoscrivere e annullare la sottoscrizione di eventi (Guida per programmatori C#)
 Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere codice personalizzato che viene chiamato quando viene generato tale evento. È ad esempio possibile sottoscrivere l'evento `click` di un pulsante perché l'applicazione esegua un'operazione utile quando l'utente fa clic sul pulsante in questione.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Per sottoscrivere gli eventi usando l'IDE di Visual Studio  
   
-1.  Se la finestra **Proprietà** non viene visualizzata, nella visualizzazione **Progettazione** fare clic con il pulsante destro del mouse sul modulo o sul controllo per cui si vuole creare un gestore eventi e selezionare **Proprietà**.  
+1. Se la finestra **Proprietà** non viene visualizzata, nella visualizzazione **Progettazione** fare clic con il pulsante destro del mouse sul modulo o sul controllo per cui si vuole creare un gestore eventi e selezionare **Proprietà**.  
   
-2.  Nella parte superiore della finestra **Proprietà** fare clic sull'icona **Eventi**.  
+2. Nella parte superiore della finestra **Proprietà** fare clic sull'icona **Eventi**.  
   
-3.  Fare doppio clic sull'evento che si vuole creare, ad esempio sull'evento `Load`.  
+3. Fare doppio clic sull'evento che si vuole creare, ad esempio sull'evento `Load`.  
   
      Visual C# crea un metodo del gestore eventi vuoto e lo aggiunge al codice. In alternativa, è possibile aggiungere manualmente il codice nella visualizzazione **Codice**. Ad esempio, le righe di codice seguenti dichiarano un metodo del gestore eventi che verrà chiamato quando la classe `Form` genera l'evento `Load`.  
   
@@ -37,7 +37,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
   
 ### <a name="to-subscribe-to-events-programmatically"></a>Per sottoscrivere gli eventi a livello di codice  
   
-1.  Definire un metodo del gestore eventi la cui firma corrisponda alla firma del delegato per l'evento. Se ad esempio l'evento è basato sul tipo di delegato <xref:System.EventHandler>, il codice riportato di seguito rappresenta lo stub del metodo:  
+1. Definire un metodo del gestore eventi la cui firma corrisponda alla firma del delegato per l'evento. Se ad esempio l'evento è basato sul tipo di delegato <xref:System.EventHandler>, il codice riportato di seguito rappresenta lo stub del metodo:  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -46,7 +46,7 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
     }  
     ```  
   
-2.  Usare l'operatore di assegnazione di addizione (`+=`) per associare il gestore eventi all'evento. Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent`. Si noti che per la classe subscriber è necessario un riferimento alla classe publisher per sottoscrivere gli eventi corrispondenti.  
+2. Usare l'operatore di assegnazione di addizione (`+=`) per associare il gestore eventi all'evento. Nell'esempio seguente si supponga che a un oggetto denominato `publisher` sia associato un evento denominato `RaiseCustomEvent`. Si noti che per la classe subscriber è necessario un riferimento alla classe publisher per sottoscrivere gli eventi corrispondenti.  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
@@ -104,5 +104,5 @@ Si sottoscrive un evento pubblicato da un'altra classe quando si vuole scrivere 
 - [Eventi](../../../csharp/programming-guide/events/index.md)
 - [event](../../../csharp/language-reference/keywords/event.md)
 - [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [Operatore = (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)
+- [Operatore -= (Riferimenti per C#)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [Operatore +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cda5df4b673412a7c8c59f80f89c19c13dc81dc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235548"
+---
 ### <a name="accessing-a-wpf-datagrids-selected-items-from-a-handler-of-the-datagrids-unloadingrow-event-can-cause-a-nullreferenceexception"></a>L'accesso agli elementi selezionati di un elemento DataGrid WPF da parte di un gestore dell'evento UnloadingRow di DataGrid può determinare un'eccezione NullReferenceException
 
 |   |   |
@@ -8,4 +16,3 @@
 |Versione|4.5|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Windows.Controls.DataGrid.UnloadingRow?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.DataGrid.UnloadingRowDetails?displayProperty=nameWithType></li></ul>|
-

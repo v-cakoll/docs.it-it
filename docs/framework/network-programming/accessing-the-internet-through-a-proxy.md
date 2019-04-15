@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 0f58759b02fb650c090267e13ec5de65c2c63d19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230564"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Accesso a Internet con un proxy
 Se nel sito viene usato un proxy per l'accesso a Internet, sarà necessario configurare un'istanza del proxy per consentire all'applicazione di comunicare con il proxy Web.  
@@ -33,5 +33,6 @@ Se nel sito viene usato un proxy per l'accesso a Internet, sarà necessario conf
 -   [Procedura: Eseguire l'override di una selezione proxy globale](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
 - [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)

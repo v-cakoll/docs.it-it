@@ -6,47 +6,47 @@ helpviewer_keywords:
 - strings [Visual Basic], retrieving from serial ports
 - My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
-ms.openlocfilehash: 1a7aa88cfb90f347caed24bec0b5123dafb4c533
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c832cd9ef5df904850261f4de2d769bfc28c3cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296719"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Procedura: Ricevere stringhe da porte seriali in Visual Basic
 Questo argomento descrive come usare `My.Computer.Ports` per ricevere stringhe dalle porte seriali del computer in Visual Basic.  
   
 ### <a name="to-receive-strings-from-the-serial-port"></a>Per ricevere stringhe dalla porta seriale  
   
-1.  Inizializzare la stringa restituita.  
+1. Inizializzare la stringa restituita.  
   
      [!code-vb[VbVbalrMyComputer#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#38)]  
   
-2.  Determinare quale porta seriale deve fornire le stringhe. In questo esempio si presuppone che sia `COM1`.  
+2. Determinare quale porta seriale deve fornire le stringhe. In questo esempio si presuppone che sia `COM1`.  
   
-3.  Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3. Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per ulteriori informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
      Il blocco `Try...Catch...Finally` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione. Tutto il codice per la modifica della porta seriale deve essere contenuto all'interno di questo blocco.  
   
      [!code-vb[VbVbalrMyComputer#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#39)]  
   
-4.  Creare un ciclo `Do` per leggere le righe di testo fino a quando non sono più disponibili righe.  
+4. Creare un ciclo `Do` per leggere le righe di testo fino a quando non sono più disponibili righe.  
   
      [!code-vb[VbVbalrMyComputer#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#40)]  
   
-5.  Usare il metodo <xref:System.IO.Ports.SerialPort.ReadLine> per leggere la successiva riga di testo disponibile dalla porta seriale.  
+5. Usare il metodo <xref:System.IO.Ports.SerialPort.ReadLine> per leggere la successiva riga di testo disponibile dalla porta seriale.  
   
      [!code-vb[VbVbalrMyComputer#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#41)]  
   
-6.  Usare un'istruzione `If` per determinare se il metodo <xref:System.IO.Ports.SerialPort.ReadLine> restituisce `Nothing`, il che significa che non è più disponibile testo. Se restituisce `Nothing`, uscire dal ciclo `Do`.  
+6. Usare un'istruzione `If` per determinare se il metodo <xref:System.IO.Ports.SerialPort.ReadLine> restituisce `Nothing`, il che significa che non è più disponibile testo. Se restituisce `Nothing`, uscire dal ciclo `Do`.  
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7.  Aggiungere un blocco `Else` all'istruzione `If` per gestire la situazione se la stringa viene effettivamente letta. Il blocco consente di aggiungere la stringa dalla porta seriale alla stringa restituita.  
+7. Aggiungere un blocco `Else` all'istruzione `If` per gestire la situazione se la stringa viene effettivamente letta. Il blocco consente di aggiungere la stringa dalla porta seriale alla stringa restituita.  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   
-8.  Restituire la stringa.  
+8. Restituire la stringa.  
   
      [!code-vb[VbVbalrMyComputer#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#44)]  
   

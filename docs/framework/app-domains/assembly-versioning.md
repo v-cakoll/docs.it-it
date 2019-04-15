@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305195"
 ---
 # <a name="assembly-versioning"></a>Controllo delle versioni degli assembly
 Il controllo delle versioni degli assembly che utilizzano Common Language Runtime viene svolto interamente a livello dell'assembly. La specifica versione di un assembly e le versioni degli assembly dipendenti sono memorizzate nel manifesto dell'assembly. I criteri di versione predefiniti del runtime prevedono che l'applicazione venga eseguita solo con le versioni con cui è stata compilata e testata. Per modificare il comportamento predefinito, è possibile esprimere esplicitamente criteri di versione diversi nei file di configurazione (il file di configurazione dell'applicazione, il file dei criteri dell'autore e il file di configurazione dell'amministratore del computer).  
@@ -25,13 +25,13 @@ Il controllo delle versioni degli assembly che utilizzano Common Language Runtim
   
  Per risolvere una richiesta di associazione di un assembly, il runtime compie diverse operazioni:  
   
-1.  Controlla il riferimento originale dell'assembly per determinare a quale versione dell'assembly effettuare l'associazione.  
+1. Controlla il riferimento originale dell'assembly per determinare a quale versione dell'assembly effettuare l'associazione.  
   
-2.  Controlla tutti i file di configurazione interessati per adottare i criteri di versione prescritti.  
+2. Controlla tutti i file di configurazione interessati per adottare i criteri di versione prescritti.  
   
-3.  Sulla base del riferimento originale e di eventuali reindirizzamenti specificati nei file di configurazione, determina la versione dell'assembly da collegare all'assembly che ha effettuato la chiamata.  
+3. Sulla base del riferimento originale e di eventuali reindirizzamenti specificati nei file di configurazione, determina la versione dell'assembly da collegare all'assembly che ha effettuato la chiamata.  
   
-4.  Controlla la Global Assembly Cache e le basi di codice specificate nei file di configurazione, quindi controlla la directory dell'applicazione e le sottodirectory che usano le regole di esecuzione del probe descritte in [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+4. Controlla la Global Assembly Cache e le basi di codice specificate nei file di configurazione, quindi controlla la directory dell'applicazione e le sottodirectory che usano le regole di esecuzione del probe descritte in [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
  Questi passaggi sono illustrati nella figura seguente:  
   
@@ -70,6 +70,7 @@ Il controllo delle versioni degli assembly che utilizzano Common Language Runtim
  La versione informativa viene espressa utilizzando l'attributo personalizzato <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType>. Per altre informazioni sull'attributo usato dalla versione informativa, vedere [Impostazione degli attributi di un assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Configurazione di applicazioni](../../../docs/framework/configure-apps/index.md)
 - [Impostazione degli attributi dell'assembly](../../../docs/framework/app-domains/set-assembly-attributes.md)

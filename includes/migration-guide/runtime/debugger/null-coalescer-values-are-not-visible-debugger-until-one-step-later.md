@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 22f8e3bb1ba72379b3f5fc87a077e5fe57f89bf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235415"
+---
 ### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>I valori di unione Null non risultano visibili nel debugger fino al passaggio successivo
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ambito|Microsoft Edge|
 |Versione|4.5|
 |Tipo|Runtime|
-

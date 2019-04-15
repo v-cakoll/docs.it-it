@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b258f0392275ffd18c52d11df3bc266a55ce3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19410bd83605e6c7325a61e64a32a828846b7df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222575"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Ogni computer in cui è installato Common Language Runtime ha una cache di codice a livello di computer detta Global Assembly Cache. La Global Assembly Cache archivia gli assembly specificamente designati per essere condivisi da più applicazioni nel computer.  
@@ -43,6 +43,7 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
  Gli assembly implementati nella Global Assembly Cache devono avere un nome sicuro. Quando si aggiunge un assembly alla Global Assembly Cache, vengono eseguiti controlli di integrità su tutti i file che compongono l'assembly. La cache esegue questi controlli di integrità per garantire che un assembly non sia stato manomesso, ad esempio quando un file è stato modificato ma il manifesto non riflette la modifica.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
-- [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Utilizzo di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298968"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilatore licenze)
 Il Compilatore licenze legge file di testo contenenti informazioni sulla licenza e produce un file binario che è possibile incorporare come risorsa in un eseguibile di Common Language Runtime.  
@@ -52,19 +52,19 @@ Il Compilatore licenze legge file di testo contenenti informazioni sulla licenza
   
 ## <a name="example"></a>Esempio  
   
-1.  Se si usa un controllo con licenza `MyCompany.Samples.LicControl1` contenuto in `Samples.DLL` all'interno di un'applicazione denominata `HostApp.exe`*,* è possibile creare il file `HostAppLic.txt` includendo gli elementi seguenti.  
+1. Se si usa un controllo con licenza `MyCompany.Samples.LicControl1` contenuto in `Samples.DLL` all'interno di un'applicazione denominata `HostApp.exe`*,* è possibile creare il file `HostAppLic.txt` includendo gli elementi seguenti.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Creare il file LICENSES denominato `HostApp.exe.licenses` usando il comando che segue.  
+2. Creare il file LICENSES denominato `HostApp.exe.licenses` usando il comando che segue.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Compilare `HostApp.exe` includendo il file LICENSES come risorsa. Se l'applicazione fosse in C#, si utilizzerebbe il seguente comando per compilarla:  
+3. Compilare `HostApp.exe` includendo il file LICENSES come risorsa. Se l'applicazione fosse in C#, si utilizzerebbe il seguente comando per compilarla:  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

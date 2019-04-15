@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296654"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor per la localizzazione di risorse Windows)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Argomenti
 
-|Argomento|Descrizione|
+|Argomento|Description|
 |--------------|-----------------|
 |`resourceFile`|File di risorse da localizzare. Deve essere un form di Windows Form con estensione .resx o .resources generato dalla finestra di progettazione di Visual Studio. Winres.exe non è in grado di aprire file .resx o .resources generici.|
 
-|Opzione|Descrizione|
+|Opzione|Description|
 |------------|-----------------|
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|
 
@@ -106,11 +106,11 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Per localizzare un file .resx o .resources associato a un form
 
-1.  Per eseguire Winres.exe, al prompt dei comandi per gli sviluppatori digitare `winres`.
+1. Per eseguire Winres.exe, al prompt dei comandi per gli sviluppatori digitare `winres`.
 
-2.  Per aprire il file di risorse predefinito relativo a un modulo da localizzare, scegliere il comando **Apri** dal menu **File** e selezionare il file desiderato.
+2. Per aprire il file di risorse predefinito relativo a un modulo da localizzare, scegliere il comando **Apri** dal menu **File** e selezionare il file desiderato.
 
-     oppure
+     -oppure-
 
      All'avvio di Winres.exe, specificare il file da aprire dalla riga di comando.
 
@@ -129,11 +129,11 @@ Si consiglia di usare la versione di Winres.exe rilasciata con la versione di .N
     > [!NOTE]
     > Se il form di cui si modificano le risorse è un form ereditato, l'assembly contenuto nel form ereditato e quello incluso nel form di derivazione devono essere entrambi registrati nella Global Assembly Cache (GAC) oppure devono trovarsi nella stessa directory di WinRes.exe. Per altre informazioni sull'installazione dei componenti di .NET Framework nella GAC, vedere [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).
 
-3.  Selezionare i controlli nel form e modificarne la proprietà <xref:System.Windows.Forms.Control.Text%2A> e le altre proprietà in base alla lingua e alle impostazioni cultura di destinazione. Spostare o ridimensionare i controlli in base al testo localizzato.
+3. Selezionare i controlli nel form e modificarne la proprietà <xref:System.Windows.Forms.Control.Text%2A> e le altre proprietà in base alla lingua e alle impostazioni cultura di destinazione. Spostare o ridimensionare i controlli in base al testo localizzato.
 
-4.  Per salvare la versione localizzata del file con estensione resx o resources, fare clic sull'icona **Salva** o scegliere il comando corrispondente dal menu **File**. Verrà visualizzata la finestra **Seleziona impostazioni cultura**.
+4. Per salvare la versione localizzata del file con estensione resx o resources, fare clic sull'icona **Salva** o scegliere il comando corrispondente dal menu **File**. Verrà visualizzata la finestra **Seleziona impostazioni cultura**.
 
-5.  Selezionare le impostazioni cultura e la modalità file appropriate, quindi scegliere **OK**.
+5. Selezionare le impostazioni cultura e la modalità file appropriate, quindi scegliere **OK**.
 
    Il file verrà salvato secondo le convenzioni di denominazione previste per i file di risorse localizzati. Se si localizza, ad esempio, il file `TestApp.resources` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resources`. Se si localizza `TestApp.resx` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resx`. Per altre informazioni sulle convenzioni di denominazione dei file di risorse, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Per un elenco dei nomi di impostazioni cultura predefiniti usati dal runtime, vedere la classe <xref:System.Globalization.CultureInfo>.
 

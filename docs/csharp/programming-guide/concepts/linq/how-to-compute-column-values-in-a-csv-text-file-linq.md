@@ -2,19 +2,19 @@
 title: 'Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 3a4bd410bc0d01e835132f7752970417be66941b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309368"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)
 In questo esempio viene illustrato come eseguire i calcoli di aggregazione quali Sum, Average, Min e Max nelle colonne di un file con estensione csv. I principi di esempio riportati di seguito possono essere applicati ad altri tipi di testo strutturati.  
   
 ### <a name="to-create-the-source-file"></a>Per creare il file di origine  
   
-1.  Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Si supponga che la prima colonna rappresenti degli ID studente e che le colonne successive rappresentino i punteggi di quattro esami.  
+1. Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Si supponga che la prima colonna rappresenti degli ID studente e che le colonne successive rappresentino i punteggi di quattro esami.  
   
     ```  
     111, 97, 92, 81, 60  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219746"
 ---
 # <a name="synchronous-client-socket-example"></a>Esempio di socket client sincrono
 Il programma di esempio seguente crea un client che si connette a un server. Il client viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione client viene sospesa fino a quando il server non restituisce una risposta. L'applicazione invia una stringa al server e quindi visualizza la stringa restituita dal server nella console.  
@@ -136,6 +136,7 @@ public class SynchronousSocketClient {
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Esempio di socket server sincrono](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
 - [Uso di un socket client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Esempi di codice socket](../../../docs/framework/network-programming/socket-code-examples.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301022"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Procedura: Aggiungere un riferimento a un assembly con nome sicuro
 Il processo per la creazione di riferimenti a tipi o risorse in un assembly con nome sicuro è solitamente trasparente all'utente. È possibile creare i riferimenti in fase di compilazione (associazione anticipata) o in fase di esecuzione.  
@@ -30,7 +30,7 @@ Il processo per la creazione di riferimenti a tipi o risorse in un assembly con 
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Per creare un riferimento in fase di compilazione a un assembly con nome sicuro  
   
-1.  Al prompt dei comandi digitare il seguente comando:  
+1. Al prompt dei comandi digitare il seguente comando:  
   
      \<*comando compilatore*> **/reference:**\<*nome assembly*>  
   
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>Per creare un riferimento in fase di esecuzione a un assembly con nome sicuro  
   
-1.  Quando si crea un riferimento in fase di esecuzione a un assembly con nome sicuro, ad esempio usando il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, è necessario usare il nome visualizzato dell'assembly con nome sicuro a cui viene fatto riferimento. La sintassi di un nome visualizzato è la seguente:  
+1. Quando si crea un riferimento in fase di esecuzione a un assembly con nome sicuro, ad esempio usando il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, è necessario usare il nome visualizzato dell'assembly con nome sicuro a cui viene fatto riferimento. La sintassi di un nome visualizzato è la seguente:  
   
      \<*nome assembly*>**,** \<*numero versione*>**,** \<*cultura*>**,** \<*token chiave pubblica*>  
   
@@ -71,4 +71,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn -tp \<** *file di chiave pubblica* **>**  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

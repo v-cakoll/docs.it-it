@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3c16bf8aed0d281b2b5a3f9c6ae06f343b1eff7c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411963"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307313"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (opzioni del compilatore C#)
 Con l'opzione **-target:winexe** il compilatore crea un file eseguibile (EXE), ovvero un programma di Windows.  
@@ -37,11 +37,11 @@ Con l'opzione **-target:winexe** il compilatore crea un file eseguibile (EXE), o
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
+2. Fare clic sulla pagina delle proprietà **Applicazione**.  
   
-3.  Modificare la proprietà **Tipo di output**.  
+3. Modificare la proprietà **Tipo di output**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

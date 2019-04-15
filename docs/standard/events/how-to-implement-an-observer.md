@@ -11,34 +11,34 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7534843c1f724dc4544b9a5a7062e79e973a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b410b9381246cef2e61086e333c4c5b07646a575
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301061"
 ---
 # <a name="how-to-implement-an-observer"></a>Procedura: Implementare un elemento Observer
 Lo schema progettuale degli observer richiede una divisione tra un observer, che si registra per le notifiche, e un provider, che monitora i dati e invia notifiche a uno o più observer. Questo argomento descrive come creare un observer. Un argomento correlato, [Procedura: Implementare un provider](../../../docs/standard/events/how-to-implement-a-provider.md), descrive come creare un provider.  
   
 ### <a name="to-create-an-observer"></a>Per creare un observer  
   
-1.  Definire l'observer, che è un tipo che implementa l'interfaccia <xref:System.IObserver%601?displayProperty=nameWithType>. Ad esempio, il codice seguente definisce un tipo denominato `TemperatureReporter` che rappresenta un'implementazione costruita <xref:System.IObserver%601?displayProperty=nameWithType> con un argomento di tipo generico `Temperature`.  
+1. Definire l'observer, che è un tipo che implementa l'interfaccia <xref:System.IObserver%601?displayProperty=nameWithType>. Ad esempio, il codice seguente definisce un tipo denominato `TemperatureReporter` che rappresenta un'implementazione costruita <xref:System.IObserver%601?displayProperty=nameWithType> con un argomento di tipo generico `Temperature`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#8)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#8)]  
   
-2.  Se l'observer può smettere di ricevere notifiche prima che il provider chiami la relativa implementazione <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, definire una variabile privata che conterrà l'implementazione <xref:System.IDisposable> restituita dal metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> del provider. È anche necessario definire un metodo di sottoscrizione che chiama il metodo <xref:System.IObservable%601.Subscribe%2A> del provider e archivia l'oggetto <xref:System.IDisposable> restituito. Ad esempio, il codice seguente definisce una variabile privata denominata `unsubscriber` e un metodo `Subscribe` che chiama il metodo <xref:System.IObservable%601.Subscribe%2A> del provider e assegna l'oggetto restituito alla variabile `unsubscriber`.  
+2. Se l'observer può smettere di ricevere notifiche prima che il provider chiami la relativa implementazione <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, definire una variabile privata che conterrà l'implementazione <xref:System.IDisposable> restituita dal metodo <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> del provider. È anche necessario definire un metodo di sottoscrizione che chiama il metodo <xref:System.IObservable%601.Subscribe%2A> del provider e archivia l'oggetto <xref:System.IDisposable> restituito. Ad esempio, il codice seguente definisce una variabile privata denominata `unsubscriber` e un metodo `Subscribe` che chiama il metodo <xref:System.IObservable%601.Subscribe%2A> del provider e assegna l'oggetto restituito alla variabile `unsubscriber`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#9)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#9)]  
   
-3.  Definire un metodo che consente all'observer di smettere di ricevere interrompere notifiche prima che il provider chiami la relativa implementazione <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, se questa funzionalità è necessaria. L'esempio seguente definisce un metodo `Unsubscribe`.  
+3. Definire un metodo che consente all'observer di smettere di ricevere interrompere notifiche prima che il provider chiami la relativa implementazione <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, se questa funzionalità è necessaria. L'esempio seguente definisce un metodo `Unsubscribe`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#10)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#10)]  
   
-4.  Fornire le implementazioni dei tre metodi definiti dall'interfaccia <xref:System.IObserver%601>: <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> e <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. A seconda del provider e delle esigenze dell'applicazione, i metodi <xref:System.IObserver%601.OnError%2A> e <xref:System.IObserver%601.OnCompleted%2A> possono essere implementazioni dello stub. Si noti che il metodo <xref:System.IObserver%601.OnError%2A> non deve gestire l'oggetto <xref:System.Exception> passato come eccezione e che il metodo <xref:System.IObserver%601.OnCompleted%2A> è libero di chiamare l'implementazione <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> del provider. L'esempio seguente mostra l'implementazione <xref:System.IObserver%601> della classe `TemperatureReporter`.  
+4. Fornire le implementazioni dei tre metodi definiti dall'interfaccia <xref:System.IObserver%601>: <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType> e <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. A seconda del provider e delle esigenze dell'applicazione, i metodi <xref:System.IObserver%601.OnError%2A> e <xref:System.IObserver%601.OnCompleted%2A> possono essere implementazioni dello stub. Si noti che il metodo <xref:System.IObserver%601.OnError%2A> non deve gestire l'oggetto <xref:System.Exception> passato come eccezione e che il metodo <xref:System.IObserver%601.OnCompleted%2A> è libero di chiamare l'implementazione <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> del provider. L'esempio seguente mostra l'implementazione <xref:System.IObserver%601> della classe `TemperatureReporter`.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#11)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#11)]  

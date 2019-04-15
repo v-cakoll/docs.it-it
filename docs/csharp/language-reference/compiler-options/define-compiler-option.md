@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558819"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305260"
 ---
 # <a name="-define-c-compiler-options"></a>-define (opzioni del compilatore C#)
 L'opzione **-define** definisce `name` come simbolo in tutti i file del codice sorgente nel programma.  
@@ -31,7 +31,7 @@ L'opzione **-define** definisce `name` come simbolo in tutti i file del codice s
  `name`, `name2`  
  Nome di uno o più simboli che si vuole definire.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  L'opzione **-define** ha lo stesso effetto dell'uso di una direttiva [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) per il preprocessore, ad eccezione del fatto che l'opzione del compilatore è valida per tutti i file nel progetto. Un simbolo resta definito in un file del codice sorgente finché una direttiva [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) nel file non rimuove la definizione. Quando si usa l'opzione -define, una direttiva `#undef` in un file non ha effetto in altri file del codice sorgente nel progetto.  
   
  È possibile usare i simboli creati da questa opzione con [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) e [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) per la compilazione condizionale dei file del codice sorgente.  
@@ -51,9 +51,9 @@ L'opzione **-define** definisce `name` come simbolo in tutti i file del codice s
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto.  
+1. Aprire la pagine **Proprietà** del progetto.  
   
-2.  Nella scheda **Compila** digitare il simbolo che deve essere definito nella casella **Simboli di compilazione condizionale**. Se si usa l'esempio di codice seguente, ad esempio, digitare `xx` nella casella di testo.  
+2. Nella scheda **Compila** digitare il simbolo che deve essere definito nella casella **Simboli di compilazione condizionale**. Se si usa l'esempio di codice seguente, ad esempio, digitare `xx` nella casella di testo.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   

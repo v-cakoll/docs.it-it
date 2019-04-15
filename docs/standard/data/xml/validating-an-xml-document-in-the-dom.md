@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664330"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298422"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM
 La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML nel DOM (Document Object Model) in base a uno schema XSD (XML Schema Definition Language) o a una DTD (Document Type Definition) per impostazione predefinita. Viene solo verificata la correttezza del formato XML.  
@@ -29,15 +29,15 @@ La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML n
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>Creazione di un XmlReader di convalida di XML Schema  
  Per creare un tipo <xref:System.Xml.XmlReader> di convalida di XML Schema, attenersi alla seguente procedura.  
   
-1.  Creare una nuova istanza di <xref:System.Xml.XmlReaderSettings>.  
+1. Creare una nuova istanza di <xref:System.Xml.XmlReaderSettings>.  
   
-2.  Aggiungere un XML Schema alla proprietà <xref:System.Xml.XmlReaderSettings.Schemas%2A> dell'istanza di <xref:System.Xml.XmlReaderSettings>.  
+2. Aggiungere un XML Schema alla proprietà <xref:System.Xml.XmlReaderSettings.Schemas%2A> dell'istanza di <xref:System.Xml.XmlReaderSettings>.  
   
-3.  Specificare `Schema` come proprietà <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
+3. Specificare `Schema` come proprietà <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
   
-4.  È possibile eventualmente specificare la proprietà <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> e un evento <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> per gestire gli errori di convalida degli schemi e gli avvisi rilevati durante la convalida.  
+4. È possibile eventualmente specificare la proprietà <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> e un evento <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> per gestire gli errori di convalida degli schemi e gli avvisi rilevati durante la convalida.  
   
-5.  Infine, passare l'oggetto <xref:System.Xml.XmlReaderSettings> al metodo <xref:System.Xml.XmlReader.Create%2A> della classe <xref:System.Xml.XmlReader> insieme al documento XML, creando un tipo <xref:System.Xml.XmlReader> di convalida dello schema.  
+5. Infine, passare l'oggetto <xref:System.Xml.XmlReaderSettings> al metodo <xref:System.Xml.XmlReader.Create%2A> della classe <xref:System.Xml.XmlReader> insieme al documento XML, creando un tipo <xref:System.Xml.XmlReader> di convalida dello schema.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio di codice seguente un tipo <xref:System.Xml.XmlReader> di convalida dello schema esegue la convalida dei dati XML caricati nel DOM. Vengono apportate modifiche non valide al documento XML che viene quindi nuovamente convalidato, determinando errori di convalida dello schema. Infine, uno degli errori viene corretto e quindi una parte del documento XML viene parzialmente convalidata.  
@@ -88,5 +88,5 @@ La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML n
 - <xref:System.Xml.XmlReader>
 - <xref:System.Xml.Schema.ValidationEventHandler>
 - <xref:System.Xml.XmlReaderSettings>
-- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [Uso di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [Elaborazione di dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
+- [Utilizzo di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

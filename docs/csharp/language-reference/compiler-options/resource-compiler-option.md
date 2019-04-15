@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302569"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (opzioni del compilatore C#)
 Incorpora la risorsa specificata nel file di output.  
@@ -37,7 +37,7 @@ Incorpora la risorsa specificata nel file di output.
  `accessibility-modifier` (facoltativo)  
  Accessibilità della risorsa: public o private. L'impostazione predefinita è public.  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Usare [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) per collegare una risorsa a un assembly senza aggiungere il file di risorse al file di output.  
   
  Per impostazione predefinita, le risorse sono pubbliche nell'assembly quando vengono create tramite il compilatore C#. Per renderle private, specificare `private` come modificatore di accessibilità. Non è consentita alcuna accessibilità diversa da `public` o `private`.  
@@ -50,13 +50,13 @@ Incorpora la risorsa specificata nel file di output.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aggiungere un file di risorse al progetto.  
+1. Aggiungere un file di risorse al progetto.  
   
-2.  Selezionare il file che si vuole incorporare in **Esplora soluzioni**.  
+2. Selezionare il file che si vuole incorporare in **Esplora soluzioni**.  
   
-3.  Selezionare **Azione di compilazione** per il file nella finestra **Proprietà**.  
+3. Selezionare **Azione di compilazione** per il file nella finestra **Proprietà**.  
   
-4.  Impostare **Azione di compilazione** su **Risorsa incorporata**.  
+4. Impostare **Azione di compilazione** su **Risorsa incorporata**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 60759e3d03137bb5983703cbf04719ba4946cb6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235625"
+---
 ### <a name="winrt-stream-adapters-no-long-call-flushasync-automatically-on-close"></a>Gli adattatori flusso di WinRT non chiamano più automaticamente FlushAsync alla chiusura
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ambito|Trasparente|
 |Versione|4.5.1|
 |Tipo|Runtime|
-

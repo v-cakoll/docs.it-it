@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573964"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308718"
 ---
 # <a name="editing-xml-schemas"></a>Modifica di schemi XML
 La modifica di uno schema XML rappresenta una delle funzionalità più importanti del modello SOM (Schema Object Model). È possibile usare tutte le proprietà del modello SOM precedenti alla compilazione dello schema per modificare i valori esistenti in uno schema XML. Sarà quindi possibile ricompilare lo schema XML per riflettere le modifiche.  
@@ -27,19 +27,19 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
 ### <a name="phonenumber-element-example"></a>Esempio dell'elemento PhoneNumber  
  Il primo esempio di codice aggiunge un nuovo elemento `PhoneNumber` all'elemento `Customer` dello schema del cliente. L'esempio di codice consente di modificare lo schema del cliente eseguendo i passaggi seguenti.  
   
-1.  Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).  
+2. Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).  
   
-3.  Crea l'elemento `PhoneNumber` mediante la classe <xref:System.Xml.Schema.XmlSchemaElement>, la restrizione del tipo semplice `xs:string` mediante le classi <xref:System.Xml.Schema.XmlSchemaSimpleType> e <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, aggiunge un facet pattern alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> della restrizione, quindi aggiunge la restrizione alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> del tipo semplice e il tipo semplice alla proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> dell'elemento `PhoneNumber`.  
+3. Crea l'elemento `PhoneNumber` mediante la classe <xref:System.Xml.Schema.XmlSchemaElement>, la restrizione del tipo semplice `xs:string` mediante le classi <xref:System.Xml.Schema.XmlSchemaSimpleType> e <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction>, aggiunge un facet pattern alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction.Facets%2A> della restrizione, quindi aggiunge la restrizione alla proprietà <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A> del tipo semplice e il tipo semplice alla proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> dell'elemento `PhoneNumber`.  
   
-4.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> della raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema.  
+4. Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaElement> nella raccolta <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> della raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema.  
   
-5.  Se la proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> dell'elemento è `"Customer"`, recupera il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
+5. Se la proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> dell'elemento è `"Customer"`, recupera il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-6.  Aggiunge il nuovo elemento `PhoneNumber` alla sequenza contenente gli elementi `FirstName` e `LastName` esistenti usando la raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> precedente allo schema della sequenza.  
+6. Aggiunge il nuovo elemento `PhoneNumber` alla sequenza contenente gli elementi `FirstName` e `LastName` esistenti usando la raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A> precedente allo schema della sequenza.  
   
-7.  Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
+7. Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
   
  Di seguito è riportato l'esempio di codice completo.  
   
@@ -76,34 +76,34 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
   
  L'esempio di codice consente di modificare lo schema del cliente eseguendo i passaggi seguenti.  
   
-1.  Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
+1. Aggiunge lo schema del cliente a un nuovo oggetto <xref:System.Xml.Schema.XmlSchemaSet>, quindi lo compila. Eventuali avvisi ed errori di convalida dello schema rilevati durante la lettura e la compilazione dello schema vengono gestiti dal delegato <xref:System.Xml.Schema.ValidationEventHandler>.  
   
-2.  Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).  
+2. Recupera l'oggetto <xref:System.Xml.Schema.XmlSchema> compilato dal tipo <xref:System.Xml.Schema.XmlSchemaSet> scorrendo la proprietà <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>. Dal momento che lo schema è stato compilato, è possibile accedere alle proprietà di PSCI (Post-Schema-Compilation-Infoset).  
   
-3.  Crea un nuovo tipo complesso per l'elemento `FirstName` usando la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.  
+3. Crea un nuovo tipo complesso per l'elemento `FirstName` usando la classe <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
-4.  Crea una nuova estensione di contenuto semplice, con un tipo di base di `xs:string`, usando le classi <xref:System.Xml.Schema.XmlSchemaSimpleContent> e <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.  
+4. Crea una nuova estensione di contenuto semplice, con un tipo di base di `xs:string`, usando le classi <xref:System.Xml.Schema.XmlSchemaSimpleContent> e <xref:System.Xml.Schema.XmlSchemaSimpleContentExtension>.  
   
-5.  Crea il nuovo attributo `Title` usando la classe <xref:System.Xml.Schema.XmlSchemaAttribute>, con una proprietà <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> di `xs:string` e aggiunge l'attributo all'estensione di contenuto semplice.  
+5. Crea il nuovo attributo `Title` usando la classe <xref:System.Xml.Schema.XmlSchemaAttribute>, con una proprietà <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> di `xs:string` e aggiunge l'attributo all'estensione di contenuto semplice.  
   
-6.  Imposta il modello di contenuto del contenuto semplice sull'estensione di contenuto semplice e il modello di contenuto del tipo complesso sul contenuto semplice.  
+6. Imposta il modello di contenuto del contenuto semplice sull'estensione di contenuto semplice e il modello di contenuto del tipo complesso sul contenuto semplice.  
   
-7.  Aggiunge il nuovo tipo complesso alla raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
+7. Aggiunge il nuovo tipo complesso alla raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
   
-8.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaObject> nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
+8. Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaObject> nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
   
 > [!NOTE]
 >  Dal momento che l'elemento `FirstName` non è un elemento globale nello schema, non è disponibile nella raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> o <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>. L'esempio di codice individua l'elemento `FirstName` dopo aver individuato l'elemento `Customer`.  
 >   
 >  Nel primo esempio di codice lo schema era stato attraversato usando la raccolta <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> successiva alla compilazione dello schema. In questo esempio, per attraversare lo schema viene usata la raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema. Mentre entrambe le raccolte forniscono l'accesso agli elementi globali dello schema, lo scorrimento della raccolta <xref:System.Xml.Schema.XmlSchema.Items%2A> richiede più tempo, poiché è necessario scorrere tutti gli elementi globali dello schema e poiché non sono presenti proprietà PSCI. Le raccolte PSCI (le proprietà <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.Attributes%2A?displayProperty=nameWithType>, <xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A?displayProperty=nameWithType> e così via) forniscono l'accesso diretto agli elementi, agli attributi, ai tipi globali e alle relative proprietà PSCI.  
   
-1.  Se la proprietà <xref:System.Xml.Schema.XmlSchemaObject> è un elemento la cui proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"Customer"`, vengono recuperati il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
+1. Se la proprietà <xref:System.Xml.Schema.XmlSchemaObject> è un elemento la cui proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"Customer"`, vengono recuperati il tipo complesso dell'elemento `Customer` mediante la classe <xref:System.Xml.Schema.XmlSchemaComplexType> e la particella di sequenza del tipo complesso mediante la classe <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-2.  Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaParticle> nella raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
+2. Scorre ciascun tipo <xref:System.Xml.Schema.XmlSchemaParticle> nella raccolta <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> precedente alla compilazione dello schema.  
   
-3.  Se il tipo <xref:System.Xml.Schema.XmlSchemaParticle> è un elemento e la relativa proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"FirstName"`, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> dell'elemento `FirstName` su nuovo tipo complesso `FirstName`.  
+3. Se il tipo <xref:System.Xml.Schema.XmlSchemaParticle> è un elemento e la relativa proprietà <xref:System.Xml.Schema.XmlSchemaElement.QualifiedName%2A> è `"FirstName"`, imposta la proprietà <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> dell'elemento `FirstName` su nuovo tipo complesso `FirstName`.  
   
-4.  Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
+4. Infine, rielabora e compila l'oggetto modificato <xref:System.Xml.Schema.XmlSchema> usando i metodi <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> e <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> della classe <xref:System.Xml.Schema.XmlSchemaSet> e lo scrive nella console.  
   
  Di seguito è riportato l'esempio di codice completo.  
   
@@ -137,10 +137,10 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

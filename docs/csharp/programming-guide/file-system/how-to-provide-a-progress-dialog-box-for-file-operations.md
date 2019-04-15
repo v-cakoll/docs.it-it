@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 462da68313fea19e5b89a9e2f5221f6659338e98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 882e4ea71331fe0513f3be71c371bbc0f714b44f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309537"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Procedura: Fornire una finestra di dialogo dello stato di avanzamento per operazioni su file (Guida per programmatori C#)
 È possibile fornire una finestra di dialogo standard che mostra lo stato di avanzamento delle operazioni sui file in Windows se si usa il metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> nello spazio dei nomi <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
@@ -19,13 +19,13 @@ ms.locfileid: "56975043"
   
 ### <a name="to-add-a-reference-in-visual-studio"></a>Per aggiungere un riferimento in Visual Studio  
   
-1.  Nella barra dei menu scegliere **Progetto**, **Aggiungi riferimento**.  
+1. Nella barra dei menu scegliere **Progetto**, **Aggiungi riferimento**.  
   
      Verrà visualizzata la finestra di dialogo **Gestione riferimenti**.  
   
-2.  Nell'area **Assembly** scegliere **Framework** se non è già selezionato.  
+2. Nell'area **Assembly** scegliere **Framework** se non è già selezionato.  
   
-3.  Nell'elenco di nomi selezionare la casella di controllo **Microsoft.VisualBasic** e scegliere il pulsante **OK** per chiudere la finestra di dialogo.  
+3. Nell'elenco di nomi selezionare la casella di controllo **Microsoft.VisualBasic** e scegliere il pulsante **OK** per chiudere la finestra di dialogo.  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente consente di copiare la directory che viene specificata da `sourcePath` nella directory specificata da `destinationPath`. Questo codice specifica anche una finestra di dialogo standard che indica la quantità stimata di tempo rimanente per il completamento dell'operazione.  

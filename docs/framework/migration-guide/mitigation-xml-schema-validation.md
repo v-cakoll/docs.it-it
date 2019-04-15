@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbeeecda3bd34f5eb651cb32246f8b56d5705002
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c0087412a53177a7c43df838266f6d896c1bd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220474"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Mitigazione: Convalida di XML Schema
 In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] la convalida dello schema XSD rileva la violazione di vincoli univoci se viene usata una chiave composta e una chiave è vuota.  
@@ -38,4 +38,5 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] la convalida dello schem
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
-- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+
+- [Modifiche di ridestinazione](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

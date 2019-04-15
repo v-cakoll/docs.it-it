@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597840"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303999"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Procedura: Compilare un assembly su singolo file
 
@@ -33,7 +33,7 @@ Le procedure seguenti illustrano come creare assembly su singolo file usando i c
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>Per creare un assembly con estensione exe
 
-1.  Al prompt dei comandi digitare il seguente comando:
+1. Al prompt dei comandi digitare il seguente comando:
 
      \<*comando compilatore*> \<*nome modulo*>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>Per creare un assembly con estensione exe e specificare il nome del file di output
 
-1.  Al prompt dei comandi digitare il seguente comando:
+1. Al prompt dei comandi digitare il seguente comando:
 
      \<*comando compilatore*> **/out:**\<*nome file*> \<*nome modulo*>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>Per creare un assembly di librerie
 
-1.  Al prompt dei comandi digitare il seguente comando:
+1. Al prompt dei comandi digitare il seguente comando:
 
      \<*comando compilatore*> **-t:library** \<*nome modulo*>
 
@@ -92,5 +92,5 @@ vbc -out:myCodeLibrary.dll -t:library myCode.vb
 
 - [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assembly su più file](../../../docs/framework/app-domains/multifile-assemblies.md)
-- [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Procedura: Compilare un assembly con più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)

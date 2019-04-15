@@ -2,19 +2,19 @@
 title: 'Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 1b2378a3f9d589640d50ca3cc80d5e82ba386bd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 243ff37e38b2e88b55962980e91a1ab6dcebab3c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304870"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)
 L'esempio seguente illustra come ordinare righe di testo strutturato, ad esempio valori delimitati da virgole, in base a un qualsiasi campo. Il campo può essere specificato in modo dinamico in runtime. Si supponga che i campi in scores.csv rappresentino il numero ID di uno studente, seguito da una serie di quattro punteggi di test.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Per creare un file che contenga i dati  
   
-1.  Copiare i dati di scores.csv dall'argomento [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvarli nella cartella della propria soluzione.  
+1. Copiare i dati di scores.csv dall'argomento [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvarli nella cartella della propria soluzione.  
   
 ## <a name="example"></a>Esempio  
   

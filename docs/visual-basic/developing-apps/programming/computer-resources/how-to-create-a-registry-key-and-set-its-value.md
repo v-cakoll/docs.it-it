@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: f3ae01057f2f2caa7ce07731c3a38f2496484713
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971762"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312612"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Procedura: Creare una chiave del Registro di sistema e impostarne il valore in Visual Basic
 Il metodo `CreateSubKey` dell'oggetto `My.Computer.Registry` consente di creare una chiave del Registro di sistema.  
@@ -31,11 +31,11 @@ Il metodo `CreateSubKey` dell'oggetto `My.Computer.Registry` consente di creare 
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>Per creare una chiave del Registro di sistema e impostarne il valore  
   
-1.  Usare il metodo `CreateSubkey` specificando l'hive in cui inserire la chiave, nonché il nome della chiave. Nell'esempio che segue viene creata la chiave del Registro di sistema `MyTestKey` in HKEY_CURRENT_USER.  
+1. Usare il metodo `CreateSubkey` specificando l'hive in cui inserire la chiave, nonché il nome della chiave. Nell'esempio che segue viene creata la chiave del Registro di sistema `MyTestKey` in HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  Impostare il valore con il metodo `SetValue`. In questo esempio viene impostato il valore stringa. "MyTestKeyValue" su "This is a test value".  
+2. Impostare il valore con il metodo `SetValue`. In questo esempio viene impostato il valore stringa. "MyTestKeyValue" su "This is a test value".  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   
@@ -71,6 +71,7 @@ Il metodo `CreateSubKey` dell'oggetto `My.Computer.Registry` consente di creare 
  Per eseguire questo processo, l'assembly richiede un livello di privilegio concesso dalla classe <xref:System.Security.Permissions.RegistryPermission>. Se viene eseguito in un contesto parzialmente attendibile, il processo potrebbe generare un'eccezione a causa di privilegi insufficienti. Allo stesso modo, l'utente deve disporre degli ACL corretti per la creazione o la scrittura nelle impostazioni. Ad esempio, un'applicazione locale che ha l'autorizzazione di sicurezza dall'accesso di codice potrebbe non avere l'autorizzazione del sistema operativo. Per altre informazioni, vedere [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
 - <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>

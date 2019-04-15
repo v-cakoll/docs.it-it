@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1e4dacf66cc17182265e8ea9f132938017a54e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300996"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilità COM senza registrazione
 L'interoperabilità COM senza registrazione consente di attivare un componente senza usare il Registro di sistema di Windows per memorizzare informazioni sugli assembly. Anziché registrare un componente su un computer durante la distribuzione, vengono creati file manifesto di tipo Win32 contenenti informazioni sull'associazione e sull'attivazione in fase di progettazione. L'attivazione di un oggetto è controllata da tali file manifesto, anziché da chiavi del Registro di sistema.  
@@ -32,7 +32,7 @@ L'interoperabilità COM senza registrazione consente di attivare un componente s
   
 ### <a name="requirements-for-registration-free-com-interop"></a>Requisiti per l'interoperabilità COM senza registrazione  
   
-1.  Il supporto per l'interoperabilità COM senza registrazione varia leggermente a seconda del tipo di assembly di libreria; in particolare, se l'assembly non è gestito (COM side-by-side) o gestito (basato su .NET). La tabella seguente illustra il sistema operativo e i requisiti di versione di .NET Framework per ogni tipo di assembly.  
+1. Il supporto per l'interoperabilità COM senza registrazione varia leggermente a seconda del tipo di assembly di libreria; in particolare, se l'assembly non è gestito (COM side-by-side) o gestito (basato su .NET). La tabella seguente illustra il sistema operativo e i requisiti di versione di .NET Framework per ogni tipo di assembly.  
   
     |Tipo di assembly|Sistema operativo|Versione di .NET Framework|  
     |-------------------|----------------------|----------------------------|  
@@ -45,7 +45,7 @@ L'interoperabilità COM senza registrazione consente di attivare un componente s
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Configurazione di componenti COM per l'attivazione senza registrazione  
   
-1.  Affinché un componente COM partecipi all'attivazione senza registrazione è necessario distribuirlo come assembly side-by-side. Gli assembly side-by-side non sono gestiti.  Per altre informazioni, vedere [Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies) (Uso di assembly side-by-side) in MSDN Library.  
+1. Affinché un componente COM partecipi all'attivazione senza registrazione è necessario distribuirlo come assembly side-by-side. Gli assembly side-by-side non sono gestiti.  Per altre informazioni, vedere [Using Side-by-side Assemblies](/windows/desktop/SbsCs/using-side-by-side-assemblies) (Uso di assembly side-by-side) in MSDN Library.  
   
      Per usare gli assembly side-by-side COM, uno sviluppatore di applicazioni basate su .NET deve fornire un manifesto dell'applicazione che contenga le informazioni di associazione e attivazione. Il supporto per gli assembly side-by-side è integrato nel sistema operativo Windows XP. Il runtime COM, supportato dal sistema operativo, esegue l'analisi di un manifesto dell'applicazione per informazioni sull'attivazione quando il componente attivato non è presente nel Registro di sistema.  
   
@@ -55,4 +55,5 @@ L'interoperabilità COM senza registrazione consente di attivare un componente s
     >  L'esecuzione side-by-side è una funzionalità di .NET Framework che consente di eseguire contemporaneamente sullo stesso computer più versioni del runtime e più versioni delle applicazioni e dei componenti che usano una versione del runtime. L'esecuzione side-by-side e gli assembly side-by-side sono meccanismi diversi per fornire la funzionalità side-by-side.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Procedura: Configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

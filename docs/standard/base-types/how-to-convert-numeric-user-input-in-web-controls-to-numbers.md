@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296160"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedura: Convertire in numeri l'input numerico dell'utente nei controlli Web
 Poiché una pagina Web può essere visualizzata ovunque nel mondo, gli utenti possono immettere dati numerici in un controllo <xref:System.Web.UI.WebControls.TextBox> in un numero praticamente illimitato di formati. Di conseguenza, è molto importante determinare le impostazioni locali e le impostazioni cultura dell'utente della pagina Web. Quando si analizza l'input dell'utente, è quindi possibile applicare le convenzioni di formattazione definite dalle impostazioni locali e dalle impostazioni cultura dell'utente.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Per convertire l'input numerico da un controllo Web TextBox a un numero  
   
-1.  Determinare se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> è popolata. In caso contrario, andare al passaggio 6.  
+1. Determinare se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> è popolata. In caso contrario, andare al passaggio 6.  
   
-2.  Se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è popolata, recuperarne il primo elemento. Il primo elemento indica la lingua e l'area geografica predefinite o preferite dell'utente.  
+2. Se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è popolata, recuperarne il primo elemento. Il primo elemento indica la lingua e l'area geografica predefinite o preferite dell'utente.  
   
-3.  Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura preferite dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
+3. Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura preferite dell'utente chiamando il costruttore <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>.  
   
-4.  Chiamare il metodo `TryParse` o `Parse` del tipo numerico in cui si vuole convertire l'input dell'utente. Usare un overload del metodo `TryParse` o `Parse` con un parametro `provider` e passare uno degli oggetti seguenti:  
+4. Chiamare il metodo `TryParse` o `Parse` del tipo numerico in cui si vuole convertire l'input dell'utente. Usare un overload del metodo `TryParse` o `Parse` con un parametro `provider` e passare uno degli oggetti seguenti:  
   
     -   Oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
   
     -   Oggetto <xref:System.Globalization.NumberFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.NumberFormat%2A> dell'oggetto <xref:System.Globalization.CultureInfo> creato nel passaggio 3.  
   
-5.  Se la conversione non riesce, ripetere i passaggi da 2 a 4 per ogni elemento rimanente nella matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A>.  
+5. Se la conversione non riesce, ripetere i passaggi da 2 a 4 per ogni elemento rimanente nella matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
-6.  Se la conversione continua a non riuscire o se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è vuota, analizzare la stringa usando le impostazioni cultura inglese non dipendenti da paese/area geografica, restituite dalla proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
+6. Se la conversione continua a non riuscire o se la matrice di stringhe restituita dalla proprietà <xref:System.Web.HttpRequest.UserLanguages%2A> è vuota, analizzare la stringa usando le impostazioni cultura inglese non dipendenti da paese/area geografica, restituite dalla proprietà <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente è la pagina code-behind completa per un Web Form che chiede all'utente di immettere un valore numerico in un controllo <xref:System.Web.UI.WebControls.TextBox> e lo converte in numero. Questo numero viene quindi raddoppiato e visualizzato usando le stesse regole di formattazione dell'input originale.  

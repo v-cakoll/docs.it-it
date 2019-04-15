@@ -2,12 +2,12 @@
 title: Collaborazione peer-to-peer
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225300"
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaborazione peer-to-peer
 
@@ -40,5 +40,6 @@ L'infrastruttura di collaborazione peer-to-peer è un'implementazione semplifica
  In un dominio di Active Directory, i controller di dominio offrono i servizi di autenticazione tramite Kerberos. In un ambiente peer senza server, i peer devono implementare un sistema di autenticazione proprio. In una rete peer-to-peer qualsiasi nodo può fungere da Autorità di certificazione, eliminando la necessità di un certificato radice nell'archivio radice attendibile di ogni peer. L'autenticazione viene fornita mediante certificati autofirmati, formattati come certificati X.509. Questi sono i certificati creati da ogni peer, che genera la coppia di chiavi pubblica/privata e il certificato che viene firmato con la chiave privata. Il certificato autofirmato viene usato per l'autenticazione e per fornire informazioni sull'entità peer. Come per l'autenticazione X.509, l'autenticazione di una rete di peer si basa su una catena di certificati riconducibili a una chiave pubblica attendibile.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Net.PeerToPeer.Collaboration>
 - [Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306521"
 ---
 # <a name="how-to-log-information-about-services"></a>Procedura: Registrare informazioni sui servizi
 Per impostazione predefinita, tutti i progetti di servizio di Windows possono interagire con il log eventi dell'applicazione in cui possono scrivere informazioni ed eccezioni. È possibile usare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> per indicare se si vuole fornire questa funzionalità nell'applicazione. Per impostazione predefinita, la registrazione è attivata per tutti i servizi creati con il modello di progetto di servizio di Windows. È possibile usare un form statico della classe <xref:System.Diagnostics.EventLog> per scrivere le informazioni sul servizio in un log senza dover creare un'istanza di un componente <xref:System.Diagnostics.EventLog> o registrare manualmente un'origine.  
@@ -46,18 +46,18 @@ Per impostazione predefinita, tutti i progetti di servizio di Windows possono in
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>Per configurare la registrazione in un log personalizzato  
   
-1.  Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> su `false`.  
+1. Impostare la proprietà <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> su `false`.  
   
     > [!NOTE]
     >  È necessario impostare <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> su false per usare un log personalizzato.  
   
-2.  Configurare un'istanza di un componente <xref:System.Diagnostics.EventLog> nell'applicazione di servizio di Windows.  
+2. Configurare un'istanza di un componente <xref:System.Diagnostics.EventLog> nell'applicazione di servizio di Windows.  
   
-3.  Creare un log personalizzato chiamando il metodo <xref:System.Diagnostics.EventLog.CreateEventSource%2A> e specificando la stringa di origine e il nome del file di log che si vuole creare.  
+3. Creare un log personalizzato chiamando il metodo <xref:System.Diagnostics.EventLog.CreateEventSource%2A> e specificando la stringa di origine e il nome del file di log che si vuole creare.  
   
-4.  Impostare la proprietà <xref:System.Diagnostics.EventLog.Source%2A> sull'istanza del componente <xref:System.Diagnostics.EventLog> per la stringa di origine creata nel passaggio 3.  
+4. Impostare la proprietà <xref:System.Diagnostics.EventLog.Source%2A> sull'istanza del componente <xref:System.Diagnostics.EventLog> per la stringa di origine creata nel passaggio 3.  
   
-5.  Scrivere le voci accedendo al metodo <xref:System.Diagnostics.EventLog.WriteEntry%2A> nell'istanza del componente <xref:System.Diagnostics.EventLog> .  
+5. Scrivere le voci accedendo al metodo <xref:System.Diagnostics.EventLog.WriteEntry%2A> nell'istanza del componente <xref:System.Diagnostics.EventLog> .  
   
      Il codice seguente illustra come configurare la registrazione in un log personalizzato.  
   
@@ -70,4 +70,5 @@ Per impostazione predefinita, tutti i progetti di servizio di Windows possono in
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

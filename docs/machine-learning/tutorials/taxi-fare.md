@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 811de96748fcc095e289905e73845c8cfdd8eea7
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295978"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Esercitazione: Eseguire una stima dei prezzi usando un algoritmo di apprendimento basato sulla regressione con ML.NET
 
@@ -36,7 +36,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
+* [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
 
 ## <a name="understand-the-problem"></a>Informazioni sul problema
 
@@ -272,7 +272,6 @@ Console.WriteLine($"*------------------------------------------------");
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 
 ## <a name="use-the-model-for-predictions"></a>Usare il modello per le stime
-
 
 ## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>Stimare il risultato dei dati di test con il modello e un singolo commento
 

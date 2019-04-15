@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311617"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Procedura: Creare griglie di proprietà per impostazioni utente in Visual Basic
 È possibile creare una griglia di proprietà delle impostazioni utente popolando un controllo <xref:System.Windows.Forms.PropertyGrid> con le proprietà dell'impostazione utente dell'oggetto `My.Settings`.  
@@ -29,17 +29,17 @@ ms.locfileid: "58843045"
   
 ### <a name="to-add-a-user-setting-property-grid"></a>Per aggiungere una griglia delle proprietà dell'impostazione utente  
   
-1.  Aggiungere il controllo **PropertyGrid** dalla **casella degli strumenti** all'area di progettazione dell'applicazione, presupponendo che questo campo sia `Form1`.  
+1. Aggiungere il controllo **PropertyGrid** dalla **casella degli strumenti** all'area di progettazione dell'applicazione, presupponendo che questo campo sia `Form1`.  
   
      Il nome predefinito del controllo PropertyGrid è `PropertyGrid1`.  
   
-2.  Fare doppio clic sull'area di progettazione del `Form1` per aprire il codice per il gestore eventi che carica il form.  
+2. Fare doppio clic sull'area di progettazione del `Form1` per aprire il codice per il gestore eventi che carica il form.  
   
-3.  Impostare l'oggetto `My.Settings` come oggetto selezionato per la griglia delle proprietà.  
+3. Impostare l'oggetto `My.Settings` come oggetto selezionato per la griglia delle proprietà.  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4.  Configurare la griglia delle proprietà affinché mostri solo le impostazioni utente.  
+4. Configurare la griglia delle proprietà affinché mostri solo le impostazioni utente.  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   
@@ -54,5 +54,5 @@ ms.locfileid: "58843045"
 - [Oggetto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Procedura: Leggere le impostazioni dell'applicazione in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [Procedura: Modificare le impostazioni dell'utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [Procedura: Mantenere le impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [Procedura: Salvare in modo permanente le impostazioni utente in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
 - [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

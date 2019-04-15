@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 198e7df6e3bdc88d699c396ce8ac97f8a74066d6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b33f49bdeb20176b711d6dc50a247e131f9de9d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309836"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Applicare gli approcci CQRS e CQS in un microservizio DDD in eShopOnContainers
 
@@ -56,9 +56,6 @@ Esiste una sola architettura dell'applicazione: l'architettura del sistema o del
   [http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
 - **Udi Dahan. Clarified CQRS** \ (Definizione di CQRS)
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
-
-- **CQRS** \
   [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 - **Event-Sourcing (ES)** \ (Determinazione dell'origine degli eventi)

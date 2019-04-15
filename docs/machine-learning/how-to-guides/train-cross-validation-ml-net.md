@@ -3,12 +3,12 @@ title: Eseguire il training di un modello di Machine Learning tramite convalida 
 description: Informazioni su come eseguire il training di un modello di Machine Learning tramite convalida incrociata con ML.NET per ottenere un maggiore livello di accuratezza per le stime del modello
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676538"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231318"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Eseguire il training di un modello di Machine Learning tramite convalida incrociata - ML.NET
 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);
