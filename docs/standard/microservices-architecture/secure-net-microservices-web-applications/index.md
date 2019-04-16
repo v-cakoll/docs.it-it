@@ -4,12 +4,12 @@ description: Protezione di microservizi e applicazioni Web .NET - Informazioni s
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464814"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611562"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteggere i microservizi e le applicazioni Web .NET
 
@@ -289,13 +289,13 @@ Il middleware di autenticazione con bearer token JWT può supportare anche scena
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
 - **Michell Anicas. An Introduction to OAuth 2 (Introduzione a OAuth 2)** \
-  [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
+  <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (repository GitHub per i provider OAuth ASP.NET) \
-  [https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
+  <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
 - **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app (Integrazione di Azure AD in un'app Web ASP.NET Core)** \
-  [https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
+  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4. Documentazione ufficiale** \
   <https://identityserver4.readthedocs.io/en/latest/>
