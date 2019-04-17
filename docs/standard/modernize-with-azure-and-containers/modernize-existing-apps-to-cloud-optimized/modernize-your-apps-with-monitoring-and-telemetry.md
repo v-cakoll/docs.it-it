@@ -1,17 +1,17 @@
 ---
-title: Modernizza le tue App con monitoraggio e telemetria
+title: Modernizzare le app con monitoraggio e telemetria
 description: Modernizzare le applicazioni .NET esistenti con contenitori Windows e il Cloud di Azure | Modernizza le tue App con monitoraggio e telemetria
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147476"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613876"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizza le tue App con monitoraggio e telemetria
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizzare le app con monitoraggio e telemetria
 
 Quando si esegue un'applicazione nell'ambiente di produzione, è fondamentale che sono disponibili informazioni dettagliate sulle prestazioni dell'applicazione. Sta eseguendo un alto livello? Gli utenti ricevono errori o è l'applicazione né stabile né affidabile? È necessario il monitoraggio avanzato delle prestazioni, potenti avvisi e i dashboard al fine di garantire che l'applicazione sia disponibile e che funzioni come previsto. È anche necessario essere in grado di visualizzare rapidamente se si è verificato un problema, determinare quanti clienti sono interessati ed eseguono un'analisi causa radice per trovare e correggere il problema.
 
@@ -69,31 +69,31 @@ Figura 4-11 vengono mostrate le relazioni tra vari host del contenitore e gli ag
 
 -   **Panoramica sul monitoraggio in Microsoft Azure**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Che cos'è Application Insights?**
+-   **Informazioni su Azure Application Insights**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **Che cos'è Log Analitica?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Soluzione monitoraggio contenitori in Log Analitica**
+-   **Soluzione monitoraggio contenitori in Monitoraggio di Azure**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Panoramica del monitoraggio di Azure**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Novità di Operations Management Suite (OMS)?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **Monitoraggio dei contenitori di Windows Server in Service Fabric con OMS**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Precedente](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

@@ -2,12 +2,12 @@
 title: Traccia ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300684"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613746"
 ---
 # <a name="etw-tracing"></a>Traccia ETW
 In questo esempio viene illustrato come implementare la traccia End-to-End (E2E) utilizzando il sistema Event Tracing for Windows (ETW) e il `ETWTraceListener` fornito in questo esempio. L'esempio è basato sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) e comprende la traccia ETW.  
@@ -50,7 +50,7 @@ In questo esempio viene illustrato come implementare la traccia End-to-End (E2E)
  Prima di utilizzare questo listener, è necessario avviare una sessione di traccia ETW. Questa sessione può essere avviata utilizzando Logman.exe o Tracelog.exe. Questo esempio comprende un file SetupETW.bat che può essere utilizzato per configurare la sessione di traccia ETW e un file CleanupETW.bat che può essere utilizzato per chiudere la sessione e completare il file di log.  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento. Per altre informazioni su questi strumenti, vedere [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
+>  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento. Per altre informazioni su questi strumenti, vedere <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  Quando si utilizza ETWTraceListener, le tracce vengono registrate in file .etl binari. Se la traccia ServiceModel è attivata, tutte le tracce generate vengono visualizzate nello stesso file. Uso [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) per la visualizzazione dei file di log con estensione etl e. svclog. Il visualizzatore crea una visualizzazione end-to-end del sistema che rende possibile tracciare un messaggio dall'origine alla destinazione e al punto di utilizzo.  
   
@@ -108,4 +108,4 @@ Logman stop Wcf
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Monitoraggio](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
