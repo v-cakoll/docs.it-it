@@ -4,12 +4,12 @@ description: Conoscere i punti chiave per la gestione di un ambiente di produzio
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836617"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672100"
 ---
 # <a name="manage-production-docker-environments"></a>Gestire gli ambienti di produzione Docker
 
@@ -30,7 +30,7 @@ Tabella 6-1 sono elencati i comuni strumenti di gestione correlati alla loro gli
 | [Monitoraggio di Azure per contenitori](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Strumento di gestione dedicato Azure in Kubernetes | Azure Kubernetes Services (AKS) |
 | [Interfaccia utente Web Kubernetes (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Strumento di gestione di Kubernetes, è possibile monitorare e gestire un cluster Kubernetes locale | Servizio Azure Kubernetes<br/>Kubernetes locale |
 | [Portale di Azure per Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Versioni desktop e online per la gestione dei cluster di Service Fabric, in Azure, in locale, lo sviluppo locale e altri cloud | Azure Service Fabric |
-| [Monitoraggio (Log Analitica) del contenitore](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Y gestione generale contenitore soluzione di monitoraggio. Consente di gestire il cluster Kubernetes tramite [monitoraggio di Azure per contenitori](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Servizio Azure Kubernetes<br/>Mesosphere DC/OS e ad altri utenti. |
+| [Contenitore Monitoring (monitoraggio di Azure)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Y gestione generale contenitore soluzione di monitoraggio. Consente di gestire il cluster Kubernetes tramite [monitoraggio di Azure per contenitori](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Servizio Azure Kubernetes<br/>Mesosphere DC/OS e ad altri utenti. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

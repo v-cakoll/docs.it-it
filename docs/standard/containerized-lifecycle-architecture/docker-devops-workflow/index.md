@@ -4,20 +4,20 @@ description: Ciclo di vita di applicazioni Docker in contenitori con flusso di l
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663925"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672303"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Flusso di lavoro DevOps per le applicazioni Docker con strumenti Microsoft
 
-*Microsoft Visual Studio, servizi di Azure DevOps, Team Foundation Server e Application Insights offrono un ecosistema completo per lo sviluppo e operazioni IT che forniscono gli strumenti necessari per gestire i progetti e compilare, testare e distribuire rapidamente al team applicazioni nei contenitori.*
+*Microsoft Visual Studio, servizi di Azure DevOps, Team Foundation Server e monitoraggio di Azure offrono che un ecosistema completo per lo sviluppo e operazioni IT in grado di fornire a ogni team gli strumenti per gestire i progetti e creare rapidamente, testare e distribuire in contenitori applicazioni.*
 
 Con Visual Studio e servizi di Azure DevOps nel cloud, insieme a Team Foundation Server in locale, i team di sviluppo possono compilare, testare e rilasciare applicazioni in contenitori destinate a Windows o Linux in modo produttivo.
 
-Gli strumenti Microsoft possono automatizzare la pipeline per implementazioni specifiche di applicazioni in contenitori, Docker, .NET Core o qualsiasi combinazione con altre piattaforme, da compilazioni globali e integrazione continua (CI) e i test con Team o servizi di Azure DevOps Foundation Server di distribuzione Continuo in ambienti Docker (sviluppo, Staging, produzione) e per trasmettere informazioni analitica sui servizi al team di sviluppo tramite Application Insights. Ogni commit di codice può avviare una compilazione (integrazione continua) e distribuire automaticamente i servizi in ambienti in contenitori specifici (recapito continuo).
+Gli strumenti Microsoft possono automatizzare la pipeline per implementazioni specifiche di applicazioni in contenitori, Docker, .NET Core o qualsiasi combinazione con altre piattaforme, da compilazioni globali e integrazione continua (CI) e i test con Team o servizi di Azure DevOps Foundation Server di distribuzione Continuo in ambienti Docker (sviluppo, Staging, produzione) e per trasmettere informazioni analitica sui servizi al team di sviluppo tramite Monitoraggio di Azure. Ogni commit di codice può avviare una compilazione (integrazione continua) e distribuire automaticamente i servizi in ambienti in contenitori specifici (recapito continuo).
 
 Sviluppatori e tester possono effettuare facilmente e rapidamente il provisioning di ambienti di sviluppo e test di produzione basati su Docker usando modelli in Microsoft Azure.
 
