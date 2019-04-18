@@ -95,8 +95,7 @@ TAP usa un singolo metodo per rappresentare l'inizio e il completamento di un'op
  Se le implementazioni TAP forniscono overload che accettano un parametro `progress`, devono consentire che l'argomento sia `null`, nel qual caso non verrà segnalato alcuno stato di avanzamento. Le implementazioni TAP devono segnalare lo stato di avanzamento all'oggetto <xref:System.Progress%601> in modo sincrono, in modo che il metodo asincrono possa fornire rapidamente lo stato di avanzamento e il consumer dello stato di avanzamento possa determinare il miglior modo per gestire le informazioni. Ad esempio, l'istanza dello stato di avanzamento può scegliere di effettuare il marshalling dei callback e generare eventi in un contesto di sincronizzazione acquisito.  
   
 ## <a name="iprogresst-implementations"></a>Implementazioni di IProgress\<T>  
- 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] fornisce un'unica implementazione <xref:System.IProgress%601>: <xref:System.Progress%601>. La classe <xref:System.Progress%601> viene dichiarata nel modo seguente:  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] fornisce un'unica implementazione <xref:System.IProgress%601>: <xref:System.Progress%601>. La classe <xref:System.Progress%601> viene dichiarata nel modo seguente:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
