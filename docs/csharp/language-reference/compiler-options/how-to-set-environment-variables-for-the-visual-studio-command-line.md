@@ -15,40 +15,41 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9eea7f76d386816aad060e9b99cea6b906a09ab9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322121"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612121"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a><span data-ttu-id="e1661-102">Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="e1661-102">How to: Set Environment Variables for the Visual Studio Command Line</span></span>
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a><span data-ttu-id="57433-102">Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="57433-102">How to: Set Environment Variables for the Visual Studio Command Line</span></span>
 
-<span data-ttu-id="e1661-103">Il file VsDevCmd.bat imposta le variabili di ambiente appropriate per abilitare le compilazioni da riga di comando.</span><span class="sxs-lookup"><span data-stu-id="e1661-103">The VsDevCmd.bat file sets the appropriate environment variables to enable command-line builds.</span></span>
+<span data-ttu-id="57433-103">Il file VsDevCmd.bat imposta le variabili di ambiente appropriate per abilitare le compilazioni da riga di comando.</span><span class="sxs-lookup"><span data-stu-id="57433-103">The VsDevCmd.bat file sets the appropriate environment variables to enable command-line builds.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e1661-104">Il file VsDevCmd.bat è un nuovo file fornito con Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="e1661-104">The VsDevCmd.bat file is a new file delivered with Visual Studio 2017.</span></span> <span data-ttu-id="e1661-105">Visual Studio 2015 e versioni precedenti usano VSVARS32.bat per gli stessi scopi.</span><span class="sxs-lookup"><span data-stu-id="e1661-105">Visual Studio 2015 and earlier versions used VSVARS32.bat for the same purpose.</span></span> <span data-ttu-id="e1661-106">Il file era archiviato in \Programmi\Microsoft Visual Studio\\*Versione*\Common7\Tools o Programmi (x86)\Microsoft Visual Studio\\*Versione*\Common7\Tools.</span><span class="sxs-lookup"><span data-stu-id="e1661-106">This file was stored in \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools.</span></span>
-  
-<span data-ttu-id="e1661-107">Se la versione corrente di Visual Studio è installata in un computer che include anche la versione precedente di Visual Studio, non eseguire VsDevCmd.bat e VSVARS32.BAT da diverse versioni nella stessa finestra del prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="e1661-107">If the current version of Visual Studio is installed on a computer that also has an earlier version of Visual Studio, you should not run VsDevCmd.bat and VSVARS32.BAT from different versions in the same Command Prompt window.</span></span> <span data-ttu-id="e1661-108">È invece necessario eseguire il comando per ogni versione in una finestra specifica.</span><span class="sxs-lookup"><span data-stu-id="e1661-108">Instead, you should run the command for each version in its own window.</span></span>
-  
-### <a name="to-run-vsdevcmdbat"></a><span data-ttu-id="e1661-109">Per eseguire VsDevCmd.BAT</span><span class="sxs-lookup"><span data-stu-id="e1661-109">To run VsDevCmd.BAT</span></span>  
-  
-1. <span data-ttu-id="e1661-110">Dal menu **Start** aprire il **Prompt dei comandi per gli sviluppatori per VS 2017**.</span><span class="sxs-lookup"><span data-stu-id="e1661-110">From the **Start** menu, open the **Developer Command Prompt for VS 2017**.</span></span>  <span data-ttu-id="e1661-111">È disponibile nella cartella **Visual Studio 2017**.</span><span class="sxs-lookup"><span data-stu-id="e1661-111">It's in the **Visual Studio 2017** folder.</span></span>
-  
-2. <span data-ttu-id="e1661-112">Passare alla sottodirectory di installazione \Programmi\Microsoft Visual Studio\\*Versione*\\*Offerta*\Common7\Tools o \Programmi (x86)\Microsoft Visual Studio\\*Versione*\\*Offerta*\Common7\Tools.</span><span class="sxs-lookup"><span data-stu-id="e1661-112">Change to the \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools or \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools subdirectory of your installation.</span></span>  <span data-ttu-id="e1661-113">(*Versione* è *2017* per la versione corrente.</span><span class="sxs-lookup"><span data-stu-id="e1661-113">(*Version* is *2017* for the current version.</span></span> <span data-ttu-id="e1661-114">*Offerta* è *Enterprise*, *Professional* o *Community*.)</span><span class="sxs-lookup"><span data-stu-id="e1661-114">*Offering* is one of *Enterprise*, *Professional* or *Community*.)</span></span>
-  
-3. <span data-ttu-id="e1661-115">Eseguire VsDevCmd.bat digitando **VsDevCmd**.</span><span class="sxs-lookup"><span data-stu-id="e1661-115">Run VsDevCmd.bat by typing **VsDevCmd**.</span></span>  
-  
+> <span data-ttu-id="57433-104">Il file VsDevCmd.bat è un nuovo file fornito con Visual Studio 2017.</span><span class="sxs-lookup"><span data-stu-id="57433-104">The VsDevCmd.bat file is a new file delivered with Visual Studio 2017.</span></span> <span data-ttu-id="57433-105">Visual Studio 2015 e versioni precedenti usano VSVARS32.bat per gli stessi scopi.</span><span class="sxs-lookup"><span data-stu-id="57433-105">Visual Studio 2015 and earlier versions used VSVARS32.bat for the same purpose.</span></span> <span data-ttu-id="57433-106">Il file era archiviato in \Programmi\Microsoft Visual Studio\\*Versione*\Common7\Tools o Programmi (x86)\Microsoft Visual Studio\\*Versione*\Common7\Tools.</span><span class="sxs-lookup"><span data-stu-id="57433-106">This file was stored in \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools or Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools.</span></span>
+
+<span data-ttu-id="57433-107">Se la versione corrente di Visual Studio è installata in un computer che include anche la versione precedente di Visual Studio, non eseguire VsDevCmd.bat e VSVARS32.BAT da diverse versioni nella stessa finestra del prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="57433-107">If the current version of Visual Studio is installed on a computer that also has an earlier version of Visual Studio, you should not run VsDevCmd.bat and VSVARS32.BAT from different versions in the same Command Prompt window.</span></span> <span data-ttu-id="57433-108">È invece necessario eseguire il comando per ogni versione in una finestra specifica.</span><span class="sxs-lookup"><span data-stu-id="57433-108">Instead, you should run the command for each version in its own window.</span></span>
+
+### <a name="to-run-vsdevcmdbat"></a><span data-ttu-id="57433-109">Per eseguire VsDevCmd.BAT</span><span class="sxs-lookup"><span data-stu-id="57433-109">To run VsDevCmd.BAT</span></span>
+
+1. <span data-ttu-id="57433-110">Dal menu **Start** aprire il **Prompt dei comandi per gli sviluppatori per VS 2017**.</span><span class="sxs-lookup"><span data-stu-id="57433-110">From the **Start** menu, open the **Developer Command Prompt for VS 2017**.</span></span>  <span data-ttu-id="57433-111">È disponibile nella cartella **Visual Studio 2017**.</span><span class="sxs-lookup"><span data-stu-id="57433-111">It's in the **Visual Studio 2017** folder.</span></span>
+
+2. <span data-ttu-id="57433-112">Passare alla sottodirectory di installazione \Programmi\Microsoft Visual Studio\\*Versione*\\*Offerta*\Common7\Tools o \Programmi (x86)\Microsoft Visual Studio\\*Versione*\\*Offerta*\Common7\Tools.</span><span class="sxs-lookup"><span data-stu-id="57433-112">Change to the \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools or \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools subdirectory of your installation.</span></span>  <span data-ttu-id="57433-113">(*Versione* è *2017* per la versione corrente.</span><span class="sxs-lookup"><span data-stu-id="57433-113">(*Version* is *2017* for the current version.</span></span> <span data-ttu-id="57433-114">*Offerta* è *Enterprise*, *Professional* o *Community*.)</span><span class="sxs-lookup"><span data-stu-id="57433-114">*Offering* is one of *Enterprise*, *Professional* or *Community*.)</span></span>
+
+3. <span data-ttu-id="57433-115">Eseguire VsDevCmd.bat digitando **VsDevCmd**.</span><span class="sxs-lookup"><span data-stu-id="57433-115">Run VsDevCmd.bat by typing **VsDevCmd**.</span></span>
+
     > [!CAUTION]
-    >  <span data-ttu-id="e1661-116">Il file VsDevCmd.bat può variare da computer a computer.</span><span class="sxs-lookup"><span data-stu-id="e1661-116">VsDevCmd.bat can vary from computer to computer.</span></span> <span data-ttu-id="e1661-117">Non sostituire un file VsDevCmd.bat mancante o danneggiato con un file VsDevCmd.bat da un altro computer.</span><span class="sxs-lookup"><span data-stu-id="e1661-117">Do not replace a missing or damaged VsDevCmd.bat file with a VsDevCmd.bat from another computer.</span></span> <span data-ttu-id="e1661-118">Rieseguire invece l'installazione per sostituire il file mancante.</span><span class="sxs-lookup"><span data-stu-id="e1661-118">Instead, rerun setup to replace the missing file.</span></span>  
+    > <span data-ttu-id="57433-116">Il file VsDevCmd.bat può variare da computer a computer.</span><span class="sxs-lookup"><span data-stu-id="57433-116">VsDevCmd.bat can vary from computer to computer.</span></span> <span data-ttu-id="57433-117">Non sostituire un file VsDevCmd.bat mancante o danneggiato con un file VsDevCmd.bat da un altro computer.</span><span class="sxs-lookup"><span data-stu-id="57433-117">Do not replace a missing or damaged VsDevCmd.bat file with a VsDevCmd.bat from another computer.</span></span> <span data-ttu-id="57433-118">Rieseguire invece l'installazione per sostituire il file mancante.</span><span class="sxs-lookup"><span data-stu-id="57433-118">Instead, rerun setup to replace the missing file.</span></span>
 
-### <a name="available-options-for-vsdevcmdbat"></a><span data-ttu-id="e1661-119">Opzioni disponibili per VsDevCmd.BAT</span><span class="sxs-lookup"><span data-stu-id="e1661-119">Available options for VsDevCmd.BAT</span></span>
+### <a name="available-options-for-vsdevcmdbat"></a><span data-ttu-id="57433-119">Opzioni disponibili per VsDevCmd.BAT</span><span class="sxs-lookup"><span data-stu-id="57433-119">Available options for VsDevCmd.BAT</span></span>
 
-<span data-ttu-id="e1661-120">Per visualizzare le opzioni disponibili per VsDevCmd.BAT, eseguire il comando con l'opzione `-help`:</span><span class="sxs-lookup"><span data-stu-id="e1661-120">To see the available options for VsDevCmd.BAT, run the command with the `-help` option:</span></span>
+<span data-ttu-id="57433-120">Per visualizzare le opzioni disponibili per VsDevCmd.BAT, eseguire il comando con l'opzione `-help`:</span><span class="sxs-lookup"><span data-stu-id="57433-120">To see the available options for VsDevCmd.BAT, run the command with the `-help` option:</span></span>
+
 ```console
 VsDevCmd.bat -help
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e1661-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1661-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57433-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="57433-121">See also</span></span>
 
-- [<span data-ttu-id="e1661-122">Compilazione dalla riga di comando con csc.exe</span><span class="sxs-lookup"><span data-stu-id="e1661-122">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [<span data-ttu-id="57433-122">Compilazione dalla riga di comando con csc.exe</span><span class="sxs-lookup"><span data-stu-id="57433-122">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a6c7fd48269a3e8291a548b3e13efe5c8e70652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150813"
 ---
-# <a name="iclrmetahostgetversionfromfile-method"></a><span data-ttu-id="4d842-102">Metodo ICLRMetaHost::GetVersionFromFile</span><span class="sxs-lookup"><span data-stu-id="4d842-102">ICLRMetaHost::GetVersionFromFile Method</span></span>
-<span data-ttu-id="4d842-103">Ottiene .NET Framework versione di compilazione originale un assembly (archiviato nei metadati), dato il percorso di file.</span><span class="sxs-lookup"><span data-stu-id="4d842-103">Gets an assembly's original .NET Framework compilation version (stored in the metadata), given its file path.</span></span> <span data-ttu-id="4d842-104">Questo metodo sostituisce le [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) (funzione).</span><span class="sxs-lookup"><span data-stu-id="4d842-104">This method supersedes the [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) function.</span></span>  
+# <a name="iclrmetahostgetversionfromfile-method"></a><span data-ttu-id="500da-102">Metodo ICLRMetaHost::GetVersionFromFile</span><span class="sxs-lookup"><span data-stu-id="500da-102">ICLRMetaHost::GetVersionFromFile Method</span></span>
+<span data-ttu-id="500da-103">Ottiene .NET Framework versione di compilazione originale un assembly (archiviato nei metadati), dato il percorso di file.</span><span class="sxs-lookup"><span data-stu-id="500da-103">Gets an assembly's original .NET Framework compilation version (stored in the metadata), given its file path.</span></span> <span data-ttu-id="500da-104">Questo metodo sostituisce le [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) (funzione).</span><span class="sxs-lookup"><span data-stu-id="500da-104">This method supersedes the [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d842-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4d842-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="500da-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="500da-105">Syntax</span></span>  
   
 ```  
 HRESULT GetVersionFromFile (  
@@ -37,40 +37,40 @@ HRESULT GetVersionFromFile (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4d842-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="4d842-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="500da-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="500da-106">Parameters</span></span>  
  `pwzFilePath`  
- <span data-ttu-id="4d842-107">[in] Il percorso del file completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="4d842-107">[in] The complete assembly file path.</span></span>  
+ <span data-ttu-id="500da-107">[in] Il percorso del file completo dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="500da-107">[in] The complete assembly file path.</span></span>  
   
  `pwzbuffer`  
- <span data-ttu-id="4d842-108">[out] La versione di compilazione di .NET Framework archiviata nei metadati, nel formato "v*un'*. *B*[. *X*] ".</span><span class="sxs-lookup"><span data-stu-id="4d842-108">[out] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="4d842-109">*Oggetto*, *B*, e *X* sono numeri decimali che corrispondono alla versione principale, la versione secondaria e il numero di build.</span><span class="sxs-lookup"><span data-stu-id="4d842-109">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="4d842-110">La lunghezza di questa stringa è limitata a MAX_PATH.</span><span class="sxs-lookup"><span data-stu-id="4d842-110">The length of this string is limited to MAX_PATH.</span></span>  
+ <span data-ttu-id="500da-108">[out] La versione di compilazione di .NET Framework archiviata nei metadati, nel formato "v*un'*. *B*[. *X*] ".</span><span class="sxs-lookup"><span data-stu-id="500da-108">[out] The .NET Framework compilation version stored in the metadata, in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="500da-109">*Oggetto*, *B*, e *X* sono numeri decimali che corrispondono alla versione principale, la versione secondaria e il numero di build.</span><span class="sxs-lookup"><span data-stu-id="500da-109">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="500da-110">La lunghezza di questa stringa è limitata a MAX_PATH.</span><span class="sxs-lookup"><span data-stu-id="500da-110">The length of this string is limited to MAX_PATH.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4d842-111">Questo output corrisponde al nome di directory per la versione di .NET Framework, così come appare sotto C:\Windows\Microsoft.NET\Framework.</span><span class="sxs-lookup"><span data-stu-id="4d842-111">This output matches the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
+>  <span data-ttu-id="500da-111">Questo output corrisponde al nome di directory per la versione di .NET Framework, così come appare sotto C:\Windows\Microsoft.NET\Framework.</span><span class="sxs-lookup"><span data-stu-id="500da-111">This output matches the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
   
- <span data-ttu-id="4d842-112">I valori di esempio sono "v1.0.3705", "v1.1.4322", "v2.0.50727" e "v4.0. *X*", dove *X* dipende dal numero di build installato.</span><span class="sxs-lookup"><span data-stu-id="4d842-112">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="4d842-113">Si noti che è necessario il prefisso "v".</span><span class="sxs-lookup"><span data-stu-id="4d842-113">Note that the "v" prefix is required.</span></span>  
+ <span data-ttu-id="500da-112">I valori di esempio sono "v1.0.3705", "v1.1.4322", "v2.0.50727" e "v4.0. *X*", dove *X* dipende dal numero di build installato.</span><span class="sxs-lookup"><span data-stu-id="500da-112">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*X*", where *X* depends on the build number installed.</span></span> <span data-ttu-id="500da-113">Si noti che è necessario il prefisso "v".</span><span class="sxs-lookup"><span data-stu-id="500da-113">Note that the "v" prefix is required.</span></span>  
   
  `pcchBuffer`  
- <span data-ttu-id="4d842-114">[in, out] Le dimensioni di `pwzbuffer` per evitare i sovraccarichi del buffer.</span><span class="sxs-lookup"><span data-stu-id="4d842-114">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span>  
+ <span data-ttu-id="500da-114">[in, out] Le dimensioni di `pwzbuffer` per evitare i sovraccarichi del buffer.</span><span class="sxs-lookup"><span data-stu-id="500da-114">[in, out] The size of `pwzbuffer` to avoid buffer overruns.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4d842-115">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4d842-115">Return Value</span></span>  
- <span data-ttu-id="4d842-116">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="4d842-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="500da-115">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="500da-115">Return Value</span></span>  
+ <span data-ttu-id="500da-116">Questo metodo restituisce gli specifici HRESULT seguenti, nonché gli errori di HRESULT che indicano la mancata riuscita del metodo.</span><span class="sxs-lookup"><span data-stu-id="500da-116">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="4d842-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4d842-117">HRESULT</span></span>|<span data-ttu-id="4d842-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4d842-118">Description</span></span>|  
+|<span data-ttu-id="500da-117">HRESULT</span><span class="sxs-lookup"><span data-stu-id="500da-117">HRESULT</span></span>|<span data-ttu-id="500da-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="500da-118">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4d842-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="4d842-119">S_OK</span></span>|<span data-ttu-id="4d842-120">Metodo completato correttamente.</span><span class="sxs-lookup"><span data-stu-id="4d842-120">The method completed successfully.</span></span>|  
-|<span data-ttu-id="4d842-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="4d842-121">E_POINTER</span></span>|`pwzbuffer` <span data-ttu-id="4d842-122">o `pcchBuffer` è null.</span><span class="sxs-lookup"><span data-stu-id="4d842-122">or `pcchBuffer` is null.</span></span>|  
-|<span data-ttu-id="4d842-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="4d842-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="4d842-124">Il buffer è troppo piccolo.</span><span class="sxs-lookup"><span data-stu-id="4d842-124">The buffer is too small.</span></span>|  
+|<span data-ttu-id="500da-119">S_OK</span><span class="sxs-lookup"><span data-stu-id="500da-119">S_OK</span></span>|<span data-ttu-id="500da-120">Metodo completato correttamente.</span><span class="sxs-lookup"><span data-stu-id="500da-120">The method completed successfully.</span></span>|  
+|<span data-ttu-id="500da-121">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="500da-121">E_POINTER</span></span>|<span data-ttu-id="500da-122">`pwzbuffer` o `pcchBuffer` è null.</span><span class="sxs-lookup"><span data-stu-id="500da-122">`pwzbuffer` or `pcchBuffer` is null.</span></span>|  
+|<span data-ttu-id="500da-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="500da-123">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="500da-124">Il buffer è troppo piccolo.</span><span class="sxs-lookup"><span data-stu-id="500da-124">The buffer is too small.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4d842-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4d842-125">Requirements</span></span>  
- <span data-ttu-id="4d842-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d842-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="500da-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="500da-125">Requirements</span></span>  
+ <span data-ttu-id="500da-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="500da-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d842-127">**Intestazione:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="4d842-127">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="500da-127">**Intestazione:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="500da-127">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="4d842-128">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="4d842-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="500da-128">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="500da-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="4d842-129">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="4d842-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="500da-129">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="500da-129">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d842-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4d842-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="500da-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="500da-130">See also</span></span>
 
-- [<span data-ttu-id="4d842-131">Interfaccia ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="4d842-131">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
-- [<span data-ttu-id="4d842-132">Hosting</span><span class="sxs-lookup"><span data-stu-id="4d842-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="500da-131">Interfaccia ICLRMetaHost</span><span class="sxs-lookup"><span data-stu-id="500da-131">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [<span data-ttu-id="500da-132">Hosting</span><span class="sxs-lookup"><span data-stu-id="500da-132">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
