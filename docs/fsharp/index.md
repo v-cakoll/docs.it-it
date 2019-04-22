@@ -1,6 +1,6 @@
 ---
 title: Guida a F#
-description: Questa guida offre una panoramica sui diversi materiali formativi disponibili su F#, un linguaggio di programmazione funzionale che gira su .NET.
+description: Questa guida offre una panoramica sui diversi materiali formativi disponibili su F#, un linguaggio di programmazione funzionale eseguito su .NET.
 author: cartermp
 ms.date: 08/03/2018
 ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
@@ -12,11 +12,11 @@ ms.locfileid: "56977006"
 ---
 # <a name="f-guide"></a>Guida a F#
 
-La Guida F# fornisce molte risorse per apprendere il linguaggio F#.
+La guida F# fornisce molte risorse per apprendere il linguaggio F#.
 
-## <a name="learning-f"></a>Apprendimento di F#
+## <a name="learning-f"></a>Formazione su F#
 
-[Che cos'è F# ](what-is-fsharp.md) spiega cos'è il linguaggio F# e con piccoli esempi descrive l'esperienza di programmazione che offre. Consigliato se non si familiarità con F#.
+[Che cos'è F# ](what-is-fsharp.md) spiega cos'è il linguaggio F# e con brevi esempi di codice descrive l'esperienza di programmazione che offre. Consigliato se non si familiarità con F#.
 
 [Panoramica su F# ](tour.md) offre una panoramica sulle funzionalità principali del linguaggio, con numerosi esempi di codice. Consigliata per vedere in azione le funzionalità di base di F#.
 
@@ -24,27 +24,27 @@ La Guida F# fornisce molte risorse per apprendere il linguaggio F#.
 
 [Introduzione a F# in Visual Studio per Mac](get-started/get-started-with-visual-studio-for-mac.md) se si ha macOS e si vuole usare Visual Studio IDE.
 
-[Introduzione a F# in Visual Studio Code](get-started/get-started-vscode.md) se si vuole una esperienza ricca di funzionalità in una IDE leggera e multipiattaforma.
+[Introduzione a F# in Visual Studio Code](get-started/get-started-vscode.md) se si vuole un'esperienza ricca di funzionalità in un ambiente IDE leggero e multipiattaforma.
 
 [Introduzione a F# con la CLI di .NET Core](get-started/get-started-command-line.md) se si desidera usare gli strumenti da riga di comando.
 
 [Introduzione a F# e Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) per la programmazione per dispositivi mobili con F#.
 
-[F# per Azure Notebooks](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) è un'esercitazione per l'apprendimento F# in un Notebook Jupyter gratuito online.
+[F# per Azure Notebooks](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb) è un'esercitazione per l'apprendimento F# in un Notebook Jupyter ospitato gratuito.
 
 ## <a name="references"></a>Riferimenti
 
-[F# Guida di riferimento al linguaggio](language-reference/index.md) è la guida di riferimento ufficiale e completa a tutte le funzionalità di F#. Ogni articolo ne illustra la sintassi e contiene esempi di codice. È possibile usare la barra dei filtri nella tabella dei contenuti per cercare articoli specifici.
+[Guida di riferimento al linguaggio F#](language-reference/index.md) è il riferimento ufficiale e completo a tutte le funzionalità di F#. Ogni articolo ne illustra la sintassi e contiene esempi di codice. È possibile usare la barra dei filtri nella tabella dei contenuti per cercare articoli specifici.
 
-[F# Core Libreria di Riferimento](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) è la documentazione della API di base F#.
+[Riferimento per la Libreria principale F#](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) è il riferimento per la Libreria principale F#.
 
 ## <a name="additional-guides"></a>Guide aggiuntive
 
 [F# per divertimento e profitto](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) è un libro completo e dettagliato sull'apprendimento di F#. Contenuto e autore sono molto apprezzati dalla comunità F#. I destinatari sono principalmente gli sviluppatori con conoscenze della programmazione orientata agli oggetti.
 
-[Programmare in F# Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) è un wikibook sull'apprendimento di F#, prodotto e mantenuto dalla comunità F#. I destinatari sono persone senza familiarità con F#, ma che hanno un po' di basi di programmazione ad oggetti.
+[Wikibook sulla programmazione in #F](https://en.wikibooks.org/wiki/F_Sharp_Programming) è un wikibook sull'apprendimento di F#, prodotto dalla comunità F#. I destinatari sono persone che non hanno familiarità con F#, ma conoscono le basi di programmazione orientata agli oggetti.
 
-## <a name="learn-f-through-videos"></a>Impara F# tramite i video
+## <a name="learn-f-through-videos"></a>Formazione F# tramite video
 
 [Esercitazione F# su YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) è un'ottima introduzione all'uso di F# su Visual Studio, ricca di ottimi esempi, della durata di 1,5 ore. I destinatari sono sviluppatori Visual Studio che non hanno familiarità con F#.
 
@@ -56,7 +56,7 @@ La Guida F# fornisce molte risorse per apprendere il linguaggio F#.
 
 Il sito [F# Snippets](http://www.fssnip.net) contiene moltissimi frammenti di codice che illustrano come risolvere pressoché qualunque problema con F#, partendo dal livello "principiante assoluto" per arrivare a codice decisamente avanzato.
 
-Il [ canale Slack della F# Software Foundation](https://fsharp.org/guides/slack/) è un ottimo punto di ritrovo sia per principianti che esperti. Il canale è molto attivo e vanta alcuni dei migliori programmatori F# disponibili per la chat. Si consiglia vivamente la partecipazione.
+Il [canale Slack della F# Software Foundation](https://fsharp.org/guides/slack/) è un ottimo punto di riferimento sia per principianti che per esperti. Il canale è molto attivo e vanta alcuni dei migliori programmatori F# disponibili per una chiacchierata. L'iscrizione è vivamente consigliata.
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
