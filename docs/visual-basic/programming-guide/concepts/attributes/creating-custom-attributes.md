@@ -3,14 +3,14 @@ title: Creazione di attributi personalizzati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
 ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814354"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="2ec4a-102">Creazione di attributi personalizzati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ec4a-102">Creating Custom Attributes (Visual Basic)</span></span>
-<span data-ttu-id="2ec4a-103">È possibile creare attributi personalizzati definendo una classe Attribute, ovvero una classe che deriva direttamente o indirettamente da <xref:System.Attribute>, la quale semplifica e rende più rapida l'identificazione delle definizioni degli attributi nei metadati.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="2ec4a-104">Si supponga di voler contrassegnare i tipi con il nome del programmatore che ha scritto il tipo.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="2ec4a-105">Si potrebbe definire una classe Attribute `Author` personalizzata:</span><span class="sxs-lookup"><span data-stu-id="2ec4a-105">You might define a custom `Author` attribute class:</span></span>  
+# <a name="creating-custom-attributes-visual-basic"></a><span data-ttu-id="88dc4-102">Creazione di attributi personalizzati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88dc4-102">Creating Custom Attributes (Visual Basic)</span></span>
+<span data-ttu-id="88dc4-103">È possibile creare attributi personalizzati definendo una classe Attribute, ovvero una classe che deriva direttamente o indirettamente da <xref:System.Attribute>, la quale semplifica e rende più rapida l'identificazione delle definizioni degli attributi nei metadati.</span><span class="sxs-lookup"><span data-stu-id="88dc4-103">You can create your own custom attributes by defining an attribute class, a class that derives directly or indirectly from <xref:System.Attribute>, which makes identifying attribute definitions in metadata fast and easy.</span></span> <span data-ttu-id="88dc4-104">Si supponga di voler contrassegnare i tipi con il nome del programmatore che ha scritto il tipo.</span><span class="sxs-lookup"><span data-stu-id="88dc4-104">Suppose you want to tag types with the name of the programmer who wrote the type.</span></span> <span data-ttu-id="88dc4-105">Si potrebbe definire una classe Attribute `Author` personalizzata:</span><span class="sxs-lookup"><span data-stu-id="88dc4-105">You might define a custom `Author` attribute class:</span></span>  
   
 ```vb  
 <System.AttributeUsage(System.AttributeTargets.Class Or   
@@ -26,9 +26,9 @@ Public Class Author
 End Class  
 ```  
   
- <span data-ttu-id="2ec4a-106">Il nome della classe è il nome dell'attributo, `Author`.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="2ec4a-107">La classe deriva da `System.Attribute`, quindi è una classe Attribute personalizzata.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="2ec4a-108">I parametri del costruttore sono parametri posizionali dell'attributo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="2ec4a-109">In questo esempio `name` è un parametro posizionale.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="2ec4a-110">Tutte le proprietà o i campi pubblici di lettura/scrittura sono parametri denominati.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="2ec4a-111">In questo caso `version` è l'unico parametro denominato.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="2ec4a-112">Si noti l'uso dell'attributo `AttributeUsage` per rendere l'attributo `Author` valido solo per la classe e le dichiarazioni `Structure`.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>  
+ <span data-ttu-id="88dc4-106">Il nome della classe è il nome dell'attributo, `Author`.</span><span class="sxs-lookup"><span data-stu-id="88dc4-106">The class name is the attribute's name, `Author`.</span></span> <span data-ttu-id="88dc4-107">La classe deriva da `System.Attribute`, quindi è una classe Attribute personalizzata.</span><span class="sxs-lookup"><span data-stu-id="88dc4-107">It is derived from `System.Attribute`, so it is a custom attribute class.</span></span> <span data-ttu-id="88dc4-108">I parametri del costruttore sono parametri posizionali dell'attributo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="88dc4-108">The constructor's parameters are the custom attribute's positional parameters.</span></span> <span data-ttu-id="88dc4-109">In questo esempio `name` è un parametro posizionale.</span><span class="sxs-lookup"><span data-stu-id="88dc4-109">In this example, `name` is a positional parameter.</span></span> <span data-ttu-id="88dc4-110">Tutte le proprietà o i campi pubblici di lettura/scrittura sono parametri denominati.</span><span class="sxs-lookup"><span data-stu-id="88dc4-110">Any public read-write fields or properties are named parameters.</span></span> <span data-ttu-id="88dc4-111">In questo caso `version` è l'unico parametro denominato.</span><span class="sxs-lookup"><span data-stu-id="88dc4-111">In this case, `version` is the only named parameter.</span></span> <span data-ttu-id="88dc4-112">Si noti l'uso dell'attributo `AttributeUsage` per rendere l'attributo `Author` valido solo per la classe e le dichiarazioni `Structure`.</span><span class="sxs-lookup"><span data-stu-id="88dc4-112">Note the use of the `AttributeUsage` attribute to make the `Author` attribute valid only on class and `Structure` declarations.</span></span>  
   
- <span data-ttu-id="2ec4a-113">È possibile usare questo nuovo attributo come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="2ec4a-113">You could use this new attribute as follows:</span></span>  
+ <span data-ttu-id="88dc4-113">È possibile usare questo nuovo attributo come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="88dc4-113">You could use this new attribute as follows:</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1)>   
@@ -37,7 +37,7 @@ Class SampleClass
 End Class  
 ```  
   
- <span data-ttu-id="2ec4a-114">`AttributeUsage` ha un parametro denominato, `AllowMultiple`, che consente di rendere un attributo personalizzato monouso o multiuso.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="2ec4a-115">Nell'esempio di codice seguente viene creato un attributo multiuso.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-115">In the following code example, a multiuse attribute is created.</span></span>  
+ <span data-ttu-id="88dc4-114">`AttributeUsage` ha un parametro denominato, `AllowMultiple`, che consente di rendere un attributo personalizzato monouso o multiuso.</span><span class="sxs-lookup"><span data-stu-id="88dc4-114">`AttributeUsage` has a named parameter, `AllowMultiple`, with which you can make a custom attribute single-use or multiuse.</span></span> <span data-ttu-id="88dc4-115">Nell'esempio di codice seguente viene creato un attributo multiuso.</span><span class="sxs-lookup"><span data-stu-id="88dc4-115">In the following code example, a multiuse attribute is created.</span></span>  
   
 ```vb  
 ' multiuse attribute  
@@ -48,7 +48,7 @@ Public Class Author
     Inherits System.Attribute  
 ```  
   
- <span data-ttu-id="2ec4a-116">Nell'esempio vengono applicati a una classe più attributi dello stesso tipo.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>  
+ <span data-ttu-id="88dc4-116">Nell'esempio vengono applicati a una classe più attributi dello stesso tipo.</span><span class="sxs-lookup"><span data-stu-id="88dc4-116">In the following code example, multiple attributes of the same type are applied to a class.</span></span>  
   
 ```vb  
 <Author("P. Ackerman", Version:=1.1),   
@@ -60,14 +60,14 @@ End Class
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="2ec4a-117">Se la classe Attribute contiene una proprietà, tale proprietà deve essere di lettura/scrittura.</span><span class="sxs-lookup"><span data-stu-id="2ec4a-117">If your attribute class contains a property, that property must be read-write.</span></span>  
+>  <span data-ttu-id="88dc4-117">Se la classe Attribute contiene una proprietà, tale proprietà deve essere di lettura/scrittura.</span><span class="sxs-lookup"><span data-stu-id="88dc4-117">If your attribute class contains a property, that property must be read-write.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ec4a-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2ec4a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88dc4-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="88dc4-118">See also</span></span>
 
 - <xref:System.Reflection>
-- [<span data-ttu-id="2ec4a-119">Guida per programmatori Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2ec4a-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="2ec4a-120">Scrittura di attributi personalizzati</span><span class="sxs-lookup"><span data-stu-id="2ec4a-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
-- [<span data-ttu-id="2ec4a-121">Reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ec4a-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="2ec4a-122">Attributi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ec4a-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- [<span data-ttu-id="2ec4a-123">Accesso agli attributi tramite reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ec4a-123">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [<span data-ttu-id="2ec4a-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ec4a-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+- [<span data-ttu-id="88dc4-119">Guida per programmatori Visual Basic</span><span class="sxs-lookup"><span data-stu-id="88dc4-119">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="88dc4-120">Scrittura di attributi personalizzati</span><span class="sxs-lookup"><span data-stu-id="88dc4-120">Writing Custom Attributes</span></span>](../../../../standard/attributes/writing-custom-attributes.md)
+- [<span data-ttu-id="88dc4-121">Reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88dc4-121">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="88dc4-122">Attributi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88dc4-122">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="88dc4-123">Accesso agli attributi tramite reflection (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88dc4-123">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="88dc4-124">AttributeUsage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88dc4-124">AttributeUsage (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
