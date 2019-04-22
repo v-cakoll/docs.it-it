@@ -6,10 +6,10 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819580"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Panoramica della globalizzazione e localizzazione WPF
@@ -267,7 +267,7 @@ Il processo di localizzazione inizia dopo la non localizzato `MyDialog.resources
   
 |Chiave di risorsa|Category|Leggibile|Modificabile|Commento|Value|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|true|true|Questo carattere viene usato come regola decorativa.|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Testo|TRUE|TRUE|Questo carattere viene usato come regola decorativa.|&#124;|  
   
  I commenti possono essere inseriti nel contenuto o nella proprietà di qualsiasi elemento usando la sintassi seguente:  
   

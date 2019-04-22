@@ -3,10 +3,10 @@ title: Operazioni set (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
 ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825782"
 ---
 # <a name="set-operations-visual-basic"></a>Operazioni set (Visual Basic)
@@ -28,7 +28,7 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
 ### <a name="distinct"></a>Distinct  
  Nella figura seguente viene illustrato il comportamento del metodo <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> su una sequenza di caratteri. La sequenza restituita contiene gli elementi univoci dalla sequenza di input.  
   
- ![Grafico che mostra il comportamento di Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
+ ![Elemento grafico che illustra il comportamento di Distinct&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Eccezione  
  Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. La sequenza restituita contiene solo gli elementi dalla prima sequenza di input che non sono presenti nella seconda sequenza di input.  
@@ -38,11 +38,11 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
 ### <a name="intersect"></a>Interseca  
  Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. La sequenza restituita contiene gli elementi comuni a entrambe le sequenze di input.  
   
- ![Grafica che mostra l'intersezione di due sequenze](./media/set-operations/intersection-two-sequences.png)    
+ ![Elemento grafico che illustra l'intersezione di due sequenze.](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>Unione  
  La figura seguente illustra un'operazione di unione tra due sequenze di caratteri. La sequenza restituita contiene gli elementi univoci da entrambe le sequenze di input.  
   
- ![Grafica che mostra l'unione di due sequenze](./media/set-operations/union-operation-two-sequences.png)    
+ ![Elemento grafico che illustra l'unione di due sequenze.](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query  
  L'esempio seguente usa il `Distinct` clausola in una query LINQ per restituire i numeri univoci da un elenco di numeri interi.  
   
