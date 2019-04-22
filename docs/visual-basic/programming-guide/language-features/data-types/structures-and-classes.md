@@ -10,10 +10,10 @@ helpviewer_keywords:
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
 ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841615"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Strutture e classi (Visual Basic)
@@ -53,7 +53,7 @@ Visual Basic unifica la sintassi per le strutture e classi, in modo che entrambe
   
 -   Gli elementi di struttura non possono essere dichiarati come `Protected`; i membri di classe possono.  
   
--   Una routine di struttura può gestire gli eventi solo se è un [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` routine e solo per mezzo del [istruzione AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md); qualsiasi routine della classe può gestire gli eventi utilizzando entrambi il [ Gestisce](../../../../visual-basic/language-reference/statements/handles-clause.md) parola chiave o il `AddHandler` istruzione. Per altre informazioni, vedere [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md).  
+-   Una routine di struttura può gestire gli eventi solo se è un [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` routine e solo per mezzo del [istruzione AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md); qualsiasi routine della classe può gestire gli eventi utilizzando entrambi il [ Gestisce](../../../../visual-basic/language-reference/statements/handles-clause.md) parola chiave o il `AddHandler` istruzione. Per ulteriori informazioni, vedi [Eventi](../../../../visual-basic/programming-guide/language-features/events/index.md).  
   
 -   Le dichiarazioni di variabili di struttura non possono specificare inizializzatori o dimensioni iniziali per le matrici. le dichiarazioni di variabili di classe possono.  
   

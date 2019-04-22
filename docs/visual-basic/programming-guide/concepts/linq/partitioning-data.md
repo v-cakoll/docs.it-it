@@ -3,10 +3,10 @@ title: Partizionamento dei dati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
 ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839574"
 ---
 # <a name="partitioning-data-visual-basic"></a>Partizionamento dei dati (Visual Basic)
@@ -14,7 +14,7 @@ Il partizionamento in LINQ è l'operazione di divisione di una sequenza di input
   
  La figura seguente illustra i risultati di tre diverse operazioni di partizionamento in una sequenza di caratteri. La prima operazione restituisce i primi tre elementi nella sequenza. La seconda operazione ignora i primi tre elementi e restituisce gli elementi rimanenti. La terza operazione ignora i primi due elementi nella sequenza e restituisce i tre elementi successivi.  
   
- ![Figura che mostra tre operazioni di partizionamento LINQ.](./media/partitioning-data/linq-partitioning-operations.png)  
+ ![Figura che illustra tre operazioni di partizionamento LINQ.](./media/partitioning-data/linq-partitioning-operations.png)  
   
  Nella sezione seguente sono elencati i metodi degli operatori di query standard che eseguono la partizione delle sequenze.  
   

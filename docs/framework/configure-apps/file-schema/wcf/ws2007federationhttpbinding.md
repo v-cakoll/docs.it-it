@@ -3,10 +3,10 @@ title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
 ms.openlocfilehash: e6215465acbf9bb94298d282d15f8735a0e20c8c
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890254"
 ---
 # <a name="ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding>
@@ -95,7 +95,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 
 |Elemento|Descrizione|
 |-------------|-----------------|
-|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|
 
 ## <a name="remarks"></a>Note
 

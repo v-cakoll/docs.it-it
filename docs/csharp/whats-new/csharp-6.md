@@ -3,10 +3,10 @@ title: Novità di C# 6 - Guida a C#
 description: Informazioni sulle nuove funzionalità di C# versione 6
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920675"
 ---
 # <a name="whats-new-in-c-6"></a>Novità di C# 6
@@ -106,7 +106,7 @@ Le regole dell'operatore `?.` garantiscono che il lato sinistro dell'operatore v
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Se ci si assicura che il lato sinistro venga valutato una sola volta, è anche possibile usare qualsiasi espressione, incluse le chiamate a metodi, sul lato sinistro dell'operatore `?.`
+Se ci si assicura che il lato sinistro venga valutato una sola volta, è anche possibile usare qualsiasi espressione, incluse le chiamate a metodi, nel lato sinistro dell'operatore `?.`
 
 ## <a name="string-interpolation"></a>Interpolazione di stringhe
 
