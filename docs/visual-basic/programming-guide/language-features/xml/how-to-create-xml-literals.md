@@ -5,24 +5,24 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836864"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="d1c20-102">Procedura: Creare valori letterali XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d1c20-102">How to: Create XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="d1c20-103">È possibile creare un documento, frammento o elemento XML direttamente nel codice usando un valore letterale XML.</span><span class="sxs-lookup"><span data-stu-id="d1c20-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="d1c20-104">Gli esempi in questo argomento illustrano come creare un elemento XML che dispone di tre elementi figlio e come creare un documento XML.</span><span class="sxs-lookup"><span data-stu-id="d1c20-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
+# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="543d0-102">Procedura: Creare valori letterali XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="543d0-102">How to: Create XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="543d0-103">È possibile creare un documento, frammento o elemento XML direttamente nel codice usando un valore letterale XML.</span><span class="sxs-lookup"><span data-stu-id="543d0-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="543d0-104">Gli esempi in questo argomento illustrano come creare un elemento XML che dispone di tre elementi figlio e come creare un documento XML.</span><span class="sxs-lookup"><span data-stu-id="543d0-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
   
- <span data-ttu-id="d1c20-105">È anche possibile usare la [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API per creare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti.</span><span class="sxs-lookup"><span data-stu-id="d1c20-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="d1c20-106">Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="d1c20-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="543d0-105">È anche possibile usare la [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API per creare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti.</span><span class="sxs-lookup"><span data-stu-id="543d0-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="543d0-106">Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="543d0-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
-### <a name="to-create-an-xml-element"></a><span data-ttu-id="d1c20-107">Per creare un elemento XML</span><span class="sxs-lookup"><span data-stu-id="d1c20-107">To create an XML element</span></span>  
+### <a name="to-create-an-xml-element"></a><span data-ttu-id="543d0-107">Per creare un elemento XML</span><span class="sxs-lookup"><span data-stu-id="543d0-107">To create an XML element</span></span>  
   
--   <span data-ttu-id="d1c20-108">Creare il XML inline usando la sintassi dei valori letterali XML, che corrisponde alla sintassi XML effettivo.</span><span class="sxs-lookup"><span data-stu-id="d1c20-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
+-   <span data-ttu-id="543d0-108">Creare il XML inline usando la sintassi dei valori letterali XML, che corrisponde alla sintassi XML effettivo.</span><span class="sxs-lookup"><span data-stu-id="543d0-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     <span data-ttu-id="d1c20-109">Eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="d1c20-109">Run the code.</span></span> <span data-ttu-id="d1c20-110">L'output di questo codice è:</span><span class="sxs-lookup"><span data-stu-id="d1c20-110">The output of this code is:</span></span>  
+     <span data-ttu-id="543d0-109">Eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="543d0-109">Run the code.</span></span> <span data-ttu-id="543d0-110">L'output di questo codice è:</span><span class="sxs-lookup"><span data-stu-id="543d0-110">The output of this code is:</span></span>  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ ms.locfileid: "58836864"
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a><span data-ttu-id="d1c20-111">Per creare un documento XML</span><span class="sxs-lookup"><span data-stu-id="d1c20-111">To create an XML document</span></span>  
+### <a name="to-create-an-xml-document"></a><span data-ttu-id="543d0-111">Per creare un documento XML</span><span class="sxs-lookup"><span data-stu-id="543d0-111">To create an XML document</span></span>  
   
--   <span data-ttu-id="d1c20-112">Creare il documento XML inline.</span><span class="sxs-lookup"><span data-stu-id="d1c20-112">Create the XML document inline.</span></span> <span data-ttu-id="d1c20-113">Il codice seguente crea un documento XML con sintassi del valore letterale, una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.</span><span class="sxs-lookup"><span data-stu-id="d1c20-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
+-   <span data-ttu-id="543d0-112">Creare il documento XML inline.</span><span class="sxs-lookup"><span data-stu-id="543d0-112">Create the XML document inline.</span></span> <span data-ttu-id="543d0-113">Il codice seguente crea un documento XML con sintassi del valore letterale, una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.</span><span class="sxs-lookup"><span data-stu-id="543d0-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     <span data-ttu-id="d1c20-114">Eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="d1c20-114">Run the code.</span></span> <span data-ttu-id="d1c20-115">L'output di questo codice è:</span><span class="sxs-lookup"><span data-stu-id="d1c20-115">The output of this code is:</span></span>  
+     <span data-ttu-id="543d0-114">Eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="543d0-114">Run the code.</span></span> <span data-ttu-id="543d0-115">L'output di questo codice è:</span><span class="sxs-lookup"><span data-stu-id="543d0-115">The output of this code is:</span></span>  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
@@ -52,9 +52,9 @@ ms.locfileid: "58836864"
   
      `</books>`  
   
-## <a name="see-also"></a><span data-ttu-id="d1c20-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d1c20-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="543d0-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="543d0-116">See also</span></span>
 
-- [<span data-ttu-id="d1c20-117">XML</span><span class="sxs-lookup"><span data-stu-id="d1c20-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="d1c20-118">Creazione di XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d1c20-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [<span data-ttu-id="d1c20-119">Valore letterale elemento XML</span><span class="sxs-lookup"><span data-stu-id="d1c20-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="d1c20-120">Valore letterale di documento XML</span><span class="sxs-lookup"><span data-stu-id="d1c20-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [<span data-ttu-id="543d0-117">XML</span><span class="sxs-lookup"><span data-stu-id="543d0-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="543d0-118">Creazione di XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="543d0-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="543d0-119">Valore letterale elemento XML</span><span class="sxs-lookup"><span data-stu-id="543d0-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [<span data-ttu-id="543d0-120">Valore letterale di documento XML</span><span class="sxs-lookup"><span data-stu-id="543d0-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

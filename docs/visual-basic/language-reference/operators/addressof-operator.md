@@ -9,43 +9,43 @@ helpviewer_keywords:
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
 ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58830344"
 ---
-# <a name="addressof-operator-visual-basic"></a><span data-ttu-id="d2d6a-102">Operatore AddressOf (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2d6a-102">AddressOf Operator (Visual Basic)</span></span>
-<span data-ttu-id="d2d6a-103">Crea un'istanza di delegato di routine che fa riferimento la procedura specifica.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-103">Creates a procedure delegate instance that references the specific procedure.</span></span>  
+# <a name="addressof-operator-visual-basic"></a><span data-ttu-id="35c2c-102">Operatore AddressOf (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35c2c-102">AddressOf Operator (Visual Basic)</span></span>
+<span data-ttu-id="35c2c-103">Crea un'istanza di delegato di routine che fa riferimento la procedura specifica.</span><span class="sxs-lookup"><span data-stu-id="35c2c-103">Creates a procedure delegate instance that references the specific procedure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d2d6a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d2d6a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35c2c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="35c2c-104">Syntax</span></span>  
   
 ```  
 AddressOf procedurename  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="d2d6a-105">Parti</span><span class="sxs-lookup"><span data-stu-id="d2d6a-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="35c2c-105">Parti</span><span class="sxs-lookup"><span data-stu-id="35c2c-105">Parts</span></span>  
  `procedurename`  
- <span data-ttu-id="d2d6a-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-106">Required.</span></span> <span data-ttu-id="d2d6a-107">Specifica la routine a cui fa riferimento il delegato appena creato.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-107">Specifies the procedure to be referenced by the newly created procedure delegate.</span></span>  
+ <span data-ttu-id="35c2c-106">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="35c2c-106">Required.</span></span> <span data-ttu-id="35c2c-107">Specifica la routine a cui fa riferimento il delegato appena creato.</span><span class="sxs-lookup"><span data-stu-id="35c2c-107">Specifies the procedure to be referenced by the newly created procedure delegate.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d2d6a-108">Note</span><span class="sxs-lookup"><span data-stu-id="d2d6a-108">Remarks</span></span>  
- <span data-ttu-id="d2d6a-109">Il `AddressOf` operatore crea un delegato della funzione che fa riferimento alla funzione specificata da `procedurename`.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-109">The `AddressOf` operator creates a function delegate that points to the function specified by `procedurename`.</span></span> <span data-ttu-id="d2d6a-110">Quando la procedura specificata è che un metodo di istanza, quindi il delegato della funzione fa riferimento a sia l'istanza del metodo.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-110">When the specified procedure is an instance method then the function delegate refers to both the instance and the method.</span></span> <span data-ttu-id="d2d6a-111">Quindi, quando viene richiamato il delegato della funzione viene chiamato il metodo specificato dell'istanza specificata.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-111">Then, when the function delegate is invoked the specified method of the specified instance is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="35c2c-108">Note</span><span class="sxs-lookup"><span data-stu-id="35c2c-108">Remarks</span></span>  
+ <span data-ttu-id="35c2c-109">Il `AddressOf` operatore crea un delegato della funzione che fa riferimento alla funzione specificata da `procedurename`.</span><span class="sxs-lookup"><span data-stu-id="35c2c-109">The `AddressOf` operator creates a function delegate that points to the function specified by `procedurename`.</span></span> <span data-ttu-id="35c2c-110">Quando la procedura specificata è che un metodo di istanza, quindi il delegato della funzione fa riferimento a sia l'istanza del metodo.</span><span class="sxs-lookup"><span data-stu-id="35c2c-110">When the specified procedure is an instance method then the function delegate refers to both the instance and the method.</span></span> <span data-ttu-id="35c2c-111">Quindi, quando viene richiamato il delegato della funzione viene chiamato il metodo specificato dell'istanza specificata.</span><span class="sxs-lookup"><span data-stu-id="35c2c-111">Then, when the function delegate is invoked the specified method of the specified instance is called.</span></span>  
   
- <span data-ttu-id="d2d6a-112">Il `AddressOf` operatore può essere usato come operando di un costruttore di delegato o può essere usato in un contesto in cui il tipo del delegato può essere determinato dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-112">The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.</span></span>  
+ <span data-ttu-id="35c2c-112">Il `AddressOf` operatore può essere usato come operando di un costruttore di delegato o può essere usato in un contesto in cui il tipo del delegato può essere determinato dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="35c2c-112">The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2d6a-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="d2d6a-113">Example</span></span>  
- <span data-ttu-id="d2d6a-114">Questo esempio Usa la `AddressOf` operatore per definire un delegato per gestire il `Click` eventi di un pulsante.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-114">This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.</span></span>  
+## <a name="example"></a><span data-ttu-id="35c2c-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="35c2c-113">Example</span></span>  
+ <span data-ttu-id="35c2c-114">Questo esempio Usa la `AddressOf` operatore per definire un delegato per gestire il `Click` eventi di un pulsante.</span><span class="sxs-lookup"><span data-stu-id="35c2c-114">This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.</span></span>  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
-## <a name="example"></a><span data-ttu-id="d2d6a-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="d2d6a-115">Example</span></span>  
- <span data-ttu-id="d2d6a-116">L'esempio seguente usa il `AddressOf` operatore per specificare la funzione di avvio per un thread.</span><span class="sxs-lookup"><span data-stu-id="d2d6a-116">The following example uses the `AddressOf` operator to designate the startup function for a thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="35c2c-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="35c2c-115">Example</span></span>  
+ <span data-ttu-id="35c2c-116">L'esempio seguente usa il `AddressOf` operatore per specificare la funzione di avvio per un thread.</span><span class="sxs-lookup"><span data-stu-id="35c2c-116">The following example uses the `AddressOf` operator to designate the startup function for a thread.</span></span>  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a><span data-ttu-id="d2d6a-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2d6a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35c2c-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="35c2c-117">See also</span></span>
 
-- [<span data-ttu-id="d2d6a-118">Istruzione Declare</span><span class="sxs-lookup"><span data-stu-id="d2d6a-118">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [<span data-ttu-id="d2d6a-119">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="d2d6a-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="d2d6a-120">Istruzione Sub</span><span class="sxs-lookup"><span data-stu-id="d2d6a-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="d2d6a-121">Delegati</span><span class="sxs-lookup"><span data-stu-id="d2d6a-121">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="35c2c-118">Istruzione Declare</span><span class="sxs-lookup"><span data-stu-id="35c2c-118">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [<span data-ttu-id="35c2c-119">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="35c2c-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="35c2c-120">Istruzione Sub</span><span class="sxs-lookup"><span data-stu-id="35c2c-120">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="35c2c-121">Delegati</span><span class="sxs-lookup"><span data-stu-id="35c2c-121">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)

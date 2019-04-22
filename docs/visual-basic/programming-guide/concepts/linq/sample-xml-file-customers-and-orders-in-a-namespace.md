@@ -3,16 +3,16 @@ title: 'File XML di esempio: Customers e Orders in uno spazio dei nomi1'
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
 ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829512"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="06aa8-102">File XML di esempio: clienti e ordini in uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="06aa8-102">Sample XML File: Customers and Orders in a Namespace</span></span>
-<span data-ttu-id="06aa8-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="06aa8-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="06aa8-104">Contiene Customers e Orders.</span><span class="sxs-lookup"><span data-stu-id="06aa8-104">This file contains customers and orders.</span></span> <span data-ttu-id="06aa8-105">L'XML si trova in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="06aa8-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="f15bc-102">File XML di esempio: clienti e ordini in uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="f15bc-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="f15bc-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f15bc-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f15bc-104">Contiene Customers e Orders.</span><span class="sxs-lookup"><span data-stu-id="f15bc-104">This file contains customers and orders.</span></span> <span data-ttu-id="f15bc-105">L'XML si trova in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="f15bc-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a><span data-ttu-id="06aa8-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="06aa8-106">CustomersOrdersInNamespace.xml</span></span>  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="f15bc-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="f15bc-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -430,6 +430,6 @@ ms.locfileid: "58829512"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="06aa8-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="06aa8-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f15bc-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f15bc-107">See also</span></span>
 
-- [<span data-ttu-id="06aa8-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="06aa8-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+- [<span data-ttu-id="f15bc-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f15bc-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
 ms.openlocfilehash: db984dad40de3082a274636934d1fc5d782093b3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58838092"
 ---
-# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a><span data-ttu-id="53747-102">'\<nomeTipo >' è un tipo e non può essere usato come espressione</span><span class="sxs-lookup"><span data-stu-id="53747-102">'\<typename>' is a type and cannot be used as an expression</span></span>
-<span data-ttu-id="53747-103">Un nome di tipo viene visualizzato nel punto in cui è richiesta un'espressione.</span><span class="sxs-lookup"><span data-stu-id="53747-103">A type name occurs where an expression is required.</span></span> <span data-ttu-id="53747-104">Un'espressione deve essere costituita da una combinazione di variabili, costanti, valori letterali, proprietà e chiamate di routine `Function` .</span><span class="sxs-lookup"><span data-stu-id="53747-104">An expression must consist of some combination of variables, constants, literals, properties, and `Function` procedure calls.</span></span>  
+# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a><span data-ttu-id="c0346-102">'\<nomeTipo >' è un tipo e non può essere usato come espressione</span><span class="sxs-lookup"><span data-stu-id="c0346-102">'\<typename>' is a type and cannot be used as an expression</span></span>
+<span data-ttu-id="c0346-103">Un nome di tipo viene visualizzato nel punto in cui è richiesta un'espressione.</span><span class="sxs-lookup"><span data-stu-id="c0346-103">A type name occurs where an expression is required.</span></span> <span data-ttu-id="c0346-104">Un'espressione deve essere costituita da una combinazione di variabili, costanti, valori letterali, proprietà e chiamate di routine `Function` .</span><span class="sxs-lookup"><span data-stu-id="c0346-104">An expression must consist of some combination of variables, constants, literals, properties, and `Function` procedure calls.</span></span>  
   
- <span data-ttu-id="53747-105">**ID errore:** BC30108</span><span class="sxs-lookup"><span data-stu-id="53747-105">**Error ID:** BC30108</span></span>  
+ <span data-ttu-id="c0346-105">**ID errore:** BC30108</span><span class="sxs-lookup"><span data-stu-id="c0346-105">**Error ID:** BC30108</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="53747-106">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="53747-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c0346-106">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="c0346-106">To correct this error</span></span>  
   
--   <span data-ttu-id="53747-107">Rimuovere il nome del tipo e costruire l'espressione usando elementi validi.</span><span class="sxs-lookup"><span data-stu-id="53747-107">Remove the type name and construct the expression using valid elements.</span></span>  
+-   <span data-ttu-id="c0346-107">Rimuovere il nome del tipo e costruire l'espressione usando elementi validi.</span><span class="sxs-lookup"><span data-stu-id="c0346-107">Remove the type name and construct the expression using valid elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53747-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="53747-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0346-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c0346-108">See also</span></span>
 
-- [<span data-ttu-id="53747-109">Operatori ed espressioni</span><span class="sxs-lookup"><span data-stu-id="53747-109">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [<span data-ttu-id="c0346-109">Operatori ed espressioni</span><span class="sxs-lookup"><span data-stu-id="c0346-109">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
