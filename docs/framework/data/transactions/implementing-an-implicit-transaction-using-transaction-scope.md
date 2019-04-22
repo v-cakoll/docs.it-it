@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120978"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementazione di una transazione implicita utilizzando l'ambito di transazione
@@ -121,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- L'esempio mostra un blocco di codice in cui non esiste alcuna transazione di ambiente che crea un nuovo ambito (`scope1`) con l'opzione <xref:System.Transactions.TransactionScopeOption.Required>. L'ambito `scope1` è un ambito radice in quanto crea una nuova transazione (Transazione A) che definisce come transazione di ambiente. `Scope1` Crea quindi altri tre oggetti, ognuno con un altro <xref:System.Transactions.TransactionScopeOption> valore. Ad esempio, l'ambito `scope2` viene creato con l'opzione <xref:System.Transactions.TransactionScopeOption.Required> e, poiché esiste una transazione di ambiente, si aggiunge alla prima transazione creata dall'ambito `scope1`. Si noti che l'ambito `scope3` è l'ambito radice di una nuova transazione e che l'ambito `scope4` è privo di transazione di ambiente.  
+ L'esempio mostra un blocco di codice in cui non esiste alcuna transazione di ambiente che crea un nuovo ambito (`scope1`) con l'opzione <xref:System.Transactions.TransactionScopeOption.Required>. L'ambito `scope1` è un ambito radice in quanto crea una nuova transazione (Transazione A) che definisce come transazione di ambiente. In `Scope1` quindi vengono creati tre nuovi oggetti, ciascuno con un valore diverso di <xref:System.Transactions.TransactionScopeOption>. Ad esempio, l'ambito `scope2` viene creato con l'opzione <xref:System.Transactions.TransactionScopeOption.Required> e, poiché esiste una transazione di ambiente, si aggiunge alla prima transazione creata dall'ambito `scope1`. Si noti che l'ambito `scope3` è l'ambito radice di una nuova transazione e che l'ambito `scope4` è privo di transazione di ambiente.  
   
  Benché il valore predefinito e più comunemente utilizzato dell'enumerazione <xref:System.Transactions.TransactionScopeOption> sia l'opzione <xref:System.Transactions.TransactionScopeOption.Required>, ognuno degli altri valori presenta uno scopo specifico.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress> è utile quando si desidera mantenere le operazioni eseguite dalla sezione di codice e non si desidera interrompere la transazione di ambiente se le operazioni hanno esito negativo. Ad esempio, questa opzione è utile quando si desidera eseguire operazioni di registrazione o di controllo, o quando si desidera pubblicare eventi agli iscritti, sia che la transazione di ambiente venga interrotta sia che ne venga eseguito il commit. Questo valore consente di includere una sezione di codice non transazionale in un ambito di transazione, come mostrato nell'esempio seguente.  
+ L'opzione <xref:System.Transactions.TransactionScopeOption.Suppress> è utile quando si desidera preservare le operazioni eseguite dalla sezione di codice e non si desidera interrompere la transazione di ambiente se le operazioni hanno esito negativo. Ad esempio, questa opzione è utile quando si desidera eseguire operazioni di registrazione o di controllo, o quando si desidera pubblicare eventi agli iscritti, sia che la transazione di ambiente venga interrotta sia che ne venga eseguito il commit. Questo valore consente di includere una sezione di codice non transazionale in un ambito di transazione, come mostrato nell'esempio seguente.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  

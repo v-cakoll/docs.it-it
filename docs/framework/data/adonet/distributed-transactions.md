@@ -3,10 +3,10 @@ title: Transazioni distribuite
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150202"
 ---
 # <a name="distributed-transactions"></a>Transazioni distribuite
@@ -39,7 +39,7 @@ Una transazione consiste in una set di attività correlate che costituiscono una
 >  Una volta che è stata inserita esplicitamente in una transazione, una connessione non può essere rimossa né inserita in una transazione diversa fino a quando non è stata completata la prima transazione.  
   
 > [!CAUTION]
->  `EnlistTransaction` genera un'eccezione se la connessione ha già iniziato una transazione che utilizza la connessione <xref:System.Data.Common.DbConnection.BeginTransaction%2A> (metodo). Tuttavia, nel caso di una transazione locale avviata nell'origine dati (ad esempio eseguendo in modo esplicito l'istruzione BEGIN TRANSACTION tramite <xref:System.Data.SqlClient.SqlCommand>), la chiamata a `EnlistTransaction` comporterà il rollback della transazione locale e l'inserimento nella transazione distribuita esistente, come richiesto. Non verrà notificato che è stato eseguito il rollback della transazione locale e l'utente dovrà gestire le transazioni locali non avviate tramite il metodo <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Se si usa il provider di dati .NET Framework per SQL Server (`SqlClient`) con SQL Server, un tentativo di inserimento genererà un'eccezione. Tutti gli altri casi non verranno rilevati.  
+>  Il metodo `EnlistTransaction` genera un'eccezione se la connessione ha già iniziato una transazione usando il metodo <xref:System.Data.Common.DbConnection.BeginTransaction%2A> della connessione. Tuttavia, nel caso di una transazione locale avviata nell'origine dati (ad esempio eseguendo in modo esplicito l'istruzione BEGIN TRANSACTION tramite <xref:System.Data.SqlClient.SqlCommand>), la chiamata a `EnlistTransaction` comporterà il rollback della transazione locale e l'inserimento nella transazione distribuita esistente, come richiesto. Non verrà notificato che è stato eseguito il rollback della transazione locale e l'utente dovrà gestire le transazioni locali non avviate tramite il metodo <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Se si usa il provider di dati .NET Framework per SQL Server (`SqlClient`) con SQL Server, un tentativo di inserimento genererà un'eccezione. Tutti gli altri casi non verranno rilevati.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Transazioni promovibili in SQL Server  
  SQL Server supporta transazioni promuovibili in cui una transazione semplice locale può essere automaticamente promossa a transazione distribuita soltanto nel caso in cui ciò sia richiesto. Una transazione promuovibile non richiama l'overhead aggiunto di una transazione distribuita, a meno che non sia necessario. Per altre informazioni e un esempio di codice, vedere [integrazione di System. Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  

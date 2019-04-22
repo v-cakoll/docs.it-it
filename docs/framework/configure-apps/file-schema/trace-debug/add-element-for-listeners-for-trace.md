@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089582"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<aggiungere > (elemento) per \<listeners > per \<traccia >
@@ -39,7 +39,7 @@ Aggiunge un listener per il **listener** raccolta.
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|**tipo**|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener. È necessario usare una stringa che soddisfi i requisiti specificati nelle [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener. È necessario usare una stringa che soddisfi i requisiti specificati nelle [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe specificata.|  
 |**name**|Attributo facoltativo.<br /><br /> Specifica il nome del listener.|  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136955"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
@@ -102,15 +102,15 @@ Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaform
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Protezione dei servizi](../../../../docs/framework/wcf/securing-services.md)
 - [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [Associazioni e protezione](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Associazioni e sicurezza](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [Protezione di servizi e client](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Autenticazione](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [Federazione e token emessi](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Federazione e token rilasciati](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Indicazioni di sicurezza e procedure consigliate](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Linee guida e procedure consigliate per la sicurezza](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Configurazione dei servizi tramite file di configurazione](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Cenni preliminari sulla creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Panoramica della creazione di endpoint](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Estensione della sicurezza](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -4,12 +4,12 @@ description: Informazioni su come eseguire un'applicazione console .NET Framewor
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: da3c814e2ae3ae646072deaf7aa932272160ce49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633842"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611497"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Esecuzione di applicazioni console in contenitori Windows
 
@@ -25,16 +25,18 @@ L'[esempio completo](https://github.com/dotnet/samples/tree/master/framework/doc
 
 È necessario avere familiarità con alcuni termini di Docker prima di iniziare lo spostamento dell'applicazione in un contenitore.
 
+> [!NOTE]
 > Una *immagine Docker* è un modello di sola lettura che definisce l'ambiente per un contenitore in esecuzione, inclusi il sistema operativo, i componenti di sistema e le applicazioni.
 
-Una delle caratteristiche principali delle immagini Docker è che sono costituite da un'immagine di base. Ogni nuova immagine aggiunge un piccolo set di funzionalità a un'immagine esistente. 
+Una delle caratteristiche principali delle immagini Docker è che sono costituite da un'immagine di base. Ogni nuova immagine aggiunge un piccolo set di funzionalità a un'immagine esistente.
 
-> Un *contenitore Docker* è un'istanza di un'immagine in esecuzione. 
+> [!NOTE]
+> Un *contenitore Docker* è un'istanza di un'immagine in esecuzione.
 
 Un'applicazione viene ridimensionata eseguendo la stessa immagine in più contenitori.
 Concettualmente, è molto simile all'esecuzione della stessa applicazione in più host.
 
-Per altre informazioni sull'architettura Docker, vedere [Docker Overview](https://docs.docker.com/engine/understanding-docker/) (Panoramica di Docker) nel sito di Docker. 
+Per altre informazioni sull'architettura Docker, vedere [Docker Overview](https://docs.docker.com/engine/understanding-docker/) (Panoramica di Docker) nel sito di Docker.
 
 Lo spostamento dell'applicazione non richiede che pochi passaggi.
 
@@ -43,6 +45,7 @@ Lo spostamento dell'applicazione non richiede che pochi passaggi.
 1. [Processo di compilazione ed esecuzione del contenitore Docker](#creating-the-image)
 
 ## <a name="prerequisites"></a>Prerequisiti
+
 I contenitori di Windows sono supportati in [Aggiornamento dell'anniversario di Windows 10](https://www.microsoft.com/en-us/software-download/windows10/) o [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
@@ -53,13 +56,14 @@ Per il supporto dei contenitori Windows è necessario avere Docker per Windows v
 ![Screenshot dell'opzione di menu dei contenitori Windows.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Compilazione dell'applicazione
+
 In genere le applicazioni console vengono distribuite attraverso un programma di installazione, FTP o una distribuzione di condivisione file. Quando si esegue la distribuzione in un contenitore, le risorse devono essere compilate e inserite temporaneamente in un percorso che può essere usato quando viene creata l'immagine Docker.
 
 Questa è l'applicazione di esempio: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
 
 In *build.ps1*<sup>[[source]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> lo script usa [MSBuild](/visualstudio/msbuild/msbuild) per compilare l'applicazione per completare l'attività di creazione delle risorse. Vi sono alcuni parametri che vengono passati a MSBuild per finalizzare le risorse necessarie. Il nome del file di progetto o della soluzione da compilare, il percorso dell'output e, infine, la configurazione (Release o Debug).
 
-Nella chiamata a `Invoke-MSBuild` `OutputPath` è impostato su **publish** e `Configuration` è impostato su **Release**. 
+Nella chiamata a `Invoke-MSBuild` `OutputPath` è impostato su **publish** e `Configuration` è impostato su **Release**.
 
 ```powershell
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
@@ -72,14 +76,16 @@ Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAns
 ## <a name="creating-the-dockerfile"></a>Creazione del documento Dockerfile
 L'immagine di base usata per un'applicazione console .NET Framework è `microsoft/windowsservercore`, disponibile pubblicamente nell'[hub Docker](https://hub.docker.com/r/microsoft/windowsservercore/). L'immagine di base contiene un'installazione minima di Windows Server 2016, .NET Framework 4.6.2 e viene usata come immagine di base del sistema operativo per i contenitori Windows.
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
 ADD publish/ /
 ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
-La prima riga del documento Dockerfile definisce l'immagine di base tramite l'istruzione [`FROM`](https://docs.docker.com/engine/reference/builder/#/from). Successivamente, l'istruzione [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) nel file copia le risorse dell'applicazione dalla cartella **publish** alla cartella radice del contenitore. Infine, impostando il valore [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) dell'immagine si indica che questo è il comando o l'applicazione che verrà eseguita all'avvio del contenitore. 
+
+La prima riga del documento Dockerfile definisce l'immagine di base tramite l'istruzione [`FROM`](https://docs.docker.com/engine/reference/builder/#/from). Successivamente, l'istruzione [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) nel file copia le risorse dell'applicazione dalla cartella **publish** alla cartella radice del contenitore. Infine, impostando il valore [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) dell'immagine si indica che questo è il comando o l'applicazione che verrà eseguita all'avvio del contenitore.
 
 ## <a name="creating-the-image"></a>Creazione dell'immagine
+
 Per creare l'immagine Docker, viene aggiunto il codice seguente allo script *build.ps1*. Quando lo script viene eseguito, viene creata l'immagine `console-random-answer-generator` tramite l'uso delle risorse compilate da MSBuild definite nella sezione [Compilazione dell'applicazione](#building-the-application).
 
 ```powershell
@@ -103,6 +109,7 @@ console-random-answer-generator   latest              8f7c807db1b5        8 seco
 ```
 
 ## <a name="running-the-container"></a>Esecuzione del contenitore
+
 È possibile avviare il contenitore dalla riga di comando tramite i comandi di Docker.
 
 ```
@@ -118,8 +125,8 @@ The answer to your question: 'Are you a square container?' is Concentrate and as
 Se si esegue il comando `docker ps -a` da PowerShell, è possibile vedere che il contenitore è ancora presente.
 
 ```
-CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS                          
-70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago      
+CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS
+70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago
 ```
 
 Nella colonna STATUS viene indicato che "About a minute ago" (circa un minuto fa) l'applicazione è stata completata ed è possibile arrestarla. Se il comando fosse stato eseguito un centinaio di volte, vi sarebbero cento contenitori statici, lasciati senza alcuna operazione da eseguire. Nello scenario iniziale l'operazione ideale è stata quella di eseguire le operazioni e quindi chiudere o eseguire la pulizia. Per completare il flusso di lavoro, aggiungere l'opzione `--rm` al comando `docker run` per rimuovere il contenitore non appena viene ricevuto il segnale `Exited`.
@@ -131,6 +138,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 Se si esegue il comando con questa opzione e quindi si esamina l'output del comando `docker ps -a`, si noterà che l'id del contenitore (`Environment.MachineName`) non è presente nell'elenco.
 
 ### <a name="running-the-container-using-powershell"></a>Esecuzione del contenitore tramite PowerShell
+
 Nei file di progetto di esempio è anche disponibile un'istruzione *run.ps1* che è un esempio di come usare PowerShell per eseguire l'applicazione accettando gli argomenti.
 
 Per l'esecuzione, aprire PowerShell e usare il comando seguente:
@@ -140,4 +148,5 @@ Per l'esecuzione, aprire PowerShell e usare il comando seguente:
 ```
 
 ## <a name="summary"></a>Riepilogo
+
 È sufficiente aggiungere un documento Dockerfile e pubblicare l'applicazione per eseguire le applicazioni console .NET Framework in un contenitore e poter sfruttare tutti i vantaggi dell'esecuzione di più istanze, avvio e arresto corretti e altre funzionalità di Windows Server 2016 senza apportare modifiche al codice dell'applicazione.

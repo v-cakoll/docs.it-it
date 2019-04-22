@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082490"
 ---
 # <a name="path-markup-syntax"></a>Sintassi di markup del percorso
@@ -47,17 +47,17 @@ I tracciati vengono illustrati nella [forme e disegno di base di WPF Overview](s
   
 |Utilizzo degli attributi XAML StreamGeometry|  
 |-----------------------------------------|  
-|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
+|`<` *oggetto* *proprietà* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
   
  Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.PathFigureCollection> è costituito da uno o più descrizioni di figure.  
   
 |Utilizzo degli attributi XAML PathFigureCollection|  
 |-----------------------------------------------|  
-|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
+|`<` *oggetto* *proprietà* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
   
 |Termine|Descrizione|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza le <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1` Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il tracciato secondario userà il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza le <xref:System.Windows.Media.FillRule.EvenOdd> oppure <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.<br />-   `F1` Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.<br /><br /> Se si omette questo comando, il tracciato secondario userà il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>. Se si specifica questo comando, è necessario inserirlo per primo.|  
 |*figureDescription*|Figura costituita da un comando di spostamento, da alcuni comandi di disegno e da un comando di chiusura facoltativo.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Comando di spostamento che specifica il punto iniziale della figura. Vedere le [comando Sposta](#themovecommand) sezione.|  
 |*drawCommands*|Uno o più comandi di disegno che descrivono il contenuto della figura. Vedere le [comandi Draw](#drawcommands) sezione.|  
@@ -230,4 +230,4 @@ Maiuscolo `V` indica che `y` è un valore assoluto; una minuscola `v` indica che
 - <xref:System.Windows.Media.PathFigureCollection>
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Cenni preliminari sulle classi Geometry](geometry-overview.md)
-- [Procedure relative](geometries-how-to-topics.md)
+- [Procedure relative alle proprietà](geometries-how-to-topics.md)

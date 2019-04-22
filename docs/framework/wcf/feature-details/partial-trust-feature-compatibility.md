@@ -3,10 +3,10 @@ title: Compatibilità con la funzionalità di trust parziale
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124566"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
 -   Quando si utilizza l'attributo `[ServiceKnownType]` , il metodo specificato deve essere `public`.  
   
--   `[MessageContract]` classi e membri possono essere `public`. Se la classe `[MessageContract]` viene definita nell'assembly dell'applicazione, può essere `internal` e disporre di membri `internal` .  
+-   Le classi`[MessageContract]` e i relativi membri possono essere `public`. Se la classe `[MessageContract]` viene definita nell'assembly dell'applicazione, può essere `internal` e disporre di membri `internal` .  
   
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema  
  Le classi <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WebHttpBinding> sono completamente supportate in un ambiente di trust parziale. La classe <xref:System.ServiceModel.WSHttpBinding> è supportata solo per la modalità di sicurezza trasporto.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, e <xref:System.IdentityModel.Tokens>.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>e <xref:System.IdentityModel.Tokens>.  
   
  Le origini di traccia seguenti non sono supportate:  
   
@@ -166,4 +166,4 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [Scenari di distribuzione supportati](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Procedure consigliate in ambienti parzialmente attendibili](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [Procedure consigliate per l'attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
