@@ -3,16 +3,16 @@ title: Esercitazioni di Machine Learning per .NET - ML.NET
 description: Queste esercitazioni di ML.NET aiutano a creare soluzioni di intelligenza artificiale personalizzate e a integrarle nelle applicazioni .NET.
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 1f3824e409c21514bfb0c5743c6d9f36419ecb06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 45534e196c2dc0cd1994445eeb482474b32aaa41
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771855"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980395"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>Esercitazioni di Machine Learning per .NET - ML.NET
 
-Le esercitazioni seguenti consentono di comprendere l'uso di [ML.NET](../index.md) per creare soluzioni di apprendimento automatico personalizzate e integrarle nelle applicazioni .NET:
+Le esercitazioni seguenti consentono di comprendere l'uso di [ML.NET](../index.yml) per creare soluzioni di apprendimento automatico personalizzate e integrarle nelle applicazioni .NET:
 
 - [Analisi del sentiment](sentiment-analysis.md): illustra come applicare un'attività di **classificazione binaria** usando ML.NET.
 - [GitHub issue classification](github-issue-classification.md) (Classificazione dei problemi di GitHub): viene illustrato come applicare un'attività di **classificazione multiclasse** usando ML.NET.
