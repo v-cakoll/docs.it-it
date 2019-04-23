@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
 ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091252"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a><span data-ttu-id="e12ff-102">Procedura: Creare pulsanti interruttore nei controlli ToolStrip</span><span class="sxs-lookup"><span data-stu-id="e12ff-102">How to: Create Toggle Buttons in ToolStrip Controls</span></span>
-<span data-ttu-id="e12ff-103">Quando un utente fa clic su un pulsante Mostra/Nascondi, viene visualizzato incassato e mantiene tale aspetto fino a quando l'utente fa clic sul pulsante nuovo.</span><span class="sxs-lookup"><span data-stu-id="e12ff-103">When a user clicks a toggle button, it appears sunken and retains the sunken appearance until the user clicks the button again.</span></span>  
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a><span data-ttu-id="0a67a-102">Procedura: Creare pulsanti interruttore nei controlli ToolStrip</span><span class="sxs-lookup"><span data-stu-id="0a67a-102">How to: Create Toggle Buttons in ToolStrip Controls</span></span>
+<span data-ttu-id="0a67a-103">Quando un utente fa clic su un pulsante Mostra/Nascondi, viene visualizzato incassato e mantiene tale aspetto fino a quando l'utente fa clic sul pulsante nuovo.</span><span class="sxs-lookup"><span data-stu-id="0a67a-103">When a user clicks a toggle button, it appears sunken and retains the sunken appearance until the user clicks the button again.</span></span>  
   
-### <a name="to-create-a-toggling-toolstripbutton"></a><span data-ttu-id="e12ff-104">Per creare un ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="e12ff-104">To create a toggling ToolStripButton</span></span>  
+### <a name="to-create-a-toggling-toolstripbutton"></a><span data-ttu-id="0a67a-104">Per creare un ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="0a67a-104">To create a toggling ToolStripButton</span></span>  
   
--   <span data-ttu-id="e12ff-105">Usare codice simile al codice seguente.</span><span class="sxs-lookup"><span data-stu-id="e12ff-105">Use code such as the following code example.</span></span> <span data-ttu-id="e12ff-106">Questo codice presuppone che il form contenga un <xref:System.Windows.Forms.ToolStrip> controllo e che il <xref:System.Windows.Forms.ToolStrip.Items%2A> raccolta contiene un <xref:System.Windows.Forms.ToolStripButton> chiamato `toolStripButton1`.</span><span class="sxs-lookup"><span data-stu-id="e12ff-106">This code assumes that your form contains a <xref:System.Windows.Forms.ToolStrip> control, and that its <xref:System.Windows.Forms.ToolStrip.Items%2A> collection contains a <xref:System.Windows.Forms.ToolStripButton> called `toolStripButton1`.</span></span> <span data-ttu-id="e12ff-107">Si presume anche che un gestore eventi chiamato `toolStripButton1_CheckedChanged`.</span><span class="sxs-lookup"><span data-stu-id="e12ff-107">It also assumes that you have an event handler called `toolStripButton1_CheckedChanged`.</span></span>  
+-   <span data-ttu-id="0a67a-105">Usare codice simile al codice seguente.</span><span class="sxs-lookup"><span data-stu-id="0a67a-105">Use code such as the following code example.</span></span> <span data-ttu-id="0a67a-106">Questo codice presuppone che il form contenga un <xref:System.Windows.Forms.ToolStrip> controllo e che il <xref:System.Windows.Forms.ToolStrip.Items%2A> raccolta contiene un <xref:System.Windows.Forms.ToolStripButton> chiamato `toolStripButton1`.</span><span class="sxs-lookup"><span data-stu-id="0a67a-106">This code assumes that your form contains a <xref:System.Windows.Forms.ToolStrip> control, and that its <xref:System.Windows.Forms.ToolStrip.Items%2A> collection contains a <xref:System.Windows.Forms.ToolStripButton> called `toolStripButton1`.</span></span> <span data-ttu-id="0a67a-107">Si presume anche che un gestore eventi chiamato `toolStripButton1_CheckedChanged`.</span><span class="sxs-lookup"><span data-stu-id="0a67a-107">It also assumes that you have an event handler called `toolStripButton1_CheckedChanged`.</span></span>  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  
@@ -35,7 +35,7 @@ ms.locfileid: "59091252"
     EventHandler(toolStripButton1_CheckedChanged);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="e12ff-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e12ff-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a67a-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0a67a-108">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripButton>
-- [<span data-ttu-id="e12ff-109">Panoramica del controllo ToolStrip</span><span class="sxs-lookup"><span data-stu-id="e12ff-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="0a67a-109">Panoramica sul controllo ToolStrip</span><span class="sxs-lookup"><span data-stu-id="0a67a-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)

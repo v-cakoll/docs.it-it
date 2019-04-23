@@ -3,23 +3,23 @@ title: LAFailedToListenForApp
 ms.date: 03/30/2017
 ms.assetid: 8ef16d4e-fab7-4ffc-829b-1e3163e72337
 ms.openlocfilehash: 49fd8440baba3752b52cc409fd1f79d2fcd28505
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086052"
 ---
-# <a name="lafailedtolistenforapp"></a><span data-ttu-id="7c50c-102">LAFailedToListenForApp</span><span class="sxs-lookup"><span data-stu-id="7c50c-102">LAFailedToListenForApp</span></span>
-<span data-ttu-id="7c50c-103">Id: 160</span><span class="sxs-lookup"><span data-stu-id="7c50c-103">Id: 160</span></span>  
+# <a name="lafailedtolistenforapp"></a><span data-ttu-id="5c873-102">LAFailedToListenForApp</span><span class="sxs-lookup"><span data-stu-id="5c873-102">LAFailedToListenForApp</span></span>
+<span data-ttu-id="5c873-103">Id: 160</span><span class="sxs-lookup"><span data-stu-id="5c873-103">Id: 160</span></span>  
   
- <span data-ttu-id="7c50c-104">Gravità: Error</span><span class="sxs-lookup"><span data-stu-id="7c50c-104">Severity: Error</span></span>  
+ <span data-ttu-id="5c873-104">Gravità: Error</span><span class="sxs-lookup"><span data-stu-id="5c873-104">Severity: Error</span></span>  
   
- <span data-ttu-id="7c50c-105">Categoria: SMSvcHost</span><span class="sxs-lookup"><span data-stu-id="7c50c-105">Category: SMSvcHost</span></span>  
+ <span data-ttu-id="5c873-105">Categoria: SMSvcHost</span><span class="sxs-lookup"><span data-stu-id="5c873-105">Category: SMSvcHost</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7c50c-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7c50c-106">Description</span></span>  
- <span data-ttu-id="7c50c-107">Questo evento indica che si è verificato un errore nel servizio di attivazione del protocollo specificato, durante il tentativo di ascolto del sito indicato, pertanto il protocollo è stato temporaneamente disattivato per il sito. Vengono elencati l'URL, lo stato, il nome e l'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="7c50c-107">This event indicates that an error occurred in the specified Activation Service of the specified protocol, while trying to listen for the specified site, thus the protocol is disabled for the site temporarily..The event lists the URL, status, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="5c873-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5c873-106">Description</span></span>  
+ <span data-ttu-id="5c873-107">Questo evento indica che si è verificato un errore nel servizio di attivazione del protocollo specificato, durante il tentativo di ascolto del sito indicato, pertanto il protocollo è stato temporaneamente disattivato per il sito. Vengono elencati l'URL, lo stato, il nome e l'ID del processo.</span><span class="sxs-lookup"><span data-stu-id="5c873-107">This event indicates that an error occurred in the specified Activation Service of the specified protocol, while trying to listen for the specified site, thus the protocol is disabled for the site temporarily..The event lists the URL, status, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c50c-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7c50c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c873-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5c873-108">See also</span></span>
 
-- [<span data-ttu-id="7c50c-109">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="7c50c-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="7c50c-110">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="7c50c-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="5c873-109">Registrazione eventi</span><span class="sxs-lookup"><span data-stu-id="5c873-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="5c873-110">Riferimenti generali sugli eventi</span><span class="sxs-lookup"><span data-stu-id="5c873-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

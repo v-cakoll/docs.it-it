@@ -11,29 +11,29 @@ helpviewer_keywords:
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
 ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085922"
 ---
-# <a name="how-to-implement-validation-logic-on-custom-objects"></a><span data-ttu-id="3623c-102">Procedura: Implementare la logica di convalida negli oggetti personalizzati</span><span class="sxs-lookup"><span data-stu-id="3623c-102">How to: Implement Validation Logic on Custom Objects</span></span>
-<span data-ttu-id="3623c-103">In questo esempio viene illustrato come implementare la logica di convalida in un oggetto personalizzato e quindi eseguire l'associazione.</span><span class="sxs-lookup"><span data-stu-id="3623c-103">This example shows how to implement validation logic on a custom object and then bind to it.</span></span>  
+# <a name="how-to-implement-validation-logic-on-custom-objects"></a><span data-ttu-id="2f71c-102">Procedura: Implementare la logica di convalida negli oggetti personalizzati</span><span class="sxs-lookup"><span data-stu-id="2f71c-102">How to: Implement Validation Logic on Custom Objects</span></span>
+<span data-ttu-id="2f71c-103">In questo esempio viene illustrato come implementare la logica di convalida in un oggetto personalizzato e quindi eseguire l'associazione.</span><span class="sxs-lookup"><span data-stu-id="2f71c-103">This example shows how to implement validation logic on a custom object and then bind to it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3623c-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="3623c-104">Example</span></span>  
- <span data-ttu-id="3623c-105">È possibile fornire la logica di convalida a livello aziendale, se l'oggetto di origine implementa <xref:System.ComponentModel.IDataErrorInfo>, come illustrato nell'esempio seguente, che definisce un `Person` oggetto che implementa <xref:System.ComponentModel.IDataErrorInfo>:</span><span class="sxs-lookup"><span data-stu-id="3623c-105">You can provide validation logic on the business layer if your source object implements <xref:System.ComponentModel.IDataErrorInfo>, as in the following example, which defines a `Person` object that implements <xref:System.ComponentModel.IDataErrorInfo>:</span></span>  
+## <a name="example"></a><span data-ttu-id="2f71c-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="2f71c-104">Example</span></span>  
+ <span data-ttu-id="2f71c-105">È possibile fornire la logica di convalida a livello aziendale, se l'oggetto di origine implementa <xref:System.ComponentModel.IDataErrorInfo>, come illustrato nell'esempio seguente, che definisce un `Person` oggetto che implementa <xref:System.ComponentModel.IDataErrorInfo>:</span><span class="sxs-lookup"><span data-stu-id="2f71c-105">You can provide validation logic on the business layer if your source object implements <xref:System.ComponentModel.IDataErrorInfo>, as in the following example, which defines a `Person` object that implements <xref:System.ComponentModel.IDataErrorInfo>:</span></span>  
   
  [!code-csharp[BusinessLayerValidation#IDataErrorInfo](~/samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Data.cs#idataerrorinfo)]
  [!code-vb[BusinessLayerValidation#IDataErrorInfo](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BusinessLayerValidation/VisualBasic/Data.vb#idataerrorinfo)]  
   
- <span data-ttu-id="3623c-106">Nell'esempio seguente associa la proprietà text della casella di testo per il `Person.Age` proprietà, che è stato reso disponibile per l'associazione tramite una dichiarazione della risorsa cui viene assegnata il `x:Key` `data`.</span><span class="sxs-lookup"><span data-stu-id="3623c-106">In the following example, the text property of the text box binds to the `Person.Age` property, which has been made available for binding through a resource declaration that is given the `x:Key` `data`.</span></span> <span data-ttu-id="3623c-107">Il <xref:System.Windows.Controls.DataErrorValidationRule> verifica la presenza di errori di convalida generati dal <xref:System.ComponentModel.IDataErrorInfo> implementazione.</span><span class="sxs-lookup"><span data-stu-id="3623c-107">The <xref:System.Windows.Controls.DataErrorValidationRule> checks for the validation errors raised by the <xref:System.ComponentModel.IDataErrorInfo> implementation.</span></span>  
+ <span data-ttu-id="2f71c-106">Nell'esempio seguente associa la proprietà text della casella di testo per il `Person.Age` proprietà, che è stato reso disponibile per l'associazione tramite una dichiarazione della risorsa cui viene assegnata il `x:Key` `data`.</span><span class="sxs-lookup"><span data-stu-id="2f71c-106">In the following example, the text property of the text box binds to the `Person.Age` property, which has been made available for binding through a resource declaration that is given the `x:Key` `data`.</span></span> <span data-ttu-id="2f71c-107">Il <xref:System.Windows.Controls.DataErrorValidationRule> verifica la presenza di errori di convalida generati dal <xref:System.ComponentModel.IDataErrorInfo> implementazione.</span><span class="sxs-lookup"><span data-stu-id="2f71c-107">The <xref:System.Windows.Controls.DataErrorValidationRule> checks for the validation errors raised by the <xref:System.ComponentModel.IDataErrorInfo> implementation.</span></span>  
   
  [!code-xaml[BusinessLayerValidation#BoundTextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Window1.xaml?highlight=8,11-19,25-42)]  
   
- <span data-ttu-id="3623c-108">In alternativa, invece di usare la <xref:System.Windows.Controls.DataErrorValidationRule>, è possibile impostare il <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> proprietà `true`.</span><span class="sxs-lookup"><span data-stu-id="3623c-108">Alternatively, instead of using the <xref:System.Windows.Controls.DataErrorValidationRule>, you can set the <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> property to `true`.</span></span>  
+ <span data-ttu-id="2f71c-108">In alternativa, invece di usare la <xref:System.Windows.Controls.DataErrorValidationRule>, è possibile impostare il <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> proprietà `true`.</span><span class="sxs-lookup"><span data-stu-id="2f71c-108">Alternatively, instead of using the <xref:System.Windows.Controls.DataErrorValidationRule>, you can set the <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> property to `true`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3623c-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3623c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f71c-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2f71c-109">See also</span></span>
 
 - <xref:System.Windows.Controls.ExceptionValidationRule>
-- [<span data-ttu-id="3623c-110">Implementare la convalida del binding</span><span class="sxs-lookup"><span data-stu-id="3623c-110">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
-- [<span data-ttu-id="3623c-111">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="3623c-111">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="2f71c-110">Implementare la convalida dell'associazione</span><span class="sxs-lookup"><span data-stu-id="2f71c-110">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
+- [<span data-ttu-id="2f71c-111">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="2f71c-111">How-to Topics</span></span>](data-binding-how-to-topics.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d366a0093ca82d2e5b3c40729777a1b6c0766bda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092201"
 ---
-# <a name="icorprofilerinfogetobjectsize-method"></a><span data-ttu-id="47b73-102">Metodo ICorProfilerInfo::GetObjectSize</span><span class="sxs-lookup"><span data-stu-id="47b73-102">ICorProfilerInfo::GetObjectSize Method</span></span>
-<span data-ttu-id="47b73-103">Ottiene le dimensioni di un oggetto specificato.</span><span class="sxs-lookup"><span data-stu-id="47b73-103">Gets the size of a specified object.</span></span>  
+# <a name="icorprofilerinfogetobjectsize-method"></a><span data-ttu-id="70d67-102">Metodo ICorProfilerInfo::GetObjectSize</span><span class="sxs-lookup"><span data-stu-id="70d67-102">ICorProfilerInfo::GetObjectSize Method</span></span>
+<span data-ttu-id="70d67-103">Ottiene le dimensioni di un oggetto specificato.</span><span class="sxs-lookup"><span data-stu-id="70d67-103">Gets the size of a specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="47b73-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="47b73-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70d67-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="70d67-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectSize(  
@@ -35,35 +35,35 @@ HRESULT GetObjectSize(
     [out] ULONG  *pcSize);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="47b73-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="47b73-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70d67-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="70d67-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="47b73-106">[in] L'ID dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="47b73-106">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="70d67-106">[in] L'ID dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="70d67-106">[in] The ID of the object.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="47b73-107">[out] Puntatore alla dimensione dell'oggetto, in byte.</span><span class="sxs-lookup"><span data-stu-id="47b73-107">[out] A pointer to the object's size, in bytes.</span></span>  
+ <span data-ttu-id="70d67-107">[out] Puntatore alla dimensione dell'oggetto, in byte.</span><span class="sxs-lookup"><span data-stu-id="70d67-107">[out] A pointer to the object's size, in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="47b73-108">Note</span><span class="sxs-lookup"><span data-stu-id="47b73-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="70d67-108">Note</span><span class="sxs-lookup"><span data-stu-id="70d67-108">Remarks</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="47b73-109">Questo metodo è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="47b73-109">This method is obsolete.</span></span> <span data-ttu-id="47b73-110">Restituisce COR_E_OVERFLOW per gli oggetti maggiori di 4GB su piattaforme a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="47b73-110">It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms.</span></span> <span data-ttu-id="47b73-111">Usare la [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) metodo invece.</span><span class="sxs-lookup"><span data-stu-id="47b73-111">Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.</span></span>  
+>  <span data-ttu-id="70d67-109">Questo metodo è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="70d67-109">This method is obsolete.</span></span> <span data-ttu-id="70d67-110">Restituisce COR_E_OVERFLOW per gli oggetti maggiori di 4GB su piattaforme a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="70d67-110">It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms.</span></span> <span data-ttu-id="70d67-111">Usare la [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) metodo invece.</span><span class="sxs-lookup"><span data-stu-id="70d67-111">Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.</span></span>  
   
- <span data-ttu-id="47b73-112">Oggetti diversi dello stesso tipo sono spesso le stesse dimensioni.</span><span class="sxs-lookup"><span data-stu-id="47b73-112">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="47b73-113">Tuttavia, alcuni tipi, ad esempio le matrici o stringhe, potrebbero essere una dimensione diversa per ogni oggetto.</span><span class="sxs-lookup"><span data-stu-id="47b73-113">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
+ <span data-ttu-id="70d67-112">Oggetti diversi dello stesso tipo sono spesso le stesse dimensioni.</span><span class="sxs-lookup"><span data-stu-id="70d67-112">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="70d67-113">Tuttavia, alcuni tipi, ad esempio le matrici o stringhe, potrebbero essere una dimensione diversa per ogni oggetto.</span><span class="sxs-lookup"><span data-stu-id="70d67-113">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
   
- <span data-ttu-id="47b73-114">Le dimensioni restituite dal `GetObjectSize` (metodo) non include eventuali spaziature interne di allineamento che possono essere visualizzati dopo che l'oggetto è nell'heap di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="47b73-114">The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap.</span></span> <span data-ttu-id="47b73-115">Se si usa il `GetObjectSize` metodo per passare da un oggetto a un oggetto nell'heap di garbage collection, aggiungere padding manualmente, in base alle esigenze di allineamento.</span><span class="sxs-lookup"><span data-stu-id="47b73-115">If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.</span></span>  
+ <span data-ttu-id="70d67-114">Le dimensioni restituite dal `GetObjectSize` (metodo) non include eventuali spaziature interne di allineamento che possono essere visualizzati dopo che l'oggetto è nell'heap di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="70d67-114">The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap.</span></span> <span data-ttu-id="70d67-115">Se si usa il `GetObjectSize` metodo per passare da un oggetto a un oggetto nell'heap di garbage collection, aggiungere padding manualmente, in base alle esigenze di allineamento.</span><span class="sxs-lookup"><span data-stu-id="70d67-115">If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.</span></span>  
   
--   <span data-ttu-id="47b73-116">In Windows a 32 bit, COR_PRF_GC_GEN_0 COR_PRF_GC_GEN_1 e COR_PRF_GC_GEN_2 usano l'allineamento a 4 byte e COR_PRF_GC_LARGE_OBJECT_HEAP Usa l'allineamento a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="47b73-116">On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.</span></span>  
+-   <span data-ttu-id="70d67-116">In Windows a 32 bit, COR_PRF_GC_GEN_0 COR_PRF_GC_GEN_1 e COR_PRF_GC_GEN_2 usano l'allineamento a 4 byte e COR_PRF_GC_LARGE_OBJECT_HEAP Usa l'allineamento a 8 byte.</span><span class="sxs-lookup"><span data-stu-id="70d67-116">On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.</span></span>  
   
--   <span data-ttu-id="47b73-117">In Windows a 64 bit, l'allineamento è sempre 8 byte.</span><span class="sxs-lookup"><span data-stu-id="47b73-117">On 64-bit Windows, the alignment is always 8 bytes.</span></span>  
+-   <span data-ttu-id="70d67-117">In Windows a 64 bit, l'allineamento è sempre 8 byte.</span><span class="sxs-lookup"><span data-stu-id="70d67-117">On 64-bit Windows, the alignment is always 8 bytes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="47b73-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="47b73-118">Requirements</span></span>  
- <span data-ttu-id="47b73-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="47b73-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70d67-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="70d67-118">Requirements</span></span>  
+ <span data-ttu-id="70d67-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70d67-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="47b73-120">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="47b73-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="70d67-120">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="70d67-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="47b73-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="47b73-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="70d67-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70d67-121">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="47b73-122">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="47b73-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="70d67-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70d67-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47b73-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="47b73-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="70d67-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="70d67-123">See also</span></span>
 
-- [<span data-ttu-id="47b73-124">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="47b73-124">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="70d67-124">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="70d67-124">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

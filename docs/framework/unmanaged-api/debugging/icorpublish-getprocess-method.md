@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 021068caa8f1ad2c64e5ca3d18ea25dc827563a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085004"
 ---
-# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="16164-102">Metodo ICorPublish::GetProcess</span><span class="sxs-lookup"><span data-stu-id="16164-102">ICorPublish::GetProcess Method</span></span>
-<span data-ttu-id="16164-103">Ottiene un' [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) istanza che rappresenta il processo con l'identificatore specificato.</span><span class="sxs-lookup"><span data-stu-id="16164-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
+# <a name="icorpublishgetprocess-method"></a><span data-ttu-id="0d2ba-102">Metodo ICorPublish::GetProcess</span><span class="sxs-lookup"><span data-stu-id="0d2ba-102">ICorPublish::GetProcess Method</span></span>
+<span data-ttu-id="0d2ba-103">Ottiene un' [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) istanza che rappresenta il processo con l'identificatore specificato.</span><span class="sxs-lookup"><span data-stu-id="0d2ba-103">Gets an [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) instance that represents the process with the specified identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16164-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="16164-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d2ba-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0d2ba-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProcess(  
@@ -36,25 +36,25 @@ HRESULT GetProcess(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="16164-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="16164-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d2ba-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0d2ba-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="16164-106">[in] L'identificatore del processo.</span><span class="sxs-lookup"><span data-stu-id="16164-106">[in] The identifier of the process.</span></span>  
+ <span data-ttu-id="0d2ba-106">[in] L'identificatore del processo.</span><span class="sxs-lookup"><span data-stu-id="0d2ba-106">[in] The identifier of the process.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="16164-107">[out] Un puntatore all'indirizzo di un `ICorPublishProcess` istanza che rappresenta il processo.</span><span class="sxs-lookup"><span data-stu-id="16164-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
+ <span data-ttu-id="0d2ba-107">[out] Un puntatore all'indirizzo di un `ICorPublishProcess` istanza che rappresenta il processo.</span><span class="sxs-lookup"><span data-stu-id="0d2ba-107">[out] A pointer to the address of an `ICorPublishProcess` instance that represents the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="16164-108">Note</span><span class="sxs-lookup"><span data-stu-id="16164-108">Remarks</span></span>  
- `GetProcess` <span data-ttu-id="16164-109">non riesce se il processo non esiste o non è un processo gestito che è possibile eseguire il debug dell'utente corrente.</span><span class="sxs-lookup"><span data-stu-id="16164-109">fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0d2ba-108">Note</span><span class="sxs-lookup"><span data-stu-id="0d2ba-108">Remarks</span></span>  
+ <span data-ttu-id="0d2ba-109">`GetProcess` non riesce se il processo non esiste o non è un processo gestito che è possibile eseguire il debug dell'utente corrente.</span><span class="sxs-lookup"><span data-stu-id="0d2ba-109">`GetProcess` fails if the process doesn't exist, or isn't a managed process that can be debugged by the current user.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16164-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="16164-110">Requirements</span></span>  
- <span data-ttu-id="16164-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16164-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d2ba-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0d2ba-110">Requirements</span></span>  
+ <span data-ttu-id="0d2ba-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d2ba-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16164-112">**Intestazione:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="16164-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="0d2ba-112">**Intestazione:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="0d2ba-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="16164-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16164-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0d2ba-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d2ba-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="16164-114">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="16164-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="0d2ba-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d2ba-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16164-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16164-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d2ba-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0d2ba-115">See also</span></span>
 
-- [<span data-ttu-id="16164-116">Interfaccia ICorPublish</span><span class="sxs-lookup"><span data-stu-id="16164-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+- [<span data-ttu-id="0d2ba-116">Interfaccia ICorPublish</span><span class="sxs-lookup"><span data-stu-id="0d2ba-116">ICorPublish Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
