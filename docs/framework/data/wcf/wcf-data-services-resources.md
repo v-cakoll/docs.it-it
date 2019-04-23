@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172120"
 ---
 # <a name="wcf-data-services-resources"></a>Risorse di WCF Data Services
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] argomenti introduttivi sono reperibile nei percorsi seguenti. Molti di questi argomenti contengono anche collegamenti ad argomenti correlati che offrono informazioni più dettagliate.  
+Nei percorsi seguenti sono disponibili argomenti di introduzione a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Molti di questi argomenti contengono anche collegamenti ad argomenti correlati che offrono informazioni più dettagliate.  
   
  [Panoramica](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Viene fornita una panoramica delle caratteristiche e delle funzionalità introdotte in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
@@ -47,7 +47,7 @@ ms.locfileid: "59172120"
  [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=91903)  
  Posizione centrale per la ricerca di informazioni e risorse per l'uso dei dati.  
   
- [Video "Ricerca per categorie" sulle piattaforme dati: Video Serie Wcf.net Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Piattaforma dati di ricerca per categorie? Video Serie Wcf.net Data Services](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Contiene un set di video nei quali viene illustrato come compilare e accedere ai servizi dati.  
   
  [Panoramica: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  

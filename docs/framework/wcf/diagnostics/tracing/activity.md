@@ -3,10 +3,10 @@ title: Attività
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170209"
 ---
 # <a name="activity"></a>Attività
@@ -38,9 +38,9 @@ Questo argomento descrive le tracce di attività nel modello di traccia di Windo
 ## <a name="defining-the-scope-of-an-activity"></a>Definizione dell'ambito di un'attività  
  Le attività vengono definite in fase di progettazione per indicare un'unità logica di esecuzione. Le tracce emesse con lo stesso identificatore di attività sono direttamente correlate, in quanto parte della stessa attività. Poiché le attività possono oltrepassare i limiti di endpoint (nel caso di una richiesta), per ogni attività vengono definiti due ambiti.  
   
--   `Global` ambito, per ogni applicazione. In questo ambito, l'attività è identificata dal proprio identificatore di attività globalmente univoco a 128 bit, il gAId. Il gAid è l'ID che viene propagato fra gli endpoint.  
+-   Ambito `Global`, per applicazione. In questo ambito, l'attività è identificata dal proprio identificatore di attività globalmente univoco a 128 bit, il gAId. Il gAid è l'ID che viene propagato fra gli endpoint.  
   
--   `Local` ambito, per ogni endpoint. In questo ambito, l'attività viene identificata in base al proprio gAId, al nome dell'origine di traccia che emette le tracce attività e all'ID del processo. Questa terna costituisce l'ID attività locale (lAId, local Activity Identifier). Il lAId è utilizzato per definire i limiti (locali) di un'attività.  
+-   Ambito `Local`, per endpoint. In questo ambito, l'attività viene identificata in base al proprio gAId, al nome dell'origine di traccia che emette le tracce attività e all'ID del processo. Questa terna costituisce l'ID attività locale (lAId, local Activity Identifier). Il lAId è utilizzato per definire i limiti (locali) di un'attività.  
   
 ## <a name="trace-schema"></a>Schema di traccia  
  Le tracce possono essere emesse utilizzando qualsiasi schema e tra piattaforme Microsoft diverse. "e2e" (per "End to End") è uno schema di uso comune. Questo schema include un gAId a 128 bit, il nome dell'origine di traccia e l'ID del processo. In codice gestito, <xref:System.Diagnostics.XmlWriterTraceListener> emette tracce nello schema E2E.  
@@ -100,7 +100,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="see-also"></a>Vedere anche
 
 - [Configurazione delle funzionalità di traccia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Scenari di analisi end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Scenari di traccia end-to-end](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Creazione di tracce di codice utente](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

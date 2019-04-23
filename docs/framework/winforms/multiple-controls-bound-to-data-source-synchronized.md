@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170339"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati
@@ -42,7 +42,7 @@ Quando si lavora con data binding in Windows Form, spesso più controlli associa
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Condividere i dati associati tra moduli usando il componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Notifica delle modifiche nell'associazione dati dei Windows Form](change-notification-in-windows-forms-data-binding.md)
+- [Procedura: Condividere dati associati tra form tramite il componente BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Notifica delle modifiche nel data binding dei Windows Form](change-notification-in-windows-forms-data-binding.md)
 - [Interfacce correlate al data binding](interfaces-related-to-data-binding.md)
-- [Data binding di Windows Form](windows-forms-data-binding.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

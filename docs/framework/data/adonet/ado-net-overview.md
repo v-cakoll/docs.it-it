@@ -3,10 +3,10 @@ title: Cenni preliminari su ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170064"
 ---
 # <a name="adonet-overview"></a>Cenni preliminari su ADO.NET
@@ -23,7 +23,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  **Informativa sulla privacy**: Gli assembly System, System, DLL, System, System, SqlServerCe. dll e DataSetExtensions. dll non viene fatta distinzione tra un utente dati privati e pubblici.  Questi assembly non raccolgono, archiviano o trasportano i dati privati degli utenti, tuttavia possono essere usati da applicazioni di terze parti per tali scopi.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Architettura ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
+ [Architettura di ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
  Viene fornita una descrizione generale dell'architettura e dei componenti di ADO.NET.  
   
  [Opzioni e linee guida per la tecnologia ADO.NET](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
@@ -35,7 +35,7 @@ ADO.NET fornisce uniformità di accesso sia per origini dati quali SQL Server e 
  [Provider di dati .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Vengono fornite informazioni generali sulle caratteristiche del provider di dati .NET Framework e dei provider di dati .NET Framework inclusi in ADO.NET.  
   
- [Dataset ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
+ [Oggetti DataSet ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Vengono fornite informazioni generali relative all'architettura e ai componenti del `DataSet`.  
   
  [Esecuzione side-by-side in ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  

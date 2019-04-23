@@ -5,10 +5,10 @@ ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fba970de6e5882d3cbe9be17b5b49be5a3e81aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171652"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>Metodo ICorDebugMutableDataTarget::WriteVirtual
@@ -34,7 +34,7 @@ HRESULT WriteVirtual(
  [in] Numero di byte in `pBuffer`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` su operazione riuscita o qualsiasi altro `HRESULT` in caso di errore.  
+ `S_OK` in caso di esito positivo o qualsiasi altro `HRESULT` in caso di errore.  
   
 ## <a name="remarks"></a>Note  
  Se non è possibile scrivere dei byte, la chiamata al metodo non riesce e non modifica i byte nello spazio degli indirizzi di destinazione (altrimenti la destinazione potrebbe trovarsi in uno stato incoerente che renderebbe il debug successivo inaffidabile).  

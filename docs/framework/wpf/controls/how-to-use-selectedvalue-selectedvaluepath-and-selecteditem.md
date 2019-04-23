@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
 ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169704"
 ---
 # <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Procedura: Usare gli oggetti SelectedValue, SelectedValuePath e SelectedItem
@@ -41,5 +41,5 @@ Questo esempio illustra come usare il <xref:System.Windows.Controls.TreeView.Sel
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Cenni preliminari sul controllo TreeView](treeview-overview.md)
-- [Procedure relative](treeview-how-to-topics.md)
+- [Panoramica sul controllo TreeView](treeview-overview.md)
+- [Procedure relative alle proprietà](treeview-how-to-topics.md)

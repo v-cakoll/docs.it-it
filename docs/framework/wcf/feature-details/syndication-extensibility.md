@@ -3,10 +3,10 @@ title: Estendibilità della diffusione
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170807"
 ---
 # <a name="syndication-extensibility"></a>Estendibilità della diffusione
@@ -46,5 +46,5 @@ L'API di diffusione è progettata per fornire un modello di programmazione di fo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Architettura di diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [Panoramica della diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Architettura della diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

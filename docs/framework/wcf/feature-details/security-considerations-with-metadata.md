@@ -3,10 +3,10 @@ title: Considerazioni sulla sicurezza con metadati
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
 ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172965"
 ---
 # <a name="security-considerations-with-metadata"></a>Considerazioni sulla sicurezza con metadati
@@ -40,5 +40,5 @@ Quando si usano le funzionalità dei metadati Windows Communication Foundation (
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Proteggere endpoint di metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Procedura: Proteggere gli endpoint dei metadati](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)

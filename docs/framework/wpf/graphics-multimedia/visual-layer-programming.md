@@ -10,10 +10,10 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
 ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172068"
 ---
 # <a name="visual-layer-programming"></a>Programmazione a livello visivo
@@ -21,9 +21,9 @@ Il <xref:System.Windows.Media.Visual> oggetto è dei principali [!INCLUDE[TLA2#t
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Hit testing a livello visivo](hit-testing-in-the-visual-layer.md)  
- [Utilizzo degli oggetti DrawingVisual](using-drawingvisual-objects.md)  
+ [Uso degli oggetti DrawingVisual](using-drawingvisual-objects.md)  
  [Esercitazione: Hosting di oggetti visivi in un'applicazione Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Procedure relative](visual-layer-programming-how-to-topics.md)  
+ [Procedure relative alle proprietà](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

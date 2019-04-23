@@ -12,10 +12,10 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170705"
 ---
 # <a name="varieties-of-custom-controls"></a>Tipi di controlli personalizzati
@@ -57,7 +57,7 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
   
  Per modificare un controllo composito, derivarlo dal <xref:System.Windows.Forms.UserControl> classe. Il <xref:System.Windows.Forms.UserControl> classe di base fornisce il routing della tastiera per controlli figlio e consente ai controlli figlio di funzionare come gruppo. Per altre informazioni, vedere [Sviluppo di un controllo Windows Form composito](developing-a-composite-windows-forms-control.md).  
   
- **Consiglio**  
+ **Consigli**  
   
  Ereditare dalla classe <xref:System.Windows.Forms.UserControl> per:  
   
@@ -70,7 +70,7 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
   
  In alcuni controlli, è possibile aggiungere anche un aspetto personalizzato per l'interfaccia utente grafica del controllo eseguendo l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo della classe di base. Per un pulsante esteso che tiene traccia dei clic, è possibile eseguire l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo da chiamare l'implementazione di base del <xref:System.Windows.Forms.Control.OnPaint%2A>, quindi disegnare il numero di clic in un angolo del <xref:System.Windows.Forms.Button> area client del controllo.  
   
- **Consiglio**  
+ **Consigli**  
   
  Ereditare da un controllo di Windows Form se:  
   
@@ -87,7 +87,7 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
   
  Un esempio di controllo personalizzato è un controllo clock che duplica l'aspetto e il funzionamento di un orologio analogico. Viene richiamato un disegno personalizzato causa il movimento delle lancette dell'orologio in risposta a <xref:System.Windows.Forms.Timer.Tick> gli eventi da interna <xref:System.Windows.Forms.Timer> componente. Per altre informazioni, vedere [Procedura: Sviluppare un controllo Form Windows semplice](how-to-develop-a-simple-windows-forms-control.md).  
   
- **Consiglio**  
+ **Consigli**  
   
  Ereditare dalla classe <xref:System.Windows.Forms.Control> per:  
   
@@ -109,7 +109,7 @@ Con .NET Framework è possibile sviluppare e implementare nuovi controlli. Si po
 ## <a name="see-also"></a>Vedere anche
 
 - [Sviluppo di controlli Windows Form personalizzati con .NET Framework](developing-custom-windows-forms-controls.md)
-- [Procedura: Sviluppare un controllo di Windows Forms semplice](how-to-develop-a-simple-windows-forms-control.md)
-- [Sviluppo di un controllo Windows Form composto](developing-a-composite-windows-forms-control.md)
+- [Procedura: Sviluppare un controllo di semplice Windows Form](how-to-develop-a-simple-windows-forms-control.md)
+- [Sviluppo di un controllo di Windows Form composto](developing-a-composite-windows-forms-control.md)
 - [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Procedura: Creare un controllo di Windows Form che sfrutta i vantaggi della funzionalità Design-Time](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
