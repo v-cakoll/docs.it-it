@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cab4b039d225f4ee1b00add6ffec63fd35be8857
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202807"
 ---
-# <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="ff2de-102">Metodo ICorProfilerCallback::ClassLoadFinished</span><span class="sxs-lookup"><span data-stu-id="ff2de-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
-<span data-ttu-id="ff2de-103">Notifica al profiler che una classe ha terminato il caricamento.</span><span class="sxs-lookup"><span data-stu-id="ff2de-103">Notifies the profiler that a class has finished loading.</span></span>  
+# <a name="icorprofilercallbackclassloadfinished-method"></a><span data-ttu-id="e91f7-102">Metodo ICorProfilerCallback::ClassLoadFinished</span><span class="sxs-lookup"><span data-stu-id="e91f7-102">ICorProfilerCallback::ClassLoadFinished Method</span></span>
+<span data-ttu-id="e91f7-103">Notifica al profiler che una classe ha terminato il caricamento.</span><span class="sxs-lookup"><span data-stu-id="e91f7-103">Notifies the profiler that a class has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ff2de-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ff2de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e91f7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e91f7-104">Syntax</span></span>  
   
 ```  
 HRESULT ClassLoadFinished(  
@@ -35,28 +35,28 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ff2de-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ff2de-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e91f7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e91f7-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="ff2de-106">[in] Identifica la classe che è stata caricata.</span><span class="sxs-lookup"><span data-stu-id="ff2de-106">[in] Identifies the class that was loaded.</span></span>  
+ <span data-ttu-id="e91f7-106">[in] Identifica la classe che è stata caricata.</span><span class="sxs-lookup"><span data-stu-id="e91f7-106">[in] Identifies the class that was loaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="ff2de-107">[in] HRESULT che indica se la classe sia stato caricato correttamente.</span><span class="sxs-lookup"><span data-stu-id="ff2de-107">[in] An HRESULT that indicates whether the class loaded successfully.</span></span>  
+ <span data-ttu-id="e91f7-107">[in] HRESULT che indica se la classe sia stato caricato correttamente.</span><span class="sxs-lookup"><span data-stu-id="e91f7-107">[in] An HRESULT that indicates whether the class loaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ff2de-108">Note</span><span class="sxs-lookup"><span data-stu-id="ff2de-108">Remarks</span></span>  
- <span data-ttu-id="ff2de-109">Il valore di `classId` non è valido per una richiesta di informazioni finché non la `ClassLoadFinished` viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="ff2de-109">The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e91f7-108">Note</span><span class="sxs-lookup"><span data-stu-id="e91f7-108">Remarks</span></span>  
+ <span data-ttu-id="e91f7-109">Il valore di `classId` non è valido per una richiesta di informazioni finché non la `ClassLoadFinished` viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="e91f7-109">The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.</span></span>  
   
- <span data-ttu-id="ff2de-110">Alcune parti del caricamento della classe potrebbero continuare dopo il `ClassLoadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="ff2de-110">Some parts of loading the class might continue after the `ClassLoadFinished` callback.</span></span> <span data-ttu-id="ff2de-111">Un HRESULT di errore in `hrStatus` indica un errore.</span><span class="sxs-lookup"><span data-stu-id="ff2de-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="ff2de-112">Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte del caricamento della classe ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="ff2de-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.</span></span>  
+ <span data-ttu-id="e91f7-110">Alcune parti del caricamento della classe potrebbero continuare dopo il `ClassLoadFinished` callback.</span><span class="sxs-lookup"><span data-stu-id="e91f7-110">Some parts of loading the class might continue after the `ClassLoadFinished` callback.</span></span> <span data-ttu-id="e91f7-111">Un HRESULT di errore in `hrStatus` indica un errore.</span><span class="sxs-lookup"><span data-stu-id="e91f7-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="e91f7-112">Tuttavia, un HRESULT di esito positivo in `hrStatus` indica solo che la prima parte del caricamento della classe ha avuto esito positivo.</span><span class="sxs-lookup"><span data-stu-id="e91f7-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff2de-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ff2de-113">Requirements</span></span>  
- <span data-ttu-id="ff2de-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ff2de-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e91f7-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e91f7-113">Requirements</span></span>  
+ <span data-ttu-id="e91f7-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e91f7-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ff2de-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ff2de-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e91f7-115">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e91f7-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ff2de-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ff2de-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e91f7-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e91f7-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="ff2de-117">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="ff2de-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="e91f7-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e91f7-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff2de-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff2de-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e91f7-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e91f7-118">See also</span></span>
 
-- [<span data-ttu-id="ff2de-119">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="ff2de-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="ff2de-120">Metodo ClassLoadStarted</span><span class="sxs-lookup"><span data-stu-id="ff2de-120">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [<span data-ttu-id="e91f7-119">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="e91f7-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="e91f7-120">Metodo ClassLoadStarted</span><span class="sxs-lookup"><span data-stu-id="e91f7-120">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
