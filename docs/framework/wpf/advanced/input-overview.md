@@ -25,10 +25,10 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320015"
 ---
 # <a name="input-overview"></a>Cenni preliminari sull'input
@@ -58,7 +58,7 @@ ms.locfileid: "59320015"
  Il <xref:System.Windows.Input.Mouse> e <xref:System.Windows.Input.Keyboard> classi vengono analizzate più dettagliatamente nel corso dell'articolo.
 
 ### <a name="stylus-input"></a>Input dello stilo
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre supporto integrato per la <xref:System.Windows.Input.Stylus>.  Il <xref:System.Windows.Input.Stylus> è un input penna diventato comune con il [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni possono trattare lo stilo come un mouse usando il puntatore del mouse [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], ma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] espone anche un'astrazione del dispositivo stilo che usa un modello analogo a tastiera e mouse.  Tutte le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] correlate allo stilo contengono la parola "Stylus".
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre supporto integrato per la <xref:System.Windows.Input.Stylus>.  Il <xref:System.Windows.Input.Stylus> è un input penna diventato comune con il [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possono trattare lo stilo come un mouse usando l'[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] del mouse, ma [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] espone anche un'astrazione del dispositivo stilo che usa un modello analogo a tastiera e mouse.  Tutte le [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] correlate allo stilo contengono la parola "Stylus".
 
  Dal momento che lo stilo può funzionare come un mouse, le applicazioni che supportano solo l'input del mouse possono comunque ottenere automaticamente un certo livello di supporto dello stilo. Quando lo stilo viene usato in questo modo, l'applicazione può gestire l'evento dello stilo appropriato gestendo l'evento del mouse corrispondente. Inoltre, tramite l'astrazione del dispositivo stilo, sono disponibili anche servizi di livello superiore, come l'input penna.  Per altre informazioni sull'input penna, vedere [Nozioni di base sull'input penna](getting-started-with-ink.md).
 
@@ -68,7 +68,7 @@ ms.locfileid: "59320015"
 
  Il routing degli eventi è il processo di inoltro degli eventi a più elementi, in modo che un oggetto o un elemento specifico lungo la route possa offrire una risposta significativa (tramite la gestione) a un evento che potrebbe essere stato originato da un elemento diverso.  Gli eventi indirizzati usano uno dei tre meccanismi di routing indicati di seguito: diretto, bubbling e tunneling.  Nel routing diretto, l'elemento di origine è l'unico elemento che riceve la notifica e l'evento non viene indirizzato a nessun altro elemento. Tuttavia, l'evento indirizzato tramite routing diretto offre alcune funzionalità aggiuntive che sono disponibili solo per gli eventi indirizzati e non per gli eventi [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] standard. Il bubbling viene eseguito procedendo verso l'alto nell'albero degli elementi, notificando innanzitutto l'elemento che ha originato l'evento, quindi l'elemento padre e così via.  Il tunneling parte dalla radice dell'albero degli elementi e procede verso il basso, terminando con l'elemento di origine.  Per altre informazioni sugli eventi indirizzati, vedere [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in genere gli eventi di input sono disponibili nelle coppie costituito da un evento di tunneling e un evento di bubbling.  Gli eventi di tunneling si distinguono da quelli di bubbling tramite il prefisso "Preview".  Ad esempio, <xref:System.Windows.Input.Mouse.PreviewMouseMove> è la versione tunneling di un evento di spostamento del mouse e <xref:System.Windows.Input.Mouse.MouseMove> è la versione di bubbling dell'evento. Questa coppia di eventi è una convenzione implementata a livello di elemento e non è una funzionalità intrinseca del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per informazioni dettagliate, vedere la sezione Eventi di input WPF in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).
+ Gli eventi di input [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono in genere a coppie, costituite da un evento di tunneling e un evento di bubbling.  Gli eventi di tunneling si distinguono da quelli di bubbling tramite il prefisso "Preview".  Ad esempio, <xref:System.Windows.Input.Mouse.PreviewMouseMove> è la versione tunneling di un evento di spostamento del mouse e <xref:System.Windows.Input.Mouse.MouseMove> è la versione di bubbling dell'evento. Questa coppia di eventi è una convenzione implementata a livello di elemento e non è una funzionalità intrinseca del sistema di eventi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Per informazioni dettagliate, vedere la sezione Eventi di input WPF in [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md).
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>Gestione degli eventi di input
@@ -137,7 +137,7 @@ ms.locfileid: "59320015"
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>Tocco e manipolazione
- Il nuovo hardware e le nuove API del sistema operativo Windows 7 consentono alle applicazioni di ricevere contemporaneamente input da più tocchi. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente alle applicazioni di rilevare e rispondere al tocco in modo analogo alle risposte ad altri input, ad esempio mouse o tastiera, generando eventi quando si verifica il tocco.
+ Il nuovo hardware e le nuove API del sistema operativo Windows 7 consentono alle applicazioni di ricevere contemporaneamente input da più tocchi. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente alle applicazioni di rilevare il tocco e rispondere in un modo simile alle risposte ad altri tipi di input, ad esempio di mouse o tastiera, generando eventi quando si verifica il tocco.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] espone due tipi di eventi quando si verifica il tocco: eventi di tocco ed eventi di manipolazione. Gli eventi di tocco forniscono dati non elaborati relativi a ogni dito appoggiato su un touchscreen e al suo movimento. Gli eventi di manipolazione interpretano l'input come azioni specifiche. Questa sezione illustra entrambi i tipi di eventi.
 
@@ -240,7 +240,7 @@ ms.locfileid: "59320015"
 
  Si possono verificare più tipi di manipolazioni contemporaneamente.
 
- Quando gli oggetti rispondono alle manipolazioni, si può fare in modo che sembrino avere un'inerzia. In questo modo, gli oggetti possono simulare il mondo fisico. Ad esempio se si spinge un libro su un tavolo con sufficiente forza, il libro continuerà a muoversi anche dopo che lo si lascia. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Consente di simulare questo comportamento generando eventi di manipolazione dopo che l'oggetto viene rilasciato le dita dell'utente.
+ Quando gli oggetti rispondono alle manipolazioni, si può fare in modo che sembrino avere un'inerzia. In questo modo, gli oggetti possono simulare il mondo fisico. Ad esempio se si spinge un libro su un tavolo con sufficiente forza, il libro continuerà a muoversi anche dopo che lo si lascia. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di simulare questo comportamento generando eventi di manipolazione dopo che le dita dell'utente rilasciano l'oggetto.
 
  Per informazioni su come creare un'applicazione che consente all'utente di spostare, ridimensionare e ruotare un oggetto, vedere [procedura dettagliata: Creazione della prima applicazione Touch](walkthrough-creating-your-first-touch-application.md).
 
@@ -391,8 +391,8 @@ ms.locfileid: "59320015"
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sullo stato attivo](focus-overview.md)
-- [Cenni preliminari sull'esecuzione di comandi](commanding-overview.md)
+- [Panoramica sullo stato attivo](focus-overview.md)
+- [Panoramica sull'esecuzione di comandi](commanding-overview.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
 - [Cenni preliminari sugli elementi di base](base-elements-overview.md)
 - [Proprietà](properties-wpf.md)

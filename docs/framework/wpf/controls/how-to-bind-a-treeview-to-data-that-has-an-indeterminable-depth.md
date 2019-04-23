@@ -5,10 +5,10 @@ helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
 ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214858"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procedura: Associare una visualizzazione struttura ad albero a dati di profondità non determinabile
@@ -28,4 +28,4 @@ Quando si desidera associare a volte può essere un <xref:System.Windows.Control
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sul data binding](../data/data-binding-overview.md)
-- [Cenni preliminari sui modelli di dati](../data/data-templating-overview.md)
+- [Panoramica sui modelli di dati](../data/data-templating-overview.md)

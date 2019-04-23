@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
 ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334965"
 ---
 # <a name="initializer-expected"></a>Previsto inizializzatore
@@ -33,5 +33,5 @@ Si è provato a dichiarare un'istanza di una classe usando un inizializzatore di
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Inizializzatori di oggetti: tipi anonimi e denominati](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

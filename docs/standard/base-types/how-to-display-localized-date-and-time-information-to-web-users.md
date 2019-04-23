@@ -16,10 +16,10 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320158"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Procedura: Visualizzare le informazioni su data e ora localizzate agli utenti del Web
@@ -115,5 +115,5 @@ Poiché una pagina Web può essere visualizzata ovunque nel mondo, le operazioni
 
 - [Esecuzione di operazioni di formattazione](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Analisi di stringhe di data e ora](../../../docs/standard/base-types/parsing-datetime.md)

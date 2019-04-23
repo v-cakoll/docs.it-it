@@ -6,16 +6,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335394"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materializzazione di oggetti (WCF Data Services)
 Quando si usa la **Aggiungi riferimento al servizio** finestra di dialogo per utilizzare un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in un'applicazione client basata su .NET Framework, vengono generate classi di dati equivalenti per ogni tipo di entità nel modello di dati esposto dal feed. Per altre informazioni, vedere [generazione della libreria Client di servizio dati](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). I dati di entità restituiti da una query vengono materializzati in un'istanza di una delle classi del servizio dati client generate. Per informazioni sulle opzioni di merge e la risoluzione di identità per gli oggetti rilevati, vedere [gestione del contesto del servizio dati](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente inoltre di definire le proprie classi di servizio dati client, anziché utilizzare le classi di dati generati dallo strumento. In questo modo è possibile usare le proprie classi di dati, note anche come classi di dati POCO (Plain-Old CLR Object). Quando si usano questi tipi di classi di dati personalizzate, è necessario attribuire la classe di dati con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> e assicurarsi che i nomi del tipo nei nomi dei tipi di client corrispondenza nel modello di dati del servizio dati.  
+ Anziché usare le classi di dati generate dallo strumento, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] consente inoltre di definire classi personalizzate del servizio dati client. In questo modo è possibile usare le proprie classi di dati, note anche come classi di dati POCO (Plain-Old CLR Object). Quando si usano questi tipi di classi di dati personalizzate, è necessario attribuire la classe di dati con <xref:System.Data.Services.Common.DataServiceKeyAttribute> o <xref:System.Data.Services.Common.DataServiceEntityAttribute> e assicurarsi che i nomi del tipo nei nomi dei tipi di client corrispondenza nel modello di dati del servizio dati.  
   
  Dopo aver ricevuto il messaggio di risposta query, la libreria materializza i dati restituiti dal [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in istanze di dati del client di classi del servizio sono di tipo della query. Di seguito viene descritto il processo generale di materializzazione di tali oggetti.  
   

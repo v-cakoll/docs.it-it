@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320052"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Procedura: Creare ed eseguire un flusso di lavoro con esecuzione prolungata
@@ -29,11 +29,11 @@ Una delle funzionalità principali di Windows Workflow Foundation (WF) è la cap
   
 -   [Per creare il form host del flusso di lavoro](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [Per aggiungere proprietà e metodi di supporto del form](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [Per aggiungere le proprietà e metodi di supporto del form](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
 -   [Per configurare l'archivio di istanze, i gestori del ciclo di vita del flusso di lavoro e le estensioni](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [Per abilitare l'avvio e la ripresa di più tipi di flussi di lavoro](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [Per abilitare l'avvio e ripresa di più tipi di flusso di lavoro](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
 -   [Per avviare un nuovo flusso di lavoro](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
@@ -94,12 +94,12 @@ Una delle funzionalità principali di Windows Workflow Foundation (WF) è la cap
   
     |Control|Proprietà: Value|  
     |-------------|---------------------|  
-    |**Button**|Nome: NewGame<br /><br /> Percorso: 13, 13<br /><br /> Dimensione: 75, 23<br /><br /> Testo: Nuova partita|  
-    |**Label**|Percorso: 94, 18<br /><br /> Testo: Immettere un numero da 1 a|  
+    |**Pulsante**|Nome: NewGame<br /><br /> Percorso: 13, 13<br /><br /> Dimensione: 75, 23<br /><br /> Testo: Nuova partita|  
+    |**Etichetta**|Percorso: 94, 18<br /><br /> Testo: Immettere un numero da 1 a|  
     |**ComboBox**|Nome: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementi: 10, 100, 1000<br /><br /> Percorso: 228, 12<br /><br /> Dimensione: 143, 21|  
-    |**Label**|Percorso: 13, 43<br /><br /> Testo: Tipo di flusso di lavoro|  
+    |**Etichetta**|Percorso: 13, 43<br /><br /> Testo: Tipo di flusso di lavoro|  
     |**ComboBox**|Nome: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementi: SequentialNumberGuessWorkflow StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow,<br /><br /> Percorso: 94, 40<br /><br /> Dimensione: 277, 21|  
-    |**Label**|Nome: WorkflowVersion<br /><br /> Percorso: 13, 362<br /><br /> Testo: Versione flusso di lavoro|  
+    |**Etichetta**|Nome: WorkflowVersion<br /><br /> Percorso: 13, 362<br /><br /> Testo: Versione flusso di lavoro|  
     |**GroupBox**|Percorso: 13, 67<br /><br /> Dimensione: 358, 287<br /><br /> Testo: Partita|  
   
     > [!NOTE]
@@ -107,12 +107,12 @@ Una delle funzionalità principali di Windows Workflow Foundation (WF) è la cap
   
     |Control|Proprietà: Value|  
     |-------------|---------------------|  
-    |**Label**|Percorso: 7, 20<br /><br /> Testo: ID istanza flusso di lavoro|  
+    |**Etichetta**|Percorso: 7, 20<br /><br /> Testo: ID istanza flusso di lavoro|  
     |**ComboBox**|Nome: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Percorso: 121, 17<br /><br /> Dimensione: 227, 21|  
-    |**Label**|Percorso: 7, 47<br /><br /> Testo: Proposta|  
+    |**Etichetta**|Percorso: 7, 47<br /><br /> Testo: Proposta|  
     |**TextBox**|Nome: Proposta<br /><br /> Percorso: 50, 44<br /><br /> Dimensione: 65, 20|  
-    |**Button**|Nome: EnterGuess<br /><br /> Percorso: 121, 42<br /><br /> Dimensione: 75, 23<br /><br /> Testo: Immetti proposta|  
-    |**Button**|Nome: QuitGame<br /><br /> Percorso: 274, 42<br /><br /> Dimensione: 75, 23<br /><br /> Testo: Esci|  
+    |**Pulsante**|Nome: EnterGuess<br /><br /> Percorso: 121, 42<br /><br /> Dimensione: 75, 23<br /><br /> Testo: Immetti proposta|  
+    |**Pulsante**|Nome: QuitGame<br /><br /> Percorso: 274, 42<br /><br /> Dimensione: 75, 23<br /><br /> Testo: Esci|  
     |**TextBox**|Nome: WorkflowStatus<br /><br /> Percorso: 10, 73<br /><br /> Multiline: True<br /><br /> ReadOnly: True<br /><br /> Barre di scorrimento: Vertical<br /><br /> Dimensione: 338, 208|  
   
 5. Impostare il **AcceptButton** proprietà del form su **EnterGuess**.  
@@ -341,7 +341,7 @@ Una delle funzionalità principali di Windows Workflow Foundation (WF) è la cap
     }  
     ```  
   
-     `ListPersistedWorkflows` query sull'archivio di istanza per le istanze persistenti del flusso di lavoro e aggiunge gli ID istanza per il `cboInstanceId` casella combinata.  
+     Tramite `ListPersistedWorkflows` viene eseguita una query sull'archivio di istanze per le istanze del flusso di lavoro persistente, quindi vengono aggiunti gli ID istanza alla casella combinata `cboInstanceId`.  
   
 10. Aggiungere il seguente metodo `UpdateStatus` e il delegato corrispondente alla classe del form. Tramite questo metodo viene aggiornata la finestra di stato nel form con lo stato del flusso di lavoro attualmente in esecuzione.  
   
@@ -574,7 +574,7 @@ Una delle funzionalità principali di Windows Workflow Foundation (WF) è la cap
     };  
     ```  
   
-     L'enumerazione <xref:System.Activities.PersistableIdleAction> ha tre valori:<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> e <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> cause del flusso di lavoro reso persistente, ma non determina il flusso di lavoro da scaricare. <xref:System.Activities.PersistableIdleAction.Unload> fa sì che il flusso di lavoro persistente e scaricata.  
+     L'enumerazione <xref:System.Activities.PersistableIdleAction> ha tre valori:<xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> e <xref:System.Activities.PersistableIdleAction.Unload>. Tramite il campo <xref:System.Activities.PersistableIdleAction.Persist> il flusso di lavoro viene reso persistente, ma non scaricato. <xref:System.Activities.PersistableIdleAction.Unload> rende il flusso di lavoro persistente e lo scarica.  
   
      Nell'esempio seguente viene mostrato il metodo `ConfigureWorkflowApplication` completato.  
   
@@ -692,7 +692,7 @@ Una delle funzionalità principali di Windows Workflow Foundation (WF) è la cap
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> Per abilitare l'avvio e ripresa di più tipi di flusso di lavoro  
- Per riprendere un'istanza del flusso di lavoro, tramite l'host deve essere fornita la definizione del flusso di lavoro. In questa esercitazione sono disponibili tre tipi di flussi di lavoro e nei passaggi successivi dell'esercitazione vengono introdotte più versioni di questi tipi. `WorkflowIdentity` fornisce un modo per un'applicazione host associare le informazioni di identificazione a un'istanza del flusso di lavoro persistente. Nei passaggi di questa sezione viene illustrato come creare una classe di utilità per consentire il mapping dell'identità del flusso di lavoro da un'istanza del flusso di lavoro persistente alla definizione del flusso di lavoro corrispondente. Per altre informazioni sulle `WorkflowIdentity` e il controllo delle versioni, vedere [usando WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md).  
+ Per riprendere un'istanza del flusso di lavoro, tramite l'host deve essere fornita la definizione del flusso di lavoro. In questa esercitazione sono disponibili tre tipi di flussi di lavoro e nei passaggi successivi dell'esercitazione vengono introdotte più versioni di questi tipi. Tramite `WorkflowIdentity` viene fornito un modo per un'applicazione host per associare le informazioni di identificazione con un'istanza del flusso di lavoro persistente. Nei passaggi di questa sezione viene illustrato come creare una classe di utilità per consentire il mapping dell'identità del flusso di lavoro da un'istanza del flusso di lavoro persistente alla definizione del flusso di lavoro corrispondente. Per altre informazioni sulle `WorkflowIdentity` e il controllo delle versioni, vedere [usando WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md).  
   
 1. Fare doppio clic su **NumberGuessWorkflowHost** nelle **Esplora soluzioni** e scegliere **Add**, **classe**. Tipo di `WorkflowVersionMap` nella **Name** casella e fare clic su **Add**.  
   
@@ -806,7 +806,7 @@ Una delle funzionalità principali di Windows Workflow Foundation (WF) è la cap
     }  
     ```  
   
-     `WorkflowVersionMap` contiene tre identità del flusso di lavoro che eseguono il mapping alle tre definizioni del flusso di lavoro da questa esercitazione e viene usato nelle sezioni seguenti quando vengono avviati e ripresi i flussi di lavoro.  
+     In `WorkflowVersionMap` sono contenute tre identità del flusso di lavoro tramite cui viene eseguito il mapping alle tre definizioni del flusso di lavoro di questa esercitazione e viene usato nelle sezioni seguenti quando i flussi di lavoro vengono avviati e ripresi.  
   
 ### <a name="BKMK_StartWorkflow"></a> Per avviare un nuovo flusso di lavoro  
   

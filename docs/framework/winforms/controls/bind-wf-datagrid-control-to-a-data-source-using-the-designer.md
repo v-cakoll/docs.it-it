@@ -13,10 +13,10 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
 ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320886"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Procedura: Associare il controllo DataGrid di Windows Forms a un'origine dati usando la finestra di progettazione
@@ -71,8 +71,8 @@ ms.locfileid: "59320886"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del controllo DataGrid](datagrid-control-overview-windows-forms.md)
-- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid di Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Cenni preliminari sul controllo DataGrid](datagrid-control-overview-windows-forms.md)
+- [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [Controllo DataGrid](datagrid-control-windows-forms.md)
-- [Data binding di Windows Form](../windows-forms-data-binding.md)
+- [Data binding in Windows Form](../windows-forms-data-binding.md)
 - [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

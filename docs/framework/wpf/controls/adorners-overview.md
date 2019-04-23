@@ -8,10 +8,10 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320470"
 ---
 # <a name="adorners-overview"></a>Cenni preliminari sugli strumenti decorativi visuali
@@ -105,4 +105,4 @@ Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.Framework
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [Disegnare con oggetti Image, Drawing e Visual](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Cenni preliminari sugli oggetti Drawing](../graphics-multimedia/drawing-objects-overview.md)
-- [Procedure relative](adorners-how-to-topics.md)
+- [Procedure relative alle proprietà](adorners-how-to-topics.md)

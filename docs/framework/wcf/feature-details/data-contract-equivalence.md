@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
 ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214936"
 ---
 # <a name="data-contract-equivalence"></a>Equivalenza dei contratti dati
@@ -65,5 +65,5 @@ Perché un client possa inviare correttamente dati di un certo tipo a un servizi
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Ordine dei membri dati](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [Tipi conosciuti di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Nomi di contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Tipi noti di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Nomi di contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

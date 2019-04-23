@@ -7,10 +7,10 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320058"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementazione del provider di automazione interfaccia utente lato server
@@ -19,7 +19,7 @@ ms.locfileid: "59320058"
   
  In questa sezione viene descritto come implementare un provider di automazione interfaccia utente sul lato server per un controllo personalizzato.  
   
- L'implementazione per gli elementi Windows Presentation Foundation (WPF) e non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementi (ad esempio quelli progettati per [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) è fondamentalmente diversa. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] gli elementi forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto tramite implementazioni di interfacce del provider.  
+ L'implementazione per gli elementi Windows Presentation Foundation (WPF) e non-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementi (ad esempio quelli progettati per [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) è fondamentalmente diversa. Gli elementi[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto per [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tramite una classe derivata da <xref:System.Windows.Automation.Peers.AutomationPeer>. Gli elementi non[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] forniscono supporto tramite implementazioni di interfacce del provider.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Considerazioni sulla sicurezza  
@@ -77,7 +77,7 @@ ms.locfileid: "59320058"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>Valori delle proprietà nei provider non WPF  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i provider per controlli personalizzati devono supportare determinate proprietà che può essere utilizzato dai sistemi di automazione, nonché dalle applicazioni client. Per gli elementi ospitati nelle finestre (HWND), [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] può recuperare alcune proprietà dal provider di finestra predefinito, ma deve ottenerne altre dal provider personalizzato.  
+ I provider[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] per i controlli personalizzati devono supportare determinate proprietà che possono essere usate dai sistemi di automazione ed anche dalle applicazioni client. Per gli elementi ospitati nelle finestre (HWND), [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] può recuperare alcune proprietà dal provider di finestra predefinito, ma deve ottenerne altre dal provider personalizzato.  
   
  I provider per i controlli basati su HWND in genere non richiedono di specificare le proprietà seguenti (identificate da valori di campo):  
   
@@ -112,7 +112,7 @@ ms.locfileid: "59320058"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>Eventi nei provider non WPF  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i provider devono generare eventi per notificare alle applicazioni client le modifiche dello stato dell'interfaccia utente. Per generare gli eventi vengono usati i metodi seguenti.  
+ I provider[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] devono generare eventi per notificare alle applicazioni client le modifiche allo stato dell'interfaccia utente. Per generare gli eventi vengono usati i metodi seguenti.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
@@ -144,7 +144,7 @@ ms.locfileid: "59320058"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>Associazione con un nuovo elemento padre per i provider non WPF  
- Le finestre popup sono in effetti finestre di primo livello, quindi per impostazione predefinita vengono visualizzate nell'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] come figli del desktop. In molti casi, tuttavia, le finestre popup sono logicamente elementi figlio di un altro controllo. Ad esempio, l'elenco a discesa di una casella combinata è logicamente un elemento figlio della casella combinata. Analogamente, una finestra popup di menu è logicamente un elemento figlio del menu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fornisce il supporto per assegnare un nuovo elemento finestre popup in modo che vengano visualizzati come elementi figlio del controllo associato.  
+ Le finestre popup sono in effetti finestre di primo livello, quindi per impostazione predefinita vengono visualizzate nell'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] come figli del desktop. In molti casi, tuttavia, le finestre popup sono logicamente elementi figlio di un altro controllo. Ad esempio, l'elenco a discesa di una casella combinata è logicamente un elemento figlio della casella combinata. Analogamente, una finestra popup di menu è logicamente un elemento figlio del menu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fornisce il supporto per l'associazione delle finestre popup con un nuovo elemento padre, in modo che vengano visualizzate come elementi figlio del controllo associato.  
   
  Per associare una finestra popup con un nuovo elemento padre:  
   
@@ -162,7 +162,7 @@ ms.locfileid: "59320058"
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
 ### <a name="non-wpf-provider-repositioning"></a>Riposizionamento per i provider non WPF  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i frammenti potrebbero contenere due o più elementi contenuti ognuno in una finestra (HWND). Dato che ogni elemento HWND ha il proprio provider predefinito che considera HWND un elemento figlio di un HWND che lo contiene, l'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] visualizzerà, per impostazione predefinita, gli HWND nel frammento come elementi figlio della finestra padre. Nella maggior parte dei casi questo comportamento è utile, ma talvolta può generare confusione perché non corrisponde alla struttura logica della [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ I frammenti di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] possono contenere due o più elementi contenuti ognuno in una finestra (HWND). Dato che ogni elemento HWND ha il proprio provider predefinito che considera HWND un elemento figlio di un HWND che lo contiene, l'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] visualizzerà, per impostazione predefinita, gli HWND nel frammento come elementi figlio della finestra padre. Nella maggior parte dei casi questo comportamento è utile, ma talvolta può generare confusione perché non corrisponde alla struttura logica della [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
  Un esempio valido è un controllo Rebar. Un controllo Rebar contiene bande, ognuna delle quali può contenere a sua volta un controllo basato su HWND come una barra degli strumenti, una casella di modifica o una casella combinata. Il provider di finestra predefinito per l'HWND del controllo Rebar vede gli elementi HWND delle bande come elementi figlio e il provider del controllo Rebar considera le bande come elementi figlio. Poiché il provider HWND e il provider del controllo Rebar operano in tandem e combinano i rispettivi elementi figlio, sia le bande che i controlli basati su HWND vengono visualizzati come elementi figlio del controllo Rebar. Dal punto di vista logico, tuttavia, solo le bande devono apparire come elementi figlio del controllo Rebar e ogni provider di banda dovrebbe essere abbinato al provider HWND predefinito per il controllo che contiene.  
   
@@ -170,9 +170,9 @@ ms.locfileid: "59320058"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sui provider di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Esporre un provider di automazione dell'interfaccia utente lato server](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [Panoramica dei provider di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Esporre un provider di automazione interfaccia utente lato server](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
 - [Restituire proprietà da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
 - [Generare eventi da un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
-- [Consentire la navigazione in un provider di frammenti di automazione interfaccia utente](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Abilitare la navigazione in un provider di frammenti di automazione interfaccia utente](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
 - [Supportare pattern di controllo in un provider di automazione interfaccia utente](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

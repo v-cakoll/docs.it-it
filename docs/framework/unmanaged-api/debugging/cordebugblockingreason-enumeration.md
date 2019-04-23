@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215079"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>Enumerazione CorDebugBlockingReason
@@ -43,7 +43,7 @@ Typedef enum CorDebugBlockingReason
 |------------|-----------------|  
 |`BLOCKING_NONE`|Solo per uso interno.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|Un thread sta tentando di acquisire la sezione critica che è associata il blocco del monitoraggio in un oggetto. In genere, ciò si verifica quando si chiama uno dei <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> o <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metodi.|  
-|`BLOCKING_MONITOR_EVENT`|Un thread è in attesa dell'evento associato a un blocco di monitoraggio per un oggetto. In genere, ciò si verifica quando si chiama uno del <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` metodi.|  
+|`BLOCKING_MONITOR_EVENT`|Un thread è in attesa dell'evento associato a un blocco di monitoraggio per un oggetto. In genere, ciò si verifica quando si chiama uno dei <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metodi.|  
   
 ## <a name="remarks"></a>Note  
  Quando la `BLOCKING_MONITOR_CRITICAL_SECTION` oppure `BLOCKING_MONITOR_EVENT` membro viene utilizzato un [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struttura, il `pBlockingObject` membro della struttura punta a un'interfaccia "ICorDebugValue" che rappresenta l'oggetto che viene viene immesso . È inoltre garantito per implementare il [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interfaccia.  

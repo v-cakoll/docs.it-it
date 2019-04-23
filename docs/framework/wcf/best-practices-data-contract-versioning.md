@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334926"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Procedure consigliate: Controllo delle versioni dei contratti dati
@@ -101,8 +101,8 @@ In questo argomento vengono elencate le procedure consigliate per la creazione d
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
-- [Uso di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Controllo delle versioni dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
-- [Nomi di contratto dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)
-- [Contratti dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Controllo delle versioni dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Nomi di contratto di dati](../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [Contratti di dati compatibili con versioni successive](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Callback di serializzazione a tolleranza di versione](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

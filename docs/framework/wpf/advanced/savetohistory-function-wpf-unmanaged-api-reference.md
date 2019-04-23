@@ -9,10 +9,10 @@ api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
 ms.openlocfilehash: 3f6413558ff1f259e497c6a1c31eb2664f70cc48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213716"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>Funzione SaveToHistory (riferimenti alle API WPF non gestite)
@@ -47,4 +47,4 @@ HRESULT SaveToHistory(
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti alle API non gestite WPF](wpf-unmanaged-api-reference.md)
+- [Riferimenti alle API non gestite di WPF](wpf-unmanaged-api-reference.md)

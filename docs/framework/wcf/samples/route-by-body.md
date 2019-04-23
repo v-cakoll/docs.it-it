@@ -3,10 +3,10 @@ title: Routing in base al corpo
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 ms.openlocfilehash: b8a3f7785d7d59d8ad85d6dddde7fd6a04a12d63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320717"
 ---
 # <a name="route-by-body"></a>Routing in base al corpo
@@ -35,7 +35,7 @@ In questo esempio viene illustrato come implementare un servizio che accetta ogg
     }  
 ```  
   
- Se dispone di un contratto, un servizio richiede un comportamento di distribuzione `DispatchByBodyBehavior` personalizzato per consentire la distribuzione dei messaggi tra le operazioni. Questo comportamento di distribuzione Inizializza il `DispatchByBodyElementOperationSelector` selettore dell'operazione personalizzato con una tabella dei nomi delle operazioni con chiave basata sul QName dei rispettivi elementi wrapper. `DispatchByBodyElementOperationSelector` Analizza il tag di inizio del primo elemento figlio del corpo e seleziona l'operazione utilizzando la tabella menzionata.  
+ Se dispone di un contratto, un servizio richiede un comportamento di distribuzione `DispatchByBodyBehavior` personalizzato per consentire la distribuzione dei messaggi tra le operazioni. Questo comportamento di distribuzione Inizializza il `DispatchByBodyElementOperationSelector` selettore dell'operazione personalizzato con una tabella dei nomi delle operazioni con chiave basata sul QName dei rispettivi elementi wrapper. `DispatchByBodyElementOperationSelector` analizza il tag iniziale del primo elemento figlio del corpo e seleziona l'operazione utilizzando la tabella menzionata.  
   
  Il client usa un proxy generato automaticamente dal WSDL, esportato usando il servizio [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   

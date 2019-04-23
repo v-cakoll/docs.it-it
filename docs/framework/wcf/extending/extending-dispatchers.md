@@ -5,10 +5,10 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335030"
 ---
 # <a name="extending-dispatchers"></a>Estensione di dispatcher
@@ -84,17 +84,17 @@ I dispatcher sono responsabili dell'estrazione dei messaggi in arrivo dai canali
   
 4. I componenti correlati alla protezione possono usare le proprietà seguenti:  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica in cui vengono scritti gli eventi di controllo.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> indica dove vengono scritti gli eventi di controllo.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Controlla se il servizio tenta di rappresentare con le credenziali fornite dal messaggio in ingresso.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> controlla se il servizio tenta di eseguire una rappresentazione usando le credenziali fornite dal messaggio in ingresso.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Controlla se gli eventi di autenticazione riuscita dei messaggi vengono scritti nel registro eventi specificato da <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> controlla se nel registro eventi specificato da <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> vengono scritti eventi di autenticazione riuscita dei messaggi.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controlli come il <xref:System.Threading.Thread.CurrentPrincipal%2A> è impostata.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> controlla le modalità di impostazione della proprietà <xref:System.Threading.Thread.CurrentPrincipal%2A>.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Specifica come il controllo di eventi di autorizzazione viene eseguito.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A>specifica le modalità di esecuzione del controllo degli eventi di autorizzazione.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Specifica se sopprimere le eccezioni non critiche che si verificano durante il processo di registrazione.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> specifica se sopprimere le eccezioni non critiche che si verificano durante il processo di registrazione.  
   
  In genere, gli oggetti di estensione personalizzati vengono assegnati a una proprietà <xref:System.ServiceModel.Dispatcher.DispatchRuntime> o inseriti in una raccolta da un comportamento del servizio (un oggetto che implementa <xref:System.ServiceModel.Description.IServiceBehavior>), un comportamento del contratto (un oggetto che implementa <xref:System.ServiceModel.Description.IContractBehavior>) o un comportamento dell'endpoint (un oggetto che implementa <xref:System.ServiceModel.Description.IEndpointBehavior>). L'oggetto del comportamento da installare viene quindi aggiunto alla raccolta appropriata di comportamenti a livello di programmazione o implementando un oggetto <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> personalizzato per consentire l'inserimento del comportamento usando un file di configurazione dell'applicazione.  
   
@@ -131,6 +131,6 @@ I dispatcher sono responsabili dell'estrazione dei messaggi in arrivo dai canali
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Procedura: Ispezionare e modificare i messaggi sul servizio](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Procedura: Esaminare e modificare i messaggi nel servizio](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
 - [Procedura: Controllare o modificare i parametri](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
 - [Procedura: Bloccare gli endpoint nell'organizzazione](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

@@ -3,10 +3,10 @@ title: 'Attività 1: Creare una nuova applicazione Windows Presentation Foundati
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320379"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Attività 1: Creare una nuova applicazione Windows Presentation Foundation
@@ -44,5 +44,5 @@ In questa attività verranno creare un'applicazione Windows Presentation Foundat
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riallocazione dell'utilità di progettazione del flusso di lavoro](rehosting-the-workflow-designer.md)
-- [Attività 2: Ospitare Progettazione flussi di lavoro](task-2-host-the-workflow-designer.md)
+- [Riallocazione di Progettazione flussi di lavoro](rehosting-the-workflow-designer.md)
+- [Attività 2: Host di progettazione del flusso di lavoro](task-2-host-the-workflow-designer.md)

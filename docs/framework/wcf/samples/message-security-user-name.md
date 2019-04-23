@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335329"
 ---
 # <a name="message-security-user-name"></a>Sicurezza dei messaggi tramite nome utente
@@ -222,7 +222,7 @@ Press <ENTER> to terminate client.
   
 5. Nel server, eseguire `setup.bat service` in un prompt dei comandi sviluppatori per Visual Studio aperto con privilegi di amministratore. In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer ed esportare il certificato di servizio in un file denominato CER.  
   
-6. Modificare Web. config per riflettere il nuovo nome del certificato (nell'attributo findValue dell'elemento serviceCertificate) che è lo stesso nome di dominio completo del computer`.`  
+6. Modificare Web.config per riflettere il nuovo nome del certificato (nell'attributo findValue dell'elemento serviceCertificate) che corrisponde al nome di dominio completo del computer`.`  
   
 7. Copiare il file Service.cer dalla directory del servizio nella directory del client sul computer relativo.  
   
