@@ -3,10 +3,10 @@ title: Rilevamento personalizzato
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307633"
 ---
 # <a name="custom-tracking"></a>Rilevamento personalizzato
@@ -18,7 +18,7 @@ Nell'esempio viene illustrato come creare un partecipante di rilevamento persona
 |Componente|Descrizione|
 |---------------|-----------------|
 |Esecuzione del rilevamento|Fornisce l'infrastruttura per la creazione dei record di rilevamento.|
-|Partecipanti del rilevamento|Usa i record di rilevamento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] viene fornito con un partecipante del rilevamento che scrive record di rilevamento come eventi di Event Tracing for Windows (ETW).|
+|Partecipanti del rilevamento|Usa i record di rilevamento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] viene fornito con un partecipante del rilevamento che scrive record di rilevamento come eventi ETW (Traccia eventi per Windows).|
 |Profilo di rilevamento|Meccanismo di filtro che consente a un partecipante del rilevamento di sottoscrivere un subset dei record di rilevamento creati da un'istanza del flusso di lavoro.|
 
  Nella tabella seguente vengono indicati in dettaglio i record di rilevamento creati dall'esecuzione del flusso di lavoro.
@@ -150,4 +150,4 @@ context.Track(customRecord);
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Monitoraggio](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Esempi di monitoraggio di AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

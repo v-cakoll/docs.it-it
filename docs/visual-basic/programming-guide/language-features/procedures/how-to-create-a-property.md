@@ -8,10 +8,10 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
 ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306716"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Procedura: Creare una proprietà (Visual Basic)
@@ -62,12 +62,12 @@ Una proprietà definizione racchiusa tra una `Property` istruzione e una `End Pr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
-- [Routine di proprietà](./property-procedures.md)
+- [Routine](./index.md)
+- [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Differenze tra proprietà e variabili in Visual Basic](./differences-between-properties-and-variables.md)
 - [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Procedura: Chiamare una routine di proprietà](./how-to-call-a-property-procedure.md)
+- [Procedura: Chiamare una routine Property](./how-to-call-a-property-procedure.md)
 - [Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Procedura: Inserire un valore in una proprietà](./how-to-put-a-value-in-a-property.md)
 - [Procedura: Ottenere un valore da una proprietà](./how-to-get-a-value-from-a-property.md)
