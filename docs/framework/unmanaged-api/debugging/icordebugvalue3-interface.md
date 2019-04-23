@@ -17,34 +17,34 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 300d2263c076c9028340863e2f7a3fa27a36ef9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221977"
 ---
-# <a name="icordebugvalue3-interface"></a><span data-ttu-id="089ab-102">Interfaccia ICorDebugValue3</span><span class="sxs-lookup"><span data-stu-id="089ab-102">ICorDebugValue3 Interface</span></span>
-<span data-ttu-id="089ab-103">Estende le interfacce "ICorDebugValue" e "ICorDebugValue2" per fornire il supporto per le matrici di dimensioni superiori a 2 GB.</span><span class="sxs-lookup"><span data-stu-id="089ab-103">Extends the "ICorDebugValue" and "ICorDebugValue2" interfaces to provide support for arrays that are larger than 2 GB.</span></span>  
+# <a name="icordebugvalue3-interface"></a><span data-ttu-id="e6c5d-102">Interfaccia ICorDebugValue3</span><span class="sxs-lookup"><span data-stu-id="e6c5d-102">ICorDebugValue3 Interface</span></span>
+<span data-ttu-id="e6c5d-103">Estende le interfacce "ICorDebugValue" e "ICorDebugValue2" per fornire il supporto per le matrici di dimensioni superiori a 2 GB.</span><span class="sxs-lookup"><span data-stu-id="e6c5d-103">Extends the "ICorDebugValue" and "ICorDebugValue2" interfaces to provide support for arrays that are larger than 2 GB.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="089ab-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="089ab-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e6c5d-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="e6c5d-104">Methods</span></span>  
   
-|<span data-ttu-id="089ab-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="089ab-105">Method</span></span>|<span data-ttu-id="089ab-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="089ab-106">Description</span></span>|  
+|<span data-ttu-id="e6c5d-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="e6c5d-105">Method</span></span>|<span data-ttu-id="e6c5d-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e6c5d-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="089ab-107">Metodo GetSize64</span><span class="sxs-lookup"><span data-stu-id="089ab-107">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|<span data-ttu-id="089ab-108">Ottiene la dimensione, espressa in byte, di questo `ICorDebugValue3` oggetto.</span><span class="sxs-lookup"><span data-stu-id="089ab-108">Gets the size, in bytes, of this `ICorDebugValue3` object.</span></span>|  
+|[<span data-ttu-id="e6c5d-107">Metodo GetSize64</span><span class="sxs-lookup"><span data-stu-id="e6c5d-107">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|<span data-ttu-id="e6c5d-108">Ottiene la dimensione, espressa in byte, di questo `ICorDebugValue3` oggetto.</span><span class="sxs-lookup"><span data-stu-id="e6c5d-108">Gets the size, in bytes, of this `ICorDebugValue3` object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="089ab-109">Note</span><span class="sxs-lookup"><span data-stu-id="089ab-109">Remarks</span></span>  
- <span data-ttu-id="089ab-110">Il [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) metodo restituisce una dimensione di oggetto compreso nell'intervallo da 0 a 2.147.483.647 byte.</span><span class="sxs-lookup"><span data-stu-id="089ab-110">The [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method returns an object size that ranges from 0 to 2,147,483,647 bytes.</span></span> <span data-ttu-id="089ab-111">Nel [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], le dimensioni delle matrici possono superare i 2 GB.</span><span class="sxs-lookup"><span data-stu-id="089ab-111">In the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], the size of arrays can exceed 2 GB.</span></span> <span data-ttu-id="089ab-112">Il `ICorDebugValue3` interfaccia consente di determinare le dimensioni di queste matrici.</span><span class="sxs-lookup"><span data-stu-id="089ab-112">The `ICorDebugValue3` interface enables you to determine the size of these arrays.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6c5d-109">Note</span><span class="sxs-lookup"><span data-stu-id="e6c5d-109">Remarks</span></span>  
+ <span data-ttu-id="e6c5d-110">Il [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) metodo restituisce una dimensione di oggetto compreso nell'intervallo da 0 a 2.147.483.647 byte.</span><span class="sxs-lookup"><span data-stu-id="e6c5d-110">The [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method returns an object size that ranges from 0 to 2,147,483,647 bytes.</span></span> <span data-ttu-id="e6c5d-111">Nel [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], le dimensioni delle matrici possono superare i 2 GB.</span><span class="sxs-lookup"><span data-stu-id="e6c5d-111">In the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], the size of arrays can exceed 2 GB.</span></span> <span data-ttu-id="e6c5d-112">Il `ICorDebugValue3` interfaccia consente di determinare le dimensioni di queste matrici.</span><span class="sxs-lookup"><span data-stu-id="e6c5d-112">The `ICorDebugValue3` interface enables you to determine the size of these arrays.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="089ab-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="089ab-113">Requirements</span></span>  
- <span data-ttu-id="089ab-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="089ab-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6c5d-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e6c5d-113">Requirements</span></span>  
+ <span data-ttu-id="e6c5d-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6c5d-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="089ab-115">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="089ab-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e6c5d-115">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e6c5d-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="089ab-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="089ab-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e6c5d-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e6c5d-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="089ab-117">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="089ab-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="e6c5d-117">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6c5d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="089ab-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="089ab-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6c5d-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e6c5d-118">See also</span></span>
 
-- [<span data-ttu-id="089ab-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="089ab-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="089ab-120">Debug</span><span class="sxs-lookup"><span data-stu-id="089ab-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="e6c5d-119">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="e6c5d-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e6c5d-120">Debug</span><span class="sxs-lookup"><span data-stu-id="e6c5d-120">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
