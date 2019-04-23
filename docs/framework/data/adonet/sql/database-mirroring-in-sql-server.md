@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
 ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325696"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mirroring del database in SQL Server
@@ -61,7 +61,7 @@ string activeServer = connection.DataSource;
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Mirroring del database](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
+|[Il mirroring del database](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Viene descritto come impostare e configurare il mirroring in SQL Server.|  
   
 ## <a name="see-also"></a>Vedere anche
 

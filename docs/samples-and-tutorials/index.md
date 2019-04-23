@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330818"
 ---
 # <a name="net-samples-and-tutorials"></a>Esempi ed esercitazioni per .NET
@@ -19,17 +19,17 @@ La documentazione di .NET contiene una serie di esempi ed esercitazioni che illu
 
 ### <a name="samples"></a>Esempi
 
-**[Testing unità in .NET Core usando il test dotnet](../core/testing/unit-testing-with-dotnet-test.md)**
+**[Unit Testing in .NET Core using dotnet test](../core/testing/unit-testing-with-dotnet-test.md)** (Testing unità in .NET Core con il test dotnet)
 
 Questa guida illustra come creare un'app Web ASP.NET Core e gli unit test associati. La procedura inizia con la creazione di una semplice app servizio Web e l'aggiunta dei test, proseguendo poi con la creazione di altri test per illustrare l'implementazione di nuove funzionalità. L'[esempio completo](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) è disponibile nel repository dotnet/samples su GitHub.
 
 ### <a name="tutorials"></a>Esercitazioni
 
-**[Scrittura di app console .NET Core mediante gli strumenti dell'interfaccia della riga di comando: guida dettagliata](../core/tutorials/using-with-xplat-cli.md)**
+**[Writing .NET Core console apps using the CLI tools: A step-by-step guide](../core/tutorials/using-with-xplat-cli.md)** (Scrittura di app console .NET Core mediante gli strumenti dell'interfaccia della riga di comando: guida dettagliata)
 
 Questa guida illustra come usare gli strumenti dell'interfaccia della riga di comando di .NET Core per creare applicazioni console multipiattaforma. Si inizia con un'app console semplice per poi passare a più progetti, incluso un progetto di test. Le funzionalità vengono aggiunte progressivamente, in modo da poter ampliare le proprie conoscenze man mano che si procede. L'[esempio completo](https://github.com/dotnet/samples/tree/master/core/console-apps) è disponibile nel repository dotnet/samples su GitHub.
 
-**[Writing Libraries with Cross Platform Tools (Scrittura di librerie con strumenti multipiattaforma)](../core/tutorials/libraries.md)**
+**[Writing Libraries with Cross Platform Tools](../core/tutorials/libraries.md)** (Scrittura di librerie con strumenti multipiattaforma)
 
 Questo esempio illustra come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma. Questi strumenti offrono un'esperienza efficace e di basso livello per qualsiasi sistema operativo supportato. L'[esempio completo](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) è disponibile nel repository dotnet/samples su GitHub.
 
@@ -41,23 +41,23 @@ Vedere le [esercitazioni di ASP .NET Core](/aspnet/core/tutorials/). Molti artic
 
 ### <a name="samples"></a>Esempi
 
-**[Iterators](../csharp/iterators.md)**
+**[Iteratori](../csharp/iterators.md)**
 
 Questo esempio illustra la sintassi e le funzionalità per la creazione e l'utilizzo di iteratori C#. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/iterators) è disponibile nel repository dotnet/samples su GitHub.
 
-**[Indicizzatori](../csharp/indexers.md)**
+**[Indexers](../csharp/indexers.md)** (Indicizzatori)
 
 Questo esempio illustra la sintassi e le funzionalità per gli indicizzatori C#. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/indexers) è disponibile nel repository dotnet/samples su GitHub.
 
-**[Delegati ed eventi](../csharp/delegates-events.md)**
+**[Delegates and Events](../csharp/delegates-events.md)** (Delegati ed eventi)
 
 Questo esempio illustra la sintassi e le funzionalità per i delegati e gli eventi C#. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) è disponibile nel repository dotnet/samples su GitHub. Nello stesso repository è disponibile un [secondo esempio](https://github.com/dotnet/samples/tree/master/csharp/events) incentrato sugli eventi.
 
-**[Alberi delle espressioni](../csharp/expression-trees.md)**
+**[Expression Trees](../csharp/expression-trees.md)** (Alberi delle espressioni)
 
 Questo esempio illustra molti dei problemi che possono essere risolti usando gli alberi delle espressioni. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) è disponibile nel repository dotnet/samples su GitHub.
 
-**Esempi di LINQ**
+**Esempi LINQ**
 
 Questa serie di esempi illustra molte delle funzionalità di LINQ (Language Integrated Query). L'[esempio completo](https://github.com/dotnet/samples/tree/master/core/linq/csharp) è disponibile nel repository dotnet/samples su GitHub.
 
@@ -67,15 +67,15 @@ L'esempio [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensi
 
 ### <a name="tutorials"></a>Esercitazioni
 
-**[Applicazione console](../csharp/tutorials/console-teleprompter.md)**
+**[Console Application](../csharp/tutorials/console-teleprompter.md)** (Applicazione console)
 
 Questa esercitazione illustra l'I/O della console, la struttura di un'app console e le nozioni di base del modello di programmazione asincrona basato su attività. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) è disponibile nel repository dotnet/samples su GitHub.
 
-**[Client REST](../csharp/tutorials/console-webapiclient.md)**
+**[REST Client](../csharp/tutorials/console-webapiclient.md)** (Client REST)
 
 Questa esercitazione illustra le comunicazioni Web, la serializzazione JSON e le funzionalità orientate a oggetti nel linguaggio C#. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) è disponibile nel repository dotnet/samples su GitHub.
 
-**[Uso di LINQ](../csharp/tutorials/working-with-linq.md)**
+**[Working with LINQ](../csharp/tutorials/working-with-linq.md)** (Utilizzo di LINQ)
 
 Questa esercitazione illustra molte delle funzionalità di LINQ e gli elementi del linguaggio che supportano questa tecnologia. L'[esempio completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) è disponibile nel repository dotnet/samples su GitHub.
 
@@ -93,11 +93,11 @@ Questa esercitazione illustra come compilare in .NET Core una semplice applicazi
 
 ## <a name="deploying-to-containers"></a>Distribuzione nei contenitori
 
-**[Esecuzione di applicazioni MVC ASP.NET nei contenitori Docker di Windows](../framework/docker/aspnetmvc.md)**
+**[Running ASP.NET MVC Applications in Windows Docker Containers](../framework/docker/aspnetmvc.md)** (Esecuzione di applicazioni MVC ASP.NET nei contenitori Docker di Windows)
 
 Questa esercitazione illustra come distribuire un'app MVC ASP.NET esistente in un contenitore Docker di Windows. L'[esempio completo](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) è disponibile nel repository dotnet/samples su GitHub.
 
-**[Esecuzione di applicazioni console .NET Framework nei contenitori di Windows](../framework/docker/console.md)**
+**[Running .NET Framework Console Applications in Windows Containers](../framework/docker/console.md)** (Esecuzione di applicazioni console .NET Framework nei contenitori di Windows)
 
 Questa esercitazione illustra come distribuire un'app console esistente in un contenitore di Windows. L'[esempio completo](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) è disponibile nel repository dotnet/samples su GitHub.
 

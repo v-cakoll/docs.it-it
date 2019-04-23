@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332118"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Procedura dettagliata: Creazione di un'interfaccia di tipo Esplora risorse con i controlli ListView e TreeView usando la finestra di progettazione
@@ -46,7 +46,7 @@ Uno dei vantaggi di Visual Studio è la possibilità di creare rapidamente appli
   
     1.  Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> su <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Impostare il <xref:System.Windows.Forms.TreeView.ImageList%2A> proprietà `imagelist1.`  
+    2.  Impostare la proprietà <xref:System.Windows.Forms.TreeView.ImageList%2A> su `imagelist1.`  
   
 7. Aggiungere un <xref:System.Windows.Forms.ListView> controllo denominato `listView1` al form e posizionarlo a destra del <xref:System.Windows.Forms.SplitContainer> controllo. Nella finestra proprietà per `listview1` eseguire le operazioni seguenti:  
   
@@ -56,7 +56,7 @@ Uno dei vantaggi di Visual Studio è la possibilità di creare rapidamente appli
   
     3.  Aprire l'Editor della raccolta ColumnHeader facendo clic sui puntini di sospensione (![schermata di VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) nella <xref:System.Windows.Forms.ListView.Columns%2A> proprietà **.** Aggiungere tre colonne e impostare loro <xref:System.Windows.Forms.ColumnHeader.Text%2A> proprietà `Name`, `Type`, e `Last Modified`, rispettivamente. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
-    4.  Impostare il <xref:System.Windows.Forms.ListView.SmallImageList%2A> proprietà `imageList1.`  
+    4.  Impostare la proprietà <xref:System.Windows.Forms.ListView.SmallImageList%2A> su `imageList1.`  
   
 8. Implementare il codice per popolare il <xref:System.Windows.Forms.TreeView> con nodi principali e secondari. Aggiungere questo codice per il `Form1` classe.  
   
@@ -94,17 +94,17 @@ Uno dei vantaggi di Visual Studio è la possibilità di creare rapidamente appli
 ## <a name="next-steps"></a>Passaggi successivi  
  Questa applicazione fornisce un esempio di come è possibile usare <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ListView> insieme i controlli. Per altre informazioni su questi controlli, vedere gli argomenti seguenti:  
   
--   [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Procedura: Aggiungere funzionalità di ricerca a un controllo ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [Procedura: Aggiungere le funzionalità di ricerca a un controllo ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Procedura: Associare un menu di scelta rapida a un nodo di TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [Procedura: Associare un Menu di scelta rapida a un nodo di TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [Controllo ListView](listview-control-windows-forms.md)
-- [Procedura: Aggiungere e rimuovere nodi tramite il controllo TreeView di Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Procedura: Aggiungere colonne al controllo ListView di Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere e rimuovere nodi con il controllo TreeView di Windows Form](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere colonne al controllo ListView Windows Form](how-to-add-columns-to-the-windows-forms-listview-control.md)

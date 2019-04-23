@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
 ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331520"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Specifica del trasferimento di dati nei contratti di servizio
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Specifica delle proprietà Use e Style  
  I due stili più comunemente utilizzati per descrivere i servizi tramite Web Services Description Language (WSDL) sono Document e Remote Procedure Call (RPC). Nello stile Document, l'intero corpo del messaggio viene descritto utilizzando un unico schema e WSDL descrive le varie parti del corpo del messaggio facendo riferimento agli elementi di tale schema. Nello stile RPC, invece, WSDL descrive le varie parti del corpo del messaggio facendo riferimento a vari tipi di schema. In alcuni casi occorre selezionare manualmente uno di questi stili. A tale scopo è possibile applicare l'attributo <xref:System.ServiceModel.DataContractFormatAttribute> e impostare la proprietà `Style` (quando si utilizza il componente <xref:System.Runtime.Serialization.DataContractSerializer>) oppure impostare la proprietà `Style` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> (quando si utilizza il motore <xref:System.Xml.Serialization.XmlSerializer>).  
   
- Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato più comunemente accettato, ed è l'unica forma di <xref:System.Runtime.Serialization.DataContractSerializer> supporta. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP e non è consigliato per i nuovi servizi. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
+ Inoltre, l'oggetto <xref:System.Xml.Serialization.XmlSerializer> supporta due formati di XML serializzato: `Literal` e `Encoded`. `Literal` è il formato in genere più accettato ed è l'unico a essere supportato da <xref:System.Runtime.Serialization.DataContractSerializer>. `Encoded` è un formato legacy descritto nella sezione 5 della specifica SOAP ed è consigliabile evitarne l'utilizzo nei servizi più recenti. Per passare alla modalità `Encoded`, impostare la proprietà `Use` dell'attributo <xref:System.ServiceModel.XmlSerializerFormatAttribute> su `Encoded`.  
   
  Nella maggior parte dei casi è consigliabile evitare di modificare le impostazioni predefinite delle proprietà `Style` e `Use`.  
   
@@ -576,6 +576,6 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [Procedura: Abilitare il flusso](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [Procedura: Creare un contratto dati di base per una classe o una struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Uso della classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
+- [Procedura: Abilitare lo Streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Procedura: Creare un contratto di dati di base per una classe o struttura](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

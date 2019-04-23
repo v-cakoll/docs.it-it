@@ -3,10 +3,10 @@ title: Instance Locked Exception Action
 ms.date: 03/30/2017
 ms.assetid: 164a5419-315c-4987-ad72-54cbdb88d402
 ms.openlocfilehash: 0cb39c51436271999c66c30210e0da79adc92e72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326151"
 ---
 # <a name="instance-locked-exception-action"></a>Instance Locked Exception Action
@@ -20,7 +20,7 @@ La proprietà <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore
   
  La funzionalità Instance Locked Exception Action supporta gli scenari seguenti. In tutti gli scenari, se la proprietà instanceLockedExceptionAction dell'oggetto SqlWorkflowInstanceStore viene impostata su <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> o <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>, l'host tenta di nuovo di acquisire periodicamente e in modo trasparente il blocco sulle istanze.  
   
-1. **Abilitazione dell'arresto normale e del riciclo sovrapposto di domini dell'applicazione.** Si supponga che un **AppDomain** con un host del servizio in esecuzione di istanze del servizio del flusso di lavoro è in fase di riciclo e un nuovo **AppDomain** accede a gestire le nuove richieste mentre la vecchia  **AppDomain** è più disponibile. L'arresto attende finché le istanze del servizio flusso di lavoro non sono inattive, quindi le istanze vengono rese persistenti e scaricate. Eventuali tentativi dagli host nel nuovo **AppDomain** bloccare un'istanza causerà un <xref:System.Runtime.DurableInstancing.InstanceLockedException>.  
+1. **Abilitazione dell'arresto normale e riciclo sovrapposto di domini applicazione.** Si supponga che un **AppDomain** con un host del servizio in esecuzione di istanze del servizio del flusso di lavoro è in fase di riciclo e un nuovo **AppDomain** accede a gestire le nuove richieste mentre la vecchia  **AppDomain** è più disponibile. L'arresto attende finché le istanze del servizio flusso di lavoro non sono inattive, quindi le istanze vengono rese persistenti e scaricate. Eventuali tentativi dagli host nel nuovo **AppDomain** bloccare un'istanza causerà un <xref:System.Runtime.DurableInstancing.InstanceLockedException>.  
   
 2. **Ridimensionamento orizzontale dei flussi di lavoro durevoli in una farm omogenea di server.** Si supponga che un nodo di una server farm in cui è in esecuzione un'istanza del flusso di lavoro venga arrestato in modo anomalo e l'host del flusso di lavoro non possa rimuovere i blocchi sull'istanza che sta eseguendo. Quando un host del servizio che è in esecuzione in un altro nodo della farm riceve un messaggio per l'istanza di quel flusso di lavoro, tenta di acquisire i blocchi su queste istanze e riceverà l'eccezione <xref:System.Runtime.DurableInstancing.InstanceLockedException>. I blocchi scadranno dopo un po' di tempo perché l'host che doveva rinnovare il blocco non esiste più.  
   

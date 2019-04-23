@@ -3,10 +3,10 @@ title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
 ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331273"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
@@ -29,7 +29,7 @@ value [ NOT ] IN expression
  Qualsiasi espressione valida che restituisce la raccolta da testare per trovare una corrispondenza. Tutte le espressioni devono essere dello stesso tipo o di un tipo di base o derivato comune di `value`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se il valore viene trovato nella raccolta. null se il valore è null o la raccolta è null. in caso contrario, `false`. L'utilizzo di NOT IN consente di negare i risultati di IN.  
+ `true` se il valore viene trovato nella raccolta; null se il valore è null o se la raccolta è null; in caso contrario `false`. L'utilizzo di NOT IN consente di negare i risultati di IN.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore IN per determinare se un valore corrisponde a qualsiasi valore in una raccolta. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  

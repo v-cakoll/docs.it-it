@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
 ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326606"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Procedura: Aggiungere più set di impostazioni dell'applicazione in C\#
@@ -27,5 +27,5 @@ In alcuni casi, è consigliabile avere più set di impostazioni in un'applicazio
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
 - [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)
