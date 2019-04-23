@@ -3,10 +3,10 @@ title: Integrazione di Common Language Runtime di SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297500"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integrazione di Common Language Runtime di SQL Server
@@ -18,7 +18,7 @@ In SQL Server 2005 è stata introdotta l'integrazione del componente CLR di .NET
   
  **Documentazione online di SQL Server**  
   
-1. [Nozioni di base sulla programmazione con l'integrazione CLR](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [Concetti di programmazione integrazione di Common Language Runtime (CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione all'integrazione CLR in SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  

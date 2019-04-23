@@ -6,10 +6,10 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230096"
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedure consigliate per comunicazioni in coda
@@ -29,7 +29,7 @@ In questo argomento illustra le procedure consigliate per la comunicazione in co
  Per l'affidabilità end-to-end, impostare la proprietà <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> su `true` per garantire il trasferimento. La proprietà <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> può essere impostata su `true` o `false` a seconda delle necessità (l'impostazione predefinita è `true`). La proprietà <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> è generalmente impostata su `true` come parte dell'affidabilità end-to-end. Ciò implica un costo in termini di prestazioni, ma rende durevole il messaggio. In questo modo il messaggio non andrà perso se il gestore delle code si arresta in modo anomalo.  
   
 ### <a name="use-of-transactions"></a>Utilizzo delle transazioni  
- È necessario utilizzare le transazioni per garantire l'affidabilità end-to-end. `ExactlyOnce` garanzie assicurano solo che i messaggi vengano recapitati alla coda di destinazione. Per garantire che il messaggio venga ricevuto, utilizzare le transazioni. Se il servizio si arresta in modo anomalo e se si opera senza transazioni, è possibile che si verifichi la perdita del messaggio che sta per essere recapitato, ma che appare come effettivamente recapitato.  
+ È necessario utilizzare le transazioni per garantire l'affidabilità end-to-end. Le garanzie `ExactlyOnce` assicurano solo che i messaggi vengano recapitati alla coda di destinazione. Per garantire che il messaggio venga ricevuto, utilizzare le transazioni. Se il servizio si arresta in modo anomalo e se si opera senza transazioni, è possibile che si verifichi la perdita del messaggio che sta per essere recapitato, ma che appare come effettivamente recapitato.  
   
 ### <a name="use-of-dead-letter-queues"></a>Utilizzo delle code dei messaggi non recapitabili  
  Le code dei messaggi non recapitabili assicurano la ricezione di una notifica se un messaggio non viene recapitato alla coda di destinazione. È possibile utilizzare la coda dei messaggi non recapitabili fornita dal sistema o una personalizzata. È generalmente consigliato l'utilizzo di una coda dei messaggi non recapitabili personalizzata poiché consente di inviare messaggi non recapitabili da una singola applicazione a un'unica coda dei messaggi non recapitabili. In caso contrario, tutti i messaggi non recapitabili che si verificano per tutte le applicazioni in esecuzione nel sistema vengono recapitati a un'unica coda. Ogni applicazione deve quindi cercare nella coda dei messaggi non recapitabili per trovare quelli pertinenti per quell'applicazione. L'utilizzo di una coda dei messaggi non recapitabili personalizzata a volte non è possibile, ad esempio quando si utilizza MSMQ 3.0.  
@@ -41,7 +41,7 @@ In questo argomento illustra le procedure consigliate per la comunicazione in co
 ### <a name="use-of-poison-message-handling"></a>Utilizzo della gestione dei messaggi non elaborabili  
  La gestione dei messaggi non elaborabili consente il ripristino dopo un errore per proseguire l'elaborazione dei messaggi.  
   
- Quando si utilizza la funzionalità di gestione dei messaggi non elaborabili, verificare che la proprietà <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> sia impostata sul valore appropriato. L'impostazione della proprietà su <xref:System.ServiceModel.ReceiveErrorHandling.Drop> significa che i dati vanno persi. L'impostazione della proprietà su <xref:System.ServiceModel.ReceiveErrorHandling.Fault> genera invece errori nell'host del servizio quando viene rilevato un messaggio non elaborabile. Se si utilizza MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> è l'opzione migliore per evitare perdite di dati e per spostare il messaggio non elaborabile. Se si utilizza MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> costituisce l'approccio consigliato. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Sposta un messaggio non elaborabile fuori dalla coda in modo che il servizio di proseguire nell'elaborazione di nuovi messaggi. Il servizio dei messaggi non elaborabili è in grado quindi di elaborare separatamente il messaggio non elaborabile.  
+ Quando si utilizza la funzionalità di gestione dei messaggi non elaborabili, verificare che la proprietà <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> sia impostata sul valore appropriato. L'impostazione della proprietà su <xref:System.ServiceModel.ReceiveErrorHandling.Drop> significa che i dati vanno persi. L'impostazione della proprietà su <xref:System.ServiceModel.ReceiveErrorHandling.Fault> genera invece errori nell'host del servizio quando viene rilevato un messaggio non elaborabile. Se si utilizza MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> è l'opzione migliore per evitare perdite di dati e per spostare il messaggio non elaborabile. Se si utilizza MSMQ 4.0, <xref:System.ServiceModel.ReceiveErrorHandling.Move> costituisce l'approccio consigliato. Il campo <xref:System.ServiceModel.ReceiveErrorHandling.Move> sposta un messaggio non elaborabile fuori dalla coda consentendo al servizio di proseguire nell'elaborazione di nuovi messaggi. Il servizio dei messaggi non elaborabili è in grado quindi di elaborare separatamente il messaggio non elaborabile.  
   
  Per altre informazioni, vedere [messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
@@ -77,20 +77,20 @@ In questo argomento illustra le procedure consigliate per la comunicazione in co
   
 -   Il corpo del messaggio WCF non è quello utilizzato per il corpo del messaggio MSMQ. Quando si invia un messaggio WCF utilizzando un'associazione in coda, il corpo del messaggio WCF viene posizionata all'interno di un messaggio MSMQ. L'infrastruttura MSMQ vede solo il messaggio MSMQ ignorando queste informazioni aggiuntive.  
   
--   `MsmqIntegrationBinding` supporta i tipi con serializzazione più diffusi. In base al tipo di serializzazione, il tipo del corpo del messaggio generico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prende parametri di tipo diverso. <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>, ad esempio, richiede `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> e `MsmqMessage<Stream>` richiede .  
+-   `MsmqIntegrationBinding` supporta i tipi di serializzazione più comuni. In base al tipo di serializzazione, il tipo del corpo del messaggio generico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prende parametri di tipo diverso. <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>, ad esempio, richiede `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> e `MsmqMessage<Stream>` richiede .  
   
 -   Con la serializzazione XML, è possibile specificare il tipo conosciuto utilizzando il `KnownTypes` attributo la [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento che viene quindi usato per determinare come deserializzare il messaggio XML.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Accodamento in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Procedura: Scambiare messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Procedura: Scambiare messaggi con endpoint WCF e con applicazioni di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Procedura: Lo scambio di messaggi in coda con endpoint WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Procedura: Scambiare messaggi con endpoint WCF e le applicazioni di Accodamento messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Raggruppamento di messaggi in coda in una sessione](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
-- [Raggruppamento di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
-- [Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
+- [Uso di code di messaggi non recapitabili per gestire gli errori di trasferimento dei messaggi](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [Gestione dei messaggi non elaborabili](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
 - [Differenze nelle funzionalità di accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [Protezione dei messaggi mediante protezione del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Protezione dei messaggi mediante protezione a livello di messaggio](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
+- [Protezione dei messaggi mediante la sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Protezione dei messaggi mediante la sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
 - [Risoluzione dei problemi relativi ai messaggi in coda](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

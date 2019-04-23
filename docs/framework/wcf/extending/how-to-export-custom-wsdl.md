@@ -3,10 +3,10 @@ title: 'Procedura: Esportare informazioni WSDL personalizzate'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
 ms.openlocfilehash: 725e1b27f36716002ad7cd05183181da9e05fa65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296420"
 ---
 # <a name="how-to-export-custom-wsdl"></a>Procedura: Esportare informazioni WSDL personalizzate
@@ -16,7 +16,7 @@ In questo argomento viene illustrato come esportare informazioni WSDL personaliz
   
 1. Implementare l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension>. Questa interfaccia può essere implementata in una classe che implementa una delle interfacce seguenti: <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior> o <xref:System.ServiceModel.Description.IEndpointBehavior>. Può inoltre essere implementata in una classe derivata della classe <xref:System.ServiceModel.Channels.BindingElement>. In questo esempio l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> viene implementata in una classe di attributo che implementa l'interfaccia <xref:System.ServiceModel.Description.IContractBehavior>.  
   
-2. <xref:System.ServiceModel.Description.IWsdlExportExtension> definisce due metodi <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> e <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Questi metodi consentono di modificare e/o aggiungere informazioni aggiuntive nel contesto <xref:System.ServiceModel.Description.WsdlContractConversionContext>. In questo esempio il metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> viene utilizzato per recuperare una raccolta di oggetti <xref:System.ServiceModel.Description.OperationDescription>. All'interno di questa raccolta viene quindi eseguita una ricerca per verificare la presenza di un attributo `WsdlDocumentationAttribute`. Se la ricerca ha esito positivo, il sistema estrae il testo associato all'attributo trovato, genera un elemento riassuntivo e quindi aggiunge tale elemento all'elemento `DocumentationElement` dell'operazione.  
+2. L'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> definisce due metodi: <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> e <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Questi metodi consentono di modificare e/o aggiungere informazioni aggiuntive nel contesto <xref:System.ServiceModel.Description.WsdlContractConversionContext>. In questo esempio il metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> viene utilizzato per recuperare una raccolta di oggetti <xref:System.ServiceModel.Description.OperationDescription>. All'interno di questa raccolta viene quindi eseguita una ricerca per verificare la presenza di un attributo `WsdlDocumentationAttribute`. Se la ricerca ha esito positivo, il sistema estrae il testo associato all'attributo trovato, genera un elemento riassuntivo e quindi aggiunge tale elemento all'elemento `DocumentationElement` dell'operazione.  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
 ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230200"
 ---
 # <a name="wcf-data-services-client-library"></a>Libreria client WCF Data Services
@@ -42,13 +42,13 @@ Un'applicazione può interagire con un servizio dati basato su [!INCLUDE[ssOData
  [Associazione di dati a controlli](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Viene descritto come associare controlli a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed restituito da un servizio dati.  
   
- [Chiamata alle operazioni di servizio](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
+ [Operazioni del servizio di chiamata](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
  Viene descritto come usare la libreria client per chiamare le operazioni del servizio.  
   
  [Gestione del contesto del servizio dati](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  Vengono descritte le opzioni per la gestione del comportamento della libreria client.  
   
- [Uso di dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [Utilizzo di dati binari](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Viene descritto come accedere e apportare modifiche ai dati binari restituiti dal servizio dati come flusso di dati.  
   
 ## <a name="see-also"></a>Vedere anche

@@ -3,10 +3,10 @@ title: Sessioni, istanze e concorrenza
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229069"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessioni, istanze e concorrenza
@@ -29,11 +29,11 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
  Se si ha familiarità con le <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazioni e le funzionalità offre, è possibile notare le differenze seguenti tra quel tipo di sessioni e le sessioni WCF:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le sessioni sono sempre avviate dal server.  
+-   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le sessioni sono implicitamente non ordinate.  
+-   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono implicitamente non ordinate.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le sessioni forniscono un meccanismo di archiviazione dati generale in tutte le richieste.  
+-   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] forniscono un meccanismo di archiviazione dati generale tramite richieste.  
   
  Le applicazioni client e le applicazioni di servizio interagiscono con le sessioni in modi diversi. Le applicazioni client avviano sessioni e quindi ricevono ed elaborano i messaggi inviati all'interno della sessione. Le applicazioni di servizio possono utilizzare le sessioni come punto di estensibilità per aggiungere comportamenti. Ciò si ottiene utilizzando direttamente <xref:System.ServiceModel.InstanceContext> o implementando un provider di contesto dell'istanza personalizzato.  
   
@@ -111,7 +111,7 @@ public class CalculatorService : ICalculatorConcurrency
 
 - [Uso di sessioni](../../../../docs/framework/wcf/using-sessions.md)
 - [Procedura: Creare un servizio che richiede sessioni](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [Procedura: Controllare l'istanza del servizio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Procedura: Controllare le istanze del servizio](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Concorrenza](../../../../docs/framework/wcf/samples/concurrency.md)
-- [creazione di istanze](../../../../docs/framework/wcf/samples/instancing.md)
+- [Creazione di istanze](../../../../docs/framework/wcf/samples/instancing.md)
 - [Sessione](../../../../docs/framework/wcf/samples/session.md)

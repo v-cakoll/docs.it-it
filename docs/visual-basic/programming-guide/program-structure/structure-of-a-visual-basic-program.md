@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295770"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struttura di un programma Visual Basic
@@ -22,9 +22,9 @@ Un programma Visual Basic è composto da blocchi di compilazione standard. Ogget
 ## <a name="file-level-programming-elements"></a>Elementi di programmazione a livello di file  
  Quando si avvia un progetto o un file e aprire l'editor di codice, viene visualizzato un codice già in uso e nell'ordine corretto. Qualsiasi codice che si scrive deve seguire la sequenza seguente:  
   
-1. `Option` istruzioni  
+1. `Option` Istruzioni  
   
-2. `Imports` istruzioni  
+2. `Imports` Istruzioni  
   
 3. `Namespace` istruzioni e gli elementi a livello di spazio dei nomi  
   
@@ -64,11 +64,11 @@ Un programma Visual Basic è composto da blocchi di compilazione standard. Ogget
   
 -   [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   

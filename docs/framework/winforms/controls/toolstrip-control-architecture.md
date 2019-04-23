@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296212"
 ---
 # <a name="toolstrip-control-architecture"></a>Architettura del controllo ToolStrip
@@ -316,7 +316,7 @@ Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripI
  <xref:System.Windows.Forms.ToolStripMenuItem> è un <xref:System.Windows.Forms.ToolStripDropDownItem> che interagisce con <xref:System.Windows.Forms.ToolStripDropDownMenu> e <xref:System.Windows.Forms.ContextMenuStrip> per gestire la disposizione di colonna, layout e l'evidenziazione speciale per i menu.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> aspetto <xref:System.Windows.Forms.ToolStripButton>, ma mostra un'area di riepilogo a discesa quando viene selezionato dall'utente. Visualizzare o nascondere la freccia giù, impostando il <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> proprietà. <xref:System.Windows.Forms.ToolStripDropDownButton> Ospita una <xref:System.Windows.Forms.ToolStripOverflowButton> che consente di visualizzare gli elementi di overflow di <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> aspetto <xref:System.Windows.Forms.ToolStripButton>, ma mostra un'area di riepilogo a discesa quando viene selezionato dall'utente. Visualizzare o nascondere la freccia giù, impostando il <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> proprietà. <xref:System.Windows.Forms.ToolStripDropDownButton> ospita una <xref:System.Windows.Forms.ToolStripOverflowButton> che consente di visualizzare gli elementi di overflow di <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> Combina le funzionalità di pulsante e pulsante a discesa.  
@@ -378,7 +378,7 @@ Il <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.ToolStripI
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Riepilogo della tecnologia ToolStrip](toolstrip-technology-summary.md)
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)
 - [Controllo MenuStrip](menustrip-control-windows-forms.md)

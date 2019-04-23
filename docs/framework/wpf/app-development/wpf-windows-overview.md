@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296121"
 ---
 # <a name="wpf-windows-overview"></a>Cenni preliminari sulle finestre WPF
@@ -108,9 +108,9 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configurazione di una definizione di finestra per MSBuild  
  Modalità di implementazione di finestra determina come viene configurata per [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Per una finestra che viene definita con entrambi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] markup e code-behind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file di markup sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` elementi.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file di markup sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementi.  
   
--   File code-behind sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` elementi.  
+-   File code-behind sono configurati come [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementi.  
   
  Come illustrato nell'esempio seguente [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] file di progetto.  
   
@@ -257,7 +257,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- Il <xref:System.Windows.Window.Closing> gestore dell'evento viene passato un <xref:System.ComponentModel.CancelEventArgs>, che implementa il `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà che è impostato su `true` per impedire la chiusura di una finestra.  
+ Il <xref:System.Windows.Window.Closing> gestore dell'evento viene passato un <xref:System.ComponentModel.CancelEventArgs>, che implementa il `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> proprietà che è impostato su `true` per impedire la chiusura di una finestra.  
   
  Se <xref:System.Windows.Window.Closing> non viene gestita, o viene gestito ma non annullato, la finestra verrà chiusa. Appena prima della chiusura di una finestra in realtà, <xref:System.Windows.Window.Closed> viene generato. A questo punto, non è più possibile impedire la chiusura di una finestra.  
   
@@ -272,7 +272,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 -   La finestra principale dell'applicazione viene chiusa e <xref:System.Windows.Application.ShutdownMode%2A> è <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
--   <xref:System.Windows.Application.Shutdown%2A> viene chiamato.  
+-   Chiamata del metodo <xref:System.Windows.Application.Shutdown%2A>.  
   
 > [!NOTE]
 >  Una volta chiusa, una finestra non può più essere riaperta.  
@@ -293,7 +293,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
  È anche possibile specificare la posizione iniziale di una <xref:System.Windows.Window> quando viene visualizzato per impostazione il <xref:System.Windows.Window.WindowStartupLocation%2A> proprietà con uno dei seguenti <xref:System.Windows.WindowStartupLocation> valori di enumerazione:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (predefinito)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (impostazione predefinita)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -381,7 +381,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
  Lo stato di una finestra può essere configurato impostando il <xref:System.Windows.Window.WindowState%2A> proprietà, che può avere uno dei seguenti <xref:System.Windows.WindowState> valori di enumerazione:  
   
--   <xref:System.Windows.WindowState.Normal> (predefinito)  
+-   <xref:System.Windows.WindowState.Normal> (impostazione predefinita)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (predefinito)  
+-   <xref:System.Windows.ResizeMode.CanResize> (impostazione predefinita)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ Gli utenti interagiscono con le applicazioni autonome di Windows Presentation Fo
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (predefinito)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (impostazione predefinita)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -485,5 +485,5 @@ L'aspetto predefinito di una finestra include un pulsante della barra delle appl
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Cenni preliminari sulle finestre di dialogo](dialog-boxes-overview.md)
+- [Panoramica sulle finestre di dialogo](dialog-boxes-overview.md)
 - [Compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)

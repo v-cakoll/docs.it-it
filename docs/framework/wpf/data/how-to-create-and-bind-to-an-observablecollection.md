@@ -9,10 +9,10 @@ helpviewer_keywords:
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
 ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188435"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procedura: Creare ed eseguire il binding a una classe ObservableCollection
@@ -143,7 +143,7 @@ End Class
 ## <a name="see-also"></a>Vedere anche
 
 - [Ordinare i dati in una visualizzazione](how-to-sort-data-in-a-view.md)
-- [Filtrare i dati in una visualizzazione](how-to-filter-data-in-a-view.md)
-- [Ordinare e raggruppare dati tramite una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Filtrare i dati di una visualizzazione](how-to-filter-data-in-a-view.md)
+- [Ordinare e raggruppare dati con una visualizzazione in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

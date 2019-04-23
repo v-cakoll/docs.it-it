@@ -7,10 +7,10 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295900"
 ---
 # <a name="document-serialization-and-storage"></a>Serializzazione e archiviazione di documenti
@@ -39,7 +39,7 @@ Microsoft .NET Framework fornisce un ambiente avanzato per la creazione e visual
     -   Supporto dell'interfaccia utente per impostazioni e opzioni di runtime personalizzate.  
   
 ### <a name="xps-print-path"></a>Percorso di stampa XPS  
- Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] percorso di stampa fornisce inoltre un meccanismo estensibile per la scrittura di documenti tramite l'output di stampa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] funge da entrambi un formato di file di documento ed è il formato nativo dello spool di stampa per [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] i documenti possono essere inviati direttamente a [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-stampanti compatibili con senza la necessità per la conversione in un formato intermedio.  Vedere [Cenni preliminari sulla stampa](printing-overview.md) per altre informazioni sulle opzioni e le funzionalità dell'output del percorso di stampa.  
+ Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] percorso di stampa fornisce inoltre un meccanismo estensibile per la scrittura di documenti tramite l'output di stampa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] funge sia da formato di file di documento che da formato nativo dello spool di stampa per documenti [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  I documenti [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] possono essere inviati direttamente alle stampanti compatibili con [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] senza la necessità di essere convertiti in un formato intermedio.  Vedere [Cenni preliminari sulla stampa](printing-overview.md) per altre informazioni sulle opzioni e le funzionalità dell'output del percorso di stampa.  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Serializzatori plug-in  
@@ -48,7 +48,7 @@ Microsoft .NET Framework fornisce un ambiente avanzato per la creazione e visual
  I serializzatori plug-in garantiscono agli sviluppatori di applicazioni estensibilità per nuovi progetti di archiviazione e formati di file, senza la necessità di scrivere direttamente codice per ogni potenziale formato in fase di compilazione.  I serializzatori plug-in sono utili anche agli sviluppatori di terze parti in quanto forniscono un metodo standardizzato per distribuire, installare e aggiornare plug-in accessibili al sistema per formati di file personalizzati o proprietari.  
   
 ### <a name="using-a-plug-in-serializer"></a>Uso di un serializzatore plug-in  
- I serializzatori plug-in sono semplici da usare.  Il <xref:System.Windows.Documents.Serialization.SerializerProvider> classe enumera una <xref:System.Windows.Documents.Serialization.SerializerDescriptor> dell'oggetto per ogni plug-in installato nel sistema.  Il <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> proprietà Filtra in base alla configurazione corrente il plug-in installati e verifica che il serializzatore può essere caricato e usato dall'applicazione.  Il <xref:System.Windows.Documents.Serialization.SerializerDescriptor> fornisce anche altre proprietà, ad esempio <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, quale l'applicazione può usare per richiedere all'utente di selezionare un serializzatore per un formato di output disponibile.  Un serializzatore plug-in predefinito per [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] viene fornito con .NET Framework ed è sempre enumerato.  Dopo che l'utente seleziona un formato di output, il <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> metodo viene utilizzato per creare un <xref:System.Windows.Documents.Serialization.SerializerWriter> per il formato specifico.  Oggetto <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> metodo può quindi essere chiamato per il flusso di documenti nell'archivio dati di output.  
+ I serializzatori plug-in sono semplici da usare.  Il <xref:System.Windows.Documents.Serialization.SerializerProvider> classe enumera una <xref:System.Windows.Documents.Serialization.SerializerDescriptor> dell'oggetto per ogni plug-in installato nel sistema.  Il <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> proprietà Filtra in base alla configurazione corrente il plug-in installati e verifica che il serializzatore può essere caricato e usato dall'applicazione.  Il <xref:System.Windows.Documents.Serialization.SerializerDescriptor> fornisce anche altre proprietà, ad esempio <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> e <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, quale l'applicazione può usare per richiedere all'utente di selezionare un serializzatore per un formato di output disponibile.  Un serializzatore plug-in predefinito per [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] viene fornito con .NET Framework ed è sempre enumerato.  Dopo che l'utente seleziona un formato di output, il <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> metodo viene utilizzato per creare un <xref:System.Windows.Documents.Serialization.SerializerWriter> per il formato specifico.  L'elemento language <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> metodo può quindi essere chiamato per il flusso di documenti nell'archivio dati di output.  
   
  L'esempio seguente illustra un'applicazione che utilizza il <xref:System.Windows.Documents.Serialization.SerializerProvider> metodo in una proprietà "PlugInFileFilter".  La proprietà PlugInFileFilter enumera i plug-in installati e compila una stringa di filtro con le opzioni di file disponibili per un <xref:Microsoft.Win32.SaveFileDialog>.  
   
@@ -77,5 +77,5 @@ Microsoft .NET Framework fornisce un ambiente avanzato per la creazione e visual
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Documenti in WPF](documents-in-wpf.md)
-- [Cenni preliminari sulla stampa](printing-overview.md)
-- [XML Paper Specification: Panoramica](https://go.microsoft.com/fwlink?LinkID=106246)
+- [Panoramica della stampa](printing-overview.md)
+- [XML Paper Specification: panoramica](https://go.microsoft.com/fwlink?LinkID=106246)
