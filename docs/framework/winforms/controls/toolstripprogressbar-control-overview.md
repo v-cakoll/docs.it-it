@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
 ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162111"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976352"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>Cenni preliminari sul controllo ToolStripProgressBar
 Il <xref:System.Windows.Forms.ToolStripProgressBar> combina il raggruppamento verticale/orizzontale e le funzionalità di rendering di tutte le <xref:System.Windows.Forms.ToolStrip> controlli con la tipica funzionalità di rilevamento di processo. Oggetto <xref:System.Windows.Forms.ToolStripProgressBar> è generalmente ospitato da <xref:System.Windows.Forms.StatusStrip>e meno frequentemente in un <xref:System.Windows.Forms.ToolStrip>.  

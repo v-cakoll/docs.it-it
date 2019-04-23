@@ -3,10 +3,10 @@ title: Proprietà e separazione tra schemi e utenti in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221860"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Proprietà e separazione tra schemi e utenti in SQL Server
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Distinzione tra utente e schema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
+|[Separazione Schema-utente](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Vengono descritte le modifiche introdotte dalla distinzione tra utente e schema, tra cui il nuovo comportamento, l'impatto sulla proprietà, le visualizzazioni del catalogo e le autorizzazioni.|  
   
 ## <a name="see-also"></a>Vedere anche
 

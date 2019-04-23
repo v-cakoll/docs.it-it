@@ -13,10 +13,10 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304805"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
@@ -165,7 +165,7 @@ ms.locfileid: "59304805"
  Queste attività sono descritte in dettaglio nelle sottosezioni seguenti.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Configurazione della pipeline e del componente aggiuntivo per la distribuzione ClickOnce  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] vengono scaricate ed eseguire da una cartella sicura nel [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] cache di distribuzione. Affinché un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ospiti un componente aggiuntivo, anche l'assembly della pipeline e del componente aggiuntivo deve essere scaricato nella cartella sicura. A tale scopo, è necessario configurare il manifesto dell'applicazione per includere l'assembly della pipeline e del componente aggiuntivo per il download. Questo risulta più semplice in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], anche se l'assembly della pipeline e del componente aggiuntivo deve trovarsi nella cartella radice del progetto di applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] host affinché [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] rilevi gli assembly della pipeline.  
+ Le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] vengono scaricate in una cartella sicura nella cache di distribuzione [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] ed eseguite da questa posizione. Affinché un'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ospiti un componente aggiuntivo, anche l'assembly della pipeline e del componente aggiuntivo deve essere scaricato nella cartella sicura. A tale scopo, è necessario configurare il manifesto dell'applicazione per includere l'assembly della pipeline e del componente aggiuntivo per il download. Questo risulta più semplice in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], anche se l'assembly della pipeline e del componente aggiuntivo deve trovarsi nella cartella radice del progetto di applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] host affinché [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] rilevi gli assembly della pipeline.  
   
  Di conseguenza, il primo passaggio consiste nel compilare l'assembly della pipeline e del componente aggiuntivo nella radice del progetto di applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], impostando l'output di compilazione di ogni progetto di assembly della pipeline e di assembly del componente aggiuntivo. La tabella seguente mostra i percorsi dell'output di compilazione per i progetti di assembly della pipeline e il progetto di assembly del componente aggiuntivo che si trovano nella stessa soluzione e cartella radice del progetto di applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] host.  
   
@@ -283,8 +283,8 @@ ms.locfileid: "59304805"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.LoaderOptimizationAttribute>
-- [Componenti aggiuntivi ed estensibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Domini applicazione](../../app-domains/application-domains.md)
-- [Panoramica di .NET Framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
-- [Impostazione degli oggetti per essere utilizzabili in remoto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Procedure relative](how-to-topics.md)
+- [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Domini dell'applicazione](../../app-domains/application-domains.md)
+- [Panoramica di .NET framework Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Oggetti remotizzabili](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
+- [Procedure relative alle proprietà](how-to-topics.md)

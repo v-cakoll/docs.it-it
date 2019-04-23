@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186095"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975754"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedura: Creare una sfumatura percorso
 Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personalizzare il modo in cui riempire una forma con gradualmente la modifica dei colori. Ad esempio, è possibile specificare un colore per il centro di un percorso e un altro per il limite di un percorso. È anche possibile specificare colori separati per ognuno dei vari punti lungo il bordo di un percorso.  
   
 > [!NOTE]
->  Nelle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un percorso è una sequenza di linee e curve gestita da un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Per altre informazioni sulle [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] percorsi, vedere [percorsi di oggetti Graphics in GDI+](graphics-paths-in-gdi.md) e [costruzione e creazione di percorsi](constructing-and-drawing-paths.md).  
-  
+>  In GDI+, un percorso è una sequenza di linee e curve gestita da un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Per altre informazioni sui percorsi di GDI+, vedere [percorsi di oggetti Graphics in GDI+](graphics-paths-in-gdi.md) e [costruzione e creazione di percorsi](constructing-and-drawing-paths.md).  
+
+Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:System.Windows.Forms.Control.Paint> gestore dell'evento.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Per compilare un'ellisse con una sfumatura percorso  
   
 -   Nell'esempio seguente viene compilato un'ellisse con un pennello a sfumatura. Colore centrale è impostato su blu e il colore del limite è impostato su azzurro. La figura seguente mostra l'ellisse piena.  
@@ -30,7 +32,7 @@ Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personal
   
      Per impostazione predefinita, un pennello a sfumatura non si estende all'esterno dei limiti del percorso. Se si usa il pennello a sfumatura per riempire una figura di seguito che si estende oltre il limite del percorso, l'area dello schermo all'esterno del percorso non essere compilato.  
   
-     La figura seguente mostra cosa accade se si modifica il <xref:System.Drawing.Graphics.FillEllipse%2A> chiamare il codice seguente a `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     La figura seguente mostra cosa accade se si modifica il <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> chiamare il codice seguente a `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Percorso sfumatura estesa oltre i limiti del percorso.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
