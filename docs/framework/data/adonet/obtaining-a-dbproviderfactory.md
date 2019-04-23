@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097408"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Recupero di un oggetto DbProviderFactory
@@ -41,7 +41,7 @@ Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory
   
 |Ordinale colonna|Nome colonna|Output esempio|Descrizione|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**Nome**|Provider di dati SqlClient|Nome leggibile del provider di dati|  
+|0|**Name**|Provider di dati SqlClient|Nome leggibile del provider di dati|  
 |1|**Descrizione**|Provider di dati .NET Framework per SQL Server|Descrizione leggibile del provider di dati|  
 |2|**InvariantName**|System.Data.SqlClient|Nome da usare a livello di codice per fare riferimento al provider di dati|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Nome completo della classe factory, che contiene informazioni sufficienti per creare un'istanza dell'oggetto|  
@@ -97,7 +97,7 @@ Il processo di recupero di un oggetto <xref:System.Data.Common.DbProviderFactory
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Oggetti DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Utilizzo delle classi di configurazione](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
-- [Cenni preliminari su ADO.NET](ado-net-overview.md)
+- [Uso delle classi di configurazione](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [Panoramica di ADO.NET](ado-net-overview.md)

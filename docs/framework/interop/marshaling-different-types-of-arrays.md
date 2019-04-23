@@ -11,10 +11,10 @@ ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095100"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshalling di diversi tipi di matrici
@@ -116,5 +116,5 @@ typedef struct _MYPERSON
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi di dati PInvoke](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [Tipi di dati platform invoke](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Creazione di prototipi nel codice gestito](creating-prototypes-in-managed-code.md)

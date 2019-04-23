@@ -10,10 +10,10 @@ helpviewer_keywords:
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
 ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087690"
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Procedura: Aggiungere un percorso personalizzato a una finestra di dialogo File
@@ -40,4 +40,4 @@ Le finestre di dialogo predefinite Apri e Salva in [!INCLUDE[wiprlhext](../../..
 
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
-- [GUID di cartella nota per percorsi personalizzati della finestra di dialogo File.](known-folder-guids-for-file-dialog-custom-places.md)
+- [GUID di cartella nota per percorsi personalizzati della finestra di dialogo File](known-folder-guids-for-file-dialog-custom-places.md)

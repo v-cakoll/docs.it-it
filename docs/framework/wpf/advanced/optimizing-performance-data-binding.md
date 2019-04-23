@@ -6,14 +6,14 @@ helpviewer_keywords:
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
 ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087833"
 ---
 # <a name="optimizing-performance-data-binding"></a>Ottimizzazione delle prestazioni: Data binding
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associazione di dati fornisce un modo semplice e coerente per le applicazioni presentare e interagire con i dati. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e interagire con essi. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  Questo argomento offre utili suggerimenti sulle prestazioni del data binding.  
 
@@ -35,7 +35,7 @@ ms.locfileid: "59087833"
   
  La tabella seguente confronta la velocità di data binding il <xref:System.Windows.Controls.TextBlock.Text%2A> proprietà di mille <xref:System.Windows.Controls.TextBlock> elementi utilizzando questi tre metodi.  
   
-|**Binding della proprietà di testo di un elemento TextBlock**|**Tempo di binding (ms)**|**Tempo di rendering: include il binding (ms)**|  
+|**Binding della proprietà Text di un TextBlock**|**Tempo di binding (ms)**|**Tempo di rendering: include il binding (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |A una proprietà di un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
 |Per una proprietà di un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetto che implementa <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
@@ -69,18 +69,18 @@ ms.locfileid: "59087833"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Non convertire oggetti CLR in XML solo per il data binding  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Consente l'associazione di dati a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] contenuto; tuttavia, l'associazione dati a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] il contenuto è più lento rispetto al data binding a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetti. Non convertire dati di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a XML se l'unico scopo è il data binding.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di eseguire il data binding a contenuti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]; il data binding a contenuti [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], tuttavia, è più lento rispetto al data binding a oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Non convertire dati di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] a XML se l'unico scopo è il data binding.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
 - [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e progettazione](optimizing-performance-layout-and-design.md)
-- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
-- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
-- [Testo](optimizing-performance-text.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [per](optimizing-performance-text.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)
 - [Panoramica sul data binding](../data/data-binding-overview.md)
-- [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

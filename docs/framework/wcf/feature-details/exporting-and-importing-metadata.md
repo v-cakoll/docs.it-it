@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091941"
 ---
 # <a name="exporting-and-importing-metadata"></a>Esportazione e importazione di metadati
@@ -48,19 +48,19 @@ In Windows Communication Foundation (WCF), l'esportazione dei metadati è il pro
  Il tipo <xref:System.ServiceModel.Description.WsdlExporter> esegue il rethrow di qualsiasi eccezione intercettata durante il processo di esportazione. Queste eccezioni non vengono acquisite come errori nella proprietà `Errors`. Quando <xref:System.ServiceModel.Description.WsdlExporter> genera un'eccezione, si trova in uno stato di errore e non può essere riutilizzato. <xref:System.ServiceModel.Description.WsdlExporter> aggiunge avvisi alla sua proprietà `Errors` quando non è possibile esportare un'operazione perché utilizza azioni con caratteri jolly e quando vengono riscontrati nomi di associazioni duplicati.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Procedura: Importare metadati in endpoint del servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Procedura: Importare metadati negli endpoint di servizio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Descrive come importare i metadati scaricati in oggetti di descrizione.  
   
- [Procedura: Esportare metadati da endpoint del servizio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Procedura: Esportare metadati dagli endpoint di servizio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Descrive come esportare oggetti di descrizione in metadati.  
   
- [ServiceDescription e riferimento a WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [Informazioni di riferimento su ServiceDescription e WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Descrive il mapping tra gli oggetti di descrizione e WSDL.  
   
  [Procedura: Usare Svcutil.exe per esportare metadati dal codice del servizio compilato](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Descrive l'utilizzo di Svcutil.exe per esportare metadati per servizi, contratti e tipi di dati in assembly compilati:  
   
- [Riferimento allo schema del contratto dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [Informazioni di riferimento sullo schema del contratto di dati](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  Descrive il sottoinsieme dell'XML Schema (XSD) utilizzato da <xref:System.Runtime.Serialization.DataContractSerializer> per descrivere i tipi Common Language Runtime (CLR) per la serializzazione XML.  
   
 ## <a name="reference"></a>Riferimenti  

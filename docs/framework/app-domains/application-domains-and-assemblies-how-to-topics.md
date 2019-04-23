@@ -8,16 +8,16 @@ ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1610322e33be81a109dec1cd1d189544a33b17d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095517"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Argomenti relativi alle procedure per domini applicazione e assembly
 Le sezioni seguenti forniscono collegamenti a tutte le procedure contenute nella documentazione concettuale per la programmazione con domini applicazione e assembly.  
   
- **Domini applicazione**  
+ **Domini dell'applicazione**  
   
 -   [Procedura: Creare un dominio dell'applicazione](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
   

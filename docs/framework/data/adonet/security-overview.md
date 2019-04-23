@@ -3,10 +3,10 @@ title: Sicurezza Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089861"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
@@ -66,8 +66,8 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Sicurezza dell'accesso al codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Vengono descritte le interazioni tra la sicurezza dall'accesso del codice, la sicurezza basata sui ruoli e gli ambienti parzialmente attendibili dal punto di vista delle applicazioni ADO.NET.|  
-|[Sicurezza per l'accesso al codice](../../../../docs/framework/misc/code-access-security.md)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
+|[Sicurezza dell'accesso di codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Vengono descritte le interazioni tra la sicurezza dall'accesso del codice, la sicurezza basata sui ruoli e gli ambienti parzialmente attendibili dal punto di vista delle applicazioni ADO.NET.|  
+|[Sicurezza dall'accesso di codice](../../../../docs/framework/misc/code-access-security.md)|Contiene collegamenti ad argomenti aggiuntivi in cui viene descritta la sicurezza dall'accesso di codice in .NET Framework.|  
   
 ## <a name="database-security"></a>Sicurezza dei database  
  Il principio dei privilegi minimi si applica anche all'origine dati. Le linee guida generali per la sicurezza dei database includono:  

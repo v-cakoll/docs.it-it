@@ -3,10 +3,10 @@ title: Archivio di istanze del flusso di lavoro SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086572"
 ---
 # <a name="sql-workflow-instance-store"></a>Archivio di istanze del flusso di lavoro SQL
@@ -24,17 +24,17 @@ ms.locfileid: "59086572"
   
 -   [Proprietà dell'archivio di istanze del flusso di lavoro SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i servizi del flusso di lavoro](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
 -   [Attivazione di istanze](instance-activation.md)  
   
 -   [Supporto per le query](support-for-queries.md)  
   
--   [Estensibilità dell'archivio](store-extensibility.md)  
+-   [Estendibilità dell'archivio](store-extensibility.md)  
   
 -   [Sicurezza](security.md)  
   
--   [Database di persistenza SQL Server](sql-server-persistence-database.md)  
+-   [Database di persistenza di SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

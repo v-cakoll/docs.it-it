@@ -8,10 +8,10 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092188"
 ---
 # <a name="richtextbox-how-to-topics"></a>Procedure relative al controllo RichTextBox
@@ -19,7 +19,7 @@ In questa sezione vengono forniti esempi che illustrano come eseguire attività 
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Estrarre il contenuto di testo da un oggetto RichTextBox](how-to-extract-the-text-content-from-a-richtextbox.md)  
- [Modifica della selezione a livello di codice in un oggetto RichTextBox](change-selection-in-a-richtextbox-programmatically.md)  
+ [Modificare la selezione a livello di codice in un oggetto RichTextBox](change-selection-in-a-richtextbox-programmatically.md)  
  [Salvare, caricare e stampare il contenuto di RichTextBox](how-to-save-load-and-print-richtextbox-content.md)  
  [Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   

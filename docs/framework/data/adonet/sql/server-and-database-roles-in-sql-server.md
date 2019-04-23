@@ -3,10 +3,10 @@ title: Ruoli server e database in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087976"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Ruoli server e database in SQL Server
@@ -16,7 +16,7 @@ In tutte le versioni di SQL Server si usa la sicurezza basata sui ruoli, che con
  I ruoli predefiniti del server hanno un set fisso di autorizzazioni e un ambito a livello di server. Sono destinati a essere usati per l'amministrazione di SQL Server e non è possibile modificare le autorizzazioni ad essi assegnate. È possibile assegnare account di accesso ai ruoli predefiniti del server senza avere un account utente in un database.  
   
 > [!IMPORTANT]
->  Il ruolo predefinito del server `sysadmin` incorpora tutti gli altri ruoli e ha un ambito illimitato. Non aggiungere entità a questo ruolo a meno che non siano considerate estremamente attendibili. `sysadmin` i membri del ruolo dispongono di privilegi amministrativi irrevocabili su tutti i database del server e le risorse.  
+>  Il ruolo predefinito del server `sysadmin` incorpora tutti gli altri ruoli e ha un ambito illimitato. Non aggiungere entità a questo ruolo a meno che non siano considerate estremamente attendibili. I membri del ruolo `sysadmin` dispongono di privilegi amministrativi irrevocabili su tutti i database e le risorse del server.  
   
  È necessario aggiungere in modo selettivo gli utenti ai ruoli predefiniti del server. Ad esempio, il ruolo `bulkadmin` consente agli utenti di inserire il contenuto di qualsiasi file locale in una tabella, il che potrebbe compromettere l'integrità dei dati. Per l'elenco completo dei ruoli predefiniti del server e le autorizzazioni, vedere la documentazione Online di SQL Server.  
   

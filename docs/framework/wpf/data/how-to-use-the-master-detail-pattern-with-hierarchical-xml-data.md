@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
 ms.openlocfilehash: ba6c932f519ffa5c3c70ecb21eb9b5d08c40fb28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086260"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>Procedura: Usare il modello Master-Details con dati XML gerarchici
@@ -24,4 +24,4 @@ In questo esempio viene illustrato come implementare lo scenario master-Details 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

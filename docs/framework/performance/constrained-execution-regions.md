@@ -8,10 +8,10 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097174"
 ---
 # <a name="constrained-execution-regions"></a>aree di esecuzione vincolate
@@ -70,14 +70,14 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. In condizioni eccezionali, il metodo garantisce la limitazione del danneggiamento dello stato dell'istanza corrente.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, In condizioni eccezionali, CLR non offre alcuna garanzia relativamente all'uniformità dello stato; vale a dire, la condizione potrebbe danneggiare il processo.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. In condizioni eccezionali, CLR non garantisce la coerenza dello stato. In altre parole, la condizione potrebbe danneggiare il processo.  
   
 -   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. In condizioni eccezionali è garantito che il metodo non danneggia lo stato.  
   
 ## <a name="reliability-trycatchfinally"></a>Blocco Try/catch/finally di affidabilità  
  Il blocco `try/catch/finally` di affidabilità è un meccanismo di gestione delle eccezioni con lo stesso livello di garanzie di prevedibilità della versione non gestita. Il blocco `catch/finally` costituisce l'area a esecuzione vincolata. I metodi nel blocco richiedono la preparazione anticipata e non devono poter essere interrotti.  
   
- In .NET Framework versione 2.0, il codice informa il runtime che un blocco try è affidabile chiamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> immediatamente prima di un blocco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> è un membro di <xref:System.Runtime.CompilerServices.RuntimeHelpers>, una classe di supporto del compilatore. Chiamare <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> direttamente durante la sua disponibilità nei compilatori.  
+ In .NET Framework versione 2.0, il codice informa il runtime che un blocco try è affidabile chiamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> immediatamente prima di un blocco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>è un membro di <xref:System.Runtime.CompilerServices.RuntimeHelpers>, una classe di supporto del compilatore. Chiamare <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> direttamente durante la sua disponibilità nei compilatori.  
   
 ## <a name="noninterruptible-regions"></a>Aree non interrompibili  
  Un'area non interrompibile raggruppa un set di istruzioni all'interno di un'area a esecuzione vincolata.  
@@ -106,7 +106,7 @@ Le aree a esecuzione vincolata rientrano in un meccanismo per la creazione di co
   
 -   Controlli di sicurezza. Non eseguire le richieste, limitarsi a collegarle.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> e <xref:System.Reflection.Emit.OpCodes.Castclass> per gli oggetti COM e proxy  
+-   <xref:System.Reflection.Emit.OpCodes.Isinst> e <xref:System.Reflection.Emit.OpCodes.Castclass> per oggetti COM e proxy  
   
 -   Ottenere o impostare campi in un proxy trasparente.  
   

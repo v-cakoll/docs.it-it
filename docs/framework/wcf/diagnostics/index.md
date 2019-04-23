@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092280"
 ---
 # <a name="administration-and-diagnostics"></a>Amministrazione e diagnostica
@@ -48,8 +48,8 @@ Windows Communication Foundation (WCF) offre un'ampia gamma di funzionalità che
 - [Registrazione messaggi](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Strumento Editor di configurazione (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Strumento di registrazione di ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
+- [Strumento di registrazione ServiceModel](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [Traccia](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uso di Strumentazione gestione Windows (WMI) per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Uso di Strumentazione gestione Windows per la diagnostica](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Contatori delle prestazioni](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
-- [Windows Communication Foundation Tools](../../../../docs/framework/wcf/tools.md)
+- [Strumenti Windows Communication Foundation](../../../../docs/framework/wcf/tools.md)

@@ -3,10 +3,10 @@ title: Esempi di LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
 ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091694"
 ---
 # <a name="linq-to-dataset-examples"></a>Esempi di LINQ to DataSet
@@ -22,7 +22,7 @@ Questa sezione vengono fornite LINQ agli esempi di programmazione di set di dati
   
 -   [Partizionamento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [Ordering](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [Ordinamento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [Operatori di elemento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
@@ -37,7 +37,7 @@ Questa sezione vengono fornite LINQ agli esempi di programmazione di set di dati
   
 -   [Partizionamento](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [Ordering](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [Ordinamento](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [Operatori Set](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
@@ -55,4 +55,4 @@ Questa sezione vengono fornite LINQ agli esempi di programmazione di set di dati
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Caricamento di dati in un dataset](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

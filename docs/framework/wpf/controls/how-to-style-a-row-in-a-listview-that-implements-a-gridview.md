@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
 ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091460"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Procedura: Applicare uno stile a una riga in un ListView che implementa un oggetto GridView
-Questo esempio viene illustrato come applicare uno stile a una riga in una <xref:System.Windows.Controls.ListView> controllo che implementa un <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> modalità.  
+Questo esempio viene illustrato come applicare uno stile a una riga in una <xref:System.Windows.Controls.ListView> controllo che implementa una <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> modalità.  
   
 ## <a name="example"></a>Esempio  
  È possibile applicare uno stile a una riga in una <xref:System.Windows.Controls.ListView> controllo impostando un <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> nel <xref:System.Windows.Controls.ListView> controllo. Impostare lo stile per i relativi elementi rappresentati come <xref:System.Windows.Controls.ListViewItem> oggetti. Il <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> riferimenti di <xref:System.Windows.Controls.ControlTemplate> gli oggetti che consentono di visualizzare il contenuto della riga.  
@@ -37,6 +37,6 @@ Questo esempio viene illustrato come applicare uno stile a una riga in una <xref
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Procedure relative](listview-how-to-topics.md)
+- [Procedure relative alle proprietà](listview-how-to-topics.md)
 - [Panoramica sul controllo ListView](listview-overview.md)
 - [Applicazione di stili e modelli](styling-and-templating.md)

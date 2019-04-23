@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085805"
 ---
 # <a name="xtypearguments-directive"></a>Direttiva x:TypeArguments
@@ -84,6 +84,6 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="see-also"></a>Vedere anche
 
 - [Direttiva x:Class](x-class-directive.md)
-- [Estensione del markup x:Type](x-type-markup-extension.md)
+- [Estensione di markup x:Type](x-type-markup-extension.md)
 - [Tipi incorporati per primitive del linguaggio XAML comuni](built-in-types-for-common-xaml-language-primitives.md)
 - [Generics in XAML](generics-in-xaml.md)

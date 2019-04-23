@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092903"
 ---
 # <a name="row-states-and-row-versions"></a>Stati e versioni delle righe
@@ -23,7 +23,7 @@ In ADO.NET le righe delle tabelle vengono gestite tramite gli stati e le version
 |<xref:System.Data.DataRowState.Added>|La riga è stata aggiunta alla tabella, ma `AcceptChanges` non è stato chiamato.|  
 |<xref:System.Data.DataRowState.Modified>|Alcuni elementi della riga sono stati modificati.|  
 |<xref:System.Data.DataRowState.Deleted>|La riga è stata eliminata da una tabella e `AcceptChanges` non è stato chiamato.|  
-|<xref:System.Data.DataRowState.Detached>|La riga non fa parte di alcun oggetto `DataRowCollection`. Il valore di `RowState` di una riga appena creata viene impostato su `Detached`. Dopo l'aggiunta della nuova `DataRow` al `DataRowCollection` tramite la chiamata al metodo `Add`, il valore della proprietà `RowState` viene impostato su `Added`.<br /><br /> `Detached` viene impostato anche per una riga a cui è stato rimosso da un `DataRowCollection` usando il `Remove` metodo, o tramite il `Delete` metodo seguita dal `AcceptChanges` (metodo).|  
+|<xref:System.Data.DataRowState.Detached>|La riga non fa parte di alcun oggetto `DataRowCollection`. Il valore di `RowState` di una riga appena creata viene impostato su `Detached`. Dopo l'aggiunta della nuova `DataRow` al `DataRowCollection` tramite la chiamata al metodo `Add`, il valore della proprietà `RowState` viene impostato su `Added`.<br /><br /> Il valore `Detached` viene impostato anche per una riga rimossa da un `DataRowCollection` mediante il metodo `Remove` oppure mediante il metodo `Delete` seguito dal metodo `AcceptChanges`.|  
   
  Quando `AcceptChanges` viene chiamato su un oggetto <xref:System.Data.DataSet>, <xref:System.Data.DataTable> o <xref:System.Data.DataRow>, tutte le righe il cui stato corrisponde a `Deleted` vengono rimosse. Alle righe rimanenti viene assegnato lo stato `Unchanged` e i valori con versione di riga `Original` vengono sovrascritti dai valori con versione di riga `Current`. Quando `RejectChanges` viene chiamato, tutte le righe il cui stato corrisponde a `Added` vengono rimosse. Alle righe rimanenti viene assegnato lo stato `Unchanged` e i valori con versione di riga `Current` vengono sovrascritti dai valori con versione di riga `Original`.  
   
@@ -50,7 +50,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Per verificare se a `DataRow` è associata una particolare versione di riga, è possibile chiamare il metodo <xref:System.Data.DataRow.HasVersion%2A> e passare `DataRowVersion` come argomento. `DataRow.HasVersion(DataRowVersion.Original)`, ad esempio, restituirà `false` per le nuove righe aggiunte prima della chiamata a `AcceptChanges`.  
   
- Nell'esempio di codice seguente vengono visualizzati i valori in tutte le righe eliminate di una tabella. `Deleted` le righe non è un `Current` versione di riga, pertanto è necessario passare `DataRowVersion.Original` quando accede ai valori della colonna.  
+ Nell'esempio di codice seguente vengono visualizzati i valori in tutte le righe eliminate di una tabella. Le righe `Deleted` non dispongono di una versione della riga `Current`, pertanto è necessario passare `DataRowVersion.Original` quando si accede ai valori della colonna.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  

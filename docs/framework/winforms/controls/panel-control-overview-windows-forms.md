@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086364"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Cenni preliminari sul controllo Panel (Windows Form)
@@ -27,5 +27,5 @@ Windows Form <xref:System.Windows.Forms.Panel> controlli vengono usati per forni
 
 - <xref:System.Windows.Forms.Panel>
 - [Controllo GroupBox](groupbox-control-windows-forms.md)
-- [Procedura: Raggruppare i controlli con il controllo Panel di Windows Forms usando la finestra di progettazione](group-controls-with-wf-panel-control-using-the-designer.md)
-- [Procedura: Impostare lo sfondo di un controllo Panel di Windows Forms usando la finestra di progettazione](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+- [Procedura: Controlli di gruppo con il controllo Panel di Windows Form usando la finestra di progettazione](group-controls-with-wf-panel-control-using-the-designer.md)
+- [Procedura: Impostare lo sfondo di un controllo Panel Windows Form usando la finestra di progettazione](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

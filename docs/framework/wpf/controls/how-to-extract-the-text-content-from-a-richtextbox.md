@@ -11,10 +11,10 @@ helpviewer_keywords:
 - extracting text content [WPF]
 ms.assetid: f13c093f-1a05-45b3-ac8f-c9ea5e4a11c5
 ms.openlocfilehash: 220da59ec893528c99014e9ec95fb185c461b291
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086117"
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a>Procedura: Estrarre il contenuto di testo da un oggetto RichTextBox
@@ -35,5 +35,5 @@ In questo esempio viene illustrato come estrarre il contenuto di un <xref:System
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)
+- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)

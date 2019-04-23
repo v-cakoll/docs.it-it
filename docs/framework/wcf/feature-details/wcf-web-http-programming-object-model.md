@@ -3,10 +3,10 @@ title: Modello a oggetti per la programmazione HTTP Web di WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
 ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096010"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modello a oggetti per la programmazione HTTP Web di WCF
@@ -22,7 +22,7 @@ Il modello di programmazione HTTP di WCF WEB consente agli sviluppatori di espor
   
 -   <xref:System.ServiceModel.Web.WebServiceHost>  
   
- **Infrastruttura del dispatcher e dei canali:**  
+ **Infrastruttura del Dispatcher di canali e:**  
   
 -   <xref:System.ServiceModel.WebHttpBinding>  
   
@@ -74,7 +74,7 @@ Il modello di programmazione HTTP di WCF WEB consente agli sviluppatori di espor
  La classe <xref:System.UriTemplateTable> rappresenta un set associativo di oggetti <xref:System.UriTemplate> associati a un oggetto scelto dallo sviluppatore. Consente di confrontare gli URI (Uniform Resource Identifier) candidati con i modelli del set e recuperare i dati associati ai modelli corrispondenti. <xref:System.UriTemplateTable> viene utilizzata internamente dal modello di programmazione di WCF WEB HTTP per eseguire il mapping di URI o gruppi di URI specifici a operazioni del servizio.  
   
 ## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost> estende il <xref:System.ServiceModel.ServiceHost> per renderne più semplice ospitare un servizio Web non SOAP. Se <xref:System.ServiceModel.Web.WebServiceHost> non trova endpoint nella descrizione del servizio, crea automaticamente un endpoint predefinito all'indirizzo di base del servizio. Quando viene creato un endpoint HTTP predefinito, <xref:System.ServiceModel.Web.WebServiceHost> disabilita anche la pagina della Guida HTTP e la funzionalità WSDL (Web Services Description Language) GET, in modo che l'endpoint dei metadati non interferisce con l'endpoint HTTP predefinito.  <xref:System.ServiceModel.Web.WebServiceHost> garantisce inoltre che tutti gli endpoint che utilizzano <xref:System.ServiceModel.WebHttpBinding> presenta le funzioni richieste <xref:System.ServiceModel.Description.WebHttpBehavior> collegato. Infine, <xref:System.ServiceModel.Web.WebServiceHost> configura automaticamente l'associazione dell'endpoint per usare le impostazioni di sicurezza IIS (Internet Information Services) associate in caso di uso in una directory virtuale protetta.  
+ <xref:System.ServiceModel.Web.WebServiceHost> estende <xref:System.ServiceModel.ServiceHost> per semplificare l'host di un servizio Web non SOAP. Se <xref:System.ServiceModel.Web.WebServiceHost> non trova endpoint nella descrizione del servizio, crea automaticamente un endpoint predefinito all'indirizzo di base del servizio. Quando viene creato un endpoint HTTP predefinito, <xref:System.ServiceModel.Web.WebServiceHost> disabilita anche la pagina della Guida HTTP e la funzionalità WSDL (Web Services Description Language) GET, in modo che l'endpoint dei metadati non interferisce con l'endpoint HTTP predefinito.  L'oggetto <xref:System.ServiceModel.Web.WebServiceHost> assicura inoltre che tutti gli endpoint che usano <xref:System.ServiceModel.WebHttpBinding> siano collegati all'oggetto <xref:System.ServiceModel.Description.WebHttpBehavior> necessario. Infine, <xref:System.ServiceModel.Web.WebServiceHost> configura automaticamente l'associazione dell'endpoint per usare le impostazioni di sicurezza IIS (Internet Information Services) associate in caso di uso in una directory virtuale protetta.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
  La classe <xref:System.ServiceModel.Activation.WebServiceHostFactory> viene usata per creare un <xref:System.ServiceModel.Web.WebServiceHost> in modo dinamico, quando un servizio viene ospitato in IIS (Internet Information Services) o WAS (Windows Process Activation Service). A differenza dei servizi indipendenti, in cui l'applicazione host crea un'istanza di <xref:System.ServiceModel.Web.WebServiceHost>, i servizi ospitati in IIS o WAS usano questa classe per creare l'oggetto <xref:System.ServiceModel.Web.WebServiceHost> per il servizio. Il metodo <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> viene chiamato quando viene ricevuta una richiesta in ingresso per il servizio.  
@@ -83,7 +83,7 @@ Il modello di programmazione HTTP di WCF WEB consente agli sviluppatori di espor
  La classe <xref:System.ServiceModel.Description.WebHttpBehavior> fornisce, tra gli altri, i formattatori e i selettori di operazioni necessari per il supporto del servizio web a livello di modello di servizio. La classe viene implementata come un comportamento dell'endpoint (usato insieme con <xref:System.ServiceModel.WebHttpBinding>) e consente di specificare formattatori e selettori di operazioni per ogni endpoint, consentendo alla stessa implementazione del servizio di esporre endpoint SOAP e POX.  
   
 ### <a name="extending-webhttpbehavior"></a>Estensione di WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior> è estendibile usando diversi metodi virtuali: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, e <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Gli sviluppatori possono derivare una classe da <xref:System.ServiceModel.Description.WebHttpBehavior> ed eseguire l'override di questi metodi per personalizzare il comportamento predefinito.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> è estendibile usando diversi metodi virtuali: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> e <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Gli sviluppatori possono derivare una classe da <xref:System.ServiceModel.Description.WebHttpBehavior> ed eseguire l'override di questi metodi per personalizzare il comportamento predefinito.  
   
  L'oggetto <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> è un esempio di estensione di <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Abilita endpoint Windows Communication Foundation (WCF) ricevere richieste HTTP da un client AJAX ASP.NET basati su browser. Il [servizio AJAX con HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) è riportato un esempio dell'uso di questo punto di estendibilità.  
   
@@ -106,4 +106,4 @@ Il modello di programmazione HTTP di WCF WEB consente agli sviluppatori di espor
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
 - <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
-- [Panoramica sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Panoramica del modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
