@@ -5,10 +5,10 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223827"
 ---
 # <a name="routing-scenarios"></a>Scenari di routing
@@ -66,7 +66,7 @@ Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare
  Per i passaggi necessari per configurare la gestione degli errori, vedere [How To: Gestione degli errori](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>In questa sezione  
- [Procedura: Controllo delle versioni dei servizi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Procedura: Controllo delle versioni del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
  [Procedura: Partizionamento dei dati del servizio](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   

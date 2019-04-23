@@ -9,10 +9,10 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
 ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224910"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procedura: Creare figure da linee, curve e forme
@@ -38,4 +38,4 @@ Per una figura di creare, costruire un <xref:System.Drawing.Drawing2D.GraphicsPa
 
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [Costruzione e creazione di percorsi](constructing-and-drawing-paths.md)
-- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)

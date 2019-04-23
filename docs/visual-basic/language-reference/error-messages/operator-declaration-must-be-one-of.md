@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
 ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299189"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>La dichiarazione dell'operatore deve essere uno di: +,-, *,\,/, ^, &amp;, Like, Mod e, Or, Xor, non \< \<, >>...
@@ -35,7 +35,7 @@ ms.locfileid: "59299189"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
 - [Procedura: Definire un operatore](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [Procedura: Definire un operatore di conversione](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

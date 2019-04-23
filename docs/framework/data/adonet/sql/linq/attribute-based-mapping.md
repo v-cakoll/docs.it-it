@@ -3,10 +3,10 @@ title: Mapping basato su attributi
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223563"
 ---
 # <a name="attribute-based-mapping"></a>Mapping basato su attributi
@@ -31,7 +31,7 @@ ms.locfileid: "59223563"
  Per altre informazioni, vedere <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>Attributo TableAttribute  
- Usare questo attributo per definire una classe come classe dell'entità associata a una visualizzazione o tabella di database. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] considera le classi con questo attributo come classi persistenti. La tabella seguente descrive la proprietà <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
+ Usare questo attributo per definire una classe come classe dell'entità associata a una visualizzazione o tabella di database. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le classi con questo attributo vengono gestite come classi persistenti. La tabella seguente descrive la proprietà <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>.  
   
 |Proprietà|Tipo|Impostazione predefinita|Descrizione|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "59223563"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Booleano|`false`|Consente di indicare che la colonna contiene un valore discriminante per una gerarchia di ereditarietà di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Booleano|`false`|Consente di specificare che questo membro della classe rappresenta una colonna che corrisponde o fa parte delle chiavi primarie della tabella.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Booleano|`false`|Consente di identificare il tipo di colonna del membro come un timestamp del database o un numero di versione.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a meno che <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> è `true` per un membro|Consente di specificare l'approccio adottato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per il rilevamento dei conflitti di concorrenza ottimistici.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, a meno che, per un membro, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> sia `true`|Consente di specificare l'approccio adottato da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per il rilevamento dei conflitti di concorrenza ottimistici.|  
   
  Per altre informazioni, vedere <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "59223563"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

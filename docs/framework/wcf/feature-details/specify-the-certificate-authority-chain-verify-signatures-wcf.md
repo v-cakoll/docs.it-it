@@ -6,10 +6,10 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224480"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Procedura: Specificare la catena di certificati dell'autorità utilizzata per verificare le firme (WCF)
@@ -35,4 +35,4 @@ Quando Windows Communication Foundation (WCF) riceve un messaggio SOAP firmato m
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Uso di certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

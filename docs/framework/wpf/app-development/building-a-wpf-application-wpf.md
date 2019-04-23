@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300957"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilazione di un'applicazione WPF (WPF)
@@ -101,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Compilazione del markup - Passaggio 2  
- Non tutte le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono compilate durante il passaggio 1 della compilazione del markup. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i file in locale sono definiti i riferimenti ai tipi (riferimenti ai tipi definiti nel codice in un' posizione nello stesso progetto) sono esclusi dalla compilazione in questo momento. poiché tali tipi definiti in locale esistono solo nel codice sorgente e non sono ancora stati compilati. Per determinare questo aspetto, il parser utilizza un'euristica che implica la ricerca di elementi, ad esempio `x:Name`, nel file di markup. Se si individua un'istanza di questo tipo, la compilazione di tale file di markup viene posticipata fino a quando non vengono compilati i file di codice. Dopodiché, nel secondo passaggio di compilazione del markup, si elaborano questi file.  
+ Non tutte le pagine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vengono compilate durante il passaggio 1 della compilazione del markup. I file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che dispongono di riferimenti a tipi definiti in locale (riferimenti a tipi definiti nel codice in un'altra parte dello stesso progetto) sono esclusi dalla compilazione in questa fase, poiché tali tipi definiti in locale esistono solo nel codice sorgente e non sono ancora stati compilati. Per determinare questo aspetto, il parser utilizza un'euristica che implica la ricerca di elementi, ad esempio `x:Name`, nel file di markup. Se si individua un'istanza di questo tipo, la compilazione di tale file di markup viene posticipata fino a quando non vengono compilati i file di codice. Dopodiché, nel secondo passaggio di compilazione del markup, si elaborano questi file.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Classificazione dei file  
@@ -170,4 +170,4 @@ End Sub
 - [Distribuzione di un'applicazione WPF](deploying-a-wpf-application-wpf.md)
 - [Informazioni di riferimento su MSBuild WPF](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URI di tipo pack in WPF](pack-uris-in-wpf.md)
-- [File di dati e di risorse dell'applicazione WPF.](wpf-application-resource-content-and-data-files.md)
+- [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md)

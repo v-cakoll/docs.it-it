@@ -9,10 +9,10 @@ helpviewer_keywords:
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
 ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300476"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Procedura: Impostare il valore visualizzato dal controllo ProgressBar di Windows Forms
@@ -228,5 +228,5 @@ ms.locfileid: "59300476"
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
-- [Panoramica del controllo ProgressBar](progressbar-control-overview-windows-forms.md)
+- [Panoramica sul controllo ProgressBar](progressbar-control-overview-windows-forms.md)
 - [Controllo ProgressBar](progressbar-control-windows-forms.md)

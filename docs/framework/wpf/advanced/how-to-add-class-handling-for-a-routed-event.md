@@ -10,10 +10,10 @@ helpviewer_keywords:
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
 ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224273"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Procedura: Aggiungere la gestione di classi per un evento indirizzato
@@ -35,6 +35,6 @@ Gli eventi indirizzati possono essere gestiti mediante i gestori classi o gestor
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.EventManager>
-- [Impostazione degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
+- [Contrassegno degli eventi indirizzati come gestiti e gestione delle classi](marking-routed-events-as-handled-and-class-handling.md)
 - [Gestire un evento indirizzato](how-to-handle-a-routed-event.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)

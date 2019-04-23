@@ -13,87 +13,88 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ea5db2ba1060479f55bbd7f67266d36085a2535f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321055"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979890"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Procedura: Creare e inizializzare listener di traccia
-Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> inviano messaggi a oggetti detti listener, che li ricevono e li elaborano. Uno di questi listener, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, viene creato e inizializzato automaticamente quando si abilita la traccia o il debug. Se si vuole indirizzare l'output di <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> a origini aggiuntive, è necessario creare e inizializzare listener di traccia aggiuntivi.  
-  
- I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad esempio, si desidera un record di testo di tutti gli output di traccia, creare un listener <xref:System.Diagnostics.TextWriterTraceListener>, che, quando è abilitato, scrive tutto l'output in un nuovo file di testo. Se invece si vuole visualizzare l'output solo durante l'esecuzione dell'applicazione, creare un listener <xref:System.Diagnostics.ConsoleTraceListener>, che indirizza tutto l'output a una finestra della console. Il listener <xref:System.Diagnostics.EventLogTraceListener> è in grado di indirizzare l'output di traccia a un registro eventi. Per altre informazioni, vedere [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
-  
- È possibile creare listener di traccia in un [file di configurazione dell'applicazione](../../../docs/framework/configure-apps/index.md) o nel codice. È consigliabile usare file di configurazione dell'applicazione, in quanto consentono di aggiungere, modificare o rimuovere listener di traccia senza dover modificare il codice.  
-  
-### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Per creare e usare un listener di traccia tramite un file di configurazione  
-  
-1. Dichiarare il listener di traccia nel file di configurazione dell'applicazione. Se il listener che si sta creando richiede altri oggetti, dichiarare anche tali oggetti. L'esempio seguente mostra come creare un listener denominato `myListener` che scrive nel file di testo `TextWriterOutput.log`.  
-  
-    ```xml  
-    <configuration>  
-      <system.diagnostics>  
-        <trace autoflush="false" indentsize="4">  
-          <listeners>  
-            <add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="TextWriterOutput.log" />  
-            <remove name="Default" />  
-          </listeners>  
-        </trace>  
-      </system.diagnostics>  
-    </configuration>  
-    ```  
-  
-2. Usare la classe <xref:System.Diagnostics.Trace> nel codice per scrivere un messaggio nei listener di traccia.  
-  
-    ```vb  
-    Trace.TraceInformation("Test message.")  
-    ' You must close or flush the trace to empty the output buffer.  
-    Trace.Flush()  
-    ```  
-  
-    ```csharp  
-    Trace.TraceInformation("Test message.");  
-    // You must close or flush the trace to empty the output buffer.  
-    Trace.Flush();  
-    ```  
-  
-### <a name="to-create-and-use-a-trace-listener-in-code"></a>Per creare e usare un listener di traccia nel codice  
-  
--   Aggiungere il listener di traccia alla raccolta <xref:System.Diagnostics.Trace.Listeners%2A> e inviare le informazioni di traccia ai listener.  
-  
-    ```vb  
-    Trace.Listeners.Add(New TextWriterTraceListener("TextWriterOutput.log", "myListener"))  
-    Trace.TraceInformation("Test message.")  
-    ' You must close or flush the trace to empty the output buffer.  
-    Trace.Flush()  
-    ```  
-  
-    ```csharp  
-    Trace.Listeners.Add(new TextWriterTraceListener("TextWriterOutput.log", "myListener"));  
-    Trace.TraceInformation("Test message.");  
-    // You must close or flush the trace to empty the output buffer.  
-    Trace.Flush();  
-    ```  
-  
-     - oppure -  
-  
--   Se non si vuole che il listener riceva l'output di traccia, non aggiungerlo alla raccolta <xref:System.Diagnostics.Trace.Listeners%2A>. È possibile trasmettere l'output tramite un listener indipendentemente dalla raccolta <xref:System.Diagnostics.Trace.Listeners%2A> chiamando i metodi di output del listener stesso. L'esempio seguente mostra come scrivere una riga in un listener non incluso nella raccolta <xref:System.Diagnostics.Trace.Listeners%2A>.  
-  
-    ```vb  
-    Dim myListener As New TextWriterTraceListener("TextWriterOutput.log", "myListener")  
-    myListener.WriteLine("Test message.")  
-    ' You must close or flush the trace listener to empty the output buffer.  
-    myListener.Flush()  
-    ```  
-  
-    ```csharp  
-    TextWriterTraceListener myListener = new TextWriterTraceListener("TextWriterOutput.log", "myListener");  
-    myListener.WriteLine("Test message.");  
-    // You must close or flush the trace listener to empty the output buffer.  
-    myListener.Flush();  
-    ```  
-  
+
+Le classi <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> inviano messaggi a oggetti detti listener, che li ricevono e li elaborano. Uno di questi listener, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, viene creato e inizializzato automaticamente quando si abilita la traccia o il debug. Se si vuole indirizzare l'output di <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> a origini aggiuntive, è necessario creare e inizializzare listener di traccia aggiuntivi.
+
+I listener devono essere creati in base alle esigenze dell'applicazione. Se, ad esempio, si desidera un record di testo di tutti gli output di traccia, creare un listener <xref:System.Diagnostics.TextWriterTraceListener>, che, quando è abilitato, scrive tutto l'output in un nuovo file di testo. Se invece si vuole visualizzare l'output solo durante l'esecuzione dell'applicazione, creare un listener <xref:System.Diagnostics.ConsoleTraceListener>, che indirizza tutto l'output a una finestra della console. Il listener <xref:System.Diagnostics.EventLogTraceListener> è in grado di indirizzare l'output di traccia a un registro eventi. Per altre informazioni, vedere [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md).
+
+È possibile creare listener di traccia in un [file di configurazione dell'applicazione](../../../docs/framework/configure-apps/index.md) o nel codice. È consigliabile usare file di configurazione dell'applicazione, in quanto consentono di aggiungere, modificare o rimuovere listener di traccia senza dover modificare il codice.
+
+### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Per creare e usare un listener di traccia tramite un file di configurazione
+
+1. Dichiarare il listener di traccia nel file di configurazione dell'applicazione. Se il listener che si sta creando richiede altri oggetti, dichiarare anche tali oggetti. L'esempio seguente mostra come creare un listener denominato `myListener` che scrive nel file di testo `TextWriterOutput.log`.
+
+    ```xml
+    <configuration>
+      <system.diagnostics>
+        <trace autoflush="false" indentsize="4">
+          <listeners>
+            <add name="myListener" type="System.Diagnostics.TextWriterTraceListener" initializeData="TextWriterOutput.log" />
+            <remove name="Default" />
+          </listeners>
+        </trace>
+      </system.diagnostics>
+    </configuration>
+    ```
+
+2. Usare la classe <xref:System.Diagnostics.Trace> nel codice per scrivere un messaggio nei listener di traccia.
+
+    ```vb
+    Trace.TraceInformation("Test message.")
+    ' You must close or flush the trace to empty the output buffer.
+    Trace.Flush()
+    ```
+
+    ```csharp
+    Trace.TraceInformation("Test message.");
+    // You must close or flush the trace to empty the output buffer.
+    Trace.Flush();
+    ```
+
+### <a name="to-create-and-use-a-trace-listener-in-code"></a>Per creare e usare un listener di traccia nel codice
+
+- Aggiungere il listener di traccia alla raccolta <xref:System.Diagnostics.Trace.Listeners%2A> e inviare le informazioni di traccia ai listener.
+
+    ```vb
+    Trace.Listeners.Add(New TextWriterTraceListener("TextWriterOutput.log", "myListener"))
+    Trace.TraceInformation("Test message.")
+    ' You must close or flush the trace to empty the output buffer.
+    Trace.Flush()
+    ```
+
+    ```csharp
+    Trace.Listeners.Add(new TextWriterTraceListener("TextWriterOutput.log", "myListener"));
+    Trace.TraceInformation("Test message.");
+    // You must close or flush the trace to empty the output buffer.
+    Trace.Flush();
+    ```
+
+    \- oppure -
+
+- Se non si vuole che il listener riceva l'output di traccia, non aggiungerlo alla raccolta <xref:System.Diagnostics.Trace.Listeners%2A>. È possibile trasmettere l'output tramite un listener indipendentemente dalla raccolta <xref:System.Diagnostics.Trace.Listeners%2A> chiamando i metodi di output del listener stesso. L'esempio seguente mostra come scrivere una riga in un listener non incluso nella raccolta <xref:System.Diagnostics.Trace.Listeners%2A>.
+
+    ```vb
+    Dim myListener As New TextWriterTraceListener("TextWriterOutput.log", "myListener")
+    myListener.WriteLine("Test message.")
+    ' You must close or flush the trace listener to empty the output buffer.
+    myListener.Flush()
+    ```
+
+    ```csharp
+    TextWriterTraceListener myListener = new TextWriterTraceListener("TextWriterOutput.log", "myListener");
+    myListener.WriteLine("Test message.");
+    // You must close or flush the trace listener to empty the output buffer.
+    myListener.Flush();
+    ```
+
 ## <a name="see-also"></a>Vedere anche
 
 - [Listener di traccia](../../../docs/framework/debug-trace-profile/trace-listeners.md)

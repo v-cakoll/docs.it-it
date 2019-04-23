@@ -3,10 +3,10 @@ title: Configurazione dei servizi WCF nel codice
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225703"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurazione dei servizi WCF nel codice
@@ -103,6 +103,6 @@ public class Service1 : IService1
 - [Supporto di configurazione e metadati](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [Configurazione](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
 - [Procedura: Specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Procedura: Creare un endpoint di servizio nella configurazione](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Procedura: Pubblicare metadati per un servizio usando un file di configurazione](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Procedura: Specificare un'associazione al client nella configurazione](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Procedura: Creare un Endpoint del servizio nella configurazione](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Procedura: Pubblicare i metadati per un servizio utilizzando un File di configurazione](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procedura: Specificare un'associazione Client nella configurazione](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

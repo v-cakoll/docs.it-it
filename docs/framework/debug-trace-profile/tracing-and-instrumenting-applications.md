@@ -16,10 +16,10 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298909"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
@@ -123,7 +123,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |Metodo|Output|  
 |------------|------------|  
 |**Assert**|Il testo specificato oppure, se non è specificato, lo stack di chiamate. L'output viene scritto solo se la condizione specificata come argomento nell'istruzione **Assert** è **false**.|  
-|**Test non superato**|Il testo specificato oppure, se non è specificato, lo stack di chiamate.|  
+|**Fail**|Il testo specificato oppure, se non è specificato, lo stack di chiamate.|  
 |**Write**|Il testo specificato.|  
 |**WriteIf**|Il testo specificato, se la condizione specificata come argomento nell'istruzione **WriteIf** viene soddisfatta.|  
 |**WriteLine**|Il testo specificato e un ritorno a capo.|  

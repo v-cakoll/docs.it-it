@@ -10,10 +10,10 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298422"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Convalida di un documento XML nel DOM
@@ -88,5 +88,5 @@ La classe <xref:System.Xml.XmlDocument> non esegue la convalida del codice XML n
 - <xref:System.Xml.XmlReader>
 - <xref:System.Xml.Schema.ValidationEventHandler>
 - <xref:System.Xml.XmlReaderSettings>
-- [Elaborazione di dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
-- [Utilizzo di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [Elaborare dati XML con il modello DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
+- [Uso di schemi XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

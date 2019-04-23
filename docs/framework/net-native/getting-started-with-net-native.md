@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298474"
 ---
 # <a name="getting-started-with-net-native"></a>Introduzione di .NET Native
@@ -106,7 +106,7 @@ ms.locfileid: "59298474"
   
  Per alcuni esempi specifici di gestione delle eccezioni e di altri problemi relativi ai test dell'app, vedere:  
   
--   [Esempio: Gestione delle eccezioni durante il data binding](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Esempio: La gestione delle eccezioni durante l'associazione dati](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [Esempio: Risoluzione dei problemi di programmazione dinamica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
@@ -114,9 +114,9 @@ ms.locfileid: "59298474"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Installazione e configurazione di .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [Compilazione e .NET Native](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Installazione e configurazione .NET native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native e compilazione](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [API basate sulla reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [Serializzazione e metadati](../../../docs/framework/net-native/serialization-and-metadata.md)

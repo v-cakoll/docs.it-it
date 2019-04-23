@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299254"
 ---
 # <a name="ordinal-is-not-valid"></a>Ordinale non valido
@@ -30,4 +30,4 @@ La chiamata a una libreria di collegamento dinamico (DLL) indica di usare un num
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

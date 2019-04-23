@@ -11,10 +11,10 @@ helpviewer_keywords:
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
 ms.openlocfilehash: eec6a754b885cd169e5542221caefb3233c4c8af
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300723"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: Connettere più eventi a un unico gestore eventi in Windows Forms
@@ -63,4 +63,4 @@ Nella progettazione delle applicazioni, si potrebbe essere necessario utilizzare
 ## <a name="see-also"></a>Vedere anche
 
 - [Creazione di gestori eventi in Windows Form](creating-event-handlers-in-windows-forms.md)
-- [Panoramica sui gestori eventi](event-handlers-overview-windows-forms.md)
+- [Informazioni generali sui gestori eventi](event-handlers-overview-windows-forms.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224286"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Ottimizzazione delle prestazioni: Altri suggerimenti
@@ -33,7 +33,7 @@ ms.locfileid: "59224286"
   
 -   [Evitare l'uso di ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [Configurare il servizio Cache tipi di carattere per ridurre il tempo di avvio](#FontCache)  
+-   [Configurare il servizio Cache tipi di carattere per ridurre i tempi di avvio](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Pennelli opachi ed elementi opachi  
@@ -76,10 +76,10 @@ ms.locfileid: "59224286"
 
 - [Pianificazione delle prestazioni dell'applicazione](planning-for-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e progettazione](optimizing-performance-layout-and-design.md)
-- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
-- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
-- [Testo](optimizing-performance-text.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [per](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Suggerimenti sulle animazioni](../graphics-multimedia/animation-tips-and-tricks.md)

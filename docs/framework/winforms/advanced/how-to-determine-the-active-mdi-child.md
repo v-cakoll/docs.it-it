@@ -12,10 +12,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
 ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300606"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Procedura: Determinare il figlio MDI attivo
@@ -89,4 +89,4 @@ In alcuni casi, è opportuno fornire un comando che opera sul controllo con lo s
 - [Procedura: Creare form padre MDI](how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](how-to-create-mdi-child-forms.md)
 - [Procedura: Inviare dati al figlio MDI attivo](how-to-send-data-to-the-active-mdi-child.md)
-- [Procedura: Disporre form figlio MDI](how-to-arrange-mdi-child-forms.md)
+- [Procedura: Disporre i form figlio MDI](how-to-arrange-mdi-child-forms.md)
