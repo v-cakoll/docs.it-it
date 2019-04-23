@@ -3,18 +3,18 @@ title: Concetti di programmazione (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: bfe4046d6d54693867ebe5d8529a4744b9e69c3b
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702464"
 ---
 # <a name="programming-concepts-c"></a>Concetti di programmazione (C#)
 Questa sezione illustra i concetti della programmazione in linguaggio C#.  
   
 ## <a name="in-this-section"></a>In questa sezione  
   
-|Titolo|Descrizione|  
+|Titolo|Description|  
 |-----------|-----------------|  
 |[Assembly in .NET](../../../standard/assembly/index.md)|Viene descritto come creare e usare gli assembly.|  
 |[Programmazione asincrona con Async e Await (C#)](../../../csharp/programming-guide/concepts/async/index.md)|Viene illustrato come creare una soluzione asincrona usando le parole chiave [async](../../../csharp/language-reference/keywords/async.md) e [await](../../../csharp/language-reference/keywords/await.md) in C#. È inclusa una procedura dettagliata.|  

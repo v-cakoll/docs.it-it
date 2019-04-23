@@ -1,127 +1,120 @@
-items:
 - name: Classi e struct
   href: index.md
   items:
-  - name: Classi
-    href: classes.md
-  - name: Oggetti
-    href: objects.md
-  - name: Struct
-    href: structs.md
-    items:
-    - name: Uso di struct
-      href: using-structs.md
-  - name: Ereditarietà
-    href: inheritance.md
-  - name: Polimorfismo
-    href: polymorphism.md
-    items:
-    - name: Controllo delle versioni con le parole chiave Override e New
-      href: versioning-with-the-override-and-new-keywords.md
-    - name: Sapere quando usare le parole chiave Override e New
-      href: knowing-when-to-use-override-and-new-keywords.md
-    - name: "Procedura: Eseguire l'override del metodo ToString"
-      href: how-to-override-the-tostring-method.md
-  - name: Classi e membri delle classi astratti e sealed
-    href: abstract-and-sealed-classes-and-class-members.md
-    items:
-    - name: 'Procedura: Definire proprietà astratte'
-      href: how-to-define-abstract-properties.md
-  - name: Classi statiche e membri di classi statiche
-    href: static-classes-and-static-class-members.md
-  - name: Membri
-    href: members.md
-  - name: Modificatori di accesso
-    href: access-modifiers.md
-  - name: Campi
-    href: fields.md
-  - name: Costanti
-    href: constants.md
-    items:
-    - name: 'Procedura: Definire costanti in C#'
-      href: how-to-define-constants.md
-  - name: Proprietà
-    href: properties.md
-    items:
-    - name: Uso delle proprietà
-      href: using-properties.md
-    - name: Proprietà dell'interfaccia
-      href: interface-properties.md
-    - name: Limitazione dell'accessibilità delle funzioni di accesso
-      href: restricting-accessor-accessibility.md
-    - name: 'Procedura: Dichiarare e usare proprietà di lettura/scrittura'
-      href: how-to-declare-and-use-read-write-properties.md
-    - name: Proprietà implementate automaticamente
-      href: auto-implemented-properties.md
-    - name: 'Procedura: Implementare una classe leggera con proprietà implementate automaticamente'
-      href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
-  - name: Metodi
-    href: methods.md
-    items:
-    - name: Funzioni locali
-      href: local-functions.md
-    - name: Valori restituiti e variabili locali ref
-      href: ref-returns.md
-    - name: Passaggio di parametri
-      href: passing-parameters.md
+    - name: Classi
+      href: classes.md
+    - name: Oggetti
+      href: objects.md
+    - name: Struct
+      href: structs.md
       items:
-      - name: Passaggio di parametri di tipo di valore
-        href: passing-value-type-parameters.md
-      - name: Passaggio di parametri di tipo di riferimento
-        href: passing-reference-type-parameters.md
-      - name: 'Procedura: Differenza tra il passaggio di uno struct e il passaggio del riferimento a una classe a un metodo'
-        href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
-    - name: Variabili locali tipizzate in modo implicito
-      href: implicitly-typed-local-variables.md
+        - name: Uso di struct
+          href: using-structs.md
+    - name: Ereditarietà
+      href: inheritance.md
+    - name: Polimorfismo
+      href: polymorphism.md
       items:
-      - name: "Procedura: Usare variabili e matrici locali tipizzate in modo implicito in un'espressione di query"
-        href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
-    - name: Metodi di estensione
-      href: extension-methods.md
+        - name: Controllo delle versioni con le parole chiave Override e New
+          href: versioning-with-the-override-and-new-keywords.md
+        - name: Sapere quando usare le parole chiave Override e New
+          href: knowing-when-to-use-override-and-new-keywords.md
+        - name: 'Procedura: Eseguire l''override del metodo ToString'
+          href: how-to-override-the-tostring-method.md
+    - name: Classi e membri delle classi astratti e sealed
+      href: abstract-and-sealed-classes-and-class-members.md
       items:
-      - name: 'Procedura: Implementare e chiamare un metodo di estensione personalizzato'
-        href: how-to-implement-and-call-a-custom-extension-method.md
-      - name: "Procedura: Creare un nuovo metodo per un'enumerazione"
-        href: how-to-create-a-new-method-for-an-enumeration.md
-    - name: Argomenti denominati e facoltativi
-      href: named-and-optional-arguments.md
+        - name: 'Procedura: Definire proprietà astratte'
+          href: how-to-define-abstract-properties.md
+    - name: Classi statiche e membri di classi statiche
+      href: static-classes-and-static-class-members.md
+    - name: Membri
+      href: members.md
+    - name: Modificatori di accesso
+      href: access-modifiers.md
+    - name: Campi
+      href: fields.md
+    - name: Costanti
+      href: constants.md
       items:
-      - name: 'Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office'
-        href: how-to-use-named-and-optional-arguments-in-office-programming.md
-  - name: Costruttori
-    href: constructors.md
-    items:
-    - name: Uso dei costruttori
-      href: using-constructors.md
-    - name: Costruttori di istanza
-      href: instance-constructors.md
-    - name: Costruttori privati
-      href: private-constructors.md
-    - name: Costruttori statici
-      href: static-constructors.md
-    - name: 'Procedura: Scrivere un costruttore di copia'
-      href: how-to-write-a-copy-constructor.md
-  - name: Finalizzatori
-    href: destructors.md
-  - name: Inizializzatori di oggetto e di raccolta
-    href: object-and-collection-initializers.md
-    items:
-    - name: 'Procedura: Inizializzare oggetti usando un inizializzatore di oggetto'
-      href: how-to-initialize-objects-by-using-an-object-initializer.md
-    - name: 'Procedura: Inizializzare un dizionario con un inizializzatore di raccolta'
-      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
-  - name: Tipi annidati
-    href: nested-types.md
-  - name: Classi e metodi parziali
-    href: partial-classes-and-methods.md
-  - name: Tipi anonimi
-    href: anonymous-types.md
-    items:
-    - name: 'Procedura: Restituire subset di proprietà degli elementi in una query'
-      href: how-to-return-subsets-of-element-properties-in-a-query.md
-ms.openlocfilehash: ab61eea92fcbfb960038eb09b6e83c31d55eb24e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469080"
+        - name: 'Procedura: Definire costanti in C#'
+          href: how-to-define-constants.md
+    - name: Proprietà
+      href: properties.md
+      items:
+        - name: Uso delle proprietà
+          href: using-properties.md
+        - name: Proprietà dell'interfaccia
+          href: interface-properties.md
+        - name: Limitazione dell'accessibilità delle funzioni di accesso
+          href: restricting-accessor-accessibility.md
+        - name: 'Procedura: Dichiarare e usare proprietà di lettura/scrittura'
+          href: how-to-declare-and-use-read-write-properties.md
+        - name: Proprietà implementate automaticamente
+          href: auto-implemented-properties.md
+        - name: 'Procedura: Implementare una classe leggera con proprietà implementate automaticamente'
+          href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+    - name: Metodi
+      href: methods.md
+      items:
+        - name: Funzioni locali
+          href: local-functions.md
+        - name: Valori restituiti e variabili locali ref
+          href: ref-returns.md
+        - name: Passaggio di parametri
+          href: passing-parameters.md
+          items:
+            - name: Passaggio di parametri di tipo di valore
+              href: passing-value-type-parameters.md
+            - name: Passaggio di parametri di tipo di riferimento
+              href: passing-reference-type-parameters.md
+            - name: 'Procedura: Differenza tra il passaggio di uno struct e il passaggio del riferimento a una classe a un metodo'
+              href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+        - name: Variabili locali tipizzate in modo implicito
+          href: implicitly-typed-local-variables.md
+          items:
+            - name: 'Procedura: Usare variabili e matrici locali tipizzate in modo implicito in un''espressione di query'
+              href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+        - name: Metodi di estensione
+          href: extension-methods.md
+          items:
+            - name: 'Procedura: Implementare e chiamare un metodo di estensione personalizzato'
+              href: how-to-implement-and-call-a-custom-extension-method.md
+            - name: 'Procedura: Creare un nuovo metodo per un''enumerazione'
+              href: how-to-create-a-new-method-for-an-enumeration.md
+        - name: Argomenti denominati e facoltativi
+          href: named-and-optional-arguments.md
+          items:
+            - name: 'Procedura: Usare argomenti denominati e facoltativi nella programmazione di Office'
+              href: how-to-use-named-and-optional-arguments-in-office-programming.md
+    - name: Costruttori
+      href: constructors.md
+      items:
+        - name: Uso dei costruttori
+          href: using-constructors.md
+        - name: Costruttori di istanza
+          href: instance-constructors.md
+        - name: Costruttori privati
+          href: private-constructors.md
+        - name: Costruttori statici
+          href: static-constructors.md
+        - name: 'Procedura: Scrivere un costruttore di copia'
+          href: how-to-write-a-copy-constructor.md
+    - name: Finalizzatori
+      href: destructors.md
+    - name: Inizializzatori di oggetto e di raccolta
+      href: object-and-collection-initializers.md
+      items:
+        - name: 'Procedura: Inizializzare oggetti usando un inizializzatore di oggetto'
+          href: how-to-initialize-objects-by-using-an-object-initializer.md
+        - name: 'Procedura: Inizializzare un dizionario con un inizializzatore di raccolta'
+          href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+    - name: Tipi annidati
+      href: nested-types.md
+    - name: Classi e metodi parziali
+      href: partial-classes-and-methods.md
+    - name: Tipi anonimi
+      href: anonymous-types.md
+      items:
+        - name: 'Procedura: Restituire subset di proprietà degli elementi in una query'
+          href: how-to-return-subsets-of-element-properties-in-a-query.md

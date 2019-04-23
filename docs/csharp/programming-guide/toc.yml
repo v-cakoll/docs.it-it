@@ -1,52 +1,45 @@
-items:
-- name: Guida per programmatori C#
+- name: 'Guida per programmatori C#'
   href: index.md
   items:
-  - name: Contenuto di un programma C#
-    href: inside-a-program/
-  - name: Main() e argomenti della riga di comando
-    href: main-and-command-args/
-  - name: Concetti di programmazione
-    href: concepts/
-  - name: Istruzioni, espressioni e operatori
-    href: statements-expressions-operators/
-  - name: Tipi
-    href: types/
-  - name: Classi e struct
-    href: classes-and-structs/
-  - name: Interfacce
-    href: interfaces/
-  - name: Tipi di enumerazione
-    href: enumeration-types.md
-  - name: Delegati
-    href: delegates/index.md
-  - name: Matrici
-    href: arrays/
-  - name: Stringhe
-    href: strings/
-  - name: Indicizzatori
-    href: indexers/
-  - name: Eventi
-    href: events/
-  - name: Generics
-    href: generics/
-  - name: Spazi dei nomi
-    href: namespaces/
-  - name: Tipi nullable
-    href: nullable-types/
-  - name: Codice unsafe e puntatori
-    href: unsafe-code-pointers/
-  - name: Commenti relativi alla documentazione XML
-    href: xmldoc/
-  - name: Eccezioni e gestione delle eccezioni
-    href: exceptions/
-  - name: File system e Registro di sistema
-    href: file-system/
-  - name: Interoperabilità
-    href: interop/
-ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471053"
+    - name: 'Contenuto di un programma C#'
+      href: inside-a-program/
+    - name: Main() e argomenti della riga di comando
+      href: main-and-command-args/
+    - name: Concetti di programmazione
+      href: concepts/
+    - name: 'Istruzioni, espressioni e operatori'
+      href: statements-expressions-operators/
+    - name: Tipi
+      href: types/
+    - name: Classi e struct
+      href: classes-and-structs/
+    - name: Interfacce
+      href: interfaces/
+    - name: Tipi di enumerazione
+      href: enumeration-types.md
+    - name: Delegati
+      href: delegates/index.md
+    - name: Matrici
+      href: arrays/
+    - name: Stringhe
+      href: strings/
+    - name: Indicizzatori
+      href: indexers/
+    - name: Eventi
+      href: events/
+    - name: Generics
+      href: generics/
+    - name: Spazi dei nomi
+      href: namespaces/
+    - name: Tipi nullable
+      href: nullable-types/
+    - name: Codice unsafe e puntatori
+      href: unsafe-code-pointers/
+    - name: Commenti relativi alla documentazione XML
+      href: xmldoc/
+    - name: Eccezioni e gestione delle eccezioni
+      href: exceptions/
+    - name: File system e Registro di sistema
+      href: file-system/
+    - name: Interoperabilità
+      href: interop/

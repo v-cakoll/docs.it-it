@@ -1,58 +1,51 @@
-items:
 - name: Accesso alle risorse del computer
   href: index.md
   items:
-  - name: Riproduzione di suoni
-    href: playing-sounds.md
-  - name: Archiviazione e lettura di dati negli Appunti
-    href: storing-data-to-and-reading-from-the-clipboard.md
-  - name: Ottenere informazioni sul computer
-    href: getting-information-about-the-computer.md
-  - name: Accesso alla tastiera
-    href: accessing-the-keyboard.md
-    items:
-    - name: "Procedura: Avviare un'applicazione e inviarle sequenze di tasti"
-      href: how-to-start-an-application-and-send-it-keystrokes.md
-  - name: Accesso al mouse
-    href: accessing-the-mouse.md
-  - name: Esecuzione di operazioni di rete
-    href: performing-network-operations.md
-    items:
-    - name: 'Procedura: Caricare un file'
-      href: how-to-upload-a-file.md
-    - name: 'Procedura: Scaricare un file'
-      href: how-to-download-a-file.md
-    - name: 'Procedura: Controllare lo stato di connessione'
-      href: how-to-check-connection-status.md
-  - name: Accesso alle porte del computer
-    href: accessing-the-computer-s-ports.md
-    items:
-    - name: 'Procedura: Mostrare le porte seriali disponibili'
-      href: how-to-show-available-serial-ports.md
-    - name: 'Procedura: Comporre numeri con modem collegati a porte seriali'
-      href: how-to-dial-modems-attached-to-serial-ports.md
-    - name: 'Procedura: Inviare stringhe a porte seriali'
-      href: how-to-send-strings-to-serial-ports.md
-    - name: 'Procedura: Ricevere stringhe da porte seriali'
-      href: how-to-receive-strings-from-serial-ports.md
-    - name: Operazioni sulle porte in .NET Framework
-      href: port-operations-in-the-net-framework.md
-  - name: Lettura e scrittura nel Registro di sistema
-    href: reading-from-and-writing-to-the-registry.md
-    items:
-    - name: 'Procedura: Creare una chiave del Registro di sistema e impostarne il valore'
-      href: how-to-create-a-registry-key-and-set-its-value.md
-    - name: 'Procedura: Leggere un valore da una chiave del Registro di sistema'
-      href: how-to-read-a-value-from-a-registry-key.md
-    - name: 'Procedura: Eliminare una chiave del Registro di sistema'
-      href: how-to-delete-a-registry-key.md
-    - name: Lettura e scrittura nel Registro di sistema mediante lo spazio dei nomi Microsoft.Win32
-      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
-    - name: Sicurezza e Registro di sistema
-      href: security-and-the-registry.md
-ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468671"
+    - name: Riproduzione di suoni
+      href: playing-sounds.md
+    - name: Archiviazione e lettura di dati negli Appunti
+      href: storing-data-to-and-reading-from-the-clipboard.md
+    - name: Ottenere informazioni sul computer
+      href: getting-information-about-the-computer.md
+    - name: Accesso alla tastiera
+      href: accessing-the-keyboard.md
+      items:
+        - name: 'Procedura: Avviare un''applicazione e inviarle sequenze di tasti'
+          href: how-to-start-an-application-and-send-it-keystrokes.md
+    - name: Accesso al mouse
+      href: accessing-the-mouse.md
+    - name: Esecuzione di operazioni di rete
+      href: performing-network-operations.md
+      items:
+        - name: 'Procedura: Caricare un file'
+          href: how-to-upload-a-file.md
+        - name: 'Procedura: Scaricare un file'
+          href: how-to-download-a-file.md
+        - name: 'Procedura: Controllare lo stato di connessione'
+          href: how-to-check-connection-status.md
+    - name: Accesso alle porte del computer
+      href: accessing-the-computer-s-ports.md
+      items:
+        - name: 'Procedura: Mostrare le porte seriali disponibili'
+          href: how-to-show-available-serial-ports.md
+        - name: 'Procedura: Comporre numeri con modem collegati a porte seriali'
+          href: how-to-dial-modems-attached-to-serial-ports.md
+        - name: 'Procedura: Inviare stringhe a porte seriali'
+          href: how-to-send-strings-to-serial-ports.md
+        - name: 'Procedura: Ricevere stringhe da porte seriali'
+          href: how-to-receive-strings-from-serial-ports.md
+        - name: Operazioni sulle porte in .NET Framework
+          href: port-operations-in-the-net-framework.md
+    - name: Lettura e scrittura nel Registro di sistema
+      href: reading-from-and-writing-to-the-registry.md
+      items:
+        - name: 'Procedura: Creare una chiave del Registro di sistema e impostarne il valore'
+          href: how-to-create-a-registry-key-and-set-its-value.md
+        - name: 'Procedura: Leggere un valore da una chiave del Registro di sistema'
+          href: how-to-read-a-value-from-a-registry-key.md
+        - name: 'Procedura: Eliminare una chiave del Registro di sistema'
+          href: how-to-delete-a-registry-key.md
+        - name: Lettura e scrittura nel Registro di sistema mediante lo spazio dei nomi Microsoft.Win32
+          href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+        - name: Sicurezza e Registro di sistema
+          href: security-and-the-registry.md

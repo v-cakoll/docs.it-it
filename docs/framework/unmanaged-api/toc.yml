@@ -1,38 +1,31 @@
-items:
 - name: Riferimenti alle API non gestite
   href: index.md
   items:
-  - name: Tipi di dati comuni
-    href: common-data-types-unmanaged-api-reference.md
-  - name: API Alink
-    href: alink/
-  - name: Authenticode
-    href: authenticode/
-  - name: Costanti
-    href: constants-unmanaged-api-reference.md
-  - name: Debug
-    href: debugging/
-  - name: Archivio dei simboli di diagnostica
-    href: diagnostics/
-  - name: Fusion
-    href: fusion/
-  - name: Hosting
-    href: hosting/
-  - name: Metadati
-    href: metadata/
-  - name: Profilatura
-    href: profiling/
-  - name: Denominazione sicura
-    href: strong-naming/
-  - name: WMI e contatori delle prestazioni
-    href: wmi/
-  - name: Funzioni helper Tlbexp
-    href: tlbexp/
-  - name: Attributo GUID_ManagedName
-    href: guid-managedname-attribute.md
-ms.openlocfilehash: 48454d1cf9285a229de8d3b852d33c985c3b53bc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469566"
+    - name: Tipi di dati comuni
+      href: common-data-types-unmanaged-api-reference.md
+    - name: API Alink
+      href: alink/
+    - name: Authenticode
+      href: authenticode/
+    - name: Costanti
+      href: constants-unmanaged-api-reference.md
+    - name: Debug
+      href: debugging/
+    - name: Archivio dei simboli di diagnostica
+      href: diagnostics/
+    - name: Fusion
+      href: fusion/
+    - name: Hosting
+      href: hosting/
+    - name: Metadati
+      href: metadata/
+    - name: Profilatura
+      href: profiling/
+    - name: Denominazione sicura
+      href: strong-naming/
+    - name: WMI e contatori delle prestazioni
+      href: wmi/
+    - name: Funzioni helper Tlbexp
+      href: tlbexp/
+    - name: Attributo GUID_ManagedName
+      href: guid-managedname-attribute.md

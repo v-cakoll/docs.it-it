@@ -14,8 +14,8 @@ ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914836"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
