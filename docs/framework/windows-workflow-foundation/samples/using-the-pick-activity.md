@@ -3,10 +3,10 @@ title: Utilizzo dell'attività Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302979"
 ---
 # <a name="using-the-pick-activity"></a>Utilizzo dell'attività Pick
@@ -17,7 +17,7 @@ In questo esempio viene illustrato come usare l'attività <xref:System.Activitie
  In questo esempio un utente deve digitare il nome nella console entro un periodo di tempo specificato. L'attività <xref:System.Activities.Statements.Pick> nell'esempio dispone di due rami eseguiti in base al fatto che l'utente abbia o meno digitato il nome entro 5 secondi. Se l'utente digita il nome nei 5 secondi, viene eseguito il primo ramo che contiene un'attività `ReadLine` personalizzata; in caso contrario, viene eseguito l'altro ramo che contiene un'attività <xref:System.Activities.Statements.Delay>. Una volta digitato nella console, il nome dell'utente viene stampato nella console. Se un input non viene immesso entro 5 secondi, l'operazione è scaduta.
 
 ## <a name="demonstrates"></a>Dimostrazione
- <xref:System.Activities.Statements.Pick> attività.
+ Attività <xref:System.Activities.Statements.Pick>
 
 ## <a name="discussion"></a>Discussione
  Nell'esempio è incluso un flusso di lavoro della finestra di progettazione e un flusso di lavoro codificato.

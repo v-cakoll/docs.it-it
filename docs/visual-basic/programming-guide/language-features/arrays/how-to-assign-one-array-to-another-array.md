@@ -7,10 +7,10 @@ helpviewer_keywords:
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
 ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303090"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Procedura: Assegnare una matrice a un'altra matrice (Visual Basic)
@@ -47,4 +47,4 @@ Poiché le matrici sono gli oggetti, è possibile usarli nelle istruzioni di ass
 - [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Risoluzione dei problemi relativi alle matrici](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Conversioni di matrici](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [Conversioni di matrice](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

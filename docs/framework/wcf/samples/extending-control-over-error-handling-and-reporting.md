@@ -3,10 +3,10 @@ title: Estensione del controllo sulla gestione e sulla segnalazione degli errori
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303206"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Estensione del controllo sulla gestione e sulla segnalazione degli errori
@@ -19,7 +19,7 @@ In questo esempio viene illustrato come estendere il controllo sulla gestione de
   
  In questo esempio, il tipo `CalculatorErrorHandler` implementa l'interfaccia <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Nel campo  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> metodo, il `CalculatorErrorHandler` scrive un log di errore in un file di testo txt in c:\logs. Si noti che nell'esempio l'errore viene registrato e non soppresso, in modo da poter essere segnalato al client.  
+ metodo <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>, `CalculatorErrorHandler` scrive un registro dell'errore nel file di testo Error.txt in c:\logs. Si noti che nell'esempio l'errore viene registrato e non soppresso, in modo da poter essere segnalato al client.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  

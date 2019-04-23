@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303492"
 ---
 # <a name="flow-document-overview"></a>Cenni preliminari sui documenti dinamici
@@ -96,7 +96,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
  Ogni classe di queste due categorie è descritta brevemente di seguito.  
   
 ### <a name="block-derived-classes"></a>Classi derivate da Block  
- **Paragrafo**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> è in genere usato per raggruppare il contenuto in un paragrafo. L'uso più semplice e più comune di Paragraph è creare un paragrafo di testo.  
   
@@ -146,7 +146,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
  <xref:System.Windows.Documents.Table> Consente di creare una tabella. <xref:System.Windows.Documents.Table> è simile al <xref:System.Windows.Controls.Grid> elemento ma offre maggiori funzionalità e, pertanto, comporta un sovraccarico di risorse superiore. In quanto <xref:System.Windows.Controls.Grid> è un <xref:System.Windows.UIElement>, non può essere usato nel contenuto dinamico a meno che non è inclusa in un <xref:System.Windows.Documents.BlockUIContainer> o <xref:System.Windows.Documents.InlineUIContainer>. Per ulteriori informazioni sul <xref:System.Windows.Documents.Table>, vedere [Cenni preliminari su tabella](table-overview.md).  
   
 ### <a name="inline-derived-classes"></a>Classi derivate da Inline  
- **Esegui**  
+ **Run**  
   
  <xref:System.Windows.Documents.Run> viene utilizzato per contenere testo non formattato. Ci si aspetterebbe <xref:System.Windows.Documents.Run> oggetti possano essere utilizzati ampiamente nel contenuto del flusso. Tuttavia, nel markup, <xref:System.Windows.Documents.Run> elementi non sono necessari per essere usato in modo esplicito. <xref:System.Windows.Documents.Run> è necessario usare quando si creano o modificano documenti dinamici mediante il codice. Ad esempio, nel markup seguente, il primo <xref:System.Windows.Documents.Paragraph> specifica il <xref:System.Windows.Documents.Run> non lo fa in modo esplicito mentre il secondo elemento. Entrambi i paragrafi generano output identici.  
   
@@ -154,7 +154,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  **Nota:**  A partire dal [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], il <xref:System.Windows.Documents.Run.Text%2A> proprietà del <xref:System.Windows.Documents.Run> oggetto è una proprietà di dipendenza. È possibile associare il <xref:System.Windows.Documents.Run.Text%2A> origine proprietà per una data, ad esempio un <xref:System.Windows.Controls.TextBlock>. Il <xref:System.Windows.Documents.Run.Text%2A> proprietà supporta completamente l'associazione unidirezionale. Il <xref:System.Windows.Documents.Run.Text%2A> proprietà supporta anche l'associazione bidirezionale, ad eccezione di <xref:System.Windows.Controls.RichTextBox>. Per un esempio, vedere <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
- **intervallo**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> Raggruppa altri elementi di contenuto inline. Nessun rendering inerente viene applicato al contenuto all'interno di un <xref:System.Windows.Documents.Span> elemento. Tuttavia, gli elementi che ereditano da <xref:System.Windows.Documents.Span> inclusi <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Italic> e <xref:System.Windows.Documents.Underline> applicare la formattazione al testo.  
   
@@ -194,7 +194,7 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
  <xref:System.Windows.Documents.Figure> e <xref:System.Windows.Documents.Floater> differiscono in diversi modi e vengono usati per scenari diversi.  
   
- **Figura:**  
+ **Figure:**  
   
 -   Può essere posizionata: È possibile impostare gli ancoraggi orizzontali e verticali per ancorarla in relazione la pagina, contenuto, colonna o del paragrafo. È anche possibile usare la <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> e <xref:System.Windows.Documents.Figure.VerticalOffset%2A> le proprietà per specificare offset arbitrari.  
   
@@ -348,11 +348,11 @@ I documenti dinamici sono progettati per ottimizzare la visualizzazione e la leg
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Testo](optimizing-performance-text.md)
+- [per](optimizing-performance-text.md)
 - [Funzionalità tipografiche di WPF](typography-in-wpf.md)
-- [Procedure relative](flow-content-elements-how-to-topics.md)
-- [Cenni preliminari sul modello di contenuto TextElement](textelement-content-model-overview.md)
-- [Cenni generali sul controllo RichTextBox](../controls/richtextbox-overview.md)
+- [Procedure relative alle proprietà](flow-content-elements-how-to-topics.md)
+- [Panoramica sul modello di contenuto TextElement](textelement-content-model-overview.md)
+- [Cenni preliminari sul controllo RichTextBox](../controls/richtextbox-overview.md)
 - [Documenti in WPF](documents-in-wpf.md)
 - [Cenni preliminari sull'elemento Table](table-overview.md)
 - [Cenni preliminari sulle annotazioni](annotations-overview.md)

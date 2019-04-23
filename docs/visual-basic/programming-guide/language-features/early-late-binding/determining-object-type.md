@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302712"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinazione del tipo di un oggetto (Visual Basic)
@@ -48,7 +48,7 @@ Variabili oggetto generico (ovvero, le variabili dichiarate come `Object`) posso
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Chiamata di una proprietà o di un metodo mediante un nome di stringa](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Istruzione If...Then...Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Tipo di dati String](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Tipo di dati Integer](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

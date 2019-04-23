@@ -3,10 +3,10 @@ title: 'Procedura: Creare un servizio per restituire dati arbitrari usando il mo
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303921"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procedura: Creare un servizio per restituire dati arbitrari usando il modello di programmazione HTTP Web WCF
@@ -51,7 +51,7 @@ Talvolta gli sviluppatori devono disporre del controllo completo sulla modalità
        }  
     ```  
   
-     Si noti che la seconda all'ultima riga di codice: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Si noti il codice dalla seconda all'ultima riga: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Questo imposta l'intestazione content-type su `"image/jpeg"`. Sebbene in questo esempio venga illustrato come restituire un file jpg, è possibile modificarlo per restituire qualsiasi tipo di dati necessario, in qualsiasi formato. L'operazione deve recuperare o generare i dati e scriverli in un flusso.  
   
@@ -177,4 +177,4 @@ namespace RawImageService
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

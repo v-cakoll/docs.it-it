@@ -3,10 +3,10 @@ title: 'Procedura: Eseguire più richieste Web in parallelo tramite Async e Awai
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303466"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedura: Eseguire più richieste Web in parallelo tramite Async e Await (Visual Basic)
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. Aggiungere i metodi di supporto seguenti al progetto:  
   
-    -   `ProcessURLAsync` Usa un <xref:System.Net.Http.HttpClient> metodo per scaricare il contenuto di un sito Web come una matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
+    -   `ProcessURLAsync` usa un metodo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web come matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
   
-    -   `DisplayResults` Visualizza il numero di byte nella matrice di byte per ogni URL. Questa visualizzazione indica quando ogni attività ha terminato il download.  
+    -   `DisplayResults` visualizza il numero di byte della matrice di byte per ogni URL. Questa visualizzazione indica quando ogni attività ha terminato il download.  
   
      Copiare i metodi seguenti e incollarli dopo il `startButton_Click` gestore dell'evento in XAML. vb.  
   

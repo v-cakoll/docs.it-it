@@ -3,10 +3,10 @@ title: Esempio di serializzazione JSON con tipizzazione debole
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303687"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Esempio di serializzazione JSON con tipizzazione debole
@@ -58,7 +58,7 @@ Quando si serializza un tipo definito dall'utente in un formato di trasmissione 
   
  Questa operazione può risultare ardua, specialmente se il client deve gestire più di un tipo di oggetto JSON.  
   
- Il tipo `JsonObject` fornito in questo esempio introduce una rappresentazione con tipizzazione debole dell'oggetto JSON deserializzato. `JsonObject` si basa sul mapping naturale tra oggetti JSON e [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dizionari e il mapping tra matrici JSON e [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] matrici. Nel codice seguente viene illustrato il tipo `JsonObject` .  
+ Il tipo `JsonObject` fornito in questo esempio introduce una rappresentazione con tipizzazione debole dell'oggetto JSON deserializzato. `JsonObject` si basa sul mapping naturale tra oggetti JSON e dizionari [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e sul mapping tra matrici JSON e matrici [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Nel codice seguente viene illustrato il tipo `JsonObject` .  
   
 ```  
 // Instantiation of JsonObject json omitted  

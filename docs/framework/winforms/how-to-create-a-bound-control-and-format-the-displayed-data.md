@@ -7,10 +7,10 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302543"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedura: Creare un controllo con associazione e formattare i dati visualizzati
@@ -58,4 +58,4 @@ Con data binding in Windows Form, è possibile formattare i dati visualizzati in
 
 - [Procedura: Creare un controllo con associazione semplice in un Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Convalida dell'input utente in Windows Form](user-input-validation-in-windows-forms.md)
-- [Data binding di Windows Form](windows-forms-data-binding.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

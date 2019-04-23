@@ -7,10 +7,10 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
 ms.openlocfilehash: b298efb0494994659673f9bf9893b667f7eb0f8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304213"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Procedura: Associare un controllo di Windows Forms a un tipo usando la finestra di progettazione
@@ -54,5 +54,5 @@ Quando si compilano controlli che interagiscono con i dati, a volte è necessari
 ## <a name="see-also"></a>Vedere anche
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Procedura: Associare un controllo di Windows Forms a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Procedura: Associare un controllo di Windows Form a un tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Associare controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

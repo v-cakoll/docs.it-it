@@ -3,10 +3,10 @@ title: Interoperabilità con transazioni COM+ ed Enterprise Services
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301906"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interoperabilità con transazioni COM+ ed Enterprise Services
@@ -21,13 +21,13 @@ Lo spazio dei nomi <xref:System.Transactions> supporta l'interoperabilità fra g
   
  La classe <xref:System.Transactions.TransactionScope> contiene costruttori che accettano come parametro l'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.None>, come suggerisce il nome, implica che non impostare alcuna interoperabilità fra <xref:System.EnterpriseServices> contesti e gli ambiti di transazione. Dopo aver creato un oggetto <xref:System.Transactions.TransactionScope> con l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.None>, le modifiche apportate alla proprietà <xref:System.Transactions.Transaction.Current%2A> non vengono riflesse nel contesto COM+. Analogamente, le modifiche apportate alla transazione nel contesto COM+ non vengono riflesse sulla proprietà <xref:System.Transactions.Transaction.Current%2A>. Si tratta della modalità di esecuzione più veloce per <xref:System.Transactions> poiché non esiste alcuna sincronizzazione aggiuntiva richiesta. <xref:System.Transactions.EnterpriseServicesInteropOption.None> è il valore predefinito utilizzato da <xref:System.Transactions.TransactionScope> con tutti i costruttori che non accettano <xref:System.Transactions.EnterpriseServicesInteropOption> come parametro.  
+ L'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.None> consente di non impostare alcuna interoperabilità fra i contesti <xref:System.EnterpriseServices> e gli ambiti di transazione. Dopo aver creato un oggetto <xref:System.Transactions.TransactionScope> con l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.None>, le modifiche apportate alla proprietà <xref:System.Transactions.Transaction.Current%2A> non vengono riflesse nel contesto COM+. Analogamente, le modifiche apportate alla transazione nel contesto COM+ non vengono riflesse sulla proprietà <xref:System.Transactions.Transaction.Current%2A>. Si tratta della modalità di esecuzione più veloce per <xref:System.Transactions> poiché non esiste alcuna sincronizzazione aggiuntiva richiesta. <xref:System.Transactions.EnterpriseServicesInteropOption.None> è il valore predefinito utilizzato da <xref:System.Transactions.TransactionScope> con tutti i costruttori che non accettano <xref:System.Transactions.EnterpriseServicesInteropOption> come parametro.  
   
  Se si desidera combinare le transazioni dello spazio dei nomi <xref:System.EnterpriseServices> con la transazione di ambiente, è necessario utilizzare l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.Full> o l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>. Entrambi questi valori si basano sulla funzionalità Services without Components, e pertanto devono essere utilizzati in Windows XP Service Pack 2 o Windows Server 2003.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full> Specifica che le transazioni di ambiente relative <xref:System.Transactions> e <xref:System.EnterpriseServices> sono sempre gli stessi. Ciò comporta la creazione di un nuovo contesto transazionale <xref:System.EnterpriseServices> e l'impostazione della transazione corrente dell'ambito <xref:System.Transactions.TransactionScope> come transazione corrente di tale contesto. Ne consegue che la transazione associata alla proprietà <xref:System.Transactions.Transaction.Current%2A> è completamente sincronizzata con la transazione associata alla proprietà <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Poiché può essere necessario creare nuovi contesti COM+, questo valore comporta una riduzione delle prestazioni.  
+ L'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.Full> impone che la transazione di ambiente dello spazio dei nomi <xref:System.Transactions> corrisponda sempre a quella dello spazio dei nomi <xref:System.EnterpriseServices>. Ciò comporta la creazione di un nuovo contesto transazionale <xref:System.EnterpriseServices> e l'impostazione della transazione corrente dell'ambito <xref:System.Transactions.TransactionScope> come transazione corrente di tale contesto. Ne consegue che la transazione associata alla proprietà <xref:System.Transactions.Transaction.Current%2A> è completamente sincronizzata con la transazione associata alla proprietà <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Poiché può essere necessario creare nuovi contesti COM+, questo valore comporta una riduzione delle prestazioni.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> Specifica i requisiti seguenti:  
+ L'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> specifica i requisiti seguenti:  
   
 -   Quando si verifica la proprietà <xref:System.Transactions.Transaction.Current%2A>, lo spazio dei nomi <xref:System.Transactions> deve supportare le transazioni nel contesto COM+ se rileva di essere in esecuzione in un contesto diverso da quello predefinito. Si noti che il contesto predefinito non può contenere alcuna transazione. In tal caso, pertanto, anche se è stata scelta l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>, il sistema restituisce come <xref:System.Transactions> la transazione memorizzata nell'archivio locale di thread utilizzato dallo spazio dei nomi <xref:System.Transactions.Transaction.Current%2A>.  
   
@@ -37,7 +37,7 @@ Lo spazio dei nomi <xref:System.Transactions> supporta l'interoperabilità fra g
   
  In breve, quando si crea un nuovo ambito di transazione, si applicano le regole seguenti:  
   
-1. <xref:System.Transactions.Transaction.Current%2A> viene controllato per verificare se è presente una transazione. Questa verifica comporta quanto segue:  
+1. Viene eseguita la verifica della proprietà <xref:System.Transactions.Transaction.Current%2A> per stabilire se esiste una transazione. Questa verifica comporta quanto segue:  
   
     -   Viene eseguita una verifica per stabilire se esiste un ambito.  
   
@@ -55,9 +55,9 @@ Lo spazio dei nomi <xref:System.Transactions> supporta l'interoperabilità fra g
   
     -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: viene creata una transazione associata a un contesto COM+.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: un <xref:System.Transactions> delle transazioni viene creata.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>: viene creata una transazione dello spazio dei nomi <xref:System.Transactions>.  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: se non esiste un contesto COM+, una transazione viene creata e collegata al contesto.  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: se esiste un contesto COM+, viene creata una transazione che quindi viene associata a tale contesto.  
   
  Nella tabella seguente vengono riportati il contesto di ES (Enterprise Services) e un ambito transazionale che richiede una transazione che utilizza l'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption>.  
   

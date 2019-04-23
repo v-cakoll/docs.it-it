@@ -17,10 +17,10 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303141"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Procedura: Garantire che la riga selezionata in una tabella figlio rimanga nella posizione corretta
@@ -85,6 +85,6 @@ Quando si usa il data binding in Windows Form, spesso i dati vengono mostrati in
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Garantire la sincronizzazione di più controlli associati alla stessa origine dati](multiple-controls-bound-to-data-source-synchronized.md)
+- [Procedura: Verificare che più controlli associati alla stessa origine dati rimangano sincronizzati](multiple-controls-bound-to-data-source-synchronized.md)
 - [Componente BindingSource](./controls/bindingsource-component.md)
-- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)

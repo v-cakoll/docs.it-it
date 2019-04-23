@@ -3,10 +3,10 @@ title: MULTISET (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
 ms.openlocfilehash: 44e411b8ae2f43bf3a729ac091ffd1eb4c462c63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303037"
 ---
 # <a name="multiset-entity-sql"></a>MULTISET (Entity SQL)
@@ -28,7 +28,7 @@ or
  Una raccolta di tipo MULTISET\<T >.  
   
 ## <a name="remarks"></a>Note  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce tre tipi di costruttori: costruttori di riga, costruttori di oggetti e costruttori multiset (o raccolta). Per altre informazioni, vedere [tipi di costruzione](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ In[!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili tre tipi di costruttori, ovvero costruttori di riga, costruttori di oggetti e costruttori di raccolte o multiset. Per altre informazioni, vedere [tipi di costruzione](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   
  Il costruttore multiset crea un'istanza di un multiset da un elenco di valori. Tutti i valori nel costruttore devono essere di un tipo compatibile.  
   

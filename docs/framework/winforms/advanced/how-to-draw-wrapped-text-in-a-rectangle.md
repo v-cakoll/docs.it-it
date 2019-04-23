@@ -10,10 +10,10 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301925"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Procedura: Disegnare testo disposto su più righe in un rettangolo
@@ -46,7 +46,7 @@ ms.locfileid: "59301925"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Disegnare testo con GDI](how-to-draw-text-with-gdi.md)
-- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)
-- [Procedura: Creare tipi di carattere e famiglie di caratteri](how-to-construct-font-families-and-fonts.md)
+- [Procedura: Creare testo con GDI](how-to-draw-text-with-gdi.md)
+- [Uso di tipi di carattere e testo](using-fonts-and-text.md)
+- [Procedura: Costruire i tipi di carattere e famiglie di caratteri](how-to-construct-font-families-and-fonts.md)
 - [Procedura: Disegnare testo in una posizione specificata](how-to-draw-text-at-a-specified-location.md)

@@ -3,10 +3,10 @@ title: Esempio sulla sicurezza dei messaggi
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302959"
 ---
 # <a name="message-security-sample"></a>Esempio sulla sicurezza dei messaggi
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 5. Eseguire `setup.bat service` sul server. In esecuzione `setup.bat` con il `service` argomento crea un certificato di servizio con il nome di dominio completo del computer e consente di esportare il certificato del servizio in un file denominato CER.  
   
-6. Modifica Service.exe.config per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) che corrisponde al nome di dominio completo del computer. Modificare anche il valore dell'indirizzo di base per specificare un nome di computer completo anziché localhost`.`  
+6. Modifica Service.exe.config per riflettere il nuovo nome del certificato (nel `findValue` attributo la [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) che corrisponde al nome di dominio completo del computer. Modificare anche il valore dell'indirizzo di base e specificare un nome di computer completo anziché localhost`.`  
   
 7. Copiare il file Service.cer dalla directory del servizio alla directory del client sul computer client.  
   
@@ -168,7 +168,7 @@ Press <ENTER> to terminate client.
 -   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
     > [!NOTE]
-    >  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Per esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    >  Questo script non rimuove i certificati del servizio su un client quando si esegue questo esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che usano certificati tra più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  

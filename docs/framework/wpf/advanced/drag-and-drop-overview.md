@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301399"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
@@ -54,7 +54,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
  L'origine e la destinazione di un'operazione di trascinamento della selezione sono elementi dell'interfaccia utente, ma i dati effettivamente trasferiti non hanno di solito una rappresentazione visiva. È possibile scrivere il codice per fornire una rappresentazione visiva dei dati trascinati, come accade quando si trascinano i file in Esplora risorse. Per impostazione predefinita, viene fornito un feedback all'utente modificando il cursore per rappresentare l'effetto che l'operazione di trascinamento della selezione avrà sui dati, ad esempio se i dati verranno spostati o copiati.  
   
 ### <a name="drag-and-drop-effects"></a>Effetti di trascinamento della selezione  
- Le operazioni di trascinamento della selezione possono avere effetti diversi sui dati trasferiti. Ad esempio, è possibile copiare i dati oppure spostarli. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definisce un <xref:System.Windows.DragDropEffects> enumerazione che è possibile usare per specificare l'effetto di un'operazione di trascinamento e rilascio. Nell'origine di trascinamento, è possibile specificare gli effetti che verranno consentiti dall'origine nel metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Nell'obiettivo di rilascio, è possibile specificare l'effetto previsto per la destinazione nella proprietà <xref:System.Windows.DragEventArgs.Effects%2A> della classe <xref:System.Windows.DragEventArgs>. Quando l'obiettivo di rilascio specifica l'effetto previsto nell'evento <xref:System.Windows.DragDrop.DragOver>, queste informazioni vengono passate nuovamente all'origine di trascinamento nell'evento <xref:System.Windows.DragDrop.GiveFeedback>. L'origine di trascinamento usa queste informazioni per informare l'utente dell'effetto sui dati previsto per l'obiettivo di rilascio. Quando i dati vengono rilasciati, l'obiettivo di rilascio specifica il vero e proprio effetto nell'evento <xref:System.Windows.DragDrop.Drop>. Queste informazioni vengono passate all'origine di trascinamento come valore restituito del metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Se l'obiettivo di trascinamento restituisce un effetto non presente nell'elenco di origini di trascinamento di `allowedEffects`, l'operazione di trascinamento della selezione viene annullata e il trasferimento dati non viene eseguito.  
+ Le operazioni di trascinamento della selezione possono avere effetti diversi sui dati trasferiti. Ad esempio, è possibile copiare i dati oppure spostarli. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definisce un'enumerazione <xref:System.Windows.DragDropEffects> che è possibile usare per specificare l'effetto di un'operazione di trascinamento della selezione. Nell'origine di trascinamento, è possibile specificare gli effetti che verranno consentiti dall'origine nel metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Nell'obiettivo di rilascio, è possibile specificare l'effetto previsto per la destinazione nella proprietà <xref:System.Windows.DragEventArgs.Effects%2A> della classe <xref:System.Windows.DragEventArgs>. Quando l'obiettivo di rilascio specifica l'effetto previsto nell'evento <xref:System.Windows.DragDrop.DragOver>, queste informazioni vengono passate nuovamente all'origine di trascinamento nell'evento <xref:System.Windows.DragDrop.GiveFeedback>. L'origine di trascinamento usa queste informazioni per informare l'utente dell'effetto sui dati previsto per l'obiettivo di rilascio. Quando i dati vengono rilasciati, l'obiettivo di rilascio specifica il vero e proprio effetto nell'evento <xref:System.Windows.DragDrop.Drop>. Queste informazioni vengono passate all'origine di trascinamento come valore restituito del metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Se l'obiettivo di trascinamento restituisce un effetto non presente nell'elenco di origini di trascinamento di `allowedEffects`, l'operazione di trascinamento della selezione viene annullata e il trasferimento dati non viene eseguito.  
   
  È importante ricordare che in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)],i valori <xref:System.Windows.DragDropEffects> vengono usati solo per fornire la comunicazione tra l'origine di trascinamento e l'obiettivo di rilascio in relazione agli effetti dell'operazione di trascinamento della selezione. L'effetto vero e proprio dell'operazione di trascinamento della selezione dipende dal codice scritto nell'applicazione.  
   
@@ -146,11 +146,11 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Nel gestore dell'evento <xref:System.Windows.UIElement.MouseMove> chiamare il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> per avviare l'operazione di trascinamento della selezione. Il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> accetta tre parametri:  
   
--   `dragSource` : Riferimento all'oggetto di dipendenza che rappresenta l'origine dei dati trasferiti. si tratta in genere l'origine del <xref:System.Windows.UIElement.MouseMove> evento.  
+-   `dragSource`: riferimento all'oggetto dipendenza che è l'origine dei dati trasferiti. Di solito è l'origine dell'evento <xref:System.Windows.UIElement.MouseMove>.  
   
--   `data` -Un oggetto che contiene i dati trasferiti, eseguito il wrapping in un <xref:System.Windows.DataObject>.  
+-   `data`: oggetto contenente i dati trasferiti, di cui è stato eseguito il wrapping in un <xref:System.Windows.DataObject>.  
   
--   `allowedEffects` : Uno del <xref:System.Windows.DragDropEffects> valori di enumerazione che specifica gli effetti consentiti dell'operazione di trascinamento e rilascio.  
+-   `allowedEffects`: uno dei valori dell'enumerazione <xref:System.Windows.DragDropEffects>, che specifica gli effetti consentiti dell'operazione di trascinamento della selezione.  
   
  Qualsiasi oggetto serializzabile può essere passato nel parametro `data`. Se il wrapping dei dati non è già stato eseguito in un <xref:System.Windows.DataObject>, verrà eseguito automaticamente in un nuovo <xref:System.Windows.DataObject>. Per passare più elementi di dati, è necessario creare il <xref:System.Windows.DataObject> manualmente e passarlo al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Per altre informazioni, vedere [Dati e oggetti dati](data-and-data-objects.md).  
   
@@ -185,7 +185,7 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
 2. <xref:System.Windows.DragDrop.DragOver>  
   
-3. <xref:System.Windows.DragDrop.DragLeave> oppure <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> o <xref:System.Windows.DragDrop.Drop>  
   
  L'evento <xref:System.Windows.DragDrop.DragEnter> si verifica quando i dati vengono trascinati entro il limite dell'obiettivo di rilascio. In genere si gestisce questo evento per fornire un'anteprima degli effetti dell'operazione di trascinamento e rilascio, se appropriato per l'applicazione. Non impostare la proprietà <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> nell'evento <xref:System.Windows.DragDrop.DragEnter>, perché verrà sovrascritta nell'evento <xref:System.Windows.DragDrop.DragOver>.  
   
@@ -219,5 +219,5 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 
 - <xref:System.Windows.Clipboard>
 - [Procedura dettagliata: Abilitare il trascinamento della selezione in un controllo utente](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Procedure relative](drag-and-drop-how-to-topics.md)
-- [Trascinamento e rilascio](drag-and-drop.md)
+- [Procedure relative alle proprietà](drag-and-drop-how-to-topics.md)
+- [Trascinamento della selezione](drag-and-drop.md)
