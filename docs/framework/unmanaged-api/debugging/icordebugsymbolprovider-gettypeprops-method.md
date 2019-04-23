@@ -5,16 +5,16 @@ ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5f9867dbdc244ed22948dbe9a07a7ea06292d6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079084"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a><span data-ttu-id="74913-102">Metodo icordebugsymbolprovider:: Gettypeprops</span><span class="sxs-lookup"><span data-stu-id="74913-102">ICorDebugSymbolProvider::GetTypeProps Method</span></span>
-<span data-ttu-id="74913-103">Restituisce informazioni sulle proprietà di un tipo, ad esempio il numero di firma dei parametri generici, dato un indirizzo RVA (Relative Virtual Address) in un oggetto vtable.</span><span class="sxs-lookup"><span data-stu-id="74913-103">Returns information about a type's properties, such as the number of signature of its generic parameters, given a relative virtual address (RVA) in a vtable.</span></span>  
+# <a name="icordebugsymbolprovidergettypeprops-method"></a><span data-ttu-id="50391-102">Metodo icordebugsymbolprovider:: Gettypeprops</span><span class="sxs-lookup"><span data-stu-id="50391-102">ICorDebugSymbolProvider::GetTypeProps Method</span></span>
+<span data-ttu-id="50391-103">Restituisce informazioni sulle proprietà di un tipo, ad esempio il numero di firma dei parametri generici, dato un indirizzo RVA (Relative Virtual Address) in un oggetto vtable.</span><span class="sxs-lookup"><span data-stu-id="50391-103">Returns information about a type's properties, such as the number of signature of its generic parameters, given a relative virtual address (RVA) in a vtable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="74913-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="74913-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50391-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="50391-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeProps(  
@@ -25,36 +25,36 @@ HRESULT GetTypeProps(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="74913-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="74913-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50391-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="50391-105">Parameters</span></span>  
  `tableRva`  
- <span data-ttu-id="74913-106">[in] Indirizzo RVA (Relative Virtual Address) in un oggetto vtable</span><span class="sxs-lookup"><span data-stu-id="74913-106">[in] A relative virtual address (RVA) in a vtable.</span></span>  
+ <span data-ttu-id="50391-106">[in] Indirizzo RVA (Relative Virtual Address) in un oggetto vtable</span><span class="sxs-lookup"><span data-stu-id="50391-106">[in] A relative virtual address (RVA) in a vtable.</span></span>  
   
  `cbSignature`  
- <span data-ttu-id="74913-107">[in] Dimensione della matrice `signature`.</span><span class="sxs-lookup"><span data-stu-id="74913-107">[in] The size of the `signature` array.</span></span> <span data-ttu-id="74913-108">Vedere la sezione Osservazioni.</span><span class="sxs-lookup"><span data-stu-id="74913-108">See the Remarks section.</span></span>  
+ <span data-ttu-id="50391-107">[in] Dimensione della matrice `signature`.</span><span class="sxs-lookup"><span data-stu-id="50391-107">[in] The size of the `signature` array.</span></span> <span data-ttu-id="50391-108">Vedere la sezione Osservazioni.</span><span class="sxs-lookup"><span data-stu-id="50391-108">See the Remarks section.</span></span>  
   
  `pcbSignature`  
- <span data-ttu-id="74913-109">[out] [out] Puntatore alla dimensione della matrice `signature` restituita.</span><span class="sxs-lookup"><span data-stu-id="74913-109">[out] [out] A pointer to the size of the returned `signature` array.</span></span>  
+ <span data-ttu-id="50391-109">[out] [out] Puntatore alla dimensione della matrice `signature` restituita.</span><span class="sxs-lookup"><span data-stu-id="50391-109">[out] [out] A pointer to the size of the returned `signature` array.</span></span>  
   
  `signature`  
- <span data-ttu-id="74913-110">[out] Buffer contenente le firme typespec di tutti i parametri generici.</span><span class="sxs-lookup"><span data-stu-id="74913-110">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
+ <span data-ttu-id="50391-110">[out] Buffer contenente le firme typespec di tutti i parametri generici.</span><span class="sxs-lookup"><span data-stu-id="50391-110">[out] A buffer that holds the typespec signatures of all generic parameters.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="74913-111">Note</span><span class="sxs-lookup"><span data-stu-id="74913-111">Remarks</span></span>  
- <span data-ttu-id="74913-112">Per ottenere la dimensione necessaria del tipo `signature` matrice, impostare il `cbSignature` argomento su 0 e `signature` al **null**.</span><span class="sxs-lookup"><span data-stu-id="74913-112">To get the required size of the type's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="74913-113">Quando il metodo viene restituito, `pcbSignature` conterrà il numero di byte necessari per la matrice `signature`.</span><span class="sxs-lookup"><span data-stu-id="74913-113">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50391-111">Note</span><span class="sxs-lookup"><span data-stu-id="50391-111">Remarks</span></span>  
+ <span data-ttu-id="50391-112">Per ottenere la dimensione necessaria del tipo `signature` matrice, impostare il `cbSignature` argomento su 0 e `signature` al **null**.</span><span class="sxs-lookup"><span data-stu-id="50391-112">To get the required size of the type's `signature` array, set the `cbSignature` argument to 0 and `signature` to **null**.</span></span> <span data-ttu-id="50391-113">Quando il metodo viene restituito, `pcbSignature` conterrà il numero di byte necessari per la matrice `signature`.</span><span class="sxs-lookup"><span data-stu-id="50391-113">When the method returns, `pcbSignature` will contain the number of bytes required for the `signature` array.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="74913-114">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="74913-114">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="50391-114">Questo metodo è disponibile solo con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="50391-114">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="74913-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="74913-115">Requirements</span></span>  
- <span data-ttu-id="74913-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="74913-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50391-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="50391-115">Requirements</span></span>  
+ <span data-ttu-id="50391-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50391-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="74913-117">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="74913-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="50391-117">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="50391-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="74913-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="74913-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="50391-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50391-118">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="74913-119">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="74913-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ <span data-ttu-id="50391-119">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50391-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74913-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="74913-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50391-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="50391-120">See also</span></span>
 
-- [<span data-ttu-id="74913-121">Metodo GetMethodProps</span><span class="sxs-lookup"><span data-stu-id="74913-121">GetMethodProps Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
-- [<span data-ttu-id="74913-122">Interfaccia ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="74913-122">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="74913-123">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="74913-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="50391-121">Metodo GetMethodProps</span><span class="sxs-lookup"><span data-stu-id="50391-121">GetMethodProps Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
+- [<span data-ttu-id="50391-122">Interfaccia ICorDebugSymbolProvider</span><span class="sxs-lookup"><span data-stu-id="50391-122">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="50391-123">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="50391-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

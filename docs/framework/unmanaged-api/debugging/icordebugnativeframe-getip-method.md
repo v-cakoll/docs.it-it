@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 38f913b742f7ece2f136454f801ae780124aed87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073533"
 ---
-# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="772ec-102">Metodo ICorDebugNativeFrame::GetIP</span><span class="sxs-lookup"><span data-stu-id="772ec-102">ICorDebugNativeFrame::GetIP Method</span></span>
-<span data-ttu-id="772ec-103">Ottiene il codice nativo offset posizione a cui è attualmente impostato il puntatore all'istruzione.</span><span class="sxs-lookup"><span data-stu-id="772ec-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
+# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="c533a-102">Metodo ICorDebugNativeFrame::GetIP</span><span class="sxs-lookup"><span data-stu-id="c533a-102">ICorDebugNativeFrame::GetIP Method</span></span>
+<span data-ttu-id="c533a-103">Ottiene il codice nativo offset posizione a cui è attualmente impostato il puntatore all'istruzione.</span><span class="sxs-lookup"><span data-stu-id="c533a-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="772ec-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="772ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c533a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c533a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetIP (  
@@ -35,20 +35,20 @@ HRESULT GetIP (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="772ec-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="772ec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c533a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c533a-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="772ec-106">[out] Puntatore alla posizione di offset nel codice nativo.</span><span class="sxs-lookup"><span data-stu-id="772ec-106">[out] A pointer to the offset location in the native code.</span></span>  
+ <span data-ttu-id="c533a-106">[out] Puntatore alla posizione di offset nel codice nativo.</span><span class="sxs-lookup"><span data-stu-id="c533a-106">[out] A pointer to the offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="772ec-107">Note</span><span class="sxs-lookup"><span data-stu-id="772ec-107">Remarks</span></span>  
- <span data-ttu-id="772ec-108">Se lo stack frame che è rappresentato da questo "ICorDebugNativeFrame" è attivo, l'offset è l'indirizzo dell'istruzione successiva da eseguire.</span><span class="sxs-lookup"><span data-stu-id="772ec-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="772ec-109">Se lo stack frame corrente non è attivo, l'offset è l'indirizzo dell'istruzione successiva da eseguire quando viene riattivato lo stack frame.</span><span class="sxs-lookup"><span data-stu-id="772ec-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c533a-107">Note</span><span class="sxs-lookup"><span data-stu-id="c533a-107">Remarks</span></span>  
+ <span data-ttu-id="c533a-108">Se lo stack frame che è rappresentato da questo "ICorDebugNativeFrame" è attivo, l'offset è l'indirizzo dell'istruzione successiva da eseguire.</span><span class="sxs-lookup"><span data-stu-id="c533a-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="c533a-109">Se lo stack frame corrente non è attivo, l'offset è l'indirizzo dell'istruzione successiva da eseguire quando viene riattivato lo stack frame.</span><span class="sxs-lookup"><span data-stu-id="c533a-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="772ec-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="772ec-110">Requirements</span></span>  
- <span data-ttu-id="772ec-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="772ec-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c533a-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c533a-110">Requirements</span></span>  
+ <span data-ttu-id="c533a-111">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c533a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="772ec-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="772ec-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c533a-112">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c533a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="772ec-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="772ec-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c533a-113">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c533a-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="772ec-114">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="772ec-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c533a-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c533a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="772ec-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="772ec-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c533a-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c533a-115">See also</span></span>

@@ -7,44 +7,44 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: 5ea30c2e9593f289c91a47cc082becf47dedc450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072785"
 ---
-# <a name="federation-and-issued-tokens"></a><span data-ttu-id="616b7-102">Federazione e token emessi</span><span class="sxs-lookup"><span data-stu-id="616b7-102">Federation and Issued Tokens</span></span>
-<span data-ttu-id="616b7-103">Con Windows Communication Foundation (WCF), è possibile creare i client che comunicano in modo sicuro con i servizi che implementano le specifiche WS-Federation e WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="616b7-103">With Windows Communication Foundation (WCF), you can create clients that communicate securely with services that implement the WS-Federation and WS-Trust specifications.</span></span> <span data-ttu-id="616b7-104">Le specifiche utilizzano XML, SOAP e Web Services Description Language (WSDL) per fornire meccanismi che consentano l'autenticazione e l'autorizzazione in diverse aree di attendibilità.</span><span class="sxs-lookup"><span data-stu-id="616b7-104">The specifications use XML, SOAP, and Web Services Description Language (WSDL) to provide mechanisms that enable authentication and authorization across different trust realms.</span></span>  
+# <a name="federation-and-issued-tokens"></a><span data-ttu-id="9ac9f-102">Federazione e token emessi</span><span class="sxs-lookup"><span data-stu-id="9ac9f-102">Federation and Issued Tokens</span></span>
+<span data-ttu-id="9ac9f-103">Con Windows Communication Foundation (WCF), è possibile creare i client che comunicano in modo sicuro con i servizi che implementano le specifiche WS-Federation e WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-103">With Windows Communication Foundation (WCF), you can create clients that communicate securely with services that implement the WS-Federation and WS-Trust specifications.</span></span> <span data-ttu-id="9ac9f-104">Le specifiche utilizzano XML, SOAP e Web Services Description Language (WSDL) per fornire meccanismi che consentano l'autenticazione e l'autorizzazione in diverse aree di attendibilità.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-104">The specifications use XML, SOAP, and Web Services Description Language (WSDL) to provide mechanisms that enable authentication and authorization across different trust realms.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="616b7-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="616b7-105">In This Section</span></span>  
- [<span data-ttu-id="616b7-106">Federazione</span><span class="sxs-lookup"><span data-stu-id="616b7-106">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
- <span data-ttu-id="616b7-107">Fornisce una panoramica della federazione.</span><span class="sxs-lookup"><span data-stu-id="616b7-107">Provides an overview of federation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9ac9f-105">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="9ac9f-105">In This Section</span></span>  
+ [<span data-ttu-id="9ac9f-106">Federazione</span><span class="sxs-lookup"><span data-stu-id="9ac9f-106">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
+ <span data-ttu-id="9ac9f-107">Fornisce una panoramica della federazione.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-107">Provides an overview of federation.</span></span>  
   
- [<span data-ttu-id="616b7-108">Federazione e attendibilità</span><span class="sxs-lookup"><span data-stu-id="616b7-108">Federation and Trust</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
- <span data-ttu-id="616b7-109">Elenca i problemi di progettazione da tenere in considerazione durante la creazione di servizi o di client federati.</span><span class="sxs-lookup"><span data-stu-id="616b7-109">Lists the design issues to be aware of when creating federated services or clients.</span></span>  
+ [<span data-ttu-id="9ac9f-108">Federazione e attendibilità</span><span class="sxs-lookup"><span data-stu-id="9ac9f-108">Federation and Trust</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ <span data-ttu-id="9ac9f-109">Elenca i problemi di progettazione da tenere in considerazione durante la creazione di servizi o di client federati.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-109">Lists the design issues to be aware of when creating federated services or clients.</span></span>  
   
- [<span data-ttu-id="616b7-110">Procedura: Creare un client federato</span><span class="sxs-lookup"><span data-stu-id="616b7-110">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- <span data-ttu-id="616b7-111">Descrive i concetti fondamentali della creazione di un client federato con WCF.</span><span class="sxs-lookup"><span data-stu-id="616b7-111">Describes the basics of creating a federated client with WCF.</span></span>  
+ [<span data-ttu-id="9ac9f-110">Procedura: Creare un Client federato</span><span class="sxs-lookup"><span data-stu-id="9ac9f-110">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ <span data-ttu-id="9ac9f-111">Descrive i concetti fondamentali della creazione di un client federato con WCF.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-111">Describes the basics of creating a federated client with WCF.</span></span>  
   
- [<span data-ttu-id="616b7-112">Procedura: Configurare le credenziali in un servizio federativo</span><span class="sxs-lookup"><span data-stu-id="616b7-112">How to: Configure Credentials on a Federation Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- <span data-ttu-id="616b7-113">Descrive i passaggi necessari per la creazione di un servizio federato.</span><span class="sxs-lookup"><span data-stu-id="616b7-113">Describes the steps of creating a federated service.</span></span>  
+ [<span data-ttu-id="9ac9f-112">Procedura: Configurare le credenziali in un servizio federativo</span><span class="sxs-lookup"><span data-stu-id="9ac9f-112">How to: Configure Credentials on a Federation Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ <span data-ttu-id="9ac9f-113">Descrive i passaggi necessari per la creazione di un servizio federato.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-113">Describes the steps of creating a federated service.</span></span>  
   
- [<span data-ttu-id="616b7-114">Procedura: Creare una classe WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="616b7-114">How to: Create a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- <span data-ttu-id="616b7-115">Descrive come configurare client e servizi che utilizzano `WSFederationHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="616b7-115">Describes how to configure clients and services that use the `WSFederationHttpBinding`.</span></span>  
+ [<span data-ttu-id="9ac9f-114">Procedura: Creare una classe WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="9ac9f-114">How to: Create a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ <span data-ttu-id="9ac9f-115">Descrive come configurare client e servizi che utilizzano `WSFederationHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-115">Describes how to configure clients and services that use the `WSFederationHttpBinding`.</span></span>  
   
- [<span data-ttu-id="616b7-116">Procedura: Creare un servizio token di sicurezza</span><span class="sxs-lookup"><span data-stu-id="616b7-116">How to: Create a Security Token Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
- <span data-ttu-id="616b7-117">Descrive i passaggi necessari per la creazione di un servizio token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="616b7-117">Describes the steps of creating a security token service.</span></span>  
+ [<span data-ttu-id="9ac9f-116">Procedura: Creare un servizio Token di sicurezza</span><span class="sxs-lookup"><span data-stu-id="9ac9f-116">How to: Create a Security Token Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ <span data-ttu-id="9ac9f-117">Descrive i passaggi necessari per la creazione di un servizio token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-117">Describes the steps of creating a security token service.</span></span>  
   
- [<span data-ttu-id="616b7-118">Attestazioni e token SAML (Security Assertions Markup Language)</span><span class="sxs-lookup"><span data-stu-id="616b7-118">Security Assertions Markup Language (SAML) Tokens and Claims</span></span>](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
- <span data-ttu-id="616b7-119">Descrive i token Security Assertions Markup Language (SAML) che sono flessibili e consentono di creare tipi di attestazione dettagliati.</span><span class="sxs-lookup"><span data-stu-id="616b7-119">Describes Security Assertions Markup Language (SAML) tokens, which are extensible and enable you to create rich claim types.</span></span>  
+ [<span data-ttu-id="9ac9f-118">Attestazioni e token SAML (Security Assertions Markup Language)</span><span class="sxs-lookup"><span data-stu-id="9ac9f-118">Security Assertions Markup Language (SAML) Tokens and Claims</span></span>](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
+ <span data-ttu-id="9ac9f-119">Descrive i token Security Assertions Markup Language (SAML) che sono flessibili e consentono di creare tipi di attestazione dettagliati.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-119">Describes Security Assertions Markup Language (SAML) tokens, which are extensible and enable you to create rich claim types.</span></span>  
   
- [<span data-ttu-id="616b7-120">Procedura: Configurare un emittente locale</span><span class="sxs-lookup"><span data-stu-id="616b7-120">How to: Configure a Local Issuer</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- <span data-ttu-id="616b7-121">Descrive come creare un emittente locale di token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="616b7-121">Describes how to create a local issuer of security tokens.</span></span>  
+ [<span data-ttu-id="9ac9f-120">Procedura: Configurare un emittente locale</span><span class="sxs-lookup"><span data-stu-id="9ac9f-120">How to: Configure a Local Issuer</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ <span data-ttu-id="9ac9f-121">Descrive come creare un emittente locale di token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-121">Describes how to create a local issuer of security tokens.</span></span>  
   
- [<span data-ttu-id="616b7-122">Procedura: Disabilitare sessioni protette in WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="616b7-122">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- <span data-ttu-id="616b7-123">Descrive come disattivare sessioni protette in `WSFederationHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="616b7-123">Describes how to disable secure sessions on a `WSFederationHttpBinding`.</span></span> <span data-ttu-id="616b7-124">La disattivazione di sessioni protette è necessaria in caso di creazione di una Web farm che richiede una sessione per ogni client.</span><span class="sxs-lookup"><span data-stu-id="616b7-124">Disabling secure sessions is necessary when creating a Web farm that requires a session for each client.</span></span>  
+ [<span data-ttu-id="9ac9f-122">Procedura: Disabilitare le sessioni protette in un'associazione WSFederationHttpBinding</span><span class="sxs-lookup"><span data-stu-id="9ac9f-122">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ <span data-ttu-id="9ac9f-123">Descrive come disattivare sessioni protette in `WSFederationHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-123">Describes how to disable secure sessions on a `WSFederationHttpBinding`.</span></span> <span data-ttu-id="9ac9f-124">La disattivazione di sessioni protette è necessaria in caso di creazione di una Web farm che richiede una sessione per ogni client.</span><span class="sxs-lookup"><span data-stu-id="9ac9f-124">Disabling secure sessions is necessary when creating a Web farm that requires a session for each client.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="616b7-125">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="616b7-125">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9ac9f-125">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="9ac9f-125">Reference</span></span>  
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
@@ -61,8 +61,8 @@ ms.locfileid: "59072785"
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a><span data-ttu-id="616b7-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="616b7-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ac9f-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9ac9f-126">See also</span></span>
 
-- [<span data-ttu-id="616b7-127">Autorizzazione</span><span class="sxs-lookup"><span data-stu-id="616b7-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [<span data-ttu-id="616b7-128">Token personalizzati</span><span class="sxs-lookup"><span data-stu-id="616b7-128">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)
-- [<span data-ttu-id="616b7-129">Sicurezza e protezione</span><span class="sxs-lookup"><span data-stu-id="616b7-129">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [<span data-ttu-id="9ac9f-127">Autorizzazione</span><span class="sxs-lookup"><span data-stu-id="9ac9f-127">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [<span data-ttu-id="9ac9f-128">Token personalizzati</span><span class="sxs-lookup"><span data-stu-id="9ac9f-128">Custom Tokens</span></span>](../../../../docs/framework/wcf/extending/custom-tokens.md)
+- [<span data-ttu-id="9ac9f-129">Modello di sicurezza per Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="9ac9f-129">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

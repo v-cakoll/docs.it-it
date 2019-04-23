@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0df8d11bba870dfec880401064ec3f78f5f04e1f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081476"
 ---
-# <a name="ihostthreadpoolmanagersetmaxthreads-method"></a><span data-ttu-id="e18cf-102">Metodo IHostThreadPoolManager::SetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="e18cf-102">IHostThreadPoolManager::SetMaxThreads Method</span></span>
-<span data-ttu-id="e18cf-103">Imposta il numero massimo di thread che l'host può mantenere nel pool di thread.</span><span class="sxs-lookup"><span data-stu-id="e18cf-103">Sets the maximum number of threads that the host can maintain in the thread pool.</span></span>  
+# <a name="ihostthreadpoolmanagersetmaxthreads-method"></a><span data-ttu-id="ca862-102">Metodo IHostThreadPoolManager::SetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="ca862-102">IHostThreadPoolManager::SetMaxThreads Method</span></span>
+<span data-ttu-id="ca862-103">Imposta il numero massimo di thread che l'host può mantenere nel pool di thread.</span><span class="sxs-lookup"><span data-stu-id="ca862-103">Sets the maximum number of threads that the host can maintain in the thread pool.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e18cf-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e18cf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca862-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ca862-104">Syntax</span></span>  
   
 ```  
 HRESULT SetMaxThreads (  
@@ -35,38 +35,38 @@ HRESULT SetMaxThreads (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e18cf-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e18cf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ca862-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="ca862-105">Parameters</span></span>  
  `MaxThreads`  
- <span data-ttu-id="e18cf-106">Numero massimo di thread di lavoro nel pool di thread.</span><span class="sxs-lookup"><span data-stu-id="e18cf-106">The maximum number of worker threads in the thread pool.</span></span>  
+ <span data-ttu-id="ca862-106">Numero massimo di thread di lavoro nel pool di thread.</span><span class="sxs-lookup"><span data-stu-id="ca862-106">The maximum number of worker threads in the thread pool.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e18cf-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="e18cf-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ca862-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="ca862-107">Return Value</span></span>  
   
-|<span data-ttu-id="e18cf-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e18cf-108">HRESULT</span></span>|<span data-ttu-id="e18cf-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e18cf-109">Description</span></span>|  
+|<span data-ttu-id="ca862-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="ca862-108">HRESULT</span></span>|<span data-ttu-id="ca862-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ca862-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e18cf-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="e18cf-110">S_OK</span></span>|`SetMaxThreads` <span data-ttu-id="e18cf-111">stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="e18cf-111">returned successfully.</span></span>|  
-|<span data-ttu-id="e18cf-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e18cf-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e18cf-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="e18cf-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="e18cf-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e18cf-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e18cf-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="e18cf-115">The call timed out.</span></span>|  
-|<span data-ttu-id="e18cf-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e18cf-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e18cf-117">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="e18cf-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="e18cf-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e18cf-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e18cf-119">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="e18cf-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="e18cf-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e18cf-120">E_FAIL</span></span>|<span data-ttu-id="e18cf-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="e18cf-121">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="e18cf-122">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="e18cf-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e18cf-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="e18cf-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="e18cf-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="e18cf-124">E_NOTIMPL</span></span>|<span data-ttu-id="e18cf-125">L'host non fornisce un'implementazione di `SetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="e18cf-125">The host does not provide an implementation of `SetMaxThreads`.</span></span>|  
+|<span data-ttu-id="ca862-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="ca862-110">S_OK</span></span>|<span data-ttu-id="ca862-111">`SetMaxThreads` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="ca862-111">`SetMaxThreads` returned successfully.</span></span>|  
+|<span data-ttu-id="ca862-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="ca862-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="ca862-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="ca862-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="ca862-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="ca862-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="ca862-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="ca862-115">The call timed out.</span></span>|  
+|<span data-ttu-id="ca862-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="ca862-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="ca862-117">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="ca862-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="ca862-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="ca862-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="ca862-119">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="ca862-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="ca862-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="ca862-120">E_FAIL</span></span>|<span data-ttu-id="ca862-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="ca862-121">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="ca862-122">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="ca862-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="ca862-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="ca862-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="ca862-124">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="ca862-124">E_NOTIMPL</span></span>|<span data-ttu-id="ca862-125">L'host non fornisce un'implementazione di `SetMaxThreads`.</span><span class="sxs-lookup"><span data-stu-id="ca862-125">The host does not provide an implementation of `SetMaxThreads`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e18cf-126">Note</span><span class="sxs-lookup"><span data-stu-id="e18cf-126">Remarks</span></span>  
- <span data-ttu-id="e18cf-127">Un host non è necessario per consentire a configurare le dimensioni del pool di thread CLR.</span><span class="sxs-lookup"><span data-stu-id="e18cf-127">A host is not required to allow the CLR to configure the size of the thread pool.</span></span> <span data-ttu-id="e18cf-128">Alcuni host potrebbe essere necessario un controllo esclusivo sul pool di thread, per motivi, ad esempio la scalabilità, prestazioni o implementazione.</span><span class="sxs-lookup"><span data-stu-id="e18cf-128">Some hosts might want exclusive control over the thread pool, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="e18cf-129">In questo caso, un host deve restituire un valore HRESULT E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="e18cf-129">In this case, a host should return an HRESULT value of E_NOTIMPL.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ca862-126">Note</span><span class="sxs-lookup"><span data-stu-id="ca862-126">Remarks</span></span>  
+ <span data-ttu-id="ca862-127">Un host non è necessario per consentire a configurare le dimensioni del pool di thread CLR.</span><span class="sxs-lookup"><span data-stu-id="ca862-127">A host is not required to allow the CLR to configure the size of the thread pool.</span></span> <span data-ttu-id="ca862-128">Alcuni host potrebbe essere necessario un controllo esclusivo sul pool di thread, per motivi, ad esempio la scalabilità, prestazioni o implementazione.</span><span class="sxs-lookup"><span data-stu-id="ca862-128">Some hosts might want exclusive control over the thread pool, for reasons such as implementation, performance, or scalability.</span></span> <span data-ttu-id="ca862-129">In questo caso, un host deve restituire un valore HRESULT E_NOTIMPL.</span><span class="sxs-lookup"><span data-stu-id="ca862-129">In this case, a host should return an HRESULT value of E_NOTIMPL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e18cf-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e18cf-130">Requirements</span></span>  
- <span data-ttu-id="e18cf-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e18cf-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca862-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ca862-130">Requirements</span></span>  
+ <span data-ttu-id="ca862-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca862-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e18cf-132">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e18cf-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ca862-132">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ca862-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e18cf-133">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="e18cf-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ca862-133">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="ca862-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="e18cf-134">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="e18cf-134">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="ca862-134">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca862-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e18cf-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e18cf-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca862-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ca862-135">See also</span></span>
 
 - <xref:System.Threading.ThreadPool.SetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>
-- [<span data-ttu-id="e18cf-136">Metodo GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="e18cf-136">GetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
-- [<span data-ttu-id="e18cf-137">Metodo SetMinThreads</span><span class="sxs-lookup"><span data-stu-id="e18cf-137">SetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
-- [<span data-ttu-id="e18cf-138">Interfaccia IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="e18cf-138">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
+- [<span data-ttu-id="ca862-136">Metodo GetMaxThreads</span><span class="sxs-lookup"><span data-stu-id="ca862-136">GetMaxThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getmaxthreads-method.md)
+- [<span data-ttu-id="ca862-137">Metodo SetMinThreads</span><span class="sxs-lookup"><span data-stu-id="ca862-137">SetMinThreads Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-setminthreads-method.md)
+- [<span data-ttu-id="ca862-138">Interfaccia IHostThreadPoolManager</span><span class="sxs-lookup"><span data-stu-id="ca862-138">IHostThreadPoolManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
