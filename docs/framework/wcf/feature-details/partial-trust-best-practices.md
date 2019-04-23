@@ -3,10 +3,10 @@ title: Procedure consigliate in ambienti parzialmente attendibili
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184080"
 ---
 # <a name="partial-trust-best-practices"></a>Procedure consigliate in ambienti parzialmente attendibili
@@ -29,7 +29,7 @@ In questo argomento descrive le procedure consigliate durante l'esecuzione di Wi
   
 -   I metodi che gestiscono eventi di serializzazione (ad esempio `OnSerializing`, `OnSerialized`, `OnDeserializing` e `OnDeserialized`) devono essere dichiarati pubblici. Sono tuttavia supportate le implementazioni sia esplicite che implicite di <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29>.  
   
--   `[DataContract]` i tipi implementati in assembly contrassegnati con il <xref:System.Security.AllowPartiallyTrustedCallersAttribute> non deve eseguire le azioni correlate alla sicurezza nel costruttore del tipo, come il <xref:System.Runtime.Serialization.DataContractSerializer> non chiama il costruttore dell'oggetto appena creata un'istanza durante la deserializzazione. In particolare, è necessario evitare le tecniche di sicurezza comuni seguenti per i tipi `[DataContract]`:  
+-   I tipi `[DataContract]` implementati in assembly contrassegnati con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> non devono eseguire azioni correlate alla protezione nel costruttore del tipo, poiché <xref:System.Runtime.Serialization.DataContractSerializer> non chiama il costruttore dell'oggetto di cui è appena stata creata un'istanza durante la deserializzazione. In particolare, è necessario evitare le tecniche di sicurezza comuni seguenti per i tipi `[DataContract]`:  
   
 -   Tentare di limitare l'accesso parzialmente attendibile rendendo interno o privato il costruttore del tipo.  
   

@@ -3,10 +3,10 @@ title: Panoramica sulla protezione estesa per l'autenticazione
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183677"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Panoramica sulla protezione estesa per l'autenticazione
@@ -34,4 +34,4 @@ La protezione estesa per l'autenticazione consente di impedire attacchi man-in-t
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with quaternions
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
 ms.openlocfilehash: d994ac2ae67fd366f27f123d5bd15f14d5ac7abe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183222"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Procedura: Aggiungere un'animazione a una rotazione tridimensionale usando quaternioni
@@ -33,7 +33,7 @@ In questo esempio illustra come animare una rotazione di un oggetto 3D tramite q
 
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Creare una scena tridimensionale](how-to-create-a-3-d-scene.md)
-- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
 - [Cenni preliminari sulle trasformazioni](transforms-overview.md)
-- [Aggiungere un'animazione a una rotazione tridimensionale usando gli storyboard](how-to-animate-a-3-d-rotation-using-storyboards.md)
+- [Animare una rotazione tridimensionale usando gli storyboard](how-to-animate-a-3-d-rotation-using-storyboards.md)
 - [Aggiungere un'animazione a una rotazione tridimensionale usando Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)

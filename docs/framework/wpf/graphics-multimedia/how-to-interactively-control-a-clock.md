@@ -9,10 +9,10 @@ helpviewer_keywords:
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
 ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186589"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Procedura: Controllare in modo interattivo un oggetto Clock
@@ -29,5 +29,5 @@ Oggetto <xref:System.Windows.Media.Animation.Clock> dell'oggetto <xref:System.Wi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Aggiungere un'animazione a una proprietà usando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)
+- [Animare una proprietà utilizzando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)

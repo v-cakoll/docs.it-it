@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186498"
 ---
 # <a name="listview-overview"></a>Panoramica sul controllo ListView
@@ -87,5 +87,5 @@ Il <xref:System.Windows.Controls.ListView> controllo fornisce l'infrastruttura p
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
 - [Cenni preliminari su GridView](gridview-overview.md)
-- [Procedure relative](listview-how-to-topics.md)
+- [Procedure relative alle proprietà](listview-how-to-topics.md)
 - [Controlli](../advanced/optimizing-performance-controls.md)

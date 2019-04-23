@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
 ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186875"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione del servizio
@@ -123,4 +123,4 @@ Dopo aver definito un contratto di servizio ([Designing Service Contracts](../..
 ## <a name="see-also"></a>Vedere anche
 
 - [Configurazione dei servizi](../../../docs/framework/wcf/configuring-services.md)
-- [Procedura: Controllare l'istanza del servizio](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Procedura: Controllare le istanze del servizio](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

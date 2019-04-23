@@ -10,23 +10,23 @@ helpviewer_keywords:
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183742"
 ---
 # <a name="ui-automation-events-overview"></a>Cenni preliminari sugli eventi di automazione interfaccia utente
 > [!NOTE]
 >  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate sulle [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] notifica degli eventi è una funzionalità chiave per Assistive Technology, quali gli screen reader e dello schermo. I client di automazione interfaccia utente tengono traccia degli eventi generati dai provider di automazione interfaccia utente quando si verifica un evento nell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e usano le informazioni per inviare notifiche agli utenti finali.  
+ La notifica degli eventi di[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] è una funzionalità chiave per dispositivi di assistive technology, quali utilità per la lettura dello schermo e lenti d'ingrandimento. I client di automazione interfaccia utente tengono traccia degli eventi generati dai provider di automazione interfaccia utente quando si verifica un evento nell' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e usano le informazioni per inviare notifiche agli utenti finali.  
   
  Una maggiore efficienza è ottenuta consentendo alle applicazioni provider di generare eventi in modo selettivo, se per tali eventi esistono sottoscrizioni di client, o di non generarne affatto, se nessun client è in attesa di eventi.  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>Tipi di eventi  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gli eventi rientrano nelle categorie seguenti.  
+ Gli eventi di[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sono suddivisi nelle categorie seguenti.  
   
 |event|Descrizione|  
 |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "59183742"
   
  I seguenti eventi possono essere generati anche se lo stato dell'interfaccia utente non è cambiato.  
   
--   `AutomationPropertyChangedEvent` (a seconda della proprietà che è stato modificato)  
+-   `AutomationPropertyChangedEvent` (a seconda della proprietà che è stata modificata)  
   
 -   `ElementSelectedEvent`  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59183742"
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>Identificatori di eventi di automazione interfaccia utente  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] gli eventi sono contrassegnati da <xref:System.Windows.Automation.AutomationEvent> oggetti. La proprietà <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> contiene un valore che identifica in modo univoco il tipo di evento.  
+ Gli eventi di[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] sono identificati da oggetti <xref:System.Windows.Automation.AutomationEvent> . La proprietà <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> contiene un valore che identifica in modo univoco il tipo di evento.  
   
  I valori possibili per <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> sono indicati nella tabella riportata di seguito, insieme al tipo usato per gli argomenti dell'evento. Si noti che gli identificatori usati da client e provider sono campi denominati in modo identico di classi diverse.  
   
