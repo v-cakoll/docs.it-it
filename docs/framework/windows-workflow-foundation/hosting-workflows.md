@@ -5,20 +5,20 @@ helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
 ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137748"
 ---
 # <a name="hosting-workflows"></a>Hosting dei flussi di lavoro
 Negli argomenti di questa sezione viene descritto l'hosting dei flussi di lavoro.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Opzioni di hosting di flussi di lavoro](workflow-hosting-options.md)  
+ [Opzioni di hosting dei flussi di lavoro](workflow-hosting-options.md)  
  Viene descritto come selezionare l'host appropriato ai flussi di lavoro.  
   
- [Utilizzo di WorkflowInvoker e WorkflowApplication](using-workflowinvoker-and-workflowapplication.md)  
+ [Uso di WorkflowInvoker e WorkflowApplication](using-workflowinvoker-and-workflowapplication.md)  
  Viene descritto come usare gli oggetti <xref:System.Activities.WorkflowInvoker> e <xref:System.Activities.WorkflowApplication> per richiamare i flussi di lavoro.  
   
  [Ispezione dell'albero delle attività](activity-tree-inspection.md)  
@@ -27,7 +27,7 @@ Negli argomenti di questa sezione viene descritto l'hosting dei flussi di lavoro
  [Serializzazione di flussi di lavoro e attività da e verso XAML](serializing-workflows-and-activities-to-and-from-xaml.md)  
  Viene descritto come serializzare i flussi di lavoro in XAML e usare le definizioni di flusso di lavoro serializzate.  
   
- [Utilizzo di WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md)  
+ [Uso di WorkflowIdentity e controllo delle versioni](using-workflowidentity-and-versioning.md)  
  Viene descritto come usare `WorkflowIdentity` per ospitare più versioni di un flusso di lavoro side-by-side.  
   
 ## <a name="see-also"></a>Vedere anche

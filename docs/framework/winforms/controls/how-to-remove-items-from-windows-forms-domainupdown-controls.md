@@ -10,10 +10,10 @@ helpviewer_keywords:
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
 ms.openlocfilehash: 0c07365f5be2e419b4049a466949fed2d884d897
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131404"
 ---
 # <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Procedura: Rimuovere elementi dai controlli DomainUpDown di Windows Forms
@@ -60,4 +60,4 @@ ms.locfileid: "59131404"
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>
 - [Controllo DomainUpDown](domainupdown-control-windows-forms.md)
-- [Panoramica del controllo DomainUpDown](domainupdown-control-overview-windows-forms.md)
+- [Panoramica sul controllo DomainUpDown](domainupdown-control-overview-windows-forms.md)

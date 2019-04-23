@@ -1,12 +1,12 @@
 ---
-title: <add> Elemento per schemeSettings (impostazioni Uri)
+title: Elemento <add> per schemeSettings (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139932"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<aggiungere > (elemento) per schemeSettings (impostazioni Uri)
@@ -48,7 +48,7 @@ Aggiunge un'impostazione di schema per un nome di schema.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<schemeSettings > (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
+|[Elemento \<schemeSettings> (impostazioni URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, il <xref:System.Uri?displayProperty=nameWithType> delimitatori di percorso con codifica percentuale non consente l'escape di classe prima di eseguire la compressione del percorso. È stato implementato come un meccanismo di protezione contro gli attacchi simile al seguente:  

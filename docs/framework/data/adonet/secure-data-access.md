@@ -3,10 +3,10 @@ title: Accesso sicuro ai dati
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137254"
 ---
 # <a name="secure-data-access"></a>Accesso sicuro ai dati
@@ -56,7 +56,7 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Nozioni fondamentali sulla gestione delle eccezioni](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Vengono descritte le forme di base di gestione delle eccezioni strutturata di tipo try/catch/finally|  
-|[Suggerimenti per le eccezioni](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Vengono descritte le procedure consigliate per la gestione delle eccezioni.|  
+|[Procedure consigliate per le eccezioni](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Vengono descritte le procedure consigliate per la gestione delle eccezioni.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Protezione delle origini dati di Microsoft Access ed Excel  
  Se i requisiti di sicurezza sono minimi o non esistenti, Microsoft Access e Microsoft Excel possono fungere da archivio dati per un'applicazione ADO.NET. Le funzionalità di sicurezza di queste applicazioni sono efficaci per la prevenzione, ma non devono essere considerate affidabili se non per scoraggiare le intrusioni di utenti non informati. I file di dati fisici per Access ed Excel si trovano nel file system e devono essere accessibili a tutti gli utenti. Questo li rende vulnerabili ad attacchi che possono comportare il furto o la perdita di dati, in quando i file possono essere facilmente copiati o modificati. Se è necessaria una soluzione di sicurezza più affidabile, usare SQL Server o un altro database basato su server in cui i file di dati non sono leggibili dal file system.  
@@ -65,9 +65,9 @@ Per scrivere codice ADO.NET protetto, è necessario comprendere i meccanismi di 
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Security Considerations and Guidance for Access 2007 (informazioni in lingua inglese)](https://go.microsoft.com/fwlink/?LinkId=98354)|Vengono descritte le tecniche di sicurezza disponibili per Access 2007, ad esempio crittografia dei file, amministrazione delle password, conversione dei database nei nuovi formati ACCDB e ACCDE e uso di altre opzioni di sicurezza.|  
-|[Understanding the Role of Workgroup Information Files in Access Security (informazioni in lingua inglese)](https://support.microsoft.com/kb/305542)|Vengono illustrati il ruolo e la relazione del file di informazioni sul gruppo di lavoro nella sicurezza di Access 2003.|  
-|[Domande frequenti sulla sicurezza di Microsoft Access disponibili nell'area download](https://go.microsoft.com/fwlink/?LinkId=47698)|Versione scaricabile delle domande frequenti sulla sicurezza di Microsoft Access.|  
+|[Considerazioni sulla sicurezza e indicazioni per Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Vengono descritte le tecniche di sicurezza disponibili per Access 2007, ad esempio crittografia dei file, amministrazione delle password, conversione dei database nei nuovi formati ACCDB e ACCDE e uso di altre opzioni di sicurezza.|  
+|[Informazioni sul ruolo del file di informazioni sul gruppo di lavoro nella sicurezza dall'accesso di](https://support.microsoft.com/kb/305542)|Vengono illustrati il ruolo e la relazione del file di informazioni sul gruppo di lavoro nella sicurezza di Access 2003.|  
+|[Domande frequenti su Microsoft Access sicurezza per le versioni di Microsoft Access 2.0 a 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Versione scaricabile delle domande frequenti sulla sicurezza di Microsoft Access.|  
 ## <a name="enterprise-services"></a>Servizi aziendali  
  In COM+ è incluso un modello di sicurezza che si basa sugli account di Windows NT e sulla rappresentazione di processi e thread. Lo spazio dei nomi <xref:System.EnterpriseServices> fornisce dei wrapper che consentono alle applicazioni .NET di integrare codice non gestito con i servizi di sicurezza COM+ tramite la classe <xref:System.EnterpriseServices.ServicedComponent>.  
   

@@ -3,14 +3,14 @@ title: Attività di raccolta in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133784"
 ---
 # <a name="collection-activities-in-wf"></a>Attività di raccolta in WF
-Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e rimozione di elementi da una raccolta, verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection` e `RemoveFromCollection` hanno un' <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
+Le attività di raccolta vengono usate per operare con gli oggetti di una raccolta in un flusso di lavoro. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] dispone di attività fornite dal sistema per l'aggiunta e la rimozione di elementi da una raccolta, la verifica dell'esistenza di un elemento in una raccolta e la cancellazione di una raccolta. `ExistsInCollection` e `RemoveFromCollection` hanno un' <xref:System.Activities.OutArgument%601> di tipo <xref:System.Boolean>, che indica il risultato.  
   
 > [!IMPORTANT]
 >  Se un'attività di raccolta viene eseguita prima di impostare l'oggetto della raccolta sottostante, viene generata un'eccezione <xref:System.InvalidOperationException> e l'attività non riesce.  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Gli esempi di codice precedente possono anche essere creati utilizzando <xref:Microsoft.CSharp.Activities.CSharpValue%601> invece di <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Gli esempi di codice precedenti possono essere creati anche usando <xref:Microsoft.CSharp.Activities.CSharpValue%601> anziché <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  

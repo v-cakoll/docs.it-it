@@ -3,10 +3,10 @@ title: 'Procedure consigliate: Intermediari'
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
 ms.openlocfilehash: 0bd553486bfb89a0ec14c42a1bb7d2ed9c4c540d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131729"
 ---
 # <a name="best-practices-intermediaries"></a>Procedure consigliate: Intermediari
@@ -35,4 +35,4 @@ catch (Exception e)
 ## <a name="see-also"></a>Vedere anche
 
 - [Gestione errori WCF](../../../docs/framework/wcf/wcf-error-handling.md)
-- [Specifica e gestione di errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

@@ -11,10 +11,10 @@ ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136461"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > elemento
@@ -178,4 +178,4 @@ L'esempio seguente usa il `<add>` elemento a cui aggiungere le due impostazioni 
 
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<runtime > elemento](runtime-element.md)
-- [\<configurazione > elemento](../configuration-element.md)
+- [Elemento \<configuration>](../configuration-element.md)

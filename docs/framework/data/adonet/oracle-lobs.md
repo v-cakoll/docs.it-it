@@ -3,10 +3,10 @@ title: Oggetti LOB Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135668"
 ---
 # <a name="oracle-lobs"></a>Oggetti LOB Oracle
@@ -16,8 +16,8 @@ Il Provider di dati .NET Framework per Oracle include la <xref:System.Data.Oracl
   
 |Tipo di dati|Descrizione|  
 |---------------|-----------------|  
-|**Blob**|Oracle **BLOB** tipo di dati che contiene dati binari con dimensioni massime di 4 GB. Esegue il mapping a un **matrice** typu **Byte**.|  
-|**Clob**|Oracle **CLOB** tipo di dati che contiene dati di tipo carattere, in base al carattere predefinito impostato nel server, con dimensioni massime di 4 GB. Esegue il mapping a **stringa**.|  
+|**BLOB**|Oracle **BLOB** tipo di dati che contiene dati binari con dimensioni massime di 4 GB. Esegue il mapping a un **matrice** typu **Byte**.|  
+|**Nell'oggetto CLOB**|Oracle **CLOB** tipo di dati che contiene dati di tipo carattere, in base al carattere predefinito impostato nel server, con dimensioni massime di 4 GB. Esegue il mapping a **stringa**.|  
 |**NClob**|Oracle **NCLOB** tipo di dati che contiene dati di tipo carattere, basato sul set sul server con una dimensione massima di 4 GB di caratteri nazionali. Esegue il mapping a **stringa**.|  
   
  Un' **OracleLob** differisce da un <xref:System.Data.OracleClient.OracleBFile> in quanto i dati vengono archiviati nel server anziché in un file fisico nel sistema operativo. Può anche essere un oggetto di lettura / scrittura, a differenza di un' **OracleBFile**, che è sempre di sola lettura.  

@@ -5,10 +5,10 @@ ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: affe67006c9e37d55b0f9d107c92441da44c9ab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138792"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>Metodo ICorDebugVariableSymbol::GetSlotIndex
@@ -27,7 +27,7 @@ HRESULT GetSlotIndex(
  [out] Un puntatore all'indice degli slot della variabile locale.  
   
 ## <a name="return-value"></a>Valore restituito  
- `S_OK` Se ha esito positivo. `E_FAIL` Se la variabile è un argomento di funzione.  
+ `S_OK` se l'operazione riesce. `E_FAIL` se la variabile è un argomento di funzione.  
   
 ## <a name="remarks"></a>Note  
  L'indice degli slot gestiti di una variabile locale può essere usato per recuperare informazioni sui metadati della variabile.  
