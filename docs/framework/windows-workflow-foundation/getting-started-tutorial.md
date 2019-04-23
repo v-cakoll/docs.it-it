@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
 ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217432"
 ---
 # <a name="getting-started-tutorial"></a>Esercitazione introduttiva
@@ -25,13 +25,13 @@ In questa sezione contiene un set di procedure dettagliate che introducono alla 
  [Procedura: Eseguire un flusso di lavoro](how-to-run-a-workflow.md)  
  Viene descritto come richiamare un flusso di lavoro da un ambiente host, come passare i dati all'interno e all'esterno di un flusso di lavoro e come riprendere i segnalibri.  
   
- [Procedura: Creare ed eseguire un flusso di lavoro con esecuzione prolungata](how-to-create-and-run-a-long-running-workflow.md)  
+ [Procedura: Creare ed eseguire una lunga esecuzione flusso di lavoro](how-to-create-and-run-a-long-running-workflow.md)  
  Viene descritto come aggiungere la persistenza a un'applicazione flusso di lavoro.  
   
- [Procedura: Creare un partecipante del rilevamento personalizzato](how-to-create-a-custom-tracking-participant.md)  
+ [Procedura: Creare un partecipante di rilevamento personalizzati](how-to-create-a-custom-tracking-participant.md)  
  Viene descritto come creare un partecipante del rilevamento personalizzato e un profilo di rilevamento.  
   
- [Procedura: Ospitare più versioni di un flusso di lavoro side-by-side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [Procedura: Ospitare più versioni di un flusso di lavoro Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  Viene descritto come usare `WorkflowIdentity` per ospitare più versioni di un flusso di lavoro side-by-side.  
   
  [Procedura: Aggiornare la definizione di un'istanza del flusso di lavoro in esecuzione](how-to-update-the-definition-of-a-running-workflow-instance.md)  

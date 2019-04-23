@@ -3,10 +3,10 @@ title: Panoramica sul flusso di lavoro di Windows
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217601"
 ---
 # <a name="windows-workflow-overview"></a>Panoramica sul flusso di lavoro di Windows
@@ -33,7 +33,7 @@ Componenti del flusso di lavoro nel processo host
   
  ![Diagramma che mostra come interagiscono i componenti del flusso di lavoro.](./media/overview/workflow-component-interatction.gif)  
   
- Nel diagramma precedente, il metodo <xref:System.Activities.WorkflowInvoker.Invoke%2A> della classe <xref:System.Activities.WorkflowInvoker> viene usato per richiamare più istanze del flusso di lavoro. <xref:System.Activities.WorkflowInvoker> viene utilizzato per flussi di lavoro semplici che non richiedono la gestione di host. i flussi di lavoro che richiedono la gestione dall'host (ad esempio <xref:System.Activities.Bookmark> ripresa) devono essere eseguiti utilizzando <xref:System.Activities.WorkflowApplication.Run%2A> invece. Non è necessario attendere il completamento di un'istanza del flusso di lavoro prima di richiamare un altro; il motore di runtime supporta l'esecuzione simultanea di più istanze del flusso di lavoro.  Di seguito sono riportati i flussi di lavoro richiamati:  
+ Nel diagramma precedente, il metodo <xref:System.Activities.WorkflowInvoker.Invoke%2A> della classe <xref:System.Activities.WorkflowInvoker> viene usato per richiamare più istanze del flusso di lavoro. <xref:System.Activities.WorkflowInvoker> viene usata per flussi di lavoro semplici che non richiedono la gestione da parte dell'host. Tali flussi di lavoro (ad esempio la ripresa di <xref:System.Activities.Bookmark>) devono essere eseguiti usando invece il metodo <xref:System.Activities.WorkflowApplication.Run%2A>. Non è necessario attendere il completamento di un'istanza del flusso di lavoro prima di richiamare un altro; il motore di runtime supporta l'esecuzione simultanea di più istanze del flusso di lavoro.  Di seguito sono riportati i flussi di lavoro richiamati:  
   
 -   Attività <xref:System.Activities.Statements.Sequence> contenente un'attività <xref:System.Activities.Statements.WriteLine> figlio. L'oggetto <xref:System.Activities.Variable> dell'attività padre viene associato a un oggetto <xref:System.Activities.InArgument> dell'attività figlio. Per altre informazioni sulle variabili, argomenti e associazione, vedere [variabili e argomenti](variables-and-arguments.md).  
   
@@ -43,4 +43,4 @@ Componenti del flusso di lavoro nel processo host
   
 ## <a name="see-also"></a>Vedere anche
 
-- [BizTalk Server 2006 or WF? Scelta del corretto flusso di lavoro per il progetto](https://go.microsoft.com/fwlink/?LinkId=154901)
+- [BizTalk Server 2006 o WF? Scelta del corretto flusso di lavoro per il progetto](https://go.microsoft.com/fwlink/?LinkId=154901)

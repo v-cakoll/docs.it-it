@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220435"
 ---
 # <a name="endpoint-addresses"></a>Indirizzi endpoint
@@ -139,5 +139,5 @@ A ogni endpoint è associato un indirizzo, che è utilizzato per individuarlo e 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Specifica di un indirizzo endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Specifica di un indirizzo dell'endpoint](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

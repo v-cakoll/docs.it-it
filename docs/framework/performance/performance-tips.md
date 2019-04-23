@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216470"
 ---
 # <a name="net-performance-tips"></a>Suggerimenti sulle prestazioni .NET
@@ -32,13 +32,13 @@ Il termine *prestazioni* si riferisce in genere alla velocità di esecuzione di 
   
 -   [Writing Faster Managed Code: Conoscere il costo delle cose](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [La scrittura di High-Performance Managed Applications: Nozioni di base](https://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [La scrittura di High-Performance Managed Applications: A Primer](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Nozioni fondamentali su Garbage Collection e suggerimenti sulle prestazioni](https://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296) (Concetti di base di Garbage Collector e suggerimenti per le prestazioni)  
   
--   [Suggerimenti sulle prestazioni nelle applicazioni .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297) (Suggerimenti e trucchi per le prestazioni nelle applicazioni .NET)  
 
--   [Mariani Rico](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Suggerimenti per le prestazioni di Rico Mariani)  
 
 -   [Blog di Vance](https://blogs.msdn.microsoft.com/vancem/)
   

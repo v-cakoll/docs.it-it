@@ -3,10 +3,10 @@ title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215911"
 ---
 # <a name="dataviews"></a>DataView
@@ -47,13 +47,13 @@ Un oggetto <xref:System.Data.DataView> consente di creare diverse visualizzazion
  [Applicazioni Web ASP.NET](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Vengono fornite informazioni generali e procedure passo passo dettagliate per la creazione di applicazioni, Web Form e servizi Web ASP.NET.  
   
- [Applicazioni Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
+ [Applicazioni di Windows](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Vengono fornite informazioni dettagliate sull'utilizzo di Windows Form e di applicazioni console.  
   
  [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Descrive la **set di dati** oggetto e come è possibile usarlo per gestire i dati dell'applicazione.  
   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  Descrive la **DataTable** oggetto e come è possibile usarlo per gestire i dati dell'applicazione da solo o come parte di un **DataSet**.  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  

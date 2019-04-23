@@ -5,10 +5,10 @@ ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e3b3645d9fc00087e163b9200edb5fbcf0dbbd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217211"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigazione: metodo X509CertificateClaimSet.FindClaims
@@ -38,4 +38,4 @@ A partire dalle app destinate a [!INCLUDE[net_v461](../../../includes/net-v461-m
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche di ridestinazione](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)

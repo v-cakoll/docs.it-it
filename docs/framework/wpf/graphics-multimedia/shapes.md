@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217770"
 ---
 # <a name="shapes"></a>Forme
@@ -26,10 +26,10 @@ ms.locfileid: "59217770"
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)  
- [Procedure relative](shapes-how-to-topics.md)  
+ [Procedure relative alle proprietà](shapes-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Shapes.Shape>
-- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Grafica e funzionalità multimediali](index.md)
