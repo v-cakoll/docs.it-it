@@ -6,12 +6,12 @@ title: Documentazione di .NET
 description: Informazioni su come usare .NET per creare un'ampia gamma di applicazioni su qualsiasi piattaforma con C#, Visual Basic ed F#. Informazioni di riferimento sulle API, codice di esempio, esercitazioni e altro ancora.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 01472d5586becf0bca2333557a05ddb10ee8b607
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427487"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978081"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -54,7 +54,7 @@ ms.locfileid: "59427487"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7.2">
+                <a href="/dotnet/api/?view=netframework-4.8">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,7 +77,7 @@ ms.locfileid: "59427487"
         <h1>Documentazione di .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Documentazione</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Introduzione</a>
@@ -136,7 +136,7 @@ ms.locfileid: "59427487"
                                                 <p><a href="/dotnet/framework/get-started/">Introduzione</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">Guida di sviluppo</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">Sviluppo client</a></p>
-                                                <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
+                                                <p><a href="/aspnet/#pivot=aspnet">ASP.NET 2.0</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -153,7 +153,7 @@ ms.locfileid: "59427487"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">Sviluppo di più piattaforme</a></p>
+                                                <p><a href="/xamarin/cross-platform">Sviluppo multipiattaforma</a></p>
                                                 <p><a href="/xamarin/ios">Guida a Xamarin.iOS</a></p>
                                                 <p><a href="/xamarin/android">Guida a Xamarin.Android</a></p>
                                                 <p><a href="/xamarin/xamarin-forms">Guida a Xamarin.Forms</a></p>
@@ -175,8 +175,8 @@ ms.locfileid: "59427487"
                                                 <h3><a href="/dotnet/csharp">Guida a C#</a></h3>
                                                 <p><a href="/dotnet/csharp/getting-started">Introduzione</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Panoramica di C#</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">Novità in C#</a></p>
-                                                <p><a href="/dotnet/csharp/language-reference">Riferimenti del linguaggio C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">Novità di C#</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference">Riferimenti per il linguaggio C#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +214,7 @@ ms.locfileid: "59427487"
                                                 <h3><a href="/dotnet/visual-basic">Guida a Visual Basic</a></h3>
                                                 <p><a href="/dotnet/visual-basic/getting-started">Introduzione</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Panoramica di Visual Basic</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Riferimenti al linguaggio Visual Basic</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Riferimenti per il linguaggio Visual Basic</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -434,7 +434,7 @@ ms.locfileid: "59427487"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Cellulare</a>
+                        <a href="#mobile">Dispositivi mobili</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
