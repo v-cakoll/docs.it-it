@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6156499368fb743b69c03f38b40ad3c5bcabce6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174902"
 ---
-# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="6c592-102">Metodo IMetaDataTables::GetColumnInfo</span><span class="sxs-lookup"><span data-stu-id="6c592-102">IMetaDataTables::GetColumnInfo Method</span></span>
-<span data-ttu-id="6c592-103">Ottiene i dati relativi alla colonna specificata nella tabella specificata.</span><span class="sxs-lookup"><span data-stu-id="6c592-103">Gets data about the specified column in the specified table.</span></span>  
+# <a name="imetadatatablesgetcolumninfo-method"></a><span data-ttu-id="340e9-102">Metodo IMetaDataTables::GetColumnInfo</span><span class="sxs-lookup"><span data-stu-id="340e9-102">IMetaDataTables::GetColumnInfo Method</span></span>
+<span data-ttu-id="340e9-103">Ottiene i dati relativi alla colonna specificata nella tabella specificata.</span><span class="sxs-lookup"><span data-stu-id="340e9-103">Gets data about the specified column in the specified table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6c592-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6c592-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="340e9-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="340e9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetColumnInfo (   
@@ -40,35 +40,35 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6c592-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6c592-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="340e9-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="340e9-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="6c592-106">[in] L'indice della tabella desiderata.</span><span class="sxs-lookup"><span data-stu-id="6c592-106">[in] The index of the desired table.</span></span>  
+ <span data-ttu-id="340e9-106">[in] L'indice della tabella desiderata.</span><span class="sxs-lookup"><span data-stu-id="340e9-106">[in] The index of the desired table.</span></span>  
   
  `ixCol`  
- <span data-ttu-id="6c592-107">[in] L'indice della colonna desiderata.</span><span class="sxs-lookup"><span data-stu-id="6c592-107">[in] The index of the desired column.</span></span>  
+ <span data-ttu-id="340e9-107">[in] L'indice della colonna desiderata.</span><span class="sxs-lookup"><span data-stu-id="340e9-107">[in] The index of the desired column.</span></span>  
   
  `poCol`  
- <span data-ttu-id="6c592-108">[out] Un puntatore all'offset della colonna nella riga.</span><span class="sxs-lookup"><span data-stu-id="6c592-108">[out] A pointer to the offset of the column in the row.</span></span>  
+ <span data-ttu-id="340e9-108">[out] Un puntatore all'offset della colonna nella riga.</span><span class="sxs-lookup"><span data-stu-id="340e9-108">[out] A pointer to the offset of the column in the row.</span></span>  
   
  `pcbCol`  
- <span data-ttu-id="6c592-109">[out] Un puntatore alla dimensione, espressa in byte, della colonna.</span><span class="sxs-lookup"><span data-stu-id="6c592-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
+ <span data-ttu-id="340e9-109">[out] Un puntatore alla dimensione, espressa in byte, della colonna.</span><span class="sxs-lookup"><span data-stu-id="340e9-109">[out] A pointer to the size, in bytes, of the column.</span></span>  
   
  `pType`  
- <span data-ttu-id="6c592-110">[out] Un puntatore al tipo dei valori nella colonna.</span><span class="sxs-lookup"><span data-stu-id="6c592-110">[out] A pointer to the type of the values in the column.</span></span>  
+ <span data-ttu-id="340e9-110">[out] Un puntatore al tipo dei valori nella colonna.</span><span class="sxs-lookup"><span data-stu-id="340e9-110">[out] A pointer to the type of the values in the column.</span></span>  
   
  `ppName`  
- <span data-ttu-id="6c592-111">[out] Un puntatore a un puntatore al nome della colonna.</span><span class="sxs-lookup"><span data-stu-id="6c592-111">[out] A pointer to a pointer to the column name.</span></span>  
+ <span data-ttu-id="340e9-111">[out] Un puntatore a un puntatore al nome della colonna.</span><span class="sxs-lookup"><span data-stu-id="340e9-111">[out] A pointer to a pointer to the column name.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c592-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6c592-112">Requirements</span></span>  
- <span data-ttu-id="6c592-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c592-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="340e9-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="340e9-112">Requirements</span></span>  
+ <span data-ttu-id="340e9-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="340e9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c592-114">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="6c592-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="340e9-114">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="340e9-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6c592-115">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="6c592-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="340e9-115">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="340e9-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="6c592-116">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="6c592-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="340e9-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="340e9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6c592-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6c592-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="340e9-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="340e9-117">See also</span></span>
 
-- [<span data-ttu-id="6c592-118">Interfaccia IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="6c592-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="6c592-119">Interfaccia IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="6c592-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="340e9-118">Interfaccia IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="340e9-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="340e9-119">Interfaccia IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="340e9-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
