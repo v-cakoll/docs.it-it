@@ -3,10 +3,10 @@ title: Memorizzazione nella cache di piani di query (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178178"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Memorizzazione nella cache di piani di query (Entity SQL)
@@ -36,7 +36,7 @@ Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di qu
   
 -   Il testo delle query deve essere un modello costante, preferibilmente una risorsa o una stringa costante.  
   
--   <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> deve essere usato ogni volta che deve essere passato un valore fornito dall'utente.  
+-   È necessario usare <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> in ogni situazione in cui deve essere passato un valore fornito dall'utente.  
   
  È necessario evitare i modelli di query seguenti, che usano inutilmente slot nella cache dei piani di query:  
   
@@ -50,4 +50,4 @@ Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di qu
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Panoramica di Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
