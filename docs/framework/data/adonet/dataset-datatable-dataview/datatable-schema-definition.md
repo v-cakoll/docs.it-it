@@ -3,10 +3,10 @@ title: Definizione dello schema di DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163072"
 ---
 # <a name="datatable-schema-definition"></a>Definizione dello schema di DataTable
@@ -32,10 +32,10 @@ Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.
  [Definizione di chiavi primarie](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
  Viene descritto come specificare la chiave primaria di una tabella da uno o più **DataColumn** oggetti.  
   
- [Vincoli DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ [Vincoli di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
  Viene descritto come definire vincoli di chiave esterna e univoci per le colonne di una tabella.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167167"
 ---
 # <a name="timing-events-overview"></a>Cenni preliminari sugli eventi di tempo
@@ -56,7 +56,7 @@ In questo argomento viene descritto come utilizzare i cinque eventi di temporizz
   
 |event|Operazione interattiva di attivazione|Altri trigger|  
 |-----------|--------------------------------------|--------------------|  
-|**Operazione completata**|Passaggio al riempimento|L'orologio viene completato.|  
+|**Completed**|Passaggio al riempimento|L'orologio viene completato.|  
 |**CurrentGlobalSpeedInvalidated**|Sospensione, ripresa, ricerca, impostazione di frequenza velocità, passaggio al riempimento, interruzione|L'orologio viene invertito, accelerato, avviato o interrotto.|  
 |**CurrentStateInvalidated**|Inizio, passaggio al riempimento, interruzione|L'orologio viene avviato, interrotto, riempito.|  
 |**CurrentTimeInvalidated**|Inizio, ricerca, passaggio al riempimento, interruzione|L'orologio avanza.|  

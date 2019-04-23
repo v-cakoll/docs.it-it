@@ -5,10 +5,10 @@ ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167688"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Metodo ICorDebugProcess6::EnableVirtualModuleSplitting
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Parametri  
  `enableSplitting`  
- `true` Per abilitare la suddivisione dei moduli virtuali; `false` per disabilitarlo.  
+ `true` per abilitare la suddivisione dei moduli virtuali; `false` per disabilitarla.  
   
 ## <a name="remarks"></a>Note  
  Le cause di suddivisione dei moduli virtuali [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) per riconoscere i moduli che sono stati uniti durante la compilazione elaborano e li presentano come un gruppo di moduli separati invece un unico grande modulo. In questo modo viene modificato il comportamento di vari [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metodi descritti di seguito.  

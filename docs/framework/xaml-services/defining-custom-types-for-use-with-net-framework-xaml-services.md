@@ -5,10 +5,10 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164437"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definizione di tipi personalizzati da utilizzare con i servizi XAML di .NET Framework
@@ -70,7 +70,7 @@ Quando si definiscono tipi personalizzati che sono oggetti business o i tipi che
 #### <a name="the-getpropertyname-accessor"></a>Funzione di accesso GetPropertyName  
  La firma per la funzione di accesso `Get`*NomeProprietà* deve essere:  
   
- `public static object Get` *PropertyName* `(object`  `target` `)`  
+ `public static object Get` *PropertyName* `(object` `target` `)`  
   
 -   L'oggetto `target` può essere specificato come tipo più specifico nell'implementazione. È possibile utilizzare questo per definire l'ambito di utilizzo del membro associabile; gli utilizzi rientrano nell'ambito desiderato genererà le eccezioni di cast non valido che vengono quindi replicate da un errore di analisi XAML. Il nome del parametro `target` non è un requisito, ma è denominato `target` per convenzione nella maggior parte delle implementazioni.  
   
@@ -81,7 +81,7 @@ Quando si definiscono tipi personalizzati che sono oggetti business o i tipi che
 #### <a name="the-setpropertyname-accessor"></a>La funzione di accesso SetPropertyName  
  La firma per il Set*PropertyName* della funzione di accesso deve essere:  
   
- `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *NomeProprietà* `(object` `target` `, object` `value` `)`  
   
 -   Il `target` oggetto può essere specificato come un tipo più specifico nell'implementazione, con lo stesso per la logica e conseguenze come descritto nella sezione precedente.  
   

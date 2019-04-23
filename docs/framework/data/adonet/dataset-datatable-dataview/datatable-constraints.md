@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165178"
 ---
 # <a name="datatable-constraints"></a>Vincoli DataTable
@@ -27,7 +27,7 @@ I vincoli consentono di applicare restrizioni ai dati di una <xref:System.Data.D
 |**Cascade**|Elimina o aggiorna righe correlate.|  
 |**SetNull**|Impostare i valori nelle righe correlate **DBNull**.|  
 |**SetDefault**|Imposta i valori delle righe correlate sul valore predefinito.|  
-|**nessuno**|Non viene eseguita alcuna operazione sulle righe correlate. Questa è l'impostazione predefinita.|  
+|**None**|Non viene eseguita alcuna operazione sulle righe correlate. Questa è l'impostazione predefinita.|  
   
  Oggetto **ForeignKeyConstraint** consente di limitare, oltre che propagare, le modifiche apportate a colonne correlate. A seconda delle proprietà impostate per il **ForeignKeyConstraint** di una colonna, se il **EnforceConstraints** proprietà del **set di dati** è **true**, eseguire determinate operazioni sulla riga padre comporterà un'eccezione. Ad esempio, se il **DeleteRule** proprietà del **ForeignKeyConstraint** viene **None**, una riga padre non può essere eliminata se dispone di tutte le righe figlio.  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |Impostazione della regola|Descrizione|  
 |------------------|-----------------|  
 |**Cascade**|Consente di accettare o rifiutare le modifiche alle righe figlio.|  
-|**nessuno**|Non viene eseguita alcuna operazione sulle righe figlio. Questa è l'impostazione predefinita.|  
+|**None**|Non viene eseguita alcuna operazione sulle righe figlio. Questa è l'impostazione predefinita.|  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un oggetto <xref:System.Data.ForeignKeyConstraint>, ne vengono impostate alcune proprietà, tra cui <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>, nonché viene aggiunto all'oggetto <xref:System.Data.ConstraintCollection> di un oggetto <xref:System.Data.DataTable>.  
@@ -98,6 +98,6 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
-- [Definizione dello schema di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [Definizione dello schema DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

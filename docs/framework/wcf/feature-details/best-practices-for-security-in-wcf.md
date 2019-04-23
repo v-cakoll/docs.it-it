@@ -8,10 +8,10 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166127"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Procedure consigliate per la protezione in WCF
@@ -59,5 +59,5 @@ Nelle sezioni seguenti vengono elencate le procedure consigliate da prendere in 
 ## <a name="see-also"></a>Vedere anche
 
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Considerazioni sulla protezione per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
-- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Considerazioni sulla sicurezza per i dati](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

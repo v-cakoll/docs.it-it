@@ -7,10 +7,10 @@ helpviewer_keywords:
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
 ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168051"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>Procedura: Applicare un oggetto Material alle parti anteriore e posteriore di un oggetto tridimensionale
@@ -26,6 +26,6 @@ Nell'esempio seguente viene illustrato come applicare un <xref:System.Windows.Me
 ## <a name="see-also"></a>Vedere anche
 
 - [Creare una scena tridimensionale](how-to-create-a-3-d-scene.md)
-- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
-- [Aggiungere un'animazione alle proprietà Material in una scena tridimensionale](how-to-animate-material-properties-in-a-3-d-scene.md)
+- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Animare le proprietà Material in una scena tridimensionale](how-to-animate-material-properties-in-a-3-d-scene.md)
 - [Applicare materiale con componente emissiva a un oggetto tridimensionale](how-to-apply-emissive-material-to-a-3-d-object.md)

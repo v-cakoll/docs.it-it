@@ -3,10 +3,10 @@ title: Esecuzione di query su dataset (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
 ms.openlocfilehash: a1c316811ce08141999bcec4c9c8504f86c2e285
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165243"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Esecuzione di query su dataset (LINQ to DataSet)
@@ -21,10 +21,10 @@ ms.locfileid: "59165243"
  [Query su tabella incrociata](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
  Viene descritto come eseguire query tra tabelle.  
   
- [Esecuzione di query su dataset tipizzati](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [Esecuzione di query su oggetti DataSet tipizzati](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  Viene descritto come eseguire una query su oggetti <xref:System.Data.DataSet> tipizzati.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Esempi di LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Caricamento di dati in un dataset](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Caricamento di dati in un oggetto DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

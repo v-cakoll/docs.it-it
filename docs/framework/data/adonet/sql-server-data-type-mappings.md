@@ -3,10 +3,10 @@ title: Mapping dei tipi di dati SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
 ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164307"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapping dei tipi di dati SQL Server
@@ -58,8 +58,8 @@ Per altre informazioni sui tipi di dati di SQL Server, vedere [tipi di dati (Tra
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Mapping dei tipi di dati SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Tipi di dati SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Dati binari e con valori elevati SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [Configurazione dei parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Configurazione di parametri e tipi di dati dei parametri](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

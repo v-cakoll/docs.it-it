@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
 ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167193"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET e LINQ to SQL
@@ -55,9 +55,9 @@ ms.locfileid: "59167193"
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  I parametri sono espressi nel testo della query usando la stessa notazione con parentesi graffe usata da `Console.WriteLine()` e `String.Format()`. `String.Format()` fornire quindi sostituisce i parametri di parentesi graffe presenti con nomi di parametro generati, ad esempio la stringa di query `@p0`, `@p1` ..., `@p(n)`.  
+>  I parametri sono espressi nel testo della query usando la stessa notazione con parentesi graffe usata da `Console.WriteLine()` e `String.Format()`. `String.Format()` sostituisce quindi i parametri con parentesi graffe presenti nella stringa fornita con nomi di parametro generati, ad esempio `@p0`, `@p1` …, `@p(n)`.  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Procedura: Riutilizzare una connessione tra un comando ADO.NET e un oggetto DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Procedura: Riutilizzare una connessione tra un comando ADO.NET e un DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

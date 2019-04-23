@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164515"
 ---
 # <a name="remote-vs-local-execution"></a>Esecuzione remota e locale
@@ -45,8 +45,8 @@ ms.locfileid: "59164515"
  Queste due funzionalità consentono di ottenere una potente combinazione di opzioni: l'esecuzione remota per le raccolte di grandi dimensioni e l'esecuzione locale per le piccole raccolte o dove è necessario disporre della raccolta completa. L'esecuzione remota viene implementata tramite <xref:System.Linq.IQueryable>, mentre l'esecuzione locale viene implementata su una raccolta <xref:System.Collections.Generic.IEnumerable%601> in memoria. Per forzare l'esecuzione locale (vale a dire <xref:System.Collections.Generic.IEnumerable%601>), vedere [convertire un tipo in un IEnumerable generico](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
   
 ### <a name="queries-against-unordered-sets"></a>Query su set non ordinati  
- Notare l'importante differenza tra una raccolta locale che implementa <xref:System.Collections.Generic.List%601> e una raccolta che fornisce query remote eseguite *insiemi non ordinati* in un database relazionale. <xref:System.Collections.Generic.List%601> i metodi, ad esempio quelle che usano valori di indice, richiedono la semantica di elenco, che in genere non può essere ottenuta tramite una query remota su un set non ordinato. Per questo motivo, tali metodi caricano in modo implicito <xref:System.Data.Linq.EntitySet%601> per consentire l'esecuzione locale.  
+ Notare l'importante differenza tra una raccolta locale che implementa <xref:System.Collections.Generic.List%601> e una raccolta che fornisce query remote eseguite *insiemi non ordinati* in un database relazionale. I metodi <xref:System.Collections.Generic.List%601>, ad esempio quelli che usano valori di indice, richiedono la semantica di elenco che in genere non può essere ottenuta tramite una query remota su un set non ordinato. Per questo motivo, tali metodi caricano in modo implicito <xref:System.Data.Linq.EntitySet%601> per consentire l'esecuzione locale.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Concetti relatici alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

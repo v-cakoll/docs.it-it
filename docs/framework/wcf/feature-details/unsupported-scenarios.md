@@ -3,10 +3,10 @@ title: Scenari non supportati
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178776"
 ---
 # <a name="unsupported-scenarios"></a>Scenari non supportati
@@ -75,7 +75,7 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Errore di sicurezza a livello di messaggio quando si utilizza la rappresentazione ASP.NET e la compatibilità con ASP.NET è obbligatoria  
  WCF non supporta la combinazione di impostazioni seguente perché possono impedire l'autenticazione di client che si verifichi:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La rappresentazione è abilitata. Questa operazione viene eseguita nel file Web. config impostando il `impersonate` attributo del <`identity`> elemento `true`.  
+-   È stata attivata la rappresentazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Questa operazione viene eseguita nel file Web. config impostando il `impersonate` attributo del <`identity`> elemento `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modalità di compatibilità viene abilitata impostando il `aspNetCompatibilityEnabled` attributo del [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
   
@@ -111,8 +111,8 @@ Per vari motivi, Windows Communication Foundation (WCF) non supporta alcuni scen
 ## <a name="see-also"></a>Vedere anche
 
 - [Considerazioni sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Diffusione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Divulgazione di informazioni](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Elevazione dei privilegi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial of Service (Negazione del servizio)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Negazione del servizio](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [Manomissioni](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Attacchi di tipo replay](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

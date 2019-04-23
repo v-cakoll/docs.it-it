@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165269"
 ---
 # <a name="binding-declarations-overview"></a>Cenni preliminari sulle dichiarazioni di associazione
@@ -79,7 +79,7 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
   
 -   Gli indicizzatori di una proprietà possono essere specificati all'interno di parentesi quadre dopo il nome della proprietà in cui viene applicato l'indicizzatore. La clausola `Path=ShoppingCart[0]` ad esempio imposta l'associazione all'indice corrispondente al modo in cui l'indicizzazione interna della proprietà gestisce la stringa letterale "0". Sono supportati anche indicizzatori annidati.  
   
--   Indicizzatori e sottoproprietà possono essere combinate in un `Path` clausola, ad esempio, `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Indicizzatori e sottoproprietà possono essere combinati in una clausola `Path`, ad esempio,`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   All'interno degli indicizzatori è possibile specificare più parametri di indicizzatore separati da virgole (,). È possibile specificare tra parentesi il tipo di ogni parametro. È possibile ad esempio avere `Path="[(sys:Int32)42,(sys:Int32)24]"`, dove è stato eseguito il mapping di `sys` allo spazio dei nomi `System`.  
   
@@ -126,6 +126,6 @@ In questo argomento vengono illustrati i diversi modi in cui è possibile dichia
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
 - [Data binding](../advanced/optimizing-performance-data-binding.md)
 - [Sintassi XAML di PropertyPath](../advanced/propertypath-xaml-syntax.md)

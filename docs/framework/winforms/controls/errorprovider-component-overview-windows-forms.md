@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181181"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Cenni preliminari sul componente ErrorProvider (Windows Form)
@@ -29,5 +29,5 @@ I moduli di Windows [ErrorProvider](errorprovider-component-windows-forms.md) co
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ErrorProvider>
-- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [Procedura: Visualizzare le icone di errore per la convalida dei moduli con il componente ErrorProvider di Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Procedura: Visualizzare gli errori all'interno di un set di dati con il componente ErrorProvider di Windows Form](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Procedura: Visualizzare le icone di errore per la convalida dei Form con il componente ErrorProvider di Windows Form](display-error-icons-for-form-validation-with-wf-errorprovider.md)

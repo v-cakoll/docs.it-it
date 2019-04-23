@@ -11,10 +11,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
 ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162371"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Procedura: Modificare le bande nel controllo DataGridView di Windows Forms
@@ -38,4 +38,4 @@ L'esempio di codice seguente presenta vari modi per modificare righe e colonne d
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Programmazione con celle, righe e colonne nel controllo DataGridView di Windows Form](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Programmazione con celle, righe e colonne nel controllo DataGridView Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)

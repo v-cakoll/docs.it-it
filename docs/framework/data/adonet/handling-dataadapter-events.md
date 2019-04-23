@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180752"
 ---
 # <a name="handling-dataadapter-events"></a>Gestione di eventi DataAdapter
@@ -22,7 +22,7 @@ ms.locfileid: "59180752"
 |`FillError`|Si è verificato un errore durante un'operazione `Fill`.|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating e RowUpdated  
- `RowUpdating` viene generato prima che un aggiornamento a una riga dal <xref:System.Data.DataSet> è stato elaborato nell'origine dati. `RowUpdated` viene generato dopo che un aggiornamento a una riga dal `DataSet` è stato elaborato nell'origine dati. Di conseguenza, è possibile usare `RowUpdating` per modificare il comportamento dell'aggiornamento prima che venga eseguito, in modo da fornire una gestione aggiuntiva quando verrà eseguito l'aggiornamento, conservare un riferimento a una riga aggiornata, annullare l'aggiornamento corrente e pianificarlo per un processo in batch che verrà eseguito successivamente e così via. `RowUpdated` è utile per rispondere a errori ed eccezioni che si verificano durante l'aggiornamento. È possibile aggiungere le informazioni sugli errori al `DataSet` così come riprovare la logica e così via.  
+ `RowUpdating` viene generato prima che un aggiornamento a una riga di <xref:System.Data.DataSet> sia stato elaborato nell'origine dati. `RowUpdated` viene generato dopo che un aggiornamento a una riga di `DataSet` è stato elaborato nell'origine dati. Di conseguenza, è possibile usare `RowUpdating` per modificare il comportamento dell'aggiornamento prima che venga eseguito, in modo da fornire una gestione aggiuntiva quando verrà eseguito l'aggiornamento, conservare un riferimento a una riga aggiornata, annullare l'aggiornamento corrente e pianificarlo per un processo in batch che verrà eseguito successivamente e così via. `RowUpdated` risulta utile per rispondere a errori ed eccezioni che si verificano durante l'aggiornamento. È possibile aggiungere le informazioni sugli errori al `DataSet` così come riprovare la logica e così via.  
   
  Gli argomenti <xref:System.Data.Common.RowUpdatingEventArgs> e <xref:System.Data.Common.RowUpdatedEventArgs> passati agli eventi `RowUpdating` e `RowUpdated` includono una proprietà `Command` che fa riferimento all'oggetto `Command` usato per eseguire l'aggiornamento, una proprietà `Row` che fa riferimento all'oggetto `DataRow` contenente le informazioni aggiornate, una proprietà `StatementType` relativa al tipo di aggiornamento eseguito, l'oggetto `TableMapping`, se applicabile, e lo `Status` dell'operazione.  
   
@@ -189,7 +189,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 ## <a name="see-also"></a>Vedere anche
 
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Gestione di eventi dataset](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [Gestione di eventi di set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [Gestione di eventi DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [Eventi](../../../../docs/standard/events/index.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

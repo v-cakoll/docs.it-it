@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168311"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Restituire o ignorare elementi in una sequenza
@@ -18,7 +18,7 @@ Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero 
  Usare l'operatore <xref:System.Linq.Queryable.Skip%2A> per ignorare un numero specificato di elementi in una sequenza, quindi restituire gli elementi rimanenti.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano determinate limitazioni quando vengono usati nelle query su SQL Server 2000. Per altre informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" nella [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per altre informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" nella [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduce <xref:System.Linq.Queryable.Skip%2A> usando una sottoquery con il codice SQL `NOT EXISTS` clausola. Di seguito vengono elencate le limitazioni di questa conversione.  
   
@@ -44,7 +44,7 @@ Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero 
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- <xref:System.Linq.Queryable.Take%2A> e <xref:System.Linq.Queryable.Skip%2A> operazioni sono definite correttamente solo per i set ordinati. mentre la semantica per i set non ordinati o i tipi multiset non è definita.  
+ Le operazioni <xref:System.Linq.Queryable.Take%2A> e <xref:System.Linq.Queryable.Skip%2A> sono definite correttamente solo per i set ordinati, mentre la semantica per i set non ordinati o i tipi multiset non è definita.  
   
  A causa delle limitazioni relative all'ordinamento in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta di spostare l'ordinamento dell'argomento dell'operatore <xref:System.Linq.Queryable.Take%2A> o <xref:System.Linq.Queryable.Skip%2A> nel risultato dell'operatore.  
   
@@ -56,7 +56,7 @@ Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero 
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Sposta l'ordinamento alla fine nel codice SQL, come indicato di seguito:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sposta l'ordinamento alla fine nel codice SQL, come segue:  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
