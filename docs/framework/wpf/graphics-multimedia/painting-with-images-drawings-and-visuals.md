@@ -13,10 +13,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204198"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Disegnare con oggetti Image, Drawing e Visual
@@ -139,11 +139,11 @@ Componenti di un oggetto TileBrush con più tessere
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Cenni preliminari sugli oggetti TileBrush](tilebrush-overview.md)
-- [Cenni preliminari sui pennelli di WPF](wpf-brushes-overview.md)
+- [Panoramica sugli oggetti TileBrush](tilebrush-overview.md)
+- [Panoramica sui pennelli di WPF](wpf-brushes-overview.md)
 - [Cenni preliminari sulla creazione dell'immagine](imaging-overview.md)
 - [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)
-- [Cenni preliminari sulle maschere di opacità](opacity-masks-overview.md)
+- [Panoramica sulle maschere di opacità](opacity-masks-overview.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
 - [Esempio ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Esempio VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

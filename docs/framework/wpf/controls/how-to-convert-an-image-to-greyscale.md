@@ -10,10 +10,10 @@ helpviewer_keywords:
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
 ms.openlocfilehash: f3b7837c6c25db1aa3bdd11786df90660a75da87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200285"
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a>Procedura: Convertire un'immagine in scala di grigi
@@ -27,6 +27,6 @@ Questo esempio viene illustrato come convertire un'immagine in scala di grigi us
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Usare l'elemento Image](how-to-use-the-image-element.md)
+- [Usare l'elemento di immagine](how-to-use-the-image-element.md)
 - [Ritagliare un'immagine](how-to-crop-an-image.md)
 - [Ruotare un'immagine](how-to-rotate-an-image.md)

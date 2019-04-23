@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200987"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertitori di tipi ed estensioni di markup per XAML
@@ -32,7 +32,7 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Convertitori di tipi  
- Nella definizione di servizi XAML di .NET Framework i convertitori di tipi sono classi che derivano dalla classe <xref:System.ComponentModel.TypeConverter> CLR. <xref:System.ComponentModel.TypeConverter> è una classe che era in Microsoft .NET Framework prima dell'introduzione di XAML. Lo scopo originale consisteva nel supporto di finestre delle proprietà e di analoghe metafore di modifica basate sul testo per le proprietà [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . L'introduzione di XAML a .NET Framework usa <xref:System.ComponentModel.TypeConverter> per convertire una sintassi del testo, come individuata in un valore di attributo o in un nodo di valori XAML, in un oggetto. <xref:System.ComponentModel.TypeConverter> può anche essere utilizzato per serializzare un valore oggetto alla sintassi del testo. <xref:System.ComponentModel.TypeConverter> è stato usato anche in implementazioni di XAML precedenti specifiche del framework in Windows Presentation Foundation (WPF) e Windows Communication Foundation (WCF). Per altre informazioni su <xref:System.ComponentModel.TypeConverter> in XAML, vedere [Type Converters for XAML Overview](type-converters-for-xaml-overview.md).  
+ Nella definizione di servizi XAML di .NET Framework i convertitori di tipi sono classi che derivano dalla classe <xref:System.ComponentModel.TypeConverter> CLR. <xref:System.ComponentModel.TypeConverter> è una classe che era in Microsoft .NET Framework prima dell'introduzione di XAML. Lo scopo originale consisteva nel supporto di finestre delle proprietà e di analoghe metafore di modifica basate sul testo per le proprietà [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] . L'introduzione di XAML a .NET Framework usa <xref:System.ComponentModel.TypeConverter> per convertire una sintassi del testo, come individuata in un valore di attributo o in un nodo di valori XAML, in un oggetto. <xref:System.ComponentModel.TypeConverter> può anche essere usato per serializzare un valore oggetto alla sintassi del testo. <xref:System.ComponentModel.TypeConverter> è stato usato anche in implementazioni di XAML precedenti specifiche del framework in Windows Presentation Foundation (WPF) e Windows Communication Foundation (WCF). Per altre informazioni su <xref:System.ComponentModel.TypeConverter> in XAML, vedere [Type Converters for XAML Overview](type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Estensioni di markup  
@@ -45,7 +45,7 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
  Per altre informazioni sul modello di implementazione dell'estensione di markup per XAML, vedere [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  I tipi <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> sono entrambi inclusi nello spazio dei nomi <xref:System.Windows.Markup> e non in quello <xref:System.Xaml> . Ciò non implica che questi tipi sono specifici per le tecnologie di Windows Forms o WPF che altrimenti popolano gli spazi dei nomi CLR che contengono la stringa `Windows`. <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> nell'assembly System. XAML e non presentano alcuna dipendenza specifica del framework. Questi tipi esistevano già nello spazio dei nomi CLR per [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] e restano nello spazio dei nomi CLR in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] per evitare di interrompere i riferimenti nei progetti WPF esistenti. Per altre informazioni, vedere [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
+>  I tipi <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> sono entrambi inclusi nello spazio dei nomi <xref:System.Windows.Markup> e non in quello <xref:System.Xaml> . Ciò non implica che questi tipi sono specifici per le tecnologie di Windows Forms o WPF che altrimenti popolano gli spazi dei nomi CLR che contengono la stringa `Windows`. <xref:System.Windows.Markup.MarkupExtension> e <xref:System.Windows.Markup.ValueSerializer> sono inclusi nell'assembly System.Xaml e non dispongono di alcuna dipendenza dal framework specifica. Questi tipi esistevano già nello spazio dei nomi CLR per [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] e restano nello spazio dei nomi CLR in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] per evitare di interrompere i riferimenti nei progetti WPF esistenti. Per altre informazioni, vedere [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Serializzatori di valori  
@@ -71,4 +71,4 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
 - <xref:System.Xaml.XamlObjectWriter>
 - [Panoramica delle estensioni di markup per XAML](markup-extensions-for-xaml-overview.md)
 - [Panoramica dei convertitori di tipi per XAML](type-converters-for-xaml-overview.md)
-- [Contesti di servizio disponibili per convertitori di tipi ed estensioni di markup](service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)

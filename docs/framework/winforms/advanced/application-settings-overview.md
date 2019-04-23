@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203626"
 ---
 # <a name="application-settings-overview"></a>Cenni preliminari sulle impostazioni delle applicazioni
@@ -55,7 +55,7 @@ Questo argomento descrive come creare e archiviare i dati delle impostazioni per
 - <xref:System.Configuration.IPersistComponentSettings>
 - [Procedura: Convalidare le impostazioni applicazione](how-to-validate-application-settings.md)
 - [Gestione delle impostazioni di un'applicazione (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Procedura: Leggere le impostazioni in fase di esecuzione con C#](how-to-read-settings-at-run-time-with-csharp.md)
-- [Utilizzo delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
-- [Architettura Impostazioni applicazione](application-settings-architecture.md)
-- [Impostazioni delle applicazioni per i controlli personalizzati](application-settings-for-custom-controls.md)
+- [Procedura: Leggere le impostazioni in fase di esecuzione conC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+- [Application Settings Architecture](application-settings-architecture.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)

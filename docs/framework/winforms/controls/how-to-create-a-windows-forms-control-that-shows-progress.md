@@ -11,10 +11,10 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202014"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: Creare un controllo di Windows Forms che visualizzi lo stato di avanzamento
@@ -28,9 +28,9 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
   
 -   Si esegue l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo per fornire la logica per disegnare il controllo.  
   
--   Calcolo dell'area disponibile per il disegno del controllo utilizzando il <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà. `FlashTrackBar` esegue questa operazione nel relativo `OptimizedInvalidate` (metodo).  
+-   Calcolo dell'area disponibile per il disegno del controllo utilizzando il <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà. `FlashTrackBar` esegue questa operazione nel relativo metodo `OptimizedInvalidate`.  
   
--   Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form. `FlashTrackBar` Definisce i `ShouldSerializeStartColor` e `ShouldSerializeEndColor` metodi per la serializzazione relativi `StartColor` e `EndColor` proprietà.  
+-   Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form. `FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle relative proprietà `StartColor` e `EndColor`.  
   
  La tabella seguente elenca le proprietà personalizzate definite da `FlashTrackBar`.  
   

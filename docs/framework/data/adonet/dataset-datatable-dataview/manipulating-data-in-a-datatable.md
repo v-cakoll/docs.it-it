@@ -3,10 +3,10 @@ title: Manipolazione di dati in un oggetto DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
 ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202573"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipolazione di dati in un oggetto DataTable
@@ -22,7 +22,7 @@ Dopo aver creato un tipo <xref:System.Data.DataTable> in un tipo <xref:System.Da
  [Metodo Load](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
  Viene descritto come utilizzare il **Load** metodo da riempire un **DataTable** con le righe.  
   
- [Modifiche agli oggetti DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
+ [Modifiche a DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
  Viene spiegato come modificare i dati di una riga, inclusa la sospensione delle modifiche a una riga fino a quando le modifiche proposte non saranno verificate e accettate.  
   
  [Stati e versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
@@ -34,11 +34,11 @@ Dopo aver creato un tipo <xref:System.Data.DataTable> in un tipo <xref:System.Da
  [Informazioni sugli errori di riga](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  Viene spiegato come inserire informazioni sugli errori in ciascuna riga, per consentire la risoluzione dei problemi relativi ai dati all'interno di un'applicazione.  
   
- [AcceptChanges e RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
+ [Oggetti AcceptChange e RejectChange](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  Viene spiegato come accettare o rifiutare le modifiche apportate a una riga.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [Gestione di eventi DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: Architettura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202638"
 ---
 # <a name="adonet-architecture"></a>Architettura ADO.NET
@@ -49,14 +49,14 @@ Architettura di ADO.NET
  ADO.NET Entity Framework è progettato per consentire agli sviluppatori di creare applicazioni di accesso ai dati tramite programmazione in base a un modello di applicazione concettuale anziché direttamente in base a uno schema di archiviazione relazionale. L'obiettivo è quello di ridurre la quantità di codice e le operazioni di manutenzione necessarie per le applicazioni orientate ai dati. Per altre informazioni, vedere [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Consente di distribuire servizi dati nel Web o in una rete intranet. I dati sono strutturati come entità e relazioni in base alle specifiche di Entity Data Model. I dati distribuiti in questo modello sono indirizzabili tramite il protocollo HTTP standard. Per altre informazioni, vedere [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] viene usato per distribuire servizi dati nel Web o in una rete Intranet. I dati sono strutturati come entità e relazioni in base alle specifiche di Entity Data Model. I dati distribuiti in questo modello sono indirizzabili tramite il protocollo HTTP standard. Per altre informazioni, vedere [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML e ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] sfrutta la potenza del codice XML per fornire un accesso disconnesso ai dati. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] è stato progettato in stretta associazione con le classi XML nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; si tratta di componenti di un'unica architettura.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] si avvale di XML per fornire un accesso disconnesso ai dati. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] è stato progettato in stretta associazione con le classi XML in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]: si tratta di componenti di un'unica architettura.  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] le classi XML in e il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] convergono nel `DataSet` oggetto. È possibile compilare il `DataSet` con dati provenienti da un'origine XML, sia che si tratti di un file che di un flusso XML. È possibile scrivere il `DataSet` sotto forma di XML in conformità con le specifiche W3C (World Wide Web Consortium), includendone lo schema sotto forma di schema XSD (XML Schema Definition Language), indipendentemente dall'origine dati nel `DataSet`. XML, che costituisce il formato di serializzazione nativo del `DataSet`, rappresenta un supporto eccellente per lo spostamento di dati tra i livelli e rende il `DataSet` una soluzione ottimale per le attività in remoto relative al contesto dei dati e dello schema da e per un servizio Web XML. Per altre informazioni, vedere [XML Documents and Data](../../../../docs/standard/data/xml/index.md) (Documenti e dati XML).  
+ In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] e le classi XML convergono nell'oggetto `DataSet`. È possibile compilare il `DataSet` con dati provenienti da un'origine XML, sia che si tratti di un file che di un flusso XML. È possibile scrivere il `DataSet` sotto forma di XML in conformità con le specifiche W3C (World Wide Web Consortium), includendone lo schema sotto forma di schema XSD (XML Schema Definition Language), indipendentemente dall'origine dati nel `DataSet`. XML, che costituisce il formato di serializzazione nativo del `DataSet`, rappresenta un supporto eccellente per lo spostamento di dati tra i livelli e rende il `DataSet` una soluzione ottimale per le attività in remoto relative al contesto dei dati e dello schema da e per un servizio Web XML. Per altre informazioni, vedere [XML Documents and Data](../../../../docs/standard/data/xml/index.md) (Documenti e dati XML).  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari su ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Panoramica di ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
