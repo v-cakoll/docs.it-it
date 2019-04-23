@@ -6,10 +6,10 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213259"
 ---
 # <a name="access-control-mechanisms"></a>Meccanismi del controllo di accesso
@@ -42,7 +42,7 @@ ms.locfileid: "59213259"
  Per altre informazioni sull'uso della funzionalità del provider di ruoli, vedere [come: Usare il Provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
 ## <a name="authorization-manager"></a>Gestione autorizzazioni  
- Un'altra funzionalità riunisce la Gestione autorizzazioni (AzMan) e il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] per l'autorizzazione dei client. Quando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ospita un servizio Web, AzMan può essere integrato nell'applicazione per fare in modo che l'autorizzazione al servizio venga eseguita tramite AzMan. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Gestione ruoli fornisce un'API che consente di gestire i ruoli applicazione, aggiungere e rimuovere utenti dai ruoli e controllare l'appartenenza al ruolo, ma non consente di eseguire una query se un utente è autorizzato a eseguire una determinata attività o l'operazione. AzMan consente di definire operazioni singole e di riunirle in attività. Con AZMan, oltre a controlli del ruolo è inoltre possibile verificare se un utente è autorizzato a eseguire un'attività. L'assegnazione del ruolo e l'autorizzazione all'esecuzione dell'attività possono essere configurate esternamente all'applicazione o eseguite a livello di programmazione all'interno dell'applicazione. Lo snap-in MMC (Microsoft Management Console) per l'amministrazione di AzMan consente agli amministratori di modificare le attività che un ruolo può eseguire in fase di esecuzione e di gestire l'appartenenza di ogni utente ai ruoli.  
+ Un'altra funzionalità riunisce la Gestione autorizzazioni (AzMan) e il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] per l'autorizzazione dei client. Quando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ospita un servizio Web, AzMan può essere integrato nell'applicazione per fare in modo che l'autorizzazione al servizio venga eseguita tramite AzMan. La funzionalità di Gestione ruoli di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fornisce un'API per gestire ruoli applicazione, aggiungere e rimuovere utenti dai ruoli e controllare l'appartenenza al ruolo. Con questa API non è tuttavia possibile eseguire una query per appurare se un utente è autorizzato a eseguire una determinata attività o operazione. AzMan consente di definire operazioni singole e di riunirle in attività. Con AZMan, oltre a controlli del ruolo è inoltre possibile verificare se un utente è autorizzato a eseguire un'attività. L'assegnazione del ruolo e l'autorizzazione all'esecuzione dell'attività possono essere configurate esternamente all'applicazione o eseguite a livello di programmazione all'interno dell'applicazione. Lo snap-in MMC (Microsoft Management Console) per l'amministrazione di AzMan consente agli amministratori di modificare le attività che un ruolo può eseguire in fase di esecuzione e di gestire l'appartenenza di ogni utente ai ruoli.  
   
  È inoltre possibile utilizzare AzMan e il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se si dispone già dell'accesso a un'installazione di AzMan esistente e si desidera autorizzare gli utenti del servizio utilizzando le funzionalità della combinazione AzMan/provider di ruoli.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59213259"
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Procedura: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Procedura: Usare il provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Procedura: Usare il provider di ruoli ASP.NET di Gestione autorizzazioni con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
-- [Gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Procedura: Usare il Provider di ruoli ASP.NET con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Procedura: Usare il Provider di ruoli ASP.NET di gestione autorizzazioni con un servizio](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Gestione delle attestazioni e dell'autorizzazione con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

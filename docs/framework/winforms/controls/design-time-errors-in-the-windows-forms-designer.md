@@ -9,10 +9,10 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213142"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Errori in fase di progettazione in Progettazione Windows Form
@@ -45,7 +45,7 @@ In questo argomento viene illustrato il significato e l'uso dell'elenco errori d
 ### <a name="forum-posts-about-this-error"></a>Post dei forum sull'errore  
  Nelle informazioni aggiuntive verrà incluso un collegamento ai post del forum MSDN relativi all'errore. La ricerca viene effettuata nei forum sulla base della stringa del messaggio di errore. È anche possibile provare a effettuare una ricerca nei seguenti forum:  
   
--   [Forum di progettazione Windows Form](https://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Forum di Progettazione Windows Form](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
 -   [Forum di Windows Form](https://go.microsoft.com/fwlink/?LinkId=203523)  
   

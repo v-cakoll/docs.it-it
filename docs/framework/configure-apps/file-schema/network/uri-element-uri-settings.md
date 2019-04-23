@@ -1,19 +1,19 @@
 ---
-title: <Uri> Elemento (impostazioni Uri)
+title: Elemento <Uri> (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212142"
 ---
 # <a name="uri-element-uri-settings"></a>\<URI > (impostazioni Uri)
 Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).  
   
 ## <a name="schema-hierarchy"></a>Gerarchia dello schema  
- [\<configurazione > elemento](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -42,7 +42,7 @@ Contiene le impostazioni che specificano come .NET Framework gestisce gli indiri
   
 |**Elemento**|**Descrizione**|  
 |-----------------|---------------------|  
-|[configurazione](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
 ## <a name="remarks"></a>Note  
  Il `uri` elemento contiene le impostazioni per i membri del <xref:System.Uri> utilizzate dalle classi nella classe la <xref:System.Net> dello spazio dei nomi. Le impostazioni di configurano il supporto per IRI e IDN.  

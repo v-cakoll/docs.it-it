@@ -3,10 +3,10 @@ title: Migrazione di servizi Web ASP.NET a WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
 ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211088"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrazione di servizi Web ASP.NET a WCF
@@ -37,8 +37,8 @@ ASP.NET fornisce strumenti e librerie di classi .NET Framework per compilare ser
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Preparazione all'adozione di Windows Communication Foundation: facilitazione della migrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Preparazione all'adozione di Windows Communication Foundation: facilitazione dell'integrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
-- [Uso di Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
-- [Confronto tra i servizi Web ASP.NET e WCF basato sullo scopo e gli standard usati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
-- [Confronto tra servizi Web ASP.NET e WCF basato sullo sviluppo](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+- [Preparazione all'adozione di Windows Communication Foundation: Semplificazione della migrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Preparazione all'adozione di Windows Communication Foundation: Semplificazione dell'integrazione futura](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Adozione di Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
+- [Confronto tra i servizi Web ASP.NET e WCF in base a scopo e standard usati](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [Confronto tra servizi Web ASP.NET e WCF in base allo sviluppo](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

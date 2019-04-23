@@ -3,10 +3,10 @@ title: Operatori numerici e di confronto
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
 ms.openlocfilehash: 9b31fd2d819afbb1e589ad74f23ec139830c68b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212167"
 ---
 # <a name="numeric-and-comparison-operators"></a>Operatori numerici e di confronto
@@ -19,7 +19,7 @@ Gli operatori aritmetici e di confronto funzionano correttamente in Common Langu
 -   Gli operatori di incremento e decremento provocano effetti collaterali quando vengono usati in espressioni che non possono essere replicate in SQL e, di conseguenza, non sono supportati.  
   
 ## <a name="supported-operators"></a>Operatori supportati  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta gli operatori seguenti.  
+ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono supportati gli operatori riportati di seguito.  
   
 -   Operatori aritmetici di base:  
   
@@ -33,7 +33,7 @@ Gli operatori aritmetici e di confronto funzionano correttamente in Common Langu
   
     -   Divisione con valori integer di Visual Basic (`\`)  
   
-    -   `%` (Visual Basic `Mod`)  
+    -   `%` (`Mod` di Visual Basic)  
   
     -   `<<`  
   
@@ -43,11 +43,11 @@ Gli operatori aritmetici e di confronto funzionano correttamente in Common Langu
   
 -   Operatori di confronto di base:  
   
-    -   Visual Basic `=` e c# `==`  
+    -   `=` di Visual Basic e `==` di C#  
   
-    -   Visual Basic `<>` e c# `!=`  
+    -   `<>` di Visual Basic e `!=` di C#  
   
-    -   Visual Basic `Is/IsNot`  
+    -   `Is/IsNot` Visual Basic  
   
     -   `<`  
   
@@ -60,5 +60,5 @@ Gli operatori aritmetici e di confronto funzionano correttamente in Common Langu
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi di dati e funzioni](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-- [Operatori [C#]](../../../../../../docs/csharp/language-reference/operators/index.md)
+- [Operatori C#](../../../../../../docs/csharp/language-reference/operators/index.md)
 - [Operatori](../../../../../visual-basic/language-reference/operators/index.md)

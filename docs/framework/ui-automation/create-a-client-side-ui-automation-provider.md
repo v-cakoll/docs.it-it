@@ -9,10 +9,10 @@ helpviewer_keywords:
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
 ms.openlocfilehash: 03f64386271565b3494b9dac42cf969fc777e40b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211309"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>Creare un provider di automazione interfaccia utente lato client
@@ -29,5 +29,5 @@ ms.locfileid: "59211309"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sui provider di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Panoramica dei provider di automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [Registrare un assembly di provider lato client](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)

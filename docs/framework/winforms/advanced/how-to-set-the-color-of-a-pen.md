@@ -10,10 +10,10 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213415"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Procedura: Impostare il colore di un oggetto Pen
@@ -35,7 +35,7 @@ Questo esempio viene modificato il colore di un preesistenti <xref:System.Drawin
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Drawing.Pen>
-- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Procedura: Creare un oggetto Pen](how-to-create-a-pen.md)
-- [Utilizzo di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
+- [Uso di un oggetto Pen per creare linee e forme](using-a-pen-to-draw-lines-and-shapes.md)
 - [Penne, linee e rettangoli in GDI+](pens-lines-and-rectangles-in-gdi.md)
