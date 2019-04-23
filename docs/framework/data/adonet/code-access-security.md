@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174109"
 ---
 # <a name="code-access-security-and-adonet"></a>Sicurezza dell'accesso al codice e ADO.NET
@@ -27,11 +27,11 @@ In .NET Framework sono incluse sia la sicurezza basata sui ruoli che la sicurezz
   
  Sono disponibili tre tipi di autorizzazioni di accesso al codice:  
   
--   `Code access permissions` derivativo di <xref:System.Security.CodeAccessPermission> classe. Le autorizzazioni sono necessarie per accedere a risorse protette, ad esempio file e variabili di ambiente, nonché per eseguire operazioni protette, ad esempio l'accesso a codice non gestito.  
+-   `Code access permissions`, che derivano dalla classe <xref:System.Security.CodeAccessPermission>. Le autorizzazioni sono necessarie per accedere a risorse protette, ad esempio file e variabili di ambiente, nonché per eseguire operazioni protette, ad esempio l'accesso a codice non gestito.  
   
--   `Identity permissions` che rappresentano le caratteristiche identificano di un assembly. Le autorizzazioni vengono concesse a un assembly in base a una prova, che può includere elementi quali una firma digitale o l'origine del codice. Le autorizzazioni di identità derivano anche dalla classe base <xref:System.Security.CodeAccessPermission>.  
+-   `Identity permissions`, che rappresentano le caratteristiche identificative di un assembly. Le autorizzazioni vengono concesse a un assembly in base a una prova, che può includere elementi quali una firma digitale o l'origine del codice. Le autorizzazioni di identità derivano anche dalla classe base <xref:System.Security.CodeAccessPermission>.  
   
--   `Role-based security permissions` si basano sul fatto che un'entità ha un'identità specificata o è un membro di un ruolo specificato. La classe <xref:System.Security.Permissions.PrincipalPermission> consente l'esecuzione di controlli di autorizzazione dichiarativi e imperativi sull'entità di sicurezza attiva.  
+-   `Role-based security permissions`, che variano a seconda che un'entità di sicurezza disponga di un'identità specificata o sia membro di un ruolo specificato. La classe <xref:System.Security.Permissions.PrincipalPermission> consente l'esecuzione di controlli di autorizzazione dichiarativi e imperativi sull'entità di sicurezza attiva.  
   
  Per determinare se il codice è autorizzato ad accedere a una risorsa o a eseguire un'operazione, il sistema di sicurezza del runtime attraversa lo stack di chiamate, confrontando le autorizzazioni concesse di ogni chiamante con l'autorizzazione richiesta. Se un qualsiasi chiamante nello stack di chiamate non dispone dell'autorizzazione richiesta, viene generata un'eccezione <xref:System.Security.SecurityException> e l'accesso viene rifiutato.  
   
@@ -197,6 +197,6 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>Vedere anche
 
 - [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sicurezza nel codice nativo e nel codice .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Security in Native and codice .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Sicurezza basata sui ruoli](../../../../docs/standard/security/role-based-security.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

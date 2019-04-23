@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015085cff23028814937dfef9aea19af7438b4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173810"
 ---
 # <a name="icordebugclass2-interface"></a>Interfaccia ICorDebugClass2
@@ -50,5 +50,5 @@ Rappresenta una classe generica oppure una classe con un parametro di metodo di 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfaccia ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [ICorDebugClass (interfaccia)](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
 - [Interfacce di debug](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
