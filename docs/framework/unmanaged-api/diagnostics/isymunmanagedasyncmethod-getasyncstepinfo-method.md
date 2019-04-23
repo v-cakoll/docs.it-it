@@ -5,24 +5,24 @@ ms.assetid: 3ef5b4b8-4ac7-4906-849b-f932c5e3db07
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f7c72d0766580f9aa3aa678aacd872b804172a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131430"
 ---
-# <a name="isymunmanagedasyncmethodgetasyncstepinfo-method"></a><span data-ttu-id="b41ad-102">Metodo ISymUnmanagedAsyncMethod::GetAsyncStepInfo</span><span class="sxs-lookup"><span data-stu-id="b41ad-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfo Method</span></span>
-<span data-ttu-id="b41ad-103">Visualizzare [metodo DefineAsyncStepInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span><span class="sxs-lookup"><span data-stu-id="b41ad-103">See [DefineAsyncStepInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span></span>  
+# <a name="isymunmanagedasyncmethodgetasyncstepinfo-method"></a><span data-ttu-id="81bc0-102">Metodo ISymUnmanagedAsyncMethod::GetAsyncStepInfo</span><span class="sxs-lookup"><span data-stu-id="81bc0-102">ISymUnmanagedAsyncMethod::GetAsyncStepInfo Method</span></span>
+<span data-ttu-id="81bc0-103">Visualizzare [metodo DefineAsyncStepInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span><span class="sxs-lookup"><span data-stu-id="81bc0-103">See [DefineAsyncStepInfo Method](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b41ad-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b41ad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81bc0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="81bc0-104">Syntax</span></span>  
   
 ```idl  
 HRESULT GetAsyncStepInfo(    [in] ULONG32 cStepInfo,    [out] ULONG32 *pcStepInfo,    [in, size_is(cStepInfo)] ULONG32 yieldOffsets[],    [in, size_is(cStepInfo)] ULONG32 breakpointOffset[],    [in, size_is(cStepInfo)] mdToken breakpointMethod[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b41ad-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="b41ad-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="81bc0-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="81bc0-105">Parameters</span></span>  
   
-|<span data-ttu-id="b41ad-106">Parametro</span><span class="sxs-lookup"><span data-stu-id="b41ad-106">Parameter</span></span>|<span data-ttu-id="b41ad-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b41ad-107">Description</span></span>|  
+|<span data-ttu-id="81bc0-106">Parametro</span><span class="sxs-lookup"><span data-stu-id="81bc0-106">Parameter</span></span>|<span data-ttu-id="81bc0-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="81bc0-107">Description</span></span>|  
 |---------------|-----------------|  
 |`cStepInfo`||  
 |`pcStepInfo`||  
@@ -30,12 +30,12 @@ HRESULT GetAsyncStepInfo(    [in] ULONG32 cStepInfo,    [out] ULONG32 *pcStepInf
 |`breakpointOffset`||  
 |`breakpointMethod`||  
   
-## <a name="return-value"></a><span data-ttu-id="b41ad-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b41ad-108">Return Value</span></span>  
- <span data-ttu-id="b41ad-109">Restituisce `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="b41ad-109">Returns `HRESULT`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="81bc0-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="81bc0-108">Return Value</span></span>  
+ <span data-ttu-id="81bc0-109">Restituisce `HRESULT`.</span><span class="sxs-lookup"><span data-stu-id="81bc0-109">Returns `HRESULT`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b41ad-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b41ad-110">Requirements</span></span>  
- <span data-ttu-id="b41ad-111">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b41ad-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81bc0-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="81bc0-110">Requirements</span></span>  
+ <span data-ttu-id="81bc0-111">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="81bc0-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b41ad-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b41ad-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81bc0-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="81bc0-112">See also</span></span>
 
-- [<span data-ttu-id="b41ad-113">Interfaccia ISymUnmanagedAsyncMethod</span><span class="sxs-lookup"><span data-stu-id="b41ad-113">ISymUnmanagedAsyncMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+- [<span data-ttu-id="81bc0-113">Interfaccia ISymUnmanagedAsyncMethod</span><span class="sxs-lookup"><span data-stu-id="81bc0-113">ISymUnmanagedAsyncMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9eb96a75686a14182b9526a0832223c2b9abfc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136916"
 ---
-# <a name="deletemethod-function"></a><span data-ttu-id="52050-103">Funzione DeleteMethod</span><span class="sxs-lookup"><span data-stu-id="52050-103">DeleteMethod function</span></span>
-<span data-ttu-id="52050-104">Elimina il metodo specificato da una definizione di classe CIM.</span><span class="sxs-lookup"><span data-stu-id="52050-104">Deletes the specified method from a CIM class definition.</span></span>
+# <a name="deletemethod-function"></a><span data-ttu-id="4fb3e-103">Funzione DeleteMethod</span><span class="sxs-lookup"><span data-stu-id="4fb3e-103">DeleteMethod function</span></span>
+<span data-ttu-id="4fb3e-104">Elimina il metodo specificato da una definizione di classe CIM.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-104">Deletes the specified method from a CIM class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="52050-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="52050-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fb3e-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4fb3e-105">Syntax</span></span>  
   
 ```  
 HRESULT Delete (
@@ -38,40 +38,40 @@ HRESULT Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="52050-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="52050-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="4fb3e-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="4fb3e-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="52050-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="52050-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="4fb3e-107">[in] Questo parametro è inutilizzato.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="52050-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="52050-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="4fb3e-108">[in] Un puntatore a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) istanza.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="52050-109">[in] Il nome del metodo da rimuovere dalla tabella della classe.</span><span class="sxs-lookup"><span data-stu-id="52050-109">[in] The name of the method to remove from the class table.</span></span> `wszName` <span data-ttu-id="52050-110">deve essere un puntatore a un valore valido `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="52050-110">must be a pointer to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="4fb3e-109">[in] Il nome del metodo da rimuovere dalla tabella della classe.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="4fb3e-110">`wszName` deve essere un puntatore a un valore valido `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="52050-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="52050-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="4fb3e-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="4fb3e-111">Return value</span></span>
 
-<span data-ttu-id="52050-112">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="52050-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="4fb3e-112">I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:</span><span class="sxs-lookup"><span data-stu-id="4fb3e-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="52050-113">Costante</span><span class="sxs-lookup"><span data-stu-id="52050-113">Constant</span></span>  |<span data-ttu-id="52050-114">Value</span><span class="sxs-lookup"><span data-stu-id="52050-114">Value</span></span>  |<span data-ttu-id="52050-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="52050-115">Description</span></span>  |
+|<span data-ttu-id="4fb3e-113">Costante</span><span class="sxs-lookup"><span data-stu-id="4fb3e-113">Constant</span></span>  |<span data-ttu-id="4fb3e-114">Value</span><span class="sxs-lookup"><span data-stu-id="4fb3e-114">Value</span></span>  |<span data-ttu-id="4fb3e-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4fb3e-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="52050-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="52050-116">0x80041002</span></span> | <span data-ttu-id="52050-117">Il metodo specificato non esiste.</span><span class="sxs-lookup"><span data-stu-id="52050-117">The specified method does not exist.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="52050-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="52050-118">0x80041006</span></span> | <span data-ttu-id="52050-119">Non è disponibile memoria sufficiente per completare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="52050-119">There is not enough memory to complete the operation.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="52050-120">0</span><span class="sxs-lookup"><span data-stu-id="52050-120">0</span></span> | <span data-ttu-id="52050-121">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="52050-121">The function call was successful.</span></span>  |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="4fb3e-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="4fb3e-116">0x80041002</span></span> | <span data-ttu-id="4fb3e-117">Il metodo specificato non esiste.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-117">The specified method does not exist.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="4fb3e-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="4fb3e-118">0x80041006</span></span> | <span data-ttu-id="4fb3e-119">Non è disponibile memoria sufficiente per completare l'operazione.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-119">There is not enough memory to complete the operation.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="4fb3e-120">0</span><span class="sxs-lookup"><span data-stu-id="4fb3e-120">0</span></span> | <span data-ttu-id="4fb3e-121">La chiamata di funzione è riuscita.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-121">The function call was successful.</span></span>  |
 
-## <a name="remarks"></a><span data-ttu-id="52050-122">Note</span><span class="sxs-lookup"><span data-stu-id="52050-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="4fb3e-122">Note</span><span class="sxs-lookup"><span data-stu-id="4fb3e-122">Remarks</span></span>
 
-<span data-ttu-id="52050-123">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) (metodo).</span><span class="sxs-lookup"><span data-stu-id="52050-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
+<span data-ttu-id="4fb3e-123">Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) (metodo).</span><span class="sxs-lookup"><span data-stu-id="4fb3e-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
 
-<span data-ttu-id="52050-124">L'eliminazione di metodo non è supportata per [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) puntatori che puntano a istanze CIM.</span><span class="sxs-lookup"><span data-stu-id="52050-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
+<span data-ttu-id="4fb3e-124">L'eliminazione di metodo non è supportata per [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) puntatori che puntano a istanze CIM.</span><span class="sxs-lookup"><span data-stu-id="4fb3e-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="52050-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="52050-125">Requirements</span></span>  
- <span data-ttu-id="52050-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="52050-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4fb3e-125">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4fb3e-125">Requirements</span></span>  
+ <span data-ttu-id="4fb3e-126">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4fb3e-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="52050-127">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="52050-127">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="4fb3e-127">**Intestazione:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4fb3e-127">**Header:** WMINet_Utils.idl</span></span>  
   
- **<span data-ttu-id="52050-128">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="52050-128">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ <span data-ttu-id="4fb3e-128">**Versioni di .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4fb3e-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52050-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="52050-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4fb3e-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4fb3e-129">See also</span></span>
 
-- [<span data-ttu-id="52050-130">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="52050-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="4fb3e-130">WMI e contatori delle prestazioni (riferimenti alle API non gestite)</span><span class="sxs-lookup"><span data-stu-id="4fb3e-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
