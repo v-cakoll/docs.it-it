@@ -18,36 +18,36 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b02f70f22a7d35bf0fe7816a52c490f88b31217
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218433"
 ---
-# <a name="icorprofilerthreadenumgetcount-method"></a><span data-ttu-id="bef53-102">Metodo ICorProfilerThreadEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="bef53-102">ICorProfilerThreadEnum::GetCount Method</span></span>
-<span data-ttu-id="bef53-103">Ottiene il numero di thread usati dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bef53-103">Gets the number of threads that are used by the application.</span></span>  
+# <a name="icorprofilerthreadenumgetcount-method"></a><span data-ttu-id="13601-102">Metodo ICorProfilerThreadEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="13601-102">ICorProfilerThreadEnum::GetCount Method</span></span>
+<span data-ttu-id="13601-103">Ottiene il numero di thread usati dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="13601-103">Gets the number of threads that are used by the application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bef53-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bef53-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13601-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="13601-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount (    [out] ULONG * pcelt  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bef53-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bef53-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13601-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="13601-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="bef53-106">[out] Il numero di thread utilizzati dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bef53-106">[out] The number of threads used by the application.</span></span>  
+ <span data-ttu-id="13601-106">[out] Il numero di thread utilizzati dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="13601-106">[out] The number of threads used by the application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bef53-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bef53-107">Requirements</span></span>  
- <span data-ttu-id="bef53-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bef53-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13601-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="13601-107">Requirements</span></span>  
+ <span data-ttu-id="13601-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13601-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bef53-109">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bef53-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="13601-109">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="13601-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bef53-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bef53-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="13601-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13601-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="bef53-111">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="bef53-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="13601-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13601-111">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bef53-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bef53-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13601-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="13601-112">See also</span></span>
 
-- [<span data-ttu-id="bef53-113">Interfaccia ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="bef53-113">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="bef53-114">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="bef53-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="13601-113">Interfaccia ICorProfilerThreadEnum</span><span class="sxs-lookup"><span data-stu-id="13601-113">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="13601-114">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="13601-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
