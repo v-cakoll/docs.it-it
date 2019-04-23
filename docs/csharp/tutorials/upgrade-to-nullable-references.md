@@ -3,12 +3,12 @@ title: Progettare con tipi riferimento nullable
 description: Questa esercitazione avanzata fornisce un'introduzione ai tipi riferimento nullable. Si imparerà a esprimere le finalità della progettazione in merito a quando i valori di riferimento possono essere Null e a configurare il compilatore in modo che stabilisca quando non possono essere Null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443250"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427292"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Esercitazione: Migrazione di codice esistente con tipi riferimento nullable
 
@@ -24,7 +24,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il compilatore della versione beta di C# 8 è disponibile con [Visual Studio 2019 Preview 2 e versioni successive](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) o [.NET Core 3.0 Preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore della versione beta di C# 8.0. Il compilatore della versione beta di C# 8 è disponibile con [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o la versione più recente di [.NET Core 3.0 Preview](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e .NET, inclusa l'interfaccia della riga di comando di .NET Core o Visual Studio.
 
@@ -81,7 +81,7 @@ Queste due proprietà causano l'avviso `CS8618` "Non-nullable property is uninit
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Sono tanti gli aspetti interessanti nel blocco di codice precedente. Questa applicazione usa il pacchetto NuGet [AutoMapper](http://automapper.org/) per costruire un elemento di notizie da un `ISyndicationItem`. Si è scoperto che gli elementi della storia delle notizie vengono costruiti e le proprietà vengono impostate in tale singola istruzione. Questo significa che la progettazione per `NewsStoryViewModel` indica che queste proprietà non devono mai avere il valore `null`. Queste proprietà devono essere **tipi riferimento non nullable**. Questa è la migliore espressione della finalità di progettazione originale. In effetti, per qualsiasi `NewsStoryViewModel` *viene* correttamente creata un'istanza con valori non Null. Il codice di inizializzazione seguente rappresenta quindi una correzione valida:
+Sono tanti gli aspetti interessanti nel blocco di codice precedente. Questa applicazione usa il pacchetto NuGet [AutoMapper](https://automapper.org/) per costruire un elemento di notizie da un `ISyndicationItem`. Si è scoperto che gli elementi della storia delle notizie vengono costruiti e le proprietà vengono impostate in tale singola istruzione. Questo significa che la progettazione per `NewsStoryViewModel` indica che queste proprietà non devono mai avere il valore `null`. Queste proprietà devono essere **tipi riferimento non nullable**. Questa è la migliore espressione della finalità di progettazione originale. In effetti, per qualsiasi `NewsStoryViewModel` *viene* correttamente creata un'istanza con valori non Null. Il codice di inizializzazione seguente rappresenta quindi una correzione valida:
 
 ```csharp
 public class NewsStoryViewModel

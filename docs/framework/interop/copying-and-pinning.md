@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219620"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326281"
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
 Durante il marshalling il gestore di marshalling di interoperabilità può copiare o bloccare i dati interessati. Tramite l'operazione di copia, una copia dei dati viene spostata da una posizione della memoria a un'altra. La figura seguente illustra le differenze esistenti tra la copia di un tipo valore e quella di un tipo passato per riferimento dalla memoria gestita a quella non gestita.  
   
- ![Tipi valore passati per valore e per riferimento](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-Tipi di valore passati per valore e per riferimento  
+ ![Diagramma che mostra come vengono copiati i tipi di riferimento e valore.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- Il marshalling degli argomenti del metodo passati per valore a codice non gestito viene eseguito come marshalling di valori sullo stack. Il processo di copia è diretto. Gli argomenti passati per riferimento vengono passati come puntatori allo stack. Anche i tipi riferimento vengono passati per valore e per riferimento. Come illustrato nella figura seguente, i tipi riferimento passati per valore vengono copiati o bloccati.  
+ Il marshalling degli argomenti del metodo passati per valore a codice non gestito viene eseguito come marshalling di valori sullo stack. Il processo di copia è diretto. Gli argomenti passati per riferimento vengono passati come puntatori allo stack. Anche i tipi riferimento vengono passati per valore e per riferimento. Come illustrato nella figura seguente, i tipi riferimento passati per valore vengono copiati o bloccati: 
   
- ![Interoperabilità COM](./media/interopmarshalpin.gif "interopmarshalpin")  
-Tipi riferimento passati per valore e per riferimento  
+ ![Diagramma che mostra i tipi riferimento passati per valore e per riferimento.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  Con il blocco, i dati vengono temporaneamente bloccati nella posizione di memoria corrente, impedendone quindi il riposizionamento da parte del Garbage Collector di Common Language Runtime. I dati vengono bloccati dal gestore di marshalling per ridurre il sovraccarico dell'operazione di copia e migliorare le prestazioni. In base al tipo, si stabilisce se i dati verranno copiati o bloccati nel corso del processo di marshalling.  Per oggetti come <xref:System.String>, il blocco viene eseguito automaticamente durante il marshalling. È tuttavia possibile bloccare la memoria manualmente tramite la classe <xref:System.Runtime.InteropServices.GCHandle>.  
   
@@ -78,6 +76,7 @@ Tipi riferimento passati per valore e per riferimento
  Quando un oggetto <xref:System.Text.StringBuilder?displayProperty=nameWithType> viene passato per valore, un riferimento al buffer interno di **StringBuilder** viene passato dal gestore di marshalling direttamente al chiamante. Il chiamante e il chiamato devono concordare sulla dimensione del buffer. Il chiamante è responsabile della creazione di uno **StringBuilder** di lunghezza adeguata. Il chiamato deve prendere le precauzioni necessarie per garantire che il buffer non risulti sovraccarico. **StringBuilder** è un'eccezione alla regola in base alla quale i tipi di riferimento passati per valore vengono passati come parametri In per impostazione predefinita, dato che viene sempre passato come parametro In/Out.  
   
 ## <a name="see-also"></a>Vedere anche
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+
+- [comportamento predefinito del marshalling](default-marshaling-behavior.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Marshalling di interoperabilità](interop-marshaling.md)

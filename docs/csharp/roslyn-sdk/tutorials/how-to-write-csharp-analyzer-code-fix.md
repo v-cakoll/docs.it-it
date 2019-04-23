@@ -3,12 +3,12 @@ title: 'Esercitazione: Scrivere il primo analizzatore con correzione del codice'
 description: In questa esercitazione vengono fornite istruzioni dettagliate per creare un analizzatore e una correzione del codice con .NET Compiler Platform SDK (API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677175"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427500"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Esercitazione: Scrivere il primo analizzatore con correzione del codice
 
@@ -260,7 +260,7 @@ Sono stati compiuti notevoli progressi. Sono presenti linee ondulate sotto le di
 
 L'analizzatore e la correzione del codice funzionano nel caso semplice di una singola dichiarazione che può essere resa const. Vi sono numerose possibili istruzioni di dichiarazione in cui questa implementazione genera errori. Questi casi possono essere gestiti usando la libreria di unit test scritta dal modello. È molto più veloce che aprire ripetutamente una seconda copia di Visual Studio.
 
-Aprire il file **MakeConstUnitTests.cs** nel progetto di unit test. Il modello ha creato due test che seguono i due modelli comuni per gli unit test di un analizzatore e una correzione del codice. `TestMethod1` illustra il modello per un test che assicura l'analizzatore non segnali una diagnostica quando non deve. `TestMethod2` illustra il modello per la segnalazione di una diagnostica e l'esecuzione della correzione del codice.
+Aprire il file **MakeConstUnitTests.cs** nel progetto di unit test. Il modello ha creato due test che seguono i due modelli comuni per gli unit test di un analizzatore e una correzione del codice. `TestMethod1` illustra il modello per un test che assicura che l'analizzatore non segnali una diagnostica quando non deve. `TestMethod2` illustra il modello per la segnalazione di una diagnostica e l'esecuzione della correzione del codice.
 
 Il codice per quasi ogni test dell'analizzatore segue uno di questi due modelli. Per il primo passaggio, è possibile rielaborare questi test come test basati sui dati. Sarà quindi possibile creare facilmente nuovi test mediante l'aggiunta di nuove costanti stringa per rappresentare diversi input di test.
 

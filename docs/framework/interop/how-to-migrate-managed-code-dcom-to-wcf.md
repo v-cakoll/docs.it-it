@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307717"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procedura: Eseguire la migrazione di codice gestito da DCOM a WCF
 Windows Communication Foundation (WCF) è la scelta migliore e più sicura su Distributed Component Object Model (DCOM) per le chiamate di codice gestito tra i server e i client in un ambiente distribuito. Questo articolo mostra come eseguire la migrazione del codice da DCOM a WCF per gli scenari seguenti.  
@@ -139,7 +139,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-4-configure-the-service-and-the-client"></a>Passaggio 4: Configurare il servizio e il client  
- Per eseguire un servizio WCF, è necessario dichiarare un endpoint che esponga tale interfaccia del servizio in un URL specifico tramite un'associazione WCF specifica. Un binding specifica i dettagli di trasporto, codifica e protocollo che permettono ai client e al server di comunicare. In genere i binding si aggiungono ai file di configurazione del progetto del servizio (web.config). Di seguito viene illustrata una voce di binding per il servizio di esempio:  
+ Per eseguire un servizio WCF, è necessario dichiarare un endpoint che esponga tale interfaccia del servizio in un URL specifico tramite un'associazione WCF specifica. Un'associazione specifica i dettagli di trasporto, codifica e protocollo che permettono ai client e al server di comunicare. In genere i binding si aggiungono ai file di configurazione del progetto del servizio (web.config). Di seguito viene illustrata una voce di associazione per il servizio di esempio:  
   
 ```xml  
 <configuration>  
@@ -291,7 +291,7 @@ public interface ISessionBoundObject
 ```  
   
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Passaggio 2: Definire il servizio factory WCF per l'oggetto con sessione  
- Il servizio che crea l'oggetto con sessione deve essere definito e implementato. A tale scopo, osservare il codice indicato di seguito. Questo codice crea un altro servizio WCF che restituisce un oggetto <xref:System.ServiceModel.EndpointAddress10>.  Si tratta di una forma serializzabile di endpoint che può essere usata per creare l'oggetto con sessione.  
+ Il servizio che crea l'oggetto con sessione deve essere definito e implementato. A tal fine, osservare il codice indicato di seguito. Questo codice crea un altro servizio WCF che restituisce un oggetto <xref:System.ServiceModel.EndpointAddress10>.  Si tratta di una forma serializzabile di endpoint che può essere usata per creare l'oggetto con sessione.  
   
 ```csharp  
 [ServiceContract]  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Passaggio 3: Configurare e avviare i servizi WCF  
  Per ospitare questi servizi, sarà necessario aggiungere quanto segue al file di configurazione del server (Web.config).  
   
-1.  Aggiungere una sezione `<client>` che descrive l'endpoint per l'oggetto con sessione.  In questo scenario, il server funge anche da client e deve essere configurato per abilitare questa opzione.  
+1. Aggiungere una sezione `<client>` che descrive l'endpoint per l'oggetto con sessione.  In questo scenario, il server funge anche da client e deve essere configurato per abilitare questa opzione.  
   
-2.  Nella sezione `<services>` dichiarare gli endpoint di servizio per la factory e l'oggetto con sessione.  Ciò consente al client di comunicare con gli endpoint di servizio, di acquisire <xref:System.ServiceModel.EndpointAddress10> e di creare il canale con sessione.  
+2. Nella sezione `<services>` dichiarare gli endpoint di servizio per la factory e l'oggetto con sessione.  Ciò consente al client di comunicare con gli endpoint di servizio, di acquisire <xref:System.ServiceModel.EndpointAddress10> e di creare il canale con sessione.  
   
  Di seguito viene riportato un file di configurazione di esempio con queste impostazioni:  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Per chiamare il servizio, aggiungere il codice al client per eseguire le operazioni seguenti:  
   
-1.  Creare un canale per il servizio `ISessionBoundFactory`.  
+1. Creare un canale per il servizio `ISessionBoundFactory`.  
   
-2.  Usare il canale per richiamare il servizio `ISessionBoundFactory` e ottenere un oggetto <xref:System.ServiceModel.EndpointAddress10>.  
+2. Usare il canale per richiamare il servizio `ISessionBoundFactory` e ottenere un oggetto <xref:System.ServiceModel.EndpointAddress10>.  
   
-3.  Usare <xref:System.ServiceModel.EndpointAddress10> per creare un canale in modo da ottenere un oggetto con sessione.  
+3. Usare <xref:System.ServiceModel.EndpointAddress10> per creare un canale in modo da ottenere un oggetto con sessione.  
   
-4.  Chiamare i metodi `SetCurrentValue` e `GetCurrentValue` per dimostrare che l'istanza dell'oggetto usata in più chiamate è sempre la stessa.  
+4. Chiamare i metodi `SetCurrentValue` e `GetCurrentValue` per dimostrare che l'istanza dell'oggetto usata in più chiamate è sempre la stessa.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Programmazione WCF di base](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Progettazione e implementazione di servizi](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Creazione di client](../../../docs/framework/wcf/building-clients.md)

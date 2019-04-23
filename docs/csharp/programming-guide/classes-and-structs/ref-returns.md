@@ -4,12 +4,12 @@ description: Informazioni su come definire e usare valori restituiti e variabili
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081846"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -59,7 +59,6 @@ Il valore restituito ref è un alias per un'altra variabile nell'ambito del meto
 - Se lo si restituisce *per riferimento*, si restituisce un alias alla stessa variabile.
 - Se lo si passa a un altro metodo *per riferimento*, si passa un riferimento alla variabile di cui effettua l'aliasing.
 - Quando si crea un alias [locale ref](#ref-locals), si crea un nuovo alias per la stessa variabile.
-
 
 ## <a name="ref-locals"></a>Variabili locali ref
 
@@ -124,5 +123,5 @@ Questa seconda versione è più efficiente con sequenze più lunghe negli scenar
 
 ## <a name="see-also"></a>Vedere anche
 
-- [ref (parola chiave)](../../language-reference/keywords/ref.md)
+- [Parola chiave ref](../../language-reference/keywords/ref.md)
 - [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)

@@ -4,12 +4,12 @@ description: Informazioni dettagliate sul flusso di lavoro richiesto per lo svil
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921091"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553875"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo per app Docker
 
@@ -67,7 +67,7 @@ Inoltre, è necessario Visual Studio 2017 versione 15.7 o successive con il cari
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 - Scrivere i Dockerfile](./media/image4.png)
 
@@ -193,26 +193,26 @@ Il Dockerfile iniziale può avere un aspetto simile al seguente:
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 E questi sono i dettagli, riga per riga:
 
-1.  Avviare una fase con una "piccola" immagine di base solo di runtime, denominarla **base** per riferimento.
-2.  Creare la directory **/app** nell'immagine.
-3.  Esporre la porta **80**.
+1. Avviare una fase con una "piccola" immagine di base solo di runtime, denominarla **base** per riferimento.
+2. Creare la directory **/app** nell'immagine.
+3. Esporre la porta **80**.
 <!-- skip -->
-5.  Iniziare una nuova fase con una "grande" immagine per la compilazione e la pubblicazione, denominarla **build** per riferimento.
-6.  Creare la directory **/src** nell'immagine.
-7.  Fino alla riga 16, copiare i file **CSPROJ** dei progetti di riferimento, per poter ripristinare i pacchetti in un secondo momento.
+5. Iniziare una nuova fase con una "grande" immagine per la compilazione e la pubblicazione, denominarla **build** per riferimento.
+6. Creare la directory **/src** nell'immagine.
+7. Fino alla riga 16, copiare i file **CSPROJ** dei progetti di riferimento, per poter ripristinare i pacchetti in un secondo momento.
 <!-- skip -->
 17. Ripristinare i pacchetti per il progetto **Catalog.API** e i progetti di riferimento.
 18. Copiare **tutti gli alberi di directory per soluzione** (tranne le directory e i file inclusi nel file **DOCKERIGNORE**) dalla directory **/src** nell'immagine.

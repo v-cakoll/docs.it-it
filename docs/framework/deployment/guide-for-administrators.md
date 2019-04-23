@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be053c9f8b431a9e157e53ec2d32fef874cf2d6b
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262461"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309511"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
 In questo articolo dettagliato vengono descritte le modalità in cui un amministratore di sistema può distribuire [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e le relative dipendenze di sistema attraverso una rete usando Microsoft System Center Configuration Manager. L'articolo presuppone che tutti i computer client di destinazione soddisfino i requisiti minimi per .NET Framework. Per un elenco di requisiti software e hardware per l'installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vedere [Requisiti di sistema di .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
@@ -29,7 +29,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
  [Creare una raccolta](#creating_a_collection)  
  [Creare un pacchetto e un programma](#creating_a_package)  
  [Selezionare un punto di distribuzione](#select_dist_point)  
- [Distribuire un pacchetto](#deploying_package)  
+ [Distribuire il pacchetto](#deploying_package)  
 [Risorse](#resources)  
 [Risoluzione dei problemi](#troubleshooting)  
   
@@ -52,13 +52,13 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 ## <a name="deploying-the-net-framework"></a>Distribuzione di .NET Framework  
  È possibile usare System Center Configuration Manager 2012 per distribuire un'installazione invisibile all'utente di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] in cui gli utenti non interagiscono con il processo di installazione. Attenersi ai passaggi riportati di seguito.  
   
-1.  [Creare una raccolta](#creating_a_collection).  
+1. [Creare una raccolta](#creating_a_collection).  
   
-2.  [Creare un pacchetto e un programma per il pacchetto ridistribuibile di .NET Framework](#creating_a_package).  
+2. [Creare un pacchetto e un programma per il pacchetto ridistribuibile di .NET Framework](#creating_a_package).  
   
-3.  [Selezionare un punto di distribuzione](#select_dist_point).  
+3. [Selezionare un punto di distribuzione](#select_dist_point).  
   
-4.  [Distribuire il pacchetto](#deploying_package).  
+4. [Distribuire il pacchetto](#deploying_package).  
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Creare una raccolta  
@@ -66,21 +66,21 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  Per creare una raccolta:  
   
-1.  Nella console di Configuration Manager scegliere **Asset e conformità**.  
+1. Nella console di Configuration Manager scegliere **Asset e conformità**.  
   
-2.  Nell'area di lavoro **Asset e conformità** scegliere **Raccolte dispositivi**.  
+2. Nell'area di lavoro **Asset e conformità** scegliere **Raccolte dispositivi**.  
   
-3.  Nella scheda **Home** del gruppo **Crea** scegliere **Crea raccolta dispositivi**.  
+3. Nella scheda **Home** del gruppo **Crea** scegliere **Crea raccolta dispositivi**.  
   
-4.  Nella pagina **Generale** della **Creazione guidata raccolta dispositivi** digitare un nome per la raccolta.  
+4. Nella pagina **Generale** della **Creazione guidata raccolta dispositivi** digitare un nome per la raccolta.  
   
-5.  Scegliere **Sfoglia** per specificare una raccolta di limitazione.  
+5. Scegliere **Sfoglia** per specificare una raccolta di limitazione.  
   
-6.  Nella pagina**Regole di appartenenza** scegliere **Aggiungi regola** e quindi **Regola diretta** per aprire la **Creazione guidata regola di appartenenza diretta**. Scegliere **Avanti**.  
+6. Nella pagina**Regole di appartenenza** scegliere **Aggiungi regola** e quindi **Regola diretta** per aprire la **Creazione guidata regola di appartenenza diretta**. Scegliere **Avanti**.  
   
-7.  Nella pagina **Cerca risorse** scegliere **Risorsa di sistema** nell'elenco **Classe di risorse**. Nell'elenco **Nome attributo** scegliere **Nome**. Nel campo **Valore** immettere `%`, quindi scegliere **Avanti**.  
+7. Nella pagina **Cerca risorse** scegliere **Risorsa di sistema** nell'elenco **Classe di risorse**. Nell'elenco **Nome attributo** scegliere **Nome**. Nel campo **Valore** immettere `%`, quindi scegliere **Avanti**.  
   
-8.  Nella pagina **Seleziona risorse** selezionare la casella di controllo per ogni computer a cui si vuole distribuire .NET Framework. Scegliere **Avanti** e completare la procedura guidata.  
+8. Nella pagina **Seleziona risorse** selezionare la casella di controllo per ogni computer a cui si vuole distribuire .NET Framework. Scegliere **Avanti** e completare la procedura guidata.  
   
 9. Nella pagina **Regole di appartenenza** della **Creazione guidata raccolta dispositivi** scegliere **Avanti** e completare la procedura guidata.  
   
@@ -90,13 +90,13 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  Per creare un pacchetto:  
   
-1.  Nella console di Configuration Manager scegliere **Raccolta software**.  
+1. Nella console di Configuration Manager scegliere **Raccolta software**.  
   
-2.  Nell'area di lavoro **Raccolta software** espandere **Gestione applicazioni** e scegliere **Pacchetti**.  
+2. Nell'area di lavoro **Raccolta software** espandere **Gestione applicazioni** e scegliere **Pacchetti**.  
   
-3.  Nella scheda **Home** scegliere **Crea pacchetto** del gruppo **Crea**.  
+3. Nella scheda **Home** scegliere **Crea pacchetto** del gruppo **Crea**.  
   
-4.  Nella pagina **Pacchetto** della **Creazione guidata pacchetto e programma** immettere le informazioni seguenti:  
+4. Nella pagina **Pacchetto** della **Creazione guidata pacchetto e programma** immettere le informazioni seguenti:  
   
     -   Nome: `.NET Framework 4.5`  
   
@@ -104,11 +104,11 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
     -   Lingua. `English (US)`  
   
-5.  Scegliere **Questo pacchetto contiene file di origine**, quindi **Sfoglia** per selezionare la cartella locale o di rete che contiene i file di installazione di .NET Framework. Dopo aver selezionato la cartella, scegliere **OK**, quindi **Avanti**.  
+5. Scegliere **Questo pacchetto contiene file di origine**, quindi **Sfoglia** per selezionare la cartella locale o di rete che contiene i file di installazione di .NET Framework. Dopo aver selezionato la cartella, scegliere **OK**, quindi **Avanti**.  
   
-6.  Nella pagina **Tipo di programma** della procedura guidata, scegliere **Programma standard**, quindi **Avanti**.  
+6. Nella pagina **Tipo di programma** della procedura guidata, scegliere **Programma standard**, quindi **Avanti**.  
   
-7.  Nella pagina **Programma** della **Creazione guidata pacchetto e programma** immettere le informazioni seguenti:  
+7. Nella pagina **Programma** della **Creazione guidata pacchetto e programma** immettere le informazioni seguenti:  
   
     1.  **Nome:** `.NET Framework 4.5`  
   
@@ -118,7 +118,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
     4.  **Requisiti per esecuzione programma:** scegliere l'opzione che specifica che il programma può essere eseguito indipendentemente dal fatto che un utente sia connesso o meno.  
   
-8.  Nella pagina **Requisiti** scegliere **Avanti** per accettare i valori predefiniti, quindi completare la procedura guidata.  
+8. Nella pagina **Requisiti** scegliere **Avanti** per accettare i valori predefiniti, quindi completare la procedura guidata.  
   
  Nella tabella seguente vengono descritte le opzioni della riga di comando specificate nel passaggio 7.  
   
@@ -136,21 +136,21 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  Usare i passaggi seguenti per selezionare un punto di distribuzione per il pacchetto di .NET Framework 4.5 creato nella sezione precedente:  
   
-1.  Nella console di Configuration Manager scegliere **Raccolta software**.  
+1. Nella console di Configuration Manager scegliere **Raccolta software**.  
   
-2.  Nell'area di lavoro **Raccolta software** espandere **Gestione applicazioni** e scegliere **Pacchetti**.  
+2. Nell'area di lavoro **Raccolta software** espandere **Gestione applicazioni** e scegliere **Pacchetti**.  
   
-3.  Dall'elenco di pacchetti, selezionare il pacchetto **.NET Framework 4.5** creato nella sezione precedente.  
+3. Dall'elenco di pacchetti, selezionare il pacchetto **.NET Framework 4.5** creato nella sezione precedente.  
   
-4.  Nella scheda **Home** scegliere **Distribuisci contenuto** nel gruppo **Distribuzione**.  
+4. Nella scheda **Home** scegliere **Distribuisci contenuto** nel gruppo **Distribuzione**.  
   
-5.  Nella scheda **Generale** della **Distribuzione guidata contenuto** scegliere **Avanti**.  
+5. Nella scheda **Generale** della **Distribuzione guidata contenuto** scegliere **Avanti**.  
   
-6.  Nella pagina **Destinazione contenuto** della procedura guidata scegliere **Aggiungi**, quindi **Punto di distribuzione**.  
+6. Nella pagina **Destinazione contenuto** della procedura guidata scegliere **Aggiungi**, quindi **Punto di distribuzione**.  
   
-7.  Nella finestra di dialogo **Aggiungi punti di distribuzione** selezionare i punti di distribuzione che ospiteranno il pacchetto e il programma, quindi scegliere **OK**.  
+7. Nella finestra di dialogo **Aggiungi punti di distribuzione** selezionare i punti di distribuzione che ospiteranno il pacchetto e il programma, quindi scegliere **OK**.  
   
-8.  Completare la procedura guidata.  
+8. Completare la procedura guidata.  
   
  Il pacchetto contiene tutte le informazioni necessarie per distribuire automaticamente .NET Framework 4.5. Prima di distribuire il pacchetto e il programma, verificare che siano installati nel punto di distribuzione. Vedere la sezione "Monitoraggio del contenuto" in [Monitorare il contenuto distribuito con System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) nella raccolta di documentazione di Configuration Manager.  
   
@@ -158,21 +158,21 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 ### <a name="deploy-the-package"></a>Distribuire il pacchetto  
  Per distribuire il pacchetto e il programma di .NET Framework 4.5:  
   
-1.  Nella console di Configuration Manager scegliere **Raccolta software**.  
+1. Nella console di Configuration Manager scegliere **Raccolta software**.  
   
-2.  Nell'area di lavoro **Raccolta software** espandere **Gestione applicazioni** e scegliere **Pacchetti**.  
+2. Nell'area di lavoro **Raccolta software** espandere **Gestione applicazioni** e scegliere **Pacchetti**.  
   
-3.  Nell'elenco di pacchetti selezionare il pacchetto creato denominato **.NET Framework 4.5**.  
+3. Nell'elenco di pacchetti selezionare il pacchetto creato denominato **.NET Framework 4.5**.  
   
-4.  Nella scheda **Home** scegliere **Distribuisci** del gruppo **Distribuzione**.  
+4. Nella scheda **Home** scegliere **Distribuisci** del gruppo **Distribuzione**.  
   
-5.  Nella pagina **Generale** della **Distribuzione guidata del software** scegliere **Sfoglia** e selezionare la raccolta creata precedentemente. Scegliere **Avanti**.  
+5. Nella pagina **Generale** della **Distribuzione guidata del software** scegliere **Sfoglia** e selezionare la raccolta creata precedentemente. Scegliere **Avanti**.  
   
-6.  Nella pagina **Contenuto** della procedura guidata, verificare che il punto da cui si vuole distribuire il software sia visualizzato, quindi scegliere **Avanti**.  
+6. Nella pagina **Contenuto** della procedura guidata, verificare che il punto da cui si vuole distribuire il software sia visualizzato, quindi scegliere **Avanti**.  
   
-7.  Nella pagina**Impostazioni di distribuzione** della procedura guidata, verificare che **Azione** sia impostato su **Installa** e **Scopo** su **Obbligatorio**. Ciò garantisce che l'installazione del pacchetto software sarà obbligatoria sui computer di destinazione. Scegliere **Avanti**.  
+7. Nella pagina**Impostazioni di distribuzione** della procedura guidata, verificare che **Azione** sia impostato su **Installa** e **Scopo** su **Obbligatorio**. Ciò garantisce che l'installazione del pacchetto software sarà obbligatoria sui computer di destinazione. Scegliere **Avanti**.  
   
-8.  Nella pagina **Pianificazione** della procedura guidata specificare quando si vuole installare .NET Framework. È possibile scegliere **Nuovo** per definire una data e un orario di installazione, specificare che il software dovrà essere installato quando l'utente accede o si disconnette oppure non appena possibile. Scegliere **Avanti**.  
+8. Nella pagina **Pianificazione** della procedura guidata specificare quando si vuole installare .NET Framework. È possibile scegliere **Nuovo** per definire una data e un orario di installazione, specificare che il software dovrà essere installato quando l'utente accede o si disconnette oppure non appena possibile. Scegliere **Avanti**.  
   
 9. Nella pagina **Esperienza utente** della procedura guidata, usare i valori predefiniti e scegliere **Avanti**.  
   
@@ -191,7 +191,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  **Active Directory, DNS, DHCP:**  
   
--   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
+-   [Servizi di dominio Active Directory](/windows/desktop/ad/active-directory-domain-services)  
   
 -   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)  
   
@@ -201,13 +201,13 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 -   [Installazione di SQL Server 2008 (video di SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
   
--   [SQL Server 2008 Security Overview for Database Administrators](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx) (Panoramica della sicurezza di SQL Server 2008 per gli amministratori di database)  
+-   [SQL Server 2008 Security Overview for Database Administrators (Panoramica della sicurezza di SQL Server 2008 per gli amministratori di database)](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (punto di gestione, punto di distribuzione):**  
   
 -   [Amministrazione del sito per System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Configuration Manager Single Site Planning and Deployment](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29) (Pianificazione e distribuzione in modalità sito singolo di Configuration Manager)  
+-   [Configuration Manager Single Site Planning and Deployment (Pianificazione e distribuzione in modalità sito singolo di Configuration Manager)](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  **Client di System Center 2012 Configuration Manager per computer Windows:**  
   
@@ -246,17 +246,17 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Scaricare i codici di errore  
   
--   [Background Intelligent Transfer Service (BITS) error codes](/windows/desktop/Bits/bits-return-values) (Codici di errore del Servizio trasferimento intelligente in background (BITS))  
+-   [Background Intelligent Transfer Service (BITS) error codes (Codici di errore del Servizio trasferimento intelligente in background - BITS)](/windows/desktop/Bits/bits-return-values)  
   
--   [Codici di errore del moniker URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
+-   [URL moniker error codes (Codici di errore del moniker URL)](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
--   [WinHttp error codes](/windows/desktop/WinHttp/error-messages) (Codici di errore WinHttp)  
+-   [WinHttp error codes (Codici di errore WinHttp)](/windows/desktop/WinHttp/error-messages)  
   
  Altri codici di errore:  
   
--   [Windows Installer error codes](/windows/desktop/msi/error-codes) (Codici di errore di Windows Installer)
+-   [Windows Installer error codes (Codici di errore di Windows Installer)](/windows/desktop/msi/error-codes)
 
--   [Windows Update Agent result codes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10)) (Codici restituiti dall'Agente di Windows Update)
+-   [Windows Update Agent result codes (Codici restituiti dall'Agente di Windows Update)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="see-also"></a>Vedere anche
 

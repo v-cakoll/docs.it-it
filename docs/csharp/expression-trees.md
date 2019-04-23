@@ -3,12 +3,12 @@ title: Alberi delle espressioni
 description: Informazioni sugli alberi delle espressioni in .NET Core e su come usarli per rappresentare il codice sotto forma di strutture che è possibile esaminare, modificare ed eseguire.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096615"
 ---
 # <a name="expression-trees"></a>Alberi delle espressioni
 
@@ -51,4 +51,3 @@ Le sezioni rimanenti di questa esercitazione illustreranno che cosa sono gli alb
 7. [Conclusioni](expression-trees-summary.md)
 
     Esaminare le informazioni sugli alberi delle espressioni.
-    

@@ -1,15 +1,15 @@
 ---
-title: 'Procedura dettagliata: accesso al Web con Async e Await (C#)'
+title: 'Procedura dettagliata: Accesso al Web con Async e Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: f06bf93f1de4de2aa70c761e1bfb101d4dde48a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127147"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306729"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Procedura dettagliata: accesso al Web con Async e Await (C#)
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Procedura dettagliata: Accesso al Web con Async e Await (C#)
 
 È possibile scrivere programmi asincroni in modo più semplice e intuitivo usando le funzionalità async/await. È possibile scrivere codice asincrono simile al codice sincrono e consentire al compilatore di gestire le complesse funzioni di callback e continuazione tipiche del codice asincrono.
 
@@ -17,34 +17,34 @@ Per altre informazioni sulla funzionalità Async, vedere [Programmazione asincro
 
 Questa procedura dettagliata inizia con l'esecuzione di un'applicazione Windows Presentation Foundation (WPF) sincrona che somma il numero di byte in un elenco di siti Web. La procedura dettagliata converte quindi l'applicazione in una soluzione asincrona usando le nuove funzionalità.
 
-Se non si vogliono compilare manualmente le applicazioni, è possibile scaricare l'esempio disponibile in [(Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) .
+Se non si vogliono compilare manualmente le applicazioni, è possibile scaricare l'esempio disponibile in [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Esempio di codice asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic)).
 
 > [!NOTE]
 > Per eseguire gli esempi, è necessario avere installato Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive nel computer.
 
 ## <a name="create-a-wpf-application"></a>Creare un'applicazione WPF
 
-1.  Avviare Visual Studio.
+1. Avviare Visual Studio.
 
-2.  Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
+2. Nella barra dei menu scegliere **File** > **Nuovo** > **Progetto**.
 
      Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-3.  Nel riquadro **Modelli installati**, scegliere Visual C# e quindi scegliere **Applicazione WPF** nell'elenco dei tipi di progetto.
+3. Nel riquadro **Modelli installati**, scegliere Visual C# e quindi scegliere **Applicazione WPF** nell'elenco dei tipi di progetto.
 
-4.  Nella casella di testo **Nome** immettere `AsyncExampleWPF` e quindi scegliere il pulsante **OK**.
+4. Nella casella di testo **Nome** immettere `AsyncExampleWPF` e quindi scegliere il pulsante **OK**.
 
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>Progettare una finestra WPF MainWindow semplice
 
-1.  Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .
+1. Nell'Editor di codice di Visual Studio scegliere la scheda **MainWindow.xaml** .
 
-2.  Se la finestra **Casella degli strumenti** non è visibile, aprire il menu **Visualizza** e quindi scegliere **Casella degli strumenti**.
+2. Se la finestra **Casella degli strumenti** non è visibile, aprire il menu **Visualizza** e quindi scegliere **Casella degli strumenti**.
 
-3.  Aggiungere un controllo **Button** e un controllo **TextBox** alla finestra **MainWindow**.
+3. Aggiungere un controllo **Button** e un controllo **TextBox** alla finestra **MainWindow**.
 
-4.  Evidenziare il controllo **TextBox** e nella finestra **Proprietà** impostare i valori seguenti:
+4. Evidenziare il controllo **TextBox** e nella finestra **Proprietà** impostare i valori seguenti:
 
     -   Impostare la proprietà **Nome** su `resultsTextBox`.
 
@@ -54,37 +54,37 @@ Se non si vogliono compilare manualmente le applicazioni, è possibile scaricare
 
     -   Nel scheda **Testo** specificare un tipo di carattere a spaziatura fissa, ad esempio Lucida Console o Global Monospace.
 
-5.  Evidenziare il controllo **Button** e nella finestra **Proprietà** impostare i valori seguenti:
+5. Evidenziare il controllo **Button** e nella finestra **Proprietà** impostare i valori seguenti:
 
     -   Impostare la proprietà **Nome** su `startButton`.
 
     -   Modificare il valore della proprietà **Content** da **Button** in **Start**.
 
-6.  Posizionare la casella di testo e il pulsante in modo che entrambi siano visualizzati nella finestra **MainWindow**.
+6. Posizionare la casella di testo e il pulsante in modo che entrambi siano visualizzati nella finestra **MainWindow**.
 
      Per altre informazioni su WPF XAML Designer, vedere [Creazione di un'interfaccia utente tramite XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).
 
 ## <a name="add-a-reference"></a>Aggiungere un riferimento
 
-1.  In **Esplora soluzioni** evidenziare il nome del progetto.
+1. In **Esplora soluzioni** evidenziare il nome del progetto.
 
-2.  Nella barra dei menu scegliere **Progetto** > **Aggiungi riferimento**.
+2. Nella barra dei menu scegliere **Progetto** > **Aggiungi riferimento**.
 
      Verrà visualizzata la finestra di dialogo **Gestione riferimenti**.
 
-3.  Nella parte superiore della finestra di dialogo verificare che il progetto sia destinato a .NET Framework 4.5 o versione successiva.
+3. Nella parte superiore della finestra di dialogo verificare che il progetto sia destinato a .NET Framework 4.5 o versione successiva.
 
-4.  Nella categoria **Assembly** scegliere **Framework** se non è già selezionato.
+4. Nella categoria **Assembly** scegliere **Framework** se non è già selezionato.
 
-5.  Nell'elenco dei nomi selezionare la casella di controllo **System.Net.Http**.
+5. Nell'elenco dei nomi selezionare la casella di controllo **System.Net.Http**.
 
-6.  Scegliere il pulsante **OK** per chiudere la finestra di dialogo.
+6. Scegliere il pulsante **OK** per chiudere la finestra di dialogo.
 
 ## <a name="add-necessary-using-directives"></a>Aggiungere le direttive using necessarie
 
-1.  In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e quindi scegliere **Visualizza codice**.
 
-2.  Aggiungere le seguenti direttive `using` all'inizio del file di codice, se non sono già presenti.
+2. Aggiungere le seguenti direttive `using` all'inizio del file di codice, se non sono già presenti.
 
     ```csharp
     using System.Net.Http;
@@ -94,9 +94,9 @@ Se non si vogliono compilare manualmente le applicazioni, è possibile scaricare
 
 ## <a name="create-a-synchronous-app"></a>Creare un'app sincrona
 
-1.  Nella finestra di progettazione MainWindow.xaml fare doppio clic sul pulsante **Start** per creare il gestore eventi `startButton_Click` in MainWindow.xaml.cs.
+1. Nella finestra di progettazione MainWindow.xaml fare doppio clic sul pulsante **Start** per creare il gestore eventi `startButton_Click` in MainWindow.xaml.cs.
 
-2.  In MainWindow.xaml.cs copiare il codice seguente nel corpo di `startButton_Click`:
+2. In MainWindow.xaml.cs copiare il codice seguente nel corpo di `startButton_Click`:
 
     ```csharp
     resultsTextBox.Clear();
@@ -106,7 +106,7 @@ Se non si vogliono compilare manualmente le applicazioni, è possibile scaricare
 
     Il codice chiama il metodo che controlla l'applicazione `SumPageSizes` e visualizza un messaggio quando il controllo torna a `startButton_Click`.
 
-3.  Il codice per la soluzione sincrona contiene i quattro metodi seguenti:
+3. Il codice per la soluzione sincrona contiene i quattro metodi seguenti:
 
     -   `SumPageSizes`, che ottiene un elenco di URL delle pagine Web da `SetUpURLList` e quindi chiama `GetURLContents` e `DisplayResults` per elaborare ogni URL.
 
@@ -222,7 +222,7 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>Convertire GetURLContents in un metodo asincrono
 
-1.  Per convertire la soluzione sincrona in una soluzione asincrona, il punto di partenza migliore è in `GetURLContents` perché le chiamate al metodo <xref:System.Net.HttpWebRequest><xref:System.Net.HttpWebRequest.GetResponse%2A> e al metodo <xref:System.IO.Stream><xref:System.IO.Stream.CopyTo%2A> sono i punti in cui l'applicazione accede al Web. .NET Framework semplifica la conversione fornendo versioni asincrone di entrambi i metodi.
+1. Per convertire la soluzione sincrona in una soluzione asincrona, il punto di partenza migliore è in `GetURLContents` perché le chiamate al metodo <xref:System.Net.HttpWebRequest><xref:System.Net.HttpWebRequest.GetResponse%2A> e al metodo <xref:System.IO.Stream><xref:System.IO.Stream.CopyTo%2A> sono i punti in cui l'applicazione accede al Web. .NET Framework semplifica la conversione fornendo versioni asincrone di entrambi i metodi.
 
      Per altre informazioni sui modelli usati in `GetURLContents`, vedere <xref:System.Net.WebRequest>.
 
@@ -235,7 +235,7 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2.  `GetResponseAsync` restituisce <xref:System.Threading.Tasks.Task%601>. In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>. L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.
+2. `GetResponseAsync` restituisce un valore <xref:System.Threading.Tasks.Task%601>. In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>. L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.
 
      Per recuperare il valore `WebResponse` dall'attività, applicare un operatore [await](../../../../csharp/language-reference/keywords/await.md) alla chiamata di `GetResponseAsync`, come mostrato nel codice riportato di seguito.
 
@@ -254,9 +254,9 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
 
      La chiamata a `webReq.GetResponseAsync` restituisce `Task(Of WebResponse)` o `Task<WebResponse>`. Viene quindi applicato un operatore await all'attività per recuperare il valore `WebResponse`.
 
-     Se il metodo asincrono ha operazioni da eseguire che non dipendono dal completamento dell'attività, il metodo può continuare l'esecuzione tra queste due istruzioni, dopo la chiamata al metodo asincrono e prima che venga applicato l'operatore `await`. Per esempi, vedere [Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) e [Procedura: Estendere la procedura dettagliata asincrona usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+     Se il metodo asincrono ha operazioni da eseguire che non dipendono dal completamento dell'attività, il metodo può continuare l'esecuzione tra queste due istruzioni, dopo la chiamata al metodo asincrono e prima che venga applicato l'operatore `await`. Per esempi, vedere [Procedura: Eseguire più richieste Web in parallelo tramite Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) e [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
-3.  Poiché è stato aggiunto l'operatore `await` nel passaggio precedente, verrà generato un errore del compilatore. L'operatore può essere usato solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md). Ignorare l'errore mentre vengono ripetuti i passaggi di conversione per sostituire la chiamata a `CopyTo` con una chiamata a `CopyToAsync`.
+3. Poiché è stato aggiunto l'operatore `await` nel passaggio precedente, verrà generato un errore del compilatore. L'operatore può essere usato solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md). Ignorare l'errore mentre vengono ripetuti i passaggi di conversione per sostituire la chiamata a `CopyTo` con una chiamata a `CopyToAsync`.
 
     -   Modificare il nome del metodo chiamato in <xref:System.IO.Stream.CopyToAsync%2A>.
 
@@ -277,13 +277,13 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
         //await copyTask;
         ```
 
-4.  A questo punto, non rimane che modificare la firma del metodo in `GetURLContents`. È possibile usare l'operatore `await` solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md). Aggiungere il modificatore per contrassegnare il metodo come *metodo async*, come mostrato nel codice riportato di seguito.
+4. A questo punto, non rimane che modificare la firma del metodo in `GetURLContents`. È possibile usare l'operatore `await` solo nei metodi contrassegnati con il modificatore [async](../../../../csharp/language-reference/keywords/async.md). Aggiungere il modificatore per contrassegnare il metodo come *metodo async*, come mostrato nel codice riportato di seguito.
 
     ```csharp
     private async byte[] GetURLContents(string url)
     ```
 
-5.  Il tipo restituito di un metodo asincrono può essere solo <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `void` in C#. In genere il tipo restituito `void` si usa solo in un gestore eventi asincrono, dove `void` è obbligatorio. In altri casi è possibile usare `Task(T)` se il metodo completato include un'istruzione [return](../../../../csharp/language-reference/keywords/return.md) che restituisce un valore di tipo T e si usa `Task` se il metodo completato non restituisce un valore significativo. È possibile considerare il tipo restituito `Task` come avente lo stesso significato di "Task(void)".
+5. Il tipo restituito di un metodo asincrono può essere solo <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `void` in C#. In genere il tipo restituito `void` si usa solo in un gestore eventi asincrono, dove `void` è obbligatorio. In altri casi è possibile usare `Task(T)` se il metodo completato include un'istruzione [return](../../../../csharp/language-reference/keywords/return.md) che restituisce un valore di tipo T e si usa `Task` se il metodo completato non restituisce un valore significativo. È possibile considerare il tipo restituito `Task` come avente lo stesso significato di "Task(void)".
 
      Per altre informazioni, vedere [Tipi restituiti asincroni (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).
 
@@ -303,7 +303,7 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
 
 ## <a name="convert-sumpagesizes-to-an-asynchronous-method"></a>Convertire SumPageSizes in un metodo asincrono
 
-1.  Ripetere i passaggi della procedura precedente per `SumPageSizes`. In primo luogo, modificare la chiamata a `GetURLContents` in una chiamata asincrona.
+1. Ripetere i passaggi della procedura precedente per `SumPageSizes`. In primo luogo, modificare la chiamata a `GetURLContents` in una chiamata asincrona.
 
     -   Modificare il nome del metodo chiamato da `GetURLContents` in `GetURLContentsAsync`, se non è ancora stato fatto.
 
@@ -324,7 +324,7 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
     //byte[] urlContents = await getContentsTask;
     ```
 
-2.  Apportare le modifiche seguenti nella firma del metodo:
+2. Apportare le modifiche seguenti nella firma del metodo:
 
     -   Contrassegnare il metodo con il modificatore `async`.
 
@@ -342,9 +342,9 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
 
 ## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a>Convertire startButton_Click in un metodo asincrono
 
-1.  Nel gestore eventi modificare il nome del metodo chiamato da `SumPageSizes` in `SumPageSizesAsync`, se non è ancora stato fatto.
+1. Nel gestore eventi modificare il nome del metodo chiamato da `SumPageSizes` in `SumPageSizesAsync`, se non è ancora stato fatto.
 
-2.  Poiché `SumPageSizesAsync` è un metodo asincrono, modificare il codice nel gestore eventi in modo che attenda il risultato.
+2. Poiché `SumPageSizesAsync` è un metodo asincrono, modificare il codice nel gestore eventi in modo che attenda il risultato.
 
      La chiamata a `SumPageSizesAsync` rispecchia la chiamata a `CopyToAsync` in `GetURLContentsAsync`. La chiamata restituisce `Task` e non `Task(T)`.
 
@@ -359,7 +359,7 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
     //await sumTask;
     ```
 
-3.  Per impedire la reentrancy accidentale dell'operazione, aggiungere l'istruzione seguente all'inizio di `startButton_Click` per disabilitare il pulsante **Start**.
+3. Per impedire la reentrancy accidentale dell'operazione, aggiungere l'istruzione seguente all'inizio di `startButton_Click` per disabilitare il pulsante **Start**.
 
     ```csharp
     // Disable the button until the operation is complete.
@@ -375,7 +375,7 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
 
      Per altre informazioni sulla reentrancy, vedere [Gestione della reentrancy nelle applicazioni asincrone (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).
 
-4.  Aggiungere infine il modificatore `async` alla dichiarazione, in modo che il gestore eventi possa attendere `SumPagSizesAsync`.
+4. Aggiungere infine il modificatore `async` alla dichiarazione, in modo che il gestore eventi possa attendere `SumPagSizesAsync`.
 
     ```csharp
     private async void startButton_Click(object sender, RoutedEventArgs e)
@@ -387,9 +387,9 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
 
 ## <a name="test-the-asynchronous-solution"></a>Eseguire il test della soluzione asincrona
 
-1.  Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.
+1. Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.
 
-2.  Viene visualizzato un output simile all'output della soluzione sincrona. Esistono tuttavia le differenze seguenti:
+2. Viene visualizzato un output simile all'output della soluzione sincrona. Esistono tuttavia le differenze seguenti:
 
     -   I risultati non vengono restituiti contemporaneamente, al termine dell'elaborazione. Ad esempio, entrambi i programmi contengono una riga in `startButton_Click` che consente di cancellare la casella di testo. Lo scopo è quello di cancellare il contenuto della casella di testo tra le esecuzioni se si sceglie il pulsante **Start** per la seconda volta, dopo la visualizzazione di un set di risultati. Nella versione sincrona la casella di testo viene cancellata prima della seconda visualizzazione dei conteggi, ovvero quando vengono completati i download e il thread dell'interfaccia utente è libero di eseguire altre operazioni. Nella versione asincrona, la casella di testo viene cancellata subito dopo aver scelto il pulsante **Start**.
 
@@ -397,7 +397,7 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Sostituire GetURLContentsAsync con un metodo .NET Framework
 
-1.  .NET Framework 4.5 fornisce molti metodi asincroni che è possibile usare. Uno di essi, il <xref:System.Net.Http.HttpClient> metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, risulta utile in modo specifico per questa procedura dettagliata. È possibile usarlo al posto del metodo `GetURLContentsAsync` creato in una procedura precedente.
+1. .NET Framework 4.5 fornisce molti metodi asincroni che è possibile usare. Uno di essi, il <xref:System.Net.Http.HttpClient> metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, risulta utile in modo specifico per questa procedura dettagliata. È possibile usarlo al posto del metodo `GetURLContentsAsync` creato in una procedura precedente.
 
      Il primo passaggio consiste nel creare un oggetto `HttpClient` nel metodo `SumPageSizesAsync`. Aggiungere la dichiarazione seguente all'inizio del metodo.
 
@@ -408,15 +408,15 @@ Si noti che sono necessari alcuni secondi per visualizzare i conteggi. Durante t
         new HttpClient() { MaxResponseContentBufferSize = 1000000 };
     ```
 
-2.  In `SumPageSizesAsync,` sostituire la chiamata al metodo `GetURLContentsAsync` con una chiamata al metodo `HttpClient`.
+2. In `SumPageSizesAsync,` sostituire la chiamata al metodo `GetURLContentsAsync` con una chiamata al metodo `HttpClient`.
 
     ```csharp
     byte[] urlContents = await client.GetByteArrayAsync(url);
     ```
 
-3.  Rimuovere o impostare come commento il metodo `GetURLContentsAsync` precedentemente scritto.
+3. Rimuovere o impostare come commento il metodo `GetURLContentsAsync` precedentemente scritto.
 
-4.  Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.
+4. Premere **F5** per eseguire il programma e quindi scegliere il pulsante **Avvia**.
 
      Il comportamento di questa versione del progetto deve corrispondere al comportamento descritto nella procedura "Per eseguire il test della soluzione asincrona" ma con un intervento ridotto da parte dell'utente.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Vedere anche
 
-- [(Esempio asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 
+- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic) (Esempio di codice asincrono: accesso alla procedura dettagliata Web (C# e Visual Basic))](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
-- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Tipi restituiti asincroni (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
+- [Programmazione asincrona con Async e Await](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Tipi restituiti async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [Programmazione asincrona basata su attività](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
 - [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

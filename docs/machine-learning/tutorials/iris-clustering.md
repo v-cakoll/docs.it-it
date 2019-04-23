@@ -3,22 +3,22 @@ title: Raggruppare i fiori iris usando un algoritmo di apprendimento automatico 
 description: Informazioni su come usare ML.NET in uno scenario di clustering
 author: pkulikov
 ms.author: johalex
-ms.date: 03/18/2019
+ms.date: 04/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634414"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481340"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Esercitazione: Raggruppare i fiori iris usando un algoritmo di apprendimento automatico basato sul clustering con ML.NET
 
 > [!NOTE]
 > Questo argomento si riferisce a ML.NET, che è attualmente in anteprima, e il materiale può essere soggetto a modifiche. Per altre informazioni, vedere l'[introduzione a ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Questa esercitazione e l'esempio correlato usano attualmente **ML.NET versione 0.11**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Questa esercitazione e l'esempio correlato usano attualmente **ML.NET 1.0 RC (Release Candidate) (versione `1.0.0-preview`)**. Per altre informazioni, vedere le note sulla versione nel [repository GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Questa esercitazione illustra come usare ML.NET per compilare un [modello di clustering](../resources/tasks.md#clustering) per il [set di dati dei fiori iris](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
@@ -34,7 +34,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
+- [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
 
 ## <a name="understand-the-problem"></a>Informazioni sul problema
 
@@ -127,16 +127,16 @@ La classe <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> rappresenta
 
 Aggiungere il codice seguente al metodo `Main` per configurare la modalità di caricamento di dati:
 
-[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
+[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
-Caricare i dati usando il wrapper `MLContext.Data.LoadFromTextFile` generico per il [metodo LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Restituisce un'interfaccia <xref:Microsoft.Data.DataView.IDataView> che deduce lo schema del set di dati dal tipo di modello di dati `IrisData`, usa l'intestazione del set di dati ed è delimitato da virgole.
+[ (`MLContext.Data.LoadFromTextFile`metodo di estensione](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) generico) deduce lo schema del set di dati dal tipo `IrisData` fornito e restituisce <xref:Microsoft.ML.IDataView>, che può essere usato come input per i trasformatori.
 
 ## <a name="create-a-learning-pipeline"></a>Creare una pipeline di apprendimento
 
 Per questa esercitazione, la pipeline di apprendimento dell'attività di clustering è costituita dai due passaggi seguenti:
 
 - Concatenare le colonne caricate in un'unica colonna **Features**, che viene usata da un trainer di clustering;
-- Usare un trainer <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> per eseguire il training del modello usando l'algoritmo di clustering k-means++.
+- Usare un trainer <xref:Microsoft.ML.Trainers.KMeansTrainer> per eseguire il training del modello usando l'algoritmo di clustering k-means++.
 
 Aggiungere al metodo `Main` il codice seguente:
 

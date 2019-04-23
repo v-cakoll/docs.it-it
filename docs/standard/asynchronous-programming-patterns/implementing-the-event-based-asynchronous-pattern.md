@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333372"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementazione del modello asincrono basato su eventi
 In caso di scrittura di una classe con alcune operazioni che possono causare ritardi notevoli, è consigliabile assegnare la funzionalità asincrona implementando [Cenni preliminari sul modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -75,7 +75,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  Per ogni firma del metodo _MethodName_**Async** distinta:  
   
-1.  Definire l'evento seguente nella stessa classe del metodo:  
+1. Definire l'evento seguente nella stessa classe del metodo:  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  Definire il delegato seguente e <xref:System.ComponentModel.AsyncCompletedEventArgs>. che verranno probabilmente definiti all'esterno della classe, ma nello stesso spazio dei nomi.  
+2. Definire il delegato seguente e <xref:System.ComponentModel.AsyncCompletedEventArgs>. che verranno probabilmente definiti all'esterno della classe, ma nello stesso spazio dei nomi.  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  
@@ -205,9 +205,9 @@ In caso di scrittura di una classe con alcune operazioni che possono causare rit
   
  Dato un metodo *MethodName* sincrono:  
   
--   I parametri `out` per *MethodName* non devono far parte di _MethodName_**Async**. Devono invece far parte di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
+-   `out` I parametri per *MethodName* non devono far parte di _MethodName_**Async**. Devono invece far parte di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
   
--   I parametri `ref` di *MethodName* devono far parte di _MethodName_**Async** e di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
+-   `ref` I parametri *MethodName* devono far parte di _MethodName_**Async** e di _MethodName_**CompletedEventArgs**, con lo stesso nome del relativo parametro equivalente in *MethodName* (a meno che non esista un nome più appropriato).  
   
  Ad esempio, dato:  
   
@@ -255,4 +255,4 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 - [Procedura: Implementare un modulo che usa un'operazione in background](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Quando implementare il modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Suggerimenti per l'implementazione del modello asincrono basato su eventi](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Modello asincrono basato su eventi, EAP)
+- [Modello asincrono basato su eventi (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

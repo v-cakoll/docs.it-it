@@ -2,12 +2,12 @@
 title: 'Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: c8f1c9a134af2139f3dd0d76614b1f719b4d453c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335420"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)
 In un metodo asincrono le attività vengono avviate al momento della creazione. L'operatore [await](../../../../csharp/language-reference/keywords/await.md) viene applicato all'attività in un punto del metodo in cui è impossibile continuare l'elaborazione finché l'attività non è terminata. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  
@@ -43,7 +43,7 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>Per impostare il progetto  
   
-1.  Per configurare un'applicazione WPF, completare i passaggi seguenti. È possibile trovare istruzioni dettagliate per questi passaggi in [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Per configurare un'applicazione WPF, completare i passaggi seguenti. È possibile trovare istruzioni dettagliate per questi passaggi in [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Creare un'applicazione WPF che contenga una casella di testo e un pulsante. Denominare il pulsante `startButton` e la casella di testo `resultsTextBox`.  
   
@@ -53,9 +53,9 @@ var result = await myTask;
   
 ### <a name="to-add-the-code"></a>Per aggiungere il codice  
   
-1.  Nella finestra di progettazione MainWindow.xaml fare doppio clic sul pulsante per creare il gestore eventi `startButton_Click` in MainWindow.xaml.cs.  
+1. Nella finestra di progettazione MainWindow.xaml fare doppio clic sul pulsante per creare il gestore eventi `startButton_Click` in MainWindow.xaml.cs.  
   
-2.  Copiare il codice seguente e incollarlo nel corpo di `startButton_Click` in MainWindow.xaml.cs.  
+2. Copiare il codice seguente e incollarlo nel corpo di `startButton_Click` in MainWindow.xaml.cs.  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -65,7 +65,7 @@ var result = await myTask;
   
      Il codice chiama un metodo asincrono, `CreateMultipleTasksAsync`, che avvia l'applicazione.  
   
-3.  Aggiungere i metodi di supporto seguenti al progetto:  
+3. Aggiungere i metodi di supporto seguenti al progetto:  
   
     -   `ProcessURLAsync` usa un metodo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web come matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
   
@@ -93,7 +93,7 @@ var result = await myTask;
     }  
     ```  
   
-4.  Infine, definire il metodo `CreateMultipleTasksAsync`, che esegue i passaggi seguenti.  
+4. Infine, definire il metodo `CreateMultipleTasksAsync`, che esegue i passaggi seguenti.  
   
     -   Il metodo dichiara un oggetto `HttpClient`, che è necessario per accedere al metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.  
   
@@ -134,7 +134,7 @@ var result = await myTask;
     }  
     ```  
   
-5.  Premere il tasto F5 per eseguire il programma e quindi scegliere il pulsante **Start** .  
+5. Premere il tasto F5 per eseguire il programma e quindi scegliere il pulsante **Start** .  
   
      Eseguire il programma più volte per verificare che le tre attività non vengano completate sempre nello stesso ordine e che l'ordine in cui vengono completate non è necessariamente l'ordine in cui sono state create e messe in attesa.  
   
@@ -227,5 +227,5 @@ namespace AsyncExample_MultipleTasks
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Programmazione asincrona con Async e Await](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

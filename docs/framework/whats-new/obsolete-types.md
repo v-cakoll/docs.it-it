@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114692"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
 <a name="introduction"></a> Le tabelle in questo articolo elencano i tipi obsoleti in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di tipi obsoleti e le alternative consigliate in ogni assembly. Poiché questi tipi sono obsoleti, lo sono anche tutti i relativi membri. Per un elenco di altri membri obsoleti nella libreria di classi .NET Framework, vedere [Membri obsoleti](obsolete-members.md).
@@ -130,7 +130,7 @@ ms.locfileid: "58412344"
 |<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> .|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>.|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0.|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0. In alternativa, usare <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Questo tipo è obsoleto e sarà rimosso nelle versioni future di .NET Framework.|
@@ -779,5 +779,6 @@ Per informazioni sulla migrazione da Visual Basic 6, vedere [Visual Basic 6.0 Re
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll è un assembly obsoleto e viene mantenuto ai soli fini della compatibilità con le versioni precedenti.|
 
 ## <a name="see-also"></a>Vedere anche
+
 - [Elementi obsoleti nella libreria di classi](whats-obsolete.md)
 - [Membri obsoleti](obsolete-members.md)

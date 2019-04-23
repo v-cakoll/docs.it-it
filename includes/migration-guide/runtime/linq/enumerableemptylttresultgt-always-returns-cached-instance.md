@@ -1,4 +1,12 @@
-### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Enumerable.Empty&lt;TResult&gt; restituisce sempre un'istanza memorizzata nella cache
+---
+ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235500"
+---
+### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult> restituisce sempre un'istanza memorizzata nella cache
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Versione|4.5|
 |Tipo|Runtime|
 |API interessate|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
-

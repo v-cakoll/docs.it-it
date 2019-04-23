@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345092"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opzioni del compilatore C#)
 Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore del compilatore interno C#.  
@@ -34,13 +34,13 @@ Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore d
  **prompt**  
  Chiede di inviare una segnalazione quando si riceve un errore interno del compilatore. **prompt** è l'impostazione predefinita se si compila un'applicazione all'interno dell'ambiente di sviluppo.  
   
- **queue**  
+ **coda**  
  Accoda la segnalazione errori. Se si accede con credenziali amministrative, è possibile segnalare qualsiasi errore dall'ultima volta che è stato effettuato l'accesso. Non verrà richiesto di inviare report di errori più di una volta ogni tre giorni. **queue** è l'impostazione predefinita se si compila un'applicazione dalla riga di comando.  
   
- **send**  
+ **invia**  
  Invia automaticamente a Microsoft le segnalazioni di errori interni del compilatore. Per abilitare questa opzione, è necessario prima di tutto accettare i Criteri per la raccolta dati Microsoft. La prima volta che si specifica **-errorreport:send** in un computer, viene visualizzato un messaggio del compilatore che indirizza a un sito Web contenente questi criteri.  
     
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Se il compilatore non è in grado di elaborare un file del codice sorgente, viene restituito un errore interno del compilatore (ICE, Internal Compiler Error). Quando si verifica un ICE, il compilatore non genera né un file di output né informazioni di diagnostica utili per correggere il codice.  
   
  Nelle versioni precedenti, quando si riceveva un ICE si riceveva anche l'invito a contattare il Servizio supporto tecnico Microsoft per segnalare il problema. Con **-errorreport** è possibile offrire informazioni sugli errori interni del compilatore al team Visual C#. Le segnalazioni degli errori consentono di migliorare le versioni future del compilatore.  
@@ -51,13 +51,13 @@ Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore d
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la pagine **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Aprire la pagine **Proprietà** del progetto. Per altre informazioni, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Fare clic sulla pagina della proprietà **Compilazione**.  
+2. Fare clic sulla pagina della proprietà **Compilazione**.  
   
-3.  Fare clic su **Avanzate** .  
+3. Fare clic su **Avanzate** .  
   
-4.  Modificare la proprietà **Segnalazione errori interni del compilatore**.  
+4. Modificare la proprietà **Segnalazione errori interni del compilatore**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   

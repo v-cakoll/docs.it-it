@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079461"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313307"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedura: Visualizzare le date in calendari non gregoriani
 I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendario gregoriano come calendario predefinito. Ciò significa che la chiamata al metodo `ToString` di un valore di data e ora visualizza la rappresentazione di stringa di tale data e ora nel calendario gregoriano, anche se la data e l'ora sono state create usando un altro calendario. Questo processo viene mostrato nell'esempio seguente, che usa due modi diversi per creare un valore di data e ora con il calendario persiano, continuando a visualizzare questi valori di data e ora nel calendario gregoriano quando viene chiamato il metodo <xref:System.DateTime.ToString%2A>. L'esempio riflette due tecniche comuni ma non corrette per la visualizzazione della data in un determinato calendario.  
@@ -30,26 +30,26 @@ I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendar
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Per visualizzare la data per il calendario predefinito di determinate impostazione cultura  
   
-1.  Creare un'istanza di un oggetto calendario derivato dalla classe <xref:System.Globalization.Calendar> che rappresenta il calendario da usare.  
+1. Creare un'istanza di un oggetto calendario derivato dalla classe <xref:System.Globalization.Calendar> che rappresenta il calendario da usare.  
   
-2.  Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura la cui formattazione verrà usata per visualizzare la data.  
+2. Creare un'istanza di un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura la cui formattazione verrà usata per visualizzare la data.  
   
-3.  Chiamare il metodo <xref:System.Array.Exists%2A?displayProperty=nameWithType> per determinare se l'oggetto calendario è un membro della matrice restituita dalla proprietà <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Questo indica che il calendario può diventare il calendario predefinito per l'oggetto <xref:System.Globalization.CultureInfo>. Se non è un membro della matrice, seguire le istruzioni riportate nella sezione "Per visualizzare la data in qualsiasi calendario".  
+3. Chiamare il metodo <xref:System.Array.Exists%2A?displayProperty=nameWithType> per determinare se l'oggetto calendario è un membro della matrice restituita dalla proprietà <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType>. Questo indica che il calendario può diventare il calendario predefinito per l'oggetto <xref:System.Globalization.CultureInfo>. Se non è un membro della matrice, seguire le istruzioni riportate nella sezione "Per visualizzare la data in qualsiasi calendario".  
   
-4.  Assegnare l'oggetto calendario alla proprietà <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
+4. Assegnare l'oggetto calendario alla proprietà <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> dell'oggetto <xref:System.Globalization.DateTimeFormatInfo> restituito dalla proprietà <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  La classe <xref:System.Globalization.CultureInfo> include anche una proprietà <xref:System.Globalization.CultureInfo.Calendar%2A>. È tuttavia costante e di sola lettura e non viene modificata per riflettere il nuovo calendario predefinito assegnato alla proprietà <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
   
-5.  Chiamare il metodo <xref:System.DateTime.ToString%2A> o <xref:System.DateTime.ToString%2A> e passare al metodo l'oggetto <xref:System.Globalization.CultureInfo> il cui calendario predefinito è stato modificato nel passaggio precedente.  
+5. Chiamare il metodo <xref:System.DateTime.ToString%2A> o <xref:System.DateTime.ToString%2A> e passare al metodo l'oggetto <xref:System.Globalization.CultureInfo> il cui calendario predefinito è stato modificato nel passaggio precedente.  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Per visualizzare la data in qualsiasi calendario  
   
-1.  Creare un'istanza di un oggetto calendario derivato dalla classe <xref:System.Globalization.Calendar> che rappresenta il calendario da usare.  
+1. Creare un'istanza di un oggetto calendario derivato dalla classe <xref:System.Globalization.Calendar> che rappresenta il calendario da usare.  
   
-2.  Determinare gli elementi di data e ora da visualizzare nella rappresentazione di stringa del valore di data e ora.  
+2. Determinare gli elementi di data e ora da visualizzare nella rappresentazione di stringa del valore di data e ora.  
   
-3.  Per ogni elemento di data e ora che si vuole visualizzare, chiamare il metodo `Get` dell'oggetto calendario. ProcessOnStatus. Sono disponibili i metodi seguenti:  
+3. Per ogni elemento di data e ora che si vuole visualizzare, chiamare il metodo `Get` dell'oggetto calendario. ProcessOnStatus. Sono disponibili i metodi seguenti:  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A>, per visualizzare l'anno nel calendario appropriato.  
   
@@ -63,7 +63,7 @@ I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendar
   
     -   <xref:System.Globalization.Calendar.GetSecond%2A>, per visualizzare i secondi del minuto nel calendario appropriato.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, per visualizzare i millisecondi del secondo nel calendario appropriato.  
+    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , per visualizzare i millisecondi del secondo nel calendario appropriato.  
   
 ## <a name="example"></a>Esempio  
  L'esempio visualizza una data usando due calendari diversi. La data viene visualizzata dopo aver definito il calendario Hijri come calendario predefinito per le impostazioni cultura ar-JO e usando il calendario persiano che non è supportato come calendario facoltativo nelle impostazioni cultura fa-IR.  
@@ -81,7 +81,7 @@ I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendar
   
 -   `HasSameName`, metodo privato assegnato al delegato <xref:System.Predicate%601> che viene passato come parametro al metodo <xref:System.Array.Exists%2A?displayProperty=nameWithType>. Ogni membro della matrice viene passato al metodo finché quest'ultimo non restituisce `true`. Il metodo determina se il nome di un calendario facoltativo è identico a quello del calendario rappresentato dall'oggetto `CalendarUtility`.  
   
--   `DisplayDate`, metodo pubblico in overload a cui vengono passati due parametri: un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> da esprimere nel calendario rappresentato dall'oggetto`CalendarUtility` e le impostazioni cultura di cui usare le regole di formattazione. Il comportamento nella restituzione della rappresentazione di stringa di una data varia a seconda che il calendario di destinazione sia supportato dalle impostazioni cultura le cui regole di formattazione devono essere usate.  
+-   `DisplayDate`, metodo pubblico in overload a cui vengono passati due parametri: un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> da esprimere nel calendario rappresentato dall'oggetto `CalendarUtility` e le impostazioni cultura di cui usare le regole di formattazione. Il comportamento nella restituzione della rappresentazione di stringa di una data varia a seconda che il calendario di destinazione sia supportato dalle impostazioni cultura le cui regole di formattazione devono essere usate.  
   
  Indipendentemente dal calendario usato per creare un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> in questo esempio, il valore viene in genere espresso come data del calendario gregoriano. Il motivo è che i tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> non mantengono le informazioni sul calendario. Internamente vengono rappresentati come numero di cicli trascorsi dopo la mezzanotte del 1 gennaio 0001. L'interpretazione del numero dipende dal calendario. Per la maggior parte delle impostazioni cultura, il calendario predefinito è il calendario gregoriano.  
   

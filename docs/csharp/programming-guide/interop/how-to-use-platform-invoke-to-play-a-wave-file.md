@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323811"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Procedura: Usare platform invoke per riprodurre un file audio (Guida per programmatori C#)
 L'esempio di codice C# seguente descrive come usare i servizi platform invoke per riprodurre un file audio con estensione wav nel sistema operativo Windows.  
@@ -31,15 +31,15 @@ L'esempio di codice C# seguente descrive come usare i servizi platform invoke pe
   
 ### <a name="to-compile-the-code"></a>Per compilare il codice  
   
-1.  Creare un nuovo progetto di applicazione Windows C# in Visual Studio e denominarlo **WinSound**.  
+1. Creare un nuovo progetto di applicazione Windows C# in Visual Studio e denominarlo **WinSound**.  
   
-2.  Copiare il codice precedente e incollarlo nel contenuto del file `Form1.cs`.  
+2. Copiare il codice precedente e incollarlo nel contenuto del file `Form1.cs`.  
   
-3.  Copiare il codice riportato di seguito e incollarlo nel file `Form1.Designer.cs`, nel metodo `InitializeComponent()`, dopo il codice esistente.  
+3. Copiare il codice riportato di seguito e incollarlo nel file `Form1.Designer.cs`, nel metodo `InitializeComponent()`, dopo il codice esistente.  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  Compilare ed eseguire il codice.  
+4. Compilare ed eseguire il codice.  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Per altre informazioni, vedere [Sicurezza in .NET](../../../standard/security/index.md).  
@@ -47,6 +47,6 @@ L'esempio di codice C# seguente descrive come usare i servizi platform invoke pe
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Cenni preliminari sull'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [Panoramica dell'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)
 - [Informazioni dettagliate su platform invoke](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Marshalling dei dati con platform invoke](../../../framework/interop/marshaling-data-with-platform-invoke.md)

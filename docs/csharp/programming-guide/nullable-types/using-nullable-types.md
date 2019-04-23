@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658247"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306651"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Uso dei tipi nullable (Guida per programmatori C#)
 
@@ -66,6 +66,9 @@ Un tipo valore non nullable viene convertito in modo implicito nel tipo nullable
 Gli operatori unari e binari predefiniti e gli eventuali operatori definiti dall'utente esistenti per i tipi di valore possono essere usati anche dai tipi nullable. Questi operatori generano un valore Null se uno o entrambi gli operandi sono Null. In caso contrario, l'operatore usa i valori contenuti per calcolare il risultato. Ad esempio:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> Per il tipo `bool?`, gli operatori `&` e `|` non si attengono alle regole descritte in questa sezione: il risultato di una valutazione degli operatori può essere diverso da Null, anche se uno degli operandi è Null. Per altre informazioni, vedere la sezione [Operatori logici booleani nullable](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) dell'articolo [Operatori logici booleani](../../language-reference/operators/boolean-logical-operators.md).
   
 Per gli operatori relazionali (`<`, `>`, `<=`, `>=`), se uno o entrambi gli operandi sono Null, il risultato è `false`. Non presupporre che poiché un particolare confronto (ad esempio, `<=`) restituisce `false`, il confronto opposto (`>`) restituisce `true`. L'esempio seguente mostra che 10
 
@@ -75,6 +78,8 @@ Per gli operatori relazionali (`<`, `>`, `<=`, `>=`), se uno o entrambi gli oper
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 L'esempio precedente mostra anche che un confronto di uguaglianza tra due tipi nullable che sono entrambi Null restituisce `true`.
+
+Per altre informazioni, vedere la sezione [Operatori elevati](~/_csharplang/spec/expressions.md#lifted-operators) della [specifica del linguaggio C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="boxing-and-unboxing"></a>Boxing e unboxing
 
@@ -87,29 +92,6 @@ Un tipo valore nullable viene sottoposto a [boxing](../types/boxing-and-unboxing
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>Tipo bool?
-
-Il tipo nullable `bool?` può contenere tre valori diversi: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) e [null](../../language-reference/keywords/null.md). Il tipo `bool?` è simile al tipo di variabile booleano usato in SQL. Per garantire che i risultati prodotti dagli operatori `&` e `|` siano coerenti con il tipo booleano a tre valori in SQL, sono disponibili gli operatori predefiniti seguenti:
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-La semantica di questi operatori è definita dalla tabella seguente:  
-  
-|x|y|x&y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|False|false|true|  
-|true|Null|Null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|Null|False|Null|  
-|Null|true|Null|true|  
-|Null|False|False|Null|  
-|Null|Null|Null|Null|  
-
-Tenere presente che questi due operatori non si attengono alle regole descritte nella sezione [Operatori](#operators): il risultato di una valutazione degli operatori può essere diverso da Null, anche se uno degli operandi è Null.
-  
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi nullable](index.md)

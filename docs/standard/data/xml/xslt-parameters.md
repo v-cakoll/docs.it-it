@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306312"
 ---
 # <a name="xslt-parameters"></a>Parametri XSLT
 I parametri XSLT vengono aggiunti all'elenco <xref:System.Xml.Xsl.XsltArgumentList> mediante il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. Un nome qualificato e un URI dello spazio dei nomi sono associati all'oggetto parametro in quel momento.  
   
 ### <a name="to-use-an-xslt-parameter"></a>Per usare un parametro XSLT  
   
-1.  Creare un oggetto <xref:System.Xml.Xsl.XsltArgumentList> e aggiungere il parametro usando il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Creare un oggetto <xref:System.Xml.Xsl.XsltArgumentList> e aggiungere il parametro usando il metodo <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Richiamare il parametro dal foglio di stile.  
+2. Richiamare il parametro dal foglio di stile.  
   
-3.  Passare l'oggetto <xref:System.Xml.Xsl.XsltArgumentList> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
+3. Passare l'oggetto <xref:System.Xml.Xsl.XsltArgumentList> al metodo <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="parameter-types"></a>Tipi di parametro  
  L'oggetto parametro dovrebbe corrispondere a un tipo W3C. Nella tabella seguente sono illustrati i tipi W3C corrispondenti e le classi Microsoft .NET equivalenti (tipo) e viene indicato se il tipo W3C è un tipo XPath o XSLT.  
@@ -40,7 +40,7 @@ I parametri XSLT vengono aggiunti all'elenco <xref:System.Xml.Xsl.XsltArgumentLi
   
  *Questo è equivalente a un set di nodi che contiene un unico nodo.  
   
- Se l'oggetto parametro non appartiene a una delle classi indicate sopra, viene convertito in base alle seguenti regole. I tipi numerici CLR vengono convertiti nel tipo <xref:System.Double>. Il tipo <xref:System.DateTime> viene convertito in <xref:System.String> e i tipi <xref:System.Xml.XPath.IXPathNavigable> in <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** viene convertito nel tipo <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Se l'oggetto parametro non appartiene a una delle classi indicate sopra, viene convertito in base alle seguenti regole. I tipi numerici CLR vengono convertiti nel tipo <xref:System.Double>. Il tipo <xref:System.DateTime> viene convertito in <xref:System.String> <xref:System.Xml.XPath.IXPathNavigable> e i tipi IXPathNavigable in <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** viene convertito nel tipo <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Per tutti gli altri tipi verrà generato un errore.  
   

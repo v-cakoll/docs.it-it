@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301126"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
 
@@ -93,7 +93,7 @@ L'operatore di moltiplicazione `*` calcola il prodotto degli operandi:
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-L'operatore `*` unario è un [operatore di riferimento indiretto a puntatore](multiplication-operator.md#pointer-indirection-operator).
+L'operatore `*` unario è l'[operatore di riferimento indiretto a puntatore](multiplication-operator.md#pointer-indirection-operator).
 
 ## <a name="division-operator-"></a>Operatore di divisione /
 
@@ -239,7 +239,7 @@ Per altre informazioni, vedere le osservazioni nelle pagine di riferimento [Syst
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
-I tipi definiti dall'utente posso eseguire l'[overload](../keywords/operator.md) degli operatori aritmetici unari (`++`, `--`, `+` e `-`) e binari (`*`, `/`, `%`, `+` e `-`). Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione composta corrispondente. Un tipo definito dall'utente non può eseguire in modo esplicito l'overload di un operatore di assegnazione composta.
+Un tipo definito dall'utente può eseguire l'[overload](../keywords/operator.md) degli operatori aritmetici unari (`++`, `--`, `+` e `-`) e binari (`*`, `/`, `%`, `+` e `-`). Quando viene eseguito l'overload di un operatore binario, viene anche eseguito in modo implicito l'overload dell'operatore di assegnazione composta corrispondente. Un tipo definito dall'utente non può eseguire in modo esplicito l'overload di un operatore di assegnazione composta.
 
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#
 
@@ -252,7 +252,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Operatore di moltiplicazione](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Operatore di divisione](~/_csharplang/spec/expressions.md#division-operator)
 - [Operatore di resto](~/_csharplang/spec/expressions.md#remainder-operator)
-- [Operatore addizione](~/_csharplang/spec/expressions.md#addition-operator)
+- [Operatore di addizione](~/_csharplang/spec/expressions.md#addition-operator)
 - [Operatore di sottrazione](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Assegnazione composta](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Operatori Checked e Unchecked](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
@@ -261,7 +261,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Operatori C#](index.md)
+- [Operatori [C#]](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
-- [Dati numerici in .NET](../../../standard/numerics.md)
+- [Valori numerici in .NET](../../../standard/numerics.md)

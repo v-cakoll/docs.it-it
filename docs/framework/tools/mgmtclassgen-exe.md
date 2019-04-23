@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213129"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Lo strumento Generatore di classi di gestione fortemente tipizzate consente di generare velocemente una classe gestita ad associazione precoce per una specifica classe WMI (Windows Management Instrumentation, Strumentazione gestita Windows). L'utilizzo della classe generata semplifica la scrittura del codice per l'accesso a un'istanza della classe WMI.  
@@ -45,7 +45,7 @@ WMIClass [options]
 |**/u**  *nomeutente*|Specifica il nome utente da usare per l'accesso a un computer specificato dall'opzione **/m**.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
-## <a name="remarks"></a>Note  
+## <a name="remarks"></a>Osservazioni  
  Mgmtclassgen.exe utilizza il metodo <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>. È possibile pertanto utilizzare un provider di codice personalizzato per generare codice in linguaggi gestiti diversi da C#, Visual Basic e JScript.  
   
  Le classi generate sono associate allo schema per il quale sono state generate. Quando lo schema sottostante una classe viene modificato è necessario generare nuovamente la classe se si desidera che essa rispecchi le modifiche dello schema.  
@@ -64,13 +64,13 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**Boolean**|  
-|CIM_String|**String**|  
+|CIM_BOOLEAN|**Booleano**|  
+|CIM_String|**Stringa**|  
 |CIM_DATETIME|**DateTime** o **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Oggetto**|  
+|CIM_IUNKNOWN|**Object**|  
 |CIM_ARRAY|Matrice degli oggetti precedenti|  
   
  Quando viene generata una classe WMI può accadere quanto segue:  
@@ -151,6 +151,7 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>

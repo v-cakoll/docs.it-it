@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168168"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
 Questo argomento descrive come accedere alle funzioni non gestite e introduce diversi campi attributo che annotano la definizione di metodo nel codice gestito. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](marshaling-data-with-platform-invoke.md).  
@@ -135,7 +135,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- I modificatori <xref:System.Security.Permissions.SecurityAction> funzionano correttamente se vengono posizionati in una classe che contiene (esegue il wrapping) la chiamata di platform invoke.  
+ <xref:System.Security.Permissions.SecurityAction> I modificatori SecurityAction funzionano correttamente se vengono posizionati in una classe che contiene (esegue il wrapping) la chiamata di platform invoke.  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -156,7 +156,7 @@ class PInvokeWrapper
 }  
 ```  
   
- I modificatori <xref:System.Security.Permissions.SecurityAction> funzionano correttamente anche in uno scenario annidato in cui vengono posizionati nel chiamante della chiamata di platform invoke:  
+ <xref:System.Security.Permissions.SecurityAction> I modificatori SecurityAction funzionano correttamente anche in uno scenario annidato in cui vengono posizionati nel chiamante della chiamata di platform invoke:  
   
 ```cpp  
       {  
@@ -235,11 +235,12 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Utilizzo di funzioni di DLL non gestite](consuming-unmanaged-dll-functions.md)
 - [Specifica di un punto di ingresso](specifying-an-entry-point.md)
 - [Specifica di un set di caratteri](specifying-a-character-set.md)
 - [Esempi di platform invoke](platform-invoke-examples.md)
-- [Platform invoke (considerazioni sulla sicurezza)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [Considerazioni sulla sicurezza di platform invoke](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identificazione delle funzioni nelle DLL](identifying-functions-in-dlls.md)
-- [Creazione di una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md)
+- [Creazione di una classe che contenga le funzioni di DLL](creating-a-class-to-hold-dll-functions.md)
 - [Chiamata a una funzione di DLL](calling-a-dll-function.md)

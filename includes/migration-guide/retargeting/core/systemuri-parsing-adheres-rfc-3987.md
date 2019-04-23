@@ -1,11 +1,18 @@
+---
+ms.openlocfilehash: 6c2c6422ca4d426fcc2ff5827a2387abb5578e3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234742"
+---
 ### <a name="systemuri-parsing-adheres-to-rfc-3987"></a>L'analisi di System.Uri è conforme a RFC 3987
 
 |   |   |
 |---|---|
-|Dettagli|L'analisi URI ha subito vari cambiamenti in .NET Framework 4.5. Si noti, tuttavia, che queste modifiche influiscono solo sul codice destinato a .NET Framework 4.5. Se un file binario è destinato a .NET Framework 4.0, viene rispettato il comportamento precedente. Le modifiche introdotte per l'analisi URI in .NET Framework 4.5 includono:<ul><li>L'analisi URI eseguirà la normalizzazione e il controllo dei caratteri in base alle regole URI più recenti nella specifica RFC 3987.</li><li>Il formato C di normalizzazione Unicode verrà applicato solo alla parte host dell'URI.</li><li>Gli URI mailto: non validi causeranno ora un'eccezione.</li><li>I punti finali alla fine di un segmento di percorso vengono ora mantenuti.</li><li>Negli URI <code>file://</code> non viene usato un codice di escape per il carattere <code>?</code>.</li><li>I caratteri di controllo Unicode da <code>U+0080</code> a <code>U+009F</code> non sono supportati.</li><li>Per i caratteri virgola <code>,</code> o <code>%2c</code> non viene rimosso automaticamente il codice di escape.</li></ul>|
+|Dettagli|L'analisi URI ha subito vari cambiamenti in .NET Framework 4.5. Si noti, tuttavia, che queste modifiche influiscono solo sul codice destinato a .NET Framework 4.5. Se un file binario è destinato a .NET Framework 4.0, viene rispettato il comportamento precedente. Le modifiche introdotte per l'analisi URI in .NET Framework 4.5 includono:<ul><li>L'analisi URI eseguirà la normalizzazione e il controllo dei caratteri in base alle regole URI più recenti nella specifica RFC 3987.</li><li>Il formato C di normalizzazione Unicode verrà applicato solo alla parte host dell'URI.</li><li>Gli URI mailto: non validi causeranno ora un'eccezione.</li><li>I punti finali alla fine di un segmento di percorso vengono ora mantenuti.</li><li><code>file://</code> : in questi URI non viene usato un codice di escape per il carattere <code>?</code>.</li><li>I caratteri di controllo Unicode da <code>U+0080</code> a <code>U+009F</code> non sono supportati.</li><li>Per i caratteri virgola <code>,</code> o <code>%2c</code> non viene rimosso automaticamente il codice di escape.</li></ul>|
 |Suggerimento|Se la semantica di analisi URI di .NET Framework 4.0 precedente è ancora necessaria, anche se spesso non lo è, è possibile usarla scegliendo .NET Framework 4.0 come destinazione. A tale scopo è possibile usare un <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=name> nell'assembly o l'interfaccia utente del sistema di progetti di Visual Studio nella pagina delle proprietà del progetto.|
 |Ambito|Principale|
 |Versione|4.5|
 |Tipo|Ridestinazione|
 |API interessate|<ul><li><xref:System.Uri.%23ctor(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.%23ctor(System.String,System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Uri.%23ctor(System.String,System.UriKind)?displayProperty=nameWithType></li><li><xref:System.Uri.%23ctor(System.Uri,System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.String,System.UriKind,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.Uri,System.String,System.Uri@)?displayProperty=nameWithType></li><li><xref:System.Uri.TryCreate(System.Uri,System.Uri,System.Uri@)?displayProperty=nameWithType></li></ul>|
-

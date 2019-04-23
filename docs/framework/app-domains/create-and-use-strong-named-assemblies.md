@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee49009915273cc1e16917805f1801268ca0d26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198891"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300697"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro
 
@@ -34,17 +34,17 @@ Gli assembly con nome sicuro possono usare solo tipi da altri assembly con nome 
 
 Lo scenario seguente descrive il processo di firma di un assembly con un nome sicuro per farvi successivamente riferimento in base a tale nome.
 
-1.  L'assembly A viene creato con un nome sicuro usando uno dei metodi seguenti:
+1. L'assembly A viene creato con un nome sicuro usando uno dei metodi seguenti:
 
     -   Usando un ambiente di sviluppo che supporta la creazione di nomi sicuri, come Visual Studio.
 
     -   Creando una coppia di chiavi crittografiche usando lo [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) e assegnandola all'assembly mediante un compilatore della riga di comando o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows Software Development Kit (SDK)
 
-2.  L'ambiente di sviluppo o lo strumento firma l'hash del file contenente il manifesto dell'assembly con la chiave privata dello sviluppatore. La firma digitale viene archiviata nel file eseguibile portabile (PE) che contiene il manifesto dell'assembly A.
+2. L'ambiente di sviluppo o lo strumento firma l'hash del file contenente il manifesto dell'assembly con la chiave privata dello sviluppatore. La firma digitale viene archiviata nel file eseguibile portabile (PE) che contiene il manifesto dell'assembly A.
 
-3.  L'assembly B è un consumer dell'assembly A. La sezione di riferimento del manifesto dell'assembly B include un token che rappresenta la chiave pubblica dell'assembly A. Un token è una parte della chiave pubblica completa e viene usato al posto della chiave stessa per risparmiare spazio.
+3. L'assembly B è un consumer dell'assembly A. La sezione di riferimento del manifesto dell'assembly B include un token che rappresenta la chiave pubblica dell'assembly A. Un token è una parte della chiave pubblica completa e viene usato al posto della chiave stessa per risparmiare spazio.
 
-4.  Common Language Runtime verifica la firma con nome sicuro quando l'assembly viene inserito nella Global Assembly Cache. Quando si esegue l'associazione in base al nome sicuro in runtime, Common Language Runtime confronta la chiave archiviata nel manifesto dell'assembly B con la chiave usata per generare il nome sicuro per l'assembly A. Se i controlli di sicurezza di .NET Framework vengono superati e l'associazione riesce, l'assembly B ha la garanzia che i bit dell'assembly A non siano stati manomessi e che questi bit provengono in effetti dagli sviluppatori dell'assembly A.
+4. Common Language Runtime verifica la firma con nome sicuro quando l'assembly viene inserito nella Global Assembly Cache. Quando si esegue l'associazione in base al nome sicuro in runtime, Common Language Runtime confronta la chiave archiviata nel manifesto dell'assembly B con la chiave usata per generare il nome sicuro per l'assembly A. Se i controlli di sicurezza di .NET Framework vengono superati e l'associazione riesce, l'assembly B ha la garanzia che i bit dell'assembly A non siano stati manomessi e che questi bit provengono in effetti dagli sviluppatori dell'assembly A.
 
 > [!NOTE]
 > Questo scenario non permette di risolvere i problemi di attendibilità. Gli assembly possono contenere firme Microsoft Authenticode complete oltre a un nome sicuro. Le firme Authenticode includono un certificato che definisce l'attendibilità. È importante tenere presente che i nomi sicuri non richiedono che il codice sia firmato in questo modo. I nomi sicuri forniscono solo un'identità univoca.
@@ -63,11 +63,11 @@ Questa funzionalità si applica a qualsiasi assembly firmato con un nome sicuro 
 
 -   Non ha firma ritardata.
 
-Questa funzionalità può essere disabilitata per singole applicazioni o per un computer. Vedere [Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
+Questa funzionalità può essere disabilitata per singole applicazioni o per un computer. Vedere [How to: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-|Titolo|Descrizione|
+|Titolo|Description|
 |-----------|-----------------|
 |[Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Descrive come creare una coppia di chiavi crittografiche per la firma di un assembly.|
 |[Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Descrive come creare un assembly con nome sicuro.|

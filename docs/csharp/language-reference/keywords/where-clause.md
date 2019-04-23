@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341387"
 ---
 # <a name="where-clause-c-reference"></a>Clausola where (Riferimento C#)
 
@@ -27,7 +27,7 @@ Nell'esempio seguente la clausola `where` esclude tutti i numeri tranne quelli m
 
 ## <a name="example"></a>Esempio
 
-In una singola clausola `where` è possibile specificare tutti i predicati necessari usando gli operatori [ && ](../operators/conditional-and-operator.md) e [&#124;&#124;](../operators/conditional-or-operator.md). Nell'esempio seguente la query specifica due predicati per selezionare solo i numeri pari minori di cinque.
+In una singola clausola `where` è possibile specificare tutti i predicati necessari usando gli operatori [ && ](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) e [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-). Nell'esempio seguente la query specifica due predicati per selezionare solo i numeri pari minori di cinque.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -37,7 +37,7 @@ Una clausola `where` può contenere uno o più metodi che restituiscono valori b
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 La clausola `where` è un meccanismo di filtro. Può essere posizionata praticamente ovunque in un'espressione di query, ma non può essere la prima o l'ultima clausola. Una clausola `where` la può apparire prima o dopo una clausola [group](group-clause.md) a seconda se gli elementi di origine devono essere filtrati prima o dopo essere stati raggruppati.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b134b4c875a2360712d14bc0b6c11ad0e13a89e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178880"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (generatore di file di risorse)
 Il generatore di file di risorse (Resgen.exe) converte i file di testo (.txt o .restext) e i file di risorse basati su XML (.resx) in file binari Common Language Runtime (.resources) incorporabili in un eseguibile binario o in un assembly satellite di runtime. Vedere [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
@@ -73,14 +73,14 @@ resgen filename.extension [outputDirectory]
   
 |Parametro o opzione|Description|  
 |-------------------------|-----------------|  
-|`/define:` *simbolo1*[, *simbolo2*,...]|A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] supporta la compilazione condizionale in file di risorse basati su testo (.txt o .restext). Se *simbolo* corrisponde ad un simbolo incluso nel file di testo di input all'interno di un costrutto `#ifdef`, la risorsa di tipo stringa associata viene inclusa nel file RESOURCES. Se il file di testo di input include un'istruzione `#if !` con un simbolo non definito dall'opzione `/define`, la risorsa di tipo stringa associata viene inclusa nel file di risorse.<br /><br /> `/define` viene ignorato se è utilizzato con file non di testo. Nei simboli viene fatta distinzione tra maiuscole e minuscole.<br /><br /> Per altre informazioni su questa opzione, vedere [Compilazione condizionale di risorse](#Conditional) più avanti in questo argomento.|  
+|`/define:` *simbolo1*[, *simbolo2*,...]|A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] supporta la compilazione condizionale in file di risorse basati su testo (.txt o .restext). Se *simbolo* corrisponde ad un simbolo incluso nel file di testo di input all'interno di un costrutto `#ifdef`, la risorsa di tipo stringa associata viene inclusa nel file RESOURCES. Se il file di testo di input include un'istruzione `#if !` con un simbolo non definito dall'opzione `/define`, la risorsa di tipo stringa associata viene inclusa nel file di risorse.<br /><br /> `/define` viene ignorato se è usato con file non di testo. Nei simboli viene fatta distinzione tra maiuscole e minuscole.<br /><br /> Per altre informazioni su questa opzione, vedere [Compilazione condizionale di risorse](#Conditional) più avanti in questo argomento.|  
 |`useSourcePath`|Specifica che è necessario usare la directory corrente del file di input per risolvere i percorsi di file relativi.|  
 |`/compile`|Consente di specificare più file di testo o .resx da convertire in più file .resources con una singola operazione di massa. Se non si specifica questa opzione, sarà possibile specificare un solo argomento di file di input. I file di output sono denominati *nomefile*.resources.<br /><br /> Non è possibile usare questa opzione con l'opzione `/str:`.<br /><br /> Per altre informazioni su questa opzione, vedere [Compilazione o conversione di più file](#Multiple) più avanti in questo argomento.|  
 |`/r:` `assembly`|Fa riferimento ai metadati dell'assembly specificato. Utilizzata quando si convertono i file .resx, consente a Resgen.exe di serializzare o deserializzare risorse di tipo oggetto. È simile alle opzioni `/reference:` o `/r:` per i compilatori C# e Visual Basic.|  
 |`filename.extension`|Specifica il nome del file di input da convertire. Se si utilizza la prima, più lunga sintassi della riga di comando presentata prima di questa tabella, `extension` deve essere una delle seguenti:<br /><br /> .txt o .restext<br /> Un file di testo da convertire in un file .resources o .resx. I file di testo possono contenere solo risorse di tipo stringa. Per informazioni sul formato del file, vedere la sezione "Risorse in file di testo" in [Creazione di file di risorse](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).<br /><br /> .resx<br /> Un file di risorse basato su XML da convertire in un file .resources o in un file di testo (.txt o .restext).<br /><br /> .resources<br /> Un file di risorse binario da convertire in un file .resx o di testo (.txt o .restext).<br /><br /> Se si utilizza la seconda, più breve sintassi della riga di comando presentata prima di questa tabella, `extension` deve essere la seguente:<br /><br /> .exe o .dll<br /> Un assembly .NET Framework (eseguibile o libreria) le cui risorse di tipo stringa devono essere estratte in un file .resw per essere utilizzate nello sviluppo di app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].|  
 |`outputFilename.extension`|Specifica il nome e il tipo del file di risorse da creare.<br /><br /> Questo argomento è facoltativo quando si esegue la conversione da un file .txt, .restext o .resx in un file .resources. Se non si specifica `outputFilename`, viene automaticamente aggiunta l'estensione .resources al `filename` di input e il file viene scritto nella directory contenente `filename,extension`.<br /><br /> L'argomento `outputFilename.extension` è obbligatorio quando si esegue la conversione da un file .resources. Specificare un nome file con l'estensione .resx quando si converte un file .resources in un file di risorse basato su XML. Specificare un nome file con l'estensione .txt o .restext quando si converte un file .resources in un file di testo. È consigliabile convertire un file .resources in un file .txt solo quando il file .resources contiene unicamente valori di tipo stringa.|  
 |`outputDirectory`|Per le app [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], specifica la directory in cui verrà scritto un file .resw che contiene le risorse di tipo stringa in `filename.extension`. `outputDirectory` deve già esistere.|  
-|`/str:` `language[,namespace[,classname[,filename]]]`|Crea un file di classe di risorse fortemente tipizzato nel linguaggio di programmazione specificato nell'opzione `language`. `language` può consistere in uno dei seguenti valori letterali:<br /><br /> -   Per C#: `c#`, `cs` o `csharp`.<br />-   Per Visual Basic: `vb` o `visualbasic`.<br />-   Per VBScript: `vbs` o `vbscript`.<br />-   Per C++: `c++`, `mc` o `cpp`.<br />-   Per JavaScript: `js`, `jscript` o `javascript`.<br /><br /> L'opzione `namespace` specifica lo spazio dei nomi predefinito del progetto, l'opzione `classname` specifica il nome della classe generata e l'opzione `filename` specifica il nome del file di classe.<br /><br /> L'opzione `/str:` consente un solo file di input, pertanto non può essere utilizzata con l'opzione `/compile`.<br /><br /> Se viene specificato `namespace`, ma non `classname`, il nome della classe deriva dal nome del file di output; ad esempio, le sottolineature vengono sostituite ai punti. Di conseguenza è possibile che le risorse fortemente tipizzate non funzionino correttamente. Per ovviare a questo problema, specificare sia il nome della classe che il nome del file di output.<br /><br /> Per altre informazioni su questa opzione, vedere [Generazione di una classe di risorse fortemente tipizzata](#Strong) più avanti in questo argomento.|  
+|`/str:` `language[,namespace[,classname[,filename]]]`|Crea un file di classe di risorse fortemente tipizzato nel linguaggio di programmazione specificato nell'opzione `language`. `language` può consistere in uno dei valori letterali seguenti:<br /><br /> -   Per C#: `c#`, `cs` o `csharp`.<br />-   Per Visual Basic: `vb` o `visualbasic`.<br />-   Per VBScript: `vbs` o `vbscript`.<br />-   Per C++: `c++`, `mc` o `cpp`.<br />-   Per JavaScript: `js`, `jscript` o `javascript`.<br /><br /> L'opzione `namespace` specifica lo spazio dei nomi predefinito del progetto, l'opzione `classname` specifica il nome della classe generata e l'opzione `filename` specifica il nome del file di classe.<br /><br /> L'opzione `/str:` consente un solo file di input, pertanto non può essere utilizzata con l'opzione `/compile`.<br /><br /> Se viene specificato `namespace`, ma non `classname`, il nome della classe deriva dal nome del file di output; ad esempio, le sottolineature vengono sostituite ai punti. Di conseguenza è possibile che le risorse fortemente tipizzate non funzionino correttamente. Per ovviare a questo problema, specificare sia il nome della classe che il nome del file di output.<br /><br /> Per altre informazioni su questa opzione, vedere [Generazione di una classe di risorse fortemente tipizzata](#Strong) più avanti in questo argomento.|  
 |`/publicClass`|Crea una classe di risorse fortemente tipizzata come classe pubblica. Per impostazione predefinita, la classe di risorse è `internal` in C# e `Friend` in Visual Basic.<br /><br /> Questa opzione viene ignorata se non si utilizza l'opzione `/str:`.|  
   
 ## <a name="resgenexe-and-resource-file-types"></a>Resgen.exe e i tipi di file di risorse  
@@ -122,7 +122,7 @@ resgen filename.extension [outputDirectory]
   
 -   [Compilazione o conversione di più file](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Esportazione di risorse in un file RESW](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+-   [Esportazione di risorse in un file .resw](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
 -   [Compilazione condizionale di risorse](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
@@ -293,7 +293,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  Se `inputFilename` è un file .resources, Resgen.exe copia il file .resources se anche `outputFilename` è un file .resources. Se `outputFilename` viene omesso, Resgen.exe sovrascrive `inputFilename` con un file .resources identico.  
   
- *linguaggio*  
+ *language*  
  Linguaggio per la generazione del codice sorgente per la classe di risorse fortemente tipizzata. I valori possibili sono `cs`, `C#` e `csharp` per il codice C#, `vb` e `visualbasic` per il codice Visual Basic, `vbs` e `vbscript` per il codice VBScript, `c++`, `mc` e `cpp` per il codice C++.  
   
  *namespace*  
@@ -330,6 +330,7 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)
 - [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)

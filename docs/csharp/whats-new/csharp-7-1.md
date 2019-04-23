@@ -1,13 +1,13 @@
 ---
 title: Novità di C# 7.1
 description: Panoramica delle nuove funzionalità in C# 7.1.
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728654"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480963"
 ---
 # <a name="whats-new-in-c-71"></a>Novità di C# 7.1
 
@@ -17,12 +17,14 @@ C# 7.1 aggiunge l'elemento di configurazione per la [selezione della versione de
 
 Le nuove funzionalità relative al linguaggio in questa versione sono:
 
-* Metodo [`async` `Main` ](#async-main)
+* [`async` `Main` metodo](#async-main)
   - Il punto di ingresso per un'applicazione può avere il modificatore `async`.
-* Espressioni letterali [`default` ](#default-literal-expressions)
+* [`default` Espressioni letterali default](#default-literal-expressions)
   - Quando è possibile dedurre il tipo di destinazione, si possono usare espressioni letterali predefinite nelle espressioni con valore predefinito.
 * [Nomi di elemento di tupla dedotti](#inferred-tuple-element-names)
   - In molti casi i nomi degli elementi della tupla possono essere dedotti dall'inizializzazione tupla.
+* [Criteri di ricerca su parametri di tipo generico](#pattern-matching-on-generic-type-parameters)
+  - È possibile usare espressioni di criteri di ricerca sulle variabili in cui il tipo è un parametro di tipo generico.
 
 Infine, il compilatore offre due opzioni `/refout` e `/refonly` che controllano la [generazione dell'assembly di riferimento](#reference-assembly-generation).
 
@@ -60,7 +62,7 @@ static async Task Main()
 }
 ```
 
-Per altre informazioni dettagliate, leggere l'argomento [async main](../programming-guide/main-and-command-args/index.md) nella guida alla programmazione.
+Per altre informazioni dettagliate, leggere l'articolo [async main](../programming-guide/main-and-command-args/index.md) nella guida alla programmazione.
 
 ## <a name="default-literal-expressions"></a>Espressioni letterali predefinite
 
@@ -77,7 +79,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-Altre informazioni su questo miglioramento sono disponibili nell'argomento della Guida per programmatori C# relativo alle [espressioni con valore predefinito](../programming-guide/statements-expressions-operators/default-value-expressions.md).
+Altre informazioni su questo miglioramento sono disponibili nell'articolo della Guida per programmatori C# relativo alle [espressioni con valore predefinito](../programming-guide/statements-expressions-operators/default-value-expressions.md).
 
 Questo miglioramento modifica anche alcune delle regole di analisi per la [parola chiave default](../language-reference/keywords/default.md).
 
@@ -99,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Informazioni più approfondite sulle tuple sono disponibili nell'argomento [Tuple](../tuples.md).
+Informazioni più approfondite sulle tuple sono disponibili nell'articolo [Tuple](../tuples.md).
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>Criteri di ricerca su parametri di tipo generico
+
+A partire da C# 7.1, l'espressione di criteri per `is` e il criterio di tipo `switch` possono avere il tipo di un parametro di tipo generico. Questo è particolarmente utile quando si esegue il controllo dei tipi che possono essere `struct` o `class` e si vuole evitare la conversione boxing.
 
 ## <a name="reference-assembly-generation"></a>Generazione assembly di riferimento
 
 Sono disponibili due nuove opzioni del compilatore che generano *gli assembly di solo riferimento* : [/refout](../language-reference/compiler-options/refout-compiler-option.md) e [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-Gli argomenti collegati illustrano in modo più dettagliato queste opzioni e gli assembly di riferimento.
+Gli articoli collegati illustrano in modo più dettagliato queste opzioni e gli assembly di riferimento.

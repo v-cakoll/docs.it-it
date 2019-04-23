@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 47d0aa554d88726caca35fa6bebe4d863fdc0695
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235435"
+---
 ### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>EventSource.WriteEvent impls deve passare a WriteEvent gli stessi parametri che ha ricevuto (oltre all'ID)
 
 |   |   |
@@ -7,4 +15,3 @@
 |Ambito|Secondario|
 |Versione|4.5.1|
 |Tipo|Runtime|
-

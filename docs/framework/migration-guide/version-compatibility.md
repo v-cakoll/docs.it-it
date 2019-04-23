@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143650"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilità tra le versioni in .NET Framework
 Per compatibilità con le versioni precedenti si intende che un'app sviluppata per una particolare versione di una piattaforma sarà eseguita su versioni successive di quella piattaforma. .NET Framework tenta di mantenere la massima compatibilità con le versioni precedenti: è possibile compilare codice sorgente scritto per una versione di .NET Framework con versioni successive di .NET Framework e i file binari in esecuzione in una versione di .NET Framework devono comportarsi in modo identico nelle versioni successive di .NET Framework.  
@@ -66,8 +66,9 @@ Per compatibilità con le versioni precedenti si intende che un'app sviluppata p
  Se non si riesce a trovare una soluzione alternativa adatta al problema, ricordare che .NET Framework 4.5 (e versioni intermedie) viene eseguito side-by-side con le versioni 1.1, 2.0 e 3.5 ed è un aggiornamento sul posto che sostituisce la versione 4. Per app destinate alle versioni 1.1, 2.0 e 3.5, è possibile installare la versione appropriata di .NET Framework nel computer di destinazione per eseguire l'app nell'ambiente migliore. Per altre informazioni sull'esecuzione side-by-side, vedere [Esecuzione side-by-side](../../../docs/framework/deployment/side-by-side-execution.md).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Novità](../../../docs/framework/whats-new/index.md)
 - [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Compatibilità delle applicazioni](../../../docs/framework/migration-guide/application-compatibility.md)
-- [Criteri relativi al ciclo di vita del supporto di Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
 - [Problemi di migrazione di .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295991"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Creazione di assembly satellite per applicazioni desktop
 I file di risorse svolgono un ruolo centrale nelle applicazioni localizzate. Questi file consentono a un'applicazione di visualizzare stringhe, immagini e altri dati nella lingua dell'utente e con le impostazioni cultura di questo, fornendo anche dati alternativi per i casi in cui non siano disponibili risorse per la lingua o le impostazioni cultura dell'utente. Per individuare e recuperare risorse localizzate, .NET Framework usa un modello hub e spoke. L'hub è l'assembly principale che contiene il codice eseguibile non localizzabile e le risorse di un singolo set di impostazioni cultura, denominate impostazioni cultura neutre o predefinite. Le impostazioni cultura predefinite sono le impostazioni di fallback per l'applicazione, usate quando non sono disponibili risorse localizzate. Per designare le impostazioni cultura predefinite dell'applicazione, si usa l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute>. Ogni spoke si connette a un assembly satellite contenente le risorse relative a impostazioni cultura specifiche, ma non contiene codice. Poiché gli assembly satellite non fanno parte dell'assembly principale, è possibile aggiornare o sostituire facilmente le risorse corrispondenti a impostazioni cultura specifiche senza sostituire l'assembly principale dell'applicazione.  
@@ -52,10 +52,11 @@ I file di risorse svolgono un ruolo centrale nelle applicazioni localizzate. Que
   
 -   Le informazioni sulle impostazioni cultura dell'assembly satellite devono essere incluse nei metadati dell'assembly. Per archiviare il nome delle impostazioni cultura nei metadati dell'assembly satellite, specificare l'opzione `/culture` quando si incorporano le risorse nell'assembly satellite tramite [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
- La figura seguente illustra una struttura di directory di esempio e i requisiti relativi alla posizione per le applicazioni che non si intende installare nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Gli elementi con estensione txt e resources non verranno forniti con l'applicazione finale. Questi sono file di risorse intermedi usati per creare gli assembly di risorse satellite finali. In questo esempio è possibile sostituire il file con estensione resx per i file con estensione txt. Per altre informazioni, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ La figura seguente illustra una struttura di directory di esempio e i requisiti relativi alla posizione per le applicazioni che non si intende installare nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Gli elementi con estensione txt e resources non verranno forniti con l'applicazione finale. Questi sono file di risorse intermedi usati per creare gli assembly di risorse satellite finali. In questo esempio è possibile sostituire il file con estensione resx per i file con estensione txt. Per altre informazioni, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
+ 
+ L'immagine seguente mostra la directory degli assembly satellite:
   
- ![Assembly satellite](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
-Directory dell'assembly satellite  
+ ![una directory di assembly satellite con sottodirectory di impostazioni cultura localizzate.](./media/creating-satellite-assemblies-for-desktop-apps/satellite-assembly-directory.gif)
   
 ## <a name="compiling-satellite-assemblies"></a>compilazione di assembly satellite  
  Per compilare file di testo o il file XML (con estensione resx) contenente risorse per file binari con estensione resources, si usa il [generatore di file di risorse (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). Si usa quindi [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per compilare i file con estensione resources in assembly satellite. Al.exe crea un assembly dai file con estensione resources specificati. Gli assembly satellite possono contenere solo risorse. Non possono contenere codice eseguibile.  
@@ -87,14 +88,14 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 ## <a name="satellite-assemblies-an-example"></a>Assembly satellite: Esempio  
  Di seguito è riportato un semplice esempio di tipo "Hello world" che visualizza una finestra di messaggio contenente un saluto localizzato. L'esempio include le risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia) e russe (Russia). Le impostazioni cultura inglesi sono le impostazioni cultura di fallback. Per creare l'esempio, eseguire le operazioni seguenti:  
   
-1.  Creare un file di risorse denominato Greeting.resx o Greeting.txt che deve contenere le risorse per le impostazioni cultura predefinite. Salvare in questo file un'unica stringa denominata `HelloString` il cui valore sia "Hello world!" .  
+1. Creare un file di risorse denominato Greeting.resx o Greeting.txt che deve contenere le risorse per le impostazioni cultura predefinite. Salvare in questo file un'unica stringa denominata `HelloString` il cui valore sia "Hello world!" .  
   
-2.  Per impostare le impostazioni cultura inglesi (en) come predefinite per l'applicazione, aggiungere l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> seguente al file AssemblyInfo dell'applicazione o al file di codice sorgente principale che verrà compilato nell'assembly principale dell'applicazione.  
+2. Per impostare le impostazioni cultura inglesi (en) come predefinite per l'applicazione, aggiungere l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> seguente al file AssemblyInfo dell'applicazione o al file di codice sorgente principale che verrà compilato nell'assembly principale dell'applicazione.  
   
      [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
      [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
-3.  Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:  
+3. Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:  
   
     -   Per supportare le impostazioni cultura en-US, cioè Inglese (Stati Uniti), creare un file di risorse denominato Greeting.en-US.resx o Greeting.en-US.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Hi world!".  
   
@@ -102,7 +103,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
     -   Per supportare le impostazioni cultura ru-RU, cioè Russo (Russia), creare un file di risorse denominato Greeting.ru-RU.resx o Greeting.ru-RU.txt e salvare al suo interno una sola stringa denominata `HelloString` il cui valore sia "Всем привет!".  
   
-4.  Usare [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire i comandi seguenti per compilare i file con estensione resx in file con estensione resources:  
+4. Usare [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire i comandi seguenti per compilare i file con estensione resx in file con estensione resources:  
   
     ```console
     resgen Greeting.resx  
@@ -113,7 +114,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
      Se le risorse sono contenute in file di testo anziché in file XML, sostituire l'estensione resx con l'estensione txt.  
   
-5.  Compilare il codice sorgente seguente con le risorse per le impostazioni cultura predefinite nell'assembly principale dell'applicazione:  
+5. Compilare il codice sorgente seguente con le risorse per le impostazioni cultura predefinite nell'assembly principale dell'applicazione:  
   
     > [!IMPORTANT]
     >  Se per creare l'esempio si usa la riga di comando anziché Visual Studio, è necessario modificare la chiamata al costruttore della classe <xref:System.Resources.ResourceManager> come segue: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
@@ -133,9 +134,9 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     vbc Example.vb -res:Greeting.resources  
     ```  
   
-6.  Creare una sottodirectory nella directory principale dell'applicazione per ognuna delle impostazioni cultura localizzate supportate dall'applicazione. È necessario creare le sottodirectory en-US, fr-FR e ru-RU. Visual Studio crea queste sottodirectory automaticamente nell'ambito del processo di compilazione.  
+6. Creare una sottodirectory nella directory principale dell'applicazione per ognuna delle impostazioni cultura localizzate supportate dall'applicazione. È necessario creare le sottodirectory en-US, fr-FR e ru-RU. Visual Studio crea queste sottodirectory automaticamente nell'ambito del processo di compilazione.  
   
-7.  Incorporare i singoli file con estensione resources specifici di ognuna delle impostazioni cultura in assembly satellite e salvarli nella directory appropriata. Il comando per eseguire questa operazione per ogni file con estensione resources è:  
+7. Incorporare i singoli file con estensione resources specifici di ognuna delle impostazioni cultura in assembly satellite e salvarli nella directory appropriata. Il comando per eseguire questa operazione per ogni file con estensione resources è:  
   
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
@@ -202,7 +203,7 @@ gacutil -i:StringLibrary.resources.dll
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>Risorse nella Global Assembly Cache: Esempio  
  L'esempio seguente usa un metodo di una libreria di classi .NET Framework per estrarre e restituire un messaggio di saluto localizzato contenuto in un file di risorse. La libreria e le relative risorse sono registrate nella Global Assembly Cache. L'esempio include risorse per le impostazioni cultura inglesi (Stati Uniti), francesi (Francia), russe (Russia) e inglesi. Le impostazioni cultura predefinite corrispondono a quelle inglesi e le risorse corrispondenti sono archiviate nell'assembly principale. All'inizio dell'esempio viene impostato il ritardo della firma della libreria e dei relativi assembly con una chiave pubblica. Questi vengono quindi firmati di nuovo con una coppia di chiavi pubblica/privata. Per creare l'esempio, eseguire le operazioni seguenti:  
   
-1.  Se non si usa Visual Studio, creare una coppia di chiavi pubblica/privata denominata ResKey.snk tramite il comando dello [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) seguente:  
+1. Se non si usa Visual Studio, creare una coppia di chiavi pubblica/privata denominata ResKey.snk tramite il comando dello [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) seguente:  
   
     ```console
     sn –k ResKey.snk  
@@ -210,20 +211,20 @@ gacutil -i:StringLibrary.resources.dll
   
      Se si usa Visual Studio, generare il file di chiave tramite la scheda **Firma** della finestra di dialogo **Proprietà** del progetto.  
   
-2.  Usare il comando dello [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) seguente per creare un file di chiave pubblica denominato PublicKey.snk:  
+2. Usare il comando dello [strumento Nome sicuro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) seguente per creare un file di chiave pubblica denominato PublicKey.snk:  
   
     ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
-3.  Creare un file di risorse denominato Strings.resx o Greeting.txt che contenga le risorse per le impostazioni cultura predefinite. Archiviare in questo file un'unica stringa denominata `Greeting` il cui valore sia "How do you do?" .  
+3. Creare un file di risorse denominato Strings.resx o Greeting.txt che contenga le risorse per le impostazioni cultura predefinite. Archiviare in questo file un'unica stringa denominata `Greeting` il cui valore sia "How do you do?" .  
   
-4.  Per impostare "en" come impostazioni cultura predefinite dell'applicazione, aggiungere l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> seguente al file AssemblyInfo dell'applicazione o al file di codice sorgente principale che verrà compilato nell'assembly principale dell'applicazione:  
+4. Per impostare "en" come impostazioni cultura predefinite dell'applicazione, aggiungere l'attributo <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> seguente al file AssemblyInfo dell'applicazione o al file di codice sorgente principale che verrà compilato nell'assembly principale dell'applicazione:  
   
      [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
      [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
-5.  Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:  
+5. Aggiungere all'applicazione il supporto per le impostazioni cultura aggiuntive (en-US, fr-FR e ru-RU) come segue:  
   
     -   Per supportare le impostazioni cultura "en-US", cioè Inglese (Stati Uniti), creare un file di risorse denominato Strings.en-US.resx o Strings.en-US.txt e salvare al suo interno una sola stringa denominata `Greeting` il cui valore sia "Hello!".  
   
@@ -231,7 +232,7 @@ gacutil -i:StringLibrary.resources.dll
   
     -   Per supportare le impostazioni cultura "ru-RU", cioè Russo (Russia), creare un file di risorse denominato Strings.ru-RU.resx o Strings.ru-RU.txt e salvare al suo interno una sola stringa denominata `Greeting` il cui valore sia "Привет!".  
   
-6.  Usare [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire il comando seguente per compilare i file con estensione resx in file con estensione resources:  
+6. Usare [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per compilare ogni file di risorse testo o XML in un file con estensione resources binario. L'output è un set di file con lo stesso nome file radice dei file con estensione resx o txt, ma con estensione resources. Se si crea l'esempio con Visual Studio, il processo di compilazione viene gestito automaticamente. Se non si usa Visual Studio, eseguire il comando seguente per compilare i file con estensione resx in file con estensione resources:  
   
     ```console
     resgen filename  
@@ -239,7 +240,7 @@ gacutil -i:StringLibrary.resources.dll
   
      dove *filename* rappresenta il percorso facoltativo, il nome file e l'estensione del file resx o di testo.  
   
-7.  Compilare il codice sorgente seguente per StringLibrary.vb o StringLibrary.cs con le risorse per le impostazioni cultura predefinite in un assembly con ritardo della firma denominato StringLibrary.dll:  
+7. Compilare il codice sorgente seguente per StringLibrary.vb o StringLibrary.cs con le risorse per le impostazioni cultura predefinite in un assembly con ritardo della firma denominato StringLibrary.dll:  
   
     > [!IMPORTANT]
     >  Se per creare l'esempio si usa la riga di comando anziché Visual Studio, è necessario modificare la chiamata al costruttore della classe <xref:System.Resources.ResourceManager> in `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
@@ -259,7 +260,7 @@ gacutil -i:StringLibrary.resources.dll
     vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
-8.  Creare una sottodirectory nella directory principale dell'applicazione per ognuna delle impostazioni cultura localizzate supportate dall'applicazione. È necessario creare le sottodirectory en-US, fr-FR e ru-RU. Visual Studio crea queste sottodirectory automaticamente nell'ambito del processo di compilazione. Poiché tutti gli assembly satellite hanno lo stesso nome file, le sottodirectory vengono usate per archiviare gli assembly satellite specifici delle impostazioni cultura fino a quando non sono firmati con una coppia di chiavi pubblica/privata.  
+8. Creare una sottodirectory nella directory principale dell'applicazione per ognuna delle impostazioni cultura localizzate supportate dall'applicazione. È necessario creare le sottodirectory en-US, fr-FR e ru-RU. Visual Studio crea queste sottodirectory automaticamente nell'ambito del processo di compilazione. Poiché tutti gli assembly satellite hanno lo stesso nome file, le sottodirectory vengono usate per archiviare gli assembly satellite specifici delle impostazioni cultura fino a quando non sono firmati con una coppia di chiavi pubblica/privata.  
   
 9. Incorporare i singoli file con estensione resources specifici di ognuna delle impostazioni cultura in assembly satellite con ritardo della firma e salvarli nella directory appropriata. Il comando per eseguire questa operazione per ogni file con estensione resources è:  
   
@@ -309,6 +310,7 @@ gacutil -i:StringLibrary.resources.dll
 14. Eseguire Example.exe.  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)

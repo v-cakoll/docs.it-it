@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200365"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Che cos'è ML.NET e come è possibile capire le nozioni fondamentali sull'apprendimento automatico?
 
@@ -24,7 +24,6 @@ ML.NET è un framework di apprendimento automatico gratuito, open source e multi
 L'apprendimento automatico è una tecnica di data science che consente ai computer di usare i dati esistenti per prevedere le tendenze, i risultati e i comportamenti futuri. Tramite l'apprendimento automatico, i computer apprendono senza essere programmati in modo esplicito.
 
 Le previsioni o stime dall'apprendimento automatico possono rendere più intelligenti le app e i dispositivi. Quando si fanno acquisti online, l'apprendimento automatico consiglia altri prodotti di possibile interesse in base a ciò che si è acquistato. Quando viene passata la carta di credito, l'apprendimento automatico confronta la transazione con un database di transazioni e aiuta a rilevare le frodi. Quando il servizio di pulitura automatico libera spazio, l'apprendimento automatico consente di decidere se il processo viene eseguito.
-
 
 ## <a name="short-videos-on-data-science"></a>Brevi video su data science 
 

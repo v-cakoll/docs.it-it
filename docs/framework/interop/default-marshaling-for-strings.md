@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 47543056eaa538b008db3332dda776c0f300108d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078473"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshalling predefinito per le stringhe
 Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> presentano un comportamento del marshalling simile.  
@@ -26,11 +26,11 @@ Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.
   
 -   [Stringhe usate nelle interfacce](#cpcondefaultmarshalingforstringsanchor1)  
   
--   [Stringhe usate in platform invoke](#cpcondefaultmarshalingforstringsanchor5)  
+-   [Stringhe usate in Platform invoke](#cpcondefaultmarshalingforstringsanchor5)  
   
 -   [Stringhe usate nelle strutture](#cpcondefaultmarshalingforstringsanchor2)  
   
--   [Buffer di stringhe a lunghezza fissa](#cpcondefaultmarshalingforstringsanchor3)  
+-   [Buffer di stringhe di lunghezza fissa](#cpcondefaultmarshalingforstringsanchor3)  
   
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
@@ -39,7 +39,7 @@ Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.
   
 |Tipo di enumerazione|Descrizione del formato non gestito|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (impostazione predefinita)|`BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
+|`UnmanagedType.BStr` (predefinito)|`BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
 |`UnmanagedType.LPStr`|Puntatore a matrice di caratteri ANSI con terminazione Null.|  
 |`UnmanagedType.LPWStr`|Puntatore a una matrice con terminazione Null di caratteri Unicode.|  
   
@@ -264,7 +264,8 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
-- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
+
+- [comportamento predefinito del marshalling](default-marshaling-behavior.md)
+- [tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Copia e blocco](copying-and-pinning.md)
+- [copia e blocco](copying-and-pinning.md)

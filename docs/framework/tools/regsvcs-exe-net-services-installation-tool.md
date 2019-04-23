@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215040"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (strumento di installazione dei servizi .NET)
 Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:  
@@ -60,7 +60,7 @@ Lo strumento di installazione dei servizi .NET effettua le seguenti operazioni:
 |**/parname:** *nome*|Specifica il nome o l'ID dell'applicazione COM+ da trovare o creare.|  
 |**/reconfig**|Riconfigura un'applicazione di destinazione esistente. Questa è l'impostazione predefinita.|  
 |**/tlb:** *filelibreriatipi*|Specifica il file della libreria dei tipi da installare.|  
-|**/u**|Disinstalla l'applicazione di destinazione.|  
+|**/U**|Disinstalla l'applicazione di destinazione.|  
 |**/quiet**|Specifica la modalità non interattiva; non visualizza il logo e i messaggi di esito positivo.|  
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
@@ -87,6 +87,7 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ```  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Strumenti](../../../docs/framework/tools/index.md)
 - [Procedura: Firmare un assembly con un nome sicuro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

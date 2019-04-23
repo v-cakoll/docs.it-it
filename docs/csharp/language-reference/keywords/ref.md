@@ -1,19 +1,19 @@
 ---
 title: Parola chiave ref - Riferimenti per C#
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116256"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
 
@@ -24,10 +24,9 @@ La parola chiave `ref` indica un valore che viene passato per riferimento. Viene
 - Nel corpo di un membro, per indicare che un valore restituito di riferimento è archiviato in locale come un riferimento che il chiamante intende modificare o, in generale, che una variabile locale accede a un altro valore per riferimento. Per altre informazioni, vedere [Variabili locali ref](#ref-locals).
 - In una dichiarazione `struct` per dichiarare `ref struct` o `ref readonly struct`. Per altre informazioni, vedere [Tipi ref struct](#ref-struct-types).
 
-
 ## <a name="passing-an-argument-by-reference"></a>Passaggio di un argomento per riferimento
 
-Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref` indica che un argomento viene passato per riferimento, non per valore. L'effetto del passaggio per riferimento è che qualsiasi modifica all'argomento nel metodo chiamato viene riflessa nel metodo di chiamata. Ad esempio, se il chiamante passa un'espressione variabile locale o un'espressione di accesso dell'elemento della matrice e il metodo chiamato sostituisce l'oggetto a cui fa riferimento il parametro ref, l'elemento della matrice o la variabile locale del chiamante fa riferimento al nuovo oggetto quando viene restituito il risultato del metodo.
+Quando viene usata nell'elenco di parametri di un metodo, la parola chiave `ref` indica che un argomento viene passato per riferimento, non per valore. La parola chiave `ref` imposta il parametro formale come alias dell'argomento, che deve essere una variabile. In altre parole, qualsiasi operazione sul parametro viene eseguita sull'argomento. Ad esempio, se il chiamante passa un'espressione variabile locale o un'espressione di accesso dell'elemento della matrice e il metodo chiamato sostituisce l'oggetto a cui fa riferimento il parametro ref, l'elemento della matrice o la variabile locale del chiamante fa riferimento al nuovo oggetto quando viene restituito il risultato del metodo.
 
 > [!NOTE]
 > Non confondere il concetto di passaggio per riferimento con il concetto di tipi di riferimento. I due concetti non sono uguali. Un parametro di metodo può essere modificato da `ref` che si tratti di un tipo di valore o di un tipo di riferimento. Non viene eseguito il boxing di un tipo di valore quando viene passato per riferimento.  
@@ -138,7 +137,7 @@ L'aggiunta del modificatore `ref` a una dichiarazione `struct` specifica che le 
 L'obiettivo di mantenere un tipo `ref struct` come variabile allocata nello stack comporta diverse regole che il compilatore applica per tutti i tipi `ref struct`.
 
 - Non è possibile eseguire il boxing di `ref struct`. Non è possibile assegnare un tipo `ref struct` a una variabile di tipo `object`, `dynamic` o qualsiasi tipo di interfaccia.
-- I tipi `ref struct` non possono implementare interfacce.
+- `ref struct` I tipi struct ref non possono implementare interfacce.
 - Non è possibile dichiarare `ref struct` come membro di una classe o di un normale struct.
 - Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararle nei metodi sincroni che restituiscono tipi simili a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
 - Non è possibile dichiarare variabili locali `ref struct` negli iteratori.
@@ -155,7 +154,7 @@ Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che
 ## <a name="see-also"></a>Vedere anche
 
 - [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)
-- [Valori restituiti e variabili locali per riferimento](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Valori restituiti e variabili locali ref](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Espressione condizionale ref](../operators/conditional-operator.md#conditional-ref-expression)
 - [Operatore di assegnazione ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)

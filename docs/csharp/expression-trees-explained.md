@@ -3,12 +3,12 @@ title: Nozioni di base sugli alberi delle espressioni
 description: Informazioni sugli alberi delle espressioni e sulla loro utilità nella conversione degli algoritmi per l'esecuzione esterna e nell'analisi del codice prima dell'esecuzione.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 97cba9e5ec388729d23fb2689dfc1842a42af9b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216869"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481431"
 ---
 # <a name="expression-trees-explained"></a>Nozioni di base sugli alberi delle espressioni
 
@@ -16,9 +16,10 @@ ms.locfileid: "33216869"
 
 Un albero delle espressioni è una struttura dei dati che definisce il codice. Si basa sulle stesse strutture usate da un compilatore per analizzare il codice e generare l'output compilato. Nel corso di questa esercitazione si noterà una certa similarità tra gli alberi delle espressioni e i tipi usati nelle API di Roslyn per compilare [analizzatori e correzioni di codice](https://github.com/dotnet/roslyn-analyzers).
 Gli analizzatori e le correzioni di codice sono pacchetti NuGet che eseguono l'analisi statica sul codice e possono suggerire potenziali correzioni agli sviluppatori. I concetti sono simili e il risultato finale è una struttura dei dati che consente di esaminare il codice sorgente in modo significativo. Gli alberi delle espressioni si basano tuttavia su un set di classi e API completamente diverso dalle API di Roslyn.
-    
+
 Si osservi l'esempio seguente.
 Ecco una riga di codice:
+
 ```csharp
 var sum = 1 + 2;
 ```
@@ -31,16 +32,17 @@ L'espressione è `1 + 2`. Si tratta di un'espressione binaria. Nello specifico, 
 A livello visivo, l'intera istruzione è una struttura ad albero: è possibile iniziare dal nodo radice e passare a ogni nodo nell'albero per visualizzare il codice che costituisce l'istruzione:
 
 - Istruzione di dichiarazione di variabili con assegnazione (`var sum = 1 + 2;`)
-    * Dichiarazione di variabili implicite (`var sum`)
-        - Parola chiave di variabile implicita (`var`)
-        - Dichiarazione del nome di variabile (`sum`)
-    * Operatore di assegnazione (`=`)
-    * Espressione di addizione binaria (`1 + 2`)
-        - Operando sinistro (`1`)
-        - Operatore di addizione (`+`)
-        - Operando destro (`2`)
+  * Dichiarazione di variabili implicite (`var sum`)
+    - Parola chiave di variabile implicita (`var`)
+    - Dichiarazione del nome di variabile (`sum`)
+  * Operatore di assegnazione (`=`)
+  * Espressione di addizione binaria (`1 + 2`)
+    - Operando sinistro (`1`)
+    - Operatore di addizione (`+`)
+    - Operando destro (`2`)
 
 Tutto ciò può apparire complicato, ma è molto funzionale. Seguendo la stessa procedura, è possibile scomporre espressioni molto più complesse. Si consideri l'espressione seguente:
+
 ```csharp
 var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
@@ -64,6 +66,6 @@ i nomi dei metodi e delle proprietà e il valore di qualsiasi espressione costan
 
 Le API degli alberi delle espressioni consentono di creare strutture che rappresentano praticamente qualsiasi costrutto di codice valido. Tuttavia, per evitare complicazioni eccessive, in un albero delle espressioni non è possibile creare alcuni idiomi di C#. Ne sono esempi le espressioni asincrone che usano le delle parole chiave `async` e `await`. Se sono necessari gli algoritmi asincroni, modificare direttamente gli oggetti `Task` invece di affidarsi al supporto del compilatore. Un altro metodo è la creazione dei cicli. In genere, i cicli vengono creati usando i cicli `for`, `foreach`, `while` o `do`. Come si vedrà [più avanti in questa serie](expression-trees-building.md), le API degli alberi delle espressioni supportano una singola espressione Loop, con le espressioni `break` e `continue` che controllano il ciclo di ripetizione.
 
-Non è possibile modificare un albero delle espressioni.  Sono infatti strutture dei dati immutabili. Se si vuole modificare un albero delle espressioni, è necessario creare un nuovo albero che sia una copia dell'originale e che contenga le modifiche desiderate. 
+Non è possibile modificare un albero delle espressioni.  Sono infatti strutture dei dati immutabili. Se si vuole modificare un albero delle espressioni, è necessario creare un nuovo albero che sia una copia dell'originale e che contenga le modifiche desiderate.
 
 [Successivo -- Tipi di framework che supportano alberi delle espressioni](expression-classes.md)

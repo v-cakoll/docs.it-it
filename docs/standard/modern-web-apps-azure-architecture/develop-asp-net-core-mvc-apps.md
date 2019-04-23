@@ -4,12 +4,12 @@ description: Progettare applicazioni Web moderne con ASP.NET Core e Azure | Svil
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128388"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Sviluppare app ASP.NET Core MVC
 
@@ -321,7 +321,7 @@ Per altre informazioni sull'implementazione di filtri e per scaricare un esempio
 >   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtri**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN - Real World ASP.NET Core MVC Filters (MSDN - Filtri reali di ASP.NET Core MVC)**  
+> - **MSDN - Filtri MVC di ASP.NET Core reali**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Sicurezza
@@ -426,14 +426,13 @@ La maggior parte delle API Web deve implementare un sistema di autenticazione ba
 
 Prestare particolare attenzione alle implementazioni personalizzate della crittografia, dell'appartenenza degli utenti o del sistema di generazione di token. Esistono molte alternative commerciali e open source che nella maggior parte dei casi offrono una sicurezza migliore rispetto a quella di un'implementazione personalizzata.
 
-
 > ### <a name="references--security"></a>Riferimenti - Sicurezza
 >
 > - **Panoramica della documentazione sulla sicurezza**  
 >   https://docs.microsoft.com/aspnet/core/security/
 > - **Applicazione di SSL in un'app ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
-> - **Introduzione a Identity**  
+> - **Introduzione all'identità**  
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Introduzione alle autorizzazioni**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
@@ -551,7 +550,7 @@ Un approccio ibrido potrebbe essere quello di usare la progettazione DDD solo pe
 
 > ### <a name="references--domain-driven-design"></a>Riferimenti - Progettazione basata su domini (DDD)
 >
-> - **DDD in Plain English (StackOverflow Answer)** (Progettazione basata su domini (risposta StackOverflow))  
+> - **DDD in Plain English (StackOverflow Answer) (Progettazione basata su domini - Risposta StackOverflow)**  
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Distribuzione
@@ -600,7 +599,7 @@ _Per altre informazioni sulle opzioni di distribuzione di Azure, vedere il [capi
 >   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Ospitare app ASP.NET Core in Docker**  
 >   <https://docs.microsoft.com/aspnet/core/publishing/docker>
-> - **Introduzione al gateway applicazione di Azure**  
+> - **Introduzione al gateway applicazione Azure**  
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]

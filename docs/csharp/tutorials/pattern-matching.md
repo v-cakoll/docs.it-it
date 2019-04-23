@@ -3,12 +3,12 @@ title: Usare funzionalità di criteri di ricerca per estendere i tipi di dati
 description: Questa esercitazione avanzata illustra come usare le tecniche dei criteri di ricerca per creare funzionalità con dati e algoritmi creati separatamente.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262518"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308601"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
 
@@ -23,7 +23,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore di anteprima di C# 8.0. Il compilatore di anteprima di C# 8 è disponibile con l'[anteprima di Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) più recente o con l'[anteprima di .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) più recente.
+Sarà necessario configurare il computer per l'esecuzione di .NET Core, incluso il compilatore di anteprima di C# 8.0. Il compilatore di anteprima di C# 8 è disponibile con la versione più recente di [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o con l'[anteprima di .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) più recente.
 
 Per questa esercitazione si presuppone che l'utente abbia familiarità con C# e .NET, inclusa l'interfaccia della riga di comando di .NET Core o Visual Studio.
 

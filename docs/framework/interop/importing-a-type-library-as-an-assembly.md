@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151268"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importazione di una libreria dei tipi come assembly
 In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al contrario, i compilatori conformi a CLS producono metadati dei tipi in un assembly. Le due origini delle informazioni sui tipi sono piuttosto diverse. Questo argomento descrive le tecniche per la generazione di metadati da una libreria dei tipi. L'assembly risultante è definito un assembly di interoperabilità e le informazioni sui tipi che contiene permettono alle applicazioni .NET Framework di usare tipi COM.  
@@ -50,7 +50,7 @@ In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al
   
      L'utilità di importazione della libreria dei tipi offre opzioni della riga di comando per modificare i metadati nel file di interoperabilità risultante, importare tipi da una libreria dei tipi esistente e generare un assembly di interoperabilità e uno spazio dei nomi. Per istruzioni, vedere [Procedura: Generare assembly di interoperabilità da librerie dei tipi](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   Classe <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> classe  
   
      Questa classe fornisce i metodi per convertire coclassi e interfacce in una libreria dei tipi in metadati in un assembly. La classe produce gli stessi metadati restituiti da Tlbimp.exe. Tuttavia, diversamente da Tlbimp.exe, la classe <xref:System.Runtime.InteropServices.TypeLibConverter> può convertire in metadati una libreria dei tipi in memoria.  
   
@@ -71,6 +71,7 @@ In genere, le definizioni dei tipi COM sono incluse in una libreria dei tipi. Al
  Per altre informazioni sui processi di importazione di interoperabilità COM, vedere [Riepilogo della conversione da libreria dei tipi ad assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).  
   
 ## <a name="see-also"></a>Vedere anche
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
 - [Riepilogo della conversione da libreria dei tipi ad assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

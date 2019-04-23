@@ -3,12 +3,12 @@ title: Interpretazione di espressioni
 description: Informazioni su come scrivere codice per esaminare la struttura di un albero delle espressioni.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211244"
 ---
 # <a name="interpreting-expressions"></a>Interpretazione di espressioni
 
@@ -355,7 +355,6 @@ Expression<Func<int, int>> factorial = (n) =>
 
 Questo codice rappresenta una possibile implementazione per funzione matematica *fattoriale*. Il modo in cui è stato scritto questo codice consente di evidenziare due limitazioni della creazione degli alberi delle espressioni tramite l'assegnazione di espressioni lambda alle espressioni. In primo luogo, non sono consentite espressioni lambda dell'istruzione. Non è quindi possibile usare cicli, blocchi, istruzioni if / else e altre strutture di controllo comuni in C#. Si è limitati all'uso delle espressioni. In secondo luogo, non è possibile chiamare in modo ricorsivo la stessa espressione.
 Ciò sarebbe possibile se fosse già un delegato, ma non può essere chiamata nella sua forma di albero delle espressioni. Nella sezione relativa alla [creazione di alberi delle espressioni](expression-trees-building.md) verranno illustrate le tecniche per superare queste limitazioni.
-
 
 In questa espressione si incontrano i nodi di tutti questi tipi:
 1. Uguale (espressione binaria)

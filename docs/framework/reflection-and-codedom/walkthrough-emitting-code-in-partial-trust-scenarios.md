@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299475"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
@@ -59,12 +59,12 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>Per creare un dominio dell'applicazione con attendibilità parziale  
   
-1.  Creare un set di autorizzazioni da concedere agli assembly nel dominio dell'applicazione sandbox. In questo caso viene usato il set di autorizzazioni dell'area Internet.  
+1. Creare un set di autorizzazioni da concedere agli assembly nel dominio dell'applicazione sandbox. In questo caso viene usato il set di autorizzazioni dell'area Internet.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  Creare un oggetto <xref:System.AppDomainSetup> per inizializzare il dominio dell'applicazione con un percorso dell'applicazione.  
+2. Creare un oggetto <xref:System.AppDomainSetup> per inizializzare il dominio dell'applicazione con un percorso dell'applicazione.  
   
     > [!IMPORTANT]
     >  Per semplicità, questo esempio di codice usa la cartella corrente. Per eseguire codice realmente proveniente da Internet, usare una cartella separata per il codice non attendibile, come descritto nella [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
@@ -72,7 +72,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  Creare il dominio dell'applicazione, specificando le informazioni di configurazione del dominio dell'applicazione e il set di concessioni per tutti gli assembly eseguiti nel dominio dell'applicazione.  
+3. Creare il dominio dell'applicazione, specificando le informazioni di configurazione del dominio dell'applicazione e il set di concessioni per tutti gli assembly eseguiti nel dominio dell'applicazione.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Per creare un dominio dell'applicazione con attendibilità parziale più RMA  
   
-1.  Creare un nuovo oggetto <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) e usare il metodo <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> per aggiungere l'autorizzazione al set di concessioni.  
+1. Creare un nuovo oggetto <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) e usare il metodo <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> per aggiungere l'autorizzazione al set di concessioni.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
     > [!NOTE]
     >  RMA è una funzionalità dei metodi dinamici ospitati in modo anonimo. Quando i metodi dinamici comuni ignorano i controlli di visibilità JIT, il codice generato richiede l'attendibilità totale.  
   
-2.  Creare il dominio dell'applicazione, specificando le informazioni di configurazione del dominio dell'applicazione e il set di concessioni.  
+2. Creare il dominio dell'applicazione, specificando le informazioni di configurazione del dominio dell'applicazione e il set di concessioni.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>Per definire ed eseguire un metodo in un dominio dell'applicazione  
   
-1.  Definire una classe che deriva da <xref:System.MarshalByRefObject>. Ciò consente di creare istanze della classe in altri domini dell'applicazione e di effettuare chiamate al metodo tra i limiti del dominio dell'applicazione. La classe di questo esempio è denominata `Worker`.  
+1. Definire una classe che deriva da <xref:System.MarshalByRefObject>. Ciò consente di creare istanze della classe in altri domini dell'applicazione e di effettuare chiamate al metodo tra i limiti del dominio dell'applicazione. La classe di questo esempio è denominata `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  Definire un metodo pubblico che contenga il codice da eseguire. In questo esempio, il codice genera un metodo dinamico semplice, crea un delegato per eseguire il metodo e richiama il delegato.  
+2. Definire un metodo pubblico che contenga il codice da eseguire. In questo esempio, il codice genera un metodo dinamico semplice, crea un delegato per eseguire il metodo e richiama il delegato.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  Nel programma principale ottenere il nome visualizzato dell'assembly. Questo nome viene usato quando si creano istanze della classe `Worker` nel dominio dell'applicazione sandbox.  
+3. Nel programma principale ottenere il nome visualizzato dell'assembly. Questo nome viene usato quando si creano istanze della classe `Worker` nel dominio dell'applicazione sandbox.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  Nel programma principale creare un dominio dell'applicazione sandbox, come descritto nella [prima procedura](#Setting_up) in questa procedura dettagliata. Non è necessario aggiungere autorizzazioni al set di autorizzazioni `Internet`, poiché il metodo `SimpleEmitDemo` usa solo metodi pubblici.  
+4. Nel programma principale creare un dominio dell'applicazione sandbox, come descritto nella [prima procedura](#Setting_up) in questa procedura dettagliata. Non è necessario aggiungere autorizzazioni al set di autorizzazioni `Internet`, poiché il metodo `SimpleEmitDemo` usa solo metodi pubblici.  
   
-5.  Nel programma principale creare un'istanza della classe `Worker` nel dominio dell'applicazione sandbox.  
+5. Nel programma principale creare un'istanza della classe `Worker` nel dominio dell'applicazione sandbox.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
     > [!NOTE]
     >  Se questo codice viene utilizzato in Visual Studio, è necessario modificare il nome della classe per includere lo spazio dei nomi. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
   
-6.  Aggiungere il codice per chiamare il metodo `SimpleEmitDemo` . La chiamata viene sottoposta a marshalling entro i limiti del dominio dell'applicazione e il codice viene eseguito nel dominio dell'applicazione sandbox.  
+6. Aggiungere il codice per chiamare il metodo `SimpleEmitDemo` . La chiamata viene sottoposta a marshalling entro i limiti del dominio dell'applicazione e il codice viene eseguito nel dominio dell'applicazione sandbox.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -169,7 +169,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     La limitazione consiste nel fatto che il metodo dinamico ospitato in modo anonimo può accedere ai dati privati solo negli assembly con livelli di attendibilità uguali o inferiori a quello dell'assembly di creazione. Ad esempio, se il metodo dinamico è in esecuzione con attendibilità Internet, può accedere ai dati privati in altri assembly in esecuzione con attendibilità Internet, ma non può accedere ai dati privati degli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Gli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sono installati nella Global Assembly Cache sono sempre completamente attendibili.  
+     La limitazione consiste nel fatto che il metodo dinamico ospitato in modo anonimo può accedere ai dati privati solo negli assembly con livelli di attendibilità uguali o inferiori a quello dell'assembly di creazione. Ad esempio, se il metodo dinamico è in esecuzione con attendibilità Internet, può accedere ai dati privati in altri assembly in esecuzione con attendibilità Internet, ma non può accedere ai dati privati degli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Gli assembly .NET Framework sono installati nella Global Assembly Cache e sono sempre completamente attendibili.  
   
      I metodi dinamici ospitati in modo anonimo possono usare questa possibilità limitata di ignorare i controlli di visibilità JIT solo se l'applicazione host concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. La richiesta di questa autorizzazione viene effettuata quando viene richiamato il metodo.  
   
@@ -212,5 +212,6 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 -   Se si compila questo esempio di codice in Visual Studio, è necessario modificare il nome della classe in modo che includa lo spazio dei nomi quando si passa la classe al metodo <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Per impostazione predefinita, lo spazio dei nomi è il nome del progetto. Ad esempio, se il progetto è "PartialTrust", il nome della classe deve essere "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

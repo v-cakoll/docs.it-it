@@ -3,12 +3,12 @@ title: Modelli comuni per i delegati
 description: Informazioni sui modelli comuni per l'uso dei delegati nel codice per evitare l'accoppiamento forte tra i componenti.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095698"
 ---
 # <a name="common-patterns-for-delegates"></a>Modelli comuni per i delegati
 
@@ -99,7 +99,6 @@ Il logger basato su file è il seguente:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-
 Dopo aver creato questa classe, è possibile crearne un'istanza che associa il relativo metodo LogMessage al componente Logger:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
@@ -154,4 +153,4 @@ Sono state descritte le prime fasi di un componente di log che può essere espan
 
 La classe Logger può apportare qualsiasi numero di miglioramenti o modifiche senza causare modifiche sostanziali. Come qualsiasi altra classe, non è possibile modificare l'API pubblica senza il rischio di modifiche di rilievo. Tuttavia, poiché l'accoppiamento tra il logger e i moduli di output avviene solo tramite il delegato, non vengono usati altri tipi, ad esempio interfacce o classi base. L'accoppiamento è ridotto al minimo.
 
-[avanti](events-overview.md)
+[Successivo](events-overview.md)

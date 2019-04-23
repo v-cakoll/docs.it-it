@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208124"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analisi di stringhe di data e ora in .NET
 
@@ -32,7 +32,6 @@ L'analisi delle stringhe per convertirle in oggetti <xref:System.DateTime> richi
 1. È possibile specificare come impostare nella data e ora i componenti mancanti nella rappresentazione di testo.
 
 I metodi <xref:System.DateTime.Parse%2A> e <xref:System.DateTime.TryParse%2A> consentono di convertire molte rappresentazioni comuni di data e ora. I metodi <xref:System.DateTime.ParseExact%2A> e <xref:System.DateTime.TryParseExact%2A> convertono una rappresentazione di stringa conforme al criterio specificato da una stringa di formato di data e ora. Per altri dettagli, vedere gli articoli relativi alle [stringhe di formato di data e ora standard](standard-date-and-time-format-strings.md) e alle [stringhe di formato di data e ora personalizzato](custom-date-and-time-format-strings.md).
-
 
 L'oggetto <xref:System.Globalization.DateTimeFormatInfo> corrente consente un maggiore controllo sulla modalità di interpretazione del testo come data e ora. Le proprietà di un oggetto <xref:System.Globalization.DateTimeFormatInfo> descrivono i separatori di data e ora, i nomi di mesi, giorni ed ere, nonché il formato per gli indicatori "AM" e "PM". Le impostazioni cultura del thread corrente forniscono un oggetto <xref:System.Globalization.DateTimeFormatInfo> che rappresenta le impostazioni cultura correnti. Se si vogliono usare impostazioni cultura specifiche o impostazioni personalizzate, specificare il parametro <xref:System.IFormatProvider> di un metodo di analisi. Per il parametro <xref:System.IFormatProvider>, specificare un oggetto <xref:System.Globalization.CultureInfo>, che rappresenta determinate impostazioni cultura o un oggetto <xref:System.Globalization.DateTimeFormatInfo>.
 
@@ -89,7 +88,7 @@ Ogni overload dei metodi <xref:System.DateTime.Parse%2A> e <xref:System.DateTime
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Parsing Strings](parsing-strings.md)
+- [Analisi di stringhe](parsing-strings.md)
 - [Formattazione di tipi](formatting-types.md)
 - [Conversione di tipi in .NET](type-conversion.md)
 - [Formati di data e ora standard](standard-date-and-time-format-strings.md)

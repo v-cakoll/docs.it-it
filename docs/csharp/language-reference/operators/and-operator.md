@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: a799c0e37d6607e8ff72ab984ff5e540a4e11063
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236375"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310044"
 ---
 # <a name="amp-operator-c-reference"></a>Operatore &amp; (Riferimenti per C#)
 
@@ -46,9 +46,9 @@ L'operatore `&` valuta entrambi gli operandi anche se il primo operando restitui
 
 [!code-csharp-interactive[bool logical AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#BooleanOperands)]
 
-L'[operatore AND condizionale](conditional-and-operator.md) `&&` calcola l'AND logico dei relativi operandi, ma valuta il secondo operando solo se il primo operando restituisce `true`.
+L'[operatore AND condizionale](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` calcola anche l'AND logico dei relativi operandi, ma non valuta il secondo operando se il primo operando restituisce `false`.
 
-Per gli operandi bool nullable, il comportamento dell'operatore `&` è coerente con la logica a tre valori di SQL. Per altre informazioni, vedere la sezione [Tipo bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) dell'articolo [Uso dei tipi nullable](../../programming-guide/nullable-types/using-nullable-types.md).
+Per gli operandi bool nullable, il comportamento dell'operatore `&` è coerente con la logica a tre valori di SQL. Per altre informazioni, vedere la sezione [Operatori logici booleani nullable](boolean-logical-operators.md#nullable-boolean-logical-operators) dell'articolo [Operatori logici booleani](boolean-logical-operators.md).
 
 ## <a name="operator-overloadability"></a>Overload degli operatori
 
@@ -62,9 +62,9 @@ Per altre informazioni, vedere le sezioni [Operatore address-of](~/_csharplang/s
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Operatori C#](index.md)
-- [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Operatori [C#]](index.md)
+- [Operatori logici booleani](boolean-logical-operators.md)
+- [Tipi puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Operatore |](or-operator.md)
 - [Operatore ^](xor-operator.md)
 - [Operatore ~](bitwise-complement-operator.md)
-- [Operatore &&](conditional-and-operator.md)

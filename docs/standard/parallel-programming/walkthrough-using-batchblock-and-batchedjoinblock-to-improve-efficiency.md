@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302978"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Procedura dettagliata: uso di BatchBlock e BatchedJoinBlock per migliorare l'efficienza
 La libreria del flusso di dati TPL fornisce le classi <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> che consentono di ricevere e memorizzare nel buffer i dati di una o più origini e quindi propagare tali dati come unica raccolta. Questo meccanismo di invio in batch è utile quando si raccolgono dati da una o più origini e quindi si elaborano più elementi dati come batch. Ad esempio, si consideri un'applicazione che usa un flusso di dati per inserire record in un database. Questa operazione può essere più efficiente se nello stesso momento vengono inseriti più elementi anziché uno alla volta, in modo sequenziale. Questo documento descrive come usare la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> per migliorare l'efficienza di tali operazioni di inserimento nel database. Descrive anche come usare la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> per acquisire sia i risultati che le eventuali eccezioni che si verificano durante la lettura da database da parte del programma.
@@ -25,9 +25,9 @@ La libreria del flusso di dati TPL fornisce le classi <xref:System.Threading.Tas
 
 ## <a name="prerequisites"></a>Prerequisiti  
   
-1.  Prima di iniziare questa procedura dettagliata, leggere la sezione sui blocchi join nel documento [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
+1. Prima di iniziare questa procedura dettagliata, leggere la sezione sui blocchi join nel documento [Flusso di dati](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
   
-2.  Verificare di avere una copia del database Northwind, Northwind.sdf, disponibile nel computer. Questo file si trova in genere nella cartella %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
+2. Verificare di avere una copia del database Northwind, Northwind.sdf, disponibile nel computer. Questo file si trova in genere nella cartella %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
     >  In alcune versioni di Windows non è possibile connettersi a Northwind.sdf se Visual Studio è in esecuzione in modalità senza privilegi di amministratore. Per connettersi a Northwind.sdf, avviare Visual Studio o un Prompt dei comandi per gli sviluppatori per Visual Studio in modalità **Esegui come amministratore**.  
@@ -52,16 +52,16 @@ La libreria del flusso di dati TPL fornisce le classi <xref:System.Threading.Tas
 ## <a name="creating-the-console-application"></a>Creazione dell'applicazione console  
   
 <a name="consoleApp"></a>   
-1.  In Visual Studio creare un progetto **Applicazione console** di Visual C# o Visual Basic. In questo documento, il progetto viene denominato `DataflowBatchDatabase`.  
+1. In Visual Studio creare un progetto **Applicazione console** di Visual C# o Visual Basic. In questo documento, il progetto viene denominato `DataflowBatchDatabase`.  
   
-2.  Nel progetto aggiungere un riferimento a System.Data.SqlServerCe.dll e un riferimento a System.Threading.Tasks.Dataflow.dll.  
+2. Nel progetto aggiungere un riferimento a System.Data.SqlServerCe.dll e un riferimento a System.Threading.Tasks.Dataflow.dll.  
   
-3.  Assicurarsi che in Form1.cs (Form1.vb per Visual Basic) siano contenute le seguenti istruzioni `using` (`Imports` in Visual Basic).  
+3. Assicurarsi che in Form1.cs (Form1.vb per Visual Basic) siano contenute le seguenti istruzioni `using` (`Imports` in Visual Basic).  
   
      [!code-csharp[TPLDataflow_BatchDatabase#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#1)]
      [!code-vb[TPLDataflow_BatchDatabase#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#1)]  
   
-4.  Aggiungere i membri dei dati seguenti alla classe `Program`.  
+4. Aggiungere i membri dei dati seguenti alla classe `Program`.  
   
      [!code-csharp[TPLDataflow_BatchDatabase#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#2)]
      [!code-vb[TPLDataflow_BatchDatabase#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#2)]  

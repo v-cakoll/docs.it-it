@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5eeef28f9a1d81ffa6328bfa5f2a8ed5295b47aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163423"
 ---
 # <a name="net-core-and-open-source"></a>Componenti di base e open-source di .NET
 Questo argomento fornisce una breve descrizione di .NET Core e illustra come trovare altre informazioni. Per l'elenco completo degli argomenti relativi a .NET Core, vedere la [Guida a .NET Core](../../core/index.md).
@@ -35,17 +35,18 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
   
 -   [.NET Core](https://github.com/dotnet/core)  
   
--   [CoreFX - .NET Core foundational libraries](https://github.com/dotnet/corefx) (CoreFX - Librerie di base di .NET Core)  
+-   [CoreFX - .NET Core foundational libraries (CoreFX - Librerie di base di .NET Core)](https://github.com/dotnet/corefx)  
   
--   [CoreCLR - .NET Core runtime](https://github.com/dotnet/coreclr) (CoreCLR - Runtime di .NET Core)  
+-   [CoreCLR - .NET Core runtime (CoreCLR - Runtime di .NET Core)](https://github.com/dotnet/coreclr)  
   
--   [CLI - .NET Core command-line tools](https://github.com/dotnet/cli) (CLI - Strumenti della riga di comando di .NET Core)  
+-   [CLI - .NET Core command-line tools (CLI - Strumenti della riga di comando di .NET Core)](https://github.com/dotnet/cli)  
   
--   [Roslyn - .NET Compiler Platform](https://github.com/dotnet/roslyn) (Roslyn - Piattaforma del compilatore .NET)  
+-   [Roslyn - .NET Compiler Platform (Roslyn - Piattaforma del compilatore .NET)](https://github.com/dotnet/roslyn)  
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Home page di .NET Core](https://www.microsoft.com/net/core)
 - [Guida a .NET Core](../../core/index.md)
 - [Documentazione di ASP.NET Core](/aspnet/core/)

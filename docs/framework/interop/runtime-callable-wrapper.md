@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654133"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210136"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper
 Common Language Runtime espone gli oggetti COM tramite un proxy denominato Runtime Callable Wrapper (RCW). Benché l'RCW appaia ai client .NET come un normale oggetto, la sua funzione principale consiste nell'effettuare il marshalling tra un client .NET e un oggetto COM.  
@@ -25,8 +25,7 @@ Common Language Runtime espone gli oggetti COM tramite un proxy denominato Runti
 La figura seguente illustra il processo per accedere a oggetti COM tramite Runtime Callable Wrapper:
 
  ![Processo per accedere a oggetti COM tramite RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  Usando i metadati derivati da una libreria dei tipi, il runtime crea sia l'oggetto COM che si sta chiamando che il relativo wrapper. Ogni RCW mantiene una cache dei puntatori a interfaccia impostati sull'oggetto COM di cui effettua il wrapping e rilascia i riferimenti all'oggetto COM quando l'RCW non è più necessario. Il runtime esegue la procedura di Garbage Collection sull'RCW.  
   
  Tra le altre attività, l'RCW effettua il marshalling dei dati trasferiti tra il codice gestito e quello non gestito, per conto dell'oggetto di cui effettua il wrapping. In particolare, l'RCW effettua il marshalling degli argomenti e dei valori restituiti dei metodi ogni volta che il client e il server adottano rappresentazioni diverse dei dati scambiati.  
@@ -46,7 +45,7 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
   
 |Interfaccia|Description|  
 |---------------|-----------------|  
-|**IDispatch**|Per l'associazione tardiva a oggetti COM tramite reflection.|  
+|**Idispatch**|Per l'associazione tardiva a oggetti COM tramite reflection.|  
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|  
 |**IProvideClassInfo**|Se l'oggetto COM di cui si esegue il wrapping implementa **IProvideClassInfo**, l'oggetto RCW estrarrà le informazioni sul tipo da questa interfaccia per definire meglio l'identità del tipo.|  
 |**IUnknown**|Per l'identità del tipo, la coercizione dei tipi e la gestione della durata:<br /><br /> - Identità degli oggetti<br />     Il runtime distingue tra gli oggetti COM confrontando il valore dell'interfaccia **IUnknown** di ciascun oggetto.<br />- Coercizione dei tipi<br />     L'oggetto RCW riconosce l'individuazione dei tipi dinamica eseguita dal metodo **QueryInterface**.<br />- Gestione del ciclo di vita<br />     Usando il metodo **QueryInterface**, l'oggetto RCW ottiene e mantiene un riferimento a un oggetto non gestito fino a quando il runtime non esegue una procedura di Garbage Collection sul wrapper, rilasciando l'oggetto non gestito.|  
@@ -60,6 +59,7 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
 |**IEnumVARIANT**|Consente di trattare come raccolte i tipi COM che supportano l'enumerazione.|  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Wrapper COM](com-wrappers.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)
 - [Riepilogo della conversione da libreria dei tipi ad assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

@@ -8,20 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: f6d7c3b3e57b236007ac267dfa8cf7aba1da1d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1ee9dc731f3cb96bd40935b94113c7c2aa91ff4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183196"
 ---
 # <a name="default-c-reference"></a>default (Riferimenti per C#)
 
-È possibile usare la parola chiave `default` nell'istruzione `switch` o in un'espressione con valore predefinito:
-
-- [L'istruzione switch](switch.md): specifica il cursore predefinito.
-
-- [Espressioni con valore predefinito](../../programming-guide/statements-expressions-operators/default-value-expressions.md): produce il valore predefinito di un tipo.
+La parola chiave `default` può essere usata in due modi:
+- L'[istruzione `switch`](switch.md) per specificare l'etichetta predefinita.
+- Un'[espressione con valore predefinito](../../programming-guide/statements-expressions-operators/default-value-expressions.md) per produrre il valore predefinito di un tipo.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294419"
 ---
 # <a name="if-else-c-reference"></a>if-else (Riferimenti per C#)
 
@@ -82,7 +82,7 @@ L'esempio seguente determina se un carattere di input è una lettera minuscola, 
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Come per un'istruzione nel blocco else o nel blocco then è possibile usare qualsiasi istruzione valida, allo stesso modo per la condizione è possibile usare qualsiasi espressione booleana valida. È possibile usare operatori logici quali [&&](../operators/conditional-and-operator.md), [&](../operators/and-operator.md), [&#124;&#124;](../operators/conditional-or-operator.md), [&#124;](../operators/or-operator.md) e [!](../operators/logical-negation-operator.md) . Il codice seguente illustra alcuni esempi.
+Come per un'istruzione nel blocco else o nel blocco then è possibile usare qualsiasi istruzione valida, allo stesso modo per la condizione è possibile usare qualsiasi espressione booleana valida. Per creare le condizioni composte è possibile usare gli [operatori logici](../operators/boolean-logical-operators.md), come `!`, `&&`, `||`, `&`, `|` e `^`. Il codice seguente illustra alcuni esempi.
 
 ```csharp
 // NOT
@@ -140,6 +140,6 @@ if (!(m >= n || m >= p))
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [?: (operatore)](../operators/conditional-operator.md)
+- [?: Operatore](../operators/conditional-operator.md)
 - [Istruzione if-else (C++)](/cpp/cpp/if-else-statement-cpp)
 - [switch](switch.md)

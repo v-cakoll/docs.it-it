@@ -2,12 +2,12 @@
 title: Annullare un'attività asincrona o un elenco di attività (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 27c14a4cc67d9f7e26f053b417d36c8de4bf594a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 01557bf80f40d4197d29ab05cfb4838f5d993a82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295744"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Annullare un'attività asincrona o un elenco di attività (C#)
 
@@ -24,17 +24,17 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 ### <a name="download-the-example"></a>Scaricare l'esempio
 
-È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.
+È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.
 
-1.  Decomprimere il file scaricato e quindi avviare Visual Studio.
+1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2.  Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
 
-3.  Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
+3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
-4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelATask** e scegliere **Imposta come progetto di avvio**.
+4. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelATask** e scegliere **Imposta come progetto di avvio**.
 
-5.  Premere **F5** per eseguire il progetto (oppure **CTRL**+**F5** per eseguire il progetto senza il debug).
+5. Premere **F5** per eseguire il progetto (oppure **CTRL**+**F5** per eseguire il progetto senza il debug).
 
 > [!TIP]
 > Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.xaml.cs alla fine di questo argomento.
@@ -46,7 +46,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
  Aggiungere quindi le modifiche seguenti al file MainWindow.xaml.cs di tale progetto.
 
-1.  Dichiarare una variabile `CancellationTokenSource`, `cts`, che sia nell'ambito di accesso di tutti i metodi.
+1. Dichiarare una variabile `CancellationTokenSource`, `cts`, che sia nell'ambito di accesso di tutti i metodi.
 
     ```csharp
     public partial class MainWindow : Window
@@ -55,7 +55,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
         CancellationTokenSource cts;
     ```
 
-2.  Aggiungere il gestore eventi seguente per il pulsante **Annulla**. Il gestore dell'evento usa il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> per inviare notifica a `cts` quando l'utente richiede l'annullamento.
+2. Aggiungere il gestore eventi seguente per il pulsante **Annulla**. Il gestore dell'evento usa il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> per inviare notifica a `cts` quando l'utente richiede l'annullamento.
 
     ```csharp
     // ***Add an event handler for the Cancel button.
@@ -68,7 +68,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
     }
     ```
 
-3.  Apportare le modifiche seguenti nel gestore eventi per il pulsante **Avvio**, `startButton_Click`.
+3. Apportare le modifiche seguenti nel gestore eventi per il pulsante **Avvio**, `startButton_Click`.
 
     -   Creare un'istanza di `CancellationTokenSource`, `cts`.
 
@@ -97,7 +97,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
         }
         ```
 
-4.  In `AccessTheWebAsync` usare l'overload <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> del metodo `GetAsync` nel tipo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web. Passare `ct`, il parametro <xref:System.Threading.CancellationToken> di `AccessTheWebAsync`, come secondo argomento. Il token trasporta il messaggio se l'utente sceglie il pulsante **Annulla**.
+4. In `AccessTheWebAsync` usare l'overload <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> del metodo `GetAsync` nel tipo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web. Passare `ct`, il parametro <xref:System.Threading.CancellationToken> di `AccessTheWebAsync`, come secondo argomento. Il token trasporta il messaggio se l'utente sceglie il pulsante **Annulla**.
 
      Il codice seguente illustra tutte le modifiche in `AccessTheWebAsync`.
 
@@ -124,7 +124,7 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
     }
     ```
 
-5.  Se non si annulla il programma, viene prodotto l'output seguente.
+5. Se non si annulla il programma, viene prodotto l'output seguente.
 
     ```text
     Ready to download.
@@ -144,17 +144,17 @@ Il primo esempio associa il pulsante **Annulla** con un'attività di download si
 
 ### <a name="download-the-example"></a>Scaricare l'esempio
 
-È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.
+È possibile scaricare i progetti completi di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: ottimizzazione dell'applicazione) e quindi seguire questa procedura.
 
-1.  Decomprimere il file scaricato e quindi avviare Visual Studio.
+1. Decomprimere il file scaricato e quindi avviare Visual Studio.
 
-2.  Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
+2. Nella barra dei menu scegliere **File** > **Apri** > **Progetto/soluzione**.
 
-3.  Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
+3. Nella finestra di dialogo **Apri progetto** aprire la cartella che contiene il codice di esempio che è stato decompresso e aprire il file di soluzione (SLN) per AsyncFineTuningCS.
 
-4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAListOfTasks** e scegliere **Imposta come progetto di avvio**.
+4. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAListOfTasks** e scegliere **Imposta come progetto di avvio**.
 
-5.  Premere **F5** per eseguire il progetto.
+5. Premere **F5** per eseguire il progetto.
 
      Premere **CTRL**+**F5** per eseguire il progetto senza il debug.
 
@@ -164,7 +164,7 @@ Se non si vuole scaricare il progetto, è possibile rivedere i file MainWindow.x
 
 Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelATask** come **progetto di avvio**. Aggiungere le modifiche seguenti a tale progetto. Gli asterischi contrassegnano le modifiche nel programma.
 
-1.  Aggiungere un metodo per creare un elenco di indirizzi Web.
+1. Aggiungere un metodo per creare un elenco di indirizzi Web.
 
     ```csharp
     // ***Add a method that creates a list of web addresses.
@@ -184,14 +184,14 @@ Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Down
     }
     ```
 
-2.  Chiamare il metodo in `AccessTheWebAsync`.
+2. Chiamare il metodo in `AccessTheWebAsync`.
 
     ```csharp
     // ***Call SetUpURLList to make a list of web addresses.
     List<string> urlList = SetUpURLList();
     ```
 
-3.  Aggiungere il ciclo seguente in `AccessTheWebAsync` per elaborare gli indirizzi Web nell'elenco.
+3. Aggiungere il ciclo seguente in `AccessTheWebAsync` per elaborare gli indirizzi Web nell'elenco.
 
     ```csharp
     // ***Add a loop to process the list of web addresses.
@@ -210,7 +210,7 @@ Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Down
     }
     ```
 
-4.  Poiché `AccessTheWebAsync` visualizza le lunghezze, il metodo non deve restituire nessun valore. Rimuovere l'istruzione return e modificare il tipo restituito del metodo in <xref:System.Threading.Tasks.Task> anziché <xref:System.Threading.Tasks.Task%601>.
+4. Poiché `AccessTheWebAsync` visualizza le lunghezze, il metodo non deve restituire nessun valore. Rimuovere l'istruzione return e modificare il tipo restituito del metodo in <xref:System.Threading.Tasks.Task> anziché <xref:System.Threading.Tasks.Task%601>.
 
     ```csharp
     async Task AccessTheWebAsync(CancellationToken ct)
@@ -222,7 +222,7 @@ Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Down
     await AccessTheWebAsync(cts.Token);
     ```
 
-5.  Se non si annulla il programma, viene prodotto l'output seguente.
+5. Se non si annulla il programma, viene prodotto l'output seguente.
 
     ```text
     Length of the downloaded string: 35939.
@@ -258,7 +258,7 @@ Per estendere l'esempio passo a passo, seguire le istruzioni nella sezione "Down
 
 Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.
 
-È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: ottimizzazione dell'applicazione).
+È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione).
 
 ### <a name="example---cancel-a-task"></a>Esempio - Annullare un'attività
 
@@ -521,6 +521,6 @@ namespace CancelAListOfTasks
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Ottimizzazione dell'applicazione Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)
+- [Programmazione asincrona con Async e Await](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Ottimizzazione dell'applicazione asincrona (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [Async Sample: Fine Tuning Your Application (Esempio di codice asincrono: ottimizzazione dell'applicazione)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

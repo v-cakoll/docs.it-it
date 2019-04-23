@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfebe57cd10f10719abf02cb529dd0cf3bb3cc9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103012"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflection in .NET Framework per applicazioni Windows Store
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Framework è incluso un set di tipi e membri di reflection che possono essere utilizzati nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Questi tipi e membri sono disponibili nella versione completa di .NET Framework, nonché in [.NET per app di Windows Store](https://go.microsoft.com/fwlink/?LinkID=225700). In questo documento vengono illustrate le differenze principali tra questi e le relative controparti in .NET Framework 4 e versioni precedenti.  
@@ -25,7 +25,7 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Frame
 ## <a name="typeinfo-and-assembly-loading"></a>Caricamento di assembly e TypeInfo  
  Nella classe [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] di <xref:System.Reflection.TypeInfo> sono contenute alcune delle funzionalità della classe <xref:System.Type> di .NET Framework 4. Un oggetto <xref:System.Type> rappresenta un riferimento a una definizione di tipo, mentre un oggetto <xref:System.Reflection.TypeInfo> rappresenta la definizione del tipo stesso. Ciò consente di modificare gli oggetti <xref:System.Type> senza richiedere necessariamente al runtime di caricare l'assembly a cui fanno riferimento. L'acquisizione dell'oggetto <xref:System.Reflection.TypeInfo> associato comporta il caricamento dell'assembly.  
   
- Nell'oggetto <xref:System.Reflection.TypeInfo> sono contenuti molti dei membri disponibili nell'oggetto <xref:System.Type> e tramite molte delle proprietà di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] vengono restituite raccolte di oggetti <xref:System.Reflection.TypeInfo>. Per ottenere un oggetto <xref:System.Reflection.TypeInfo> da un oggetto <xref:System.Type>, utilizzare il metodo <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>.  
+ <xref:System.Reflection.TypeInfo> contiene molti dei membri disponibili nell'oggetto <xref:System.Type> e molte delle proprietà di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] restituiscono raccolte di oggetti <xref:System.Reflection.TypeInfo>. Per ottenere un oggetto <xref:System.Reflection.TypeInfo> da un oggetto <xref:System.Type>, utilizzare il metodo <xref:System.Reflection.IReflectableType.GetTypeInfo%2A>.  
   
 ## <a name="query-methods"></a>Metodi di query  
  In [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] utilizzare le proprietà di reflection tramite cui vengono restituite raccolte di oggetti <xref:System.Collections.Generic.IEnumerable%601> anziché i metodi mediante cui vengono restituite matrici. Nei contesti di reflection è possibile implementare l'attraversamento lazy di queste raccolte in caso di assembly o tipi di grandi dimensioni.  
@@ -42,5 +42,6 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Frame
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [.NET per app di Windows Store – API supportate](https://go.microsoft.com/fwlink/?LinkID=225700)
+- [.NET per app di Windows Store - API supportate](https://go.microsoft.com/fwlink/?LinkID=225700)

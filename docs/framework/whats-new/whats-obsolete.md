@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337279"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Elementi obsoleti nella libreria di classi .NET Framework
 .NET Framework cambia nel corso del tempo. In ogni nuova versione vengono aggiunti nuovi tipi e membri dei tipi che forniscono nuove funzionalità. Anche i tipi esistenti e i relativi membri cambiano nel tempo. Alcuni tipi, ad esempio, perdono di importanza in quanto la tecnologia che supportano viene sostituita da una nuova tecnologia, e alcuni metodi vengono sostituiti da altri più nuovi che sono più adatti o più completi in termini di funzionalità.  
@@ -42,9 +42,9 @@ ms.locfileid: "58018739"
   
  Si può scegliere di non ricompilare il codice esistente con una versione successiva di .NET Framework. È possibile invece specificare la versione di .NET Framework con la quale eseguire il codice compilato esistente. Si supponga ad esempio di avere un'applicazione denominata app1.exe, compilata con [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], e di voler eseguire l'applicazione in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. La procedura da adottare è la seguente:  
   
-1.  Creare un file di configurazione per l'eseguibile principale e denominarlo *NomeApp*.exe.config, dove *NomeApp* è il nome dell'eseguibile dell'applicazione. Nel caso dell'applicazione denominata app1.exe dell'esempio, il nome del file di configurazione da creare sarebbe app1.exe.config.  
+1. Creare un file di configurazione per l'eseguibile principale e denominarlo *NomeApp*.exe.config, dove *NomeApp* è il nome dell'eseguibile dell'applicazione. Nel caso dell'applicazione denominata app1.exe dell'esempio, il nome del file di configurazione da creare sarebbe app1.exe.config.  
   
-2.  Aggiungere il codice seguente al file di configurazione.  
+2. Aggiungere il codice seguente al file di configurazione.  
   
     ```xml  
     <configuration>  
@@ -56,7 +56,7 @@ ms.locfileid: "58018739"
   
  La tabella seguente elenca i valori di stringa che è possibile assegnare all'attributo `version` per scegliere come destinazione una versione di .NET Framework specifica.  
   
-|Versione di .NET Framework|Stringa `version`|
+|Versione di .NET Framework|`version` string|
 |-|-|  
 |4.7 (incluse 4.7.1 e 4.7.2)|v4.0|  
 |4.6 (incluse 4.6.1 e 4.6.2)|v4.0|  
@@ -82,4 +82,5 @@ ms.locfileid: "58018739"
  [Elenco degli elementi obsoleti di .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)

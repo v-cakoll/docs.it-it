@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186563"
 ---
 # <a name="setting-assembly-attributes"></a>Impostazione degli attributi dell'assembly
 Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Tali attributi sono suddivisi nei seguenti gruppi di informazioni:  
@@ -37,7 +37,7 @@ Gli attributi dell'assembly sono valori che forniscono informazioni relative a u
   
 |Attributi relativi all'identità dell'assembly|Description|  
 |---------------------------------|-----------------|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Campo elenco in cui vengono indicate le impostazioni cultura supportate dall'assembly. È possibile specificare anche l'indipendenza dalle impostazioni cultura per l'assembly, indicando che nell'assembly sono presenti le risorse per le impostazioni cultura predefinite. **Nota:**  Tutti gli assembly il cui attributo relativo alle impostazioni cultura non è impostato su null vengono considerati dal runtime come assembly satellite e sono soggetti alle regole di associazione degli assembly satellite. Per altre informazioni, vedere [Modalità di individuazione di assembly del runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Campo elenco in cui vengono indicate le impostazioni cultura supportate dall'assembly. È possibile specificare anche l'indipendenza dalle impostazioni cultura per l'assembly, indicando che nell'assembly sono presenti le risorse per le impostazioni cultura predefinite. **Nota:**  tutti gli assembly il cui attributo relativo alle impostazioni cultura non è impostato su null vengono considerati dal runtime come assembly satellite e sono soggetti alle regole di associazione degli assembly satellite. Per altre informazioni, vedere [Modalità di individuazione di assembly del runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valore che consente di impostare gli attributi relativi all'assembly, indicando ad esempio se è consentita l'esecuzione affiancata di più versioni.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|Valore numerico in formato *principale*.*secondario*.*build*.*revisione* (ad esempio, 2.4.0.0). Questo valore viene usato da Common Language Runtime per eseguire operazioni di associazione in assembly con nome sicuro. **Nota:**  Se l'attributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> non viene applicato a un assembly, il numero di versione specificato dall'attributo <xref:System.Reflection.AssemblyVersionAttribute> viene usato dalle proprietà  <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
   
@@ -55,7 +55,7 @@ Gli attributi dell'assembly sono valori che forniscono informazioni relative a u
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Valore stringa in cui viene specificato un nome di società.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Valore stringa in cui vengono specificate informazioni relative al copyright.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Valore stringa in cui viene specificato il numero di versione del file Win32. L'impostazione predefinita è solitamente la versione dell'assembly.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valore stringa in cui vengono specificate informazioni relative alla versione non usate da Common Language Runtime, quale il numero di versione del prodotto completo. **Nota:**  Se questo attributo viene applicato a un assembly, è possibile ottenere la stringa che specifica in fase di esecuzione tramite la proprietà <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. La stringa viene usata anche nel percorso e nella chiave del Registro di sistema specificati dalle proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Valore stringa in cui vengono specificate informazioni relative alla versione non usate da Common Language Runtime, quale il numero di versione del prodotto completo. **Nota:**  se questo attributo viene applicato a un assembly, è possibile ottenere la stringa che specifica in fase di esecuzione tramite la proprietà <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. La stringa viene usata anche nel percorso e nella chiave del Registro di sistema specificati dalle proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Valore stringa in cui vengono specificate informazioni relative al prodotto.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Valore stringa in cui vengono specificate informazioni relative al marchio registrato.|  
   
@@ -87,5 +87,6 @@ Gli attributi dell'assembly sono valori che forniscono informazioni relative a u
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Vedere anche
+
 - [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)
 - [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545819"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318975"
 ---
 # <a name="if-c-reference"></a>#if (Riferimenti per C#)
 
@@ -24,11 +24,11 @@ Quando il compilatore C# trova una direttiva `#if` seguita da una direttiva [#en
 #endif
 ```
 
-È possibile usare gli operatori [==](../operators/equality-operators.md#equality-operator-) (uguaglianza) e [!=](../operators/equality-operators.md#inequality-operator-) (disuguaglianza) solo per verificare se una condizione è [true](../keywords/true.md) o [false](../keywords/false.md). True significa che il simbolo è definito. L'istruzione `#if DEBUG` ha lo stesso significato di `#if (DEBUG == true)`. È possibile usare gli operatori [&&](../operators/conditional-and-operator.md) (and), [&#124;&#124;](../operators/conditional-or-operator.md) (or) e [!](../operators/logical-negation-operator.md) (not) per stabilire se sono stati definiti più simboli. È anche possibile raggruppare simboli e operatori tra parentesi.
+È possibile usare gli operatori [==](../operators/equality-operators.md#equality-operator-) (uguaglianza) e [!=](../operators/equality-operators.md#inequality-operator-) (disuguaglianza) solo per verificare se una condizione è [true](../keywords/true.md) o [false](../keywords/false.md). True significa che il simbolo è definito. L'istruzione `#if DEBUG` ha lo stesso significato di `#if (DEBUG == true)`. È possibile usare gli operatori [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (and), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (or) e [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) per stabilire se sono stati definiti più simboli. È anche possibile raggruppare simboli e operatori tra parentesi.
 
 ## <a name="remarks"></a>Osservazioni
 
-`#if`, nsieme alle direttive [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) e [#undef](preprocessor-undef.md), consente di includere o escludere il codice in base all'esistenza di uno o più simboli. Questo può essere utile quando si compila il codice per una build di debug o per una configurazione specifica.
+`#if`, insieme alle direttive [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) e [#undef](preprocessor-undef.md), consente di includere o escludere il codice in base all'esistenza di uno o più simboli. Questo può essere utile quando si compila il codice per una build di debug o per una configurazione specifica.
 
 Una direttiva condizionale che inizia con `#if` deve terminare in modo esplicito con una direttiva `#endif`.
 

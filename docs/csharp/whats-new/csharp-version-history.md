@@ -3,12 +3,12 @@ title: Cronologia di C# - Guida a C#
 description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione successiva.
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303362"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
 
@@ -20,11 +20,11 @@ Questo articolo include la cronologia di ogni versione principale del linguaggio
 Gli strumenti di compilazione per C# considerano la versione del linguaggio principale più recente la versione del linguaggio predefinita. Potrebbero esistere versioni intermedie tra le versioni principali, descritte in dettaglio in altri articoli in questa sezione. Per usare le funzionalità più recenti in una versione intermedia, è necessario [configurare la versione in lingua del compilatore](../language-reference/configure-language-version.md) e selezionare la versione. Sono state rilasciate tre versioni intermedie da C# 7.0:
 
 * [C# 7.3](csharp-7-3.md):
-  - C# 7.3 è attualmente disponibile in [Visual Studio 2017 versione 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) e in [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md).
+  - C# 7.3 è disponibile a partire da [Visual Studio 2017 versione 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md).
 * [C# 7.2](csharp-7-2.md):
-  - C# 7.2 è attualmente disponibile in [Visual Studio 2017 versione 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) e in [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+  - C# 7.2 è disponibile a partire da [Visual Studio 2017 versione 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 * [C# 7.1](csharp-7-1.md):
-  - Queste funzionalità sono state aggiunte in [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) e in [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+  - C# 7.1 è disponibile a partire da [Visual Studio 2017 versione 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# versione 1.0
 
@@ -59,7 +59,7 @@ Qui le cose iniziano a farsi interessanti. Ecco alcune delle funzionalità princ
 - [Tipi parziali](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metodi anonimi](../programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Tipi nullable](../programming-guide/nullable-types/index.md)
-- [Iteratori](../programming-guide/concepts/iterators.md)
+- [Iterators](../programming-guide/concepts/iterators.md)
 - [Covarianza e controvarianza](../programming-guide/concepts/covariance-contravariance/index.md)
 
 Altre funzionalità di C# 2.0 aggiungevano capacità alle funzionalità esistenti:
@@ -125,7 +125,7 @@ C# versione 5.0 è una versione incentrata sul linguaggio. Quasi tutto l'impegno
 
 ### <a name="see-also"></a>Vedere anche
 
-* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Attributi informativi sul chiamante in C# 5.0)
+* [Code Project: Caller Info Attributes in C# 5.0 (Attributi informativi sul chiamante in C# 5.0)](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Gli attributi informativi sul chiamante consentono di recuperare facilmente informazioni sul contesto di esecuzione senza dover ricorrere a una grande quantità di codice di reflection boilerplate. Questi attributi hanno molte applicazioni nelle attività di diagnostica e di registrazione.
 

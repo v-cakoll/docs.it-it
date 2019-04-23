@@ -2,12 +2,12 @@
 title: Debug degli alberi delle espressioni in Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 308b377af00a3d12523f8f8d469c50808f216030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95a01a98e771e04afd296428ed56e9518bad9ac2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330408"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debug degli alberi delle espressioni in Visual Studio (C#)
 È possibile analizzare la struttura e il contenuto degli alberi delle espressioni durante il debug delle applicazioni. Per una breve panoramica della struttura ad albero dell'espressione, è possibile usare la proprietà `DebugView`, disponibile solo nella modalità di debug. Per altre informazioni sul debug, vedere [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
@@ -16,22 +16,22 @@ ms.locfileid: "54632153"
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Per aprire un visualizzatore per un albero delle espressioni  
   
-1.  Fare clic sull'icona a forma di lente di ingrandimento visualizzata accanto alla proprietà `DebugView` di una struttura ad albero dell'espressione in **Suggerimenti dati**, in una finestra **Espressioni di controllo**, nella finestra **Auto** o nella finestra **Variabili locali**.  
+1. Fare clic sull'icona a forma di lente di ingrandimento visualizzata accanto alla proprietà `DebugView` di una struttura ad albero dell'espressione in **Suggerimenti dati**, in una finestra **Espressioni di controllo**, nella finestra **Auto** o nella finestra **Variabili locali**.  
   
      Verrà visualizzato un elenco di visualizzatori.  
   
-2.  Fare clic sul visualizzatore da usare.  
+2. Fare clic sul visualizzatore da usare.  
   
  Ogni tipo di espressione viene visualizzato nel visualizzatore come descritto nelle sezioni seguenti.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- I nomi delle variabili <xref:System.Linq.Expressions.ParameterExpression> vengono visualizzati con un simbolo "$" all'inizio.  
+ <xref:System.Linq.Expressions.ParameterExpression> I nomi delle variabili ParameterExpression vengono visualizzati con un simbolo "$" all'inizio.  
   
  Se un parametro non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `$var1` o `$var2`.  
   
 ### <a name="examples"></a>Esempi  
   
-|Espressione|Proprietà`DebugView` |  
+|Espressione|`DebugView` proprietà|  
 |----------------|--------------------------|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int), "num");`|`$num`|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
@@ -52,7 +52,7 @@ ms.locfileid: "54632153"
   
 ### <a name="examples"></a>Esempi  
   
-|Espressione|Proprietà`DebugView` |  
+|Espressione|`DebugView` proprietà|  
 |----------------|--------------------------|  
 |`int num = 10; ConstantExpression expr = Expression.Constant(num);`|10|  
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
@@ -62,19 +62,19 @@ ms.locfileid: "54632153"
   
 ### <a name="examples"></a>Esempi  
   
-|Espressione|Proprietà`DebugView` |  
+|Espressione|`DebugView` proprietà|  
 |----------------|--------------------------|  
 |`BlockExpression block = Expression.Block(Expression.Constant("test"));`|`.Block() {`<br /><br /> `"test"`<br /><br /> `}`|  
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- Gli oggetti <xref:System.Linq.Expressions.LambdaExpression> vengono visualizzati insieme ai rispettivi tipi delegato.  
+ <xref:System.Linq.Expressions.LambdaExpression> Gli oggetti LambdaExpression vengono visualizzati insieme ai rispettivi tipi di delegati.  
   
  Se un'espressione lamda non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `#Lambda1` o `#Lambda2`.  
   
 ### <a name="examples"></a>Esempi  
   
-|Espressione|Proprietà`DebugView` |  
+|Espressione|`DebugView` proprietà|  
 |----------------|--------------------------|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1));`|`.Lambda #Lambda1<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
@@ -88,7 +88,7 @@ ms.locfileid: "54632153"
   
 ### <a name="examples"></a>Esempi  
   
-|Espressione|Proprietà`DebugView` |  
+|Espressione|`DebugView` proprietà|  
 |----------------|--------------------------|  
 |`LabelTarget target = Expression.Label(typeof(int), "SampleLabel"); BlockExpression block = Expression.Block( Expression.Goto(target, Expression.Constant(0)), Expression.Label(target, Expression.Constant(-1)));`|`.Block() {`<br /><br /> `.Goto SampleLabel { 0 };`<br /><br /> `.Label`<br /><br /> `-1`<br /><br /> `.LabelTarget SampleLabel:`<br /><br /> `}`|  
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
@@ -98,7 +98,7 @@ ms.locfileid: "54632153"
   
 ### <a name="examples"></a>Esempi  
   
-|Espressione|Proprietà`DebugView` |  
+|Espressione|`DebugView` proprietà|  
 |----------------|--------------------------|  
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
@@ -107,4 +107,4 @@ ms.locfileid: "54632153"
 
 - [Alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
-- [Creazione di visualizzatori personalizzati](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [Creare visualizzatori personalizzati](/visualstudio/debugger/create-custom-visualizers-of-data)
