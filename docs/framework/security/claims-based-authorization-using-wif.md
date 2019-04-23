@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312176"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorizzazione basata su attestazioni con WIF
@@ -60,4 +60,4 @@ Tramite l'autorizzazione di un'applicazione relying party vengono determinate le
   
 5. L'accesso viene consentito se il risultato è true e viene negato se è false. Ad esempio, la regola potrebbe essere che l'utente ha 21 anni, o anche di più, e vive nello stato di Washington.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> è utile per esternalizzare la logica delle decisioni per l'autorizzazione basata sulle attestazioni nelle applicazioni. ClaimsAuthorizationManager è un componente di WIF fornito come parte di .NET 4.5. Con ClaimsAuthorizationManager è possibile intercettare le richieste in ingresso e implementare qualsiasi logica di scelta per prendere decisioni di autorizzazioni basate sulle attestazioni in ingresso. Questo aspetto diventa importante quando è necessario modificare la logica dell'autorizzazione. In tal caso, l'utilizzo di ClaimsAuthorizationManager non influirà sull'integrità dell'applicazione, quindi riducendo la probabilità di un errore di applicazione come risultato della modifica. Per altre informazioni su come usare ClaimsAuthorizationManager per implementare il controllo di accesso basato sulle attestazioni, vedere [How To: Implementare autorizzazione delle attestazioni in un'applicazione ASP.NET compatibili con le attestazioni mediante WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247446).
+ L'oggetto <xref:System.Security.Claims.ClaimsAuthorizationManager> è utile per esternalizzare la logica delle decisioni per l'autorizzazione basata su attestazioni nelle applicazioni. ClaimsAuthorizationManager è un componente di WIF fornito come parte di .NET 4.5. Con ClaimsAuthorizationManager è possibile intercettare le richieste in ingresso e implementare qualsiasi logica di scelta per prendere decisioni di autorizzazioni basate sulle attestazioni in ingresso. Questo aspetto diventa importante quando è necessario modificare la logica dell'autorizzazione. In tal caso, l'utilizzo di ClaimsAuthorizationManager non influirà sull'integrità dell'applicazione, quindi riducendo la probabilità di un errore di applicazione come risultato della modifica. Per altre informazioni su come usare ClaimsAuthorizationManager per implementare il controllo di accesso basato sulle attestazioni, vedere [How To: Implementare autorizzazione delle attestazioni in un'applicazione ASP.NET compatibili con le attestazioni mediante WIF e ACS](https://go.microsoft.com/fwlink/?LinkID=247446).

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312163"
 ---
 # <a name="how-to-enable-streaming"></a>Procedura: Abilitare il flusso
@@ -30,13 +30,13 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     L'operazione `GetStream` riceve alcuni dati di input memorizzati nel buffer come `string`, che è memorizzata nel buffer, e restituisce `Stream`, trasferito con flusso. Viceversa, `UploadStream` accetta uno `Stream` (trasmesso) e restituisce un `bool` (memorizzato nel buffer). `EchoStream` accetta e restituisce `Stream` ed è riportato un esempio di un'operazione il cui input e i messaggi di output vengono entrambi trasmessi. Infine, `GetReversedStream` non prende input e restituisce un `Stream` (trasmesso).  
+     L'operazione `GetStream` riceve alcuni dati di input memorizzati nel buffer come `string`, che è memorizzata nel buffer, e restituisce `Stream`, trasferito con flusso. Viceversa, `UploadStream` accetta uno `Stream` (trasmesso) e restituisce un `bool` (memorizzato nel buffer). `EchoStream` accetta e restituisce uno `Stream` ed è un esempio di un'operazione i cui messaggi di input e output vengono entrambi trasmessi. Infine, `GetReversedStream` non prende input e restituisce un `Stream` (trasmesso).  
   
 2. La trasmissione deve essere attivata nell'associazione. Impostare una proprietà `TransferMode`, che può prendere uno dei valori seguenti:  
   
     1.  `Buffered`,  
   
-    2.  `Streamed`, che consente la comunicazione di streaming in entrambe le direzioni.  
+    2.  `Streamed`, che consente di attivare la comunicazione con flusso bidirezionale.  
   
     3.  `StreamedRequest`, che consente la trasmissione della sola richiesta.  
   
@@ -69,12 +69,12 @@ Windows Communication Foundation (WCF) può inviare messaggi utilizzando trasfer
   
 1. Per eseguire un'elaborazione speciale su ogni blocco di flusso di dati quando viene inviato o ricevuto, derivare una classe del flusso personalizzato da <xref:System.IO.Stream>. Come esempio di flusso personalizzato, il codice riportato di seguito contiene un metodo `GetReversedStream` e una classe `ReverseStream`.  
   
-     `GetReversedStream` Crea e restituisce una nuova istanza della `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge dall'oggetto `ReverseStream`. Il metodo `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Questo metodo non inverte l'intero contenuto del file, ma un blocco di byte alla volta. In questo esempio viene illustrato come eseguire l'elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
+     `GetReversedStream` crea e restituisce una nuova istanza di `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge dall'oggetto `ReverseStream`. Il metodo `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Questo metodo non inverte l'intero contenuto del file, ma un blocco di byte alla volta. In questo esempio viene illustrato come eseguire l'elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Dati di grandi dimensioni e flussi](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [Flusso](../../../../docs/framework/wcf/samples/stream.md)
+- [Dati di grandi dimensioni e streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [Stream](../../../../docs/framework/wcf/samples/stream.md)

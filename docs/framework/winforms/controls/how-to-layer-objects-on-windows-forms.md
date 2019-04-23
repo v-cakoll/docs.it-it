@@ -13,10 +13,10 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311662"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Procedura: Disporre oggetti su più livelli in Windows Forms
@@ -54,7 +54,7 @@ Quando si crea un'interfaccia utente complessa, o di lavoro con un form MDI (int
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli per Windows Form](index.md)
+- [Controlli Windows Form](index.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

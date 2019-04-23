@@ -3,10 +3,10 @@ title: '!= (diverso da) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
 ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310967"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (diverso da) (Entity SQL)
@@ -25,7 +25,7 @@ expression <> expression
  Qualsiasi espressione valida. Entrambe le espressioni devono contenere tipi di dati convertibili in modo implicito.  
   
 ## <a name="result-types"></a>Tipi di risultati  
- `true` Se l'espressione a sinistra non è uguale a quella a destra; in caso contrario, `false`.  
+ `true` se l'espressione a sinistra è diversa da quella a destra; in caso contrario, `false`.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore != per confrontare due espressioni e determinare se l'espressione a sinistra è diversa da quella a destra. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  

@@ -10,10 +10,10 @@ ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 119c4c13c90aeca8c14d2725d927c38be32212a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308718"
 ---
 # <a name="editing-xml-schemas"></a>Modifica di schemi XML
@@ -137,10 +137,10 @@ La modifica di uno schema XML rappresenta una delle funzionalità più important
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Attraversamento di schemi XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
 ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308614"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Istruzione Option Explicit (Visual Basic)
@@ -71,7 +71,7 @@ Option Explicit { On | Off }
 - [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

@@ -3,10 +3,10 @@ title: Considerazioni sulla migrazione (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310421"
 ---
 # <a name="migration-considerations-entity-framework"></a>Considerazioni sulla migrazione (Entity Framework)
@@ -79,7 +79,7 @@ ms.locfileid: "59310421"
   
   Per altre informazioni, vedere [associazione di oggetti ai controlli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] controlli origine dati.  
+- Controlli origine dati [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
 
   Il [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] include un controllo origine dati progettato per semplificare il data binding in [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] applicazioni Web. Per altre informazioni, vedere [Cenni preliminari sul controllo Server Web EntityDataSource](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   

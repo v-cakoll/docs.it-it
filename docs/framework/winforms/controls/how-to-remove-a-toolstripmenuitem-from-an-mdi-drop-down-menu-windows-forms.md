@@ -11,10 +11,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
 ms.openlocfilehash: 7c84d260783e3a511b5ef6a651c71f1ee55acffe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295341"
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Procedura: Rimuovere un ToolStripMenuItem da un Menu a discesa MDI (Windows Form)
@@ -28,15 +28,15 @@ In alcune applicazioni, il tipo di una finestra figlio di interfaccia a document
   
 2. Aggiungere <xref:System.Windows.Forms.MenuStrip> a `Form1` e impostare la proprietà <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> di <xref:System.Windows.Forms.MenuStrip> su `true`.  
   
-3. Aggiungere una voce di menu di primo livello per il `Form1`<xref:System.Windows.Forms.MenuStrip> e impostare relativi <xref:System.Windows.Forms.Control.Text%2A> proprietà `&File`.  
+3. Aggiungere una voce di menu di primo livello a `Form1`<xref:System.Windows.Forms.MenuStrip> e impostare la relativa proprietà <xref:System.Windows.Forms.Control.Text%2A> su `&File`.  
   
 4. Aggiungere tre voci di sottomenu per il `&File` voce di menu e set loro <xref:System.Windows.Forms.ToolStripItem.Text%2A> delle proprietà per `&Open`, `&Import from`, e `E&xit`.  
   
 5. Aggiungere due voci di sottomenu per il `&Import from` voce di sottomenu e set loro <xref:System.Windows.Forms.ToolStripItem.Text%2A> delle proprietà per `&Word` e `&Excel`.  
   
-6. Aggiungere un modulo al progetto, aggiungere un <xref:System.Windows.Forms.MenuStrip> al form e impostare il <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> proprietà delle `Form2`<xref:System.Windows.Forms.MenuStrip> a `true`.  
+6. Aggiungere un form al progetto, aggiungere <xref:System.Windows.Forms.MenuStrip> al form e impostare la proprietà <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> del `Form2`<xref:System.Windows.Forms.MenuStrip> su `true`.  
   
-7. Aggiungere una voce di menu di primo livello per il `Form2`<xref:System.Windows.Forms.MenuStrip> e impostare relativi <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà `&File`.  
+7. Aggiungere una voce di menu di primo livello a `Form2`<xref:System.Windows.Forms.MenuStrip> e impostare la relativa proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> su `&File`.  
   
 8. Aggiungere un `&Import from` voce di sottomenu per il `&File` dal menu di `Form2`e aggiungere un `&Word` voce di sottomenu per il `&File` menu.  
   
@@ -48,7 +48,7 @@ In alcune applicazioni, il tipo di una finestra figlio di interfaccia a document
     |Importare da|MatchOnly|-1|  
     |Word|Rimuovi|-1|  
   
-10. Nelle `Form1`, creare un gestore eventi per il <xref:System.Windows.Forms.Control.Click> eventi del `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Nelle `Form1`, creare un gestore eventi per il <xref:System.Windows.Forms.Control.Click> eventi del `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 11. All'interno del gestore di evento, inserire codice simile all'esempio di codice seguente per creare e visualizzare le nuove istanze di `Form2` come finestre figlio MDI di `Form1`:  
   
@@ -73,7 +73,7 @@ In alcune applicazioni, il tipo di una finestra figlio di interfaccia a document
     }  
     ```  
   
-12. Inserire codice simile al seguente esempio di codice nel `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> per registrare il gestore dell'evento.  
+12. Inserire codice analogo al seguente esempio di codice nel `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> per registrare il gestore eventi.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -98,4 +98,4 @@ In alcune applicazioni, il tipo di una finestra figlio di interfaccia a document
 
 - [Procedura: Creare form padre MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Panoramica del controllo MenuStrip](menustrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo MenuStrip](menustrip-control-overview-windows-forms.md)

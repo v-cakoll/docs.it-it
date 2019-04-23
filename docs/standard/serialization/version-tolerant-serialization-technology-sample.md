@@ -3,14 +3,14 @@ title: Esempio di tecnologia di serializzazione indipendente dalla versione
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
 ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308367"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Esempio di tecnologia di serializzazione indipendente dalla versione
-[Scarica esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+[Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
  In questo esempio vengono illustrate le funzionalità relative alla tolleranza dalla versione della serializzazione .NET. L'esempio compila applicazioni che, nonostante utilizzino versioni diverse di un oggetto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> per serializzare e deserializzare i dati, sono in grado di comunicare senza problemi. Per altre informazioni, vedere [Serializzazione indipendente dalla versione](../../../docs/standard/serialization/version-tolerant-serialization.md).  
   

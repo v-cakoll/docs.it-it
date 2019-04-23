@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
 ms.openlocfilehash: ccf82b2ea767d69797af1ffa38381a7cc0fd3b67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308003"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Procedura: Eseguire il wrapping di un controllo di Windows Forms con ToolStripControlHost
-<xref:System.Windows.Forms.ToolStripControlHost> è progettato per consentire l'hosting di controlli Windows Form arbitrari usando il <xref:System.Windows.Forms.ToolStripControlHost> costruttore o estendendo <xref:System.Windows.Forms.ToolStripControlHost> stesso. È più semplice eseguire il wrapping del controllo estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando proprietà e metodi che espongono le proprietà e i metodi del controllo usati di frequente. È anche possibile esporre gli eventi del controllo a livello di <xref:System.Windows.Forms.ToolStripControlHost>.  
+<xref:System.Windows.Forms.ToolStripControlHost> è progettato per abilitare l'hosting di controlli Windows Form arbitrari usando il costruttore <xref:System.Windows.Forms.ToolStripControlHost> o estendendo direttamente <xref:System.Windows.Forms.ToolStripControlHost>. È più semplice eseguire il wrapping del controllo estendendo <xref:System.Windows.Forms.ToolStripControlHost> e implementando proprietà e metodi che espongono le proprietà e i metodi del controllo usati di frequente. È anche possibile esporre gli eventi del controllo a livello di <xref:System.Windows.Forms.ToolStripControlHost>.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Per ospitare un controllo in un oggetto ToolStripControlHost tramite derivazione  
   
@@ -68,6 +68,6 @@ ms.locfileid: "59308003"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
-- [Panoramica del controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
+- [Panoramica sul controllo ToolStrip](toolstrip-control-overview-windows-forms.md)
 - [Architettura del controllo ToolStrip](toolstrip-control-architecture.md)
 - [Riepilogo della tecnologia ToolStrip](toolstrip-technology-summary.md)

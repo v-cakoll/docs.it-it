@@ -3,10 +3,10 @@ title: Tipi restituiti asincroni (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
 ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313281"
 ---
 # <a name="async-return-types-visual-basic"></a>Tipi restituiti asincroni (Visual Basic)
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` viene chiamato e atteso usando un'istruzione await invece di un'espressione await, simile all'istruzione di chiamata per un oggetto sincrono `Sub` o un metodo che restituisce void. L'applicazione di un `Await` operatore in questo caso non produce alcun valore.  
+ `Task_MethodAsync` viene chiamato e atteso usando un'istruzione await invece di un'espressione await, simile all'istruzione chiamante per un metodo sincrono `Sub` o che restituisce void. L'applicazione di un `Await` operatore in questo caso non produce alcun valore.  
   
  Il codice seguente chiama e attende il metodo `Task_MethodAsync`.  
   

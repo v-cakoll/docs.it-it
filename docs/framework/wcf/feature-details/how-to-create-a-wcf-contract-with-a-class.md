@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
 ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313217"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Procedura: Creare un contratto Windows Communication Foundation con una classe
 Il modo migliore di creazione di un contratto Windows Communication Foundation (WCF) consiste nell'usare un'interfaccia. Per altre informazioni, vedere [Procedura: Definire un contratto di servizio](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Un'alternativa, illustrata qui, consiste nel creare una classe e quindi nell'applicare l'attributo <xref:System.ServiceModel.ServiceContractAttribute> direttamente alla classe e l'attributo <xref:System.ServiceModel.OperationContractAttribute> a ognuno dei metodi nella classe che fanno parte del contratto.  
   
 > [!WARNING]
->  `[ServiceContract]` e `[ServiceContractAttribute]` eseguire la stessa operazione. La stessa cosa vale per `[OperationContract]` e `[OperationContractAttribute]`. In ogni caso, il primo è l'abbreviazione del secondo.  
+>  `[ServiceContract]` e `[ServiceContractAttribute]` eseguono la stessa operazione. La stessa cosa vale per `[OperationContract]` e `[OperationContractAttribute]`. In ogni caso, il primo è l'abbreviazione del secondo.  
   
  Per altre informazioni sui contratti di servizio, vedere [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   

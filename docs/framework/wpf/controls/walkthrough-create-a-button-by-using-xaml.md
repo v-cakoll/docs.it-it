@@ -5,10 +5,10 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309498"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Procedura dettagliata: Creare un pulsante usando XAML
@@ -437,4 +437,4 @@ L'obiettivo di questa procedura dettagliata consiste nel comprendere come creare
 - [Applicazione di stili e modelli](styling-and-templating.md)
 - [Cenni preliminari sull'animazione](../graphics-multimedia/animation-overview.md)
 - [Cenni sul disegno con colori a tinta unita e sfumature](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Cenni preliminari sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)
+- [Panoramica sugli effetti bitmap](../graphics-multimedia/bitmap-effects-overview.md)

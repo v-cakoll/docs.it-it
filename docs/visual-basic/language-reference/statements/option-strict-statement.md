@@ -12,10 +12,10 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310187"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
@@ -69,9 +69,9 @@ Option Strict { On | Off }
   
 -   [Operatore +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [Operatore \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [\ Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [Operatore /= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [/ = (Operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 -   [Tipo di dati Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
@@ -118,9 +118,9 @@ Option Strict { On | Off }
   
 -   **Conversione implicita**  
   
--   **Associazione tardiva: la chiamata potrebbe avere esito negativo al runtime**  
+-   **Binding tardivo. La chiamata potrebbe non riuscire in fase di esecuzione.**  
   
--   **Tipo implicito: presunto oggetto**  
+-   **Tipo implicito. Verrà utilizzato oggetto.**  
   
  Quando si imposta **Option Strict** su **On**, tutte e tre queste impostazioni di configurazione degli avvisi vengono impostate su **Errore**. Quando si imposta **Option Strict** su **Off**, tutte e tre le impostazioni vengono impostate su **Nessuno**.  
   
@@ -153,11 +153,11 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Conversioni di ampliamento e restrizione](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversioni implicite ed esplicite](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Compilazione (pagina), Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Pagina Compilazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Procedura: Accedere ai membri di un oggetto](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Espressioni incorporate in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Conversione di tipo relaxed del delegato](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

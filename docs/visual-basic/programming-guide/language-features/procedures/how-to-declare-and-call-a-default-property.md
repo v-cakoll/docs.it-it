@@ -11,10 +11,10 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295640"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic
@@ -83,13 +83,13 @@ Oggetto *predefiniti delle proprietà* è una proprietà di classe o struttura c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Routine di proprietà](./property-procedures.md)
+- [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Impostazione predefinita](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
 - [Differenze tra proprietà e variabili in Visual Basic](./differences-between-properties-and-variables.md)
 - [Procedura: Creare una proprietà](./how-to-create-a-property.md)
 - [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Procedura: Chiamare una routine di proprietà](./how-to-call-a-property-procedure.md)
+- [Procedura: Chiamare una routine Property](./how-to-call-a-property-procedure.md)
 - [Procedura: Inserire un valore in una proprietà](./how-to-put-a-value-in-a-property.md)
 - [Procedura: Ottenere un valore da una proprietà](./how-to-get-a-value-from-a-property.md)

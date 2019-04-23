@@ -13,10 +13,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
 ms.openlocfilehash: 9e803b6450fb8c9ade4adde5bf98fb1c3c62c861
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313216"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView di Windows Forms
@@ -92,7 +92,7 @@ Gestione degli errori dall'archivio dati sottostante è una funzionalità necess
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Immissione di dati nel controllo DataGridView Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Gestire gli errori che si verificano durante l'immissione di dati nel controllo DataGridView di Windows Forms](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Procedura dettagliata: Convalida dei dati nel controllo DataGridView di Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Immissione di dati nel controllo DataGridView di Windows Form](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Procedura: Gestire gli errori che si verificano durante l'immissione di dati nel controllo DataGridView Windows Form](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Procedura dettagliata: La convalida dei dati nel controllo DataGridView Windows Form](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
 - [Protezione delle informazioni di connessione](../../data/adonet/protecting-connection-information.md)

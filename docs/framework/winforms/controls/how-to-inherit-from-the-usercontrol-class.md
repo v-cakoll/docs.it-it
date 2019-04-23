@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
 ms.openlocfilehash: 5e9bdb6d6628b1c696b7944dc0ea1f4c974c8172
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311409"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Procedura: Ereditare dalla classe UserControl
@@ -38,7 +38,7 @@ Per combinare le funzionalità di uno o più controlli Windows Form con il codic
 
 - [Tipi di controlli personalizzati](varieties-of-custom-controls.md)
 - [Procedura: Ereditare dalla classe Control](how-to-inherit-from-the-control-class.md)
-- [Procedura: Ereditare da controlli Windows Forms esistenti](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Procedura: Creare controlli per Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Procedura: Ereditare da esistenti di Windows Form](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Procedura: Creare controlli per Windows Form](how-to-author-controls-for-windows-forms.md)
 - [Risoluzione dei problemi relativi ai gestori eventi ereditati in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Procedura: Eseguire il test del comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Procedura: Testare il comportamento in fase di esecuzione di UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308445"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Procedura dettagliata: Esecuzione di un'operazione in background
@@ -34,7 +34,7 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
   
     |Button|Nome|Testo|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Inizia**|  
+    |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**Annulla**|  
   
 2. Aprire il **casella degli strumenti**, fare clic sul **componenti** scheda e quindi trascinare il <xref:System.ComponentModel.BackgroundWorker> componente al form.  
@@ -106,4 +106,4 @@ Se l'esecuzione di un'operazione richiede molto tempo e si vogliono evitare rita
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [Procedura: Implementare un modulo che usa un'operazione in background](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Procedura: Eseguire un'operazione in background](how-to-run-an-operation-in-the-background.md)
-- [Componente BackgroundWorker](backgroundworker-component.md)
+- [BackgroundWorker (componente)](backgroundworker-component.md)

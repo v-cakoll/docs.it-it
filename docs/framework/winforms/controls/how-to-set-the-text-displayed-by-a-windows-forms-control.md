@@ -22,10 +22,10 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308523"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Procedura: Impostare il testo visualizzato da un controllo di Windows Forms
@@ -74,5 +74,5 @@ I controlli Windows Form in genere visualizzano il testo relativo alla funzione 
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Procedura: Creare tasti di scelta per i controlli Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Procedura: Rispondere alla selezione dei pulsanti Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Procedura: Creare le chiavi di accesso per i controlli Windows Form](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Procedura: Rispondere alle selezioni dei pulsanti di Windows Form](how-to-respond-to-windows-forms-button-clicks.md)

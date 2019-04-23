@@ -7,10 +7,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
 ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312657"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Procedura: Visualizzare le barre di scorrimento nel controllo RichTextBox di Windows Forms
@@ -24,7 +24,7 @@ Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.Ric
   
     |Value|Descrizione|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (predefinito)|Consente di visualizzare le barre di scorrimento orizzontale o verticale, o entrambi, solo quando il testo supera la larghezza o la lunghezza del controllo.|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (impostazione predefinita)|Consente di visualizzare le barre di scorrimento orizzontale o verticale, o entrambi, solo quando il testo supera la larghezza o la lunghezza del controllo.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Non viene mai visualizzata qualsiasi tipo di barra di scorrimento.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|Consente di visualizzare una barra solo quando il testo supera la larghezza del controllo di scorrimento orizzontale. (Per questo motivo, il <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> proprietà deve essere impostata su `false`.)|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|Consente di visualizzare una barra solo quando il testo supera l'altezza del controllo di scorrimento verticale.|  
@@ -37,7 +37,7 @@ Per impostazione predefinita, i moduli di Windows <xref:System.Windows.Forms.Ric
     |Value|Descrizione|  
     |-----------|-----------------|  
     |`false`|Testo nel controllo non è regolato automaticamente per adattarsi alla larghezza del controllo, in modo che scorre verso destra fino a quando non viene raggiunta un'interruzione di riga. Utilizzare questo valore se si sceglie le barre di scorrimento orizzontale o entrambi, in precedenza.|  
-    |`true` (predefinito)|Il testo del controllo viene regolato automaticamente per adattarsi alla larghezza del controllo. Non verrà visualizzata la barra di scorrimento orizzontale. Utilizzare questo valore se si sceglie le barre di scorrimento verticale sopra, per visualizzare uno o più paragrafi.|  
+    |`true` (impostazione predefinita)|Il testo del controllo viene regolato automaticamente per adattarsi alla larghezza del controllo. Non verrà visualizzata la barra di scorrimento orizzontale. Utilizzare questo valore se si sceglie le barre di scorrimento verticale sopra, per visualizzare uno o più paragrafi.|  
   
 ## <a name="see-also"></a>Vedere anche
 

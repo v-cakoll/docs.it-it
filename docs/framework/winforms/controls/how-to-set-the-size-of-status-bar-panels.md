@@ -11,10 +11,10 @@ helpviewer_keywords:
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
 ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311903"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>Procedura: Impostare la dimensione dei pannelli della barra di stato
@@ -70,5 +70,5 @@ ms.locfileid: "59311903"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Forms](determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [Panoramica del controllo StatusBar](statusbar-control-overview-windows-forms.md)
+- [Procedura: Individuare il pannello nel controllo StatusBar Windows Form è stato selezionato](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Cenni preliminari sul controllo StatusBar](statusbar-control-overview-windows-forms.md)

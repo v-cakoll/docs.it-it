@@ -3,10 +3,10 @@ title: Processo di assunzione
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313151"
 ---
 # <a name="hiring-process"></a>Processo di assunzione
@@ -18,7 +18,7 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
  In questo esempio vengono illustrate le funzionalità [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] seguenti:  
   
--   <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence> flussi di lavoro per modellare processi aziendali.  
+-   Flussi di lavoro <xref:System.Activities.Statements.Flowchart> e <xref:System.Activities.Statements.Sequence> per modellare processi aziendali  
   
 -   Servizi flusso di lavoro  
   
@@ -38,9 +38,9 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
   
 -   Composizione di attività  
   
--   <xref:System.Activities.Statements.Parallel> attività.  
+-   Attività <xref:System.Activities.Statements.Parallel>  
   
--   <xref:System.Activities.Statements.CancellationScope> attività.  
+-   Attività <xref:System.Activities.Statements.CancellationScope>  
   
 -   Timer durevoli (attività <xref:System.Activities.Statements.Delay>)  
   
@@ -121,10 +121,10 @@ In questo esempio viene illustrato come implementare un processo aziendale trami
 |Composizione di attività|La definizione del processo usa la composizione libera di <xref:System.Activities.Activity>. Il diagramma di flusso contiene diverse attività Sequence e Parallel che a loro volta ne contengono altre e così via.|HiringRequestService|  
 |Attività parallele|-   <xref:System.Activities.Statements.ParallelForEach%601> Consente di registrare nella posta in arrivo del CEO e dei responsabili delle risorse Umane in parallelo (in attesa di passaggio di approvazione dei responsabili delle risorse Umane due).<br />-   <xref:System.Activities.Statements.Parallel> Consente di eseguire alcune attività di pulizia nei passaggi di completamento e rifiuto.|HiringRequestService|  
 |Annullamento del modello|Nel diagramma di flusso viene usato <xref:System.Activities.Statements.CancellationScope> per applicare l'annullamento (in questo caso eseguendo attività di pulizia).|HiringRequestService|  
-|Partecipante di persistenza personalizzato|`HiringRequestPersistenceParticipant` Salva i dati da una variabile del flusso di lavoro in una tabella archiviata nel database delle risorse Umane di Contoso.|HiringRequestService|  
+|Partecipante di persistenza personalizzato|`HiringRequestPersistenceParticipant` salva i dati da una variabile del flusso di lavoro in una tabella archiviata nel database delle risorse umane di Contoso.|HiringRequestService|  
 |Servizi flusso di lavoro|`ResumeRequestService` viene implementato usando servizi flusso di lavoro. La definizione del flusso di lavoro e le informazioni sul servizio sono contenute nel file ResumeRequestService.xamlx. Il servizio è configurato per usare la persistenza e il rilevamento.|ResumeRequestService|  
-|Timer durevoli|`ResumeRequestService` vengono usati timer durevoli per definire la durata di un processo di registrazione (dopo un periodo di timeout scade, le offerte vengono chiuse).|ResumeRequestService|  
-|Transazioni|<xref:System.Activities.Statements.TransactionScope> viene usato per garantire la coerenza dei dati all'interno dell'esecuzione di diverse attività (quando viene ricevuto un nuovo curriculum).|ResumeRequestService|  
+|Timer durevoli|In `ResumeRequestService` vengono usati timer durevoli per definire la durata di un elenco di offerte di lavoro (quando un timeout scade, le offerte vengono chiuse).|ResumeRequestService|  
+|Transazioni|<xref:System.Activities.Statements.TransactionScope> viene usato per garantire la coerenza dei dati durante l'esecuzione di diverse attività (quando viene ricevuto un nuovo curriculum).|ResumeRequestService|  
 |Transazioni|Il partecipante di persistenza (`HiringRequestPersistenceParticipant`) e il partecipante del rilevamento personalizzati (`HistoryFileTrackingParticipant`) usano la stessa transazione.|HiringRequestService|  
 |Uso di [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|L'accesso ai flussi di lavoro viene eseguito da due applicazioni [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|InternalClient / CareersWebSite|  
   

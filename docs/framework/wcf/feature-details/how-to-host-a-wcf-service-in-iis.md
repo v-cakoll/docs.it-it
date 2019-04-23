@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309680"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Procedura: Hosting di un servizio WCF in WAS
@@ -66,7 +66,7 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
   
      In questo esempio vengono specificati in modo esplicito gli endpoint del file di configurazione. Se non vengono aggiunti endpoint al servizio, il runtime aggiunge gli endpoint predefiniti. Per altre informazioni sull'endpoint, associazioni e comportamenti vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-11. Per assicurarsi che il servizio è ospitato in modo corretto, aprire un'istanza di Internet Explorer e passare all'URL del servizio: `http://localhost/IISHostedCalc/Service.svc`  
+11. Per assicurarsi che il servizio sia ospitato correttamente, aprire un'istanza di Internet Explorer e passare all'URL del servizio: `http://localhost/IISHostedCalc/Service.svc`  
   
 ## <a name="example"></a>Esempio  
  Di seguito è riportato un elenco completo del codice per il servizio calcolatrice ospitato da IIS.  
@@ -77,8 +77,8 @@ Questo argomento descrive i passaggi di base necessari per creare un servizio Wi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Host in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Servizi host](../../../../docs/framework/wcf/hosting-services.md)
+- [Hosting in Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [Servizi di hosting](../../../../docs/framework/wcf/hosting-services.md)
 - [Servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Sicurezza](../../../../docs/framework/wcf/feature-details/security.md)
 - [Funzionalità di hosting di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

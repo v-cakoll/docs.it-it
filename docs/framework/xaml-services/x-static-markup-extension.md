@@ -11,10 +11,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295710"
 ---
 # <a name="xstatic-markup-extension"></a>Estensione del markup x:Static
@@ -84,5 +84,5 @@ Nell'implementazione di servizi XAML di .NET Framework, la gestione di questa es
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Estensione del markup x:Type](x-type-markup-extension.md)
+- [Estensione di markup x:Type](x-type-markup-extension.md)
 - [Tipi migrati da WPF a System.Xaml](types-migrated-from-wpf-to-system-xaml.md)
