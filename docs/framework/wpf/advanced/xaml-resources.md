@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344923"
 ---
 # <a name="xaml-resources"></a>Risorse XAML
@@ -128,7 +128,7 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
   
 -   La proprietà impostata deve essere una proprietà in un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>. Tale proprietà deve essere supportata da un <xref:System.Windows.DependencyProperty>.  
   
--   Il riferimento è relativo a un valore all'interno di un <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   Il riferimento è relativo a un valore all'interno di un <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
 -   La proprietà impostata deve essere una proprietà di un <xref:System.Windows.Freezable> che viene fornito come un valore di un <xref:System.Windows.FrameworkElement> oppure <xref:System.Windows.FrameworkContentElement> proprietà, o un <xref:System.Windows.Setter> valore.  
   
@@ -144,7 +144,7 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Che stile dispone effettivamente di una chiave: la chiave implicita `typeof(`<xref:System.Windows.Controls.Button>`)`. Nel markup, è possibile specificare una <xref:System.Windows.Style.TargetType%2A> direttamente come tipo di nome (o è possibile usare facoltativamente [{... x: Type}](../../xaml-services/x-type-markup-extension.md) per restituire un <xref:System.Type>.  
+ Che stile dispone effettivamente di una chiave: la chiave implicita `typeof(` <xref:System.Windows.Controls.Button> `)`. Nel markup, è possibile specificare una <xref:System.Windows.Style.TargetType%2A> direttamente come tipo di nome (o è possibile usare facoltativamente [{... x: Type}](../../xaml-services/x-type-markup-extension.md) per restituire un <xref:System.Type>.  
   
  Tramite i meccanismi di stile del tema predefinito utilizzati da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], che lo stile viene applicato come stile di runtime di un <xref:System.Windows.Controls.Button> nella pagina, anche se il <xref:System.Windows.Controls.Button> stesso non tenta di specificare relativo <xref:System.Windows.FrameworkElement.Style%2A> proprietà o una risorsa specifica Fare riferimento allo stile. Lo stile definito nella pagina è stato trovato in precedenza nella sequenza di ricerca più lo stile del tema dizionario, usando la stessa chiave con lo stile del dizionario temi. È possibile specificare semplicemente `<Button>Hello</Button>` in un punto qualsiasi nella pagina e lo stile definito con <xref:System.Windows.Style.TargetType%2A> di `Button` verrà applicata a tale pulsante. Se si desidera, è possibile usare in modo esplicito una chiave lo stile con lo stesso valore di tipo come <xref:System.Windows.Style.TargetType%2A>per maggiore chiarezza nel markup, ma che è facoltativo.  
   
@@ -155,10 +155,10 @@ Una risorsa è un oggetto che è possibile riusare in posizioni diverse all'inte
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.ResourceDictionary>
-- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
 - [Risorse e codice](resources-and-code.md)
 - [Definire e fare riferimento a una risorsa](how-to-define-and-reference-a-resource.md)
 - [Cenni preliminari sulla gestione di applicazioni](../app-development/application-management-overview.md)
-- [Estensione del markup x:Type](../../xaml-services/x-type-markup-extension.md)
-- [Estensione del markup StaticResource](staticresource-markup-extension.md)
+- [Estensione di markup x:Type](../../xaml-services/x-type-markup-extension.md)
+- [Estensione di markup StaticResource](staticresource-markup-extension.md)
 - [Estensione del markup DynamicResource](dynamicresource-markup-extension.md)

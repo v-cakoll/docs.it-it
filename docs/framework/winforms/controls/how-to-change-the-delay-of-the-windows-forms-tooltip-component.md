@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345482"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Procedura: Modificare il ritardo del componente ToolTip di Windows Forms
@@ -44,6 +44,6 @@ Sono presenti più valori di ritardo che è possibile impostare per un controllo
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica del componente ToolTip](tooltip-component-overview-windows-forms.md)
-- [Procedura: Impostare le descrizioni comando per i controlli in un Windows Form in fase di progettazione](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [Panoramica sul componente ToolTip](tooltip-component-overview-windows-forms.md)
+- [Procedura: Impostare le descrizioni comandi per i controlli in un Windows Form in fase di progettazione](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [Componente ToolTip](tooltip-component-windows-forms.md)

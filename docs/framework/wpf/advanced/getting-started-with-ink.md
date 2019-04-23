@@ -10,10 +10,10 @@ helpviewer_keywords:
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
 ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343597"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Introduzione a input penna in WPF
@@ -113,4 +113,4 @@ Tutte le funzionalità WPF è possibile accedere dal codice procedurale. Seguire
 - [Input penna](digital-ink.md)
 - [Raccolta di input penna](collecting-ink.md)
 - [Riconoscimento della grafia](handwriting-recognition.md)
-- [Memorizzazione dell'input penna](storing-ink.md)
+- [Archiviazione dell'input penna](storing-ink.md)

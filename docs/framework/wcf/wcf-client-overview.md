@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312332"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770386"
 ---
 # <a name="wcf-client-overview"></a>Panoramica dei client WCF
 Questa sezione descrive come proteggere le applicazioni client, come configurare, creare e usare un client Windows Communication Foundation (WCF) e cosa fare delle applicazioni client.  

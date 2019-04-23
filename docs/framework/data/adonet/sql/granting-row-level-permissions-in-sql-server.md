@@ -2,12 +2,12 @@
 title: Concessione di autorizzazioni a livello di riga in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844769"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973083"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Concessione di autorizzazioni a livello di riga in SQL Server
 
@@ -23,35 +23,35 @@ L'esempio seguente descrive come configurare l'applicazione di filtri a livello 
 
 - Abilitare l'applicazione di filtri a livello di riga:
 
-    - Se si usa SQL Server 2016 o versioni successive oppure il [database SQL di Azure](https://docs.microsoft.com/azure/sql-database/), creare un criterio di sicurezza che aggiunga un predicato nella tabella per limitare le righe restituite a quelle che corrispondono all'utente del database corrente (usando la funzione predefinita CURRENT_USER()) o il nome di accesso corrente (usando la funzione predefinita SUSER_SNAME()):
+  - Se si usa SQL Server 2016 o versioni successive oppure il [database SQL di Azure](https://docs.microsoft.com/azure/sql-database/), creare un criterio di sicurezza che aggiunga un predicato nella tabella per limitare le righe restituite a quelle che corrispondono all'utente del database corrente (usando la funzione predefinita CURRENT_USER()) o il nome di accesso corrente (usando la funzione predefinita SUSER_SNAME()):
 
-        ```sql
-        CREATE SCHEMA Security
-        GO
+      ```sql
+      CREATE SCHEMA Security
+      GO
 
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
-            RETURNS TABLE
-            WITH SCHEMABINDING
-        AS
-            RETURN SELECT 1 AS accessResult
-            WHERE @UserName = SUSER_SNAME()
-        GO
+      CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+          RETURNS TABLE
+          WITH SCHEMABINDING
+      AS
+          RETURN SELECT 1 AS accessResult
+          WHERE @UserName = SUSER_SNAME()
+      GO
 
-        CREATE SECURITY POLICY Security.userAccessPolicy
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
-        GO
-        ```
+      CREATE SECURITY POLICY Security.userAccessPolicy
+          ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+          ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+      GO
+      ```
 
-    - Se si usa una versione di SQL Server precedente alla 2016, è possibile ottenere funzionalità simili usando una visualizzazione:
+  - Se si usa una versione di SQL Server precedente alla 2016, è possibile ottenere funzionalità simili usando una visualizzazione:
 
-        ```sql
-        CREATE VIEW vw_MyTable
-        AS
-            RETURN SELECT * FROM MyTable
-            WHERE UserName = SUSER_SNAME()
-        GO
-        ```
+      ```sql
+      CREATE VIEW vw_MyTable
+      AS
+          RETURN SELECT * FROM MyTable
+          WHERE UserName = SUSER_SNAME()
+      GO
+      ```
 
 - Creare stored procedure per selezionare, inserire, aggiornare ed eliminare i dati. Se il filtro viene applicato dai criteri di sicurezza, le stored procedure devono eseguire queste operazioni direttamente nella tabella di base. In caso contrario, se il filtro viene applicato da una visualizzazione, le stored procedure devono invece operare sulla visualizzazione. Il criterio di sicurezza o la visualizzazione filtrerà automaticamente le righe restituite o modificate dalle query utente e la stored procedure fornirà un limite di sicurezza più rigoroso per impedire che gli utenti con accesso diretto alle query eseguano query che possono dedurre l'esistenza di dati filtrati.
 

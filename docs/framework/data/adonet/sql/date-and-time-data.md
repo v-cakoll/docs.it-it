@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344175"
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
@@ -21,7 +21,7 @@ In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di info
   
  **Documentazione online di SQL Server**  
   
-1. [Utilizzo di dati relativi a data e ora](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [Utilizzo dati di data e ora](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipi di dati relativi a data e ora introdotti in SQL Server 2008  
  La tabella seguente descrive i nuovi tipi di dati relativi a data e ora.  
@@ -99,7 +99,7 @@ In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di info
 >  I valori relativi all'ora minori di zero o maggiori o uguali a 24 ore generano un evento <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Creazione di parametri  
- È possibile creare un <xref:System.Data.SqlClient.SqlParameter> oggetto utilizzando il relativo costruttore o aggiungendolo a un <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> raccolta chiamando il `Add` metodo del <xref:System.Data.SqlClient.SqlParameterCollection>. Il metodo `Add` accetta come input argomenti del costruttore o un oggetto parametro esistente.  
+ È possibile creare un oggetto <xref:System.Data.SqlClient.SqlParameter> usando il relativo costruttore o aggiungendolo a una raccolta <xref:System.Data.SqlClient.SqlCommand> di <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> chiamando il metodo `Add` di <xref:System.Data.SqlClient.SqlParameterCollection>. Il metodo `Add` accetta come input argomenti del costruttore o un oggetto parametro esistente.  
   
  Nelle sezioni successive di questo argomento vengono forniti esempi di come specificare i parametri relativi a data e ora. Per altri esempi di uso dei parametri, vedere [configurazione dei parametri e tipi di dati di parametro](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) e [parametri DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -235,13 +235,13 @@ command.Parameters.AddWithValue( _
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Funzioni e tipi di dati di data e ora (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Viene fornita una panoramica di tutti i tipi di dati e le funzioni relativi a data e ora di Transact-SQL.|  
-|[Utilizzo di dati relativi a data e ora](https://go.microsoft.com/fwlink/?LinkId=98361)|Fornisce informazioni sulle funzioni e sui tipi di dati relativi a data e ora ed esempi del loro uso.|  
+|[Data e ora i tipi e funzioni (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Viene fornita una panoramica di tutti i tipi di dati e le funzioni relativi a data e ora di Transact-SQL.|  
+|[Utilizzo dati di data e ora](https://go.microsoft.com/fwlink/?LinkId=98361)|Fornisce informazioni sulle funzioni e sui tipi di dati relativi a data e ora ed esempi del loro uso.|  
 |[Tipi di dati (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Vengono descritti i tipi di dati di sistema inclusi in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Vedere anche
 
 - [Mapping dei tipi di dati SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Configurazione dei parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Mapping dei tipi di dati SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Configurazione di parametri e tipi di dati dei parametri](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Tipi di dati SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: Gestione di eccezioni ed errori
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343428"
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestione di eccezioni ed errori
@@ -20,7 +20,7 @@ Le eccezioni vengono utilizzate per comunicare errori localmente, all'interno de
   
 |Tipo di eccezione|Significato|Contenuto dell'eccezione interna.|Strategia di recupero|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|L'indirizzo dell'endpoint specificato per l'ascolto è già in uso.|Se presente, fornisce ulteriori dettagli sull'errore del trasporto che ha provocato l'eccezione. Ad esempio, <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException>, o <xref:System.Net.Sockets.SocketException>.|Provare un indirizzo diverso.|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|L'indirizzo dell'endpoint specificato per l'ascolto è già in uso.|Se presente, fornisce ulteriori dettagli sull'errore del trasporto che ha provocato l'eccezione. Ad esempio, <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> o <xref:System.Net.Sockets.SocketException>.|Provare un indirizzo diverso.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|Al processo non è consentito l'accesso all'indirizzo dell'endpoint specificato per l'ascolto.|Se presente, fornisce ulteriori dettagli sull'errore del trasporto che ha provocato l'eccezione. Ad esempio: <xref:System.IO.PipeException> o <xref:System.Net.HttpListenerException>.|Provare con credenziali diverse.|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|Il <xref:System.ServiceModel.ICommunicationObject> utilizzato è nello stato Faulted (per altre informazioni, vedere [informazioni sulle modifiche di stato](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Si noti che quando un oggetto con più chiamate in sospeso passa allo stato Faulted, solo una chiamata genera un'eccezione riferita all'errore e il resto delle chiamate genera un'eccezione <xref:System.ServiceModel.CommunicationObjectFaultedException>. In genere questa eccezione viene generata perché un'applicazione trascura qualche eccezione e tenta di utilizzare un oggetto già Faulted, probabilmente su un thread diverso da quello che ha rilevato l'eccezione originale.|Se presente, fornisce dettagli sull'eccezione interna.|Creare un nuovo oggetto. Si noti che a seconda di ciò che ha determinato in primo luogo l'errore di <xref:System.ServiceModel.ICommunicationObject>, potrebbero essere necessarie altre operazioni per la relativa correzione.|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|Il <xref:System.ServiceModel.ICommunicationObject> in uso è stata interrotta (per altre informazioni, vedere [informazioni sulle modifiche di stato](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Analogamente a <xref:System.ServiceModel.CommunicationObjectFaultedException>, questa eccezione indica che l'applicazione ha chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Abort%2A> sull'oggetto, probabilmente da un altro thread, e che l'oggetto non è più utilizzabile per questo motivo.|Se presente, fornisce dettagli sull'eccezione interna.|Creare un nuovo oggetto. Si noti che a seconda di ciò che ha determinato in primo luogo l'interruzione di <xref:System.ServiceModel.ICommunicationObject>, potrebbero essere necessarie altre operazioni per il recupero.|  
@@ -116,7 +116,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>Generazione di errori  
  Contenuto della sezione viene spiegato il processo di generazione di un messaggio di errore in risposta a una condizione di errore rilevata in un canale o in una proprietà di messaggio creata dal canale. Un esempio tipico è la restituzione di un errore in risposta a un messaggio di richiesta contenente dati non validi.  
   
- Nel caso della generazione di un errore, è preferibile che il canale personalizzato non invii l'errore direttamente bensì generi un'eccezione e lasci al livello superiore la decisione di convertire l'eccezione in errore e la scelta della modalità di invio. Per favorire questa conversione, è opportuno che il canale fornisca un'implementazione di `FaultConverter` in grado di convertire l'eccezione generata dal canale personalizzato nell'errore appropriato. `FaultConverter` viene definita come segue:  
+ Nel caso della generazione di un errore, è preferibile che il canale personalizzato non invii l'errore direttamente bensì generi un'eccezione e lasci al livello superiore la decisione di convertire l'eccezione in errore e la scelta della modalità di invio. Per favorire questa conversione, è opportuno che il canale fornisca un'implementazione di `FaultConverter` in grado di convertire l'eccezione generata dal canale personalizzato nell'errore appropriato. L'oggetto `FaultConverter` viene definito come:  
   
 ```  
 public class FaultConverter  
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` Restituisce `true` se l'errore è un `mustUnderstand` fault. `WasHeaderNotUnderstood` Restituisce `true` se l'intestazione con il nome specificato e lo spazio dei nomi è inclusa nell'errore come intestazione NotUnderstood.  In caso contrario restituirà `false`.  
+ `IsMustUnderstandFault` restituisce `true` se l'errore è un errore `mustUnderstand`. `WasHeaderNotUnderstood` restituisce `true` se l'intestazione con il nome e lo spazio dei nomi specificati è inclusa nell'errore come intestazione NotUnderstood.  In caso contrario restituirà `false`.  
   
  Se un canale genera un'intestazione contrassegnata con MustUnderstand = true, tale livello deve inoltre implementare il modello API di generazione delle eccezioni e convertire gli errori `mustUnderstand` causati da tale intestazione in un'eccezione più utile, come descritto in precedenza.  
   
 ## <a name="tracing"></a>Traccia  
  In .NET Framework è disponibile un meccanismo per tenere traccia dell'esecuzione del programma che facilita la diagnosi delle applicazioni di produzione o di problemi intermittenti laddove non è possibile allegare semplicemente un debugger ed eseguire il codice. I componenti principali di questo meccanismo si trovano nello spazio dei nomi <xref:System.Diagnostics?displayProperty=nameWithType> e consistono in:  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, che rappresenta l'origine delle informazioni di traccia da scrivere <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, che è una classe base astratta per listener concreti che ricevono le informazioni da tracciare dal <xref:System.Diagnostics.TraceSource> e il relativo output in una destinazione specifico del listener. <xref:System.Diagnostics.XmlWriterTraceListener>, ad esempio, restituisce informazioni di traccia a un file XML. <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, infine, che consente all'utente dell'applicazione di controllare il dettaglio della traccia ed è in genere specificato nella configurazione.  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, origine delle informazioni di traccia da scrivere, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, classe di base astratta per listener concreti che ricevono le informazioni da tracciare da <xref:System.Diagnostics.TraceSource> e le restituiscono a una destinazione specifica del listener. <xref:System.Diagnostics.XmlWriterTraceListener>, ad esempio, restituisce informazioni di traccia a un file XML. <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, infine, che consente all'utente dell'applicazione di controllare il dettaglio della traccia ed è in genere specificato nella configurazione.  
   
 -   Oltre ai componenti principali, è possibile usare la [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) visualizzare e cercare WCF esegue la traccia. Lo strumento è progettato specificamente per i file di traccia generato da WCF e scritti utilizzando <xref:System.Diagnostics.XmlWriterTraceListener>. Nella figura seguente sono illustrati i vari componenti della traccia.  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>Analisi di dati strutturati  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> ha un <xref:System.Diagnostics.TraceSource.TraceData%2A> metodo che accetta uno o più oggetti che devono essere inclusi nella voce di traccia. In genere il metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType> viene chiamato su ogni oggetto e la stringa risultante viene scritta nell'ambito della voce di traccia. Quando si utilizza <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> per restituire tracce, è possibile passare un <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> come oggetto dati a <xref:System.Diagnostics.TraceSource.TraceData%2A>. La voce di traccia risultante comprende l'XML fornito da <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Segue una voce di esempio con dati di applicazione XML:  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> dispone di un metodo <xref:System.Diagnostics.TraceSource.TraceData%2A> che accetta uno o più oggetti che devono essere inclusi nella voce di traccia. In genere il metodo <xref:System.Object.ToString%2A?displayProperty=nameWithType> viene chiamato su ogni oggetto e la stringa risultante viene scritta nell'ambito della voce di traccia. Quando si utilizza <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> per restituire tracce, è possibile passare un <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> come oggetto dati a <xref:System.Diagnostics.TraceSource.TraceData%2A>. La voce di traccia risultante comprende l'XML fornito da <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>. Segue una voce di esempio con dati di applicazione XML:  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

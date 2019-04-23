@@ -4,10 +4,10 @@ description: Introduzione a C# Informazioni di base sul linguaggio.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481093"
 ---
 # <a name="a-tour-of-the-c-language"></a>Panoramica del linguaggio C#
@@ -56,7 +56,7 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
 * [Tipi e variabili](types-and-variables.md)
   - Vengono offerte informazioni sui ***tipi valore***, i ***tipi riferimento*** e le ***variabili*** del linguaggio C#.
 * [Espressioni](expressions.md)
-  - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori***. e producono un valore.
+  - Le ***espressioni*** sono costituite da ***operandi*** e ***operatori*** e producono un valore.
 * [Istruzioni](statements.md)
   - Le ***istruzioni*** consentono di esprimere le azioni di un programma.
 * [Classi e oggetti](classes-and-objects.md)
@@ -75,4 +75,4 @@ Oltre quelli sopra riportati, rimangono da discutere altri numerosi aspetti del 
   * Gli ***attributi*** consentono ai programmi di specificare informazioni dichiarative aggiuntive sui tipi, i membri e altre entità.
 
 > [!div class="step-by-step"]
-> [Successivo](program-structure.md)
+> [avanti](program-structure.md)

@@ -9,10 +9,10 @@ ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343870"
 ---
 # <a name="net-framework-cryptography-model"></a>Modello di crittografia di .NET Framework
@@ -42,7 +42,7 @@ ms.locfileid: "59343870"
   
 5. <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes> viene ereditata da due classi: <xref:System.Security.Cryptography.AesCryptoServiceProvider> e <xref:System.Security.Cryptography.AesManaged>. La classe <xref:System.Security.Cryptography.AesCryptoServiceProvider> è un wrapper per l'implementazione dell'API di crittografia (CAPI, Cryptography API) Windows di Aes, mentre la classe <xref:System.Security.Cryptography.AesManaged> viene scritta interamente in codice gestito. Vi è anche un terzo tipo di implementazione, Cryptography Next Generation (CNG), oltre alle implementazioni gestita e CAPI. Un esempio di algoritmo CNG è <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Gli algoritmi CNG sono disponibili in Windows Vista e versioni successive.  
+ L'oggetto <xref:System.Security.Cryptography.Aes> viene ereditato da due classi: <xref:System.Security.Cryptography.AesCryptoServiceProvider> e <xref:System.Security.Cryptography.AesManaged>. La classe <xref:System.Security.Cryptography.AesCryptoServiceProvider> è un wrapper per l'implementazione dell'API di crittografia (CAPI, Cryptography API) Windows di Aes, mentre la classe <xref:System.Security.Cryptography.AesManaged> viene scritta interamente in codice gestito. Vi è anche un terzo tipo di implementazione, Cryptography Next Generation (CNG), oltre alle implementazioni gestita e CAPI. Un esempio di algoritmo CNG è <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Gli algoritmi CNG sono disponibili in Windows Vista e versioni successive.  
   
  È possibile scegliere l'implementazione più appropriata.  Le implementazioni gestite sono disponibili in tutte le piattaforme che supportano .NET Framework.  Le implementazioni CAPI sono disponibili nei sistemi operativi precedenti e non vengono più sviluppate. CNG è l'implementazione più recente, su cui si baseranno le nuove attività di sviluppo. Tuttavia, le implementazioni gestite non sono certificate da FIPS (Federal Information Processing Standards) e potrebbero essere più lente rispetto alle classi wrapper.  
   
@@ -89,4 +89,4 @@ ms.locfileid: "59343870"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [servizi crittografici](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

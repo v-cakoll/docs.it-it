@@ -10,10 +10,10 @@ helpviewer_keywords:
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
 ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346080"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Procedura: Aggiungere un'animazione alla posizione e alla direzione di una fotocamera usando i fotogrammi chiave
@@ -30,5 +30,5 @@ Nell'esempio riportato di seguito <xref:System.Windows.Media.Animation.Point3DAn
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Aggiungere un'animazione alla posizione e alla direzione di una fotocamera in una scena tridimensionale](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Animare la posizione e la direzione di una fotocamera in una scena tridimensionale](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
+- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)

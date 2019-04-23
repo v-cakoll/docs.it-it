@@ -5,10 +5,10 @@ f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 ms.openlocfilehash: 9aa7ba0babe0a89942e320a76e07c05162b31700
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313612"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Errore imprevisto. Impossibile acquisire una risorsa del sistema operativo necessaria per l'avvio di istanze singole
@@ -32,6 +32,6 @@ L'applicazione non è riuscita ad acquisire una risorsa del sistema operativo ne
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [Nozioni di base sul debugger](/visualstudio/debugger/debugger-basics)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Debugger Basics](/visualstudio/debugger/debugger-basics) (Nozioni di base sul debugger)
+- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

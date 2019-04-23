@@ -3,10 +3,10 @@ title: Impossibile ottenere i nomi delle porte seriali a causa di un errore di s
 ms.date: 07/20/2015
 ms.assetid: 789a1e94-28c2-4c20-8ee4-ad65fea37812
 ms.openlocfilehash: 04841634938a1ccd6702fd1e3e14cf379f82875f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342492"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>Impossibile ottenere i nomi delle porte seriali a causa di un errore di sistema interno
@@ -21,5 +21,5 @@ Si è verificato un errore interno quando è stata chiamata la proprietà `My.Co
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames>
-- [Nozioni di base sul debugger](/visualstudio/debugger/debugger-basics)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Debugger Basics](/visualstudio/debugger/debugger-basics) (Nozioni di base sul debugger)
+- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)

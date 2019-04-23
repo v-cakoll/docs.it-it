@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344871"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Finestre di progettazione composite personalizzate - Relatore di elementi del flusso di lavoro
@@ -32,11 +32,11 @@ ms.locfileid: "59344871"
 ## <a name="sample-highlights"></a>Evidenziazioni di esempio
  Nel codice di questo esempio viene illustrato quanto segue:
 
--   L'attività di una finestra di progettazione è pensato per:  `Parallel`
+-   Compilazione di una finestra di progettazione dell'attività per: `Parallel`
 
 -   La creazione di un ActivityDesigner personalizzato con un oggetto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Alcune considerazioni:
 
-    -   Notare l'uso dell'associazione dati WPF per eseguire l'associazione a `ModelItem.Branches`. `ModelItem` è la proprietà su `WorkflowElementDesigner` che fa riferimento all'oggetto sottostante la finestra di progettazione viene utilizzato, in questo caso, nostro `Parallel`.
+    -   Notare l'uso dell'associazione dati WPF per eseguire l'associazione a `ModelItem.Branches`. `ModelItem` è la proprietà su `WorkflowElementDesigner` che fa riferimento all'oggetto sottostante la finestra di progettazione per il quale è usata, in questo caso, `Parallel`.
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> può essere usato per inserire un elemento visivo per visualizzare i singoli elementi nella raccolta.
 

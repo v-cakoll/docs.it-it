@@ -1,13 +1,14 @@
 ---
 title: Prerequisiti per .NET Core in Windows
 description: Informazioni sulle dipendenze per sviluppare ed eseguire applicazioni .NET Core in computer Windows.
-ms.date: 12/14/2018
-ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.custom: updateeachvsrelease
+ms.date: 04/08/2019
+ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656115"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313710"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Prerequisiti per .NET Core in Windows
 
@@ -54,17 +55,17 @@ Per i collegamenti per il download e altre informazioni, vedere [.NET downloads]
 * Installazione di .NET Core tramite un file *ZIP*. Sono inclusi i server di compilazione/di integrazione continua/di distribuzione continua.
 
 > [!NOTE]
-> **Per Windows 8.1 e versioni precedenti, o Windows Server 2012 R2 e versioni precedenti:**
+> **Per Windows 8.1 e versioni precedenti o Windows Server 2012 R2 e versioni precedenti:**
 >
-> Verificare che l'installazione di Windows sia aggiornata e includa l'aggiornamento [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), che può essere installato tramite Windows Update. Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core verrà visualizzato un errore simile al seguente: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Verificare che l'installazione di Windows sia aggiornata e includa l'aggiornamento [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), che può essere installato tramite Windows Update. Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core viene visualizzato un errore simile al seguente: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Per Windows 7 o Windows Server 2008 R2:**
 >
 > Oltre all'aggiornamento KB2999226, verificare che sia installato anche l'aggiornamento [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot). Se l'aggiornamento non è installato, quando si avvia un'applicazione .NET Core verrà visualizzato un errore simile al seguente: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-for-net-core-30-preview-1"></a>Prerequisiti per .NET Core 3.0 Preview 1
+## <a name="prerequisites-for-net-core-30-preview-3"></a>Prerequisiti per .NET Core 3.0 Preview 3
 
-.NET core 3.0 Preview 1 ha gli stessi prerequisiti delle altre versioni di .NET Core. Se tuttavia si vuole usare Visual Studio per creare progetti .NET Core 3.0, è necessario usare [Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/). È possibile installare Visual Studio 2019 Preview side-by-side con altre versioni di Visual Studio, senza alcun conflitto.
+.NET core 3.0 Preview 3 ha gli stessi prerequisiti delle altre versioni di .NET Core. Se tuttavia si vuole usare Visual Studio per creare progetti .NET Core 3.0, è necessario usare [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). È possibile installare Visual Studio 2019 side-by-side con altre versioni di Visual Studio, senza alcun conflitto.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Prerequisiti con Visual Studio 2017
     
@@ -72,7 +73,7 @@ Per i collegamenti per il download e altre informazioni, vedere [.NET downloads]
 
 Nelle [note sulla versione ](/visualstudio/releasenotes/vs2017-relnotes) è possibile trovare altre informazioni sulle modifiche in Visual Studio 2017.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 Per sviluppare app .NET Core in Visual Studio 2017 con .NET Core 2.2 SDK:
 
@@ -100,7 +101,7 @@ Dopo aver configurato Visual Studio con .NET Core 2.2 SDK, è possibile eseguire
 * Ridestinare i progetti .NET Core 1.x e 2.x a .NET Core 2.2, compilarli ed eseguirli.
 * Creare nuovi progetti .NET Core 2.2.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 Per sviluppare app .NET Core 1.x in Visual Studio, [scaricare e installare Visual Studio 2017](/visualstudio/install/install-visual-studio) con il carico di lavoro di **"Sviluppo multipiattaforma .NET Core"** (nella sezione **Altri set di strumenti**) selezionato.
 
@@ -122,7 +123,7 @@ Per sviluppare app .NET Core 1.x in Visual Studio, [scaricare e installare Visua
 >
 > * Dal menu **Guida** scegliere **About Microsoft Visual Studio** (Informazioni su Microsoft Visual Studio).
 > * Nella finestra di dialogo **Informazioni su Microsoft Visual Studio** verificare il numero di versione.
->   * Per le app .NET Core 3.0 Preview 1, Visual Studio 2019 Preview 1 o versione successiva.
+>   * Per le app .NET Core 3.0 Preview 3, Visual Studio 2019 versione 16.0 o successiva.
 >   * Per le app .NET Core 2.2, Visual Studio 2017 versione 15.9 o successiva.
 >   * Per le app .NET Core 2.1, Visual Studio 2017 versione 15.7 o successiva.
 >   * Per le app .NET Core 1.x, Visual Studio 2017 versione 15.0 o successiva.

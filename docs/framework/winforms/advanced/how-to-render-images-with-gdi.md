@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342550"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Procedura: Eseguire il rendering delle immagini con GDI+
@@ -83,7 +83,7 @@ ms.locfileid: "59342550"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Guida introduttiva alla programmazione grafica](getting-started-with-graphics-programming.md)
+- [Introduzione alla programmazione grafica](getting-started-with-graphics-programming.md)
 - [Procedura: Creare oggetti Graphics per disegnare](how-to-create-graphics-objects-for-drawing.md)
 - [Penne, linee e rettangoli in GDI+](pens-lines-and-rectangles-in-gdi.md)
 - [Procedura: Disegnare testo in un Windows Form](how-to-draw-text-on-a-windows-form.md)

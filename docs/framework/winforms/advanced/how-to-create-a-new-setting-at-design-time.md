@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344962"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Procedura: Creare una nuova impostazione in fase di progettazione
@@ -33,6 +33,6 @@ ms.locfileid: "59344962"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
+- [Uso delle impostazioni applicazione e delle impostazioni utente](using-application-settings-and-user-settings.md)
 - [Cenni preliminari sulle impostazioni delle applicazioni](application-settings-overview.md)
 - [Procedura: Modificare il valore di un'impostazione esistente in fase di progettazione](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

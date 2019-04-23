@@ -18,10 +18,10 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
 ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314308"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Procedura: Creare tasti di scelta con i controlli Label di Windows Forms
@@ -65,6 +65,6 @@ Windows Form <xref:System.Windows.Forms.Label> controlli possono essere utilizza
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Ridimensionare un controllo Label di Windows Forms in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Panoramica del controllo Label](label-control-overview-windows-forms.md)
+- [Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Panoramica sul controllo Label](label-control-overview-windows-forms.md)
 - [Controllo Label](label-control-windows-forms.md)
