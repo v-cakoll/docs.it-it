@@ -8,10 +8,10 @@ helpviewer_keywords:
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
 ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197360"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Stampa più protetta in Windows Form
@@ -28,7 +28,7 @@ Le applicazioni Windows Forms spesso includono funzionalità di stampa. Il [!INC
   
 ## <a name="see-also"></a>Vedere anche
 
-- [File e accesso ai dati più protetti in Windows Form](more-secure-file-and-data-access-in-windows-forms.md)
+- [Accesso più sicuro a file e dati in Windows Form](more-secure-file-and-data-access-in-windows-forms.md)
 - [Considerazioni aggiuntive sulla sicurezza in Windows Form](additional-security-considerations-in-windows-forms.md)
-- [Cenni preliminari sulla sicurezza in Windows Form](security-in-windows-forms-overview.md)
+- [Panoramica della sicurezza in Windows Forms](security-in-windows-forms-overview.md)
 - [Sicurezza di Windows Form](windows-forms-security.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305956"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Procedura: Implementare la convalida con il controllo DataGrid
@@ -95,5 +95,5 @@ Il <xref:System.Windows.Controls.DataGrid> controllo consente di eseguire la con
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Data binding](../data/data-binding-wpf.md)
-- [Implementare la convalida del binding](../data/how-to-implement-binding-validation.md)
+- [Implementare la convalida dell'associazione](../data/how-to-implement-binding-validation.md)
 - [Implementare la logica di convalida negli oggetti personalizzati](../data/how-to-implement-validation-logic-on-custom-objects.md)

@@ -3,10 +3,10 @@ title: '> (Maggiore di) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
 ms.openlocfilehash: e1d13fa863eb79982d239f4e2dc298f7fcd1346f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328556"
 ---
 # <a name="-greater-than-entity-sql"></a>> (Maggiore di) (Entity SQL)
@@ -23,7 +23,7 @@ expression > expression
  Qualsiasi espressione valida. Entrambe le espressioni devono contenere tipi di dati convertibili in modo implicito.  
   
 ## <a name="result-types"></a>Tipi di risultati  
- `true` Se l'espressione a sinistra ha un valore maggiore rispetto all'espressione a destra; in caso contrario, `false`.  
+ `true` se l'espressione a sinistra ha un valore maggiore di quella a destra; in caso contrario, `false`.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore di confronto > per confrontare due espressioni e determinare se l'espressione a sinistra ha un valore maggiore di quella a destra. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410264"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306066"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Pubblicare le app .NET Core con l'interfaccia della riga di comando
 
@@ -33,8 +33,7 @@ Per un aiuto rapido sull'uso dell'interfaccia della riga di comando, la tabella 
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*Quando si usa l'SDK versione 3.0, il file eseguibile dipendente dal framework è la modalità di pubblicazione predefinita durante l'esecuzione del comando `dotnet publish` di base. Ciò si applica solo ai progetti che hanno come destinazione **.NET Core 2.1** o **.NET Core 3.0**.
+\* Quando si usa l'SDK versione 3.0, il file eseguibile dipendente dal framework è la modalità di pubblicazione predefinita durante l'esecuzione del comando `dotnet publish` di base. Questo vale solo quando il progetto è destinato a **.NET Core 2.1** o **.NET Core 3.0**.
 
 ## <a name="publishing-basics"></a>Nozioni di base sulla pubblicazione
 
@@ -129,7 +128,8 @@ La pubblicazione di un eseguibile dipendente dal framework crea un'app che esegu
 
 Per pubblicare un eseguibile dipendente dal framework è necessario usare le opzioni seguenti con il comando `dotnet publish` (ad eccezione di .NET Core 3.x con la piattaforma corrente come destinazione):
 
-- `-r <RID>` Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
+- `-r <RID>`
+  Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
 
 - `--self-contained false` Questa opzione indica a .NET Core SDK di creare un eseguibile come eseguibile dipendente dal framework.
 
@@ -148,13 +148,13 @@ La pubblicazione di una distribuzione autonoma crea un'app che non esegue il rol
 
 È necessario usare le opzioni seguenti con il comando `dotnet publish` per pubblicare una distribuzione autonoma:
 
-- `-r <RID>` Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
+- `-r <RID>`
+  Questa opzione usa un identificatore relativo (RID) per specificare la piattaforma di destinazione. Per un elenco degli identificatori di runtime, vedere [Catalogo RID di .NET Core](../rid-catalog.md).
 
 - `--self-contained true` Questa opzione indica a .NET Core SDK di creare un eseguibile come distribuzione autonoma.
 
 > [!NOTE]
 > È possibile ridurre le dimensioni totali della distribuzione abilitando la **modalità invariante della globalizzazione**. La modalità invariante della globalizzazione è utile per le applicazioni che non sono compatibili a livello globale e possono usare le convenzioni di formattazione, le convenzioni sulla combinazione di maiuscole e minuscole, il confronto tra stringhe e l'ordinamento delle [impostazioni cultura invarianti](xref:System.Globalization.CultureInfo.InvariantCulture). Per altre informazioni sulla **modalità invariante della globalizzazione** e su come abilitarla, vedere [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) (Modalità invariante della globalizzazione di .NET Core)
-
 
 ## <a name="see-also"></a>Vedere anche
 

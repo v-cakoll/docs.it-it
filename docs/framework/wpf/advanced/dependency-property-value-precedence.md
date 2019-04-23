@@ -8,10 +8,10 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315686"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedenza del valore della proprietà di dipendenza
@@ -57,9 +57,9 @@ ms.locfileid: "59315686"
   
 7. **Trigger dei modelli.** Qualsiasi trigger da un modello all'interno di uno stile oppure un modello applicato direttamente.  
   
-8. **Setter di stile.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
+8. **Setter di stili.** I valori da un <xref:System.Windows.Setter> all'interno di stili da pagine o applicazioni.  
   
-9. **Stile (tema) predefiniti.** Per informazioni dettagliate sui casi in cui viene applicato e sul modo in cui gli stili del tema si riferiscono ai modelli all'interno degli stili del tema, vedere [Stili (tema) predefiniti](#themestyles) più avanti in questo argomento. All'interno di uno stile predefinito, viene applicato il seguente ordine di precedenza:  
+9. **Stile (tema) predefinito.** Per informazioni dettagliate sui casi in cui viene applicato e sul modo in cui gli stili del tema si riferiscono ai modelli all'interno degli stili del tema, vedere [Stili (tema) predefiniti](#themestyles) più avanti in questo argomento. All'interno di uno stile predefinito, viene applicato il seguente ordine di precedenza:  
   
     1.  Trigger attivi nello stile del tema.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59315686"
   
 10. **Ereditarietà.** Alcune proprietà di dipendenza ereditano i propri valori dall'elemento padre agli elementi figlio, in modo che non sia necessario impostarli in modo specifico per ogni elemento in tutta l'applicazione. Per informazioni dettagliate, vedere [Ereditarietà del valore della proprietà](property-value-inheritance.md).  
   
-11. **Valore predefinito dai metadati di proprietà di dipendenza.** Qualsiasi proprietà di dipendenza specificata può avere un valore predefinito come stabilito dalla registrazione del sistema di proprietà di quella particolare proprietà. Inoltre, le classi derivate che ereditano una proprietà di dipendenza hanno la possibilità di eseguire l'override di tali metadati (incluso il valore predefinito) in base al tipo. Per altre informazioni, vedere [Metadati delle proprietà di dipendenza](dependency-property-metadata.md). Dato che l'ereditarietà viene controllata prima del valore predefinito, per una proprietà ereditata un valore predefinito dell'elemento padre ha la precedenza su un elemento figlio.  Di conseguenza, se una proprietà ereditabile non viene impostata ovunque, viene usato il valore predefinito come specificato nella radice o nell'elemento padre invece del valore predefinito dell'elemento figlio.  
+11. **Valore predefinito dai metadati delle proprietà di dipendenza.** Qualsiasi proprietà di dipendenza specificata può avere un valore predefinito come stabilito dalla registrazione del sistema di proprietà di quella particolare proprietà. Inoltre, le classi derivate che ereditano una proprietà di dipendenza hanno la possibilità di eseguire l'override di tali metadati (incluso il valore predefinito) in base al tipo. Per altre informazioni, vedere [Metadati delle proprietà di dipendenza](dependency-property-metadata.md). Dato che l'ereditarietà viene controllata prima del valore predefinito, per una proprietà ereditata un valore predefinito dell'elemento padre ha la precedenza su un elemento figlio.  Di conseguenza, se una proprietà ereditabile non viene impostata ovunque, viene usato il valore predefinito come specificato nella radice o nell'elemento padre invece del valore predefinito dell'elemento figlio.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  

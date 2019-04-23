@@ -3,10 +3,10 @@ title: 'Procedura: Determinare se un File è un Assembly (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
 ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316063"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Procedura: Determinare se un File è un Assembly (Visual Basic)
@@ -55,5 +55,5 @@ End Module
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Reflection.AssemblyName>
-- [Concetti di programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Assembly e Global Assembly Cache (Visual Basic)](index.md)

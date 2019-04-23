@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317103"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modifica di dati con valori elevati (massimi) in ADO.NET
@@ -21,7 +21,7 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
   
  **Documentazione online di SQL Server**  
   
-1. [Utilizzo di tipi di dati per valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Utilizzo di tipi di dati di valori di grandi dimensioni](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrizioni per i tipi di valori di grandi dimensioni  
  Le seguenti restrizioni si applicano ai tipi di dati `max` e non ai tipi di dati di dimensioni minori:  
@@ -33,7 +33,7 @@ I tipi di dati LOB (oggetti di grandi dimensioni) sono quelli che superano la di
 -   Le colonne `varchar` di grandi dimensioni non possono essere usate come colonne chiave di partizionamento.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Uso di tipi di valori di grandi dimensioni in Transact-SQL  
- La funzione `OPENROWSET` di Transact-SQL è un metodo unico per eseguire la connessione e l'accesso ai dati remoti. Include tutte le informazioni di connessione necessarie per l'accesso remoto ai dati da un'origine dati OLE DB. `OPENROWSET` è possibile fare riferimento nella clausola FROM di una query come se fosse un nome di tabella. È inoltre possibile farvi riferimento come tabella di destinazione di un'istruzione INSERT, UPDATE o DELETE, soggetta alle funzionalità del provider OLE DB.  
+ La funzione `OPENROWSET` di Transact-SQL è un metodo unico per eseguire la connessione e l'accesso ai dati remoti. Include tutte le informazioni di connessione necessarie per l'accesso remoto ai dati da un'origine dati OLE DB. È possibile fare riferimento a `OPENROWSET` nella clausola FROM di una query come se fosse un nome di tabella. È inoltre possibile farvi riferimento come tabella di destinazione di un'istruzione INSERT, UPDATE o DELETE, soggetta alle funzionalità del provider OLE DB.  
   
  La funzione `OPENROWSET` include il provider di set di righe `BULK`, che consente di leggere i dati direttamente da un file senza caricare i dati in una tabella di destinazione. Questo consente l'uso di `OPENROWSET` in una semplice istruzione INSERT SELECT.  
   
@@ -69,7 +69,7 @@ FROM OPENROWSET
 |--------|----------|  
 |L'espressione è impostata su NULL.|`@Length` viene ignorato e il valore in *column_name* viene troncato in corrispondenza `@Offset`.|  
 |`@Offset` è NULL|L'operazione di aggiornamento aggiunge l'espressione alla fine dell'oggetto esistente *column_name* valore e `@Length` viene ignorato.|  
-|`@Offset` è maggiore della lunghezza del valore di column_name|SQL Server restituisce un errore.|  
+|Il valore di `@Offset` è maggiore della lunghezza del valore di column_name.|SQL Server restituisce un errore.|  
 |`@Length` è NULL|L'operazione di aggiornamento rimuove tutti i dati a partire da `@Offset` alla fine del valore di `column_name`.|  
   
 > [!NOTE]

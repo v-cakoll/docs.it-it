@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316739"
 ---
 # <a name="key-frame-animations-overview"></a>Cenni preliminari sulle animazioni con fotogrammi chiave
@@ -46,11 +46,11 @@ Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con
   
  Le classi di animazione con fotogrammi chiave appartengono al <xref:System.Windows.Media.Animation> dello spazio dei nomi e sono conformi alla convenzione di denominazione seguente:  
   
- *\<tipo >* `AnimationUsingKeyFrames`  
+ *\<Tipo>* `AnimationUsingKeyFrames`  
   
  Dove *\<Tipo>* è il tipo di valore cui è stata aggiunta un'animazione dalla classe.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce le classi di animazione con fotogrammi chiave seguenti.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre le classi di animazione con fotogrammi chiave seguenti.  
   
 |Tipo di proprietà|Classe di animazione From/To/By corrispondente|Metodi di interpolazione supportati|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -79,7 +79,7 @@ Questo argomento presenta le animazioni con fotogrammi chiave. Le animazioni con
 ## <a name="target-values-key-frames-and-key-times"></a>Valori di destinazione (fotogrammi chiave) e chiavi temporali  
  Così come esistono diversi tipi di animazioni con fotogrammi chiave per l'animazione di diversi tipi di proprietà, esistono anche diversi tipi di oggetti fotogrammi chiave: uno per ogni tipo di valore animato e metodo di interpolazione supportato. I tipi di fotogrammi chiave sono conformi alle convenzione di denominazione seguente:  
   
- *\<InterpolationMethod >\<tipo >* `KeyFrame`  
+ *\<Metodo di interpolazione>\<Tipo>* `KeyFrame`  
   
  Dove *\<Metodo di interpolazione>* è il metodo di interpolazione usato dal fotogramma chiave e *\<Tipo>* è il tipo di valore cui è stata aggiunta un'animazione dalla classe. Un'animazione con fotogrammi chiave che supporta tutti e tre i metodi di interpolazione disporrà di tre tipi di fotogrammi chiave che è possibile usare. Ad esempio, è possibile usare tre tipi di fotogrammi chiave con una <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, e <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. I metodi di interpolazione sono descritti in dettaglio in una sezione successiva.  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315322"
 ---
 # <a name="data-binding-overview"></a>Panoramica sul data binding
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associazione di dati fornisce un modo semplice e coerente per le applicazioni presentare e interagire con i dati. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>s, ad esempio <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> dispongono di funzionalità incorporate per abilitare lo stile flessibile dei singoli elementi di dati o raccolte di elementi di dati. In cima ai dati è possibile generare visualizzazioni di ordinamento, filtro e raggruppamento.  
+Il data binding [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e di interagire con essi. È possibile eseguire il data binding degli elementi a diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, ad esempio <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.ItemsControl>s, ad esempio <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListView> dispongono di funzionalità incorporate per abilitare lo stile flessibile dei singoli elementi di dati o raccolte di elementi di dati. In cima ai dati è possibile generare visualizzazioni di ordinamento, filtro e raggruppamento.  
   
  La funzionalità di data binding in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] presenta molti vantaggi rispetto ai modelli tradizionali, tra cui un'ampia gamma di proprietà che supportano implicitamente il data binding, una rappresentazione dei dati mediante [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] flessibile e una netta separazione tra logica di business e [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59315322"
   
 -   La proprietà di destinazione deve essere una proprietà di dipendenza. La maggior parte delle <xref:System.Windows.UIElement> proprietà sono proprietà di dipendenza e la maggior parte delle proprietà di dipendenza, ad eccezione di quelli di sola lettura, supportano il data binding per impostazione predefinita. (Solo <xref:System.Windows.DependencyObject> tipi possono definire le proprietà di dipendenza e tutti i <xref:System.Windows.UIElement>derivano da <xref:System.Windows.DependencyObject>.)  
   
--   Sebbene non sia specificato nella figura, è importante notare che l'oggetto di origine del binding non è necessariamente costituito da un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personalizzato. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Data binding supporta anche i dati nel formato [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] gli oggetti e [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Per fornire alcuni esempi, l'origine del binding può essere un <xref:System.Windows.UIElement>, qualsiasi oggetto elenco, una [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetto associato [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] dati o servizi Web o un oggetto XmlNode che contiene il [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](binding-sources-overview.md).  
+-   Sebbene non sia specificato nella figura, è importante notare che l'oggetto di origine del binding non è necessariamente costituito da un oggetto [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] personalizzato. Il data binding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta dati nel formato di oggetti [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] e [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Per fornire alcuni esempi, l'origine del binding può essere un <xref:System.Windows.UIElement>, qualsiasi oggetto elenco, una [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] oggetto associato [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] dati o servizi Web o un oggetto XmlNode che contiene il [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](binding-sources-overview.md).  
   
  Come detto in altri argomenti concernenti [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], è importante ricordare che quando si stabilisce un binding, si associa una destinazione del binding *a* un'origine del binding. Ad esempio, se si visualizzano alcuni sottostante [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] i dati in un <xref:System.Windows.Controls.ListBox> tramite data binding, si esegue il binding i <xref:System.Windows.Controls.ListBox> per il [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dati.  
   
@@ -174,9 +174,9 @@ ms.locfileid: "59315322"
   
  Oggetto <xref:System.Windows.Data.BindingExpression> oggetto può essere ottenuto tramite il valore restituito della chiamata al metodo <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> su un oggetto con associazione a dati. Gli argomenti seguenti vengono illustrati alcuni degli utilizzi del <xref:System.Windows.Data.BindingExpression> classe:  
   
--   [Ottenere l'oggetto di binding da una proprietà di destinazione associata](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [Procedura: ottenere l'oggetto di binding da una proprietà di destinazione associata](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [Controllare il momento in cui il database di origine viene aggiornato dal testo di TextBox](how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [Procedura: Controllare il momento in cui il database di origine viene aggiornata dal testo di TextBox](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>Conversione dei dati  
@@ -431,8 +431,8 @@ ms.locfileid: "59315322"
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Novità di WPF versione 4.5](../getting-started/whats-new.md)
-- [Eseguire il binding ai risultati di una query LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
+- [Eseguire l'associazione dei risultati di una query LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
 - [Data binding](../advanced/optimizing-performance-data-binding.md)
 - [Demo di Data Binding](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [Procedure relative](data-binding-how-to-topics.md)
-- [Eseguire il binding a un'origine dati ADO.NET](how-to-bind-to-an-ado-net-data-source.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)
+- [Procedura: Eseguire l'associazione a un'origine dati ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

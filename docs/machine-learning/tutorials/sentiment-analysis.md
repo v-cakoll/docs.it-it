@@ -4,12 +4,12 @@ description: Informazioni su come usare ML.NET in uno scenario di classificazion
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303115"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612095"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Esercitazione: Usare ML.NET in uno scenario di classificazione binaria per l'analisi del sentiment
 
@@ -33,7 +33,7 @@ In questa esercitazione si imparerà a:
 
 ## <a name="sentiment-analysis-sample-overview"></a>Panoramica dell'esempio di analisi del sentiment
 
-L'esempio è un'app console che usa ML.NET per eseguire il training di un modello che classifica e stima il sentiment come positivo o negativo. Il set di dati del sentiment Yelp è prodotto dalla University of California, Irvine (UCI) ed è suddiviso in set di dati di training e set di dati di test. L'esempio consente di valutare il modello con il set di dati di test per l'analisi della qualità. 
+L'esempio è un'app console che usa ML.NET per eseguire il training di un modello che classifica e stima il sentiment come positivo o negativo. Il set di dati del sentiment Yelp è prodotto dalla University of California, Irvine (UCI) ed è suddiviso in set di dati di training e set di dati di test. L'esempio consente di valutare il modello con il set di dati di test per l'analisi della qualità.
 
 È possibile trovare il codice sorgente per questa esercitazione nel repository [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
@@ -41,7 +41,7 @@ L'esempio è un'app console che usa ML.NET per eseguire il training di un modell
 
 * [Visual Studio 2017 15.6 o versione successiva](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato.
 
-* [File con estensione zip del set di dati Sentiment Labeled Sentences di UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
+* [File ZIP del set di dati Sentiment Labeled Sentences di UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
 
 ## <a name="machine-learning-workflow"></a>Flusso di lavoro di apprendimento automatico
 
@@ -53,9 +53,9 @@ Le fasi del flusso di lavoro sono le seguenti:
 2. **Preparare i dati**
    * **Caricare i dati**
    * **Estrarre le caratteristiche (trasformare i dati)**
-3. **Creare il modello ed eseguirne il training** 
+3. **Compilare ed eseguire il training**
    * **Eseguire il training del modello**
-   * **Valutare il modello**
+   * **Valutazione del modello**
 4. **Distribuire il modello**
    * **Usare il modello per le stime**
 
@@ -96,7 +96,7 @@ Gli algoritmi di classificazione sono spesso di uno dei tipi seguenti:
 * Binarie: A o B.
 * Multiclasse: più categorie che possono essere stimate tramite un singolo modello.
 
-Dato che i commenti nel sito Web devono essere classificati come positivi o negativi, si usa l'algoritmo di classificazione binaria. 
+Dato che i commenti nel sito Web devono essere classificati come positivi o negativi, si usa l'algoritmo di classificazione binaria.
 
 ## <a name="create-a-console-application"></a>Creare un'applicazione console
 
@@ -152,7 +152,7 @@ Rimuovere la definizione di classe esistente e aggiungere il codice seguente, ch
 
 La classe del set di dati di input, `SentimentData`, include un valore `string` per il commento (`SentimentText`) e un valore `bool` (`Sentiment`) che include un valore per il sentiment positivo o negativo. A entrambi i campi sono associati attributi <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29>. Questo attributo descrive l'ordine di ogni campo nel file di dati.  Inoltre, la proprietà `Sentiment` include un elemento <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A> per designarlo come il campo `Label`. `SentimentPrediction` è la classe usata per la stima dopo il training del modello. Dispone di un singolo valore booleano (`Sentiment`) e un attributo `ColumnName` `PredictedLabel`. `Label` viene usato per creare il modello ed eseguirne il training, nonché con il set di dati suddiviso per valutare il modello. `PredictedLabel` viene usato durante la valutazione e la stima. Per la valutazione vengono usati un input con dati di training, i valori stimati e il modello.
 
-Quando si crea un modello con ML.NET, si inizia creando un'istanza di <xref:Microsoft.ML.MLContext>. `MLContext` è paragonabile a livello concettuale all'uso di `DbContext` in Entity Framework. L'ambiente offre un contesto per il processo di apprendimento automatico che può essere usato per il rilevamento e la registrazione di eccezioni.
+Quando si crea un modello con ML.NET, si inizia creando un'istanza di <xref:Microsoft.ML.MLContext>. A livello concettuale `MLContext` è paragonabile all'uso di `DbContext` in Entity Framework. L'ambiente offre un contesto per il processo di apprendimento automatico che può essere usato per il rilevamento e la registrazione di eccezioni.
 
 ### <a name="initialize-variables-in-main"></a>Inizializzare le variabili in Main
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>Caricare i dati
 
-Poiché il tipo di modello di dati `SentimentData` creato in precedenza corrisponde allo schema del set di dati, è possibile combinare l'inizializzazione, il mapping e il caricamento del set di dati in un'unica riga di codice usando il wrapper `MLContext.Data.LoadFromTextFile` per il [metodo LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Verrà restituita un'istanza di <xref:Microsoft.Data.DataView.IDataView>. 
+Poiché il tipo di modello di dati `SentimentData` creato in precedenza corrisponde allo schema del set di dati, è possibile combinare l'inizializzazione, il mapping e il caricamento del set di dati in un'unica riga di codice usando il wrapper `MLContext.Data.LoadFromTextFile` per il [metodo LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Verrà restituita un'istanza di <xref:Microsoft.Data.DataView.IDataView>.
 
- Come input e output di `Transforms`, una `DataView` è il tipo di pipeline di dati fondamentale, paragonabile a `IEnumerable` per `LINQ`.
+Come input e output di `Transforms`, una `DataView` è il tipo di pipeline di dati fondamentale, paragonabile a `IEnumerable` per `LINQ`.
 
 In ML.NET i dati sono simili a una visualizzazione SQL. Vengono valutati in modalità differita, sono schematizzati ed eterogenei. L'oggetto è la prima parte della pipeline e carica i dati. Per questa esercitazione, carica un set di dati con commenti e il sentiment positivo o negativo corrispondente. Queste informazioni vengono usate per creare il modello ed eseguirne il training.
 
- Aggiungere il codice seguente come prima riga del metodo `LoadData`:
+Aggiungere il codice seguente come prima riga del metodo `LoadData`:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Dividere il set di dati per il training e il test del modello
 
-Successivamente, è necessario sia un set di dati di training per il training del modello che un set di dati di test per valutare il modello. Usare `MLContext.BinaryClassification.TrainTestSplit` che esegue il wrapping di <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> per dividere il set di dati caricato in set di dati di training e di test e restituirli all'interno di un <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. È possibile specificare la frazione di dati per il set di test con il parametro `testFraction`. Il valore predefinito è 10%, ma in questo caso si usa il 20% per usare più dati per la valutazione.  
+Successivamente, è necessario sia un set di dati di training per il training del modello che un set di dati di test per valutare il modello. Usare `MLContext.BinaryClassification.TrainTestSplit` che esegue il wrapping di <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> per dividere il set di dati caricato in set di dati di training e di test e restituirli all'interno di un <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. È possibile specificare la frazione di dati per il set di test con il parametro `testFraction`. Il valore predefinito è 10%, ma in questo caso si usa il 20% per usare più dati per la valutazione.
 
 Per dividere i dati caricati nei set di dati necessari, aggiungere il codice seguente come riga successiva nel metodo `LoadData`:
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-Si noti che vengono passati due parametri al metodo Train: `MLContext` per il contesto (`mlContext`) e `IDataView` per il set di dati di training (`splitTrainSet`). 
+Si noti che vengono passati due parametri al metodo Train: `MLContext` per il contesto (`mlContext`) e `IDataView` per il set di dati di training (`splitTrainSet`).
 
 ## <a name="extract-and-transform-the-data"></a>Estrarre e trasformare i dati
 
@@ -353,7 +354,7 @@ Aggiungere una chiamata al nuovo metodo dal metodo `Main`, subito sotto la chiam
 `model` è un oggetto `transformer` che opera su molte righe di dati, ma in un ambiente produzione è spesso necessario eseguire stime su singoli esempi. <xref:Microsoft.ML.PredictionEngine%602> è un wrapper che viene restituito dal metodo `CreatePredictionEngine`. A questo punto si aggiunge il codice seguente per creare l'istanza di `PredictionEngine` come prima riga nel metodo `Predict`:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 Aggiungere un commento per testare la stima del modello sottoposto a training nel metodo `Predict` creando un'istanza di `SentimentData`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-La procedura è stata completata. A questo punto, è stato creato correttamente un modello di apprendimento automatico per la classificazione e la stima del sentiment dei messaggi. 
+La procedura è stata completata. A questo punto, è stato creato correttamente un modello di apprendimento automatico per la classificazione e la stima del sentiment dei messaggi.
 
 La creazione di modelli efficaci è un processo iterativo. Questo modello ha inizialmente una qualità inferiore, perché l'esercitazione usa set di dati di dimensioni contenute per consentire il training rapido del modello. Se non si è soddisfatti della qualità del modello, è possibile provare a migliorarla fornendo set di dati di training più grandi o scegliendo algoritmi di training diversi con iperparametri diversi per ogni algoritmo.
 
@@ -459,6 +460,7 @@ La creazione di modelli efficaci è un processo iterativo. Questo modello ha ini
 ## <a name="next-steps"></a>Passaggi successivi
 
 In questa esercitazione si è appreso come:
+
 > [!div class="checklist"]
 > * Informazioni sul problema
 > * Selezionare l'algoritmo di Machine Learning appropriato
@@ -470,5 +472,6 @@ In questa esercitazione si è appreso come:
 > * Eseguire distribuzione e stime con un modello caricato
 
 Passare all'esercitazione successiva per altre informazioni
+
 > [!div class="nextstepaction"]
-> [Classificazione dei problemi](github-issue-classification.md)
+> [Classificazione del problema](github-issue-classification.md)

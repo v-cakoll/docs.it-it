@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
 ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314543"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Procedura: Ereditare Windows Form
@@ -42,8 +42,8 @@ La creazione di nuovi Windows Form mediante l'ereditarietà da form di base è u
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [Istruzione Inherits](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Istruzione Imports (tipo e spazio dei nomi .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [utilizzo](~/docs/csharp/language-reference/keywords/using.md)
-- [Effetti della modifica dell'aspetto di un form di base](effects-of-modifying-base-form-appearance.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Effetti della modifica dell'aspetto di un modulo di base](effects-of-modifying-base-form-appearance.md)
 - [Ereditarietà visiva di Windows Form](windows-forms-visual-inheritance.md)

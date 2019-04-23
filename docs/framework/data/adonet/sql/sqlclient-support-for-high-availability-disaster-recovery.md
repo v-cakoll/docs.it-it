@@ -3,10 +3,10 @@ title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307606"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
@@ -63,7 +63,7 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
   
 2. Se un'applicazione usa `ApplicationIntent=ReadWrite` (illustrato di seguito) e il percorso di replica secondaria è configurato per l'accesso di sola lettura.  
   
- <xref:System.Data.SqlClient.SqlDependency> non è supportata nelle repliche secondarie di sola lettura.  
+ <xref:System.Data.SqlClient.SqlDependency> non è supportato per le repliche secondarie di sola lettura.  
   
  Una connessione non riuscirà se una replica primaria è configurata per rifiutare i carichi di lavoro di sola lettura e la stringa di connessione contiene `ApplicationIntent=ReadOnly`.  
   
@@ -79,7 +79,7 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
   
  La parola chiave `ApplicationIntent` non funziona con i database legacy di sola lettura.  
   
- Un database può consentire o non consentire carichi di lavoro di lettura nel database AlwaysOn di destinazione. (Questa operazione viene eseguita con il `ALLOW_CONNECTIONS` clausola del `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] istruzioni.)  
+ Un database può consentire o non consentire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la clausola `ALLOW_CONNECTIONS` delle istruzioni `PRIMARY_ROLE` e `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
   
  La parola chiave `ApplicationIntent` viene usata per abilitare il routing di sola lettura.  
   
@@ -98,5 +98,5 @@ In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCL
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Funzionalità SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [Funzionalità di SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

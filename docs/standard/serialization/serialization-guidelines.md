@@ -9,10 +9,10 @@ helpviewer_keywords:
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
 ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317337"
 ---
 # <a name="serialization-guidelines"></a>Linee guida relative alla serializzazione
@@ -140,9 +140,9 @@ In questo documento vengono elencate le linee guida da tenere presenti quando si
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Uso di contratti dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [Tipi supportati dal serializzatore dei contratti dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Uso di contratti di dati](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [Tipi supportati dal serializzatore dei contratti di dati](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [Serializzazione binaria](binary-serialization.md)
 - [Servizi remoti .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [Serializzazione SOAP e XML](xml-and-soap-serialization.md)

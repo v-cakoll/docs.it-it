@@ -11,10 +11,10 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316531"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     Il metodo <xref:System.Security.SecurityManager.GetStandardSandbox%2A> restituisce un set di autorizzazioni `Internet` o un set di autorizzazioni `LocalIntranet`, a seconda dell'area nell'evidenza. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> Crea anche le autorizzazioni di identità per alcuni degli oggetti evidenza passati come riferimenti.  
+     Il metodo <xref:System.Security.SecurityManager.GetStandardSandbox%2A> restituisce un set di autorizzazioni `Internet` o un set di autorizzazioni `LocalIntranet`, a seconda dell'area nell'evidenza. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> crea inoltre autorizzazioni di identità per alcuni degli oggetti evidenza passati come riferimenti.  
   
 2. Firmare l'assembly contenente la classe host (in questo esempio `Sandboxer`) che chiama il codice non attendibile. Aggiungere l'oggetto <xref:System.Security.Policy.StrongName> usato per firmare l'assembly alla matrice <xref:System.Security.Policy.StrongName> del parametro `fullTrustAssemblies` della chiamata a <xref:System.AppDomain.CreateDomain%2A>. La classe host deve essere eseguita come completamente attendibile per consentire l'esecuzione del codice parzialmente attendibile o per offrire servizi per l'applicazione parzialmente attendibile. Ecco come viene letto l'oggetto <xref:System.Security.Policy.StrongName> di un assembly:  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> Consente di ottenere un handle di un metodo nell'assembly parzialmente attendibile. L'handle può essere usato per eseguire codice in modo sicuro con autorizzazioni minime.  
+     Viene usato <xref:System.Reflection> per ottenere un handle di un metodo nell'assembly parzialmente attendibile. L'handle può essere usato per eseguire codice in modo sicuro con autorizzazioni minime.  
   
      Nel codice precedente, osservare l'oggetto <xref:System.Security.PermissionSet.Assert%2A> per l'autorizzazione di attendibilità totale prima di stampare <xref:System.Security.SecurityException>.  
   

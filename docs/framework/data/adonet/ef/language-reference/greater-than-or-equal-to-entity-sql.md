@@ -3,10 +3,10 @@ title: '>= (Maggiore o uguale a) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
 ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317142"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (maggiore o uguale a) (Entity SQL)
@@ -23,7 +23,7 @@ expression >= expression
  Qualsiasi espressione valida. Entrambe le espressioni devono contenere tipi di dati convertibili in modo implicito.  
   
 ## <a name="result-types"></a>Tipi di risultati  
- `true` Se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra; in caso contrario, `false`.  
+ `true` se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra; in caso contrario, `false`.  
   
 ## <a name="example"></a>Esempio  
  Nella query Entity SQL seguente viene usato l'operatore di confronto >= per confrontare due espressioni e determinare se l'espressione a sinistra ha un valore maggiore o uguale a quella a destra. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  

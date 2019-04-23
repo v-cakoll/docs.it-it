@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
 ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304844"
 ---
 # <a name="error-creating-win32-resources-error-message"></a>Errore durante la creazione delle risorse Win32: \<messaggio di errore >
@@ -28,4 +28,4 @@ Il compilatore Visual Basic chiama Assembly Linker (Al.exe, definito anche Alink
 ## <a name="see-also"></a>Vedere anche
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
