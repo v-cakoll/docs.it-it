@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157677"
 ---
 # <a name="securing-services"></a>Protezione dei servizi
@@ -109,11 +109,11 @@ Sicurezza di un servizio Windows Communication Foundation (WCF) è costituito da
 - [Delega e rappresentazione](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
 - [Progettazione dei contratti di servizio](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Sicurezza](../../../docs/framework/wcf/feature-details/security.md)
-- [Cenni preliminari sulla sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Procedura: Impostare la proprietà ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Procedura: Proteggere un servizio con credenziali di Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Procedura: Proteggere un servizio con le credenziali di Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Procedura: Impostare la modalità di sicurezza](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Procedura: Specificare il tipo di credenziali client](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Procedura: Specificare il tipo di credenziale Client](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
 - [Procedura: Limitare l'accesso con la classe PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Procedura: Rappresentare un client in un servizio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Procedura: Rappresenta un Client in un servizio](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [Procedura: Esaminare il contesto di sicurezza](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

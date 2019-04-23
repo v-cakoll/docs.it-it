@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157872"
 ---
 # <a name="panels-overview"></a>Cenni preliminari sugli elementi Panel
@@ -23,7 +23,7 @@ ms.locfileid: "59157872"
   
 -   [Classe Panel](#Panels_view_from_10000_feet)  
   
--   [Pannello membri comuni degli elementi](#Panels_declared_members)  
+-   [Membri comuni degli elementi Panel](#Panels_declared_members)  
   
 -   [Elementi Panel derivati](#Panels_derived_elements)  
   
@@ -242,7 +242,7 @@ ms.locfileid: "59157872"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Supporto per la globalizzazione o la localizzazione  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta una serie di funzionalità che facilitano la creazione di localizzabili [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta un insieme di funzionalità che facilitano la creazione di [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] localizzabili.  
   
  Tutti gli elementi panel supportano in modo nativo il <xref:System.Windows.FrameworkElement.FlowDirection%2A> proprietà, che può essere utilizzata per un nuovo flusso dinamico del contenuto in base alle impostazioni locali o dalla lingua dell'utente. Per altre informazioni, vedere <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -254,12 +254,12 @@ ms.locfileid: "59157872"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Compilare una prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Esempio di raccolte di Layout WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Esempio di raccolte di layout WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Layout](../advanced/layout.md)
 - [Esempio di raccolta di controlli WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Panoramica su allineamento, margini e spaziatura interna](../advanced/alignment-margins-and-padding-overview.md)
 - [Creare un contenuto-Wrapping Panel Sample personalizzato](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [Cenni preliminari sulle proprietà associate](../advanced/attached-properties-overview.md)
 - [Cenni preliminari sull'utilizzo del layout automatico](../advanced/use-automatic-layout-overview.md)
-- [Layout e progettazione](../advanced/optimizing-performance-layout-and-design.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](../advanced/optimizing-performance-layout-and-design.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155090"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
@@ -172,11 +172,11 @@ L'autorizzazione è il processo volto a determinare quali entità dispongono del
 - <xref:System.IdentityModel.Tokens>
 - <xref:System.IdentityModel.Selectors>
 - [Attestazioni e token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
-- [Attestazioni e negazioni di accesso alle risorse](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [Attestazioni e negazione dell'accesso alle risorse](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Creazione di attestazioni e valori delle risorse](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
 - [Procedura: Creare un'attestazione personalizzata](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
 - [Procedura: Confrontare le attestazioni](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
 - [Procedura: Creare un criterio di autorizzazione personalizzato](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
 - [Procedura: Creare un gestore autorizzazioni personalizzato per un servizio](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155935"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilizzo di un servizio dati in un'applicazione client (WCF Data Services)
@@ -21,7 +21,7 @@ ms.locfileid: "59155935"
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] garantisce l'interoperabilità tra servizi che espongono [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] newsfeed e le applicazioni che utilizzano [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Applicazioni di accedere e modificare i dati in un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-servizio basato su inviando messaggi di richiesta di un'azione HTTP specifica e utilizzando un URI che indirizza una risorsa di entità sulla quale deve essere eseguita l'azione. I dati di entità necessari vengono forniti come payload codificato in modo appropriato nel corpo del messaggio.  
   
 ### <a name="http-actions"></a>Azioni HTTP  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta le azioni HTTP seguenti da eseguire creano, lettura, aggiornamento ed eliminazione di operazioni sui dati di entità rappresentati dalla risorsa indirizzata:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] supporta le azioni HTTP riportate di seguito per l'esecuzione di operazioni di creazione, lettura, aggiornamento ed eliminazione sui dati di entità rappresentati dalla risorsa indirizzata.  
   
 -   **HTTP GET** -si tratta dell'azione predefinita quando si accede a una risorsa da un browser. Nel messaggio di richiesta non viene fornito alcun payload e viene restituito un metodo di risposta con un payload contenente i dati richiesti.  
   
@@ -53,5 +53,5 @@ ms.locfileid: "59155935"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Accesso alle risorse dei servizi dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Accesso alle risorse di un servizio dati](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

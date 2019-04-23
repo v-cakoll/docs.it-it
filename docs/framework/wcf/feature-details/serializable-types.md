@@ -3,10 +3,10 @@ title: Tipi serializzabili
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160849"
 ---
 # <a name="serializable-types"></a>Tipi serializzabili
@@ -27,7 +27,7 @@ Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSer
   
 -   I campi di sola lettura, le proprietà senza un metodo `get` o `set` e quelle con metodi `set` o `get` interni o privati non vengono serializzati. Tali proprietà vengono ignorate e non viene generata alcuna eccezione, salvo nel caso di raccolte con sola funzione di accesso get.  
   
--   <xref:System.Xml.Serialization.XmlSerializer> attributi (ad esempio `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`e così via) vengono ignorati.  
+-   Gli attributi <xref:System.Xml.Serialization.XmlSerializer> (ad esempio `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` e così via) vengono ignorati.  
   
 -   Se non si applica l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> a un tipo specificato, il serializzatore ignora qualsiasi membro del tipo a cui viene applicato l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
@@ -44,4 +44,4 @@ Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSer
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Tipi supportati dal serializzatore dei contratti dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Tipi supportati dal serializzatore dei contratti di dati](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

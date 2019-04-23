@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159523"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Provider di reflection (WCF Data Services)
-Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di esporre dati non definiti rigidamente in un modello basato su entità. Il provider di reflection espone i dati nelle classi che restituiscono i tipi che implementano l'interfaccia <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Usa la reflection per dedurre un modello di dati per queste classi e può convertire le query basate sull'indirizzo per le risorse in language-integrated query (LINQ)-basati su query su esposti <xref:System.Linq.IQueryable%601> tipi.  
+Oltre a consentire l'esposizione di dati da un modello tramite Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] è in grado di esporre dati non definiti rigidamente in un modello basato su entità. Il provider di reflection espone i dati nelle classi che restituiscono i tipi che implementano l'interfaccia <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa la reflection per dedurre un modello di dati per queste classi e può convertire le query basate sull'indirizzo eseguite sulle risorse in query basate su LINQ (Language-Integrated Query) eseguite sui tipi <xref:System.Linq.IQueryable%601> esposti.  
   
 > [!NOTE]
 >  È possibile usare il metodo <xref:System.Linq.Queryable.AsQueryable%2A> per restituire un'interfaccia <xref:System.Linq.IQueryable%601> da una classe che implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. In questo modo è possibile usare la maggior parte dei tipi di raccolte generiche come origine dati per il servizio dati.  
