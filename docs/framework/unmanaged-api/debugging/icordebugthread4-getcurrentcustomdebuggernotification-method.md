@@ -18,17 +18,17 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216327"
 ---
-# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="adb1d-102">Metodo ICorDebugThread4::GetCurrentCustomDebuggerNotification</span><span class="sxs-lookup"><span data-stu-id="adb1d-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
+# <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a><span data-ttu-id="2c2e7-102">Metodo ICorDebugThread4::GetCurrentCustomDebuggerNotification</span><span class="sxs-lookup"><span data-stu-id="2c2e7-102">ICorDebugThread4::GetCurrentCustomDebuggerNotification Method</span></span>
 
-<span data-ttu-id="adb1d-103">Ottiene l'oggetto corrente [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) oggetto nel thread corrente.</span><span class="sxs-lookup"><span data-stu-id="adb1d-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>
+<span data-ttu-id="2c2e7-103">Ottiene l'oggetto corrente [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) oggetto nel thread corrente.</span><span class="sxs-lookup"><span data-stu-id="2c2e7-103">Gets the current [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) object on the current thread.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="adb1d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="adb1d-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2c2e7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2c2e7-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetCurrentCustomDebuggerNotification(
@@ -36,27 +36,27 @@ HRESULT GetCurrentCustomDebuggerNotification(
     );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="adb1d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="adb1d-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2c2e7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="2c2e7-105">Parameters</span></span>
 
 `ppNotificationObject`\
-<span data-ttu-id="adb1d-106">[out] Un puntatore all'oggetto corrente `ICorDebugManagedCallback3::CustomNotification` oggetto nel thread corrente.</span><span class="sxs-lookup"><span data-stu-id="adb1d-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>
+<span data-ttu-id="2c2e7-106">[out] Un puntatore all'oggetto corrente `ICorDebugManagedCallback3::CustomNotification` oggetto nel thread corrente.</span><span class="sxs-lookup"><span data-stu-id="2c2e7-106">[out] A pointer to the current `ICorDebugManagedCallback3::CustomNotification` object on the current thread.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="adb1d-107">Note</span><span class="sxs-lookup"><span data-stu-id="adb1d-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2c2e7-107">Note</span><span class="sxs-lookup"><span data-stu-id="2c2e7-107">Remarks</span></span>
 
-<span data-ttu-id="adb1d-108">Il valore di `ppNotificationObject` è null se il metodo non viene chiamato dall'interno una `ICorDebugManagedCallback3::CustomNotification` callback, o se non esiste alcun oggetto di notifica corrente.</span><span class="sxs-lookup"><span data-stu-id="adb1d-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>
+<span data-ttu-id="2c2e7-108">Il valore di `ppNotificationObject` è null se il metodo non viene chiamato dall'interno una `ICorDebugManagedCallback3::CustomNotification` callback, o se non esiste alcun oggetto di notifica corrente.</span><span class="sxs-lookup"><span data-stu-id="2c2e7-108">The value of `ppNotificationObject` is null if the method is not called from within a `ICorDebugManagedCallback3::CustomNotification` callback, or if no current notification object exists.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="adb1d-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="adb1d-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="2c2e7-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="2c2e7-109">Requirements</span></span>
 
-<span data-ttu-id="adb1d-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="adb1d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="2c2e7-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c2e7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="adb1d-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="adb1d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
+<span data-ttu-id="2c2e7-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2c2e7-111">**Header:** CorDebug.idl, CorDebug.h</span></span>
 
-<span data-ttu-id="adb1d-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="adb1d-112">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="2c2e7-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c2e7-112">**Library:** CorGuids.lib</span></span>
 
-**<span data-ttu-id="adb1d-113">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="adb1d-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+<span data-ttu-id="2c2e7-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c2e7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="adb1d-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="adb1d-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c2e7-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2c2e7-114">See also</span></span>
 
-- [<span data-ttu-id="adb1d-115">Interfaccia ICorDebugThread4</span><span class="sxs-lookup"><span data-stu-id="adb1d-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [<span data-ttu-id="adb1d-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="adb1d-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="adb1d-117">Debug</span><span class="sxs-lookup"><span data-stu-id="adb1d-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="2c2e7-115">Interfaccia ICorDebugThread4</span><span class="sxs-lookup"><span data-stu-id="2c2e7-115">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [<span data-ttu-id="2c2e7-116">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="2c2e7-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="2c2e7-117">Debug</span><span class="sxs-lookup"><span data-stu-id="2c2e7-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
