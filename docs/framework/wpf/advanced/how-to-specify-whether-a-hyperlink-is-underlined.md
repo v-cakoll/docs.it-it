@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
 ms.openlocfilehash: 5718912e24a0697f209669b0ab4e7f4df1765ed3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076315"
 ---
 # <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>Procedura: Specificare se un collegamento ipertestuale è sottolineato
@@ -36,4 +36,4 @@ Il <xref:System.Windows.Documents.Hyperlink> oggetto è un elemento di contenuto
 - <xref:System.Windows.TextDecoration>
 - <xref:System.Windows.Documents.Hyperlink>
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
-- [Creare un effetto testo](how-to-create-a-text-decoration.md)
+- [Creare un effetto di testo](how-to-create-a-text-decoration.md)

@@ -1,12 +1,12 @@
 ---
-title: <clear> Elemento per schemeSettings (impostazioni Uri)
+title: Elemento <clear> per schemeSettings (impostazioni URI)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082685"
 ---
 # <a name="clear-element-for-schemesettings-uri-settings"></a>\<Cancella > (elemento) per schemeSettings (impostazioni Uri)
@@ -36,7 +36,7 @@ Cancella tutte le impostazioni di schema esistenti.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<schemeSettings > (impostazioni Uri)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
+|[Elemento \<schemeSettings> (impostazioni URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, il <xref:System.Uri?displayProperty=nameWithType> delimitatori di percorso con codifica percentuale non consente l'escape di classe prima di eseguire la compressione del percorso. È stato implementato come un meccanismo di protezione contro gli attacchi simile al seguente:  

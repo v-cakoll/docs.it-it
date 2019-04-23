@@ -19,16 +19,16 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073728"
 ---
 # <a name="using-the-assert-method"></a>Utilizzo del metodo Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A> è un metodo che può essere chiamato nelle classi di autorizzazione di accesso di codice e scegliere il <xref:System.Security.PermissionSet> classe. È possibile usare **Assert** per consentire al codice (e ai chiamanti downstream) eseguire le azioni che il codice dispone delle autorizzazioni, ma i chiamanti non disponga dell'autorizzazione necessaria. Un'asserzione di sicurezza modifica il normale processo eseguito dal runtime durante un controllo di sicurezza. Mediante l'asserzione di un'autorizzazione si impone al sistema di sicurezza di non eseguire il controllo dei chiamanti del codice relativamente all'autorizzazione oggetto dell'asserzione.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> è un metodo che può essere chiamato nelle classi di autorizzazione di accesso al codice e nella classe <xref:System.Security.PermissionSet>. È possibile usare **Assert** per consentire al codice (e ai chiamanti downstream) eseguire le azioni che il codice dispone delle autorizzazioni, ma i chiamanti non disponga dell'autorizzazione necessaria. Un'asserzione di sicurezza modifica il normale processo eseguito dal runtime durante un controllo di sicurezza. Mediante l'asserzione di un'autorizzazione si impone al sistema di sicurezza di non eseguire il controllo dei chiamanti del codice relativamente all'autorizzazione oggetto dell'asserzione.  
   
 > [!CAUTION]
 >  Usare con cautela le asserzioni, in quanto possono introdurre vulnerabilità nella sicurezza e compromettere il meccanismo runtime per l'applicazione delle restrizioni di sicurezza.  
@@ -174,4 +174,4 @@ namespace LogUtil
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.Permissions.SecurityAction>
 - [Attributi](../../../docs/standard/attributes/index.md)
-- [Sicurezza per l'accesso al codice](../../../docs/framework/misc/code-access-security.md)
+- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)

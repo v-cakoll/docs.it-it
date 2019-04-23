@@ -3,10 +3,10 @@ title: Zkratka
 description: Informazioni su byref e tipi byref simili in F#, che vengono utilizzati per la programmazione di basso livello.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055365"
 ---
 # <a name="byrefs"></a>Zkratka
@@ -110,19 +110,19 @@ Lo scopo di `outref<'T>` consiste nell'indicare che il puntatore deve essere let
 
 C# supporta le `in ref` e `out ref` parole chiave, oltre a `ref` restituisce. La tabella seguente illustra come F# interpreta cosa C# genera:
 
-|Costrutto di linguaggio C#|F#deduce|
+|Costrutto di linguaggio c#|F#deduce|
 |------------|---------|
-|`ref` valore restituito|`outref<'T>`|
-|`ref readonly` valore restituito|`inref<'T>`|
-|`in ref` parametro|`inref<'T>`|
-|`out ref` parametro|`outref<'T>`|
+|`ref` Valore restituito|`outref<'T>`|
+|`ref readonly` Valore restituito|`inref<'T>`|
+|`in ref` Parametro|`inref<'T>`|
+|`out ref` Parametro|`outref<'T>`|
 
 La tabella seguente illustra ciò che F# genera:
 
 |F#costrutto|Costrutto generato|
 |------------|-----------------|
 |`inref<'T>` argomento|`[In]` attributo nell'argomento|
-|`inref<'T>` return|`modreq` attributo sul valore|
+|`inref<'T>` restituire|`modreq` attributo sul valore|
 |`inref<'T>` in uno slot astratto o implementazione|`modreq` argomento o return|
 |`outref<'T>` argomento|`[Out]` attributo nell'argomento|
 

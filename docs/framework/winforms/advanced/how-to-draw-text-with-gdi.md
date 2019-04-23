@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
 ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073325"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Procedura: Disegnare testo con GDI
@@ -34,7 +34,7 @@ Con il <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodo nella <xref:S
  Per altre informazioni su come ottenere un <xref:System.Drawing.Graphics>, vedere [come: Creare oggetti Graphics per disegnare](how-to-create-graphics-objects-for-drawing.md). Per altre informazioni sulla creazione di un <xref:System.Drawing.Font>, vedere [come: Creare le famiglie di caratteri e caratteri](how-to-construct-font-families-and-fonts.md).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Esempio di codice precedente è progettato per l'uso con Windows Form e richiede la <xref:System.Windows.Forms.PaintEventArgs>`e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+ Esempio di codice precedente è progettato per l'uso con Windows Form e richiede la <xref:System.Windows.Forms.PaintEventArgs> `e`, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -42,4 +42,4 @@ Con il <xref:System.Windows.Forms.TextRenderer.DrawText%2A> metodo nella <xref:S
 - <xref:System.Drawing.Font>
 - <xref:System.Drawing.Color>
 - <xref:System.Drawing.Color>
-- [Utilizzo di tipi di carattere e testo](using-fonts-and-text.md)
+- [Uso di tipi di carattere e testo](using-fonts-and-text.md)

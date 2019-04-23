@@ -3,10 +3,10 @@ title: 'Dichiarazioni di importazione: Parola chiave open'
 description: Informazioni su F# Importa le dichiarazioni e come vengono specificati un modulo o i cui elementi è possibile fare riferimento senza usare un nome completo dello spazio dei nomi.
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055001"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Dichiarazioni di importazione: Il `open` (parola chiave)
@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Note
 
-Riferimento al codice utilizzando il percorso completo dello spazio dei nomi o modulo ogni volta possibile creare codice difficile da leggere, scrivere e mantenere. In alternativa, è possibile usare il `open` parola chiave per utilizzati spesso moduli e spazi dei nomi in modo che quando si fa riferimento a un membro di tale modulo o dello spazio dei nomi, è possibile usare la versione abbreviata del nome anziché il nome completo. Questa parola chiave è simile al `using` parola chiave nel linguaggio C# `using namespace` in Visual C++ e `Imports` in Visual Basic.
+Riferimento al codice utilizzando il percorso completo dello spazio dei nomi o modulo ogni volta possibile creare codice difficile da leggere, scrivere e mantenere. In alternativa, è possibile usare il `open` parola chiave per utilizzati spesso moduli e spazi dei nomi in modo che quando si fa riferimento a un membro di tale modulo o dello spazio dei nomi, è possibile usare la versione abbreviata del nome anziché il nome completo. Questa parola chiave è simile al `using` parola chiave nel linguaggio c# `using namespace` in Visual C++ e `Imports` in Visual Basic.
 
 Il modulo o dello spazio dei nomi fornito deve essere nello stesso progetto o in un progetto di riferimento o un assembly. In caso contrario, è possibile aggiungere un riferimento al progetto o usare il `-reference` comandi`-`opzione della riga (o la relativa abbreviazione `-r`). Per altre informazioni, vedere [Opzioni del compilatore](compiler-options.md).
 

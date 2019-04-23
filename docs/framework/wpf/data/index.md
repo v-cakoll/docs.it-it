@@ -9,18 +9,18 @@ helpviewer_keywords:
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077732"
 ---
 # <a name="data"></a>Dati
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] associazione di dati fornisce un modo semplice e coerente per le applicazioni presentare e interagire con i dati. È possibile associare gli elementi a dati provenienti da numerose e diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce inoltre un meccanismo per il trasferimento dei dati tramite operazioni di trascinamento e rilascio.  
+Il data binding di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] rappresenta per le applicazioni un modo semplice e coerente di presentare i dati e interagire con essi. È possibile associare gli elementi a dati provenienti da numerose e diverse origini dati sotto forma di oggetti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce anche un meccanismo per il trasferimento dei dati tramite operazioni di trascinamento della selezione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Data binding](data-binding-wpf.md)  
- [Trascinamento e rilascio](../advanced/drag-and-drop.md)  
+ [Trascinamento della selezione](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Data>  
@@ -40,5 +40,5 @@ ms.locfileid: "59077732"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Compilare una prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Procedura dettagliata: La memorizzazione nella cache i dati dell'applicazione in un'applicazione WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

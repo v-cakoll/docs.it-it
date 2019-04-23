@@ -8,10 +8,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073272"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Procedura: Controllare un'animazione usando i valori From, To e By
@@ -41,4 +41,4 @@ Un "From/To/By" o "un'animazione base" Crea una transizione tra due valori di de
 
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md)
-- [FROM, To e dall'esempio di valori di destinazione dell'animazione](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Esempio di valori di destinazione dell'animazione From/To/By](https://go.microsoft.com/fwlink/?LinkID=159988)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082178"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Hit testing a livello visivo
@@ -145,5 +145,5 @@ Eliminazione di una struttura ad albero visuale
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [Eseguire un hit Test Using DrawingVisuals Sample](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [Eseguire un hit Test con interoperatività Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Eseguire un hit test della geometria in un oggetto visivo](how-to-hit-test-geometry-in-a-visual.md)
-- [Eseguire un hit test usando un contenitore di host Win32](how-to-hit-test-using-a-win32-host-container.md)
+- [Eseguire un hit test della geometria in un oggetto Visual](how-to-hit-test-geometry-in-a-visual.md)
+- [Eseguire un hit test utilizzando un contenitore di host Win32](how-to-hit-test-using-a-win32-host-container.md)

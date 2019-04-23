@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055313"
 ---
 # <a name="working-with-calendars"></a>Utilizzo di calendari
@@ -54,7 +54,7 @@ Tutti i calendari in .NET derivano dal <xref:System.Globalization.Calendar?displ
 
 * <xref:System.Globalization.TaiwanLunisolarCalendar>, che rappresenta il calendario lunisolare taiwanese.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>, che rappresenta il calendario buddista Thai.
+* <xref:System.Globalization.ThaiBuddhistCalendar>, che rappresenta il calendario buddista thailandese.
 
 * <xref:System.Globalization.UmAlQuraCalendar>, che rappresenta il calendario Um Al Qura.
 

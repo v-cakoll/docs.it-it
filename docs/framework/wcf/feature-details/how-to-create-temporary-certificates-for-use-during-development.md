@@ -6,10 +6,10 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921325"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedura: Creare certificati temporanei da usare durante lo sviluppo
@@ -114,6 +114,6 @@ Assicurarsi di eliminare qualsiasi certificato temporaneo dell'autorità di radi
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Utilizzo dei certificati](working-with-certificates.md)
-- [Procedura: Visualizzare certificati con lo snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Uso di certificati](working-with-certificates.md)
+- [Procedura: Visualizzare i certificati con lo Snap-in MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protezione di servizi e client](securing-services-and-clients.md)

@@ -3,10 +3,10 @@ title: <transport> di <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
 ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076003"
 ---
 # <a name="transport-of-peertransport"></a>\<Transport > di \<peerTransport >
@@ -62,7 +62,7 @@ Specifica il tipo di trasporto per messaggi protetti inviati dai peer configurat
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Protezione del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Sicurezza del trasporto](../../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)
 - [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Associazioni](../../../../../docs/framework/wcf/bindings.md)

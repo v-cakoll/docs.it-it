@@ -5,10 +5,10 @@ helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
 ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072545"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipi supportati dal serializzatore dei contratti dati
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) viene utilizzato il <xref:System.Runtime.
   
 -   Tipi contrassegnati con l'attributo <xref:System.SerializableAttribute> . Numerosi tipi inclusi nella libreria della classe di base [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] rientrano in questa categoria. <xref:System.Runtime.Serialization.DataContractSerializer> supporta completamente questo modello di programmazione della serializzazione utilizzato da .NET Framework Remoting, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>e <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, compreso il supporto per l'interfaccia <xref:System.Runtime.Serialization.ISerializable> .  
   
--   Tipi che rappresentano XML non elaborato o tipi che rappresentano dati relazionali [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . <xref:System.Xml.XmlElement> e la matrice di tipi <xref:System.Xml.XmlNode> sono supportati come un modo di rappresentazione diretta di XML. Sono inoltre supportati i tipi che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> , compreso l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> correlato e i tipi <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement> . Il [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> tipo e il <xref:System.Data.DataSet> tipo (come le sue classi derivate tipizzate) implementano tutti il <xref:System.Xml.Serialization.IXmlSerializable> interfaccia e pertanto rientrano in questa categoria. Per altre informazioni, vedere [tipi XML e ADO.NET nei contratti dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
+-   Tipi che rappresentano XML non elaborato o tipi che rappresentano dati relazionali [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . <xref:System.Xml.XmlElement> e la matrice di tipi <xref:System.Xml.XmlNode> sono supportati come un modo di rappresentazione diretta di XML. Sono inoltre supportati i tipi che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> , compreso l'attributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> correlato e i tipi <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement> . L'attributo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> e il tipo <xref:System.Data.DataSet> (come le sue classi derivate tipizzate) implementano tutti l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> e di conseguenza appartengono a questa categoria. Per altre informazioni, vedere [tipi XML e ADO.NET nei contratti dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Limitazioni dell'utilizzo di certi tipi in modalità parzialmente attendibile  
  Nell'elenco seguente sono riportate le limitazioni relative all'utilizzo di determinati tipi in scenari in modalità parzialmente attendibile:  
@@ -69,8 +69,8 @@ Windows Communication Foundation (WCF) viene utilizzato il <xref:System.Runtime.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tipi XML e ADO.NET nei contratti dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
-- [Uso di contratti dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Tipi XML e ADO.NET nei contratti di dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
+- [Uso di contratti di dati](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Tipi serializzabili](../../../../docs/framework/wcf/feature-details/serializable-types.md)
-- [Tipi di raccolta nei contratti dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)
-- [Tipi di enumerazioni nei contratti dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)
+- [Tipi di raccolta nei contratti di dati](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)
+- [Tipi di enumerazione nei contratti di dati](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

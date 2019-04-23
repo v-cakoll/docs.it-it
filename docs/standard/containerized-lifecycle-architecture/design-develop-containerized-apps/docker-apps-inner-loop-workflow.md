@@ -5,10 +5,10 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920909"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flusso di lavoro di sviluppo del ciclo interno per le app Docker
@@ -216,7 +216,7 @@ Il servizio redis Usa il [immagine redis pubblica più recente](https://hub.dock
 
 Se l'app ha solo un singolo contenitore, è sufficiente eseguirla distribuendola all'host Docker (macchina virtuale o server fisico). Tuttavia, se l'app è costituita da più servizi, devi *comporlo*anche. Esaminiamo le diverse opzioni.
 
-***Opzione A: Eseguire un singolo contenitore o un servizio***
+***Opzione a: Eseguire un singolo contenitore o un servizio***
 
 È possibile eseguire l'immagine Docker usando il comando docker run, come illustrato di seguito:
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 Per questa distribuzione specifica, si saranno reindirizzando le richieste inviate alla porta 80 alla porta interna 5000. A questo punto l'applicazione è in ascolto sulla porta esterna 80 a livello di host.
 
-***Opzione B: Creare ed eseguire un'applicazione di più contenitori***
+***Opzione b: Creare ed eseguire un'applicazione di più contenitori***
 
 Nella maggior parte degli scenari aziendali, un'applicazione Docker sarà essere composte da più servizi. In questi casi, è possibile eseguire il `docker-compose up` comando (figura 4-27), che userà il file docker-Compose. yml che è stato creato in precedenza. Questo comando consente di distribuire un'applicazione composta con tutti i contenitori correlati.
 

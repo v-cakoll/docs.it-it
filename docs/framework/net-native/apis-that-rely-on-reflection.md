@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076861"
 ---
 # <a name="apis-that-rely-on-reflection"></a>API basate sulla reflection
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Per una corretta esecuzione, questo codice richiede diversi elementi di metadati:  
   
--   `Browse` metadati per il tipo di metodo da chiamare.  
+-   I metadati `Browse` per il tipo di metodo da chiamare.  
   
--   `Browse` metadati per il metodo da chiamare.  Se si tratta di un metodo pubblico, l'aggiunta di metadati `Browse` pubblici per il tipo contenitore include anche il metodo.  
+-   I metadati `Browse` per il metodo da chiamare.  Se si tratta di un metodo pubblico, l'aggiunta di metadati `Browse` pubblici per il tipo contenitore include anche il metodo.  
   
 -   I metadati dinamici per il metodo da chiamare, in modo che il delegato di chiamata della reflection non venga rimosso dalla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Se i metadati dinamici non sono disponibili per il metodo, viene generata la seguente eccezione quando viene chiamato il metodo <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>:  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` i metadati per il tipo di matrice sono necessario per un'istanza in modo dinamico.  La seguente direttiva di runtime consente la creazione dinamica di un'istanza di `Class1[]`.  
+ I metadati `Browse` per il tipo di matrice sono richiesti per la creazione dinamica di un'istanza.  La seguente direttiva di runtime consente la creazione dinamica di un'istanza di `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
@@ -95,4 +95,4 @@ Unfortunately, no further information is available.
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

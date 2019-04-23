@@ -3,10 +3,10 @@ title: Cenni preliminari su LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073676"
 ---
 # <a name="linq-to-dataset-overview"></a>Cenni preliminari su LINQ to DataSet
@@ -14,7 +14,7 @@ ms.locfileid: "59073676"
   
  Nonostante l'importanza che lo contraddistingue, <xref:System.Data.DataSet> dispone di funzionalità limitate di query. È possibile usare il metodo <xref:System.Data.DataTable.Select%2A> per il filtro e l'ordinamento e i metodi <xref:System.Data.DataRow.GetChildRows%2A> e <xref:System.Data.DataRow.GetParentRow%2A> per la navigazione all'interno della gerarchia. Per operazioni più complesse, tuttavia, lo sviluppatore deve scrivere una query personalizzata. Le applicazioni risultanti possono quindi essere difficilmente gestibili e caratterizzate da prestazioni inadeguate.  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] rende più semplice e rapido per eseguire query sui dati memorizzati nella cache un <xref:System.Data.DataSet> oggetto. Queste query sono espresse nel linguaggio di programmazione stesso, anziché come valori letterali stringa incorporati nel codice dell'applicazione. Gli sviluppatori non devono pertanto imparare un diverso linguaggio di query. È inoltre [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consente agli sviluppatori di Visual Studio lavorare con maggiore produttività, poiché l'IDE di Visual Studio offre controllo della sintassi in fase di compilazione, la tipizzazione statica e il supporto IntelliSense per [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] può anche essere usato per eseguire query su dati che sono stati consolidati da una o più origini dati. In tal modo sono possibili molti scenari in cui è necessario poter rappresentare e gestire i dati con flessibilità. In particolare, questo tipo di modifiche sono richieste nelle applicazioni generiche per la creazione di rapporti, di analisi e di Business Intelligence.  
+ Con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è più facile e veloce eseguire una query su dati memorizzati nella cache di un oggetto <xref:System.Data.DataSet>. Queste query sono espresse nel linguaggio di programmazione stesso, anziché come valori letterali stringa incorporati nel codice dell'applicazione. Gli sviluppatori non devono pertanto imparare un diverso linguaggio di query. È inoltre [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consente agli sviluppatori di Visual Studio lavorare con maggiore produttività, poiché l'IDE di Visual Studio offre controllo della sintassi in fase di compilazione, la tipizzazione statica e il supporto IntelliSense per [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] può inoltre essere usato per eseguire query su dati che sono stati consolidati da una o più origini dati. In tal modo sono possibili molti scenari in cui è necessario poter rappresentare e gestire i dati con flessibilità. In particolare, questo tipo di modifiche sono richieste nelle applicazioni generiche per la creazione di rapporti, di analisi e di Business Intelligence.  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>Esecuzione di query su DataSet con LINQ to DataSet  
  Prima di poter eseguire query su un oggetto <xref:System.Data.DataSet> con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], è necessario popolare <xref:System.Data.DataSet>. Esistono diversi modi per caricare dati in un <xref:System.Data.DataSet>, ad esempio usando il <xref:System.Data.Common.DataAdapter> classe oppure [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md). Dopo che i dati sono stati caricati in un <xref:System.Data.DataSet> dell'oggetto, è possibile iniziare a eseguire una query. La formulazione di query che utilizzano [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è simile all'uso [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] su altre [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-origini dati. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] è possibile eseguire query su singole tabelle di un <xref:System.Data.DataSet> o su più di una tabella usando il <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A> operatori query standard.  
@@ -31,6 +31,6 @@ ms.locfileid: "59073676"
 ## <a name="see-also"></a>Vedere anche
 
 - [Esecuzione di query su oggetti DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Language-Integrated Query (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)
-- [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ (Language-Integrated Query) - C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (Language-Integrated Query) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

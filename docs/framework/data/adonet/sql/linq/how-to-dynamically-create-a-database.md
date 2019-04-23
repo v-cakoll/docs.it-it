@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072389"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Procedura: Creare un database in modo dinamico
@@ -23,7 +23,7 @@ In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database r
   
 -   Si compila un'applicazione client che richiede un database locale per salvare il proprio stato offline.  
   
- È inoltre possibile usare il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> con SQL Server mediante un file con estensione mdf o con un nome di catalogo, a seconda della stringa di connessione. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Usa la stringa di connessione per definire il creazione del database e server su cui deve essere creato il database.  
+ È inoltre possibile usare il metodo <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> con SQL Server mediante un file con estensione mdf o con un nome di catalogo, a seconda della stringa di connessione. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa la stringa di connessione per definire il database da creare e il server su cui dovrà essere creato il database.  
   
 > [!NOTE]
 >  Se possibile, usare la sicurezza integrata di Windows per connettersi al database in modo che non vengano richieste le password nella stringa di connessione.  
@@ -51,7 +51,7 @@ In LINQ to SQL viene eseguito il mapping di un modello a oggetti a un database r
 ## <a name="see-also"></a>Vedere anche
 
 - [Mapping basato su attributi](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
 - [Mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Creazione e invio di modifiche dei dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

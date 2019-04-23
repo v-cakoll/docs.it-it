@@ -6,10 +6,10 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079825"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Cenni preliminari sulle funzionalità bidirezionali di WPF
@@ -23,11 +23,11 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  L'esempio seguente imposta la direzione del flusso di un <xref:System.Windows.Controls.TextBox> elemento.  
   
- **Direzione del flusso da sinistra a destra**  
+ **Direzione di flusso da sinistra a destra**  
   
  [!code-xaml[LTRRTL#LTR](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
   
- **Direzione del flusso da destra a sinistra**  
+ **Direzione di flusso da destra a sinistra**  
   
  [!code-xaml[LTRRTL#RTL](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
@@ -41,7 +41,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- Il livello superiore <xref:System.Windows.Window> ha un <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, in modo che tutti gli elementi in esso contenuti anche ereditano lo stesso <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Per un elemento eseguire l'override di un oggetto specificato <xref:System.Windows.FrameworkElement.FlowDirection%2A> è necessario aggiungere una modifica della direzione esplicita, ad esempio il secondo <xref:System.Windows.Controls.TextBlock> nell'esempio precedente in cui viene modificato in <xref:System.Windows.FlowDirection.LeftToRight>. Se non si specifica <xref:System.Windows.FrameworkElement.FlowDirection%2A> è definito, il valore predefinito <xref:System.Windows.FlowDirection.LeftToRight> si applica.  
+ Il livello superiore <xref:System.Windows.Window> ha un <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, in modo che tutti gli elementi in esso contenuti anche ereditano lo stesso <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Per un elemento eseguire l'override di un oggetto specificato <xref:System.Windows.FrameworkElement.FlowDirection%2A> è necessario aggiungere una modifica della direzione esplicita, ad esempio il secondo <xref:System.Windows.Controls.TextBlock> nell'esempio precedente in cui viene modificato in <xref:System.Windows.FlowDirection.LeftToRight>. Se non si specifica <xref:System.Windows.FrameworkElement.FlowDirection%2A> è definito, il valore predefinito <xref:System.Windows.FlowDirection.LeftToRight> si applica.  
   
  La figura seguente mostra l'output dell'esempio precedente:
 
@@ -114,7 +114,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
     
  ![Figura che illustra una barra degli strumenti con un diritto di sfumatura a sinistra.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- L'esempio seguente disegna un <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Per disegnarlo da sinistra a destra, rimuovere il <xref:System.Windows.FlowDirection> attributo la <xref:System.Windows.Controls.ToolBar>.  
+ L'esempio seguente disegna un' <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Per disegnarlo da sinistra a destra, rimuovere il <xref:System.Windows.FlowDirection> attributo la <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -122,7 +122,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
 ### <a name="flowdirection-exceptions"></a>Eccezioni di FlowDirection  
  Esistono alcuni casi in cui <xref:System.Windows.FlowDirection> non comportarsi come previsto. In questa sezione vengono illustrate due di queste eccezioni.  
   
- **Image**  
+ **Immagine**  
   
  Un <xref:System.Windows.Controls.Image> rappresenta un controllo che visualizza un'immagine. Nella [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] può essere utilizzato con un <xref:System.Windows.Controls.Image.Source%2A> proprietà che definisce il [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] del <xref:System.Windows.Controls.Image> da visualizzare.  
   
@@ -140,9 +140,9 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  **Percorsi**  
   
- Oltre a un <xref:System.Windows.Controls.Image>, un altro elemento interessante è <xref:System.Windows.Shapes.Path>. Path è un oggetto che consente di disegnare una serie di righe e curve collegate. Si comporta in modo analogo a un <xref:System.Windows.Controls.Image> relative a relativo <xref:System.Windows.FlowDirection>, ad esempio relativi <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> è un'immagine speculare orizzontale del relativo <xref:System.Windows.FlowDirection.LeftToRight> uno. Tuttavia, a differenza di un' <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> eredita relativo <xref:System.Windows.FlowDirection> dal contenitore e uno non è necessario specificarlo in modo esplicito.  
+ Oltre a un <xref:System.Windows.Controls.Image>, un altro elemento interessante è <xref:System.Windows.Shapes.Path>. Path è un oggetto che consente di disegnare una serie di righe e curve collegate. Si comporta in modo analogo a un <xref:System.Windows.Controls.Image> relative a relativo <xref:System.Windows.FlowDirection>, ad esempio relativi <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> è un'immagine speculare orizzontale del relativo <xref:System.Windows.FlowDirection.LeftToRight> uno. Tuttavia, a differenza di un' <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> eredita relativo <xref:System.Windows.FlowDirection> dal contenitore e uno non è necessario specificarlo in modo esplicito.  
   
- L'esempio seguente disegna una freccia semplice con 3 linee. La prima freccia eredita la <xref:System.Windows.FlowDirection.RightToLeft> dalla direzione del flusso di <xref:System.Windows.Controls.StackPanel> in modo che i punti iniziali e finali vengano misurati da una radice posizionata sul lato destro. La seconda freccia è esplicita <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> inizia anche a destra. Tuttavia, la radice iniziale della terza freccia è collocata sul lato sinistro. Per altre informazioni sul disegno, vedere <xref:System.Windows.Media.LineGeometry> e <xref:System.Windows.Media.GeometryGroup>.  
+ L'esempio seguente disegna una freccia semplice con 3 linee. La prima freccia eredita la <xref:System.Windows.FlowDirection.RightToLeft> dalla direzione del flusso di <xref:System.Windows.Controls.StackPanel> in modo che i punti iniziali e finali vengano misurati da una radice posizionata sul lato destro. La seconda freccia è esplicita <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> inizia anche a destra. Tuttavia, la radice iniziale della terza freccia è collocata sul lato sinistro. Per altre informazioni sul disegno, vedere <xref:System.Windows.Media.LineGeometry> e <xref:System.Windows.Media.GeometryGroup>.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
@@ -158,7 +158,7 @@ A differenza di altre piattaforme di sviluppo, [!INCLUDE[TLA2#tla_winclient](../
   
  Ciò ha consentito alle applicazioni di elaborare valori numerici senza dover convertirli da una lingua a altra, ad esempio un utente può aprire una [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] foglio di calcolo in una localizzata in arabo [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e visualizzare i numeri in arabo, ma aprirli in versione europea di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] rappresentazione europea degli stessi numeri. Questa condizione è necessaria anche per altri simboli, quali i separatori virgola e il simbolo della percentuale, perché sono spesso associati a numeri nello stesso documento.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] la stessa tradizione e aggiunto un ulteriore supporto per questa funzionalità che consente un maggiore controllo utente su quando e come viene usata la sostituzione. Sebbene questa funzionalità sia stata progettata per tutte le lingue, è particolarmente utile per i contenuti bidirezionali in cui la definizione delle cifre per una lingua specifica rappresenta solitamente una sfida per gli sviluppatori di applicazioni, a causa delle diverse impostazioni cultura con cui un'applicazione può essere eseguita.  
+ In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è stata mantenuta la stessa tradizione e aggiunto un ulteriore supporto a questa funzionalità che consente un maggiore controllo dell'utente sul momento e sulla modalità d'su della sostituzione. Sebbene questa funzionalità sia stata progettata per tutte le lingue, è particolarmente utile per i contenuti bidirezionali in cui la definizione delle cifre per una lingua specifica rappresenta solitamente una sfida per gli sviluppatori di applicazioni, a causa delle diverse impostazioni cultura con cui un'applicazione può essere eseguita.  
   
  La proprietà principale che controlla la sostituzione dei numeri come funziona [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] è il <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> proprietà di dipendenza. Il <xref:System.Windows.Media.NumberSubstitution> classe specifica come devono essere visualizzati numeri nel testo. Include tre proprietà pubbliche che ne definiscono il comportamento. Di seguito è riportato un riepilogo di tutte le proprietà.  
   
