@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226962"
 ---
 # <a name="textbox"></a>TextBox
@@ -19,7 +19,7 @@ Il <xref:System.Windows.Controls.TextBox> controllo fornisce il supporto per l'i
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sulla classe TextBox](textbox-overview.md)  
- [Procedure relative](textbox-how-to-topics.md)  
+ [Procedure relative alle proprietà](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Controls.TextBox>  

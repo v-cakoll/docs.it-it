@@ -3,11 +3,11 @@ title: Configurazione dei valori di timeout per un'associazione
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
 ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339762"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773246"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Configurazione dei valori di timeout per un'associazione
 Esistono numerose impostazioni di timeout disponibili nelle associazioni WCF. La configurazione corretta di queste impostazioni di timeout non solo può migliorare le prestazioni del servizio, bensì anche svolgere un ruolo nell'usabilità e nella sicurezza del servizio. Nelle associazioni WCF sono disponibili i timeout seguenti:  

@@ -4,11 +4,11 @@ description: Queste esercitazioni di ML.NET aiutano a creare soluzioni di intell
 ms.custom: seodec18
 ms.date: 04/05/2019
 ms.openlocfilehash: 1f3824e409c21514bfb0c5743c6d9f36419ecb06
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427573"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771855"
 ---
 # <a name="net-machine-learning-tutorials---mlnet"></a>Esercitazioni di Machine Learning per .NET - ML.NET
 

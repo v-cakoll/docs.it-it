@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
 ms.openlocfilehash: 7d542a3dcae514e75194b49c23a8dec5dd7e8c3b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298851"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773727"
 ---
 # <a name="how-to-use-the-channelfactory"></a>Procedura: Usare ChannelFactory
 La classe generica <xref:System.ServiceModel.ChannelFactory%601> viene usata in scenari avanzati che richiedono la creazione di una channel factory utilizzabile per creare più di un canale.  

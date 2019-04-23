@@ -13,10 +13,10 @@ helpviewer_keywords:
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
 ms.openlocfilehash: ffda85b2704212ea5323117447e0cfe17ffb33db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226963"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfacce correlate al data binding
@@ -28,14 +28,14 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
 ### <a name="interfaces-for-implementation-by-data-source-authors"></a>Interfacce per l'implementazione da parte degli autori dell'origine dati  
  Le interfacce seguenti sono progettate per essere usate dai controlli di Windows Forms:  
   
--   <xref:System.Collections.IList> interfaccia  
+-   <xref:System.Collections.IList> Interfaccia  
   
      Una classe che implementa il <xref:System.Collections.IList> interfaccia potrebbe essere un <xref:System.Array>, <xref:System.Collections.ArrayList>, o <xref:System.Collections.CollectionBase>. Questi sono elenchi indicizzati di elementi di tipo <xref:System.Object>. Questi elenchi devono contenere tipi omogenei, perché il primo elemento dell'indice determina il tipo. <xref:System.Collections.IList> saranno disponibili per l'associazione solo in fase di esecuzione.  
   
     > [!NOTE]
     >  Se si desidera creare un elenco di oggetti business per l'associazione con Windows Form, è consigliabile usare il <xref:System.ComponentModel.BindingList%601>. Il <xref:System.ComponentModel.BindingList%601> è una classe estensibile che implementa le interfacce primarie richieste per l'associazione di dati di Windows Form bidirezionali.  
   
--   <xref:System.ComponentModel.IBindingList> interfaccia  
+-   <xref:System.ComponentModel.IBindingList> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.IBindingList> interfaccia fornisce un livello di funzionalità di associazione dati molto maggiore. Questa implementazione offre funzionalità di ordinamento di base e la notifica delle modifiche, sia quando gli elementi dell'elenco cambiano (ad esempio, il terzo elemento in un elenco di clienti include una modifica al campo indirizzo), sia quando l'elenco stesso cambia (ad esempio, il numero di elementi nell'elenco aumenta o diminuisce). La notifica della modifica è importante se si prevede di disporre di più controlli associati agli stessi dati e si desidera che le modifiche apportate in uno dei controlli si propaghi agli altri controlli associati.  
   
@@ -47,11 +47,11 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
     > [!NOTE]
     >  Il <xref:System.ComponentModel.BindingList%601> fornisce un'implementazione generica del <xref:System.ComponentModel.IBindingList> interfaccia.  
   
--   <xref:System.ComponentModel.IBindingListView> interfaccia  
+-   <xref:System.ComponentModel.IBindingListView> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.IBindingListView> interfaccia fornisce tutte le funzionalità di un'implementazione di <xref:System.ComponentModel.IBindingList>, nonché come filtro e avanzate funzionalità di ordinamento. Questa implementazione fornisce un filtro basato sulle stringhe, e un ordinamento a più colonne con coppie descrittore-direzione della proprietà.  
   
--   <xref:System.ComponentModel.IEditableObject> interfaccia  
+-   <xref:System.ComponentModel.IEditableObject> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.IEditableObject> interfaccia consente a un oggetto controllare quando le modifiche apportate a tale oggetto vengono rese permanenti. Questa implementazione mette a disposizione il <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, e <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> metodi che consentono di eseguire il rollback delle modifiche apportate all'oggetto. Ecco una breve spiegazione del funzionamento dei <xref:System.ComponentModel.IEditableObject.BeginEdit%2A>, <xref:System.ComponentModel.IEditableObject.EndEdit%2A>, e <xref:System.ComponentModel.IEditableObject.CancelEdit%2A> metodi e come funzionano in combinazione con un'altra per abilitare un possibile rollback delle modifiche apportate ai dati:  
   
@@ -65,11 +65,11 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
   
      Questa nozione transazionale delle funzionalità dei dati viene usata per il <xref:System.Windows.Forms.DataGridView> controllo.  
   
--   <xref:System.ComponentModel.ICancelAddNew> interfaccia  
+-   <xref:System.ComponentModel.ICancelAddNew> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.ICancelAddNew> interface implementa in genere il <xref:System.ComponentModel.IBindingList> l'interfaccia e consente di eseguire il rollback di un'aggiunta apportata all'origine dati con il <xref:System.ComponentModel.IBindingList.AddNew%2A> (metodo). Se l'origine dati implementa la <xref:System.ComponentModel.IBindingList> interfaccia, è necessario anche che implementano il <xref:System.ComponentModel.ICancelAddNew> interfaccia.  
   
--   <xref:System.ComponentModel.IDataErrorInfo> interfaccia  
+-   <xref:System.ComponentModel.IDataErrorInfo> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.IDataErrorInfo> interfaccia consente di offrire informazioni personalizzate sugli errori per i controlli associati agli oggetti:  
   
@@ -77,39 +77,39 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
   
     -   Il <xref:System.ComponentModel.IDataErrorInfo.Item%2A> proprietà restituisce una stringa con il messaggio di errore specifico dalla colonna (ad esempio, "il valore nel `State` colonna non è valida").  
   
--   <xref:System.Collections.IEnumerable> interfaccia  
+-   <xref:System.Collections.IEnumerable> Interfaccia  
   
      Una classe che implementa il <xref:System.Collections.IEnumerable> interfaccia viene generalmente usata da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Supporto per Windows Form per questa interfaccia è disponibile solo tramite il <xref:System.Windows.Forms.BindingSource> componente.  
   
     > [!NOTE]
     >  Il <xref:System.Windows.Forms.BindingSource> tutti i componenti copiati <xref:System.Collections.IEnumerable> elementi in un elenco separato per motivi di associazione.  
   
--   <xref:System.ComponentModel.ITypedList> interfaccia  
+-   <xref:System.ComponentModel.ITypedList> Interfaccia  
   
      Una classe di raccolte che implementa il <xref:System.ComponentModel.ITypedList> interfaccia offre la possibilità di controllare l'ordine e il set di proprietà esposte per il controllo associato.  
   
     > [!NOTE]
     >  Quando si implementa il <xref:System.ComponentModel.ITypedList.GetItemProperties%2A> metodo e il <xref:System.ComponentModel.PropertyDescriptor> matrice non è null, l'ultima voce nella matrice sarà il descrittore di proprietà che descrivono la proprietà di elenco che è un altro elenco di elementi.  
   
--   <xref:System.ComponentModel.ICustomTypeDescriptor> interfaccia  
+-   <xref:System.ComponentModel.ICustomTypeDescriptor> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.ICustomTypeDescriptor> interfaccia fornisce informazioni dinamiche su se stesso. Questa interfaccia è simile a <xref:System.ComponentModel.ITypedList> ma viene usato per gli oggetti anziché gli elenchi. Questa interfaccia viene utilizzata da <xref:System.Data.DataRowView> per progettare lo schema delle righe sottostanti. Un'implementazione semplice di <xref:System.ComponentModel.ICustomTypeDescriptor> avviene tramite il <xref:System.ComponentModel.CustomTypeDescriptor> classe.  
   
     > [!NOTE]
     >  Per supportare il binding in fase di progettazione per i tipi che implementano <xref:System.ComponentModel.ICustomTypeDescriptor>, il tipo deve implementare anche <xref:System.ComponentModel.IComponent> ed esistere come un'istanza del modulo.  
   
--   <xref:System.ComponentModel.IListSource> interfaccia  
+-   <xref:System.ComponentModel.IListSource> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.IListSource> interfaccia consente l'associazione elenco basato su oggetti non di elenco. Il <xref:System.ComponentModel.IListSource.GetList%2A> metodo di <xref:System.ComponentModel.IListSource> viene utilizzato per restituire un elenco associabile da un oggetto che non eredita da <xref:System.Collections.IList>. <xref:System.ComponentModel.IListSource> viene usato per il <xref:System.Data.DataSet> classe.  
   
--   <xref:System.ComponentModel.IRaiseItemChangedEvents> interfaccia  
+-   <xref:System.ComponentModel.IRaiseItemChangedEvents> Interfaccia  
   
      Una classe che implementa il <xref:System.ComponentModel.IRaiseItemChangedEvents> interfaccia è un elenco associabile che implementa anche il <xref:System.ComponentModel.IBindingList> interfaccia. Questa interfaccia viene utilizzata per indicare se il tipo genera <xref:System.ComponentModel.IBindingList.ListChanged> eventi di tipo <xref:System.ComponentModel.ListChangedType.ItemChanged> tramite relativo <xref:System.ComponentModel.IRaiseItemChangedEvents.RaisesItemChangedEvents%2A> proprietà.  
   
     > [!NOTE]
     >  È consigliabile implementare il <xref:System.ComponentModel.IRaiseItemChangedEvents> se l'origine dati fornisce la proprietà di conversione dell'evento dell'elenco descritta in precedenza e interagisce con il <xref:System.Windows.Forms.BindingSource> componente. In caso contrario, il <xref:System.Windows.Forms.BindingSource> eseguirà anche la proprietà di conversione dell'evento dell'elenco che rallenterà le prestazioni.  
   
--   <xref:System.ComponentModel.ISupportInitialize> interfaccia  
+-   <xref:System.ComponentModel.ISupportInitialize> Interfaccia  
   
      Un componente che implementa il <xref:System.ComponentModel.ISupportInitialize> interfaccia trae vantaggio dalle ottimizzazioni batch per l'impostazione delle proprietà e l'inizializzazione delle proprietà di CO-dipendenti. Il <xref:System.ComponentModel.ISupportInitialize> contiene due metodi:  
   
@@ -117,15 +117,15 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
   
     -   <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> segnala la fine dell'inizializzazione dell'oggetto.  
   
--   <xref:System.ComponentModel.ISupportInitializeNotification> interfaccia  
+-   <xref:System.ComponentModel.ISupportInitializeNotification> Interfaccia  
   
      Un componente che implementa il <xref:System.ComponentModel.ISupportInitializeNotification> implementa anche di interfaccia di <xref:System.ComponentModel.ISupportInitialize> interfaccia. Questa interfaccia consente di segnalare ad altre <xref:System.ComponentModel.ISupportInitialize> componenti che l'inizializzazione è stata completata. Il <xref:System.ComponentModel.ISupportInitializeNotification> interfaccia contiene due membri:  
   
     -   <xref:System.ComponentModel.ISupportInitializeNotification.IsInitialized%2A> Restituisce un `boolean` valore che indica se il componente viene inizializzato.  
   
-    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> Si verifica quando <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> viene chiamato.  
+    -   <xref:System.ComponentModel.ISupportInitializeNotification.Initialized> si verifica quando <xref:System.ComponentModel.ISupportInitialize.EndInit%2A> viene chiamato.  
   
--   <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia  
+-   <xref:System.ComponentModel.INotifyPropertyChanged> Interfaccia  
   
      Una classe che implementa questa interfaccia è un tipo che genera un evento quando uno dei valori delle proprietà viene modificato. Questa interfaccia è progettata per sostituire il criterio di disporre di un evento di modifica per ogni proprietà di un controllo. Quando usato in un <xref:System.ComponentModel.BindingList%601>, deve implementare un oggetto business il <xref:System.ComponentModel.INotifyPropertyChanged> interfaccia e la BindingList\`1 convertirà <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> eventi <xref:System.ComponentModel.BindingList%601.ListChanged> gli eventi di tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
   
@@ -135,14 +135,14 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
 ### <a name="interfaces-for-implementation-by-component-authors"></a>Interfacce per l'implementazione da parte degli autori del componente  
  Le interfacce seguenti sono progettate per l'uso da parte del motore di data-binding di Windows Forms:  
   
--   <xref:System.Windows.Forms.IBindableComponent> interfaccia  
+-   <xref:System.Windows.Forms.IBindableComponent> Interfaccia  
   
      Una classe che implementa questa interfaccia è un componente di non-controllo che supporta il data-binding. Questa classe restituisce il data binding e il contesto di associazione del componente tramite il <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> e <xref:System.Windows.Forms.IBindableComponent.BindingContext%2A> le proprietà di questa interfaccia.  
   
     > [!NOTE]
     >  Se il componente eredita dalla <xref:System.Windows.Forms.Control>, non è necessaria implementare il <xref:System.Windows.Forms.IBindableComponent> interfaccia.  
   
--   <xref:System.Windows.Forms.ICurrencyManagerProvider> interfaccia  
+-   <xref:System.Windows.Forms.ICurrencyManagerProvider> Interfaccia  
   
      Una classe che implementa il <xref:System.Windows.Forms.ICurrencyManagerProvider> interfaccia è un componente che fornisce la propria <xref:System.Windows.Forms.CurrencyManager> per gestire le associazioni collegate a questo particolare componente. Accesso alla classe personalizzata <xref:System.Windows.Forms.CurrencyManager> avviene tramite il <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> proprietà.  
   
@@ -151,6 +151,6 @@ Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] è possibile creare m
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Associazione dati e Windows Form](data-binding-and-windows-forms.md)
+- [Data binding e Windows Forms](data-binding-and-windows-forms.md)
 - [Procedura: Creare un controllo con associazione semplice in un Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Data binding di Windows Form](windows-forms-data-binding.md)
+- [Data binding in Windows Form](windows-forms-data-binding.md)

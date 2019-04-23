@@ -3,11 +3,11 @@ title: Esempio di annunci
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333977"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771673"
 ---
 # <a name="announcements-sample"></a>Esempio di annunci
 In questo esempio viene illustrato come utilizzare la funzionalità degli annunci della funzionalità di individuazione. Gli annunci consentono ai servizi di inviare messaggi di annuncio contenenti i metadati relativi al servizio. Per impostazione predefinita, viene inviato un annuncio Hello all'avvio del servizio e un annuncio Bye all'arresto del servizio. Questi annunci possono essere trasmessi tramite multicast oppure inviati da punto a punto. Questo esempio è costituito da due progetti, ovvero il servizio e il client.  

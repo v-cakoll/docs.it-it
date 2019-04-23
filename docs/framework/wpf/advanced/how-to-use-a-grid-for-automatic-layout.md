@@ -6,10 +6,10 @@ helpviewer_keywords:
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
 ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227128"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Procedura: Usare una griglia per il layout automatico
@@ -32,4 +32,4 @@ Grid
 ## <a name="see-also"></a>Vedere anche
 
 - [Cenni preliminari sull'utilizzo del layout automatico](use-automatic-layout-overview.md)
-- [Usare il layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)
+- [Utilizzare un layout automatico per creare un pulsante](how-to-use-automatic-layout-to-create-a-button.md)

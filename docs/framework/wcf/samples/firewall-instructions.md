@@ -3,11 +3,11 @@ title: Istruzioni del firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295159"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773794"
 ---
 # <a name="firewall-instructions"></a>Istruzioni del firewall
 È necessario abilitare più porte o programmi nel firewall in modo che possono funzionare gli esempi di Windows Communication Foundation (WCF). In molti degli esempi la comunicano avviene tramite le porte comprese nell'intervallo 8000-8003 e la porta 9000. Il firewall viene attivato per impostazione predefinita e impedisce l'accesso a queste porte. Per abilitare il firewall per gli esempi, completare una delle procedure descritte di seguito, a seconda dei requisiti e dell’ambiente di sicurezza:  
