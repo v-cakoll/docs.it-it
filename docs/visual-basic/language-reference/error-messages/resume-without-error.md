@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
 ms.openlocfilehash: 61332486b20af66af24eac06b222a38353578c16
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300905"
 ---
-# <a name="resume-without-error"></a><span data-ttu-id="da622-102">Resume senza errore</span><span class="sxs-lookup"><span data-stu-id="da622-102">Resume without error</span></span>
-<span data-ttu-id="da622-103">Oggetto `Resume` istruzione all'esterno di codice di gestione degli errori, o il codice passato in un gestore degli errori, anche se si è verificato alcun errore.</span><span class="sxs-lookup"><span data-stu-id="da622-103">A `Resume` statement appeared outside error-handling code, or the code jumped into an error handler even though there was no error.</span></span>  
+# <a name="resume-without-error"></a><span data-ttu-id="4e522-102">Resume senza errore</span><span class="sxs-lookup"><span data-stu-id="4e522-102">Resume without error</span></span>
+<span data-ttu-id="4e522-103">Oggetto `Resume` istruzione all'esterno di codice di gestione degli errori, o il codice passato in un gestore degli errori, anche se si è verificato alcun errore.</span><span class="sxs-lookup"><span data-stu-id="4e522-103">A `Resume` statement appeared outside error-handling code, or the code jumped into an error handler even though there was no error.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="da622-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="da622-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4e522-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="4e522-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="da622-105">Spostare il `Resume` istruzione in un gestore di errori, oppure eliminarlo.</span><span class="sxs-lookup"><span data-stu-id="da622-105">Move the `Resume` statement into an error handler, or delete it.</span></span>  
+1. <span data-ttu-id="4e522-105">Spostare il `Resume` istruzione in un gestore di errori, oppure eliminarlo.</span><span class="sxs-lookup"><span data-stu-id="4e522-105">Move the `Resume` statement into an error handler, or delete it.</span></span>  
   
-2. <span data-ttu-id="da622-106">Passa alle etichette non sono consentiti tra le procedure, quindi è necessario cercare la procedura per l'etichetta che identifica il gestore degli errori.</span><span class="sxs-lookup"><span data-stu-id="da622-106">Jumps to labels cannot occur across procedures, so search the procedure for the label that identifies the error handler.</span></span> <span data-ttu-id="da622-107">Se si trova un'etichetta duplicata specificata come destinazione di una `GoTo` istruzione che non sia un `On Error GoTo` istruzione, modificare l'etichetta di riga per essere conforme alla destinazione prevista.</span><span class="sxs-lookup"><span data-stu-id="da622-107">If you find a duplicate label specified as the target of a `GoTo` statement that isn't an `On Error GoTo` statement, change the line label to agree with its intended target.</span></span>  
+2. <span data-ttu-id="4e522-106">Passa alle etichette non sono consentiti tra le procedure, quindi è necessario cercare la procedura per l'etichetta che identifica il gestore degli errori.</span><span class="sxs-lookup"><span data-stu-id="4e522-106">Jumps to labels cannot occur across procedures, so search the procedure for the label that identifies the error handler.</span></span> <span data-ttu-id="4e522-107">Se si trova un'etichetta duplicata specificata come destinazione di una `GoTo` istruzione che non sia un `On Error GoTo` istruzione, modificare l'etichetta di riga per essere conforme alla destinazione prevista.</span><span class="sxs-lookup"><span data-stu-id="4e522-107">If you find a duplicate label specified as the target of a `GoTo` statement that isn't an `On Error GoTo` statement, change the line label to agree with its intended target.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da622-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="da622-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4e522-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4e522-108">See also</span></span>
 
-- [<span data-ttu-id="da622-109">Istruzione Resume</span><span class="sxs-lookup"><span data-stu-id="da622-109">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)
-- [<span data-ttu-id="da622-110">Istruzione On Error</span><span class="sxs-lookup"><span data-stu-id="da622-110">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [<span data-ttu-id="4e522-109">Istruzione Resume</span><span class="sxs-lookup"><span data-stu-id="4e522-109">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [<span data-ttu-id="4e522-110">Istruzione On Error</span><span class="sxs-lookup"><span data-stu-id="4e522-110">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)

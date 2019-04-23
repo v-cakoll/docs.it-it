@@ -18,38 +18,38 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9fd0900e61c57d105439d83430284dc8634d2a1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223602"
 ---
-# <a name="icorprofilerinfo4initializecurrentthread-method"></a><span data-ttu-id="45794-102">Metodo ICorProfilerInfo4::InitializeCurrentThread</span><span class="sxs-lookup"><span data-stu-id="45794-102">ICorProfilerInfo4::InitializeCurrentThread Method</span></span>
-<span data-ttu-id="45794-103">Inizializza il thread corrente prima di profiler successive chiamate API sullo stesso thread, in modo tale deadlock può essere evitato.</span><span class="sxs-lookup"><span data-stu-id="45794-103">Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.</span></span>  
+# <a name="icorprofilerinfo4initializecurrentthread-method"></a><span data-ttu-id="ec3ff-102">Metodo ICorProfilerInfo4::InitializeCurrentThread</span><span class="sxs-lookup"><span data-stu-id="ec3ff-102">ICorProfilerInfo4::InitializeCurrentThread Method</span></span>
+<span data-ttu-id="ec3ff-103">Inizializza il thread corrente prima di profiler successive chiamate API sullo stesso thread, in modo tale deadlock può essere evitato.</span><span class="sxs-lookup"><span data-stu-id="ec3ff-103">Initializes the current thread in advance of subsequent profiler API calls on the same thread, so that deadlock can be avoided.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45794-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="45794-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec3ff-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ec3ff-104">Syntax</span></span>  
   
 ```  
 HRESULT InitializeCurrentThread ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="45794-105">Note</span><span class="sxs-lookup"><span data-stu-id="45794-105">Remarks</span></span>  
- <span data-ttu-id="45794-106">Si consiglia di chiamare `InitializeCurrentThread` in qualsiasi thread che chiama un profiler API mentre vi sono sospese thread.</span><span class="sxs-lookup"><span data-stu-id="45794-106">We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads.</span></span> <span data-ttu-id="45794-107">Questo metodo viene utilizzato generalmente per i profiler di campionamento che creano i propri thread per chiamare il [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metodo per eseguire stack descrive mentre il thread di destinazione è sospesa.</span><span class="sxs-lookup"><span data-stu-id="45794-107">This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended.</span></span> <span data-ttu-id="45794-108">Chiamando `InitializeCurrentThread` una volta quando il profiler crea innanzitutto il thread di campionamento, i profiler possono assicurarsi che l'inizializzazione differita per ogni thread che CLR altrimenti verrebbero eseguite durante la prima chiamata a `DoStackSnapshot` può ora avvenire in modo sicuro quando nessun altro thread è sospeso.</span><span class="sxs-lookup"><span data-stu-id="45794-108">By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ec3ff-105">Note</span><span class="sxs-lookup"><span data-stu-id="ec3ff-105">Remarks</span></span>  
+ <span data-ttu-id="ec3ff-106">Si consiglia di chiamare `InitializeCurrentThread` in qualsiasi thread che chiama un profiler API mentre vi sono sospese thread.</span><span class="sxs-lookup"><span data-stu-id="ec3ff-106">We recommend that you call `InitializeCurrentThread` on any thread that will call a profiler API while there are suspended threads.</span></span> <span data-ttu-id="ec3ff-107">Questo metodo viene utilizzato generalmente per i profiler di campionamento che creano i propri thread per chiamare il [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metodo per eseguire stack descrive mentre il thread di destinazione è sospesa.</span><span class="sxs-lookup"><span data-stu-id="ec3ff-107">This method is typically used by sampling profilers that create their own thread to call the [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) method to perform stack walks while the target thread is suspended.</span></span> <span data-ttu-id="ec3ff-108">Chiamando `InitializeCurrentThread` una volta quando il profiler crea innanzitutto il thread di campionamento, i profiler possono assicurarsi che l'inizializzazione differita per ogni thread che CLR altrimenti verrebbero eseguite durante la prima chiamata a `DoStackSnapshot` può ora avvenire in modo sicuro quando nessun altro thread è sospeso.</span><span class="sxs-lookup"><span data-stu-id="ec3ff-108">By calling `InitializeCurrentThread` once when the profiler first creates the sampling thread, profilers can ensure that lazy per-thread initialization that the CLR would otherwise perform during the first call to `DoStackSnapshot` can now occur safely when no other threads are suspended.</span></span>  
   
 > [!NOTE]
->  `InitializeCurrentThread` <span data-ttu-id="45794-109">esegue l'inizializzazione in anticipo per completare le attività accettano blocchi e possono causare un deadlock.</span><span class="sxs-lookup"><span data-stu-id="45794-109">does the initialization in advance to finish tasks that take locks, and may deadlock.</span></span> <span data-ttu-id="45794-110">Chiamare `InitializeCurrentThread` solo quando nessun thread sospesi.</span><span class="sxs-lookup"><span data-stu-id="45794-110">Call `InitializeCurrentThread` only when there are no suspended threads.</span></span>  
+>  <span data-ttu-id="ec3ff-109">`InitializeCurrentThread` esegue l'inizializzazione in anticipo per completare le attività accettano blocchi e possono causare un deadlock.</span><span class="sxs-lookup"><span data-stu-id="ec3ff-109">`InitializeCurrentThread` does the initialization in advance to finish tasks that take locks, and may deadlock.</span></span> <span data-ttu-id="ec3ff-110">Chiamare `InitializeCurrentThread` solo quando nessun thread sospesi.</span><span class="sxs-lookup"><span data-stu-id="ec3ff-110">Call `InitializeCurrentThread` only when there are no suspended threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="45794-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="45794-111">Requirements</span></span>  
- <span data-ttu-id="45794-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="45794-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec3ff-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="ec3ff-111">Requirements</span></span>  
+ <span data-ttu-id="ec3ff-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec3ff-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="45794-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="45794-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="ec3ff-113">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ec3ff-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="45794-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="45794-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ec3ff-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec3ff-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="45794-115">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="45794-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="ec3ff-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec3ff-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45794-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="45794-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ec3ff-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ec3ff-116">See also</span></span>
 
-- [<span data-ttu-id="45794-117">Interfaccia ICorProfilerInfo4</span><span class="sxs-lookup"><span data-stu-id="45794-117">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="45794-118">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="45794-118">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="45794-119">Profilatura</span><span class="sxs-lookup"><span data-stu-id="45794-119">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="ec3ff-117">Interfaccia ICorProfilerInfo4</span><span class="sxs-lookup"><span data-stu-id="ec3ff-117">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="ec3ff-118">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="ec3ff-118">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="ec3ff-119">Profilatura</span><span class="sxs-lookup"><span data-stu-id="ec3ff-119">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b203c9414a500116f2f3622fb7fb4a71afb9ce2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224975"
 ---
-# <a name="itypenamebuilderaddarray-method"></a><span data-ttu-id="c2ae3-102">Metodo ITypeNameBuilder::AddArray</span><span class="sxs-lookup"><span data-stu-id="c2ae3-102">ITypeNameBuilder::AddArray Method</span></span>
-<span data-ttu-id="c2ae3-103">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="c2ae3-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderaddarray-method"></a><span data-ttu-id="bd085-102">Metodo ITypeNameBuilder::AddArray</span><span class="sxs-lookup"><span data-stu-id="bd085-102">ITypeNameBuilder::AddArray Method</span></span>
+<span data-ttu-id="bd085-103">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="bd085-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2ae3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c2ae3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd085-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bd085-104">Syntax</span></span>  
   
 ```  
 HRESULT AddArray (  
@@ -35,15 +35,15 @@ HRESULT AddArray (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c2ae3-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c2ae3-105">Requirements</span></span>  
- <span data-ttu-id="c2ae3-106">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2ae3-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd085-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bd085-105">Requirements</span></span>  
+ <span data-ttu-id="bd085-106">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd085-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2ae3-107">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c2ae3-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bd085-107">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bd085-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c2ae3-108">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="c2ae3-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bd085-108">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="bd085-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="c2ae3-109">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="c2ae3-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="bd085-109">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd085-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2ae3-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c2ae3-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd085-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bd085-110">See also</span></span>
 
-- [<span data-ttu-id="c2ae3-111">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="c2ae3-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="bd085-111">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="bd085-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
