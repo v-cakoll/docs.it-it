@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211062"
 ---
 # <a name="application-development"></a>Sviluppo di applicazioni
@@ -17,7 +17,7 @@ ms.locfileid: "59211062"
   
 -   Applicazioni autonome, ovvero applicazioni [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] dallo stile tradizionale compilate come assembly eseguibili installati nel computer client, da cui vengono eseguite.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (le applicazioni costituite da pagine di navigazione compilate come assembly eseguibili e ospitate da Web browser, ad esempio [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Mozilla Firefox).  
+-   Applicazioni [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], ovvero applicazioni costituite da riquadri di navigazione compilate come assembly eseguibili e ospitate da Web browser come [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Mozilla Firefox.  
   
 -   Librerie di controlli personalizzati, ovvero assembly non eseguibili contenenti controlli riutilizzabili.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "59211062"
   
  Per altre informazioni, vedere [Cenni preliminari sulle finestre di WPF](wpf-windows-overview.md).  
   
- <xref:System.Windows.Window> supporta la possibilità di creare un tipo speciale di finestra, chiamata finestra di dialogo. È possibile creare tipi di finestre di dialogo modali e non modali.  
+ <xref:System.Windows.Window> permette di creare un tipo speciale di finestra, chiamata finestra di dialogo. È possibile creare tipi di finestre di dialogo modali e non modali.  
   
  Per motivi di praticità e i vantaggi della riusabilità e di un'esperienza utente coerente tra le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] espone tre delle finestre di dialogo comuni di Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, e <xref:System.Windows.Controls.PrintDialog>.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "59211062"
   
  Per semplificare la navigazione, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa quanto segue:  
   
--   <xref:System.Windows.Navigation.NavigationService>, il motore di navigazione condiviso per l'elaborazione delle richieste di navigazione usato da <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] per supportare la navigazione tra applicazioni.  
+-   <xref:System.Windows.Navigation.NavigationService>, il motore di navigazione condiviso per l'elaborazione di richieste di navigazione usato da <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> e da applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] per supportare la navigazione tra applicazioni.  
   
 -   Metodi di navigazione per avviare la navigazione.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "59211062"
   
  Per informazioni, vedere [Cenni preliminari sulla navigazione](navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta anche un tipo speciale di navigazione chiamato navigazione strutturata. La navigazione strutturata può essere usata per chiamare una o più pagine che restituiscono dati in modo strutturato e prevedibile, coerentemente con le funzioni chiamanti. Questa funzionalità dipende dalla classe <xref:System.Windows.Navigation.PageFunction%601>, che viene descritta in modo più approfondito in [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> consente inoltre di semplificare la creazione di topologie di navigazione complesse, descritte nelle [Cenni preliminari sulle topologie di navigazione](navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] supporta anche un tipo speciale di navigazione chiamato navigazione strutturata. La navigazione strutturata può essere usata per chiamare una o più pagine che restituiscono dati in modo strutturato e prevedibile, coerentemente con le funzioni chiamanti. Questa funzionalità dipende dalla classe <xref:System.Windows.Navigation.PageFunction%601>, che viene descritta in modo più approfondito in [Cenni preliminari sulla navigazione strutturata](structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> ha anche lo scopo di semplificare la creazione di topologie di navigazione complesse, descritte in [Cenni preliminari sulle topologie di navigazione](navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] possono essere ospitati in [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Firefox. Ogni modello di hosting è associato a un insieme di considerazioni e vincoli descritti in [Hosting](hosting-wpf-applications.md).  
+ Le applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] possono essere ospitate in [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Firefox. Ogni modello di hosting è associato a un insieme di considerazioni e vincoli descritti in [Hosting](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilazione e distribuzione  
@@ -125,6 +125,6 @@ ms.locfileid: "59211062"
 |[Windows in WPF](windows-in-wpf-applications.md)|Offre informazioni dettagliate sulla gestione delle finestre nell'applicazione, tra cui l'uso della classe <xref:System.Windows.Window> e delle finestre di dialogo.|  
 |[Cenni preliminari sulla navigazione](navigation-overview.md)|Offre una panoramica della gestione della navigazione tra pagine dell'applicazione.|  
 |[Hosting](hosting-wpf-applications.md)|Viene fornita una panoramica su [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Compilazione e distribuzione](building-and-deploying-wpf-applications.md)|Descrive come compilare e distribuire un'applicazione WPF.|  
+|[Compilazione e distribuzione di applicazioni WPF](building-and-deploying-wpf-applications.md)|Descrive come compilare e distribuire un'applicazione WPF.|  
 |[Introduzione a WPF in Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Descrive le principali funzionalità di WPF.|  
-|[Procedura dettagliata: Compilare una prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Procedura dettagliata che mostra come creare un'applicazione WPF tramite navigazione tra le pagine, layout, controlli, immagini, stili e binding.|
+|[Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Procedura dettagliata che mostra come creare un'applicazione WPF tramite navigazione tra le pagine, layout, controlli, immagini, stili e binding.|

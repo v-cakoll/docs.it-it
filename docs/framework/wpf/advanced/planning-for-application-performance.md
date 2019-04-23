@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210204"
 ---
 # <a name="planning-for-application-performance"></a>Pianificazione delle prestazioni dell'applicazione
@@ -36,10 +36,10 @@ La possibilità di raggiungere gli obiettivi di prestazioni dipende dalla capaci
 
 - [Ottimizzazione delle prestazioni di applicazioni WPF](optimizing-wpf-application-performance.md)
 - [Sfruttare appieno l'hardware](optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout e progettazione](optimizing-performance-layout-and-design.md)
-- [Grafica 2D e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
-- [Comportamento degli oggetti](optimizing-performance-object-behavior.md)
-- [Risorse dell'applicazione](optimizing-performance-application-resources.md)
-- [Testo](optimizing-performance-text.md)
+- [Ottimizzazione delle prestazioni: layout e progettazione](optimizing-performance-layout-and-design.md)
+- [Grafica bidimensionale e creazione di immagini](optimizing-performance-2d-graphics-and-imaging.md)
+- [Comportamento dell'oggetto](optimizing-performance-object-behavior.md)
+- [Risorse di applicazioni](optimizing-performance-application-resources.md)
+- [per](optimizing-performance-text.md)
 - [Data binding](optimizing-performance-data-binding.md)
 - [Altri suggerimenti relativi alle prestazioni](optimizing-performance-other-recommendations.md)

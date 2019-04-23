@@ -7,10 +7,10 @@ helpviewer_keywords:
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
 ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210022"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>Procedura: Eseguire il binding a un'enumerazione
@@ -23,6 +23,6 @@ In questo esempio viene illustrato come eseguire l'associazione a un'enumerazion
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Eseguire il binding a un metodo](how-to-bind-to-a-method.md)
+- [Eseguire l'associazione a un metodo](how-to-bind-to-a-method.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

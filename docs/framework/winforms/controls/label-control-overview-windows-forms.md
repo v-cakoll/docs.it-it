@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210090"
 ---
 # <a name="label-control-overview-windows-forms"></a>Cenni preliminari sul controllo Label (Windows Form)
@@ -26,5 +26,5 @@ Windows Form <xref:System.Windows.Forms.Label> controlli vengono usati per visua
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.Label>
-- [Procedura: Ridimensionare un controllo Label di Windows Forms in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Procedura: Creare tasti di scelta con i controlli Label di Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Procedura: Creare le chiavi di accesso con i controlli Label di Windows Form](how-to-create-access-keys-with-windows-forms-label-controls.md)

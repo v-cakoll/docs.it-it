@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
 ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209658"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Procedura: Esecuzione dell'associazione ai risultati di una query XDocument, XElement o LINQ to XML
@@ -41,7 +41,7 @@ In questo esempio viene illustrato come associare dati XML da un <xref:System.Wi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sulle origini del binding](binding-sources-overview.md)
-- [Panoramica del data binding WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
+- [Panoramica delle origini di associazione](binding-sources-overview.md)
+- [Panoramica dei data binding WPF con LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [Esempio di data binding WPF tramite LINQ to XML](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
 - [Proprietà dinamiche in LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties)

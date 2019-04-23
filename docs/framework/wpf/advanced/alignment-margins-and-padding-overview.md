@@ -11,10 +11,10 @@ helpviewer_keywords:
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
 ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209164"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Panoramica su allineamento, margini e spaziatura interna
@@ -55,7 +55,7 @@ Il <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che v
 |<xref:System.Windows.HorizontalAlignment.Left>|Gli elementi figlio sono allineati a sinistra dello spazio di layout allocato dell'elemento padre.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Gli elementi figlio sono allineati al centro dello spazio di layout allocato dell'elemento padre.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Gli elementi figlio sono allineati a destra dello spazio di layout allocato dell'elemento padre.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (Predefinito)|Gli elementi figlio vengono estesi fino a riempire lo spazio di layout allocato dell'elemento padre. Explicit <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> valori hanno la precedenza.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Impostazione predefinita)|Gli elementi figlio vengono estesi fino a riempire lo spazio di layout allocato dell'elemento padre. Explicit <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> valori hanno la precedenza.|  
   
  Nell'esempio seguente viene illustrato come applicare la <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà <xref:System.Windows.Controls.Button> elementi. Vengono visualizzati tutti i valori di attributo per illustrare i diversi comportamenti di rendering.  
   
@@ -75,7 +75,7 @@ Il <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che v
 |<xref:System.Windows.VerticalAlignment.Top>|Gli elementi figlio sono allineati in alto nello spazio di layout allocato dell'elemento padre.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Gli elementi figlio sono allineati al centro dello spazio di layout allocato dell'elemento padre.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Gli elementi figlio sono allineati in basso nello spazio di layout allocato dell'elemento padre.|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (Predefinito)|Gli elementi figlio vengono estesi fino a riempire lo spazio di layout allocato dell'elemento padre. Explicit <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> valori hanno la precedenza.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Impostazione predefinita)|Gli elementi figlio vengono estesi fino a riempire lo spazio di layout allocato dell'elemento padre. Explicit <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> valori hanno la precedenza.|  
   
  Nell'esempio seguente viene illustrato come applicare la <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> proprietà <xref:System.Windows.Controls.Button> elementi. Vengono visualizzati tutti i valori di attributo per illustrare i diversi comportamenti di rendering. Ai fini di questo esempio, un <xref:System.Windows.Controls.Grid> elemento visibile linee della griglia viene usato come elemento padre, per illustrare meglio il comportamento di layout di ogni valore della proprietà.  
   
@@ -148,4 +148,4 @@ Il <xref:System.Windows.FrameworkElement> classe espone diverse proprietà che v
 - <xref:System.Windows.FrameworkElement.Margin%2A>
 - [Cenni preliminari sugli elementi Panel](../controls/panels-overview.md)
 - [Layout](layout.md)
-- [Esempio di raccolte di Layout WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Esempio di raccolte di layout WPF](https://go.microsoft.com/fwlink/?LinkID=160054)
