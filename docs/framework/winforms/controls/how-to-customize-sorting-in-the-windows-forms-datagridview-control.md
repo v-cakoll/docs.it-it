@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
 ms.openlocfilehash: 0e7dffa45dc8d3ac467129d44a7c73a8c4b4bfa2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192914"
 ---
 # <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Procedura: Personalizzare l'ordinamento nel controllo DataGridView di Windows Forms
@@ -49,6 +49,6 @@ Il controllo <xref:System.Windows.Forms.DataGridView> fornisce l'ordinamento aut
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Ordinamento dei dati nel controllo DataGridView di Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Ordinamento di dati nel controllo DataGridView di Windows Form](sorting-data-in-the-windows-forms-datagridview-control.md)
 - [Modalità di ordinamento delle colonne nel controllo DataGridView di Windows Form](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Procedura: Impostare le modalità di ordinamento delle colonne nel controllo DataGridView di Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Procedura: Impostare la modalità di ordinamento delle colonne nel controllo DataGridView Windows Form](set-the-sort-modes-for-columns-wf-datagridview-control.md)

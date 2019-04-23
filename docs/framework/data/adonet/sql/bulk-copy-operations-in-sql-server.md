@@ -3,10 +3,10 @@ title: Operazioni di copia di massa in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194799"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operazioni di copia di massa in SQL Server
@@ -35,7 +35,7 @@ Microsoft SQL Server include una popolare utilità della riga di comando denomin
  [Più operazioni di copia di massa](../../../../../docs/framework/data/adonet/sql/multiple-bulk-copy-operations.md)  
  Viene descritto come eseguire più copie di massa di dati in un'istanza di SQL Server usando la classe <xref:System.Data.SqlClient.SqlBulkCopy>.  
   
- [Transazioni e operazioni di copia di massa](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
+ [Transazioni e operazioni di copia bulk](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
  Viene descritto come eseguire una copia bulk all'interno di una transazione e come eseguire il commit e il rollback della transazione.  
   
 ## <a name="see-also"></a>Vedere anche

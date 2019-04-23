@@ -10,10 +10,10 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192979"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Procedura: Usare il controllo ortografico con un menu di scelta rapida
@@ -41,6 +41,6 @@ Per impostazione predefinita, quando si abilita il controllo ortografico in un c
 ## <a name="see-also"></a>Vedere anche
 
 - [Cenni preliminari sulla classe TextBox](textbox-overview.md)
-- [Cenni generali sul controllo RichTextBox](richtextbox-overview.md)
+- [Cenni preliminari sul controllo RichTextBox](richtextbox-overview.md)
 - [Attivare il controllo ortografico in un controllo di modifica del testo](how-to-enable-spell-checking-in-a-text-editing-control.md)
 - [Usare un menu di scelta rapida personalizzato con un oggetto TextBox](how-to-use-a-custom-context-menu-with-a-textbox.md)

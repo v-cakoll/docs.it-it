@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191445"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Procedura: Impostare la proprietà di sola lettura per un oggetto Freezable
@@ -41,4 +41,4 @@ In questo esempio viene illustrato come effettuare una <xref:System.Windows.Free
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Cenni preliminari sugli oggetti Freezable](freezable-objects-overview.md)
-- [Procedure relative](base-elements-how-to-topics.md)
+- [Procedure relative alle proprietà](base-elements-how-to-topics.md)

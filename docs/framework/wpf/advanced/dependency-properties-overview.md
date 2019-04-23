@@ -15,10 +15,10 @@ helpviewer_keywords:
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
 ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188643"
 ---
 # <a name="dependency-properties-overview"></a>Panoramica sulle proprietà di dipendenza
@@ -36,7 +36,7 @@ Lo scopo delle proprietà di dipendenza consiste nel fornire un modo per calcola
 Nel riferimento SDK, è possibile identificare la proprietà di dipendenza grazie alla sezione Informazioni sulle proprietà di dipendenza, presente nella pagina di riferimento gestita per quella proprietà. Nella sezione sono inclusi un collegamento al campo dell'identificatore <xref:System.Windows.DependencyProperty> per quella proprietà di dipendenza e un elenco delle opzioni dei metadati impostati per quella proprietà, informazioni sull'override per classe e altri dettagli.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Proprietà di dipendenza che supportano le proprietà CLR
-Le proprietà di dipendenza e il sistema di proprietà WPF estendono le funzionalità della proprietà fornendo un tipo che supporta una proprietà, come implementazione alternativa al modello standard di supporto della proprietà con un campo privato. Il nome del tipo è <xref:System.Windows.DependencyProperty>. L'altro tipo importante che definisce il sistema di proprietà WPF è <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definisce la classe base che consente di registrare e possiede una proprietà di dipendenza.
+Le proprietà di dipendenza e il sistema di proprietà WPF estendono le funzionalità della proprietà fornendo un tipo che supporta una proprietà, come implementazione alternativa al modello standard di supporto della proprietà con un campo privato. Il nome del tipo è <xref:System.Windows.DependencyProperty>. L'altro tipo importante che definisce il sistema di proprietà WPF è <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definisce la classe di base che può essere registrata ed essere proprietaria di una proprietà di dipendenza.
 
 Di seguito è elencata la terminologia usata con le proprietà di dipendenza:
 
@@ -87,11 +87,11 @@ Una proprietà di dipendenza fornisce funzionalità che consentono di estendere 
 
 - [Risorse](#resources)
 
-- [Associazione dati](#data-binding)
+- [Data binding](#data-binding)
 
 - [Stili](#styles)
 
-- [Animations](#animations)
+- [Animazioni](#animations)
 
 - [Override dei metadati](#metadata-overrides)
 
@@ -200,5 +200,5 @@ In genere, non si vuole che gli stili vengano sempre applicati e che nascondano 
 
 - [Proprietà di dipendenza personalizzate](custom-dependency-properties.md)
 - [Proprietà di dipendenza di sola lettura](read-only-dependency-properties.md)
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)
 - [Architettura WPF](wpf-architecture.md)

@@ -12,10 +12,10 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188526"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Procedura: Caricare assembly in un dominio dell'applicazione
@@ -49,7 +49,7 @@ ms.locfileid: "59188526"
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
-- [Programmazione con i domini applicazione](application-domains.md#programming-with-application-domains)
+- [Programmazione con i domini dell'applicazione](application-domains.md#programming-with-application-domains)
 - [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)
 - [Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)

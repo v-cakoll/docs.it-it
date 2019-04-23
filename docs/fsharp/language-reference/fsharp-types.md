@@ -3,10 +3,10 @@ title: Tipi F#
 description: Informazioni sui tipi utilizzabili in F# e in che modo F# sono denominati e descritti i tipi.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193590"
 ---
 # <a name="f-types"></a>Tipi F#
@@ -35,7 +35,7 @@ La tabella seguente illustra gli aspetti della sintassi del tipo per F# tipi.
 |----|-----------|--------|
 |tipo primitivo|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
 |tipo di aggregazione (classe, struttura, unione, record, enum e così via)|*type-name*|`System.DateTime`<br /><br />`Color`|
-|abbreviazione di tipo|*nome di abbreviazione di tipo*|`bigint`|
+|abbreviazione di tipo|*type-abbreviation-name*|`bigint`|
 |nome completo del tipo|*namespaces.type-name*<br /><br />oppure<br /><br />*modules.type-name*<br /><br />oppure<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
 |array|*nome del tipo*[] o<br /><br />*nome del tipo* matrice|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |matrice bidimensionale|*type-name*[,]|`int[,]`<br /><br />`float[,]`|

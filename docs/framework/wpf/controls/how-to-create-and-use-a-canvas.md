@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
 ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190769"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>Procedura: Creare e usare un'area di disegno
@@ -37,4 +37,4 @@ Questo esempio illustra come creare e usare un'istanza di <xref:System.Windows.C
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
 - [Cenni preliminari sugli elementi Panel](panels-overview.md)
-- [Procedure relative](canvas-how-to-topics.md)
+- [Procedure relative alle proprietà](canvas-how-to-topics.md)
