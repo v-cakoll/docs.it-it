@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7e201b9a350c030da59e2b6ed27f84f570c8e621
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126659"
 ---
-# <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="99d53-102">Funzione _EFN_GetManagedExcepStack</span><span class="sxs-lookup"><span data-stu-id="99d53-102">_EFN_GetManagedExcepStack Function</span></span>
-<span data-ttu-id="99d53-103">Restituisce una versione stringa della traccia dello stack contenuta internamente, dato l'indirizzo di un oggetto eccezione gestita.</span><span class="sxs-lookup"><span data-stu-id="99d53-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
+# <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="18429-102">Funzione _EFN_GetManagedExcepStack</span><span class="sxs-lookup"><span data-stu-id="18429-102">_EFN_GetManagedExcepStack Function</span></span>
+<span data-ttu-id="18429-103">Restituisce una versione stringa della traccia dello stack contenuta internamente, dato l'indirizzo di un oggetto eccezione gestita.</span><span class="sxs-lookup"><span data-stu-id="18429-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99d53-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="99d53-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="18429-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="18429-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedExcepStack(  
@@ -37,29 +37,29 @@ HRESULT _EFN_GetManagedExcepStack(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="99d53-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="99d53-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="18429-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="18429-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="99d53-106">[in] Il client in fase di debug.</span><span class="sxs-lookup"><span data-stu-id="99d53-106">[in] The client being debugged.</span></span>  
+ <span data-ttu-id="18429-106">[in] Il client in fase di debug.</span><span class="sxs-lookup"><span data-stu-id="18429-106">[in] The client being debugged.</span></span>  
   
  `StackObjAddr`  
- <span data-ttu-id="99d53-107">[in] Puntatore a un oggetto gestito, derivato da <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="99d53-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
+ <span data-ttu-id="18429-107">[in] Puntatore a un oggetto gestito, derivato da <xref:System.Exception>.</span><span class="sxs-lookup"><span data-stu-id="18429-107">[in] A managed object pointer, derived from <xref:System.Exception>.</span></span>  
   
- <span data-ttu-id="99d53-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="99d53-108">szStackString</span></span>  
- <span data-ttu-id="99d53-109">[out] La stringa restituita.</span><span class="sxs-lookup"><span data-stu-id="99d53-109">[out] The returned string.</span></span>  
+ <span data-ttu-id="18429-108">szStackString</span><span class="sxs-lookup"><span data-stu-id="18429-108">szStackString</span></span>  
+ <span data-ttu-id="18429-109">[out] La stringa restituita.</span><span class="sxs-lookup"><span data-stu-id="18429-109">[out] The returned string.</span></span>  
   
  `cbString`  
- <span data-ttu-id="99d53-110">[out] Il numero di caratteri disponibili nel buffer di stringa.</span><span class="sxs-lookup"><span data-stu-id="99d53-110">[out] The number of characters available in the string buffer.</span></span>  
+ <span data-ttu-id="18429-110">[out] Il numero di caratteri disponibili nel buffer di stringa.</span><span class="sxs-lookup"><span data-stu-id="18429-110">[out] The number of characters available in the string buffer.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="99d53-111">Note</span><span class="sxs-lookup"><span data-stu-id="99d53-111">Remarks</span></span>  
- <span data-ttu-id="99d53-112">Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.</span><span class="sxs-lookup"><span data-stu-id="99d53-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="18429-111">Note</span><span class="sxs-lookup"><span data-stu-id="18429-111">Remarks</span></span>  
+ <span data-ttu-id="18429-112">Se non vi è nessun codice gestito sul thread attualmente nel contesto, la funzione restituisce HRESULT SOS_E_NOMANAGEDCODE con un valore di impianto pari a 0xa0 e un codice di errore di 0x1000.</span><span class="sxs-lookup"><span data-stu-id="18429-112">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="99d53-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="99d53-113">Requirements</span></span>  
- <span data-ttu-id="99d53-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99d53-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="18429-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="18429-113">Requirements</span></span>  
+ <span data-ttu-id="18429-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="18429-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="99d53-115">**Intestazione:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="99d53-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="18429-115">**Intestazione:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="18429-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- **<span data-ttu-id="99d53-116">Versione di .NET framework:</span><span class="sxs-lookup"><span data-stu-id="99d53-116">.NET Framework Version:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="18429-116">**Versione di .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="18429-116">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99d53-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="99d53-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="18429-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="18429-117">See also</span></span>
 
-- [<span data-ttu-id="99d53-118">Funzioni statiche globali di debug</span><span class="sxs-lookup"><span data-stu-id="99d53-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [<span data-ttu-id="18429-118">Funzioni statiche globali di debug</span><span class="sxs-lookup"><span data-stu-id="18429-118">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -11,57 +11,57 @@ helpviewer_keywords:
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120744"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a><span data-ttu-id="77261-102">\<Filtro > (elemento) per \<Aggiungi > per \<sharedListeners ></span><span class="sxs-lookup"><span data-stu-id="77261-102">\<filter> Element for \<add> for \<sharedListeners></span></span>
-<span data-ttu-id="77261-103">Aggiunge un filtro a un listener nella raccolta `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="77261-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  
+# <a name="filter-element-for-add-for-sharedlisteners"></a><span data-ttu-id="58f41-102">\<Filtro > (elemento) per \<Aggiungi > per \<sharedListeners ></span><span class="sxs-lookup"><span data-stu-id="58f41-102">\<filter> Element for \<add> for \<sharedListeners></span></span>
+<span data-ttu-id="58f41-103">Aggiunge un filtro a un listener nella raccolta `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="58f41-103">Adds a filter to a listener in the `sharedListeners` collection.</span></span>  
   
- <span data-ttu-id="77261-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="77261-104">\<configuration></span></span>  
-<span data-ttu-id="77261-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="77261-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="77261-106">\<sharedListeners > elemento</span><span class="sxs-lookup"><span data-stu-id="77261-106">\<sharedListeners> Element</span></span>  
-<span data-ttu-id="77261-107">\<add></span><span class="sxs-lookup"><span data-stu-id="77261-107">\<add></span></span>  
-<span data-ttu-id="77261-108">\<filter></span><span class="sxs-lookup"><span data-stu-id="77261-108">\<filter></span></span>  
+ <span data-ttu-id="58f41-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="58f41-104">\<configuration></span></span>  
+<span data-ttu-id="58f41-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="58f41-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="58f41-106">\<sharedListeners > elemento</span><span class="sxs-lookup"><span data-stu-id="58f41-106">\<sharedListeners> Element</span></span>  
+<span data-ttu-id="58f41-107">\<add></span><span class="sxs-lookup"><span data-stu-id="58f41-107">\<add></span></span>  
+<span data-ttu-id="58f41-108">\<filter></span><span class="sxs-lookup"><span data-stu-id="58f41-108">\<filter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77261-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="77261-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58f41-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="58f41-109">Syntax</span></span>  
   
 ```xml  
 <filter type="System.Diagnostics.EventTypeFilter"   
   initializeData="Warning" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="77261-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="77261-110">Attributes and Elements</span></span>  
- <span data-ttu-id="77261-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="77261-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="58f41-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="58f41-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="58f41-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="58f41-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="77261-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="77261-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="58f41-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="58f41-112">Attributes</span></span>  
   
-|<span data-ttu-id="77261-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="77261-113">Attribute</span></span>|<span data-ttu-id="77261-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="77261-114">Description</span></span>|  
+|<span data-ttu-id="58f41-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="58f41-113">Attribute</span></span>|<span data-ttu-id="58f41-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="58f41-114">Description</span></span>|  
 |---------------|-----------------|  
-|**<span data-ttu-id="77261-115">tipo</span><span class="sxs-lookup"><span data-stu-id="77261-115">type</span></span>**|<span data-ttu-id="77261-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="77261-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="77261-117">Specifica il tipo del filtro.</span><span class="sxs-lookup"><span data-stu-id="77261-117">Specifies the type of the filter.</span></span> <span data-ttu-id="77261-118">È possibile usare solo il nome completo del tipo (nel formato il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà), oppure è possibile usare il nome completo del tipo tra cui le informazioni sull'assembly (nel formato di <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> proprietà).</span><span class="sxs-lookup"><span data-stu-id="77261-118">You can use only the full name of the type (in the format of the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property), or you can use the fully qualified type name including the assembly information (in the format of the <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> property).</span></span> <span data-ttu-id="77261-119">Per informazioni sulla creazione di un nome completo del tipo, vedere [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="77261-119">For information on creating a fully qualified type name, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|**<span data-ttu-id="77261-120">initializeData</span><span class="sxs-lookup"><span data-stu-id="77261-120">initializeData</span></span>**|<span data-ttu-id="77261-121">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="77261-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="77261-122">La stringa passata al costruttore per la classe specificata.</span><span class="sxs-lookup"><span data-stu-id="77261-122">The string passed to the constructor for the specified class.</span></span>|  
+|<span data-ttu-id="58f41-115">**type**</span><span class="sxs-lookup"><span data-stu-id="58f41-115">**type**</span></span>|<span data-ttu-id="58f41-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="58f41-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="58f41-117">Specifica il tipo del filtro.</span><span class="sxs-lookup"><span data-stu-id="58f41-117">Specifies the type of the filter.</span></span> <span data-ttu-id="58f41-118">È possibile usare solo il nome completo del tipo (nel formato il <xref:System.Type.FullName%2A?displayProperty=nameWithType> proprietà), oppure è possibile usare il nome completo del tipo tra cui le informazioni sull'assembly (nel formato di <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> proprietà).</span><span class="sxs-lookup"><span data-stu-id="58f41-118">You can use only the full name of the type (in the format of the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property), or you can use the fully qualified type name including the assembly information (in the format of the <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> property).</span></span> <span data-ttu-id="58f41-119">Per informazioni sulla creazione di un nome completo del tipo, vedere [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="58f41-119">For information on creating a fully qualified type name, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|<span data-ttu-id="58f41-120">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="58f41-120">**initializeData**</span></span>|<span data-ttu-id="58f41-121">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="58f41-121">Optional attribute.</span></span><br /><br /> <span data-ttu-id="58f41-122">La stringa passata al costruttore per la classe specificata.</span><span class="sxs-lookup"><span data-stu-id="58f41-122">The string passed to the constructor for the specified class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="77261-123">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="77261-123">Child Elements</span></span>  
- <span data-ttu-id="77261-124">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="77261-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="58f41-123">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="58f41-123">Child Elements</span></span>  
+ <span data-ttu-id="58f41-124">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="58f41-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="77261-125">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="77261-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="58f41-125">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="58f41-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="77261-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="77261-126">Element</span></span>|<span data-ttu-id="77261-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="77261-127">Description</span></span>|  
+|<span data-ttu-id="58f41-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="58f41-126">Element</span></span>|<span data-ttu-id="58f41-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="58f41-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="77261-128">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="77261-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="77261-129">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="77261-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sharedListeners`|<span data-ttu-id="77261-130">Raccolta di listener che possono fare riferimento qualsiasi origine o un elemento di traccia.</span><span class="sxs-lookup"><span data-stu-id="77261-130">A collection of listeners that any source or trace element can reference.</span></span>|  
-|`add`|<span data-ttu-id="77261-131">Aggiunge un listener per il **sharedListeners** raccolta.</span><span class="sxs-lookup"><span data-stu-id="77261-131">Adds a listener to the **sharedListeners** collection.</span></span>|  
+|`configuration`|<span data-ttu-id="58f41-128">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="58f41-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="58f41-129">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="58f41-129">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sharedListeners`|<span data-ttu-id="58f41-130">Raccolta di listener che possono fare riferimento qualsiasi origine o un elemento di traccia.</span><span class="sxs-lookup"><span data-stu-id="58f41-130">A collection of listeners that any source or trace element can reference.</span></span>|  
+|`add`|<span data-ttu-id="58f41-131">Aggiunge un listener per il **sharedListeners** raccolta.</span><span class="sxs-lookup"><span data-stu-id="58f41-131">Adds a listener to the **sharedListeners** collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="77261-132">Note</span><span class="sxs-lookup"><span data-stu-id="77261-132">Remarks</span></span>  
- <span data-ttu-id="77261-133">Se viene definito un listener in un `<add>` elemento del `<sharedListeners>` elemento, il filtro per il listener deve essere definito un `<filter>` elemento figlio del `<add>` elemento.</span><span class="sxs-lookup"><span data-stu-id="77261-133">If a listener is defined in an `<add>` element of the `<sharedListeners>` element, the filter for that listener should be defined in a `<filter>` element that is a child of the `<add>` element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58f41-132">Note</span><span class="sxs-lookup"><span data-stu-id="58f41-132">Remarks</span></span>  
+ <span data-ttu-id="58f41-133">Se viene definito un listener in un `<add>` elemento del `<sharedListeners>` elemento, il filtro per il listener deve essere definito un `<filter>` elemento figlio del `<add>` elemento.</span><span class="sxs-lookup"><span data-stu-id="58f41-133">If a listener is defined in an `<add>` element of the `<sharedListeners>` element, the filter for that listener should be defined in a `<filter>` element that is a child of the `<add>` element.</span></span>  
   
- <span data-ttu-id="77261-134">Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e il file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="77261-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="58f41-134">Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e il file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="58f41-134">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="77261-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="77261-135">Example</span></span>  
- <span data-ttu-id="77261-136">Nell'esempio seguente viene illustrato come utilizzare il `<filter>` elemento per aggiungere un filtro per il listener di traccia `console` nel `sharedListeners` raccolta.</span><span class="sxs-lookup"><span data-stu-id="77261-136">The following example shows how to use the `<filter>` element to add a filter to the trace listener `console` in the `sharedListeners` collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="58f41-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="58f41-135">Example</span></span>  
+ <span data-ttu-id="58f41-136">Nell'esempio seguente viene illustrato come utilizzare il `<filter>` elemento per aggiungere un filtro per il listener di traccia `console` nel `sharedListeners` raccolta.</span><span class="sxs-lookup"><span data-stu-id="58f41-136">The following example shows how to use the `<filter>` element to add a filter to the trace listener `console` in the `sharedListeners` collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -85,9 +85,9 @@ ms.locfileid: "59120744"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="77261-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="77261-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58f41-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="58f41-137">See also</span></span>
 
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [<span data-ttu-id="77261-138">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="77261-138">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="58f41-138">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="58f41-138">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
