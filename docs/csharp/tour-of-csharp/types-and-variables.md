@@ -3,12 +3,12 @@ title: Tipi e variabili C# - Panoramica del linguaggio C#
 description: Informazioni sulla definizione di tipi e la dichiarazione di variabili nel linguaggio C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5159d75c601bbcb8248a11993a4aaf39299734f0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846610"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481080"
 ---
 # <a name="types-and-variables"></a>Tipi e variabili
 
@@ -19,30 +19,30 @@ I tipi valore di C# sono ulteriormente suddivisi in *tipi semplici*, *tipi enum*
 Di seguito viene offerta una panoramica del sistema di tipi di C#.
 
 * Tipi valore
-    - Tipi semplici
-        * Signed Integer: `sbyte`, `short`, `int`,`long`
-        * Unsigned Integer: `byte`, `ushort`, `uint`,`ulong`
-        * Caratteri Unicode: `char`
-        * Virgola mobile IEEE: `float`, `double`
-        * Decimale ad alta precisione: `decimal`
-        * Booleano: `bool`
-    - Tipi enum
-        * Tipi definiti dall'utente nel formato `enum E {...}`
-    - Tipi struct
-        * Tipi definiti dall'utente nel formato `struct S {...}`
-    - Tipi valore nullable
-        * Estensioni di tutti gli altri tipi valore con un valore `null`
+  - Tipi semplici
+    * Integrale firmato: `sbyte`, `short`, `int`, `long`
+    * Integrale non firmato: `byte`, `ushort`, `uint`, `ulong`
+    * Caratteri Unicode: `char`
+    * Virgola mobile IEEE: `float`, `double`
+    * Decimale ad alta precisione: `decimal`
+    * Booleano: `bool`
+  - Tipi enum
+    * Tipi definiti dall'utente nel formato `enum E {...}`
+  - Tipi struct
+    * Tipi definiti dall'utente nel formato `struct S {...}`
+  - Tipi valore nullable
+    * Estensioni di tutti gli altri tipi valore con un valore `null`
 * Tipi riferimento
-    - Tipi classe
-        * Classe di base principale di tutti gli altri tipi: `object`
-        * Stringhe Unicode: `string`
-        * Tipi definiti dall'utente nel formato `class C {...}`
-    - Tipi interfaccia
-        * Tipi definiti dall'utente nel formato `interface I {...}`
-    - Tipi matrice
-        * Unidimensionale e multidimensionale, ad esempio `int[]` e `int[,]`
-    - Tipi delegato
-        * Tipi definiti dall'utente nel formato `delegate int D(...)`
+  - Tipi classe
+    * Classe di base principale di tutti gli altri tipi: `object`
+    * Stringhe Unicode: `string`
+    * Tipi definiti dall'utente nel formato `class C {...}`
+  - Tipi interfaccia
+    * Tipi definiti dall'utente nel formato `interface I {...}`
+  - Tipi matrice
+    * Unidimensionale e multidimensionale, ad esempio `int[]` e `int[,]`
+  - Tipi delegato
+    * Tipi definiti dall'utente nel formato `delegate int D(...)`
 
 Gli otto tipi integrali offrono supporto per i valori a 8, 16, 32 e 64 bit in formato con segno o senza segno.
 
@@ -57,20 +57,20 @@ Per l'elaborazione di caratteri e stringhe, in C# viene usata la codifica Unicod
 Di seguito vengono riepilogati i tipi numerici di C#.
 
 * Signed Integer
-    - `sbyte`:  8 bit, intervallo compreso tra -128 e 127
-    - `short`: 16 bit, intervallo compreso tra -32.768 e 32.767
-    - `int`  : 32 bit, intervallo compreso tra -2.147.483.648 e 2.147.483.647
-    - `long`: 64 bit, intervallo compreso tra -9.223.372.036.854.775.808 e 9.223.372.036.854.775.807
+  - `sbyte`:  8 bit, intervallo compreso tra -128 e 127
+  - `short`: 16 bit, intervallo compreso tra -32.768 e 32.767
+  - `int`  : 32 bit, intervallo compreso tra -2.147.483.648 e 2.147.483.647
+  - `long` : 64 bit, intervallo compreso tra -9.223.372.036.854.775.808 e 9.223.372.036.854.775.807
 * Unsigned Integer
-    - `byte`   :  8 bit, intervallo compreso tra 0 e 255
-    - `ushort`: 16 bit, intervallo compreso tra 0 e 65.535
-    - `uint`   : 32 bit, intervallo compreso tra 0 e 4.294.967.295
-    - `ulong`  : 64 bit, intervallo compreso tra 0 e 18.446.744.073.709.551.615
+  - `byte`   :  8 bit, intervallo compreso tra 0 e 255
+  - `ushort` : 16 bit, intervallo compreso tra 0 e 65.535
+  - `uint`   : 32 bit, intervallo compreso tra 0 e 4.294.967.295
+  - `ulong`  : 64 bit, intervallo compreso tra 0 e 18.446.744.073.709.551.615
 * Virgola mobile
-    - `float`  : 32 bit, intervallo compreso tra 1,5 x 10<sup>-45</sup> e 3,4 × 10<sup>38</sup>, precisione di 7 cifre
-    - `double`: 64 bit, intervallo compreso tra 5,0 × 10<sup>-324</sup> e 1,7 × 10<sup>308</sup>, precisione di 15 cifre
+  - `float`  : 32 bit, intervallo compreso tra 1,5 x 10<sup>-45</sup> e 3,4 × 10<sup>38</sup>, precisione di 7 cifre
+  - `double` : 64 bit, intervallo compreso tra 5,0 × 10<sup>-324</sup> e 1,7 × 10<sup>308</sup>, precisione di 15 cifre
 * Decimale
-    - `decimal`: 128 bit, intervallo compreso almeno tra -7,9 × 10<sup>-28</sup> e 7,9 × 10<sup>28</sup>, con precisione di almeno 28 cifre
+  - `decimal` : 128 bit, intervallo compreso almeno tra -7,9 × 10<sup>-28</sup> e 7,9 × 10<sup>28</sup>, con precisione di almeno 28 cifre
 
 I programmi C# usano le *dichiarazioni di tipo* per creare nuovi tipi. Una dichiarazione di tipo consente di specificare il nome e i membri del nuovo tipo. Cinque delle categorie di tipi di C# possono essere definite dall'utente: tipi classe, tipi struct, tipi interfaccia, tipi enum e tipi delegato.
 
@@ -101,19 +101,19 @@ Con il sistema di tipi unificato di C#, i tipi valore possono diventare oggetti 
 In C# sono disponibili diversi tipi di *variabili*, inclusi campi, elementi matrice, variabili locali e parametri. Le variabili rappresentano posizioni di archiviazione e ogni variabile dispone di un tipo che determina quali valori possono essere archiviati nella variabile stessa, come illustrato di seguito.
 
 * Tipo valore non-nullable
-    - Valore esattamente del tipo indicato
+  - Valore esattamente del tipo indicato
 * Tipo valore nullable
-    - Valore `null` o valore esattamente del tipo indicato
+  - Valore `null` o valore esattamente del tipo indicato
 * object
-    - Riferimento `null`, riferimento a un oggetto di qualsiasi tipo riferimento oppure riferimento a un valore boxed di qualsiasi tipo valore
+  - Riferimento `null`, riferimento a un oggetto di qualsiasi tipo riferimento oppure riferimento a un valore boxed di qualsiasi tipo valore
 * Tipo classe
-    - Riferimento `null`, riferimento a un'istanza del tipo classe oppure riferimento a un'istanza di una classe derivata dal tipo classe
+  - Riferimento `null`, riferimento a un'istanza del tipo classe oppure riferimento a un'istanza di una classe derivata dal tipo classe
 * Tipo interfaccia
-    - Riferimento `null`, riferimento a un'istanza di un tipo classe che implementa il tipo interfaccia oppure riferimento a un valore boxed di un tipo valore che implementa il tipo interfaccia
+  - Riferimento `null`, riferimento a un'istanza di un tipo classe che implementa il tipo interfaccia oppure riferimento a un valore boxed di un tipo valore che implementa il tipo interfaccia
 * Tipo matrice
-    - Riferimento `null`, riferimento a un'istanza del tipo matrice oppure riferimento a un'istanza di un tipo matrice compatibile
+  - Riferimento `null`, riferimento a un'istanza del tipo matrice oppure riferimento a un'istanza di un tipo matrice compatibile
 * Tipo delegato
-    - Riferimento `null` oppure riferimento a un'istanza di un tipo delegato compatibile
+  - Riferimento `null` oppure riferimento a un'istanza di un tipo delegato compatibile
 
 > [!div class="step-by-step"]
 > [Precedente](program-structure.md)

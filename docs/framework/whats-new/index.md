@@ -1,7 +1,7 @@
 ---
 title: Novità di .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -10,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3c0fcf9bd1c1e8df19458f681497b77348279915
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613759"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975780"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novità di .NET Framework
 
 Questo articolo riepiloga le nuove funzionalità e i principali miglioramenti apportati alle versioni seguenti di .NET Framework:
 
+- [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
 - [.NET Framework 4.7](#v47)
@@ -36,42 +37,175 @@ Non vengono fornite informazioni complete su ogni nuova funzionalità e l'artico
 > [!NOTE]
 > Il team di .NET Framework rende disponibili anche alcune funzionalità fuori programma con NuGet per espandere le piattaforme supportate e introdurre nuove funzionalità, ad esempio le raccolte non modificabili e i tipi di vettore abilitati per SIMD. Per altre informazioni, vedere [API e librerie di classi aggiuntive](../additional-apis/index.md) e [.NET Framework e rilascio fuori programma](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md). Vedere l'[elenco completo dei pacchetti NuGet](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/) per .NET Framework oppure sottoscrivere [questo feed](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
 
+<a name="v48" />
+
+## <a name="introducing-net-framework-48"></a>Introduzione a .NET Framework 4.8
+
+.NET Framework 4.8 è basato sulle versioni precedenti di .NET Framework 4.x con l'aggiunta di molte nuove correzioni e diverse nuove funzionalità, pur rimanendo un prodotto molto stabile.
+
+### <a name="downloading-and-installing-net-framework-48"></a>Download e installazione di .NET Framework 4.8
+
+È possibile scaricare .NET Framework 4.8 dalle posizioni seguenti:
+
+- [Programma di installazione Web di .NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155)
+
+- [Programma di installazione offline di .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)
+
+.NET Framework 4.8 può essere installato in Windows 10, Windows 8.1, Windows 7 SP1 e nelle piattaforme server corrispondenti a partire da Windows Server 2008 R2 SP1. È possibile installare .NET Framework 4.8 usando il programma di installazione Web o il programma di installazione offline. Per la maggior parte degli utenti è consigliabile usare il programma di installazione Web.
+
+Per .NET Framework 4.8 in Visual Studio 2012 o versioni successive è possibile installare [.NET Framework 4.8 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=2085167).
+
+### <a name="whats-new-in-net-framework-48"></a>Novità di .NET Framework 4.8
+
+.NET Framework 4.8 include nuove funzionalità nelle aree seguenti:
+
+- [Classi di base](#core48)
+- [Windows Communication Foundation (WCF)](#wcf48)
+- [Windows Presentation Foundation (WPF)](#wpf48)
+- [Common Language Runtime](#clr48) 
+
+Un'accessibilità migliorata, grazie alla quale un'applicazione può offrire un'esperienza appropriata agli utenti di Assistive Technology, continua a essere uno dei principali obiettivi di .NET Framework 4.8. Per informazioni sui miglioramenti apportati all'accessibilità in .NET Framework 4.8, vedere [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md).
+
+<a name="core48" />
+
+#### <a name="base-classes"></a>Classi di base
+
+**Impatto ridotto di FIPS sulla crittografia**. Nelle versioni precedenti di .NET Framework le classi del provider del servizio di crittografia gestite, ad esempio <xref:System.Security.Cryptography.SHA256Managed>, generano un'eccezione <xref:System.Security.Cryptography.CryptographicException> quando le librerie di crittografia del sistema sono configurate in "Modalità FIPS". Queste eccezioni vengono generate perché le versioni gestite delle classi del provider del servizio di crittografia, a differenza delle librerie di crittografia del sistema, non hanno ottenuto la certificazione FIPS (Federal Information Processing Standards) 140-2. Poiché alcuni sviluppatori usano computer in modalità FIPS per lo sviluppo, le eccezioni vengono di solito generate nei sistemi di produzione.
+
+Per impostazione predefinita, nelle applicazioni destinate a .NET Framework 4.8 le classi di crittografia gestite seguenti non generano più un'eccezione <xref:System.Security.Cryptography.CryptographicException> in questo caso:
+
+- <xref:System.Security.Cryptography.MD5Cng>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RIPEMD160Managed>
+- <xref:System.Security.Cryptography.SHA256Managed> 
+
+Al contrario, queste classi reindirizzano le operazioni di crittografia a una libreria di crittografia del sistema. Questa modifica rimuove in modo efficiente una differenza potenzialmente fuorviante tra ambienti di sviluppo e ambienti di produzione e rende possibile eseguire i componenti nativi e i componenti gestiti in base agli stessi criteri di crittografia. Le applicazioni che dipendono da queste eccezioni possono ripristinare il comportamento precedente impostando l'opzione di AppContext `Switch.System.Security.Cryptography.UseLegacyFipsThrow` su `true`. Per altre informazioni, vedere la sezione relativa alle [classi di crittografia gestite che non generano un'eccezione CryptographyException in modalità FIPS](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
+
+**Uso della versione aggiornata di ZLib**
+
+A partire da .NET Framework 4.5, l'assembly clrcompression.dll usa [ZLib](https://www.zlib.net), una libreria esterna nativa per la compressione dei dati, al fine di fornire un'implementazione per l'algoritmo deflate. Il file clrcompression.dll di .NET Framework 4.8 viene aggiornato in modo da usare ZLib versione 1.2.11, che include varie correzioni e alcuni miglioramenti chiave.
+
+<a name="wcf48" />
+
+#### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+
+**Introduzione di ServiceHealthBehavior**
+
+Gli endpoint di integrità vengono ampiamente usati tramite gli strumenti di orchestrazione per gestire i servizi in base allo stato di integrità. I controlli di integrità possono anche essere usati tramite strumenti di monitoraggio, al fine di tenere traccia e fornire notifiche sulla disponibilità e sulle prestazioni di un servizio. 
+
+**ServiceHealthBehavior** è il comportamento di un servizio WCF che estende <xref:System.ServiceModel.Description.IServiceBehavior>.  Se aggiunto alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors?displayProperty=nameWithType>, il comportamento di un servizio esegue queste operazioni:
+
+- Restituisce lo stato di integrità del servizio con codici di risposta HTTP. È possibile specificare in una stringa di query il codice di stato HTTP per una richiesta di probe di integrità HTTP/GET.
+
+- Pubblica informazioni sull'integrità del servizio. Dettagli specifici del servizio, tra cui stato del servizio, numero di limitazioni e capacità, possono essere visualizzati tramite una richiesta HTTP/GET con la stringa di query `?health`. L'accessibilità a tali informazioni è importante durante la risoluzione dei problemi relativi a un servizio WCF che non funziona correttamente.
+
+Esistono due modi per esporre l'endpoint di integrità e pubblicare le informazioni di integrità del servizio WCF:
+
+- Tramite codice. Ad esempio:
+
+  ```csharp
+  ServiceHost host = new ServiceHost(typeof(Service1), 
+                     new Uri("http://contoso:81/Service1")); 
+  ServiceHealthBehavior healthBehavior =
+      host.Description.Behaviors.Find<ServiceHealthBehavior>(); 
+  if (healthBehavior == null)
+  { 
+     healthBehavior = new ServiceHealthBehavior(); 
+  } 
+   host.Description.Behaviors.Add(healthBehavior); 
+  ```
+
+- Tramite un file di configurazione. Ad esempio:
+
+  ```xml
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="DefaultBehavior">
+        <serviceHealth httpsGetEnabled="true"/>
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+  ```
+
+È possibile eseguire una query sullo stato di integrità di un servizio usando i parametri di query, ad esempio `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`. Un codice di risposta HTTP può inoltre essere specificato per ogni parametro di query. Se si omette il codice di risposta HTTP per un parametro di query, per impostazione predefinita viene usato un codice di risposta HTTP 503. Ad esempio:
+
+- OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
+
+  Un codice di stato di risposta HTTP U 450 viene restituito quando [ServiceHost.State](xref:System.ServiceModel.Channels.CommunicationObject.State) è maggiore di <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
+Esempi e parametri di query:
+
+- OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
+  
+  Un codice di stato della risposta HTTP 455 viene restituito quando lo stato di uno dei dispatcher di canale è maggiore di <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
+
+- OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
+
+  Un codice di stato della risposta HTTP 465 viene restituito quando lo stato di uno dei listener di canale è maggiore di <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
+
+- OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
+
+  Specifica la percentuale {1-100} che attiva la risposta e il relativo codice di risposta HTTP {599-200}. In questo esempio:
+  
+    - Se la percentuale è maggiore di 95, viene restituito un codice di risposta HTTP 500.
+    
+    - Se la percentuale equivale a 70 e 95 o è inclusa tra tali valori, viene restituito 350.
+    
+    - In caso contrario, viene restituito 200.
+
+Lo stato di integrità del servizio può essere visualizzato in HTML, specificando una stringa di query come `https://contoso:81/Service1?health`, o in codice XML, specificando una stringa di query come `https://contoso:81/Service1?health&Xml`. Una stringa di query come `https://contoso:81/Service1?health&NoContent` restituisce una pagina HTML vuota.
+
+<a name="wpf48" />
+
+#### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+**Miglioramenti a valori DPI alti**
+
+In .NET Framework 4.8 WPF aggiunge supporto per la sensibilità ai valori DPI per monitor V2 e per il ridimensionamento DPI in modalità mista. Vedere la pagina [High DPI Desktop Application Development on Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) (Sviluppo di applicazioni desktop con valori DPI alti in Windows) per altre informazioni sullo sviluppo con valori DPI alti. 
+
+.NET Framework 4.8 migliora il supporto per le finestre HWND ospitate e l'interoperatività di Windows Form nelle applicazioni WPF con valori DPI alti in piattaforme che supportano il ridimensionamento DPI in modalità mista, a partire dall'Aggiornamento di Windows 10 (aprile 2018). Quando le finestre HWND ospitate o i controlli Windows Form vengono creati come finestre con ridimensionamento DPI in modalità mista chiamando [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) e [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), possono essere ospitati in un'applicazione WPF per monitor V2 e vengono ridimensionati in modo appropriato. Il rendering di questi contenuti ospitati non viene eseguito in base ai valori DPI nativi. Il sistema operativo ridimensiona infatti i contenuti ospitati in modo appropriato. Il supporto per la sensibilità ai valori DPI per monitor V2 consente anche l'hosting dei controlli WPF, ad esempio con associazione con elemento padre, in una finestra nativa in un'applicazione con valori DPI alti. 
+
+Per abilitare il supporto per il ridimensionamento con valori DPI alti in modalità mista, è possibile impostare le opzioni [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) seguenti per il file di configurazione dell'applicazione:
+
+```xml
+<runtime>
+   <AppContextSwitchOverrides value = "Switch.System.Windows.DoNotScaleForDpiChanges=false; Switch.System.Windows.DoNotUsePresentationDpiCapabilityTier2OrGreater=false"/>
+</runtime>
+```
+
+<a name="clr48" />
+
+#### <a name="common-language-runtime"></a>Common Language Runtime
+
+Il runtime in .NET Framework 4.8 include le modifiche e i miglioramenti seguenti:
+
+**Miglioramenti al compilatore JIT**. Il compilatore JIT in .NET Framework 4.8 è basato sul compilatore JIT in .NET Core 2.1. Molte delle ottimizzazioni e tutte le correzioni di bug apportate al compilatore JIT di .NET Core 2.1 sono incluse nel compilatore JIT di .NET Framework 4.8. 
+
+**Miglioramenti di NGEN**. Il runtime ha migliorato la gestione della memoria per le immagini del [generatore di immagini native](../tools/ngen-exe-native-image-generator.md) (NGEN) in modo tale che i dati mappati dalle immagini NGEN non siano residenti in memoria. In questo modo viene ridotta la superficie di attacco vulnerabile agli attacchi che tentano di eseguire codice arbitrario mediante la modifica della memoria.
+
+**Analisi antimalware per tutti gli assembly**. Nelle versioni precedenti di .NET Framework il runtime esegue l'analisi di tutti gli assembly caricati da disco tramite Windows Defender o software antimalware di terze parti. Gli assembly caricati da altre origini, ad esempio tramite il metodo <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, non vengono tuttavia analizzati e potrebbero contenere malware non rilevato. A partire da .NET Framework 4.8 eseguito su Windows 10, il runtime attiva un'analisi tramite soluzioni antimalware che implementano l'[interfaccia AMSI (Antimalware Scan Interface)](/windows/desktop/AMSI/antimalware-scan-interface-portal).  
+
 <a name="v472" />
 
-## <a name="introducing-the-net-framework-472"></a>Introduzione a .NET Framework 4.7.2
-
-.NET Framework 4.7.2 è basato sulle versioni precedenti di .NET Framework 4.x con l'aggiunta di molte nuove correzioni e diverse funzionalità, pur rimanendo un prodotto molto stabile.
-
-### <a name="downloading-and-installing-the-net-framework-472"></a>Download e installazione di .NET Framework 4.7.2
-
-È possibile scaricare .NET Framework 4.7.2 dalle posizioni seguenti:
-
-- [Programma di installazione Web di .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)
-
-- [Programma di installazione offline di .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)
-
-.NET Framework 4.7.2 può essere installato in Windows 10, Windows 8.1, Windows 7 SP1 e nelle piattaforme server corrispondenti a partire da Windows Server 2008 R2 SP1. È possibile installare .NET Framework 4.7.2 usando il programma di installazione Web o il programma di installazione offline. Per la maggior parte degli utenti è consigliabile usare il programma di installazione Web.
-
-Per .NET Framework 4.7.2 in Visual Studio 2012 o versioni successive è possibile installare [.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338).
-
-### <a name="whats-new-in-the-net-framework-472"></a>Novità di .NET Framework 4.7.2
+## <a name="whats-new-in-net-framework-472"></a>Novità di .NET Framework 4.7.2
 
 .NET Framework 4.7.2 include nuove funzionalità nelle aree seguenti:
 
-- [Base](#core-472)
+- [Classi di base](#core-472)
 - [ASP.NET 2.0](#asp-net472)
 - [Rete](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
 
-Un obiettivo principale di .NET Framework 4.7.2 è quello migliorare l'accessibilità, attraverso la quale un'applicazione può offrire un'esperienza appropriata agli utenti di Assistive Technology. Per informazioni sui miglioramenti apportati all'accessibilità in .NET Framework 4.7.2, vedere [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md).
+Un'accessibilità migliorata, grazie alla quale un'applicazione può offrire un'esperienza appropriata agli utenti di Assistive Technology, continua a essere uno dei principali obiettivi di .NET Framework 4.7.2. Per informazioni sui miglioramenti apportati all'accessibilità in .NET Framework 4.7.2, vedere [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md).
 
 <a name="core-472" />
 
-#### <a name="core"></a>Base
+#### <a name="base-classes"></a>Classi di base
 
-.NET Framework 4.7.2 presenta un numero elevato di miglioramenti della crittografia, un supporto aggiornato per la decompressione degli archivi ZIP e nuove API Collection.
+.NET Framework 4.7.2 presenta un numero elevato di miglioramenti della crittografia, un supporto aggiornato per la decompressione degli archivi ZIP e nuove API della raccolta.
 
 **Nuovi overload di RSA.Create e DSA.Create**
 
@@ -177,13 +311,13 @@ L'importazione PFX può caricare chiavi private direttamente dalla memoria, igno
 
 **Creazione a livello di codice di richieste di firma dei certificati PKCS #10 e certificati chiave pubblica X.509**
 
-A partire da .NET Framework 4.7.2 i carichi di lavoro possono generare richieste di firma dei certificati (CSR), che consentono la suddivisione in fasi della generazione di richieste di certificati negli strumenti esistenti. Ciò è spesso utile negli scenari di test.
+A partire da .NET Framework 4.7.2, i carichi di lavoro possono generare richieste di firma dei certificati (CSR), che consentono la gestione temporanea della generazione di richieste di certificati negli strumenti esistenti. Ciò è spesso utile negli scenari di test.
 
 Per altre informazioni ed esempi di codice, vedere "Creazione a livello di codice di richieste di firma dei certificati PKCS #10 e certificati chiave pubblica X.509" nel [blog di .NET](https://devblogs.microsoft.com/dotnet/net-framework-4-7-2-developer-pack-early-access-build-3056-is-available/).
 
 **Nuovi membri SignerInfo**
 
-A partire da .NET Framework 4.7.2 la classe <xref:System.Security.Cryptography.Pkcs.SignerInfo> visualizza maggiori informazioni sulla firma. È possibile recuperare il valore della proprietà <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> per determinare l'algoritmo di firma usato dal firmatario. È possibile chiamare <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> per ottenere una copia della firma crittografica del firmatario.
+A partire da .NET Framework 4.7.2 la classe <xref:System.Security.Cryptography.Pkcs.SignerInfo> espone maggiori informazioni sulla firma. È possibile recuperare il valore della proprietà <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName> per determinare l'algoritmo di firma usato dal firmatario. È possibile chiamare <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> per ottenere una copia della firma crittografica del firmatario.
 
 **Lasciare aperto un flusso con wrapping dopo l'eliminazione di CryptoStream**
 
@@ -199,7 +333,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **Modifiche alla decompressione in DeflateStream**
 
-A partire da .NET Framework 4.7.2 l'implementazione di operazioni di decompressione nella classe <xref:System.IO.Compression.DeflateStream> è stata modificata e ora usa le API Windows native per impostazione predefinita. In genere questo comporta un miglioramento significativo delle prestazioni.
+A partire da .NET Framework 4.7.2 l'implementazione di operazioni di decompressione nella classe <xref:System.IO.Compression.DeflateStream> è stata modificata in modo da usare le API di Windows native per impostazione predefinita. In genere questo comporta un miglioramento significativo delle prestazioni.
 
 Il supporto della decompressione mediante le API di Windows è abilitato per impostazione predefinita per le applicazioni destinate a .NET Framework 4.7.2. Le applicazioni destinate a versioni precedenti di .NET Framework ma eseguite in .NET Framework 4.7.2 possono scegliere il nuovo comportamento aggiungendo la seguente [opzione AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) al file di configurazione dell'applicazione:
 
@@ -209,7 +343,7 @@ Il supporto della decompressione mediante le API di Windows è abilitato per imp
 
 **API aggiuntive della raccolta**
 
-In .NET Framework 4.7.2 sono state aggiunte varie API nuove ai tipi <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Sono inclusi:
+.NET Framework 4.7.2 aggiunge varie API nuove ai tipi <xref:System.Collections.Generic.SortedSet%601> e <xref:System.Collections.Generic.HashSet%601>. Sono inclusi:
 
 - Metodi `TryGetValue`, che estendono il modello Try usato in altri tipi di raccolta per questi due tipi. Sono disponibili i seguenti metodi:
 
@@ -256,7 +390,7 @@ L'[inserimento di dipendenze (DI)](/aspnet/core/fundamentals/dependency-injectio
 
 **Supporto dei cookie SameSite**
 
-[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) impedisce a un browser di inviare un cookie insieme a una richiesta intersito. .NET Framework 4.7.2 aggiunge una proprietà <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType> il cui valore è un membro di un'enumerazione <xref:System.Web.SameSiteMode?displayProperty=nameWithType>. Se il valore è <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> oppure <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>, ASP.NET aggiunge l'attributo `SameSite` all'intestazione set-cookie. Il supporto SameSite è valido per gli oggetti <xref:System.Web.HttpCookie> e per i cookie <xref:System.Web.Security.FormsAuthentication> e <xref:System.Web.SessionState>.
+[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) impedisce a un browser di inviare un cookie insieme a una richiesta intersito. .NET Framework 4.7.2 aggiunge una proprietà <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType> il cui valore è un membro dell'enumerazione <xref:System.Web.SameSiteMode?displayProperty=nameWithType>. Se il valore è <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> oppure <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>, ASP.NET aggiunge l'attributo `SameSite` all'intestazione set-cookie. Il supporto SameSite è valido per gli oggetti <xref:System.Web.HttpCookie> e per i cookie <xref:System.Web.Security.FormsAuthentication> e <xref:System.Web.SessionState>.
 
 È possibile impostare SameSite per un oggetto <xref:System.Web.HttpCookie> come segue:
 
@@ -316,7 +450,7 @@ Per altre informazioni e un esempio, vedere "SQL -- Azure AD Universal and Multi
 
 **Supporto di Always Encrypted versione 2**
 
-NET Framework 4.7.2 aggiunge il supporto per Always Encrypted basato su enclave. La versione originale di Always Encrypted è una tecnologia di crittografia lato client in cui la crittografia delle chiavi non lascia mai il client. In Always Encrypted basato su enclave il client può inviare le chiavi di crittografia a un'enclave protetta, ovvero un'entità di elaborazione protetta che può essere considerata come parte di SQL Server ma non può essere alterata tramite codice SQL Server. Per supportare Always Encrypted basato su enclave, .NET Framework 4.7.2 aggiunge i seguenti tipi e membri allo spazio dei nomi <xref:System.Data.SqlClient>:
+NET Framework 4.7.2 aggiunge il supporto per Always Encrypted basato su enclave. La versione originale di Always Encrypted è una tecnologia di crittografia lato client in cui la crittografia delle chiavi non lascia mai il client. In Always Encrypted basato su enclave il client può inviare le chiavi di crittografia a un'enclave protetta, ovvero un'entità di elaborazione protetta che può essere considerata come parte di SQL Server ma non può essere alterata tramite codice SQL Server. Per supportare Always Encrypted basato su enclave, .NET Framework 4.7.2 aggiunge i tipi e i membri seguenti allo spazio dei nomi <xref:System.Data.SqlClient>:
 
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>, che consente di specificare l'URI per Always Encrypted basato su enclave.
 
@@ -356,7 +490,7 @@ Il flusso base di Always Encrypted basato su enclave è il seguente:
 
 **Ricerca di ResourceDictionary in base all'origine**
 
-A partire da .NET Framework 4.7.2, un assistente di diagnostica può trovare i <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> creati da un URI di origine specificato. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" consente all'utente di modificare un ResourceDictionary con lo scopo di implementare le modifiche applicate all'applicazione in esecuzione. Un passaggio per raggiungere questo obiettivo è il rilevamento di tutti i ResourceDictionary creati dall'applicazione a partire dal dizionario che viene modificato. Ad esempio un'applicazione può dichiarare un ResourceDictionary il cui contenuto viene copiato da un determinato URI di origine:
+A partire da .NET Framework 4.7.2, un assistente di diagnostica può trovare gli oggetti  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> creati da un URI di origine specificato. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" consente all'utente di modificare un ResourceDictionary con lo scopo di implementare le modifiche applicate all'applicazione in esecuzione. Un passaggio per raggiungere questo obiettivo è il rilevamento di tutti i ResourceDictionary creati dall'applicazione a partire dal dizionario che viene modificato. Ad esempio un'applicazione può dichiarare un ResourceDictionary il cui contenuto viene copiato da un determinato URI di origine:
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
@@ -376,7 +510,7 @@ Il metodo restituisce un oggetto enumerabile vuoto, a meno che non sia abilitato
 
 **Rilevamento di proprietari di ResourceDictionary**
 
-A partire da .NET Framework 4.7.2 un assistente di diagnostica può trovare i proprietari di un determinato <xref:Windows.UI.Xaml.ResourceDictionary>. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Ogni volta che viene apportata una modifica a un <xref:Windows.UI.Xaml.ResourceDictionary>, WPF trova automaticamente tutti i riferimenti [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) che potrebbero essere interessati dalla modifica.
+A partire da .NET Framework 4.7.2 un assistente di diagnostica può trovare i proprietari di un determinato oggetto <xref:Windows.UI.Xaml.ResourceDictionary>. Questa funzionalità può essere usata dagli assistenti di diagnostica, non dalle applicazioni di produzione. Ogni volta che viene apportata una modifica a un <xref:Windows.UI.Xaml.ResourceDictionary>, WPF trova automaticamente tutti i riferimenti [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) che potrebbero essere interessati dalla modifica.
 
 Un assistente di diagnostica come la funzionalità di Visual Studio "Modifica e continuazione" potrebbe richiedere di estendere questa funzionalità per gestire i riferimenti [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Il primo passaggio in questo processo è il rilevamento dei proprietari del dizionario, ovvero di tutti gli oggetti la cui proprietà `Resources` fa riferimento al dizionario (direttamente o indirettamente tramite la proprietà <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Questa fase è supportata da tre nuovi metodi statici implementati nella classe <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, uno per ogni tipo di base che dispone di una proprietà `Resources`:
 
@@ -433,20 +567,20 @@ Per le applicazioni Windows Forms, la soluzione alternativa precedente, con impo
 
 <a name="v471" />
 
-## <a name="whats-new-in-the-net-framework-471"></a>Novità di .NET Framework 4.7.1
+## <a name="whats-new-in-net-framework-471"></a>Novità di .NET Framework 4.7.1
 
 .NET Framework 4.7.1 include nuove funzionalità nelle aree seguenti:
 
-- [Base](#core471)
+- [Classi di base](#core471)
 - [Common Language Runtime (CLR)](#clr)
 - [Rete](#net471)
 - [ASP.NET 2.0](#asp-net471)
 
-Inoltre, un obiettivo principale di .NET Framework 4.7.1 è migliorare l'accessibilità, attraverso la quale un'applicazione può offrire un'esperienza appropriata agli utenti di Assistive Technology. Per informazioni sui miglioramenti apportati all'accessibilità in .NET Framework 4.7.1, vedere [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md).
+Un'accessibilità migliorata, grazie alla quale un'applicazione può offrire un'esperienza appropriata agli utenti di Assistive Technology, continua a essere uno dei principali obiettivi di .NET Framework 4.7.1. Per informazioni sui miglioramenti apportati all'accessibilità in .NET Framework 4.7.1, vedere [Nuove funzionalità di accessibilità in .NET Framework](whats-new-in-accessibility.md).
 
 <a name="core471" />
 
-#### <a name="core"></a>Base
+#### <a name="base-classes"></a>Classi di base
 
 **Supporto per .NET Standard 2.0**
 
@@ -464,11 +598,11 @@ La classe <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=n
 
 **I tipi di tupla di valori sono serializzabili**
 
-A partire da .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> e i tipi generici associati sono contrassegnati come [serializzabili](xref:System.SerializableAttribute), consentendo la serializzazione binaria. Questa novità dovrebbe semplificare la migrazione dei tipi di tupla, come <xref:System.Tuple%603> e <xref:System.Tuple%604>, ai tipi di tupla di valori. Per altre informazioni, vedere la sezione relativa al compilatore e alla serializzazione di ValueTuple nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1).
+A partire da .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> e i tipi generici associati sono contrassegnati come oggetti [Serializable](xref:System.SerializableAttribute), consentendo la serializzazione binaria. Questa novità dovrebbe semplificare la migrazione dei tipi di tupla, come <xref:System.Tuple%603> e <xref:System.Tuple%604>, ai tipi di tupla di valori. Per altre informazioni, vedere la sezione relativa al compilatore e alla serializzazione di ValueTuple nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1).
 
 **Supporto per riferimenti di sola lettura**
 
-In .NET Framework 4.7.1 è stato aggiunto <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Questo attributo viene usato dai compilatori dei linguaggi per contrassegnare i membri che hanno tipi o parametri restituiti per riferimenti di sola lettura. Per altre informazioni, vedere la sezione relativa al compilatore e al supporto per ReadOnlyReferences nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1). Per informazioni sui valori restituiti per riferimenti, vedere [Valori restituiti e variabili locali ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) e [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) (Valori restituiti per riferimenti - Visual Basic).
+.NET Framework 4.7.1 aggiunge l'oggetto <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Questo attributo viene usato dai compilatori dei linguaggi per contrassegnare i membri che hanno tipi o parametri restituiti per riferimenti di sola lettura. Per altre informazioni, vedere la sezione relativa al compilatore e al supporto per ReadOnlyReferences nel post di blog [.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) (Funzionalità del runtime e del compilatore di .NET Framework 4.7.1). Per informazioni sui valori restituiti per riferimenti, vedere [Valori restituiti e variabili locali ref](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) e [Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md) (Valori restituiti per riferimenti - Visual Basic).
 
 <a name="clr" />
 
@@ -516,28 +650,28 @@ In .NET Framework 4.7 e versioni precedenti, ASP.NET consente agli sviluppatori 
 
 <a name="v47" />
 
-## <a name="whats-new-in-the-net-framework-47"></a>Novità di .NET Framework 4.7
+## <a name="whats-new-in-net-framework-47"></a>Novità di .NET Framework 4.7
 
 .NET Framework 4.7 include nuove funzionalità nelle aree seguenti:
 
-- [Base](#Core47)
+- [Classi di base](#Core47)
 - [Rete](#net47)
 - [ASP.NET 2.0](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Form](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Per l'elenco delle nuove API aggiunte a .NET Framework 4.7, vedere l'argomento [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Modifiche alle API di .NET Framework 4.7) su GitHub. Per l'elenco delle correzioni di bug e dei miglioramenti apportati alle funzionalità in .NET Framework 4.7, vedere l'argomento [.NET Framework 4.7 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Elenco delle modifiche di .NET Framework 4.7) su GitHub.  Per altre informazioni, vedere l'[annuncio di .NET Framework 4.7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) in .NET Blog.
+Per l'elenco delle nuove API aggiunte a .NET Framework 4.7, vedere l'argomento [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Modifiche alle API di .NET Framework 4.7) su GitHub. Per un elenco dei miglioramenti apportati alle funzionalità e delle correzioni di bug in .NET Framework 4.7, vedere[.NET Framework 4.7 List of Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Elenco delle modifiche di .NET Framework 4.7) su GitHub.  Per altre informazioni, vedere l'[annuncio di .NET Framework 4.7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/) in .NET Blog.
 
 <a name="Core47" />
 
-#### <a name="core"></a>Base
+#### <a name="base-classes"></a>Classi di base
 
 .NET Framework 4.7 migliora la serializzazione di <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
 **Funzionalità migliorate con l'algoritmo ECC (Elliptic Curve Cryptography)***
 
-In .NET Framework 4.7, sono stati aggiunti i metodi `ImportParameters(ECParameters)` alle classi <xref:System.Security.Cryptography.ECDsa> e <xref:System.Security.Cryptography.ECDiffieHellman> per consentire a un oggetto di rappresentare una chiave già stabilita. È stato anche aggiunto un metodo `ExportParameters(Boolean)` per l'esportazione della chiave usando parametri della curva esplicita.
+In .NET Framework 4.7 sono stati aggiunti i metodi `ImportParameters(ECParameters)` alle classi <xref:System.Security.Cryptography.ECDsa> e <xref:System.Security.Cryptography.ECDiffieHellman> per consentire a un oggetto di rappresentare una chiave già stabilita. È stato anche aggiunto un metodo `ExportParameters(Boolean)` per l'esportazione della chiave usando parametri della curva esplicita.
 
 .NET Framework 4.7 aggiunge anche il supporto per le curve aggiuntive (inclusa la suite di curve Brainpool) e ha aggiunto definizioni predefinite per semplificare la creazione attraverso i nuovi metodi factory <xref:System.Security.Cryptography.ECDsa.Create%2A> e <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A>.
 
@@ -545,13 +679,13 @@ In .NET Framework 4.7, sono stati aggiunti i metodi `ImportParameters(ECParamete
 
 **Supporto migliorato per i caratteri di controllo da DataContractJsonSerializer**
 
-In .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializza i caratteri di controllo in conformità con lo standard ECMAScript 6. Questo comportamento è abilitato per impostazione predefinita per le applicazioni che utilizzano .NET Framework 4.7 ed è una funzionalità che prevede il consenso esplicito per le applicazioni che sono in esecuzione con .NET Framework 4.7, ma sono destinate a una versione precedente di .NET Framework. Per altre informazioni, vedere [Reindirizzamento delle modifiche in .NET Framework versione 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+In .NET Framework 4.7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializza i caratteri di controllo in conformità con lo standard ECMAScript 6. Questo comportamento è abilitato per impostazione predefinita per le applicazioni che usano .NET Framework 4.7 ed è una funzionalità che prevede il consenso esplicito per le applicazioni eseguite in .NET Framework 4.7, ma destinate a una versione precedente di .NET Framework. Per altre informazioni, vedere [Reindirizzamento delle modifiche in .NET Framework versione 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="net47" />
 
 #### <a name="networking"></a>Servizi di rete
 
-.NET Framework 4.7 aggiunge la seguente funzionalità relativa alla rete:
+.NET Framework 4.7 aggiunge la funzionalità seguente relativa alla rete:
 
 **Supporto del sistema operativo predefinito per i protocolli TLS***
 
@@ -561,11 +695,11 @@ Lo stack TLS, che viene usato da <xref:System.Net.Security.SslStream?displayProp
 
 #### <a name="aspnet"></a>ASP.NET
 
-In .NET Framework 4.7, ASP.NET include le nuove funzionalità seguenti:
+In .NET Framework 4.7 ASP.NET include le nuove funzionalità seguenti:
 
 **Estendibilità della cache oggetti**
 
-A partire da Framework .NET 4.7, ASP.NET aggiunge un nuovo set di API che consente agli sviluppatori di sostituire le implementazioni di ASP.NET predefinite per la cache di oggetti in memoria e il monitoraggio della memoria. Gli sviluppatori possono ora sostituire uno qualsiasi dei seguenti tre componenti se l'implementazione di ASP.NET non è sufficiente:
+A partire da .NET Framework 4.7, ASP.NET aggiunge un nuovo set di API che consente agli sviluppatori di sostituire le implementazioni di ASP.NET predefinite per la cache di oggetti in memoria e il monitoraggio della memoria. Gli sviluppatori possono ora sostituire uno qualsiasi dei seguenti tre componenti se l'implementazione di ASP.NET non è sufficiente:
 
 - **Archivio cache oggetti**. Usando la nuova sezione di configurazione dei provider di cache, gli sviluppatori possono inserire nuove implementazioni di una cache oggetti per un'applicazione ASP.NET con la nuova interfaccia **ICacheStoreProvider**.
 
@@ -581,7 +715,7 @@ Windows Communication Foundation (WCF) aggiunge le seguenti funzionalità e modi
 
 **Possibilità di configurare le impostazioni predefinite di sicurezza dei messaggi su TLS 1.1 o TLS 1.2**
 
-A partire da .NET Framework 4.7, WCF consente di configurare TSL 1.1 o TLS 1.2, oltre a SSL 3.0 e TSL 1.0, come protocollo di sicurezza del messaggio predefinito. Questa funzionalità prevede il consenso esplicito e occorre quindi aggiungere la voce seguente al file di configurazione dell'applicazione:
+A partire da .NET Framework 4.7, WCF consente di configurare TLS 1.1 o TLS 1.2, oltre a SSL 3.0 e TLS 1.0, come protocollo di sicurezza del messaggio predefinito. Questa funzionalità prevede il consenso esplicito e occorre quindi aggiungere la voce seguente al file di configurazione dell'applicazione:
 
 ```xml
 <runtime>
@@ -602,7 +736,7 @@ WCF include un numero di modifiche al codice che eliminano le race condition, mi
 
 #### <a name="windows-forms"></a>Windows Form
 
-In Framework .NET 4.7, Windows Form migliora il supporto per i monitor di valori DPI alti.
+In .NET Framework 4.7 Windows Form migliora il supporto per i monitor con valori DPI alti.
 
 **Supporto di valori DPI alti**
 
@@ -614,7 +748,7 @@ Il supporto di valori DPI alti è una funzionalità che prevede il consenso espl
 
 #### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-In .NET Framework 4.7, WPF include i miglioramenti seguenti:
+In .NET Framework 4.7 WPF include i miglioramenti seguenti:
 
 **Supporto per lo stack di tocco/stilo basato sui messaggi basato sui messaggi WM_POINTER Windows**
 
@@ -626,7 +760,7 @@ Le API di stampa di WPF nella classe <xref:System.Printing.PrintQueue?displayPro
 
 <a name="v462" />
 
-## <a name="whats-new-in-the-net-framework-462"></a>Novità di .NET Framework 4.6.2
+## <a name="whats-new-in-net-framework-462"></a>Novità di .NET Framework 4.6.2
 
 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] include nuove funzionalità nelle aree seguenti:
 
@@ -650,7 +784,7 @@ Le API di stampa di WPF nella classe <xref:System.Printing.PrintQueue?displayPro
 
 - [Miglioramenti apportati al debug](#Debug462)
 
-Per un elenco delle nuove API aggiunte a .NET Framework 4.6.2, vedere l'argomento sulle [modifiche apportate all'API di .NET Framework 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) su GitHub. Per l'elenco dei miglioramenti apportati alle funzionalità e delle correzioni di bug in .NET Framework 4.6.2, vedere l'argomento [.NET Framework 4.6.2 List of Changes](https://go.microsoft.com/fwlink/?LinkId=708778) (Elenco delle modifiche in .NET Framework 4.6.2) su GitHub.  Per altre informazioni, vedere l'[annuncio di .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) in .NET Blog.
+Per un elenco delle nuove API aggiunte a .NET Framework 4.6.2, vedere l'argomento [.NET Framework 4.6.2 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) (Modifiche alle API di .NET Framework 4.6.2) su GitHub. Per un elenco dei miglioramenti apportati alle funzionalità e delle correzioni di bug in .NET Framework 4.6.2, vedere[.NET Framework 4.6.2 List of Changes](https://go.microsoft.com/fwlink/?LinkId=708778) (Elenco delle modifiche di .NET Framework 4.6.2) su GitHub.  Per altre informazioni, vedere l'[annuncio di .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/) in .NET Blog.
 
 <a name="ASPNET462" />
 
@@ -752,7 +886,7 @@ Per informazioni sulle modifiche nelle categorie di caratteri da Unicode 6.0 a U
 
 Oltre a supportare le dimensioni della chiave più grandi di FIPS 186-3, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] consente di calcolare le firme con la famiglia SHA-2 di algoritmi hash (SHA256, SHA384 e SHA512). Il supporto per FIPS 186-3 è assicurato dalla nuova classe <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType>.
 
-In conformità alle recenti modifiche apportate alla classe <xref:System.Security.Cryptography.RSA> in .NET Framework 4.6 e alla classe <xref:System.Security.Cryptography.ECDsa> in .NET Framework 4.6.1, la classe base astratta <xref:System.Security.Cryptography.DSA> in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] offre ulteriori metodi per consentire ai chiamanti di usare questa funzionalità senza eseguire il cast. È possibile chiamare il metodo di estensione <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> per firmare i dati, come illustrato nell'esempio seguente.
+In conformità alle recenti modifiche apportate alla classe <xref:System.Security.Cryptography.RSA> in .NET Framework 4.6 e alla classe <xref:System.Security.Cryptography.ECDsa> in .NET Framework 4.6.1, la classe di base astratta <xref:System.Security.Cryptography.DSA> in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] offre ulteriori metodi per consentire ai chiamanti di usare questa funzionalità senza eseguire il cast. È possibile chiamare il metodo di estensione <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> per firmare i dati, come illustrato nell'esempio seguente.
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -794,7 +928,7 @@ End Function
 
 **Maggiore chiarezza degli input per le routine di derivazione di chiave ECDiffieHellman**
 
-.NET Framework 3.5 offre in più il supporto per la chiave concordata Elliptic Curve Diffie-Hellman con tre diverse routine di funzione di derivazione chiave (KDF). Gli input per le routine e le routine stesse sono stati configurati usando le proprietà dell'oggetto <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Ma poiché non tutte le routine leggono tutte le proprietà di input, in passato era molto probabile che si creasse confusione per lo sviluppatore.
+.NET Framework 3.5 offre in più il supporto per la chiave concordata Elliptic Curve Diffie-Hellman con tre diverse routine di funzione di derivazione di chiave (KDF). Gli input per le routine e le routine stesse sono stati configurati usando le proprietà dell'oggetto <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Ma poiché non tutte le routine leggono tutte le proprietà di input, in passato era molto probabile che si creasse confusione per lo sviluppatore.
 
 Per risolvere questo problema in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], sono stati aggiunti i tre metodi seguenti alla classe base <xref:System.Security.Cryptography.ECDiffieHellman> per rappresentare in modo più chiaro le routine KDF e i relativi input:
 
@@ -1087,7 +1221,7 @@ L'*API di debug non gestito* è stata ottimizzata in [!INCLUDE[net_v462](../../.
 
 <a name="v461" />
 
-## <a name="whats-new-in-the-net-framework-461"></a>Novità di .NET Framework 4.6.1
+## <a name="whats-new-in-net-framework-461"></a>Novità di .NET Framework 4.6.1
 
 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] include nuove funzionalità nelle aree seguenti:
 
@@ -1109,7 +1243,7 @@ Per altre informazioni su [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]
 
 - [Compatibilità delle applicazioni nella versione 4.6.1](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
 
-- [Differenze nell'API di .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (su GitHub)
+- [Differenza tra API di .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (su GitHub)
 
 <a name="Crypto" />
 
@@ -1305,7 +1439,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - **Compilatore JIT a 64 bit per il codice gestito**
 
-     .NET Framework 4.6 presenta una nuova versione del compilatore JIT a 64 bit (il cui nome in codice iniziale era RyuJIT). Il nuovo compilatore a 64 bit offre miglioramenti significativi delle prestazioni rispetto al compilatore JIT a 64 bit esistente. Il nuovo compilatore a 64 bit è abilitato per i processi a 64 bit in esecuzione su NET Framework 4.6. L'app verrà eseguita in un processo a 64 bit se è compilata come 64 bit o AnyCPU e se viene eseguita su un sistema operativo a 64 bit. Nonostante si sia cercato di rendere il più possibile trasparente la transizione al nuovo compilatore, potrebbero verificarsi cambiamenti del comportamento. Microsoft è interessata a conoscere i commenti diretti degli utenti sugli eventuali problemi riscontrati durante l'uso del nuovo compilatore JIT. In caso di problemi che potrebbero essere correlati al nuovo compilatore JIT a 64 bit, contattare Microsoft tramite [Microsoft Connect](https://connect.microsoft.com/).
+     .NET Framework 4.6 presenta una nuova versione del compilatore JIT a 64 bit (il cui nome in codice iniziale è RyuJIT). Il nuovo compilatore a 64 bit offre miglioramenti significativi delle prestazioni rispetto al compilatore JIT a 64 bit esistente. Il nuovo compilatore a 64 bit è abilitato per i processi a 64 bit in esecuzione su NET Framework 4.6. L'app verrà eseguita in un processo a 64 bit se è compilata come 64 bit o AnyCPU e se viene eseguita su un sistema operativo a 64 bit. Nonostante si sia cercato di rendere il più possibile trasparente la transizione al nuovo compilatore, potrebbero verificarsi cambiamenti del comportamento. Microsoft è interessata a conoscere i commenti diretti degli utenti sugli eventuali problemi riscontrati durante l'uso del nuovo compilatore JIT. In caso di problemi che potrebbero essere correlati al nuovo compilatore JIT a 64 bit, contattare Microsoft tramite [Microsoft Connect](https://connect.microsoft.com/).
 
      Il nuovo compilatore JIT a 64 bit include anche funzionalità di accelerazione SIMD hardware quando è associato a tipi abilitati per SIMD nello spazio dei nomi <xref:System.Numerics>, con conseguente ottimizzazione delle prestazioni.
 
@@ -1566,7 +1700,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - **Supporto per le codifiche della tabella codici**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] supporta principalmente le codifiche Unicode e per impostazione predefinita offre un supporto limitato per le codifiche della tabella codici. È possibile aggiungere il supporto delle codifiche della tabella codici disponibili in .NET Framework ma non supportate in [!INCLUDE[net_core](../../../includes/net-core-md.md)] registrando le codifiche della tabella codici con il metodo <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] supporta principalmente le codifiche Unicode e per impostazione predefinita offre un supporto limitato per le codifiche della tabella codici. È possibile aggiungere il supporto delle codifiche della tabella codici disponibili in .NET Framework, ma non supportate in [!INCLUDE[net_core](../../../includes/net-core-md.md)] registrando le codifiche della tabella codici con il metodo <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Per ulteriori informazioni, vedere <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1582,7 +1716,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 <a name="v452" />
 
-## <a name="whats-new-in-the-net-framework-452"></a>Novità di .NET Framework 4.5.2
+## <a name="whats-new-in-net-framework-452"></a>Novità di .NET Framework 4.5.2
 
 - **Nuove API per app ASP.NET** I nuovi metodi <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> e <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> consentono di esaminare e modificare le intestazioni di risposta e il codice di stato mentre la risposta viene scaricata sull'app client. Considerare l'uso di questi metodi invece degli eventi <xref:System.Web.HttpApplication.PreSendRequestHeaders> e <xref:System.Web.HttpApplication.PreSendRequestContent>, poiché sono più efficienti e affidabili.
 
@@ -1635,7 +1769,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
     - [Metodo GetActiveReJitRequestILCode](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
     - [Metodo GetInstrumentedILMap](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
-- **Modifiche apportate alla traccia eventi** .NET Framework 4.5.2 consente di eseguire attività out-of-process basate su Event Tracing for Windows (ETW) per una superficie maggiore. Ciò consente ai fornitori di Advanced Power Management (APM) di offrire strumenti semplici che tengono accuratamente traccia dei costi delle singole richieste e attività cross-thread.  Questi eventi vengono generati solo quando sono abilitati dai controller ETW; di conseguenza, le modifiche non influiscono sul codice ETW scritto in precedenza oppure sul codice eseguito con ETW disattivato.
+- **Modifiche apportate alla traccia eventi** .NET Framework 4.5.2 consente di eseguire attività out-of-process basate su Event Tracing for Windows (ETW) per una superficie di attacco maggiore. Ciò consente ai fornitori di Advanced Power Management (APM) di offrire strumenti semplici che tengono accuratamente traccia dei costi delle singole richieste e attività cross-thread.  Questi eventi vengono generati solo quando sono abilitati dai controller ETW; di conseguenza, le modifiche non influiscono sul codice ETW scritto in precedenza oppure sul codice eseguito con ETW disattivato.
 
 - **Promozione di una transazione e relativa conversione in integrazione durevole**
 
@@ -1653,7 +1787,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 <a name="v451" />
 
-## <a name="whats-new-in-the-net-framework-451"></a>Novità di .NET Framework 4.5.1
+## <a name="whats-new-in-net-framework-451"></a>Novità di .NET Framework 4.5.1
 
 **Aggiornamenti di aprile 2014**:
 
@@ -1673,7 +1807,7 @@ Con i PDB Ngen, NGen può creare un PDB che contiene il mapping da IL a nativo s
 
 - [Reference Source per .NET Framework](https://referencesource.microsoft.com/) offre una nuova esperienza di esplorazione e funzionalità migliorate. È ora possibile esplorare il codice sorgente di .NET Framework online, [scaricare i riferimenti](https://referencesource.microsoft.com/download.html) per la visualizzazione offline ed eseguire le origini (inclusi aggiornamenti e patch) durante il debug. Per altre informazioni, vedere il post di blog relativo al [nuovo aspetto di Reference Source per .NET](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
-Le nuove funzionalità e i miglioramenti principali in .NET Framework 4.5.1 includono:
+Le nuove funzionalità e i miglioramenti nelle classi di base di .NET Framework 4.5.1 includono:
 
 - Reindirizzamento di associazione automatico per assembly. A partire da Visual Studio 2013, quando si compila un'app destinata a [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], è possibile aggiungere reindirizzamenti di associazione al file di configurazione dell'app se quest'ultima o i relativi componenti fanno riferimento a più versioni dello stesso assembly. È inoltre possibile abilitare questa funzionalità per i progetti destinati a versioni precedenti di .NET Framework. Per altre informazioni, vedere [Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
@@ -1715,9 +1849,9 @@ Per le nuove funzionalità in ASP.NET 4.5.1, vedere [Note sulla versione di ASP.
 
 <a name="v45" />
 
-## <a name="whats-new-in-the-net-framework-45"></a>Novità di .NET Framework 4.5
+## <a name="whats-new-in-net-framework-45"></a>Novità di .NET Framework 4.5
 
-### <a name="core-new-features-and-improvements"></a>Miglioramenti e nuove funzionalità principali
+### <a name="base-classes"></a>Classi di base
 
 - Possibilità di ridurre i riavvii di sistema rilevando e chiudendo le applicazioni .NET Framework 4 durante la distribuzione. Vedere [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../deployment/reducing-system-restarts.md).
 
