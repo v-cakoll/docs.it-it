@@ -16,7 +16,7 @@ La guida F# fornisce molte risorse per apprendere il linguaggio F#.
 
 ## <a name="learning-f"></a>Apprendimento F\#
 
-[Che cos'è F# ](what-is-fsharp.md) spiega cos'è il linguaggio F# e con brevi esempi di codice descrive l'esperienza di programmazione che offre. Consigliato se non si familiarità con F#.
+[Che cos'è F# ](what-is-fsharp.md) spiega cos'è il linguaggio F# e con brevi esempi di codice descrive l'esperienza di programmazione che offre. Consigliato se non si ha familiarità con F#.
 
 [Panoramica su F# ](tour.md) offre una panoramica sulle funzionalità principali del linguaggio, con numerosi esempi di codice. Consigliata per vedere in azione le funzionalità di base di F#.
 
@@ -42,13 +42,13 @@ La guida F# fornisce molte risorse per apprendere il linguaggio F#.
 
 [F# per divertimento e profitto](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) è un libro completo e dettagliato sull'apprendimento di F#. Contenuto e autore sono molto apprezzati dalla comunità F#. I destinatari sono principalmente gli sviluppatori con conoscenze della programmazione orientata agli oggetti.
 
-[F#Programmazione Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) è un wikibook sulla formazione F#. È anche un prodotto di F# community. I destinatari sono persone che hanno familiarità con F#, con un dell'oggetto orientato alla programmazione in background.
+[F# Programmazione Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) è un wikibook sulla formazione F#, creato dalla comunità F#. I destinatari sono persone che hanno familiarità con F#, con un dell'oggetto orientato alla programmazione in background.
 
 ## <a name="learn-f-through-videos"></a>Formazione F# tramite video
 
 [Esercitazione F# su YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) è un'ottima introduzione all'uso di F# su Visual Studio, ricca di ottimi esempi, della durata di 1,5 ore. I destinatari sono sviluppatori Visual Studio che non hanno familiarità con F#.
 
-[Introduzione alla programmazione con F# ](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) è una serie di video eccezionali nei quali si usa Visual Studio Code come editor principale. La serie inizia da zero e termina con la creazione di un gioco di ruolo testuale. I destinatari sono sviluppatori che preferiscono Visual Studio Code (o un IDE leggero) e non hanno familiarità con F#.
+[Introduzione alla programmazione con F# ](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) è una serie di video eccezionali nei quali si usa Visual Studio Code come editor principale. La serie inizia da zero e termina con la creazione di un gioco di ruolo testuale. I destinatari sono sviluppatori che preferiscono Visual Studio Code (o un ambiente IDE leggero) e non hanno familiarità con F#.
 
 [What ' s New in Visual Studio 2017 per F# per gli sviluppatori](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) è un'esercitazione video che illustra alcune delle funzionalità più recenti per F# in Visual Studio 2017. I destinatari sono sviluppatori Visual Studio che non hanno familiarità con F#.
 
