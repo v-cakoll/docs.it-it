@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129116"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Cenni preliminari sul controllo RadioButton (Windows Form)
@@ -27,10 +27,10 @@ Windows Form <xref:System.Windows.Forms.RadioButton> controlli presentano un ins
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.RadioButton>
-- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
-- [Panoramica del controllo GroupBox](groupbox-control-overview-windows-forms.md)
-- [Panoramica del controllo CheckBox](checkbox-control-overview-windows-forms.md)
-- [Procedura: Creare tasti di scelta per i controlli Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Procedura: Impostare il testo visualizzato da un controllo di Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Procedura: Raggruppare i controlli RadioButton di Windows Forms in modo che funzionino come set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
+- [Panoramica sul controllo GroupBox](groupbox-control-overview-windows-forms.md)
+- [Panoramica sul controllo CheckBox](checkbox-control-overview-windows-forms.md)
+- [Procedura: Creare le chiavi di accesso per i controlli Windows Form](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Procedura: Gruppo Windows Form controlli RadioButton funzionino come Set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [Controllo RadioButton](radiobutton-control-windows-forms.md)

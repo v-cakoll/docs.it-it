@@ -3,10 +3,10 @@ title: Supporto per il debug
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
 ms.openlocfilehash: eab6370614bab12955c18523c8accca4089a6bc5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126828"
 ---
 # <a name="debugging-support"></a>Supporto per il debug
@@ -21,7 +21,7 @@ ms.locfileid: "59126828"
  [Procedura: Visualizzare un insieme di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-a-changeset.md)  
  Viene descritto come visualizzare le modifiche inviate al database.  
   
- [Procedura: Visualizzare comandi LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-linq-to-sql-commands.md)  
+ [Procedura: Visualizzazione LINQ in comandi SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-display-linq-to-sql-commands.md)  
  Viene descritto come visualizzare comandi SQL e altre informazioni.  
   
  [Risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  

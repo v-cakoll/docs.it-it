@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130403"
 ---
 # <a name="expander-overview"></a>Cenni preliminari sul controllo Expander
@@ -28,7 +28,7 @@ Un <xref:System.Windows.Controls.Expander> controllo fornisce un modo per fornir
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Impostazione della direzione dell'area del contenuto espandibile  
- È possibile impostare l'area di contenuto di un <xref:System.Windows.Controls.Expander> controllo per espandere in uno dei quattro direzioni (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, o <xref:System.Windows.Controls.ExpandDirection.Right>) usando il <xref:System.Windows.Controls.ExpandDirection> proprietà. Quando l'area del contenuto è compresso, solo il <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e vengono visualizzati il relativo interruttore. Oggetto <xref:System.Windows.Controls.Button> controllo che visualizza una freccia direzionale viene usato come un interruttore per espandere o comprimere l'area del contenuto. Se viene espansa, il <xref:System.Windows.Controls.Expander> prova a visualizzare tutto il contenuto in un'area simile a finestra.  
+ È possibile impostare l'area di contenuto di un <xref:System.Windows.Controls.Expander> controllo per espandere in uno dei quattro direzioni (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, o <xref:System.Windows.Controls.ExpandDirection.Right>) usando il <xref:System.Windows.Controls.ExpandDirection> proprietà. Quando l'area del contenuto è compresso, solo il <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> e vengono visualizzati il relativo interruttore. Oggetto <xref:System.Windows.Controls.Button> controllo che visualizza una freccia direzionale viene usato come un interruttore per espandere o comprimere l'area del contenuto. Se viene espansa, il <xref:System.Windows.Controls.Expander> prova a visualizzare tutto il contenuto in un'area simile a finestra.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Controllo delle dimensioni di un controllo Expander in un pannello  
@@ -62,4 +62,4 @@ Un <xref:System.Windows.Controls.Expander> controllo fornisce un modo per fornir
 
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Procedure relative](expander-how-to-topics.md)
+- [Procedure relative alle proprietà](expander-how-to-topics.md)

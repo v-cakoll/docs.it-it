@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
 ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120666"
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
@@ -74,7 +74,7 @@ csc /r:System.Data.OracleClient.dll
  [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  Viene descritto come usare le funzionalità e le caratteristiche specifiche di SQL Server.  
   
- [Oggetti DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Vengono descritte le classi generiche che consentono di scrivere codice indipendente dal provider in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche

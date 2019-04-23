@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119925"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Uso di un socket server asincrono
@@ -273,4 +273,4 @@ public static void ReadCallback(IAsyncResult ar)
 - [Uso di un socket server sincrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Esempio di socket server asincrono](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
 - [Threading](../../../docs/standard/threading/index.md)
-- [attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)

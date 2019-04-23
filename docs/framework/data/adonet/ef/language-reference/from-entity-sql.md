@@ -3,10 +3,10 @@ title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
 ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119834"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
@@ -28,7 +28,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>Elementi della clausola FROM  
- Ogni elemento della clausola `FROM` si riferisce a una raccolta di origine nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta le seguenti classi di `FROM` gli elementi della clausola: semplice `FROM` elementi della clausola `JOIN FROM` elementi della clausola e `APPLY FROM` elementi della clausola. Nelle sezioni seguenti è disponibile una descrizione più dettagliata per ognuno di questi elementi della clausola `FROM`.  
+ Ogni elemento della clausola `FROM` si riferisce a una raccolta di origine nella query [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta le classi seguenti di elementi della clausola `FROM`: elementi della clausola `FROM` semplici, elementi della clausola `JOIN FROM` ed elementi della clausola `APPLY FROM` Nelle sezioni seguenti è disponibile una descrizione più dettagliata per ognuno di questi elementi della clausola `FROM`.  
   
 ### <a name="simple-from-clause-item"></a>Elemento della clausola FROM semplice  
  L'elemento della clausola `FROM` più semplice è dato da una singola espressione che identifica una raccolta e un alias. L'espressione può consistere semplicemente in un set di entità, o subquery, o in qualsiasi altra espressione corrispondente a un tipo di raccolta. Di seguito è riportato un esempio:  
@@ -80,7 +80,7 @@ LOB.Customers
 >  Per mantenere la compatibilità con SQL-92, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] la parola chiave OUTER è facoltativa. Pertanto, `LEFT JOIN`, `RIGHT JOIN` e `FULL JOIN` sono sinonimi di `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` e `FULL OUTER JOIN`.  
   
 ### <a name="apply-clause-item"></a>Elemento della clausola APPLY  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due tipi di `APPLY`: `CROSS APPLY` e `OUTER APPLY`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due tipi di clausola `APPLY`: `CROSS APPLY` e `OUTER APPLY`.  
   
  Una clausola `CROSS APPLY` produce un abbinamento univoco di ogni elemento della raccolta a sinistra con un elemento della raccolta prodotto dalla valutazione dell'espressione a destra. Con una clausola `CROSS APPLY`, l'espressione a destra dipende dal punto di vista funzionale dall'elemento a sinistra, come illustrato nell'esempio di raccolta associata seguente:  
   
@@ -96,7 +96,7 @@ LOB.Customers
 >  A differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è necessario un passaggio UNNEST esplicito.  
   
 > [!NOTE]
->  `CROSS` e `OUTER APPLY` gli operatori sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`. Poiché alcuni provider di back-end, incluse le versioni di SQL Server precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], questi operatori non sono supportati, tali query non possono essere eseguite su questi provider di back-end.  
+>  Gli operatori `CROSS` e `OUTER APPLY` sono stati introdotti in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In alcuni casi, è possibile che la pipeline della query produca istruzioni Transact-SQL contenenti gli operatori `CROSS APPLY` e/o `OUTER APPLY`. Poiché alcuni provider di back-end, incluse le versioni di SQL Server precedenti a [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], questi operatori non sono supportati, tali query non possono essere eseguite su questi provider di back-end.  
 >   
 >  Di seguito sono elencati alcuni degli scenari tipici che potrebbero determinare la presenza degli operatori `CROSS APPLY` e/o `OUTER APPLY` nella query di output: una subquery correlata con paging, AnyElement su una subquery correlata o su una raccolta prodotta dalla navigazione, query LINQ che usano metodi di raggruppamento che accettano un selettore elemento, una query nella quale viene specificata in modo esplicito una clausola `CROSS APPLY` o `OUTER APPLY`, una query che presenta un costrutto `DEREF` su un costrutto `REF`.  
   
@@ -131,7 +131,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  La clausola `FROM` produce logicamente un multiset di righe di tipo Row(c, d, e) in cui si presuppone che i campi c, d ed e siano del tipo di elemento `C`, `D` e `c.Names`.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduce un alias per ogni semplice `FROM` elemento della clausola nell'ambito. Nel frammento di clausola FROM seguente, ad esempio, i nomi introdotti nell'ambito sono c, d ed e.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduce nell'ambito un alias per ogni elemento della clausola `FROM` semplice. Nel frammento di clausola FROM seguente, ad esempio, i nomi introdotti nell'ambito sono c, d ed e.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  

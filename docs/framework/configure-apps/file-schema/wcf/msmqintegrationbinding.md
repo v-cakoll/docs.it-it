@@ -5,10 +5,10 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130039"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
@@ -92,7 +92,7 @@ msmqIntegrationBinding
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<le associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
   
 ## <a name="remarks"></a>Note  
  Questo elemento di associazione può essere usato per consentire alle applicazioni di Windows Communication Foundation (WCF) inviare e ricevere messaggi da applicazioni MSMQ esistenti che usano COM, API native MSMQ o i tipi definiti nel <xref:System.Messaging?displayProperty=nameWithType> dello spazio dei nomi è può usare questo elemento di configurazione per specificare metodi per indirizzare la coda, garanzie di trasferimento, se i messaggi devono essere archiviati in modo durevole e come i messaggi devono essere protetti e autenticati. Per altre informazioni, vedere [Procedura: Scambiare messaggi con endpoint WCF e applicazioni di Accodamento messaggi](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  

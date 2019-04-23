@@ -3,10 +3,10 @@ title: Applicazioni client sicure
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119613"
 ---
 # <a name="secure-client-applications"></a>Applicazioni client sicure
@@ -24,7 +24,7 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
  [Convalida dell'Input utente nelle pagine Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Viene fornita una panoramica della convalida dell'input dell'utente tramite gli appositi controlli di ASP.NET.  
   
- [Input dell'utente in Windows Form](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Input dell'utente in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Vengono forniti collegamenti e informazioni per la convalida dell'input da mouse e tastiera in un'applicazione Windows Forms.  
   
  [Espressioni regolari di .NET Framework](../../../../docs/standard/base-types/regular-expressions.md)  
@@ -61,9 +61,9 @@ Le applicazioni sono costituite in genere da molte parti che è necessario prote
   
 |Risorsa|Descrizione|  
 |--------------|-----------------|  
-|[Configurazione di applicazioni remote](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Viene descritto come configurare le applicazioni remote per evitare problemi comuni.|  
+|[Configurazione di applicazioni Remote](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Viene descritto come configurare le applicazioni remote per evitare problemi comuni.|  
 |[Sicurezza in .NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Vengono descritte l'autenticazione e la crittografia e sono riportati altri argomenti sulla sicurezza relativi ai servizi remoti.|  
-|[Considerazioni sulla sicurezza e sui servizi remoti](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Vengono descritti i problemi di sicurezza con gli oggetti protetti e l'uso di più domini di applicazioni.|  
+|[Considerazioni sulla sicurezza e la comunicazione remota](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Vengono descritti i problemi di sicurezza con gli oggetti protetti e l'uso di più domini di applicazioni.|  
   
 ## <a name="see-also"></a>Vedere anche
 

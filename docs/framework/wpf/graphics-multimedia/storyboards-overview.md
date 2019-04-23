@@ -10,10 +10,10 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124839"
 ---
 # <a name="storyboards-overview"></a>Cenni preliminari sugli storyboard
@@ -61,10 +61,10 @@ In questo argomento viene illustrato come utilizzare <xref:System.Windows.Media.
   
 |Storyboard iniziato usando…|Per istanza|Stile|Modello di controllo|Modello di dati|Esempio|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> e un oggetto <xref:System.Windows.EventTrigger>|Yes|Yes|Yes|Yes|[Aggiungere un'animazione a una proprietà usando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> e un oggetto <xref:System.Windows.EventTrigger>|Yes|Yes|Yes|Yes|[Animare una proprietà utilizzando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e una proprietà <xref:System.Windows.Trigger>|No|Yes|Yes|Yes|[Attivare un'animazione quando il valore di una proprietà viene modificato](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> e un oggetto <xref:System.Windows.DataTrigger>|No|Yes|Yes|Yes|[Procedura: Attivare un'animazione alla modifica dei dati](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metodo|Yes|No|No|No|[Aggiungere un'animazione a una proprietà usando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|Metodo <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>|Yes|No|No|No|[Animare una proprietà utilizzando uno storyboard](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  L'esempio seguente usa un <xref:System.Windows.Media.Animation.Storyboard> animare il <xref:System.Windows.FrameworkElement.Width%2A> di un <xref:System.Windows.Shapes.Rectangle> elemento e il <xref:System.Windows.Media.SolidColorBrush.Color%2A> di un <xref:System.Windows.Media.SolidColorBrush> utilizzato per disegnare che <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -276,7 +276,7 @@ In questo argomento viene illustrato come utilizzare <xref:System.Windows.Media.
   
 -   Non è possibile specificare una <xref:System.Windows.EventTrigger.SourceName%2A> per un <xref:System.Windows.EventTrigger> o un <xref:System.Windows.Trigger>.  
   
--   È possibile usare espressioni di associazione dati o i riferimenti di risorsa dinamica per impostare <xref:System.Windows.Media.Animation.Storyboard> o i valori delle proprietà di animazione. Infatti, tutti gli elementi in un <xref:System.Windows.Style> deve essere thread-safe, e il sistema di temporizzazione deve <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> oggetti per renderli thread-safe. Oggetto <xref:System.Windows.Media.Animation.Storyboard> non può essere bloccato se è o le sequenze temporali figlio contengono espressioni di associazione dati o i riferimenti di risorsa dinamica. Per altre informazioni sul blocco e altri <xref:System.Windows.Freezable> funzionalità, vedere la [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md).  
+-   È possibile usare espressioni di associazione dati o i riferimenti di risorsa dinamica per impostare <xref:System.Windows.Media.Animation.Storyboard> o i valori delle proprietà di animazione. Infatti, tutti gli elementi in un <xref:System.Windows.Style> deve essere thread-safe, e il sistema di temporizzazione deve <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> oggetti per renderli thread-safe. Oggetto <xref:System.Windows.Media.Animation.Storyboard> non può essere bloccato se è o le sequenze temporali figlio contengono espressioni di associazione dati o i riferimenti di risorsa dinamica. Per altre informazioni sul blocco e altri <xref:System.Windows.Freezable> funzionalità, vedere la [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md).  
   
 -   Nelle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], non è possibile dichiarare i gestori eventi per <xref:System.Windows.Media.Animation.Storyboard> o gli eventi animazione.  
   
@@ -290,7 +290,7 @@ In questo argomento viene illustrato come utilizzare <xref:System.Windows.Media.
   
 -   Il <xref:System.Windows.EventTrigger.SourceName%2A> per un <xref:System.Windows.EventTrigger> o una <xref:System.Windows.Trigger> può fare riferimento solo agli oggetti figlio del <xref:System.Windows.Controls.ControlTemplate>.  
   
--   È possibile usare espressioni di associazione dati o i riferimenti di risorsa dinamica per impostare <xref:System.Windows.Media.Animation.Storyboard> o i valori delle proprietà di animazione. Infatti, tutti gli elementi in un <xref:System.Windows.Controls.ControlTemplate> deve essere thread-safe, e il sistema di temporizzazione deve <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> oggetti per renderli thread-safe. Oggetto <xref:System.Windows.Media.Animation.Storyboard> non può essere bloccato se è o le sequenze temporali figlio contengono espressioni di associazione dati o i riferimenti di risorsa dinamica. Per altre informazioni sul blocco e altri <xref:System.Windows.Freezable> funzionalità, vedere la [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md).  
+-   È possibile usare espressioni di associazione dati o i riferimenti di risorsa dinamica per impostare <xref:System.Windows.Media.Animation.Storyboard> o i valori delle proprietà di animazione. Infatti, tutti gli elementi in un <xref:System.Windows.Controls.ControlTemplate> deve essere thread-safe, e il sistema di temporizzazione deve <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> oggetti per renderli thread-safe. Oggetto <xref:System.Windows.Media.Animation.Storyboard> non può essere bloccato se è o le sequenze temporali figlio contengono espressioni di associazione dati o i riferimenti di risorsa dinamica. Per altre informazioni sul blocco e altri <xref:System.Windows.Freezable> funzionalità, vedere la [Cenni preliminari sugli oggetti Freezable](../advanced/freezable-objects-overview.md).  
   
 -   Nelle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], non è possibile dichiarare i gestori eventi per <xref:System.Windows.Media.Animation.Storyboard> o gli eventi animazione.  
   

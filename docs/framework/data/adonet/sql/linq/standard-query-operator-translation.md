@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127946"
 ---
 # <a name="standard-query-operator-translation"></a>Conversione dell'operatore query standard
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Converte gli operatori Query Standard in comandi SQL. Il processore di query del database determina la semantica di esecuzione della conversione SQL.  
+Gli operatori di query standard vengono convertiti in comandi SQL in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Il processore di query del database determina la semantica di esecuzione della conversione SQL.  
   
  Operatori di Query standard definiti per *sequenze*. È una sequenza *ordinati* e si basa sull'identità del riferimento per ogni elemento della sequenza. Per altre informazioni, vedere [panoramica degli operatori Query Standard (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oppure [panoramica degli operatori di Query Standard (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
@@ -24,9 +24,9 @@ ms.locfileid: "59127946"
 ## <a name="operator-support"></a>Supporto degli operatori  
   
 ### <a name="concat"></a>Concat  
- Il metodo <xref:System.Linq.Enumerable.Concat%2A> viene definito per multiset ordinati in cui l'ordine del ricevente e l'ordine dell'argomento sono uguali. <xref:System.Linq.Enumerable.Concat%2A> funziona come `UNION ALL` sui multiset seguiti dall'ordine comune.  
+ Il metodo <xref:System.Linq.Enumerable.Concat%2A> viene definito per multiset ordinati in cui l'ordine del ricevente e l'ordine dell'argomento sono uguali. Il funzionamento di <xref:System.Linq.Enumerable.Concat%2A> sui multiset seguiti dall'ordine comune è analogo a quello di `UNION ALL`.  
   
- Il passaggio finale in SQL consiste nell'ordinamento prima che vengano generati i risultati. <xref:System.Linq.Enumerable.Concat%2A> non mantiene l'ordine dei relativi argomenti. Per assicurare che l'ordine sia appropriato, è necessario ordinare i risultati di <xref:System.Linq.Enumerable.Concat%2A> in modo esplicito.  
+ Il passaggio finale in SQL consiste nell'ordinamento prima che vengano generati i risultati. <xref:System.Linq.Enumerable.Concat%2A> non mantiene l'ordine degli argomenti. Per assicurare che l'ordine sia appropriato, è necessario ordinare i risultati di <xref:System.Linq.Enumerable.Concat%2A> in modo esplicito.  
   
 ### <a name="intersect-except-union"></a>Metodi Intersect, Except, Union  
  I metodi <xref:System.Linq.Enumerable.Intersect%2A> e <xref:System.Linq.Enumerable.Except%2A> sono definiti correttamente solo sui set, mentre la semantica per i tipi multiset non è definita.  
@@ -37,7 +37,7 @@ ms.locfileid: "59127946"
  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> metodi sono definiti correttamente solo sugli *set ordinati*. mentre la semantica per i set non ordinati o i tipi multiset non è definita.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano determinate limitazioni quando vengono usati nelle query su SQL Server 2000. Per altre informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" nella [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000. Per altre informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" nella [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  A causa di limitazioni relative all'ordinamento in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta di spostare l'ordinamento dell'argomento di questi metodi per il risultato del metodo. Si consideri ad esempio la seguente query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
@@ -80,7 +80,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="expression-translation"></a>Conversione di espressione  
   
 ### <a name="null-semantics"></a>Semantica null  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone la semantica di confronto in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. Per questo motivo la semantica riflette la semantica SQL definita nelle impostazioni di connessione o del server. Ad esempio, due valori null sono considerati disuguali nelle impostazioni predefinite di SQL Server, ma è possibile modificare le impostazioni per modificare la semantica. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non considera le impostazioni del server durante la conversione delle query.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone la semantica di confronto in SQL. Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL. Per questo motivo la semantica riflette la semantica SQL definita nelle impostazioni di connessione o del server. Ad esempio, due valori null sono considerati disuguali nelle impostazioni predefinite di SQL Server, ma è possibile modificare le impostazioni per modificare la semantica. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non vengono considerate le impostazioni del server durante la conversione delle query.  
   
  Un confronto con il valore letterale null viene convertito nella versione SQL appropriata (`is null` o `is not null`).  
   
@@ -207,7 +207,7 @@ ORDER BY [t0].[CustomerID]
   
     -   Costruttori  
   
-    -   `ToString` metodi nelle proiezioni  
+    -   Metodi `ToString` nelle proiezioni  
   
     -   Cast dei tipi nelle proiezioni  
   
@@ -227,7 +227,7 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Restituire o ignorare elementi in una sequenza](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [Concatenare due sequenze](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
 - [Restituire la differenza dei set tra due sequenze](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)

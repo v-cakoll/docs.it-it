@@ -3,10 +3,10 @@ title: 'Endpoint: Chiamate non riuscite al secondo'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 ms.openlocfilehash: f425d95868a9ba5bc3c2f2291db2bc414b1918e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122226"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Endpoint: Chiamate non riuscite al secondo
@@ -23,4 +23,4 @@ Nome contatore: Chiamate non riuscite al secondo.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Specifica e gestione di errori in contratti e servizi](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Specifica e gestione degli errori in contratti e servizi](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

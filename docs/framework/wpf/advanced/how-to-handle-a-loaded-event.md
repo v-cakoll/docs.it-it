@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Loaded events [WPF]
 ms.assetid: 0cf8d003-8441-4df4-807a-6db09347e829
 ms.openlocfilehash: b8cd2f5e9d848cebb712e7b4930ca39efe48ecc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122551"
 ---
 # <a name="how-to-handle-a-loaded-event"></a>Procedura: Gestire un evento caricato
@@ -32,4 +32,4 @@ In questo esempio viene illustrato come gestire il <xref:System.Windows.Framewor
 - <xref:System.Windows.FrameworkElement>
 - [Eventi di durata degli oggetti](object-lifetime-events.md)
 - [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md)
-- [Procedure relative](base-elements-how-to-topics.md)
+- [Procedure relative alle proprietà](base-elements-how-to-topics.md)

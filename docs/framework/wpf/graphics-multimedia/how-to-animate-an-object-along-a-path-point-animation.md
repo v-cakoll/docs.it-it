@@ -9,10 +9,10 @@ helpviewer_keywords:
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
 ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129590"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Procedura: Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Point)
@@ -32,6 +32,6 @@ In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempio di animazione tracciato](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Path Animation Sample (Esempio di animazione tracciato)](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Cenni preliminari sull'animazione](animation-overview.md)
 - [Procedure relative all'animazione percorso](path-animation-how-to-topics.md)
