@@ -3,10 +3,10 @@ title: Mapping esterno
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218680"
 ---
 # <a name="external-mapping"></a>Mapping esterno
@@ -27,7 +27,7 @@ ms.locfileid: "59218680"
   
 -   Il mapping esterno esegue l'override del mapping basato sugli attributi. In altre parole, quando si usa un'origine del mapping esterna per creare un oggetto <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora tutti gli attributi di mapping creati nelle classi. Questo comportamento si verifica se la classe è inclusa nel file di mapping esterno.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta l'uso ibrido dei due approcci del mapping (basato su attributi ed esterni).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta l'uso ibrido dei due approcci del mapping (esterno e basato sugli attributi).  
   
 ## <a name="xml-schema-definition-file"></a>File di definizione di XML Schema  
  Il mapping esterno in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deve essere convalidato in base alla seguente definizione di XML Schema.  
@@ -144,5 +144,5 @@ elementFormDefault="qualified" >
 ## <a name="see-also"></a>Vedere anche
 
 - [Generazione di codice in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Procedura: Generare il modello a oggetti come file esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Procedura: Generare il modello a oggetti come File esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
