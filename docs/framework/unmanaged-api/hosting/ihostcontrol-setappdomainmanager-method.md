@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 118e75cb28a4e474427f35f4516ec41850ebe99f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150865"
 ---
-# <a name="ihostcontrolsetappdomainmanager-method"></a><span data-ttu-id="38e0a-102">Metodo IHostControl::SetAppDomainManager</span><span class="sxs-lookup"><span data-stu-id="38e0a-102">IHostControl::SetAppDomainManager Method</span></span>
-<span data-ttu-id="38e0a-103">Notifica all'host che è stato creato un dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="38e0a-103">Notifies the host that an application domain has been created.</span></span>  
+# <a name="ihostcontrolsetappdomainmanager-method"></a><span data-ttu-id="73928-102">Metodo IHostControl::SetAppDomainManager</span><span class="sxs-lookup"><span data-stu-id="73928-102">IHostControl::SetAppDomainManager Method</span></span>
+<span data-ttu-id="73928-103">Notifica all'host che è stato creato un dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="73928-103">Notifies the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38e0a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="38e0a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73928-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="73928-104">Syntax</span></span>  
   
 ```  
 HRESULT SetAppDomainManager (  
@@ -36,40 +36,40 @@ HRESULT SetAppDomainManager (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="38e0a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="38e0a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73928-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="73928-105">Parameters</span></span>  
  `dwAppDomainID`  
- <span data-ttu-id="38e0a-106">[in] L'identificatore numerico dell'oggetto selezionato <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="38e0a-106">[in] The numeric identifier of the selected <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="73928-106">[in] L'identificatore numerico dell'oggetto selezionato <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="73928-106">[in] The numeric identifier of the selected <xref:System.AppDomain>.</span></span>  
   
  `pUnkAppDomainManager`  
- <span data-ttu-id="38e0a-107">[in] Un puntatore per il <xref:System.AppDomainManager> oggetto che implementa l'host come `IUnknown`.</span><span class="sxs-lookup"><span data-stu-id="38e0a-107">[in] A pointer to the <xref:System.AppDomainManager> object that the host implements as `IUnknown`.</span></span>  
+ <span data-ttu-id="73928-107">[in] Un puntatore per il <xref:System.AppDomainManager> oggetto che implementa l'host come `IUnknown`.</span><span class="sxs-lookup"><span data-stu-id="73928-107">[in] A pointer to the <xref:System.AppDomainManager> object that the host implements as `IUnknown`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="38e0a-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="38e0a-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="73928-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="73928-108">Return Value</span></span>  
   
-|<span data-ttu-id="38e0a-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="38e0a-109">HRESULT</span></span>|<span data-ttu-id="38e0a-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="38e0a-110">Description</span></span>|  
+|<span data-ttu-id="73928-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="73928-109">HRESULT</span></span>|<span data-ttu-id="73928-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="73928-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="38e0a-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="38e0a-111">S_OK</span></span>|`SetAppDomainManager` <span data-ttu-id="38e0a-112">stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="38e0a-112">returned successfully.</span></span>|  
-|<span data-ttu-id="38e0a-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="38e0a-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="38e0a-114">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="38e0a-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="38e0a-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="38e0a-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="38e0a-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="38e0a-116">The call timed out.</span></span>|  
-|<span data-ttu-id="38e0a-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="38e0a-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="38e0a-118">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="38e0a-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="38e0a-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="38e0a-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="38e0a-120">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="38e0a-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="38e0a-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="38e0a-121">E_FAIL</span></span>|<span data-ttu-id="38e0a-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="38e0a-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="38e0a-123">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="38e0a-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="38e0a-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="38e0a-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="73928-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="73928-111">S_OK</span></span>|<span data-ttu-id="73928-112">`SetAppDomainManager` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="73928-112">`SetAppDomainManager` returned successfully.</span></span>|  
+|<span data-ttu-id="73928-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="73928-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="73928-114">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="73928-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="73928-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="73928-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="73928-116">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="73928-116">The call timed out.</span></span>|  
+|<span data-ttu-id="73928-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="73928-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="73928-118">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="73928-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="73928-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="73928-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="73928-120">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="73928-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="73928-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="73928-121">E_FAIL</span></span>|<span data-ttu-id="73928-122">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="73928-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="73928-123">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="73928-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="73928-124">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="73928-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="38e0a-125">Note</span><span class="sxs-lookup"><span data-stu-id="38e0a-125">Remarks</span></span>  
- <span data-ttu-id="38e0a-126">Il <xref:System.AppDomainManager> fornisce un meccanismo per eseguire il bootstrap in codice gestito e per controllare la creazione e configurazione di ciascun host <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="38e0a-126">The <xref:System.AppDomainManager> provides the host with a mechanism to bootstrap into managed code and to control the creation and settings of each <xref:System.AppDomain>.</span></span> <span data-ttu-id="38e0a-127">Il <xref:System.AppDomainManager> viene caricato in ognuno <xref:System.AppDomain> quando che <xref:System.AppDomain> viene creato.</span><span class="sxs-lookup"><span data-stu-id="38e0a-127">The <xref:System.AppDomainManager> is loaded into each <xref:System.AppDomain> when that <xref:System.AppDomain> is created.</span></span> <span data-ttu-id="38e0a-128">Se sceglie, CLR notifica all'host che creato il dominio dell'applicazione impostando il valore della `pUnkAppDomainManager` parametro.</span><span class="sxs-lookup"><span data-stu-id="38e0a-128">If it chooses, the CLR notifies the host that the application domain has been created by setting the value of the `pUnkAppDomainManager` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="73928-125">Note</span><span class="sxs-lookup"><span data-stu-id="73928-125">Remarks</span></span>  
+ <span data-ttu-id="73928-126">Il <xref:System.AppDomainManager> fornisce un meccanismo per eseguire il bootstrap in codice gestito e per controllare la creazione e configurazione di ciascun host <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="73928-126">The <xref:System.AppDomainManager> provides the host with a mechanism to bootstrap into managed code and to control the creation and settings of each <xref:System.AppDomain>.</span></span> <span data-ttu-id="73928-127">Il <xref:System.AppDomainManager> viene caricato in ognuno <xref:System.AppDomain> quando che <xref:System.AppDomain> viene creato.</span><span class="sxs-lookup"><span data-stu-id="73928-127">The <xref:System.AppDomainManager> is loaded into each <xref:System.AppDomain> when that <xref:System.AppDomain> is created.</span></span> <span data-ttu-id="73928-128">Se sceglie, CLR notifica all'host che creato il dominio dell'applicazione impostando il valore della `pUnkAppDomainManager` parametro.</span><span class="sxs-lookup"><span data-stu-id="73928-128">If it chooses, the CLR notifies the host that the application domain has been created by setting the value of the `pUnkAppDomainManager` parameter.</span></span>  
   
- <span data-ttu-id="38e0a-129">Nella sua implementazione del `SetAppDomainManager` metodo, l'host può impostare il nome dell'assembly e il tipo per il gestore del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="38e0a-129">In its implementation of the `SetAppDomainManager` method, the host can set the assembly name and type for the application domain manager.</span></span>  
+ <span data-ttu-id="73928-129">Nella sua implementazione del `SetAppDomainManager` metodo, l'host può impostare il nome dell'assembly e il tipo per il gestore del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="73928-129">In its implementation of the `SetAppDomainManager` method, the host can set the assembly name and type for the application domain manager.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38e0a-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="38e0a-130">Requirements</span></span>  
- <span data-ttu-id="38e0a-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38e0a-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73928-130">Requisiti</span><span class="sxs-lookup"><span data-stu-id="73928-130">Requirements</span></span>  
+ <span data-ttu-id="73928-131">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73928-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38e0a-132">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="38e0a-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="73928-132">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="73928-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="38e0a-133">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="38e0a-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="73928-133">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="73928-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="38e0a-134">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="38e0a-134">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="73928-134">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73928-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38e0a-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="38e0a-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73928-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="73928-135">See also</span></span>
 
 - <xref:System.AppDomain>
 - <xref:System.AppDomainManager>
-- [<span data-ttu-id="38e0a-136">Interfaccia IHostControl</span><span class="sxs-lookup"><span data-stu-id="38e0a-136">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [<span data-ttu-id="73928-136">Interfaccia IHostControl</span><span class="sxs-lookup"><span data-stu-id="73928-136">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 732523935eec62bffbc15705bc93c97f14c90064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148421"
 ---
-# <a name="cordebugmdaflags-enumeration"></a><span data-ttu-id="3c0e6-102">Enumerazione CorDebugMDAFlags</span><span class="sxs-lookup"><span data-stu-id="3c0e6-102">CorDebugMDAFlags Enumeration</span></span>
-<span data-ttu-id="3c0e6-103">Specifica lo stato del thread su cui è attivato l'assistente al debug gestito.</span><span class="sxs-lookup"><span data-stu-id="3c0e6-103">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
+# <a name="cordebugmdaflags-enumeration"></a><span data-ttu-id="19b33-102">Enumerazione CorDebugMDAFlags</span><span class="sxs-lookup"><span data-stu-id="19b33-102">CorDebugMDAFlags Enumeration</span></span>
+<span data-ttu-id="19b33-103">Specifica lo stato del thread su cui è attivato l'assistente al debug gestito.</span><span class="sxs-lookup"><span data-stu-id="19b33-103">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3c0e6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3c0e6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19b33-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="19b33-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugMDAFlags {  
@@ -34,24 +34,24 @@ typedef enum CorDebugMDAFlags {
 } CorDebugMDAFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3c0e6-105">Membri</span><span class="sxs-lookup"><span data-stu-id="3c0e6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="19b33-105">Membri</span><span class="sxs-lookup"><span data-stu-id="19b33-105">Members</span></span>  
   
-|<span data-ttu-id="3c0e6-106">Member</span><span class="sxs-lookup"><span data-stu-id="3c0e6-106">Member</span></span>|<span data-ttu-id="3c0e6-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3c0e6-107">Description</span></span>|  
+|<span data-ttu-id="19b33-106">Member</span><span class="sxs-lookup"><span data-stu-id="19b33-106">Member</span></span>|<span data-ttu-id="19b33-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="19b33-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|<span data-ttu-id="3c0e6-108">Il thread in cui è stato attivato l'assistente al debug gestito è stato ignorato poiché è stato attivato l'assistente al debug gestito.</span><span class="sxs-lookup"><span data-stu-id="3c0e6-108">The thread on which the MDA was fired has slipped since the MDA was fired.</span></span>|  
+|`MDA_FLAG_SLIP`|<span data-ttu-id="19b33-108">Il thread in cui è stato attivato l'assistente al debug gestito è stato ignorato poiché è stato attivato l'assistente al debug gestito.</span><span class="sxs-lookup"><span data-stu-id="19b33-108">The thread on which the MDA was fired has slipped since the MDA was fired.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3c0e6-109">Note</span><span class="sxs-lookup"><span data-stu-id="3c0e6-109">Remarks</span></span>  
- <span data-ttu-id="3c0e6-110">Quando lo stack di chiamate non descrive in cui è stato originariamente generato l'assistente al debug gestito, il thread è considerato *slittato*.</span><span class="sxs-lookup"><span data-stu-id="3c0e6-110">When the call stack no longer describes where the MDA was originally raised, the thread is considered to have *slipped*.</span></span> <span data-ttu-id="3c0e6-111">Si tratta di una situazione insolita causata dall'esecuzione del thread di un'operazione non valida all'uscita dal.</span><span class="sxs-lookup"><span data-stu-id="3c0e6-111">This is an unusual circumstance brought about by the thread's execution of an invalid operation upon exiting.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="19b33-109">Note</span><span class="sxs-lookup"><span data-stu-id="19b33-109">Remarks</span></span>  
+ <span data-ttu-id="19b33-110">Quando lo stack di chiamate non descrive in cui è stato originariamente generato l'assistente al debug gestito, il thread è considerato *slittato*.</span><span class="sxs-lookup"><span data-stu-id="19b33-110">When the call stack no longer describes where the MDA was originally raised, the thread is considered to have *slipped*.</span></span> <span data-ttu-id="19b33-111">Si tratta di una situazione insolita causata dall'esecuzione del thread di un'operazione non valida all'uscita dal.</span><span class="sxs-lookup"><span data-stu-id="19b33-111">This is an unusual circumstance brought about by the thread's execution of an invalid operation upon exiting.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3c0e6-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3c0e6-112">Requirements</span></span>  
- <span data-ttu-id="3c0e6-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3c0e6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19b33-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="19b33-112">Requirements</span></span>  
+ <span data-ttu-id="19b33-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19b33-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3c0e6-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3c0e6-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="19b33-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="19b33-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3c0e6-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3c0e6-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="19b33-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="19b33-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="3c0e6-116">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="3c0e6-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="19b33-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19b33-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3c0e6-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c0e6-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19b33-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="19b33-117">See also</span></span>
 
-- [<span data-ttu-id="3c0e6-118">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="3c0e6-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="19b33-118">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="19b33-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
