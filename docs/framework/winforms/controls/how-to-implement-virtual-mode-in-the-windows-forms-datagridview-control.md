@@ -12,10 +12,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
 ms.openlocfilehash: d5b34f5c9d9e6db9c3fd06f2c09f62c196c96d0a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146243"
 ---
 # <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procedura: Implementare la modalità virtuale nel controllo DataGridView di Windows Forms
@@ -46,6 +46,6 @@ Nell'esempio di codice seguente viene illustrato come gestire insiemi di dati di
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView di Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
-- [Ottimizzazione delle prestazioni nel controllo DataGridView Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Procedura dettagliata: Implementazione della modalità virtuale nel controllo DataGridView Windows Form](implementing-virtual-mode-wf-datagridview-control.md)
+- [Ottimizzazione delle prestazioni nel controllo DataGridView di Windows Form](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Modo virtuale nel controllo DataGridView di Windows Form](virtual-mode-in-the-windows-forms-datagridview-control.md)

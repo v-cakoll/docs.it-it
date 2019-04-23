@@ -9,19 +9,19 @@ ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146575"
 ---
 # <a name="ialink-interface"></a>Interfaccia IALink
 Utile per la costruzione di assembly .NET Framework. Tra le altre cose, l'interfaccia contiene i metodi di supporto per la scrittura di manifesti dell'assembly per gli assembly multimodulo, la firma degli assembly con nomi sicuri e la creazione netmodule.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Metodo AddFile](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile (metodo)](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [Metodo AddImport](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [AddImport (metodo)](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [Metodo CloseAssembly](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -53,7 +53,7 @@ Utile per la costruzione di assembly .NET Framework. Tra le altre cose, l'interf
   
  [Metodo GetResolutionScope](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [Metodo GetScope](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope (metodo)](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
  [Metodo GetWin32ResBlob](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   
@@ -77,6 +77,6 @@ Utile per la costruzione di assembly .NET Framework. Tra le altre cose, l'interf
   
 ## <a name="see-also"></a>Vedere anche
 
-- [API Alink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink (API)](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [Interfaccia IALink2](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

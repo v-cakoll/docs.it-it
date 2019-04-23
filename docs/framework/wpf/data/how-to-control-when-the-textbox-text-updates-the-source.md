@@ -10,17 +10,17 @@ helpviewer_keywords:
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
 ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143273"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Procedura: Controllare il momento in cui il database di origine viene aggiornato dal testo di TextBox
 In questo argomento viene descritto come utilizzare il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà per controllare la tempistica degli aggiornamenti dell'origine di associazione. L'argomento viene utilizzato il <xref:System.Windows.Controls.TextBox> controllo come esempio.  
   
 ## <a name="example"></a>Esempio  
- Oggetto <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> proprietà ha un valore predefinito <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> pari a <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Ciò significa che se un'applicazione ha un <xref:System.Windows.Controls.TextBox> con associazione a dati <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> proprietà, il testo digitato nella <xref:System.Windows.Controls.TextBox> non aggiorna l'origine finché il <xref:System.Windows.Controls.TextBox> perde lo stato attivo (ad esempio, quando fa clic su lontani dal <xref:System.Windows.Controls.TextBox>).  
+ L'elemento language <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> proprietà ha un valore predefinito <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> pari a <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Ciò significa che se un'applicazione ha un <xref:System.Windows.Controls.TextBox> con associazione a dati <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> proprietà, il testo digitato nella <xref:System.Windows.Controls.TextBox> non aggiorna l'origine finché il <xref:System.Windows.Controls.TextBox> perde lo stato attivo (ad esempio, quando fa clic su lontani dal <xref:System.Windows.Controls.TextBox>).  
   
  Se si desidera che l'origine da aggiornare durante la digitazione, impostare il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> dell'associazione da <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Nell'esempio seguente, le righe di codice evidenziate illustrano che la `Text` le proprietà di entrambe le <xref:System.Windows.Controls.TextBox> e il <xref:System.Windows.Controls.TextBlock> sono associati alla stessa proprietà origine. Il <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> proprietà del <xref:System.Windows.Controls.TextBox> associazione è impostata su <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
@@ -47,4 +47,4 @@ In questo argomento viene descritto come utilizzare il <xref:System.Windows.Data
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

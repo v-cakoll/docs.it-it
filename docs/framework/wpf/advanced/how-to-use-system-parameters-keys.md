@@ -6,10 +6,10 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
 ms.openlocfilehash: 147f65b4bb214c12317309081c345251d7426cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147335"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>Procedura: Usare le chiavi dei parametri di sistema
@@ -26,5 +26,5 @@ Le risorse di sistema espongono diverse metriche di sistema come risorse per con
 ## <a name="see-also"></a>Vedere anche
 
 - [Disegnare un'area con un pennello di sistema](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [Usare la classe SystemFonts](how-to-use-systemfonts.md)
-- [Usare la classe SystemParameters](how-to-use-systemparameters.md)
+- [Utilizzare la classe SystemFonts](how-to-use-systemfonts.md)
+- [Utilizzare SystemParameters](how-to-use-systemparameters.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152880"
 ---
 # <a name="how-to-map-database-relationships"></a>Procedura: Eseguire il mapping delle relazioni di database
@@ -28,7 +28,7 @@ Qualsiasi relazione tra i dati, che rimane prevedibilmente sempre la stessa, pu�
   
 -   Molti-a-molti: In una relazione molti-a-molti, la chiave primaria della tabella dei collegamenti (anche denominato il *giunzione* tabella) è spesso formata da una combinazione di chiavi esterne delle altre due tabelle.  
   
-     Si consideri, ad esempio, un' `Employee` - `Project` relazione molti-a-molti formate usando tabella dei collegamenti `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è necessario che tale relazione venga modellata usando tre classi: `Employee`, `Project`, e `EmployeeProject`. In questo caso la modifica della relazione tra `Employee` e `Project` può apparentemente richiedere un aggiornamento della chiave primaria di `EmployeeProject`. In questa situazione, tuttavia, è preferibile modellare la relazione eliminando una classe `EmployeeProject` esistente e creando una nuova classe `EmployeeProject`.  
+     Si consideri, ad esempio, un' `Employee` - `Project` relazione molti-a-molti formate usando tabella dei collegamenti `EmployeeProject`. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è necessario che tale relazione venga modellata usando tre classi:`Employee`, `Project` e `EmployeeProject`. In questo caso la modifica della relazione tra `Employee` e `Project` può apparentemente richiedere un aggiornamento della chiave primaria di `EmployeeProject`. In questa situazione, tuttavia, è preferibile modellare la relazione eliminando una classe `EmployeeProject` esistente e creando una nuova classe `EmployeeProject`.  
   
     > [!NOTE]
     >  Le relazioni nei database relazionali vengono in genere modellate come valori di chiave esterna che fanno riferimento a chiavi primarie in altre tabelle. Per spostarsi tra di essi si associano in modo esplicito le due tabelle usando una relazionale *join* operazione.  
@@ -55,5 +55,5 @@ Qualsiasi relazione tra i dati, che rimane prevedibilmente sempre la stessa, pu�
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Personalizzare classi di entità mediante l'editor del codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Procedura: Personalizzare le classi di entità usando l'Editor di codice](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [Modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151502"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informazioni sulla privacy di Windows Communication Foundation
@@ -47,7 +47,7 @@ Microsoft è impegnata a proteggere la privacy degli utenti finali. Quando si co
 |Dati|Archiviazione|  
 |----------|-------------|  
 |Credenziali di presentazione, ad esempio nome utente, certificati X.509, token Kerberos e riferimenti alle credenziali.|Meccanismi di gestione delle credenziali standard di Windows, ad esempio l'archivio certificati di Windows.|  
-|Informazioni relative all'appartenenza degli utenti, ad esempio nomi utente e password.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] provider di appartenenza.|  
+|Informazioni relative all'appartenenza degli utenti, ad esempio nomi utente e password.|Provider di appartenenza [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].|  
 |Informazioni di identità sul servizio usato per autenticare il servizio sui client.|Indirizzo dell'endpoint del servizio.|  
 |Informazioni sul chiamante.|Registri di controllo.|  
   

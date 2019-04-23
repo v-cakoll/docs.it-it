@@ -3,10 +3,10 @@ title: Tipi di dati e funzioni
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151944"
 ---
 # <a name="data-types-and-functions"></a>Tipi di dati e funzioni
@@ -17,7 +17,7 @@ Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ
 |Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Mapping del tipo SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|Viene fornita una matrice dettagliata dei mapping tra tipi CLR e tipi SQL Server.|  
-|[Tipi di dati di base](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
+|[Tipi di dati Basic](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Tipi di dati Boolean](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
 |[Semantica Null](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Vengono forniti i collegamenti ad argomenti su [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in cui sono descritti i problemi relativi a elementi null e nullable.|  
 |[Operatori numerici e di confronto](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|Riepiloga le differenze di comportamento rispetto a [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].|  
@@ -34,4 +34,4 @@ Negli argomenti elencati nella tabella seguente viene descritto il supporto LINQ
 ## <a name="see-also"></a>Vedere anche
 
 - [Tipi SQL-CLR non corrispondenti](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
-- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

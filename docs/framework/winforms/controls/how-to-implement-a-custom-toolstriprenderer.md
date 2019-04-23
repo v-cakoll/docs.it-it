@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151918"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procedura: Implementare un oggetto ToolStripRenderer personalizzato
@@ -23,11 +23,11 @@ ms.locfileid: "59151918"
   
  La classe `GridStripRenderer` consente di definire tre componenti relativi all'aspetto del controllo `GridStrip`:  
   
--   `GridStrip` border  
+-   Bordo di `GridStrip`  
   
--   <xref:System.Windows.Forms.ToolStripButton> border  
+-   Bordo di <xref:System.Windows.Forms.ToolStripButton>  
   
--   <xref:System.Windows.Forms.ToolStripButton> immagine  
+-   immagine di <xref:System.Windows.Forms.ToolStripButton>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
 ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146003"
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>Procedura: Aggiungere un'animazione alla posizione e alla direzione di una fotocamera in una scena tridimensionale
@@ -26,5 +26,5 @@ Nell'esempio seguente viene illustrato come animare la posizione della fotocamer
 
 - <xref:System.Windows.Media.Animation.Vector3DAnimation>
 - <xref:System.Windows.Media.Animation.Point3DAnimation>
-- [Aggiungere un'animazione alla posizione e alla direzione di una fotocamera usando i fotogrammi chiave](how-to-animate-camera-position-and-direction-using-key-frames.md)
-- [Cenni preliminari sulla grafica tridimensionale](3-d-graphics-overview.md)
+- [Animare la posizione e la direzione di una fotocamera usando i fotogrammi chiave](how-to-animate-camera-position-and-direction-using-key-frames.md)
+- [Panoramica sulla grafica tridimensionale](3-d-graphics-overview.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142688"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Procedure relative alla programmazione a livello visivo
@@ -21,10 +21,10 @@ Negli argomenti di questa sezione illustrano come usare il livello visivo per la
 ## <a name="in-this-section"></a>In questa sezione  
  [Ottenere l'offset di un oggetto visivo](how-to-get-the-offset-of-a-visual.md)  
  [Enumerare il contenuto del disegno di un oggetto visivo](how-to-enumerate-drawing-content-of-a-visual.md)  
- [Eseguire un hit test della geometria in un oggetto visivo](how-to-hit-test-geometry-in-a-visual.md)  
- [Eseguire un hit test usando la geometria come parametro](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [Eseguire un hit test usando un contenitore di host Win32](how-to-hit-test-using-a-win32-host-container.md)  
- [Eseguire il rendering in un intervallo per frame usando l'oggetto CompositionTarget](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [Eseguire un hit test della geometria in un oggetto Visual](how-to-hit-test-geometry-in-a-visual.md)  
+ [Eseguire un hit test utilizzando la geometria come parametro](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [Eseguire un hit test utilizzando un contenitore di host Win32](how-to-hit-test-using-a-win32-host-container.md)  
+ [Eseguire il rendering in un intervallo per frame tramite l'oggetto CompositionTarget](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>Vedere anche
 

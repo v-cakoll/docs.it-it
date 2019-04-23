@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153595"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aggiornamento di origini dati con DataAdapter
@@ -46,7 +46,7 @@ Il metodo `Update` di <xref:System.Data.Common.DataAdapter> viene chiamato per a
   
  Per gestire le eccezioni che possono verificarsi quando si chiama il `Update` metodo, è possibile usare il `RowUpdated` eventi per rispondere agli errori di aggiornamento di riga appena si verificano (vedere [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), oppure è possibile impostare `DataAdapter.ContinueUpdateOnError` a `true` prima di chiamare `Update`e rispondere alle informazioni di errore archiviate nella `RowError` proprietà di una determinata riga al termine dell'aggiornamento (vedere [informazioni sugli errori di riga](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Nota** chiamata `AcceptChanges` nel `DataSet`, `DataTable`, o `DataRow` tutti `Original` valori per un `DataRow` verranno sovrascritti con il `Current` valori per il `DataRow`. Se i valori di campo che identificano la riga come univoca sono stati modificati, dopo la chiamata a `AcceptChanges` i valori `Original` non corrisponderanno più ai valori dell'origine dati. `AcceptChanges` viene chiamato automaticamente per ogni riga durante una chiamata al metodo Update di un `DataAdapter`. Per mantenere i valori originali durante una chiamata al metodo Update, impostare prima la proprietà `AcceptChangesDuringUpdate` di `DataAdapter` su false oppure creare un gestore eventi per l'evento `RowUpdated` e impostare <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow>. Per altre informazioni, vedere [unione di contenuti di DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) e [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Nota** chiamata `AcceptChanges` nel `DataSet`, `DataTable`, o `DataRow` tutti `Original` valori per un `DataRow` verranno sovrascritti con il `Current` valori per il `DataRow`. Se i valori di campo che identificano la riga come univoca sono stati modificati, dopo la chiamata a `AcceptChanges` i valori `Original` non corrisponderanno più ai valori dell'origine dati. `AcceptChanges` viene chiamato automaticamente per ogni riga durante una chiamata al metodo Update di un oggetto `DataAdapter`. Per mantenere i valori originali durante una chiamata al metodo Update, impostare prima la proprietà `AcceptChangesDuringUpdate` di `DataAdapter` su false oppure creare un gestore eventi per l'evento `RowUpdated` e impostare <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> su <xref:System.Data.UpdateStatus.SkipCurrentRow>. Per altre informazioni, vedere [unione di contenuti di DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) e [gestione degli eventi DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Esempio  
  Gli esempi seguenti illustrano come eseguire gli aggiornamenti alle righe modificate impostando in modo esplicito il `UpdateCommand` di un `DataAdapter` e la chiamata relativo `Update` (metodo). Notare che il parametro specificato nella clausola WHERE dell'istruzione UPDATE viene impostato in modo da usare il valore `Original` di `SourceColumn`. Questo è importante in quanto è possibile che il valore `Current` sia stato modificato e che non corrisponda più al valore nell'origine dati. Il valore `Original` è il valore che è stato usato per compilare `DataTable` dall'origine dati.  
@@ -372,7 +372,7 @@ class Program {
 
 - [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Stati e versioni delle righe](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [AcceptChanges e RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [Unione di contenuti di dataset](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [Oggetti AcceptChange e RejectChange](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [Unione di contenuti di set di dati](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
 - [Recupero di identità o di valori numerati automaticamente](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

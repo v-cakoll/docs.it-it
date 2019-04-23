@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
 ms.openlocfilehash: d49c6d933a09dce5d657746358f1a5f716ab639b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143364"
 ---
 # <a name="activityscheduledquery"></a>\<activityScheduledQuery>
@@ -60,5 +60,5 @@ Rappresenta una raccolta di query usate per rilevare un'attività pianificata pe
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>
-- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

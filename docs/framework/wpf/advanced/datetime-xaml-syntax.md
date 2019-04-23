@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
 ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146497"
 ---
 # <a name="datetime-xaml-syntax"></a>Sintassi DateTime XAML
@@ -75,4 +75,4 @@ Alcuni controlli, ad esempio <xref:System.Windows.Controls.Calendar> e <xref:Sys
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)

@@ -5,10 +5,10 @@ ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6ed8c6e61c558a4bc9e3f92d559615ac93ecff8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144235"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>Interfaccia ISymUnmanagedWriter5
@@ -34,5 +34,5 @@ Interfaccia ISymUnmanagedWriter5.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Interfacce dell'archivio dei simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [Interfacce dell'archivio simboli di diagnostica](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [Interfaccia ISymUnmanagedWriter4](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)

@@ -3,10 +3,10 @@ title: Protezione delle applicazioni ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149383"
 ---
 # <a name="securing-adonet-applications"></a>Protezione delle applicazioni ADO.NET
@@ -17,7 +17,7 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
  Il codice protetto non difende dai problemi di sicurezza che si possono verificare quando si usano risorse non gestite quali i database. La maggior parte dei database di server, ad esempio SQL Server, dispone di sistemi di sicurezza interni, che aumentano la protezione se correttamente implementati. Tuttavia, anche un'origine dati con un sistema di sicurezza efficace può subire danni da un attacco se non è configurata in modo appropriato.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/data/adonet/security-overview.md)  
+ [Panoramica della sicurezza](../../../../docs/framework/data/adonet/security-overview.md)  
  Vengono forniti consigli per la progettazione di applicazioni ADO.NET protette.  
   
  [Accesso sicuro ai dati](../../../../docs/framework/data/adonet/secure-data-access.md)  
@@ -26,7 +26,7 @@ Per scrivere un'applicazione ADO.NET protetta, non è sufficiente evitare i prob
  [Applicazioni client sicure](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  Vengono riportate alcune considerazioni sulla sicurezza per le applicazioni client.  
   
- [Sicurezza dell'accesso al codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
+ [Sicurezza dell'accesso di codice e ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
  Viene descritto come usare la sicurezza dall'accesso di codice per migliorare la protezione del codice ADO.NET. Viene inoltre illustrato come operare in un contesto di attendibilità parziale.  
   
  [Privacy e sicurezza dei dati](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  

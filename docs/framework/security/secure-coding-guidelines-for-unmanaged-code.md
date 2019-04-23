@@ -10,10 +10,10 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143767"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Linee guida per la creazione di codice sicuro applicabili al codice non gestito
@@ -48,7 +48,7 @@ Alcuni codici di libreria devono chiamare codice non gestito (ad esempio, le API
 |Parola chiave|Considerazioni sulla sicurezza|  
 |-------------|-----------------------------|  
 |**safe**|Sicurezza completa dalle chiamate da parte del codice, anche di quello dannoso. L'uso è analogo a quello del normale codice gestito. Una funzione che ottiene l'ora del giorno, ad esempio, è in genere sicura.|  
-|**nativi**|Indipendente dalla sicurezza; in altre parole, codice non gestito per cui è richiesta l'autorizzazione alla chiamata di codice non gestito. Viene eseguito il controllo di sicurezza, che blocca le chiamate non autorizzate.|  
+|**native**|Indipendente dalla sicurezza; in altre parole, codice non gestito per cui è richiesta l'autorizzazione alla chiamata di codice non gestito. Viene eseguito il controllo di sicurezza, che blocca le chiamate non autorizzate.|  
 |**unsafe**|Presenza di un punto di ingresso per codice non gestito pericoloso con annullamento della sicurezza. Gli sviluppatori dovranno usare la massima attenzione nell'uso di codice non gestito di questo tipo, accertandosi che siano attivi altri tipi di sicurezza per evitare vulnerabilità di sicurezza. Questa parola chiave consente l'override del sistema di sicurezza.|  
   
 ## <a name="see-also"></a>Vedere anche

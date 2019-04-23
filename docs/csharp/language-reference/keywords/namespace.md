@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148759"
 ---
 # <a name="namespace-c-reference"></a>namespace (Riferimenti per C#)
@@ -28,15 +28,15 @@ All'interno di uno spazio dei nomi è possibile dichiarare nessuno o più di uno
 
 - un altro spazio dei nomi
 
-- [classe](class.md)
+- [class](class.md)
 
-- [interfaccia](interface.md)
+- [interface](interface.md)
 
 - [struct](struct.md)
 
 - [enum](enum.md)
 
-- [delegato](delegate.md)
+- [delegate](delegate.md)
 
 Il compilatore aggiunge uno spazio dei nomi predefinito indipendentemente dal fatto che venga dichiarato o meno uno spazio dei nomi in modo esplicito in un file di origine C#. Questo spazio dei nomi senza nome, talvolta chiamato spazio dei nomi globale, è presente in ogni file. Qualsiasi identificatore nello spazio dei nomi globale può essere usato all'interno di uno spazio dei nomi denominato.
 
@@ -72,5 +72,5 @@ Per altre informazioni sull'uso degli spazi dei nomi, vedere gli argomenti segue
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
 - [Parole chiave per gli spazi dei nomi](namespace-keywords.md)
-- [utilizzo](using-directive.md)
+- [using](using-directive.md)
 - [using static](using-static.md)

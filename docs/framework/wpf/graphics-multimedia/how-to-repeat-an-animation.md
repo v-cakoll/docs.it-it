@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
 ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150540"
 ---
 # <a name="how-to-repeat-an-animation"></a>Procedura: Ripetere un'animazione
@@ -32,6 +32,6 @@ Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.Timel
 
 - [Accumulare valori di animazione durante i cicli ripetuti](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Specificare se una sequenza temporale viene invertita automaticamente](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Procedure relative all'animazione e al sistema di temporizzazione](animation-and-timing-how-to-topics.md)
+- [Animazione e temporizzazione procedure](animation-and-timing-how-to-topics.md)
 - [Cenni preliminari sull'animazione](animation-overview.md)
-- [Esempio di comportamento temporale di animazione](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Esempio di comportamento temporale di un'animazione](https://go.microsoft.com/fwlink/?LinkID=159970)

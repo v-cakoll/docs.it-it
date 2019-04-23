@@ -3,10 +3,10 @@ title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
 ms.openlocfilehash: 4d3dd9042951ffb46b8e0a3f7bb7bcdee23fd58b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148837"
 ---
 # <a name="knowntype"></a>\<knownType>
@@ -43,7 +43,7 @@ Specifica un tipo da usare dal serializzatore <xref:System.Runtime.Serialization
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Parametro >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Specifica un indice di parametro quando il tipo dichiarato è un tipo generico.|  
+|[\<parameter>](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Specifica un indice di parametro quando il tipo dichiarato è un tipo generico.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
@@ -72,6 +72,6 @@ Specifica un tipo da usare dal serializzatore <xref:System.Runtime.Serialization
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Tipi noti di contratto di dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

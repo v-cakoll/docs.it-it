@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
 ms.openlocfilehash: 759b2f36f9d38cdac0cfe4ff8e451b38012493e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143832"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection, DbCommand e DbException
@@ -65,7 +65,7 @@ finally
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Oggetti DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Recupero di un oggetto DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [Recupero di una classe DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [Modifica di dati con un oggetto DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)

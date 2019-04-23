@@ -5,10 +5,10 @@ helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
 ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150449"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurazione di associazioni per i servizi Windows Communication Foundation
@@ -58,7 +58,7 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
 </service>  
 ```  
   
- In questo esempio l'attributo `name` indica il tipo di servizio per il quale è destinata la configurazione. Quando si crea un servizio nel codice con il contratto `HelloWorld`, viene inizializzato con tutti gli endpoint definiti nella configurazione di esempio. Se l'assembly implementa solo un contratto di servizio, il `name` attributo può essere omesso perché il servizio utilizza l'unico tipo disponibile. L'attributo accetta una stringa che deve essere nel formato `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ In questo esempio l'attributo `name` indica il tipo di servizio per il quale è destinata la configurazione. Quando si crea un servizio nel codice con il contratto `HelloWorld`, viene inizializzato con tutti gli endpoint definiti nella configurazione di esempio. Se l'assembly implementa solo un contratto di servizio, il `name` attributo può essere omesso perché il servizio utilizza l'unico tipo disponibile. L'attributo accetta una stringa che deve presentarsi nel formato `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  L'attributo `address` specifica l'URI utilizzato dagli altri endpoint per comunicare con il servizio. L'URI può essere assoluto o relativo. Se viene fornito un indirizzo relativo, l'host deve fornire un indirizzo di base appropriato per lo schema di trasporto utilizzato nell'associazione. Se non viene configurato un indirizzo, si presuppone che l'indirizzo di base valga come indirizzo per quell'endpoint.  
   
@@ -165,5 +165,5 @@ Durante la creazione di un'applicazione, è spesso necessario assegnare all'ammi
 
 - [Configurazione semplificata](../../../docs/framework/wcf/simplified-configuration.md)
 - [Associazioni fornite dal sistema](../../../docs/framework/wcf/system-provided-bindings.md)
-- [Cenni preliminari sulla creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Panoramica della creazione di endpoint](../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Uso di associazioni per configurare servizi e client](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

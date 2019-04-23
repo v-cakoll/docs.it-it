@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9519f7c2df5cf078bac6be038275527d7741edb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152165"
 ---
 # <a name="iclrgcmanager-interface"></a>Interfaccia ICLRGCManager
@@ -51,7 +51,7 @@ Fornisce metodi che consentono a un host interagire con il sistema di common lan
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Gestione automatica della memoria](../../../../docs/standard/automatic-memory-management.md)
 - [Struttura COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [Interfaccia ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interfacce di hosting CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

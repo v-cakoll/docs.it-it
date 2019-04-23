@@ -10,10 +10,10 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148304"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Cenni sul disegno con colori a tinta unita e sfumature
@@ -146,7 +146,7 @@ Oggetto RadialGradientBrushes con impostazioni GradientOrigin, Center, RadiusX e
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Specifica dell'opacità di colore in "XAML"  
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] si usa la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare l'opacità di colori singoli. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] la notazione esadecimale usa la sintassi seguente:  
+ In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] si usa la notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] per specificare l'opacità di colori singoli. La notazione esadecimale [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa la sintassi seguente:  
   
  `#` **aa** *rrggbb*  
   
@@ -173,5 +173,5 @@ Oggetto RadialGradientBrushes con impostazioni GradientOrigin, Center, RadiusX e
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
 - [Disegnare con oggetti Image, Drawing e Visual](painting-with-images-drawings-and-visuals.md)
-- [Cenni preliminari sulle proprietà di trasformazione Brush](brush-transformation-overview.md)
+- [Panoramica sulle proprietà di trasformazione Brush](brush-transformation-overview.md)
 - [Livelli di rendering della grafica](../advanced/graphics-rendering-tiers.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148083"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Protezione del trasporto con l'autenticazione di Windows
@@ -119,6 +119,6 @@ Lo scenario seguente viene illustrato un client Windows Communication Foundation
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Procedura: Proteggere un servizio con credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Sicurezza e protezione](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Panoramica della sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Procedura: Proteggere un servizio con le credenziali di Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Modello di sicurezza per Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
