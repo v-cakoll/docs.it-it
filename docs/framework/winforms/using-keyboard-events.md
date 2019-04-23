@@ -10,10 +10,10 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114270"
 ---
 # <a name="using-keyboard-events"></a>Utilizzo degli eventi di tastiera
@@ -40,6 +40,6 @@ La maggioranza dei programmi di Windows Form elabora gli input della tastiera tr
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Input da tastiera in un'applicazione Windows Form](keyboard-input-in-a-windows-forms-application.md)
+- [Input da tastiera in un'applicazione Windows Forms](keyboard-input-in-a-windows-forms-application.md)
 - [Funzionamento dell'input da tastiera](how-keyboard-input-works.md)
 - [Input del mouse in un'applicazione Windows Forms](mouse-input-in-a-windows-forms-application.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115310"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pennelli e forme con riempimento in GDI+
@@ -83,5 +83,5 @@ Una forma chiusa, ad esempio un rettangolo o un'ellisse, è costituito da una st
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Linee, curve e forme](lines-curves-and-shapes.md)
-- [Procedura: Disegnare un rettangolo pieno in un Windows Form](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Procedura: Disegnare un'ellisse piena in un Windows Form](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Procedura: Disegna un rettangolo pieno in un Windows Form](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Procedura: Disegna un'ellisse piena in un Windows Form](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

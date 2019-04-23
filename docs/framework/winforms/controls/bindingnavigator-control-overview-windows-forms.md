@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
 ms.openlocfilehash: ad63f622aae55cb4175eddc93ab5e086965a8fe8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109109"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Cenni preliminari sul controllo BindingNavigator (Windows Form)
@@ -29,14 +29,14 @@ ms.locfileid: "59109109"
   
 |Control|Funzione|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> button|Inserisce una nuova riga nell'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> button|Elimina la riga corrente dall'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> button|Passa al primo elemento nell'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> button|Passa all'ultimo elemento nell'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> button|Passa all'elemento successivo nell'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> button|Passa all'elemento precedente nell'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A> Casella di testo|Restituisce la posizione corrente nell'origine dati sottostante.|  
-|<xref:System.Windows.Forms.BindingNavigator.CountItem%2A> Casella di testo|Restituisce il numero totale di elementi nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Pulsante|Inserisce una nuova riga nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Pulsante|Elimina la riga corrente dall'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Pulsante|Passa al primo elemento nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Pulsante|Passa all'ultimo elemento nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Pulsante|Passa all'elemento successivo nell'origine dati sottostante.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Pulsante|Passa all'elemento precedente nell'origine dati sottostante.|  
+|Casella di testo <xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>|Restituisce la posizione corrente nell'origine dati sottostante.|  
+|Casella di testo <xref:System.Windows.Forms.BindingNavigator.CountItem%2A>|Restituisce il numero totale di elementi nell'origine dati sottostante.|  
   
  A ogni controllo contenuto nell'insieme corrisponde un membro del componente <xref:System.Windows.Forms.BindingSource> che fornisce la stessa funzionalità a livello di codice. Il pulsante <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>, ad esempio, corrisponde al metodo <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> del componente <xref:System.Windows.Forms.BindingSource>, il pulsante <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> corrisponde al metodo <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> e così via.  
   

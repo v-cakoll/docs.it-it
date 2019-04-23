@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 ms.openlocfilehash: 43e1d54d4e74b49fdf1a8997d1cc89492c9412bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117249"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Uso di un socket server sincrono
@@ -79,4 +79,4 @@ handler.Close();
 
 - [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Esempio di socket server sincrono](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -3,10 +3,10 @@ title: SqlClient per funzioni Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
 ms.openlocfilehash: 54072576b73b933277d33839fdbb575d420f2286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117780"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>SqlClient per funzioni Entity Framework
@@ -32,4 +32,4 @@ Il provider di dati .NET Framework per SQL Server (SqlClient) per Entity Framewo
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimento a Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Cenni preliminari su Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Panoramica di Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -16,10 +16,10 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 298620092c37b2c02332e9135f73584272e326bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111683"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>Metodo DacpGetModuleAddress::Request
@@ -57,4 +57,4 @@ Questa struttura si trova all'interno del runtime e non viene esposto tramite le
 ## <a name="see-also"></a>Vedere anche
 
 - [Debug](index.md)
-- [DacpGetModuleAddress Interface](dacpgetmoduleaddress-structure.md)
+- [Interfaccia DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)

@@ -3,10 +3,10 @@ title: Creazione di una classe BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115167"
 ---
 # <a name="creating-a-bindingelement"></a>Creazione di una classe BindingElement
@@ -22,9 +22,9 @@ Associazioni ed elementi di associazione (oggetti che estendono <xref:System.Ser
   
  `ChunkingBindingElement` è responsabile della creazione di `ChunkingChannelFactory` e `ChunkingChannelListener`. Esegue l'override delle implementazioni dei metodi <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory%2A> e <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener%2A>, controlla che il parametro di tipo sia <xref:System.ServiceModel.Channels.IDuplexSessionChannel> (nell'esempio si tratta dell'unica forma del canale supportata da `ChunkingChannel`) e che gli altri elementi di associazione presenti nell'associazione supportino tale forma.  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> verifica innanzitutto che la forma del canale richiesta possa essere compilata, quindi Ottiene un elenco delle azioni del messaggio da suddividere in blocchi. Crea quindi una nuova `ChunkingChannelFactory`, passando la channel factory interna (se si sta creando un elemento di associazione del trasporto, tale elemento è l'ultimo nello stack dell'associazione e pertanto deve necessariamente creare un listener del canale o una channel factory).  
+ Il metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> controlla prima che la forma del canale richiesta possa essere creata e poi ottiene un elenco di azioni del messaggio da suddividere in blocchi. Crea quindi una nuova `ChunkingChannelFactory`, passando la channel factory interna (se si sta creando un elemento di associazione del trasporto, tale elemento è l'ultimo nello stack dell'associazione e pertanto deve necessariamente creare un listener del canale o una channel factory).  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> l'implementazione è simile per la creazione di `ChunkingChannelListener` e passandogli il listener del canale interno.  
+ L'implementazione del metodo <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> per creare `ChunkingChannelListener` e passare il listener del canale interno è simile.  
   
  Come ulteriore esempio di utilizzo di un canale di trasporto, il [trasporto: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) comprende l'override seguente.  
   
@@ -47,14 +47,14 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="protocol-binding-elements"></a>Elementi di associazione di protocollo  
  I nuovi elementi di associazione possono sostituire o aumentare gli elementi di associazione presenti, aggiungendo nuovi trasporti, codifiche o protocolli di livello superiore. Per creare un nuovo elemento di associazione di protocollo, iniziare estendendo la classe <xref:System.ServiceModel.Channels.BindingElement>. Come minimo, è necessario quindi implementare il <xref:System.ServiceModel.Channels.BindingElement.Clone%2A?displayProperty=nameWithType> e implementare le `ChannelProtectionRequirements` usando <xref:System.ServiceModel.Channels.IChannel.GetProperty%2A?displayProperty=nameWithType>. In questo modo viene restituita la classe <xref:System.ServiceModel.Security.ChannelProtectionRequirements> per l'elemento di associazione.  Per altre informazioni, vedere <xref:System.ServiceModel.Security.ChannelProtectionRequirements>.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> deve restituire una copia aggiornata di questo elemento di associazione. È consigliabile che gli autori dell'elemento di associazione implementino il metodo <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> utilizzando un costruttore di copia che chiami il costruttore di copia di base e che quindi duplichi i campi aggiuntivi in questa classe.  
+ Il metodo <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> deve restituire una copia aggiornata dell'elemento di associazione. È consigliabile che gli autori dell'elemento di associazione implementino il metodo <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> utilizzando un costruttore di copia che chiami il costruttore di copia di base e che quindi duplichi i campi aggiuntivi in questa classe.  
   
 #### <a name="transport-binding-elements"></a>Elementi di associazione del trasporto  
  Per creare un nuovo elemento di associazione del trasporto, estendere l'interfaccia <xref:System.ServiceModel.Channels.TransportBindingElement>. È necessario quindi implementare almeno il metodo <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> e la proprietà <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A?displayProperty=nameWithType>.  
   
- <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – Deve restituire una copia aggiornata di questo elemento di associazione.  È consigliabile che gli autori dell'elemento di associazione implementino Clone mediante un costruttore di copia che chiami il costruttore di copia di base e che quindi duplichi i campi aggiuntivi in questa classe.  
+ <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> – Deve restituire una copia aggiornata dell'elemento di associazione.  È consigliabile che gli autori dell'elemento di associazione implementino Clone mediante un costruttore di copia che chiami il costruttore di copia di base e che quindi duplichi i campi aggiuntivi in questa classe.  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> : Le <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> ottenere proprietà restituisce lo schema URI per il protocollo di trasporto rappresentato dall'elemento di associazione. Ad esempio, il <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> e il <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> restituiscono "http" e "NET. TCP" dalle rispettive <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> proprietà.  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – La proprietà <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> restituisce lo schema URI per il protocollo di trasporto rappresentato dall'elemento di associazione. Ad esempio, il <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> e il <xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType> restituiscono "http" e "NET. TCP" dalle rispettive <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> proprietà.  
   
 #### <a name="encoding-binding-elements"></a>Elementi di associazione di codifica  
  Per creare un nuovo elemento di associazione di codifica, iniziare estendendo la classe <xref:System.ServiceModel.Channels.BindingElement> e implementando la classe <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType>. È necessario quindi implementare almeno i metodi <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> e <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> e la proprietà <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType>.  

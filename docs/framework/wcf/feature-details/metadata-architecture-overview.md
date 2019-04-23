@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
 ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111475"
 ---
 # <a name="metadata-architecture-overview"></a>Panoramica dell'architettura dei metadati
@@ -93,7 +93,7 @@ Windows Communication Foundation (WCF) offre un'infrastruttura avanzata per espo
 - [Formati dei metadati](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [Esportazione e importazione di metadati](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
 - [Pubblicazione di metadati](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
-- [Recupero dei metadati](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
+- [Recupero di metadati](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
 - [Uso di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Considerazioni sulla sicurezza con metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Considerazioni sulla sicurezza con i metadati](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
 - [Estensione del sistema di metadati](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

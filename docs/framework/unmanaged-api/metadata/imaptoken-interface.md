@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111670"
 ---
 # <a name="imaptoken-interface"></a>Interfaccia IMapToken
@@ -33,7 +33,7 @@ Fornisce funzionalità di mapping tra gli assembly.
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[Metodo Map](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Esegue il mapping di una relazione tra due assembly utilizzando le firme di metadati.|  
+|[Metodo map](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Esegue il mapping di una relazione tra due assembly utilizzando le firme di metadati.|  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

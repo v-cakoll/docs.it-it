@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
 ms.openlocfilehash: 865b1a3ccc30ff5efab4b08956bf7ba2bba4769c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110586"
 ---
 # <a name="mcprocesscontent-attribute"></a>Attributo mc:ProcessContent
@@ -37,7 +37,7 @@ Specifica quale [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-
 |*ignorablePrefix*|Qualsiasi stringa di prefisso valida, secondo la specifica XML 1.0.|  
 |*ignorableUri*|Qualsiasi URI valido per la designazione di uno spazio dei nomi, secondo la specifica XML 1.0.|  
 |*ThisElementCanBeIgnored*|Un elemento che può essere ignorato dagli [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] le implementazioni del processore, se il tipo sottostante non può essere risolto.|  
-|*[content]*|*ThisElementCanBeIgnored* è contrassegnato come può essere ignorato. Se il processore ignora questo elemento, *[contenuto]* viene elaborato dal *oggetto*.|  
+|*[contenuto]*|*ThisElementCanBeIgnored* è contrassegnato come può essere ignorato. Se il processore ignora questo elemento, *[contenuto]* viene elaborato dal *oggetto*.|  
   
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore ignorerà il contenuto di un elemento ignorato. È possibile specificare un elemento specifico dal `mc:ProcessContent`e un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processore continuerà a elaborare il contenuto all'interno dell'elemento ignorato. Ciò in genere vengono usato se il contenuto è annidato all'interno dei tag diversi, almeno uno dei quali è possibile ignorare e almeno uno dei quali non è possibile ignorare.  
@@ -49,4 +49,4 @@ Specifica quale [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-
 ## <a name="see-also"></a>Vedere anche
 
 - [Attributo mc:Ignorable](mc-ignorable-attribute.md)
-- [Panoramica di XAML (WPF)](xaml-overview-wpf.md)
+- [Cenni preliminari su XAML (WPF)](xaml-overview-wpf.md)

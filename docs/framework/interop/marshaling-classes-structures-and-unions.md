@@ -21,10 +21,10 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113724"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshalling di classi, strutture e unioni
@@ -264,7 +264,7 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- La classe `MyStruct` contiene un oggetto stringa di caratteri ANSI. Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> specifica il formato ANSI. `MyUnsafeStruct`è una struttura contenente un tipo <xref:System.IntPtr> anziché una stringa.  
+ La classe `MyStruct` contiene un oggetto stringa di caratteri ANSI. Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> specifica il formato ANSI. `MyUnsafeStruct` è una struttura contenente un tipo <xref:System.IntPtr> anziché una stringa.  
   
  La classe `LibWrap` contiene il metodo prototipo `TestOutArrayOfStructs` di overload. Se un metodo dichiara un puntatore come parametro, la classe deve essere contrassegnata con la parola chiave `unsafe`. Poiché [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] non può usare codice unsafe, il metodo di overload, il modificatore unsafe e la struttura `MyUnsafeStruct` non sono necessari.  
   

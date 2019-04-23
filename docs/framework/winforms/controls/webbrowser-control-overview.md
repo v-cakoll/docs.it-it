@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109435"
 ---
 # <a name="webbrowser-control-overview"></a>Cenni preliminari sul controllo WebBrowser
@@ -26,19 +26,19 @@ Il <xref:System.Windows.Forms.WebBrowser> controllo fornisce un wrapper gestito 
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A> proprietà|Ottiene un oggetto che fornisce l'accesso gestito per il modello di oggetto di documento (DOM) HTML della pagina Web corrente.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event|Si verifica quando una pagina Web al termine del caricamento.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> proprietà|Ottiene o imposta il codice HTML del contenuto della pagina Web corrente.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> proprietà|Ottiene il titolo della pagina Web corrente.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> metodo|Consente di passare alla pagina precedente nella cronologia.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> metodo|Consente di passare alla pagina successiva nella cronologia.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> metodo|Consente di passare all'URL specificato.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> event|Si verifica prima dello spostamento, consentendo l'annullamento dell'azione.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> proprietà|Ottiene o imposta un oggetto che è possibile usare script di codice della pagina Web per comunicare con l'applicazione.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A> metodo|Consente di stampare la pagina Web corrente.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> metodo|Ricarica la pagina Web corrente.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A> metodo|Il processo si interromperà la navigazione corrente e si arresta elemento dinamico della pagina, ad esempio i suoni e animazioni.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A> proprietà|Ottiene o imposta l'URL della pagina Web corrente. Impostazione di questa proprietà consente di passare il controllo al nuovo URL.|  
+|Proprietà <xref:System.Windows.Forms.WebBrowser.Document%2A>|Ottiene un oggetto che fornisce l'accesso gestito per il modello di oggetto di documento (DOM) HTML della pagina Web corrente.|  
+|Evento<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> |Si verifica quando una pagina Web al termine del caricamento.|  
+|Proprietà <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>|Ottiene o imposta il codice HTML del contenuto della pagina Web corrente.|  
+|Proprietà <xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>|Ottiene il titolo della pagina Web corrente.|  
+|Metodo <xref:System.Windows.Forms.WebBrowser.GoBack%2A>|Consente di passare alla pagina precedente nella cronologia.|  
+|Metodo <xref:System.Windows.Forms.WebBrowser.GoForward%2A>|Consente di passare alla pagina successiva nella cronologia.|  
+|Metodo <xref:System.Windows.Forms.WebBrowser.Navigate%2A>|Consente di passare all'URL specificato.|  
+|Evento<xref:System.Windows.Forms.WebBrowser.Navigating> |Si verifica prima dello spostamento, consentendo l'annullamento dell'azione.|  
+|Proprietà <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>|Ottiene o imposta un oggetto che è possibile usare script di codice della pagina Web per comunicare con l'applicazione.|  
+|Metodo <xref:System.Windows.Forms.WebBrowser.Print%2A>|Consente di stampare la pagina Web corrente.|  
+|Metodo <xref:System.Windows.Forms.WebBrowser.Refresh%2A>|Ricarica la pagina Web corrente.|  
+|Metodo <xref:System.Windows.Forms.WebBrowser.Stop%2A>|Il processo si interromperà la navigazione corrente e si arresta elemento dinamico della pagina, ad esempio i suoni e animazioni.|  
+|Proprietà <xref:System.Windows.Forms.WebBrowser.Url%2A>|Ottiene o imposta l'URL della pagina Web corrente. Impostazione di questa proprietà consente di passare il controllo al nuovo URL.|  
   
 ## <a name="see-also"></a>Vedere anche
 
@@ -54,8 +54,8 @@ Il <xref:System.Windows.Forms.WebBrowser> controllo fornisce un wrapper gestito 
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
 - [Procedura: Passare a un URL con il controllo WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Procedura: Stampare con un controllo WebBrowser](how-to-print-with-a-webbrowser-control.md)
-- [Procedura: Aggiungere funzionalità Web browser a una Windows Forms Application](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Procedura: Stampa con un controllo WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Procedura: Aggiungere funzionalità del Browser Web a un'applicazione di Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
 - [Procedura: Creare un visualizzatore di documenti HTML in una Windows Forms Application](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [Procedura: Implementare comunicazioni bidirezionali tra il codice DHTML e il codice dell'applicazione client](implement-two-way-com-between-dhtml-and-client.md)
+- [Procedura: Implementare comunicazioni bidirezionali tra codice DHTML e il codice dell'applicazione Client](implement-two-way-com-between-dhtml-and-client.md)
 - [Sicurezza dei controlli WebBrowser](webbrowser-security.md)

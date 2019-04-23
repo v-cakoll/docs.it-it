@@ -14,10 +14,10 @@ helpviewer_keywords:
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
 ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115765"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>File e accesso ai dati più protetti in Windows Form
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  In Visual c#, assicurarsi di aggiungere codice per abilitare il gestore dell'evento. Usando il codice dell'esempio precedente, il codice seguente viene illustrato come abilitare il gestore eventi.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  In Visual c#, assicurarsi di aggiungere codice per abilitare il gestore dell'evento. Usando il codice dell'esempio precedente, il seguente codice mostra come abilitare il gestore eventi.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Altri file  
  Talvolta sarà necessario leggere o scrivere in file non specificati dall'utente, ad esempio quando si devono rendere persistenti le impostazioni dell'applicazione. Nelle aree Internet e Intranet locale, l'applicazione non disporrà delle autorizzazioni per archiviare i dati in un file locale. Tuttavia, l'applicazione potrà archiviare dati nello spazio di memorizzazione isolato. Lo spazio di memorizzazione isolato è un raggruppamento dati astratto, non un percorso di archiviazione specifico, contenente uno o più file dello spazio di memorizzazione isolato, denominati archivi, che includono i percorsi di directory in cui sono effettivamente memorizzati i dati. Non sono necessarie autorizzazioni di accesso ai file, ad esempio <xref:System.Security.Permissions.FileIOPermission>. La classe <xref:System.Security.Permissions.IsolatedStoragePermission> controlla invece le autorizzazioni per lo spazio di memorizzazione isolato. Per impostazione predefinita, le applicazioni eseguite nelle aree Internet e Intranet locale possono archiviare i dati usando lo spazio di memorizzazione isolato. Tuttavia, le impostazioni come la quota disco possono variare. Per altre informazioni sull'archiviazione isolata, vedere [isolato](../../standard/io/isolated-storage.md).  
@@ -354,15 +354,15 @@ public void Write()
  Se non è possibile accedere direttamente a un database, perché si desidera che l'applicazione venga eseguita con attendibilità parziale, è possibile usare un servizio Web come alternativa per accedere ai dati. Un servizio Web è un componente software accessibile a livello di codice in una rete. Con i servizi Web, le applicazioni possono condividere dati tra le aree dei gruppi di codice. Per impostazione predefinita, alle applicazioni nelle aree Internet e Intranet locale viene concesso il diritto di accedere ai relativi siti di origine. Questo consente a tali applicazioni di chiamare un servizio Web ospitato nello stesso server. Per altre informazioni, vedere [dei servizi Web in ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) oppure [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Accesso al Registro di sistema  
- La classe <xref:System.Security.Permissions.RegistryPermission> controlla l'accesso al Registro di sistema del sistema operativo. Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono accedere al Registro di sistema.  <xref:System.Security.Permissions.RegistryPermission> concede a un'applicazione solo il diritto di tentare di accedere al Registro di sistema; Ciò garantisce l'accesso avrà esito positivo, perché il sistema operativo applicare comunque la sicurezza del Registro di sistema.  
+ La classe <xref:System.Security.Permissions.RegistryPermission> controlla l'accesso al Registro di sistema del sistema operativo. Per impostazione predefinita, solo le applicazioni in esecuzione in locale possono accedere al Registro di sistema.  <xref:System.Security.Permissions.RegistryPermission> concede a un'applicazione solo il diritto di provare ad accedere al Registro di sistema. Non garantisce l'accesso, perché il sistema operativo continua ad applicare la sicurezza al Registro di sistema.  
   
  Poiché non è possibile accedere al Registro di sistema con l'attendibilità parziale, potrebbe essere necessario trovare altri metodi di archiviazione dei dati. Quando si archiviano le impostazioni dell'applicazione, usare lo spazio di memorizzazione isolato invece del Registro di sistema. Lo spazio di memorizzazione isolato può essere usato anche per archiviare altri file specifici dell'applicazione. È anche possibile archiviare informazioni di applicazioni globali relative al server o al sito di origine, perché, per impostazione predefinita, a un'applicazione viene concesso il diritto di accedere al sito di origine.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Stampa più protetta in Windows Form](more-secure-printing-in-windows-forms.md)
+- [Stampa più sicura in Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Considerazioni aggiuntive sulla sicurezza in Windows Form](additional-security-considerations-in-windows-forms.md)
-- [Cenni preliminari sulla sicurezza in Windows Form](security-in-windows-forms-overview.md)
+- [Panoramica della sicurezza in Windows Forms](security-in-windows-forms-overview.md)
 - [Sicurezza di Windows Form](windows-forms-security.md)
 - [Mage.exe (Strumento per la generazione e la modifica di manifesti)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
 - [MageUI.exe (Strumento per la generazione e la modifica di manifesti, client grafico)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

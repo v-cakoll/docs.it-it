@@ -8,10 +8,10 @@ helpviewer_keywords:
 - control types, UI Automation
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
 ms.openlocfilehash: 54a2157d469acad6d20a44afe72432138894cfe8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116103"
 ---
 # <a name="ui-automation-control-types"></a>Tipi di controllo per l'automazione dell'interfaccia utente
@@ -20,45 +20,45 @@ ms.locfileid: "59116103"
  In questa sezione contiene informazioni sul supporto per i tipi di controllo in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Cenni preliminari sui tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Panoramica dei tipi di controllo per l'automazione interfaccia utente](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Button](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo Calendar](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Calendar](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo Document](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo Edit](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Document](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Edit](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Group](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo Header](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Header](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo HeaderItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Hyperlink](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Image](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo List](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [Supporto per l'automazione dell'interfaccia utente del tipo di controllo Menu](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
+ [Supporto per automazione dell'interfaccia utente del tipo di controllo Menu](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo MenuItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo Pane](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Pane](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo ProgressBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo ScrollBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [Supporto per l'automazione interfaccia utente del tipo di controllo Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Slider](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Spinner](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [Supporto per l'automazione interfaccia utente del tipo di controllo SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo StatusBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
  [Supporto di automazione interfaccia utente per il tipo di controllo Tab](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
  [Supporto di automazione interfaccia utente per il tipo di controllo TabItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Table](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [Supporto di automazione interfaccia utente per il tipo di controllo Text](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [Supporto per l'automazione interfaccia utente del tipo di controllo Thumb](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [Supporto per l'automazione interfaccia utente del tipo di controllo TitleBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [Supporto per l'automazione interfaccia utente del tipo di controllo ToolBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [Supporto per l'automazione dell'interfaccia utente del tipo di controllo ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Text](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Thumb](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo TitleBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo ToolBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
+ [Supporto per automazione dell'interfaccia utente del tipo di controllo ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo Tree](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
  [Supporto per automazione interfaccia utente del tipo di controllo TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [Supporto per l'automazione interfaccia utente del tipo di controllo Window](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
+ [Supporto per automazione interfaccia utente del tipo di controllo Window](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Windows.Automation.ControlType>  

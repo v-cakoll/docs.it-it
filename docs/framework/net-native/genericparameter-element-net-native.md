@@ -5,10 +5,10 @@ ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111657"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > elemento (.NET Native)
@@ -68,8 +68,8 @@ Applica i criteri al tipo di parametro di un tipo o di un metodo generico.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[\<Metodo >](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
-|[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection di runtime a un determinato tipo, ad esempio una classe o una struttura.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection di runtime a un determinato tipo, ad esempio una classe o una struttura.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<GenericParameter>` è figlio dell'elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) o [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) ed è usato per applicare i criteri a un determinato parametro di tipo generico, specificato mediante il nome nella firma del tipo o del metodo generico.  
@@ -88,8 +88,8 @@ Applica i criteri al tipo di parametro di un tipo o di un metodo generico.
   
 ## <a name="see-also"></a>Vedere anche
 
-- [\<Metodo > elemento](../../../docs/framework/net-native/method-element-net-native.md)
+- [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Tipo > elemento](../../../docs/framework/net-native/type-element-net-native.md)
-- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Impostazioni dei criteri delle direttive di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

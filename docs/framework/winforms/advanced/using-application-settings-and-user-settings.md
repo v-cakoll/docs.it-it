@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107263"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizzo delle impostazioni applicazione e delle impostazioni utente
@@ -30,15 +30,15 @@ A partire da .NET Framework 2.0, è possibile creare e accedere ai valori che ve
   
  Illustra come modificare il valore di un'impostazione in un'applicazione compilata tra sessioni dell'applicazione.  
   
- [Procedura: Leggere le impostazioni in fase di esecuzione con C#](how-to-read-settings-at-run-time-with-csharp.md)  
+ [Procedura: Leggere le impostazioni in fase di esecuzione conC#](how-to-read-settings-at-run-time-with-csharp.md)  
   
  Viene descritto come usare il codice per leggere le impostazioni con C#.  
   
- [Procedura: Scrivere le impostazioni utente in fase di esecuzione con C#](how-to-write-user-settings-at-run-time-with-csharp.md)  
+ [Procedura: Scrivere le impostazioni utente in fase di esecuzione conC#](how-to-write-user-settings-at-run-time-with-csharp.md)  
   
  Viene illustrato come usare il codice per scrivere e salvare i valori delle impostazioni utente con C#.  
   
- [Procedura: Aggiungere più set di impostazioni all'applicazione in C#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
+ [Procedura: Aggiungere all'applicazione in più set di impostazioniC#](how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md)  
   
  Spiega come aggiungere più set di impostazioni a un'applicazione con C#.  
   

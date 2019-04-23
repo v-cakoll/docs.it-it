@@ -3,10 +3,10 @@ title: Operazioni asincrone
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116038"
 ---
 # <a name="asynchronous-operations"></a>Operazioni asincrone
@@ -32,5 +32,5 @@ Il completamento di alcune operazioni di database, ad esempio l'esecuzione di co
 ## <a name="see-also"></a>Vedere anche
 
 - [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Chiamata asincrona dei metodi sincroni](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [Chiamata sincrona dei metodi asincroni](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](https://go.microsoft.com/fwlink/?LinkId=217917)
