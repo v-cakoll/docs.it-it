@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177411"
 ---
 # <a name="dialog-boxes-overview"></a>Cenni preliminari sulle finestre di dialogo
@@ -45,7 +45,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Per visualizzare una finestra di messaggio, si chiama il `static`<xref:System.Windows.MessageBox.Show%2A> metodo, come illustrato nel codice seguente.  
+ Per visualizzare una finestra di messaggio, si chiama il `static` <xref:System.Windows.MessageBox.Show%2A> metodo, come illustrato nel codice seguente.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -63,7 +63,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Finestre di dialogo comuni  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa una serie di finestre di dialogo riutilizzabili comuni a tutte le applicazioni, incluse finestre di dialogo per l'apertura, salvataggio di file e la stampa. Poiché queste finestre di dialogo sono implementate dal sistema operativo, possono essere condivise da tutte le applicazioni eseguite nel sistema operativo, con notevoli vantaggi in termini della coerenza di utilizzo: se un utente utilizza con frequenza una finestra di dialogo basata sul sistema operativo in un'applicazione, non dovrà imparare a utilizzare la stessa finestra in altre applicazioni. Poiché queste finestre di dialogo sono disponibili per tutte le applicazioni e poiché consentono un'esperienza utente coerente, sono note come *finestre di dialogo comuni*.  
+ In [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] è implementata una varietà di finestre di dialogo riutilizzabili comuni a tutte le applicazioni, incluse le finestre di dialogo per l'apertura, il salvataggio e la stampa di file. Poiché queste finestre di dialogo sono implementate dal sistema operativo, possono essere condivise da tutte le applicazioni eseguite nel sistema operativo, con notevoli vantaggi in termini della coerenza di utilizzo: se un utente utilizza con frequenza una finestra di dialogo basata sul sistema operativo in un'applicazione, non dovrà imparare a utilizzare la stessa finestra in altre applicazioni. Poiché queste finestre di dialogo sono disponibili per tutte le applicazioni e poiché consentono un'esperienza utente coerente, sono note come *finestre di dialogo comuni*.  
   
  Windows Presentation Foundation (WPF) incapsula il file aperto, salvare file e finestre di dialogo comuni di stampa e li espone come classi gestite per l'utilizzo in applicazioni autonome. Questo argomento fornisce alcuni cenni preliminari su ognuna.  
   
@@ -208,7 +208,7 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
   
  ![Una finestra di dialogo margini con un bordo rosso intorno al valore di margine sinistro non valido.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] non limita un utente per il controllo non è valido finché non vengono immessi dati validi. In questo modo, l'utente sarà libero di spostarsi tra i controlli della finestra di dialogo anche se i dati immessi non sono validi. Tuttavia, ciò significa che un utente può immettere dati non validi e premere il **OK** pulsante. Per questo motivo, il codice deve anche convalidare tutti i controlli in una finestra di dialogo quando il **OK** pulsante viene premuto gestendo il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+ In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] l'utente non rimane bloccato sul controllo non valido finché non vengono immessi dati validi. In questo modo, l'utente sarà libero di spostarsi tra i controlli della finestra di dialogo anche se i dati immessi non sono validi. Tuttavia, ciò significa che un utente può immettere dati non validi e premere il **OK** pulsante. Per questo motivo, il codice deve anche convalidare tutti i controlli in una finestra di dialogo quando il **OK** pulsante viene premuto gestendo il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -344,6 +344,6 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sul controllo Popup](../controls/popup-overview.md)
+- [Panoramica sul controllo Popup](../controls/popup-overview.md)
 - [Esempio di finestra di dialogo](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [Esempio di controllo personalizzato ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)

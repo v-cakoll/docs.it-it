@@ -6,10 +6,10 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175825"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Memorizzazione nella cache dei client di automazione interfaccia utente
@@ -70,7 +70,7 @@ ms.locfileid: "59175825"
   
  Se la proprietà richiesta non è nella cache, viene generata un'eccezione.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, ad esempio <xref:System.Windows.Automation.AutomationElement.Current%2A>, espone le singole proprietà come membri di una struttura. che tuttavia non è necessario recuperare perché è possibile accedere direttamente alle singole proprietà. La proprietà <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> , ad esempio, può essere ottenuta da `element.Cached.Name`, dove `element` è un oggetto <xref:System.Windows.Automation.AutomationElement>.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, come <xref:System.Windows.Automation.AutomationElement.Current%2A>, espone le singole proprietà come membri di una struttura che tuttavia non è necessario recuperare perché è possibile accedere direttamente alle singole proprietà. La proprietà <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> , ad esempio, può essere ottenuta da `element.Cached.Name`, dove `element` è un oggetto <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>Recupero di pattern di controllo memorizzati nella cache  
@@ -104,5 +104,5 @@ ms.locfileid: "59175825"
 ## <a name="see-also"></a>Vedere anche
 
 - [Eventi di automazione interfaccia utente per i client](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [Utilizzare la memorizzazione nella cache per l'automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Usare la memorizzazione nella cache in automazione interfaccia utente](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [Esempio di FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
 ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176631"
 ---
 # <a name="mainmenu-component-windows-forms"></a>Componente MainMenu (Windows Form)
@@ -18,7 +18,7 @@ ms.locfileid: "59176631"
  I moduli di Windows `MainMenu` componente consente di visualizzare un menu di scelta in fase di esecuzione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Panoramica del componente MainMenu](mainmenu-component-overview-windows-forms.md)  
+ [Panoramica sul componente MainMenu](mainmenu-component-overview-windows-forms.md)  
  Spiega che cos'è il componente le funzionalità principali e i relativi delle proprietà.  
   
 ## <a name="reference"></a>Riferimenti  

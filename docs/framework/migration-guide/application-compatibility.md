@@ -9,10 +9,10 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176254"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilità delle applicazioni in .NET Framework
@@ -71,8 +71,8 @@ Per ogni problema sono incluse le informazioni seguenti:
 ## <a name="usage"></a>Utilizzo
 Per iniziare, selezionare il tipo di modifica della compatibilità di seguito:
 
-* [Modifiche di ridestinazione](./retargeting/index.md)
-* [Modifiche in fase di esecuzione](./runtime/index.md)
+* [Modifiche di reindirizzamento](./retargeting/index.md)
+* [Modifiche al runtime](./runtime/index.md)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
 ms.openlocfilehash: a5e775c69a4dd520d8148bfc790cc00428d9d15e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175513"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>Trovare un elemento di automazione interfaccia utente in base a una proprietà
@@ -34,4 +34,4 @@ ms.locfileid: "59175513"
 
 - [Esempio di elemento Menu ExpandCollapsePattern e InvokePattern](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771636(v=vs.90))
 - [Ottenere elementi di automazione interfaccia utente](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)
-- [Utilizzare la proprietà AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+- [Usare la proprietà AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)
