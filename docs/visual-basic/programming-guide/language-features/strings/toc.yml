@@ -1,57 +1,50 @@
-items:
 - name: Stringhe in Visual Basic
   href: index.md
   items:
-  - name: Introduzione alle stringhe
-    href: introduction-to-strings.md
-    items:
-    - name: Nozioni fondamentali sulle stringhe
-      href: string-basics.md
-    - name: Tipi di metodi per la gestione delle stringhe
-      href: types-of-string-manipulation-methods.md
-    - name: Nothing e stringhe
-      href: nothing-and-strings.md
-    - name: Influenza delle impostazioni cultura sulle stringhe
-      href: how-culture-affects-strings.md
-    - name: Stringhe interpolate
-      href: interpolated-strings.md
-    - name: Accesso alle stringhe in base zero o in base uno
-      href: zero-based-vs-one-based-string-access.md
-  - name: 'Procedura: Creare stringhe usando StringBuilder'
-    href: how-to-create-strings-using-a-stringbuilder.md
-  - name: "Procedura: Cercare all'interno di una stringa"
-    href: how-to-search-within-a-string.md
-  - name: Conversione tra stringhe e altri tipi di dati
-    href: converting-between-strings-and-other-data-types.md
-    items:
-    - name: 'Procedura: Convertire una matrice di byte in una stringa'
-      href: how-to-convert-an-array-of-bytes-into-a-string.md
-    - name: 'Procedura: Convertire stringhe in matrici di byte'
-      href: how-to-convert-strings-into-an-array-of-bytes.md
-    - name: 'Procedura: Creare una stringa da una matrice di valori Char'
-      href: how-to-create-a-string-from-an-array-of-char-values.md
-    - name: 'Procedura: Convertire stringhe esadecimali in numeri'
-      href: how-to-convert-hexadecimal-strings-to-numbers.md
-    - name: 'Procedura: Convertire una stringa in una matrice di caratteri'
-      href: how-to-convert-a-string-to-an-array-of-characters.md
-    - name: 'Procedura: Accedere ai caratteri delle stringhe'
-      href: how-to-access-characters-in-strings.md
-  - name: Convalida delle stringhe
-    href: validating-strings.md
-    items:
-    - name: 'Procedura: Convalidare nomi e percorsi di file'
-      href: how-to-validate-file-names-and-paths.md
-    - name: 'Procedura: Convalidare le stringhe che rappresentano date o ore'
-      href: how-to-validate-strings-that-represent-dates-or-times.md
-    - name: Uso di espressioni regolari con il controllo MaskedTextBox
-      href: using-regular-expressions-with-the-maskedtextbox-control.md
-    - name: 'Procedura dettagliata: Verifica della complessità delle password'
-      href: walkthrough-validating-that-passwords-are-complex.md
-  - name: 'Procedura dettagliata: Crittografia e decrittografia delle stringhe'
-    href: walkthrough-encrypting-and-decrypting-strings.md
-ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469313"
+    - name: Introduzione alle stringhe
+      href: introduction-to-strings.md
+      items:
+        - name: Nozioni fondamentali sulle stringhe
+          href: string-basics.md
+        - name: Tipi di metodi per la gestione delle stringhe
+          href: types-of-string-manipulation-methods.md
+        - name: Nothing e stringhe
+          href: nothing-and-strings.md
+        - name: Influenza delle impostazioni cultura sulle stringhe
+          href: how-culture-affects-strings.md
+        - name: Stringhe interpolate
+          href: interpolated-strings.md
+        - name: Accesso alle stringhe in base zero o in base uno
+          href: zero-based-vs-one-based-string-access.md
+    - name: 'Procedura: Creare stringhe usando StringBuilder'
+      href: how-to-create-strings-using-a-stringbuilder.md
+    - name: 'Procedura: Cercare all''interno di una stringa'
+      href: how-to-search-within-a-string.md
+    - name: Conversione tra stringhe e altri tipi di dati
+      href: converting-between-strings-and-other-data-types.md
+      items:
+        - name: 'Procedura: Convertire una matrice di byte in una stringa'
+          href: how-to-convert-an-array-of-bytes-into-a-string.md
+        - name: 'Procedura: Convertire stringhe in matrici di byte'
+          href: how-to-convert-strings-into-an-array-of-bytes.md
+        - name: 'Procedura: Creare una stringa da una matrice di valori Char'
+          href: how-to-create-a-string-from-an-array-of-char-values.md
+        - name: 'Procedura: Convertire stringhe esadecimali in numeri'
+          href: how-to-convert-hexadecimal-strings-to-numbers.md
+        - name: 'Procedura: Convertire una stringa in una matrice di caratteri'
+          href: how-to-convert-a-string-to-an-array-of-characters.md
+        - name: 'Procedura: Accedere ai caratteri delle stringhe'
+          href: how-to-access-characters-in-strings.md
+    - name: Convalida delle stringhe
+      href: validating-strings.md
+      items:
+        - name: 'Procedura: Convalidare nomi e percorsi di file'
+          href: how-to-validate-file-names-and-paths.md
+        - name: 'Procedura: Convalidare le stringhe che rappresentano date o ore'
+          href: how-to-validate-strings-that-represent-dates-or-times.md
+        - name: Uso di espressioni regolari con il controllo MaskedTextBox
+          href: using-regular-expressions-with-the-maskedtextbox-control.md
+        - name: 'Procedura dettagliata: Verifica della complessità delle password'
+          href: walkthrough-validating-that-passwords-are-complex.md
+    - name: 'Procedura dettagliata: Crittografia e decrittografia delle stringhe'
+      href: walkthrough-encrypting-and-decrypting-strings.md

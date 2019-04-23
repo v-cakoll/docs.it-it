@@ -1,22 +1,15 @@
-items:
 - name: Sviluppo per piattaforme multiple
   href: index.md
   items:
-  - name: Libreria di classi portabile
-    href: cross-platform-development-with-the-portable-class-library.md
-  - name: Uso della libreria di classi portabile con MVVM
-    href: using-portable-class-library-with-model-view-view-model.md
-  - name: Risorse app per librerie destinate a più piattaforme
-    href: app-resources-for-libraries-that-target-multiple-platforms.md
-  - name: Supporto .NET Framework per applicazioni Windows Store e Windows Runtime
-    href: support-for-windows-store-apps-and-windows-runtime.md
-  - name: Passaggio di un URI a Windows Runtime
-    href: passing-a-uri-to-the-windows-runtime.md
-  - name: Metodo WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
-    href: windowsruntimestreamextensions-asrandomaccessstream-method.md
-ms.openlocfilehash: 92ecd411bf13b7906d5faaaf459f9b786f3aba0a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469218"
+    - name: Libreria di classi portabile
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: Uso della libreria di classi portabile con MVVM
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: Risorse app per librerie destinate a più piattaforme
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Supporto .NET Framework per applicazioni Windows Store e Windows Runtime
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: Passaggio di un URI a Windows Runtime
+      href: passing-a-uri-to-the-windows-runtime.md
+    - name: Metodo WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)
+      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

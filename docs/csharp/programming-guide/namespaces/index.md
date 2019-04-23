@@ -7,53 +7,53 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710108"
 ---
-# <a name="namespaces-c-programming-guide"></a><span data-ttu-id="3c770-102">Spazi dei nomi (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="3c770-102">Namespaces (C# Programming Guide)</span></span>
+# <a name="namespaces-c-programming-guide"></a><span data-ttu-id="fcd2f-102">Spazi dei nomi (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="fcd2f-102">Namespaces (C# Programming Guide)</span></span>
 
-<span data-ttu-id="3c770-103">Gli spazi dei nomi vengono usati frequentemente nella programmazione C# in due modi.</span><span class="sxs-lookup"><span data-stu-id="3c770-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="3c770-104">Primo, .NET Framework usa gli spazi dei nomi per organizzare numerose classi, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="3c770-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  
+<span data-ttu-id="fcd2f-103">Gli spazi dei nomi vengono usati frequentemente nella programmazione C# in due modi.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="fcd2f-104">Primo, .NET Framework usa gli spazi dei nomi per organizzare numerose classi, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="fcd2f-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  
   
  [!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]  
   
-<span data-ttu-id="3c770-105">`System` è uno spazio dei nomi e `Console` è una classe in quello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="3c770-105">`System` is a namespace and `Console` is a class in that namespace.</span></span> <span data-ttu-id="3c770-106">Si può usare la parola chiave `using` in modo tale che il nome completo non sia necessario, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="3c770-106">The `using` keyword can be used so that the complete name is not required, as in the following example:</span></span>  
+<span data-ttu-id="fcd2f-105">`System` è uno spazio dei nomi e `Console` è una classe in quello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-105">`System` is a namespace and `Console` is a class in that namespace.</span></span> <span data-ttu-id="fcd2f-106">Si può usare la parola chiave `using` in modo tale che il nome completo non sia necessario, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="fcd2f-106">The `using` keyword can be used so that the complete name is not required, as in the following example:</span></span>  
   
  [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
  [!code-csharp[csProgGuide#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#25)]  
   
-<span data-ttu-id="3c770-107">Per altre informazioni, vedere la [direttiva using](../../language-reference/keywords/using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="3c770-107">For more information, see the [using Directive](../../language-reference/keywords/using-directive.md).</span></span>  
+<span data-ttu-id="fcd2f-107">Per altre informazioni, vedere la [direttiva using](../../language-reference/keywords/using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="fcd2f-107">For more information, see the [using Directive](../../language-reference/keywords/using-directive.md).</span></span>  
   
-<span data-ttu-id="3c770-108">Secondo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito dei nomi di classi e metodi nei progetti di programmazione più grandi.</span><span class="sxs-lookup"><span data-stu-id="3c770-108">Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects.</span></span> <span data-ttu-id="3c770-109">Usare la parola chiave [namespace](../../language-reference/keywords/namespace.md) per dichiarare uno spazio dei nomi, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="3c770-109">Use the [namespace](../../language-reference/keywords/namespace.md) keyword to declare a namespace, as in the following example:</span></span>  
+<span data-ttu-id="fcd2f-108">Secondo, dichiarando i propri spazi dei nomi è possibile controllare l'ambito dei nomi di classi e metodi nei progetti di programmazione più grandi.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-108">Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects.</span></span> <span data-ttu-id="fcd2f-109">Usare la parola chiave [namespace](../../language-reference/keywords/namespace.md) per dichiarare uno spazio dei nomi, come nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="fcd2f-109">Use the [namespace](../../language-reference/keywords/namespace.md) keyword to declare a namespace, as in the following example:</span></span>  
   
  [!code-csharp[csProgGuideNamespaces#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#6)]
 
-<span data-ttu-id="3c770-110">Il nome dello spazio dei nomi deve essere un [nome di identificatore](../inside-a-program/identifier-names.md) C# valido.</span><span class="sxs-lookup"><span data-stu-id="3c770-110">The name of the namespace must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span>
+<span data-ttu-id="fcd2f-110">Il nome dello spazio dei nomi deve essere un [nome di identificatore](../inside-a-program/identifier-names.md) C# valido.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-110">The name of the namespace must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span>
 
-## <a name="namespaces-overview"></a><span data-ttu-id="3c770-111">Panoramica degli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="3c770-111">Namespaces Overview</span></span>  
+## <a name="namespaces-overview"></a><span data-ttu-id="fcd2f-111">Panoramica degli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="fcd2f-111">Namespaces Overview</span></span>  
 
-<span data-ttu-id="3c770-112">Gli spazi dei nomi hanno le proprietà riportate di seguito:</span><span class="sxs-lookup"><span data-stu-id="3c770-112">Namespaces have the following properties:</span></span>  
+<span data-ttu-id="fcd2f-112">Gli spazi dei nomi hanno le proprietà riportate di seguito:</span><span class="sxs-lookup"><span data-stu-id="fcd2f-112">Namespaces have the following properties:</span></span>  
   
-- <span data-ttu-id="3c770-113">Consentono di organizzare progetti di codice di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="3c770-113">They organize large code projects.</span></span>  
-- <span data-ttu-id="3c770-114">Vengono delimitati usando l'operatore `.`.</span><span class="sxs-lookup"><span data-stu-id="3c770-114">They are delimited by using the `.` operator.</span></span>  
-- <span data-ttu-id="3c770-115">La direttiva `using` elimina la necessità di specificare il nome dello spazio dei nomi per ogni classe.</span><span class="sxs-lookup"><span data-stu-id="3c770-115">The `using` directive obviates the requirement to specify the name of the namespace for every class.</span></span>  
-- <span data-ttu-id="3c770-116">Lo spazio dei nomi `global` è lo spazio dei nomi "radice": `global::System` farà sempre riferimento allo spazio dei nomi <xref:System> di .NET.</span><span class="sxs-lookup"><span data-stu-id="3c770-116">The `global` namespace is the "root" namespace: `global::System` will always refer to the .NET <xref:System> namespace.</span></span>  
+- <span data-ttu-id="fcd2f-113">Consentono di organizzare progetti di codice di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-113">They organize large code projects.</span></span>  
+- <span data-ttu-id="fcd2f-114">Vengono delimitati usando l'operatore `.`.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-114">They are delimited by using the `.` operator.</span></span>  
+- <span data-ttu-id="fcd2f-115">La direttiva `using` elimina la necessità di specificare il nome dello spazio dei nomi per ogni classe.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-115">The `using` directive obviates the requirement to specify the name of the namespace for every class.</span></span>  
+- <span data-ttu-id="fcd2f-116">Lo spazio dei nomi `global` è lo spazio dei nomi "radice": `global::System` farà sempre riferimento allo spazio dei nomi <xref:System> di .NET.</span><span class="sxs-lookup"><span data-stu-id="fcd2f-116">The `global` namespace is the "root" namespace: `global::System` will always refer to the .NET <xref:System> namespace.</span></span>  
 
-## <a name="c-language-specification"></a><span data-ttu-id="3c770-117">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="3c770-117">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="fcd2f-117">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="fcd2f-117">C# Language Specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3c770-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c770-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcd2f-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fcd2f-118">See also</span></span>
 
-- [<span data-ttu-id="3c770-119">Uso degli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="3c770-119">Using Namespaces</span></span>](using-namespaces.md)
-- [<span data-ttu-id="3c770-120">Procedura: Usare l'alias dello spazio dei nomi globale</span><span class="sxs-lookup"><span data-stu-id="3c770-120">How to: Use the Global Namespace Alias</span></span>](how-to-use-the-global-namespace-alias.md)
-- [<span data-ttu-id="3c770-121">Procedura: Usare lo spazio dei nomi My</span><span class="sxs-lookup"><span data-stu-id="3c770-121">How to: Use the My Namespace</span></span>](how-to-use-the-my-namespace.md)
-- [<span data-ttu-id="3c770-122">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="3c770-122">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="3c770-123">Nomi di identificatore</span><span class="sxs-lookup"><span data-stu-id="3c770-123">Identifier names</span></span>](../inside-a-program/identifier-names.md)
-- [<span data-ttu-id="3c770-124">Parole chiave per gli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="3c770-124">Namespace Keywords</span></span>](../../language-reference/keywords/namespace-keywords.md)
-- [<span data-ttu-id="3c770-125">Direttiva using</span><span class="sxs-lookup"><span data-stu-id="3c770-125">using Directive</span></span>](../../language-reference/keywords/using-directive.md)
-- [<span data-ttu-id="3c770-126">:: (operatore)</span><span class="sxs-lookup"><span data-stu-id="3c770-126">:: Operator</span></span>](../../language-reference/operators/namespace-alias-qualifer.md)
-- [<span data-ttu-id="3c770-127">. (operatore)</span><span class="sxs-lookup"><span data-stu-id="3c770-127">. Operator</span></span>](../../language-reference/operators/member-access-operator.md)
+- [<span data-ttu-id="fcd2f-119">Uso degli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="fcd2f-119">Using Namespaces</span></span>](using-namespaces.md)
+- [<span data-ttu-id="fcd2f-120">Procedura: Usare l'alias dello spazio dei nomi globale</span><span class="sxs-lookup"><span data-stu-id="fcd2f-120">How to: Use the Global Namespace Alias</span></span>](how-to-use-the-global-namespace-alias.md)
+- [<span data-ttu-id="fcd2f-121">Procedura: Usare lo spazio dei nomi My</span><span class="sxs-lookup"><span data-stu-id="fcd2f-121">How to: Use the My Namespace</span></span>](how-to-use-the-my-namespace.md)
+- [<span data-ttu-id="fcd2f-122">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="fcd2f-122">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="fcd2f-123">Nomi di identificatore</span><span class="sxs-lookup"><span data-stu-id="fcd2f-123">Identifier names</span></span>](../inside-a-program/identifier-names.md)
+- [<span data-ttu-id="fcd2f-124">Parole chiave per gli spazi dei nomi</span><span class="sxs-lookup"><span data-stu-id="fcd2f-124">Namespace Keywords</span></span>](../../language-reference/keywords/namespace-keywords.md)
+- [<span data-ttu-id="fcd2f-125">Direttiva using</span><span class="sxs-lookup"><span data-stu-id="fcd2f-125">using Directive</span></span>](../../language-reference/keywords/using-directive.md)
+- [<span data-ttu-id="fcd2f-126">:: (operatore)</span><span class="sxs-lookup"><span data-stu-id="fcd2f-126">:: Operator</span></span>](../../language-reference/operators/namespace-alias-qualifer.md)
+- [<span data-ttu-id="fcd2f-127">. (operatore)</span><span class="sxs-lookup"><span data-stu-id="fcd2f-127">. Operator</span></span>](../../language-reference/operators/member-access-operator.md)

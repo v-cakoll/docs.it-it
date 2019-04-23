@@ -1,406 +1,399 @@
-items:
 - name: Archivio dei simboli di diagnostica
   href: index.md
   items:
-  - name: Interfacce dell'archivio dei simboli di diagnostica
-    href: diagnostics-symbol-store-interfaces.md
-    items:
-    - name: Interfaccia IBindingDisplay
-      href: ibindingdisplay-interface.md
+    - name: Interfacce dell'archivio dei simboli di diagnostica
+      href: diagnostics-symbol-store-interfaces.md
       items:
-      - name: Metodo GetCurrentDisplay
-        href: ibindingdisplay-getcurrentdisplay-method.md
-      - name: Metodo InitializeForProcess
-        href: ibindingdisplay-initializeforprocess-method.md
-    - name: Interfaccia IDebugAutoAttach
-      href: idebugautoattach-interface.md
+        - name: Interfaccia IBindingDisplay
+          href: ibindingdisplay-interface.md
+          items:
+            - name: Metodo GetCurrentDisplay
+              href: ibindingdisplay-getcurrentdisplay-method.md
+            - name: Metodo InitializeForProcess
+              href: ibindingdisplay-initializeforprocess-method.md
+        - name: Interfaccia IDebugAutoAttach
+          href: idebugautoattach-interface.md
+          items:
+            - name: Metodo AutoAttach
+              href: idebugautoattach-autoattach-method.md
+        - name: Interfaccia INotifyConnection2
+          href: inotifyconnection2-interface.md
+          items:
+            - name: Metodo RegisterNotifySource
+              href: inotifyconnection2-registernotifysource-method.md
+            - name: Metodo UnregisterNotifySource
+              href: inotifyconnection2-unregisternotifysource-method.md
+        - name: Interfaccia INotifySink2
+          href: inotifysink2-interface.md
+          items:
+            - name: Metodo OnSyncCallEnter
+              href: inotifysink2-onsynccallenter-method.md
+            - name: Metodo OnSyncCallExit
+              href: inotifysink2-onsynccallexit-method.md
+            - name: Metodo OnSyncCallOut
+              href: inotifysink2-onsynccallout-method.md
+            - name: Metodo OnSyncCallReturn
+              href: inotifysink2-onsynccallreturn-method.md
+        - name: Interfaccia INotifySource2
+          href: inotifysource2-interface.md
+          items:
+            - name: Metodo SetNotifyFilter
+              href: inotifysource2-setnotifyfilter-method.md
+        - name: Interfaccia ISymENCUnmanagedMethod
+          href: isymencunmanagedmethod-interface.md
+          items:
+            - name: Metodo GetDocumentsForMethod
+              href: isymencunmanagedmethod-getdocumentsformethod-method.md
+            - name: Metodo GetDocumentsForMethodCount
+              href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
+            - name: Metodo GetFileNameFromOffset
+              href: isymencunmanagedmethod-getfilenamefromoffset-method.md
+            - name: Metodo GetLineFromOffset
+              href: isymencunmanagedmethod-getlinefromoffset-method.md
+            - name: Metodo GetSourceExtentInDocument
+              href: isymencunmanagedmethod-getsourceextentindocument-method.md
+        - name: Interfaccia ISymUnmanagedAsyncMethod
+          href: isymunmanagedasyncmethod-interface.md
+          items:
+            - name: Metodo GetAsyncStepInfo
+              href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
+            - name: Metodo GetAsyncStepInfoCount
+              href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
+            - name: Metodo GetCatchHandlerILOffset
+              href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
+            - name: Metodo GetKickoffMethod
+              href: isymunmanagedasyncmethod-getkickoffmethod-method.md
+            - name: Metodo HasCatchHandlerILOffset
+              href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
+            - name: Metodo IsAsyncMethod
+              href: isymunmanagedasyncmethod-isasyncmethod-method.md
+        - name: Interfaccia ISymUnmanagedAsyncMethodPropertiesWriter
+          href: isymunmanagedasyncmethodpropertieswriter-interface.md
+          items:
+            - name: Metodo DefineAsyncStepInfo
+              href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
+            - name: Metodo DefineCatchHandlerILOffset
+              href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
+            - name: Metodo DefineKickoffMethod
+              href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
+        - name: Interfaccia ISymUnmanagedBinder
+          href: isymunmanagedbinder-interface.md
+          items:
+            - name: Metodo GetReaderForFile
+              href: isymunmanagedbinder-getreaderforfile-method.md
+            - name: Metodo GetReaderFromStream
+              href: isymunmanagedbinder-getreaderfromstream-method.md
+        - name: Interfaccia ISymUnmanagedBinder2
+          href: isymunmanagedbinder2-interface.md
+          items:
+            - name: Metodo GetReaderForFile2
+              href: isymunmanagedbinder2-getreaderforfile2-method.md
+        - name: Interfaccia ISymUnmanagedBinder3
+          href: isymunmanagedbinder3-interface.md
+          items:
+            - name: Metodo GetReaderFromCallback
+              href: isymunmanagedbinder3-getreaderfromcallback-method.md
+        - name: Interfaccia ISymUnmanagedConstant
+          href: isymunmanagedconstant-interface.md
+          items:
+            - name: Metodo GetName
+              href: isymunmanagedconstant-getname-method.md
+            - name: Metodo GetSignature
+              href: isymunmanagedconstant-getsignature-method.md
+            - name: Metodo GetValue
+              href: isymunmanagedconstant-getvalue-method.md
+        - name: Interfaccia ISymUnmanagedDispose
+          href: isymunmanageddispose-interface.md
+          items:
+            - name: Metodo Destroy
+              href: isymunmanageddispose-destroy-method.md
+        - name: Interfaccia ISymUnmanagedDocument
+          href: isymunmanageddocument-interface.md
+          items:
+            - name: Metodo FindClosestLine
+              href: isymunmanageddocument-findclosestline-method.md
+            - name: Metodo GetCheckSum
+              href: isymunmanageddocument-getchecksum-method.md
+            - name: Metodo GetCheckSumAlgorithmId
+              href: isymunmanageddocument-getchecksumalgorithmid-method.md
+            - name: Metodo GetDocumentType
+              href: isymunmanageddocument-getdocumenttype-method.md
+            - name: Metodo GetLanguage
+              href: isymunmanageddocument-getlanguage-method.md
+            - name: Metodo GetLanguageVendor
+              href: isymunmanageddocument-getlanguagevendor-method.md
+            - name: Metodo GetSourceLength
+              href: isymunmanageddocument-getsourcelength-method.md
+            - name: Metodo GetSourceRange
+              href: isymunmanageddocument-getsourcerange-method.md
+            - name: Metodo GetURL
+              href: isymunmanageddocument-geturl-method.md
+            - name: Metodo HasEmbeddedSource
+              href: isymunmanageddocument-hasembeddedsource-method.md
+        - name: Interfaccia ISymUnmanagedDocumentWriter
+          href: isymunmanageddocumentwriter-interface.md
+          items:
+            - name: Metodo SetCheckSum
+              href: isymunmanageddocumentwriter-setchecksum-method.md
+            - name: Metodo SetSource
+              href: isymunmanageddocumentwriter-setsource-method.md
+        - name: Interfaccia ISymUnmanagedENCUpdate
+          href: isymunmanagedencupdate-interface.md
+          items:
+            - name: Metodo GetLocalVariableCount
+              href: isymunmanagedencupdate-getlocalvariablecount-method.md
+            - name: Metodo GetLocalVariables
+              href: isymunmanagedencupdate-getlocalvariables-method.md
+            - name: Metodo InitializeForEnc
+              href: isymunmanagedencupdate-initializeforenc-method.md
+            - name: Metodo UpdateMethodLines
+              href: isymunmanagedencupdate-updatemethodlines-method.md
+            - name: Metodo UpdateSymbolStore2
+              href: isymunmanagedencupdate-updatesymbolstore2-method.md
+        - name: Interfaccia ISymUnmanagedMethod
+          href: isymunmanagedmethod-interface.md
+          items:
+            - name: Metodo GetNamespace
+              href: isymunmanagedmethod-getnamespace-method.md
+            - name: Metodo GetOffset
+              href: isymunmanagedmethod-getoffset-method.md
+            - name: Metodo GetParameters
+              href: isymunmanagedmethod-getparameters-method.md
+            - name: Metodo GetRanges
+              href: isymunmanagedmethod-getranges-method.md
+            - name: Metodo GetRootScope
+              href: isymunmanagedmethod-getrootscope-method.md
+            - name: Metodo GetScopeFromOffset
+              href: isymunmanagedmethod-getscopefromoffset-method.md
+            - name: Metodo GetSequencePointCount
+              href: isymunmanagedmethod-getsequencepointcount-method.md
+            - name: Metodo GetSequencePoints
+              href: isymunmanagedmethod-getsequencepoints-method.md
+            - name: Metodo GetSourceStartEnd
+              href: isymunmanagedmethod-getsourcestartend-method.md
+            - name: Metodo GetToken
+              href: isymunmanagedmethod-gettoken-method.md
+        - name: Interfaccia ISymUnmanagedNamespace
+          href: isymunmanagednamespace-interface.md
+          items:
+            - name: Metodo GetName
+              href: isymunmanagednamespace-getname-method.md
+            - name: Metodo GetNamespaces
+              href: isymunmanagednamespace-getnamespaces-method.md
+            - name: Metodo GetVariables
+              href: isymunmanagednamespace-getvariables-method.md
+        - name: Interfaccia ISymUnmanagedReader
+          href: isymunmanagedreader-interface.md
+          items:
+            - name: Metodo GetDocument
+              href: isymunmanagedreader-getdocument-method.md
+            - name: Metodo GetDocuments
+              href: isymunmanagedreader-getdocuments-method.md
+            - name: Metodo GetDocumentVersion
+              href: isymunmanagedreader-getdocumentversion-method.md
+            - name: Metodo GetGlobalVariables
+              href: isymunmanagedreader-getglobalvariables-method.md
+            - name: Metodo GetMethod
+              href: isymunmanagedreader-getmethod-method.md
+            - name: Metodo GetMethodByVersion
+              href: isymunmanagedreader-getmethodbyversion-method.md
+            - name: Metodo GetMethodFromDocumentPosition
+              href: isymunmanagedreader-getmethodfromdocumentposition-method.md
+            - name: Metodo GetMethodsFromDocumentPosition
+              href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
+            - name: Metodo GetMethodVersion
+              href: isymunmanagedreader-getmethodversion-method.md
+            - name: Metodo GetNamespaces
+              href: isymunmanagedreader-getnamespaces-method.md
+            - name: Metodo GetSymAttribute
+              href: isymunmanagedreader-getsymattribute-method.md
+            - name: Metodo GetSymbolStoreFileName
+              href: isymunmanagedreader-getsymbolstorefilename-method.md
+            - name: Metodo GetUserEntryPoint
+              href: isymunmanagedreader-getuserentrypoint-method.md
+            - name: Metodo GetVariables
+              href: isymunmanagedreader-getvariables-method.md
+            - name: Metodo Initialize
+              href: isymunmanagedreader-initialize-method.md
+            - name: Metodo ReplaceSymbolStore
+              href: isymunmanagedreader-replacesymbolstore-method.md
+            - name: Metodo UpdateSymbolStore
+              href: isymunmanagedreader-updatesymbolstore-method.md
+        - name: Interfaccia ISymUnmanagedReader2
+          href: isymunmanagedreader2-interface.md
+          items:
+            - name: Metodo GetMethodByVersionPreRemap
+              href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
+            - name: Metodo GetMethodsInDocument
+              href: isymunmanagedreader2-getmethodsindocument-method.md
+            - name: Metodo GetSymAttributePreRemap
+              href: isymunmanagedreader2-getsymattributepreremap-method.md
+        - name: Interfaccia ISymUnmanagedReaderSymbolSearchInfo
+          href: isymunmanagedreadersymbolsearchinfo-interface.md
+          items:
+            - name: Metodo GetSymbolSearchInfoCount
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
+            - name: Metodo GetSymbolSearchInfo
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
+        - name: Interfaccia ISymUnmanagedScope
+          href: isymunmanagedscope-interface.md
+          items:
+            - name: Metodo GetChildren
+              href: isymunmanagedscope-getchildren-method.md
+            - name: Metodo GetEndOffset
+              href: isymunmanagedscope-getendoffset-method.md
+            - name: Metodo GetLocalCount
+              href: isymunmanagedscope-getlocalcount-method.md
+            - name: Metodo GetLocals
+              href: isymunmanagedscope-getlocals-method.md
+            - name: Metodo GetMethod
+              href: isymunmanagedscope-getmethod-method.md
+            - name: Metodo GetNamespaces
+              href: isymunmanagedscope-getnamespaces-method.md
+            - name: Metodo GetParent
+              href: isymunmanagedscope-getparent-method.md
+            - name: Metodo GetStartOffset
+              href: isymunmanagedscope-getstartoffset-method.md
+        - name: Interfaccia ISymUnmanagedScope2
+          href: isymunmanagedscope2-interface.md
+          items:
+            - name: Metodo GetConstantCount
+              href: isymunmanagedscope2-getconstantcount-method.md
+            - name: Metodo GetConstants
+              href: isymunmanagedscope2-getconstants-method.md
+        - name: Interfaccia ISymUnmanagedSourceServerModule
+          href: isymunmanagedsourceservermodule-interface.md
+          items:
+            - name: Metodo GetSourceServerData
+              href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
+        - name: Interfaccia ISymUnmanagedSymbolSearchInfo
+          href: isymunmanagedsymbolsearchinfo-interface.md
+          items:
+            - name: Metodo GetHRESULT
+              href: isymunmanagedsymbolsearchinfo-gethresult-method.md
+            - name: Metodo GetSearchPath
+              href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
+            - name: Metodo GetSearchPathLength
+              href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
+        - name: Interfaccia ISymUnmanagedVariable
+          href: isymunmanagedvariable-interface.md
+          items:
+            - name: Metodo GetAddressField1
+              href: isymunmanagedvariable-getaddressfield1-method.md
+            - name: Metodo GetAddressField2
+              href: isymunmanagedvariable-getaddressfield2-method.md
+            - name: Metodo GetAddressField3
+              href: isymunmanagedvariable-getaddressfield3-method.md
+            - name: Metodo GetAddressKind
+              href: isymunmanagedvariable-getaddresskind-method.md
+            - name: Metodo GetAttributes
+              href: isymunmanagedvariable-getattributes-method.md
+            - name: Metodo GetEndOffset
+              href: isymunmanagedvariable-getendoffset-method.md
+            - name: Metodo GetName
+              href: isymunmanagedvariable-getname-method.md
+            - name: Metodo GetSignature
+              href: isymunmanagedvariable-getsignature-method.md
+            - name: Metodo GetStartOffset
+              href: isymunmanagedvariable-getstartoffset-method.md
+        - name: Interfaccia ISymUnmanagedWriter
+          href: isymunmanagedwriter-interface.md
+          items:
+            - name: Metodo Abort
+              href: isymunmanagedwriter-abort-method.md
+            - name: Metodo Close
+              href: isymunmanagedwriter-close-method.md
+            - name: Metodo CloseMethod
+              href: isymunmanagedwriter-closemethod-method.md
+            - name: Metodo CloseNamespace
+              href: isymunmanagedwriter-closenamespace-method.md
+            - name: Metodo CloseScope
+              href: isymunmanagedwriter-closescope-method.md
+            - name: Metodo DefineConstant
+              href: isymunmanagedwriter-defineconstant-method.md
+            - name: Metodo DefineDocument
+              href: isymunmanagedwriter-definedocument-method.md
+            - name: Metodo DefineField
+              href: isymunmanagedwriter-definefield-method.md
+            - name: Metodo DefineGlobalVariable
+              href: isymunmanagedwriter-defineglobalvariable-method.md
+            - name: Metodo DefineLocalVariable
+              href: isymunmanagedwriter-definelocalvariable-method.md
+            - name: Metodo DefineParameter
+              href: isymunmanagedwriter-defineparameter-method.md
+            - name: Metodo DefineSequencePoints
+              href: isymunmanagedwriter-definesequencepoints-method.md
+            - name: Metodo GetDebugInfo
+              href: isymunmanagedwriter-getdebuginfo-method.md
+            - name: Metodo Initialize
+              href: isymunmanagedwriter-initialize-method.md
+            - name: Metodo Initialize2
+              href: isymunmanagedwriter-initialize2-method.md
+            - name: Metodo OpenMethod
+              href: isymunmanagedwriter-openmethod-method.md
+            - name: Metodo OpenNamespace
+              href: isymunmanagedwriter-opennamespace-method.md
+            - name: Metodo OpenScope
+              href: isymunmanagedwriter-openscope-method.md
+            - name: Metodo RemapToken
+              href: isymunmanagedwriter-remaptoken-method.md
+            - name: Metodo SetMethodSourceRange
+              href: isymunmanagedwriter-setmethodsourcerange-method.md
+            - name: Metodo SetScopeRange
+              href: isymunmanagedwriter-setscoperange-method.md
+            - name: Metodo SetSymAttribute
+              href: isymunmanagedwriter-setsymattribute-method.md
+            - name: Metodo SetUserEntryPoint
+              href: isymunmanagedwriter-setuserentrypoint-method.md
+            - name: Metodo UsingNamespace
+              href: isymunmanagedwriter-usingnamespace-method.md
+        - name: Interfaccia ISymUnmanagedWriter2
+          href: isymunmanagedwriter2-interface.md
+          items:
+            - name: Metodo DefineConstant2
+              href: isymunmanagedwriter2-defineconstant2-method.md
+            - name: Metodo DfineGlobalVariable2
+              href: isymunmanagedwriter2-defineglobalvariable2-method.md
+            - name: Metodo DefineLocalVariable2
+              href: isymunmanagedwriter2-definelocalvariable2-method.md
+        - name: Interfaccia ISymUnmanagedWriter3
+          href: isymunmanagedwriter3-interface.md
+          items:
+            - name: Metodo Commit
+              href: isymunmanagedwriter3-commit-method.md
+            - name: Metodo OpenMethod2
+              href: isymunmanagedwriter3-openmethod2-method.md
+        - name: Interfaccia ISymUnmanagedWriter4
+          href: isymunmanagedwriter4-interface.md
+          items:
+            - name: Metodo GetDebugInfoWithPadding
+              href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
+        - name: Interfaccia ISymUnmanagedWriter5
+          href: isymunmanagedwriter5-interface.md
+          items:
+            - name: Metodo CloseMapTokensToSourceSpans
+              href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
+            - name: Metodo MapTokenToSourceSpan
+              href: isymunmanagedwriter5-maptokentosourcespan-method.md
+            - name: Metodo OpenMapTokensToSourceSpans
+              href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
+    - name: Enumerazioni dell'archivio dei simboli di diagnostica
+      href: diagnostics-symbol-store-enumerations.md
       items:
-      - name: Metodo AutoAttach
-        href: idebugautoattach-autoattach-method.md
-    - name: Interfaccia INotifyConnection2
-      href: inotifyconnection2-interface.md
+        - name: Enumerazione CorSymAddrKind
+          href: corsymaddrkind-enumeration.md
+        - name: Enumerazione CorSymSearchPolicyAttributes
+          href: corsymsearchpolicyattributes-enumeration.md
+        - name: Enumerazione CorSymVarFlag
+          href: corsymvarflag-enumeration.md
+        - name: Enumerazione NOTIFY_FILTER
+          href: notify-filter-enumeration.md
+    - name: Strutture dell'archivio dei simboli di diagnostica
+      href: diagnostics-symbol-store-structures.md
       items:
-      - name: Metodo RegisterNotifySource
-        href: inotifyconnection2-registernotifysource-method.md
-      - name: Metodo UnregisterNotifySource
-        href: inotifyconnection2-unregisternotifysource-method.md
-    - name: Interfaccia INotifySink2
-      href: inotifysink2-interface.md
-      items:
-      - name: Metodo OnSyncCallEnter
-        href: inotifysink2-onsynccallenter-method.md
-      - name: Metodo OnSyncCallExit
-        href: inotifysink2-onsynccallexit-method.md
-      - name: Metodo OnSyncCallOut
-        href: inotifysink2-onsynccallout-method.md
-      - name: Metodo OnSyncCallReturn
-        href: inotifysink2-onsynccallreturn-method.md
-    - name: Interfaccia INotifySource2
-      href: inotifysource2-interface.md
-      items:
-      - name: Metodo SetNotifyFilter
-        href: inotifysource2-setnotifyfilter-method.md
-    - name: Interfaccia ISymENCUnmanagedMethod
-      href: isymencunmanagedmethod-interface.md
-      items:
-      - name: Metodo GetDocumentsForMethod
-        href: isymencunmanagedmethod-getdocumentsformethod-method.md
-      - name: Metodo GetDocumentsForMethodCount
-        href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
-      - name: Metodo GetFileNameFromOffset
-        href: isymencunmanagedmethod-getfilenamefromoffset-method.md
-      - name: Metodo GetLineFromOffset
-        href: isymencunmanagedmethod-getlinefromoffset-method.md
-      - name: Metodo GetSourceExtentInDocument
-        href: isymencunmanagedmethod-getsourceextentindocument-method.md
-    - name: Interfaccia ISymUnmanagedAsyncMethod
-      href: isymunmanagedasyncmethod-interface.md
-      items:
-      - name: Metodo GetAsyncStepInfo
-        href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
-      - name: Metodo GetAsyncStepInfoCount
-        href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
-      - name: Metodo GetCatchHandlerILOffset
-        href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
-      - name: Metodo GetKickoffMethod
-        href: isymunmanagedasyncmethod-getkickoffmethod-method.md
-      - name: Metodo HasCatchHandlerILOffset
-        href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
-      - name: Metodo IsAsyncMethod
-        href: isymunmanagedasyncmethod-isasyncmethod-method.md
-    - name: Interfaccia ISymUnmanagedAsyncMethodPropertiesWriter
-      href: isymunmanagedasyncmethodpropertieswriter-interface.md
-      items:
-      - name: Metodo DefineAsyncStepInfo
-        href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
-      - name: Metodo DefineCatchHandlerILOffset
-        href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
-      - name: Metodo DefineKickoffMethod
-        href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
-    - name: Interfaccia ISymUnmanagedBinder
-      href: isymunmanagedbinder-interface.md
-      items:
-      - name: Metodo GetReaderForFile
-        href: isymunmanagedbinder-getreaderforfile-method.md
-      - name: Metodo GetReaderFromStream
-        href: isymunmanagedbinder-getreaderfromstream-method.md
-    - name: Interfaccia ISymUnmanagedBinder2
-      href: isymunmanagedbinder2-interface.md
-      items:
-      - name: Metodo GetReaderForFile2
-        href: isymunmanagedbinder2-getreaderforfile2-method.md
-    - name: Interfaccia ISymUnmanagedBinder3
-      href: isymunmanagedbinder3-interface.md
-      items:
-      - name: Metodo GetReaderFromCallback
-        href: isymunmanagedbinder3-getreaderfromcallback-method.md
-    - name: Interfaccia ISymUnmanagedConstant
-      href: isymunmanagedconstant-interface.md
-      items:
-      - name: Metodo GetName
-        href: isymunmanagedconstant-getname-method.md
-      - name: Metodo GetSignature
-        href: isymunmanagedconstant-getsignature-method.md
-      - name: Metodo GetValue
-        href: isymunmanagedconstant-getvalue-method.md
-    - name: Interfaccia ISymUnmanagedDispose
-      href: isymunmanageddispose-interface.md
-      items:
-      - name: Metodo Destroy
-        href: isymunmanageddispose-destroy-method.md
-    - name: Interfaccia ISymUnmanagedDocument
-      href: isymunmanageddocument-interface.md
-      items:
-      - name: Metodo FindClosestLine
-        href: isymunmanageddocument-findclosestline-method.md
-      - name: Metodo GetCheckSum
-        href: isymunmanageddocument-getchecksum-method.md
-      - name: Metodo GetCheckSumAlgorithmId
-        href: isymunmanageddocument-getchecksumalgorithmid-method.md
-      - name: Metodo GetDocumentType
-        href: isymunmanageddocument-getdocumenttype-method.md
-      - name: Metodo GetLanguage
-        href: isymunmanageddocument-getlanguage-method.md
-      - name: Metodo GetLanguageVendor
-        href: isymunmanageddocument-getlanguagevendor-method.md
-      - name: Metodo GetSourceLength
-        href: isymunmanageddocument-getsourcelength-method.md
-      - name: Metodo GetSourceRange
-        href: isymunmanageddocument-getsourcerange-method.md
-      - name: Metodo GetURL
-        href: isymunmanageddocument-geturl-method.md
-      - name: Metodo HasEmbeddedSource
-        href: isymunmanageddocument-hasembeddedsource-method.md
-    - name: Interfaccia ISymUnmanagedDocumentWriter
-      href: isymunmanageddocumentwriter-interface.md
-      items:
-      - name: Metodo SetCheckSum
-        href: isymunmanageddocumentwriter-setchecksum-method.md
-      - name: Metodo SetSource
-        href: isymunmanageddocumentwriter-setsource-method.md
-    - name: Interfaccia ISymUnmanagedENCUpdate
-      href: isymunmanagedencupdate-interface.md
-      items:
-      - name: Metodo GetLocalVariableCount
-        href: isymunmanagedencupdate-getlocalvariablecount-method.md
-      - name: Metodo GetLocalVariables
-        href: isymunmanagedencupdate-getlocalvariables-method.md
-      - name: Metodo InitializeForEnc
-        href: isymunmanagedencupdate-initializeforenc-method.md
-      - name: Metodo UpdateMethodLines
-        href: isymunmanagedencupdate-updatemethodlines-method.md
-      - name: Metodo UpdateSymbolStore2
-        href: isymunmanagedencupdate-updatesymbolstore2-method.md
-    - name: Interfaccia ISymUnmanagedMethod
-      href: isymunmanagedmethod-interface.md
-      items:
-      - name: Metodo GetNamespace
-        href: isymunmanagedmethod-getnamespace-method.md
-      - name: Metodo GetOffset
-        href: isymunmanagedmethod-getoffset-method.md
-      - name: Metodo GetParameters
-        href: isymunmanagedmethod-getparameters-method.md
-      - name: Metodo GetRanges
-        href: isymunmanagedmethod-getranges-method.md
-      - name: Metodo GetRootScope
-        href: isymunmanagedmethod-getrootscope-method.md
-      - name: Metodo GetScopeFromOffset
-        href: isymunmanagedmethod-getscopefromoffset-method.md
-      - name: Metodo GetSequencePointCount
-        href: isymunmanagedmethod-getsequencepointcount-method.md
-      - name: Metodo GetSequencePoints
-        href: isymunmanagedmethod-getsequencepoints-method.md
-      - name: Metodo GetSourceStartEnd
-        href: isymunmanagedmethod-getsourcestartend-method.md
-      - name: Metodo GetToken
-        href: isymunmanagedmethod-gettoken-method.md
-    - name: Interfaccia ISymUnmanagedNamespace
-      href: isymunmanagednamespace-interface.md
-      items:
-      - name: Metodo GetName
-        href: isymunmanagednamespace-getname-method.md
-      - name: Metodo GetNamespaces
-        href: isymunmanagednamespace-getnamespaces-method.md
-      - name: Metodo GetVariables
-        href: isymunmanagednamespace-getvariables-method.md
-    - name: Interfaccia ISymUnmanagedReader
-      href: isymunmanagedreader-interface.md
-      items:
-      - name: Metodo GetDocument
-        href: isymunmanagedreader-getdocument-method.md
-      - name: Metodo GetDocuments
-        href: isymunmanagedreader-getdocuments-method.md
-      - name: Metodo GetDocumentVersion
-        href: isymunmanagedreader-getdocumentversion-method.md
-      - name: Metodo GetGlobalVariables
-        href: isymunmanagedreader-getglobalvariables-method.md
-      - name: Metodo GetMethod
-        href: isymunmanagedreader-getmethod-method.md
-      - name: Metodo GetMethodByVersion
-        href: isymunmanagedreader-getmethodbyversion-method.md
-      - name: Metodo GetMethodFromDocumentPosition
-        href: isymunmanagedreader-getmethodfromdocumentposition-method.md
-      - name: Metodo GetMethodsFromDocumentPosition
-        href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
-      - name: Metodo GetMethodVersion
-        href: isymunmanagedreader-getmethodversion-method.md
-      - name: Metodo GetNamespaces
-        href: isymunmanagedreader-getnamespaces-method.md
-      - name: Metodo GetSymAttribute
-        href: isymunmanagedreader-getsymattribute-method.md
-      - name: Metodo GetSymbolStoreFileName
-        href: isymunmanagedreader-getsymbolstorefilename-method.md
-      - name: Metodo GetUserEntryPoint
-        href: isymunmanagedreader-getuserentrypoint-method.md
-      - name: Metodo GetVariables
-        href: isymunmanagedreader-getvariables-method.md
-      - name: Metodo Initialize
-        href: isymunmanagedreader-initialize-method.md
-      - name: Metodo ReplaceSymbolStore
-        href: isymunmanagedreader-replacesymbolstore-method.md
-      - name: Metodo UpdateSymbolStore
-        href: isymunmanagedreader-updatesymbolstore-method.md
-    - name: Interfaccia ISymUnmanagedReader2
-      href: isymunmanagedreader2-interface.md
-      items:
-      - name: Metodo GetMethodByVersionPreRemap
-        href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
-      - name: Metodo GetMethodsInDocument
-        href: isymunmanagedreader2-getmethodsindocument-method.md
-      - name: Metodo GetSymAttributePreRemap
-        href: isymunmanagedreader2-getsymattributepreremap-method.md
-    - name: Interfaccia ISymUnmanagedReaderSymbolSearchInfo
-      href: isymunmanagedreadersymbolsearchinfo-interface.md
-      items:
-      - name: Metodo GetSymbolSearchInfoCount
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
-      - name: Metodo GetSymbolSearchInfo
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
-    - name: Interfaccia ISymUnmanagedScope
-      href: isymunmanagedscope-interface.md
-      items:
-      - name: Metodo GetChildren
-        href: isymunmanagedscope-getchildren-method.md
-      - name: Metodo GetEndOffset
-        href: isymunmanagedscope-getendoffset-method.md
-      - name: Metodo GetLocalCount
-        href: isymunmanagedscope-getlocalcount-method.md
-      - name: Metodo GetLocals
-        href: isymunmanagedscope-getlocals-method.md
-      - name: Metodo GetMethod
-        href: isymunmanagedscope-getmethod-method.md
-      - name: Metodo GetNamespaces
-        href: isymunmanagedscope-getnamespaces-method.md
-      - name: Metodo GetParent
-        href: isymunmanagedscope-getparent-method.md
-      - name: Metodo GetStartOffset
-        href: isymunmanagedscope-getstartoffset-method.md
-    - name: Interfaccia ISymUnmanagedScope2
-      href: isymunmanagedscope2-interface.md
-      items:
-      - name: Metodo GetConstantCount
-        href: isymunmanagedscope2-getconstantcount-method.md
-      - name: Metodo GetConstants
-        href: isymunmanagedscope2-getconstants-method.md
-    - name: Interfaccia ISymUnmanagedSourceServerModule
-      href: isymunmanagedsourceservermodule-interface.md
-      items:
-      - name: Metodo GetSourceServerData
-        href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
-    - name: Interfaccia ISymUnmanagedSymbolSearchInfo
-      href: isymunmanagedsymbolsearchinfo-interface.md
-      items:
-      - name: Metodo GetHRESULT
-        href: isymunmanagedsymbolsearchinfo-gethresult-method.md
-      - name: Metodo GetSearchPath
-        href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
-      - name: Metodo GetSearchPathLength
-        href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
-    - name: Interfaccia ISymUnmanagedVariable
-      href: isymunmanagedvariable-interface.md
-      items:
-      - name: Metodo GetAddressField1
-        href: isymunmanagedvariable-getaddressfield1-method.md
-      - name: Metodo GetAddressField2
-        href: isymunmanagedvariable-getaddressfield2-method.md
-      - name: Metodo GetAddressField3
-        href: isymunmanagedvariable-getaddressfield3-method.md
-      - name: Metodo GetAddressKind
-        href: isymunmanagedvariable-getaddresskind-method.md
-      - name: Metodo GetAttributes
-        href: isymunmanagedvariable-getattributes-method.md
-      - name: Metodo GetEndOffset
-        href: isymunmanagedvariable-getendoffset-method.md
-      - name: Metodo GetName
-        href: isymunmanagedvariable-getname-method.md
-      - name: Metodo GetSignature
-        href: isymunmanagedvariable-getsignature-method.md
-      - name: Metodo GetStartOffset
-        href: isymunmanagedvariable-getstartoffset-method.md
-    - name: Interfaccia ISymUnmanagedWriter
-      href: isymunmanagedwriter-interface.md
-      items:
-      - name: Metodo Abort
-        href: isymunmanagedwriter-abort-method.md
-      - name: Metodo Close
-        href: isymunmanagedwriter-close-method.md
-      - name: Metodo CloseMethod
-        href: isymunmanagedwriter-closemethod-method.md
-      - name: Metodo CloseNamespace
-        href: isymunmanagedwriter-closenamespace-method.md
-      - name: Metodo CloseScope
-        href: isymunmanagedwriter-closescope-method.md
-      - name: Metodo DefineConstant
-        href: isymunmanagedwriter-defineconstant-method.md
-      - name: Metodo DefineDocument
-        href: isymunmanagedwriter-definedocument-method.md
-      - name: Metodo DefineField
-        href: isymunmanagedwriter-definefield-method.md
-      - name: Metodo DefineGlobalVariable
-        href: isymunmanagedwriter-defineglobalvariable-method.md
-      - name: Metodo DefineLocalVariable
-        href: isymunmanagedwriter-definelocalvariable-method.md
-      - name: Metodo DefineParameter
-        href: isymunmanagedwriter-defineparameter-method.md
-      - name: Metodo DefineSequencePoints
-        href: isymunmanagedwriter-definesequencepoints-method.md
-      - name: Metodo GetDebugInfo
-        href: isymunmanagedwriter-getdebuginfo-method.md
-      - name: Metodo Initialize
-        href: isymunmanagedwriter-initialize-method.md
-      - name: Metodo Initialize2
-        href: isymunmanagedwriter-initialize2-method.md
-      - name: Metodo OpenMethod
-        href: isymunmanagedwriter-openmethod-method.md
-      - name: Metodo OpenNamespace
-        href: isymunmanagedwriter-opennamespace-method.md
-      - name: Metodo OpenScope
-        href: isymunmanagedwriter-openscope-method.md
-      - name: Metodo RemapToken
-        href: isymunmanagedwriter-remaptoken-method.md
-      - name: Metodo SetMethodSourceRange
-        href: isymunmanagedwriter-setmethodsourcerange-method.md
-      - name: Metodo SetScopeRange
-        href: isymunmanagedwriter-setscoperange-method.md
-      - name: Metodo SetSymAttribute
-        href: isymunmanagedwriter-setsymattribute-method.md
-      - name: Metodo SetUserEntryPoint
-        href: isymunmanagedwriter-setuserentrypoint-method.md
-      - name: Metodo UsingNamespace
-        href: isymunmanagedwriter-usingnamespace-method.md
-    - name: Interfaccia ISymUnmanagedWriter2
-      href: isymunmanagedwriter2-interface.md
-      items:
-      - name: Metodo DefineConstant2
-        href: isymunmanagedwriter2-defineconstant2-method.md
-      - name: Metodo DfineGlobalVariable2
-        href: isymunmanagedwriter2-defineglobalvariable2-method.md
-      - name: Metodo DefineLocalVariable2
-        href: isymunmanagedwriter2-definelocalvariable2-method.md
-    - name: Interfaccia ISymUnmanagedWriter3
-      href: isymunmanagedwriter3-interface.md
-      items:
-      - name: Metodo Commit
-        href: isymunmanagedwriter3-commit-method.md
-      - name: Metodo OpenMethod2
-        href: isymunmanagedwriter3-openmethod2-method.md
-    - name: Interfaccia ISymUnmanagedWriter4
-      href: isymunmanagedwriter4-interface.md
-      items:
-      - name: Metodo GetDebugInfoWithPadding
-        href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
-    - name: Interfaccia ISymUnmanagedWriter5
-      href: isymunmanagedwriter5-interface.md
-      items:
-      - name: Metodo CloseMapTokensToSourceSpans
-        href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
-      - name: Metodo MapTokenToSourceSpan
-        href: isymunmanagedwriter5-maptokentosourcespan-method.md
-      - name: Metodo OpenMapTokensToSourceSpans
-        href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
-  - name: Enumerazioni dell'archivio dei simboli di diagnostica
-    href: diagnostics-symbol-store-enumerations.md
-    items:
-    - name: Enumerazione CorSymAddrKind
-      href: corsymaddrkind-enumeration.md
-    - name: Enumerazione CorSymSearchPolicyAttributes
-      href: corsymsearchpolicyattributes-enumeration.md
-    - name: Enumerazione CorSymVarFlag
-      href: corsymvarflag-enumeration.md
-    - name: Enumerazione NOTIFY_FILTER
-      href: notify-filter-enumeration.md
-  - name: Strutture dell'archivio dei simboli di diagnostica
-    href: diagnostics-symbol-store-structures.md
-    items:
-    - name: Struttura CALL_ID
-      href: call-id-structure.md
-    - name: Struttura SYMLINEDELTA
-      href: symlinedelta-structure.md
-    - name: Struttura USER_THREAD
-      href: user-thread-structure.md
-ms.openlocfilehash: e9bec23db08e17d11aa5cabadb8967bcc8b32b77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468924"
+        - name: Struttura CALL_ID
+          href: call-id-structure.md
+        - name: Struttura SYMLINEDELTA
+          href: symlinedelta-structure.md
+        - name: Struttura USER_THREAD
+          href: user-thread-structure.md

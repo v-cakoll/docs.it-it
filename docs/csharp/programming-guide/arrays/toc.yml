@@ -1,24 +1,17 @@
-items:
 - name: Matrici
   href: index.md
   items:
-  - name: Matrici come oggetti
-    href: arrays-as-objects.md
-  - name: Matrici unidimensionali
-    href: single-dimensional-arrays.md
-  - name: Matrici multidimensionali
-    href: multidimensional-arrays.md
-  - name: Matrici irregolari
-    href: jagged-arrays.md
-  - name: Uso di foreach con matrici
-    href: using-foreach-with-arrays.md
-  - name: Passaggio di matrici come argomenti
-    href: passing-arrays-as-arguments.md
-  - name: Matrici tipizzate in modo implicito
-    href: implicitly-typed-arrays.md
-ms.openlocfilehash: b587998861fba9ae9f13da1e58fd24e9279c6224
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469559"
+    - name: Matrici come oggetti
+      href: arrays-as-objects.md
+    - name: Matrici unidimensionali
+      href: single-dimensional-arrays.md
+    - name: Matrici multidimensionali
+      href: multidimensional-arrays.md
+    - name: Matrici irregolari
+      href: jagged-arrays.md
+    - name: Uso di foreach con matrici
+      href: using-foreach-with-arrays.md
+    - name: Passaggio di matrici come argomenti
+      href: passing-arrays-as-arguments.md
+    - name: Matrici tipizzate in modo implicito
+      href: implicitly-typed-arrays.md

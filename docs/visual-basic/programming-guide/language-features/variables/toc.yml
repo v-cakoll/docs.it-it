@@ -1,51 +1,44 @@
-items:
 - name: Variabili in Visual Basic
   href: index.md
   items:
-  - name: Dichiarazione di variabili
-    href: variable-declaration.md
-    items:
-    - name: 'Procedura: Creare una nuova variabile'
-      href: how-to-create-a-new-variable.md
-    - name: 'Procedura: Creare una variabile che non cambia di valore'
-      href: how-to-create-a-variable-that-does-not-change-in-value.md
-    - name: "Procedura: Spostare i dati all'interno e all'esterno di una variabile"
-      href: how-to-move-data-into-and-out-of-a-variable.md
-  - name: Variabili oggetto
-    href: object-variables.md
-    items:
-    - name: "Procedura: Velocizzare l'accesso a un oggetto con un percorso di qualificazione lungo"
-      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
-  - name: Dichiarazione di variabili oggetto
-    href: object-variable-declaration.md
-    items:
-    - name: 'Procedura: Accedere ai membri di un oggetto'
-      href: how-to-access-members-of-an-object.md
-    - name: Assegnazione di variabili oggetto
-      href: object-variable-assignment.md
+    - name: Dichiarazione di variabili
+      href: variable-declaration.md
       items:
-      - name: 'Procedura: Dichiarare una variabile oggetto e assegnarle un oggetto'
-        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
-      - name: 'Procedura: Impostare una variabile oggetto in modo che non faccia riferimento ad alcuna istanza'
-        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
-    - name: Valori di variabili oggetto
-      href: object-variable-values.md
+        - name: 'Procedura: Creare una nuova variabile'
+          href: how-to-create-a-new-variable.md
+        - name: 'Procedura: Creare una variabile che non cambia di valore'
+          href: how-to-create-a-variable-that-does-not-change-in-value.md
+        - name: 'Procedura: Spostare i dati all''interno e all''esterno di una variabile'
+          href: how-to-move-data-into-and-out-of-a-variable.md
+    - name: Variabili oggetto
+      href: object-variables.md
       items:
-      - name: "Procedura: Fare riferimento all'istanza corrente di un oggetto"
-        href: how-to-refer-to-the-current-instance-of-an-object.md
-      - name: 'Procedura: Determinare a quale tipo fa riferimento una variabile oggetto'
-        href: how-to-determine-what-type-an-object-variable-refers-to.md
-      - name: 'Procedura: Determinare se due oggetti sono correlati'
-        href: how-to-determine-whether-two-objects-are-related.md
-      - name: 'Procedura: Determinare se due oggetti sono identici'
-        href: how-to-determine-whether-two-objects-are-identical.md
-  - name: Inferenza del tipo di variabile locale
-    href: local-type-inference.md
-  - name: Risoluzione dei problemi relativi alle variabili
-    href: troubleshooting-variables.md
-ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469325"
+        - name: 'Procedura: Velocizzare l''accesso a un oggetto con un percorso di qualificazione lungo'
+          href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+    - name: Dichiarazione di variabili oggetto
+      href: object-variable-declaration.md
+      items:
+        - name: 'Procedura: Accedere ai membri di un oggetto'
+          href: how-to-access-members-of-an-object.md
+        - name: Assegnazione di variabili oggetto
+          href: object-variable-assignment.md
+          items:
+            - name: 'Procedura: Dichiarare una variabile oggetto e assegnarle un oggetto'
+              href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+            - name: 'Procedura: Impostare una variabile oggetto in modo che non faccia riferimento ad alcuna istanza'
+              href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+        - name: Valori di variabili oggetto
+          href: object-variable-values.md
+          items:
+            - name: 'Procedura: Fare riferimento all''istanza corrente di un oggetto'
+              href: how-to-refer-to-the-current-instance-of-an-object.md
+            - name: 'Procedura: Determinare a quale tipo fa riferimento una variabile oggetto'
+              href: how-to-determine-what-type-an-object-variable-refers-to.md
+            - name: 'Procedura: Determinare se due oggetti sono correlati'
+              href: how-to-determine-whether-two-objects-are-related.md
+            - name: 'Procedura: Determinare se due oggetti sono identici'
+              href: how-to-determine-whether-two-objects-are-identical.md
+    - name: Inferenza del tipo di variabile locale
+      href: local-type-inference.md
+    - name: Risoluzione dei problemi relativi alle variabili
+      href: troubleshooting-variables.md

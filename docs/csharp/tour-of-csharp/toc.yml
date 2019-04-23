@@ -1,32 +1,25 @@
-items:
-- name: Panoramica di C#
+- name: 'Panoramica di C#'
   href: index.md
   items:
-  - name: Struttura del programma
-    href: program-structure.md
-  - name: Tipi e variabili
-    href: types-and-variables.md
-  - name: Espressioni
-    href: expressions.md
-  - name: Istruzioni
-    href: statements.md
-  - name: Classi e oggetti
-    href: classes-and-objects.md
-  - name: Struct
-    href: structs.md
-  - name: Matrici
-    href: arrays.md
-  - name: Interfacce
-    href: interfaces.md
-  - name: Enumerazioni
-    href: enums.md
-  - name: Delegati
-    href: delegates.md
-  - name: Attributi
-    href: attributes.md
-ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468930"
+    - name: Struttura del programma
+      href: program-structure.md
+    - name: Tipi e variabili
+      href: types-and-variables.md
+    - name: Espressioni
+      href: expressions.md
+    - name: Istruzioni
+      href: statements.md
+    - name: Classi e oggetti
+      href: classes-and-objects.md
+    - name: Struct
+      href: structs.md
+    - name: Matrici
+      href: arrays.md
+    - name: Interfacce
+      href: interfaces.md
+    - name: Enumerazioni
+      href: enums.md
+    - name: Delegati
+      href: delegates.md
+    - name: Attributi
+      href: attributes.md

@@ -1,21 +1,14 @@
-items:
 - name: Risorse nelle app .NET
   href: index.md
   items:
-  - name: Creare i file di risorse
-    href: creating-resource-files-for-desktop-apps.md
-    items:
-    - name: Usare i file con estensione resx a livello di codice
-      href: working-with-resx-files-programmatically.md
-  - name: Creare assembly satellite
-    href: creating-satellite-assemblies-for-desktop-apps.md
-  - name: Creare il pacchetto e distribuire le risorse
-    href: packaging-and-deploying-resources-in-desktop-apps.md
-  - name: Recuperare le risorse
-    href: retrieving-resources-in-desktop-apps.md
-ms.openlocfilehash: b927e35892ced172b528008abe74a26524ffaaa7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469464"
+    - name: Creare i file di risorse
+      href: creating-resource-files-for-desktop-apps.md
+      items:
+        - name: Usare i file con estensione resx a livello di codice
+          href: working-with-resx-files-programmatically.md
+    - name: Creare assembly satellite
+      href: creating-satellite-assemblies-for-desktop-apps.md
+    - name: Creare il pacchetto e distribuire le risorse
+      href: packaging-and-deploying-resources-in-desktop-apps.md
+    - name: Recuperare le risorse
+      href: retrieving-resources-in-desktop-apps.md

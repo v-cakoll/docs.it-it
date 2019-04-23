@@ -1,344 +1,337 @@
-items:
 - name: LINQ to SQL
   href: index.md
   items:
-  - name: Introduzione
-    href: getting-started.md
-    items:
-    - name: Operazioni eseguibili con LINQ to SQL
-      href: what-you-can-do-with-linq-to-sql.md
-    - name: Passaggi tipici per l'utilizzo di LINQ to SQL
-      href: typical-steps-for-using-linq-to-sql.md
-    - name: Scaricare database di esempio e strumenti
-      href: downloading-sample-databases.md
-    - name: Apprendimento tramite procedure dettagliate
-      href: learning-by-walkthroughs.md
+    - name: Introduzione
+      href: getting-started.md
       items:
-      - name: 'Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)'
-        href: walkthrough-simple-object-model-and-query-visual-basic.md
-      - name: 'Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)'
-        href: walkthrough-querying-across-relationships-visual-basic.md
-      - name: 'Procedura dettagliata: Modifica dei dati (Visual Basic)'
-        href: walkthrough-manipulating-data-visual-basic.md
-      - name: 'Procedura dettagliata: Usare solo stored procedure (Visual Basic)'
-        href: walkthrough-using-only-stored-procedures-visual-basic.md
-      - name: 'Procedura dettagliata: Modello a oggetti e query semplici (C#)'
-        href: walkthrough-simple-object-model-and-query-csharp.md
-      - name: 'Procedura dettagliata: Esecuzione di query tra relazioni (C#)'
-        href: walkthrough-querying-across-relationships-csharp.md
-      - name: 'Procedura dettagliata: Modifica dei dati (C#)'
-        href: walkthrough-manipulating-data-csharp.md
-      - name: 'Procedura dettagliata: Usare solo stored procedure (C#)'
-        href: walkthrough-using-only-stored-procedures-csharp.md
-  - name: Guida per programmatori
-    href: programming-guide.md
-    items:
-    - name: Creazione del modello a oggetti
-      href: creating-the-object-model.md
-      items:
-      - name: 'Procedura: Generare il modello a oggetti in Visual Basic o C#'
-        href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
-      - name: 'Procedura: Generare il modello a oggetti come file esterno'
-        href: how-to-generate-the-object-model-as-an-external-file.md
-      - name: 'Procedura: Generare codice personalizzato modificando un file DBML'
-        href: how-to-generate-customized-code-by-modifying-a-dbml-file.md
-      - name: 'Procedura: Convalidare file di mapping esterni e DBML'
-        href: how-to-validate-dbml-and-external-mapping-files.md
-      - name: 'Procedura: Rendere serializzabili le entità'
-        href: how-to-make-entities-serializable.md
-      - name: "Procedura: Personalizzare classi di entità mediante l'editor del codice"
-        href: how-to-customize-entity-classes-by-using-the-code-editor.md
-        items:
-        - name: 'Procedura: Specificare nomi di database'
-          href: how-to-specify-database-names.md
-        - name: 'Procedura: Rappresentare tabelle come classi'
-          href: how-to-represent-tables-as-classes.md
-        - name: 'Procedura: Rappresentare colonne come membri di classi'
-          href: how-to-represent-columns-as-class-members.md
-        - name: 'Procedura: Rappresentare le chiavi primarie'
-          href: how-to-represent-primary-keys.md
-        - name: 'Procedura: Eseguire il mapping delle relazioni di database'
-          href: how-to-map-database-relationships.md
-        - name: 'Procedura: Rappresentare colonne come generate dal database'
-          href: how-to-represent-columns-as-database-generated.md
-        - name: 'Procedura: Rappresentare colonne come timestamp o colonne di versione'
-          href: how-to-represent-columns-as-timestamp-or-version-columns.md
-        - name: 'Procedura: Specificare i tipi di dati del database'
-          href: how-to-specify-database-data-types.md
-        - name: 'Procedura: Rappresentare colonne calcolate'
-          href: how-to-represent-computed-columns.md
-        - name: 'Procedura: Specificare campi di archiviazione privati'
-          href: how-to-specify-private-storage-fields.md
-        - name: "Procedura: Rappresentare colonne per l'accettazione di valori Null"
-          href: how-to-represent-columns-as-allowing-null-values.md
-        - name: 'Procedura: Eseguire il mapping di gerarchie di ereditarietà'
-          href: how-to-map-inheritance-hierarchies.md
-        - name: 'Procedura: Specificare il controllo di conflitti di concorrenza'
-          href: how-to-specify-concurrency-conflict-checking.md
-    - name: Comunicazione con il database
-      href: communicating-with-the-database.md
-      items:
-      - name: 'Procedura: Connettersi a un database'
-        href: how-to-connect-to-a-database.md
-      - name: 'Procedura: Eseguire direttamente comandi SQL'
-        href: how-to-directly-execute-sql-commands.md
-      - name: 'Procedura: Riutilizzare una connessione tra un comando ADO.NET e un oggetto DataContext'
-        href: how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md
-    - name: Esecuzione di query sul database
-      href: querying-the-database.md
-      items:
-      - name: 'Procedura: Eseguire una query per ottenere informazioni'
-        href: how-to-query-for-information.md
-      - name: 'Procedura: Recuperare informazioni in sola lettura'
-        href: how-to-retrieve-information-as-read-only.md
-      - name: 'Procedura: Controllare la quantità di dati correlati recuperata'
-        href: how-to-control-how-much-related-data-is-retrieved.md
-      - name: 'Procedura: Filtrare dati correlati'
-        href: how-to-filter-related-data.md
-      - name: 'Procedura: Disattivare il caricamento posticipato'
-        href: how-to-turn-off-deferred-loading.md
-      - name: 'Procedura: Eseguire direttamente query SQL'
-        href: how-to-directly-execute-sql-queries.md
-      - name: 'Procedura: Archiviare e riutilizzare query'
-        href: how-to-store-and-reuse-queries.md
-      - name: 'Procedura: Gestire le chiavi composite nelle query'
-        href: how-to-handle-composite-keys-in-queries.md
-      - name: 'Procedura: Recuperare più oggetti contemporaneamente'
-        href: how-to-retrieve-many-objects-at-once.md
-      - name: 'Procedura: Filtrare a livello di DataContext'
-        href: how-to-filter-at-the-datacontext-level.md
-      - name: Esempi di query
-        href: query-examples.md
-        items:
-        - name: Query di aggregazione
-          href: aggregate-queries.md
+        - name: Operazioni eseguibili con LINQ to SQL
+          href: what-you-can-do-with-linq-to-sql.md
+        - name: Passaggi tipici per l'utilizzo di LINQ to SQL
+          href: typical-steps-for-using-linq-to-sql.md
+        - name: Scaricare database di esempio e strumenti
+          href: downloading-sample-databases.md
+        - name: Apprendimento tramite procedure dettagliate
+          href: learning-by-walkthroughs.md
           items:
-          - name: Restituire il valore medio da una sequenza numerica
-            href: return-the-average-value-from-a-numeric-sequence.md
-          - name: Contare il numero di elementi in una sequenza
-            href: count-the-number-of-elements-in-a-sequence.md
-          - name: Trovare il valore massimo in una sequenza numerica
-            href: find-the-maximum-value-in-a-numeric-sequence.md
-          - name: Trovare il valore minimo in una sequenza numerica
-            href: find-the-minimum-value-in-a-numeric-sequence.md
-          - name: Calcolare la somma dei valori in una sequenza numerica
-            href: compute-the-sum-of-values-in-a-numeric-sequence.md
-        - name: Restituire il primo elemento di una sequenza
-          href: return-the-first-element-in-a-sequence.md
-        - name: Restituire o ignorare elementi in una sequenza
-          href: return-or-skip-elements-in-a-sequence.md
-        - name: Ordinare elementi in una sequenza
-          href: sort-elements-in-a-sequence.md
-        - name: Raggruppare elementi in una sequenza
-          href: group-elements-in-a-sequence.md
-        - name: Eliminare elementi duplicati da una sequenza
-          href: eliminate-duplicate-elements-from-a-sequence.md
-        - name: Determinare se alcuni o tutti gli elementi di una sequenza soddisfano una condizione
-          href: determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md
-        - name: Concatenare due sequenze
-          href: concatenate-two-sequences.md
-        - name: Restituire la differenza dei set tra due sequenze
-          href: return-the-set-difference-between-two-sequences.md
-        - name: Restituire l'intersezione tra set di due sequenze
-          href: return-the-set-intersection-of-two-sequences.md
-        - name: Restituire l'unione di set di due sequenze
-          href: return-the-set-union-of-two-sequences.md
-        - name: 'Procedura: convertire una sequenza in una matrice'
-          href: convert-a-sequence-to-an-array.md
-        - name: Convertire una sequenza un tipo in un elenco generico
-          href: convert-a-sequence-to-a-generic-list.md
-        - name: Convertire un tipo in un IEnumerable generico
-          href: convert-a-type-to-a-generic-ienumerable.md
-        - name: Formulare query su prodotto incrociato e join
-          href: formulate-joins-and-cross-product-queries.md
-        - name: Formulare proiezioni
-          href: formulate-projections.md
-    - name: Creazione e invio di modifiche dei dati
-      href: making-and-submitting-data-changes.md
+            - name: 'Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)'
+              href: walkthrough-simple-object-model-and-query-visual-basic.md
+            - name: 'Procedura dettagliata: Eseguire query tra relazioni (Visual Basic)'
+              href: walkthrough-querying-across-relationships-visual-basic.md
+            - name: 'Procedura dettagliata: Modifica dei dati (Visual Basic)'
+              href: walkthrough-manipulating-data-visual-basic.md
+            - name: 'Procedura dettagliata: Usare solo stored procedure (Visual Basic)'
+              href: walkthrough-using-only-stored-procedures-visual-basic.md
+            - name: 'Procedura dettagliata: Modello a oggetti e query semplici (C#)'
+              href: walkthrough-simple-object-model-and-query-csharp.md
+            - name: 'Procedura dettagliata: Esecuzione di query tra relazioni (C#)'
+              href: walkthrough-querying-across-relationships-csharp.md
+            - name: 'Procedura dettagliata: Modifica dei dati (C#)'
+              href: walkthrough-manipulating-data-csharp.md
+            - name: 'Procedura dettagliata: Usare solo stored procedure (C#)'
+              href: walkthrough-using-only-stored-procedures-csharp.md
+    - name: Guida per programmatori
+      href: programming-guide.md
       items:
-      - name: 'Procedura: Inserire righe nel database'
-        href: how-to-insert-rows-into-the-database.md
-      - name: 'Procedura: Aggiornare righe nel database'
-        href: how-to-update-rows-in-the-database.md
-      - name: 'Procedura: Eliminare righe dal database'
-        href: how-to-delete-rows-from-the-database.md
-      - name: 'Procedura: Inviare modifiche al database'
-        href: how-to-submit-changes-to-the-database.md
-      - name: 'Procedura: Racchiudere tra parentesi quadre gli invii di dati usando transazioni'
-        href: how-to-bracket-data-submissions-by-using-transactions.md
-      - name: 'Procedura: Creare un database in modo dinamico'
-        href: how-to-dynamically-create-a-database.md
-      - name: 'Procedura: Gestire i conflitti di modifiche'
-        href: how-to-manage-change-conflicts.md
-        items:
-        - name: 'Procedura: Rilevare e risolvere gli invii in conflitto'
-          href: how-to-detect-and-resolve-conflicting-submissions.md
-        - name: 'Procedura: Specificare quando vengono generate eccezioni di concorrenza'
-          href: how-to-specify-when-concurrency-exceptions-are-thrown.md
-        - name: 'Procedura: Specificare per quali membri viene eseguito il test dei conflitti di concorrenza'
-          href: how-to-specify-which-members-are-tested-for-concurrency-conflicts.md
-        - name: 'Procedura: Recuperare informazioni sui conflitti di entità'
-          href: how-to-retrieve-entity-conflict-information.md
-        - name: 'Procedura: Recuperare informazioni sui conflitti tra membri'
-          href: how-to-retrieve-member-conflict-information.md
-        - name: 'Procedura: Risolvere conflitti mantenendo i valori di database'
-          href: how-to-resolve-conflicts-by-retaining-database-values.md
-        - name: 'Procedura: Risolvere conflitti sovrascrivendo i valori di database'
-          href: how-to-resolve-conflicts-by-overwriting-database-values.md
-        - name: "Procedura: Risolvere i conflitti mediante l'unione con valori di database"
-          href: how-to-resolve-conflicts-by-merging-with-database-values.md
-    - name: Supporto per il debug
-      href: debugging-support.md
+        - name: Creazione del modello a oggetti
+          href: creating-the-object-model.md
+          items:
+            - name: 'Procedura: Generare il modello a oggetti in Visual Basic o C#'
+              href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
+            - name: 'Procedura: Generare il modello a oggetti come file esterno'
+              href: how-to-generate-the-object-model-as-an-external-file.md
+            - name: 'Procedura: Generare codice personalizzato modificando un file DBML'
+              href: how-to-generate-customized-code-by-modifying-a-dbml-file.md
+            - name: 'Procedura: Convalidare file di mapping esterni e DBML'
+              href: how-to-validate-dbml-and-external-mapping-files.md
+            - name: 'Procedura: Rendere serializzabili le entità'
+              href: how-to-make-entities-serializable.md
+            - name: 'Procedura: Personalizzare classi di entità mediante l''editor del codice'
+              href: how-to-customize-entity-classes-by-using-the-code-editor.md
+              items:
+                - name: 'Procedura: Specificare nomi di database'
+                  href: how-to-specify-database-names.md
+                - name: 'Procedura: Rappresentare tabelle come classi'
+                  href: how-to-represent-tables-as-classes.md
+                - name: 'Procedura: Rappresentare colonne come membri di classi'
+                  href: how-to-represent-columns-as-class-members.md
+                - name: 'Procedura: Rappresentare le chiavi primarie'
+                  href: how-to-represent-primary-keys.md
+                - name: 'Procedura: Eseguire il mapping delle relazioni di database'
+                  href: how-to-map-database-relationships.md
+                - name: 'Procedura: Rappresentare colonne come generate dal database'
+                  href: how-to-represent-columns-as-database-generated.md
+                - name: 'Procedura: Rappresentare colonne come timestamp o colonne di versione'
+                  href: how-to-represent-columns-as-timestamp-or-version-columns.md
+                - name: 'Procedura: Specificare i tipi di dati del database'
+                  href: how-to-specify-database-data-types.md
+                - name: 'Procedura: Rappresentare colonne calcolate'
+                  href: how-to-represent-computed-columns.md
+                - name: 'Procedura: Specificare campi di archiviazione privati'
+                  href: how-to-specify-private-storage-fields.md
+                - name: 'Procedura: Rappresentare colonne per l''accettazione di valori Null'
+                  href: how-to-represent-columns-as-allowing-null-values.md
+                - name: 'Procedura: Eseguire il mapping di gerarchie di ereditarietà'
+                  href: how-to-map-inheritance-hierarchies.md
+                - name: 'Procedura: Specificare il controllo di conflitti di concorrenza'
+                  href: how-to-specify-concurrency-conflict-checking.md
+        - name: Comunicazione con il database
+          href: communicating-with-the-database.md
+          items:
+            - name: 'Procedura: Connettersi a un database'
+              href: how-to-connect-to-a-database.md
+            - name: 'Procedura: Eseguire direttamente comandi SQL'
+              href: how-to-directly-execute-sql-commands.md
+            - name: 'Procedura: Riutilizzare una connessione tra un comando ADO.NET e un oggetto DataContext'
+              href: how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md
+        - name: Esecuzione di query sul database
+          href: querying-the-database.md
+          items:
+            - name: 'Procedura: Eseguire una query per ottenere informazioni'
+              href: how-to-query-for-information.md
+            - name: 'Procedura: Recuperare informazioni in sola lettura'
+              href: how-to-retrieve-information-as-read-only.md
+            - name: 'Procedura: Controllare la quantità di dati correlati recuperata'
+              href: how-to-control-how-much-related-data-is-retrieved.md
+            - name: 'Procedura: Filtrare dati correlati'
+              href: how-to-filter-related-data.md
+            - name: 'Procedura: Disattivare il caricamento posticipato'
+              href: how-to-turn-off-deferred-loading.md
+            - name: 'Procedura: Eseguire direttamente query SQL'
+              href: how-to-directly-execute-sql-queries.md
+            - name: 'Procedura: Archiviare e riutilizzare query'
+              href: how-to-store-and-reuse-queries.md
+            - name: 'Procedura: Gestire le chiavi composite nelle query'
+              href: how-to-handle-composite-keys-in-queries.md
+            - name: 'Procedura: Recuperare più oggetti contemporaneamente'
+              href: how-to-retrieve-many-objects-at-once.md
+            - name: 'Procedura: Filtrare a livello di DataContext'
+              href: how-to-filter-at-the-datacontext-level.md
+            - name: Esempi di query
+              href: query-examples.md
+              items:
+                - name: Query di aggregazione
+                  href: aggregate-queries.md
+                  items:
+                    - name: Restituire il valore medio da una sequenza numerica
+                      href: return-the-average-value-from-a-numeric-sequence.md
+                    - name: Contare il numero di elementi in una sequenza
+                      href: count-the-number-of-elements-in-a-sequence.md
+                    - name: Trovare il valore massimo in una sequenza numerica
+                      href: find-the-maximum-value-in-a-numeric-sequence.md
+                    - name: Trovare il valore minimo in una sequenza numerica
+                      href: find-the-minimum-value-in-a-numeric-sequence.md
+                    - name: Calcolare la somma dei valori in una sequenza numerica
+                      href: compute-the-sum-of-values-in-a-numeric-sequence.md
+                - name: Restituire il primo elemento di una sequenza
+                  href: return-the-first-element-in-a-sequence.md
+                - name: Restituire o ignorare elementi in una sequenza
+                  href: return-or-skip-elements-in-a-sequence.md
+                - name: Ordinare elementi in una sequenza
+                  href: sort-elements-in-a-sequence.md
+                - name: Raggruppare elementi in una sequenza
+                  href: group-elements-in-a-sequence.md
+                - name: Eliminare elementi duplicati da una sequenza
+                  href: eliminate-duplicate-elements-from-a-sequence.md
+                - name: Determinare se alcuni o tutti gli elementi di una sequenza soddisfano una condizione
+                  href: determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md
+                - name: Concatenare due sequenze
+                  href: concatenate-two-sequences.md
+                - name: Restituire la differenza dei set tra due sequenze
+                  href: return-the-set-difference-between-two-sequences.md
+                - name: Restituire l'intersezione tra set di due sequenze
+                  href: return-the-set-intersection-of-two-sequences.md
+                - name: Restituire l'unione di set di due sequenze
+                  href: return-the-set-union-of-two-sequences.md
+                - name: 'Procedura: convertire una sequenza in una matrice'
+                  href: convert-a-sequence-to-an-array.md
+                - name: Convertire una sequenza un tipo in un elenco generico
+                  href: convert-a-sequence-to-a-generic-list.md
+                - name: Convertire un tipo in un IEnumerable generico
+                  href: convert-a-type-to-a-generic-ienumerable.md
+                - name: Formulare query su prodotto incrociato e join
+                  href: formulate-joins-and-cross-product-queries.md
+                - name: Formulare proiezioni
+                  href: formulate-projections.md
+        - name: Creazione e invio di modifiche dei dati
+          href: making-and-submitting-data-changes.md
+          items:
+            - name: 'Procedura: Inserire righe nel database'
+              href: how-to-insert-rows-into-the-database.md
+            - name: 'Procedura: Aggiornare righe nel database'
+              href: how-to-update-rows-in-the-database.md
+            - name: 'Procedura: Eliminare righe dal database'
+              href: how-to-delete-rows-from-the-database.md
+            - name: 'Procedura: Inviare modifiche al database'
+              href: how-to-submit-changes-to-the-database.md
+            - name: 'Procedura: Racchiudere tra parentesi quadre gli invii di dati usando transazioni'
+              href: how-to-bracket-data-submissions-by-using-transactions.md
+            - name: 'Procedura: Creare un database in modo dinamico'
+              href: how-to-dynamically-create-a-database.md
+            - name: 'Procedura: Gestire i conflitti di modifiche'
+              href: how-to-manage-change-conflicts.md
+              items:
+                - name: 'Procedura: Rilevare e risolvere gli invii in conflitto'
+                  href: how-to-detect-and-resolve-conflicting-submissions.md
+                - name: 'Procedura: Specificare quando vengono generate eccezioni di concorrenza'
+                  href: how-to-specify-when-concurrency-exceptions-are-thrown.md
+                - name: 'Procedura: Specificare per quali membri viene eseguito il test dei conflitti di concorrenza'
+                  href: how-to-specify-which-members-are-tested-for-concurrency-conflicts.md
+                - name: 'Procedura: Recuperare informazioni sui conflitti di entità'
+                  href: how-to-retrieve-entity-conflict-information.md
+                - name: 'Procedura: Recuperare informazioni sui conflitti tra membri'
+                  href: how-to-retrieve-member-conflict-information.md
+                - name: 'Procedura: Risolvere conflitti mantenendo i valori di database'
+                  href: how-to-resolve-conflicts-by-retaining-database-values.md
+                - name: 'Procedura: Risolvere conflitti sovrascrivendo i valori di database'
+                  href: how-to-resolve-conflicts-by-overwriting-database-values.md
+                - name: 'Procedura: Risolvere i conflitti mediante l''unione con valori di database'
+                  href: how-to-resolve-conflicts-by-merging-with-database-values.md
+        - name: Supporto per il debug
+          href: debugging-support.md
+          items:
+            - name: 'Procedura: Visualizzare il codice SQL generato'
+              href: how-to-display-generated-sql.md
+            - name: 'Procedura: Visualizzare un insieme di modifiche'
+              href: how-to-display-a-changeset.md
+            - name: 'Procedura: Visualizzare comandi LINQ to SQL'
+              href: how-to-display-linq-to-sql-commands.md
+            - name: Risoluzione dei problemi
+              href: troubleshooting.md
+        - name: Informazioni di base
+          href: background-information.md
+          items:
+            - name: ADO.NET e LINQ to SQL
+              href: ado-net-and-linq-to-sql.md
+            - name: Analisi del codice sorgente in LINQ to SQL
+              href: analyzing-linq-to-sql-source-code.md
+            - name: 'Personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione'
+              href: customizing-insert-update-and-delete-operations.md
+              items:
+                - name: 'Personalizzazione di operazioni: Panoramica'
+                  href: customizing-operations-overview.md
+                - name: 'Operazioni di inserimento, aggiornamento ed eliminazione'
+                  href: insert-update-and-delete-operations.md
+                - name: Responsabilità dello sviluppatore nell'override del comportamento predefinito
+                  href: responsibilities-of-the-developer-in-overriding-default-behavior.md
+                - name: Aggiunta di logica di business mediante metodi parziali
+                  href: adding-business-logic-by-using-partial-methods.md
+            - name: Data binding
+              href: data-binding.md
+            - name: Supporto dell'ereditarietà
+              href: inheritance-support.md
+            - name: Chiamate a metodo locali
+              href: local-method-calls.md
+            - name: Applicazioni a più livelli e remote con LINQ to SQL
+              href: n-tier-and-remote-applications-with-linq-to-sql.md
+              items:
+                - name: Più livelli di LINQ to SQL con ASP.NET
+                  href: linq-to-sql-n-tier-with-aspnet.md
+                - name: Più livelli di LINQ to SQL con Servizi Web
+                  href: linq-to-sql-n-tier-with-web-services.md
+                - name: Implementazione della logica di business a più livelli
+                  href: implementing-business-logic-linq-to-sql.md
+                - name: Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)
+                  href: data-retrieval-and-cud-operations-in-n-tier-applications.md
+            - name: Identità dell'oggetto
+              href: object-identity.md
+            - name: Modello a oggetti LINQ to SQL
+              href: the-linq-to-sql-object-model.md
+            - name: Stati di oggetti e rilevamento di modifiche
+              href: object-states-and-change-tracking.md
+            - name: 'Concorrenza ottimistica: Panoramica'
+              href: optimistic-concurrency-overview.md
+            - name: Concetti relatici alle query
+              href: query-concepts.md
+              items:
+                - name: 'Query [LINQ to SQL]'
+                  href: linq-to-sql-queries.md
+                - name: Esecuzione di query tra relazioni
+                  href: querying-across-relationships.md
+                - name: Esecuzione remota e locale
+                  href: remote-vs-local-execution.md
+                - name: Caricamento posticipato e immediato
+                  href: deferred-versus-immediate-loading.md
+            - name: Recupero di oggetti dalla cache di identità
+              href: retrieving-objects-from-the-identity-cache.md
+            - name: Sicurezza in LINQ to SQL
+              href: security-in-linq-to-sql.md
+            - name: Serializzazione
+              href: serialization.md
+            - name: Stored procedure
+              href: stored-procedures.md
+              items:
+                - name: 'Procedura: Restituire set di righe'
+                  href: how-to-return-rowsets.md
+                - name: 'Procedura: Usare stored procedure che accettano parametri'
+                  href: how-to-use-stored-procedures-that-take-parameters.md
+                - name: 'Procedura: Usare stored procedure mappate per più forme di risultati'
+                  href: how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md
+                - name: 'Procedura: Usare stored procedure mappate per forme di risultati sequenziali'
+                  href: how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md
+                - name: Personalizzazione di operazioni utilizzando stored procedure
+                  href: customizing-operations-by-using-stored-procedures.md
+                - name: Personalizzazione di operazioni utilizzando esclusivamente stored procedure
+                  href: customizing-operations-by-using-stored-procedures-exclusively.md
+            - name: Supporto delle transazioni
+              href: transaction-support.md
+            - name: Tipi SQL-CLR non corrispondenti
+              href: sql-clr-type-mismatches.md
+            - name: Mapping del tipo personalizzato SQL-CLR
+              href: sql-clr-custom-type-mappings.md
+            - name: Funzioni definite dall'utente
+              href: user-defined-functions.md
+              items:
+                - name: 'Procedura: Usare funzioni definite dall''utente con valori scalari'
+                  href: how-to-use-scalar-valued-user-defined-functions.md
+                - name: 'Procedura: Usare funzioni definite dall''utente con valori scalari'
+                  href: how-to-use-table-valued-user-defined-functions.md
+                - name: 'Procedura: Chiamare funzioni inline definite dall''utente'
+                  href: how-to-call-user-defined-functions-inline.md
+    - name: Riferimenti
+      href: reference.md
       items:
-      - name: 'Procedura: Visualizzare il codice SQL generato'
-        href: how-to-display-generated-sql.md
-      - name: 'Procedura: Visualizzare un insieme di modifiche'
-        href: how-to-display-a-changeset.md
-      - name: 'Procedura: Visualizzare comandi LINQ to SQL'
-        href: how-to-display-linq-to-sql-commands.md
-      - name: Risoluzione dei problemi
-        href: troubleshooting.md
-    - name: Informazioni di base
-      href: background-information.md
-      items:
-      - name: ADO.NET e LINQ to SQL
-        href: ado-net-and-linq-to-sql.md
-      - name: Analisi del codice sorgente in LINQ to SQL
-        href: analyzing-linq-to-sql-source-code.md
-      - name: Personalizzazione di operazioni di inserimento, aggiornamento ed eliminazione
-        href: customizing-insert-update-and-delete-operations.md
-        items:
-        - name: 'Personalizzazione di operazioni: Panoramica'
-          href: customizing-operations-overview.md
-        - name: Operazioni di inserimento, aggiornamento ed eliminazione
-          href: insert-update-and-delete-operations.md
-        - name: Responsabilità dello sviluppatore nell'override del comportamento predefinito
-          href: responsibilities-of-the-developer-in-overriding-default-behavior.md
-        - name: Aggiunta di logica di business mediante metodi parziali
-          href: adding-business-logic-by-using-partial-methods.md
-      - name: Data binding
-        href: data-binding.md
-      - name: Supporto dell'ereditarietà
-        href: inheritance-support.md
-      - name: Chiamate a metodo locali
-        href: local-method-calls.md
-      - name: Applicazioni a più livelli e remote con LINQ to SQL
-        href: n-tier-and-remote-applications-with-linq-to-sql.md
-        items:
-        - name: Più livelli di LINQ to SQL con ASP.NET
-          href: linq-to-sql-n-tier-with-aspnet.md
-        - name: Più livelli di LINQ to SQL con Servizi Web
-          href: linq-to-sql-n-tier-with-web-services.md
-        - name: Implementazione della logica di business a più livelli
-          href: implementing-business-logic-linq-to-sql.md
-        - name: Recupero di dati e operazioni CUD in applicazioni a più livelli (LINQ to SQL)
-          href: data-retrieval-and-cud-operations-in-n-tier-applications.md
-      - name: Identità dell'oggetto
-        href: object-identity.md
-      - name: Modello a oggetti LINQ to SQL
-        href: the-linq-to-sql-object-model.md
-      - name: Stati di oggetti e rilevamento di modifiche
-        href: object-states-and-change-tracking.md
-      - name: 'Concorrenza ottimistica: Panoramica'
-        href: optimistic-concurrency-overview.md
-      - name: Concetti relatici alle query
-        href: query-concepts.md
-        items:
-        - name: Query [LINQ to SQL]
-          href: linq-to-sql-queries.md
-        - name: Esecuzione di query tra relazioni
-          href: querying-across-relationships.md
-        - name: Esecuzione remota e locale
-          href: remote-vs-local-execution.md
-        - name: Caricamento posticipato e immediato
-          href: deferred-versus-immediate-loading.md
-      - name: Recupero di oggetti dalla cache di identità
-        href: retrieving-objects-from-the-identity-cache.md
-      - name: Sicurezza in LINQ to SQL
-        href: security-in-linq-to-sql.md
-      - name: Serializzazione
-        href: serialization.md
-      - name: Stored procedure
-        href: stored-procedures.md
-        items:
-        - name: 'Procedura: Restituire set di righe'
-          href: how-to-return-rowsets.md
-        - name: 'Procedura: Usare stored procedure che accettano parametri'
-          href: how-to-use-stored-procedures-that-take-parameters.md
-        - name: 'Procedura: Usare stored procedure mappate per più forme di risultati'
-          href: how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md
-        - name: 'Procedura: Usare stored procedure mappate per forme di risultati sequenziali'
-          href: how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md
-        - name: Personalizzazione di operazioni utilizzando stored procedure
-          href: customizing-operations-by-using-stored-procedures.md
-        - name: Personalizzazione di operazioni utilizzando esclusivamente stored procedure
-          href: customizing-operations-by-using-stored-procedures-exclusively.md
-      - name: Supporto delle transazioni
-        href: transaction-support.md
-      - name: Tipi SQL-CLR non corrispondenti
-        href: sql-clr-type-mismatches.md
-      - name: Mapping del tipo personalizzato SQL-CLR
-        href: sql-clr-custom-type-mappings.md
-      - name: Funzioni definite dall'utente
-        href: user-defined-functions.md
-        items:
-        - name: "Procedura: Usare funzioni definite dall'utente con valori scalari"
-          href: how-to-use-scalar-valued-user-defined-functions.md
-        - name: "Procedura: Usare funzioni definite dall'utente con valori scalari"
-          href: how-to-use-table-valued-user-defined-functions.md
-        - name: "Procedura: Chiamare funzioni inline definite dall'utente"
-          href: how-to-call-user-defined-functions-inline.md
-  - name: Riferimenti
-    href: reference.md
-    items:
-    - name: Tipi di dati e funzioni
-      href: data-types-and-functions.md
-      items:
-      - name: Mapping del tipo SQL-CLR
-        href: sql-clr-type-mapping.md
-      - name: Tipi di dati di base
-        href: basic-data-types.md
-      - name: Tipi di dati Boolean
-        href: boolean-data-types.md
-      - name: Semantica Null
-        href: null-semantics.md
-      - name: Operatori numerici e di confronto
-        href: numeric-and-comparison-operators.md
-      - name: Operatori di sequenza
-        href: sequence-operators.md
-      - name: Metodi System.Convert
-        href: system-convert-methods.md
-      - name: Metodi System.DateTime
-        href: system-datetime-methods.md
-      - name: Metodi System.Math
-        href: system-math-methods.md
-      - name: Metodi System.Object
-        href: system-object-methods.md
-      - name: Metodi System.String
-        href: system-string-methods.md
-      - name: Metodi System.TimeSpan
-        href: system-timespan-methods.md
-      - name: Funzionalità non supportata
-        href: unsupported-functionality.md
-      - name: Metodi System.DateTimeOffset
-        href: system-datetimeoffset-methods.md
-    - name: Mapping basato su attributi
-      href: attribute-based-mapping.md
-    - name: Generazione di codice in LINQ to SQL
-      href: code-generation-in-linq-to-sql.md
-    - name: Mapping esterno
-      href: external-mapping.md
-    - name: Domande frequenti
-      href: frequently-asked-questions.md
-    - name: SQL Server Compact e LINQ to SQL
-      href: sql-server-compact-and-linq-to-sql.md
-    - name: Conversione dell'operatore query standard
-      href: standard-query-operator-translation.md
-  - name: Esempi
-    href: samples.md
-ms.openlocfilehash: 754a552a01d40f6dc020536ef090b2bcbb3f90c2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469493"
+        - name: Tipi di dati e funzioni
+          href: data-types-and-functions.md
+          items:
+            - name: Mapping del tipo SQL-CLR
+              href: sql-clr-type-mapping.md
+            - name: Tipi di dati di base
+              href: basic-data-types.md
+            - name: Tipi di dati Boolean
+              href: boolean-data-types.md
+            - name: Semantica Null
+              href: null-semantics.md
+            - name: Operatori numerici e di confronto
+              href: numeric-and-comparison-operators.md
+            - name: Operatori di sequenza
+              href: sequence-operators.md
+            - name: Metodi System.Convert
+              href: system-convert-methods.md
+            - name: Metodi System.DateTime
+              href: system-datetime-methods.md
+            - name: Metodi System.Math
+              href: system-math-methods.md
+            - name: Metodi System.Object
+              href: system-object-methods.md
+            - name: Metodi System.String
+              href: system-string-methods.md
+            - name: Metodi System.TimeSpan
+              href: system-timespan-methods.md
+            - name: Funzionalità non supportata
+              href: unsupported-functionality.md
+            - name: Metodi System.DateTimeOffset
+              href: system-datetimeoffset-methods.md
+        - name: Mapping basato su attributi
+          href: attribute-based-mapping.md
+        - name: Generazione di codice in LINQ to SQL
+          href: code-generation-in-linq-to-sql.md
+        - name: Mapping esterno
+          href: external-mapping.md
+        - name: Domande frequenti
+          href: frequently-asked-questions.md
+        - name: SQL Server Compact e LINQ to SQL
+          href: sql-server-compact-and-linq-to-sql.md
+        - name: Conversione dell'operatore query standard
+          href: standard-query-operator-translation.md
+    - name: Esempi
+      href: samples.md

@@ -1,36 +1,29 @@
-items:
 - name: Generics
   href: index.md
   items:
-  - name: Introduzione ai generics
-    href: introduction-to-generics.md
-  - name: Vantaggi dei generics
-    href: benefits-of-generics.md
-  - name: Parametri di tipo generico
-    href: generic-type-parameters.md
-  - name: Vincoli sui parametri di tipo
-    href: constraints-on-type-parameters.md
-  - name: Classi generiche
-    href: generic-classes.md
-  - name: Interfacce generiche
-    href: generic-interfaces.md
-  - name: Metodi generici
-    href: generic-methods.md
-  - name: Generics e matrici
-    href: generics-and-arrays.md
-  - name: Delegati generici
-    href: generic-delegates.md
-  - name: Differenze tra modelli C++ e generics C#
-    href: differences-between-cpp-templates-and-csharp-generics.md
-  - name: Generics in fase di esecuzione
-    href: generics-in-the-run-time.md
-  - name: Generics e reflection
-    href: generics-and-reflection.md
-  - name: Generics e attributi
-    href: generics-and-attributes.md
-ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468894"
+    - name: Introduzione ai generics
+      href: introduction-to-generics.md
+    - name: Vantaggi dei generics
+      href: benefits-of-generics.md
+    - name: Parametri di tipo generico
+      href: generic-type-parameters.md
+    - name: Vincoli sui parametri di tipo
+      href: constraints-on-type-parameters.md
+    - name: Classi generiche
+      href: generic-classes.md
+    - name: Interfacce generiche
+      href: generic-interfaces.md
+    - name: Metodi generici
+      href: generic-methods.md
+    - name: Generics e matrici
+      href: generics-and-arrays.md
+    - name: Delegati generici
+      href: generic-delegates.md
+    - name: 'Differenze tra modelli C++ e generics C#'
+      href: differences-between-cpp-templates-and-csharp-generics.md
+    - name: Generics in fase di esecuzione
+      href: generics-in-the-run-time.md
+    - name: Generics e reflection
+      href: generics-and-reflection.md
+    - name: Generics e attributi
+      href: generics-and-attributes.md

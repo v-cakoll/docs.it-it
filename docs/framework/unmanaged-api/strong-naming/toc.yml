@@ -1,64 +1,57 @@
-items:
 - name: Denominazione sicura
   href: index.md
   items:
-  - name: Funzione GetHashFromAssemblyFile
-    href: gethashfromassemblyfile-function.md
-  - name: Funzione GetHashFromAssemblyFileW
-    href: gethashfromassemblyfilew-function.md
-  - name: Funzione GetHashFromBlob
-    href: gethashfromblob-function.md
-  - name: Funzione GetHashFromFile
-    href: gethashfromfile-function.md
-  - name: Funzione GetHashFromFileW
-    href: gethashfromfilew-function.md
-  - name: Funzione GetHashFromHandle
-    href: gethashfromhandle-function.md
-  - name: Struttura PublicKeyBlob
-    href: publickeyblob-structure.md
-  - name: Funzione StrongNameCompareAssemblies
-    href: strongnamecompareassemblies-function.md
-  - name: Funzione StrongNameErrorInfo
-    href: strongnameerrorinfo-function.md
-  - name: Funzione StrongNameFreeBuffer
-    href: strongnamefreebuffer-function.md
-  - name: Funzione StrongNameGetBlob
-    href: strongnamegetblob-function.md
-  - name: Funzione StrongNameGetBlobFromImage
-    href: strongnamegetblobfromimage-function.md
-  - name: Funzione StrongNameGetPublicKey
-    href: strongnamegetpublickey-function.md
-  - name: Funzione StrongNameHashSize
-    href: strongnamehashsize-function.md
-  - name: Funzione StrongNameKeyDelete
-    href: strongnamekeydelete-function.md
-  - name: Funzione StrongNameKeyGen
-    href: strongnamekeygen-function.md
-  - name: Funzione StrongNameKeyGenEx
-    href: strongnamekeygenex-function.md
-  - name: Funzione StrongNameKeyInstall
-    href: strongnamekeyinstall-function.md
-  - name: Funzione StrongNameSignatureGeneration
-    href: strongnamesignaturegeneration-function.md
-  - name: Funzione StrongNameSignatureGenerationEx
-    href: strongnamesignaturegenerationex-function.md
-  - name: Funzione StrongNameSignatureSize
-    href: strongnamesignaturesize-function.md
-  - name: Funzione StrongNameSignatureVerification
-    href: strongnamesignatureverification-function.md
-  - name: Funzione StrongNameSignatureVerificationEx
-    href: strongnamesignatureverificationex-function.md
-  - name: Funzione StrongNameSignatureVerificationFromImage
-    href: strongnamesignatureverificationfromimage-function.md
-  - name: Funzione StrongNameTokenFromAssembly
-    href: strongnametokenfromassembly-function.md
-  - name: Funzione StrongNameTokenFromAssemblyEx
-    href: strongnametokenfromassemblyex-function.md
-  - name: Funzione StrongNameTokenFromPublicKey
-    href: strongnametokenfrompublickey-function.md
-ms.openlocfilehash: 4c06fdc28855b0dadf1aca52c372236ffb30b782
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468929"
+    - name: Funzione GetHashFromAssemblyFile
+      href: gethashfromassemblyfile-function.md
+    - name: Funzione GetHashFromAssemblyFileW
+      href: gethashfromassemblyfilew-function.md
+    - name: Funzione GetHashFromBlob
+      href: gethashfromblob-function.md
+    - name: Funzione GetHashFromFile
+      href: gethashfromfile-function.md
+    - name: Funzione GetHashFromFileW
+      href: gethashfromfilew-function.md
+    - name: Funzione GetHashFromHandle
+      href: gethashfromhandle-function.md
+    - name: Struttura PublicKeyBlob
+      href: publickeyblob-structure.md
+    - name: Funzione StrongNameCompareAssemblies
+      href: strongnamecompareassemblies-function.md
+    - name: Funzione StrongNameErrorInfo
+      href: strongnameerrorinfo-function.md
+    - name: Funzione StrongNameFreeBuffer
+      href: strongnamefreebuffer-function.md
+    - name: Funzione StrongNameGetBlob
+      href: strongnamegetblob-function.md
+    - name: Funzione StrongNameGetBlobFromImage
+      href: strongnamegetblobfromimage-function.md
+    - name: Funzione StrongNameGetPublicKey
+      href: strongnamegetpublickey-function.md
+    - name: Funzione StrongNameHashSize
+      href: strongnamehashsize-function.md
+    - name: Funzione StrongNameKeyDelete
+      href: strongnamekeydelete-function.md
+    - name: Funzione StrongNameKeyGen
+      href: strongnamekeygen-function.md
+    - name: Funzione StrongNameKeyGenEx
+      href: strongnamekeygenex-function.md
+    - name: Funzione StrongNameKeyInstall
+      href: strongnamekeyinstall-function.md
+    - name: Funzione StrongNameSignatureGeneration
+      href: strongnamesignaturegeneration-function.md
+    - name: Funzione StrongNameSignatureGenerationEx
+      href: strongnamesignaturegenerationex-function.md
+    - name: Funzione StrongNameSignatureSize
+      href: strongnamesignaturesize-function.md
+    - name: Funzione StrongNameSignatureVerification
+      href: strongnamesignatureverification-function.md
+    - name: Funzione StrongNameSignatureVerificationEx
+      href: strongnamesignatureverificationex-function.md
+    - name: Funzione StrongNameSignatureVerificationFromImage
+      href: strongnamesignatureverificationfromimage-function.md
+    - name: Funzione StrongNameTokenFromAssembly
+      href: strongnametokenfromassembly-function.md
+    - name: Funzione StrongNameTokenFromAssemblyEx
+      href: strongnametokenfromassemblyex-function.md
+    - name: Funzione StrongNameTokenFromPublicKey
+      href: strongnametokenfrompublickey-function.md
