@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338072"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Procedura dettagliata: Modello a oggetti e query semplici (Visual Basic)
@@ -91,7 +91,7 @@ In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlin
   
 -   Definire la proprietà `CustomerID` in modo che rappresenti una colonna di chiave primaria nel database.  
   
--   Definire i campi `_CustomerID` e `_City` per l'archiviazione privata. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] può quindi archiviare e recuperare i valori direttamente, anziché usare funzioni di accesso pubbliche che potrebbero includere la logica di business.  
+-   Definire i campi `_CustomerID` e `_City` per l'archiviazione privata. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sarà quindi in grado di archiviare e recuperare direttamente i valori, anziché usare funzioni di accesso pubbliche che potrebbero includere la logica di business.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Per rappresentare caratteristiche di due colonne del database  
   
