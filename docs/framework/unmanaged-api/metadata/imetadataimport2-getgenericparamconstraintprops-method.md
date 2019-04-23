@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0503c5bd924793df8143c89e358618fb8844c6c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215118"
 ---
-# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="90b36-102">Metodo IMetaDataImport2::GetGenericParamConstraintProps</span><span class="sxs-lookup"><span data-stu-id="90b36-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
-<span data-ttu-id="90b36-103">Ottiene i metadati associati al vincolo del parametro generico rappresentato dal token di vincolo specificato.</span><span class="sxs-lookup"><span data-stu-id="90b36-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
+# <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="6d98e-102">Metodo IMetaDataImport2::GetGenericParamConstraintProps</span><span class="sxs-lookup"><span data-stu-id="6d98e-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
+<span data-ttu-id="6d98e-103">Ottiene i metadati associati al vincolo del parametro generico rappresentato dal token di vincolo specificato.</span><span class="sxs-lookup"><span data-stu-id="6d98e-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="90b36-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="90b36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d98e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6d98e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGenericParamConstraintProps (  
@@ -37,26 +37,26 @@ HRESULT GetGenericParamConstraintProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="90b36-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="90b36-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6d98e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6d98e-105">Parameters</span></span>  
  `gpc`  
- <span data-ttu-id="90b36-106">[in] Il token al vincolo del parametro generico per il quale restituire i metadati.</span><span class="sxs-lookup"><span data-stu-id="90b36-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
+ <span data-ttu-id="6d98e-106">[in] Il token al vincolo del parametro generico per il quale restituire i metadati.</span><span class="sxs-lookup"><span data-stu-id="6d98e-106">[in] The token to the generic parameter constraint for which to return the metadata.</span></span>  
   
  `ptGenericParam`  
- <span data-ttu-id="90b36-107">[out] Puntatore al token che rappresenta il parametro generico che è vincolato.</span><span class="sxs-lookup"><span data-stu-id="90b36-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
+ <span data-ttu-id="6d98e-107">[out] Puntatore al token che rappresenta il parametro generico che è vincolato.</span><span class="sxs-lookup"><span data-stu-id="6d98e-107">[out] A pointer to the token that represents the generic parameter that is constrained.</span></span>  
   
  `ptkConstraintType`  
- <span data-ttu-id="90b36-108">[out] Un puntatore a un token TypeDef, TypeRef o TypeSpec che rappresenta un vincolo su `ptGenericParam`.</span><span class="sxs-lookup"><span data-stu-id="90b36-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
+ <span data-ttu-id="6d98e-108">[out] Un puntatore a un token TypeDef, TypeRef o TypeSpec che rappresenta un vincolo su `ptGenericParam`.</span><span class="sxs-lookup"><span data-stu-id="6d98e-108">[out] A pointer to a TypeDef, TypeRef, or TypeSpec token that represents a constraint on `ptGenericParam`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="90b36-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="90b36-109">Requirements</span></span>  
- <span data-ttu-id="90b36-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="90b36-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d98e-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6d98e-109">Requirements</span></span>  
+ <span data-ttu-id="6d98e-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d98e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="90b36-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="90b36-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6d98e-111">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="6d98e-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="90b36-112">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="90b36-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6d98e-112">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="6d98e-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="90b36-113">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="90b36-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="6d98e-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d98e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="90b36-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="90b36-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d98e-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6d98e-114">See also</span></span>
 
-- [<span data-ttu-id="90b36-115">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="90b36-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="90b36-116">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="90b36-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="6d98e-115">Interfaccia IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="6d98e-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="6d98e-116">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="6d98e-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
