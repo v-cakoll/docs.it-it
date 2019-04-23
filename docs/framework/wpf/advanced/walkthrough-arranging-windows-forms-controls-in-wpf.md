@@ -9,10 +9,10 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338774"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procedura dettagliata: Disposizione di controlli Windows Form in WPF
@@ -91,7 +91,7 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2. Premere F5 per compilare ed eseguire l'applicazione. Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Button?displayProperty=nameWithType> verrà visualizzato nel controllo di <xref:System.Windows.Controls.Canvas>. Il controllo ospitato viene ridimensionato in base al contenuto e <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento viene ridimensionato in base al controllo ospitato.  
+2. Premere F5 per compilare ed eseguire l'applicazione. Il [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> verrà visualizzato nel controllo di <xref:System.Windows.Controls.Canvas>. Il controllo ospitato viene ridimensionato in base al contenuto e <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento viene ridimensionato in base al controllo ospitato.  
   
 ## <a name="sizing-to-content"></a>Ridimensionamento in base al contenuto  
  Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento garantisce che il controllo ospitato venga ridimensionato per visualizzare correttamente il contenuto.  
@@ -263,5 +263,5 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
 - [Progettare XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Considerazioni sul layout per l'elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [I controlli di disposizione Windows Form in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Procedura dettagliata: Hosting di un controllo composito Windows Form in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
 - [Procedura dettagliata: Hosting di un controllo composito WPF in Windows Form](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

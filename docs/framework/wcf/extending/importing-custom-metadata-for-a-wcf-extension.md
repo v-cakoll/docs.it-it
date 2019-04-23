@@ -3,10 +3,10 @@ title: Importazione di metadati personalizzati per un'estensione WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339970"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importazione di metadati personalizzati per un'estensione WCF
@@ -51,5 +51,5 @@ In Windows Communication Foundation (WCF), l'importazione dei metadati è il pro
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura: Importare informazioni WSDL personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [Procedura: Importare asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Procedura: Importa asserzioni di criteri personalizzate](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
 - [Procedura: Scrivere un'estensione per ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340022"
 ---
 # <a name="control-authoring-overview"></a>Panoramica della creazione di controlli
@@ -41,7 +41,7 @@ L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>Modelli per la modifica dei controlli  
- Il modello di contenuto avanzato, gli stili, i modelli e i trigger riducono al minimo la necessità di creare un nuovo controllo. Se, tuttavia, è necessario creare un nuovo controllo, è importante conoscere i diversi modelli di creazione di controlli in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce tre modelli generali per la creazione di un controllo, ognuno dei quali fornisce un set di funzionalità diverso e a livello di flessibilità. Le classi base per i tre modelli sono <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, e <xref:System.Windows.FrameworkElement>.  
+ Il modello di contenuto avanzato, gli stili, i modelli e i trigger riducono al minimo la necessità di creare un nuovo controllo. Se, tuttavia, è necessario creare un nuovo controllo, è importante conoscere i diversi modelli di creazione di controlli in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce tre modelli generali per la creazione di un controllo, ognuno dei quali offre un set di funzionalità e un livello di flessibilità specifici. Le classi base per i tre modelli sono <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Controls.Control>, e <xref:System.Windows.FrameworkElement>.  
   
 ### <a name="deriving-from-usercontrol"></a>Derivazione da UserControl  
  Il modo più semplice per creare un controllo nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consiste nel derivarlo da <xref:System.Windows.Controls.UserControl>. Quando si crea un controllo che eredita da <xref:System.Windows.Controls.UserControl>, si aggiungono i componenti esistenti per il <xref:System.Windows.Controls.UserControl>denominare i componenti e fare riferimento ai gestori di eventi in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. È quindi possibile fare riferimento agli elementi denominati e definire i gestori eventi nel codice. Questo modello di sviluppo è molto simile al modello usato per lo sviluppo di applicazioni in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -112,7 +112,7 @@ L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../
   
 -   Definizione di una proprietà del wrapper [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] denominata `Value`, ovvero lo stesso nome usato per registrare la proprietà di dipendenza, implementando le funzioni di accesso `get` e `set` della proprietà. Si noti che il `get` e `set` chiamare solo funzioni di accesso <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> rispettivamente. È consigliabile che le funzioni di accesso delle proprietà di dipendenza non contengano logica aggiuntiva perché i client e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possono ignorare le funzioni di accesso e chiamare il metodo <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> direttamente. Ad esempio, quando una proprietà è associata a un'origine dati, la funzione di accesso `set` della proprietà non viene chiamata.  Anziché aggiungere logica aggiuntiva per get e set di funzioni di accesso, usare il <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, e <xref:System.Windows.PropertyChangedCallback> delegati per rispondere o per controllare il valore in caso di modifiche.  Per altre informazioni su questi callback, vedere [Callback e convalida delle proprietà di dipendenza](../advanced/dependency-property-callbacks-and-validation.md).  
   
--   Definire un metodo per la <xref:System.Windows.CoerceValueCallback> denominato `CoerceValue`. `CoerceValue` assicura che `Value` è maggiore o uguale a `MinValue` e minore o uguale a `MaxValue`.  
+-   Definire un metodo per la <xref:System.Windows.CoerceValueCallback> denominato `CoerceValue`. `CoerceValue` garantisce che `Value` sia maggiore o uguale a `MinValue` e minore o uguale a `MaxValue`.  
   
 -   Definire un metodo per la <xref:System.Windows.PropertyChangedCallback>, denominato `OnValueChanged`. `OnValueChanged` Crea una <xref:System.Windows.RoutedPropertyChangedEventArgs%601> dell'oggetto e lo prepara per la generazione di `ValueChanged` evento indirizzato. Gli eventi indirizzati sono illustrati nella sezione successiva.  
   
@@ -182,7 +182,7 @@ L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../
   
 -   Implementare una coppia di metodi CLR`public` `static` denominati `Set`*NomeProprietà* e `Get`*NomeProprietà*. Entrambi i metodi devono accettare una classe derivata da <xref:System.Windows.DependencyProperty> come primo argomento. Il metodo `Set`*NomeProprietà* accetta anche un argomento il cui tipo corrisponde al tipo di dati registrato per la proprietà. Il metodo `Get`*NomeProprietà* deve restituire un valore dello stesso tipo. In assenza del metodo `Set`*NomeProprietà*, la proprietà viene contrassegnata come di sola lettura.  
   
--   `Set` **PropertyName* e `Get` *PropertyName* devono essere indirizzati direttamente al <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> metodi sulla dipendenza di destinazione dell'oggetto, rispettivamente.DLe finestre di progettazione possono accedere alla proprietà associata eseguendo una chiamata tramite il wrapper del metodo oppure una chiamata diretta all'oggetto dipendenza di destinazione.  
+-   `Set` *PropertyName* e `Get` *PropertyName* devono essere indirizzati direttamente al <xref:System.Windows.DependencyObject.GetValue%2A> e <xref:System.Windows.DependencyObject.SetValue%2A> metodi sulla dipendenza di destinazione dell'oggetto, rispettivamente. Le finestre di progettazione possono accedere alla proprietà associata eseguendo una chiamata tramite il wrapper del metodo oppure una chiamata diretta all'oggetto dipendenza di destinazione.  
   
  Per altre informazioni sulle proprietà associate, vedere [Cenni preliminari sulle proprietà associate](../advanced/attached-properties-overview.md).  
   
@@ -227,7 +227,7 @@ L'estendibilità del modello di controlli di [!INCLUDE[TLA#tla_winclient](../../
  [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>Definizione delle risorse a livello di tema  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Consente di creare risorse per diversi temi di Windows.  L'autore di un controllo può definire una risorsa per un tema specifico in modo da modificare l'aspetto del controllo a seconda del tema in uso. Ad esempio, l'aspetto di un <xref:System.Windows.Controls.Button> in di Windows classico tema (il tema predefinito per Windows 2000) è diverso da un <xref:System.Windows.Controls.Button> nel tema Windows Luna (il tema predefinito per Windows XP) perché il <xref:System.Windows.Controls.Button> utilizza una diversa <xref:System.Windows.Controls.ControlTemplate> per ogni tema.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente di creare risorse per diversi temi di Windows.  L'autore di un controllo può definire una risorsa per un tema specifico in modo da modificare l'aspetto del controllo a seconda del tema in uso. Ad esempio, l'aspetto di un <xref:System.Windows.Controls.Button> in di Windows classico tema (il tema predefinito per Windows 2000) è diverso da un <xref:System.Windows.Controls.Button> nel tema Windows Luna (il tema predefinito per Windows XP) perché il <xref:System.Windows.Controls.Button> utilizza una diversa <xref:System.Windows.Controls.ControlTemplate> per ogni tema.  
   
  Le risorse specifiche di un tema vengono inserite in un dizionario risorse con un nome file specifico. Questi file devono trovarsi in una cartella denominata `Themes` che è una sottocartella della cartella contenente il controllo. La tabella seguente elenca i file del dizionario risorse e il tema associato a ogni file:  
   

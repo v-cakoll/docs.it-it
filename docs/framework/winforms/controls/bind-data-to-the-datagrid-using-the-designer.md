@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321848"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: Associare dati al controllo DataGridView di Windows Forms usando la finestra di progettazione
@@ -51,13 +51,13 @@ ms.locfileid: "59321848"
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [Procedura: Connettersi ai dati in un Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [Procedura: Aggiungere e rimuovere colonne nel controllo DataGridView di Windows Forms usando la finestra di progettazione](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Procedura: Modificare l'ordine delle colonne nel controllo DataGridView di Windows Forms usando la finestra di progettazione](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [Procedura: Modificare il tipo di una colonna DataGridView di Windows Forms usando la finestra di progettazione](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [Procedura: Bloccare le colonne nel controllo DataGridView di Windows Forms usando la finestra di progettazione](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [Procedura: Nascondere le colonne nel controllo DataGridView di Windows Forms usando la finestra di progettazione](hide-columns-in-the-datagrid-using-the-designer.md)
-- [Procedura: Impostare le colonne come di sola lettura nel controllo DataGridView di Windows Forms usando la finestra di progettazione](make-columns-read-only-in-the-datagrid-using-the-designer.md)
-- [Procedura: Creare un progetto Windows Forms application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procedura: Aggiungere e rimuovere colonne nel controllo DataGridView Windows Form usando la finestra di progettazione](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Procedura: Modificare l'ordine delle colonne nel controllo DataGridView Windows Form usando la finestra di progettazione](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [Procedura: Modificare il tipo di una colonna DataGridView di Windows Form usando la finestra di progettazione](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [Procedura: Bloccare le colonne nel controllo DataGridView Windows Form usando la finestra di progettazione](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Procedura: Nascondere colonne nel controllo DataGridView Windows Form usando la finestra di progettazione](hide-columns-in-the-datagrid-using-the-designer.md)
+- [Procedura: Rendere le colonne di sola lettura nel controllo DataGridView Windows Form usando la finestra di progettazione](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [Procedura: Creare un progetto di Windows Forms Application](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
 - [Finestra Origini dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [Procedura: Visualizzare i dati correlati in una Windows Forms Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

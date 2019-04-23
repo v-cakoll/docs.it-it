@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339905"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Procedura: Impostare l'ordine di tabulazione in Windows Forms
@@ -56,7 +56,7 @@ L'ordine di tabulazione è l'ordine in cui un utente si sposta lo stato attivo d
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli per Windows Form](index.md)
+- [Controlli Windows Form](index.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)

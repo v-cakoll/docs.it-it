@@ -11,10 +11,10 @@ helpviewer_keywords:
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
 ms.openlocfilehash: 318521cc1377be89ef54706d80c8b2990a6ba1b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339294"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Procedura: Visualizzare elementi secondari nelle colonne con il controllo ListView di Windows Forms
@@ -32,7 +32,7 @@ I moduli di Windows <xref:System.Windows.Forms.ListView> controllo può visualiz
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica del controllo ListView](listview-control-overview-windows-forms.md)
-- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Procedura: Aggiungere colonne al controllo ListView di Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Procedura: Visualizzare icone per il controllo ListView di Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Procedura: Aggiungere e rimuovere elementi con il controllo ListView di Windows Form](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere colonne al controllo ListView Windows Form](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Procedura: Visualizzare le icone per il controllo ListView di Windows Form](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333912"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedura: Passare argomenti a una routine (Visual Basic)
@@ -49,11 +49,11 @@ Quando si chiama una routine, si seguono il nome della routine con un elenco di 
 
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
-- [Routine di proprietà](./property-procedures.md)
+- [Routine Property](./property-procedures.md)
 - [Routine di operatore](./operator-procedures.md)
 - [Procedura: Definire un parametro per una routine](./how-to-define-a-parameter-for-a-procedure.md)
 - [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)
 - [Routine ricorsive](./recursive-procedures.md)
-- [Overload delle routine](./procedure-overloading.md)
+- [Overload della routine](./procedure-overloading.md)
 - [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Programmazione orientata agli oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)

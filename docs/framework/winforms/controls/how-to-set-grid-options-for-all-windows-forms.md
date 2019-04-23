@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336057"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Procedura: Impostare le opzioni della griglia per tutti i Windows Form
@@ -31,13 +31,13 @@ Come si diventa abituati a usare nell'ambiente di sviluppo Visual Studio, è pos
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Generale, Progettazione Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Controlli per Windows Form](index.md)
-- [Procedura: Aggiungere controlli a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Generale, finestra di progettazione di Windows Form, finestra di dialogo Opzioni](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Controlli Windows Form](index.md)
+- [Procedura: Aggiungere controlli a un Windows Form](how-to-add-controls-to-windows-forms.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
-- [Procedura: Impostare l'ordine di tabulazione in Windows Forms](how-to-set-the-tab-order-on-windows-forms.md)
-- [Procedura: Impostare il testo visualizzato da un controllo di Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Procedura: Impostare l'ordine di tabulazione in Windows Form](how-to-set-the-tab-order-on-windows-forms.md)
+- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Inserimento di controlli in Windows Form](putting-controls-on-windows-forms.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)
 - [Controlli Windows Form per funzione](windows-forms-controls-by-function.md)

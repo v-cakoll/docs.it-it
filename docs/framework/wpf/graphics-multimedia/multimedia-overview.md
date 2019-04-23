@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340490"
 ---
 # <a name="multimedia-overview"></a>Panoramica delle funzionalità multimediali
@@ -99,7 +99,7 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
 ### <a name="controlling-mediaplayer"></a>Controllo di un oggetto MediaPlayer  
  Poiché <xref:System.Windows.Media.MediaPlayer> è senza stato, sono disponibili solo due modi per controllare la riproduzione multimediale.  
   
-1. Metodi di controllo interattivi. Disponibili nella modalità indipendente (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> proprietà).  
+1. Metodi di controllo interattivi. Disponibili nella modalità indipendente (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> proprietà).  
   
 2. <xref:System.Windows.Media.MediaClock>. Disponibile quando i supporti hanno un <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -114,4 +114,4 @@ Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includ
 
 - <xref:System.Windows.Media.DrawingGroup>
 - [Layout](../advanced/layout.md)
-- [Procedure relative](audio-and-video-how-to-topics.md)
+- [Procedure relative alle proprietà](audio-and-video-how-to-topics.md)

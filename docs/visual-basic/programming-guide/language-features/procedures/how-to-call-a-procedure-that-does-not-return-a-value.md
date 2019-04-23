@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335472"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Procedura: Chiamare una routine che non restituisce un valore (Visual Basic)
@@ -32,10 +32,10 @@ Oggetto `Sub` procedure non restituisce un valore al codice chiamante. Viene chi
 
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Istruzione Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Procedura: Creare una routine](./how-to-create-a-procedure.md)
-- [Procedura: Creare una routine che restituisce un valore](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Procedura: Creare una stored Procedure](./how-to-create-a-procedure.md)
+- [Procedura: Chiamare una routine che restituisce un valore](./how-to-call-a-procedure-that-returns-a-value.md)
 - [Procedura: Chiamare un gestore eventi in Visual Basic](./how-to-call-an-event-handler.md)

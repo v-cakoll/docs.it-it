@@ -10,10 +10,10 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341049"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introduzione all'oggetto GlyphRun e all'elemento Glyphs
@@ -27,7 +27,7 @@ Questo argomento viene descritto il <xref:System.Windows.Media.GlyphRun> oggetto
   
 2. Scenari di stampa.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] come un linguaggio della stampante.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] come linguaggio della stampante.  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -97,4 +97,4 @@ Questo argomento viene descritto il <xref:System.Windows.Media.GlyphRun> oggetto
 
 - [Funzionalità tipografiche di WPF](typography-in-wpf.md)
 - [Documenti in WPF](documents-in-wpf.md)
-- [Testo](optimizing-performance-text.md)
+- [per](optimizing-performance-text.md)

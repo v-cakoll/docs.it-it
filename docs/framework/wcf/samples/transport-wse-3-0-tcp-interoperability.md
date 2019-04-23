@@ -3,10 +3,10 @@ title: 'Trasporto: interoperabilità WSE 3.0 TCP'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324214"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Trasporto: interoperabilità WSE 3.0 TCP
@@ -23,7 +23,7 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
 5. Inserire un elemento di associazione che aggiunge il trasporto personalizzato a uno stack di canali. Per altre informazioni, vedere [aggiunta di un elemento di associazione].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Creazione di IDuplexSessionChannel  
- Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> su <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` Deriva da <xref:System.ServiceModel.Channels.ChannelBase>. La logica di inviare un messaggio è costituito da due parti principali: (1) codifica del messaggio in byte e (2) framing dei byte e invio via cavo.  
+ Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> su <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` deriva da <xref:System.ServiceModel.Channels.ChannelBase>. La logica di inviare un messaggio è costituito da due parti principali: (1) codifica del messaggio in byte e (2) framing dei byte e invio via cavo.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -31,13 +31,13 @@ L'esempio trasporto interoperabilità WSE 3.0 TCP illustra come implementare una
   
  Inoltre, viene utilizzato un blocco in modo che le chiamate Send() mantengano la garanzia di ordine di IDuplexSessionChannel e per fare sì che le chiamate al socket sottostante siano sincronizzate correttamente.  
   
- `WseTcpDuplexSessionChannel` Usa un' <xref:System.ServiceModel.Channels.MessageEncoder> per la conversione di un <xref:System.ServiceModel.Channels.Message> da e verso byte []. Poiché si tratta di un trasporto, `WseTcpDuplexSessionChannel` è inoltre responsabile dell'applicazione dell'indirizzo remoto con cui il canale è stato configurato. `EncodeMessage` incapsula la logica per la conversione.  
+ `WseTcpDuplexSessionChannel` utilizza una classe <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre classi <xref:System.ServiceModel.Channels.Message> da e verso byte[]. Poiché si tratta di un trasporto, `WseTcpDuplexSessionChannel` è inoltre responsabile dell'applicazione dell'indirizzo remoto con cui il canale è stato configurato. `EncodeMessage` contiene la logica per la conversione.  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo. Ciò richiede un sistema per la definizione dei limiti del messaggio. WSE 3.0 utilizza una versione di [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing. `WriteData` incapsula la logica di framing per eseguire il wrapping di una matrice di byte in un set di record DIME.  
+ Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo. Ciò richiede un sistema per la definizione dei limiti del messaggio. WSE 3.0 utilizza una versione di [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing. `WriteData` contiene la logica di framing per eseguire il wrapping di un byte[] in un set di record DIME.  
   
  La logica alla base della ricezione dei messaggi è molto simile. Il problema più complesso sta nel gestite il fatto che la lettura di un socket può restituire meno byte di quanto richiesto. Per ricevere un messaggio, `WseTcpDuplexSessionChannel` legge i byte via cavo, decodifica il framing DIME e utilizza <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre i byte [] in una classe <xref:System.ServiceModel.Channels.Message>.  
   

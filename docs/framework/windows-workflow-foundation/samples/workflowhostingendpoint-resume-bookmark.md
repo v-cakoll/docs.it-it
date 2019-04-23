@@ -3,10 +3,10 @@ title: Segnalibro di ripresa WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: a708064f-50b0-4751-b44e-d5410d08d451
 ms.openlocfilehash: 5c3c996a73d8f88e925d459fae3eb785996eada4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340542"
 ---
 # <a name="workflowhostingendpoint-resume-bookmark"></a>Segnalibro di ripresa WorkflowHostingEndpoint
@@ -16,7 +16,7 @@ In questo esempio viene illustrato come usare l'oggetto <xref:System.ServiceMode
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
 ## <a name="discussion"></a>Discussione  
- In questo esempio viene usato <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> per creare un'istanza del flusso di lavoro ospitata usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> è un punto di estendibilità per <xref:System.ServiceModel.Activities.WorkflowServiceHost> che può essere utilizzato negli scenari seguenti:  
+ In questo esempio viene usato <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> per creare un'istanza del flusso di lavoro ospitata usando <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> è un punto di estensibilità per <xref:System.ServiceModel.Activities.WorkflowServiceHost> che può essere usato negli scenari seguenti:  
   
 -   Creazione di nuove istanze del flusso di lavoro.  
   

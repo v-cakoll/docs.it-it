@@ -4,12 +4,12 @@ description: Informazioni su come implementare i gateway API con Ocelot e come u
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5d4f2a3b2551f8da83359b26578d45559721f7df
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464541"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613720"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementare gateway API con Ocelot
 
@@ -85,6 +85,7 @@ public async Task<IActionResult> GetItemById(int id)
     return NotFound();
 }
 ```
+
 La richiesta HTTP eseguirà quel genere di codice C# durante l'accesso al database del microservizio e a qualsiasi altra azione necessaria.
 
 Per quanto riguarda l'URL del microservizio, quando i contenitori vengono distribuiti nel PC di sviluppo locale (host Docker locale), ogni contenitore del microservizio ha sempre una porta interna, in genere la porta 80, specificata nel dockerfile, come illustrato di seguito:
@@ -564,16 +565,16 @@ Nel file del codice sorgente di eShopOnContainers i file "configuration.json" or
 Esistono altre importanti funzionalità da cercare e usare quando si usa un gateway API Ocelot. Queste funzionalità sono descritte nei collegamenti seguenti.
 
 - **Individuazione di servizi sul lato client che integra Ocelot con Consul o Eureka** \
-  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
 - **Memorizzazione nella cache a livello di gateway API** \
-  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
 - **Registrazione a livello di gateway API** \
-  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
 - **Qualità del servizio (nuovi tentativi e interruttori) a livello di gateway API** \
-  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
 - **Limite di frequenza** \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )

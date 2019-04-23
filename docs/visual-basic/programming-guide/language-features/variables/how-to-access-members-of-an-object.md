@@ -6,10 +6,10 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322758"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Procedura: Accedere ai membri di un oggetto (Visual Basic)
@@ -77,5 +77,5 @@ Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è s
 - <xref:System.MemberAccessException>
 - [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Dichiarazione di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

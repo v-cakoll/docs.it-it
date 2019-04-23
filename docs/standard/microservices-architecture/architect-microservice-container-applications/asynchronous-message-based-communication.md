@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET in contenit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4285c37c90b01424de70a2ac4dd75d5d9c63dac0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 105daed3bca03571caea92fdbd1d6c6f56b24fef
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465568"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614077"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicazione asincrona basata su messaggi
 
@@ -86,25 +86,25 @@ Altri aspetti da considerare quando si usa la comunicazione asincrona sono l'ide
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Event Driven Messaging** \ (Messaggistica basata su eventi)
-  [http://soapatterns.org/design_patterns/event_driven_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+  <http://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **Publish/Subscribe Channel** \ (Canale di pubblicazione/sottoscrizione)
-  [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+  <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan. Clarified CQRS** \ (Definizione di CQRS)
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
+  <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **Command and Query Responsibility Segregation (CQRS) (Separazione di responsabilità per query e comandi (CQRS))** \
-  [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+  <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Communicating Between Bounded Contexts** \ (Comunicazione tra contesti delimitati)
-  [https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Eventual Consistency** \ (Coerenza finale)
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring e resilienza: valutazione dell'accoppiamento)** \
-  [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+  <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
 > [Precedente](communication-in-microservice-architecture.md)

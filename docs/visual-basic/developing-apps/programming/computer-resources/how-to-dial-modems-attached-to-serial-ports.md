@@ -7,10 +7,10 @@ helpviewer_keywords:
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
 ms.openlocfilehash: db482af7750012d8805d4f834063a2c82224cf67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337032"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Procedura: Comporre numeri con modem collegati a porte seriali in Visual Basic

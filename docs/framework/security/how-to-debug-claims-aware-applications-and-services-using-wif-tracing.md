@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321549"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con le funzionalità di traccia WIF
@@ -108,4 +108,4 @@ ms.locfileid: "59321549"
   
 ## <a name="related-items"></a>Elementi correlati  
   
--   [Uso di Service Trace Viewer per la visualizzazione di tracce correlate e risoluzione dei problemi](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+-   [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

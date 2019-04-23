@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
 ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336070"
 ---
 # <a name="how-to-disable-tab-pages"></a>Procedura: Disabilitare le schede
@@ -104,6 +104,6 @@ In alcuni casi, è opportuno limitare l'accesso ai dati che sono disponibili all
 ## <a name="see-also"></a>Vedere anche
 
 - [Panoramica del controllo TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Procedura: Aggiungere un controllo a una scheda](how-to-add-a-control-to-a-tab-page.md)
-- [Procedura: Aggiungere e rimuovere schede con TabControl di Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Procedura: Modificare l'aspetto di TabControl di Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Procedura: Aggiungere un controllo a un oggetto TabPage](how-to-add-a-control-to-a-tab-page.md)
+- [Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Procedura: Modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

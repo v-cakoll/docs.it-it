@@ -16,10 +16,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334003"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Procedura: Posizionare i controlli in Windows Forms
@@ -97,10 +97,10 @@ Per posizionare i controlli, usare Progettazione Windows Form o specificare il <
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli per Windows Form](index.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Controlli Windows Form](index.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

@@ -3,10 +3,10 @@ title: Generazione di codice in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
 ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321588"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generazione di codice in LINQ to SQL
@@ -272,7 +272,7 @@ elementFormDefault="qualified" >
 ## <a name="see-also"></a>Vedere anche
 
 - [Informazioni di base](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Mapping esterno](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Procedura: Generare il modello a oggetti come file esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [External Mapping](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md) (Mapping esterno)
+- [Procedura: Generare il modello a oggetti come File esterno](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [Download di database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Riferimento](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

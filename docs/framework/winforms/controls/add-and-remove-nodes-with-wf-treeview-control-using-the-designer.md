@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
 ms.openlocfilehash: ecf0b758a9c45a0354a68b6cbfecdb1c49ab390f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322628"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>Procedura: Aggiungere e rimuovere nodi tramite il controllo TreeView di Windows Forms usando la finestra di progettazione
@@ -37,8 +37,8 @@ Poiché il Windows Form <xref:System.Windows.Forms.TreeView> controllo consente 
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo TreeView](treeview-control-windows-forms.md)
-- [Panoramica del controllo TreeView](treeview-control-overview-windows-forms.md)
-- [Procedura: Impostare icone per il controllo TreeView di Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Panoramica sul controllo TreeView](treeview-control-overview-windows-forms.md)
+- [Procedura: Impostare icone per il controllo TreeView di Windows Form](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Form](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
 - [Procedura: Individuare il nodo di TreeView scelto](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

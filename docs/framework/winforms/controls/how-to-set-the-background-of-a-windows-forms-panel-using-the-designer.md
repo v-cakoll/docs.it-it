@@ -8,10 +8,10 @@ helpviewer_keywords:
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
 ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334354"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Procedura: Impostare lo sfondo di un controllo Panel di Windows Forms usando la finestra di progettazione
@@ -41,5 +41,5 @@ Un controllo Windows Form <xref:System.Windows.Forms.Panel> controllo può visua
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Controllo Panel](panel-control-windows-forms.md)
-- [Panoramica del controllo Panel](panel-control-overview-windows-forms.md)
-- [Procedura: Raggruppare i controlli con il controllo Panel di Windows Forms usando la finestra di progettazione](group-controls-with-wf-panel-control-using-the-designer.md)
+- [Panoramica sul controllo Panel](panel-control-overview-windows-forms.md)
+- [Procedura: Controlli di gruppo con il controllo Panel di Windows Form usando la finestra di progettazione](group-controls-with-wf-panel-control-using-the-designer.md)

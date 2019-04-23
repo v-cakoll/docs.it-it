@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333834"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procedura: Definire un parametro per una routine (Visual Basic)
@@ -54,12 +54,12 @@ Oggetto *parametro* consente di passare un valore per la procedura quando si chi
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Routine Sub](./sub-procedures.md)
 - [Routine Function](./function-procedures.md)
 - [Procedura: Passare argomenti a una routine](./how-to-pass-arguments-to-a-procedure.md)
 - [Passaggio di argomenti per valore e per riferimento](./passing-arguments-by-value-and-by-reference.md)
 - [Routine ricorsive](./recursive-procedures.md)
-- [Overload delle routine](./procedure-overloading.md)
+- [Overload della routine](./procedure-overloading.md)
 - [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Programmazione orientata agli oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [Programmazione orientata a oggetti (Visual Basic)](../../concepts/object-oriented-programming.md)

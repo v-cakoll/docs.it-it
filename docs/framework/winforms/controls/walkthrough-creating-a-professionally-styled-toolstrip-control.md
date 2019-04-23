@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336551"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procedura dettagliata: Creazione di un controllo ToolStrip professionale
@@ -88,7 +88,7 @@ ms.locfileid: "59336551"
     |ImageTransparentColor|`238, 238, 238`|  
     |Margini|`0, 0, 0, 0`|  
     |Spaziatura interna|`3, 3, 3, 3`|  
-    |Testo|**Posta**|  
+    |Testo|**Posta elettronica**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5. Ripetere il passaggio 7 per altri tre <xref:System.Windows.Forms.ToolStripButton> controlli.  
@@ -190,4 +190,4 @@ ms.locfileid: "59336551"
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)
-- [Procedura: Specificare voci di menu standard per un modulo](how-to-provide-standard-menu-items-to-a-form.md)
+- [Procedura: Specificare voci di Menu Standard in un Form](how-to-provide-standard-menu-items-to-a-form.md)

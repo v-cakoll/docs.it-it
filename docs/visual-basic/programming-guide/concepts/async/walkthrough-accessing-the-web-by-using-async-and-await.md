@@ -3,10 +3,10 @@ title: 'Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basi
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335901"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basic)
@@ -137,7 +137,7 @@ ms.locfileid: "59335901"
   
 3. Il codice per la soluzione sincrona contiene i quattro metodi seguenti:  
   
-    -   `SumPageSizes`, che ottiene un elenco di URL delle pagine Web dalla `SetUpURLList` e quindi chiama `GetURLContents` e `DisplayResults` per elaborare ogni URL.  
+    -   `SumPageSizes`, che ottiene un elenco di URL delle pagine Web da `SetUpURLList` e quindi chiama `GetURLContents` e `DisplayResults` per elaborare ogni URL.  
   
     -   `SetUpURLList`, che crea e restituisce un elenco di indirizzi web.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "59335901"
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` Restituisce un <xref:System.Threading.Tasks.Task%601>. In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>. L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.  
+2. `GetResponseAsync` restituisce <xref:System.Threading.Tasks.Task%601>. In questo caso, la *variabile di restituzione dell'attività*, `TResult`, è di tipo <xref:System.Net.WebResponse>. L'attività rappresenta una promessa di creazione di un oggetto `WebResponse` effettivo dopo il download dei dati richiesti e il completamento dell'esecuzione dell'attività.  
   
      Per recuperare il `WebResponse` valore dall'attività, applicare un' [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operatore per la chiamata a `GetResponseAsync`, come illustrato nel codice seguente.  
   
@@ -675,11 +675,11 @@ End Class
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Esempio asincrono: Accesso alla procedura dettagliata Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Accesso alla procedura dettagliata Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Operatore Await](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Tipi restituiti asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Programmazione asincrona basata su attività (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [Programmazione asincrona basata su attività](https://go.microsoft.com/fwlink/?LinkId=204847)
 - [Procedura: Estendere la procedura dettagliata asincrona tramite Task. whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Procedura: Eseguire più richieste Web in parallelo tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

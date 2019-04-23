@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
 ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337955"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>Procedura: Impostare il testo visualizzato da un controllo di Windows Forms usando la finestra di progettazione
@@ -27,6 +27,6 @@ Controlli Windows Form in genere visualizzano il testo è correlato alla funzion
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Impostare il testo visualizzato da un controllo di Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Utilizzo di tipi di carattere e testo](../advanced/using-fonts-and-text.md)
+- [Procedura: Impostare il testo visualizzato dal controllo di un Windows Form](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Uso di tipi di carattere e testo](../advanced/using-fonts-and-text.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

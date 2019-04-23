@@ -7,10 +7,10 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340971"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Procedura: Aggiungere un controllo a una scheda usando la finestra di progettazione
@@ -31,6 +31,6 @@ L'uso di moduli di Windows <xref:System.Windows.Forms.TabControl> consiste nel v
 
 - [Controllo TabControl](tabcontrol-control-windows-forms.md)
 - [Panoramica del controllo TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Procedura: Modificare l'aspetto di TabControl di Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Procedura: Modificare l'aspetto del controllo TabControl Windows Form](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
 - [Procedura: Disabilitare le schede](how-to-disable-tab-pages.md)
-- [Procedura: Aggiungere e rimuovere schede con TabControl di Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Procedura: Aggiungere e rimuovere schede con il controllo TabControl di Windows Form](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

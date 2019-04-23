@@ -11,10 +11,10 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
 ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337058"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Procedura: Associare un menu di scelta rapida a un componente NotifyIcon di Windows Forms
@@ -130,6 +130,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Procedura: Aggiungere icone delle applicazioni alla barra delle applicazioni con il componente NotifyIcon di Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Procedura: Aggiungere le icone dell'applicazione alla barra delle applicazioni con il componente NotifyIcon di Windows Form](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [Componente NotifyIcon](notifyicon-component-windows-forms.md)
-- [Panoramica del componente NotifyIcon](notifyicon-component-overview-windows-forms.md)
+- [Panoramica sul componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

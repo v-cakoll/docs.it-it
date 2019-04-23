@@ -3,11 +3,11 @@ title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
 ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329661"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767539"
 ---
 # <a name="jsonp"></a>JSONP
 In questo esempio viene illustrato come supportare JSONP (JSON with Padding) nei servizi WCF REST. JSONP è una convenzione usata per richiamare script tra domini mediante la generazione di tag script nel documento corrente. Il risultato viene restituito in una funzione di callback specificata. JSONP si basa sul concetto che tag quali `<script src="http://..." >` grado di valutare script da ogni dominio e che lo script recuperato da tali tag venga valutato all'interno di un ambito in cui altre funzioni possono essere già definite.

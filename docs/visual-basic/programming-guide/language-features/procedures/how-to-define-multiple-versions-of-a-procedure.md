@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
 ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324032"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Procedura: Definire più versioni di una routine (Visual Basic)
@@ -44,10 +44,10 @@ ms.locfileid: "59324032"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
+- [Routine](./index.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
 - [Risoluzione dei problemi relativi alle routine](./troubleshooting-procedures.md)
-- [Procedura: Eseguire l'overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Procedura: Overload di una routine che accetta parametri facoltativi](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Procedura: Eseguire l'overload di una routine che accetta un numero indefinito di parametri](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md)
-- [Overload Resolution](./overload-resolution.md)
+- [Risoluzione dell'overload](./overload-resolution.md)

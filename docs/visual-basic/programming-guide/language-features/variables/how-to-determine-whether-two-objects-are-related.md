@@ -7,10 +7,10 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
 ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342102"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Procedura: Determinare se due oggetti sono correlati (Visual Basic)
@@ -52,7 +52,7 @@ End Class
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Valori di variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Procedura: Determinare se due oggetti sono identici](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

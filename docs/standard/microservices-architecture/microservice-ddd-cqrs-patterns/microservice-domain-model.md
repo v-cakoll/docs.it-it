@@ -4,12 +4,12 @@ description: Architettura di microservizi .NET per applicazioni .NET incluse in 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465893"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613057"
 ---
 # <a name="design-a-microservice-domain-model"></a>Progettare un modello di dominio del microservizio
 
@@ -58,13 +58,13 @@ Alcune persone sostengono che il modello di dominio anemico sia un antipattern: 
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **DevIQ. Entità di dominio** \
-  [https://deviq.com/entity/](https://deviq.com/entity/)
+  <https://deviq.com/entity/>
 
 - **Martin Fowler. Modello di dominio** \
-  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
+  <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler. The Anemic Domain Model** \ (Il modello di dominio anemico)
-  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>Schema Value Object
 
@@ -83,16 +83,16 @@ EF Core 2.0 include la funzionalità [Entità di proprietà](https://devblogs.mi
 #### <a name="additional-resources"></a>Risorse aggiuntive
 
 - **Martin Fowler. Schema Value Object** \
-  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
+  <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Oggetto valore** \
-  [https://deviq.com/value-object/](https://deviq.com/value-object/)
+  <https://deviq.com/value-object/>
 
 - **Oggetti valore nello sviluppo basato su test** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans. Domain-Driven Design (Progettazione basata su domini): Tackling Complexity in the Heart of Software.** (Gestire le complessità nel software) (Libro. Include una trattazione sugli oggetti valore) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>Schema Aggregate
 
@@ -145,13 +145,13 @@ Identificare ed eseguire operazioni sulle aggregazioni richiede esperienza e ric
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. DDD Tactical Design Patterns** \ (Schemi progettuali tattici DDD)
-  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
 - **Chris Richardson. Developing Transactional Microservices Using Aggregates** \ (Sviluppo di microservizi transazionali usando aggregazioni)
-  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ. Schema Aggregate** \
-  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
+  <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
 >[Precedente](ddd-oriented-microservice.md)

@@ -6,10 +6,10 @@ ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336135"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Rimozione di attributi da un nodo di elemento nel DOM
@@ -41,4 +41,4 @@ Sono disponibili numerosi metodi per rimuovere gli attributi. Una tecnica consis
   
 ## <a name="see-also"></a>Vedere anche
 
-- [XML DOM (Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Modello DOM (Document Object Mode) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

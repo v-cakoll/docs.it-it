@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
 ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321601"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Procedura: Ridimensionare i controlli in Windows Forms
@@ -34,7 +34,7 @@ ms.locfileid: "59321601"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Controlli per Windows Form](index.md)
+- [Controlli Windows Form](index.md)
 - [Disposizione di controlli in Windows Form](arranging-controls-on-windows-forms.md)
 - [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controlli da usare in Windows Form](controls-to-use-on-windows-forms.md)

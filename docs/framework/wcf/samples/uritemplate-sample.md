@@ -3,10 +3,10 @@ title: Esempio di UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322615"
 ---
 # <a name="uritemplate-sample"></a>Esempio di UriTemplate
@@ -16,7 +16,7 @@ La classe <xref:System.UriTemplate> fornisce metodi per l'utilizzo di set di URI
   
 -   Creazione di istanze degli URI da un `UriTemplate` utilizzando <xref:System.UriTemplate.BindByName%2A> e <xref:System.UriTemplate.BindByPosition%2A>.  
   
--   <xref:System.UriTemplateTable.Match%2A>, che è l'operazione inversa del `BindByName` e `BindByPosition`.  
+-   <xref:System.UriTemplateTable.Match%2A>, che corrisponde all'operazione inversa di `BindByName` e `BindByPosition`.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
@@ -35,5 +35,5 @@ La classe <xref:System.UriTemplate> fornisce metodi per l'utilizzo di set di URI
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplateTable](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [Dispatcher della tabella UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

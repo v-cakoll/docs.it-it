@@ -3,10 +3,10 @@ title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334094"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
@@ -24,7 +24,7 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
  La coda di messaggi non recapitabili nell'associazione `NetMsmqBinding` è espressa nelle proprietà seguenti:
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> proprietà per esprimere il tipo di coda dei messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
+-   Proprietà <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> per esprimere il tipo di coda di messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
 
 -   `None`: Coda dei messaggi non recapitabili è richiesto dal client.
 
@@ -32,7 +32,7 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
 -   `Custom`: Una coda recapitabili personalizzata specificata utilizzando il <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà viene utilizzata per archiviare i messaggi non recapitati. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà per esprimere la coda specifica da usare come una coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  In questo esempio, il client invia un gruppo di messaggi al servizio dall'interno dell'ambito di una transazione e specifica un valore arbitrariamente basso per la "durata" di questi messaggi (circa 2 secondi). Il client specifica anche una coda di messaggi non recapitabili personalizzata da usare per accodare i messaggi che sono scaduti.
 

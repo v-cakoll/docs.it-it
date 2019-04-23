@@ -3,10 +3,10 @@ title: Istruzioni per la configurazione di directory virtuali
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325345"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Istruzioni per la configurazione di directory virtuali
@@ -59,9 +59,9 @@ Gli esempi di Windows Communication Foundation (WCF) devono condividere una dire
   
 7. Per impostazione predefinita, le caselle di controllo seguenti sono selezionate:  
   
-    -   **Lettura**  
+    -   **Read**  
   
-    -   **Esecuzione script (ad esempio, ASP)**  
+    -   **Eseguire gli script (ad esempio, ASP)**  
   
 8. Fare clic su **successivo**, quindi fare clic su **fine** per completare la procedura guidata.  
   
@@ -84,7 +84,7 @@ Gli esempi di Windows Communication Foundation (WCF) devono condividere una dire
   
 2. Per impostazione predefinita, le caselle di controllo seguenti sono selezionate:  
   
-    -   **Lettura**  
+    -   **Read**  
   
     -   **Registrazione visite**  
   
@@ -192,4 +192,4 @@ Gli esempi di Windows Communication Foundation (WCF) devono condividere una dire
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Istruzioni per l'hosting su IIS (Internet Information Services)](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
+- [Istruzioni per l'hosting su Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

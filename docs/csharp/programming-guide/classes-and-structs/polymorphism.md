@@ -7,10 +7,10 @@ helpviewer_keywords:
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
 ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322082"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guida per programmatori C#)
@@ -99,7 +99,7 @@ Il polimorfismo è spesso definito il terzo pilastro della programmazione orient
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
 - [Ereditarietà](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Classi e membri delle classi astratti e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Eventi](../../../csharp/programming-guide/events/index.md)
 - [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)

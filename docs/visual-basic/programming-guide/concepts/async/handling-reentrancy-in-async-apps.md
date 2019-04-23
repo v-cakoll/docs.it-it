@@ -3,16 +3,16 @@ title: Gestione della Reentrancy nelle applicazioni asincrone (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324786"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Gestione della Reentrancy nelle applicazioni asincrone (Visual Basic)
 Quando si include codice asincrono nell'applicazione, è consigliabile prevedere ed evitare la reentrancy, ovvero il reinserimento di un'operazione asincrona prima del suo completamento. Se non vengono identificate e gestite le possibilità di reentrancy, esse possono causare risultati imprevisti.  
   
- **Contenuto dell'argomento**  
+ **In questo argomento**  
   
 -   [Riconoscimento della reentrancy](#BKMK_RecognizingReentrancy)  
   
@@ -24,7 +24,7 @@ Quando si include codice asincrono nell'applicazione, è consigliabile prevedere
   
     -   [Eseguire più operazioni e mettere in coda l'output](#BKMK_RunMultipleOperations)  
   
--   [Revisione ed esecuzione dell'applicazione di esempio](#BKMD_SettingUpTheExample)  
+-   [Revisione ed esecuzione dell'app di esempio](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Per eseguire l'esempio, è necessario che nel computer siano installati Visual Studio 2012 o versioni successive e .NET Framework 4.5 o versioni successive.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>Il metodo AccessTheWebAsync  
  Questo esempio suddivide `AccessTheWebAsync` in due metodi. Il primo metodo, `AccessTheWebAsync`, avvia tutte le attività di download per un gruppo e configura `pendingWork` per il controllo del processo di visualizzazione. Il metodo usa una query LINQ (Language Integrated Query) e <xref:System.Linq.Enumerable.ToArray%2A> per avviare tutte le attività di download contemporaneamente.  
   
- `AccessTheWebAsync` chiama quindi `FinishOneGroupAsync` per attendere il completamento di ogni download e visualizzare la relativa lunghezza.  
+ `AccessTheWebAsync` quindi chiama `FinishOneGroupAsync` per attendere il completamento di ogni download e visualizzare la relativa lunghezza.  
   
- `FinishOneGroupAsync` Restituisce un'attività che è stata assegnata `pendingWork` in `AccessTheWebAsync`. Tale valore impedisce l'interruzione da parte di un'altra operazione prima del completamento dell'attività.  
+ `FinishOneGroupAsync` restituisce un'attività assegnata a `pendingWork` in `AccessTheWebAsync`. Tale valore impedisce l'interruzione da parte di un'altra operazione prima del completamento dell'attività.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  

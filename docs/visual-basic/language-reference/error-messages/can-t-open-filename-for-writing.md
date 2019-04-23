@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
 ms.openlocfilehash: b92a2c6f3de02a1a31ad131004dd613b15f01f19
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325163"
 ---
 # <a name="cant-open-filename-for-writing"></a>Non è possibile aprire '\<nomefile >' per la scrittura
@@ -29,4 +29,4 @@ Impossibile aprire il file specificato per la scrittura, probabilmente perché �
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [Scrittura in file](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Scrittura su file](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

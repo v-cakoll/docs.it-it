@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341621"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Procedura dettagliata: Disposizione dei controlli in Windows Forms usando TableLayoutPanel
@@ -182,13 +182,13 @@ Alcune applicazioni richiedono che il form abbia un layout che possa adattarsi a
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Procedura dettagliata: Disposizione dei controlli in Windows Forms usando le guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Procedura dettagliata: Disposizione dei controlli in Windows Form usando guide di allineamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers (Esperienza utente di Microsoft Windows, Linee guida ufficiali per analisti e sviluppatori dell'interfaccia utente). Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [Procedura dettagliata: Creazione di un Form Windows ridimensionabile per immissione dati](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [Procedura dettagliata: Creazione di un Form Windows localizzabili](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
-- [Suggerimenti per il controllo TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
-- [Cenni preliminari sulla proprietà AutoSize](autosize-property-overview.md)
-- [Procedura: Ancorare i controlli in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Procedura: Agganciare i controlli in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Procedura dettagliata: Disposizione dei controlli Windows Forms con spaziatura interna, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)
+- [Procedure consigliate per il controllo TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
+- [Panoramica sulla proprietà AutoSize](autosize-property-overview.md)
+- [Procedura: Ancorare i controlli in Windows Form](how-to-dock-controls-on-windows-forms.md)
+- [Procedura: Ancoraggio dei controlli in Windows Form](how-to-anchor-controls-on-windows-forms.md)
+- [Procedura dettagliata: Definire il layout dei Windows Form usando spaziatura, margini e la proprietà AutoSize](windows-forms-controls-padding-autosize.md)

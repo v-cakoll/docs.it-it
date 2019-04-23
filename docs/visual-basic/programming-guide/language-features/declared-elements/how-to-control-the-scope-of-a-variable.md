@@ -13,10 +13,10 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324318"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Procedura: Controllare l'ambito di una variabile (Visual Basic)
@@ -88,9 +88,9 @@ Public strMsg As String
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Ambito in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Durata in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Livelli di accesso in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Dichiarazione di variabili](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 ms.openlocfilehash: c682db98ac72019d434e06ae79d87b69c85c275e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310291"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767409"
 ---
 # <a name="ws-reliable-session"></a>Sessioni affidabili WS
 Nell'esempio viene illustrato l'utilizzo delle sessioni affidabili. Le sessioni affidabili forniscono supporto per la messaggistica affidabile e le sessioni. La messaggistica affidabile ritenta la comunicazione in caso di errore e consente di specificare assicurazioni del recapito quali l'arrivo nell'ordine di invio dei messaggi. Le sessioni gestiscono lo stato per i client tra le chiamate. L'esempio implementa le sessioni per mantenere lo stato del client e specifica assicurazioni di recapito nell'ordine.  

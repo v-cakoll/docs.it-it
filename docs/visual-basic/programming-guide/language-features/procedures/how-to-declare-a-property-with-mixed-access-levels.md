@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339814"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Procedura: Dichiarare una proprietà con livelli di accesso misti (Visual Basic)
@@ -36,13 +36,13 @@ Se si desidera che il `Get` e `Set` procedure su una proprietà per avere divers
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedure](./index.md)
-- [Routine di proprietà](./property-procedures.md)
+- [Routine](./index.md)
+- [Routine Property](./property-procedures.md)
 - [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Differenze tra proprietà e variabili in Visual Basic](./differences-between-properties-and-variables.md)
 - [Procedura: Creare una proprietà](./how-to-create-a-property.md)
-- [Procedura: Chiamare una routine di proprietà](./how-to-call-a-property-procedure.md)
+- [Procedura: Chiamare una routine Property](./how-to-call-a-property-procedure.md)
 - [Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Procedura: Inserire un valore in una proprietà](./how-to-put-a-value-in-a-property.md)
 - [Procedura: Ottenere un valore da una proprietà](./how-to-get-a-value-from-a-property.md)

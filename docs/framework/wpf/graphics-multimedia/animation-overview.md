@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337734"
 ---
 # <a name="animation-overview"></a>Cenni preliminari sull'animazione
@@ -35,9 +35,9 @@ ms.locfileid: "59337734"
   
 -   Il programma aggiorna quindi il rettangolo in base al nuovo valore e lo ridisegna.  
   
- Nelle versioni precedenti a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] gli sviluppatori dovevano creare e gestire i propri sistemi di temporizzazione oppure usare librerie personalizzate speciali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include un sistema di temporizzazione efficiente esposto tramite codice gestito e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e che è integrato nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animazione rende più facile applicare animazioni ai controlli e ad altri oggetti grafici.  
+ Nelle versioni precedenti a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] gli sviluppatori dovevano creare e gestire i propri sistemi di temporizzazione oppure usare librerie personalizzate speciali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include un sistema di temporizzazione efficiente esposto tramite codice gestito e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e che è integrato nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. Le funzionalità disponibili in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] semplificano l'applicazione di animazioni ai controlli e ad altri oggetti grafici.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gestisce tutte le attività di gestione di un sistema di temporizzazione e aggiornamento dello schermo in modo efficiente. grazie a classi di temporizzazione che consentono di concentrarsi sugli effetti da creare anziché sulle operazioni per ottenerli. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rende anche facilmente per creare il proprio animazioni tramite l'esposizione di classi di animazione base da cui possono ereditare le classi, di animazioni personalizzate. che sfruttano molti vantaggi in termini di prestazioni delle classi di animazione standard.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] esegue in modo efficiente tutte le attività automatiche di gestione del sistema di temporizzazione e di aggiornamento dello schermo grazie a classi di temporizzazione che consentono di concentrarsi sugli effetti da creare anziché sulle operazioni per ottenerli. Esponendo le classi di base di animazione da cui le classi dell'utente possono ereditare, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] semplifica anche la creazione di animazioni personalizzate che sfruttano molti vantaggi in termini di prestazioni delle classi di animazione standard.  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>Sistema di animazione delle proprietà WPF  
@@ -318,11 +318,11 @@ ms.locfileid: "59337734"
 ## <a name="animation-samples"></a>Esempi di animazione  
  Gli esempi seguenti consentono di iniziare ad aggiungere animazione alle applicazioni.  
   
--   [FROM, To e dall'esempio di valori di destinazione dell'animazione](https://go.microsoft.com/fwlink/?LinkID=159988)  
+-   [Esempio di valori di destinazione dell'animazione From/To/By](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      Descrive le diverse impostazioni From/To/By.  
   
--   [Esempio di comportamento temporale di animazione](https://go.microsoft.com/fwlink/?LinkID=159970)  
+-   [Esempio di comportamento temporale di un'animazione](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      Illustra le diverse modalità per controllare il comportamento temporale di un'animazione. Questo esempio illustra anche come associare a dati il valore di destinazione di un'animazione.  
   
@@ -342,7 +342,7 @@ ms.locfileid: "59337734"
 |[Cenni preliminari sugli storyboard](storyboards-overview.md)|Descrive come usare gli storyboard con più sequenze temporali per creare animazioni complesse.|  
 |[Cenni preliminari sui comportamenti temporali](timing-behaviors-overview.md)|Viene descritto il <xref:System.Windows.Media.Animation.Timeline> tipi e le proprietà usate nelle animazioni.|  
 |[Cenni preliminari sugli eventi di tempo](timing-events-overview.md)|Vengono descritti gli eventi disponibili nel <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> oggetti per l'esecuzione di codice in punti specifici nella sequenza temporale, ad esempio avviare, sospendere, riprendere, ignorare o arrestare.|  
-|[Procedure relative](animation-and-timing-how-to-topics.md)|Contiene esempi di codice per usare animazioni e sequenze temporali in un'applicazione.|  
+|[Procedure relative alle proprietà](animation-and-timing-how-to-topics.md)|Contiene esempi di codice per usare animazioni e sequenze temporali in un'applicazione.|  
 |[Procedure relative a oggetti Clock](clocks-how-to-topics.md)|Contiene esempi di codice per l'uso di <xref:System.Windows.Media.Animation.Clock> oggetto nell'applicazione.|  
 |[Procedure relative ai fotogrammi chiave](key-frame-animation-how-to-topics.md)|Contiene esempi di codice per l'uso di animazioni con fotogrammi chiave in un'applicazione.|  
 |[Procedure relative all'animazione percorso](path-animation-how-to-topics.md)|Contiene esempi di codice per l'uso di animazioni basate su tracciato in un'applicazione.|  

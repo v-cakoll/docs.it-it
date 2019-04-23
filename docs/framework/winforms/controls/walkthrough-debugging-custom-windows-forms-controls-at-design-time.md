@@ -16,10 +16,10 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325358"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Procedura dettagliata: Debug di controlli di Windows Form personalizzati in fase di progettazione
@@ -174,6 +174,6 @@ Quando si crea un controllo personalizzato, è spesso risulterà necessario per 
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura dettagliata: Creazione di un controllo di Windows Forms che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione](creating-a-wf-control-design-time-features.md)
+- [Procedura dettagliata: Creazione di un controllo di Windows Form che consente di sfruttare le funzionalità in fase di progettazione di Visual Studio](creating-a-wf-control-design-time-features.md)
 - [Procedura: Servizi di accesso in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [Procedura: Supporto dell'accesso in fase di progettazione in Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

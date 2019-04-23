@@ -3,10 +3,10 @@ title: 'Procedura: Creare assembly Friend firmati (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324669"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Procedura: Creare assembly Friend firmati (Visual Basic)
@@ -93,4 +93,4 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
 - [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [Sn.exe (strumento nome sicuro)](../../../../framework/tools/sn-exe-strong-name-tool.md))
 - [Creazione e utilizzo degli assembly con nome sicuro](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Concetti di programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Nozioni di base sulla programmazione](../../../../visual-basic/programming-guide/concepts/index.md)
