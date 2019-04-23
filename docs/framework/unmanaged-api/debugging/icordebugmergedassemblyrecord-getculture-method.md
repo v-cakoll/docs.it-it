@@ -6,7 +6,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 093b21a439b96c9fe2f971300f314d1b75527f1f
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207201"

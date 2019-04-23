@@ -14,10 +14,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206408"
 ---
 # <a name="drawings"></a>Oggetti Drawing
@@ -25,12 +25,12 @@ ms.locfileid: "59206408"
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Cenni preliminari sugli oggetti Drawing](drawing-objects-overview.md)  
-  [Procedure relative](drawings-how-to-topics.md)  
+  [Procedure relative alle proprietà](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Media.Drawing>
-- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Cenni preliminari sul rendering della grafica WPF](wpf-graphics-rendering-overview.md)
 - [Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafica e funzionalità multimediali](index.md)

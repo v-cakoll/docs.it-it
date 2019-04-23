@@ -3,10 +3,10 @@ title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207318"
 ---
 # <a name="datatables"></a>DataTables
@@ -24,7 +24,7 @@ Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relaz
  [Creazione di un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Viene illustrato come creare un **DataTable** e aggiungerlo a un **DataSet**.  
   
- [Definizione dello schema di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [Definizione dello schema DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Vengono fornite informazioni sulla creazione e utilizzo **DataColumn** oggetti e i vincoli.  
   
  [Manipolazione di dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
@@ -52,7 +52,7 @@ Un tipo <xref:System.Data.DataSet> è composto da una raccolta di tabelle, relaz
  <xref:System.Data.DataTable>  
  Vengono fornite informazioni di riferimento sul **DataTable** oggetto.  
   
- [Cenni preliminari sulla libreria di classi](../../../../../docs/standard/class-library-overview.md)  
+ [Panoramica della libreria di classi](../../../../../docs/standard/class-library-overview.md)  
  Viene fornita una panoramica della libreria di classi .NET Framework, inclusi i **System** dello spazio dei nomi, nonché lo spazio dei nomi di secondo livello, **System. Data**.  
   
 ## <a name="see-also"></a>Vedere anche

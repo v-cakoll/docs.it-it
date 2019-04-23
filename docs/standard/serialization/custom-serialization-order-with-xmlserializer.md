@@ -3,14 +3,14 @@ title: Ordine di serializzazione personalizzato con XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
 ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295035"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>Ordine di serializzazione personalizzato con XmlSerializer
-[Scarica esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
+[Scaricare l'esempio](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
   
  In questo esempio viene illustrato come controllare l'ordine degli elementi serializzati e deserializzati per la serializzazione XML.  
   
