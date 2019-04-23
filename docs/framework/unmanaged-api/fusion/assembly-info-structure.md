@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bae19ec18c54eccc7aa54d2d3a006f36ba8ab762
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110877"
 ---
-# <a name="assemblyinfo-structure"></a><span data-ttu-id="b987b-102">Struttura ASSEMBLY_INFO</span><span class="sxs-lookup"><span data-stu-id="b987b-102">ASSEMBLY_INFO Structure</span></span>
-<span data-ttu-id="b987b-103">Contiene informazioni relative a un assembly registrato nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="b987b-103">Contains information about an assembly that is registered in the global assembly cache.</span></span>  
+# <a name="assemblyinfo-structure"></a><span data-ttu-id="19124-102">Struttura ASSEMBLY_INFO</span><span class="sxs-lookup"><span data-stu-id="19124-102">ASSEMBLY_INFO Structure</span></span>
+<span data-ttu-id="19124-103">Contiene informazioni relative a un assembly registrato nella global assembly cache.</span><span class="sxs-lookup"><span data-stu-id="19124-103">Contains information about an assembly that is registered in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b987b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b987b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19124-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="19124-104">Syntax</span></span>  
   
 ```  
 typedef struct _ASSEMBLY_INFO {  
@@ -38,24 +38,24 @@ typedef struct _ASSEMBLY_INFO {
 } ASSEMBLY_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b987b-105">Membri</span><span class="sxs-lookup"><span data-stu-id="b987b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="19124-105">Membri</span><span class="sxs-lookup"><span data-stu-id="19124-105">Members</span></span>  
   
-|<span data-ttu-id="b987b-106">Member</span><span class="sxs-lookup"><span data-stu-id="b987b-106">Member</span></span>|<span data-ttu-id="b987b-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b987b-107">Description</span></span>|  
+|<span data-ttu-id="19124-106">Member</span><span class="sxs-lookup"><span data-stu-id="19124-106">Member</span></span>|<span data-ttu-id="19124-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="19124-107">Description</span></span>|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|<span data-ttu-id="b987b-108">Le dimensioni, in byte, della struttura.</span><span class="sxs-lookup"><span data-stu-id="b987b-108">The size, in bytes, of the structure.</span></span> <span data-ttu-id="b987b-109">Questo campo è riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="b987b-109">This field is reserved for future extensibility.</span></span>|  
-|`dwAssemblyFlags`|<span data-ttu-id="b987b-110">Flag che indicano i dettagli di installazione sull'assembly.</span><span class="sxs-lookup"><span data-stu-id="b987b-110">Flags that indicate installation details about the assembly.</span></span> <span data-ttu-id="b987b-111">Sono supportati i valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="b987b-111">The following values are supported:</span></span><br /><br /> <span data-ttu-id="b987b-112">-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è installato.</span><span class="sxs-lookup"><span data-stu-id="b987b-112">-   The ASSEMBLYINFO_FLAG_INSTALLED value, which indicates that the assembly is installed.</span></span> <span data-ttu-id="b987b-113">Imposta sempre la versione corrente di .NET Framework `dwAssemblyFlags` a questo valore.</span><span class="sxs-lookup"><span data-stu-id="b987b-113">The current version of the .NET Framework always sets `dwAssemblyFlags` to this value.</span></span><br /><span data-ttu-id="b987b-114">-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è un payload residente.</span><span class="sxs-lookup"><span data-stu-id="b987b-114">-   The ASSEMBLYINFO_FLAG_PAYLOADRESIDENT value, which indicates that the assembly is a payload resident.</span></span> <span data-ttu-id="b987b-115">La versione corrente di .NET Framework non viene mai `dwAssemblyFlags` a questo valore.</span><span class="sxs-lookup"><span data-stu-id="b987b-115">The current version of the .NET Framework never sets `dwAssemblyFlags` to this value.</span></span>|  
-|`uliAssemblySizeInKB`|<span data-ttu-id="b987b-116">Dimensione totale, espressa in kilobyte, dei file che contiene l'assembly.</span><span class="sxs-lookup"><span data-stu-id="b987b-116">The total size, in kilobytes, of the files that the assembly contains.</span></span>|  
-|`pszCurrentAssemblyPathBuf`|<span data-ttu-id="b987b-117">Puntatore a un buffer di stringa che contiene il percorso corrente per il file manifesto.</span><span class="sxs-lookup"><span data-stu-id="b987b-117">A pointer to a string buffer that holds the current path to the manifest file.</span></span> <span data-ttu-id="b987b-118">Il percorso deve terminare con un carattere null.</span><span class="sxs-lookup"><span data-stu-id="b987b-118">The path must end with a null character.</span></span>|  
-|`cchBuf`|<span data-ttu-id="b987b-119">Il numero di caratteri "wide", incluso il carattere di terminazione null, che `pszCurrentAssemblyPathBuf` contiene.</span><span class="sxs-lookup"><span data-stu-id="b987b-119">The number of wide characters, including the null terminator, that `pszCurrentAssemblyPathBuf` contains.</span></span>|  
+|`cbAssemblyInfo`|<span data-ttu-id="19124-108">Le dimensioni, in byte, della struttura.</span><span class="sxs-lookup"><span data-stu-id="19124-108">The size, in bytes, of the structure.</span></span> <span data-ttu-id="19124-109">Questo campo è riservato per un'estendibilità futura.</span><span class="sxs-lookup"><span data-stu-id="19124-109">This field is reserved for future extensibility.</span></span>|  
+|`dwAssemblyFlags`|<span data-ttu-id="19124-110">Flag che indicano i dettagli di installazione sull'assembly.</span><span class="sxs-lookup"><span data-stu-id="19124-110">Flags that indicate installation details about the assembly.</span></span> <span data-ttu-id="19124-111">Sono supportati i valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="19124-111">The following values are supported:</span></span><br /><br /> <span data-ttu-id="19124-112">-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è installato.</span><span class="sxs-lookup"><span data-stu-id="19124-112">-   The ASSEMBLYINFO_FLAG_INSTALLED value, which indicates that the assembly is installed.</span></span> <span data-ttu-id="19124-113">Imposta sempre la versione corrente di .NET Framework `dwAssemblyFlags` a questo valore.</span><span class="sxs-lookup"><span data-stu-id="19124-113">The current version of the .NET Framework always sets `dwAssemblyFlags` to this value.</span></span><br /><span data-ttu-id="19124-114">-Il valore ASSEMBLYINFO_FLAG_INSTALLED, che indica che l'assembly è un payload residente.</span><span class="sxs-lookup"><span data-stu-id="19124-114">-   The ASSEMBLYINFO_FLAG_PAYLOADRESIDENT value, which indicates that the assembly is a payload resident.</span></span> <span data-ttu-id="19124-115">La versione corrente di .NET Framework non viene mai `dwAssemblyFlags` a questo valore.</span><span class="sxs-lookup"><span data-stu-id="19124-115">The current version of the .NET Framework never sets `dwAssemblyFlags` to this value.</span></span>|  
+|`uliAssemblySizeInKB`|<span data-ttu-id="19124-116">Dimensione totale, espressa in kilobyte, dei file che contiene l'assembly.</span><span class="sxs-lookup"><span data-stu-id="19124-116">The total size, in kilobytes, of the files that the assembly contains.</span></span>|  
+|`pszCurrentAssemblyPathBuf`|<span data-ttu-id="19124-117">Puntatore a un buffer di stringa che contiene il percorso corrente per il file manifesto.</span><span class="sxs-lookup"><span data-stu-id="19124-117">A pointer to a string buffer that holds the current path to the manifest file.</span></span> <span data-ttu-id="19124-118">Il percorso deve terminare con un carattere null.</span><span class="sxs-lookup"><span data-stu-id="19124-118">The path must end with a null character.</span></span>|  
+|`cchBuf`|<span data-ttu-id="19124-119">Il numero di caratteri "wide", incluso il carattere di terminazione null, che `pszCurrentAssemblyPathBuf` contiene.</span><span class="sxs-lookup"><span data-stu-id="19124-119">The number of wide characters, including the null terminator, that `pszCurrentAssemblyPathBuf` contains.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b987b-120">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b987b-120">Requirements</span></span>  
- <span data-ttu-id="b987b-121">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b987b-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19124-120">Requisiti</span><span class="sxs-lookup"><span data-stu-id="19124-120">Requirements</span></span>  
+ <span data-ttu-id="19124-121">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19124-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b987b-122">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="b987b-122">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="19124-122">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="19124-122">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="b987b-123">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="b987b-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="19124-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19124-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b987b-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b987b-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19124-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="19124-124">See also</span></span>
 
-- [<span data-ttu-id="b987b-125">Strutture Fusion</span><span class="sxs-lookup"><span data-stu-id="b987b-125">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [<span data-ttu-id="b987b-126">Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="b987b-126">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="19124-125">Strutture Fusion</span><span class="sxs-lookup"><span data-stu-id="19124-125">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [<span data-ttu-id="19124-126">Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="19124-126">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
