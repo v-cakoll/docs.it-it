@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195059"
 ---
 # <a name="sending-and-receiving-faults"></a>Invio e ricezione degli errori
@@ -51,15 +51,15 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> gli oggetti vengono generati quando un'operazione supera il periodo di timeout specificato.  
+ Gli oggetti <xref:System.TimeoutException> vengono generati quando un'operazione supera il periodo di timeout specificato.  
   
- <xref:System.ServiceModel.CommunicationException> gli oggetti vengono generati quando è presente una condizione di errore di comunicazione risolvibile sul servizio o client.  
+ Gli oggetti <xref:System.ServiceModel.CommunicationException> vengono generati quando nel servizio o nel client si verifica una condizione di errore di comunicazione risolvibile.  
   
  La classe <xref:System.ServiceModel.CommunicationException> dispone di due tipi derivati importanti: <xref:System.ServiceModel.FaultException> e il tipo <xref:System.ServiceModel.FaultException%601> generico.  
   
- <xref:System.ServiceModel.FaultException> vengono generate eccezioni quando un listener riceve un errore che non è previsto o specificato nel contratto dell'operazione; in genere ciò si verifica quando viene eseguito il debug dell'applicazione e il servizio ha il <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> impostata su `true`.  
+ Le eccezioni <xref:System.ServiceModel.FaultException> vengono generate quando un listener riceve un errore che non è previsto o non è specificato nel contratto dell'operazione. Ciò in genere si verifica quando durante il debug dell'applicazione la proprietà <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> del servizio è impostata su `true`.  
   
- <xref:System.ServiceModel.FaultException%601> vengono generate eccezioni nel client quando viene ricevuto un errore specificato nel contratto dell'operazione in risposta a un'operazione bidirezionale (vale a dire, un metodo con un <xref:System.ServiceModel.OperationContractAttribute> dell'attributo con <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> impostato su `false`).  
+ Le eccezioni <xref:System.ServiceModel.FaultException%601> vengono generate nel client quando un errore specificato nel contratto dell'operazione viene ricevuto in risposta a un'operazione bidirezionale, ovvero a un metodo avente un attributo <xref:System.ServiceModel.OperationContractAttribute> in cui la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> è impostata su `false`.  
   
 > [!NOTE]
 >  Quando un servizio WCF presenta la <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oppure <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> proprietà impostata su `true` il client considera ciò come un identificatore non dichiarato <xref:System.ServiceModel.FaultException%601> di tipo <xref:System.ServiceModel.ExceptionDetail>. I client possono intercettare questo errore specifico oppure gestire l'errore in un blocco catch per l'eccezione <xref:System.ServiceModel.FaultException>.  
@@ -110,4 +110,4 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Eccezioni previste](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Usare Chiudi e Interrompi per rilasciare risorse client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Utilizzare Chiudi e Interrompi per rilasciare le risorse del client WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

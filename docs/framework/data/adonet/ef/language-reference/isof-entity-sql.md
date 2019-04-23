@@ -3,10 +3,10 @@ title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
 ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195748"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  Tipo rispetto al quale testare `expression`. Il tipo deve essere qualificato dallo spazio dei nomi.  
   
 ## <a name="return-value"></a>Valore restituito  
- `true` Se `expression` è di tipo T e T è un tipo di base, o un tipo derivato del `type`; null se `expression` è null in fase di esecuzione; in caso contrario, `false`.  
+ `true` se `expression` è di tipo T e T è un tipo di base o un tipo derivato di `type`; null se `expression` è null in fase di runtime; in caso contrario, `false`.  
   
 ## <a name="remarks"></a>Note  
  Le espressioni `expression IS NOT OF (type)` e `expression IS NOT OF (ONLY type)` sono sintatticamente equivalenti a `NOT (expression IS OF (type))` e `NOT (expression IS OF (ONLY type))`, rispettivamente.  
