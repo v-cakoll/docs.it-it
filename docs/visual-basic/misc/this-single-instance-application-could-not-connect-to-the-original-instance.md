@@ -5,33 +5,33 @@ f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
 ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322654"
 ---
-# <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a><span data-ttu-id="3750a-102">Impossibile connettere l'applicazione a istanza singola con l'istanza originale</span><span class="sxs-lookup"><span data-stu-id="3750a-102">This single-instance application could not connect to the original instance</span></span>
-<span data-ttu-id="3750a-103">Impossibile connettere l'applicazione a istanza singola con l'istanza originale.</span><span class="sxs-lookup"><span data-stu-id="3750a-103">This single-instance application could not connect to the original instance.</span></span> <span data-ttu-id="3750a-104">Alcune possibili cause di questo problema sono le seguenti:</span><span class="sxs-lookup"><span data-stu-id="3750a-104">Some of the possible causes for this problem are as follows:</span></span>  
+# <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a><span data-ttu-id="a812f-102">Impossibile connettere l'applicazione a istanza singola con l'istanza originale</span><span class="sxs-lookup"><span data-stu-id="a812f-102">This single-instance application could not connect to the original instance</span></span>
+<span data-ttu-id="a812f-103">Impossibile connettere l'applicazione a istanza singola con l'istanza originale.</span><span class="sxs-lookup"><span data-stu-id="a812f-103">This single-instance application could not connect to the original instance.</span></span> <span data-ttu-id="a812f-104">Alcune possibili cause di questo problema sono le seguenti:</span><span class="sxs-lookup"><span data-stu-id="a812f-104">Some of the possible causes for this problem are as follows:</span></span>  
   
--   <span data-ttu-id="3750a-105">L'istanza originale attualmente non risponde.</span><span class="sxs-lookup"><span data-stu-id="3750a-105">The original instance stopped responding.</span></span>  
+-   <span data-ttu-id="a812f-105">L'istanza originale attualmente non risponde.</span><span class="sxs-lookup"><span data-stu-id="a812f-105">The original instance stopped responding.</span></span>  
   
--   <span data-ttu-id="3750a-106">L'applicazione non dispone di autorizzazioni per la creazione di oggetti del kernel.</span><span class="sxs-lookup"><span data-stu-id="3750a-106">The application does not have permissions to create kernel objects.</span></span> <span data-ttu-id="3750a-107">Per altre informazioni sugli oggetti kernel, vedere [mutex](../../standard/threading/mutexes.md).</span><span class="sxs-lookup"><span data-stu-id="3750a-107">For more information about kernel objects, see [Mutexes](../../standard/threading/mutexes.md).</span></span>  
+-   <span data-ttu-id="a812f-106">L'applicazione non dispone di autorizzazioni per la creazione di oggetti del kernel.</span><span class="sxs-lookup"><span data-stu-id="a812f-106">The application does not have permissions to create kernel objects.</span></span> <span data-ttu-id="a812f-107">Per altre informazioni sugli oggetti kernel, vedere [mutex](../../standard/threading/mutexes.md).</span><span class="sxs-lookup"><span data-stu-id="a812f-107">For more information about kernel objects, see [Mutexes](../../standard/threading/mutexes.md).</span></span>  
   
-     <span data-ttu-id="3750a-108">Il nome base degli oggetti del kernel deriva dalla concatenazione del GUID dell'assembly, del numero di versione principale e del numero di versione secondario.</span><span class="sxs-lookup"><span data-stu-id="3750a-108">The base name for the kernel objects comes from concatenating the assembly's GUID, major version number, and minor version number.</span></span> <span data-ttu-id="3750a-109">Il nome base ad esempio potrebbe essere `3639f15d-9547-43da-8145-60da347829915.1`.</span><span class="sxs-lookup"><span data-stu-id="3750a-109">For example, the base name could be `3639f15d-9547-43da-8145-60da347829915.1`.</span></span>  
+     <span data-ttu-id="a812f-108">Il nome base degli oggetti del kernel deriva dalla concatenazione del GUID dell'assembly, del numero di versione principale e del numero di versione secondario.</span><span class="sxs-lookup"><span data-stu-id="a812f-108">The base name for the kernel objects comes from concatenating the assembly's GUID, major version number, and minor version number.</span></span> <span data-ttu-id="a812f-109">Il nome base ad esempio potrebbe essere `3639f15d-9547-43da-8145-60da347829915.1`.</span><span class="sxs-lookup"><span data-stu-id="a812f-109">For example, the base name could be `3639f15d-9547-43da-8145-60da347829915.1`.</span></span>  
   
-## <a name="to-correct-this-error-when-developing-the-application"></a><span data-ttu-id="3750a-110">Per correggere questo errore quando si sviluppa l'applicazione</span><span class="sxs-lookup"><span data-stu-id="3750a-110">To correct this error when developing the application</span></span>  
+## <a name="to-correct-this-error-when-developing-the-application"></a><span data-ttu-id="a812f-110">Per correggere questo errore quando si sviluppa l'applicazione</span><span class="sxs-lookup"><span data-stu-id="a812f-110">To correct this error when developing the application</span></span>  
   
-1. <span data-ttu-id="3750a-111">Verificare che l'applicazione non passi allo stato di non reattività.</span><span class="sxs-lookup"><span data-stu-id="3750a-111">Check that the application does not go into an unresponsive state.</span></span>  
+1. <span data-ttu-id="a812f-111">Verificare che l'applicazione non passi allo stato di non reattività.</span><span class="sxs-lookup"><span data-stu-id="a812f-111">Check that the application does not go into an unresponsive state.</span></span>  
   
-2. <span data-ttu-id="3750a-112">Verificare che l'applicazione abbia autorizzazioni sufficienti per creare oggetti kernel.</span><span class="sxs-lookup"><span data-stu-id="3750a-112">Check that the application has sufficient permissions to create kernel objects.</span></span>  
+2. <span data-ttu-id="a812f-112">Verificare che l'applicazione abbia autorizzazioni sufficienti per creare oggetti kernel.</span><span class="sxs-lookup"><span data-stu-id="a812f-112">Check that the application has sufficient permissions to create kernel objects.</span></span>  
   
-3. <span data-ttu-id="3750a-113">Riavviare l'istanza originale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="3750a-113">Restart the original instance of the application.</span></span>  
+3. <span data-ttu-id="a812f-113">Riavviare l'istanza originale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a812f-113">Restart the original instance of the application.</span></span>  
   
-4. <span data-ttu-id="3750a-114">Riavviare il computer per cancellare i processi che stanno usando la risorsa necessaria per la connessione all'istanza originale.</span><span class="sxs-lookup"><span data-stu-id="3750a-114">Restart the computer to clear any process that may be using the resource that is required to connect to the original instance application.</span></span>  
+4. <span data-ttu-id="a812f-114">Riavviare il computer per cancellare i processi che stanno usando la risorsa necessaria per la connessione all'istanza originale.</span><span class="sxs-lookup"><span data-stu-id="a812f-114">Restart the computer to clear any process that may be using the resource that is required to connect to the original instance application.</span></span>  
   
-5. <span data-ttu-id="3750a-115">Prendere nota delle circostanze in cui si è verificato l'errore e chiamare il Servizio supporto tecnico Microsoft.</span><span class="sxs-lookup"><span data-stu-id="3750a-115">Note the circumstances under which the error occurred, and telephone Microsoft Product Support Services.</span></span>  
+5. <span data-ttu-id="a812f-115">Prendere nota delle circostanze in cui si è verificato l'errore e chiamare il Servizio supporto tecnico Microsoft.</span><span class="sxs-lookup"><span data-stu-id="a812f-115">Note the circumstances under which the error occurred, and telephone Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3750a-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3750a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a812f-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a812f-116">See also</span></span>
 
-- [<span data-ttu-id="3750a-117">Nozioni di base sul debugger</span><span class="sxs-lookup"><span data-stu-id="3750a-117">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
+- <span data-ttu-id="a812f-117">[Debugger Basics](/visualstudio/debugger/debugger-basics) (Nozioni di base sul debugger)</span><span class="sxs-lookup"><span data-stu-id="a812f-117">[Debugger Basics](/visualstudio/debugger/debugger-basics)</span></span>
