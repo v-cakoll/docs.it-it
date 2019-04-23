@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352817"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978926"
 ---
 # <a name="data-binding"></a>Data binding
 
@@ -42,9 +42,9 @@ Le generazioni di raccolte vengono implementate dall'oggetto generico <xref:Syst
 
 - L'origine dati è un oggetto <xref:System.Linq.IQueryable%601>. Esistono due possibili scenari:
 
-    - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] trova sottostante <xref:System.Data.Linq.Table%601> dal <xref:System.Linq.IQueryable%601>, l'origine consente la modifica e la situazione è analoga al primo punto.
+  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] trova sottostante <xref:System.Data.Linq.Table%601> dal <xref:System.Linq.IQueryable%601>, l'origine consente la modifica e la situazione è analoga al primo punto.
 
-    - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non è stato trovato l'oggetto sottostante <xref:System.Data.Linq.Table%601>, l'origine non consente la modifica (ad esempio, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esamina la query per compilare un oggetto generico `SortableBindingList`, che è una semplice <xref:System.ComponentModel.BindingList%601> che implementa la funzionalità di ordinamento per le entità T per una determinata proprietà.
+  - Se [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non è stato trovato l'oggetto sottostante <xref:System.Data.Linq.Table%601>, l'origine non consente la modifica (ad esempio, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esamina la query per compilare un oggetto generico `SortableBindingList`, che è una semplice <xref:System.ComponentModel.BindingList%601> che implementa la funzionalità di ordinamento per le entità T per una determinata proprietà.
 
 ## <a name="specialized-collections"></a>Raccolte specializzate
 
