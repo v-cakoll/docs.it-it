@@ -18,10 +18,10 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 ms.openlocfilehash: 339f9c9d8b25f6deef4cc77f60c26b7b5d017ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105781"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Uso di un socket client sincrono
@@ -73,5 +73,5 @@ s.Close();
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di un socket client asincrono](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
-- [attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Esempio di socket client sincrono](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100927"
 ---
 # <a name="xclassmodifier-directive"></a>Direttiva x:ClassModifier
@@ -58,5 +58,5 @@ Modifica il comportamento di compilazione XAML quando `x:Class` viene anche forn
 - [Direttiva x:Class](x-class-directive.md)
 - [Code-behind e XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [Direttiva x:FieldModifier](x-fieldmodifier-directive.md)
-- [Sicurezza (WPF)](../wpf/security-wpf.md)
+- [Security (WPF)](../wpf/security-wpf.md)
 - [Tipi migrati da WPF a System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

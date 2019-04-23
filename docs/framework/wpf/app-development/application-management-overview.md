@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100080"
 ---
 # <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
@@ -105,7 +105,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Recupero dell'applicazione corrente  
- Poiché la funzionalità dei <xref:System.Windows.Application> classe sono condivise tra un'applicazione, può esistere una sola istanza del <xref:System.Windows.Application> classe per ogni <xref:System.AppDomain>. Per applicare questo comportamento, il <xref:System.Windows.Application> classe è implementata come classe singleton (vedere [Implementing Singleton in C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), che consente di creare una singola istanza di se stesso e fornisce accesso a esso con condiviso il `static`<xref:System.Windows.Application.Current%2A> proprietà.  
+ Poiché la funzionalità dei <xref:System.Windows.Application> classe sono condivise tra un'applicazione, può esistere una sola istanza del <xref:System.Windows.Application> classe per ogni <xref:System.AppDomain>. Per applicare questo comportamento, il <xref:System.Windows.Application> classe è implementata come classe singleton (vedere [Implementing Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567)), che consente di creare una singola istanza di se stesso e fornisce accesso a esso con condiviso il `static` <xref:System.Windows.Application.Current%2A> proprietà.  
   
  Il codice seguente viene illustrato come acquisire un riferimento per la <xref:System.Windows.Application> oggetto corrente <xref:System.AppDomain>.  
   
@@ -357,9 +357,9 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Application>
-- [Cenni preliminari sulle finestre WPF](wpf-windows-overview.md)
+- [Panoramica sulle finestre WPF](wpf-windows-overview.md)
 - [Cenni preliminari sulla navigazione](navigation-overview.md)
-- [File di dati e di risorse dell'applicazione WPF.](wpf-application-resource-content-and-data-files.md)
+- [File di dati e di risorse dell'applicazione WPF](wpf-application-resource-content-and-data-files.md)
 - [URI di tipo pack in WPF](pack-uris-in-wpf.md)
-- [Modello di applicazione: Procedure relative](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Modello di applicazione: Procedure](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Sviluppo di applicazioni](index.md)

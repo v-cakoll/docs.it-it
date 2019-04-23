@@ -3,10 +3,10 @@ title: Dataset tipizzati
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098657"
 ---
 # <a name="typed-datasets"></a>Dataset tipizzati
@@ -17,10 +17,10 @@ Oltre all'accesso ad associazione tardiva ai valori tramite variabili tipizzate 
  Inoltre, l'oggetto fortemente tipizzato **set di dati** fornisce accesso ai valori del tipo corretto in fase di compilazione. Con una classe fortemente tipizzata **set di dati**, gli errori di mancata corrispondenza di tipo vengono rilevati quando il codice viene compilato, anziché in fase di esecuzione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
- [Generazione di dataset fortemente tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
+ [Generazione di oggetti DataSet fortemente tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
  Viene descritto come creare e usare un oggetto fortemente tipizzato **set di dati**.  
   
- [Annotazione di dataset tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
+ [Annotazione di oggetti DataSet tipizzati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
  Viene descritto come annotare lo schema XML Schema definition language (XSD) utilizzato per generare una classe fortemente tipizzata **set di dati**per assegnare **DataSet** nomi descrittivi di elementi senza alterare lo schema sottostante.  
   
 ## <a name="see-also"></a>Vedere anche

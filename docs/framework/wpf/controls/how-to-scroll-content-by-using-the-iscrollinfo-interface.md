@@ -10,10 +10,10 @@ helpviewer_keywords:
 - IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
 ms.openlocfilehash: 6ebd8268e1358b45709885c07e6b096d5f806ebb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098546"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Procedura: Scorrere il contenuto usando l'interfaccia IScrollInfo
@@ -34,6 +34,6 @@ Questo esempio viene illustrato come scorrere il contenuto usando la <xref:Syste
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - <xref:System.Windows.Controls.StackPanel>
-- [Cenni preliminari sull'elemento ScrollViewer](scrollviewer-overview.md)
-- [Procedure relative](scrollviewer-how-to-topics.md)
+- [Panoramica sull'elemento ScrollViewer](scrollviewer-overview.md)
+- [Procedure relative alle proprietà](scrollviewer-how-to-topics.md)
 - [Cenni preliminari sugli elementi Panel](panels-overview.md)

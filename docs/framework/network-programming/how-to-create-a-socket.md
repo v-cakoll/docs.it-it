@@ -18,10 +18,10 @@ helpviewer_keywords:
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101120"
 ---
 # <a name="how-to-create-a-socket"></a>Procedura: Creare un socket
@@ -63,4 +63,4 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
 ## <a name="see-also"></a>Vedere anche
 
 - [Uso di socket client](../../../docs/framework/network-programming/using-client-sockets.md)
-- [attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104481"
 ---
 # <a name="opentype-font-features"></a>Funzionalità dei tipi di carattere OpenType
@@ -22,7 +22,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato dei tipi di carattere OpenType  
- Il formato dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] è un'estensione del formato [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], a cui è stato aggiunto il supporto per dati dei tipi di carattere PostScript. Il formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] è stato sviluppato da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e Adobe Corporation insieme. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere e il sistema operativo di servizi che supportano [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere offrono agli utenti un modo semplice per installare e usare i tipi di carattere, se contengono i tipi di carattere [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] contorni o CFF (PostScript).  
+ Il formato dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] è un'estensione del formato [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)], a cui è stato aggiunto il supporto per dati dei tipi di carattere PostScript. Il formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] è stato sviluppato da [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] e Adobe Corporation insieme. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] e i servizi del sistema operativo che supportano i tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] offrono agli utenti un semplice strumento per installare e usare i tipi di carattere, indipendentemente dal fatto che questi contengano strutture [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o strutture CFF (PostScript).  
   
  Il formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] permette di affrontare le sfide di sviluppo seguenti:  
   
@@ -42,7 +42,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
  Vedere la [specifica OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) per informazioni dettagliate sul formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
   
 ### <a name="advanced-typographic-extensions"></a>Estensioni tipografiche avanzate  
- Le tabelle tipografiche avanzate (tabelle dei layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) estendono le funzionalità dei tipi di carattere con strutture [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o CFF. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] I tipi di carattere layout contengono informazioni aggiuntive che estendono le funzionalità dei tipi di carattere per supportare la tipografia internazionale di alta qualità. La maggior parte dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] espone solo un subset delle funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] totali disponibili. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere offrono le funzionalità seguenti.  
+ Le tabelle tipografiche avanzate (tabelle dei layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]) estendono le funzionalità dei tipi di carattere con strutture [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] o CFF. I tipi di carattere con layout [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] contengono informazioni aggiuntive che estendono le funzionalità dei tipi di carattere per supportare la tipografia internazionale di alta qualità. La maggior parte dei tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] espone solo un subset delle funzionalità [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] totali disponibili. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] offrono le funzionalità seguenti.  
   
 -   Mapping avanzato tra caratteri e glifi che supportano legature, formati posizionali, glifi alternativi e altre sostituzioni di tipi di carattere.  
   
@@ -88,7 +88,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>Caratteri maiuscoli  
- I caratteri maiuscoli sono un set di caratteri tipografici per il rendering del testo in glifi in stile maiuscolo. In genere, quando il testo viene visualizzato come tutto maiuscolo, la spaziatura tra le lettere può risultare insufficiente, mentre lo spessore e le proporzioni delle lettere possono apparire eccessivi. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supporta diversi formati di applicazione di stili per le lettere maiuscole, tra cui maiuscoletto, maiuscoletto, titolazione e spaziatura tra caratteri maiuscoli. Questi formati permettono di controllare l'aspetto dei caratteri maiuscoli.  
+ I caratteri maiuscoli sono un set di caratteri tipografici per il rendering del testo in glifi in stile maiuscolo. In genere, quando il testo viene visualizzato come tutto maiuscolo, la spaziatura tra le lettere può risultare insufficiente, mentre lo spessore e le proporzioni delle lettere possono apparire eccessivi. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supporta diversi formati di stile per le maiuscole, tra cui maiuscoletto, maiuscoletto ridotto, titolazione e spaziatura tra caratteri maiuscoli. Questi formati permettono di controllare l'aspetto dei caratteri maiuscoli.  
   
  Il testo seguente visualizza lettere maiuscole standard per il tipo di carattere Pescadero, seguite da lettere in stile "SmallCaps" e "AllSmallCaps". In questo caso, viene usata la stessa dimensione di carattere per tutte e tre le parole.  
   
@@ -118,7 +118,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Legature  
- Le legature sono due o più glifi uniti a formare un singolo glifo per creare un testo più leggibile o gradevole. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere supportano quattro tipi di legature:  
+ Le legature sono due o più glifi uniti a formare un singolo glifo per creare un testo più leggibile o gradevole. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano quattro tipi di legature:  
   
 -   **Legature standard**. Progettate per migliorare la leggibilità. Le legature standard includono "fi", "fl" e "ff".  
   
@@ -181,7 +181,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Glifi alternativi  
- I glifi alternativi possono essere usati per sostituire un glifo standard. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere, ad esempio il tipo di carattere Pericles usato negli esempi seguenti, possono contenere glifi alternativi che è possibile usare per conferire aspetti diversi per il testo. Il testo seguente mostra i glifi standard per il tipo di carattere Pericles.  
+ I glifi alternativi possono essere usati per sostituire un glifo standard. I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], come il tipo di carattere Pericles usato negli esempi seguenti, possono contenere glifi alternativi, da usare per conferire aspetti diversi al testo. Il testo seguente mostra i glifi standard per il tipo di carattere Pericles.  
   
  ![Testo con glifi standard OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "testo con glifi standard OpenType")  
 
@@ -224,7 +224,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
  I tipi di carattere OpenType supportano numerose funzionalità che possono essere usate con i valori numerici nel testo.  
   
 ### <a name="fractions"></a>Frazioni  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere supportano gli stili per le frazioni, tra cui barrato e in pila.  
+ I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano stili per le frazioni, tra cui frazioni con barra e frazioni sovrapposte.  
   
  Il testo seguente mostra stili di frazione per il tipo di carattere Palatino Linotype.  
   
@@ -235,7 +235,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Caratteri numerici in stile antico  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere supportano un formato numerico in stile antico. Questo formato è utile per visualizzare valori numerici in stili che non sono più quelli standard. Il testo seguente mostra una data del 18° secolo con formati numerici standard e in stile antico per il tipo di carattere Palatino Linotype.  
+ I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano un formato numerico in stile antico. Questo formato è utile per visualizzare valori numerici in stili che non sono più quelli standard. Il testo seguente mostra una data del 18° secolo con formati numerici standard e in stile antico per il tipo di carattere Palatino Linotype.  
   
  ![Testo con stile antico OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "testo con stile antico OpenType")  
     
@@ -248,7 +248,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Cifre proporzionali e tabulari  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] i tipi di carattere supportano una funzionalità di cifre proporzionali e tabulari per controllare l'allineamento delle larghezze quando si usano caratteri numerici. Le cifre proporzionali gestiscono ogni carattere numerico applicando una larghezza diversa: "1" è più stretto di "5". Le cifre tabulari vengono gestite come caratteri numerici di uguale larghezza in modo da poter essere allineate in verticale, per aumentare la leggibilità delle informazioni di tipo finanziario.  
+ I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano una funzionalità per cifre proporzionali e tabulari, che permette di controllare l'allineamento delle larghezze quando si usano caratteri numerici. Le cifre proporzionali gestiscono ogni carattere numerico applicando una larghezza diversa: "1" è più stretto di "5". Le cifre tabulari vengono gestite come caratteri numerici di uguale larghezza in modo da poter essere allineate in verticale, per aumentare la leggibilità delle informazioni di tipo finanziario.  
   
  Il testo seguente mostra due cifre proporzionali nella prima colonna usando il tipo di carattere Miramonte. Notare la differenza in larghezza tra i caratteri numerici "5" e "1". La seconda colonna mostra gli stessi valori numerici, le cui larghezze sono state modificate tramite la funzionalità per le cifre tabulari.  
   
@@ -259,7 +259,7 @@ Questo argomento contiene una panoramica di alcune delle funzionalità principal
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Zero barrato  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere supportano un barrato formato numerico con zero per evidenziare la differenza tra la lettera "O" e il carattere numerico "0". Il carattere numerico zero barrato viene spesso usato per gli identificatori all'interno di informazioni finanziarie e aziendali.  
+ I tipi di carattere [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] supportano un formato numerico con zero barrato per evidenziare la differenza tra la lettera "O" e il carattere numerico "0". Il carattere numerico zero barrato viene spesso usato per gli identificatori all'interno di informazioni finanziarie e aziendali.  
   
  Il testo seguente mostra un identificatore di ordine di esempio con il tipo di carattere Miramonte. La prima riga usa caratteri numerici standard. La seconda riga usa caratteri numerici con zero barrato per distinguere meglio il carattere numerico dalla lettera "O" maiuscola.  
   

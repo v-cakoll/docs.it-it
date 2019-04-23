@@ -5,10 +5,10 @@ ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9015ec35c2a3d13b986eb9524e4f2984d909eb21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098234"
 ---
 # <a name="runtime-directive-policy-settings"></a>Impostazioni dei criteri della direttiva di runtime
@@ -24,11 +24,11 @@ ms.locfileid: "59098234"
   
 -   I tipi di criteri di reflection determinano i metadati disponibili per la reflection al runtime:  
   
-    -   `Activate` Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.  
+    -   `Activate` controlla l'accesso in fase di esecuzione ai costruttori, per abilitare l'attivazione di istanze.  
   
-    -   `Browse` Controlla le query per informazioni su elementi del programma.  
+    -   `Browse` controlla le query per le informazioni relative agli elementi di programma.  
   
-    -   `Dynamic` controlli runtime l'accesso a tutti i tipi e membri per abilitare dynamic di programmazione.  
+    -   `Dynamic` controlla l'accesso in fase di esecuzione a tutti i tipi e i membri per abilitare la programmazione dinamica.  
   
      Nella seguente tabella sono elencati i tipi di criteri di reflection e gli elementi di programma con cui possono essere usati.  
   
@@ -38,28 +38,28 @@ ms.locfileid: "59098234"
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
-    |[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
+    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Metodo >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
-    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
+    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Proprietà >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 -   I tipi di criteri di serializzazione determinano i metadati disponibili per la serializzazione e la deserializzazione al runtime:  
   
-    -   `Serialize` Controlla l'accesso in fase di esecuzione ai costruttori, campi e proprietà per abilitare le istanze di tipi da serializzare in librerie di terze parti, ad esempio il serializzatore JSON Newtonsoft.  
+    -   `Serialize` controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.  
   
-    -   `DataContractSerializer` Controlla l'accesso in fase di esecuzione ai costruttori, campi e proprietà per abilitare le istanze di tipi da serializzare tramite il <xref:System.Runtime.Serialization.DataContractSerializer> classe.  
+    -   `DataContractSerializer` controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione delle istanze del tipo da parte della classe <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
-    -   `DataContractJsonSerializer` Controlla l'accesso in fase di esecuzione ai costruttori, campi e proprietà per abilitare le istanze di tipi da serializzare tramite il <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> classe.  
+    -   `DataContractJsonSerializer` controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione delle istanze del tipo da parte della classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
-    -   `XmlSerializer` Controlla l'accesso in fase di esecuzione ai costruttori, campi e proprietà per abilitare le istanze di tipi da serializzare tramite il <xref:System.Xml.Serialization.XmlSerializer> classe.  
+    -   `XmlSerializer` controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione delle istanze del tipo da parte della classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
      Nella seguente tabella sono elencati i tipi di criteri di serializzazione e gli elementi di programma con cui possono essere usati.  
   
@@ -69,26 +69,26 @@ ms.locfileid: "59098234"
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||  
-    |[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
+    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Metodo >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
-    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||  
+    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Proprietà >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
   
 -   I tipi di criteri di interoperabilità determinano i metadati disponibili al runtime per passare i tipi di riferimento, i tipi di valore e i puntatori a funzioni a COM e Windows Runtime:  
   
-    -   `MarshalObject` Controlla il marshalling nativo a COM e il Runtime di Windows per i tipi di riferimento.  
+    -   `MarshalObject` controlla il marshalling a COM e Windows Runtime per i tipi di riferimento.  
   
-    -   `MarshalDelegate` Controlla il marshalling dei tipi delegati come puntatori a funzione.  
+    -   `MarshalDelegate` controlla il marshalling nativo dei tipi delegati come puntatori a funzioni.  
   
-    -   `MarshalStructure` Controlla il marshalling nativo a COM e il Runtime di Windows per i tipi di valore.  
+    -   `MarshalStructure` controlla il marshalling nativo a COM e Windows Runtime per i tipi di valore.  
   
      Nella seguente tabella sono elencati i tipi di criteri di interoperabilità e gli elementi di programma con cui possono essere usati.  
   
@@ -98,26 +98,26 @@ ms.locfileid: "59098234"
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
     |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||  
-    |[\<Campo >](../../../docs/framework/net-native/field-element-net-native.md)||||  
+    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Metodo >](../../../docs/framework/net-native/method-element-net-native.md)||||  
-    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
-    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||  
+    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
+    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Proprietà >](../../../docs/framework/net-native/property-element-net-native.md)||||  
+    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<tipo >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
     |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 ## <a name="policy-settings"></a>Impostazioni dei criteri  
  Ciascun tipo di criteri può essere impostato su uno dei valori elencati nella seguente tabella. Gli elementi che rappresentano i membri dei tipi supportano un set di impostazioni dei criteri diverso rispetto a quello degli altri elementi.  
   
-|Impostazione dei criteri|Descrizione|`Assembly`, `Namespace`, `Type`, e `TypeInstantiation` elementi|`Event`, `Field`, `Method`, `MethodInstantiation`, e `Property` elementi|  
+|Impostazione dei criteri|Descrizione|Elementi `Assembly`, `Namespace`, `Type` e `TypeInstantiation`|Elementi `Event`, `Field`, `Method`, `MethodInstantiation` e `Property`|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|Abilita i criteri per tutti i tipi e i membri non rimossi dalla catena di strumenti del .NET Native.|✓||  
-|`Auto`|Specifica di usare i criteri predefiniti per il tipo di criteri di un determinato elemento di programma. Questa impostazione equivale all'omissione dei criteri per un determinato tipo di criteri. `Auto` in genere viene utilizzato per indicare che i criteri viene ereditato da un elemento padre.|✓|✓|  
+|`Auto`|Specifica di usare i criteri predefiniti per il tipo di criteri di un determinato elemento di programma. Questa impostazione equivale all'omissione dei criteri per un determinato tipo di criteri. `Auto` in genere viene usato per indicare che i criteri sono stati ereditati da un elemento padre.|✓|✓|  
 |`Excluded`|Specifica che i criteri sono disabilitati per un determinato elemento di programma. Ad esempio, la direttiva di runtime:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> specifica che i metadati per la classe `BusinessClasses.Person` non sono disponibili né per sfogliare, né per creare dinamicamente un'istanza e modificare gli oggetti `Person`.|✓|✓|  
 |`Included`|Abilita i criteri se sono disponibili i metadati per il tipo padre.||✓|  
 |`Public`|Abilita i criteri per i tipi o i membri pubblici, a meno che la catena di strumenti non determini che il tipo o il membro non è necessario e lo rimuova. Questa impostazione è diversa da `Required Public`, che garantisce la disponibilità costante dei metadati per i tipi e i membri pubblici, anche quando la catena di strumenti li identifica come non necessari.|✓||  
@@ -129,5 +129,5 @@ ms.locfileid: "59098234"
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimento a file di configurazione di direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)

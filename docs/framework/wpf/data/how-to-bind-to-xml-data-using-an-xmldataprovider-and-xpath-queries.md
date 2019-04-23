@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
 ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097226"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Procedura: Eseguire il binding ai dati XML usando un oggetto XMLDataProvider e le query XPath
@@ -36,9 +36,9 @@ Questo esempio viene illustrato come associare [!INCLUDE[TLA#tla_xml](../../../.
   
  Le proprietà **XPath** in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sono gestite dal metodo XmlNode. SelectNodes. È possibile modificare le query **XPath** per ottenere risultati diversi. Di seguito sono riportati alcuni esempi per la <xref:System.Windows.Data.Binding.XPath%2A> eseguire una query sull'oggetto associato <xref:System.Windows.Controls.ListBox> dall'esempio precedente:  
   
--   `XPath="Book[1]"` Restituisce il primo elemento libro ("XML nell'azione"). Notare che gli indici di **XPath** sono basati su 1, non su 0.  
+-   `XPath="Book[1]"` restituirà il primo elemento libro ("XML nell'azione"). Notare che gli indici di **XPath** sono basati su 1, non su 0.  
   
--   `XPath="Book[@*]"` restituirà tutti gli elementi libro con eventuali attributi.  
+-   `XPath="Book[@*]"` restituirà tutti gli elementi libro con qualsiasi attributo.  
   
 -   `XPath="Book[last()-1]"` restituirà dal secondo all'ultimo elemento libro ("Introduzione a Microsoft .NET").  
   
@@ -61,8 +61,8 @@ Questo esempio viene illustrato come associare [!INCLUDE[TLA#tla_xml](../../../.
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Data.ObjectDataProvider>
-- [Esecuzione dell'associazione ai risultati di una query XDocument, XElement o LINQ to XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
+- [Eseguire l'associazione ai risultati di una query XDocument, XElement o LINQ for XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
 - [Usare il modello Master-Details con dati XML gerarchici](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Cenni preliminari sulle origini del binding](binding-sources-overview.md)
+- [Panoramica delle origini di associazione](binding-sources-overview.md)
 - [Panoramica sul data binding](data-binding-overview.md)
-- [Procedure relative](data-binding-how-to-topics.md)
+- [Procedure relative alle proprietà](data-binding-how-to-topics.md)

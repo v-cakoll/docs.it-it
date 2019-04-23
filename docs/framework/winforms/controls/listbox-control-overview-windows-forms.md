@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104201"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo ListBox (Windows Form)
@@ -25,10 +25,10 @@ Un controllo Windows Form <xref:System.Windows.Forms.ListBox> controllo Visualiz
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.ListBox>
-- [Procedura: Aggiungere e rimuovere elementi da un controllo ComboBox, ListBox o CheckedListBox di Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
-- [Procedura: Ordinare il contenuto di un controllo ComboBox, ListBox o CheckedListBox di Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Procedura: Associare un controllo ComboBox o ListBox di Windows Forms ai dati](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
-- [Panoramica del controllo ComboBox](combobox-control-overview-windows-forms.md)
-- [Panoramica del controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
+- [Procedura: Aggiungere e rimuovere elementi da un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](add-and-remove-items-from-a-wf-combobox.md)
+- [Procedura: Ordinare il contenuto di un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Procedura: Associare un Windows Form controllo ComboBox o ListBox ai dati](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Panoramica sul controllo ComboBox](combobox-control-overview-windows-forms.md)
+- [Panoramica sul controllo CheckedListBox](checkedlistbox-control-overview-windows-forms.md)
 - [Controlli Windows Form usati per elencare opzioni](windows-forms-controls-used-to-list-options.md)
-- [Procedura: Creare una tabella di ricerca per un controllo ComboBox, ListBox o CheckedListBox di Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Procedura: Creare una tabella di ricerca per un Windows Form ComboBox, ListBox o CheckedListBox (controllo)](create-a-lookup-table-for-a-wf-combobox-listbox.md)

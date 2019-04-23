@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102739"
 ---
 # <a name="designing-service-contracts"></a>Progettazione dei contratti di servizio
@@ -271,12 +271,12 @@ End Interface
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Procedura: Creare un contratto Request/Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Procedura: Creare un contratto Request / Reply](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
 - [Procedura: Creare un contratto unidirezionale](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Procedura: Creare un contratto duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Specifica del trasferimento di dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [Specifica e gestione di errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Procedura: Creare un contratto Duplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Definizione del trasferimento dati nei contratti di servizio](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Uso di sessioni](../../../docs/framework/wcf/using-sessions.md)
 - [Operazioni sincrone e asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [Servizi affidabili](../../../docs/framework/wcf/reliable-services.md)
+- [Reliable Services](../../../docs/framework/wcf/reliable-services.md)
 - [Servizi e transazioni](../../../docs/framework/wcf/services-and-transactions.md)

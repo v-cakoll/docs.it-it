@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101367"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Cenni preliminari sul rendering della grafica WPF
@@ -177,14 +177,14 @@ Diagramma dell'albero logico
  Si noti che il <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, e <xref:System.Windows.Controls.Button> visualizzano entrambi una gerarchia di oggetti visivi separata nel **Visual Tree Explorer** Pannello di XamlPad. Infatti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controlli dispongono di un <xref:System.Windows.Controls.ControlTemplate> che contiene la struttura ad albero visuale del controllo. Quando si fa riferimento in modo esplicito a un controllo, si fa riferimento in modo implicito alla relativa gerarchia visiva.  
   
 ### <a name="profiling-visual-performance"></a>Profilatura delle prestazioni visive  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornisce una suite di strumenti che consentono di analizzare il comportamento in fase di esecuzione dell'applicazione e determinare i tipi di ottimizzazioni delle prestazioni che è possibile applicare per la profilatura delle prestazioni. Lo strumento Visual Profiler offre una visualizzazione grafica completa dei dati sulle prestazioni eseguendo il mapping direttamente alla struttura ad albero visuale dell'applicazione. In questa schermata, la sezione **Utilizzo della CPU** di Visual Profiler fornisce un'indicazione dettagliata dell'uso dei servizi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da parte di un oggetto, ad esempio il layout e il rendering.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include una suite di strumenti per la profilatura delle prestazioni che consentono di analizzare il comportamento dell'applicazione in fase di esecuzione e di determinare i tipi di ottimizzazioni delle prestazioni che è possibile applicare. Lo strumento Visual Profiler offre una visualizzazione grafica completa dei dati sulle prestazioni eseguendo il mapping direttamente alla struttura ad albero visuale dell'applicazione. In questa schermata, la sezione **Utilizzo della CPU** di Visual Profiler fornisce un'indicazione dettagliata dell'uso dei servizi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da parte di un oggetto, ad esempio il layout e il rendering.  
   
  ![Visualizzare l'output di Visual Profiler](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Output di Visual Profiler  
   
 <a name="visual_rendering_behavior"></a>   
 ## <a name="visual-rendering-behavior"></a>Comportamento di rendering visivo  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] introduce numerose funzionalità che influiscono sul comportamento di rendering degli oggetti visivi: mantenuta grafica in modalità grafica vettoriale e grafica indipendente dal dispositivo.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] introduce numerose funzionalità che influiscono sul comportamento di rendering degli oggetti visivi: grafica in modalità differita, grafica vettoriale e grafica indipendente dal dispositivo.  
   
 ### <a name="retained-mode-graphics"></a>Grafica in modalità differita  
  Uno dei fattori chiave per comprendere il ruolo dell'oggetto visivo consiste nel comprendere la differenza tra i sistemi di grafica in **modalità immediata** e in **modalità differita**. Un'applicazione Win32 standard basata su GDI o GDI+ usa un sistema di grafica in modalità immediata. Ciò significa che l'applicazione è responsabile dell'aggiornamento della porzione dell'area client invalidata, a causa di un'azione, ad esempio il ridimensionamento di una finestra o la modifica dell'aspetto visivo di un oggetto.  
@@ -199,7 +199,7 @@ Output di Visual Profiler
  Uno dei maggiori vantaggi nell'uso della grafica in modalità differita è che [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può ottimizzare in modo efficace ciò che deve essere ridisegnato nell'applicazione. Anche se si ha a che fare con una scena complessa con livelli di opacità variabili, in genere non è necessario scrivere un codice specifico per ottimizzare il ridisegno. Confrontare questo aspetto con la programmazione Win32 in cui può succedere di dedicare un notevole impegno per ottimizzare l'applicazione riducendo al minimo la quantità di ridisegno nell'area di aggiornamento. Vedere [Ridisegno nell'area di aggiornamento](/windows/desktop/gdi/redrawing-in-the-update-region) per un esempio del tipo di complessità inclusa nell'ottimizzazione del ridisegno nelle applicazioni Win32.  
   
 ### <a name="vector-graphics"></a>Grafica vettoriale  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene utilizzato **grafica vettoriale** come formato per i dati per il rendering. Le immagini vettoriali, che includono Scalable Vector Graphics (con estensione svg), Windows Metafile (con estensione wmf) e i tipi di carattere TrueType, archiviano i dati di rendering e li trasmettono come un elenco di istruzioni che descrivono come ricreare un'immagine mediante primitive grafiche. I tipi di carattere TrueType sono ad esempio caratteri vettoriali che descrivono un set di linee, curve e comandi, anziché una matrice di pixel. Uno dei principali vantaggi della grafica vettoriale è la possibilità di adattarsi a qualsiasi dimensione e risoluzione.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa la **grafica vettoriale** come formato per i dati di rendering. Le immagini vettoriali, che includono Scalable Vector Graphics (con estensione svg), Windows Metafile (con estensione wmf) e i tipi di carattere TrueType, archiviano i dati di rendering e li trasmettono come un elenco di istruzioni che descrivono come ricreare un'immagine mediante primitive grafiche. I tipi di carattere TrueType sono ad esempio caratteri vettoriali che descrivono un set di linee, curve e comandi, anziché una matrice di pixel. Uno dei principali vantaggi della grafica vettoriale è la possibilità di adattarsi a qualsiasi dimensione e risoluzione.  
   
  A differenza delle immagini vettoriali, le immagini bitmap archiviano i dati di rendering come rappresentazione pixel per pixel di un'immagine, di cui è stato eseguito il pre-rendering per una risoluzione specifica. Una delle differenze principali tra i formati di immagini bitmap e vettoriali è la fedeltà all'immagine originale. Quando ad esempio viene modificata la dimensione di un'immagine di origine, i sistemi di grafica bitmap allungano l'immagine, mentre i sistemi di grafica vettoriale la ridimensionano, conservandone la fedeltà.  
   
@@ -218,7 +218,7 @@ Output di Visual Profiler
   
  Non tutte le applicazioni sono compatibili con il valore DPI: alcune usano i pixel hardware come unità di misura primaria. La modifica del valore DPI di sistema non ha alcun effetto su tali applicazioni. Molte altre applicazioni usano unità compatibili con DPI per descrivere le dimensioni dei tipi di carattere, ma usano i pixel per descrivere tutto il resto. L'eccessiva riduzione o l'eccessivo aumento del valore DPI può causare problemi di layout per queste applicazioni, poiché il testo delle applicazioni viene ridimensionato con l'impostazione DPI del sistema, ma non l'interfaccia utente. Questo problema è stato eliminato per le applicazioni sviluppate usando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta il ridimensionamento automatico usando il device independent pixel come unità di misura, anziché i pixel hardware; primaria grafica e testo vengono ridimensionati correttamente senza operazioni aggiuntive da parte dello sviluppatore dell'applicazione. La figura seguente illustra un esempio di come vengono visualizzati la grafica e il testo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con impostazioni DPI diverse.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supporta il ridimensionamento automatico usando il pixel indipendente dal dispositivo come unità di misura primaria, anziché i pixel hardware. La grafica e il testo vengono ridimensionati correttamente senza operazioni aggiuntive da parte dello sviluppatore dell'applicazione. La figura seguente illustra un esempio di come vengono visualizzati la grafica e il testo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] con impostazioni DPI diverse.  
   
  ![Grafica e testo con impostazioni DPI diverse](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Grafica e testo con impostazioni DPI diverse  
@@ -252,8 +252,8 @@ Grafica e testo con impostazioni DPI diverse
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [Grafica 2D e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafica bidimensionale e creazione di immagini](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Hit testing a livello visivo](hit-testing-in-the-visual-layer.md)
-- [Utilizzo degli oggetti DrawingVisual](using-drawingvisual-objects.md)
+- [Uso degli oggetti DrawingVisual](using-drawingvisual-objects.md)
 - [Esercitazione: Hosting di oggetti visivi in un'applicazione Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [Ottimizzazione delle prestazioni di applicazioni WPF](../advanced/optimizing-wpf-application-performance.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099690"
 ---
 # <a name="getting-started-wpf"></a>Guida introduttiva (WPF)
@@ -20,10 +20,10 @@ Windows Presentation Foundation (WPF) è un framework dell'interfaccia utente ch
   
 |||  
 |-|-|  
-|Passare subito a...|[Procedura dettagliata: Compilare una prima applicazione desktop WPF](walkthrough-my-first-wpf-desktop-application.md)|  
+|Passare subito a...|[Procedura dettagliata: Prima applicazione desktop WPF](walkthrough-my-first-wpf-desktop-application.md)|  
 |Progettazione dell'interfaccia utente dell'applicazione|[Progettazione di XAML in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|Nuovi utenti di .NET?|[Panoramica di .NET Framework](../../get-started/overview.md)<br /><br /> [Concetti di base sulle applicazioni .NET Framework](../../../standard/application-essentials.md)<br /><br /> [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
-|Ulteriori informazioni su WPF...|[Introduzione a WPF in Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Panoramica di XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Controlli](../controls/index.md)<br /><br /> [Panoramica sul data binding](../data/data-binding-overview.md)|  
+|Nuovi utenti di .NET?|[Cenni preliminari su .NET Framework](../../get-started/overview.md)<br /><br /> [Concetti di base sulle applicazioni .NET Framework](../../../standard/application-essentials.md)<br /><br /> [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
+|Ulteriori informazioni su WPF...|[Introduzione a WPF in Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Cenni preliminari su XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Controlli](../controls/index.md)<br /><br /> [Cenni preliminari sull'associazione dati](../data/data-binding-overview.md)|  
 |Per gli sviluppatori Windows Form|[Controlli Windows Form e controlli WPF equivalenti](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interoperatività di WPF e Windows Form](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>Vedere anche

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
 ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105769"
 ---
 # <a name="property-changed-events"></a>Eventi per proprietà modificate
@@ -28,5 +28,5 @@ Se si desidera che il controllo per inviare notifiche quando una proprietà deno
 ## <a name="see-also"></a>Vedere anche
 
 - [Eventi](../../../standard/events/index.md)
-- [Eventi nei controlli di Windows Form](events-in-windows-forms-controls.md)
+- [Eventi dei controlli di Windows Form](events-in-windows-forms-controls.md)
 - [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)

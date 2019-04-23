@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100301"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedura: Creare un componente aggiuntivo che costituisca un'interfaccia utente
@@ -87,7 +87,7 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
   
  Il codice per l'elaborazione delle interazioni con l'interfaccia utente del componente aggiuntivo viene eseguito nel dominio di applicazione del componente aggiuntivo. Di seguito vengono riportati alcuni esempi di interazione:  
   
--   La gestione di <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
+-   La gestione di <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
 -   Che mostra il <xref:System.Windows.MessageBox>.  
   
@@ -95,5 +95,5 @@ In questo esempio viene illustrato come creare un componente aggiuntivo che è u
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Componenti aggiuntivi ed estensibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Componenti aggiuntivi ed estendibilità](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Cenni preliminari sui componenti aggiuntivi di WPF](wpf-add-ins-overview.md)
