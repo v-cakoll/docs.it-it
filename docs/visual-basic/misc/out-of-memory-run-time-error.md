@@ -5,27 +5,27 @@ f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
 ms.openlocfilehash: cbd9ae0945b89df8c5eb04fa6c1fe2bed22aef2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319326"
 ---
-# <a name="out-of-memory-visual-basic-run-time-error"></a><span data-ttu-id="ae8fc-102">Memoria insufficiente (errore di runtime di Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae8fc-102">Out of memory (Visual Basic Run-Time Error)</span></span>
-<span data-ttu-id="ae8fc-103">È necessaria una maggiore quantità di memoria rispetto a quella disponibile.</span><span class="sxs-lookup"><span data-stu-id="ae8fc-103">More memory was required than is available.</span></span>  
+# <a name="out-of-memory-visual-basic-run-time-error"></a><span data-ttu-id="09e6c-102">Memoria insufficiente (errore di runtime di Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09e6c-102">Out of memory (Visual Basic Run-Time Error)</span></span>
+<span data-ttu-id="09e6c-103">È necessaria una maggiore quantità di memoria rispetto a quella disponibile.</span><span class="sxs-lookup"><span data-stu-id="09e6c-103">More memory was required than is available.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ae8fc-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="ae8fc-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="09e6c-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="09e6c-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="ae8fc-105">Chiudere le applicazioni, i documenti o i file di origine aperti.</span><span class="sxs-lookup"><span data-stu-id="ae8fc-105">Close unnecessary applications, documents, or source files that are open.</span></span>  
+1. <span data-ttu-id="09e6c-105">Chiudere le applicazioni, i documenti o i file di origine aperti.</span><span class="sxs-lookup"><span data-stu-id="09e6c-105">Close unnecessary applications, documents, or source files that are open.</span></span>  
   
-2. <span data-ttu-id="ae8fc-106">Suddividere i moduli o le routine di grandi dimensioni in moduli o routine di dimensioni inferiori.</span><span class="sxs-lookup"><span data-stu-id="ae8fc-106">Break large modules or procedures into smaller ones.</span></span>  
+2. <span data-ttu-id="09e6c-106">Suddividere i moduli o le routine di grandi dimensioni in moduli o routine di dimensioni inferiori.</span><span class="sxs-lookup"><span data-stu-id="09e6c-106">Break large modules or procedures into smaller ones.</span></span>  
   
-3. <span data-ttu-id="ae8fc-107">Eliminare i programmi TSR.</span><span class="sxs-lookup"><span data-stu-id="ae8fc-107">Eliminate terminate-and-stay-resident programs.</span></span>  
+3. <span data-ttu-id="09e6c-107">Eliminare i programmi TSR.</span><span class="sxs-lookup"><span data-stu-id="09e6c-107">Eliminate terminate-and-stay-resident programs.</span></span>  
   
-4. <span data-ttu-id="ae8fc-108">Eliminare i driver di dispositivi non necessari.</span><span class="sxs-lookup"><span data-stu-id="ae8fc-108">Eliminate unnecessary device drivers.</span></span>  
+4. <span data-ttu-id="09e6c-108">Eliminare i driver di dispositivi non necessari.</span><span class="sxs-lookup"><span data-stu-id="09e6c-108">Eliminate unnecessary device drivers.</span></span>  
   
-5. <span data-ttu-id="ae8fc-109">Ridurre il numero di variabili pubbliche.</span><span class="sxs-lookup"><span data-stu-id="ae8fc-109">Reduce the number of public variables.</span></span>  
+5. <span data-ttu-id="09e6c-109">Ridurre il numero di variabili pubbliche.</span><span class="sxs-lookup"><span data-stu-id="09e6c-109">Reduce the number of public variables.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae8fc-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ae8fc-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09e6c-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="09e6c-110">See also</span></span>
 
-- [<span data-ttu-id="ae8fc-111">Tipi di errore</span><span class="sxs-lookup"><span data-stu-id="ae8fc-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="09e6c-111">Tipi di errore</span><span class="sxs-lookup"><span data-stu-id="09e6c-111">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

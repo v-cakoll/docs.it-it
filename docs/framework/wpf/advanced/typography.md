@@ -9,28 +9,28 @@ helpviewer_keywords:
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
 ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195514"
 ---
-# <a name="typography"></a><span data-ttu-id="a7f76-102">Opzioni tipografiche</span><span class="sxs-lookup"><span data-stu-id="a7f76-102">Typography</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a7f76-103">include il supporto per una presentazione dettagliata del contenuto di testo.</span><span class="sxs-lookup"><span data-stu-id="a7f76-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="a7f76-104">Il rendering del testo in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene eseguito usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], che ne migliora la chiarezza e la leggibilità.</span><span class="sxs-lookup"><span data-stu-id="a7f76-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="a7f76-105">supporta inoltre [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere, che offrono funzionalità aggiuntive oltre a quelli definiti per il [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato.</span><span class="sxs-lookup"><span data-stu-id="a7f76-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
+# <a name="typography"></a><span data-ttu-id="aa49d-102">Opzioni tipografiche</span><span class="sxs-lookup"><span data-stu-id="aa49d-102">Typography</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="aa49d-103">include il supporto per una presentazione dettagliata del contenuto di testo.</span><span class="sxs-lookup"><span data-stu-id="aa49d-103">includes support for rich presentation of text content.</span></span> <span data-ttu-id="aa49d-104">Il rendering del testo in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] viene eseguito usando [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], che ne migliora la chiarezza e la leggibilità.</span><span class="sxs-lookup"><span data-stu-id="aa49d-104">Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is rendered using [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], which enhances the clarity and readability of text.</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <span data-ttu-id="aa49d-105">supporta inoltre [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tipi di carattere, che offrono funzionalità aggiuntive oltre a quelli definiti per il [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato.</span><span class="sxs-lookup"><span data-stu-id="aa49d-105">also supports [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts, which provide additional capabilities beyond those defined by the [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a7f76-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="a7f76-106">In This Section</span></span>  
- [<span data-ttu-id="a7f76-107">Funzionalità tipografiche di WPF</span><span class="sxs-lookup"><span data-stu-id="a7f76-107">Typography in WPF</span></span>](typography-in-wpf.md)  
- [<span data-ttu-id="a7f76-108">Cenni preliminari su ClearType</span><span class="sxs-lookup"><span data-stu-id="a7f76-108">ClearType Overview</span></span>](cleartype-overview.md)  
- [<span data-ttu-id="a7f76-109">Impostazioni del Registro di sistema ClearType</span><span class="sxs-lookup"><span data-stu-id="a7f76-109">ClearType Registry Settings</span></span>](cleartype-registry-settings.md)  
- [<span data-ttu-id="a7f76-110">Disegno di testo formattato</span><span class="sxs-lookup"><span data-stu-id="a7f76-110">Drawing Formatted Text</span></span>](drawing-formatted-text.md)  
- [<span data-ttu-id="a7f76-111">Formattazione del testo avanzata</span><span class="sxs-lookup"><span data-stu-id="a7f76-111">Advanced Text Formatting</span></span>](advanced-text-formatting.md)  
- [<span data-ttu-id="a7f76-112">Tipi di carattere</span><span class="sxs-lookup"><span data-stu-id="a7f76-112">Fonts</span></span>](fonts-wpf.md)  
- [<span data-ttu-id="a7f76-113">Glifi</span><span class="sxs-lookup"><span data-stu-id="a7f76-113">Glyphs</span></span>](glyphs.md)  
- [<span data-ttu-id="a7f76-114">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="a7f76-114">How-to Topics</span></span>](typography-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="aa49d-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="aa49d-106">In This Section</span></span>  
+ [<span data-ttu-id="aa49d-107">Funzionalità tipografiche di WPF</span><span class="sxs-lookup"><span data-stu-id="aa49d-107">Typography in WPF</span></span>](typography-in-wpf.md)  
+ [<span data-ttu-id="aa49d-108">Panoramica su ClearType</span><span class="sxs-lookup"><span data-stu-id="aa49d-108">ClearType Overview</span></span>](cleartype-overview.md)  
+ [<span data-ttu-id="aa49d-109">Impostazioni del Registro di sistema ClearType</span><span class="sxs-lookup"><span data-stu-id="aa49d-109">ClearType Registry Settings</span></span>](cleartype-registry-settings.md)  
+ [<span data-ttu-id="aa49d-110">Disegno di testo formattato</span><span class="sxs-lookup"><span data-stu-id="aa49d-110">Drawing Formatted Text</span></span>](drawing-formatted-text.md)  
+ [<span data-ttu-id="aa49d-111">Formattazione del testo avanzata</span><span class="sxs-lookup"><span data-stu-id="aa49d-111">Advanced Text Formatting</span></span>](advanced-text-formatting.md)  
+ [<span data-ttu-id="aa49d-112">Tipi di carattere</span><span class="sxs-lookup"><span data-stu-id="aa49d-112">Fonts</span></span>](fonts-wpf.md)  
+ [<span data-ttu-id="aa49d-113">Glifi</span><span class="sxs-lookup"><span data-stu-id="aa49d-113">Glyphs</span></span>](glyphs.md)  
+ [<span data-ttu-id="aa49d-114">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="aa49d-114">How-to Topics</span></span>](typography-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a7f76-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a7f76-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aa49d-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa49d-115">See also</span></span>
 
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="a7f76-116">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="a7f76-116">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="a7f76-117">Funzionalità dei tipi di carattere OpenType</span><span class="sxs-lookup"><span data-stu-id="a7f76-117">OpenType Font Features</span></span>](opentype-font-features.md)
-- [<span data-ttu-id="a7f76-118">Ottimizzazione delle prestazioni di applicazioni WPF</span><span class="sxs-lookup"><span data-stu-id="a7f76-118">Optimizing WPF Application Performance</span></span>](optimizing-wpf-application-performance.md)
+- [<span data-ttu-id="aa49d-116">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="aa49d-116">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="aa49d-117">Funzionalità dei tipi di carattere OpenType</span><span class="sxs-lookup"><span data-stu-id="aa49d-117">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="aa49d-118">Ottimizzazione delle prestazioni di applicazioni WPF</span><span class="sxs-lookup"><span data-stu-id="aa49d-118">Optimizing WPF Application Performance</span></span>](optimizing-wpf-application-performance.md)
