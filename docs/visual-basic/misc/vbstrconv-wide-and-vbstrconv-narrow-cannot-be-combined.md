@@ -5,21 +5,21 @@ f1_keywords:
 - vbrArgument_IllegalWideNarrow
 ms.assetid: a53b4e6a-36b1-4e36-b2c5-8196313ec599
 ms.openlocfilehash: 917fcdfcb34778074db6a19c04e12c3cf8de90dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307925"
 ---
-# <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a><span data-ttu-id="92036-102">VbStrConv.Wide e VbStrConv.Narrow non possono essere combinati</span><span class="sxs-lookup"><span data-stu-id="92036-102">VbStrConv.Wide and VbStrConv.Narrow cannot be combined</span></span>
-<span data-ttu-id="92036-103">L'applicazione sta tentando di combinare i membri `VbStrConv` e `Wide` dell'enumerazione `Narrow`, che si escludono reciprocamente.</span><span class="sxs-lookup"><span data-stu-id="92036-103">Your application is trying to combine the `VbStrConv` enumeration members `Wide` and `Narrow`, which are mutually exclusive.</span></span>  
+# <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a><span data-ttu-id="d5e8b-102">VbStrConv.Wide e VbStrConv.Narrow non possono essere combinati</span><span class="sxs-lookup"><span data-stu-id="d5e8b-102">VbStrConv.Wide and VbStrConv.Narrow cannot be combined</span></span>
+<span data-ttu-id="d5e8b-103">L'applicazione sta tentando di combinare i membri `VbStrConv` e `Wide` dell'enumerazione `Narrow`, che si escludono reciprocamente.</span><span class="sxs-lookup"><span data-stu-id="d5e8b-103">Your application is trying to combine the `VbStrConv` enumeration members `Wide` and `Narrow`, which are mutually exclusive.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="92036-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="92036-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d5e8b-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="d5e8b-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="92036-105">Rimuovere `VbStrConv.Wide` o `VbStrConv.Narrow`.</span><span class="sxs-lookup"><span data-stu-id="92036-105">Remove either `VbStrConv.Wide` or `VbStrConv.Narrow`.</span></span>  
+1. <span data-ttu-id="d5e8b-105">Rimuovere `VbStrConv.Wide` o `VbStrConv.Narrow`.</span><span class="sxs-lookup"><span data-stu-id="d5e8b-105">Remove either `VbStrConv.Wide` or `VbStrConv.Narrow`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="92036-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="92036-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d5e8b-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d5e8b-106">See also</span></span>
 
 - <xref:System.Globalization>
 
-- [<span data-ttu-id="92036-107">Introduzione alle applicazioni internazionali basate su .NET Framework</span><span class="sxs-lookup"><span data-stu-id="92036-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [<span data-ttu-id="d5e8b-107">Introduzione alle applicazioni internazionali basate su .NET Framework</span><span class="sxs-lookup"><span data-stu-id="d5e8b-107">Introduction to International Applications Based on the .NET Framework</span></span>](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
