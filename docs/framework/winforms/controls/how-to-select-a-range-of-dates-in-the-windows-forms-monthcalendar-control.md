@@ -12,10 +12,10 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
 ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332235"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Procedura: Selezionare un intervallo di date nel controllo MonthCalendar di Windows Forms
@@ -77,6 +77,6 @@ Una caratteristica importante dei moduli di Windows <xref:System.Windows.Forms.M
 ## <a name="see-also"></a>Vedere anche
 
 - [Controllo MonthCalendar](monthcalendar-control-windows-forms.md)
-- [Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Forms](how-to-change-monthcalendar-control-appearance.md)
-- [Procedura: Visualizzare giorni specifici in grassetto con il controllo MonthCalendar di Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Procedura: Visualizzare più mesi nel controllo MonthCalendar di Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form](how-to-change-monthcalendar-control-appearance.md)
+- [Procedura: Visualizzare giorni specifici in grassetto con il Windows Form controllo MonthCalendar](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Procedura: Visualizzare più mesi nel controllo MonthCalendar Windows Form](display-more-than-one-month-wf-monthcalendar-control.md)
