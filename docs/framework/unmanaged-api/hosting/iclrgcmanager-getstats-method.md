@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187335"
 ---
-# <a name="iclrgcmanagergetstats-method"></a><span data-ttu-id="5e470-102">Metodo ICLRGCManager::GetStats</span><span class="sxs-lookup"><span data-stu-id="5e470-102">ICLRGCManager::GetStats Method</span></span>
-<span data-ttu-id="5e470-103">Ottiene un set di statistiche correnti sul sistema di garbage collection di common language runtime.</span><span class="sxs-lookup"><span data-stu-id="5e470-103">Gets a set of current statistics about the common language runtime's garbage collection system.</span></span>  
+# <a name="iclrgcmanagergetstats-method"></a><span data-ttu-id="9b6e8-102">Metodo ICLRGCManager::GetStats</span><span class="sxs-lookup"><span data-stu-id="9b6e8-102">ICLRGCManager::GetStats Method</span></span>
+<span data-ttu-id="9b6e8-103">Ottiene un set di statistiche correnti sul sistema di garbage collection di common language runtime.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-103">Gets a set of current statistics about the common language runtime's garbage collection system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5e470-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5e470-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b6e8-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9b6e8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStats (  
@@ -35,27 +35,27 @@ HRESULT GetStats (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5e470-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5e470-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9b6e8-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9b6e8-105">Parameters</span></span>  
  `pStats`  
- <span data-ttu-id="5e470-106">[in, out] Oggetto [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) istanza che contiene le statistiche richieste.</span><span class="sxs-lookup"><span data-stu-id="5e470-106">[in, out] A [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) instance that contains the requested statistics.</span></span>  
+ <span data-ttu-id="9b6e8-106">[in, out] Oggetto [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) istanza che contiene le statistiche richieste.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-106">[in, out] A [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) instance that contains the requested statistics.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5e470-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5e470-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9b6e8-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="9b6e8-107">Return Value</span></span>  
   
-|<span data-ttu-id="5e470-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5e470-108">HRESULT</span></span>|<span data-ttu-id="5e470-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5e470-109">Description</span></span>|  
+|<span data-ttu-id="9b6e8-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9b6e8-108">HRESULT</span></span>|<span data-ttu-id="9b6e8-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9b6e8-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5e470-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="5e470-110">S_OK</span></span>|`GetStats` <span data-ttu-id="5e470-111">stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="5e470-111">returned successfully.</span></span>|  
-|<span data-ttu-id="5e470-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="5e470-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="5e470-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="5e470-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="5e470-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="5e470-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="5e470-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="5e470-115">The call timed out.</span></span>|  
-|<span data-ttu-id="5e470-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="5e470-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="5e470-117">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="5e470-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="5e470-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="5e470-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="5e470-119">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="5e470-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="5e470-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="5e470-120">E_FAIL</span></span>|<span data-ttu-id="5e470-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="5e470-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="5e470-122">Dopo che un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="5e470-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="5e470-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="5e470-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="9b6e8-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="9b6e8-110">S_OK</span></span>|<span data-ttu-id="9b6e8-111">`GetStats` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-111">`GetStats` returned successfully.</span></span>|  
+|<span data-ttu-id="9b6e8-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9b6e8-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9b6e8-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="9b6e8-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9b6e8-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9b6e8-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-115">The call timed out.</span></span>|  
+|<span data-ttu-id="9b6e8-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9b6e8-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9b6e8-117">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="9b6e8-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9b6e8-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9b6e8-119">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="9b6e8-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9b6e8-120">E_FAIL</span></span>|<span data-ttu-id="9b6e8-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9b6e8-122">Dopo che un metodo viene restituito E_FAIL, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-122">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9b6e8-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5e470-124">Note</span><span class="sxs-lookup"><span data-stu-id="5e470-124">Remarks</span></span>  
- <span data-ttu-id="5e470-125">Common Language Runtime calcola e restituisce solo le statistiche che vengono specificate per il `Flags` campo `pStats`.</span><span class="sxs-lookup"><span data-stu-id="5e470-125">The CLR calculates and returns only those statistics that are specified by the `Flags` field of `pStats`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9b6e8-124">Note</span><span class="sxs-lookup"><span data-stu-id="9b6e8-124">Remarks</span></span>  
+ <span data-ttu-id="9b6e8-125">Common Language Runtime calcola e restituisce solo le statistiche che vengono specificate per il `Flags` campo `pStats`.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-125">The CLR calculates and returns only those statistics that are specified by the `Flags` field of `pStats`.</span></span>  
   
- <span data-ttu-id="5e470-126">Impostare il `Flags` uno o più valori di campo il [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumerazione per specificare le statistiche nel [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) struttura devono essere impostate.</span><span class="sxs-lookup"><span data-stu-id="5e470-126">Set the `Flags` field to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics in the [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure are to be set.</span></span>  
+ <span data-ttu-id="9b6e8-126">Impostare il `Flags` uno o più valori di campo il [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumerazione per specificare le statistiche nel [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) struttura devono essere impostate.</span><span class="sxs-lookup"><span data-stu-id="9b6e8-126">Set the `Flags` field to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics in the [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md) structure are to be set.</span></span>  
   
- <span data-ttu-id="5e470-127">Un esempio dell'utilizzo è come segue:</span><span class="sxs-lookup"><span data-stu-id="5e470-127">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="9b6e8-127">Un esempio dell'utilizzo è come segue:</span><span class="sxs-lookup"><span data-stu-id="9b6e8-127">An example of the usage is as follows:</span></span>  
   
 ```  
 COR_GC_STATS GCStats;  
@@ -63,23 +63,23 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="5e470-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5e470-128">Requirements</span></span>  
- <span data-ttu-id="5e470-129">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e470-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9b6e8-128">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9b6e8-128">Requirements</span></span>  
+ <span data-ttu-id="9b6e8-129">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b6e8-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5e470-130">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5e470-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9b6e8-130">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9b6e8-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="5e470-131">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5e470-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9b6e8-131">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9b6e8-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="5e470-132">Versioni di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="5e470-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="9b6e8-132">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b6e8-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e470-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5e470-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b6e8-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9b6e8-133">See also</span></span>
 
-- [<span data-ttu-id="5e470-134">Automatic Memory Management</span><span class="sxs-lookup"><span data-stu-id="5e470-134">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="5e470-135">Struttura COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="5e470-135">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [<span data-ttu-id="5e470-136">Enumerazione COR_GC_STAT_TYPES</span><span class="sxs-lookup"><span data-stu-id="5e470-136">COR_GC_STAT_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
-- [<span data-ttu-id="5e470-137">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="5e470-137">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
-- [<span data-ttu-id="5e470-138">Interfaccia ICLRControl</span><span class="sxs-lookup"><span data-stu-id="5e470-138">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="5e470-139">Interfaccia ICLRGCManager</span><span class="sxs-lookup"><span data-stu-id="5e470-139">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
-- [<span data-ttu-id="5e470-140">Interfacce di hosting CLR</span><span class="sxs-lookup"><span data-stu-id="5e470-140">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [<span data-ttu-id="5e470-141">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="5e470-141">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="5e470-142">Hosting</span><span class="sxs-lookup"><span data-stu-id="5e470-142">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="9b6e8-134">Gestione automatica della memoria</span><span class="sxs-lookup"><span data-stu-id="9b6e8-134">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
+- [<span data-ttu-id="9b6e8-135">Struttura COR_GC_STATS</span><span class="sxs-lookup"><span data-stu-id="9b6e8-135">COR_GC_STATS Structure</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [<span data-ttu-id="9b6e8-136">Enumerazione COR_GC_STAT_TYPES</span><span class="sxs-lookup"><span data-stu-id="9b6e8-136">COR_GC_STAT_TYPES Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
+- [<span data-ttu-id="9b6e8-137">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="9b6e8-137">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="9b6e8-138">Interfaccia ICLRControl</span><span class="sxs-lookup"><span data-stu-id="9b6e8-138">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="9b6e8-139">Interfaccia ICLRGCManager</span><span class="sxs-lookup"><span data-stu-id="9b6e8-139">ICLRGCManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [<span data-ttu-id="9b6e8-140">Interfacce di hosting CLR</span><span class="sxs-lookup"><span data-stu-id="9b6e8-140">CLR Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
+- [<span data-ttu-id="9b6e8-141">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="9b6e8-141">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="9b6e8-142">Hosting</span><span class="sxs-lookup"><span data-stu-id="9b6e8-142">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
