@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
 ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327100"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Procedura: Specificare valori di credenziali client
@@ -101,8 +101,8 @@ Utilizza Windows Communication Foundation (WCF), il servizio può specificare co
 - [Programmazione delle funzionalità di sicurezza di WCF](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Selezione di un tipo di credenziale](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Utilizzo dei certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Procedura: Creare un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Uso di certificati](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Procedura: Creare un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<messaggio >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)

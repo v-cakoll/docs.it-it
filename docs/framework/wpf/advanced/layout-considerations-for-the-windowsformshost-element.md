@@ -10,10 +10,10 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327854"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerazioni sul layout per l'elemento WindowsFormsHost
@@ -40,7 +40,7 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
   
 -   In alcuni casi, i controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non possono essere ridimensionati oppure possono essere ridimensionati solo in dimensioni specifiche. Ad esempio, un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> controllo supporta una sola altezza, definita dalla dimensione del carattere del controllo. In un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout dinamico in cui gli elementi possano essere ridimensionati verticalmente, un ambiente host <xref:System.Windows.Forms.ComboBox> controllo non verrà ridimensionato come previsto.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i controlli non possono essere ruotati o asimmetrici. Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento genera il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventi se si applica una trasformazione di inclinazione o una rotazione. Se non si gestisce il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> viene generato.  
+-   I controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non possono essere ruotati o inclinati. Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento genera il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> eventi se si applica una trasformazione di inclinazione o una rotazione. Se non si gestisce il <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> evento, un <xref:System.InvalidOperationException> viene generato.  
   
 -   Nella maggior parte dei casi, i controlli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] non supportano il ridimensionamento proporzionale. Anche se le dimensioni complessive del controllo vengono ridimensionate, i controlli figlio e gli elementi componente del controllo potrebbero non venire ridimensionati come previsto. Questa limitazione dipende dal modo in cui ogni controllo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] supporta il ridimensionamento. Inoltre, non è possibile ridimensionare [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli fino a una dimensione pari a 0 pixel.  
   
@@ -102,7 +102,7 @@ Questo argomento viene descritto come la <xref:System.Windows.Forms.Integration.
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Procedura dettagliata: Disposizione di controlli Windows Form in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Procedura dettagliata: Controlli disposizione dei Windows Form in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [I controlli di disposizione Windows Form in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Mapping di proprietà di Windows Form e WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migrazione e interoperabilità](migration-and-interoperability.md)

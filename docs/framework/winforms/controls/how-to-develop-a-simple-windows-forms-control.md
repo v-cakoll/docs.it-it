@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
 ms.openlocfilehash: 457069cd7ac5af62e08115d84060c9c7fb25beee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328140"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Procedura: Sviluppare un controllo di Windows Forms semplice
@@ -105,4 +105,4 @@ Questa sezione illustra i passaggi chiave per la creazione di un controllo di Wi
 ## <a name="see-also"></a>Vedere anche
 
 - [Proprietà dei controlli Windows Form](properties-in-windows-forms-controls.md)
-- [Eventi nei controlli di Windows Form](events-in-windows-forms-controls.md)
+- [Eventi dei controlli di Windows Form](events-in-windows-forms-controls.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327373"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedura: Creare un'interfaccia di tipo Esplora risorse in un Windows Form
@@ -52,7 +52,7 @@ Windows Explorer è una soluzione di interfaccia utente comune per le applicazio
 ## <a name="see-also"></a>Vedere anche
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Procedura: Definire il ridimensionamento e il posizionamento in una finestra divisa](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [Procedura: Dividere una finestra orizzontalmente](how-to-split-a-window-horizontally.md)
+- [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Procedura: Definire il ridimensionamento e posizionamento in una finestra divisa](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Procedura: Suddividere una finestra orizzontalmente](how-to-split-a-window-horizontally.md)
 - [Controllo SplitContainer](splitcontainer-control-windows-forms.md)

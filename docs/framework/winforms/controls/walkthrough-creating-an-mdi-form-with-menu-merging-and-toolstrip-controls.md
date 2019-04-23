@@ -15,10 +15,10 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319066"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedura dettagliata: Creazione di un modulo con interfaccia a documenti multipli con unione di menu e controlli ToolStrip
@@ -211,5 +211,5 @@ Lo spazio dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> supp
 - <xref:System.Windows.Forms.StatusStrip>
 - [Procedura: Creare form padre MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Procedura: Creare form figlio MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Procedura: Inserire un elemento MenuStrip in un menu a discesa di interfaccia a documenti multipli](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [Procedura: Inserire un MenuStrip in un Menu a discesa MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [Controllo ToolStrip](toolstrip-control-windows-forms.md)

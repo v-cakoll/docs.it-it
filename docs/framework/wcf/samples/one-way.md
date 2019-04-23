@@ -3,10 +3,10 @@ title: Unidirezionale
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: e82034a79610ea7956b3ef07508295578461de1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320996"
 ---
 # <a name="one-way"></a>Unidirezionale
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP è, per definizione, un protocollo di richiesta/risposta; quando viene effettuata una richiesta, viene restituita una risposta. Ciò è vero anche per un'operazione del servizio unidirezionale esposta su HTTP. Quando l'operazione viene chiamata, il servizio restituisce un codice di stato HTTP 202 prima che l'operazione del servizio abbia completato l'esecuzione. Questo codice di stato significa che la richiesta è stata accettata, ma l'elaborazione non è stata ancora completata. Il client che ha chiamato l'operazione si blocca fino a che non riceve la risposta 202 dal servizio. Questo può provocare alcuni comportamenti imprevisti quando più messaggi unidirezionali vengono inviati utilizzando un'associazione configurata per utilizzare sessioni. L'associazione `wsHttpBinding` utilizzata in questo esempio è configurata per utilizzare sessioni per impostazione predefinita e stabilire un contesto di sicurezza. Per impostazione predefinita, in una sessione, è garantito l'arrivo dei messaggi nell'ordine in cui sono stati inviati. Perciò, quando viene inviato il secondo messaggio di una sessione, non viene elaborato fino a che non è stato elaborato il primo messaggio. Ne risulta che il client non riceve la risposta 202 per un messaggio sino al completamento dell'elaborazione del messaggio precedente. Il client sembra pertanto bloccarsi su ogni chiamata successiva dell'operazione. Per evitare questo comportamento questo esempio configura il runtime in modo da inviare contemporaneamente i messaggi alle varie istanze per l'elaborazione. Nell'esempio la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> viene impostata su `PerCall` in modo che ogni messaggio possa essere elaborato da un'istanza diversa. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> è impostato su `Multiple` per consentire più thread inviare i messaggi alla volta.  
+>  HTTP è, per definizione, un protocollo di richiesta/risposta; quando viene effettuata una richiesta, viene restituita una risposta. Ciò è vero anche per un'operazione del servizio unidirezionale esposta su HTTP. Quando l'operazione viene chiamata, il servizio restituisce un codice di stato HTTP 202 prima che l'operazione del servizio abbia completato l'esecuzione. Questo codice di stato significa che la richiesta è stata accettata, ma l'elaborazione non è stata ancora completata. Il client che ha chiamato l'operazione si blocca fino a che non riceve la risposta 202 dal servizio. Questo può provocare alcuni comportamenti imprevisti quando più messaggi unidirezionali vengono inviati utilizzando un'associazione configurata per utilizzare sessioni. L'associazione `wsHttpBinding` utilizzata in questo esempio è configurata per utilizzare sessioni per impostazione predefinita e stabilire un contesto di sicurezza. Per impostazione predefinita, in una sessione, è garantito l'arrivo dei messaggi nell'ordine in cui sono stati inviati. Perciò, quando viene inviato il secondo messaggio di una sessione, non viene elaborato fino a che non è stato elaborato il primo messaggio. Ne risulta che il client non riceve la risposta 202 per un messaggio sino al completamento dell'elaborazione del messaggio precedente. Il client sembra pertanto bloccarsi su ogni chiamata successiva dell'operazione. Per evitare questo comportamento questo esempio configura il runtime in modo da inviare contemporaneamente i messaggi alle varie istanze per l'elaborazione. Nell'esempio la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> viene impostata su `PerCall` in modo che ogni messaggio possa essere elaborato da un'istanza diversa. La proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> viene impostata su `Multiple` per consentire l'invio contemporaneo di messaggi da parte di più thread.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

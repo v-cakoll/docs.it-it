@@ -10,10 +10,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
 ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328673"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Procedura: Definire il ridimensionamento e il posizionamento in una finestra divisa
@@ -23,9 +23,9 @@ I pannelli del <xref:System.Windows.Forms.SplitContainer> controllo si prestano 
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> proprietà|Determina se la barra di divisione è mobile tramite mouse o tastiera.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> proprietà|Determina la distanza in pixel dal bordo sinistro o superiore per la barra di divisione mobile.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> proprietà|Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se la barra di divisione è mobile tramite mouse o tastiera.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Determina la distanza in pixel dal bordo sinistro o superiore per la barra di divisione mobile.|  
+|Proprietà <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Determina la distanza minima, in pixel, che la barra di divisione può essere spostato dall'utente.|  
   
  Nell'esempio seguente viene modificato il <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> proprietà per creare un effetto "allineamento splitter"; quando l'utente trascina la barra di divisione, viene automaticamente incrementato in unità pari a 10 pixel anziché il valore predefinito 1.  
   
