@@ -8,16 +8,16 @@ helpviewer_keywords:
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
 ms.openlocfilehash: 1ff11b1cae4ec8f6fe886a55cb0add27831048d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177814"
 ---
-# <a name="request-reply-services"></a><span data-ttu-id="46ea9-102">Servizi request/reply</span><span class="sxs-lookup"><span data-stu-id="46ea9-102">Request-Reply Services</span></span>
-<span data-ttu-id="46ea9-103">Servizi request / reply sono il tipo predefinito di contratto dell'operazione in Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="46ea9-103">Request-reply services are the default type of operation contract in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="46ea9-104">I client effettuano chiamate alle operazioni del servizio e attendono una risposta dal servizio.</span><span class="sxs-lookup"><span data-stu-id="46ea9-104">Clients make calls to service operations and wait for a response from the service.</span></span> <span data-ttu-id="46ea9-105">È possibile effettuare chiamate a un'operazione del servizio in modo sincrono o asincrono. Nel primo caso, il client si blocca finché non riceve una risposta dal servizio o la chiamata scade, mentre nel secondo caso il client esegue una chiamata all'operazione del servizio, continua a funzionare e riceve la risposta dal servizio su un altro thread.</span><span class="sxs-lookup"><span data-stu-id="46ea9-105">You can perform calls to a service operation either synchronously, where the client blocks until it receives a response from the service or the call times, or asynchronously, where the client makes a call to the service operation, continues working, and receives the response from the service on another thread.</span></span>  
+# <a name="request-reply-services"></a><span data-ttu-id="e3c98-102">Servizi request/reply</span><span class="sxs-lookup"><span data-stu-id="e3c98-102">Request-Reply Services</span></span>
+<span data-ttu-id="e3c98-103">Servizi request / reply sono il tipo predefinito di contratto dell'operazione in Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e3c98-103">Request-reply services are the default type of operation contract in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="e3c98-104">I client effettuano chiamate alle operazioni del servizio e attendono una risposta dal servizio.</span><span class="sxs-lookup"><span data-stu-id="e3c98-104">Clients make calls to service operations and wait for a response from the service.</span></span> <span data-ttu-id="e3c98-105">È possibile effettuare chiamate a un'operazione del servizio in modo sincrono o asincrono. Nel primo caso, il client si blocca finché non riceve una risposta dal servizio o la chiamata scade, mentre nel secondo caso il client esegue una chiamata all'operazione del servizio, continua a funzionare e riceve la risposta dal servizio su un altro thread.</span><span class="sxs-lookup"><span data-stu-id="e3c98-105">You can perform calls to a service operation either synchronously, where the client blocks until it receives a response from the service or the call times, or asynchronously, where the client makes a call to the service operation, continues working, and receives the response from the service on another thread.</span></span>  
   
- <span data-ttu-id="46ea9-106">Per creare un contratto di servizio request/reply, definirlo e applicare la classe <xref:System.ServiceModel.OperationContractAttribute> a ogni operazione, come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="46ea9-106">To create a request-reply service contract, define your service contract, and apply the <xref:System.ServiceModel.OperationContractAttribute> class to each operation, as shown in the following sample code.</span></span>  
+ <span data-ttu-id="e3c98-106">Per creare un contratto di servizio request/reply, definirlo e applicare la classe <xref:System.ServiceModel.OperationContractAttribute> a ogni operazione, come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="e3c98-106">To create a request-reply service contract, define your service contract, and apply the <xref:System.ServiceModel.OperationContractAttribute> class to each operation, as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -28,9 +28,9 @@ public interface IRequestReplyCalculator
 }  
 ```  
   
- <span data-ttu-id="46ea9-107">Non è necessario impostare la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `false` perché questo è il comportamento predefinito.</span><span class="sxs-lookup"><span data-stu-id="46ea9-107">You do not have to set the  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `false` because this is the default behavior.</span></span>  
+ <span data-ttu-id="e3c98-107">Non è necessario impostare la proprietà <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> su `false` perché questo è il comportamento predefinito.</span><span class="sxs-lookup"><span data-stu-id="e3c98-107">You do not have to set the  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> property to `false` because this is the default behavior.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46ea9-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="46ea9-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3c98-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e3c98-108">See also</span></span>
 
-- [<span data-ttu-id="46ea9-109">Servizi unidirezionali</span><span class="sxs-lookup"><span data-stu-id="46ea9-109">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
-- [<span data-ttu-id="46ea9-110">Servizi duplex</span><span class="sxs-lookup"><span data-stu-id="46ea9-110">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [<span data-ttu-id="e3c98-109">Servizi unidirezionali</span><span class="sxs-lookup"><span data-stu-id="e3c98-109">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [<span data-ttu-id="e3c98-110">Servizi duplex</span><span class="sxs-lookup"><span data-stu-id="e3c98-110">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)
