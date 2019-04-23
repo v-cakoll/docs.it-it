@@ -3,10 +3,10 @@ title: Distribuzione in base all'elemento corpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
 ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330200"
 ---
 # <a name="dispatch-by-body-element"></a>Distribuzione in base all'elemento corpo
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> le implementazioni sono molto semplici da compilare in quanto è presente solo un metodo sull'interfaccia: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Il compito di questo metodo è ispezionare un messaggio in arrivo e restituire una stringa uguale al nome di un metodo nel contratto di servizio per l'endpoint corrente.  
+ Le implementazioni di <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> sono molto semplici da compilare in quanto vi è solo un metodo nell'interfaccia: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Il compito di questo metodo è ispezionare un messaggio in arrivo e restituire una stringa uguale al nome di un metodo nel contratto di servizio per l'endpoint corrente.  
   
  In questo esempio, il selettore dell'operazione acquisisce un <xref:System.Xml.XmlDictionaryReader> per il corpo del messaggio in arrivo usando <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Questo metodo posiziona già il reader sul primo figlio del corpo del messaggio in modo che sia sufficiente ottenere il nome dell'elemento corrente e l'URI dello spazio dei nomi e combinarli in un `XmlQualifiedName` che viene quindi usato per cercare l'operazione corrispondente nel dizionario usato dal selettore dell'operazione.  
   
