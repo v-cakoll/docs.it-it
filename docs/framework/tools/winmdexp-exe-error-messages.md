@@ -160,10 +160,10 @@ ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 99fa84b8dea326bc7a32ff4f3c3187acc9883748
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121641"
 ---
 # <a name="winmdexpexe-error-messages"></a>Messaggi di errore Winmdexp.exe
@@ -175,5 +175,5 @@ Il processo di compilazione chiama [Winmdexp.exe (strumento di esportazione di m
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Winmdexp.exe (strumento di esportazione di metadati di Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Diagnosi delle condizioni di errore di componenti Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)

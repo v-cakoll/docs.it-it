@@ -14,10 +14,10 @@ ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213129"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
@@ -64,13 +64,13 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**Booleano**|  
-|CIM_String|**Stringa**|  
+|CIM_BOOLEAN|**Boolean**|  
+|CIM_String|**String**|  
 |CIM_DATETIME|**DateTime** o **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Object**|  
+|CIM_IUNKNOWN|**Oggetto**|  
 |CIM_ARRAY|Matrice degli oggetti precedenti|  
   
  Quando viene generata una classe WMI può accadere quanto segue:  

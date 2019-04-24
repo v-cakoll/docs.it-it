@@ -23,10 +23,10 @@ helpviewer_keywords:
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
 ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103415"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introduzione alle applicazioni di servizio Windows
@@ -82,11 +82,11 @@ I servizi Microsoft Windows, noti in precedenza come servizi NT, consentono di c
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Applicazioni di servizio di Windows](../../../docs/framework/windows-services/index.md)
+- [Applicazioni di servizi Windows](../../../docs/framework/windows-services/index.md)
 - [Architettura di programmazione delle applicazioni di servizio](../../../docs/framework/windows-services/service-application-programming-architecture.md)
-- [Procedura: Creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
-- [Procedura: installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Procedura: creare servizi Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Procedura: Eseguire il debug di applicazioni di servizio di Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
 - [Procedura dettagliata: Creazione di un'applicazione di servizio Windows in Progettazione componenti](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [Procedura: Aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Procedura: aggiungere programmi di installazione all'applicazione di servizio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

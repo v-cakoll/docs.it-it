@@ -28,10 +28,10 @@ helpviewer_keywords:
 - subtraction operator [C#]
 - '- operator [C#]'
 ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301126"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatori aritmetici (Riferimenti per C#)
@@ -252,7 +252,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 - [Operatore di moltiplicazione](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Operatore di divisione](~/_csharplang/spec/expressions.md#division-operator)
 - [Operatore di resto](~/_csharplang/spec/expressions.md#remainder-operator)
-- [Operatore di addizione](~/_csharplang/spec/expressions.md#addition-operator)
+- [Operatore addizione](~/_csharplang/spec/expressions.md#addition-operator)
 - [Operatore di sottrazione](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Assegnazione composta](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Operatori Checked e Unchecked](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
@@ -261,7 +261,7 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Operatori [C#]](index.md)
+- [Operatori C#](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
-- [Valori numerici in .NET](../../../standard/numerics.md)
+- [Dati numerici in .NET](../../../standard/numerics.md)

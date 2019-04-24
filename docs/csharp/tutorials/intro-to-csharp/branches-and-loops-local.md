@@ -4,10 +4,10 @@ description: In questa esercitazione su rami e cicli si scriverà codice C# per 
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427253"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Informazioni sulla logica condizionale con istruzioni per rami e cicli

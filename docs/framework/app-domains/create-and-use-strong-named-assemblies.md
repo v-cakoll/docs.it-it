@@ -15,10 +15,10 @@ ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300697"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Creare e usare gli assembly con nome sicuro

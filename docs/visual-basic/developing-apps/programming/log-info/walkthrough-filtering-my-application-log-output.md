@@ -7,10 +7,10 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298396"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procedura dettagliata: Filtro dell'output di My.Application.Log (Visual Basic)
@@ -56,7 +56,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
 |Valore DefaultSwitch|Gravità del messaggio richiesto per l'output|  
 |---|---| 
 |`Critical`|`Critical`|  
-|`Error`|`Critical` oppure `Error`|  
+|`Error`|`Critical` o `Error`|  
 |`Warning`|`Critical`, `Error`o `Warning`|  
 |`Information`|`Critical`, `Error`, `Warning` o `Information`|  
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` o `Verbose`|  

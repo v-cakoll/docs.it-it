@@ -3,10 +3,10 @@ title: 'Procedura: Eseguire più richieste Web in parallelo tramite async e awai
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
 ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335420"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)
@@ -227,5 +227,5 @@ namespace AsyncExample_MultipleTasks
 ## <a name="see-also"></a>Vedere anche
 
 - [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Programmazione asincrona con Async e Await](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Procedura: Estendere la procedura dettagliata asincrona tramite Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

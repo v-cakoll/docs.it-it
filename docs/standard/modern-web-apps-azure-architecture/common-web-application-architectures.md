@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122694"
 ---
 # <a name="common-web-application-architectures"></a>Architetture di applicazioni Web comuni
@@ -296,11 +296,11 @@ Se si vuole aggiungere il supporto per Docker all'applicazione tramite Visual St
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Architettura ad anelli**  
 >   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **Schema Repository**  
+> - **Schema repository**  
 >   <https://deviq.com/repository-pattern/>
 > - **Esempio di soluzione con Architettura pulita**  
 >   <https://github.com/ardalis/cleanarchitecture>
-> - **E-book sulla progettazione di microservizi**  
+> - **Architecting Microservices e-book** (E-book Progettazione di microservizi)  
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]

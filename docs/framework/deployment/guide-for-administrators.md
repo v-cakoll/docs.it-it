@@ -8,10 +8,10 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309511"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guida alla distribuzione di .NET Framework per amministratori
@@ -29,7 +29,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
  [Creare una raccolta](#creating_a_collection)  
  [Creare un pacchetto e un programma](#creating_a_package)  
  [Selezionare un punto di distribuzione](#select_dist_point)  
- [Distribuire il pacchetto](#deploying_package)  
+ [Distribuire un pacchetto](#deploying_package)  
 [Risorse](#resources)  
 [Risoluzione dei problemi](#troubleshooting)  
   
@@ -191,7 +191,7 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
  **Active Directory, DNS, DHCP:**  
   
--   [Servizi di dominio Active Directory](/windows/desktop/ad/active-directory-domain-services)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
 -   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)  
   
@@ -201,13 +201,13 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
   
 -   [Installazione di SQL Server 2008 (video di SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
   
--   [SQL Server 2008 Security Overview for Database Administrators (Panoramica della sicurezza di SQL Server 2008 per gli amministratori di database)](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [SQL Server 2008 Security Overview for Database Administrators](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx) (Panoramica della sicurezza di SQL Server 2008 per gli amministratori di database)  
   
  **System Center 2012 Configuration Manager (punto di gestione, punto di distribuzione):**  
   
 -   [Amministrazione del sito per System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Configuration Manager Single Site Planning and Deployment (Pianificazione e distribuzione in modalità sito singolo di Configuration Manager)](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
+-   [Configuration Manager Single Site Planning and Deployment](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29) (Pianificazione e distribuzione in modalità sito singolo di Configuration Manager)  
   
  **Client di System Center 2012 Configuration Manager per computer Windows:**  
   
@@ -246,17 +246,17 @@ In questo articolo dettagliato vengono descritte le modalità in cui un amminist
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Scaricare i codici di errore  
   
--   [Background Intelligent Transfer Service (BITS) error codes (Codici di errore del Servizio trasferimento intelligente in background - BITS)](/windows/desktop/Bits/bits-return-values)  
+-   [Background Intelligent Transfer Service (BITS) error codes](/windows/desktop/Bits/bits-return-values) (Codici di errore del Servizio trasferimento intelligente in background (BITS))  
   
--   [URL moniker error codes (Codici di errore del moniker URL)](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
+-   [Codici di errore del moniker URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
--   [WinHttp error codes (Codici di errore WinHttp)](/windows/desktop/WinHttp/error-messages)  
+-   [WinHttp error codes](/windows/desktop/WinHttp/error-messages) (Codici di errore WinHttp)  
   
  Altri codici di errore:  
   
--   [Windows Installer error codes (Codici di errore di Windows Installer)](/windows/desktop/msi/error-codes)
+-   [Windows Installer error codes](/windows/desktop/msi/error-codes) (Codici di errore di Windows Installer)
 
--   [Windows Update Agent result codes (Codici restituiti dall'Agente di Windows Update)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+-   [Windows Update Agent result codes](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10)) (Codici restituiti dall'Agente di Windows Update)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,10 +9,10 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306534"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
@@ -66,8 +66,8 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
 |Strategia di distribuzione per l'applicazione|Metodi di distribuzione disponibili|Pacchetto ridistribuibile di .NET Framework da usare|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Installazione dal Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[programma di installazione Web](#redistributable-packages)|
-|Installazione da disco|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[programma di installazione offline](#redistributable-packages)|
+|Installazione dal Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Web installer](#redistributable-packages)|
+|Installazione da disco|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Offline installer](#redistributable-packages)|
 |Installazione da una rete locale (per applicazioni aziendali)|- [ClickOnce](#clickonce-deployment)|[Programma di installazione Web](#redistributable-packages) (vedere [ClickOnce](#clickonce-deployment) per le restrizioni) o [programma di installazione offline](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Pacchetti ridistribuibili
@@ -287,7 +287,7 @@ Type: DWORD
 
 - [Language Pack di.NET Framework 4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [Language Pack di.NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [Language Pack di .NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
 - [Language Pack di.NET Framework 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
@@ -331,18 +331,18 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 #### <a name="download-error-codes"></a>Scaricare i codici di errore
  Fare riferimento al contenuto seguente:
 
-- [Background Intelligent Transfer Service (BITS) error codes (Codici di errore del Servizio trasferimento intelligente in background - BITS)](https://go.microsoft.com/fwlink/?LinkId=180946)
+- [Background Intelligent Transfer Service (BITS) error codes](https://go.microsoft.com/fwlink/?LinkId=180946) (Codici di errore del Servizio trasferimento intelligente in background (BITS))
 
-- [URL moniker error codes (Codici di errore del moniker URL)](https://go.microsoft.com/fwlink/?LinkId=180947)
+- [Codici di errore del moniker URL](https://go.microsoft.com/fwlink/?LinkId=180947)
 
-- [WinHttp error codes (Codici di errore WinHttp)](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [Codici di errore WinHttp](https://go.microsoft.com/fwlink/?LinkId=180948)
 
 #### <a name="other-error-codes"></a>Altri codici di errore
  Fare riferimento al contenuto seguente:
 
-- [Windows Installer error codes (Codici di errore di Windows Installer)](https://go.microsoft.com/fwlink/?LinkId=180949)
+- [Windows Installer error codes](https://go.microsoft.com/fwlink/?LinkId=180949) (Codici di errore di Windows Installer)
 
-- [Windows Update Agent result codes (Codici restituiti dall'Agente di Windows Update)](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Codici di risultato dell'Agente di Windows Update](https://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>Disinstallazione di .NET Framework
  A partire da [!INCLUDE[win8](../../../includes/win8-md.md)], è possibile disinstallare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una delle relative versioni intermedie usando **Attiva o disattiva funzionalità di Windows** nel Pannello di controllo. Nelle versioni precedenti di Windows è possibile disinstallare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una delle relative versioni intermedie usando **Installazione applicazioni** nel Pannello di controllo.
@@ -407,6 +407,6 @@ Nella tabella seguente sono elencati i Language Pack di .NET Framework disponibi
 - [Guida alla distribuzione per amministratori](../../../docs/framework/deployment/guide-for-administrators.md)
 - [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)
 - [Installare .NET Framework per sviluppatori](../../../docs/framework/install/guide-for-developers.md)
-- [Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

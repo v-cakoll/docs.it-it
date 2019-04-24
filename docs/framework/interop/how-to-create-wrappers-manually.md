@@ -7,10 +7,10 @@ ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f834eb52476e9b04ed6aaf294deed88213961045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304246"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Procedura: Creare wrapper manualmente

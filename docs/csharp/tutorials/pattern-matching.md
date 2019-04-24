@@ -4,11 +4,11 @@ description: Questa esercitazione avanzata illustra come usare le tecniche dei c
 ms.date: 03/13/2019
 ms.custom: mvc
 ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308601"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769242"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Esercitazione: Uso di funzionalità di criteri di ricerca per estendere i tipi di dati
 

@@ -3,10 +3,10 @@ title: Isolamento rete per app di Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 ms.openlocfilehash: 0d08b09f4ed0314d4f235f10b69bbf1343935841
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333262"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolamento rete per app di Windows Store
@@ -27,9 +27,9 @@ Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Connessione a servizi Web](https://go.microsoft.com/fwlink/?LinkID=245696)
+- [Connecting to a web service](https://go.microsoft.com/fwlink/?LinkID=245696) (Connessione a servizi Web)
 - [Linee guida ed elenco di controllo per l'isolamento rete](https://go.microsoft.com/fwlink/?LinkID=228265)
-- [Guida introduttiva: Connecting using HttpClient (Connessione tramite HttpClient)](https://go.microsoft.com/fwlink/?LinkId=245697)
-- [How to use HttpClient handlers (Come usare i gestori HttpClient)](https://go.microsoft.com/fwlink/?LinkId=245699)
-- [How to secure HttpClient connections (Come proteggere le connessioni HttpClient)](https://go.microsoft.com/fwlink/?LinkId=245698)
-- [Esempio con HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Avvio rapido: Connecting using HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697) (Connessione tramite HttpClient)
+- [How to use HttpClient handlers](https://go.microsoft.com/fwlink/?LinkId=245699) (Come usare i gestori HttpClient)
+- [How to secure HttpClient connections](https://go.microsoft.com/fwlink/?LinkId=245698) (Come proteggere le connessioni HttpClient)
+- [HttpClient Sample](https://go.microsoft.com/fwlink/?LinkId=242550) (Esempio con HttpClient)

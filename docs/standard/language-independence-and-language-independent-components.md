@@ -16,10 +16,10 @@ ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313372"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
@@ -42,13 +42,13 @@ ms.locfileid: "59313372"
   
     -   [Conversione di tipi](#conversion)  
   
-    -   [Matrici](#arrays)  
+    -   [Array](#arrays)  
   
     -   [Interfacce](#Interfaces)  
   
     -   [Enumerazioni](#enums)  
   
-    -   [Membri dei tipi in generale](#members)  
+    -   [Membri dei tipi di in generale](#members)  
   
     -   [Accessibilità del membro](#MemberAccess)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "59313372"
   
     -   [Eventi](#events)  
   
-    -   [Overloads](#overloads)  
+    -   [Overload](#overloads)  
   
     -   [Eccezioni](#exceptions)  
   
@@ -131,14 +131,14 @@ ms.locfileid: "59313372"
 |Generics|[Tipi e membri generici](#Generics)|Per ogni metodo generico astratto o virtuale, sarà necessaria un'implementazione concreta (non astratta) predefinita.|47|  
 |Interfacce|[Interfacce](#Interfaces)|Per l'implementazione delle interfacce conformi a CLS, non sarà necessaria la definizione di metodi non conformi a CLS.|18|  
 |Interfacce|[Interfacce](#Interfaces)|Tramite le interfacce conformi a CLS non verranno definiti i metodi statici, né verranno definiti i campi.|19|  
-|Membri|[Membri dei tipi in generale](#members)|I metodi e i campi static globali non sono conformi a CLS.|36|  
+|Membri|[Membri dei tipi di in generale](#members)|I metodi e i campi static globali non sono conformi a CLS.|36|  
 |Membri|--|Il valore di un valore statico letterale viene specificato attraverso l'uso dei metadati di inizializzazione del campo. Un valore letterale conforme a CLS deve disporre di un valore specificato nei metadati di inizializzazione del campo che sia esattamente dello stesso tipo del valore letterale, o del tipo sottostante, se questo valore letterale è un oggetto `enum`.|13|  
-|Membri|[Membri dei tipi in generale](#members)|Il vincolo vararg non fa parte delle specifiche CLS e l'unica convenzione di chiamata supportata da CLS è la convenzione di chiamata gestita standard.|15|  
+|Membri|[Membri dei tipi di in generale](#members)|Il vincolo vararg non fa parte delle specifiche CLS e l'unica convenzione di chiamata supportata da CLS è la convenzione di chiamata gestita standard.|15|  
 |Convenzioni di denominazione|[Convenzioni di denominazione](#naming)|Gli assembly seguiranno l'allegato 7 del rapporto tecnico 15 di Unicode Standard 3.0, con cui viene controllato il set di caratteri che possono essere usati all'inizio e all'interno degli identificatori, disponibili online nella pagina <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>. Gli identificatori dovranno essere nel formato canonico definito dal formato di normalizzazione Unicode C. Per scopi correlati a CLS, due identificatori sono identici se i rispettivi mapping delle minuscole (come specificato dai mapping di minuscole di tipo uno a uno, senza distinzione tra le impostazioni locali Unicode) sono uguali. Vale a dire, affinché due identificatori vengano considerati differenti nella specifica CLS, devono presentare differenze che vanno oltre la semplice distinzione tra maiuscole e minuscole. Tuttavia, per eseguire l'override di una definizione non ereditata, CLI richiede l'uso della codifica precisa della dichiarazione originale.|4|  
 |Overload|[Convenzioni di denominazione](#naming)|Tutti i nomi introdotti in un ambito conforme a CLS devono essere di tipo indipendente e distinto, fatta eccezione per i casi in cui i nomi sono identici e vengono risolti tramite l'overload. Laddove, ad esempio, CTS consente a un unico tipo di usare lo stesso nome per un metodo e per un campo, CLS non lo consente.|5|  
 |Overload|[Convenzioni di denominazione](#naming)|I campi e i tipi annidati devono essere distinti in base al solo confronto tra identificatori, anche se CTS permette la distinzione di firme distinte. I metodi, le proprietà e gli eventi che hanno lo stesso nome (in base al confronto degli identificatori) dovranno differire per più del tipo restituito, ad eccezione di quanto specificato nella regola CLS 39.|6|  
-|Overload|[Overloads](#overloads)|È possibile eseguire l'overload solo di proprietà e metodi.|37|  
-|Overload|[Overloads](#overloads)|Le proprietà e i metodi possono essere sottoposti a overload solo in base al numero e ai tipi dei relativi parametri, a eccezione degli operatori di conversione denominati `op_Implicit` e `op_Explicit`, i quali possono essere anche sottoposti a overload in base al relativo tipo restituito.|38|  
+|Overload|[Overload](#overloads)|È possibile eseguire l'overload solo di proprietà e metodi.|37|  
+|Overload|[Overload](#overloads)|Le proprietà e i metodi possono essere sottoposti a overload solo in base al numero e ai tipi dei relativi parametri, a eccezione degli operatori di conversione denominati `op_Implicit` e `op_Explicit`, i quali possono essere anche sottoposti a overload in base al relativo tipo restituito.|38|  
 |Overload|--|Se due o più metodi conformi a CLS dichiarati in un tipo hanno lo stesso nome e, per un set specifico di creazioni di istanze del tipo, hanno lo stesso parametro e gli stesi tipi restituiti, tutti questi metodi saranno semanticamente equivalenti alle creazioni di istanze del tipo.|48|  
 |Tipi|[Tipo e firme dei membri di tipo](#Types)|<xref:System.Object?displayProperty=nameWithType> è conforme a CLS. Qualsiasi altra classe conforme a CLS deve ereditare da una classe conforme a CLS.|23|  
 |Proprietà|[Proprietà](#properties)|I metodi che implementano i metodi Get e Set di una proprietà devono essere contrassegnati come `SpecialName` nei metadati.|24|  
@@ -177,7 +177,7 @@ ms.locfileid: "59313372"
 |<xref:System.Int64>|Intero con segno a 64 bit|  
 |<xref:System.Single>|Valore a virgola mobile e precisione singola|  
 |<xref:System.Double>|Valore a virgola mobile e precisione doppia|  
-|<xref:System.Boolean>|`true` o tipo di valore `false`|  
+|<xref:System.Boolean>|Tipo di valore `true` o `false`|  
 |<xref:System.Char>|Unità di codice codificata UTF-16|  
 |<xref:System.Decimal>|Numero decimale non a virgola mobile|  
 |<xref:System.IntPtr>|Puntatore o handle di una dimensione definita dalla piattaforma|  
@@ -381,7 +381,7 @@ ms.locfileid: "59313372"
   
  Le specifiche CLS (Common Language Specification) impongono un modello conservativo per creazione di istanze per tipi annidati e membri protetti. Tramite i tipi generici aperti non è possibile esporre campi o membri con firme contenenti la creazione di un'istanza specifica di un tipo generico annidato e protetto. Tramite i tipi non generici, mediante i quali viene estesa la creazione di un'istanza specifica di un'interfaccia o di una classe di base generica, non è possibile esporre i campi o i membri con firme contenenti la creazione di un'istanza differente di un tipo generico annidato e protetto.  
   
- Nell'esempio seguente vengono definiti un tipo generico, `C1<T>` (o `C1(Of T)` in Visual Basic) e una classe protetta, `C1<T>.N` (o `C1(Of T).N` in Visual Basic). `C1<T>` dispone di due metodi, `M1` e `M2`. Tuttavia, `M1` non è conforme a CLS poiché tramite esso si tenta di restituire un oggetto `C1<int>.N` (o `C1(Of Integer).N`) da C1\<T> (o `C1(Of T)`). Una seconda classe, `C2`, viene derivata da `C1<long>` (o `C1(Of Long)`). Dispone di due metodi, `M3` e `M4`. `M3` non è conforme a CLS poiché viene eseguito il tentativo di restituzione di un oggetto `C1<int>.N` (o `C1(Of Integer).N`) da una sottoclasse di `C1<long>`. Si noti che i compilatori di linguaggio possono essere anche più restrittivi. In questo esempio in Visual Basic viene visualizzato un errore quando viene eseguito un tentativo di compilazione di `M4`.  
+ Nell'esempio seguente vengono definiti un tipo generico, `C1<T>` (o `C1(Of T)` in Visual Basic) e una classe protetta, `C1<T>.N` (o `C1(Of T).N` in Visual Basic). L'oggetto `C1<T>` dispone di due metodi: `M1` e `M2`. Tuttavia, `M1` non è conforme a CLS poiché tramite esso si tenta di restituire un oggetto `C1<int>.N` (o `C1(Of Integer).N`) da C1\<T> (o `C1(Of T)`). Una seconda classe, `C2`, viene derivata da `C1<long>` (o `C1(Of Long)`). Dispone di due metodi, `M3` e `M4`. `M3` non è conforme a CLS poiché viene eseguito il tentativo di restituzione di un oggetto `C1<int>.N` (o `C1(Of Integer).N`) da una sottoclasse di `C1<long>`. Si noti che i compilatori di linguaggio possono essere anche più restrittivi. In questo esempio in Visual Basic viene visualizzato un errore quando viene eseguito un tentativo di compilazione di `M4`.  
   
  [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
  [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116256"
 ---
 # <a name="ref-c-reference"></a>ref (Riferimenti per C#)
@@ -137,7 +137,7 @@ L'aggiunta del modificatore `ref` a una dichiarazione `struct` specifica che le 
 L'obiettivo di mantenere un tipo `ref struct` come variabile allocata nello stack comporta diverse regole che il compilatore applica per tutti i tipi `ref struct`.
 
 - Non è possibile eseguire il boxing di `ref struct`. Non è possibile assegnare un tipo `ref struct` a una variabile di tipo `object`, `dynamic` o qualsiasi tipo di interfaccia.
-- `ref struct` I tipi struct ref non possono implementare interfacce.
+- I tipi `ref struct` non possono implementare interfacce.
 - Non è possibile dichiarare `ref struct` come membro di una classe o di un normale struct.
 - Non è possibile dichiarare variabili locali che sono tipi `ref struct` nei metodi asincroni. È possibile dichiararle nei metodi sincroni che restituiscono tipi simili a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `Task`.
 - Non è possibile dichiarare variabili locali `ref struct` negli iteratori.
@@ -154,7 +154,7 @@ Queste restrizioni evitano l'uso accidentale di un tipo `ref struct` in modo che
 ## <a name="see-also"></a>Vedere anche
 
 - [Scrivere codice efficiente e sicuro](../../write-safe-efficient-code.md)
-- [Valori restituiti e variabili locali ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Valori restituiti e variabili locali per riferimento](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Espressione condizionale ref](../operators/conditional-operator.md#conditional-ref-expression)
 - [Operatore di assegnazione ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Passaggio di parametri](../../programming-guide/classes-and-structs/passing-parameters.md)

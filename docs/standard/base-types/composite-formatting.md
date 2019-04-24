@@ -16,10 +16,10 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314009"
 ---
 # <a name="composite-formatting"></a>Formattazione composita
@@ -89,9 +89,9 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
   
 |Tipo o categoria di tipo|Vedere|  
 |---------------------------|---------|  
-|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Stringhe di formato di enumerazione](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Stringhe di formato numerico standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Stringhe di formato numerico personalizzato](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipi di data e ora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Stringhe di formato di data e ora standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Tipi di enumerazione (tutti derivati da <xref:System.Enum?displayProperty=nameWithType>)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Tipi numerici (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -172,4 +172,4 @@ La funzionalità di formattazione composita è supportata da metodi quali i segu
 - [Stringhe di formato di data e ora personalizzato](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Stringhe di formato TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Stringhe di formato TimeSpan personalizzate](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Stringhe di formato di enumerazione](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

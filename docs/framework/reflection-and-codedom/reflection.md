@@ -24,10 +24,10 @@ ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101575"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflection in .NET Framework
@@ -75,11 +75,11 @@ Le classi nello spazio dei nomi <xref:System.Reflection>, insieme a <xref:System
 |-----------|-----------------|  
 |[Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Viene illustrata la classe <xref:System.Type> e vengono forniti esempi di codice in cui viene descritto l'uso di <xref:System.Type> con diverse classi di reflection per ottenere informazioni su costruttori, metodi, campi, proprietà ed eventi.|  
 |[Reflection e tipi generici](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Vengono illustrate le modalità con cui la reflection gestisce i parametri e gli argomenti tipo di metodi e tipi generici.|  
-|[Considerazioni sulla sicurezza in relazione alla reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Vengono illustrate le regole che determinano in che misura è possibile usare la reflection per recuperare informazioni sui tipi e accedere a essi.|  
-|[Caricamento e utilizzo dinamico dei tipi](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Viene illustrata l'interfaccia di associazione personalizzata della reflection che supporta l'associazione tardiva.|  
+|[Security Considerations for Reflection](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md) (Considerazioni sulla sicurezza per reflection)|Vengono illustrate le regole che determinano in che misura è possibile usare la reflection per recuperare informazioni sui tipi e accedere a essi.|  
+|[Dynamically Loading and Using Types](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md) (Caricamento e uso dinamico dei tipi)|Viene illustrata l'interfaccia di associazione personalizzata della reflection che supporta l'associazione tardiva.|  
 |[Procedura: Caricare assembly nel contesto Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Viene descritto il contesto di caricamento Reflection-Only. Viene illustrato come caricare un assembly, verificare il contesto ed esaminare gli attributi applicati a un assembly nel contesto Reflection-Only.|  
-|[Accesso ad attributi personalizzati](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Viene illustrato l'uso della reflection per ottenere informazioni sull'esistenza degli attributi e sui relativi valori.|  
-|[Specifica di nomi di tipo completi](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Vengono illustrati il formato dei nomi di tipo completi, secondo la notazione BNF (Backus-Naur Form), e la sintassi richiesta per specificare nomi di assembly, puntatori, riferimenti, matrici e caratteri speciali.|  
+|[Accessing Custom Attributes](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md) (Accesso agli attributi personalizzati)|Viene illustrato l'uso della reflection per ottenere informazioni sull'esistenza degli attributi e sui relativi valori.|  
+|[Specifying Fully Qualified Type Names](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md) (Specifica di nomi di tipo completi)|Vengono illustrati il formato dei nomi di tipo completi, secondo la notazione BNF (Backus-Naur Form), e la sintassi richiesta per specificare nomi di assembly, puntatori, riferimenti, matrici e caratteri speciali.|  
 |[Procedura: Associare un delegato tramite reflection](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Viene illustrato come creare un delegato per un metodo e associarlo a un evento. Viene illustrato come creare un metodo di gestione degli eventi in fase di esecuzione usando <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Viene illustrato come generare assembly e metodi generici.|  
   

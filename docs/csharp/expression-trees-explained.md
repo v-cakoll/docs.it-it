@@ -3,12 +3,12 @@ title: Nozioni di base sugli alberi delle espressioni
 description: Informazioni sugli alberi delle espressioni e sulla loro utilità nella conversione degli algoritmi per l'esecuzione esterna e nell'analisi del codice prima dell'esecuzione.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481431"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613421"
 ---
 # <a name="expression-trees-explained"></a>Nozioni di base sugli alberi delle espressioni
 
@@ -23,6 +23,7 @@ Ecco una riga di codice:
 ```csharp
 var sum = 1 + 2;
 ```
+
 Analizzando la riga come se fosse un albero delle espressioni, si nota che l'albero contiene numerosi nodi.
 Il nodo più esterno è un'istruzione di dichiarazione di variabile con assegnazione (`var sum = 1 + 2;`). Tale nodo contiene più nodi figlio: una dichiarazione di variabile, un operatore di assegnazione e un'espressione che rappresenta la parte a destra del segno di uguale. Questa espressione è a sua volta suddivisa in espressioni che rappresentano l'operazione di addizione e gli operandi sinistro e destro dell'addizione.
 

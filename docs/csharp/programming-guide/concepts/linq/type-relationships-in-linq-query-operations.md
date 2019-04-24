@@ -13,16 +13,16 @@ helpviewer_keywords:
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
 ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307652"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relazioni tra i tipi nelle operazioni di query LINQ (C#)
 Per scrivere le query in modo efficace, è necessario comprendere in che modo i tipi di variabili in un'operazione di query completa interagiscono tra loro. Conoscendo queste relazioni, si comprenderanno più facilmente gli esempi di [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e di codice nella documentazione. In aggiunta, è possibile comprendere che cosa accade dietro le quinte quando le variabili vengono tipizzate in modo implicito tramite `var`.  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Le operazioni di query sono fortemente tipizzate nell'origine dati, nella query stessa e nell'esecuzione della query. Il tipo delle variabili nella query deve essere compatibile con il tipo degli elementi nell'origine dati e con il tipo della variabile di iterazione nell'istruzione `foreach`. Questa forte tipizzazione garantisce che gli errori di tipo vengono rilevati in fase di compilazione quando possono essere corretti prima di essere riscontrati dagli utenti.  
+ Le operazioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]sono fortemente tipizzate nell'origine dati, nella query stessa e nell'esecuzione della query. Il tipo delle variabili nella query deve essere compatibile con il tipo degli elementi nell'origine dati e con il tipo della variabile di iterazione nell'istruzione `foreach`. Questa forte tipizzazione garantisce che gli errori di tipo vengono rilevati in fase di compilazione quando possono essere corretti prima di essere riscontrati dagli utenti.  
   
  Per illustrare tali relazioni del tipo, la maggior parte degli esempi che seguono usa la tipizzazione esplicita per tutte le variabili. Nell'ultimo esempio viene illustrato come si applichino gli stessi principi anche quando si usa la tipizzazione implicita tramite [var](../../../../csharp/language-reference/keywords/var.md).  
   

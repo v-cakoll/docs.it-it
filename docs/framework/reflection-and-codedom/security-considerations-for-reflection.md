@@ -13,10 +13,10 @@ ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207513"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerazioni sulla sicurezza in relazione alla reflection
@@ -36,7 +36,7 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
   
     -   Membri protetti delle classi base del codice chiamante. Nella reflection viene fatto riferimento a questa operazione con il termine accesso a livello di famiglia.  
   
-    -   `internal` Membri internal (membri `Friend` in Visual Basic) nell'assembly del codice chiamante. Nella reflection viene fatto riferimento a questa operazione con il termine accesso a livello di assembly.  
+    -   Membri `internal` (membri `Friend` in Visual Basic) nell'assembly del codice chiamante. Nella reflection viene fatto riferimento a questa operazione con il termine accesso a livello di assembly.  
   
     -   Membri privati di altre istanze della classe che contiene il codice chiamante.  
   
@@ -109,9 +109,9 @@ La reflection consente di ottenere informazioni su tipi e membri e di accedere a
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Modifiche di sicurezza](../../../docs/framework/security/security-changes.md)
-- [Sicurezza per l'accesso al codice](../../../docs/framework/misc/code-access-security.md)
+- [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md)
+- [Sicurezza dall'accesso di codice](../../../docs/framework/misc/code-access-security.md)
 - [Problemi di sicurezza nella reflection emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Visualizzazione delle informazioni sul tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
 - [Applicazione di attributi](../../../docs/standard/attributes/applying-attributes.md)
-- [Accesso ad attributi personalizzati](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+- [Accessing Custom Attributes](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md) (Accesso agli attributi personalizzati)

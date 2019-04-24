@@ -11,10 +11,10 @@ ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092267"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (strumento per lo spazio di memorizzazione isolato)

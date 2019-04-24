@@ -12,10 +12,10 @@ ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344234"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedura: Definire un metodo generico tramite reflection emit
@@ -117,7 +117,7 @@ La prima procedura illustra come creare un metodo generico semplice con due para
   
 6. Creare il codice per il ciclo. Il primo passaggio consiste nel contrassegnare l'inizio del ciclo chiamando <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> con l'etichetta `loopAgain`. Le istruzioni per la creazione di un ramo che usano l'etichetta passeranno a questo punto del codice. Il passaggio successivo prevede l'inserimento nello stack dell'oggetto `TOutput` di cui è stato eseguito il cast in `ICollection(Of TInput)`. Questa operazione non deve essere eseguita immediatamente, ma deve comunque essere prevista per la chiamata al metodo `Add`. Dopo l'inserimento della matrice di input nello stack è necessario inserire la variabile `index` contenente l'indice corrente nella matrice. Il codice operativo <xref:System.Reflection.Emit.OpCodes.Ldelem> estrae l'indice e la matrice dallo stack e inserisce l'elemento della matrice indicizzata nello stack. A questo punto lo stack è pronto per la chiamata al metodo <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> che estrae l'insieme e il nuovo elemento dallo stack e aggiunge il secondo al primo.  
   
-     Il resto del codice nel ciclo incrementa l'indice e verifica se il ciclo è terminato: l'indice e un intero 1 a 32 bit vengono inseriti nello stack e aggiunti, lasciando la somma nello stack. La somma viene archiviata in `index`. <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A> viene chiamato per impostare questo punto come punto di ingresso per il ciclo. L'indice viene nuovamente caricato. La matrice di input viene inserita nello stack e viene creato <xref:System.Reflection.Emit.OpCodes.Ldlen> per ottenere la relativa lunghezza. Per eseguire il confronto tra l'indice e la lunghezza, ora presenti nello stack, viene creato <xref:System.Reflection.Emit.OpCodes.Clt>. Se l'indice è minore della lunghezza, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> torna all'inizio del ciclo.  
+     Il resto del codice nel ciclo incrementa l'indice e verifica se il ciclo è terminato: l'indice e un intero 1 a 32 bit vengono inseriti nello stack e aggiunti, lasciando la somma nello stack. La somma viene archiviata in `index`. Per impostare questo punto come punto di ingresso per il ciclo, viene chiamato il metodo <xref:System.Reflection.Emit.ILGenerator.MarkLabel%2A>. L'indice viene nuovamente caricato. La matrice di input viene inserita nello stack e viene creato <xref:System.Reflection.Emit.OpCodes.Ldlen> per ottenere la relativa lunghezza. Per eseguire il confronto tra l'indice e la lunghezza, ora presenti nello stack, viene creato <xref:System.Reflection.Emit.OpCodes.Clt>. Se l'indice è minore della lunghezza, <xref:System.Reflection.Emit.OpCodes.Brtrue_S> torna all'inizio del ciclo.  
   
      [!code-csharp[GenericMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#13)]
      [!code-vb[GenericMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#13)]  

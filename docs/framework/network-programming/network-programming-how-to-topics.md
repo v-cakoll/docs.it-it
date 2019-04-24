@@ -8,10 +8,10 @@ helpviewer_keywords:
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 ms.openlocfilehash: c165470cd00ac39a45464ec5a534eb0eea531be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121992"
 ---
 # <a name="network-programming-how-to-topics"></a>Procedure per la programmazione di rete
@@ -27,7 +27,7 @@ Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella d
   
 -   [Procedura: Recuperare un oggetto WebResponse specifico del protocollo corrispondente a un oggetto WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- **Protocolli di collegamento e applicativi:**  
+ **Protocolli di collegamento e applicativi**  
   
 -   [Procedura: Registrare un protocollo personalizzato con WebRequest](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
   
@@ -45,7 +45,7 @@ Di seguito vengono elencati i collegamenti ad alcune procedure contenute nella d
   
 -   [Procedura: Elencare il contenuto della directory con FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
- **Protocollo IP versione 6:**  
+ **Protocollo IPv6:**  
   
 -   [Procedura: Modificare il file di configurazione del computer per abilitare il supporto IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   

@@ -8,10 +8,10 @@ ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115375"
 ---
 # <a name="blittable-and-non-blittable-types"></a>tipi copiabili e non copiabili
@@ -75,4 +75,4 @@ La maggior parte dei tipi di dati ha una rappresentazione comune sia nella memor
   
 ## <a name="see-also"></a>Vedere anche
 
-- [comportamento predefinito del marshalling](../../../docs/framework/interop/default-marshaling-behavior.md)
+- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)

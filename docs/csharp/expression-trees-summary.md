@@ -4,15 +4,15 @@ description: Viene riepilogato come usare gli alberi delle espressioni per crear
 ms.date: 06/20/2016
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
 ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148629"
 ---
 # <a name="expression-trees-summary"></a>Riepilogo degli alberi delle espressioni
 
-[Precedente -- Conversione di espressioni](expression-trees-translating.md)
+[Precedente -- Traduzione delle espressioni](expression-trees-translating.md)
 
 In questa serie, abbiamo visto come usare gli *alberi delle espressioni* per creare programmi dinamici che interpretano il codice sotto forma di dati e come compilare nuove funzionalità basate su tale codice.
 

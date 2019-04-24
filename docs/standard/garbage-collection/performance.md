@@ -9,10 +9,10 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310564"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection e prestazioni
@@ -22,7 +22,7 @@ ms.locfileid: "59310564"
   
 -   [Strumenti di analisi delle prestazioni](#performance_analysis_tools)  
   
--   [Risoluzione dei problemi relativi alle prestazioni](#troubleshooting_performance_issues)  
+-   [Risoluzione dei problemi di prestazioni](#troubleshooting_performance_issues)  
   
 -   [Linee guida per la risoluzione dei problemi](#troubleshooting_guidelines)  
   
@@ -234,7 +234,7 @@ ms.locfileid: "59310564"
 ## <a name="performance-check-procedures"></a>Procedure di controllo delle prestazioni  
  Questa sezione descrive le procedure per isolare la causa del problema di prestazioni:  
   
--   [Determinare se il problema è causato da Garbage Collection.](#IsGC)  
+-   [Determinare se il problema è causato da Garbage Collection](#IsGC)  
   
 -   [Determinare se l'eccezione di memoria esaurita è gestita.](#OOMIsManaged)  
   

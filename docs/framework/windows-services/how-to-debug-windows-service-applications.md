@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321445"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Procedura: Eseguire il debug di applicazioni di servizio di Windows
@@ -116,6 +116,6 @@ Poiché un servizio deve essere eseguito dall'interno del contesto di Gestione c
 ## <a name="see-also"></a>Vedere anche
 
 - [Introduzione alle applicazioni di servizio Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Procedura: installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Procedura: Installare e disinstallare servizi](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Procedura: Avviare servizi](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Debug di un servizio](/windows/desktop/Services/debugging-a-service)

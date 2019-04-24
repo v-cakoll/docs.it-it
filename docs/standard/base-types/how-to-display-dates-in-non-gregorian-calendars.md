@@ -14,10 +14,10 @@ ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313307"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedura: Visualizzare le date in calendari non gregoriani
@@ -63,7 +63,7 @@ I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendar
   
     -   <xref:System.Globalization.Calendar.GetSecond%2A>, per visualizzare i secondi del minuto nel calendario appropriato.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , per visualizzare i millisecondi del secondo nel calendario appropriato.  
+    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, per visualizzare i millisecondi del secondo nel calendario appropriato.  
   
 ## <a name="example"></a>Esempio  
  L'esempio visualizza una data usando due calendari diversi. La data viene visualizzata dopo aver definito il calendario Hijri come calendario predefinito per le impostazioni cultura ar-JO e usando il calendario persiano che non è supportato come calendario facoltativo nelle impostazioni cultura fa-IR.  
@@ -81,7 +81,7 @@ I tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> e usano il calendar
   
 -   `HasSameName`, metodo privato assegnato al delegato <xref:System.Predicate%601> che viene passato come parametro al metodo <xref:System.Array.Exists%2A?displayProperty=nameWithType>. Ogni membro della matrice viene passato al metodo finché quest'ultimo non restituisce `true`. Il metodo determina se il nome di un calendario facoltativo è identico a quello del calendario rappresentato dall'oggetto `CalendarUtility`.  
   
--   `DisplayDate`, metodo pubblico in overload a cui vengono passati due parametri: un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> da esprimere nel calendario rappresentato dall'oggetto `CalendarUtility` e le impostazioni cultura di cui usare le regole di formattazione. Il comportamento nella restituzione della rappresentazione di stringa di una data varia a seconda che il calendario di destinazione sia supportato dalle impostazioni cultura le cui regole di formattazione devono essere usate.  
+-   `DisplayDate`, metodo pubblico in overload a cui vengono passati due parametri: un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> da esprimere nel calendario rappresentato dall'oggetto`CalendarUtility` e le impostazioni cultura di cui usare le regole di formattazione. Il comportamento nella restituzione della rappresentazione di stringa di una data varia a seconda che il calendario di destinazione sia supportato dalle impostazioni cultura le cui regole di formattazione devono essere usate.  
   
  Indipendentemente dal calendario usato per creare un valore <xref:System.DateTime> o <xref:System.DateTimeOffset> in questo esempio, il valore viene in genere espresso come data del calendario gregoriano. Il motivo è che i tipi <xref:System.DateTime> e <xref:System.DateTimeOffset> non mantengono le informazioni sul calendario. Internamente vengono rappresentati come numero di cicli trascorsi dopo la mezzanotte del 1 gennaio 0001. L'interpretazione del numero dipende dal calendario. Per la maggior parte delle impostazioni cultura, il calendario predefinito è il calendario gregoriano.  
   

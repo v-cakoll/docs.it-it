@@ -9,16 +9,16 @@ helpviewer_keywords:
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122889"
 ---
 # <a name="await-c-reference"></a>await (Riferimenti per C#)
 L'operatore `await` viene applicato a un'attività in un metodo asincrono per inserire un punto di sospensione nell'esecuzione del metodo fino al completamento dell'attività di cui si è in attesa. L'attività rappresenta il lavoro attualmente in fase di esecuzione.  
   
-`await` può essere usato solo in un metodo asincrono modificato dalla parola chiave [async](../../../csharp/language-reference/keywords/async.md). Tale metodo, definito usando il modificatore `async` e contenente di solito una o più espressioni `await`, viene denominato *metodo asincrono*.  
+È possibile usare `await` solo in un metodo asincrono modificato dalla parola chiave [async](../../../csharp/language-reference/keywords/async.md). Tale metodo, definito usando il modificatore `async` e contenente di solito una o più espressioni `await`, viene denominato *metodo asincrono*.  
   
 > [!NOTE]
 > Le parole chiave `async` e `await` sono state introdotte in C# 5. Per un'introduzione alla programmazione asincrona, vedere [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md) (Programmazione asincrona con async e await).  

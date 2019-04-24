@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - fixed keyword [C#]
 ms.openlocfilehash: 4ef334f6d200e75f29e22a9586f4538309797942
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095984"
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
 
-L'istruzione `fixed` impedisce che il Garbage Collector esegua la rilocazione di una variabile mobile. L'istruzione `fixed` è consentita solo in un contesto di tipo [unsafe](unsafe.md). `fixed` può essere usato anche per creare [buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+L'istruzione `fixed` impedisce che il Garbage Collector esegua la rilocazione di una variabile mobile. L'istruzione `fixed` è consentita solo in un contesto di tipo [unsafe](unsafe.md). È possibile usare `fixed` anche per creare [buffer a dimensione fissa](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 L'istruzione `fixed` imposta un puntatore a una variabile gestita e la blocca durante l'esecuzione dell'istruzione. I puntatori alle variabili mobili gestite sono utili solo in un contesto `fixed`. Senza un contesto `fixed`, l'operazione di garbage collection potrebbe spostare le variabili in modo imprevedibile. Il compilatore C# consente di assegnare un puntatore a una variabile gestita in un'istruzione `fixed`.
 

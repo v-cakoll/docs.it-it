@@ -10,10 +10,10 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 ms.openlocfilehash: d4a35882d99a87ca5bf22fb386a87158e3c2d664
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154570"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Procedura: Personalizzare criteri di cache basati sul tempo
@@ -118,6 +118,6 @@ Level:Default MaxAge:36000 MinFresh:18000
 
 - [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
-- [criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

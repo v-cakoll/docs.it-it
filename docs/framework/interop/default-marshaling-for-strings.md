@@ -11,10 +11,10 @@ ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 47543056eaa538b008db3332dda776c0f300108d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078473"
 ---
 # <a name="default-marshaling-for-strings"></a>Marshalling predefinito per le stringhe
@@ -26,11 +26,11 @@ Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.
   
 -   [Stringhe usate nelle interfacce](#cpcondefaultmarshalingforstringsanchor1)  
   
--   [Stringhe usate in Platform invoke](#cpcondefaultmarshalingforstringsanchor5)  
+-   [Stringhe usate in platform invoke](#cpcondefaultmarshalingforstringsanchor5)  
   
 -   [Stringhe usate nelle strutture](#cpcondefaultmarshalingforstringsanchor2)  
   
--   [Buffer di stringhe di lunghezza fissa](#cpcondefaultmarshalingforstringsanchor3)  
+-   [Buffer di stringhe a lunghezza fissa](#cpcondefaultmarshalingforstringsanchor3)  
   
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
@@ -39,7 +39,7 @@ Le classi <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.
   
 |Tipo di enumerazione|Descrizione del formato non gestito|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (predefinito)|`BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
+|`UnmanagedType.BStr` (impostazione predefinita)|`BSTR` di tipo COM con lunghezza fissa e caratteri Unicode.|  
 |`UnmanagedType.LPStr`|Puntatore a matrice di caratteri ANSI con terminazione Null.|  
 |`UnmanagedType.LPWStr`|Puntatore a una matrice con terminazione Null di caratteri Unicode.|  
   
@@ -265,7 +265,7 @@ public class Window {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [comportamento predefinito del marshalling](default-marshaling-behavior.md)
-- [tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [copia e blocco](copying-and-pinning.md)
+- [Copia e blocco](copying-and-pinning.md)

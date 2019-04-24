@@ -19,10 +19,10 @@ ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097265"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Preparazione di un assembly per COM

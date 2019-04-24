@@ -9,10 +9,10 @@ ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114692"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
@@ -130,7 +130,7 @@ ms.locfileid: "59114692"
 |<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|In alternativa, utilizzare <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>.|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|In alternativa, usare <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> .|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0.|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> viene usato solo per la compatibilità con la trasparenza di .NET Framework 2.0. In alternativa, usare <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Questo tipo è obsoleto e sarà rimosso nelle versioni future di .NET Framework.|

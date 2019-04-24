@@ -5,10 +5,10 @@ ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d54751ae0492e25f824eee6362e0f3bca446d75e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147628"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Mitigazione: Rendering di finestre WPF
@@ -32,12 +32,12 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] in esecuzione in Windows
   
      L'impostazione di configurazione `<EnableMultiMonitorDisplayClipping>` può avere uno dei due valori seguenti:  
   
-    -   `true`per consentire il ritaglio delle finestre in base ai confini del monitor durante il rendering.  
+    -   `true` per consentire il ritaglio delle finestre in base ai confini del monitor durante il rendering.  
   
-    -   `false`per disabilitare il ritaglio delle finestre in base ai confini del monitor durante il rendering.  
+    -   `false` per disabilitare il ritaglio delle finestre in base ai confini del monitor durante il rendering.  
   
 -   Impostando la proprietà <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> su `true` all'avvio dell'app.  
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche in fase di esecuzione](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

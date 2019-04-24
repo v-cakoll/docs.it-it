@@ -5,10 +5,10 @@ author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
 ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196658"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedure consigliate di interoperabilità nativa
@@ -33,7 +33,7 @@ Le linee guida in questa sezione si applicano a tutti gli scenari di interoperab
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantenere l'impostazione predefinita  | Con l'impostazione esplicita su false, i valori restituiti HRESULT di errore verranno convertiti in eccezioni e il valore restituito nella definizione diventa Null di conseguenza.|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Dipende dall'API  | Impostare su true se l'API usa GetLastError e usare Marshal.GetLastWin32Error per ottenere il valore. Se l'API imposta una condizione che indica la presenza di un errore, recuperare l'errore prima di effettuare altre chiamate in modo da evitare di sovrascriverlo inavvertitamente.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`con fallback al comportamento `CharSet.Ansi`  | Usare in modo esplicito `CharSet.Unicode` o `CharSet.Ansi` quando sono presenti stringhe o caratteri nella definizione | Specifica il comportamento di marshalling delle stringhe e cosa fa `ExactSpelling` quando l'impostazione è `false`. Si noti che `CharSet.Ansi` è in effetti UTF8 su Unix. Nella _maggior parte_ dei casi Windows usa Unicode, mentre Unix usa UTF8. Vedere altre informazioni nella [documentazione sui set di caratteri](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` con fallback al comportamento `CharSet.Ansi`  | Usare in modo esplicito `CharSet.Unicode` o `CharSet.Ansi` quando sono presenti stringhe o caratteri nella definizione | Specifica il comportamento di marshalling delle stringhe e cosa fa `ExactSpelling` quando l'impostazione è `false`. Si noti che `CharSet.Ansi` è in effetti UTF8 su Unix. Nella _maggior parte_ dei casi Windows usa Unicode, mentre Unix usa UTF8. Vedere altre informazioni nella [documentazione sui set di caratteri](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Impostare su true e ottenere un leggero miglioramento delle prestazioni perché il runtime non cercherà nomi di funzioni alternativi con suffisso "A" o "W" in base al valore dell'impostazione `CharSet` ("A" per `CharSet.Ansi` e "W" per `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parametri stringa
@@ -44,7 +44,7 @@ Ricordarsi di contrassegnare `[DllImport]` come `Charset.Unicode` a meno che non
 
 **❌ NON** usare parametri `[Out] string`. I parametri stringa passati per valore con l'attributo `[Out]` possono destabilizzare il runtime se la stringa è una stringa centralizzata. Altre informazioni sulla centralizzazione delle stringhe sono disponibili nella documentazione relativa a <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ EVITARE** parametri `StringBuilder`. `StringBuilder` Il marshalling di StringBuilder crea *sempre* una copia del buffer nativo. Di conseguenza, può risultare estremamente inefficiente. Si consideri lo scenario tipico di chiamata di un'API di Windows che accetta una stringa:
+**❌ EVITARE** parametri `StringBuilder`. Il marshalling di `StringBuilder` crea *sempre* una copia del buffer nativo. Di conseguenza, può risultare estremamente inefficiente. Si consideri lo scenario tipico di chiamata di un'API di Windows che accetta una stringa:
 
 1. Creare un SB con la capacità desiderata (alloca capacità gestita) **{1}**
 2. Invoke
@@ -107,7 +107,7 @@ I tipi copiabili da BLT sono tipi che hanno la stessa rappresentazione a livello
 
 Quando i tipi copiabili da BLT vengono passati per riferimento, vengono semplicemente bloccati dal gestore del marshalling invece di essere copiati in un buffer intermedio. (Le classi vengono passare in modo intrinseco per riferimento, mentre gli struct vengono passati per riferimento quando vengono usati con `ref` o `out`.)
 
-`char` è copiabile da BLT in una matrice unidimensionale **oppure**, se fa parte di un tipo che lo contiene, viene contrassegnato in modo esplicito con `[StructLayout]` con `CharSet = CharSet.Unicode`.
+`char` è copiabile da BLT in una matrice unidimensionale **oppure** se fa parte di un tipo che lo contiene viene contrassegnato in modo esplicito con `[StructLayout]` con `CharSet = CharSet.Unicode`.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -125,7 +125,7 @@ public struct UnicodeCharStruct
 
 Per altre informazioni, vedere:
 
-- [tipi copiabili e non copiabili](../../framework/interop/blittable-and-non-blittable-types.md)  
+- [Tipi copiabili e non copiabili](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [Marshalling dei tipi](type-marshalling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Mantenere attivi gli oggetti gestiti

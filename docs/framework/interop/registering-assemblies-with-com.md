@@ -10,10 +10,10 @@ ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169026"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrazione di assembly presso COM

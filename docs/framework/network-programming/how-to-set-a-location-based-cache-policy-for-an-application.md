@@ -12,10 +12,10 @@ helpviewer_keywords:
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 ms.openlocfilehash: 06d458828c77f61e03d18f635ec00f6a7267bab8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341868"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione
@@ -157,6 +157,6 @@ I criteri di cache basati sulla posizione consentono a un'applicazione di defini
 
 - [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)
-- [criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

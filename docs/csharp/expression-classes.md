@@ -4,15 +4,15 @@ description: Informazioni sui tipi di framework che supportano gli alberi delle 
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
 ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198465"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipi di framework che supportano alberi delle espressioni
 
-[Precedente -- Nozioni di base sugli alberi delle espressioni](expression-trees-explained.md)
+[Precedente -- Expression Trees Explained (Nozioni di base sugli alberi delle espressioni)](expression-trees-explained.md)
 
 In .NET Core Framework esiste un lungo elenco di classi che funzionano con gli alberi delle espressioni.
 È possibile visualizzare l'elenco completo in <xref:System.Linq.Expressions>.

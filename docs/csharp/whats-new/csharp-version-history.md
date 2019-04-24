@@ -4,10 +4,10 @@ description: Caratteristiche del linguaggio nelle prime versioni ed evoluzione s
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303362"
 ---
 # <a name="the-history-of-c"></a>Cronologia di C\#
@@ -59,7 +59,7 @@ Qui le cose iniziano a farsi interessanti. Ecco alcune delle funzionalità princ
 - [Tipi parziali](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metodi anonimi](../programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Tipi nullable](../programming-guide/nullable-types/index.md)
-- [Iterators](../programming-guide/concepts/iterators.md)
+- [Iteratori](../programming-guide/concepts/iterators.md)
 - [Covarianza e controvarianza](../programming-guide/concepts/covariance-contravariance/index.md)
 
 Altre funzionalità di C# 2.0 aggiungevano capacità alle funzionalità esistenti:
@@ -125,7 +125,7 @@ C# versione 5.0 è una versione incentrata sul linguaggio. Quasi tutto l'impegno
 
 ### <a name="see-also"></a>Vedere anche
 
-* [Code Project: Caller Info Attributes in C# 5.0 (Attributi informativi sul chiamante in C# 5.0)](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Attributi informativi sul chiamante in C# 5.0)
 
 Gli attributi informativi sul chiamante consentono di recuperare facilmente informazioni sul contesto di esecuzione senza dover ricorrere a una grande quantità di codice di reflection boilerplate. Questi attributi hanno molte applicazioni nelle attività di diagnostica e di registrazione.
 

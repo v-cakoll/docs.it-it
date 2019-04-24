@@ -10,10 +10,10 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305039"
 ---
 # <a name="traversing-xml-schemas"></a>Attraversamento di schemi XML
@@ -69,10 +69,10 @@ L'attraversamento di uno schema XML mediante l'API del modello SOM (Schema Objec
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Cenni preliminari sul modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Panoramica del modello SOM XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lettura e scrittura di schemi XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Compilazione di XML Schema](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Compilazione di schemi XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Modifica di schemi XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [Inclusione o importazione di schemi XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet per la compilazione di schemi](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Post-Schema Compilation Infoset (PSCI, infoset sulla compilazione post-schema)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Post-Schema-Validation Infoset (PSVI)](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
