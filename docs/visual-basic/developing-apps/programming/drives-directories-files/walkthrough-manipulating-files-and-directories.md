@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314685"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: Modifica di file e directory in Visual Basic
@@ -45,11 +45,11 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
     |Control|Proprietà|Value|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**nome**|`filesListBox`|  
-    |**Button**|**nome**<br /><br /> **Testo**|`browseButton`<br /><br /> **Browse**|  
-    |**Button**|**nome**<br /><br /> **Testo**|`examineButton`<br /><br /> **Esamina**|  
-    |**CheckBox**|**nome**<br /><br /> **Testo**|`saveCheckBox`<br /><br /> **Salva risultati**|  
-    |**FolderBrowserDialog**|**nome**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Name**|`filesListBox`|  
+    |**Pulsante**|**Name**<br /><br /> **per**|`browseButton`<br /><br /> **Sfoglia**|  
+    |**Pulsante**|**Name**<br /><br /> **per**|`examineButton`<br /><br /> **Esaminare**|  
+    |**CheckBox**|**Name**<br /><br /> **per**|`saveCheckBox`<br /><br /> **Salva risultati**|  
+    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Per selezionare una cartella ed elencare file di una cartella  
   

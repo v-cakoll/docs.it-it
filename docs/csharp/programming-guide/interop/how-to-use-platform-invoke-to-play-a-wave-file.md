@@ -9,10 +9,10 @@ helpviewer_keywords:
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
 ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323811"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Procedura: Usare platform invoke per riprodurre un file audio (Guida per programmatori C#)
@@ -47,6 +47,6 @@ L'esempio di codice C# seguente descrive come usare i servizi platform invoke pe
 ## <a name="see-also"></a>Vedere anche
 
 - [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
-- [Panoramica dell'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [Cenni preliminari sull'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)
 - [Informazioni dettagliate su platform invoke](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Marshalling dei dati con platform invoke](../../../framework/interop/marshaling-data-with-platform-invoke.md)

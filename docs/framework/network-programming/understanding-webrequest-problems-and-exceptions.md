@@ -3,14 +3,14 @@ title: Informazioni su problemi ed eccezioni di WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
 ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215014"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Informazioni su problemi ed eccezioni di WebRequest
-<xref:System.Net.WebRequest> e le relative classi derivate (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> e <xref:System.Net.FileWebRequest>) generano eccezioni per segnalare una condizione anomala. In alcuni casi la risoluzione di questi problemi non è scontata.  
+<xref:System.Net.WebRequest> e le relative classi derivate (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, e <xref:System.Net.FileWebRequest>) generano eccezioni per segnalare una condizione anomala. In alcuni casi la risoluzione di questi problemi non è scontata.  
   
 ## <a name="solutions"></a>Soluzioni  
  Esaminare la proprietà <xref:System.Net.WebException.Status%2A> di <xref:System.Net.WebException> per determinare il problema. La tabella seguente illustra i diversi valori di stato e alcune possibili soluzioni.  
@@ -22,7 +22,7 @@ ms.locfileid: "59215014"
 |<xref:System.Net.WebExceptionStatus.SecureChannelFailure>|Si è verificato un errore nella transazione SSL o è presente un problema con il certificato.|.NET Framework versione 1.1 supporta solo SSL versione 3.0. Se il server usa solo TLS versione 1.0 o SSL versione 2.0, viene generata l'eccezione. Eseguire l'aggiornamento a .NET Framework versione 2.0 e impostare <xref:System.Net.ServicePointManager.SecurityProtocol%2A> in modo che corrisponda al server.<br /><br /> Il certificato client è stato firmato da un'Autorità di certificazione (CA) non attendibile per il server. Installare il certificato della CA nel server. Vedere <https://support.microsoft.com/?id=332077>.<br /><br /> Assicurarsi di avere installato il Service Pack più recente.|  
 |<xref:System.Net.WebExceptionStatus.ConnectFailure>|Connessione non riuscita.|La connessione è bloccata da un firewall o proxy. Modificare il firewall o proxy per consentire la connessione.<br /><br /> Impostare in modo esplicito una classe <xref:System.Net.WebProxy> nell'applicazione client chiamando il costruttore <xref:System.Net.WebProxy> (WebServiceProxyClass.Proxy = new WebProxy([http://server:80](http://server/), true)).<br /><br /> Eseguire Filemon o Regmon per assicurarsi che l'identità del processo di lavoro disponga delle autorizzazioni necessarie per accedere a WSPWSP.dll, HKLM\System\CurrentControlSet\Services\DnsCache o HKLM\System\CurrentControlSet\Services\WinSock2.|  
 |<xref:System.Net.WebExceptionStatus.NameResolutionFailure>|Il servizio DNS (Domain Name Service) non è riuscito a risolvere il nome host.|Configurare il proxy in modo corretto. Vedere <https://support.microsoft.com/?id=318140>.<br /><br /> Assicurarsi che il software antivirus installato o il firewall non blocchi la connessione.|  
-|<xref:System.Net.WebExceptionStatus.RequestCanceled>|<xref:System.Net.WebRequest.Abort%2A> È stato chiamato Abort o si è verificato un errore.|Questo problema potrebbe essere causato da un carico eccessivo sul client o sul server. Ridurre il carico.<br /><br /> Aumentare l'impostazione <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Vedere <https://support.microsoft.com/?id=821268> per modificare le impostazioni delle prestazioni del servizio Web.|  
+|<xref:System.Net.WebExceptionStatus.RequestCanceled>|È stato chiamato <xref:System.Net.WebRequest.Abort%2A> o si è verificato un errore.|Questo problema potrebbe essere causato da un carico eccessivo sul client o sul server. Ridurre il carico.<br /><br /> Aumentare l'impostazione <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Vedere <https://support.microsoft.com/?id=821268> per modificare le impostazioni delle prestazioni del servizio Web.|  
 |<xref:System.Net.WebExceptionStatus.ConnectionClosed>|L'applicazione ha tentato di scrivere in un socket già chiuso.|Il client o il server è sovraccarico. Ridurre il carico.<br /><br /> Aumentare l'impostazione <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A>.<br /><br /> Vedere <https://support.microsoft.com/?id=821268> per modificare le impostazioni delle prestazioni del servizio Web.|  
 |<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|È stato superato il limite impostato (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>) per la lunghezza del messaggio.|Aumentare il valore della proprietà <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>.|  
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Il servizio DNS (Domain Name Service) non è riuscito a risolvere il nome host del proxy.|Configurare il proxy in modo corretto. Vedere <https://support.microsoft.com/?id=318140>.<br /><br /> Forzare <xref:System.Net.HttpWebRequest> a non usare alcun proxy impostando la proprietà <xref:System.Net.HttpWebRequest.Proxy%2A> su `null`.|  
