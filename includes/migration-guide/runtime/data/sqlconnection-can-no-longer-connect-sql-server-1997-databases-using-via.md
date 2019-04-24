@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: fcaee245e98dfe71beb4042a2664a14b64cf2398
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235594"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804243"
 ---
 ### <a name="sqlconnection-can-no-longer-connect-to-sql-server-1997-or-databases-using-the-via-adapter"></a>SqlConnection non può più connettersi a SQL Server 1997 o a database che usano l'adapter VIA
 

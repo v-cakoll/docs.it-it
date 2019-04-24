@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230980"
 ---
 # <a name="networkinformation"></a>NetworkInformation
@@ -26,6 +26,6 @@ Lo spazio dei nomi <xref:System.Net.NetworkInformation> consente di raccogliere 
 ## <a name="see-also"></a>Vedere anche
 
 - [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)
-- [Esempio di tecnologia per le informazioni di rete](https://go.microsoft.com/fwlink/?LinkID=179564)
-- [Esempio di tecnologia NetStatTool](https://go.microsoft.com/fwlink/?LinkID=179562)
-- [Esempio di tecnologia client ping](https://go.microsoft.com/fwlink/?LinkID=179565)
+- [Network Information Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179564) (Esempio di tecnologia per informazioni di rete)
+- [NetStat Tool Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179562) (Esempio di tecnologia dello strumento NetStat)
+- [Ping Client Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179565) (Esempio di tecnologia ping)

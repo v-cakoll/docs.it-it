@@ -10,10 +10,10 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143650"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilità tra le versioni in .NET Framework
@@ -70,5 +70,5 @@ Per compatibilità con le versioni precedenti si intende che un'app sviluppata p
 - [Novità](../../../docs/framework/whats-new/index.md)
 - [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Compatibilità delle applicazioni](../../../docs/framework/migration-guide/application-compatibility.md)
-- [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Criteri relativi al ciclo di vita del supporto di Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
 - [Problemi di migrazione di .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

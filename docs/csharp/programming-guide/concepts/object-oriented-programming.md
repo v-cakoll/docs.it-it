@@ -3,10 +3,10 @@ title: Programmazione orientata a oggetti (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
 ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481171"
 ---
 # <a name="object-oriented-programming-c"></a>Programmazione orientata a oggetti (C#)
@@ -79,7 +79,7 @@ struct SampleStruct
 
 Per altre informazioni, vedere:
 
-- [classe](../../../csharp/language-reference/keywords/class.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
 
 - [struct](../../../csharp/language-reference/keywords/struct.md)
 
@@ -135,7 +135,7 @@ Per altre informazioni, vedere:
 
 - [get](../../../csharp/language-reference/keywords/get.md)
 
-- [imposta](../../../csharp/language-reference/keywords/set.md)
+- [set](../../../csharp/language-reference/keywords/set.md)
 
 #### <a name="Methods"></a> Metodi
 
@@ -239,7 +239,7 @@ Sono disponibili i seguenti modificatori di accesso:
 |[protected](../../../csharp/language-reference/keywords/protected.md)|Il tipo o il membro è accessibile solo dal codice nella stessa classe o in una classe derivata.|
 |[internal](../../../csharp/language-reference/keywords/internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly ma non da un altro assembly.|
 |[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Il tipo o il membro è accessibile dal codice nello stesso assembly o da una classe derivata in un altro assembly.|
-|[protetto privato](../../../csharp/language-reference/keywords/private-protected.md)|Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base.|
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Il tipo o membro è accessibile solo dal codice nella stessa classe o in una classe derivata all'interno dell'assembly della classe di base.|
 
 Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).
 
@@ -352,7 +352,7 @@ I seguenti modificatori consentono di controllare le modalità di override di pr
 
 |Modificatore di C#|Definizione|
 |------------------|----------------|
-|[virtuale](../../../csharp/language-reference/keywords/virtual.md)|Consente a un membro della classe di essere sottoposto a override in una classe derivata.|
+|[virtual](../../../csharp/language-reference/keywords/virtual.md)|Consente a un membro della classe di essere sottoposto a override in una classe derivata.|
 |[override](../../../csharp/language-reference/keywords/override.md)|Esegue l'override di un membro virtuale (sottoponibile a override) definito nella classe base.|
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|Richiede che un membro della classe venga sottoposto a override nella classe derivata.|
 |[Modificatore new](../../../csharp/language-reference/keywords/new-modifier.md)|Nasconde un membro ereditato da una classe base.|
@@ -386,7 +386,7 @@ Per altre informazioni, vedere:
 
 [Interfacce](../../../csharp/programming-guide/interfaces/index.md)
 
-[interfaccia](../../../csharp/language-reference/keywords/interface.md)
+[interface](../../../csharp/language-reference/keywords/interface.md)
 
 ## <a name="Generics"></a> Generics
 
@@ -450,7 +450,7 @@ Per altre informazioni, vedere:
 
 - [Delegati](../../../csharp/programming-guide/delegates/index.md)
 
-- [delegato](../../../csharp/language-reference/keywords/delegate.md)
+- [delegate](../../../csharp/language-reference/keywords/delegate.md)
 
 ## <a name="see-also"></a>Vedere anche
 

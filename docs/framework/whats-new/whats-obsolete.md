@@ -10,10 +10,10 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337279"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Elementi obsoleti nella libreria di classi .NET Framework
@@ -56,7 +56,7 @@ ms.locfileid: "59337279"
   
  La tabella seguente elenca i valori di stringa che è possibile assegnare all'attributo `version` per scegliere come destinazione una versione di .NET Framework specifica.  
   
-|Versione di .NET Framework|`version` string|
+|Versione di .NET Framework|Stringa `version`|
 |-|-|  
 |4.7 (incluse 4.7.1 e 4.7.2)|v4.0|  
 |4.6 (incluse 4.6.1 e 4.6.2)|v4.0|  

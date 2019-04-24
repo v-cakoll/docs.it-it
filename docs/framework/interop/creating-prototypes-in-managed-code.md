@@ -20,10 +20,10 @@ ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168168"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Creazione di prototipi nel codice gestito
@@ -135,7 +135,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction> I modificatori SecurityAction funzionano correttamente se vengono posizionati in una classe che contiene (esegue il wrapping) la chiamata di platform invoke.  
+ I modificatori <xref:System.Security.Permissions.SecurityAction> funzionano correttamente se vengono posizionati in una classe che contiene (esegue il wrapping) la chiamata di platform invoke.  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -156,7 +156,7 @@ class PInvokeWrapper
 }  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction> I modificatori SecurityAction funzionano correttamente anche in uno scenario annidato in cui vengono posizionati nel chiamante della chiamata di platform invoke:  
+ I modificatori <xref:System.Security.Permissions.SecurityAction> funzionano correttamente anche in uno scenario annidato in cui vengono posizionati nel chiamante della chiamata di platform invoke:  
   
 ```cpp  
       {  
@@ -240,7 +240,7 @@ interface IDemandStubsItf
 - [Specifica di un punto di ingresso](specifying-an-entry-point.md)
 - [Specifica di un set di caratteri](specifying-a-character-set.md)
 - [Esempi di platform invoke](platform-invoke-examples.md)
-- [Considerazioni sulla sicurezza di platform invoke](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [Platform invoke (considerazioni sulla sicurezza)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identificazione delle funzioni nelle DLL](identifying-functions-in-dlls.md)
-- [Creazione di una classe che contenga le funzioni di DLL](creating-a-class-to-hold-dll-functions.md)
+- [Creazione di una classe che contenga le funzioni DLL](creating-a-class-to-hold-dll-functions.md)
 - [Chiamata a una funzione di DLL](calling-a-dll-function.md)

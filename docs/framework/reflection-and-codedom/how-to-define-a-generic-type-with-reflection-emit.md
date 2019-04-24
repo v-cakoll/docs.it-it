@@ -13,10 +13,10 @@ ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315543"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedura: Definire un tipo generico tramite reflection emit
@@ -65,7 +65,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7. Definire un campo. In questo esempio il tipo del campo è specificato dal parametro di tipo `TFirst`. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> deriva da <xref:System.Type> e, pertanto, è possibile usare parametri di tipo generico ovunque sia consentito l'uso di un tipo.  
+7. Definire un campo. In questo esempio il tipo del campo è specificato dal parametro di tipo `TFirst`. Poiché <xref:System.Reflection.Emit.GenericTypeParameterBuilder> deriva da <xref:System.Type>, è possibile usare parametri di tipo generico ovunque sia consentito l'uso di un tipo.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
@@ -98,7 +98,7 @@ Questo argomento illustra come creare un tipo generico semplice con due parametr
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Richiamare il metodo. `ExampleMethod` non è generico ma appartiene a un tipo generico e per ottenere un oggetto <xref:System.Reflection.MethodInfo> che possa essere richiamato, è quindi necessario creare un tipo costruito dalla definizione di tipo per `Sample`. Il tipo costruito usa la classe `Example` che, essendo un tipo di riferimento e disponendo di un costruttore senza parametri predefinito, soddisfa i vincoli di `TFirst` e la classe `ExampleDerived` che soddisfa i vincoli di `TSecond`. Il codice per `ExampleDerived` è disponibile nella sezione del codice di esempio. Questi due tipi vengono passati a <xref:System.Type.MakeGenericType%2A> per la creazione del tipo costruito. <xref:System.Reflection.MethodInfo> viene quindi ottenuto usando il metodo <xref:System.Type.GetMethod%2A>.  
+11. Richiamare il metodo. Poiché `ExampleMethod` non è generico ma appartiene a un tipo generico, per ottenere un oggetto <xref:System.Reflection.MethodInfo> che possa essere richiamato, è necessario creare un tipo costruito dalla definizione di tipo per `Sample`. Il tipo costruito usa la classe `Example` che, essendo un tipo di riferimento e disponendo di un costruttore senza parametri predefinito, soddisfa i vincoli di `TFirst` e la classe `ExampleDerived` che soddisfa i vincoli di `TSecond`. Il codice per `ExampleDerived` è disponibile nella sezione del codice di esempio. Questi due tipi vengono passati a <xref:System.Type.MakeGenericType%2A> per la creazione del tipo costruito. <xref:System.Reflection.MethodInfo> viene quindi ottenuto usando il metodo <xref:System.Type.GetMethod%2A>.  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]

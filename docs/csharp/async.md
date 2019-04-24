@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
 ms.openlocfilehash: 8570692c02855cda7a1990f10ef97590449baccd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184666"
 ---
 # <a name="asynchronous-programming"></a>Programmazione asincrona
@@ -218,7 +218,7 @@ Sebbene produca una quantità minore di codice, è necessario prestare molta att
 
 Sebbene la programmazione asincrona è relativamente semplice, ci sono alcuni dettagli da tenere presente per evitare comportamenti non previsti.
 
-* `async` I metodi **devono avere una parola chiave** `await`  **nel corpo, altrimenti non verranno eseguiti.**
+* `async`I metodi **devono avere una parola chiave** `await`  **nel corpo, altrimenti non verranno eseguiti.**
 
 Questo è importante da tenere presente.  Se `await` non viene usato nel corpo di un metodo `async`, il compilatore C# genererà un avviso, ma il codice verrà compilato ed eseguito come se fosse un metodo normale.  Si noti che anche questo sarebbe estremamente inefficiente, perché la macchina a stati generata dal compilatore C# per il metodo asincrono non produrrebbe niente.
 
@@ -226,13 +226,13 @@ Questo è importante da tenere presente.  Se `await` non viene usato nel corpo d
 
 Questa è la convenzione usata in .NET per differenziare più facilmente i metodi sincroni dai metodi asincroni. Si noti che alcuni metodi non chiamati in modo esplicito dal codice, ad esempio un gestore di eventi o un metodo di controller del Web, non vengono necessariamente applicati. Poiché questi metodi non vengono chiamati in modo esplicito dal codice, non è importante denominarli in modo esplicito.
 
-* `async void` **deve essere usato solo per i gestori eventi.**
+* `async void`  **deve essere usato solo per i gestori eventi.**
 
 `async void` è l'unico modo per consentire ai gestori eventi asincroni di funzionare correttamente, poiché gli eventi non hanno tipi restituiti (quindi non possono usare `Task` e `Task<T>`). Qualsiasi altro uso di `async void` non segue il modello TAP e può essere difficile da usare, ad esempio:
 
 * Le eccezioni generate in un metodo `async void` non possono essere rilevate al di fuori di tale metodo.
-* `async void` I metodi async void sono molto difficili da testare.
-* `async void` I metodi async void possono causare effetti collaterali seri se il chiamante non li prevede asincroni.
+* I metodi `async void` sono molto difficili da testare.
+* I metodi `async void` possono causare effetti collaterali seri se il chiamante non li prevede asincroni.
 
 * **Prestare attenzione quando si usano le espressioni lambda asincrone in espressioni LINQ**
 
@@ -244,7 +244,7 @@ Il blocco del thread corrente come mezzo per attendere il completamento di un'at
 
 | Usare questo | Invece di questo | Quando si vuole eseguire questa operazione |
 | --- | --- | --- |
-| `await` | `Task.Wait` oppure `Task.Result` | Recuperare il risultato di un'attività in background |
+| `await` | `Task.Wait` o `Task.Result` | Recuperare il risultato di un'attività in background |
 | `await Task.WhenAny` | `Task.WaitAny` | Attendere che un'attività sia completa |
 | `await Task.WhenAll` | `Task.WaitAll` | Attendere che tutte le attività siano complete |
 | `await Task.Delay` | `Thread.Sleep` | Attendere un periodo di tempo |

@@ -12,10 +12,10 @@ ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315764"
 ---
 # <a name="default-marshaling-behavior"></a>comportamento predefinito del marshalling
@@ -166,9 +166,9 @@ internal class DelegateTest {
   
  Questa sezione contiene informazioni sui tipi di valore formattati seguenti:  
   
--   [Tipi di valore usati in platform invoke](#value-types-used-in-platform-invoke)  
+-   [Tipi valore usati in platform invoke](#value-types-used-in-platform-invoke)  
   
--   [Tipi di valore usati nell'interoperabilità COM](#value-types-used-in-com-interop)  
+-   [Tipi valore usati nell'interoperabilità COM](#value-types-used-in-com-interop)  
   
  Oltre a descrivere i tipi formattati, questo argomento identifica i [tipi valore di sistema](#system-value-types) che presentano un comportamento di marshalling insolito.  
   
@@ -441,8 +441,8 @@ interface IValueTypes : IDispatch {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
-- [copia e blocco](copying-and-pinning.md)
+- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
+- [Copia e blocco](copying-and-pinning.md)
 - [Marshalling predefinito per le matrici](default-marshaling-for-arrays.md)
 - [Marshalling predefinito per gli oggetti](default-marshaling-for-objects.md)
 - [Marshalling predefinito per le stringhe](default-marshaling-for-strings.md)

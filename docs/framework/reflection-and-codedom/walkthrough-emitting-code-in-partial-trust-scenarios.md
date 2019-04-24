@@ -17,10 +17,10 @@ ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299475"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale
@@ -169,7 +169,7 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     La limitazione consiste nel fatto che il metodo dinamico ospitato in modo anonimo può accedere ai dati privati solo negli assembly con livelli di attendibilità uguali o inferiori a quello dell'assembly di creazione. Ad esempio, se il metodo dinamico è in esecuzione con attendibilità Internet, può accedere ai dati privati in altri assembly in esecuzione con attendibilità Internet, ma non può accedere ai dati privati degli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Gli assembly .NET Framework sono installati nella Global Assembly Cache e sono sempre completamente attendibili.  
+     La limitazione consiste nel fatto che il metodo dinamico ospitato in modo anonimo può accedere ai dati privati solo negli assembly con livelli di attendibilità uguali o inferiori a quello dell'assembly di creazione. Ad esempio, se il metodo dinamico è in esecuzione con attendibilità Internet, può accedere ai dati privati in altri assembly in esecuzione con attendibilità Internet, ma non può accedere ai dati privati degli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Gli assembly [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] sono installati nella Global Assembly Cache sono sempre completamente attendibili.  
   
      I metodi dinamici ospitati in modo anonimo possono usare questa possibilità limitata di ignorare i controlli di visibilità JIT solo se l'applicazione host concede <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. La richiesta di questa autorizzazione viene effettuata quando viene richiamato il metodo.  
   

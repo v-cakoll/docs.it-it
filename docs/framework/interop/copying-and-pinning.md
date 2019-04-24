@@ -10,10 +10,10 @@ ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326281"
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
@@ -77,6 +77,6 @@ Durante il marshalling il gestore di marshalling di interoperabilità può copia
   
 ## <a name="see-also"></a>Vedere anche
 
-- [comportamento predefinito del marshalling](default-marshaling-behavior.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Marshalling di interoperabilità](interop-marshaling.md)

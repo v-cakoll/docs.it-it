@@ -11,10 +11,10 @@ ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210136"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper
@@ -45,7 +45,7 @@ La figura seguente illustra il processo per accedere a oggetti COM tramite Runti
   
 |Interfaccia|Description|  
 |---------------|-----------------|  
-|**Idispatch**|Per l'associazione tardiva a oggetti COM tramite reflection.|  
+|**IDispatch**|Per l'associazione tardiva a oggetti COM tramite reflection.|  
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|  
 |**IProvideClassInfo**|Se l'oggetto COM di cui si esegue il wrapping implementa **IProvideClassInfo**, l'oggetto RCW estrarrà le informazioni sul tipo da questa interfaccia per definire meglio l'identità del tipo.|  
 |**IUnknown**|Per l'identità del tipo, la coercizione dei tipi e la gestione della durata:<br /><br /> - Identità degli oggetti<br />     Il runtime distingue tra gli oggetti COM confrontando il valore dell'interfaccia **IUnknown** di ciascun oggetto.<br />- Coercizione dei tipi<br />     L'oggetto RCW riconosce l'individuazione dei tipi dinamica eseguita dal metodo **QueryInterface**.<br />- Gestione del ciclo di vita<br />     Usando il metodo **QueryInterface**, l'oggetto RCW ottiene e mantiene un riferimento a un oggetto non gestito fino a quando il runtime non esegue una procedura di Garbage Collection sul wrapper, rilasciando l'oggetto non gestito.|  

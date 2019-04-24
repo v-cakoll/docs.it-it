@@ -3,10 +3,10 @@ title: Raccolte (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481106"
 ---
 # <a name="collections-c"></a>Raccolte (C#)
@@ -24,7 +24,7 @@ Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una
 > [!NOTE]
 > Per gli esempi in questo argomento, includere le direttive [using](../../../csharp/language-reference/keywords/using-directive.md) per gli spazi dei nomi `System.Collections.Generic` e `System.Linq`.
 
- **Contenuto dell'argomento**
+ **In questo argomento**
 
 - [Uso di una raccolta semplice](#BKMK_SimpleCollection)
 
@@ -44,7 +44,7 @@ Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una
 
 - [Definizione di una raccolta personalizzata](#BKMK_CustomCollection)
 
-- [Iterators](#BKMK_Iterators)
+- [Iteratori](#BKMK_Iterators)
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -186,11 +186,11 @@ Molte raccolte comuni vengono fornite da .NET Framework. Ogni tipo di raccolta �
 
 In questa sezione sono descritte alcune classi di raccolte comuni:
 
-- <xref:System.Collections.Generic> classi
+- Classi <xref:System.Collections.Generic>
 
-- <xref:System.Collections.Concurrent> classi
+- Classi <xref:System.Collections.Concurrent>
 
-- <xref:System.Collections> classi
+- Classi <xref:System.Collections>
 
 <a name="BKMK_Generic"></a>
 
@@ -599,8 +599,8 @@ private static IEnumerable<int> EvenSequence(
 ## <a name="see-also"></a>Vedere anche
 
 - [Inizializzatori di oggetto e di raccolta](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Concetti di programmazione (C#)](../../../csharp/programming-guide/concepts/index.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Nozioni di base sulla programmazione (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Raccolte e strutture di dati](../../../standard/collections/index.md)

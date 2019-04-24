@@ -11,10 +11,10 @@ ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098221"
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
@@ -362,7 +362,7 @@ public struct MyStruct {
   
 ## <a name="see-also"></a>Vedere anche
 
-- [comportamento predefinito del marshalling](default-marshaling-behavior.md)
-- [tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
+- [Comportamento di marshalling predefinito](default-marshaling-behavior.md)
+- [Tipi copiabili e non copiabili](blittable-and-non-blittable-types.md)
 - [Attributi direzionali](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [copia e blocco](copying-and-pinning.md)
+- [Copia e blocco](copying-and-pinning.md)

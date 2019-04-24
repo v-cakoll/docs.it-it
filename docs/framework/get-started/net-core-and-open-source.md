@@ -5,10 +5,10 @@ ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5eeef28f9a1d81ffa6328bfa5f2a8ed5295b47aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163423"
 ---
 # <a name="net-core-and-open-source"></a>Componenti di base e open-source di .NET
@@ -35,13 +35,13 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
   
 -   [.NET Core](https://github.com/dotnet/core)  
   
--   [CoreFX - .NET Core foundational libraries (CoreFX - Librerie di base di .NET Core)](https://github.com/dotnet/corefx)  
+-   [CoreFX - .NET Core foundational libraries](https://github.com/dotnet/corefx) (CoreFX - Librerie di base di .NET Core)  
   
--   [CoreCLR - .NET Core runtime (CoreCLR - Runtime di .NET Core)](https://github.com/dotnet/coreclr)  
+-   [CoreCLR - .NET Core runtime](https://github.com/dotnet/coreclr) (CoreCLR - Runtime di .NET Core)  
   
--   [CLI - .NET Core command-line tools (CLI - Strumenti della riga di comando di .NET Core)](https://github.com/dotnet/cli)  
+-   [CLI - .NET Core command-line tools](https://github.com/dotnet/cli) (CLI - Strumenti della riga di comando di .NET Core)  
   
--   [Roslyn - .NET Compiler Platform (Roslyn - Piattaforma del compilatore .NET)](https://github.com/dotnet/roslyn)  
+-   [Roslyn - .NET Compiler Platform](https://github.com/dotnet/roslyn) (Roslyn - Piattaforma del compilatore .NET)  
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   

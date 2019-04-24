@@ -7,10 +7,10 @@ ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341075"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Esecuzione side-by-side in .NET Framework
@@ -114,10 +114,10 @@ publicKeyToken=...,
 |Titolo|Description|  
 |-----------|-----------------|  
 |[Procedura: Abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Viene descritto come associare un'applicazione a una versione specifica di un assembly.|  
-|[Configurazione del reindirizzamento dell'associazione di assembly](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Viene illustrato come reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly di .NET Framework.|  
-|[Esecuzione side-by-side in-process](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Viene illustrato come usare l'attivazione dell'host di runtime side-by-side in-process per eseguire più versioni di CLR in un solo processo.|  
+|[Configuring Assembly Binding Redirection](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md) (Configurazione del reindirizzamento di associazione di assembly)|Viene illustrato come reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly di .NET Framework.|  
+|[In-Process Side-by-Side Execution](../../../docs/framework/deployment/in-process-side-by-side-execution.md) (Esecuzione side-by-side In-Process)|Viene illustrato come usare l'attivazione dell'host di runtime side-by-side in-process per eseguire più versioni di CLR in un solo processo.|  
 |[Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Viene fornita una panoramica sui concetti di base relativi agli assembly.|  
-|[Domini applicazione](../../../docs/framework/app-domains/application-domains.md)|Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.|  
+|[Domini dell'applicazione](../../../docs/framework/app-domains/application-domains.md)|Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.|  
   
 ## <a name="reference"></a>Riferimenti  
  [Elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

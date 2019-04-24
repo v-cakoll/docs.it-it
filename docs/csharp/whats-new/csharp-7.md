@@ -4,16 +4,16 @@ description: Panoramica delle nuove funzionalità nella versione 7.0 del linguag
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481301"
 ---
 # <a name="whats-new-in-c-70"></a>Novità di C# 7.0
 
 C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
-* [`out` variabili](#out-variables)
+* [Variabili `out`](#out-variables)
   - È possibile dichiarare valori `out` inline come argomenti per il metodo in cui vengono usati.
 * [Tuple](#tuples)
   - È possibile creare tipi leggeri e senza nome che contengono più campi pubblici. I compilatori e gli strumenti dell'IDE comprendono la semantica di questi tipi.
@@ -21,13 +21,13 @@ C# 7.0 aggiunge diverse nuove funzionalità al linguaggio C#:
   - Le variabili discard sono variabili temporanee di sola scrittura usate nelle assegnazioni quando non si è interessati al valore assegnato. Sono utili soprattutto per la decostruzione di tuple e tipi definiti dall'utente, nonché per la chiamata di metodi con i parametri `out`.
 * [Criteri di ricerca](#pattern-matching)
   - È possibile creare una logica di salto condizionato basata su tipi e valori arbitrari dei membri di tali tipi.
-* [`ref` Variabili locali e valori restituiti](#ref-locals-and-returns)
+* [Variabili locali e valori restituiti `ref`](#ref-locals-and-returns)
   - Le variabili locali del metodo e i valori restituiti possono essere riferimenti ad altre opzioni di memorizzazione.
 * [Funzioni locali](#local-functions)
   - È possibile annidare funzioni all'interno di altre funzioni per limitarne l'ambito e visibilità.
 * [Più membri con corpo di espressione](#more-expression-bodied-members)
   - L'elenco dei membri che possono essere creati con le espressioni è cresciuto.
-* [`throw` Espressioni](#throw-expressions)
+* [Espressioni `throw`](#throw-expressions)
   - È possibile generare eccezioni in costrutti di codice che in precedenza non erano consentiti, perché `throw` era un'istruzione.
 * [Tipi restituiti asincroni generalizzati](#generalized-async-return-types)
   - I metodi dichiarati con il modificatore `async` possono restituire altri tipi oltre a `Task` e `Task<T>`.
@@ -183,7 +183,7 @@ Il linguaggio C# usa diverse regole per evitare l'uso improprio delle variabili 
   - Questo non consente istruzioni come `ref int i = sequence.Count();`
 * Non è possibile restituire un elemento `ref` a una variabile la cui durata è limitata alla durata di esecuzione del metodo.
   - Ciò significa che non è possibile restituire un riferimento a una variabile locale o a una variabile con ambito simile.
-* `ref` Non è possibile usare variabili locali e valori restituiti ref con i metodi asincroni.
+* Non è possibile usare variabili locali e valori restituiti `ref` con i metodi asincroni.
   - Il compilatore non può stabilire se la variabile a cui si fa riferimento è stata impostata sul valore finale quando il metodo asincrono restituisce il controllo.
 
 L'aggiunta di variabili locali e valori restituiti ref abilita algoritmi più efficienti, evitando la copia dei valori o l'esecuzione ripetuta di operazioni di dereferenziazione.

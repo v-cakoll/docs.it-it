@@ -7,10 +7,10 @@ helpviewer_keywords:
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
 ms.openlocfilehash: d0a5555bbe68aa82218c1dbe3d24705b26aff9c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296576"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Operatori che supportano l'overload (Guida per programmatori C#)
@@ -38,5 +38,5 @@ Per informazioni su come eseguire l'overload di un operatore, vedere l'articolo 
 - [Guida per programmatori C#](../index.md)
 - [Istruzioni, espressioni e operatori](index.md)
 - [Operatori](operators.md)
-- [Operatori [C#]](../../language-reference/operators/index.md)
-- [Why are overloaded operators always static in C#? (Perché gli operatori sottoposti a overload sono sempre statici in C#?)](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)
+- [Operatori C#](../../language-reference/operators/index.md)
+- [Why are overloaded operators always static in C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/) (Perché gli operatori sottoposti a overload sono sempre statici in C#?)
