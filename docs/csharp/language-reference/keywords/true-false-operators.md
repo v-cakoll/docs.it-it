@@ -7,10 +7,10 @@ helpviewer_keywords:
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
 ms.openlocfilehash: 869eeab6515340b2f1884ab7206979e83654a10b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328244"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatori true e false (Riferimenti per C#)
@@ -40,6 +40,6 @@ Wait!
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
 - [Parole chiave di C#](index.md)
-- [Operatori [C#]](../operators/index.md)
-- [`true` valore letterale](true-literal.md)
-- [`false` valore letterale](false-literal.md)
+- [Operatori C#](../operators/index.md)
+- [Valore letterale `true`](true-literal.md)
+- [Valore letterale `false`](false-literal.md)

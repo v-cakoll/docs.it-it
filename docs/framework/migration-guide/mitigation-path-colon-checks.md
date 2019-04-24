@@ -5,10 +5,10 @@ ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 342c3ce59ad80c9a60f2a2b69b30f77ff0549415
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176761"
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigazione: Verifica della presenza dei due punti nel percorso
@@ -34,4 +34,4 @@ A partire dalle applicazioni dedicate a [!INCLUDE[net_v462](../../../includes/ne
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Modifiche di ridestinazione](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Modifiche di reindirizzamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
