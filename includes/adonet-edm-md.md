@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d9b3b24ad8a61e956d8ca973e93f841a758fa721
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2019
-ms.locfileid: "25593678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663658"
 ---
-<span data-ttu-id="fff5e-101">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="fff5e-101">Entity Data Model</span></span>
+<span data-ttu-id="1fc55-101">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="1fc55-101">Entity Data Model</span></span>
