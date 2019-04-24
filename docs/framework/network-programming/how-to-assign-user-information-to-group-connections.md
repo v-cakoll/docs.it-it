@@ -6,19 +6,19 @@ dev_langs:
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296966"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a><span data-ttu-id="5ae1b-102">Procedura: Assegnare informazioni utente a connessioni di gruppo</span><span class="sxs-lookup"><span data-stu-id="5ae1b-102">How to: Assign User Information to Group Connections</span></span>
+# <a name="how-to-assign-user-information-to-group-connections"></a><span data-ttu-id="a18d2-102">Procedura: Assegnare informazioni utente a connessioni di gruppo</span><span class="sxs-lookup"><span data-stu-id="a18d2-102">How to: Assign User Information to Group Connections</span></span>
 
- <span data-ttu-id="5ae1b-103">L'esempio seguente dimostra come assegnare informazioni utente a connessioni di gruppo, presupponendo che l'applicazione imposti le variabili *UserName*, *SecurelyStoredPassword* e *Domain* prima della chiamata di questa sezione di codice e che *UserName* sia univoco.</span><span class="sxs-lookup"><span data-stu-id="5ae1b-103">The following example demonstrates how to assign user information to group connections, assuming that the application sets the variables *UserName*, *SecurelyStoredPassword*, and *Domain* before this section of code is called and that *UserName* is unique.</span></span>  
+ <span data-ttu-id="a18d2-103">L'esempio seguente dimostra come assegnare informazioni utente a connessioni di gruppo, presupponendo che l'applicazione imposti le variabili *UserName*, *SecurelyStoredPassword* e *Domain* prima della chiamata di questa sezione di codice e che *UserName* sia univoco.</span><span class="sxs-lookup"><span data-stu-id="a18d2-103">The following example demonstrates how to assign user information to group connections, assuming that the application sets the variables *UserName*, *SecurelyStoredPassword*, and *Domain* before this section of code is called and that *UserName* is unique.</span></span>  
   
-### <a name="to-assign-user-information-to-a-group-connection"></a><span data-ttu-id="5ae1b-104">Per assegnare informazioni utente a una connessione di gruppo</span><span class="sxs-lookup"><span data-stu-id="5ae1b-104">To assign user information to a group connection</span></span>  
+### <a name="to-assign-user-information-to-a-group-connection"></a><span data-ttu-id="a18d2-104">Per assegnare informazioni utente a una connessione di gruppo</span><span class="sxs-lookup"><span data-stu-id="a18d2-104">To assign user information to a group connection</span></span>  
   
-1. <span data-ttu-id="5ae1b-105">Creare un nome del gruppo di connessione.</span><span class="sxs-lookup"><span data-stu-id="5ae1b-105">Create a connection group name.</span></span>  
+1. <span data-ttu-id="a18d2-105">Creare un nome del gruppo di connessione.</span><span class="sxs-lookup"><span data-stu-id="a18d2-105">Create a connection group name.</span></span>  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -32,7 +32,7 @@ ms.locfileid: "59296966"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2. <span data-ttu-id="5ae1b-106">Creare una richiesta per un URL specifico.</span><span class="sxs-lookup"><span data-stu-id="5ae1b-106">Create a request for a specific URL.</span></span> <span data-ttu-id="5ae1b-107">Ad esempio, il codice seguente crea una richiesta per l'URL</span><span class="sxs-lookup"><span data-stu-id="5ae1b-107">For example, the following code creates a request for the URL</span></span> `http://www.contoso.com.`  
+2. <span data-ttu-id="a18d2-106">Creare una richiesta per un URL specifico.</span><span class="sxs-lookup"><span data-stu-id="a18d2-106">Create a request for a specific URL.</span></span> <span data-ttu-id="a18d2-107">Ad esempio, il codice seguente crea una richiesta per l'URL `http://www.contoso.com.`</span><span class="sxs-lookup"><span data-stu-id="a18d2-107">For example, the following code creates a request for the URL `http://www.contoso.com.`</span></span>  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -42,7 +42,7 @@ ms.locfileid: "59296966"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3. <span data-ttu-id="5ae1b-108">Impostare le credenziali e il nome del gruppo di connessione per la richiesta Web e chiamare **GetResponse** per recuperare un oggetto **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="5ae1b-108">Set the credentials and Connection GroupName for the Web request, and call **GetResponse** to retrieve a **WebResponse** object.</span></span>  
+3. <span data-ttu-id="a18d2-108">Impostare le credenziali e il nome del gruppo di connessione per la richiesta Web e chiamare **GetResponse** per recuperare un oggetto **WebResponse**.</span><span class="sxs-lookup"><span data-stu-id="a18d2-108">Set the credentials and Connection GroupName for the Web request, and call **GetResponse** to retrieve a **WebResponse** object.</span></span>  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -58,7 +58,7 @@ ms.locfileid: "59296966"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4. <span data-ttu-id="5ae1b-109">Chiudere il flusso di risposta dopo aver usato l'oggetto WebResponse.</span><span class="sxs-lookup"><span data-stu-id="5ae1b-109">Close the response stream after using the WebRespose object.</span></span>  
+4. <span data-ttu-id="a18d2-109">Chiudere il flusso di risposta dopo aver usato l'oggetto WebResponse.</span><span class="sxs-lookup"><span data-stu-id="a18d2-109">Close the response stream after using the WebRespose object.</span></span>  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -68,7 +68,7 @@ ms.locfileid: "59296966"
     MyWebResponse.Close()  
     ```  
   
- <span data-ttu-id="5ae1b-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="5ae1b-110">Example</span></span>  
+ <span data-ttu-id="a18d2-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="a18d2-110">Example</span></span>  
   
 ```csharp  
 // Create a connection group name.  
@@ -107,7 +107,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5ae1b-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5ae1b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a18d2-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a18d2-111">See also</span></span>
 
-- [<span data-ttu-id="5ae1b-112">Gestione di connessioni</span><span class="sxs-lookup"><span data-stu-id="5ae1b-112">Managing Connections</span></span>](../../../docs/framework/network-programming/managing-connections.md)
-- [<span data-ttu-id="5ae1b-113">Raggruppamento delle connessioni</span><span class="sxs-lookup"><span data-stu-id="5ae1b-113">Connection Grouping</span></span>](../../../docs/framework/network-programming/connection-grouping.md)
+- [<span data-ttu-id="a18d2-112">Gestione di connessioni</span><span class="sxs-lookup"><span data-stu-id="a18d2-112">Managing Connections</span></span>](../../../docs/framework/network-programming/managing-connections.md)
+- [<span data-ttu-id="a18d2-113">Raggruppamento delle connessioni</span><span class="sxs-lookup"><span data-stu-id="a18d2-113">Connection Grouping</span></span>](../../../docs/framework/network-programming/connection-grouping.md)
