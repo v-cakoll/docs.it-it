@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345092"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opzioni del compilatore C#)
@@ -34,10 +34,10 @@ Questa opzione rappresenta un modo pratico per segnalare a Microsoft un errore d
  **prompt**  
  Chiede di inviare una segnalazione quando si riceve un errore interno del compilatore. **prompt** è l'impostazione predefinita se si compila un'applicazione all'interno dell'ambiente di sviluppo.  
   
- **coda**  
+ **queue**  
  Accoda la segnalazione errori. Se si accede con credenziali amministrative, è possibile segnalare qualsiasi errore dall'ultima volta che è stato effettuato l'accesso. Non verrà richiesto di inviare report di errori più di una volta ogni tre giorni. **queue** è l'impostazione predefinita se si compila un'applicazione dalla riga di comando.  
   
- **invia**  
+ **send**  
  Invia automaticamente a Microsoft le segnalazioni di errori interni del compilatore. Per abilitare questa opzione, è necessario prima di tutto accettare i Criteri per la raccolta dati Microsoft. La prima volta che si specifica **-errorreport:send** in un computer, viene visualizzato un messaggio del compilatore che indirizza a un sito Web contenente questi criteri.  
     
 ## <a name="remarks"></a>Osservazioni  

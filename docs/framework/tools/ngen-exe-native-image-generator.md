@@ -21,10 +21,10 @@ ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481262"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (generatore di immagini native)
@@ -189,7 +189,7 @@ Nella sezione Osservazioni:
 
 - [Risoluzione dei problemi](#Troubleshooting)
 
-  - [Visualizzatore registro associazione assembly](#Fusion)
+  - [Visualizzatore log binding assembly](#Fusion)
 
   - [Assistente al debug gestito JITCompilationStart](#MDA)
 
@@ -302,7 +302,7 @@ Gli attributi <xref:System.Runtime.CompilerServices.DependencyAttribute> e <xref
 
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>Specifica di un suggerimento di binding per una dipendenza
 
-Applicare <xref:System.Runtime.CompilerServices.DependencyAttribute> a un assembly per indicare la probabilità che una dipendenza specificata venga caricata. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> indica che l'hard binding è appropriato, <xref:System.Runtime.CompilerServices.LoadHint.Default> indica che deve essere usato il valore predefinito per la dipendenza e <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> indica che l'hard binding non è appropriato.
+Applicare <xref:System.Runtime.CompilerServices.DependencyAttribute> a un assembly per indicare la probabilità che una dipendenza specificata venga caricata. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> indica che l'associazione forte è appropriata, <xref:System.Runtime.CompilerServices.LoadHint.Default> indica che deve essere usato il valore predefinito per la dipendenza e <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> indica che l'associazione forte non è appropriata.
 
 Nell'esempio di codice riportato di seguito vengono illustrati gli attributi per un assembly con due dipendenze. La prima dipendenza (Assembly1) è un candidato appropriato per l'associazione forte, al contrario della seconda (Assembly2).
 
@@ -610,7 +610,7 @@ ngen update /queue
 
 L'azione `update` rigenera tutte le immagini native che sono state invalidate, non solo quelle che usano `MyComponent`.
 
-Se l'applicazione è costituita da più radici, è possibile controllare la priorità delle azioni differite. I comandi riportati di seguito consentono di accodare l'installazione di tre radici. `Assembly1` viene installata per prima, senza attendere l'inattività del computer. `Assembly2` viene ugualmente installata senza attendere l'inattività, ma dopo il completamento delle azioni con priorità 1. `Assembly3` viene invece installata quando il servizio rileva lo stato di inattività del computer.
+Se l'applicazione è costituita da più radici, è possibile controllare la priorità delle azioni differite. I comandi riportati di seguito consentono di accodare l'installazione di tre radici. `Assembly1` viene installata per prima, senza attendere l'inattività del computer. Anche `Assembly2` viene installata senza attendere l'inattività, ma dopo il completamento delle azioni con priorità 1. `Assembly3` viene invece installata quando il servizio rileva lo stato di inattività del computer.
 
 ```
 ngen install Assembly1 /queue:1
@@ -637,6 +637,6 @@ In .NET Framework versione 2.0 l'interazione con il servizio immagini native avv
 ## <a name="see-also"></a>Vedere anche
 
 - [Strumenti](../../../docs/framework/tools/index.md)
-- [processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md)
+- [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md)
 - [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689814"
 ---
 # <a name="c-operators"></a>Operatori C#
 
@@ -77,7 +77,7 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-): negazione logica.
 
-[~x](bitwise-complement-operator.md): complemento bit per bit.
+[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-): complemento bit per bit.
 
 [~x](arithmetic-operators.md#increment-operator-): incremento prefisso. Restituisce il valore di x dopo avere aggiornato la posizione di archiviazione con il valore di x che risulta maggiore (in genere aggiunge il numero intero 1).
 
@@ -90,6 +90,10 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 [&x](and-operator.md): indirizzo.
 
 [*x](multiplication-operator.md): dereferenziazione.
+
+[Operatore true](../keywords/true-false-operators.md): restituisce il valore [bool](../keywords/bool.md) `true` per indicare che un operando è senza dubbio true.
+
+[Operatore false](../keywords/true-false-operators.md): restituisce il valore [bool](../keywords/bool.md) `true` per indicare che un operando è senza dubbio false.
 
 ## <a name="multiplicative-operators"></a>Operatori moltiplicativi
 
@@ -113,9 +117,9 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 Questi operatori hanno una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x <\<  y](left-shift-operator.md): spostamento dei bit a sinistra e inserimento di zero a destra.
+[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-): spostamento dei bit a sinistra e inserimento di zero a destra.
 
-[x >> y](right-shift-operator.md): spostamento dei bit a destra. Se l'operando di sinistra è `int` o `long`, i bit di sinistra vengono riempiti con il bit più significativo. Se l'operando di sinistra è `uint` o `ulong`, i bit di sinistra vengono riempiti con zero.
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-): spostamento dei bit a destra. Se l'operando di sinistra è `int` o `long`, i bit di sinistra vengono riempiti con il bit più significativo. Se l'operando di sinistra è `uint` o `ulong`, i bit di sinistra vengono riempiti con zero.
 
 ## <a name="relational-and-type-testing-operators"></a>Operatori relazionali e operatori di test del tipo
 
@@ -145,27 +149,19 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 Questo operatore ha una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x & y](and-operator.md): AND logico o bit per bit. Di solito è possibile usarlo con i tipi Integer e con i tipi `enum`.
+`x & y`: [AND logico](boolean-logical-operators.md#logical-and-operator-) per gli operandi `bool` o [AND logico bit per bit](bitwise-and-shift-operators.md#logical-and-operator-) per gli operandi dei tipi di dati integrali.
 
 ## <a name="logical-xor-operator"></a>Operatore XOR logico
 
 Questo operatore ha una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x ^ y](xor-operator.md): XOR logico o bit per bit. Di solito è possibile usarlo con i tipi Integer e con i tipi `enum`.
+`x ^ y`: [XOR logico](boolean-logical-operators.md#logical-exclusive-or-operator-) per gli operandi `bool` o [XOR logico bit per bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) per gli operandi dei tipi di dati integrali.
 
 ## <a name="logical-or-operator"></a>Operatore logico OR
 
 Questo operatore ha una precedenza più alta di quelli della sezione successiva e più bassa di quelli della sezione precedente.
 
-[x &#124; y](or-operator.md): OR logico o bit per bit. Di solito è possibile usarlo con i tipi Integer e con i tipi `enum`.
-
-## <a name="true-operator"></a>Operatore true
-
-L'operatore [true](../keywords/true-false-operators.md) restituisce il valore [bool](../keywords/bool.md) `true` per indicare che un operando è indubbiamente true. 
-
-## <a name="false-operator"></a>Operatore false
-
-L'operatore [false](../keywords/true-false-operators.md) restituisce il valore [bool](../keywords/bool.md) `true` per indicare che un operando è indubbiamente false. 
+`x | y`: [OR logico](boolean-logical-operators.md#logical-or-operator-) per gli operandi `bool` o [OR logico bit per bit](bitwise-and-shift-operators.md#logical-or-operator-) per gli operandi dei tipi di dati integrali.
 
 ## <a name="conditional-and-operator"></a>Operatore AND condizionale
 
@@ -201,21 +197,21 @@ Questi operatori hanno una precedenza più alta di quelli della sezione successi
 
 [x -= y](subtraction-assignment-operator.md): decremento. Sottrae il valore di `y` dal valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore. Se `x` designa un oggetto `event`, `y` deve essere una funzione appropriata che C# rimuove come gestore eventi.
 
-[x -= y](multiplication-assignment-operator.md): assegnazione di moltiplicazione. Moltiplica il valore di `y` per il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
+[x -= y](arithmetic-operators.md#compound-assignment): assegnazione di moltiplicazione. Moltiplica il valore di `y` per il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
 
 [x -= y](arithmetic-operators.md#compound-assignment): assegnazione di divisione. Divide il valore di `x` per il valore di `y`, archivia il risultato in `x` e restituisce il nuovo valore.
 
 [x %= y](arithmetic-operators.md#compound-assignment): assegnazione di resto. Divide il valore di `x` per il valore di `y`, archivia il resto in `x` e restituisce il nuovo valore.
 
-[x &= y](and-assignment-operator.md): assegnazione dell'operatore AND. Applica AND al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
+[x &= y](boolean-logical-operators.md#compound-assignment): assegnazione dell'operatore AND. Applica AND al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
 
-[x &#124;= y](or-assignment-operator.md): assegnazione dell'operatore OR. Applica OR al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
+[x &#124;= y](boolean-logical-operators.md#compound-assignment): assegnazione dell'operatore OR. Applica OR al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
 
-[x ^= y](xor-assignment-operator.md): assegnazione dell'operatore XOR. Applica XOR al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
+[x ^= y](boolean-logical-operators.md#compound-assignment): assegnazione dell'operatore XOR. Applica XOR al valore di `y` con il valore di `x`, archivia il risultato in `x` e restituisce il nuovo valore.
 
-[x <<= y](left-shift-assignment-operator.md): assegnazione di spostamento a sinistra. Sposta il valore di `x` verso sinistra di `y` posti, archivia il risultato in `x` e restituisce il nuovo valore.
+[x <<= y](bitwise-and-shift-operators.md#compound-assignment): assegnazione di spostamento a sinistra. Sposta il valore di `x` verso sinistra di `y` posti, archivia il risultato in `x` e restituisce il nuovo valore.
 
-[x >>= y](right-shift-assignment-operator.md): assegnazione di spostamento a destra. Sposta il valore di `x` verso destra di `y` posti, archivia il risultato in `x` e restituisce il nuovo valore.
+[x >>= y](bitwise-and-shift-operators.md#compound-assignment): assegnazione di spostamento a destra. Sposta il valore di `x` verso destra di `y` posti, archivia il risultato in `x` e restituisce il nuovo valore.
 
 [=>](lambda-operator.md): dichiarazione lambda.
 
