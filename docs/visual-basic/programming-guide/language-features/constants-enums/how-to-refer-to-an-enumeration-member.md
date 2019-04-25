@@ -8,11 +8,11 @@ helpviewer_keywords:
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
 ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907595"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Procedura: Fare riferimento a un membro di enumerazione (Visual Basic)
 Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i nomi di valori costanti. Ad esempio, si può dichiarare un'enumerazione per un set di costanti integer associate ai giorni della settimana e quindi usare i nomi dei giorni anziché i relativi valori integer nel codice.  

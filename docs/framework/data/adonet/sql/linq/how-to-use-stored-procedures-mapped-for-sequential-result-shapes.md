@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
 ms.openlocfilehash: e51ebacb3f6be849f7b871f2d12db3ea7476b117
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877071"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Procedura: Usare stored procedure mappate per forme di risultati sequenziali
 Questo tipo di stored procedure può generare più di una forma di risultati, tuttavia si conosce l'ordine in cui tali risultati vengono restituiti. Si consideri questo scenario rispetto allo scenario in cui non si conosca la sequenza dei risultati restituiti. Per altre informazioni, vedere [Procedura: Utilizzare le Stored procedure mappate per più forme di risultati](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  

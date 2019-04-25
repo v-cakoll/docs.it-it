@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
 ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012191"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>Procedura: Impostare le modalità di ordinamento delle colonne nel controllo DataGridView di Windows Forms
 Nel <xref:System.Windows.Forms.DataGridView> le colonne di caselle di testo di controllo, utilizzano l'ordinamento automatico per impostazione predefinita, mentre altri tipi di colonna non sono ordinati automaticamente. In alcuni casi si dovranno eseguire l'override di questi valori predefiniti. Ad esempio, è possibile visualizzare le immagini al posto di testo, numeri o valori di cella di enumerazione. Mentre le immagini non possono essere ordinate, possono essere ordinati i valori sottostanti che rappresentano.  

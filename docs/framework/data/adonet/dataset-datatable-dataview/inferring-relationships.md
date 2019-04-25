@@ -3,11 +3,11 @@ title: Deduzione di relazioni
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
 ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879671"
 ---
 # <a name="inferring-relationships"></a>Deduzione di relazioni
 Se a un elemento inferito come tabella è associato un elemento figlio a sua volta inferito come tabella, tra le due tabelle verrà creato un tipo <xref:System.Data.DataRelation>. Una nuova colonna con il nome **ParentTableName_Id** verranno aggiunti alla tabella creata per l'elemento padre sia la tabella creata per l'elemento figlio. Il **ColumnMapping** della colonna identity verrà impostata su **MappingType**. La colonna sarà una chiave primaria con incremento automatico per la tabella padre e verrà usata per il **DataRelation** tra le due tabelle. Il tipo di dati della colonna identity aggiunta sarà **System.Int32**, a differenza del tipo di dati di tutte le altre colonne inferite, ovvero **System. String**. Oggetto <xref:System.Data.ForeignKeyConstraint> con **DeleteRule** = **Cascade** verrà inoltre creato usando la nuova colonna nelle tabelle padre e figlio.  

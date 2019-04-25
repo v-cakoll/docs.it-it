@@ -3,11 +3,11 @@ title: Metodi System.DateTimeOffset
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
 ms.openlocfilehash: 288a0d99feecdeccc0d215ec3c14ec31bb3ccb54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876902"
 ---
 # <a name="systemdatetimeoffset-methods"></a>Metodi System.DateTimeOffset
 Una volta eseguito il mapping nel modello a oggetti o nel file di mapping esterno, LINQ to SQL consente di chiamare la maggior parte degli operatori, delle proprietà e dei metodi <xref:System.DateTimeOffset?displayProperty=nameWithType> dalle query LINQ to SQL.  
