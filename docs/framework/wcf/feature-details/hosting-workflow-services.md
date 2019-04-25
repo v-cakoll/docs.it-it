@@ -3,11 +3,11 @@ title: Hosting di servizi flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 ms.openlocfilehash: c933fd2bd46588ccd5c6115fbc2efca72bfadca4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855868"
 ---
 # <a name="hosting-workflow-services"></a>Hosting di servizi flusso di lavoro
 Per poter rispondere ai messaggi in arrivo, un servizio flusso di lavoro deve essere ospitato. I servizi flusso di lavoro utilizzano l'infrastruttura di messaggistica WCF e sono quindi ospitati in modi analoghi. Come servizi WCF, servizi flusso di lavoro possono essere ospitati in qualsiasi applicazione gestita, in Internet Information Services (IIS) o in Windows Process Activation Services (WAS). Inoltre, i servizi flusso di lavoro possono essere ospitati in Windows Server AppFabric. Per altre informazioni su Windows Server AppFabric, vedere [documentazione di Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [funzionalità di Hosting di AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), e [concetti di Hosting](https://go.microsoft.com/fwlink/?LinkId=196495). Per altre informazioni sui diversi modi per ospitare WCF servizi, vedere [servizi di Hosting](../../../../docs/framework/wcf/hosting-services.md).

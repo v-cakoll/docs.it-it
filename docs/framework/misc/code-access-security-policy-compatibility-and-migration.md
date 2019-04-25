@@ -8,11 +8,11 @@ ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868914"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Migrazione e compatibilità dei criteri di sicurezza dall'accesso di codice
 
@@ -114,8 +114,7 @@ Eccezioni di runtime:
 
 ### <a name="determining-an-assemblys-trust-level"></a>Determinazione del livello di attendibilità di un assembly
 
-I criteri di sicurezza dall'accesso di codice vengono spesso usati per determinare il livello di attendibilità o il set di autorizzazioni di un assembly o di un dominio dell'applicazione. 
-  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] espone le utili proprietà seguenti, che non richiedono la risoluzione dei criteri di sicurezza:
+I criteri di sicurezza dall'accesso di codice vengono spesso usati per determinare il livello di attendibilità o il set di autorizzazioni di un assembly o di un dominio dell'applicazione. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] espone le utili proprietà seguenti, che non richiedono la risoluzione dei criteri di sicurezza:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 

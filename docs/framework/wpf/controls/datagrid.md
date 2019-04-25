@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
 ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912236"
 ---
 # <a name="datagrid"></a>DataGrid
 Il <xref:System.Windows.Controls.DataGrid> controllo consente di visualizzare e modificare i dati da molte origini diverse, ad esempio da un database SQL, query LINQ o qualsiasi altra origine dati associabili. Per altre informazioni, vedere [Cenni preliminari sulle origini del binding](../data/binding-sources-overview.md).  

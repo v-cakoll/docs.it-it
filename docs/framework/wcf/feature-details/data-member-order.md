@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
 ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857142"
 ---
 # <a name="data-member-order"></a>Ordine dei membri dati
 In alcune applicazioni, è utile conoscere l'ordine in cui i dati dei vari membri dati vengono inviati o si prevede che siano ricevuti (ad esempio l'ordine in cui i dati vengono visualizzati nell'XML serializzato). Talvolta può essere necessario modificare tale ordine. In questo argomento vengono illustrate le regole di ordinamento.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877123"
 ---
 # <a name="remote-vs-local-execution"></a>Esecuzione remota e locale
 È possibile scegliere di eseguire le query in modalità remota, dove il motore di database esegue la query sul database, oppure localmente, dove [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue la query sulla cache locale.  

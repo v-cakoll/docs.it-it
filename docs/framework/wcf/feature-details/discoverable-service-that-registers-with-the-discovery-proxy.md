@@ -3,11 +3,11 @@ title: 'Procedura: Implementare un servizio individuabile per eseguire la regist
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
 ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856492"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: Implementare un servizio individuabile per eseguire la registrazione al proxy di individuazione
 Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [come: Implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è stato implementato un proxy di individuazione. In questo argomento, si crea un servizio WCF che invia messaggi di annuncio (`Hello` e `Bye`) al proxy di individuazione, in modo da registrare e annullare la registrazione di se stesso con il proxy di individuazione.

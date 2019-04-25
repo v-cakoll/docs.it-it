@@ -12,10 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674298"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > elemento
 Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
 ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801855"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procedura: Rispondere a modifiche delle combinazioni dei tipi di carattere in un'applicazione Windows Forms
 Nei sistemi operativi Windows, un utente può modificare le impostazioni del tipo di carattere a livello di sistema per rendere il tipo di carattere predefinito superiore o inferiore. Modifica di queste impostazioni del tipo di carattere è fondamentale per gli utenti che hanno problemi di vista e richiedono il tipo più grande contenere il testo sullo schermo. È possibile modificare l'applicazione Windows Forms per rispondere a queste modifiche, aumentando o riducendo le dimensioni del form e tutto il testo relativo a ogni volta che viene modificato lo schema del tipo di carattere. Se si desidera che il form per supportare le modifiche nelle dimensioni dei caratteri in modo dinamico, è possibile aggiungere codice al form.  

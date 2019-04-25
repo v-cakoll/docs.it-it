@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876733"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Procedura dettagliata: Usare solo stored procedure (Visual Basic)
 In questa procedura dettagliata viene descritto uno scenario [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] end-to-end di base per l'accesso ai dati usando solo stored procedure. Questo approccio viene spesso è usato dagli amministratori di database per limitare l'accesso all'archivio dati.  

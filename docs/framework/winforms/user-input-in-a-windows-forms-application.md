@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800139"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Input dell'utente in un'applicazione Windows Form
 In Windows Form, input dell'utente viene inviato alle applicazioni sotto forma di messaggi di Windows. Una serie di metodi sottoponibili a override elaborare questi messaggi nell'applicazione, form e a livello di controllo. Quando questi metodi ricevano i messaggi del mouse e tastiera, generano eventi che possono essere gestiti per ottenere informazioni sul mouse o i tasti di input. In molti casi, le applicazioni Windows Forms saranno in grado di elaborare tutti gli input utente semplicemente mediante la gestione di questi eventi. In altri casi, un'applicazione potrebbe essere necessario eseguire l'override di uno dei metodi che elaborano i messaggi per intercettare un determinato messaggio prima che venga ricevuto dall'applicazione, form o controllo.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
 ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904475"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Procedura: Controllare la quantità di dati correlati recuperata
 Usare il metodo <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> per specificare quali dati correlati alla destinazione principale devono essere recuperati contemporaneamente. Ad esempio, se le informazioni necessarie sono relative agli ordini dei clienti, è possibile usare <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> per assicurarsi che le informazioni sugli ordini vengano recuperate contestualmente alle informazioni sui clienti. Questo approccio comporta un solo accesso al database per entrambi i set di informazioni.  
