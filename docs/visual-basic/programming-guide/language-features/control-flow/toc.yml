@@ -1,24 +1,17 @@
-items:
 - name: Flusso di controllo
   href: index.md
   items:
-  - name: Strutture decisionali
-    href: decision-structures.md
-  - name: Strutture di ciclo
-    href: loop-structures.md
-    items:
-    - name: 'Procedura dettagliata: Implementazione di IEnumerable(Of T)'
-      href: walkthrough-implementing-ienumerable-of-t.md
-  - name: Altre strutture di controllo
-    href: other-control-structures.md
-    items:
-    - name: 'Procedura: Eliminare una risorsa di sistema'
-      href: how-to-dispose-of-a-system-resource.md
-  - name: Strutture di controllo annidate
-    href: nested-control-structures.md
-ms.openlocfilehash: 8f6ec473d9d635ca93013aa23f21dee916fba1ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469182"
+    - name: Strutture decisionali
+      href: decision-structures.md
+    - name: Strutture di ciclo
+      href: loop-structures.md
+      items:
+        - name: 'Procedura dettagliata: Implementazione di IEnumerable(Of T)'
+          href: walkthrough-implementing-ienumerable-of-t.md
+    - name: Altre strutture di controllo
+      href: other-control-structures.md
+      items:
+        - name: 'Procedura: Eliminare una risorsa di sistema'
+          href: how-to-dispose-of-a-system-resource.md
+    - name: Strutture di controllo annidate
+      href: nested-control-structures.md
