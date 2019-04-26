@@ -3,10 +3,10 @@ title: Flusso di controllo in programmi asincroni (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326203"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flusso di controllo in programmi asincroni (C#)
@@ -19,7 +19,7 @@ L'esempio seguente usa i metodi asincroni per scaricare come stringa il contenut
 
 -   `startButton_Click`, che chiama `AccessTheWebAsync` e visualizza il risultato.
 
--   `AccessTheWebAsync`, che scarica il contenuto di un sito Web come stringa e restituisce la lunghezza della stringa. `AccessTheWebAsync` usa un metodo <xref:System.Net.Http.HttpClient> asincrono, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, per scaricare il contenuto.
+-   `AccessTheWebAsync`, che scarica il contenuto di un sito Web come stringa e restituisce la lunghezza della stringa. `AccessTheWebAsync` usa un metodo <xref:System.Net.Http.HttpClient> asincrono, ovvero <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, per scaricare il contenuto.
 
 In corrispondenza dei punti strategici del programma sono visualizzate righe numerate che consentono di comprendere come viene eseguito il programma e spiegano che cosa accade in ogni punto contrassegnato. Le righe sono evidenziate con etichette numerate da "ONE" a "SIX." Le etichette rappresentano l'ordine in cui il programma raggiunge queste righe di codice.
 
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  L'espressione await sospende `AccessTheWebAsync` finché non viene restituito `client.GetStringAsync`. Nel frattempo il controllo viene restituito al chiamante di `AccessTheWebAsync`, `startButton_Click`.
 
 > [!NOTE]
-> In genere, la chiamata a un metodo asincrono si attende immediatamente. Ad esempio, l'assegnazione seguente potrebbe sostituire il codice precedente che crea e quindi attende `getStringTask`: `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
+> In genere, la chiamata a un metodo asincrono si attende immediatamente. Ad esempio, l'assegnazione seguente potrebbe sostituire il codice precedente che crea e quindi attende `getStringTask`:`string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > In questo argomento l'operatore await viene applicato in un secondo tempo per contenere le righe di output che indicano il flusso di controllo attraverso il programma.
 
@@ -387,7 +387,7 @@ int contentLength = await getLengthTask;
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Programmazione asincrona con Async e Await](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Tipi restituiti async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
+- [Programmazione asincrona con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Tipi restituiti asincroni (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [Procedura dettagliata: Accesso al Web con Async e Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Async Sample: Control Flow in Async Programs (C# and Visual Basic) (Esempio di codice asincrono: Flusso di controllo in programmi asincroni (C# e Visual Basic))](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (Esempio di codice asincrono: Flusso di controllo in programmi asincroni - C# e Visual Basic)

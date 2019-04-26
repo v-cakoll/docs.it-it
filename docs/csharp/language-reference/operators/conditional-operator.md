@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427383"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672394"
 ---
 # <a name="-operator-c-reference"></a>?: Operatore (Riferimenti per C#)
 
@@ -42,6 +42,12 @@ viene valutata come
 ```csharp
 a ? b : (c ? d : e)
 ```
+
+Un modo per ricordarsi come funziona questo operatore consiste nel porsi questa domanda: 
+```
+is this condition true ? yes : no
+```
+dove la parte ? dell'operatore funge da punto interrogativo per l'affermazione precedente e la parte successiva da risposta logica alla domanda.
 
 L'esempio seguente illustra l'uso dell'operatore condizionale:
 
@@ -85,8 +91,8 @@ Per altre informazioni, vedere la sezione [Operatore condizionale](~/_csharplang
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Operatori [C#]](index.md)
+- [Operatori C#](index.md)
 - [Istruzione if-else](../keywords/if-else.md)
-- [?. Operatori ?. e ?[]](null-conditional-operators.md)
-- [?? Operatore](null-coalescing-operator.md)
-- [Parola chiave ref](../keywords/ref.md)
+- [Operatori ?. e ?[]](null-conditional-operators.md)
+- [?? (operatore)](null-coalescing-operator.md)
+- [ref (parola chiave)](../keywords/ref.md)

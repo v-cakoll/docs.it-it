@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427318"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operatori logici booleani (riferimenti per C#)
@@ -162,9 +162,9 @@ Gli operatori condizionali logici `&&` e `||` non supportano l'assegnazione comp
 Nell'elenco seguente gli operatori logici sono ordinati dalla precedenza più elevata a quella più bassa:
 
 - Operatore di negazione logica `!`
-- AND (operatore logico) `&`
+- Operatore AND logico `&`
 - Operatore OR esclusivo logico `^`
-- Operatore logico OR `|`
+- Operatore OR logico `|`
 - Operatore AND condizionale logico `&&`
 - Operatore OR condizionale logico `||`
 
@@ -192,4 +192,4 @@ Per altre informazioni, vedere le sezioni seguenti delle [specifiche del linguag
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Operatori [C#]](index.md)
+- [Operatori C#](index.md)

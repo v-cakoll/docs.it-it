@@ -11,10 +11,10 @@ helpviewer_keywords:
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
 ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310044"
 ---
 # <a name="amp-operator-c-reference"></a>Operatore &amp; (Riferimenti per C#)
@@ -62,9 +62,9 @@ Per altre informazioni, vedere le sezioni [Operatore address-of](~/_csharplang/s
 
 - [Riferimenti per C#](../index.md)
 - [Guida per programmatori C#](../../programming-guide/index.md)
-- [Operatori [C#]](index.md)
+- [Operatori C#](index.md)
 - [Operatori logici booleani](boolean-logical-operators.md)
-- [Tipi puntatore](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipi di puntatori](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Operatore |](or-operator.md)
 - [Operatore ^](xor-operator.md)
 - [Operatore ~](bitwise-complement-operator.md)

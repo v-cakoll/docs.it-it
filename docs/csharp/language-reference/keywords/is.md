@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480833"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672459"
 ---
 # <a name="is-c-reference"></a>is (Riferimenti per C#)
 
@@ -144,7 +144,7 @@ L'esempio seguente illustra un confronto di controlli `null`:
  
 ### <a name="var" /> Criterio var </a>
 
-Un criterio di ricerca con il criterio var ha sempre esito positivo per le espressioni non Null; se *expr* è `null`, l'espressione `is` è `false`. Il valore non Null di *expr* viene sempre assegnato a una variabile locale dello stesso tipo del tipo di runtime di *expr*.  La sintassi è la seguente:
+Il criterio `var` è applicabile a qualsiasi tipo o valore. Il valore di *expr* viene sempre assegnato a una variabile locale dello stesso tipo del tipo della fase di compilazione di *expr*. Il risultato dell'espressione `is` è sempre `true`. La sintassi è la seguente:
 
 ```csharp 
    expr is var varname

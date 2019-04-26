@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309485"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613252"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -51,7 +51,7 @@ Oltre a esporre le interfacce che sono esplicitamente implementate da una classe
 
 |Interfaccia|Description|
 |---------------|-----------------|
-|**Idispatch**|Fornisce un meccanismo per l'associazione tardiva al tipo.|
+|**IDispatch**|Fornisce un meccanismo per l'associazione tardiva al tipo.|
 |**IErrorInfo**|Fornisce una descrizione testuale dell'errore, la relativa origine, un file della Guida, un contesto della Guida e il GUID dell'interfaccia che ha definito l'errore (sempre **GUID_NULL** per le classi .NET).|
 |**IProvideClassInfo**|Consente ai client COM di ottenere l'accesso all'interfaccia **ITypeInfo** implementata da una classe gestita.|
 |**ISupportErrorInfo**|Consente a un client COM di determinare se l'oggetto gestito supporta l'interfaccia **IErrorInfo**. Se sì, consente al client di ottenere un puntatore all'ultimo oggetto eccezione. Tutti i tipi gestiti supportano l'interfaccia **IErrorInfo**.|
@@ -182,7 +182,7 @@ Per ottenere il DispId di un membro di interfaccia in fase di esecuzione, i clie
 
 Le interfacce duali permettono ai client COM di effettuare sia l'associazione anticipata che l'associazione tardiva ai membri di interfaccia. In fase di progettazione e durante il test, può risultare utile impostare l'interfaccia della classe su duale. Per una classe gestita (e le relative classi base) che non verrà mai modificata, questa opzione è accettabile. In tutti gli altri casi è preferibile evitare di impostare l'interfaccia della classe su duale.
 
-Un'interfaccia duale generata automaticamente può essere appropriata in alcuni casi meno comuni. Nella maggior parte dei casi creerà invece complicazioni in relazione alla gestione delle versioni. Ad esempio, il funzionamento dei client COM che usano l'interfaccia della classe di una classe derivata verrà facilmente compromesso in conseguenza di modifiche della classe base. Quando la classe base è fornita da terzi, il layout dell'interfaccia della classe sarà fuori dal proprio controllo. Diversamente da un'interfaccia solo dispatch, un'interfaccia duale (**ClassInterfaceType.AutoDual**) fornisce anche una descrizione dell'interfaccia della classe nella libreria dei tipi esportata. Tale descrizione invita i client ad associazione tardiva a inserire nella cache i DispId in fase di esecuzione.
+Un'interfaccia duale generata automaticamente può essere appropriata in alcuni casi meno comuni. Nella maggior parte dei casi creerà invece complicazioni in relazione alla gestione delle versioni. Ad esempio, il funzionamento dei client COM che usano l'interfaccia della classe di una classe derivata verrà facilmente compromesso in conseguenza di modifiche della classe base. Quando la classe base è fornita da terzi, il layout dell'interfaccia della classe sarà fuori dal proprio controllo. Diversamente da un'interfaccia solo dispatch, un'interfaccia duale (**ClassInterfaceType.AutoDual**) fornisce anche una descrizione dell'interfaccia della classe nella libreria dei tipi esportata. Tale descrizione invita i client ad associazione tardiva a memorizzare nella cache i DispId in fase di compilazione.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Verificare che tutte le notifiche degli eventi COM siano ad associazione tardiva.
 

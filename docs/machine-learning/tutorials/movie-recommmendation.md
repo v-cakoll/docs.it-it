@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311097"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612277"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Esercitazione: Creare un sistema di raccomandazione di film con ML.NET
 
@@ -161,7 +161,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 > [!NOTE]
 > Questo metodo restituisce un errore finché non si aggiungerà un'istruzione return nei passaggi seguenti.
 
-Inizializzare le variabili di percorso dei dati, caricare i dati dai file con estensione csv e restituire i dati `Train` e `Test` come oggetti `IDataView` aggiungendo il codice seguente come riga successiva in `LoadData()`:
+Inizializzare le variabili di percorso dei dati, caricare i dati dai file \*.csv e restituire i dati `Train` e `Test` come oggetti `IDataView` aggiungendo il codice seguente come riga successiva in `LoadData()`:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
@@ -177,11 +177,11 @@ Aggiungere queste due righe di codice come righe successive nel metodo `Main()` 
 
 ML.NET si basa su tre concetti fondamentali: [dati](../basic-concepts-model-training-in-mldotnet.md#data), [trasformatori](../basic-concepts-model-training-in-mldotnet.md#transformer) e [strumenti di stima](../basic-concepts-model-training-in-mldotnet.md#estimator).
 
-Gli algoritmi di training del Machine Learning necessitano di dati in un determinato formato. `Transformers` sono usati per trasformare i dati tabulari in un formato compatibile.
+Gli algoritmi di training del Machine Learning necessitano di dati in un determinato formato. I `Transformers` sono usati per trasformare i dati tabulari in un formato compatibile.
 
 ![immagine di trasformatore](./media/movie-recommendation/transformer.png)
 
-In ML.NET è possibile creare `Transformers` tramite la creazione di `Estimators`. `Estimators` acquisiscono i dati e restituiscono `Transformers`.
+In ML.NET è possibile creare `Transformers` tramite la creazione di `Estimators`. Gli `Estimators` acquisiscono i dati e restituiscono `Transformers`.
 
 ![immagine di strumento di stima](./media/movie-recommendation/estimator.png)
 
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 > Questo metodo restituisce un errore finché non si aggiungerà un'istruzione return nei passaggi seguenti.
 
 Definire le trasformazioni dei dati aggiungendo il codice seguente a `BuildAndTrainModel()`:
-   
+
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 Poiché `userId` e `movieId` rappresentano utenti e titoli di film, non valori reali, viene usato il metodo [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) per trasformare ogni `userId` e ogni `movieId` in una colonna chiave di tipo numerico `Feature` (un formato accettato dagli algoritmi di raccomandazione) e aggiungerle come nuove colonne del set di dati:
@@ -217,7 +217,7 @@ Scegliere l'algoritmo di Machine Learning e aggiungerlo alle definizioni di tras
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) è l'algoritmo di training della raccomandazione.  La [fattorizzazione di matrice](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) è un approccio comune alla raccomandazione quando si hanno a disposizione dati su come gli utenti hanno valutato i prodotti in passato, come nel caso dei set di dati usati in questa esercitazione. Per le situazioni in cui sono disponibili dati diversi, esistono altri algoritmi di raccomandazione. Per altre informazioni, vedere la sezione [Altri algoritmi di raccomandazione](#other-recommendation-algorithms) più avanti in questo articolo. 
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) è l'algoritmo di training della raccomandazione.  La [fattorizzazione di matrice](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) è un approccio comune alla raccomandazione quando si hanno a disposizione dati su come gli utenti hanno valutato i prodotti in passato, come nel caso dei set di dati usati in questa esercitazione. Per le situazioni in cui sono disponibili dati diversi, esistono altri algoritmi di raccomandazione. Per altre informazioni, vedere la sezione [Altri algoritmi di raccomandazione](#other-recommendation-algorithms) più avanti in questo articolo.
 
 In questo caso, l'algoritmo `Matrix Factorization` usa un metodo denominato "filtraggio collaborativo" il quale presuppone che se l'utente 1 ha la stessa opinione dell'utente 2 relativamente a un determinato problema, è probabile che l'utente 1 sia d'accordo con l'utente 2 riguardo a un altro problema.
 
@@ -242,7 +242,7 @@ Aggiungere il codice seguente come riga successiva nel metodo `Main()` per chiam
 
 ## <a name="evaluate-your-model"></a>Valutare il modello
 
-Dopo aver eseguito il training del modello, usare i dati di test per valutare le prestazioni del modello. 
+Dopo aver eseguito il training del modello, usare i dati di test per valutare le prestazioni del modello.
 
 Creare il metodo `EvaluateModel()` subito dopo il metodo `BuildAndTrainModel()`, usando il codice seguente:
 
@@ -253,8 +253,7 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-Trasformare i dati `Test` aggiungendo il codice seguente a `EvaluateModel()`:
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+Trasformare i dati `Test` aggiungendo il codice seguente a `EvaluateModel()`: [!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 Il metodo [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) effettua previsioni per più righe di input specificate di un set di dati di test.
 
@@ -315,6 +314,7 @@ La creazione di modelli efficaci è un processo iterativo. Questo modello ha ini
 Ora è possibile usare il modello sottoposto a training per effettuare previsioni sui nuovi dati.
 
 Creare il metodo `UseModelForSinglePrediction()` subito dopo il metodo `EvaluateModel()`, usando il codice seguente:
+
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
@@ -427,9 +427,9 @@ La [convalida incrociata](../how-to-guides/train-cross-validation-ml-net.md) è 
 
 ### <a name="features"></a>Funzionalità
 
-In questa esercitazione vengono usate solo le tre `Features` (`user id`, `movie id` e `rating`) offerte dal set di dati. 
+In questa esercitazione vengono usate solo le tre `Features` (`user id`, `movie id` e `rating`) offerte dal set di dati.
 
-È un buon inizio, ma nella realtà è utile aggiungere altri attributi o `Features`, ad esempio età, sesso, posizione geografica e così via, se sono inclusi nel set di dati. L'aggiunta di `Features` più rilevanti può contribuire a migliorare le prestazioni del modello di raccomandazione. 
+È un buon inizio, ma nella realtà è utile aggiungere altri attributi o `Features`, ad esempio età, sesso, posizione geografica e così via, se sono inclusi nel set di dati. L'aggiunta di `Features` più rilevanti può contribuire a migliorare le prestazioni del modello di raccomandazione.
 
 Se non si è sicuri di quali `Features` potrebbero essere più rilevanti per la propria attività di Machine Learning, è anche possibile usare gli strumenti Feature Contribution Calculation (FCC) e [Permutation Feature Importance](../how-to-guides/determine-global-feature-importance-in-model.md) offerti da ML.NET per individuare le `Features` più influenti.
 
@@ -445,7 +445,7 @@ Ad esempio, in questa esercitazione le opzioni di algoritmo sono:
 var options = new MatrixFactorizationTrainer.Options
 {
     MatrixColumnIndexColumnName = "userIdEncoded",
-    MatrixRowIndexColumnName = "movieIdEncoded", 
+    MatrixRowIndexColumnName = "movieIdEncoded",
     LabelColumnName = "Label",
     NumberOfIterations = 20,
     ApproximationRank = 100
