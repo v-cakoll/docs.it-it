@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830167"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caratteristiche di elementi dichiarati (Visual Basic)
 Oggetto *caratteristica* di un elemento dichiarato è un aspetto di tale elemento che influisce sulla modalità di interazione con il codice. Ogni elemento dichiarato con uno o più delle caratteristiche seguenti associate:  

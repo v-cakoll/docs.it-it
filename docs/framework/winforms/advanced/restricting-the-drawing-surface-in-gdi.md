@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
 ms.openlocfilehash: d0508166f905b45789ce638b03d0747dd6fa904e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672640"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>Limitazione della superficie di disegno in GDI+
 Ritaglio comporta la limitazione di disegno per una determinata rettangolo o area geografica. La figura seguente mostra la stringa "Hello" ritagliata a un'area a forma di cuore.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
 ms.openlocfilehash: 98dafab3e524ea371bba228eb231e28d46cc3b4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802557"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
 Specifica che Visual Basic deve eseguire il marshalling di tutte le stringhe in valori American National Standards Institute (ANSI) indipendentemente dal nome della routine esterna viene dichiarato.  
