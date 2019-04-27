@@ -3,11 +3,11 @@ title: Creazione di esempi di copia di massa
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878657"
 ---
 # <a name="bulk-copy-example-setup"></a>Creazione di esempi di copia di massa
 La classe <xref:System.Data.SqlClient.SqlBulkCopy> consente di scrivere dati solo su tabelle SQL Server. Gli esempi di codice illustrati in questo argomento usano il database di esempio di SQL Server, **AdventureWorks**. Per evitare di modificare gli esempi di codice delle tabelle esistenti, è necessario creare tabelle in cui scrivere i dati.  

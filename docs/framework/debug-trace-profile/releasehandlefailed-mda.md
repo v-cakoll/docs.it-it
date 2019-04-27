@@ -13,11 +13,11 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874003"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed (MDA)
 L'assistente al debug gestito `releaseHandleFailed` viene attivato per notificare agli sviluppatori quando il metodo <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> di una classe derivata da <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> restituisce `false`.  

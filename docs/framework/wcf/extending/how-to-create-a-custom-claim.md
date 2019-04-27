@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
 ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857779"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Procedura: Creare un'attestazione personalizzata
 L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) offre un set di tipi di attestazione incorporati e diritti con le funzioni di supporto per la creazione di <xref:System.IdentityModel.Claims.Claim> istanze con tali tipi e diritti. Queste attestazioni incorporate sono progettate per modellare le informazioni presenti nei tipi di credenziale client supportati da WCF per impostazione predefinita. In molti casi, le attestazioni incorporate sono sufficienti; tuttavia alcune applicazioni possono richiedere attestazioni personalizzate. Un'attestazione è costituita dal tipo di attestazione, dalla risorsa a cui si applica l'attestazione e dal diritto asserito sulla risorsa in questione. In questo argomento viene descritto come creare un'attestazione personalizzata.  

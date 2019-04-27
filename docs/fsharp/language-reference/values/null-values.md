@@ -3,11 +3,11 @@ title: Valori Null
 description: Informazioni su come viene usato il valore null in di F# linguaggio di programmazione.
 ms.date: 03/22/2019
 ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902278"
 ---
 # <a name="null-values"></a>Valori Null
 
@@ -31,7 +31,7 @@ Per interpretare un valore null che viene ottenuto da un metodo .NET, usare crit
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-I valori null per F# tipi possono essere generati anche in altri modi, ad esempio quando Usa `Array.zeroCreate`, che chiama `Unchecked.defaultof`. È necessario prestare attenzione con tale codice per mantenere i valori null incapsulati. In una libreria destinata solo a F#, non è necessario verificare la presenza di valori null in tutte le funzioni. Se si scrive una libreria per essere interoperabile con altri linguaggi .NET, si potrebbe essere necessario aggiungere controlli null i parametri di input e generano un `ArgumentNullException`, esattamente come avviene nel codice C# o Visual Basic.
+I valori null per F# tipi possono essere generati anche in altri modi, ad esempio quando Usa `Array.zeroCreate`, che chiama `Unchecked.defaultof`. È necessario prestare attenzione con tale codice per mantenere i valori null incapsulati. In una libreria destinata solo a F#, non è necessario verificare la presenza di valori null in tutte le funzioni. Se si scrive una libreria per essere interoperabile con altri linguaggi .NET, si potrebbe essere necessario aggiungere controlli null i parametri di input e generano un `ArgumentNullException`, esattamente come avviene nel codice c# o Visual Basic.
 
 È possibile usare il codice seguente per verificare se un valore arbitrario è null.
 

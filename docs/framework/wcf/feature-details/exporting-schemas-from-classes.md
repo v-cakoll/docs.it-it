@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
 ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856676"
 ---
 # <a name="exporting-schemas-from-classes"></a>Esportazione di schemi dalle classi
 Per generare schemi XSD (XML Schema Definition Language) dalle classi usate nel modello del contratto dati, usare la classe <xref:System.Runtime.Serialization.XsdDataContractExporter> . In questo argomento viene illustrato il processo di creazione degli schemi.  

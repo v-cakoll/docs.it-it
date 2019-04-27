@@ -3,11 +3,11 @@ title: Uso di Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
 ms.openlocfilehash: 58a51f7ea0db2297c7151a752de3f54307e0c5fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857714"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Uso di Windows Communication Foundation
 
@@ -19,7 +19,7 @@ WCF può essere utilizzato per aggiungere nuove funzionalità per servizi Web AS
 
 I client WCF possono utilizzare servizi Web ASP.NET. I servizi WCF che sono configurati con la <xref:System.ServiceModel.BasicHttpBinding> può essere utilizzato dai client del servizio Web ASP.NET. Servizi Web ASP.NET possono coesistere con le applicazioni WCF e WCF può anche essere utilizzato per aggiungere funzionalità a servizi Web ASP.NET esistenti. Tutte le modalità in cui i servizi Web ASP.NET e WCF possono essere usati insieme, è possibile eseguire la migrazione di servizi Web ASP.NET a WCF solo se sono necessarie funzionalità fornite da servizi non Web ASP.NET e WCF.
 
-Anche in alcuni casi in cui è necessario, la migrazione di codice da una tecnologia a un altro raramente è l'approccio corretto. L'utilizzo della nuova tecnologia è volto a soddisfare requisiti nuovi che non possono essere soddisfatti dalla precedente tecnologia e in tal caso la cosa corretta da fare è progettare una nuova soluzione in grado di soddisfare il nuovo set espanso di requisiti. La nuova progettazione si avvale dell'esperienza maturata con il sistema esistente e delle conoscenze acquisite nel frattempo. La nuova progettazione può inoltre utilizzare le funzionalità complete delle nuove tecnologie anziché riprodurre nella nuova piattaforma la progettazione precedente. Dopo aver creato gli elementi principali della nuova progettazione, diviene più semplice riutilizzare all'interno del nuovo sistema un codice proveniente dal sistema esistente.
+Anche in alcuni casi in cui è necessario, la migrazione di codice da una tecnologia a un altro raramente è l'approccio corretto. L'utilizzo della nuova tecnologia è volto a soddisfare requisiti nuovi che non possono essere soddisfatti dalla precedente tecnologia e in tal caso la cosa corretta da fare è progettare una nuova soluzione in grado di soddisfare il nuovo set di requisiti. La nuova progettazione si avvale dell'esperienza maturata con il sistema esistente e delle conoscenze acquisite nel frattempo. La nuova progettazione può inoltre utilizzare le funzionalità complete delle nuove tecnologie anziché riprodurre nella nuova piattaforma la progettazione precedente. Dopo aver creato gli elementi principali della nuova progettazione, diviene più semplice riutilizzare all'interno del nuovo sistema un codice proveniente dal sistema esistente.
 
 ## <a name="see-also"></a>Vedere anche
 

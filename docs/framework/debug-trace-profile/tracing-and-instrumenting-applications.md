@@ -16,11 +16,11 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876148"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traccia e strumentazione di applicazioni
 La traccia consente di monitorare l'esecuzione dell'applicazione mentre è in corso. È possibile aggiungere strumentazione di traccia e debug all'applicazione .NET Framework quando la si sviluppa e usare tale strumentazione sia mentre si sviluppa l'applicazione sia dopo la distribuzione. È possibile usare le classi <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> per registrare le informazioni sugli errori e sull'esecuzione dell'applicazione in log, file di testo o altri dispositivi per un'analisi successiva.  

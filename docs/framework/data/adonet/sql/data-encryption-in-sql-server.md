@@ -3,11 +3,11 @@ title: Crittografia dei dati in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877877"
 ---
 # <a name="data-encryption-in-sql-server"></a>Crittografia dei dati in SQL Server
 In SQL Server sono disponibili funzioni per di crittografia e decrittografia dei dati tramite certificato, chiave asimmetrica o chiave simmetrica. Tutte queste funzionalità vengono gestite in un archivio di certificati interno. Nell'archivio viene usata una gerarchia di crittografia per proteggere i certificati e le chiavi di un livello con il livello superiore nella gerarchia. Quest'area di funzionalità di SQL Server è denominata archivio segreto.  

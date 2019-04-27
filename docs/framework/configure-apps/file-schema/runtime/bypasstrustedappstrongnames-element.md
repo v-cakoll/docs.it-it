@@ -10,13 +10,13 @@ ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674207"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > elemento
+# <a name="bypasstrustedappstrongnames-element"></a>Elemento \<bypassTrustedAppStrongNames>
 Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibilità che vengono caricati con attendibilità <xref:System.AppDomain>.  
   
  \<configuration>  
@@ -70,7 +70,7 @@ Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibi
 -   Non ha firma ritardata.  
   
 > [!NOTE]
->  Se questa funzionalità è stata disattivata per tutte le applicazioni nel computer usando una chiave del Registro di sistema, questa impostazione di file di configurazione non ha alcun effetto. Per altre informazioni, vedere [Procedura: Disabilitare la funzionalità di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+>  Se questa funzionalità è stata disattivata per tutte le applicazioni nel computer usando una chiave del Registro di sistema, questa impostazione di file di configurazione non ha alcun effetto. Per altre informazioni, vedere [Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come specificare il comportamento che convalida la firma con nome sicuro su assembly completamente attendibili.  

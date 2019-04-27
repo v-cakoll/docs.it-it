@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923929"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Operazioni eseguibili con LINQ to SQL
 In[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono supportare tutte le funzionalità principali usate dagli sviluppatori SQL. È possibile creare query per ottenere informazioni ed eseguire operazioni di inserimento, aggiornamento ed eliminazione di dati dalle tabelle.  

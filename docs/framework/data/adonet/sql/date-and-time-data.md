@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877747"
 ---
 # <a name="date-and-time-data"></a>Dati relativi a data e ora
 In SQL Server 2008 vengono introdotti nuovi tipi di dati per la gestione di informazioni relative a data e ora. I nuovi tipi di dati includono tipi separati per data e ora e tipi di dati espansi che offrono miglioramenti in termini di intervallo, precisione e gestione del fuso orario. A partire da .NET Framework versione 3.5 Service Pack 1 (SP1), il provider di dati .NET Framework per SQL Server (<xref:System.Data.SqlClient>) fornisce supporto completo per tutte le nuove funzionalità del Motore di database di SQL Server 2008. Per usare queste nuove funzionalità con SqlClient, è necessario installare .NET Framework 3.5 SP1 (o versione successiva).  

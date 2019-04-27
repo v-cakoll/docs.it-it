@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
 ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863649"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procedura: Overload di una routine che accetta parametri facoltativi (Visual Basic)
 Se una routine contiene uno o più [facoltativo](../../../../visual-basic/language-reference/modifiers/optional.md) parametri, non è possibile definire una versione di overload corrisponda a uno dei relativi overload impliciti. Per altre informazioni, vedere "Esegue l'overload implicito per i parametri facoltativi" nella [considerazioni sull'overload di routine](./considerations-in-overloading-procedures.md).  

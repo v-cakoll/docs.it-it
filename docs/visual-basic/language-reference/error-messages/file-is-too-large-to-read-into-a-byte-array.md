@@ -3,11 +3,11 @@ title: Il file è troppo grande per essere letto in una matrice byte
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
 ms.openlocfilehash: 0c7d35e08eeb42e35c4c40e47434a64393d829b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800880"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>Il file è troppo grande per essere letto in una matrice byte
 Le dimensioni del file di cui che si sta tentando di leggere in una matrice di byte superano i 4 GB. Il `My.Computer.FileSystem.ReadAllBytes` (metodo) non è possibile leggere un file che supera la dimensione specificata.  

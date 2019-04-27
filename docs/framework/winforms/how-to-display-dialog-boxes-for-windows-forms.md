@@ -12,11 +12,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802583"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Procedura: Visualizzare le finestre di dialogo per Windows Forms
 Visualizzare una finestra di dialogo nello stesso modo che visualizzare qualsiasi altra forma in un'applicazione. Form di avvio viene caricata automaticamente quando viene eseguita l'applicazione. Per rendere un secondo form o finestra di dialogo visualizzata nell'applicazione, scrivere codice per caricare e visualizzarlo. In modo analogo, per consentire il form o finestra di dialogo casella scomparsa, scrivere il codice per scaricare o nasconderlo.  

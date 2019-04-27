@@ -5,11 +5,11 @@ ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866977"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Classe MissingMetadataException (.NET Native)
 
@@ -35,7 +35,7 @@ La classe `MissingMetadataException` ha i seguenti membri:
 |Costruttore|Descrizione|
 |-----------------|-----------------|
 |`public MissingMetadataException()`|Inizializza una nuova istanza della classe `MissingMetadataException` usando un messaggio fornito dal sistema che descrive l'errore.<br /><br /> Questo costruttore è destinato a un uso interno da parte della sola catena di strumenti del [!INCLUDE[net_native](../../../includes/net-native-md.md)].|
-|`public MissingMetadataException(String message)`|Consente l'inizializzazione di una nuova istanza della classe `MissingMetadataException` con un messaggio di errore specificato.<br /><br /> Questo costruttore è destinato a un uso interno da parte della sola catena di strumenti del [!INCLUDE[net_native](../../../includes/net-native-md.md)].|
+|`public MissingMetadataException(String message)`|Inizializza una nuova istanza della classe `MissingMetadataException` con un messaggio di errore specificato.<br /><br /> Questo costruttore è destinato a un uso interno da parte della sola catena di strumenti del [!INCLUDE[net_native](../../../includes/net-native-md.md)].|
 
 ## <a name="properties"></a>Proprietà
 
@@ -57,7 +57,7 @@ La classe `MissingMetadataException` ha i seguenti membri:
 |------------|-----------------|
 |`public bool Equals(Object obj)`|Determina se l'oggetto specificato è uguale all'oggetto corrente.  Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|
 |`protected void Finalize()`|Consente a un oggetto di effettuare un tentativo di liberare risorse ed eseguire altre operazioni di pulizia prima che venga recuperato da Garbage Collection. Ereditato da <xref:System.Object>.|
-|`public Exception GetBaseException()`|Restituisce l'eccezione che rappresenta la causa principale di una o più eccezioni successive. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|
+|`public Exception GetBaseException()`|Restituisce l'eccezione che rappresenta la causa radice di una o più eccezioni successive. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|
 |`public int GetHashCode()`|Restituisce un codice hash per un'istanza `MissingMetadataException`.   Ereditato da <xref:System.Object>.|
 |`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Imposta un oggetto <xref:System.Runtime.Serialization.SerializationInfo> con le informazioni relative all'eccezione.  Ereditato da <xref:System.TypeLoadException>.|
 |`public Type GetType()`|Ottiene il tipo di runtime dell'istanza corrente. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|
@@ -66,7 +66,7 @@ La classe `MissingMetadataException` ha i seguenti membri:
 
 ## <a name="events"></a>Eventi
 
-|Evento|Descrizione|
+|event|Descrizione|
 |-----------|-----------------|
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Si verifica quando un'eccezione viene serializzata per creare un oggetto di stato eccezione contenente i dati serializzati relativi all'eccezione. Ereditato da <xref:System.Exception?displayProperty=nameWithType>.|
 

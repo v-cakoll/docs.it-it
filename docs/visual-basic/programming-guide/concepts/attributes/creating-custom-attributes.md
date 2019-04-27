@@ -3,11 +3,11 @@ title: Creazione di attributi personalizzati (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
 ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903552"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Creazione di attributi personalizzati (Visual Basic)
 È possibile creare attributi personalizzati definendo una classe Attribute, ovvero una classe che deriva direttamente o indirettamente da <xref:System.Attribute>, la quale semplifica e rende più rapida l'identificazione delle definizioni degli attributi nei metadati. Si supponga di voler contrassegnare i tipi con il nome del programmatore che ha scritto il tipo. Si potrebbe definire una classe Attribute `Author` personalizzata:  

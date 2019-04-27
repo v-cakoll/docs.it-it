@@ -3,11 +3,11 @@ title: Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876089"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Supporto SqlClient per disponibilità elevata, ripristino di emergenza
 In questo argomento viene descritto il supporto di SqlClient (aggiunto in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) per i gruppi di disponibilità AlwaysOn, con disponibilità elevata e ripristino di emergenza.  La funzionalità gruppi di disponibilità AlwaysOn è stato aggiunto a SQL Server 2012. Per altre informazioni sui gruppi di disponibilità AlwaysOn, vedere la documentazione Online di SQL Server.  

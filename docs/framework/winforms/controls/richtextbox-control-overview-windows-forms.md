@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902499"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo RichTextBox (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.RichTextBox> controllo viene usato per visualizzare, immettere e modificare testo formattato. Il <xref:System.Windows.Forms.RichTextBox> offerte dal controllo di <xref:System.Windows.Forms.TextBox> del controllo, ma può anche visualizzare i tipi di carattere, colori e collegamenti, caricare testo e immagini incorporate da un file; e trovare caratteri specificati. Il <xref:System.Windows.Forms.RichTextBox> controllo viene in genere usato per fornire funzionalità simili alle applicazioni di elaborazione di testi, ad esempio Microsoft Word di visualizzazione e modifica di testo. Ad esempio la <xref:System.Windows.Forms.TextBox> (controllo), il <xref:System.Windows.Forms.RichTextBox> controllo può visualizzare le barre di scorrimento; ma a differenza di <xref:System.Windows.Forms.TextBox> (controllo), l'impostazione predefinita per visualizzare le barre di scorrimento orizzontale e verticale in base alle esigenze, e ha impostazioni aggiuntive.  

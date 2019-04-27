@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
 ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864507"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Procedura: Chiamare un gestore eventi in Visual Basic
 Un' *evento* è un'azione o una occorrenza, ovvero, ad esempio un mouse superato un limite di credito o fare clic su, che viene riconosciuto da alcuni componenti del programma e per cui è possibile scrivere codice per rispondere. Un' *gestore dell'evento* è riportato il codice scritto in risposta a un evento.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
 ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856821"
 ---
 # <a name="federation"></a>Federazione
 In questo argomento viene illustrato brevemente il concetto di sicurezza federata. Viene inoltre descritto il supporto di Windows Communication Foundation (WCF) per la distribuzione di architetture di sicurezza federata. Per un'applicazione di esempio che illustra la federazione, vedere [esempio di federazione](../../../../docs/framework/wcf/samples/federation-sample.md).  

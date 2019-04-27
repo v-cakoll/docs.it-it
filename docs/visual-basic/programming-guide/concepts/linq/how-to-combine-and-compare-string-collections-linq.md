@@ -3,11 +3,11 @@ title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual B
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
 ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855231"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
 In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  

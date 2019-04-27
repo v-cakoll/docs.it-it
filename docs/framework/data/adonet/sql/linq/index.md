@@ -3,11 +3,11 @@ title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
 ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902603"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è un componente di [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] versione 3.5 che fornisce l'infrastruttura di runtime per la gestione di dati relazionali come oggetti.  
@@ -19,7 +19,7 @@ ms.locfileid: "56092228"
   
  Gli sviluppatori che usano Visual Studio in genere usano la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], che fornisce un'interfaccia utente per l'implementazione di molte delle funzionalità di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Nella documentazione inclusa in questa versione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono descritti i blocchi di compilazione di base, il processi e le tecniche necessari per la compilazione di applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. È possibile anche cercare problemi specifici di Docs Microsoft e per partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. Infine, il [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) white paper su Dettagli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e C#.  
+ Nella documentazione inclusa in questa versione di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono descritti i blocchi di compilazione di base, il processi e le tecniche necessari per la compilazione di applicazioni [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. È possibile anche cercare problemi specifici di Docs Microsoft e per partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. Infine, il [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) white paper su Dettagli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e c#.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -32,13 +32,13 @@ ms.locfileid: "56092228"
  Fornisce informazioni di riferimento sui diversi aspetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Tra gli argomenti vengono descritti il mapping dei tipi CLR SQL, la conversione dell'operatore di query standard e altri.  
   
  [Esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
- Vengono forniti collegamenti a esempi di Visual Basic e C#.  
+ Vengono forniti collegamenti a esempi di Visual Basic e c#.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  [Language-Integrated Query (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  Viene fornita una panoramica delle tecnologie LINQ in C#.
  
- [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [LINQ (Language-Integrated Query) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Viene fornita una panoramica delle tecnologie LINQ in Visual Basic.
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  

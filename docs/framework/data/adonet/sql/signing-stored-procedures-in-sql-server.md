@@ -3,11 +3,11 @@ title: Firma di stored procedure in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922187"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Firma di stored procedure in SQL Server
  Un firma digitale è un digest di dati crittografato con la chiave privata del firmatario. La chiave privata garantisce che la firma digitale è univoca per il titolare o il proprietario. È possibile firmare gli assembly, funzioni (ad eccezione delle funzioni inline con valori di tabella), trigger e stored procedure.  

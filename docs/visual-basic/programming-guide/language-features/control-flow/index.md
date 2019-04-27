@@ -9,15 +9,16 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
 ms.openlocfilehash: 14133dc764d6708d8b7a3366038bc3240e5cbc76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906659"
 ---
 # <a name="control-flow-in-visual-basic"></a>Flusso di controllo in Visual Basic
 Se non vengono applicate regole, un programma procede attraverso le relative istruzioni dall'inizio alla fine. Alcuni programmi molto semplici possono essere scritti con solo questo flusso unidirezionale. Tuttavia, l'efficacia e l'utilità di un linguaggio di programmazione sono in gran parte correlate alla possibilità di modificare l'ordine di esecuzione con cicli e istruzioni di controllo.  
   
- Le strutture di controllo consentono di regolare il flusso di esecuzione del programma. Utilizza strutture di controllo, è possibile scrivere codice di Visual Basic che prende decisioni o che si ripete azioni. Altre strutture di controllo consentono di garantire l'eliminazione di una risorsa o di eseguire una serie di istruzioni per lo stesso riferimento a un oggetto.  
+ Le strutture di controllo consentono di regolare il flusso di esecuzione del programma. Utilizza le strutture di controllo, è possibile scrivere il codice Visual Basic che prende decisioni o ripetere azioni. Altre strutture di controllo consentono di garantire l'eliminazione di una risorsa o di eseguire una serie di istruzioni per lo stesso riferimento a un oggetto.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Strutture decisionali](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  

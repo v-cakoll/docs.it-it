@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857155"
 ---
 # <a name="data-contract-versioning"></a>Controllo delle versioni dei contratti dati
 Lo sviluppo delle applicazioni implica la modifica dei contratti dati utilizzati dai servizi. In questo argomento viene illustrato come controllare le versioni dei contratti dati. Vengono descritti i meccanismi di controllo delle versioni dei contratti dati. Per una panoramica completa e precise sul controllo delle versioni, vedere [le procedure consigliate: Data Contract Versioning](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

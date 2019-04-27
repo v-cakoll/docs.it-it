@@ -3,11 +3,11 @@ title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
 ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879060"
 ---
 # <a name="facet"></a>facet
 Oggetto *facet* viene usato per aggiungere dettagli alla definizione di una proprietà di tipo primitivo. Oggetto [proprietà](../../../../docs/framework/data/adonet/property.md) definizione contiene informazioni sul tipo di proprietà, ma spesso sono necessari ulteriori dettagli. Un tipo di entità in un modello concettuale, ad esempio, potrebbe disporre di una proprietà di tipo `String` il cui valore non può essere impostato su null. I facet consentono di specificare questo livello di dettaglio.  

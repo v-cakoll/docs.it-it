@@ -3,11 +3,11 @@ title: 'Procedura: Caricare e scaricare gli assembly (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
 ms.openlocfilehash: efd8ddbe45323e1f80cec54379d61b5aa8a435cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818651"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>Procedura: Caricare e scaricare gli assembly (Visual Basic)
 Gli assembly cui il programma fa riferimento verranno caricati automaticamente in fase di compilazione, ma è anche possibile caricare assembly specifici nel dominio dell'applicazione corrente in fase di esecuzione. Per altre informazioni, vedere [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  

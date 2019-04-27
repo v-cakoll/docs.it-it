@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902330"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Procedura: Creare un criterio di autorizzazione personalizzato
 L'infrastruttura del modello di identità in Windows Communication Foundation (WCF) supporta un modello di autorizzazione basata sulle attestazioni. Le attestazioni vengono estratte dai token, elaborate facoltativamente dal criterio di autorizzazione personalizzato e poi collocate nella classe <xref:System.IdentityModel.Policy.AuthorizationContext> che può quindi essere esaminata per prendere decisioni in merito alle autorizzazioni. È possibile utilizzare un criterio personalizzato per trasformare le attestazioni ottenute dai token in ingresso in attestazioni previste dall'applicazione. In questo modo, il livello dell'applicazione può essere isolato dai dettagli alle differenti attestazioni fornite dai diversi tipi di token supportati da WCF. In questo argomento viene illustrato come implementare un criterio di autorizzazione personalizzato e come aggiungerlo alla raccolta di criteri utilizzati da un servizio.  

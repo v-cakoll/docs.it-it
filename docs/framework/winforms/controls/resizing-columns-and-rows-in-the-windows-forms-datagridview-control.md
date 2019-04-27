@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903188"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Ridimensionamento di colonne e righe nel controllo DataGridView di Windows Form
 Il `DataGridView` controllo offre numerose opzioni per personalizzare il comportamento di ridimensionamento di colonne e righe. In genere, `DataGridView` celle non vengono ridimensionano in base al rispettivo contenuto. Al contrario, vengono tagliati qualsiasi valore di visualizzazione che è maggiore della cella. Se il contenuto può essere visualizzato sotto forma di stringa, viene inserito in una descrizione comando.  

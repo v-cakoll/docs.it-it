@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
 ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902941"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Procedura: Aggiornare righe nel database
 È possibile aggiornare le righe in un database modificando i valori dei membri degli oggetti associati con la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> raccolta e quindi inviare le modifiche al database. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le modifiche vengono convertite in SQL appropriate `UPDATE` comandi.  

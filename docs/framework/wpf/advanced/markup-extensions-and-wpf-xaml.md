@@ -16,11 +16,11 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804585"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Estensioni di markup e XAML WPF
 Questo argomento introduce le estensioni di markup per XAML, con informazioni sulle regole della sintassi, le finalità e il modello a oggetti di classe sottostante. Le estensioni di markup sono una funzionalità generale del linguaggio XAML e dell'implementazione .NET di servizi XAML. Questo argomento descrive in particolare le estensioni di markup per l'uso in XAML WPF.  

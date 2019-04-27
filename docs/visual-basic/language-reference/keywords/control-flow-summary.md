@@ -5,11 +5,11 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
 ms.openlocfilehash: d3884f99a79a66ed8f8b25975b25a110c7341849
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802986"
 ---
 # <a name="control-flow-summary-visual-basic"></a>Riepilogo del flusso di controllo (Visual Basic)
 Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime sono organizzati in base allo scopo e usano.  

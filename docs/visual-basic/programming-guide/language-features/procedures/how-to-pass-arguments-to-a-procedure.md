@@ -12,11 +12,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863441"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Procedura: Passare argomenti a una routine (Visual Basic)
 Quando si chiama una routine, si seguono il nome della routine con un elenco di argomenti racchiuso tra parentesi. Viene fornito un argomento corrispondente a ogni parametro obbligatorio, definisce la procedura e, facoltativamente, è possibile specificare argomenti per il `Optional` parametri. Se non si fornisce un `Optional` parametro nella chiamata, è necessario includere una virgola per contrassegnarne la posizione nell'elenco di argomenti, se viene fornito alcun argomento successivo.  

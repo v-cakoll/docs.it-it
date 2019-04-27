@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
 ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910260"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>Procedura: Creare una bitmap da un oggetto visivo
 Questo esempio viene illustrato come creare una bitmap da un <xref:System.Windows.Media.Visual>. Oggetto <xref:System.Windows.Media.DrawingVisual> viene eseguito il rendering con <xref:System.Windows.Media.FormattedText>. Il <xref:System.Windows.Media.Visual> viene quindi eseguito il rendering di <xref:System.Windows.Media.Imaging.RenderTargetBitmap> crea una bitmap del testo specificato.  

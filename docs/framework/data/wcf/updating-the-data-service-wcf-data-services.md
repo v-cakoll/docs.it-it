@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876109"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aggiornamento del servizio dati (WCF Data Services)
 Quando si usa la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] libreria client di utilizzare un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, la libreria traduce le voci del feed in istanze di classi del servizio dati client. Queste classi del servizio dati vengono rilevate utilizzando la classe <xref:System.Data.Services.Client.DataServiceContext> a cui appartiene <xref:System.Data.Services.Client.DataServiceQuery%601>. Il client rileva le modifiche alle entità segnalate utilizzando i metodi su <xref:System.Data.Services.Client.DataServiceContext>. Questi metodi consentono al client di rilevare le entità aggiunte ed eliminate, nonché le modifiche apportate ai valori delle proprietà o alle relazioni tra le istanze di entità. Le modifiche rilevate vengono restituite al servizio dati sotto forma di operazioni basate su REST quando si chiama il metodo <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  

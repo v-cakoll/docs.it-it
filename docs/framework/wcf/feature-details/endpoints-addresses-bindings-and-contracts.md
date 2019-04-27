@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
 ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856539"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpoint: indirizzi, associazioni e contratti
 Tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) viene eseguita tramite il *endpoint* del servizio. Gli endpoint forniscono ai client l'accesso alla funzionalità offerta da un servizio WCF.  

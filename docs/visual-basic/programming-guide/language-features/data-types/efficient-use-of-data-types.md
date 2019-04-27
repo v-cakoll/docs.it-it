@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907218"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Utilizzo efficiente dei tipi di dati (Visual Basic)
 Le variabili non dichiarate e le variabili dichiarate senza un tipo di dati vengono assegnate i `Object` tipo di dati. Ciò semplifica la scrittura di programmi rapidamente, ma è possibile che vengano eseguite più lentamente.  
