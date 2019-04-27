@@ -3,26 +3,26 @@ title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878423"
 ---
-# <a name="oracletypes"></a><span data-ttu-id="77d17-102">OracleTypes</span><span class="sxs-lookup"><span data-stu-id="77d17-102">OracleTypes</span></span>
-<span data-ttu-id="77d17-103">Il provider di dati .NET Framework per Oracle include varie strutture necessarie per usare i tipi di dati Oracle.</span><span class="sxs-lookup"><span data-stu-id="77d17-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="77d17-104">Tra queste sono inclusi i tipi  <xref:System.Data.OracleClient.OracleNumber> e <xref:System.Data.OracleClient.OracleString>.</span><span class="sxs-lookup"><span data-stu-id="77d17-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
+# <a name="oracletypes"></a><span data-ttu-id="35e34-102">OracleTypes</span><span class="sxs-lookup"><span data-stu-id="35e34-102">OracleTypes</span></span>
+<span data-ttu-id="35e34-103">Il provider di dati .NET Framework per Oracle include varie strutture necessarie per usare i tipi di dati Oracle.</span><span class="sxs-lookup"><span data-stu-id="35e34-103">The .NET Framework Data Provider for Oracle includes several structures you can use to work with Oracle data types.</span></span> <span data-ttu-id="35e34-104">Tra queste sono inclusi i tipi  <xref:System.Data.OracleClient.OracleNumber> e <xref:System.Data.OracleClient.OracleString>.</span><span class="sxs-lookup"><span data-stu-id="35e34-104">These include <xref:System.Data.OracleClient.OracleNumber> and <xref:System.Data.OracleClient.OracleString>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="77d17-105">Per un elenco completo delle strutture, vedere <xref:System.Data.OracleClient>.</span><span class="sxs-lookup"><span data-stu-id="77d17-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
+>  <span data-ttu-id="35e34-105">Per un elenco completo delle strutture, vedere <xref:System.Data.OracleClient>.</span><span class="sxs-lookup"><span data-stu-id="35e34-105">For a complete list of these structures, see <xref:System.Data.OracleClient>.</span></span>  
   
- <span data-ttu-id="77d17-106">Esempi di C#:</span><span class="sxs-lookup"><span data-stu-id="77d17-106">The following C# examples:</span></span>  
+ <span data-ttu-id="35e34-106">Esempi di C#:</span><span class="sxs-lookup"><span data-stu-id="35e34-106">The following C# examples:</span></span>  
   
--   <span data-ttu-id="77d17-107">Creare una tabella Oracle e caricarla con i dati.</span><span class="sxs-lookup"><span data-stu-id="77d17-107">Create an Oracle table and load it with data.</span></span>  
+-   <span data-ttu-id="35e34-107">Creare una tabella Oracle e caricarla con i dati.</span><span class="sxs-lookup"><span data-stu-id="35e34-107">Create an Oracle table and load it with data.</span></span>  
   
--   <span data-ttu-id="77d17-108">Usare un tipo <xref:System.Data.OracleClient.OracleDataReader> per accedere ai dati e usare varie strutture <xref:System.Data.OracleClient.OracleType> per visualizzarli.</span><span class="sxs-lookup"><span data-stu-id="77d17-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
+-   <span data-ttu-id="35e34-108">Usare un tipo <xref:System.Data.OracleClient.OracleDataReader> per accedere ai dati e usare varie strutture <xref:System.Data.OracleClient.OracleType> per visualizzarli.</span><span class="sxs-lookup"><span data-stu-id="35e34-108">Use an <xref:System.Data.OracleClient.OracleDataReader> to access the data, and use several <xref:System.Data.OracleClient.OracleType> structures to display the data.</span></span>  
   
-## <a name="creating-an-oracle-table"></a><span data-ttu-id="77d17-109">Creazione di una tabella Oracle</span><span class="sxs-lookup"><span data-stu-id="77d17-109">Creating an Oracle Table</span></span>  
- <span data-ttu-id="77d17-110">Nell'esempio seguente viene creata una tabella Oracle caricata con dati.</span><span class="sxs-lookup"><span data-stu-id="77d17-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="77d17-111">È necessario che questo esempio venga eseguito prima dell'esempio successivo.</span><span class="sxs-lookup"><span data-stu-id="77d17-111">You must run this example before running the next example.</span></span>  
+## <a name="creating-an-oracle-table"></a><span data-ttu-id="35e34-109">Creazione di una tabella Oracle</span><span class="sxs-lookup"><span data-stu-id="35e34-109">Creating an Oracle Table</span></span>  
+ <span data-ttu-id="35e34-110">Nell'esempio seguente viene creata una tabella Oracle caricata con dati.</span><span class="sxs-lookup"><span data-stu-id="35e34-110">This example creates an Oracle table and loads it with data.</span></span> <span data-ttu-id="35e34-111">È necessario che questo esempio venga eseguito prima dell'esempio successivo.</span><span class="sxs-lookup"><span data-stu-id="35e34-111">You must run this example before running the next example.</span></span>  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -51,8 +51,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="77d17-112">Recupero di dati dalla tabella Oracle</span><span class="sxs-lookup"><span data-stu-id="77d17-112">Retrieving Data from the Oracle Table</span></span>  
- <span data-ttu-id="77d17-113">Questo esempio Usa un' **OracleDataReader** per accedere ai dati e vengono usate molte **OracleType** strutture per visualizzare i dati.</span><span class="sxs-lookup"><span data-stu-id="77d17-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
+## <a name="retrieving-data-from-the-oracle-table"></a><span data-ttu-id="35e34-112">Recupero di dati dalla tabella Oracle</span><span class="sxs-lookup"><span data-stu-id="35e34-112">Retrieving Data from the Oracle Table</span></span>  
+ <span data-ttu-id="35e34-113">Questo esempio Usa un' **OracleDataReader** per accedere ai dati e vengono usate molte **OracleType** strutture per visualizzare i dati.</span><span class="sxs-lookup"><span data-stu-id="35e34-113">This example uses an **OracleDataReader** to access the data, and uses several **OracleType** structures to display the data.</span></span>  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -115,7 +115,7 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="77d17-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="77d17-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="35e34-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="35e34-114">See also</span></span>
 
-- [<span data-ttu-id="77d17-115">Oracle e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="77d17-115">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [<span data-ttu-id="77d17-116">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="77d17-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="35e34-115">Oracle e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="35e34-115">Oracle and ADO.NET</span></span>](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [<span data-ttu-id="35e34-116">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="35e34-116">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
