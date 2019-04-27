@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907387"
 ---
 # <a name="composite-data-types-visual-basic"></a>Tipi di dati compositi (Visual Basic)
 Oltre a disponibili in Visual Basic di tipi di dati elementari è anche possibile assemblare gli elementi di tipi diversi per creare *tipi di dati compositi* , ad esempio classi, matrici e strutture. È possibile compilare i tipi di dati composti da tipi elementari e da altri tipi composti. Ad esempio, è possibile definire una matrice di elementi di struttura o una struttura con i membri della matrice.  

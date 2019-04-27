@@ -3,11 +3,11 @@ title: 'Espressione Loops: for...in'
 description: Vedere il F# for... nell'espressione costrutto di ciclo viene utilizzato per scorrere le corrispondenze di un modello in una raccolta enumerabile.
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024443"
 ---
 # <a name="loops-forin-expression"></a>Espressione Loops: for...in
 
@@ -28,11 +28,11 @@ L'espressione enumerabile può essere specificata come una raccolta enumerabile 
 
 Quando si esprime un intervallo usando la `..` operatore, è possibile usare la sintassi seguente.
 
-*Avviare* ... *Fine*
+*Avviare* ... *finish*
 
 È anche possibile usare una versione che include un incremento denominato il *ignorare*, come nel codice seguente.
 
-*Avviare* ... *ignorare* ... *Fine*
+*Avviare* ... *ignorare* ... *finish*
 
 Quando si usa intervalli integrali e una variabile contatore semplici come un modello, il comportamento tipico è incrementare la variabile contatore da 1 a ogni iterazione, ma se l'intervallo include un valore di omissione, il contatore viene incrementato dal valore skip invece.
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>Vedere anche
 
 - [Riferimenti per il linguaggio F#](index.md)
-- [Cicli: `for...to` Espressione](loops-for-to-expression.md)
-- [Cicli: `while...do` Espressione](loops-while-do-expression.md)
+- [Cicli: `for...to` Expression](loops-for-to-expression.md)
+- [Cicli: `while...do` Expression](loops-while-do-expression.md)

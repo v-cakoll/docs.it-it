@@ -3,11 +3,11 @@ title: Elenchi
 description: Informazioni su F# sono elencati, una serie ordinata e non modificabile di elementi dello stesso tipo.
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904124"
 ---
 # <a name="lists"></a>Elenchi
 
@@ -65,7 +65,7 @@ Il tipo di elenco supporta le proprietà seguenti:
 |Proprietà|Tipo|Descrizione|
 |--------|----|-----------|
 |[Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Primo elemento.|
-|[vuota](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Proprietà statica che restituisce un elenco vuoto del tipo appropriato.|
+|[Empty](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Proprietà statica che restituisce un elenco vuoto del tipo appropriato.|
 |[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` se nell'elenco non sono presenti elementi.|
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Elemento in corrispondenza dell'indice specificato (a base zero).|
 |[Lunghezza](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Numero di elementi.|

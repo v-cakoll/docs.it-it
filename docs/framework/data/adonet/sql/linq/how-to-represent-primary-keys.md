@@ -3,11 +3,11 @@ title: 'Procedura: Rappresentare le chiavi primarie'
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
 ms.openlocfilehash: dcb8929c9cd9a7b88f19d760b70117a1092760f9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877201"
 ---
 # <a name="how-to-represent-primary-keys"></a>Procedura: Rappresentare le chiavi primarie
 Usare il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> proprietà di <xref:System.Data.Linq.Mapping.ColumnAttribute> attributo per definire una proprietà o campo che rappresenti la chiave primaria per una colonna del database.  
