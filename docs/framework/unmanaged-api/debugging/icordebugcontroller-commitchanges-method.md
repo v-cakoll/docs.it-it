@@ -18,13 +18,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 115f3a8c81bcedb48669d06e57f26b88d36148d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749592"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="2c6dd-102">Metodo ICorDebugController::CommitChanges</span><span class="sxs-lookup"><span data-stu-id="2c6dd-102">ICorDebugController::CommitChanges Method</span></span>
-<span data-ttu-id="2c6dd-103">`CommitChanges` è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="2c6dd-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="2c6dd-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="2c6dd-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="b9fbb-102">Metodo ICorDebugController::CommitChanges</span><span class="sxs-lookup"><span data-stu-id="b9fbb-102">ICorDebugController::CommitChanges Method</span></span>
+<span data-ttu-id="b9fbb-103">`CommitChanges` è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="b9fbb-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="b9fbb-104">Non chiamare questo metodo.</span><span class="sxs-lookup"><span data-stu-id="b9fbb-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c6dd-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2c6dd-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9fbb-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b9fbb-105">See also</span></span>
