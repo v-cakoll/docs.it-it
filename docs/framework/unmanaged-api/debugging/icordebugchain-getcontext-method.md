@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0fd80cb16466d95f443b098fe20f2d407ba2aed8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645253"
 ---
-# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="905f7-102">Metodo ICorDebugChain::GetContext</span><span class="sxs-lookup"><span data-stu-id="905f7-102">ICorDebugChain::GetContext Method</span></span>
-<span data-ttu-id="905f7-103">Questo metodo non è implementato nella versione corrente di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="905f7-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="c77e2-102">Metodo ICorDebugChain::GetContext</span><span class="sxs-lookup"><span data-stu-id="c77e2-102">ICorDebugChain::GetContext Method</span></span>
+<span data-ttu-id="c77e2-103">Questo metodo non è implementato nella versione corrente di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c77e2-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="905f7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="905f7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c77e2-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c77e2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  
