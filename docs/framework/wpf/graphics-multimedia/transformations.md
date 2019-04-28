@@ -17,22 +17,22 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925996"
 ---
-# <a name="transformations"></a><span data-ttu-id="b752d-102">Trasformazioni</span><span class="sxs-lookup"><span data-stu-id="b752d-102">Transformations</span></span>
-<span data-ttu-id="b752d-103">Le trasformazioni vengono utilizzate per ruotare, ridimensionare, convertire o inclinare <xref:System.Windows.FrameworkElement> oggetti.</span><span class="sxs-lookup"><span data-stu-id="b752d-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="b7059-102">Trasformazioni</span><span class="sxs-lookup"><span data-stu-id="b7059-102">Transformations</span></span>
+<span data-ttu-id="b7059-103">Le trasformazioni vengono utilizzate per ruotare, ridimensionare, convertire o inclinare <xref:System.Windows.FrameworkElement> oggetti.</span><span class="sxs-lookup"><span data-stu-id="b7059-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b752d-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="b752d-104">In This Section</span></span>  
- [<span data-ttu-id="b752d-105">Cenni preliminari sulle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="b752d-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="b752d-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="b752d-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b7059-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="b7059-104">In This Section</span></span>  
+ [<span data-ttu-id="b7059-105">Cenni preliminari sulle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="b7059-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="b7059-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="b7059-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="b752d-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b752d-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7059-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b7059-107">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="b752d-108">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="b752d-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="b752d-109">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="b752d-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="b752d-110">Layout</span><span class="sxs-lookup"><span data-stu-id="b752d-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="b7059-108">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="b7059-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="b7059-109">Cenni preliminari sul rendering della grafica WPF</span><span class="sxs-lookup"><span data-stu-id="b7059-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="b7059-110">Layout</span><span class="sxs-lookup"><span data-stu-id="b7059-110">Layout</span></span>](../advanced/layout.md)

@@ -14,19 +14,19 @@ ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b47f4c093acb094188cbd5a8a0a0026c67eb3f2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795161"
 ---
-# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="c05a6-102">Procedura: Creare oggetti GenericPrincipal e GenericIdentity</span><span class="sxs-lookup"><span data-stu-id="c05a6-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
+# <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a><span data-ttu-id="754ee-102">Procedura: Creare oggetti GenericPrincipal e GenericIdentity</span><span class="sxs-lookup"><span data-stu-id="754ee-102">How to: Create GenericPrincipal and GenericIdentity Objects</span></span>
 
-<span data-ttu-id="c05a6-103">È possibile usare la <xref:System.Security.Principal.GenericIdentity> classe in combinazione con il <xref:System.Security.Principal.GenericPrincipal> classe per creare uno schema di autorizzazione che esista indipendentemente da un dominio di Windows.</span><span class="sxs-lookup"><span data-stu-id="c05a6-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>
+<span data-ttu-id="754ee-103">È possibile usare la <xref:System.Security.Principal.GenericIdentity> classe in combinazione con il <xref:System.Security.Principal.GenericPrincipal> classe per creare uno schema di autorizzazione che esista indipendentemente da un dominio di Windows.</span><span class="sxs-lookup"><span data-stu-id="754ee-103">You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.</span></span>
 
-### <a name="to-create-a-genericprincipal-object"></a><span data-ttu-id="c05a6-104">Per creare un oggetto GenericPrincipal</span><span class="sxs-lookup"><span data-stu-id="c05a6-104">To create a GenericPrincipal object</span></span>
+### <a name="to-create-a-genericprincipal-object"></a><span data-ttu-id="754ee-104">Per creare un oggetto GenericPrincipal</span><span class="sxs-lookup"><span data-stu-id="754ee-104">To create a GenericPrincipal object</span></span>
 
-1. <span data-ttu-id="c05a6-105">Creare una nuova istanza della classe di identità e inizializzarla con il nome che si desidera conservare.</span><span class="sxs-lookup"><span data-stu-id="c05a6-105">Create a new instance of the identity class and initialize it with the name you want it to hold.</span></span> <span data-ttu-id="c05a6-106">Il codice seguente crea un nuovo oggetto **GenericIdentity** e lo inizializza con il nome `MyUser`.</span><span class="sxs-lookup"><span data-stu-id="c05a6-106">The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.</span></span>
+1. <span data-ttu-id="754ee-105">Creare una nuova istanza della classe di identità e inizializzarla con il nome che si desidera conservare.</span><span class="sxs-lookup"><span data-stu-id="754ee-105">Create a new instance of the identity class and initialize it with the name you want it to hold.</span></span> <span data-ttu-id="754ee-106">Il codice seguente crea un nuovo oggetto **GenericIdentity** e lo inizializza con il nome `MyUser`.</span><span class="sxs-lookup"><span data-stu-id="754ee-106">The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.</span></span>
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -36,7 +36,7 @@ ms.locfileid: "57360056"
     GenericIdentity myIdentity = new GenericIdentity("MyUser");
     ```
 
-2. <span data-ttu-id="c05a6-107">Creare una nuova istanza della classe **GenericPrincipal** e inizializzarla con l'oggetto **GenericIdentity** creato in precedenza e una matrice di stringhe che rappresenta i ruoli che si desidera associare a questa entità.</span><span class="sxs-lookup"><span data-stu-id="c05a6-107">Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal.</span></span> <span data-ttu-id="c05a6-108">L'esempio di codice seguente specifica una matrice di stringhe che rappresenta un ruolo amministratore e un ruolo utente.</span><span class="sxs-lookup"><span data-stu-id="c05a6-108">The following code example specifies an array of strings that represent an administrator role and a user role.</span></span> <span data-ttu-id="c05a6-109">Il **GenericPrincipal** viene quindi inizializzato con il precedente **GenericIdentity** e la matrice di stringhe.</span><span class="sxs-lookup"><span data-stu-id="c05a6-109">The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.</span></span>
+2. <span data-ttu-id="754ee-107">Creare una nuova istanza della classe **GenericPrincipal** e inizializzarla con l'oggetto **GenericIdentity** creato in precedenza e una matrice di stringhe che rappresenta i ruoli che si desidera associare a questa entità.</span><span class="sxs-lookup"><span data-stu-id="754ee-107">Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal.</span></span> <span data-ttu-id="754ee-108">L'esempio di codice seguente specifica una matrice di stringhe che rappresenta un ruolo amministratore e un ruolo utente.</span><span class="sxs-lookup"><span data-stu-id="754ee-108">The following code example specifies an array of strings that represent an administrator role and a user role.</span></span> <span data-ttu-id="754ee-109">Il **GenericPrincipal** viene quindi inizializzato con il precedente **GenericIdentity** e la matrice di stringhe.</span><span class="sxs-lookup"><span data-stu-id="754ee-109">The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.</span></span>
 
     ```vb
     Dim myStringArray As String() = {"Manager", "Teller"}
@@ -48,7 +48,7 @@ ms.locfileid: "57360056"
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. <span data-ttu-id="c05a6-110">Usare il codice seguente per allegare l'entità al thread attuale.</span><span class="sxs-lookup"><span data-stu-id="c05a6-110">Use the following code to attach the principal to the current thread.</span></span> <span data-ttu-id="c05a6-111">Questo è particolarmente utile nelle situazioni in cui l'entità deve essere convalidata più volte, deve essere convalidata da un altro codice in esecuzione nell'applicazione o deve essere convalidata da un <xref:System.Security.Permissions.PrincipalPermission> oggetto.</span><span class="sxs-lookup"><span data-stu-id="c05a6-111">This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object.</span></span> <span data-ttu-id="c05a6-112">Si può comunque eseguire la convalida basata sui ruoli sull'oggetto entità senza allegarlo al thread.</span><span class="sxs-lookup"><span data-stu-id="c05a6-112">You can still perform role-based validation on the principal object without attaching it to the thread.</span></span> <span data-ttu-id="c05a6-113">Per maggiori informazioni, vedere [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md).</span><span class="sxs-lookup"><span data-stu-id="c05a6-113">For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).</span></span>
+3. <span data-ttu-id="754ee-110">Usare il codice seguente per allegare l'entità al thread attuale.</span><span class="sxs-lookup"><span data-stu-id="754ee-110">Use the following code to attach the principal to the current thread.</span></span> <span data-ttu-id="754ee-111">Questo è particolarmente utile nelle situazioni in cui l'entità deve essere convalidata più volte, deve essere convalidata da un altro codice in esecuzione nell'applicazione o deve essere convalidata da un <xref:System.Security.Permissions.PrincipalPermission> oggetto.</span><span class="sxs-lookup"><span data-stu-id="754ee-111">This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object.</span></span> <span data-ttu-id="754ee-112">Si può comunque eseguire la convalida basata sui ruoli sull'oggetto entità senza allegarlo al thread.</span><span class="sxs-lookup"><span data-stu-id="754ee-112">You can still perform role-based validation on the principal object without attaching it to the thread.</span></span> <span data-ttu-id="754ee-113">Per maggiori informazioni, vedere [Sostituzione di oggetti Principal](../../../docs/standard/security/replacing-a-principal-object.md).</span><span class="sxs-lookup"><span data-stu-id="754ee-113">For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).</span></span>
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -58,9 +58,9 @@ ms.locfileid: "57360056"
     Thread.CurrentPrincipal = myPrincipal;
     ```
 
-## <a name="example"></a><span data-ttu-id="c05a6-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="c05a6-114">Example</span></span>
+## <a name="example"></a><span data-ttu-id="754ee-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="754ee-114">Example</span></span>
 
-<span data-ttu-id="c05a6-115">L'esempio di codice seguente illustra come creare un'istanza di **GenericPrincipal** e di **GenericIdentity**.</span><span class="sxs-lookup"><span data-stu-id="c05a6-115">The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**.</span></span> <span data-ttu-id="c05a6-116">Questo codice visualizza i valori di questi oggetti nella console.</span><span class="sxs-lookup"><span data-stu-id="c05a6-116">This code displays the values of these objects to the console.</span></span>
+<span data-ttu-id="754ee-115">L'esempio di codice seguente illustra come creare un'istanza di **GenericPrincipal** e di **GenericIdentity**.</span><span class="sxs-lookup"><span data-stu-id="754ee-115">The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**.</span></span> <span data-ttu-id="754ee-116">Questo codice visualizza i valori di questi oggetti nella console.</span><span class="sxs-lookup"><span data-stu-id="754ee-116">This code displays the values of these objects to the console.</span></span>
 
 ```vb
 Imports System
@@ -134,7 +134,7 @@ public class Class1
 }
 ```
 
-<span data-ttu-id="c05a6-117">In esecuzione, l'applicazione visualizza un output simile al seguente.</span><span class="sxs-lookup"><span data-stu-id="c05a6-117">When executed, the application displays output similar to the following.</span></span>
+<span data-ttu-id="754ee-117">In esecuzione, l'applicazione visualizza un output simile al seguente.</span><span class="sxs-lookup"><span data-stu-id="754ee-117">When executed, the application displays output similar to the following.</span></span>
 
 ```
 The Name is: MyIdentity
@@ -142,10 +142,10 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c05a6-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c05a6-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="754ee-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="754ee-118">See also</span></span>
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>
 - <xref:System.Security.Permissions.PrincipalPermission>
-- [<span data-ttu-id="c05a6-119">Sostituzione di oggetti Principal</span><span class="sxs-lookup"><span data-stu-id="c05a6-119">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)
-- [<span data-ttu-id="c05a6-120">Oggetti Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="c05a6-120">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)
+- [<span data-ttu-id="754ee-119">Sostituzione di oggetti Principal</span><span class="sxs-lookup"><span data-stu-id="754ee-119">Replacing a Principal Object</span></span>](../../../docs/standard/security/replacing-a-principal-object.md)
+- [<span data-ttu-id="754ee-120">Oggetti Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="754ee-120">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)

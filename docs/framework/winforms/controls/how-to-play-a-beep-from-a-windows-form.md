@@ -12,16 +12,16 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
 ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913432"
 ---
-# <a name="how-to-play-a-beep-from-a-windows-form"></a><span data-ttu-id="112bd-102">Procedura: Emettere un segnale acustico da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="112bd-102">How to: Play a Beep from a Windows Form</span></span>
-<span data-ttu-id="112bd-103">In questo esempio viene riprodotto un segnale acustico in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="112bd-103">This example plays a beep at run time.</span></span>  
+# <a name="how-to-play-a-beep-from-a-windows-form"></a><span data-ttu-id="7d6b4-102">Procedura: Emettere un segnale acustico da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="7d6b4-102">How to: Play a Beep from a Windows Form</span></span>
+<span data-ttu-id="7d6b4-103">In questo esempio viene riprodotto un segnale acustico in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="7d6b4-103">This example plays a beep at run time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="112bd-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="112bd-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="7d6b4-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="7d6b4-104">Example</span></span>  
   
 ```vb  
 Public Sub OnePing()  
@@ -37,14 +37,14 @@ public void onePing()
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="112bd-105">Il suono riprodotto nel C# esempio di codice è determinato dal <xref:System.Media.SystemSounds.Beep%2A> impostazione del suono del sistema.</span><span class="sxs-lookup"><span data-stu-id="112bd-105">The sound played in the C# code sample is determined by the <xref:System.Media.SystemSounds.Beep%2A> system sound setting.</span></span> <span data-ttu-id="112bd-106">Per altre informazioni, vedere <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="112bd-106">For more information, see <xref:System.Media.SystemSounds>.</span></span>  
+>  <span data-ttu-id="7d6b4-105">Il suono riprodotto nel C# esempio di codice è determinato dal <xref:System.Media.SystemSounds.Beep%2A> impostazione del suono del sistema.</span><span class="sxs-lookup"><span data-stu-id="7d6b4-105">The sound played in the C# code sample is determined by the <xref:System.Media.SystemSounds.Beep%2A> system sound setting.</span></span> <span data-ttu-id="7d6b4-106">Per altre informazioni, vedere <xref:System.Media.SystemSounds>.</span><span class="sxs-lookup"><span data-stu-id="7d6b4-106">For more information, see <xref:System.Media.SystemSounds>.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="112bd-107">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="112bd-107">Compiling the Code</span></span>  
- <span data-ttu-id="112bd-108">Per C#, in questo esempio richiede un riferimento per la <xref:System.Media?displayProperty=nameWithType> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="112bd-108">For C#, this example requires  a reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="7d6b4-107">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="7d6b4-107">Compiling the Code</span></span>  
+ <span data-ttu-id="7d6b4-108">Per C#, in questo esempio richiede un riferimento per la <xref:System.Media?displayProperty=nameWithType> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="7d6b4-108">For C#, this example requires  a reference to the <xref:System.Media?displayProperty=nameWithType> namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="112bd-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="112bd-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d6b4-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7d6b4-109">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [<span data-ttu-id="112bd-110">Procedura: Riprodurre un suono del sistema da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="112bd-110">How to: Play a System Sound from a Windows Form</span></span>](how-to-play-a-system-sound-from-a-windows-form.md)
-- [<span data-ttu-id="112bd-111">Procedura: Riprodurre un suono da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="112bd-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)
+- [<span data-ttu-id="7d6b4-110">Procedura: Riprodurre un suono del sistema da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="7d6b4-110">How to: Play a System Sound from a Windows Form</span></span>](how-to-play-a-system-sound-from-a-windows-form.md)
+- [<span data-ttu-id="7d6b4-111">Procedura: Riprodurre un suono da un Windows Form</span><span class="sxs-lookup"><span data-stu-id="7d6b4-111">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)

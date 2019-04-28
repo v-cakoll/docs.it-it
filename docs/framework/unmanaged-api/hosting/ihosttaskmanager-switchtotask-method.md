@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a50c9f7fc5921d3e5c21dd3566de81ac2249f3dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796604"
 ---
-# <a name="ihosttaskmanagerswitchtotask-method"></a><span data-ttu-id="a8661-102">Metodo IHostTaskManager::SwitchToTask</span><span class="sxs-lookup"><span data-stu-id="a8661-102">IHostTaskManager::SwitchToTask Method</span></span>
-<span data-ttu-id="a8661-103">Notifica all'host che si passa all'attività corrente.</span><span class="sxs-lookup"><span data-stu-id="a8661-103">Notifies the host that it should switch out the current task.</span></span>  
+# <a name="ihosttaskmanagerswitchtotask-method"></a><span data-ttu-id="476ae-102">Metodo IHostTaskManager::SwitchToTask</span><span class="sxs-lookup"><span data-stu-id="476ae-102">IHostTaskManager::SwitchToTask Method</span></span>
+<span data-ttu-id="476ae-103">Notifica all'host che si passa all'attività corrente.</span><span class="sxs-lookup"><span data-stu-id="476ae-103">Notifies the host that it should switch out the current task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8661-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a8661-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="476ae-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="476ae-104">Syntax</span></span>  
   
 ```  
 HRESULT SwitchToTask (  
@@ -35,39 +35,39 @@ HRESULT SwitchToTask (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a8661-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a8661-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="476ae-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="476ae-105">Parameters</span></span>  
  `option`  
- <span data-ttu-id="a8661-106">[in] Uno dei [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) valori di enumerazione, che indica l'azione dell'host devono eseguire se l'operazione richiesta si blocca.</span><span class="sxs-lookup"><span data-stu-id="a8661-106">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) enumeration values, indicating the action the host should take if the requested operation blocks.</span></span>  
+ <span data-ttu-id="476ae-106">[in] Uno dei [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) valori di enumerazione, che indica l'azione dell'host devono eseguire se l'operazione richiesta si blocca.</span><span class="sxs-lookup"><span data-stu-id="476ae-106">[in] One of the [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) enumeration values, indicating the action the host should take if the requested operation blocks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a8661-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="a8661-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="476ae-107">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="476ae-107">Return Value</span></span>  
   
-|<span data-ttu-id="a8661-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a8661-108">HRESULT</span></span>|<span data-ttu-id="a8661-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a8661-109">Description</span></span>|  
+|<span data-ttu-id="476ae-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="476ae-108">HRESULT</span></span>|<span data-ttu-id="476ae-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="476ae-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a8661-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="a8661-110">S_OK</span></span>|<span data-ttu-id="a8661-111">`SwitchToTask` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="a8661-111">`SwitchToTask` returned successfully.</span></span>|  
-|<span data-ttu-id="a8661-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a8661-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a8661-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="a8661-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a8661-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a8661-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a8661-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="a8661-115">The call timed out.</span></span>|  
-|<span data-ttu-id="a8661-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a8661-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a8661-117">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="a8661-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a8661-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a8661-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a8661-119">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="a8661-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a8661-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a8661-120">E_FAIL</span></span>|<span data-ttu-id="a8661-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="a8661-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a8661-122">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="a8661-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a8661-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="a8661-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="476ae-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="476ae-110">S_OK</span></span>|<span data-ttu-id="476ae-111">`SwitchToTask` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="476ae-111">`SwitchToTask` returned successfully.</span></span>|  
+|<span data-ttu-id="476ae-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="476ae-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="476ae-113">Common language runtime (CLR) non è stato caricato in un processo oppure si trova in uno stato in cui non può eseguire codice gestito o elaborare correttamente la chiamata.</span><span class="sxs-lookup"><span data-stu-id="476ae-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="476ae-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="476ae-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="476ae-115">Timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="476ae-115">The call timed out.</span></span>|  
+|<span data-ttu-id="476ae-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="476ae-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="476ae-117">Il chiamante non possiede il blocco.</span><span class="sxs-lookup"><span data-stu-id="476ae-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="476ae-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="476ae-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="476ae-119">Un evento è stato annullato durante un thread bloccato o fiber è rimasta in attesa su di esso.</span><span class="sxs-lookup"><span data-stu-id="476ae-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="476ae-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="476ae-120">E_FAIL</span></span>|<span data-ttu-id="476ae-121">Si è verificato un errore irreversibile sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="476ae-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="476ae-122">Quando un metodo di E_FAIL viene restituito, CLR non è più utilizzabile all'interno del processo.</span><span class="sxs-lookup"><span data-stu-id="476ae-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="476ae-123">Le chiamate successive ai metodi di hosting restituiranno HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="476ae-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a8661-124">Note</span><span class="sxs-lookup"><span data-stu-id="a8661-124">Remarks</span></span>  
- <span data-ttu-id="a8661-125">L'host è possibile passare in un'altra attività come richiesto o necessario.</span><span class="sxs-lookup"><span data-stu-id="a8661-125">The host can switch in another task as desired or needed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="476ae-124">Note</span><span class="sxs-lookup"><span data-stu-id="476ae-124">Remarks</span></span>  
+ <span data-ttu-id="476ae-125">L'host è possibile passare in un'altra attività come richiesto o necessario.</span><span class="sxs-lookup"><span data-stu-id="476ae-125">The host can switch in another task as desired or needed.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a8661-126">`SwitchToTask` non specifica quali attività deve passare all'host di; solo l'attività che si passa dalla specifica.</span><span class="sxs-lookup"><span data-stu-id="a8661-126">`SwitchToTask` does not specify which task the host should switch to; it specifies only the task that it should switch from.</span></span>  
+>  <span data-ttu-id="476ae-126">`SwitchToTask` non specifica quali attività deve passare all'host di; solo l'attività che si passa dalla specifica.</span><span class="sxs-lookup"><span data-stu-id="476ae-126">`SwitchToTask` does not specify which task the host should switch to; it specifies only the task that it should switch from.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a8661-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a8661-127">Requirements</span></span>  
- <span data-ttu-id="a8661-128">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8661-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="476ae-127">Requisiti</span><span class="sxs-lookup"><span data-stu-id="476ae-127">Requirements</span></span>  
+ <span data-ttu-id="476ae-128">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="476ae-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8661-129">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a8661-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="476ae-129">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="476ae-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a8661-130">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="a8661-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="476ae-130">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="476ae-130">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a8661-131">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8661-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="476ae-131">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="476ae-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8661-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a8661-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="476ae-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="476ae-132">See also</span></span>
 
-- [<span data-ttu-id="a8661-133">Interfaccia ICLRTask</span><span class="sxs-lookup"><span data-stu-id="a8661-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="a8661-134">Interfaccia ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="a8661-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="a8661-135">Interfaccia IHostTask</span><span class="sxs-lookup"><span data-stu-id="a8661-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="a8661-136">Interfaccia IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="a8661-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="476ae-133">Interfaccia ICLRTask</span><span class="sxs-lookup"><span data-stu-id="476ae-133">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="476ae-134">Interfaccia ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="476ae-134">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="476ae-135">Interfaccia IHostTask</span><span class="sxs-lookup"><span data-stu-id="476ae-135">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="476ae-136">Interfaccia IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="476ae-136">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
