@@ -17,39 +17,39 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 159cebc76f732629ed84a3b6c9041cc15f8bbb69
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763763"
 ---
-# <a name="icordebugfunction2-interface"></a><span data-ttu-id="d2764-102">Interfaccia ICorDebugFunction2</span><span class="sxs-lookup"><span data-stu-id="d2764-102">ICorDebugFunction2 Interface</span></span>
+# <a name="icordebugfunction2-interface"></a><span data-ttu-id="5338e-102">Interfaccia ICorDebugFunction2</span><span class="sxs-lookup"><span data-stu-id="5338e-102">ICorDebugFunction2 Interface</span></span>
 
-<span data-ttu-id="d2764-103">Estende logicamente l'interfaccia ICorDebugFunction per fornire supporto per Just My Code debug passo-passo, che ignora il codice non utente.</span><span class="sxs-lookup"><span data-stu-id="d2764-103">Logically extends the ICorDebugFunction interface to provide support for Just My Code step-through debugging, which skips non-user code.</span></span>  
+<span data-ttu-id="5338e-103">Estende logicamente l'interfaccia ICorDebugFunction per fornire supporto per Just My Code debug passo-passo, che ignora il codice non utente.</span><span class="sxs-lookup"><span data-stu-id="5338e-103">Logically extends the ICorDebugFunction interface to provide support for Just My Code step-through debugging, which skips non-user code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d2764-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="d2764-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5338e-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="5338e-104">Methods</span></span>  
   
-|<span data-ttu-id="d2764-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="d2764-105">Method</span></span>|<span data-ttu-id="d2764-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d2764-106">Description</span></span>|  
+|<span data-ttu-id="5338e-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="5338e-105">Method</span></span>|<span data-ttu-id="5338e-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5338e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d2764-107">Metodo EnumerateNativeCode</span><span class="sxs-lookup"><span data-stu-id="d2764-107">EnumerateNativeCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|<span data-ttu-id="d2764-108">(Non ancora implementato). Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum contenente le istruzioni di codice nativo nella funzione di cui viene fatto riferimento dall'oggetto ICorDebugFunction2.</span><span class="sxs-lookup"><span data-stu-id="d2764-108">(Not yet implemented.) Gets an interface pointer to an ICorDebugCodeEnum that contains the native code statements in the function referenced by this ICorDebugFunction2 object.</span></span>|  
-|[<span data-ttu-id="d2764-109">Metodo GetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="d2764-109">GetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|<span data-ttu-id="d2764-110">Ottiene un valore che indica se questa funzione è contrassegnata come codice utente.</span><span class="sxs-lookup"><span data-stu-id="d2764-110">Gets a value that indicates whether this function is marked as user code.</span></span>|  
-|[<span data-ttu-id="d2764-111">Metodo GetVersionNumber</span><span class="sxs-lookup"><span data-stu-id="d2764-111">GetVersionNumber Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|<span data-ttu-id="d2764-112">Ottiene la versione di modifica e continuazione di questa funzione.</span><span class="sxs-lookup"><span data-stu-id="d2764-112">Gets the Edit and Continue version of this function.</span></span>|  
-|[<span data-ttu-id="d2764-113">Metodo SetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="d2764-113">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|<span data-ttu-id="d2764-114">Contrassegna questa funzione per Just My Code l'esecuzione di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="d2764-114">Marks this function for Just My Code stepping.</span></span>|  
+|[<span data-ttu-id="5338e-107">Metodo EnumerateNativeCode</span><span class="sxs-lookup"><span data-stu-id="5338e-107">EnumerateNativeCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|<span data-ttu-id="5338e-108">(Non ancora implementato). Ottiene un puntatore a interfaccia a un oggetto ICorDebugCodeEnum contenente le istruzioni di codice nativo nella funzione di cui viene fatto riferimento dall'oggetto ICorDebugFunction2.</span><span class="sxs-lookup"><span data-stu-id="5338e-108">(Not yet implemented.) Gets an interface pointer to an ICorDebugCodeEnum that contains the native code statements in the function referenced by this ICorDebugFunction2 object.</span></span>|  
+|[<span data-ttu-id="5338e-109">Metodo GetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="5338e-109">GetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|<span data-ttu-id="5338e-110">Ottiene un valore che indica se questa funzione è contrassegnata come codice utente.</span><span class="sxs-lookup"><span data-stu-id="5338e-110">Gets a value that indicates whether this function is marked as user code.</span></span>|  
+|[<span data-ttu-id="5338e-111">Metodo GetVersionNumber</span><span class="sxs-lookup"><span data-stu-id="5338e-111">GetVersionNumber Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|<span data-ttu-id="5338e-112">Ottiene la versione di modifica e continuazione di questa funzione.</span><span class="sxs-lookup"><span data-stu-id="5338e-112">Gets the Edit and Continue version of this function.</span></span>|  
+|[<span data-ttu-id="5338e-113">Metodo SetJMCStatus</span><span class="sxs-lookup"><span data-stu-id="5338e-113">SetJMCStatus Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|<span data-ttu-id="5338e-114">Contrassegna questa funzione per Just My Code l'esecuzione di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="5338e-114">Marks this function for Just My Code stepping.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d2764-115">Note</span><span class="sxs-lookup"><span data-stu-id="d2764-115">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5338e-115">Note</span><span class="sxs-lookup"><span data-stu-id="5338e-115">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d2764-116">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="d2764-116">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="5338e-116">Questa interfaccia non supporta la chiamata in modalità remota, tra computer o tra processi.</span><span class="sxs-lookup"><span data-stu-id="5338e-116">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d2764-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d2764-117">Requirements</span></span>  
- <span data-ttu-id="d2764-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d2764-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5338e-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="5338e-117">Requirements</span></span>  
+ <span data-ttu-id="5338e-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5338e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d2764-119">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d2764-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5338e-119">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5338e-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d2764-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d2764-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5338e-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5338e-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d2764-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d2764-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5338e-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5338e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2764-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2764-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5338e-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5338e-122">See also</span></span>
 
-- [<span data-ttu-id="d2764-123">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="d2764-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5338e-123">Interfacce di debug</span><span class="sxs-lookup"><span data-stu-id="5338e-123">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
