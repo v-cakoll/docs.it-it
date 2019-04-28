@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669316"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Considerazioni aggiuntive sulla sicurezza in Windows Form
 Le impostazioni di sicurezza di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] potrebbero modificare l'esecuzione di un'applicazione in un ambiente ad attendibilità parziale rispetto al computer locale. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] limita l'accesso a tali risorse locali critiche, ad esempio il file system, la rete e le API non gestite. Le impostazioni di sicurezza influiscono sulla possibilità di chiamare l'API di Windows Microsoft o altre API che non possono essere verificato dal sistema di sicurezza. La sicurezza influisce inoltre su altri aspetti dell'applicazione, inclusi l'accesso ai file e ai dati e la stampa. Per altre informazioni sull'accesso a file e dati in un ambiente ad attendibilità parziale, vedere [More Secure File and Data Access in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md) (Accesso più sicuro a file e dati in Windows Form). Per altre informazioni sulla stampa in un ambiente ad attendibilità parziale, vedere [More Secure Printing in Windows Forms](more-secure-printing-in-windows-forms.md) (Stampa più sicura in Windows Form).  

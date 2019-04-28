@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665793"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Espressioni lambda (Visual Basic)
 Oggetto *espressione lambda* è una funzione o subroutine senza un nome che può essere usato ovunque un delegato è valido. Le espressioni lambda possono essere funzioni o subroutine e possono essere a riga singola o multilinea. È possibile passare i valori dall'ambito corrente a un'espressione lambda.  
@@ -43,27 +43,27 @@ Oggetto *espressione lambda* è una funzione o subroutine senza un nome che può
 ## <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda  
  La sintassi di un'espressione lambda è simile a quello di una subroutine o una funzione standard. Le differenze sono i seguenti:  
   
--   Un'espressione lambda non ha un nome.  
+- Un'espressione lambda non ha un nome.  
   
--   Le espressioni lambda non possono avere modificatori, ad esempio `Overloads` o `Overrides`.  
+- Le espressioni lambda non possono avere modificatori, ad esempio `Overloads` o `Overrides`.  
   
--   Le funzioni lambda a riga singola non utilizzano un `As` clausola per designare il tipo restituito. Al contrario, il tipo viene dedotto dal valore che restituisce il corpo dell'espressione lambda. Ad esempio, se il corpo dell'espressione lambda `cust.City = "London"`, il tipo restituito è `Boolean`.  
+- Le funzioni lambda a riga singola non utilizzano un `As` clausola per designare il tipo restituito. Al contrario, il tipo viene dedotto dal valore che restituisce il corpo dell'espressione lambda. Ad esempio, se il corpo dell'espressione lambda `cust.City = "London"`, il tipo restituito è `Boolean`.  
   
--   Nelle funzioni lambda su più righe, è possibile specificare un tipo restituito tramite un `As` clausola, oppure omettere la `As` clausola in modo che il tipo restituito è dedotto. Quando la `As` clausola viene omessa per una funzione lambda su più righe, il tipo restituito viene dedotto il tipo dominante da tutti i `Return` istruzioni nella funzione lambda su più righe. Il *tipo dominante* è un tipo univoco in cui tutti gli altri tipi possono ampliarsi. Se non è possibile determinare il tipo univoco, il tipo dominante è il tipo univoco in cui possono restringersi tutti gli altri tipi nella matrice. Se nessuno di questi tipi univoci può essere determinato, il tipo dominante è `Object`. In questo caso, se `Option Strict` è impostata su `On`, si verifica un errore del compilatore.  
+- Nelle funzioni lambda su più righe, è possibile specificare un tipo restituito tramite un `As` clausola, oppure omettere la `As` clausola in modo che il tipo restituito è dedotto. Quando la `As` clausola viene omessa per una funzione lambda su più righe, il tipo restituito viene dedotto il tipo dominante da tutti i `Return` istruzioni nella funzione lambda su più righe. Il *tipo dominante* è un tipo univoco in cui tutti gli altri tipi possono ampliarsi. Se non è possibile determinare il tipo univoco, il tipo dominante è il tipo univoco in cui possono restringersi tutti gli altri tipi nella matrice. Se nessuno di questi tipi univoci può essere determinato, il tipo dominante è `Object`. In questo caso, se `Option Strict` è impostata su `On`, si verifica un errore del compilatore.  
   
      Ad esempio, se le espressioni fornito per il `Return` istruzione contengono valori di tipo `Integer`, `Long`, e `Double`, la matrice risultante è di tipo `Double`. Entrambe `Integer` e `Long` ampliarsi `Double` e solo `Double`. `Double` è pertanto il tipo dominante. Per altre informazioni, vedere [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   Il corpo di una funzione a riga singola deve essere un'espressione che restituisce un valore, non un'istruzione. È presente alcun `Return` istruzione per le funzioni a riga singola. Il valore restituito dalla funzione a riga singola è il valore dell'espressione nel corpo della funzione.  
+- Il corpo di una funzione a riga singola deve essere un'espressione che restituisce un valore, non un'istruzione. È presente alcun `Return` istruzione per le funzioni a riga singola. Il valore restituito dalla funzione a riga singola è il valore dell'espressione nel corpo della funzione.  
   
--   Il corpo di una subroutine a riga singola deve essere a riga singola istruzione.  
+- Il corpo di una subroutine a riga singola deve essere a riga singola istruzione.  
   
--   Le funzioni a riga singola e le subroutine non includono un' `End Function` o `End Sub` istruzione.  
+- Le funzioni a riga singola e le subroutine non includono un' `End Function` o `End Sub` istruzione.  
   
--   È possibile specificare il tipo di dati di un parametro di espressione lambda con la `As` parola chiave o il tipo di dati del parametro può essere dedotto. Tutti i parametri devono avere specificati tipi di dati o tutti devono essere dedotti.  
+- È possibile specificare il tipo di dati di un parametro di espressione lambda con la `As` parola chiave o il tipo di dati del parametro può essere dedotto. Tutti i parametri devono avere specificati tipi di dati o tutti devono essere dedotti.  
   
--   `Optional` e `Paramarray` parametri non sono consentiti.  
+- `Optional` e `Paramarray` parametri non sono consentiti.  
   
--   I parametri generici non sono consentiti.  
+- I parametri generici non sono consentiti.  
   
 ## <a name="async-lambdas"></a>Espressioni lambda asincrone  
  È possibile creare con facilità le espressioni lambda e le istruzioni che includono l'elaborazione asincrona usando il [Async](../../../../visual-basic/language-reference/modifiers/async.md) e [operatore Await](../../../../visual-basic/language-reference/operators/await-operator.md) parole chiave. Nell'esempio seguente di Windows Form è presente un gestore eventi che chiama e attende un metodo asincrono, `ExampleMethodAsync`.  
@@ -118,15 +118,15 @@ End Class
   
  L'esempio seguente illustra l'ampia gamma di diritti di accesso dell'espressione lambda annidata. Quando viene eseguita l'espressione lambda restituita da `Main` come `aDel`, accede a questi elementi:  
   
--   Un campo della classe in cui è definito: `aField`  
+- Un campo della classe in cui è definito: `aField`  
   
--   Una proprietà della classe in cui è definito: `aProp`  
+- Una proprietà della classe in cui è definito: `aProp`  
   
--   Un parametro di metodo `functionWithNestedLambda`, in cui è definito: `level1`  
+- Un parametro di metodo `functionWithNestedLambda`, in cui è definito: `level1`  
   
--   Una variabile locale di `functionWithNestedLambda`: `localVar`  
+- Una variabile locale di `functionWithNestedLambda`: `localVar`  
   
--   Un parametro dell'espressione lambda in cui è annidato: `level2`  
+- Un parametro dell'espressione lambda in cui è annidato: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>Esempi  
   
--   L'esempio seguente definisce un'espressione lambda che restituisce `True` se l'argomento che ammette valori null è stato assegnato un valore, e `False` ha valore `Nothing`.  
+- L'esempio seguente definisce un'espressione lambda che restituisce `True` se l'argomento che ammette valori null è stato assegnato un valore, e `False` ha valore `Nothing`.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   L'esempio seguente definisce un'espressione lambda che restituisce l'indice dell'ultimo elemento in una matrice.  
+- L'esempio seguente definisce un'espressione lambda che restituisce l'indice dell'ultimo elemento in una matrice.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

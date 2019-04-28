@@ -3,28 +3,28 @@ title: Supporto per le query
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641515"
 ---
 # <a name="support-for-queries"></a>Supporto per le query
 L'archivio di istanze del flusso di lavoro SQL registra un set di proprietà note nell'archivio. Gli utenti possono eseguire query per le istanze basate su queste proprietà. Nell'elenco seguente sono contenute alcune di queste proprietà note:  
   
--   **Nome del sito.** Nome del sito Web che contiene il servizio.  
+- **Nome del sito.** Nome del sito Web che contiene il servizio.  
   
--   **Percorso relativo dell'applicazione.** Percorso dell'applicazione relativo al sito Web.  
+- **Percorso relativo dell'applicazione.** Percorso dell'applicazione relativo al sito Web.  
   
--   **Percorso relativo del servizio.** Percorso del servizio relativo all'applicazione.  
+- **Percorso relativo del servizio.** Percorso del servizio relativo all'applicazione.  
   
--   **Nome del servizio.** Nome del servizio.  
+- **Nome del servizio.** Nome del servizio.  
   
--   **Servizio Namespace.** Nome dello spazio dei nomi utilizzato dal servizio.  
+- **Servizio Namespace.** Nome dello spazio dei nomi utilizzato dal servizio.  
   
--   **Computer corrente.**  
+- **Computer corrente.**  
   
--   **Ultimo macchina**. Computer su cui l'istanza del servizio flusso di lavoro è stata eseguita l'ultima volta.  
+- **Ultimo macchina**. Computer su cui l'istanza del servizio flusso di lavoro è stata eseguita l'ultima volta.  
   
 > [!NOTE]
 >  Per gli scenari indipendenti che usano l'host del servizio del flusso di lavoro vengono popolate solo le ultime quattro proprietà. Per gli scenari dell'applicazione flusso di lavoro, viene popolata solo l'ultima proprietà.  

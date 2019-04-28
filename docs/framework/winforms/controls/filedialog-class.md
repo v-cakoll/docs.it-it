@@ -5,11 +5,11 @@ helpviewer_keywords:
 - FileDialog class [Windows Forms]
 ms.assetid: 85a8fb62-c7d9-4a30-9b74-1cd10efe6ccb
 ms.openlocfilehash: e8c3a0abe00f1f209c138dff234cdcabf766d979
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651493"
 ---
 # <a name="filedialog-class"></a>Classe FileDialog
 I moduli di Windows <xref:System.Windows.Forms.FileDialog> classe è la classe di base comune per il <xref:System.Windows.Forms.OpenFileDialog> e <xref:System.Windows.Forms.SaveFileDialog> componenti. È possibile apportare modifiche per il <xref:System.Windows.Forms.FileDialog> classe che influiscono sull'aspetto e il comportamento di queste finestre di dialogo, a seconda della versione di Windows in cui viene eseguita l'applicazione.  

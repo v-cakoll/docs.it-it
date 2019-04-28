@@ -3,11 +3,11 @@ title: Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607496"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
 Il **keyref** elemento consente di stabilire collegamenti tra gli elementi all'interno di un documento. Questo elemento ha quindi una funzione simile a quella della relazione di chiave esterna in un database relazionale. Se uno schema viene specificato il **keyref** elemento, l'elemento viene convertito durante il processo di mapping dello schema per un vincolo di chiave esterna corrispondente nelle colonne delle tabelle del <xref:System.Data.DataSet>. Per impostazione predefinita, il **keyref** elemento genera anche una relazione, con la **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** proprietà specificate per la relazione.  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  Inoltre, il **set di dati** definisce i vincoli seguenti:  
   
--   Un vincolo unique per la **ordine** tabella.  
+- Un vincolo unique per la **ordine** tabella.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Una relazione tra il **ordine** e **OrderDetail** tabelle. Il **Nested** è impostata su **False** perché i due elementi non annidati nello schema.  
+- Una relazione tra il **ordine** e **OrderDetail** tabelle. Il **Nested** è impostata su **False** perché i due elementi non annidati nello schema.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Un vincolo di chiave esterna nella **OrderDetail** tabella.  
+- Un vincolo di chiave esterna nella **OrderDetail** tabella.  
   
     ```  
               ConstraintName: OrderNoRef  

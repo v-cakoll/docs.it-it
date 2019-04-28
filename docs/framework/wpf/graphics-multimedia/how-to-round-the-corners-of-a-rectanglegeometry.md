@@ -8,11 +8,11 @@ helpviewer_keywords:
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
 ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651397"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Procedura: Arrotondare gli angoli di un oggetto RectangleGeometry
 Per arrotondare gli angoli di un <xref:System.Windows.Media.RectangleGeometry>, impostare il <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> e <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> proprietà su un valore maggiore di zero. Più valori, più rotondi sono angoli del rettangolo.  

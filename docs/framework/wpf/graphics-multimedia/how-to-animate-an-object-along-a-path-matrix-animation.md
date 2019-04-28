@@ -9,11 +9,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
 ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651441"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Procedura: Aggiungere un'animazione a un oggetto lungo un tracciato (animazione Matrix)
 Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> classe per animare un oggetto lungo un tracciato definito da un <xref:System.Windows.Media.PathGeometry>.  
@@ -21,11 +21,11 @@ Questo esempio illustra come usare il <xref:System.Windows.Media.Animation.Matri
 ## <a name="example"></a>Esempio  
  L'esempio seguente aggiunge un'animazione a un oggetto lungo un tracciato effettuando le operazioni seguenti:  
   
--   Si applica un <xref:System.Windows.Media.MatrixTransform> all'oggetto per spostarlo.  
+- Si applica un <xref:System.Windows.Media.MatrixTransform> all'oggetto per spostarlo.  
   
--   Definisce il percorso utilizzando un <xref:System.Windows.Media.PathGeometry>.  
+- Definisce il percorso utilizzando un <xref:System.Windows.Media.PathGeometry>.  
   
--   Crea una <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> e lo usa per animare la <xref:System.Windows.Media.Matrix> proprietà del <xref:System.Windows.Media.MatrixTransform>. Il <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> accetta il <xref:System.Windows.Media.PathGeometry> e lo usa per generare <xref:System.Windows.Media.Matrix> valori.  
+- Crea una <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> e lo usa per animare la <xref:System.Windows.Media.Matrix> proprietà del <xref:System.Windows.Media.MatrixTransform>. Il <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> accetta il <xref:System.Windows.Media.PathGeometry> e lo usa per generare <xref:System.Windows.Media.Matrix> valori.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathexample.xaml#matrixanimationusingpathwholepage)]  
   

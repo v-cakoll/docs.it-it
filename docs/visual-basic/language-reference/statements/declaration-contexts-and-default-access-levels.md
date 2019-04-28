@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638186"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Contesti delle dichiarazioni e livelli di accesso predefiniti (Visual Basic)
 Questo argomento descrive i tipi di Visual Basic possono essere dichiarati all'interno di altri tipi, e ciò che i livelli di accesso per impostazione predefinita se non diversamente specificato.  
@@ -24,11 +24,11 @@ Questo argomento descrive i tipi di Visual Basic possono essere dichiarati all'i
   
  I livelli per contesti delle dichiarazioni sono i seguenti:  
   
--   *A livello di Namespace* , ovvero all'interno di un file di origine o lo spazio dei nomi ma non all'interno di una classe, struttura, modulo o interfaccia  
+- *A livello di Namespace* , ovvero all'interno di un file di origine o lo spazio dei nomi ma non all'interno di una classe, struttura, modulo o interfaccia  
   
--   *Livello di modulo* , ovvero all'interno di una classe, struttura, modulo o interfaccia, ma non all'interno di una routine o un blocco  
+- *Livello di modulo* , ovvero all'interno di una classe, struttura, modulo o interfaccia, ma non all'interno di una routine o un blocco  
   
--   *Livello di routine* , ovvero all'interno di una routine o un blocco (ad esempio `If` o `For`)  
+- *Livello di routine* , ovvero all'interno di una routine o un blocco (ad esempio `If` o `For`)  
   
  La tabella seguente illustra i livelli di accesso predefinito per vari elementi di programmazione dichiarati, a seconda della loro contesti delle dichiarazioni.  
   

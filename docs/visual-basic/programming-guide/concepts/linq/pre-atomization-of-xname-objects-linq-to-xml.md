@@ -3,11 +3,11 @@ title: Pre-atomizzazione di oggetti XName (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
 ms.openlocfilehash: 250b7aa8060c8196c28725fded090e2a63a0ee54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665845"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Pre-atomizzazione di oggetti XName (LINQ to XML) (Visual Basic)
 Per migliorare le prestazioni in LINQ to XML, è possibile pre-atomizzare gli oggetti <xref:System.Xml.Linq.XName>. Questa operazione consiste nell'assegnare una stringa a un oggetto <xref:System.Xml.Linq.XName> prima di creare l'albero XML usando i costruttori delle classi <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute>. Anziché passare una stringa al costruttore, che utilizzerebbe la conversione implicita da stringa a <xref:System.Xml.Linq.XName>, è possibile passare l'oggetto <xref:System.Xml.Linq.XName> inizializzato.  

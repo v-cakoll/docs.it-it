@@ -3,11 +3,11 @@ title: 'Procedura: Scrivere una Query per trovare elementi in base al contesto (
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
 ms.openlocfilehash: 0981da1e35f2c0b6023c009d4f62c95a612d8971
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614883"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Procedura: Scrivere una Query per trovare elementi in base al contesto (Visual Basic)
 A volte può essere necessario scrivere una query per selezionare gli elementi in base al contesto. In questo caso è anche possibile scegliere un filtro basato sugli elementi di pari livello precedenti o successivi oppure sugli elementi figlio o sui predecessori.  

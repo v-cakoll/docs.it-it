@@ -3,11 +3,11 @@ title: Attivazione di istanze
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641666"
 ---
 # <a name="instance-activation"></a>Attivazione di istanze
 L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che attiva e rileva periodicamente istanze del flusso di lavoro eseguibili o attivabili nel database di persistenza. Se rileva un'istanza del flusso di lavoro eseguibile, notifica all'host del flusso di lavoro la possibilità di attivare l'istanza. Se l'archivio di istanze rileva un'istanza del flusso di lavoro attivabile, invia una notifica a un host generico che attiva un host del flusso di lavoro il quale, a sua volta, esegue l'istanza del flusso di lavoro. Nelle sezioni seguenti di questo argomento viene illustrato dettagliatamente il processo di attivazione delle istanze.  
@@ -15,11 +15,11 @@ L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che a
 ## <a name="RunnableSection"></a> Rilevamento e attivazione di istanze del flusso di lavoro eseguibili  
  La Store di istanza del flusso di lavoro SQL considera un'istanza del flusso di lavoro *eseguibili* se l'istanza non è nello stato sospeso o il completamento e soddisfa le condizioni seguenti:  
   
--   L'istanza è sbloccata e dispone di un timer in sospeso scaduto.  
+- L'istanza è sbloccata e dispone di un timer in sospeso scaduto.  
   
--   Nell'istanza è presente un blocco scaduto.  
+- Nell'istanza è presente un blocco scaduto.  
   
--   L'istanza viene sbloccata e il suo stato sia **Executing**.  
+- L'istanza viene sbloccata e il suo stato sia **Executing**.  
   
  L'archivio di istanze del flusso di lavoro SQL genera l'oggetto <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> quando rileva un'istanza eseguibile. Successivamente, l'oggetto SqlWorkflowInstanceStore arresta il monitoraggio finché l'oggetto <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> non viene chiamato una volta sull'archivio.  
   

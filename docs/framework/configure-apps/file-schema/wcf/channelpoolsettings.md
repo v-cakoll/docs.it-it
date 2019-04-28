@@ -3,11 +3,11 @@ title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673329"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 Specifica le impostazioni del pool di canali per un'associazione personalizzata.  
@@ -52,11 +52,11 @@ Specifica le impostazioni del pool di canali per un'associazione personalizzata.
   
  `ChannelPoolSettings` specifica tre quote:  
   
--   La quota `idleTimeout` viene usata per ridurre il rischio di attacchi di tipo Denial of Service (DoS) nel server basati sul blocco di risorse per periodi di tempo prolungati. Nel client, l'impostazione del valore corretto può aumentare l'affidabilità della connessione con il servizio. Il valore predefinito è basato su un'allocazione conservativamente modesta di risorse. È adatto per un ambiente di sviluppo e in scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono rivedere il valore se un'installazione sta esaurendo le risorse o se le connessioni sono limitate nonostante la disponibilità di risorse aggiuntive.  
+- La quota `idleTimeout` viene usata per ridurre il rischio di attacchi di tipo Denial of Service (DoS) nel server basati sul blocco di risorse per periodi di tempo prolungati. Nel client, l'impostazione del valore corretto può aumentare l'affidabilità della connessione con il servizio. Il valore predefinito è basato su un'allocazione conservativamente modesta di risorse. È adatto per un ambiente di sviluppo e in scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono rivedere il valore se un'installazione sta esaurendo le risorse o se le connessioni sono limitate nonostante la disponibilità di risorse aggiuntive.  
   
--   La quota `leaseTimeout` viene usata per l'integrazione con i servizi di bilanciamento del carico e per migliorare l'affidabilità. Il valore predefinito è basato su un'allocazione conservativa di risorse. È adatto per un ambiente di sviluppo e in scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono rivedere il valore se un'installazione sta esaurendo le risorse o se le connessioni sono limitate nonostante la disponibilità di risorse aggiuntive.  
+- La quota `leaseTimeout` viene usata per l'integrazione con i servizi di bilanciamento del carico e per migliorare l'affidabilità. Il valore predefinito è basato su un'allocazione conservativa di risorse. È adatto per un ambiente di sviluppo e in scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono rivedere il valore se un'installazione sta esaurendo le risorse o se le connessioni sono limitate nonostante la disponibilità di risorse aggiuntive.  
   
--   La quota `maxOutboundChannelsPerEndpoint` imposta limiti della cache sia nel server che nel client ed è usata per migliorare l'affidabilità. Il valore predefinito è basato su un'allocazione conservativamente modesta di risorse idonee per ambienti di sviluppo e scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono rivedere il valore se un'installazione sta esaurendo le risorse o se le connessioni sono limitate nonostante la disponibilità di risorse aggiuntive.  
+- La quota `maxOutboundChannelsPerEndpoint` imposta limiti della cache sia nel server che nel client ed è usata per migliorare l'affidabilità. Il valore predefinito è basato su un'allocazione conservativamente modesta di risorse idonee per ambienti di sviluppo e scenari con installazioni di piccole dimensioni. Gli amministratori del servizio devono rivedere il valore se un'installazione sta esaurendo le risorse o se le connessioni sono limitate nonostante la disponibilità di risorse aggiuntive.  
   
 ## <a name="see-also"></a>Vedere anche
 

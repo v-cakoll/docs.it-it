@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
 ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663362"
 ---
 # <a name="structures-visual-basic"></a>Strutture (Visual Basic)
 Oggetto *struttura* è una generalizzazione del tipo definito dall'utente (UDT) supportato da versioni precedenti di Visual Basic. Oltre ai campi, le strutture possono esporre le proprietà, metodi ed eventi. È possibile dichiarare i livelli di accesso singolo per ogni campo e una struttura può implementare una o più interfacce.  

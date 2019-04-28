@@ -3,11 +3,11 @@ title: Overload degli operatori
 description: Informazioni su come eseguire l'overload di operatori aritmetici in una classe o un tipo di record e a livello globale in F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666248"
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 
@@ -97,7 +97,7 @@ La tabella seguente illustra gli operatori standard e i relativi nomi generati.
 
 Altre combinazioni di caratteri dell'operatore che non sono elencati di seguito possono essere utilizzati come operatori e hanno nomi composti da concatenando i nomi per i singoli caratteri della tabella seguente. Ad esempio +! diventa `op_PlusBang`.
 
-|Carattere dell'operatore|nome|
+|Carattere dell'operatore|Nome|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|

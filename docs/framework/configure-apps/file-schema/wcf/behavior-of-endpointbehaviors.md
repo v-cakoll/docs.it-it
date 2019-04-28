@@ -3,11 +3,11 @@ title: <behavior> di <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
 ms.openlocfilehash: 34306f99f2343c987700e964aaa9800aa3f488fa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673550"
 ---
 # <a name="behavior-of-endpointbehaviors"></a>\<comportamento > di \<endpointBehaviors >
 L'elemento `behavior` contiene una raccolta di impostazioni per il comportamento di un endpoint. Ogni comportamento è indicizzato in base al relativo `name`. Gli endpoint possono essere collegati a ciascun comportamento tramite questo nome. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per altre informazioni sulla configurazione predefinita e associazioni privi di nome e i comportamenti, vedere [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) e [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640508"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ridimensionamento automatico in Windows Form
 
 Con il ridimensionamento automatico, un form e i relativi controlli, progettati su un computer con una determinata risoluzione dello schermo o tipo di carattere del sistema, possono essere visualizzati correttamente su un altro computer con una risoluzione dello schermo o tipo di carattere del sistema diverso. Questa funzionalità assicura che il form e i controlli vengano ridimensionati in modo coerente con le finestre native e le altre applicazioni presenti sia sui computer degli utenti che su quelli di altri sviluppatori. Il supporto di [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per il ridimensionamento automatico e gli stili di visualizzazione consente alle applicazioni [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] di avere sempre un aspetto coerente, se confrontate con le applicazioni Windows native sul computer di ogni utente.
 
-Il ridimensionamento automatico funziona per lo più come previsto in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0 e successive. Le modifiche delle combinazioni tipi di carattere tuttavia possono essere problematiche. Per un esempio di come risolvere questo problema, vedere [procedura: rispondere alle modifiche dello schema del tipo di carattere in una Windows Forms Application](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+Il ridimensionamento automatico funziona per lo più come previsto in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] versione 2.0 e successive. Le modifiche delle combinazioni tipi di carattere tuttavia possono essere problematiche. Per un esempio di come risolvere questo problema, vedere [come: Rispondere alle modifiche dello schema del tipo di carattere in una Windows Forms Application](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>È necessario per la scalabilità automatica
 

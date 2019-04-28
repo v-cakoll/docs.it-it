@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
 ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608742"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configurazione di associazioni per i servizi Windows Communication Foundation
 Durante la creazione di un'applicazione, è spesso necessario assegnare all'amministratore il compito di prendere alcune decisioni dopo la distribuzione dell'applicazione. Non è in alcun modo possibile, ad esempio, conoscere in anticipo l'indirizzo di un servizio, o URI (Uniform Resource Identifier). Anziché inserire un indirizzo nel codice, è preferibile consentire che questa operazione venga eseguita da un amministratore dopo la creazione del servizio. Questa flessibilità viene realizzata attraverso la configurazione.  

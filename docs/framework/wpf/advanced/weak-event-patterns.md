@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669363"
 ---
 # <a name="weak-event-patterns"></a>Modelli di eventi deboli
 Nelle applicazioni, è possibile che i gestori associati alle origini evento non verranno distrutto in combinazione con l'oggetto listener che è associato il gestore per l'origine. Questa situazione può causare perdite di memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce un modello di progettazione che può essere utilizzato per risolvere questo problema, fornendo una classe di gestione dedicato per determinati eventi e implementando un'interfaccia nei listener per l'evento. Questo schema progettuale è noto come il *modello di eventi deboli*.  
@@ -40,13 +40,13 @@ Nelle applicazioni, è possibile che i gestori associati alle origini evento non
 
  Le sezioni seguenti descrivono come implementare il modello di eventi deboli.  Ai fini di questa discussione, l'evento da sottoscrivere presenta le caratteristiche seguenti.  
   
--   Il nome dell'evento è `SomeEvent`.  
+- Il nome dell'evento è `SomeEvent`.  
   
--   L'evento viene generato dal `EventSource` classe.  
+- L'evento viene generato dal `EventSource` classe.  
   
--   Il gestore dell'evento è di tipo: `SomeEventEventHandler` (o `EventHandler<SomeEventEventArgs>`).  
+- Il gestore dell'evento è di tipo: `SomeEventEventHandler` (o `EventHandler<SomeEventEventArgs>`).  
   
--   L'evento passato un parametro di tipo `SomeEventEventArgs` ai gestori eventi.  
+- L'evento passato un parametro di tipo `SomeEventEventArgs` ai gestori eventi.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Usando una classe di gestore di eventi deboli esistente  
   

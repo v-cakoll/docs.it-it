@@ -3,18 +3,18 @@ title: Utilizzo di un editor espressioni personalizzato
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669602"
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilizzo di un editor espressioni personalizzato
 È possibile implementare un editor di espressioni personalizzato per fornire un'esperienza di modifica delle espressioni più dettagliata o più semplice. Esistono diversi scenari in cui è opportuno usare un editor di espressioni personalizzato:  
   
--   Per fornire supporto per IntelliSense e altre funzionalità di modifica dettagliate in una finestra di progettazione flussi di lavoro riallocata. Questa funzionalità deve essere fornita perché l'editor di espressioni di Visual Studio predefinito non può essere usato in applicazioni riallocate.  
+- Per fornire supporto per IntelliSense e altre funzionalità di modifica dettagliate in una finestra di progettazione flussi di lavoro riallocata. Questa funzionalità deve essere fornita perché l'editor di espressioni di Visual Studio predefinito non può essere usato in applicazioni riallocate.  
   
--   Per semplificare l'esperienza degli utenti business analyst, di modifica delle espressioni in modo che non, sono ad esempio, necessari per apprendere Visual Basic o gestire espressioni Visual Basic.  
+- Per semplificare l'esperienza degli utenti business analyst, di modifica delle espressioni in modo che non, sono ad esempio, necessari per apprendere Visual Basic o gestire espressioni Visual Basic.  
   
  Per implementare un editor di espressioni personalizzato sono necessari tre passaggi di base:  
   

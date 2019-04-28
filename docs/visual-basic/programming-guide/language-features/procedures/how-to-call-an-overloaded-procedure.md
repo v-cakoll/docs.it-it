@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
 ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666014"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Procedura: Chiamare una routine di overload (Visual Basic)
 Il vantaggio di overload di una routine è la flessibilità della chiamata. Il codice chiamante può ottenere le informazioni che necessarie per passare alla procedura e quindi chiamare un nome di procedura singolo, indipendentemente dagli argomenti è stato superato.  

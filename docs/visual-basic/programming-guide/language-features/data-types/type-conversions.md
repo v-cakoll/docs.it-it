@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663284"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Conversioni di tipi in Visual Basic
 Il processo di modifica di un valore da un tipo di dati in un altro tipo viene definito *conversione*. Sono conversioni *widening* oppure *narrowing*, in base a capacità di dati dei tipi interessati. Sono inoltre *implicita* oppure *esplicite*, a seconda di sintassi nel codice sorgente.  
@@ -30,7 +30,7 @@ Il processo di modifica di un valore da un tipo di dati in un altro tipo viene d
  [Conversioni fra stringhe e altri tipi](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Viene illustrata la conversione tra stringhe e numerici, `Boolean`, o i valori di data/ora.  
   
- [Procedura: convertire un oggetto in un altro tipo in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Procedura: Convertire un oggetto in un altro tipo in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  Viene illustrato come convertire un `Object` variabile con un altro tipo di dati.  
   
  [Conversioni di matrice](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

@@ -3,11 +3,11 @@ title: Variabili e argomenti
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669485"
 ---
 # <a name="variables-and-arguments"></a>Variabili e argomenti
 In Windows Workflow Foundation (WF), le variabili rappresentano l'archiviazione dei dati e gli argomenti rappresentano il flusso di dati da e verso un'attività. Un'attività dispone di un set di argomenti che costituiscono la firma dell'attività. Inoltre, un'attività può gestire un elenco di variabili a cui uno sviluppatore può aggiungere o rimuovere variabili durante la progettazione di un flusso di lavoro. Un argomento viene associato usando un'espressione che restituisce un valore.  

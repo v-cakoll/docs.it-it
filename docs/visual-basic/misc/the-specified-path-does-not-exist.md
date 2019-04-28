@@ -3,18 +3,18 @@ title: Il percorso specificato non esiste.
 ms.date: 07/20/2015
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
 ms.openlocfilehash: 933f23f42cc591bbc8eccb23b0e1b2bb700dfb6a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669082"
 ---
 # <a name="the-specified-path-does-not-exist"></a>Il percorso specificato non esiste.
 Un percorso specificato non esiste, forse a causa di un errore di combinazione delle stringhe.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Verificare che il percorso sia corretto.  
+- Verificare che il percorso sia corretto.  
   
 ## <a name="see-also"></a>Vedere anche
 

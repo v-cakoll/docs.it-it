@@ -3,11 +3,11 @@ title: <endpoint> di <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
 ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673225"
 ---
 # <a name="endpoint-of-client"></a>\<endpoint > di \<client >
 Specifica proprietà di contratto, associazione e indirizzo dell'endpoint del canale usato dai client per connettersi agli endpoint del servizio nel server.  
