@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935226"
 ---
 # <a name="bad-file-name-or-number"></a>Numero o nome file errato
 Si è verificato un errore durante il tentativo di accedere al file specificato. Tra le possibili cause di questo errore sono:  
   
--   Un'istruzione fa riferimento a un file con un nome file o un numero che non è stato specificato nel `FileOpen` istruzione o che è stato specificato un `FileOpen` istruzione ma è stata successivamente chiusi.  
+- Un'istruzione fa riferimento a un file con un nome file o un numero che non è stato specificato nel `FileOpen` istruzione o che è stato specificato un `FileOpen` istruzione ma è stata successivamente chiusi.  
   
--   Un'istruzione fa riferimento a un file con un numero compreso nell'intervallo dei numeri di file.  
+- Un'istruzione fa riferimento a un file con un numero compreso nell'intervallo dei numeri di file.  
   
--   Un'istruzione fa riferimento a un nome file o un numero non valido.  
+- Un'istruzione fa riferimento a un nome file o un numero non valido.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   

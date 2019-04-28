@@ -8,11 +8,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
 ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747459"
 ---
 # <a name="why-transformation-order-is-significant"></a>Importanza dell'ordine delle trasformazioni
 Un singolo <xref:System.Drawing.Drawing2D.Matrix> oggetti possono archiviare una trasformazione o una sequenza di trasformazioni. Quest'ultimo viene chiamato una trasformazione composita. La matrice di una trasformazione composita viene ottenuta moltiplicando le matrici delle trasformazioni singoli.  

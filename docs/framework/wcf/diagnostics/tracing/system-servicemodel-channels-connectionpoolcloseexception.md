@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.ConnectionPoolCloseException
 ms.date: 03/30/2017
 ms.assetid: 8358898e-129e-4fac-a6bf-bf3aa4293ae2
 ms.openlocfilehash: 3dd28276cd3a39497c0387f5b9d0adec23d07c37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666833"
 ---
 # <a name="systemservicemodelchannelsconnectionpoolcloseexception"></a>System.ServiceModel.Channels.ConnectionPoolCloseException
 Si è verificata un'eccezione durante la chiusura delle connessioni in questo pool di connessioni.  

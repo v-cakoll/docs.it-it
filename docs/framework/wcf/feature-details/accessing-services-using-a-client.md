@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696223"
 ---
 # <a name="accessing-services-using-a-client"></a>Accesso ai servizi tramite client
 Le applicazioni client devono creare, configurare e usare oggetti client o canale WCF per comunicare con i servizi. Il [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) argomento fornisce una panoramica degli oggetti e passaggi coinvolti nella creazione di oggetti client e il canale di base e il relativo utilizzo.  
@@ -20,13 +20,13 @@ Le applicazioni client devono creare, configurare e usare oggetti client o canal
 ## <a name="overview"></a>Panoramica  
  In questo argomento vengono descritti il comportamento e i problemi relativi a:  
   
--   Durata di canali e sessioni.  
+- Durata di canali e sessioni.  
   
--   Gestione delle eccezioni.  
+- Gestione delle eccezioni.  
   
--   Problemi che causano blocchi.  
+- Problemi che causano blocchi.  
   
--   Inizializzazione interattiva dei canali.  
+- Inizializzazione interattiva dei canali.  
   
 ### <a name="channel-and-session-lifetimes"></a>Durata di canali e sessioni  
  Le applicazioni di Windows Communication Foundation (WCF) include due categorie di canali, datagramma e quelli con sessione.  

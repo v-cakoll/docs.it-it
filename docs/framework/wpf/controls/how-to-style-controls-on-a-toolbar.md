@@ -7,32 +7,32 @@ helpviewer_keywords:
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
 ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699188"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>Procedura: Applicare uno stile ai controlli di un oggetto ToolBar
 Il <xref:System.Windows.Controls.ToolBar> definisce <xref:System.Windows.ResourceKey> gli oggetti per specificare lo stile di controlli all'interno di <xref:System.Windows.Controls.ToolBar>.  Per definire lo stile di un controllo in una <xref:System.Windows.Controls.ToolBar>, impostare il `x:key` attributo di stile da un <xref:System.Windows.ResourceKey> definito in <xref:System.Windows.Controls.ToolBar>.  
   
  Il <xref:System.Windows.Controls.ToolBar> definisce i seguenti <xref:System.Windows.ResourceKey> oggetti:  
   
--   <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.CheckBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.CheckBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.MenuStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.MenuStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.RadioButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.RadioButtonStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.SeparatorStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.SeparatorStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.TextBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.TextBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente definisce gli stili per i controlli all'interno di un <xref:System.Windows.Controls.ToolBar>.  

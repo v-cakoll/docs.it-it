@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
 ms.openlocfilehash: 01659205f271b089fe4e8aa87cf7a8c44e7a4000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918164"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>Il numero di indici è superiore al numero di dimensioni della matrice indicizzata
 Il numero di indici usati per accedere a un elemento di matrice deve essere esattamente uguale all'ordine di priorità della matrice, vale a dire al numero di dimensioni dichiarate per la matrice.  
@@ -21,7 +21,7 @@ Il numero di indici usati per accedere a un elemento di matrice deve essere esat
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Rimuovere gli indici da riferimento della matrice fino a quando il numero totale di indici è pari all'ordine della matrice. Ad esempio:  
+- Rimuovere gli indici da riferimento della matrice fino a quando il numero totale di indici è pari all'ordine della matrice. Ad esempio:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  

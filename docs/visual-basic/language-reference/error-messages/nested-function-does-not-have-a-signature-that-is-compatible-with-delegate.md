@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
 ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918255"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>Funzione annidata non ha una firma compatibile con il delegato '\<NomeDelegato >'
 Un'espressione lambda assegnata a un delegato che ha una firma compatibile. Nel codice seguente, ad esempio, è consigliabile delegare `Del` ha due parametri di tipo integer.  
@@ -33,7 +33,7 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Modificare la definizione del delegato o l'espressione lambda assegnata in modo che le firme sono compatibili.  
+- Modificare la definizione del delegato o l'espressione lambda assegnata in modo che le firme sono compatibili.  
   
 ## <a name="see-also"></a>Vedere anche
 

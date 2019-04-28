@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674389"
 ---
 # <a name="socket-element-network-settings"></a>\<socket > (impostazioni di rete)
 Specifica se le operazioni socket usano le porte di completamento.  
@@ -64,9 +64,9 @@ Specifica se le operazioni socket usano le porte di completamento.
   
  Ciò `ipProtectionLevel` impostazione dell'attributo interessa solo il traffico in ingresso iniziale:  
   
--   Un server TCP in ascolto delle connessioni in ingresso su un socket.  
+- Un server TCP in ascolto delle connessioni in ingresso su un socket.  
   
--   Un'applicazione di UDP ricezione di un pacchetto su un socket.  
+- Un'applicazione di UDP ricezione di un pacchetto su un socket.  
   
  Questa impostazione di configurazione non influisce sulle già stabilite le connessioni TCP (il traffico è senza restrizioni in entrambe le direzioni) e non un'applicazione che invia i pacchetti UDP.  
   

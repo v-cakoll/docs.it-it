@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox'
+title: 'Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752971"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: Eseguire codice parzialmente attendibile in un oggetto Sandbox
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procedura: Eseguire codice parzialmente attendibile in un oggetto sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Il termine sandboxing si riferisce all'esecuzione di codice in un ambiente di sicurezza con restrizioni che limita le autorizzazioni di accesso concesse al codice. Se, ad esempio, si dispone di una libreria gestita proveniente da un'origine non considerata completamente attendibile, è consigliabile non eseguirla come completamente attendibile. Inserire invece il codice in un ambiente sandbox che limita le autorizzazioni a quelle che si prevede siano necessarie (ad esempio, l'autorizzazione <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Altre informazioni:  
   
-    -   Questo è l'unico overload del metodo <xref:System.AppDomain.CreateDomain%2A> che accetta un oggetto <xref:System.Security.PermissionSet> come parametro e pertanto l'unico overload che consente di caricare un'applicazione con un'impostazione di attendibilità parziale.  
+    - Questo è l'unico overload del metodo <xref:System.AppDomain.CreateDomain%2A> che accetta un oggetto <xref:System.Security.PermissionSet> come parametro e pertanto l'unico overload che consente di caricare un'applicazione con un'impostazione di attendibilità parziale.  
   
-    -   Il parametro `evidence` non viene usato per calcolare un set di autorizzazioni, ma per l'identificazione da parte di altre funzionalità di .NET Framework.  
+    - Il parametro `evidence` non viene usato per calcolare un set di autorizzazioni, ma per l'identificazione da parte di altre funzionalità di .NET Framework.  
   
-    -   L'impostazione della proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> del parametro `info` è obbligatoria per questo overload.  
+    - L'impostazione della proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> del parametro `info` è obbligatoria per questo overload.  
   
-    -   Il parametro `fullTrustAssemblies` dispone della parola chiave `params`, pertanto non è necessario creare una matrice <xref:System.Security.Policy.StrongName>. È possibile passare 0, 1 o più nomi sicuri come parametri.  
+    - Il parametro `fullTrustAssemblies` dispone della parola chiave `params`, pertanto non è necessario creare una matrice <xref:System.Security.Policy.StrongName>. È possibile passare 0, 1 o più nomi sicuri come parametri.  
   
-    -   Il codice per creare il dominio applicazione è il seguente:  
+    - Il codice per creare il dominio applicazione è il seguente:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Caricare il codice nell'oggetto <xref:System.AppDomain> sandbox creato. Questa operazione può essere eseguita nei due modi seguenti.  
   
-    -   Chiamare il metodo <xref:System.AppDomain.ExecuteAssembly%2A> per l'assembly.  
+    - Chiamare il metodo <xref:System.AppDomain.ExecuteAssembly%2A> per l'assembly.  
   
-    -   Usare il metodo <xref:System.Activator.CreateInstanceFrom%2A> per creare un'istanza di una classe derivata da <xref:System.MarshalByRefObject> nel nuovo oggetto <xref:System.AppDomain>.  
+    - Usare il metodo <xref:System.Activator.CreateInstanceFrom%2A> per creare un'istanza di una classe derivata da <xref:System.MarshalByRefObject> nel nuovo oggetto <xref:System.AppDomain>.  
   
      Il secondo metodo è preferibile, in quanto consente di passare in modo più semplice i parametri alla nuova istanza di <xref:System.AppDomain>. Il metodo <xref:System.Activator.CreateInstanceFrom%2A> offre due funzionalità importanti:  
   
-    -   È possibile usare una codebase che punta a una posizione che non contiene l'assembly.  
+    - È possibile usare una codebase che punta a una posizione che non contiene l'assembly.  
   
-    -   È possibile eseguire la creazione in un oggetto <xref:System.Security.CodeAccessPermission.Assert%2A> per l'attendibilità totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), per poter creare un'istanza di una classe critica. Ciò avviene ogni volta che l'assembly non dispone di contrassegni di trasparenza e viene caricato come completamente attendibile. È pertanto necessario prestare attenzione a creare solo codice attendibile con questa funzione e si consiglia di creare solo istanze di classi completamente attendibili nel nuovo dominio applicazione.  
+    - È possibile eseguire la creazione in un oggetto <xref:System.Security.CodeAccessPermission.Assert%2A> per l'attendibilità totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), per poter creare un'istanza di una classe critica. Ciò avviene ogni volta che l'assembly non dispone di contrassegni di trasparenza e viene caricato come completamente attendibile. È pertanto necessario prestare attenzione a creare solo codice attendibile con questa funzione e si consiglia di creare solo istanze di classi completamente attendibili nel nuovo dominio applicazione.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

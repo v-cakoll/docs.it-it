@@ -3,11 +3,11 @@ title: . (Accesso ai membri) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
 ms.openlocfilehash: 6ebedd2b381d035d199e151f64632acf7d502ff5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760623"
 ---
 # <a name="-member-access-entity-sql"></a>. (Accesso ai membri) (Entity SQL)
 L'operatore punto (.) è il [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatore di accesso al membro. L'operatore di accesso ai membri viene usato per produrre il valore di una proprietà o di un campo di un'istanza del tipo di modello concettuale strutturale.  

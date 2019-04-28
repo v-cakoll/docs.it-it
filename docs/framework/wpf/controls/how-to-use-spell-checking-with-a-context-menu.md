@@ -10,11 +10,11 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699149"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Procedura: Usare il controllo ortografico con un menu di scelta rapida
 Per impostazione predefinita, quando si abilita il controllo ortografico in un controllo di modifica, ad esempio <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>, si ottengono le opzioni di controllo ortografico nel menu di scelta rapida. Ad esempio, quando gli utenti fare doppio clic su una parola errata, ricevono un set di suggerimenti ortografici o la possibilità **Ignora tutto**. Tuttavia, quando si esegue l'override di menu di scelta rapida predefinito con il proprio menu di scelta rapida personalizzato, questa funzionalità viene persa e devi scrivere codice per riabilitare la funzionalità di controllo ortografico nel menu di scelta rapida. Nell'esempio seguente viene illustrato come abilitare questa opzione su un <xref:System.Windows.Controls.TextBox>.  

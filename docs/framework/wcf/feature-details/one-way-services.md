@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762488"
 ---
 # <a name="one-way-services"></a>Servizi unidirezionali
 Il comportamento predefinito di un'operazione del servizio segue il modello request-reply, in base al quale il client resta in attesa del messaggio di risposta, anche se l'operazione del servizio è rappresentata nel codice come metodo `void`. Con un'operazione unidirezionale, viene invece trasmesso solo un messaggio. Il destinatario non invia un messaggio di risposta, né il mittente ne aspetta uno.  
   
  Utilizzare il modello di progettazione unidirezionale nelle situazioni seguenti:  
   
--   Quando il client deve chiamare operazioni e il risultato dell'operazione non influisce su di esso a livello di operazione.  
+- Quando il client deve chiamare operazioni e il risultato dell'operazione non influisce su di esso a livello di operazione.  
   
--   Quando si utilizza la classe <xref:System.ServiceModel.NetMsmqBinding> o la classe <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Per altre informazioni su questo scenario, vedere [code in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Quando si utilizza la classe <xref:System.ServiceModel.NetMsmqBinding> o la classe <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. (Per altre informazioni su questo scenario, vedere [code in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Quando un'operazione è unidirezionale, non ci sarà alcun messaggio di risposta per trasportare le informazioni di errore al client. È possibile rilevare le condizioni di errore utilizzando le funzionalità dell'associazione sottostante, ad esempio le sessioni affidabili, o progettando un contratto di servizio duplex che utilizza due operazioni unidirezionali, ovvero un contratto unidirezionale dal client al servizio per chiamare l'operazione del servizio e un altro contratto unidirezionale tra il servizio e il client in modo che il servizio possa inviare gli errori al client utilizzando un callback implementato dal client.  
   

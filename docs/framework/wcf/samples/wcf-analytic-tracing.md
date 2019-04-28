@@ -3,11 +3,11 @@ title: Traccia analitica WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723355"
 ---
 # <a name="wcf-analytic-tracing"></a>Traccia analitica WCF
 Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche che Windows Communication Foundation (WCF) scrive in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Le tracce analitiche hanno lo scopo di semplificare la visibilità all'interno dei servizi senza un'elevata riduzione delle prestazioni. In questo esempio viene illustrato come utilizzare il <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API per scrivere eventi che si integrano con i servizi WCF.  
@@ -22,11 +22,11 @@ Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di 
 ## <a name="self-hosting-vs-web-hosting"></a>Differenze tra self-hosting e hosting Web  
  Per i servizi ospitati su Web, le tracce analitiche di WCF forniscono un campo, denominato "HostReference", che consente di identificare il servizio che sta generando le tracce. Le tracce utente estensibili possono far parte di tale modello e in questo esempio vengono descritte le procedure consigliate per effettuare tale operazione. Il formato di un host Web di riferimento quando la pipe '&#124;' caratteri viene effettivamente visualizzato nella finestra di stringa può essere una qualsiasi delle operazioni seguenti:  
   
--   Se l'applicazione non è alla radice.  
+- Se l'applicazione non è alla radice.  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   Se l'applicazione è alla radice.  
+- Se l'applicazione è alla radice.  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ Questo esempio viene illustrato come aggiungere eventi di traccia nel flusso di 
   
 10. Testare il servizio usando il client di prova WCF.  
   
-    1.  Nel Client di prova WCF fare doppio clic **Add ()** nel nodo del servizio ICalculator.  
+    1. Nel Client di prova WCF fare doppio clic **Add ()** nel nodo del servizio ICalculator.  
   
          Il **Add ()** metodo viene visualizzato nel riquadro di destra con due parametri.  
   
-    2.  Digitare 2 per il primo parametro e 3 per il secondo parametro.  
+    2. Digitare 2 per il primo parametro e 3 per il secondo parametro.  
   
-    3.  Fare clic su **Invoke** per richiamare il metodo.  
+    3. Fare clic su **Invoke** per richiamare il metodo.  
   
 11. Andare alla **Visualizzatore eventi** finestra che è già aperta. Passare a **Visualizzatore eventi**, **registri applicazioni e servizi**, **Microsoft**, **Windows**, **dell'applicazione Le applicazioni server**.  
   

@@ -3,11 +3,11 @@ title: Selezione di un tipo di credenziale
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748805"
 ---
 # <a name="selecting-a-credential-type"></a>Selezione di un tipo di credenziale
 *Le credenziali* sono i dati di Windows Communication Foundation (WCF) viene utilizzato per stabilire un'identità attestata o funzionalità. Ad esempio, un passaporto è una credenziale rilasciata da un'autorità dello Stato per provare la cittadinanza in un paese o un'area geografica. In WCF, le credenziali possono assumere molte forme, ad esempio token del nome utente e i certificati X.509. In questo argomento illustra come selezionare la credenziale appropriata per l'applicazione, come vengono usati in WCF e le credenziali.  
@@ -85,9 +85,9 @@ ms.locfileid: "59167843"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Come usare le credenziali client per autenticare il client per il servizio  
  Le informazioni sulla credenziale client richieste per comunicare con un servizio vengono fornite mediante la proprietà <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> o la proprietà <xref:System.ServiceModel.ChannelFactory.Credentials%2A>. Il canale di sicurezza usa queste informazioni per autenticare il client per il servizio. L'autenticazione viene eseguita tramite una delle due modalità seguenti:  
   
--   Le credenziali client vengono usate una sola volta prima che il primo messaggio venga inviato, usando l'istanza del client WCF per stabilire un contesto di sicurezza. Tutti i messaggi dell'applicazione vengono quindi protetti tramite il contesto di sicurezza.  
+- Le credenziali client vengono usate una sola volta prima che il primo messaggio venga inviato, usando l'istanza del client WCF per stabilire un contesto di sicurezza. Tutti i messaggi dell'applicazione vengono quindi protetti tramite il contesto di sicurezza.  
   
--   Le credenziali client vengono usate per autenticare ogni messaggio dell'applicazione inviato al servizio. In questo caso, nessun contesto viene stabilito tra il client e il servizio.  
+- Le credenziali client vengono usate per autenticare ogni messaggio dell'applicazione inviato al servizio. In questo caso, nessun contesto viene stabilito tra il client e il servizio.  
   
 ### <a name="established-identities-cannot-be-changed"></a>Non è possibile modificare le identità stabilite  
  Quando si usa il primo metodo, il contesto stabilito viene associato permanentemente all'identità del client. Pertanto, quando il contesto di sicurezza è stato stabilito, l'identità associata al client non può essere modificata.  
@@ -108,7 +108,6 @@ ms.locfileid: "59167843"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Concetti relativi alla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)

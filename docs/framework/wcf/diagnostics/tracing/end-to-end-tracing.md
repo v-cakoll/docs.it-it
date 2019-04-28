@@ -3,11 +3,11 @@ title: Analisi end-to-end
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912535"
 ---
 # <a name="end-to-end-tracing"></a>Analisi end-to-end
 End-to-End (e2e) traccia consente agli sviluppatori di seguire l'esecuzione di codice nell'infrastruttura di Windows Communication Foundation (WCF) per analizzare il motivo per cui si è verificato un percorso di codice o per fornire una traccia dettagliata per l'analisi delle prestazioni e pianificazione della capacità. Windows Communication Foundation (WCF) offre tre meccanismi di correlazione per aiutare a diagnosticare la causa dell'errore: attività, trasferimenti e propagazione.  

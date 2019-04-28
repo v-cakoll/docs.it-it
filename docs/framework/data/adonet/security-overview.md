@@ -3,11 +3,11 @@ title: Sicurezza Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664155"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 La protezione di un'applicazione è un processo costante. Lo sviluppatore non sarà mai in grado di garantire l'assoluta sicurezza di un'applicazione da tutti gli attacchi, in quanto non è possibile prevedere i tipi di attacchi che consentiranno di elaborare le nuove tecnologie. Al contrario, proprio perché nessuno ha ancora individuato (o pubblicato) i punti deboli nella sicurezza di un sistema, questo non implica che non ne esista nessuno. Durante la fase di progettazione del progetto è necessario pianificare la sicurezza nonché le procedure previste di manutenzione per l'intera durata dell'applicazione.  
@@ -46,19 +46,19 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 ## <a name="code-access-security-cas"></a>Sicurezza per l'accesso al codice (CAS, Code Access Security)  
  La sicurezza dall'accesso di codice è un meccanismo che consente di limitare l'accesso del codice alle risorse e alle operazioni protette. In .NET Framework vengono svolte le seguenti funzioni:  
   
--   Definizione di autorizzazioni e set di autorizzazioni che rappresentano il diritto di accedere a varie risorse di sistema.  
+- Definizione di autorizzazioni e set di autorizzazioni che rappresentano il diritto di accedere a varie risorse di sistema.  
   
--   Possibilità per gli amministratori di configurare criteri di sicurezza associando set di autorizzazioni a gruppi di codice.  
+- Possibilità per gli amministratori di configurare criteri di sicurezza associando set di autorizzazioni a gruppi di codice.  
   
--   Possibilità di richiedere le autorizzazioni necessarie per l'esecuzione del codice, oltre a quelle che potrebbero migliorare il funzionamento, e di specificare le autorizzazioni che invece non devono essere mai concesse al codice.  
+- Possibilità di richiedere le autorizzazioni necessarie per l'esecuzione del codice, oltre a quelle che potrebbero migliorare il funzionamento, e di specificare le autorizzazioni che invece non devono essere mai concesse al codice.  
   
--   Concessione di autorizzazioni a ogni assembly caricato, in base alle autorizzazioni richieste dal codice e alle operazioni autorizzate dai criteri di sicurezza.  
+- Concessione di autorizzazioni a ogni assembly caricato, in base alle autorizzazioni richieste dal codice e alle operazioni autorizzate dai criteri di sicurezza.  
   
--   Possibilità di esigere dai chiamanti del codice il possesso di autorizzazioni specifiche.  
+- Possibilità di esigere dai chiamanti del codice il possesso di autorizzazioni specifiche.  
   
--   Possibilità di esigere dai chiamanti del codice il possesso di una firma digitale, in modo che solo i chiamanti appartenenti a un'organizzazione o a un sito particolare siano autorizzati a chiamare il codice sicuro.  
+- Possibilità di esigere dai chiamanti del codice il possesso di una firma digitale, in modo che solo i chiamanti appartenenti a un'organizzazione o a un sito particolare siano autorizzati a chiamare il codice sicuro.  
   
--   Applicazione di restrizioni sul codice in fase di esecuzione confrontando le autorizzazioni concesse a ogni chiamante dello stack di chiamate con le autorizzazioni effettivamente necessarie.  
+- Applicazione di restrizioni sul codice in fase di esecuzione confrontando le autorizzazioni concesse a ogni chiamante dello stack di chiamate con le autorizzazioni effettivamente necessarie.  
   
  Per minimizzare il quantità di danni che possono verificarsi se un attacco riesce, scegliere un contesto di sicurezza per il codice che conceda l'accesso solo alle risorse necessarie per completare il lavoro.  
   
@@ -72,17 +72,17 @@ La protezione di un'applicazione è un processo costante. Lo sviluppatore non sa
 ## <a name="database-security"></a>Sicurezza dei database  
  Il principio dei privilegi minimi si applica anche all'origine dati. Le linee guida generali per la sicurezza dei database includono:  
   
--   Creare account con il livello di privilegi minimo possibile.  
+- Creare account con il livello di privilegi minimo possibile.  
   
--   Non consentire l'accesso ad account amministrativi solo per ottenere il funzionamento del codice.  
+- Non consentire l'accesso ad account amministrativi solo per ottenere il funzionamento del codice.  
   
--   Non restituire i messaggi di errore lato server alle applicazioni client.  
+- Non restituire i messaggi di errore lato server alle applicazioni client.  
   
--   Convalidare tutto l'input, sia nel client che nel server.  
+- Convalidare tutto l'input, sia nel client che nel server.  
   
--   Usare comandi con parametri ed evitare istruzioni SQL dinamiche.  
+- Usare comandi con parametri ed evitare istruzioni SQL dinamiche.  
   
--   Abilitare le funzionalità di controllo della sicurezza e registrazione per il database in uso, in modo da ricevere avvisi in caso di violazioni della sicurezza.  
+- Abilitare le funzionalità di controllo della sicurezza e registrazione per il database in uso, in modo da ricevere avvisi in caso di violazioni della sicurezza.  
   
  Per altre informazioni, vedere le seguenti risorse.  
   

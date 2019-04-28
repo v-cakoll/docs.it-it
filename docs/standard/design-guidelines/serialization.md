@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
 ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650154"
 ---
 # <a name="serialization"></a>Serializzazione
 La serializzazione è il processo di conversione di un oggetto in un formato che può essere facilmente mantenuto o trasportato. Ad esempio, è possibile serializzare un oggetto, trasferirlo via Internet tramite HTTP e deserializzato, il computer di destinazione.  

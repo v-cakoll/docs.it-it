@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 75ef24162adbb653671ed070587e7155fae6b949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697745"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>Metodo IAssemblyCache::UninstallAssembly
 Disinstalla l'assembly specificato dalla global assembly cache.  
@@ -51,17 +51,17 @@ HRESULT UninstallAssembly (
  `pulDisposition`  
  [out, optional] Uno dei valori disposition definiti in Fusion. I valori possibili includono quanto segue:  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

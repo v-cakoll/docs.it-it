@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638027"
 ---
 # <a name="get-statement"></a>Istruzione Get
 Dichiara un `Get` routine della proprietà utilizzata per recuperare il valore di una proprietà.  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>Regole  
   
--   **Livelli di accesso misti.** Se si sta definendo una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diversi per il `Get` o il `Set` procedure, ma non entrambi. In questo caso, il livello di accesso di routine deve essere più restrittivo rispetto a livello di accesso della proprietà. Ad esempio, se la proprietà è dichiarata `Friend`, è possibile dichiarare il `Get` routine `Private`, ma non `Public`.  
+- **Livelli di accesso misti.** Se si sta definendo una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diversi per il `Get` o il `Set` procedure, ma non entrambi. In questo caso, il livello di accesso di routine deve essere più restrittivo rispetto a livello di accesso della proprietà. Ad esempio, se la proprietà è dichiarata `Friend`, è possibile dichiarare il `Get` routine `Private`, ma non `Public`.  
   
      Se si sta definendo un `ReadOnly` proprietà, il `Get` procedure rappresenta l'intera proprietà. Non è possibile dichiarare un accesso diverso a livello di `Get`, poiché verrebbero specificati due livelli di accesso per la proprietà.  
   
--   **Tipo restituito.** Il [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) può dichiarare il tipo di dati del valore restituito. Il `Get` routine restituisce automaticamente che tipo di dati. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.  
+- **Tipo restituito.** Il [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md) può dichiarare il tipo di dati del valore restituito. Il `Get` routine restituisce automaticamente che tipo di dati. È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.  
   
      Se il `Property` istruzione non è specificato `returntype`, la stored procedure restituisce `Object`.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Restituzione da una procedura.** Quando il `Get` routine restituisce al codice chiamante, l'esecuzione continua all'interno dell'istruzione che ha richiesto il valore della proprietà.  
+- **Restituzione da una procedura.** Quando il `Get` routine restituisce al codice chiamante, l'esecuzione continua all'interno dell'istruzione che ha richiesto il valore della proprietà.  
   
      `Get` le routine della proprietà possono restituire un valore usando il [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md) o assegnando il valore restituito per il nome della proprietà. Per altre informazioni, vedere "Valore di restituire" nella [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      Il `Exit Property` e `Return` istruzioni di uscire immediatamente da una routine di proprietà. Un numero qualsiasi di `Exit Property` e `Return` istruzioni possono trovarsi in qualsiasi punto della procedura, ed è possibile combinare `Exit Property` e `Return` istruzioni.  
   
--   **Valore restituito.** Per restituire un valore da un `Get` procedure, è possibile assegnare il valore per il nome della proprietà o includerlo in un [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md). Il `Return` istruzione assegna contemporaneamente il `Get` procedure restituire valore e viene chiuso la procedura.  
+- **Valore restituito.** Per restituire un valore da un `Get` procedure, è possibile assegnare il valore per il nome della proprietà o includerlo in un [istruzione Return](../../../visual-basic/language-reference/statements/return-statement.md). Il `Return` istruzione assegna contemporaneamente il `Get` procedure restituire valore e viene chiuso la procedura.  
   
      Se si usa `Exit Property` senza assegnarle un valore per il nome della proprietà di `Get` procedure restituisce il valore predefinito per il tipo di dati della proprietà. Per altre informazioni, vedere "Valore di restituire" nella [istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md).  
   

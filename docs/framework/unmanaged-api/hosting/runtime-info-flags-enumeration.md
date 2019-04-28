@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9483cf8671b7d3ad5430081d93925af30b3d8368
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765154"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>Enumerazione RUNTIME_INFO_FLAGS
 Contiene valori che indicano le informazioni su common language runtime (CLR) devono essere restituite.  
@@ -59,11 +59,11 @@ typedef enum {
 ## <a name="remarks"></a>Note  
  I flag di architettura di piattaforma seguenti possono essere specificato solo uno alla volta e non possono essere combinati:  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

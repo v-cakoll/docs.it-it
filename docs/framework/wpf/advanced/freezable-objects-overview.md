@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703317"
 ---
 # <a name="freezable-objects-overview"></a>Cenni preliminari sugli oggetti Freezable
 In questo argomento viene descritto come creare e utilizzare in modo efficace <xref:System.Windows.Freezable> oggetti, che forniscono funzionalità speciali che consentono di migliorare le prestazioni dell'applicazione. Sono esempi di oggetti freezable pennelli, penne, trasformazioni, geometrie e animazioni.  
@@ -63,11 +63,11 @@ In questo argomento viene descritto come creare e utilizzare in modo efficace <x
   
  Un oggetto Freezable **non è possibile** essere bloccato se viene soddisfatta una delle operazioni seguenti:  
   
--   È stata eseguita l'animazione o le proprietà con associazione a dati.  
+- È stata eseguita l'animazione o le proprietà con associazione a dati.  
   
--   Include proprietà impostata da una risorsa dinamica. (Vedere la [risorse XAML](xaml-resources.md) per altre informazioni sulle risorse dinamiche.)  
+- Include proprietà impostata da una risorsa dinamica. (Vedere la [risorse XAML](xaml-resources.md) per altre informazioni sulle risorse dinamiche.)  
   
--   Contiene <xref:System.Windows.Freezable> oggetti secondari che non possono essere bloccati.  
+- Contiene <xref:System.Windows.Freezable> oggetti secondari che non possono essere bloccati.  
   
  Se queste condizioni sono false e non si prevede di modificare il <xref:System.Windows.Freezable>, quindi è necessario bloccare in modo da ottenere i vantaggi di prestazioni descritti in precedenza.  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>Creare la propria classe Freezable  
  Una classe che deriva da <xref:System.Windows.Freezable> Ottiene le funzionalità seguenti.  
   
--   Stati speciali: sola lettura (bloccato) e uno stato accessibile in scrittura.  
+- Stati speciali: sola lettura (bloccato) e uno stato accessibile in scrittura.  
   
--   Sicurezza dei thread: un oggetto bloccato <xref:System.Windows.Freezable> possono essere condivisi tra thread.  
+- Sicurezza dei thread: un oggetto bloccato <xref:System.Windows.Freezable> possono essere condivisi tra thread.  
   
--   Notifica dettagliata delle modifiche: A differenza di altri <xref:System.Windows.DependencyObject>, sugli oggetti Freezable forniscono le notifiche di modifica quando cambiano i valori delle sottoproprietà.  
+- Notifica dettagliata delle modifiche: A differenza di altri <xref:System.Windows.DependencyObject>, sugli oggetti Freezable forniscono le notifiche di modifica quando cambiano i valori delle sottoproprietà.  
   
--   La clonazione semplice: la classe Freezable ha già implementato diversi metodi che producono cloni.  
+- La clonazione semplice: la classe Freezable ha già implementato diversi metodi che producono cloni.  
   
  Oggetto <xref:System.Windows.Freezable> è un tipo di <xref:System.Windows.DependencyObject>e pertanto utilizza il sistema di proprietà di dipendenza. Le proprietà di classe non devono essere proprietà di dipendenza, ma usando le proprietà di dipendenza ridurrà la quantità di codice da scrivere, perché il <xref:System.Windows.Freezable> classe è stata progettata tenendo presenti le proprietà di dipendenza. Per altre informazioni sul sistema di proprietà di dipendenza, vedere la [Cenni preliminari sulle proprietà di dipendenza](dependency-properties-overview.md).  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  Se la classe contiene membri dati della proprietà non di dipendenza, è inoltre necessario sostituire i metodi seguenti:  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  È inoltre necessario rispettare le regole seguenti per l'accesso e la scrittura in membri dati che non sono proprietà di dipendenza:  
   
--   All'inizio di qualsiasi [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] che legge i membri dati della proprietà di dipendenza non, chiamare il <xref:System.Windows.Freezable.ReadPreamble%2A> (metodo).  
+- All'inizio di qualsiasi [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] che legge i membri dati della proprietà di dipendenza non, chiamare il <xref:System.Windows.Freezable.ReadPreamble%2A> (metodo).  
   
--   All'inizio di qualsiasi API che consente di scrivere membri dati della proprietà di dipendenza non, chiamare il <xref:System.Windows.Freezable.WritePreamble%2A> (metodo). (Dopo aver chiamato <xref:System.Windows.Freezable.WritePreamble%2A> in un [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], non è necessario effettuare una chiamata aggiuntiva a <xref:System.Windows.Freezable.ReadPreamble%2A> se è stato inoltre leggere i membri dati della proprietà di dipendenza non.)  
+- All'inizio di qualsiasi API che consente di scrivere membri dati della proprietà di dipendenza non, chiamare il <xref:System.Windows.Freezable.WritePreamble%2A> (metodo). (Dopo aver chiamato <xref:System.Windows.Freezable.WritePreamble%2A> in un [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], non è necessario effettuare una chiamata aggiuntiva a <xref:System.Windows.Freezable.ReadPreamble%2A> se è stato inoltre leggere i membri dati della proprietà di dipendenza non.)  
   
--   Chiamare il <xref:System.Windows.Freezable.WritePostscript%2A> metodo prima di uscire dai metodi che scrivono in membri dati della proprietà di dipendenza non.  
+- Chiamare il <xref:System.Windows.Freezable.WritePostscript%2A> metodo prima di uscire dai metodi che scrivono in membri dati della proprietà di dipendenza non.  
   
  Se la classe contiene membri dati non della proprietà di dipendenza <xref:System.Windows.DependencyObject> oggetti, è necessario chiamare anche il <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> metodo ogni volta che si modifica uno dei relativi valori, anche se si imposta il membro `null`.  
   

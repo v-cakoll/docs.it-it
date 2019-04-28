@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess Interface
+title: Interfaccia IXCLRDataProcess
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess Interface
@@ -16,13 +16,13 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: ff74a7acb5cc84c177f083c19402cd78977aeab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775245"
 ---
-# <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess Interface
+# <a name="ixclrdataprocess-interface"></a>Interfaccia IXCLRDataProcess
 
 Fornisce metodi per l'esecuzione di query informazioni sul processo.
 

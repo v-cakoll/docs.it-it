@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007122"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Procedura dettagliata: Mapping di proprietà tramite l'elemento WindowsFormsHost
 
@@ -21,17 +21,17 @@ Questa procedura dettagliata illustra come usare il <xref:System.Windows.Forms.I
 
 Le attività illustrate nella procedura dettagliata sono le seguenti:
 
--   Creazione del progetto.
+- Creazione del progetto.
 
--   Definizione del layout dell'applicazione.
+- Definizione del layout dell'applicazione.
 
--   Definizione di un nuovo mapping delle proprietà.
+- Definizione di un nuovo mapping delle proprietà.
 
--   Definizione di un mapping delle proprietà predefinito.
+- Definizione di un mapping delle proprietà predefinito.
 
--   Sostituzione di un mapping delle proprietà predefinito.
+- Sostituzione di un mapping delle proprietà predefinito.
 
--   Estensione di un mapping delle proprietà predefinito.
+- Estensione di un mapping delle proprietà predefinito.
 
 Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Mapping delle proprietà usando l'esempio di elemento WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
@@ -41,7 +41,7 @@ Al termine, sarà possibile eseguire il mapping [!INCLUDE[TLA2#tla_winclient](..
 
 Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>Creare e configurare il progetto
 
@@ -76,7 +76,7 @@ Il <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento fornisce ma
 
 ### <a name="to-define-a-new-property-mapping"></a>Per definire un nuovo mapping delle proprietà
 
--   Copiare il codice seguente nella definizione per il `Window1` classe.
+- Copiare il codice seguente nella definizione per il `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ Rimuovere un mapping delle proprietà predefinito chiamando il <xref:System.Wind
 
 ### <a name="to-remove-a-default-property-mapping"></a>Per rimuovere un mapping delle proprietà predefinito
 
--   Copiare il codice seguente nella definizione per il `Window1` classe.
+- Copiare il codice seguente nella definizione per il `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ Sostituire un mapping delle proprietà predefinito rimuovendo il mapping predefi
 
 ### <a name="to-replace-a-default-property-mapping"></a>Per sostituire un mapping delle proprietà predefinito
 
--   Copiare il codice seguente nella definizione per il `Window1` classe.
+- Copiare il codice seguente nella definizione per il `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ Sostituire un mapping delle proprietà predefinito rimuovendo il mapping predefi
 
 ### <a name="to-extend-a-default-property-mapping"></a>Per estendere un mapping delle proprietà predefinito
 
--   Copiare il codice seguente nella definizione per il `Window1` classe.
+- Copiare il codice seguente nella definizione per il `Window1` classe.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ Configurare i mapping delle proprietà chiamando i metodi descritti precedenteme
 
      Il `WindowLoaded` metodo consente di gestire il <xref:System.Windows.FrameworkElement.Loaded> eventi ed esegue l'inizializzazione seguente.
 
-    -   Crea una [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> controllo.
+    - Crea una [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> controllo.
 
-    -   Chiama i metodi definiti in precedenza nella procedura dettagliata per impostare i mapping delle proprietà.
+    - Chiama i metodi definiti in precedenza nella procedura dettagliata per impostare i mapping delle proprietà.
 
-    -   Assegna i valori iniziali alle proprietà mappate.
+    - Assegna i valori iniziali alle proprietà mappate.
 
 2. Premere **F5** per compilare ed eseguire l'applicazione. Selezionare la casella di controllo per visualizzare l'effetto del <xref:System.Windows.FrameworkElement.FlowDirection%2A> mapping. Quando si seleziona la casella di controllo, il layout inverte l'orientamento da sinistra a destra.
 

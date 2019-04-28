@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9687f6139d67a2387091367c2c72167e03be4eee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698291"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>Metodo ICLRDataTarget::GetCurrentThreadID
 Ottiene l'identificatore del sistema operativo per il thread corrente.  

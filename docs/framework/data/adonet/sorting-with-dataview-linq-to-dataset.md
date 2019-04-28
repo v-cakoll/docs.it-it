@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664129"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Ordinamento con DataView (LINQ to DataSet)
 La possibilità di ordinare i dati in base a criteri specifici e quindi di presentarli a un client tramite un controllo dell'interfaccia utente rappresenta un aspetto importante dell'associazione dati. Con <xref:System.Data.DataView> è possibile ordinare i dati e restituire righe di dati ordinate in base a criteri specifici in diversi modi. Oltre a basate su stringa, funzionalità di ordinamento <xref:System.Data.DataView> consente inoltre di usare [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] espressioni per i criteri di ordinamento. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le espressioni consentono le operazioni di ordinamento più complesse e potenti rispetto a ordinamento basato su stringa. In questo argomento vengono descritti entrambi gli approcci all'ordinamento tramite <xref:System.Data.DataView>.  
@@ -65,9 +65,9 @@ La possibilità di ordinare i dati in base a criteri specifici e quindi di prese
 ## <a name="clearing-the-sort"></a>Cancellazione dell'ordinamento  
  È possibile cancellare le informazioni sull'ordinamento relative a un oggetto <xref:System.Data.DataView>, impostate tramite la proprietà <xref:System.Data.DataView.Sort%2A>. È possibile cancellare le informazioni sull'ordinamento in <xref:System.Data.DataView> in due modi diversi:  
   
--   Impostare la proprietà <xref:System.Data.DataView.Sort%2A> su `null`.  
+- Impostare la proprietà <xref:System.Data.DataView.Sort%2A> su `null`.  
   
--   Impostare la proprietà <xref:System.Data.DataView.Sort%2A> su una stringa vuota.  
+- Impostare la proprietà <xref:System.Data.DataView.Sort%2A> su una stringa vuota.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un oggetto <xref:System.Data.DataView> da una query e viene quindi cancellato l'ordinamento impostando la proprietà <xref:System.Data.DataView.Sort%2A> su una stringa vuota:  

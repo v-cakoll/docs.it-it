@@ -10,11 +10,11 @@ helpviewer_keywords:
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
 ms.openlocfilehash: 98f81bfb4a49bbac2a1e07533e1584d7c2b23302
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649803"
 ---
 # <a name="xml-literals-visual-basic"></a>Valori letterali XML (Visual Basic)
 Negli argomenti di questa sezione descrivono la sintassi dei valori letterali XML in Visual Basic. La sintassi dei valori letterali XML consente di incorporare XML direttamente nel codice.  
