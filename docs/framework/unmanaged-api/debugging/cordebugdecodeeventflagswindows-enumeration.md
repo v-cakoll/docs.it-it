@@ -13,16 +13,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d4e006a03db5b16de93dfd07ec7b964db4bfc1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609217"
 ---
-# <a name="cordebugdecodeeventflagswindows-enumeration"></a><span data-ttu-id="efb03-102">Enumerazione CorDebugDecodeEventFlagsWindows</span><span class="sxs-lookup"><span data-stu-id="efb03-102">CorDebugDecodeEventFlagsWindows Enumeration</span></span>
-<span data-ttu-id="efb03-103">Fornisce altre informazioni sugli eventi di debug nella piattaforma Windows.</span><span class="sxs-lookup"><span data-stu-id="efb03-103">Provides additional information about debug events on the Windows platform.</span></span>  
+# <a name="cordebugdecodeeventflagswindows-enumeration"></a><span data-ttu-id="d1040-102">Enumerazione CorDebugDecodeEventFlagsWindows</span><span class="sxs-lookup"><span data-stu-id="d1040-102">CorDebugDecodeEventFlagsWindows Enumeration</span></span>
+<span data-ttu-id="d1040-103">Fornisce altre informazioni sugli eventi di debug nella piattaforma Windows.</span><span class="sxs-lookup"><span data-stu-id="d1040-103">Provides additional information about debug events on the Windows platform.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="efb03-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="efb03-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1040-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d1040-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugDecodeEventFlagsWindows {  
@@ -30,27 +30,27 @@ typedef enum CorDebugDecodeEventFlagsWindows {
 } CorDebugDecodeEventFlagsWindows;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="efb03-105">Membri</span><span class="sxs-lookup"><span data-stu-id="efb03-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d1040-105">Membri</span><span class="sxs-lookup"><span data-stu-id="d1040-105">Members</span></span>  
   
-|<span data-ttu-id="efb03-106">Member</span><span class="sxs-lookup"><span data-stu-id="efb03-106">Member</span></span>|<span data-ttu-id="efb03-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="efb03-107">Description</span></span>|  
+|<span data-ttu-id="d1040-106">Member</span><span class="sxs-lookup"><span data-stu-id="d1040-106">Member</span></span>|<span data-ttu-id="d1040-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d1040-107">Description</span></span>|  
 |------------|-----------------|  
-|`IS_FIRST_CHANCE`|<span data-ttu-id="efb03-108">Indica che l'evento di debug è un'eccezione first-chance.</span><span class="sxs-lookup"><span data-stu-id="efb03-108">Indicates that the debug event is a first-chance exception.</span></span>|  
+|`IS_FIRST_CHANCE`|<span data-ttu-id="d1040-108">Indica che l'evento di debug è un'eccezione first-chance.</span><span class="sxs-lookup"><span data-stu-id="d1040-108">Indicates that the debug event is a first-chance exception.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="efb03-109">Note</span><span class="sxs-lookup"><span data-stu-id="efb03-109">Remarks</span></span>  
- <span data-ttu-id="efb03-110">Il [ICorDebugProcess6::DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metodo include un `dwFlags` parametro che fornisce informazioni aggiuntive su un evento di debug e il cui valore è dipendente dall'architettura di destinazione.</span><span class="sxs-lookup"><span data-stu-id="efb03-110">The [ICorDebugProcess6::DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method includes a `dwFlags` parameter that provides additional information about a debug event and whose value is dependent on the target architecture.</span></span> <span data-ttu-id="efb03-111">L'enumerazione `CorDebugDecodeEventFlagsWindows` può essere usata con gli eventi di debug nella piattaforma Windows.</span><span class="sxs-lookup"><span data-stu-id="efb03-111">The `CorDebugDecodeEventFlagsWindows` enumeration can be used with debug events on the Windows platform.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d1040-109">Note</span><span class="sxs-lookup"><span data-stu-id="d1040-109">Remarks</span></span>  
+ <span data-ttu-id="d1040-110">Il [ICorDebugProcess6::DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) metodo include un `dwFlags` parametro che fornisce informazioni aggiuntive su un evento di debug e il cui valore è dipendente dall'architettura di destinazione.</span><span class="sxs-lookup"><span data-stu-id="d1040-110">The [ICorDebugProcess6::DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) method includes a `dwFlags` parameter that provides additional information about a debug event and whose value is dependent on the target architecture.</span></span> <span data-ttu-id="d1040-111">L'enumerazione `CorDebugDecodeEventFlagsWindows` può essere usata con gli eventi di debug nella piattaforma Windows.</span><span class="sxs-lookup"><span data-stu-id="d1040-111">The `CorDebugDecodeEventFlagsWindows` enumeration can be used with debug events on the Windows platform.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="efb03-112">Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.</span><span class="sxs-lookup"><span data-stu-id="efb03-112">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
+>  <span data-ttu-id="d1040-112">Questa enumerazione è progettata per l'uso solo in scenari di debug di .NET Native.</span><span class="sxs-lookup"><span data-stu-id="d1040-112">This enumeration is intended for use in .NET Native debugging scenarios only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="efb03-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="efb03-113">Requirements</span></span>  
- <span data-ttu-id="efb03-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="efb03-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1040-113">Requisiti</span><span class="sxs-lookup"><span data-stu-id="d1040-113">Requirements</span></span>  
+ <span data-ttu-id="d1040-114">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1040-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="efb03-115">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="efb03-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d1040-115">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d1040-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="efb03-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="efb03-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d1040-116">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1040-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="efb03-117">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="efb03-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="d1040-117">**Versioni di .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1040-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="efb03-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="efb03-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1040-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d1040-118">See also</span></span>
 
-- [<span data-ttu-id="efb03-119">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="efb03-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="d1040-119">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="d1040-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

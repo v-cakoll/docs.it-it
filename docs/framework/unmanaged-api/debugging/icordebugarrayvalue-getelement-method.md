@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645643"
 ---
-# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="44a4a-102">Metodo ICorDebugArrayValue::GetElement</span><span class="sxs-lookup"><span data-stu-id="44a4a-102">ICorDebugArrayValue::GetElement Method</span></span>
-<span data-ttu-id="44a4a-103">Ottiene il valore dell'elemento della matrice specificata.</span><span class="sxs-lookup"><span data-stu-id="44a4a-103">Gets the value of the given array element.</span></span>  
+# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="f396b-102">Metodo ICorDebugArrayValue::GetElement</span><span class="sxs-lookup"><span data-stu-id="f396b-102">ICorDebugArrayValue::GetElement Method</span></span>
+<span data-ttu-id="f396b-103">Ottiene il valore dell'elemento della matrice specificata.</span><span class="sxs-lookup"><span data-stu-id="f396b-103">Gets the value of the given array element.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44a4a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="44a4a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f396b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f396b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElement (  
@@ -38,25 +38,25 @@ HRESULT GetElement (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="44a4a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="44a4a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f396b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f396b-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="44a4a-106">[in] Il numero di dimensioni di questo `ICorDebugArrayValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="44a4a-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="f396b-106">[in] Il numero di dimensioni di questo `ICorDebugArrayValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="f396b-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="44a4a-107">Questo valore viene anche le dimensioni dei `indices` matrice perché la dimensione è uguale al numero di dimensioni del `ICorDebugArrayValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="44a4a-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="f396b-107">Questo valore viene anche le dimensioni dei `indices` matrice perché la dimensione è uguale al numero di dimensioni del `ICorDebugArrayValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="f396b-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `indices`  
- <span data-ttu-id="44a4a-108">[in] Una matrice di valori di indice, ognuno dei quali specifica una posizione all'interno di una dimensione del `ICorDebugArrayValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="44a4a-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="f396b-108">[in] Una matrice di valori di indice, ognuno dei quali specifica una posizione all'interno di una dimensione del `ICorDebugArrayValue` oggetto.</span><span class="sxs-lookup"><span data-stu-id="f396b-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="44a4a-109">Questo valore non deve essere null.</span><span class="sxs-lookup"><span data-stu-id="44a4a-109">This value must not be null.</span></span>  
+ <span data-ttu-id="f396b-109">Questo valore non deve essere null.</span><span class="sxs-lookup"><span data-stu-id="f396b-109">This value must not be null.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="44a4a-110">[out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento specificato.</span><span class="sxs-lookup"><span data-stu-id="44a4a-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
+ <span data-ttu-id="f396b-110">[out] Un puntatore all'indirizzo di un oggetto ICorDebugValue che rappresenta il valore dell'elemento specificato.</span><span class="sxs-lookup"><span data-stu-id="f396b-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44a4a-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="44a4a-111">Requirements</span></span>  
- <span data-ttu-id="44a4a-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44a4a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f396b-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f396b-111">Requirements</span></span>  
+ <span data-ttu-id="f396b-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f396b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44a4a-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="44a4a-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f396b-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f396b-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="44a4a-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44a4a-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f396b-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f396b-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="44a4a-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44a4a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="f396b-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f396b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
