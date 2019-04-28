@@ -3,11 +3,11 @@ title: Problemi noti in SqlClient per Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607748"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemi noti in SqlClient per Entity Framework
 Questa sezione descrive i problemi noti relativi al provider di dati .NET Framework per SQL Server.  
@@ -25,15 +25,15 @@ Questa sezione descrive i problemi noti relativi al provider di dati .NET Framew
   
  Gli elementi seguenti rappresentano alcuni scenari tipici che potrebbero produrre operatori CROSS APPLY e/o OUTER APPLY nella query di output:  
   
--   Una subquery correlata con paging.  
+- Una subquery correlata con paging.  
   
--   Un oggetto `AnyElement` su una sottoquery correlata o su una raccolta prodotta dalla navigazione.  
+- Un oggetto `AnyElement` su una sottoquery correlata o su una raccolta prodotta dalla navigazione.  
   
--   Query LINQ che usano metodi di raggruppamento che accettano un selettore elemento.  
+- Query LINQ che usano metodi di raggruppamento che accettano un selettore elemento.  
   
--   Una query in cui è specificato in modo esplicito un operatore CROSS APPLY o OUTER APPLY.  
+- Una query in cui è specificato in modo esplicito un operatore CROSS APPLY o OUTER APPLY.  
   
--   Una query che presenta un costrutto DEREF su un costrutto REF.  
+- Una query che presenta un costrutto DEREF su un costrutto REF.  
   
 ## <a name="skip-operator"></a>Operatore SKIP  
  Se si usa [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], uso di SKIP con ORDER BY in colonne non chiave potrebbe restituire risultati non corretti. Se la colonna non chiave include dati duplicati, potrebbe venire ignorato un numero di righe maggiore di quello specificato. Questo comportamento è dovuto alla modalità di conversione di SKIP per [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Ad esempio, nella query seguente, più di cinque righe potrebbero essere ignorate se `E.NonKeyColumn` sono presenti valori duplicati:  

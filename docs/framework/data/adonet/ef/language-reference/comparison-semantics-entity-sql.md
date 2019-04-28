@@ -3,11 +3,11 @@ title: Semantica di confronto (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605971"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Semantica di confronto (Entity SQL)
 L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguenti comporta un confronto tra istanze di tipi:  
@@ -15,53 +15,53 @@ L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/e
 ## <a name="explicit-comparison"></a>Confronto esplicito  
  Operazioni di uguaglianza:  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  Operazioni di ordinamento:  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  Operazioni di impostazione del supporto dei valori Null:  
   
--   IS NULL  
+- IS NULL  
   
--   IS NOT NULL  
+- IS NOT NULL  
   
 ## <a name="explicit-distinction"></a>Distinzione esplicita  
  Distinzione di uguaglianza:  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  Distinzione di ordinamento:  
   
--   ORDER BY  
+- ORDER BY  
   
 ## <a name="implicit-distinction"></a>Distinzione implicita  
  Predicati e operazioni sui set (uguaglianza):  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  Predicati degli elementi (uguaglianza):  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>Combinazioni supportate  
  Nella tabella seguente sono illustrate tutte le combinazioni supportate di operatori di confronto per ognuno dei tipi:  

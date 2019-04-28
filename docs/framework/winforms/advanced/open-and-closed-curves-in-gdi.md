@@ -11,11 +11,11 @@ helpviewer_keywords:
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
 ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641471"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Curve aperte e chiuse in GDI+
 La figura seguente mostra due curve: quello aperto e una chiusa.  

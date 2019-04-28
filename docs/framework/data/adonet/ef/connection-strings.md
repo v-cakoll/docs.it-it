@@ -3,11 +3,11 @@ title: Stringhe di connessione in ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606781"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Stringhe di connessione in ADO.NET Entity Framework
 
@@ -28,7 +28,7 @@ Nella tabella seguente sono inclusi i nomi validi per i valori di parola chiave 
 |Parola chiave|Descrizione|
 |-------------|-----------------|
 |`Provider`|Obbligatoria se la parola chiave `Name` non è specificata. Nome del provider usato per recuperare l'oggetto <xref:System.Data.Common.DbProviderFactory> per il provider sottostante. Questo valore è costante.<br /><br /> Quando la parola chiave `Name` non è inclusa in una stringa di connessione di entità, per la parola chiave `Provider` è necessario specificare un valore non vuoto. Questa parola chiave e la parola chiave `Name` si escludono a vicenda.|
-|`Provider Connection String`|Parametro facoltativo. Indica la stringa di connessione specifica del provider passata all'origine dati sottostante. Questa stringa di connessione contiene coppie parola chiave/valore valido per il provider di dati. Una parola chiave `Provider Connection String` non valida produrrà un errore di runtime quando viene valutata dall'origine dati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.<br /><br /> Assicurarsi di eseguire l'escape il valore in base alla sintassi generale delle [stringhe di connessione ADO.NET](../../../../../docs/framework/data/adonet/connection-strings.md). Si consideri ad esempio la stringa di connessione seguente: `Server=serverName; User ID = userID`. È necessario essere sottoposta a escape perché contiene un punto e virgola. Poiché non contiene virgolette doppie, possono essere usati per eseguire l'escape:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
+|`Provider Connection String`|Facoltativo. Indica la stringa di connessione specifica del provider passata all'origine dati sottostante. Questa stringa di connessione contiene coppie parola chiave/valore valido per il provider di dati. Una parola chiave `Provider Connection String` non valida produrrà un errore di runtime quando viene valutata dall'origine dati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.<br /><br /> Assicurarsi di eseguire l'escape il valore in base alla sintassi generale delle [stringhe di connessione ADO.NET](../../../../../docs/framework/data/adonet/connection-strings.md). Si consideri ad esempio la stringa di connessione seguente: `Server=serverName; User ID = userID`. È necessario essere sottoposta a escape perché contiene un punto e virgola. Poiché non contiene virgolette doppie, possono essere usati per eseguire l'escape:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
 |`Metadata`|Obbligatoria se la parola chiave `Name` non è specificata. Elenco di percorsi di directory, file e risorse delimitato da barre verticali in cui cercare informazioni relative a metadati e mapping. Di seguito è riportato un esempio:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Gli spazi vuoti a ogni lato del separatore vengono ignorati.<br /><br /> Questa parola chiave e la parola chiave `Name` si escludono a vicenda.|
 |`Name`|L'applicazione può eventualmente specificare il nome della connessione in un file di configurazione dell'applicazione che fornisce i valori della stringa di connessione parola chiave/valore obbligatori. In questo caso, non è possibile specificare tali valori direttamente nella stringa di connessione. L'utilizzo della parola chiave `Name` non è consentito in un file di configurazione.<br /><br /> Quando la parola chiave `Name` non è inclusa nella stringa di connessione, per la parola chiave Provider è necessario specificare valori non vuoti.<br /><br /> Questa parola chiave e tutte le altre parole chiave per la stringa di connessione si escludono a vicenda.|
 
@@ -94,8 +94,7 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Supporto per il &#124;DataDirectory&#124; stringa di sostituzione e l'applicazione Web radice operatore (~)
 
-`DataDirectory` e ~ operatore vengono utilizzati nel <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> come parte del `Metadata` e `Provider Connection String` parole chiave. 
-  <xref:System.Data.EntityClient.EntityConnection> inoltra `DataDirectory` e l'operatore ~ rispettivamente a <xref:System.Data.Metadata.Edm.MetadataWorkspace> e al provider di archiviazione.
+`DataDirectory` e ~ operatore vengono utilizzati nel <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> come parte del `Metadata` e `Provider Connection String` parole chiave. <xref:System.Data.EntityClient.EntityConnection> inoltra `DataDirectory` e l'operatore ~ rispettivamente a <xref:System.Data.Metadata.Edm.MetadataWorkspace> e al provider di archiviazione.
 
 |Termine|Descrizione|
 |----------|-----------------|

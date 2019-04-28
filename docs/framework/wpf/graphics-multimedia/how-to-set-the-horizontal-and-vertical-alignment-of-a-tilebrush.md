@@ -11,20 +11,20 @@ helpviewer_keywords:
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
 ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651306"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Procedura: Impostare l'allineamento orizzontale e verticale di un TileBrush
 Questo esempio spiega come controllare l'allineamento orizzontale e verticale del contenuto in una tessera. Per controllare l'allineamento orizzontale e verticale di un <xref:System.Windows.Media.TileBrush>, usare il <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà.  
   
  Il <xref:System.Windows.Media.TileBrush.AlignmentX%2A> e <xref:System.Windows.Media.TileBrush.AlignmentY%2A> delle proprietà di un <xref:System.Windows.Media.TileBrush> vengono usati quando viene soddisfatta una delle condizioni seguenti:  
   
--   Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà è <xref:System.Windows.Media.Stretch.Uniform> oppure <xref:System.Windows.Media.Stretch.UniformToFill> e il <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> presentano proporzioni diverse.  
+- Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà è <xref:System.Windows.Media.Stretch.Uniform> oppure <xref:System.Windows.Media.Stretch.UniformToFill> e il <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> presentano proporzioni diverse.  
   
--   Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà viene <xref:System.Windows.Media.Stretch.None> e il <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> sono di dimensioni diverse.  
+- Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà viene <xref:System.Windows.Media.Stretch.None> e il <xref:System.Windows.Media.TileBrush.Viewbox%2A> e <xref:System.Windows.Media.TileBrush.Viewport%2A> sono di dimensioni diverse.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente Allinea il contenuto di un <xref:System.Windows.Media.DrawingBrush>, che è un tipo di <xref:System.Windows.Media.TileBrush>, nell'angolo superiore sinistro della relativa tessera. Per allineare il contenuto, nell'esempio viene impostata la <xref:System.Windows.Media.TileBrush.AlignmentX%2A> proprietà del <xref:System.Windows.Media.DrawingBrush> a <xref:System.Windows.Media.AlignmentX.Left> e il <xref:System.Windows.Media.TileBrush.AlignmentY%2A> proprietà <xref:System.Windows.Media.AlignmentY.Top>. Questo esempio produce il seguente output:  

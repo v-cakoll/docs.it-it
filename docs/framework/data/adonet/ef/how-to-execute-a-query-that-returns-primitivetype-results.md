@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
 ms.openlocfilehash: 78d6c9287c5c69c41bd2f50abd8d57dcd1cb4e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605803"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Procedura: Eseguire una query che restituisce risultati PrimitiveType
 In questo argomento viene illustrato come eseguire un comando su un modello concettuale usando un oggetto <xref:System.Data.EntityClient.EntityCommand> e viene mostrato come recuperare i risultati di <xref:System.Data.Metadata.Edm.PrimitiveType> usando un oggetto <xref:System.Data.EntityClient.EntityDataReader>.  

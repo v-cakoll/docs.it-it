@@ -3,24 +3,24 @@ title: 'Procedura: Usare EdmGen.exe per generare i file di modello e di mapping'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605990"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Procedura: Usare EdmGen.exe per generare i file di modello e di mapping
 In questo argomento viene illustrato come usare lo strumento Generatore EDM (EdmGen.exe) per generare i seguenti file in base al database School:  
   
--   Modello concettuale (file con estensione csdl).  
+- Modello concettuale (file con estensione csdl).  
   
--   Modello di archiviazione (file con estensione ssdl).  
+- Modello di archiviazione (file con estensione ssdl).  
   
--   Mapping tra i modelli concettuali e di archiviazione (file con estensione msl).  
+- Mapping tra i modelli concettuali e di archiviazione (file con estensione msl).  
   
--   Codice del livello oggetti in Visual Basic o C#.  
+- Codice del livello oggetti in Visual Basic o C#.  
   
--   File di visualizzazione.  
+- File di visualizzazione.  
   
  Lo strumento EdmGen.exe usa /mode:FullGeneration per la generazione dei file elencati in precedenza. Per altre informazioni sui comandi EdmGen.exe, vedere [generatore EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   

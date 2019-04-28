@@ -3,20 +3,20 @@ title: Architettura e progettazione
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606848"
 ---
 # <a name="architecture-and-design"></a>Architettura e progettazione
 Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) viene implementato come un visitatore dell'albero delle espressioni che rappresenta l'albero dei comandi. La generazione viene eseguita in un unico passaggio sull'albero delle espressioni.  
   
  I nodi dell'albero vengono elaborati dal basso verso l'alto. In primo luogo, viene prodotta una struttura intermedia: Oggetto SqlSelectStatement o SqlBuilder, entrambe implementano ISqlFragment. Successivamente da tale struttura viene prodotta l'istruzione SQL della stringa. Esistono due motivi per cui viene prodotta la struttura intermedia:  
   
--   Un'istruzione SQL SELECT viene popolata in modo non corretto da un punto di vista logico. I nodi che partecipano alla clausola FROM vengono visitati prima di quelli che partecipano alla clausola WHERE, GROUP BY e ORDER BY.  
+- Un'istruzione SQL SELECT viene popolata in modo non corretto da un punto di vista logico. I nodi che partecipano alla clausola FROM vengono visitati prima di quelli che partecipano alla clausola WHERE, GROUP BY e ORDER BY.  
   
--   Per evitare conflitti durante la ridenominazione degli alias, è necessario identificare tutti gli alias usati. È possibile rinviare le scelte di ridenominazione in SqlBuilder, usando gli oggetti Symbol per rappresentare le colonne candidate per la ridenominazione.  
+- Per evitare conflitti durante la ridenominazione degli alias, è necessario identificare tutti gli alias usati. È possibile rinviare le scelte di ridenominazione in SqlBuilder, usando gli oggetti Symbol per rappresentare le colonne candidate per la ridenominazione.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ Il modulo di generazione SQL nel [Provider di esempio](https://code.msdn.microso
 ### <a name="isqlfragment"></a>ISqlFragment  
  Questa sezione analizza le classi che implementano l'interfaccia ISqlFragment che ha una duplice funzione:  
   
--   Un tipo restituito comune per tutti i metodi del visitatore.  
+- Un tipo restituito comune per tutti i metodi del visitatore.  
   
--   Fornisce un metodo per scrivere la stringa SQL finale.  
+- Fornisce un metodo per scrivere la stringa SQL finale.  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  In genere, se le clausole dell'istruzione SQL vengono valutate dopo le clausole in cui i nodi considerati per l'unione non sono vuoti, non è possibile aggiungere il nodo all'istruzione corrente. Se ad esempio il nodo successivo è un filtro, tale nodo può essere incorporato nell'oggetto SqlSelectStatement corrente solo se si verificano le condizioni seguenti:  
   
--   L'elenco SELECT è vuoto. Se l'elenco SELECT non è vuoto, l'elenco di selezione è stato prodotto da un nodo che precede il filtro e il predicato può fare riferimento alle colonne prodotte dall'elenco SELECT.  
+- L'elenco SELECT è vuoto. Se l'elenco SELECT non è vuoto, l'elenco di selezione è stato prodotto da un nodo che precede il filtro e il predicato può fare riferimento alle colonne prodotte dall'elenco SELECT.  
   
--   La classe GROUPBY è vuota. Se GROUPBY non è vuota, l'aggiunta del filtro comporterebbe l'applicazione di filtri prima del raggruppamento e tale procedura non è corretta.  
+- La classe GROUPBY è vuota. Se GROUPBY non è vuota, l'aggiunta del filtro comporterebbe l'applicazione di filtri prima del raggruppamento e tale procedura non è corretta.  
   
--   La clausola TOP è vuota. Se la clausola TOP non è vuota, l'aggiunta del filtro comporterebbe l'applicazione di filtri prima dell'esecuzione di TOP e tale procedura non è corretta.  
+- La clausola TOP è vuota. Se la clausola TOP non è vuota, l'aggiunta del filtro comporterebbe l'applicazione di filtri prima dell'esecuzione di TOP e tale procedura non è corretta.  
   
  Queste indicazioni non valgono per i nodi non relazionali come DbConstantExpression o le espressioni aritmetiche, poiché questi sono sempre inclusi come parte di un oggetto SqlSelectStatement esistente.  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>Nodi relazionali (non join)  
  Di seguito vengono indicati i tipi di espressione che supportano nodi non join:  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  Il modello che viene seguito per la visita di questi nodi è il seguente:  
   
 1. Visitare l'input relazionale e ottenere l'oggetto SqlSelectStatement risultante. L'input in un nodo relazionale potrebbe essere uno degli elementi seguenti:  
   
-    -   Un nodo relazionale che include un extent, ad esempio un oggetto DbScanExpression. Quando si visita un nodo di questo tipo, viene restituito un oggetto SqlSelectStatement.  
+    - Un nodo relazionale che include un extent, ad esempio un oggetto DbScanExpression. Quando si visita un nodo di questo tipo, viene restituito un oggetto SqlSelectStatement.  
   
-    -   Un'espressione dell'operazione di impostazione, ad esempio UNION ALL. Il risultato deve essere racchiuso tra parentesi e inserito nella clausola FROM di un nuovo oggetto SqlSelectStatement.  
+    - Un'espressione dell'operazione di impostazione, ad esempio UNION ALL. Il risultato deve essere racchiuso tra parentesi e inserito nella clausola FROM di un nuovo oggetto SqlSelectStatement.  
   
 2. Controllare se il nodo corrente può essere aggiunto all'oggetto SqlSelectStatement prodotto dall'input. Questa procedura viene descritta nella sezione intitolata Raggruppamento di espressioni nelle istruzioni SQL. Se non può essere aggiunto,  
   
-    -   Visualizzare l'oggetto SqlSelectStatement corrente.  
+    - Visualizzare l'oggetto SqlSelectStatement corrente.  
   
-    -   Creare un nuovo oggetto SqlSelectStatement e aggiungere l'oggetto SqlSelectStatement visualizzato come FROM del nuovo oggetto SqlSelectStatement.  
+    - Creare un nuovo oggetto SqlSelectStatement e aggiungere l'oggetto SqlSelectStatement visualizzato come FROM del nuovo oggetto SqlSelectStatement.  
   
-    -   Inserire il nuovo oggetto in cima allo stack.  
+    - Inserire il nuovo oggetto in cima allo stack.  
   
 3. Reindirizzare l'associazione di espressioni di input nel simbolo corretto dall'input. Queste informazioni si trovano nell'oggetto SqlSelectStatement.  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>Espressioni di join  
  Gli elementi seguenti sono considerati espressioni di join e vengono elaborati come di consueto, ovvero mediante il metodo VisitJoinExpression:  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  I passaggi della visita sono i seguenti:  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. Completare l'elaborazione del risultato della visita dell'input chiamando il metodo ProcessJoinInputResult, responsabile della gestione della tabella dei simboli, dopo aver visitato un figlio di un'espressione di join e possibilmente aver completato l'oggetto SqlSelectStatement prodotto dal figlio. Il risultato del figlio potrebbe essere uno dei seguenti:  
   
-    -   Un oggetto SqlSelectStatement diverso da quello al quale verrà aggiunto il padre. In questo caso, può essere necessario completarlo aggiungendo colonne predefinite. Se l'input è un join, è necessario creare un nuovo simbolo di join. In caso contrario, creare un simbolo normale.  
+    - Un oggetto SqlSelectStatement diverso da quello al quale verrà aggiunto il padre. In questo caso, può essere necessario completarlo aggiungendo colonne predefinite. Se l'input è un join, è necessario creare un nuovo simbolo di join. In caso contrario, creare un simbolo normale.  
   
-    -   Un extent, ad esempio un oggetto DbScanExpression, nel qual caso viene semplicemente aggiunto all'elenco di input dell'oggetto SqlSelectStatement del padre.  
+    - Un extent, ad esempio un oggetto DbScanExpression, nel qual caso viene semplicemente aggiunto all'elenco di input dell'oggetto SqlSelectStatement del padre.  
   
-    -   Un oggetto diverso da SqlSelectStatement, nel qual caso viene racchiuso tra parentesi.  
+    - Un oggetto diverso da SqlSelectStatement, nel qual caso viene racchiuso tra parentesi.  
   
-    -   Lo stesso oggetto SqlSelectStatement al quale viene aggiunto il padre. In questo caso, i simboli dell'elenco FromExtents devono essere sostituiti da un unico nuovo oggetto JoinSymbol che li rappresenta tutti.  
+    - Lo stesso oggetto SqlSelectStatement al quale viene aggiunto il padre. In questo caso, i simboli dell'elenco FromExtents devono essere sostituiti da un unico nuovo oggetto JoinSymbol che li rappresenta tutti.  
   
-    -   Per i primi tre casi viene chiamato il metodo AddFromSymbol per aggiungere la clausola AS e aggiornare la tabella dei simboli.  
+    - Per i primi tre casi viene chiamato il metodo AddFromSymbol per aggiungere la clausola AS e aggiornare la tabella dei simboli.  
   
  Il terzo passaggio è costituito dalla visita della condizione di join (se presente).  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  Viene prima visitata la proprietà Instance e il risultato è un oggetto Symbol, JoinSymbol o SymbolPair. I tre casi vengono gestiti nel modo seguente:  
   
--   Se viene restituito un oggetto JoinSymbol, la rispettiva proprietà NameToExtent contiene un simbolo per la proprietà necessaria. Se il simbolo di join rappresenta un join annidato, viene restituita una nuova coppia di simboli con il simbolo di join per rilevare il simbolo che verrebbe usato come alias dell'istanza e il simbolo che rappresenta la proprietà effettiva per l'altre risoluzione.  
+- Se viene restituito un oggetto JoinSymbol, la rispettiva proprietà NameToExtent contiene un simbolo per la proprietà necessaria. Se il simbolo di join rappresenta un join annidato, viene restituita una nuova coppia di simboli con il simbolo di join per rilevare il simbolo che verrebbe usato come alias dell'istanza e il simbolo che rappresenta la proprietà effettiva per l'altre risoluzione.  
   
--   Se viene restituito un oggetto SymbolPair e la parte della colonna è un simbolo di join, viene restituito nuovamente un simbolo di join, ma in questo caso la proprietà della colonna viene aggiornata in modo da puntare alla proprietà rappresentata dall'espressione della proprietà corrente. In caso contrario, viene restituito un SqlBuilder con l'origine SymbolPair come alias e il simbolo per la proprietà corrente come colonna.  
+- Se viene restituito un oggetto SymbolPair e la parte della colonna è un simbolo di join, viene restituito nuovamente un simbolo di join, ma in questo caso la proprietà della colonna viene aggiornata in modo da puntare alla proprietà rappresentata dall'espressione della proprietà corrente. In caso contrario, viene restituito un SqlBuilder con l'origine SymbolPair come alias e il simbolo per la proprietà corrente come colonna.  
   
--   Se viene restituito un oggetto Symbol, il metodo Visit restituisce un metodo SqlBuilder con l'istanza specifica come alias e il nome di proprietà come nome di colonna.  
+- Se viene restituito un oggetto Symbol, il metodo Visit restituisce un metodo SqlBuilder con l'istanza specifica come alias e il nome di proprietà come nome di colonna.  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Se viene usato come proprietà Projection di DbProjectExpression, DbNewInstanceExpression produce un elenco delimitato da virgole degli argomenti per rappresentare le colonne previste.  
   
  Quando DbNewInstanceExpression presenta un tipo restituito di raccolta e definisce una nuova raccolta delle espressioni fornite come argomenti, i tre casi seguenti vengono gestiti separatamente:  
   
--   Se l'unico argomento di DbNewInstanceExpression è DbElementExpression, viene convertito come segue:  
+- Se l'unico argomento di DbNewInstanceExpression è DbElementExpression, viene convertito come segue:  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

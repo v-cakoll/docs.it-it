@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651519"
 ---
 # <a name="three-categories-of-graphics-services"></a>Tre categorie di servizi grafici
 Le offerte di grafica in Windows Form possono essere suddivise in tre categorie generali seguenti:  
   
--   Grafica vettoriale bidimensionale (2D)  
+- Grafica vettoriale bidimensionale (2D)  
   
--   Creazione di immagini  
+- Creazione di immagini  
   
--   Opzioni tipografiche  
+- Opzioni tipografiche  
   
 ## <a name="2-d-vector-graphics"></a>Grafica vettoriale 2D  
  Grafica vettoriale bidimensionale è tipi primitivi; ad esempio linee, curve e le cifre; dal set di punti su un sistema di coordinate specificati. Ad esempio, una linea retta specificata dal relativo due endpoint, e un rettangolo specificato da un punto fornisce la posizione dell'angolo superiore sinistro e una coppia di numeri che ne indicano la larghezza e altezza. Viene specificato un percorso semplice da una matrice di punti connessi da linee rette. Una spline di Bézier è una sofisticata curva specificata da quattro punti di controllo.  

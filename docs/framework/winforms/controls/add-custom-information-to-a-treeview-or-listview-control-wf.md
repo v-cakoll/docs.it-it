@@ -14,18 +14,18 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
 ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640399"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Forms)
 È possibile creare un nodo derivato in un controllo Windows Form <xref:System.Windows.Forms.TreeView> controllo o un elemento derivato in un <xref:System.Windows.Forms.ListView> controllo. La derivazione consente di aggiungere eventuali campi necessari, nonché metodi personalizzati e costruttori per gestirli. Un utilizzo di questa funzionalità consiste nel collegare un oggetto Customer a ogni nodo di una struttura ad albero o voce di elenco. Negli esempi seguenti sono per un <xref:System.Windows.Forms.TreeView> controllo, ma lo stesso approccio può essere utilizzato per un <xref:System.Windows.Forms.ListView> controllo.  
   
 ### <a name="to-derive-a-tree-node"></a>Per derivare un nodo della struttura ad albero  
   
--   Creare una nuova classe nodo, derivata dal <xref:System.Windows.Forms.TreeNode> classe, che ha un campo personalizzato per registrare un percorso di file.  
+- Creare una nuova classe nodo, derivata dal <xref:System.Windows.Forms.TreeNode> classe, che ha un campo personalizzato per registrare un percorso di file.  
   
     ```vb  
     Class myTreeNode  
