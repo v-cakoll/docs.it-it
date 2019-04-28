@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3ce2b23306e7e38f3982f8d5a4b377aa2f9547c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723160"
 ---
-# <a name="cordebugstepreason-enumeration"></a><span data-ttu-id="a51ab-102">Enumerazione CorDebugStepReason</span><span class="sxs-lookup"><span data-stu-id="a51ab-102">CorDebugStepReason Enumeration</span></span>
-<span data-ttu-id="a51ab-103">Indica l'esito di una singola istruzione.</span><span class="sxs-lookup"><span data-stu-id="a51ab-103">Indicates the outcome of an individual step.</span></span>  
+# <a name="cordebugstepreason-enumeration"></a><span data-ttu-id="9d042-102">Enumerazione CorDebugStepReason</span><span class="sxs-lookup"><span data-stu-id="9d042-102">CorDebugStepReason Enumeration</span></span>
+<span data-ttu-id="9d042-103">Indica l'esito di una singola istruzione.</span><span class="sxs-lookup"><span data-stu-id="9d042-103">Indicates the outcome of an individual step.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a51ab-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a51ab-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d042-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9d042-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugStepReason {  
@@ -40,28 +40,28 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="a51ab-105">Membri</span><span class="sxs-lookup"><span data-stu-id="a51ab-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9d042-105">Membri</span><span class="sxs-lookup"><span data-stu-id="9d042-105">Members</span></span>  
   
-|<span data-ttu-id="a51ab-106">Member</span><span class="sxs-lookup"><span data-stu-id="a51ab-106">Member</span></span>|<span data-ttu-id="a51ab-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a51ab-107">Description</span></span>|  
+|<span data-ttu-id="9d042-106">Member</span><span class="sxs-lookup"><span data-stu-id="9d042-106">Member</span></span>|<span data-ttu-id="9d042-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9d042-107">Description</span></span>|  
 |------------|-----------------|  
-|`STEP_NORMAL`|<span data-ttu-id="a51ab-108">L'esecuzione di istruzioni completata in genere, entro la stessa funzione.</span><span class="sxs-lookup"><span data-stu-id="a51ab-108">Stepping completed normally, within the same function.</span></span>|  
-|`STEP_RETURN`|<span data-ttu-id="a51ab-109">L'esecuzione di istruzioni continuato in genere, dopo la funzione ha restituito.</span><span class="sxs-lookup"><span data-stu-id="a51ab-109">Stepping continued normally, after the function returned.</span></span>|  
-|`STEP_CALL`|<span data-ttu-id="a51ab-110">L'esecuzione di istruzioni continuato in genere, all'inizio di una nuova funzione chiamata.</span><span class="sxs-lookup"><span data-stu-id="a51ab-110">Stepping continued normally, at the beginning of a newly called function.</span></span>|  
-|`STEP_EXCEPTION_FILTER`|<span data-ttu-id="a51ab-111">È stata generata un'eccezione e il controllo è stato passato a un filtro eccezioni.</span><span class="sxs-lookup"><span data-stu-id="a51ab-111">An exception was generated and control was passed to an exception filter.</span></span>|  
-|`STEP_EXCEPTION_HANDLER`|<span data-ttu-id="a51ab-112">È stata generata un'eccezione e il controllo è stato passato a un gestore di eccezioni.</span><span class="sxs-lookup"><span data-stu-id="a51ab-112">An exception was generated and control was passed to an exception handler.</span></span>|  
-|`STEP_INTERCEPT`|<span data-ttu-id="a51ab-113">Il controllo è stato passato a un intercettore.</span><span class="sxs-lookup"><span data-stu-id="a51ab-113">Control was passed to an interceptor.</span></span>|  
-|`STEP_EXIT`|<span data-ttu-id="a51ab-114">Il thread sia stato chiuso prima del completamento dell'istruzione.</span><span class="sxs-lookup"><span data-stu-id="a51ab-114">The thread exited before the step was completed.</span></span>|  
+|`STEP_NORMAL`|<span data-ttu-id="9d042-108">L'esecuzione di istruzioni completata in genere, entro la stessa funzione.</span><span class="sxs-lookup"><span data-stu-id="9d042-108">Stepping completed normally, within the same function.</span></span>|  
+|`STEP_RETURN`|<span data-ttu-id="9d042-109">L'esecuzione di istruzioni continuato in genere, dopo la funzione ha restituito.</span><span class="sxs-lookup"><span data-stu-id="9d042-109">Stepping continued normally, after the function returned.</span></span>|  
+|`STEP_CALL`|<span data-ttu-id="9d042-110">L'esecuzione di istruzioni continuato in genere, all'inizio di una nuova funzione chiamata.</span><span class="sxs-lookup"><span data-stu-id="9d042-110">Stepping continued normally, at the beginning of a newly called function.</span></span>|  
+|`STEP_EXCEPTION_FILTER`|<span data-ttu-id="9d042-111">È stata generata un'eccezione e il controllo è stato passato a un filtro eccezioni.</span><span class="sxs-lookup"><span data-stu-id="9d042-111">An exception was generated and control was passed to an exception filter.</span></span>|  
+|`STEP_EXCEPTION_HANDLER`|<span data-ttu-id="9d042-112">È stata generata un'eccezione e il controllo è stato passato a un gestore di eccezioni.</span><span class="sxs-lookup"><span data-stu-id="9d042-112">An exception was generated and control was passed to an exception handler.</span></span>|  
+|`STEP_INTERCEPT`|<span data-ttu-id="9d042-113">Il controllo è stato passato a un intercettore.</span><span class="sxs-lookup"><span data-stu-id="9d042-113">Control was passed to an interceptor.</span></span>|  
+|`STEP_EXIT`|<span data-ttu-id="9d042-114">Il thread sia stato chiuso prima del completamento dell'istruzione.</span><span class="sxs-lookup"><span data-stu-id="9d042-114">The thread exited before the step was completed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a51ab-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a51ab-115">Requirements</span></span>  
- <span data-ttu-id="a51ab-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a51ab-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d042-115">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9d042-115">Requirements</span></span>  
+ <span data-ttu-id="9d042-116">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d042-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a51ab-117">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a51ab-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9d042-117">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d042-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a51ab-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a51ab-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9d042-118">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d042-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a51ab-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a51ab-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9d042-119">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d042-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a51ab-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a51ab-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d042-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d042-120">See also</span></span>
 
-- [<span data-ttu-id="a51ab-121">Metodo StepComplete</span><span class="sxs-lookup"><span data-stu-id="a51ab-121">StepComplete Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
-- [<span data-ttu-id="a51ab-122">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="a51ab-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="9d042-121">Metodo StepComplete</span><span class="sxs-lookup"><span data-stu-id="9d042-121">StepComplete Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [<span data-ttu-id="9d042-122">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="9d042-122">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

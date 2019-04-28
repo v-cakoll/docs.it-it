@@ -7,27 +7,27 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
 ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769070"
 ---
-# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a><span data-ttu-id="d2442-102">Procedura: Determinare se due oggetti sono correlati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d2442-102">How to: Determine Whether Two Objects Are Related (Visual Basic)</span></span>
-<span data-ttu-id="d2442-103">È possibile confrontare due oggetti per stabilire la relazione, se presente, tra le classi da cui vengono creati.</span><span class="sxs-lookup"><span data-stu-id="d2442-103">You can compare two objects to determine the relationship, if any, between the classes from which they are created.</span></span> <span data-ttu-id="d2442-104">Il <xref:System.Type.IsInstanceOfType%2A> metodo per il <xref:System.Type?displayProperty=nameWithType> classe restituisce `True` se la classe specificata eredita dalla classe corrente o se il tipo corrente è un'interfaccia supportata dalla classe specificata.</span><span class="sxs-lookup"><span data-stu-id="d2442-104">The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.</span></span>  
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a><span data-ttu-id="a4f12-102">Procedura: Determinare se due oggetti sono correlati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a4f12-102">How to: Determine Whether Two Objects Are Related (Visual Basic)</span></span>
+<span data-ttu-id="a4f12-103">È possibile confrontare due oggetti per stabilire la relazione, se presente, tra le classi da cui vengono creati.</span><span class="sxs-lookup"><span data-stu-id="a4f12-103">You can compare two objects to determine the relationship, if any, between the classes from which they are created.</span></span> <span data-ttu-id="a4f12-104">Il <xref:System.Type.IsInstanceOfType%2A> metodo per il <xref:System.Type?displayProperty=nameWithType> classe restituisce `True` se la classe specificata eredita dalla classe corrente o se il tipo corrente è un'interfaccia supportata dalla classe specificata.</span><span class="sxs-lookup"><span data-stu-id="a4f12-104">The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.</span></span>  
   
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a><span data-ttu-id="d2442-105">Per determinare se un oggetto eredita da un altro oggetto classe o interfaccia</span><span class="sxs-lookup"><span data-stu-id="d2442-105">To determine if one object inherits from another object's class or interface</span></span>  
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a><span data-ttu-id="a4f12-105">Per determinare se un oggetto eredita da un altro oggetto classe o interfaccia</span><span class="sxs-lookup"><span data-stu-id="a4f12-105">To determine if one object inherits from another object's class or interface</span></span>  
   
-1. <span data-ttu-id="d2442-106">Per l'oggetto si ritiene che potrebbero essere del tipo di base, richiamare il <xref:System.Object.GetType%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="d2442-106">On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.</span></span>  
+1. <span data-ttu-id="a4f12-106">Per l'oggetto si ritiene che potrebbero essere del tipo di base, richiamare il <xref:System.Object.GetType%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="a4f12-106">On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.</span></span>  
   
-2. <span data-ttu-id="d2442-107">Nel <xref:System.Type?displayProperty=nameWithType> oggetto restituito da <xref:System.Object.GetType%2A>, richiamare il <xref:System.Type.IsInstanceOfType%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="d2442-107">On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
+2. <span data-ttu-id="a4f12-107">Nel <xref:System.Type?displayProperty=nameWithType> oggetto restituito da <xref:System.Object.GetType%2A>, richiamare il <xref:System.Type.IsInstanceOfType%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="a4f12-107">On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
   
-3. <span data-ttu-id="d2442-108">Nell'elenco di argomenti per <xref:System.Type.IsInstanceOfType%2A>, specificare l'oggetto si ritiene che potrebbe essere del tipo derivato.</span><span class="sxs-lookup"><span data-stu-id="d2442-108">In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.</span></span>  
+3. <span data-ttu-id="a4f12-108">Nell'elenco di argomenti per <xref:System.Type.IsInstanceOfType%2A>, specificare l'oggetto si ritiene che potrebbe essere del tipo derivato.</span><span class="sxs-lookup"><span data-stu-id="a4f12-108">In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.</span></span>  
   
-     <span data-ttu-id="d2442-109"><xref:System.Type.IsInstanceOfType%2A> Restituisce `True` se il tipo di argomento eredita dal <xref:System.Type?displayProperty=nameWithType> tipo di oggetto.</span><span class="sxs-lookup"><span data-stu-id="d2442-109"><xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.</span></span>  
+     <span data-ttu-id="a4f12-109"><xref:System.Type.IsInstanceOfType%2A> Restituisce `True` se il tipo di argomento eredita dal <xref:System.Type?displayProperty=nameWithType> tipo di oggetto.</span><span class="sxs-lookup"><span data-stu-id="a4f12-109"><xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2442-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="d2442-110">Example</span></span>  
- <span data-ttu-id="d2442-111">Nell'esempio seguente determina se un oggetto rappresenta una classe derivata dalla classe dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="d2442-111">The following example determines whether one object represents a class derived from another object's class.</span></span>  
+## <a name="example"></a><span data-ttu-id="a4f12-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="a4f12-110">Example</span></span>  
+ <span data-ttu-id="a4f12-111">Nell'esempio seguente determina se un oggetto rappresenta una classe derivata dalla classe dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="a4f12-111">The following example determines whether one object represents a class derived from another object's class.</span></span>  
   
 ```  
 Public Class baseClass  
@@ -45,14 +45,14 @@ Public Class testTheseClasses
 End Class  
 ```  
   
- <span data-ttu-id="d2442-112">Si noti la posizione di due variabili oggetto nella chiamata a imprevisto <xref:System.Type.IsInstanceOfType%2A>.</span><span class="sxs-lookup"><span data-stu-id="d2442-112">Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>.</span></span> <span data-ttu-id="d2442-113">Il tipo base previsto è utilizzato per generare il <xref:System.Type?displayProperty=nameWithType> classe e il tipo derivato previsto viene passata come argomento per il <xref:System.Type.IsInstanceOfType%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="d2442-113">The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
+ <span data-ttu-id="a4f12-112">Si noti la posizione di due variabili oggetto nella chiamata a imprevisto <xref:System.Type.IsInstanceOfType%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4f12-112">Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>.</span></span> <span data-ttu-id="a4f12-113">Il tipo base previsto è utilizzato per generare il <xref:System.Type?displayProperty=nameWithType> classe e il tipo derivato previsto viene passata come argomento per il <xref:System.Type.IsInstanceOfType%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="a4f12-113">The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2442-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2442-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4f12-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a4f12-114">See also</span></span>
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [<span data-ttu-id="d2442-115">Tipo di dati Object</span><span class="sxs-lookup"><span data-stu-id="d2442-115">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [<span data-ttu-id="d2442-116">Variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="d2442-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="d2442-117">Valori di variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="d2442-117">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [<span data-ttu-id="d2442-118">Procedura: Determinare se due oggetti sono identici</span><span class="sxs-lookup"><span data-stu-id="d2442-118">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [<span data-ttu-id="a4f12-115">Tipo di dati Object</span><span class="sxs-lookup"><span data-stu-id="a4f12-115">Object Data Type</span></span>](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [<span data-ttu-id="a4f12-116">Variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="a4f12-116">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="a4f12-117">Valori di variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="a4f12-117">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [<span data-ttu-id="a4f12-118">Procedura: Determinare se due oggetti sono identici</span><span class="sxs-lookup"><span data-stu-id="a4f12-118">How to: Determine Whether Two Objects Are Identical</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

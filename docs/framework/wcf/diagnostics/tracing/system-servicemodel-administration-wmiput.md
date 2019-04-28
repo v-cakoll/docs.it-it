@@ -3,20 +3,20 @@ title: System.ServiceModel.Administration.WmiPut
 ms.date: 03/30/2017
 ms.assetid: 32c063c0-1bf2-4a40-9ea2-d9610d391bf9
 ms.openlocfilehash: 1dd9dd8b626b03c44aba192538622fff5458b403
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752828"
 ---
-# <a name="systemservicemodeladministrationwmiput"></a><span data-ttu-id="ecc17-102">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="ecc17-102">System.ServiceModel.Administration.WmiPut</span></span>
-<span data-ttu-id="ecc17-103">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="ecc17-103">System.ServiceModel.Administration.WmiPut</span></span>  
+# <a name="systemservicemodeladministrationwmiput"></a><span data-ttu-id="87cba-102">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="87cba-102">System.ServiceModel.Administration.WmiPut</span></span>
+<span data-ttu-id="87cba-103">System.ServiceModel.Administration.WmiPut</span><span class="sxs-lookup"><span data-stu-id="87cba-103">System.ServiceModel.Administration.WmiPut</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ecc17-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ecc17-104">Description</span></span>  
- <span data-ttu-id="ecc17-105">Impostazione di un valore utilizzando WMI.</span><span class="sxs-lookup"><span data-stu-id="ecc17-105">Setting a value using WMI.</span></span>  
+## <a name="description"></a><span data-ttu-id="87cba-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="87cba-104">Description</span></span>  
+ <span data-ttu-id="87cba-105">Impostazione di un valore utilizzando WMI.</span><span class="sxs-lookup"><span data-stu-id="87cba-105">Setting a value using WMI.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ecc17-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ecc17-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87cba-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="87cba-106">See also</span></span>
 
-- [<span data-ttu-id="ecc17-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="ecc17-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="ecc17-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="ecc17-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="ecc17-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="ecc17-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="87cba-107">Traccia</span><span class="sxs-lookup"><span data-stu-id="87cba-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="87cba-108">Uso delle tracce per risolvere i problemi di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="87cba-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="87cba-109">Amministrazione e diagnostica</span><span class="sxs-lookup"><span data-stu-id="87cba-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

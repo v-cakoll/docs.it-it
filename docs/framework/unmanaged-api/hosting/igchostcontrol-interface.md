@@ -17,30 +17,30 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 050b515e91517efe5b4dc4e391ace4fba5876727
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761598"
 ---
-# <a name="igchostcontrol-interface"></a><span data-ttu-id="7caf8-102">Interfaccia IGCHostControl</span><span class="sxs-lookup"><span data-stu-id="7caf8-102">IGCHostControl Interface</span></span>
-<span data-ttu-id="7caf8-103">Fornisce un metodo che consente al garbage collector richiedere l'host per modificare i limiti di memoria virtuale.</span><span class="sxs-lookup"><span data-stu-id="7caf8-103">Provides a method that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
+# <a name="igchostcontrol-interface"></a><span data-ttu-id="08027-102">Interfaccia IGCHostControl</span><span class="sxs-lookup"><span data-stu-id="08027-102">IGCHostControl Interface</span></span>
+<span data-ttu-id="08027-103">Fornisce un metodo che consente al garbage collector richiedere l'host per modificare i limiti di memoria virtuale.</span><span class="sxs-lookup"><span data-stu-id="08027-103">Provides a method that allows the garbage collector to request the host to change the limits of virtual memory.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="7caf8-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="7caf8-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="08027-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="08027-104">Methods</span></span>  
   
-|<span data-ttu-id="7caf8-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="7caf8-105">Method</span></span>|<span data-ttu-id="7caf8-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7caf8-106">Description</span></span>|  
+|<span data-ttu-id="08027-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="08027-105">Method</span></span>|<span data-ttu-id="08027-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="08027-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="7caf8-107">Metodo RequestVirtualMemLimit</span><span class="sxs-lookup"><span data-stu-id="7caf8-107">RequestVirtualMemLimit Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|<span data-ttu-id="7caf8-108">Le richieste all'host di modificare i limiti di memoria virtuale.</span><span class="sxs-lookup"><span data-stu-id="7caf8-108">Requests the host to change the limits of virtual memory.</span></span>|  
+|[<span data-ttu-id="08027-107">Metodo RequestVirtualMemLimit</span><span class="sxs-lookup"><span data-stu-id="08027-107">RequestVirtualMemLimit Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-requestvirtualmemlimit-method.md)|<span data-ttu-id="08027-108">Le richieste all'host di modificare i limiti di memoria virtuale.</span><span class="sxs-lookup"><span data-stu-id="08027-108">Requests the host to change the limits of virtual memory.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7caf8-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="7caf8-109">Requirements</span></span>  
- <span data-ttu-id="7caf8-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7caf8-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08027-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="08027-109">Requirements</span></span>  
+ <span data-ttu-id="08027-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="08027-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7caf8-111">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7caf8-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="08027-111">**Intestazione:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="08027-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7caf8-112">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="7caf8-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="08027-112">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="08027-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7caf8-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7caf8-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="08027-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08027-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7caf8-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7caf8-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="08027-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="08027-114">See also</span></span>
 
-- [<span data-ttu-id="7caf8-115">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="7caf8-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="08027-115">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="08027-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

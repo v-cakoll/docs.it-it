@@ -9,19 +9,19 @@ helpviewer_keywords:
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
 ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791027"
 ---
-# <a name="stackpanel"></a><span data-ttu-id="2ce69-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="2ce69-102">StackPanel</span></span>
-<span data-ttu-id="2ce69-103">Il <xref:System.Windows.Controls.StackPanel> elemento viene usato in stack gli elementi figlio orizzontalmente o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="2ce69-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
+# <a name="stackpanel"></a><span data-ttu-id="27a7d-102">StackPanel</span><span class="sxs-lookup"><span data-stu-id="27a7d-102">StackPanel</span></span>
+<span data-ttu-id="27a7d-103">Il <xref:System.Windows.Controls.StackPanel> elemento viene usato in stack gli elementi figlio orizzontalmente o verticalmente.</span><span class="sxs-lookup"><span data-stu-id="27a7d-103">The <xref:System.Windows.Controls.StackPanel> element is used to stack child elements horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2ce69-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="2ce69-104">In This Section</span></span>  
- [<span data-ttu-id="2ce69-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="2ce69-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="27a7d-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="27a7d-104">In This Section</span></span>  
+ [<span data-ttu-id="27a7d-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="27a7d-105">How-to Topics</span></span>](stackpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="2ce69-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="2ce69-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="27a7d-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="27a7d-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -36,9 +36,9 @@ ms.locfileid: "57361230"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="2ce69-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="2ce69-107">Related Sections</span></span>  
- [<span data-ttu-id="2ce69-108">Layout</span><span class="sxs-lookup"><span data-stu-id="2ce69-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="27a7d-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="27a7d-107">Related Sections</span></span>  
+ [<span data-ttu-id="27a7d-108">Layout</span><span class="sxs-lookup"><span data-stu-id="27a7d-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="2ce69-109">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="2ce69-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="27a7d-109">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="27a7d-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="2ce69-110">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="2ce69-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="27a7d-110">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="27a7d-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

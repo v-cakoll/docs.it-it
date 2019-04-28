@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
 ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766986"
 ---
-# <a name="listbox"></a><span data-ttu-id="31f4e-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="31f4e-102">ListBox</span></span>
-<span data-ttu-id="31f4e-103">Oggetto <xref:System.Windows.Controls.ListBox> controllo fornisce agli utenti un elenco di elementi selezionabili.</span><span class="sxs-lookup"><span data-stu-id="31f4e-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="c38a0-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="c38a0-102">ListBox</span></span>
+<span data-ttu-id="c38a0-103">Oggetto <xref:System.Windows.Controls.ListBox> controllo fornisce agli utenti un elenco di elementi selezionabili.</span><span class="sxs-lookup"><span data-stu-id="c38a0-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="31f4e-104">La figura seguente illustra una tipica <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="31f4e-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="c38a0-104">La figura seguente illustra una tipica <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="c38a0-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="31f4e-105">![Schermata ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="31f4e-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="31f4e-106">Casella di riepilogo tipico</span><span class="sxs-lookup"><span data-stu-id="31f4e-106">Typical ListBox</span></span>  
+ <span data-ttu-id="c38a0-105">![Schermata ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="c38a0-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="c38a0-106">Casella di riepilogo tipico</span><span class="sxs-lookup"><span data-stu-id="c38a0-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="31f4e-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="31f4e-107">In This Section</span></span>  
- [<span data-ttu-id="31f4e-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="31f4e-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c38a0-107">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="c38a0-107">In This Section</span></span>  
+ [<span data-ttu-id="c38a0-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="c38a0-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="31f4e-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="31f4e-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c38a0-109">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="c38a0-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="31f4e-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="31f4e-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c38a0-110">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="c38a0-110">Related Sections</span></span>

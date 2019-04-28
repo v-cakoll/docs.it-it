@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765375"
 ---
-# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="adc71-102">Metodo IValidator::FormatEventInfo</span><span class="sxs-lookup"><span data-stu-id="adc71-102">IValidator::FormatEventInfo Method</span></span>
-<span data-ttu-id="adc71-103">Ottiene il messaggio di errore corrispondente all'errore di convalida specificato.</span><span class="sxs-lookup"><span data-stu-id="adc71-103">Gets the error message corresponding to the specified validation error.</span></span>  
+# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="71ee7-102">Metodo IValidator::FormatEventInfo</span><span class="sxs-lookup"><span data-stu-id="71ee7-102">IValidator::FormatEventInfo Method</span></span>
+<span data-ttu-id="71ee7-103">Ottiene il messaggio di errore corrispondente all'errore di convalida specificato.</span><span class="sxs-lookup"><span data-stu-id="71ee7-103">Gets the error message corresponding to the specified validation error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="adc71-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="adc71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71ee7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="71ee7-104">Syntax</span></span>  
   
 ```  
 HRESULT FormatEventInfo(  
@@ -39,27 +39,27 @@ HRESULT FormatEventInfo(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="adc71-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="adc71-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71ee7-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="71ee7-105">Parameters</span></span>  
  `hVECode`  
- <span data-ttu-id="adc71-106">[in] Il valore HRESULT passato al gestore di errori di convalida.</span><span class="sxs-lookup"><span data-stu-id="adc71-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
+ <span data-ttu-id="71ee7-106">[in] Il valore HRESULT passato al gestore di errori di convalida.</span><span class="sxs-lookup"><span data-stu-id="71ee7-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
   
  `Context`  
- <span data-ttu-id="adc71-107">[in] Oggetto `VEContext` istanza che contiene informazioni contestuali relative all'errore di convalida.</span><span class="sxs-lookup"><span data-stu-id="adc71-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
+ <span data-ttu-id="71ee7-107">[in] Oggetto `VEContext` istanza che contiene informazioni contestuali relative all'errore di convalida.</span><span class="sxs-lookup"><span data-stu-id="71ee7-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
   
  `msg`  
- <span data-ttu-id="adc71-108">[in, out] Stringa che contiene il messaggio di errore restituito.</span><span class="sxs-lookup"><span data-stu-id="adc71-108">[in, out] A string that contains the returned error message.</span></span>  
+ <span data-ttu-id="71ee7-108">[in, out] Stringa che contiene il messaggio di errore restituito.</span><span class="sxs-lookup"><span data-stu-id="71ee7-108">[in, out] A string that contains the returned error message.</span></span>  
   
  `ulMaxLength`  
- <span data-ttu-id="adc71-109">[in] La lunghezza massima del messaggio di errore.</span><span class="sxs-lookup"><span data-stu-id="adc71-109">[in] The maximum length of the error message.</span></span>  
+ <span data-ttu-id="71ee7-109">[in] La lunghezza massima del messaggio di errore.</span><span class="sxs-lookup"><span data-stu-id="71ee7-109">[in] The maximum length of the error message.</span></span>  
   
  `psa`  
- <span data-ttu-id="adc71-110">[in] Una matrice protetta contenente parametri aggiuntivi che descrive l'errore.</span><span class="sxs-lookup"><span data-stu-id="adc71-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
+ <span data-ttu-id="71ee7-110">[in] Una matrice protetta contenente parametri aggiuntivi che descrive l'errore.</span><span class="sxs-lookup"><span data-stu-id="71ee7-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="adc71-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="adc71-111">Requirements</span></span>  
- <span data-ttu-id="adc71-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="adc71-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71ee7-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="71ee7-111">Requirements</span></span>  
+ <span data-ttu-id="71ee7-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71ee7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="adc71-113">**Intestazione:** IValidator. idl, IValidator. H</span><span class="sxs-lookup"><span data-stu-id="adc71-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="71ee7-113">**Intestazione:** IValidator. idl, IValidator. H</span><span class="sxs-lookup"><span data-stu-id="71ee7-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="adc71-114">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="adc71-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="71ee7-114">**Libreria:** Inclusa come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="71ee7-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="adc71-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="adc71-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="71ee7-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="71ee7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
