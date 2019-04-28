@@ -3,17 +3,17 @@ title: Riferimento alle classi WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
 ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915656"
 ---
 # <a name="wmi-class-reference"></a>Riferimento alle classi WMI
-In questa sezione vengono elencate tutte le classi WMI esposte dal provider WMI di Windows Communication Foundation (WCF).  
+Questa sezione elenca tutte le classi WMI esposte dal provider WMI di Windows Communication Foundation (WCF).  
   
 ## <a name="accessing-wmi-instances"></a>Accesso alle istanze WMI  
- Di tutte le classi elencate nel riferimento agli oggetti WMI non è possibile creare direttamente un'istanza, ad eccezione di Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation e Endpoint. Per accedere alle altre istanze, è possibile accedere alle proprietà delle classi del livello superiore precedentemente menzionate. Ad esempio, è possibile accedere all'istanza di TransportBindingElement dall'istanza di Endpoint -> Binding -> BindingElements.  
+ Di tutte le classi elencate nel riferimento agli oggetti WMI non è possibile creare direttamente un'istanza, ad eccezione di Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation e Endpoint. Per accedere alle altre istanze, è possibile accedere alle proprietà delle classi del livello superiore precedentemente menzionate. Ad esempio, è possibile accedere all'istanza di TransportBindingElement dall'Endpoint di istanza -> Binding -> BindingElements.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [ActivityTransfer](../../../../../docs/framework/wcf/diagnostics/wmi/activitytransfer.md)  

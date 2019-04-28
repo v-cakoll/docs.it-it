@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9f8c3e4f-e2e3-4402-9760-03bf918ece7b
 ms.openlocfilehash: 539ce0ba72ae7a8d568cdea3a1a3aab3eec1001b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790390"
 ---
 # <a name="activitystatequery"></a>\<activityStateQuery>
 Rappresenta una query usata per rilevare le modifiche al ciclo di vita delle attività che costituiscono un'istanza del flusso di lavoro. Ad esempio, è possibile tenere traccia di ogni volta che viene completata l'attività "Invia messaggio" all'interno di un'istanza del flusso di lavoro. Questa query è necessaria affinché un partecipante del rilevamento sottoscriva gli oggetti record di stato. Gli stati disponibili per la sottoscrizione sono specificati in ActivityStates.  

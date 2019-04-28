@@ -18,11 +18,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
 ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791872"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Overload della routine (Visual Basic)
 *L'overload* significa che una routine di definirla in più versioni, usando lo stesso nome ma gli elenchi di parametri diversi. Lo scopo dell'overload consiste nel definire più versioni strettamente correlate di una stored procedure senza la necessità di distinguerli in base al nome. Eseguire questa operazione modificando l'elenco di parametri.  
@@ -30,39 +30,39 @@ ms.locfileid: "58828238"
 ## <a name="overloading-rules"></a>Regole di overload  
  Quando si esegue l'overload di una procedura, si applicano le regole seguenti:  
   
--   **Stesso nome**. Ogni versione di overload debba usare lo stesso nome di procedura.  
+- **Stesso nome**. Ogni versione di overload debba usare lo stesso nome di procedura.  
   
--   **Firma diversa**. Ogni versione di overload deve essere diversa da tutte le altre versioni di overload in almeno uno dei seguenti:  
+- **Firma diversa**. Ogni versione di overload deve essere diversa da tutte le altre versioni di overload in almeno uno dei seguenti:  
   
-    -   Numero di parametri  
+    - Numero di parametri  
   
-    -   Ordine dei parametri  
+    - Ordine dei parametri  
   
-    -   Tipi di dati dei parametri  
+    - Tipi di dati dei parametri  
   
-    -   Numero di parametri di tipo (per una routine generica)  
+    - Numero di parametri di tipo (per una routine generica)  
   
-    -   Tipo restituito (solo per un operatore di conversione)  
+    - Tipo restituito (solo per un operatore di conversione)  
   
      Con il nome della routine, degli elementi precedenti vengono collettivamente definiti il *firma* della procedura. Quando si chiama una routine di overload, il compilatore Usa la firma per verificare che la chiamata corrisponda in modo corretto la definizione.  
   
--   **Elementi che non fanno parte della firma**. È possibile eseguire l'overload di una procedura senza modificare la firma. In particolare, è possibile eseguire l'overload di una procedura variando solo uno o più dei seguenti elementi:  
+- **Elementi che non fanno parte della firma**. È possibile eseguire l'overload di una procedura senza modificare la firma. In particolare, è possibile eseguire l'overload di una procedura variando solo uno o più dei seguenti elementi:  
   
-    -   Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e `Static`  
+    - Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e `Static`  
   
-    -   Nomi dei parametri di parametro o tipo  
+    - Nomi dei parametri di parametro o tipo  
   
-    -   Vincoli del parametro (per una routine generica)  
+    - Vincoli del parametro (per una routine generica)  
   
-    -   Parole chiave di modificatori di parametro, ad esempio `ByRef` e `Optional`  
+    - Parole chiave di modificatori di parametro, ad esempio `ByRef` e `Optional`  
   
-    -   Se viene restituito un valore  
+    - Se viene restituito un valore  
   
-    -   il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)  
+    - il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)  
   
      Gli elementi nell'elenco precedente non fanno parte della firma. Anche se non possono essere utilizzati per distinguere le versioni di overload, è possibile variare tra le versioni di overload che si differenziano in modo corretto per le firme.  
   
--   **Associazione tardiva argomenti**. Se si prevede di passare una variabile di oggetto associato ad associazione tardiva a una versione di overload, è necessario dichiarare il parametro appropriato come <xref:System.Object>.  
+- **Associazione tardiva argomenti**. Se si prevede di passare una variabile di oggetto associato ad associazione tardiva a una versione di overload, è necessario dichiarare il parametro appropriato come <xref:System.Object>.  
   
 ## <a name="multiple-versions-of-a-procedure"></a>Più versioni di una stored Procedure  
  Si supponga che si sta scrivendo un `Sub` procedure per inserire una transazione con saldo di un cliente e si desidera essere in grado di fare riferimento al cliente in base al nome o dal numero di account. Di conseguenza, è possibile definire due diversi `Sub` procedure, come nell'esempio seguente:  

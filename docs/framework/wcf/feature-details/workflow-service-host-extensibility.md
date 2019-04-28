@@ -3,11 +3,11 @@ title: Estensibilità host del servizio flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929792"
 ---
 # <a name="workflow-service-host-extensibility"></a>Estensibilità host del servizio flusso di lavoro
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fornisce la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> per ospitare i servizi flusso di lavoro. Questa classe viene usata in caso di hosting automatico di un servizio flusso di lavoro in un'applicazione gestita o un servizio Windows. La classe viene inoltre usata quando si ospita un servizio flusso di lavoro con IIS (Internet Information Services) o con il servizio Attivazione Processo Windows (WAS, Windows Process Activation Service). La classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornisce punti di estensione che consentono di aggiungere estensioni personalizzate, modificare il comportamento inattivo e ospitare flussi di lavoro non di servizi (ovvero che non usano attività di messaggistica).  
@@ -18,13 +18,13 @@ ms.locfileid: "59196476"
 ## <a name="react-to-unhandled-exceptions"></a>Reazione alle eccezioni non gestite  
  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> consente di specificare l'azione da eseguire quando si verifica un'eccezione non gestita in un servizio flusso di lavoro. La proprietà <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior.Action%2A> specifica uno dei valori <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> - Interrompe l'istanza del servizio flusso di lavoro.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> - Interrompe l'istanza del servizio flusso di lavoro.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> - Esegue il rollback all'ultimo stato persistente e sospende l'istanza del servizio flusso di lavoro. Questo caso si verifica solo se il flusso di lavoro è già stato reso persistente almeno una volta. In caso contrario, l'istanza del flusso di lavoro viene interrotta.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> - Esegue il rollback all'ultimo stato persistente e sospende l'istanza del servizio flusso di lavoro. Questo caso si verifica solo se il flusso di lavoro è già stato reso persistente almeno una volta. In caso contrario, l'istanza del flusso di lavoro viene interrotta.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> - Annulla l'istanza.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> - Annulla l'istanza.  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> - Termina l'istanza.  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> - Termina l'istanza.  
   
  È possibile configurare questo comportamento nel codice, come indicato nell'esempio seguente.  
   

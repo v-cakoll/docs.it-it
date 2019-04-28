@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907478"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Scrittura della prima query LINQ (Visual Basic)
 Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono espresse in un linguaggio di query dedicato. Nel corso del tempo, sono stati sviluppati diversi linguaggi per diversi tipi di origini dati, ad esempio, SQL per i database relazionali e XQuery per XML. Ciò rende necessario per lo sviluppatore dell'applicazione per informazioni su un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato.  

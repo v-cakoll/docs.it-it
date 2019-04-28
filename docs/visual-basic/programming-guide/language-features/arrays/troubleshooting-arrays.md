@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
 ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908128"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Risoluzione dei problemi relativi alle matrici (Visual Basic)
 Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si lavora con le matrici.  
@@ -22,7 +22,7 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Errori di compilazione, la dichiarazione e inizializzazione di una matrice  
  Errori di compilazione possono essere generati da malintesi delle regole per la dichiarazione, la creazione e inizializzazione di matrici. Le cause più comuni degli errori sono i seguenti:  
   
--   Fornendo una [operatore New](../../../../visual-basic/language-reference/operators/new-operator.md) clausola dopo aver specificato le lunghezze delle dimensioni nella dichiarazione di variabile di matrice. Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.  
+- Fornendo una [operatore New](../../../../visual-basic/language-reference/operators/new-operator.md) clausola dopo aver specificato le lunghezze delle dimensioni nella dichiarazione di variabile di matrice. Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Specifica le lunghezze delle dimensioni per più di una matrice di primo livello di una matrice di matrici. La riga di codice seguente mostra una dichiarazione non valida di questo tipo.  
+- Specifica le lunghezze delle dimensioni per più di una matrice di primo livello di una matrice di matrici. La riga di codice seguente mostra una dichiarazione non valida di questo tipo.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   L'omissione di `New` parola chiave quando si specificano i valori degli elementi. La riga di codice seguente mostra una dichiarazione non valida di questo tipo.  
+- L'omissione di `New` parola chiave quando si specificano i valori degli elementi. La riga di codice seguente mostra una dichiarazione non valida di questo tipo.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Fornendo una `New` clausola senza parentesi graffe (`{}`). Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.  
+- Fornendo una `New` clausola senza parentesi graffe (`{}`). Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

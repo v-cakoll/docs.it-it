@@ -7,11 +7,11 @@ helpviewer_keywords:
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
 ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917956"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Riferimenti a elementi dichiarati (Visual Basic)
 Quando il codice fa riferimento a un elemento dichiarato, il compilatore Visual Basic corrisponde al nome nel riferimento alla dichiarazione appropriata di tale nome. Se più di un elemento viene dichiarato con lo stesso nome, è possibile controllare quale di questi elementi è a cui fa riferimento *qualificazione* il relativo nome.  

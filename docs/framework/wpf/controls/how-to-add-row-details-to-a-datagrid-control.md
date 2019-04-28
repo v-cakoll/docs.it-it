@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
 ms.openlocfilehash: d5b6539f3d379088528b9654861267988b6fc69b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911391"
 ---
 # <a name="how-to-add-row-details-to-a-datagrid-control"></a>Procedura: Aggiungere dettagli di riga a un controllo DataGrid
 Quando si usa il <xref:System.Windows.Controls.DataGrid> (controllo), è possibile personalizzare la presentazione dei dati mediante l'aggiunta di una sezione di dettagli della riga. Aggiunta di una sezione di dettagli di riga consente di raggruppare i dati in un modello che è possibile rendere visibile o compressa. Ad esempio, è possibile aggiungere i dettagli delle righe per un <xref:System.Windows.Controls.DataGrid> che presenta solo un riepilogo dei dati per ogni riga nel <xref:System.Windows.Controls.DataGrid>, ma presenta più campi di dati quando l'utente seleziona una riga. Viene definito il modello per la sezione dettagli della riga nel <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> proprietà. La figura seguente mostra un esempio di una sezione di dettagli della riga.  

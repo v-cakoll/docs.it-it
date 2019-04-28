@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869012"
 ---
 # <a name="using-the-assert-method"></a>Utilizzo del metodo Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073728"
   
  La figura seguente mostra cosa accade quando si usa **Assert**. Si supponga che le affermazioni seguenti siano valide per gli assembly A, B, C, E e F e le due autorizzazioni P1 e P1A:  
   
--   P1A rappresenta il diritto di leggere i file TXT presenti nell'unità C.  
+- P1A rappresenta il diritto di leggere i file TXT presenti nell'unità C.  
   
--   P1 rappresenta il diritto di leggere tutti i file presenti nell'unità C.  
+- P1 rappresenta il diritto di leggere tutti i file presenti nell'unità C.  
   
--   P1A e P1 sono entrambi **FileIOPermission** tipi e P1A è un subset di P1.  
+- P1A e P1 sono entrambi **FileIOPermission** tipi e P1A è un subset di P1.  
   
--   Agli assembly E ed F è stata concessa l'autorizzazione P1A.  
+- Agli assembly E ed F è stata concessa l'autorizzazione P1A.  
   
--   All'assembly C è stata concessa l'autorizzazione P1.  
+- All'assembly C è stata concessa l'autorizzazione P1.  
   
--   Agli assembly A e B non è stata concessa né l'autorizzazione P1 né l'autorizzazione P1A.  
+- Agli assembly A e B non è stata concessa né l'autorizzazione P1 né l'autorizzazione P1A.  
   
--   Il metodo A è incluso nell'assembly A, il metodo B nell'assembly B e così via.  
+- Il metodo A è incluso nell'assembly A, il metodo B nell'assembly B e così via.  
   
  ![Diagramma che mostra gli assembly del metodo Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

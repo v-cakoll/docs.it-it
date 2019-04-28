@@ -3,11 +3,11 @@ title: Differenze tra programmazione funzionale e Programmazione imperativa (Vis
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
 ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931665"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Differenze tra programmazione funzionale e Programmazione imperativa (Visual Basic)
 In questo argomento vengono presentate le differenze tra la programmazione funzionale e la più tradizionale programmazione imperativa (procedurale).  
@@ -35,11 +35,11 @@ In questo argomento vengono presentate le differenze tra la programmazione funzi
 ## <a name="advantages-of-pure-functions"></a>Vantaggi delle funzioni pure  
  Il motivo principale per implementare le trasformazioni funzionali come funzioni pure è che le funzioni pure sono componibili, ossia sono autonome e senza stato. Queste caratteristiche offrono numerosi vantaggi, tra cui quelli riportati di seguito:  
   
--   Maggiore facilità di lettura e manutenibilità, in quanto ogni funzione è progettata per realizzare un'attività specifica con gli argomenti assegnati. La funzione non si basa su alcuno stato esterno.  
+- Maggiore facilità di lettura e manutenibilità, in quanto ogni funzione è progettata per realizzare un'attività specifica con gli argomenti assegnati. La funzione non si basa su alcuno stato esterno.  
   
--   Sviluppo iterativo più semplice, in quanto è più agevole eseguire il refactoring del codice ed è più facile implementare le modifiche di progettazione. Si supponga ad esempio di scrivere una trasformazione complicata e poi di realizzare che una parte di codice viene ripetuta diverse volte al suo interno. Se si esegue il refactoring tramite un metodo puro, è possibile chiamare il metodo puro quando è necessario senza preoccuparsi degli effetti collaterali.  
+- Sviluppo iterativo più semplice, in quanto è più agevole eseguire il refactoring del codice ed è più facile implementare le modifiche di progettazione. Si supponga ad esempio di scrivere una trasformazione complicata e poi di realizzare che una parte di codice viene ripetuta diverse volte al suo interno. Se si esegue il refactoring tramite un metodo puro, è possibile chiamare il metodo puro quando è necessario senza preoccuparsi degli effetti collaterali.  
   
--   Procedure più semplici di test e debug, in quanto le funzioni pure possono essere più facilmente testate in isolamento ed è possibile scrivere codice di test che chiama la funzione pura con valori tipici, casi limite validi e casi limite non validi.  
+- Procedure più semplici di test e debug, in quanto le funzioni pure possono essere più facilmente testate in isolamento ed è possibile scrivere codice di test che chiama la funzione pura con valori tipici, casi limite validi e casi limite non validi.  
   
 ## <a name="transitioning-for-oop-developers"></a>Transizione per gli sviluppatori OOP  
  Nella tradizionale programmazione orientata a oggetti (OOP, Object-Oriented Programming), gli sviluppatori sono in genere abituati a programmare nello stile imperativo/procedurale. Per passare allo sviluppo in uno stile funzionale puro, devono modificare il loro modo di ragionare e l'approccio adottato per lo sviluppo.  

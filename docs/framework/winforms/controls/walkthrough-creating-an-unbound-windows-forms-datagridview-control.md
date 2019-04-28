@@ -12,11 +12,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
 ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792262"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Procedura dettagliata: Creazione di un controllo DataGridView di Windows Forms non associato
 Spesso è possibile visualizzare i dati in formato tabulare che provengono da un database. È possibile, ad esempio visualizzare il contenuto di una matrice di stringhe bidimensionale. Il <xref:System.Windows.Forms.DataGridView> classe fornisce un modo semplice e altamente personalizzabile per visualizzare i dati senza associazione a un'origine dati. Questa procedura dettagliata illustra come popolare un <xref:System.Windows.Forms.DataGridView> controllare e gestire l'aggiunta e l'eliminazione di righe in modalità "associata". Per impostazione predefinita, l'utente può aggiungere nuove righe. Per impedire l'aggiunta delle righe, impostare il <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> è di proprietà `false`.  
@@ -75,22 +75,22 @@ Spesso è possibile visualizzare i dati in formato tabulare che provengono da un
   
 #### <a name="to-test-the-form"></a>Per testare il form  
   
--   Premere F5 per eseguire l'applicazione.  
+- Premere F5 per eseguire l'applicazione.  
   
      Si noterà una <xref:System.Windows.Forms.DataGridView> controllo che vengono visualizzate le canzoni elencate in `PopulateDataGridView`. È possibile aggiungere nuove righe con la **Aggiungi riga** e sarà possibile eliminare le righe selezionate con i **Elimina riga** pulsante. La cornice <xref:System.Windows.Forms.DataGridView> controllo è l'archivio dati e i dati sono indipendente da qualsiasi origine esterna, ad esempio un <xref:System.Data.DataSet> o una matrice.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Questa applicazione fornisce una conoscenza di base di <xref:System.Windows.Forms.DataGridView> funzionalità del controllo. È possibile personalizzare l'aspetto e il comportamento del <xref:System.Windows.Forms.DataGridView> controllo in diversi modi:  
   
--   Modificare gli stili del bordo e l'intestazione. Per altre informazioni, vedere [Procedura: Modificare il bordo e gli stili delle linee della griglia nella finestra di Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Modificare gli stili del bordo e l'intestazione. Per altre informazioni, vedere [Procedura: Modificare il bordo e gli stili delle linee della griglia nella finestra di Windows Forms DataGridView Control](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Abilitare o limitare l'input dell'utente per il <xref:System.Windows.Forms.DataGridView> controllo. Per altre informazioni, vedere [Procedura: Impedire l'aggiunta di riga o eliminazione in di Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), e [come: Rendere le colonne di sola lettura nella finestra di Windows Forms DataGridView Control](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Abilitare o limitare l'input dell'utente per il <xref:System.Windows.Forms.DataGridView> controllo. Per altre informazioni, vedere [Procedura: Impedire l'aggiunta di riga o eliminazione in di Windows Forms DataGridView Control](prevent-row-addition-and-deletion-datagridview.md), e [come: Rendere le colonne di sola lettura nella finestra di Windows Forms DataGridView Control](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Verificare l'input dell'utente per gli errori correlati al database. Per altre informazioni, vedere [Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nella finestra di Windows Forms DataGridView Control](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+- Verificare l'input dell'utente per gli errori correlati al database. Per altre informazioni, vedere [Procedura dettagliata: Gestione degli errori che si verificano durante l'immissione di dati nella finestra di Windows Forms DataGridView Control](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
--   Gestire set di dati molto grandi usando la modalità virtuale. Per altre informazioni, vedere [Procedura dettagliata: Implementazione della modalità virtuale in Windows il controllo DataGridView form](implementing-virtual-mode-wf-datagridview-control.md).  
+- Gestire set di dati molto grandi usando la modalità virtuale. Per altre informazioni, vedere [Procedura dettagliata: Implementazione della modalità virtuale in Windows il controllo DataGridView form](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Personalizzare l'aspetto delle celle. Per altre informazioni, vedere [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView Windows Form](customize-the-appearance-of-cells-in-the-datagrid.md) e [come: Impostare stili di cella predefiniti per i Windows Form controllo DataGridView](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Personalizzare l'aspetto delle celle. Per altre informazioni, vedere [Procedura: Personalizzare l'aspetto delle celle nel controllo DataGridView Windows Form](customize-the-appearance-of-cells-in-the-datagrid.md) e [come: Impostare stili di cella predefiniti per i Windows Form controllo DataGridView](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

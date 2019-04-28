@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929688"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocolli di servizi Web supportati da associazioni di interoperabilità fornite dal sistema
 Windows Communication Foundation (WCF) è realizzato per interoperare con servizi Web che supportano un set di specifiche note come specifiche dei servizi Web. Per semplificare la configurazione del servizio per le procedure consigliate di interoperabilità, WCF introduce tre associazioni interoperative fornite dal sistema: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, e <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Per l'interoperabilità con organizzazione per gli standard Advancement of Structured Information Standards (OASIS), WCF include un'associazione interoperativa fornita dal sistema: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Per la pubblicazione dei metadati, WCF include due associazioni interoperative fornite dal sistema: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) e [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). In questo argomento vengono elencate le specifiche supportate dalle associazioni interoperative fornite dal sistema.  
@@ -63,9 +63,9 @@ Windows Communication Foundation (WCF) è realizzato per interoperare con serviz
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding e ws2007FederationHttpBinding  
  Il [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) e [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementi sono stati introdotti per fornire supporto per gli scenari federati, dove un terzo parte rilascia un token utilizzato per autenticare un client. Oltre ai protocolli utilizzati da `wsHttpBinding`, `wsFederationHttpBinding` utilizza:  
   
--   `WS-Trust` per il rilascio dei token.  
+- `WS-Trust` per il rilascio dei token.  
   
--   WSS Security Assertions Markup Language (SAML) Token Profile 1.0 e 1.1 per il formato dei token rilasciati più comuni.  
+- WSS Security Assertions Markup Language (SAML) Token Profile 1.0 e 1.1 per il formato dei token rilasciati più comuni.  
   
  Esempio:  
   

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792691"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>Metodo ICLRIoCompletionManager::OnComplete
 Invia una notifica di common language runtime (CLR) dello stato di una richiesta dei / o che è stato effettuato mediante una chiamata per il [IHostIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md) (metodo).  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in] Un valore HRESULT che indica lo stato dell'operazione di associazione.  
   
--   S_OK indica che l'operazione è stata completata.  
+- S_OK indica che l'operazione è stata completata.  
   
--   HOST_E_INTERRUPTED indica che la chiamata terminata prima del completamento.  
+- HOST_E_INTERRUPTED indica che la chiamata terminata prima del completamento.  
   
--   E_FAIL indica che si è verificato un errore sconosciuto e irreversibile.  
+- E_FAIL indica che si è verificato un errore sconosciuto e irreversibile.  
   
  `NumberOfBytesTransferred`  
  [in] Il numero di byte trasferiti durante l'elaborazione della richiesta dei / o.  

@@ -9,18 +9,18 @@ ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788011"
 ---
 # <a name="clr-etw-events"></a>Eventi ETW di CLR
 Gli argomenti presenti in questa sezione descrivono gli eventi ETW (Event Tracing for Windows). A ogni evento sono associati una parola chiave e un livello, come descritto nell'argomento [Parole chiave e livelli ETW di CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). CLR dispone di due provider per gli eventi:  
   
--   Il provider di runtime, che genera eventi in base alle parole chiave (categorie di eventi) abilitate. Il GUID del provider di runtime di CLR è e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
+- Il provider di runtime, che genera eventi in base alle parole chiave (categorie di eventi) abilitate. Il GUID del provider di runtime di CLR è e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
--   Il provider di rundown, che viene usato per scopi specifici. Il GUID del provider di rundown di CLR è a669021c-c450-4609-a035-5af59af4df18.  
+- Il provider di rundown, che viene usato per scopi specifici. Il GUID del provider di rundown di CLR è a669021c-c450-4609-a035-5af59af4df18.  
   
  Per altre informazioni, vedere [Provider ETW di CLR](../../../docs/framework/performance/clr-etw-providers.md).  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929844"
 ---
 # <a name="working-with-certificates"></a>Utilizzo dei certificati
 Per programmare le funzionalità di sicurezza di Windows Communication Foundation (WCF) in genere si usano i certificati digitali X.509. In particolare, questi certificati vengono usati per autenticare client e server, nonché per crittografare e firmare digitalmente i messaggi. Questo argomento fornisce una breve descrizione delle funzionalità relative ai certificati digitali X.509 e illustra come usarle in WCF. Questo argomento contiene inoltre i collegamenti agli argomenti che trattano questi concetti in modo più dettagliato o che descrivono come eseguire attività comuni tramite l'uso di WCF e dei certificati.  
@@ -29,27 +29,27 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
 ## <a name="certificate-stores"></a>Archivi certificati  
  I certificati vengono memorizzati in appositi archivi. Sono disponibili due posizioni principali di archiviazione, ognuna delle quali è composta da più sottoarchivi. Gli amministratori di un computer possono visualizzare entrambi gli archivi principali mediante lo snap-in MMC. Gli altri utenti, invece, sono in grado di visualizzare soltanto l'archivio utente corrente.  
   
--   **Archivio locale del computer**. contiene i certificati utilizzati dai processi del computer, ad esempio [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilizzare questa posizione per archiviare i certificati utilizzati per l'autenticazione del server presso i client.  
+- **Archivio locale del computer**. contiene i certificati utilizzati dai processi del computer, ad esempio [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilizzare questa posizione per archiviare i certificati utilizzati per l'autenticazione del server presso i client.  
   
--   **Archivio dell'utente corrente**. questa posizione in genere viene utilizzata dalle applicazioni interattive per memorizzare i certificati relativi all'utente corrente del computer. Se si crea un'applicazione client, utilizzare questa posizione per archiviare i certificati utilizzati per l'autenticazione degli utenti presso un servizio.  
+- **Archivio dell'utente corrente**. questa posizione in genere viene utilizzata dalle applicazioni interattive per memorizzare i certificati relativi all'utente corrente del computer. Se si crea un'applicazione client, utilizzare questa posizione per archiviare i certificati utilizzati per l'autenticazione degli utenti presso un servizio.  
   
  Ognuno di questi due archivi è composto da più sottoarchivi. Di seguito sono elencati alcuni dei sottoarchivi più importanti quando si programma in WCF:  
   
--   **Autorità di certificazione radice attendibili**. i certificati contenuti in questo archivio possono essere utilizzati per creare una catena di certificati che consente di risalire a un certificato di autorità di certificazione di questo archivio.  
+- **Autorità di certificazione radice attendibili**. i certificati contenuti in questo archivio possono essere utilizzati per creare una catena di certificati che consente di risalire a un certificato di autorità di certificazione di questo archivio.  
   
     > [!IMPORTANT]
     >  Il computer locale considera implicitamente attendibile qualsiasi certificato posizionato in questo archivio, anche se il certificato non è stato rilasciato da un autorità di certificazione di terze parti attendibile. È pertanto necessario garantire che questo archivio contenga soltanto certificati rilasciati da emittenti completamente attendibili, nonché comprendere quali problemi possono verificarsi qualora questa indicazione non venga rispettata.  
   
--   **Personale**. questo archivio viene utilizzato per i certificati associati a un utente di un computer. In genere questo archivio viene utilizzato per i certificati rilasciati mediante uno dei certificati di autorità di certificazione contenuti nell'archivio Autorità di certificazione radice disponibile nell'elenco locale. In alternativa, questo archivio può contenere certificati autocertificati ritenuti attendibili da un'applicazione.  
+- **Personale**. questo archivio viene utilizzato per i certificati associati a un utente di un computer. In genere questo archivio viene utilizzato per i certificati rilasciati mediante uno dei certificati di autorità di certificazione contenuti nell'archivio Autorità di certificazione radice disponibile nell'elenco locale. In alternativa, questo archivio può contenere certificati autocertificati ritenuti attendibili da un'applicazione.  
   
  Per altre informazioni sugli archivi certificati, vedere [Archivi certificati](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Scelta di un archivio  
  La scelta della posizione in cui archiviare un certificato dipende dalla modalità di esecuzione del servizio o del client. In particolare, la scelta si basa sulle regole di carattere generale seguenti:  
   
--   Se il servizio WCF è ospitato in un servizio Windows, usare l'archivio del **computer locale**. Si noti che per memorizzare certificati in questo archivio è necessario disporre dei privilegi di amministratore.  
+- Se il servizio WCF è ospitato in un servizio Windows, usare l'archivio del **computer locale**. Si noti che per memorizzare certificati in questo archivio è necessario disporre dei privilegi di amministratore.  
   
--   Se il servizio o il client è un'applicazione in esecuzione con un account utente, usare l'archivio **utente corrente**.  
+- Se il servizio o il client è un'applicazione in esecuzione con un account utente, usare l'archivio **utente corrente**.  
   
 ### <a name="accessing-stores"></a>Accesso agli archivi  
  Analogamente alle cartelle di un computer, anche gli archivi vengono protetti tramite gli elenchi di controllo di accesso (ACL, Access Control List). Quando si crea un servizio ospitato in Internet Information Services (IIS), il processo [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] è in esecuzione nell'account [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Tale account deve essere autorizzato ad accedere all'archivio contenente i certificati utilizzati da un servizio. Ogni archivio principale viene protetto mediante un ACL predefinito, che tuttavia può essere modificato. Se si crea un ruolo a parte per accedere a un archivio, a tale ruolo è necessario concedere l'autorizzazione di accesso. Per informazioni su come modificare l'elenco di accesso usando lo strumento WinHttpCertConfig.exe, vedere [come: Creare certificati temporanei da usare durante lo sviluppo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Per altre informazioni sull'uso di certificati client in IIS, vedere la pagina relativa alla [procedura per chiamare un servizio Web tramite un certificato client per l'autenticazione in un'applicazione Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
@@ -74,11 +74,11 @@ Per programmare le funzionalità di sicurezza di Windows Communication Foundatio
   
  La proprietà può anche essere impostata in configurazione. Gli elementi seguenti vengono utilizzati per specificare la modalità di convalida:  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Autenticazione personalizzata  
  La proprietà `CertificateValidationMode` consente inoltre di personalizzare la modalità di autenticazione dei certificati. Per impostazione predefinita, il livello è impostato su `ChainTrust`. Per usare il valore <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> è necessario impostare anche l'attributo `CustomCertificateValidatorType` sull'assembly e sul tipo usati per convalidare il certificato. Per creare un validator personalizzato è necessario ereditare una classe dalla classe astratta <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  

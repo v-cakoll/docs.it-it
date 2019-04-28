@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928712"
 ---
 # <a name="creating-an-ink-input-control"></a>Creazione di un controllo di input penna
 È possibile creare un controllo personalizzato che in modo dinamico e in modo statico viene eseguito il rendering dell'input penna. Vale a dire, eseguire il rendering dell'input penna come un utente consente di disegnare un tratto, causando l'input penna venga visualizzato "fluire" dalla penna del tablet PC e visualizzarlo dopo che viene aggiunto al controllo, tramite la penna del tablet PC, incollato dagli Appunti o caricato da un file. Per eseguire il rendering dinamico, è necessario usare il controllo un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Per eseguire il rendering statico, è necessario eseguire l'override dei metodi di evento dello stilo (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, e <xref:System.Windows.UIElement.OnStylusUp%2A>) per raccogliere <xref:System.Windows.Input.StylusPoint> dati, creare i tratti e aggiungerle a un <xref:System.Windows.Controls.InkPresenter> (che esegue il rendering dell'input penna in del controllo).  
   
  In questo argomento sono contenute le seguenti sottosezioni:  
   
--   [Procedura: Raccogliere dati di punti dello stilo e creare tratti input penna](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [Procedura: Raccogliere dati di punti dello stilo e creare tratti input penna](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [Procedura: Abilitare il controllo accettare l'Input da Mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [Procedura: Abilitare il controllo accettare l'Input da Mouse](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [Uso combinato](#PuttingItTogether)  
+- [Uso combinato](#PuttingItTogether)  
   
--   [Utilizzo di Plug-in aggiuntivi e oggetti DynamicRenderer](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [Utilizzo di Plug-in aggiuntivi e oggetti DynamicRenderer](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Conclusione](#AdvancedInkHandling_Conclusion)  
+- [Conclusione](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Procedura: Raccogliere dati di punti dello stilo e creare tratti input penna  

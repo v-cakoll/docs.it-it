@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929077"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Procedura: Implementare un'operazione del servizio asincrona
 Nelle applicazioni Windows Communication Foundation (WCF), un'operazione del servizio può essere implementata in modo asincrono o in modo sincrono senza imporre al client come chiamarlo. Ad esempio, le operazioni del servizio asincrona possono essere chiamate in modo sincrono e operazioni del servizio sincrone possono essere chiamate in modo asincrono. Per un esempio che illustra come chiamare un'operazione in modo asincrono in un'applicazione client, vedere [come: Chiamare operazioni del servizio in modo asincrono](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Per altre informazioni sulle operazioni sincrone e asincrone, vedere [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) e [sincrono e alle operazioni asincrone](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In questo argomento viene descritta la struttura di base di un'operazione del servizio asincrona (il codice non è completo). Per un esempio completo di lati client e servizio, vedere [asincrono](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -34,11 +34,11 @@ Nelle applicazioni Windows Communication Foundation (WCF), un'operazione del ser
   
 1. Un'interfaccia del contratto di servizio con:  
   
-    1.  Un'operazione `SampleMethod` sincrona.  
+    1. Un'operazione `SampleMethod` sincrona.  
   
-    2.  Un'operazione `BeginSampleMethod` asincrona.  
+    2. Un'operazione `BeginSampleMethod` asincrona.  
   
-    3.  Asincrono `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` coppia di operazioni.  
+    3. Asincrono `BeginServiceAsyncMethod` / `EndServiceAsyncMethod` coppia di operazioni.  
   
 2. Un'implementazione del servizio tramite un oggetto <xref:System.IAsyncResult?displayProperty=nameWithType>.  
   

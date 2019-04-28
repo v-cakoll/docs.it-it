@@ -11,11 +11,11 @@ helpviewer_keywords:
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
 ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934693"
 ---
 # <a name="system-information-and-windows-forms"></a>Informazioni sul sistema e Windows Form
 In alcuni casi è necessario raccogliere informazioni sui computer in cui l'applicazione è in esecuzione su per prendere decisioni nel codice. Ad esempio, potrebbe essere una funzione che è disponibile solo quando si è connessi a un dominio di rete specifica. In questo caso, è necessario un modo per determinare il dominio e se non è presente il dominio, disabilitare la funzione.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
 ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920445"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Specifica che uno o più elementi di programmazione dichiarati sono accessibili solo dal contesto della dichiarazione, anche all'interno di qualsiasi tipo di contenuto.  
@@ -25,13 +25,13 @@ Specifica che uno o più elementi di programmazione dichiarati sono accessibili 
 
 ## <a name="rules"></a>Regole  
 
--   **Contesto della dichiarazione.** Si può usare `Private` solo a livello di modulo. Ciò significa che il contesto della dichiarazione per un `Private` elemento deve essere un modulo, classe o struttura e non può essere un file di origine, lo spazio dei nomi, interfaccia o procedura.  
+- **Contesto della dichiarazione.** Si può usare `Private` solo a livello di modulo. Ciò significa che il contesto della dichiarazione per un `Private` elemento deve essere un modulo, classe o struttura e non può essere un file di origine, lo spazio dei nomi, interfaccia o procedura.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Livello di accesso.** Può accedere a tutto il codice all'interno di un contesto della dichiarazione relativo `Private` elementi. Ciò include il codice all'interno di un tipo di contenuto, ad esempio una classe annidata o un'espressione di assegnazione in un'enumerazione. Non può accedere a nessun codice all'esterno del contesto di dichiarazione relativa `Private` elementi.  
+- **Livello di accesso.** Può accedere a tutto il codice all'interno di un contesto della dichiarazione relativo `Private` elementi. Ciò include il codice all'interno di un tipo di contenuto, ad esempio una classe annidata o un'espressione di assegnazione in un'enumerazione. Non può accedere a nessun codice all'esterno del contesto di dichiarazione relativa `Private` elementi.  
   
--   **Modificatori di accesso.** Le parole chiave che specificano il livello di accesso vengono chiamate *modificatori di accesso*. Per un confronto tra i modificatori di accesso, vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Modificatori di accesso.** Le parole chiave che specificano il livello di accesso vengono chiamate *modificatori di accesso*. Per un confronto tra i modificatori di accesso, vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Il modificatore `Private` può essere usato nei contesti seguenti:  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793679"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementazione di una transazione implicita utilizzando l'ambito di transazione
 La classe <xref:System.Transactions.TransactionScope> consente di contrassegnare facilmente un blocco di codice come ambito partecipante a una transazione, senza che sia necessario interagire con la transazione stessa. Un ambito di transazione può selezionare e gestire automaticamente la transazione di ambiente. In quanto efficiente e di facile utilizzo, la classe <xref:System.Transactions.TransactionScope> rappresenta la scelta ideale per sviluppare un'applicazione transazionale.  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  Per gli oggetti <xref:System.Transactions.TransactionScope> sono disponibili tre opzioni:  
   
--   Aggiungersi alla transazione di ambiente, se presente, oppure crearne una nuova.  
+- Aggiungersi alla transazione di ambiente, se presente, oppure crearne una nuova.  
   
--   Essere un nuovo ambito radice, ovvero avviare una nuova transazione e definire tale transazione come una nuova transazione di ambiente contenuta all'interno del proprio ambito.  
+- Essere un nuovo ambito radice, ovvero avviare una nuova transazione e definire tale transazione come una nuova transazione di ambiente contenuta all'interno del proprio ambito.  
   
--   Non partecipare ad alcuna transazione. In questo caso non viene creata alcuna transazione di ambiente.  
+- Non partecipare ad alcuna transazione. In questo caso non viene creata alcuna transazione di ambiente.  
   
  Se l'ambito viene istanziato con l'opzione <xref:System.Transactions.TransactionScopeOption.Required> ed è presente una transazione di ambiente, l'ambito si aggiunge a tale transazione. Se invece non è presente alcuna transazione di ambiente, l'ambito crea una nuova transazione e diventa l'ambito radice. Rappresenta il valore predefinito. Quando si utilizza l'opzione <xref:System.Transactions.TransactionScopeOption.Required>, l'ambito deve presentare lo stesso comportamento sia che rappresenti l'ambito radice sia che si aggiunga alla transazione di ambiente esistente.  
   

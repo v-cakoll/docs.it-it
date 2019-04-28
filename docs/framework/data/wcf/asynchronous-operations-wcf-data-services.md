@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
 ms.openlocfilehash: ef41b458a3f5b977eaaff523413c1a8d3b1982a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793419"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operazioni asincrone (WCF Data Services)
 Le applicazioni Web devono includere una latenza tra client e server superiore a quella delle applicazioni eseguite in reti interne. Per ottimizzare le prestazioni e l'esperienza utente dell'applicazione, si consiglia di usare i metodi asincroni delle classi <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> in caso di accesso ai server di [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sul Web.  

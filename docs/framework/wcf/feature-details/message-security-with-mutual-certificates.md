@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
 ms.openlocfilehash: 8fc8d6d4a63b7a752fb8c26991d904761fdcebdd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923065"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Protezione dei messaggi con certificati reciproci
 Lo scenario seguente illustra un servizio Windows Communication Foundation (WCF) e un client protetto usando la modalità sicurezza messaggio. Il client e il servizio sono autenticati mediante certificati.  
@@ -35,9 +35,9 @@ Lo scenario seguente illustra un servizio Windows Communication Foundation (WCF)
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
--   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
+- Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
--   Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
+- Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
   
 ### <a name="code"></a>Codice  
  Nel codice seguente viene illustrato come creare un endpoint del servizio che utilizza la protezione del messaggio. Il servizio richiede un certificato per identificarsi.  
@@ -93,9 +93,9 @@ Lo scenario seguente illustra un servizio Windows Communication Foundation (WCF)
 ## <a name="client"></a>Client  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
--   Creare un client autonomo usando il codice (e il codice client).  
+- Creare un client autonomo usando il codice (e il codice client).  
   
--   Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio:  
+- Creare un client che non definisce alcun indirizzo di endpoint. Usare invece il costruttore client che accetta il nome della configurazione come argomento. Ad esempio:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

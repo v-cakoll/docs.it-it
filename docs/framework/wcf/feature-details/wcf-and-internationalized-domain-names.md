@@ -3,11 +3,11 @@ title: WCF e nomi IDN (Internationalized Domain Name)
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
 ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932522"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF e nomi IDN (Internationalized Domain Name)
 È stato aggiunto il supporto per i servizi WCF con gli IDN (Internationalized Domain Name). Un IDN è un nome di dominio che contiene caratteri non ASCII. Questo supporto include sia la possibilità di ospitare un servizio WCF con un nome IDN sia un client WCF per comunicare con un servizio Web con un nome IDN.  

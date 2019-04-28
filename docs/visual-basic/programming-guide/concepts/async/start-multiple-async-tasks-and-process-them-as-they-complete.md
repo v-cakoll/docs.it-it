@@ -3,11 +3,11 @@ title: Avviare più attività asincrone ed elaborarle quando vengono completate 
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
 ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925125"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Avviare più attività asincrone ed elaborarle quando vengono completate (Visual Basic)
 Usando <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, è possibile avviare più attività contemporaneamente ed elaborarle una ad una quando vengono completate, invece che nell'ordine in cui vengono avviate.  
@@ -50,27 +50,27 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  Nel file XAML. vb del progetto, apportare le modifiche seguenti per il `AccessTheWebAsync` (metodo).  
   
--   Eseguire la query applicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> anziché <xref:System.Linq.Enumerable.ToArray%2A>.  
+- Eseguire la query applicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> anziché <xref:System.Linq.Enumerable.ToArray%2A>.  
   
     ```vb  
     Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
     ```  
   
--   Aggiungere un ciclo while che esegue i passaggi seguenti per ogni attività nella raccolta.  
+- Aggiungere un ciclo while che esegue i passaggi seguenti per ogni attività nella raccolta.  
   
-    1.  Attende una chiamata a `WhenAny` per identificare la prima attività nella raccolta che deve completare il relativo download.  
+    1. Attende una chiamata a `WhenAny` per identificare la prima attività nella raccolta che deve completare il relativo download.  
   
         ```vb  
         Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
         ```  
   
-    2.  Rimuove l'attività dalla Collection.  
+    2. Rimuove l'attività dalla Collection.  
   
         ```vb  
         downloadTasks.Remove(firstFinishedTask)  
         ```  
   
-    3.  Attende `firstFinishedTask`, che viene restituito da una chiamata a `ProcessURLAsync`. La variabile `firstFinishedTask` è un <xref:System.Threading.Tasks.Task%601> dove `TReturn` è un valore intero. L'attività è già stata completata, ma è possibile metterla in attesa per recuperare la lunghezza del sito Web scaricato, come illustrato di seguito.  
+    3. Attende `firstFinishedTask`, che viene restituito da una chiamata a `ProcessURLAsync`. La variabile `firstFinishedTask` è un <xref:System.Threading.Tasks.Task%601> dove `TReturn` è un valore intero. L'attività è già stata completata, ma è possibile metterla in attesa per recuperare la lunghezza del sito Web scaricato, come illustrato di seguito.  
   
         ```vb  
         Dim length = Await firstFinishedTask  

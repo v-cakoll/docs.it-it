@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
 ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928609"
 ---
 # <a name="introduction-to-extensibility"></a>Introduzione all'estendibilità
 Il modello di applicazione Windows Communication Foundation (WCF) è progettato per soddisfare la maggior parte dei requisiti di comunicazione di qualsiasi applicazione distribuita. Esistono tuttavia scenari che non sono supportati dal modello di applicazione predefinito né dalle implementazioni fornite dal sistema. Il modello di estendibilità WCF è progettato per supportare scenari personalizzati consentendo di modificare il comportamento del sistema a ogni livello, anche al punto di sostituzione l'intero modello di applicazione. In questo argomento vengono illustrate le varie aree di estensione e vengono forniti i collegamenti alle informazioni aggiuntive relative a ogni area.  
@@ -19,11 +19,11 @@ Il modello di applicazione Windows Communication Foundation (WCF) è progettato 
 ## <a name="areas-to-extend"></a>Aree da estendere  
  È possibile estendere:  
   
--   La fase di esecuzione dell'applicazione. Estende la distribuzione e l'elaborazione di messaggi per l'applicazione. Quest'area include anche l'estensione del sistema di sicurezza, del sistema dei metadati, del sistema della serializzazione e delle associazioni ed elementi di associazione che connettono l'applicazione al sistema di canali sottostante.  
+- La fase di esecuzione dell'applicazione. Estende la distribuzione e l'elaborazione di messaggi per l'applicazione. Quest'area include anche l'estensione del sistema di sicurezza, del sistema dei metadati, del sistema della serializzazione e delle associazioni ed elementi di associazione che connettono l'applicazione al sistema di canali sottostante.  
   
--   Il canale e la fase di esecuzione del canale. Estende il sistema che funziona al livello del messaggio, fornendo protocollo, trasporto e supporto di codifica.  
+- Il canale e la fase di esecuzione del canale. Estende il sistema che funziona al livello del messaggio, fornendo protocollo, trasporto e supporto di codifica.  
   
--   La fase di esecuzione dell'host. Estende la relazione del dominio dell'applicazione host alla fase di esecuzione del canale e dell'applicazione.  
+- La fase di esecuzione dell'host. Estende la relazione del dominio dell'applicazione host alla fase di esecuzione del canale e dell'applicazione.  
   
 ### <a name="extending-the-application-runtime"></a>Estensione della fase di esecuzione dell'applicazione  
  Nelle applicazioni di WCF, vi è una differenza tra i messaggi destinati a un canale corrispondente e sono destinati all'applicazione stessa. I messaggi del canale supportano alcune funzionalità correlate al canale, ad esempio quella che consente di stabilire una conversazione protetta o una sessione affidabile. Questi messaggi non sono disponibili nella fase di esecuzione dell'applicazione. Vengono elaborati prima che venga coinvolto il livello dell'applicazione.  

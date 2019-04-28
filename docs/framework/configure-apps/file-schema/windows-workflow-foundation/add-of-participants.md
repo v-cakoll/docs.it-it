@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
 ms.openlocfilehash: 291d1a006bc16769e36774dd9507017cb555e547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790377"
 ---
 # <a name="add-of-participants"></a>\<aggiungere > di \<partecipanti >
 Configurare un partecipante del rilevamento che ascolta i record di rilevamento generati direttamente durante la fase di esecuzione e li elabora in base alle impostazioni configurate. Tali impostazioni includono la scrittura in un output specifico, ad esempio file, console, ETW, l'elaborazione/aggregazione dei record o qualsiasi altra combinazione che potrebbe essere richiesta.  
