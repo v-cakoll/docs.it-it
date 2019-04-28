@@ -3,11 +3,11 @@ title: Criteri di protezione estesa
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990171"
 ---
 # <a name="extended-protection-policy"></a>Criteri di protezione estesa
 La protezione estesa rappresenta un'iniziativa di sicurezza per la protezione da attacchi di tipo man-in-the-middle (MITM). Un attacco MITM è un rischio per la sicurezza nel quale l'autore dell'attacco rileva le credenziali di un client e le inoltra a un server.  
@@ -34,9 +34,9 @@ La protezione estesa rappresenta un'iniziativa di sicurezza per la protezione da
   
 4. In questo esempio il client deve stabilire un canale protetto con il server, di conseguenza è necessario che sia presente un certificato del server che può essere installato da Gestione Internet Information Services.  
   
-    1.  Aprire Gestione IIS. Aprire **certificati del Server**, che viene visualizzato il **visualizzazione funzionalità** scheda quando si seleziona il nodo radice (nome del computer).  
+    1. Aprire Gestione IIS. Aprire **certificati del Server**, che viene visualizzato il **visualizzazione funzionalità** scheda quando si seleziona il nodo radice (nome del computer).  
   
-    2.  Ai fini dimostrativi di questo esempio, creare un certificato autofirmato. Se non si desidera che venga visualizzato un messaggio relativo alla sicurezza del certificato, installare il certificato nell'archivio Autorità di certificazione radice attendibili.  
+    2. Ai fini dimostrativi di questo esempio, creare un certificato autofirmato. Se non si desidera che venga visualizzato un messaggio relativo alla sicurezza del certificato, installare il certificato nell'archivio Autorità di certificazione radice attendibili.  
   
 5. Aprire il **azioni** riquadro per il sito Web predefinito. Fare clic su **modifica sito**, **associazioni**. Aggiungere HTTPS come tipo, se non già presente, con numero di porta 443. Assegnare il certificato SSL creato nel passaggio precedente.  
   

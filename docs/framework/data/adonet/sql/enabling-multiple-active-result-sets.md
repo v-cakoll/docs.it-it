@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877682"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Abilitazione di MARS (Multiple Active Result Set)
 MARS (Multiple Active Result Set) è un servizio che funziona in combinazione con SQL Server per consentire l'esecuzione di più batch in un'unica connessione. Quando MARS è abilitato per l'uso con SQL Server, ciascun oggetto comando usato aggiunge una sessione alla connessione.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  L'ambiente di esecuzione in batch include i componenti seguenti:  
   
--   Opzioni di impostazione (ad esempio, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
+- Opzioni di impostazione (ad esempio, ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
   
--   Contesto di sicurezza (ruolo utente/applicazione)  
+- Contesto di sicurezza (ruolo utente/applicazione)  
   
--   Contesto database (database corrente)  
+- Contesto database (database corrente)  
   
--   Le variabili di stato di esecuzione (ad esempio, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Le variabili di stato di esecuzione (ad esempio, @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Tabelle temporanee principali  
+- Tabelle temporanee principali  
   
  Con MARS, un ambiente di esecuzione predefinito viene associato a una connessione. Ogni nuovo batch che viene eseguito in una determinata connessione riceve una copia dell'ambiente predefinito. Quando il codice viene eseguito in un determinato batch, tutte le modifiche apportate all'ambiente sono limitate al batch specifico. Al termine dell'esecuzione, le impostazioni di esecuzione vengono copiate nell'ambiente predefinito. Nel caso di un singolo batch in cui vengono generati diversi comandi da eseguire in ordine sequenziale nella stessa transazione, la semantica è identica a quella esposta dalle connessioni che implicano client e server con versioni precedenti.  
   

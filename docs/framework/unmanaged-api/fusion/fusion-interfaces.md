@@ -9,30 +9,30 @@ ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697667"
 ---
 # <a name="fusion-interfaces"></a>Interfacce Fusion
-Questa sezione descrive le interfacce non gestite utilizzate dall'API Fusion per accedere alle proprietà di risorse dell'applicazione e per individuare le versioni corrette di tali risorse per l'applicazione.  
+Questa sezione descrive le interfacce non gestite utilizzate dall'API Fusion per accedere alle proprietà delle risorse di un'applicazione e individuare le versioni corrette di tali risorse per l'applicazione.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Interfaccia IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- Fornisce metodi che generano e confrontare le chiavi per le identità delle applicazioni e i riferimenti.  
+ Fornisce metodi che generano e confrontare le chiavi per le identità dell'applicazione e i riferimenti.  
   
  [Interfaccia IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
  Fornisce una rappresentazione della global assembly cache.  
   
  [Interfaccia IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
- Rappresenta un singolo assembly nella global assembly cache.  
+ Rappresenta un singolo assembly in global assembly cache.  
   
  [Interfaccia IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
  Rappresenta un enumeratore per una matrice di `IAssemblyName` oggetti.  
   
  [Interfaccia IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- Fornisce metodi per la descrizione e l'utilizzo di un'identità univoca di assembly.  
+ Fornisce metodi per la descrizione e l'utilizzo di identità univoca di un assembly.  
   
  [Interfaccia IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)  
  Rappresenta un identificatore univoco per il codice che definisce l'applicazione nell'ambito corrente.  
@@ -41,7 +41,7 @@ Questa sezione descrive le interfacce non gestite utilizzate dall'API Fusion per
  Rappresenta la firma univoca del codice che definisce l'applicazione nell'ambito corrente.  
   
  [Interfaccia IEnumDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md)  
- Funge dall'enumeratore per un insieme di `IDefinitionIdentity` oggetti.  
+ Serve come enumeratore per una raccolta di `IDefinitionIdentity` oggetti.  
   
  [Interfaccia IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
  Funge da un enumeratore per gli attributi dell'oggetto codice nell'ambito corrente.  
@@ -53,7 +53,7 @@ Questa sezione descrive le interfacce non gestite utilizzate dall'API Fusion per
  Gestisce le chiavi di identità per gli oggetti di codice.  
   
  [Interfaccia IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)  
- Rappresenta un enumeratore per gli assembly di riferimento installati nella global assembly cache.  
+ Rappresenta un enumeratore per gli assembly di riferimento installato nella global assembly cache.  
   
  [Interfaccia IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
  Rappresenta un elemento installato nella global assembly cache.  
@@ -62,7 +62,7 @@ Questa sezione descrive le interfacce non gestite utilizzate dall'API Fusion per
  Rappresenta un riferimento all'identificatore univoco per l'applicazione nell'ambito corrente.  
   
  [Interfaccia IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- Rappresenta un riferimento alla firma univoca di un oggetto di codice.  
+ Rappresenta un riferimento a una firma univoca di un oggetto di codice.  
   
 ## <a name="reference"></a>Riferimenti  
  <xref:System.Reflection>  

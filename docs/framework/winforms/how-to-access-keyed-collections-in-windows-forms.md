@@ -9,44 +9,44 @@ helpviewer_keywords:
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
 ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801829"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Procedura: Accedere a raccolte con chiavi in Windows Forms
--   È possibile accedere a singoli elementi della raccolta dalla chiave. Questa funzionalità è stata aggiunta a molte classi di raccolta che in genere vengono usate dalle applicazioni di Windows Form. L'elenco seguente mostra alcune delle classi di raccolta che dispone di raccolte con chiave accessibile:  
+- È possibile accedere a singoli elementi della raccolta dalla chiave. Questa funzionalità è stata aggiunta a molte classi di raccolta che in genere vengono usate dalle applicazioni di Windows Form. L'elenco seguente mostra alcune delle classi di raccolta che dispone di raccolte con chiave accessibile:  
   
--   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
+- <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
   
--   <xref:System.Windows.Forms.ListViewItem.ListViewSubItemCollection>  
+- <xref:System.Windows.Forms.ListViewItem.ListViewSubItemCollection>  
   
--   <xref:System.Windows.Forms.Control.ControlCollection>  
+- <xref:System.Windows.Forms.Control.ControlCollection>  
   
--   <xref:System.Windows.Forms.TabControl.TabPageCollection>  
+- <xref:System.Windows.Forms.TabControl.TabPageCollection>  
   
--   <xref:System.Windows.Forms.TreeNodeCollection>  
+- <xref:System.Windows.Forms.TreeNodeCollection>  
   
  La chiave associata a un elemento in una raccolta è in genere il nome dell'elemento. Le procedure seguenti illustrano come usare le classi di raccolta per eseguire attività comuni.  
   
 ### <a name="to-find-and-give-focus-to-a-nested-control-in-a-control-collection"></a>Per trovare e attivare un controllo annidato in una raccolta di controllo  
   
--   Usare la <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> e <xref:System.Windows.Forms.Control.Focus%2A> metodi per specificare il nome del controllo da trovare e attivare controllo.  
+- Usare la <xref:System.Windows.Forms.Control.ControlCollection.Find%2A> e <xref:System.Windows.Forms.Control.Focus%2A> metodi per specificare il nome del controllo da trovare e attivare controllo.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#1)]  
   
 ### <a name="to-access-an-image-in-an-image-collection"></a>Per accedere a un'immagine in una raccolta di immagini  
   
--   Usare il <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> proprietà per specificare il nome dell'immagine di cui si desidera accedere.  
+- Usare il <xref:System.Windows.Forms.ImageList.ImageCollection.Item%2A> proprietà per specificare il nome dell'immagine di cui si desidera accedere.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#2)]  
   
 ### <a name="to-set-a-tab-page-as-the-selected-tab"></a>Per impostare una pagina della scheda selezionata  
   
--   Usare la <xref:System.Windows.Forms.TabControl.SelectedTab%2A> proprietà con il <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> proprietà per specificare il nome della scheda per impostare come scheda selezionata.  
+- Usare la <xref:System.Windows.Forms.TabControl.SelectedTab%2A> proprietà con il <xref:System.Windows.Forms.TabControl.TabPageCollection.Item%2A> proprietà per specificare il nome della scheda per impostare come scheda selezionata.  
   
      [!code-csharp[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  

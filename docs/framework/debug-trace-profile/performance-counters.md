@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874472"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contatori di prestazioni in .NET Framework
 In questo argomento fornisce un elenco di contatori delle prestazioni in cui è possibile trovare il [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Contatori delle prestazioni per le eccezioni](#exception)  
+- [Contatori delle prestazioni per le eccezioni](#exception)  
   
--   [Contatori delle prestazioni per l'interoperabilità](#interop)  
+- [Contatori delle prestazioni per l'interoperabilità](#interop)  
   
--   [Contatori delle prestazioni JIT](#jit)  
+- [Contatori delle prestazioni JIT](#jit)  
   
--   [Contatori delle prestazioni di caricamento](#loading)  
+- [Contatori delle prestazioni di caricamento](#loading)  
   
--   [Contatori delle prestazioni di blocchi e thread](#lockthread)  
+- [Contatori delle prestazioni di blocchi e thread](#lockthread)  
   
--   [Contatori delle prestazioni di memoria](#memory)  
+- [Contatori delle prestazioni di memoria](#memory)  
   
--   [Contatori delle prestazioni della rete](#networking)  
+- [Contatori delle prestazioni della rete](#networking)  
   
--   [Contatori delle prestazioni di sicurezza](#security)  
+- [Contatori delle prestazioni di sicurezza](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Contatori delle prestazioni per le eccezioni  
@@ -161,21 +161,21 @@ In questo argomento fornisce un elenco di contatori delle prestazioni in cui è 
   
  Sono supportate diverse classi di contatori delle prestazioni della rete:  
   
--   I contatori evento che misurano il numero di volte in cui si verifica un evento.  
+- I contatori evento che misurano il numero di volte in cui si verifica un evento.  
   
--   I contatori dati che misurano la quantità di dati inviati o ricevuti.  
+- I contatori dati che misurano la quantità di dati inviati o ricevuti.  
   
--   I contatori di durata che misurano la durata dei diversi processi. I tempi vengono misurati su ciascun intervallo degli oggetti (in genere in secondi) dopo che escono da diversi stati.  
+- I contatori di durata che misurano la durata dei diversi processi. I tempi vengono misurati su ciascun intervallo degli oggetti (in genere in secondi) dopo che escono da diversi stati.  
   
--   I contatori per ogni intervallo che misurano il numero di oggetti che stanno effettuando una particolare transizione per intervallo (in genere al secondo).  
+- I contatori per ogni intervallo che misurano il numero di oggetti che stanno effettuando una particolare transizione per intervallo (in genere al secondo).  
   
  I contatori delle prestazioni della rete per gli eventi includono quanto segue:  
   
--   **Connessioni stabilite**  
+- **Connessioni stabilite**  
   
--   **Datagrammi ricevuti**  
+- **Datagrammi ricevuti**  
   
--   **Datagrammi inviati**  
+- **Datagrammi inviati**  
   
  I contatori delle prestazioni forniscono i conteggi dall'avvio del processo. I conteggi delle connessioni <xref:System.Net.Sockets.Socket> stabilite includono le chiamate al metodo <xref:System.Net.Sockets.Socket> esplicite da un'applicazione per una connessione al socket di flusso stabilita, nonché chiamate interne effettuate da altre classi (ad esempio <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> e <xref:System.Net.Sockets.TcpClient>) alla classe <xref:System.Net.Sockets.Socket>  
   
@@ -183,33 +183,33 @@ In questo argomento fornisce un elenco di contatori delle prestazioni in cui è 
   
  I contatori delle prestazioni della rete per i dati includono:  
   
--   **Byte ricevuti**  
+- **Byte ricevuti**  
   
--   **Byte inviati**  
+- **Byte inviati**  
   
  I contatori precedenti indicano i conteggi di byte dall'avvio del processo.  
   
  Esistono due contatori di durata che misurano il tempo impiegato dagli oggetti <xref:System.Net.HttpWebRequest> per passare in tutto il proprio ciclo di vita del ciclo o solo parte di esso:  
   
--   **Durata media di HttpWebRequest**  
+- **Durata media di HttpWebRequest**  
   
--   **Tempo medio coda di HttpWebRequest**  
+- **Tempo medio coda di HttpWebRequest**  
   
  Per il contatore **Durata media di HttpWebRequest**, la durata per la maggior parte degli oggetti <xref:System.Net.HttpWebRequest> inizia sempre dall'ora di creazione dell'oggetto fino all'ora di chiusura del flusso di risposta da parte dell'applicazione. Esistono due casi non comuni:  
   
--   Se l'applicazione non chiama mai i metodi <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, la durata dell'oggetto <xref:System.Net.HttpWebRequest> viene ignorata.  
+- Se l'applicazione non chiama mai i metodi <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, la durata dell'oggetto <xref:System.Net.HttpWebRequest> viene ignorata.  
   
--   Se l'oggetto <xref:System.Net.HttpWebRequest> genera <xref:System.Net.WebException> quando si chiama il metodo <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.EndGetResponse%2A>, la durata termina quando viene generata l'eccezione. Tecnicamente, anche il flusso di risposta sottostante viene chiuso a questo punto (il flusso di risposta restituito all'utente è in effetti un flusso di memoria che contiene una copia del flusso di risposta).  
+- Se l'oggetto <xref:System.Net.HttpWebRequest> genera <xref:System.Net.WebException> quando si chiama il metodo <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.EndGetResponse%2A>, la durata termina quando viene generata l'eccezione. Tecnicamente, anche il flusso di risposta sottostante viene chiuso a questo punto (il flusso di risposta restituito all'utente è in effetti un flusso di memoria che contiene una copia del flusso di risposta).  
   
  Sono disponibili quattro contatori che rilevano determinati problemi degli oggetti <xref:System.Net.HttpWebRequest> per intervallo. Questi contatori delle prestazioni consentono agli sviluppatori di applicazioni, agli amministratori e al personale del supporto di comprendere meglio le attività degli oggetti <xref:System.Net.HttpWebRequest>. I contatori includono quando segue:  
   
--   **Oggetti HttpWebRequests creati al secondo**  
+- **Oggetti HttpWebRequests creati al secondo**  
   
--   **Oggetti HttpWebRequests in coda al secondo**  
+- **Oggetti HttpWebRequests in coda al secondo**  
   
--   **Oggetti HttpWebRequests interrotti al secondo**  
+- **Oggetti HttpWebRequests interrotti al secondo**  
   
--   **Oggetti HttpWebRequests non completati al secondo**  
+- **Oggetti HttpWebRequests non completati al secondo**  
   
  Per il contatore **Oggetti HttpWebRequests interrotti al secondo** vengono conteggiate anche le chiamate interne a <xref:System.Net.HttpWebRequest.Abort%2A>. Queste chiamate interne sono generalmente causate dai timeout che un'applicazione desidera misurare.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  I contatori delle prestazioni della rete sono elencati in due categorie:  
   
--   ".NET CLR Networking": i contatori delle prestazioni originali introdotti in .NET Framework versione 2 e supportati in .NET Framework versione 2 e versioni successive.  
+- ".NET CLR Networking": i contatori delle prestazioni originali introdotti in .NET Framework versione 2 e supportati in .NET Framework versione 2 e versioni successive.  
   
--   ".NET CLR Networking 4.0.0.0": tutti i contatori socket sopra indicati più i nuovi contatori delle prestazioni supportati in .NET Framework versione 4 e versioni successive. Questi nuovi contatori forniscono informazioni sulle prestazioni degli oggetti <xref:System.Net.HttpWebRequest>.  
+- ".NET CLR Networking 4.0.0.0": tutti i contatori socket sopra indicati più i nuovi contatori delle prestazioni supportati in .NET Framework versione 4 e versioni successive. Questi nuovi contatori forniscono informazioni sulle prestazioni degli oggetti <xref:System.Net.HttpWebRequest>.  
   
  Per altre informazioni sull'accesso e la gestione dei contatori delle prestazioni in un'applicazione, vedere [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

@@ -3,11 +3,11 @@ title: Considerazioni sulle prestazioni (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879398"
 ---
 # <a name="performance-considerations-entity-framework"></a>Considerazioni sulle prestazioni (Entity Framework)
 In questo argomento vengono descritte le caratteristiche relative alle prestazioni di ADO.NET Entity Framework e vengono illustrate alcune considerazioni per migliorare le prestazioni di applicazioni Entity Framework.  
@@ -55,12 +55,12 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 #### <a name="query-complexity"></a>Complessità delle query  
  Le query con un elevato numero di join nei comandi che sono eseguite sull'origine dati o che restituiscono una grande quantità di dati influiscono sulle prestazioni nei seguenti modi:  
   
--   Le query su un modello concettuale che sembrano semplici possono comportare l'esecuzione di query più complesse sull'origine dati. Il motivo consiste nel fatto che Entity Framework traduce una query su un modello concettuale in una equivalente query sull'origine dati. Quando un singolo set di entità nel modello concettuale esegue il mapping a più tabelle nell'origine dati, o quando una relazione tra entità viene mappata a una tabella di join, è possibile che il comando di query eseguito sulla query dell'origine dati richieda uno o più join.  
+- Le query su un modello concettuale che sembrano semplici possono comportare l'esecuzione di query più complesse sull'origine dati. Il motivo consiste nel fatto che Entity Framework traduce una query su un modello concettuale in una equivalente query sull'origine dati. Quando un singolo set di entità nel modello concettuale esegue il mapping a più tabelle nell'origine dati, o quando una relazione tra entità viene mappata a una tabella di join, è possibile che il comando di query eseguito sulla query dell'origine dati richieda uno o più join.  
   
     > [!NOTE]
     >  Usare il metodo <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> della classe <xref:System.Data.Objects.ObjectQuery%601> o <xref:System.Data.EntityClient.EntityCommand> per visualizzare i comandi che sono eseguiti sull'origine dati per una data query. Per altre informazioni, vedere [Procedura: Visualizzare i comandi di Store](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100)).  
   
--   Le query Entity SQL annidate possono creare join nel server e possono restituire un elevato numero di righe.  
+- Le query Entity SQL annidate possono creare join nel server e possono restituire un elevato numero di righe.  
   
      Di seguito è riportato un esempio di query annidata in una clausola di proiezione:  
   
@@ -72,7 +72,7 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
   
      Inoltre, tali query fanno in modo che la pipeline delle query generi un'unica query con duplicazione di oggetti tra le query annidate. Per questo motivo una singola colonna può essere duplicata più volte. In alcuni database, tra cui SQL Server, questo può causare un forte aumento delle dimensioni della tabella TempDB, con effetti negativi sulle prestazioni del server. Occorre quindi prestare attenzione quando si eseguono query annidate.  
   
--   Qualsiasi query che restituisce un elevato numero di dati può causare una diminuzione delle prestazioni se il client in quel momento sta eseguendo operazioni che consumano risorse in modo proporzionale alle dimensioni del set dei risultati. In tali casi, è necessario limitare la quantità di dati restituiti dalla query. Per altre informazioni, vedere [Procedura: Risultati della pagina tramite Query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
+- Qualsiasi query che restituisce un elevato numero di dati può causare una diminuzione delle prestazioni se il client in quel momento sta eseguendo operazioni che consumano risorse in modo proporzionale alle dimensioni del set dei risultati. In tali casi, è necessario limitare la quantità di dati restituiti dalla query. Per altre informazioni, vedere [Procedura: Risultati della pagina tramite Query](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)).  
   
  Qualsiasi comando generato automaticamente da Entity Framework può essere più complesso degli analoghi comandi scritti in modo esplicito da un sviluppatore del database. Se è necessario avere il controllo esplicito sui comandi eseguiti sull'origine dati, si può definire un mapping a una funzione con valori di tabella o una stored procedure.  
   
@@ -114,9 +114,9 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 ### <a name="distributed-transactions"></a>Transazioni distribuite  
  Le operazioni in una transazione esplicita che richiedono risorse gestite dal DTC (Distributed Transaction Coordinator) saranno molto più costose di un'operazione analoga che non richiede il DTC. Una promozione al DTC avverrà nelle situazioni seguenti:  
   
--   Una transazione esplicita con un'operazione su un database SQL Server 2000 o altra origine dati che promuove sempre transazioni esplicite al DTC.  
+- Una transazione esplicita con un'operazione su un database SQL Server 2000 o altra origine dati che promuove sempre transazioni esplicite al DTC.  
   
--   Una transazione esplicita con un'operazione a SQL Server 2005 quando la connessione è gestita da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ciò si verifica perché SQL Server 2005 promuove a un DTC ogni qualvolta una connessione viene chiusa e riaperta all'interno di una singola transazione, che è il comportamento predefinito di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Questa promozione al DTC non avviene quando si utilizza SQL Server 2008. Per evitare questa promozione quando si utilizza SQL Server 2005, è necessario aprire e chiudere la connessione in modo esplicito all'interno della transazione. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
+- Una transazione esplicita con un'operazione a SQL Server 2005 quando la connessione è gestita da [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ciò si verifica perché SQL Server 2005 promuove a un DTC ogni qualvolta una connessione viene chiusa e riaperta all'interno di una singola transazione, che è il comportamento predefinito di [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Questa promozione al DTC non avviene quando si utilizza SQL Server 2008. Per evitare questa promozione quando si utilizza SQL Server 2005, è necessario aprire e chiudere la connessione in modo esplicito all'interno della transazione. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
  Una transazione esplicita viene usata quando una o più operazioni vengono eseguite all'interno di una transazione <xref:System.Transactions>. Per altre informazioni, vedere [alla gestione delle connessioni e transazioni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
   
@@ -147,11 +147,11 @@ In questo argomento vengono descritte le caratteristiche relative alle prestazio
 ## <a name="performance-data"></a>Dati prestazioni  
  Alcuni dati sulle prestazioni per Entity Framework sono pubblicati nei post seguenti nel [blog del team di ADO.NET](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Analisi delle prestazioni di ADO.NET Entity Framework - parte 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [Analisi delle prestazioni di ADO.NET Entity Framework - parte 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Analisi delle prestazioni di ADO.NET Entity Framework-parte 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [Analisi delle prestazioni di ADO.NET Entity Framework-parte 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [Confronto delle prestazioni di ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [Confronto delle prestazioni di ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -82,11 +82,11 @@ helpviewer_keywords:
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
 ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802297"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funzioni di conversione del tipo (Visual Basic)
 Queste funzioni vengono compilate inline, vale a dire che il codice di conversione fa parte del codice che valuta l'espressione. In alcuni casi non vi è alcuna chiamata a una procedura per eseguire la conversione, che migliora le prestazioni. Ogni funzione converte un'espressione per un tipo di dati specifico.  
@@ -171,21 +171,21 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>Comportamento  
   
--   **Coercion.** In generale, è possibile utilizzare le funzioni di conversione di tipi di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito. Ad esempio, usare `CDec` forzare operazioni aritmetiche decimali nei casi in cui con precisione singola e precisione doppia o calcoli di interi normalmente avverrebbero.  
+- **Coercion.** In generale, è possibile utilizzare le funzioni di conversione di tipi di dati per assegnare il risultato di un'operazione a un particolare tipo di dati anziché il tipo di dati predefinito. Ad esempio, usare `CDec` forzare operazioni aritmetiche decimali nei casi in cui con precisione singola e precisione doppia o calcoli di interi normalmente avverrebbero.  
   
--   **Conversioni non riuscite.** Se il `expression` passati alla funzione è compreso nell'intervallo del tipo di dati a cui si desidera convertire, un <xref:System.OverflowException> si verifica.  
+- **Conversioni non riuscite.** Se il `expression` passati alla funzione è compreso nell'intervallo del tipo di dati a cui si desidera convertire, un <xref:System.OverflowException> si verifica.  
   
--   **Parti frazionarie.** Quando si converte un valore non integrale in un valore integrale digita, le funzioni di conversione di valori integer (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, e `CUShort`) rimuovere il frazionari parte e arrotondare il valore all'intero più vicino.  
+- **Parti frazionarie.** Quando si converte un valore non integrale in un valore integrale digita, le funzioni di conversione di valori integer (`CByte`, `CInt`, `CLng`, `CSByte`, `CShort`, `CUInt`, `CULng`, e `CUShort`) rimuovere il frazionari parte e arrotondare il valore all'intero più vicino.  
   
      Se la parte frazionaria è identica 0,5, le funzioni di conversione di valori integer arrotondano per l'intero pari più vicino. Ad esempio 0,5 verrà arrotondato a 0 e 1,5 e 2,5 che entrambi arrotondato a 2. Questa operazione è denominata *arrotondamento*, e il suo scopo consiste nel compensare la distorsione che può accumularsi quando aggiungono molti tali numeri.  
   
      `CInt` e `CLng` differiscono dalle <xref:Microsoft.VisualBasic.Conversion.Int%2A> e <xref:Microsoft.VisualBasic.Conversion.Fix%2A> funzioni, che troncano, anziché round, la parte frazionaria di un numero. È inoltre `Fix` e `Int` restituiscono sempre un valore del tipo di dati stesso di quello passato.  
   
--   **Conversioni di data/ora.** Usare il <xref:Microsoft.VisualBasic.Information.IsDate%2A> funzione per determinare se un valore può essere convertito in una data e ora. `CDate` riconosce i valori letterali di data e ora, ma i valori non numerici. La conversione di Visual Basic 6.0 `Date` valore per un `Date` valore in Visual Basic 2005 o versioni successive, è possibile usare il <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> (metodo).  
+- **Conversioni di data/ora.** Usare il <xref:Microsoft.VisualBasic.Information.IsDate%2A> funzione per determinare se un valore può essere convertito in una data e ora. `CDate` riconosce i valori letterali di data e ora, ma i valori non numerici. La conversione di Visual Basic 6.0 `Date` valore per un `Date` valore in Visual Basic 2005 o versioni successive, è possibile usare il <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> (metodo).  
   
--   **Neutro valori data/ora.** Il [tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md) contiene sempre le informazioni sia data e ora. Ai fini di conversione del tipo, Visual Basic considera come 1/1/0001 (1 ° gennaio dell'anno 1) da un *valore neutro* per la data e 00:00:00 (mezzanotte) su un valore neutro per il periodo di tempo. Se si converte un `Date` valore da una stringa, `CStr` non include valori neutri nella stringa risultante. Ad esempio, se si converte `#January 1, 0001 9:30:00#` in una stringa, il risultato è "9:30: 12:00:00 AM"; le informazioni sulla data viene eliminate. Tuttavia, le informazioni sulla data è ancora presente nell'originale `Date` valore e possono essere recuperate con le funzioni, ad esempio <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> (funzione).  
+- **Neutro valori data/ora.** Il [tipo di dati Date](../../../visual-basic/language-reference/data-types/date-data-type.md) contiene sempre le informazioni sia data e ora. Ai fini di conversione del tipo, Visual Basic considera come 1/1/0001 (1 ° gennaio dell'anno 1) da un *valore neutro* per la data e 00:00:00 (mezzanotte) su un valore neutro per il periodo di tempo. Se si converte un `Date` valore da una stringa, `CStr` non include valori neutri nella stringa risultante. Ad esempio, se si converte `#January 1, 0001 9:30:00#` in una stringa, il risultato è "9:30: 12:00:00 AM"; le informazioni sulla data viene eliminate. Tuttavia, le informazioni sulla data è ancora presente nell'originale `Date` valore e possono essere recuperate con le funzioni, ad esempio <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> (funzione).  
   
--   **Sensibilità delle impostazioni cultura.** Le funzioni di conversione di tipo che interessa le stringhe di eseguono conversioni in base alle impostazioni cultura correnti per l'applicazione. Ad esempio, `CDate` riconosce i formati di data in base alle impostazioni locali del sistema. È necessario specificare il giorno, mese e anno nell'ordine corretto per le impostazioni locali, o alla data potrà essere interpretata erroneamente. Se contiene una stringa di giorno della settimana, ad esempio "Wednesday", un formato di data estesa non è riconosciuto.  
+- **Sensibilità delle impostazioni cultura.** Le funzioni di conversione di tipo che interessa le stringhe di eseguono conversioni in base alle impostazioni cultura correnti per l'applicazione. Ad esempio, `CDate` riconosce i formati di data in base alle impostazioni locali del sistema. È necessario specificare il giorno, mese e anno nell'ordine corretto per le impostazioni locali, o alla data potrà essere interpretata erroneamente. Se contiene una stringa di giorno della settimana, ad esempio "Wednesday", un formato di data estesa non è riconosciuto.  
   
      Se è necessario convertire a o da una rappresentazione di stringa di un valore in un formato diverso da quello specificato dalle impostazioni locali, è possibile usare le funzioni di conversione di tipo Visual Basic. A questo scopo, usare il `ToString(IFormatProvider)` e `Parse(String, IFormatProvider)` metodi del tipo di valore. Ad esempio, usare <xref:System.Double.Parse%2A?displayProperty=nameWithType> quando si converte una stringa in un `Double`e usare <xref:System.Double.ToString%2A?displayProperty=nameWithType> durante la conversione di un valore di tipo `Double` in una stringa.  
   

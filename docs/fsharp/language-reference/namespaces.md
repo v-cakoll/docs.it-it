@@ -3,11 +3,11 @@ title: Spazi dei nomi
 description: Informazioni su come un F# dello spazio dei nomi consente di organizzare il codice in aree di funzionalità correlate grazie alla possibilità di associare un nome a un raggruppamento di elementi di programma.
 ms.date: 12/08/2018
 ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666391"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 

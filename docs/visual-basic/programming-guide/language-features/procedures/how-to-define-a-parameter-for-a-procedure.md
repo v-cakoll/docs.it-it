@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863701"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Procedura: Definire un parametro per una routine (Visual Basic)
 Oggetto *parametro* consente di passare un valore per la procedura quando si chiama il codice chiama. Ciascun parametro viene dichiarato per una procedura simile a quello si dichiara una variabile, che specifica il nome e tipo di dati. Specificare inoltre il meccanismo di passaggio e indica se il parametro è facoltativo.  
@@ -46,11 +46,11 @@ Oggetto *parametro* consente di passare un valore per la procedura quando si chi
   
      Specifica dei tipi di dati per tutti gli elementi di programmazione è detta *tipizzazione forte*. Quando si imposta `Option Strict On`, Visual Basic applica la tipizzazione forte. Questa opzione è fortemente consigliata per i motivi seguenti:  
   
-    -   Consente il supporto IntelliSense per le variabili e parametri. In questo modo è possibile visualizzare le relative proprietà e gli altri membri durante la digitazione del codice.  
+    - Consente il supporto IntelliSense per le variabili e parametri. In questo modo è possibile visualizzare le relative proprietà e gli altri membri durante la digitazione del codice.  
   
-    -   Consente al compilatore di eseguire il controllo dei tipi. Ciò risulta utile per intercettare le istruzioni possono avere esito negativo in fase di esecuzione a causa di errori, ad esempio overflow. Anche intercetta le chiamate ai metodi su oggetti che non li supportano.  
+    - Consente al compilatore di eseguire il controllo dei tipi. Ciò risulta utile per intercettare le istruzioni possono avere esito negativo in fase di esecuzione a causa di errori, ad esempio overflow. Anche intercetta le chiamate ai metodi su oggetti che non li supportano.  
   
-    -   Restituisce un'esecuzione più rapida del codice. Uno dei motivi è che se non si specifica un tipo di dati per un elemento di programmazione, il compilatore Visual Basic assegna il `Object` tipo. Il codice compilato potrebbe essere necessario convertire spostarsi tra `Object` e altri tipi di dati, riducendo le prestazioni.  
+    - Restituisce un'esecuzione più rapida del codice. Uno dei motivi è che se non si specifica un tipo di dati per un elemento di programmazione, il compilatore Visual Basic assegna il `Object` tipo. Il codice compilato potrebbe essere necessario convertire spostarsi tra `Object` e altri tipi di dati, riducendo le prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche
 

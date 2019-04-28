@@ -3,11 +3,11 @@ title: <add> di <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701463"
 ---
 # <a name="add-of-serviceactivations"></a>\<aggiungere > di \<serviceActivations >
 
@@ -36,7 +36,7 @@ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gl
 |Attributo|Descrizione|
 |---------------|-----------------|
 |factory|Stringa che specifica il tipo CLR della factory che genera un elemento di attivazione del servizio.|
-|service|ServiceType che implementa il servizio, ossia il Typename completo o il Typename breve, quando viene inserito nella cartella App_Code.|
+|servizio|ServiceType che implementa il servizio, ossia il Typename completo o il Typename breve, quando viene inserito nella cartella App_Code.|
 |relativeAddress|Indirizzo relativo all'interno dell'applicazione IIS corrente, ad esempio “Service.svc". In WCF 4.0 questo indirizzo relativo deve contenere una delle estensioni di file note (svc, xamlx, ecc.). Nessun file fisico deve esistere per l'URL relativo|
 
 ### <a name="child-elements"></a>Elementi figlio

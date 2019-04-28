@@ -3,11 +3,11 @@ title: Guida per programmatori (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
 ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638012"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Guida per programmatori (LINQ to DataSet)
 Contenuto della sezione vengono fornite informazioni di carattere concettuale ed esempi per programmare con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  

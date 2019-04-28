@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: KrzysztofCwalina
 ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669049"
 ---
 # <a name="guidelines-for-collections"></a>Linee guida per le raccolte
 Qualsiasi tipo progettata specificamente per modificare un gruppo di oggetti con alcune caratteristiche comuni può essere considerato come una raccolta. È quasi sempre appropriato per questi tipi implementare <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, pertanto in questa sezione è considerare solo i tipi che implementano una o entrambe queste interfacce a essere raccolte.  

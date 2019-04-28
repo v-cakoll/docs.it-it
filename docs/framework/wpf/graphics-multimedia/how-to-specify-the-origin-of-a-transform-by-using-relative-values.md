@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
 ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651142"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Procedura: Specificare l'origine di una trasformazione usando valori relativi
 Questo esempio illustra come usare i valori relativi per specificare l'origine di un <xref:System.Windows.UIElement.RenderTransform%2A> che viene applicato a un <xref:System.Windows.FrameworkElement>.  

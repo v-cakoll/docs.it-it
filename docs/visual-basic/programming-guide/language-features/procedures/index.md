@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863506"
 ---
 # <a name="procedures-in-visual-basic"></a>Routine in Visual Basic
 Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e un corrispondente `End` dichiarazione. Le istruzioni eseguibili in Visual Basic devono trovarsi nella stessa routine.  
@@ -24,11 +24,11 @@ Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istru
 ## <a name="returning-from-a-procedure"></a>Termine di una routine  
  Una routine restituisce il controllo al codice chiamante al termine della sua esecuzione. A tale scopo, è possibile usare un'[istruzione Return](../../../../visual-basic/language-reference/statements/return-statement.md), l'istruzione [Exit](../../../../visual-basic/language-reference/statements/exit-statement.md) appropriata per la routine o l'istruzione [End \<parola chiave>](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) della routine. Il controllo passa quindi al codice chiamante che segue il punto della chiamata di routine.  
   
--   Con un'istruzione `Return`, il controllo ritorna immediatamente al codice chiamante. Le istruzioni che seguono l'istruzione `Return` non vengono eseguite. Una routine può includere più di un'istruzione `Return`.  
+- Con un'istruzione `Return`, il controllo ritorna immediatamente al codice chiamante. Le istruzioni che seguono l'istruzione `Return` non vengono eseguite. Una routine può includere più di un'istruzione `Return`.  
   
--   Con un'istruzione `Exit Sub` o `Exit Function`, il controllo ritorna immediatamente al codice chiamante. Le istruzioni che seguono l'istruzione `Exit` non vengono eseguite. Una routine può includere più di un'istruzione `Exit` ed è possibile combinare istruzioni `Return` e `Exit` nella stessa routine.  
+- Con un'istruzione `Exit Sub` o `Exit Function`, il controllo ritorna immediatamente al codice chiamante. Le istruzioni che seguono l'istruzione `Exit` non vengono eseguite. Una routine può includere più di un'istruzione `Exit` ed è possibile combinare istruzioni `Return` e `Exit` nella stessa routine.  
   
--   Se una routine non contiene istruzioni `Return` o `Exit`, termina con un'istruzione `End Sub` o `End Function`, `End Get` o `End Set` che segue l'ultima istruzione del corpo della routine. L'istruzione `End` restituisce il controllo immediatamente al codice chiamante. Una routine può contenere solo un'istruzione `End`.  
+- Se una routine non contiene istruzioni `Return` o `Exit`, termina con un'istruzione `End Sub` o `End Function`, `End Get` o `End Set` che segue l'ultima istruzione del corpo della routine. L'istruzione `End` restituisce il controllo immediatamente al codice chiamante. Una routine può contenere solo un'istruzione `End`.  
   
 ## <a name="parameters-and-arguments"></a>Parametri e argomenti  
  Nella maggior parte dei casi, una routine deve usare dati diversi ogni volta che viene chiamata. È possibile passare queste informazioni alla routine come parte della chiamata di routine. La routine definisce zero o più *parametri*, ognuno dei quali rappresenta un valore necessario da passare alla routine. A ogni parametro della definizione della routine corrisponde un *argomento* nella chiamata di routine. Un argomento rappresenta il valore passato al parametro corrispondente in una chiamata di routine specifica.  
@@ -36,19 +36,19 @@ Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istru
 ## <a name="types-of-procedures"></a>Tipi di routine  
  Visual Basic Usa diversi tipi di routine:  
   
--   Le [routine Sub](./sub-procedures.md) eseguono operazioni ma non restituiscono un valore al codice chiamante.  
+- Le [routine Sub](./sub-procedures.md) eseguono operazioni ma non restituiscono un valore al codice chiamante.  
   
--   Le routine di gestione degli eventi sono routine `Sub` eseguite in risposta a un evento generato da un'azione utente o da un'occorrenza in un programma.  
+- Le routine di gestione degli eventi sono routine `Sub` eseguite in risposta a un evento generato da un'azione utente o da un'occorrenza in un programma.  
   
--   Le [routine Function](./function-procedures.md) restituiscono un valore al codice chiamante. Possono eseguire altre azioni prima della restituzione del valore.
+- Le [routine Function](./function-procedures.md) restituiscono un valore al codice chiamante. Possono eseguire altre azioni prima della restituzione del valore.
 
     Alcune funzioni scritte in C# restituiscono un *valore di riferimento restituito*. I chiamanti delle routine Function possono modificare il valore restituito e questa modifica si riflette nello stato dell'oggetto chiamato. A partire da Visual Basic 2017, il codice di Visual Basic può usare valori di riferimento restituiti, anche se non può restituire un valore in base al riferimento. Per altre informazioni, vedere [Valori di riferimento restituiti](ref-return-values.md).
   
--   Le [routine Property](./property-procedures.md) restituiscono e assegnano valori di proprietà su oggetti o moduli.  
+- Le [routine Property](./property-procedures.md) restituiscono e assegnano valori di proprietà su oggetti o moduli.  
   
--   Le [routine Operator](./operator-procedures.md) definiscono il comportamento di un operatore standard quando uno o entrambi gli operandi sono una struttura o classe appena definita.  
+- Le [routine Operator](./operator-procedures.md) definiscono il comportamento di un operatore standard quando uno o entrambi gli operandi sono una struttura o classe appena definita.  
   
--   Le [routine generiche in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definiscono uno o più *parametri di tipo* oltre i relativi parametri normali, per cui il codice chiamante può passare tipi di dati specifici ogni volta che esegue una chiamata.  
+- Le [routine generiche in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definiscono uno o più *parametri di tipo* oltre i relativi parametri normali, per cui il codice chiamante può passare tipi di dati specifici ogni volta che esegue una chiamata.  
   
 ## <a name="procedures-and-structured-code"></a>Routine e codice strutturato  
  Ogni riga di codice eseguibile nell'applicazione deve essere incluso all'interno di una routine, ad esempio `Main`, `calculate` o `Button1_Click`. Se si suddividono le routine di grandi dimensioni in piccole routine, l'applicazione risulta più leggibile.  
@@ -57,9 +57,9 @@ Oggetto *routine* è un blocco di Visual Basic istruzioni racchiuse tra un'istru
   
  La strutturazione del codice con routine offre i vantaggi seguenti:  
   
--   Le routine consentono di dividere i programmi in unità logiche distinte. È possibile eseguire più facilmente il debug di unità separate, piuttosto che eseguire il debug di un intero programma senza routine.  
+- Le routine consentono di dividere i programmi in unità logiche distinte. È possibile eseguire più facilmente il debug di unità separate, piuttosto che eseguire il debug di un intero programma senza routine.  
   
--   Dopo aver sviluppato le routine da usare in un programma, è possibile usarle in altri programmi, spesso senza modificarle o apportando modifiche minime. Questo consente di evitare la duplicazione del codice.  
+- Dopo aver sviluppato le routine da usare in un programma, è possibile usarle in altri programmi, spesso senza modificarle o apportando modifiche minime. Questo consente di evitare la duplicazione del codice.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858078"
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedure consigliate per comunicazioni in coda
 In questo argomento illustra le procedure consigliate per la comunicazione in coda in Windows Communication Foundation (WCF). Nelle sezioni seguenti vengono descritte le procedure consigliate in funzione dello scenario.  
@@ -48,11 +48,11 @@ In questo argomento illustra le procedure consigliate per la comunicazione in co
 ## <a name="achieving-high-throughput"></a>Raggiungimento di velocità effettive elevate  
  Per raggiungere velocità effettive elevate in un singolo endpoint, utilizzare gli elementi seguenti:  
   
--   Batch transazionale. Il batch transazionale garantisce la lettura di molti messaggi in una singola transazione. In questo modo vengono ottimizzati i commit della transazione, aumentando le prestazioni complessive. Lo svantaggio del batch consiste nel fatto che se si verifica un errore in un singolo messaggio all'interno di un batch, verrà eseguito il rollback dell'intero batch e i messaggi dovranno essere elaborati uno alla volta fino a che il batch non sarà nuovamente sicuro. Nella maggior parte dei casi i messaggi non elaborabili sono rari, pertanto il batch è il modo preferito per aumentare le prestazioni del sistema, in particolare quando vi sono altri gestori delle risorse che partecipano alla transazione. Per altre informazioni, vedere [l'invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Batch transazionale. Il batch transazionale garantisce la lettura di molti messaggi in una singola transazione. In questo modo vengono ottimizzati i commit della transazione, aumentando le prestazioni complessive. Lo svantaggio del batch consiste nel fatto che se si verifica un errore in un singolo messaggio all'interno di un batch, verrà eseguito il rollback dell'intero batch e i messaggi dovranno essere elaborati uno alla volta fino a che il batch non sarà nuovamente sicuro. Nella maggior parte dei casi i messaggi non elaborabili sono rari, pertanto il batch è il modo preferito per aumentare le prestazioni del sistema, in particolare quando vi sono altri gestori delle risorse che partecipano alla transazione. Per altre informazioni, vedere [l'invio in batch di messaggi in una transazione](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Concorrenza. La concorrenza aumenta la velocità effettiva, ma può anche provocare conflitti nelle risorse condivise. Per altre informazioni, vedere [concorrenza](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Concorrenza. La concorrenza aumenta la velocità effettiva, ma può anche provocare conflitti nelle risorse condivise. Per altre informazioni, vedere [concorrenza](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Limitazione. Per ottenere prestazioni ottimali, limitare il numero di messaggi nella pipeline del dispatcher. Per un esempio di come eseguire questa operazione, vedere [limitazione](../../../../docs/framework/wcf/samples/throttling.md).  
+- Limitazione. Per ottenere prestazioni ottimali, limitare il numero di messaggi nella pipeline del dispatcher. Per un esempio di come eseguire questa operazione, vedere [limitazione](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Quando si utilizza il batch, è necessario sapere che la concorrenza e la limitazione danno luogo a batch simultanei.  
   
@@ -75,11 +75,11 @@ In questo argomento illustra le procedure consigliate per la comunicazione in co
   
  Quando si utilizza `MsmqIntegrationBinding`, è necessario sapere che:  
   
--   Il corpo del messaggio WCF non è quello utilizzato per il corpo del messaggio MSMQ. Quando si invia un messaggio WCF utilizzando un'associazione in coda, il corpo del messaggio WCF viene posizionata all'interno di un messaggio MSMQ. L'infrastruttura MSMQ vede solo il messaggio MSMQ ignorando queste informazioni aggiuntive.  
+- Il corpo del messaggio WCF non è quello utilizzato per il corpo del messaggio MSMQ. Quando si invia un messaggio WCF utilizzando un'associazione in coda, il corpo del messaggio WCF viene posizionata all'interno di un messaggio MSMQ. L'infrastruttura MSMQ vede solo il messaggio MSMQ ignorando queste informazioni aggiuntive.  
   
--   `MsmqIntegrationBinding` supporta i tipi di serializzazione più comuni. In base al tipo di serializzazione, il tipo del corpo del messaggio generico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prende parametri di tipo diverso. <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>, ad esempio, richiede `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> e `MsmqMessage<Stream>` richiede .  
+- `MsmqIntegrationBinding` supporta i tipi di serializzazione più comuni. In base al tipo di serializzazione, il tipo del corpo del messaggio generico, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prende parametri di tipo diverso. <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray>, ad esempio, richiede `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> e `MsmqMessage<Stream>` richiede .  
   
--   Con la serializzazione XML, è possibile specificare il tipo conosciuto utilizzando il `KnownTypes` attributo la [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento che viene quindi usato per determinare come deserializzare il messaggio XML.  
+- Con la serializzazione XML, è possibile specificare il tipo conosciuto utilizzando il `KnownTypes` attributo la [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elemento che viene quindi usato per determinare come deserializzare il messaggio XML.  
   
 ## <a name="see-also"></a>Vedere anche
 
