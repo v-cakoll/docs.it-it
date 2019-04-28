@@ -10,11 +10,11 @@ ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b2cf06a5ab921f5ae89da4856e8164b6f57db5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754258"
 ---
 # <a name="loadfromcontext-mda"></a>MDA loadFromContext
 L'assistente al debug gestito `loadFromContext` viene attivato se viene caricato un assembly nel contesto `LoadFrom`. Questa situazione può verificarsi come risultato di una chiamata di <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> o di altri metodi simili.  
@@ -28,11 +28,11 @@ L'assistente al debug gestito `loadFromContext` viene attivato se viene caricato
 ## <a name="resolution"></a>Risoluzione  
  Configurare le applicazioni in modo che non siano più necessarie chiamate di <xref:System.Reflection.Assembly.LoadFrom%2A>. A questo scopo, è possibile usare le tecniche seguenti:  
   
--   Installare gli assembly nella Global Assembly Cache.  
+- Installare gli assembly nella Global Assembly Cache.  
   
--   Inserire gli assembly nella directory <xref:System.AppDomainSetup.ApplicationBase%2A> per <xref:System.AppDomain>. Nel caso del dominio predefinito, la directory <xref:System.AppDomainSetup.ApplicationBase%2A> è quella che contiene il file eseguibile che ha avviato il processo. In questo caso, può essere necessaria anche la creazione di un nuovo oggetto <xref:System.AppDomain> se non si vuole spostare l'assembly.  
+- Inserire gli assembly nella directory <xref:System.AppDomainSetup.ApplicationBase%2A> per <xref:System.AppDomain>. Nel caso del dominio predefinito, la directory <xref:System.AppDomainSetup.ApplicationBase%2A> è quella che contiene il file eseguibile che ha avviato il processo. In questo caso, può essere necessaria anche la creazione di un nuovo oggetto <xref:System.AppDomain> se non si vuole spostare l'assembly.  
   
--   Aggiungere un percorso di sondaggio al file di configurazione dell'applicazione (con estensione config) o ai domini dell'applicazione secondari se nelle directory figlio relative al file eseguibile sono presenti assembly dipendenti.  
+- Aggiungere un percorso di sondaggio al file di configurazione dell'applicazione (con estensione config) o ai domini dell'applicazione secondari se nelle directory figlio relative al file eseguibile sono presenti assembly dipendenti.  
   
  In ogni caso, il codice può essere modificato in modo da usare il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   

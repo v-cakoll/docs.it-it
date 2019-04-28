@@ -14,30 +14,30 @@ ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c201ab51c1af8a86fc1c2c4f80738007152b3bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754505"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
 L'assistente al debug gestito `invalidApartmentStateChange` viene attivato quando si verificano due problemi diversi:  
   
--   Viene effettuato un tentativo di modificare lo stato di apartment COM di un thread che è già stato inizializzato da COM in uno stato di apartment diverso.  
+- Viene effettuato un tentativo di modificare lo stato di apartment COM di un thread che è già stato inizializzato da COM in uno stato di apartment diverso.  
   
--   Lo stato di apartment COM di un thread cambia in modo imprevisto.  
+- Lo stato di apartment COM di un thread cambia in modo imprevisto.  
   
 ## <a name="symptoms"></a>Sintomi  
   
--   Lo stato di apartment COM di un thread è diverso da quello richiesto. Questo problema può causare l'uso di proxy per componenti COM associati a un modello di threading diverso da quello corrente. A sua volta, questo comportamento può provocare la generazione di un'eccezione <xref:System.InvalidCastException> quando viene chiamato l'oggetto COM tramite interfacce che non sono configurate per il marshalling tra diversi apartment.  
+- Lo stato di apartment COM di un thread è diverso da quello richiesto. Questo problema può causare l'uso di proxy per componenti COM associati a un modello di threading diverso da quello corrente. A sua volta, questo comportamento può provocare la generazione di un'eccezione <xref:System.InvalidCastException> quando viene chiamato l'oggetto COM tramite interfacce che non sono configurate per il marshalling tra diversi apartment.  
   
--   Lo stato di apartment COM del thread è diverso da quello previsto. Questo problema può provocare un'eccezione <xref:System.Runtime.InteropServices.COMException> con valore HRESULT impostato su RPC_E_WRONG_THREAD, nonché un'eccezione <xref:System.InvalidCastException> quando si effettuano chiamate in un [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Questo problema può anche far sì che diversi thread accedano contemporaneamente ad alcuni componenti COM a thread singolo, danneggiando i dati o provocandone la perdita.  
+- Lo stato di apartment COM del thread è diverso da quello previsto. Questo problema può provocare un'eccezione <xref:System.Runtime.InteropServices.COMException> con valore HRESULT impostato su RPC_E_WRONG_THREAD, nonché un'eccezione <xref:System.InvalidCastException> quando si effettuano chiamate in un [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Questo problema può anche far sì che diversi thread accedano contemporaneamente ad alcuni componenti COM a thread singolo, danneggiando i dati o provocandone la perdita.  
   
 ## <a name="cause"></a>Causa  
   
--   Il thread è stato precedentemente inizializzato in uno stato di apartment COM diverso. Si noti che lo stato di apartment di un thread può essere impostato in modo sia esplicito sia implicito. Le operazioni esplicite includono la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> e i metodi <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A>. Un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> viene impostato in modo implicito su <xref:System.Threading.ApartmentState.MTA>, a meno che <xref:System.Threading.Thread.SetApartmentState%2A> non venga chiamato prima dell'avvio del thread. Anche il thread principale dell'applicazione viene inizializzato in modo implicito in <xref:System.Threading.ApartmentState.MTA>, a meno che nel metodo principale non sia specificato l'attributo <xref:System.STAThreadAttribute>.  
+- Il thread è stato precedentemente inizializzato in uno stato di apartment COM diverso. Si noti che lo stato di apartment di un thread può essere impostato in modo sia esplicito sia implicito. Le operazioni esplicite includono la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> e i metodi <xref:System.Threading.Thread.SetApartmentState%2A> e <xref:System.Threading.Thread.TrySetApartmentState%2A>. Un thread creato con il metodo <xref:System.Threading.Thread.Start%2A> viene impostato in modo implicito su <xref:System.Threading.ApartmentState.MTA>, a meno che <xref:System.Threading.Thread.SetApartmentState%2A> non venga chiamato prima dell'avvio del thread. Anche il thread principale dell'applicazione viene inizializzato in modo implicito in <xref:System.Threading.ApartmentState.MTA>, a meno che nel metodo principale non sia specificato l'attributo <xref:System.STAThreadAttribute>.  
   
--   Nel thread viene chiamato il metodo `CoUninitialize` (o il metodo `CoInitializeEx`) con un modello di concorrenza diverso.  
+- Nel thread viene chiamato il metodo `CoUninitialize` (o il metodo `CoInitializeEx`) con un modello di concorrenza diverso.  
   
 ## <a name="resolution"></a>Risoluzione  
  Impostare lo stato di apartment del thread prima dell'avvio dell'esecuzione oppure applicare l'attributo <xref:System.STAThreadAttribute> o <xref:System.MTAThreadAttribute> al metodo principale dell'applicazione.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757355"
 ---
 # <a name="application-management-overview"></a>Cenni preliminari sulla gestione di applicazioni
 Tutte le applicazioni tendono a condividere un set comune di funzionalità relative all'implementazione e alla gestione di applicazioni. In questo argomento viene fornita una panoramica delle funzionalità del <xref:System.Windows.Application> classe per la creazione e la gestione delle applicazioni.  
@@ -20,17 +20,17 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 ## <a name="the-application-class"></a>Classe Application  
  In WPF, le funzionalità con ambito di applicazione comuni sono incapsulata nel <xref:System.Windows.Application> classe. Il <xref:System.Windows.Application> classe include le funzionalità seguenti:  
   
--   Interazione con il ciclo di vita dell'applicazione e relativa verifica.  
+- Interazione con il ciclo di vita dell'applicazione e relativa verifica.  
   
--   Recupero ed elaborazione di parametri della riga di comando.  
+- Recupero ed elaborazione di parametri della riga di comando.  
   
--   Rilevamento delle eccezioni non gestite e riposta a tali eccezioni.  
+- Rilevamento delle eccezioni non gestite e riposta a tali eccezioni.  
   
--   Condivisione di proprietà e risorse con ambito di applicazione.  
+- Condivisione di proprietà e risorse con ambito di applicazione.  
   
--   Gestione delle finestre in applicazioni autonome.  
+- Gestione delle finestre in applicazioni autonome.  
   
--   Verifica e gestione della navigazione.  
+- Verifica e gestione della navigazione.  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Come eseguire attività comuni con la classe Application  
@@ -71,7 +71,7 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
   
 - Nel markup, il `Application` elemento deve includere il `x:Class` attributo. Quando viene compilata l'applicazione, la presenza di `x:Class` nel markup file fa in modo che MSBuild crei una `partial` classe che deriva da <xref:System.Windows.Application> e ha il nome specificato da di `x:Class` attributo. Ciò richiede l'aggiunta di una dichiarazione dello spazio dei nomi XML per lo schema XAML (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   Nel code-behind, la classe deve essere un `partial` classe con lo stesso nome specificato per il `x:Class` dell'attributo nel markup e deve derivare da <xref:System.Windows.Application>. In questo modo il file code-behind può essere associato il `partial` classe generata per il file di markup durante la compilazione dell'applicazione (vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)).  
+- Nel code-behind, la classe deve essere un `partial` classe con lo stesso nome specificato per il `x:Class` dell'attributo nel markup e deve derivare da <xref:System.Windows.Application>. In questo modo il file code-behind può essere associato il `partial` classe generata per il file di markup durante la compilazione dell'applicazione (vedere [compilazione di un'applicazione WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  Quando si crea un nuovo progetto applicazione WPF o un progetto di applicazione Browser WPF usando Visual Studio, definizione di un'applicazione è incluso per impostazione predefinita e viene definita tramite markup e code-behind.  
@@ -195,17 +195,17 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 ### <a name="application-activation-and-deactivation"></a>Attivazione e disattivazione dell'applicazione  
  Windows consente agli utenti di passare tra le applicazioni. A questo scopo, il modo più comune consiste nell'usare la combinazione di tasti ALT+TAB. Un'applicazione può solo essere attivata se dispone di un oggetto visibile <xref:System.Windows.Window> che un utente può selezionare. Attualmente selezionato <xref:System.Windows.Window> è il *finestra attiva* (noto anche come il *finestra in primo piano*) ed è il <xref:System.Windows.Window> che riceve l'input dell'utente. L'applicazione con la finestra attiva è il *applicazione attiva* (o *applicazione in primo piano*). Un'applicazione diventa l'applicazione attiva nei casi seguenti:  
   
--   Viene avviata e Mostra un <xref:System.Windows.Window>.  
+- Viene avviata e Mostra un <xref:System.Windows.Window>.  
   
--   Un utente passa da un'altra applicazione, selezionando un <xref:System.Windows.Window> nell'applicazione.  
+- Un utente passa da un'altra applicazione, selezionando un <xref:System.Windows.Window> nell'applicazione.  
   
  È possibile rilevare quando un'applicazione diventa attiva gestendo il <xref:System.Windows.Application.Activated?displayProperty=nameWithType> evento.  
   
  Analogamente, un'applicazione può diventare inattiva nei casi seguenti:  
   
--   Un utente passa a un'altra applicazione da quella corrente.  
+- Un utente passa a un'altra applicazione da quella corrente.  
   
--   L'applicazione viene arrestata.  
+- L'applicazione viene arrestata.  
   
  È possibile rilevare quando un'applicazione diventa inattiva gestendo il <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> evento.  
   
@@ -225,13 +225,13 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 ### <a name="application-shutdown"></a>Arresto dell'applicazione  
  Il ciclo di vita di un'applicazione termina all'arresto dell'applicazione, che può essere dovuto ai motivi seguenti:  
   
--   Un utente chiude ogni <xref:System.Windows.Window>.  
+- Un utente chiude ogni <xref:System.Windows.Window>.  
   
--   Un utente chiude l'oggetto principale <xref:System.Windows.Window>.  
+- Un utente chiude l'oggetto principale <xref:System.Windows.Window>.  
   
--   Un utente termina la sessione di Windows mediante disconnessione o arresto.  
+- Un utente termina la sessione di Windows mediante disconnessione o arresto.  
   
--   È stata soddisfatta una condizione specifica dell'applicazione.  
+- È stata soddisfatta una condizione specifica dell'applicazione.  
   
  Per gestire la chiusura dell'applicazione, <xref:System.Windows.Application> fornisce il <xref:System.Windows.Application.Shutdown%2A> metodo, il <xref:System.Windows.Application.ShutdownMode%2A> proprietà e il <xref:System.Windows.Application.SessionEnding> e <xref:System.Windows.Application.Exit> eventi.  
   
@@ -241,11 +241,11 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 #### <a name="shutdown-mode"></a>Modalità di arresto  
  La maggior parte delle applicazioni viene arrestata quando vengono chiuse tutte le finestre o quando viene chiusa la finestra principale. A volte, tuttavia, l'arresto può essere determinato da altre condizioni specifiche dell'applicazione. È possibile specificare le condizioni in cui l'applicazione verrà arrestata impostando <xref:System.Windows.Application.ShutdownMode%2A> con uno dei seguenti <xref:System.Windows.ShutdownMode> valori di enumerazione:  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  Il valore predefinito <xref:System.Windows.Application.ShutdownMode%2A> è <xref:System.Windows.ShutdownMode.OnLastWindowClose>, il che significa che un'applicazione arresta automaticamente quando l'ultima finestra nell'applicazione viene chiusa dall'utente. Tuttavia, se l'applicazione deve essere arrestata quando viene chiusa la finestra principale, WPF in modo che se si imposta <xref:System.Windows.Application.ShutdownMode%2A> a <xref:System.Windows.ShutdownMode.OnMainWindowClose>. come illustrato nell'esempio riportato di seguito.  
   
@@ -259,13 +259,13 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
 #### <a name="session-ending"></a>Fine della sessione  
  Le condizioni di arresto descritte dal <xref:System.Windows.Application.ShutdownMode%2A> proprietà sono specifiche di un'applicazione. In alcuni casi, tuttavia, un'applicazione può essere arrestata come conseguenza di una condizione esterna. La condizione esterna più comune si verifica quando un utente termina la sessione di Windows mediante le azioni seguenti:  
   
--   Disconnessione  
+- Disconnessione  
   
--   Arresto  
+- Arresto  
   
--   Riavvio  
+- Riavvio  
   
--   Ibernazione  
+- Ibernazione  
   
  Per rilevare quando si termina una sessione di Windows, è possibile gestire il <xref:System.Windows.Application.SessionEnding> evento, come illustrato nell'esempio seguente.  
   
@@ -291,11 +291,11 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
   
  <xref:System.Windows.Application.Exit> possono essere gestiti da applicazioni autonome e le applicazioni XBAP. Per le applicazioni XBAP, <xref:System.Windows.Application.Exit> viene generato nei casi seguenti:  
   
--   Un'applicazione XBAP utente esce dall'applicazione.  
+- Un'applicazione XBAP utente esce dall'applicazione.  
   
--   In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], quando viene chiusa la scheda che ospita l'applicazione XBAP.  
+- In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], quando viene chiusa la scheda che ospita l'applicazione XBAP.  
   
--   Viene chiuso il browser.  
+- Viene chiuso il browser.  
   
 #### <a name="exit-code"></a>Codice di uscita  
  Nella maggior parte dei casi, le applicazioni vengono avviate dal sistema operativo in risposta a una richiesta dell'utente. Tuttavia, un'applicazione può essere avviata da un'altra applicazione per l'esecuzione di alcune attività specifiche. Quando l'applicazione avviata viene arrestata, l'applicazione che ne esegue l'avvio potrebbe voler identificare la condizione in base alla quale è stata arrestata l'applicazione avviata. In questi casi, Windows consente alle applicazioni di restituire un codice di uscita dell'applicazione in fase di arresto. Per impostazione predefinita, le applicazioni WPF restituiscono un valore di codice di uscita pari a 0.  
@@ -325,11 +325,11 @@ Tutte le applicazioni tendono a condividere un set comune di funzionalità relat
   
  Dal punto di vista dell'esperienza utente, è preferibile per un'applicazione evitare il comportamento predefinito eseguendo alcune o tutte le operazioni seguenti:  
   
--   Visualizzare informazioni descrittive.  
+- Visualizzare informazioni descrittive.  
   
--   Tentare di mantenere in esecuzione un'applicazione.  
+- Tentare di mantenere in esecuzione un'applicazione.  
   
--   Registrazione dettagliata, le informazioni sull'eccezione intuitiva nel registro eventi di Windows.  
+- Registrazione dettagliata, le informazioni sull'eccezione intuitiva nel registro eventi di Windows.  
   
  Implementazione di questo supporto dipende dalla possibilità di rilevare le eccezioni non gestite, cioè che cosa le <xref:System.Windows.Application.DispatcherUnhandledException> evento viene generato per.  
   

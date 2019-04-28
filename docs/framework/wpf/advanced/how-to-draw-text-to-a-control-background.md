@@ -9,11 +9,11 @@ helpviewer_keywords:
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
 ms.openlocfilehash: 76449c88f9a720741c8ed61255e04a40e6a8613f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776206"
 ---
 # <a name="how-to-draw-text-to-a-controls-background"></a>Procedura: Disegnare testo sullo sfondo di un controllo
 È possibile disegnare testo direttamente sullo sfondo di un controllo convertendo una stringa di testo a un <xref:System.Windows.Media.FormattedText> dell'oggetto e quindi disegnare l'oggetto per il controllo <xref:System.Windows.Media.DrawingContext>. È anche possibile usare questa tecnica per disegnare sullo sfondo di oggetti derivati da <xref:System.Windows.Controls.Panel>, ad esempio <xref:System.Windows.Controls.Canvas> e <xref:System.Windows.Controls.StackPanel>.  

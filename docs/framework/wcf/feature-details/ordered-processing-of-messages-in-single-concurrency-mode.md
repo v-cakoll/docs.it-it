@@ -3,11 +3,11 @@ title: Elaborazione di messaggi ordinata in modalità di concorrenza singola
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
 ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769447"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>Elaborazione di messaggi ordinata in modalità di concorrenza singola
 WCF non offre alcuna garanzia sull'ordine in cui vengono elaborati i messaggi, a meno che il canale sottostante sia con sessione.  Ad esempio, un servizio WCF che utilizza MsmqInputChannel, che non è un canale con sessione, non riuscirà a elaborare i messaggi in ordine. Ci sono casi in cui uno sviluppatore può desidera che il comportamento di elaborazione degli ordini in ma non si desidera utilizzare sessioni. In questo argomento viene descritto come configurare questo comportamento quando un servizio è in esecuzione in modalità di concorrenza singola.  

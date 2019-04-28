@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746793"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Procedura: Creare un elenco di finestre MDI con MenuStrip (Windows Form)
 Usare l'interfaccia a documenti multipli (MDI) per creare applicazioni che possono aprire i documenti diverse alla stessa ora e copia e Incolla il contenuto da un documento a altro.  
@@ -75,11 +75,11 @@ Usare l'interfaccia a documenti multipli (MDI) per creare applicazioni che posso
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Due controlli <xref:System.Windows.Forms.Form> denominati `Form1` e `Form2`.  
+- Due controlli <xref:System.Windows.Forms.Form> denominati `Form1` e `Form2`.  
   
--   Un controllo <xref:System.Windows.Forms.MenuStrip> su `Form1` denominato `menuStrip1` e un controllo <xref:System.Windows.Forms.MenuStrip> su `Form2` denominato `menuStrip2`.  
+- Un controllo <xref:System.Windows.Forms.MenuStrip> su `Form1` denominato `menuStrip1` e un controllo <xref:System.Windows.Forms.MenuStrip> su `Form2` denominato `menuStrip2`.  
   
--   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 

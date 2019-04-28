@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696361"
 ---
 # <a name="controls"></a>Controlli
 <a name="introduction"></a>
@@ -33,11 +33,11 @@ ms.locfileid: "59154414"
 ## <a name="changing-the-appearance-of-a-control"></a>Modifica dell'aspetto di un controllo  
  È spesso necessario modificare l'aspetto di un controllo per adattarlo all'aspetto dell'applicazione. Per modificare l'aspetto di un controllo, è possibile adottare una delle procedure seguenti, a seconda del risultato che si intende ottenere:  
   
--   Modificare il valore di una proprietà del controllo.  
+- Modificare il valore di una proprietà del controllo.  
   
--   Creare un <xref:System.Windows.Style> per il controllo.  
+- Creare un <xref:System.Windows.Style> per il controllo.  
   
--   Creare un nuovo <xref:System.Windows.Controls.ControlTemplate> per il controllo.  
+- Creare un nuovo <xref:System.Windows.Controls.ControlTemplate> per il controllo.  
   
 ### <a name="changing-a-controls-property-value"></a>Modifica di un valore della proprietà del controllo  
  Molti controlli dispongono di proprietà che consentono di modificare l'aspetto del controllo, ad esempio la <xref:System.Windows.Controls.Control.Background%2A> di un <xref:System.Windows.Controls.Button>. È possibile impostare il valore delle proprietà in entrambi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e codice. L'esempio seguente imposta la <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, e <xref:System.Windows.Controls.Control.FontWeight%2A> delle proprietà in un <xref:System.Windows.Controls.Button> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -87,13 +87,13 @@ ms.locfileid: "59154414"
 ## <a name="rich-content-in-controls"></a>Contenuto avanzato dei controlli  
  La maggior parte delle classi che ereditano dal <xref:System.Windows.Controls.Control> classe è in grado di contenere contenuto avanzato. Ad esempio, un <xref:System.Windows.Controls.Label> può contenere qualsiasi oggetto, ad esempio una stringa, un <xref:System.Windows.Controls.Image>, o un <xref:System.Windows.Controls.Panel>.  Le classi seguenti forniscono il supporto per contenuto avanzato e fungono da classi di base per la maggior parte dei controlli in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   <xref:System.Windows.Controls.ContentControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, e <xref:System.Windows.Controls.ToolTip>.  
+- <xref:System.Windows.Controls.ContentControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, e <xref:System.Windows.Controls.ToolTip>.  
   
--   <xref:System.Windows.Controls.ItemsControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.Primitives.StatusBar>.  
+- <xref:System.Windows.Controls.ItemsControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, e <xref:System.Windows.Controls.Primitives.StatusBar>.  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, e <xref:System.Windows.Controls.Expander>.  
+- <xref:System.Windows.Controls.HeaderedContentControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, e <xref:System.Windows.Controls.Expander>.  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, e <xref:System.Windows.Controls.ToolBar>.  
+- <xref:System.Windows.Controls.HeaderedItemsControl>-- Alcuni esempi di classi che ereditano da questa classe vengono <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, e <xref:System.Windows.Controls.ToolBar>.  
 
  Per altre informazioni su queste classi di base, vedere [modello di contenuto WPF](wpf-content-model.md).  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
 ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766943"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedura: Usare certificati X.509 separati per la firma e la crittografia
 Questo argomento illustra come configurare Windows Communication Foundation (WCF) per utilizzare certificati diversi per la firma dei messaggi e la crittografia nei client sia servizio.  
@@ -23,15 +23,15 @@ Questo argomento illustra come configurare Windows Communication Foundation (WCF
   
  Nel diagramma seguente vengono illustrate le principali classi utilizzate, le classi da cui ereditano (contrassegnate da una freccia rivolta verso l'alto) e i tipi restituiti di alcuni metodi e proprietà.  
   
--   `MyClientCredentials` è un'implementazione personalizzata di <xref:System.ServiceModel.Description.ClientCredentials>.  
+- `MyClientCredentials` è un'implementazione personalizzata di <xref:System.ServiceModel.Description.ClientCredentials>.  
   
-    -   Tutte le relative proprietà illustrate nel diagramma restituiscono istanze di <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
+    - Tutte le relative proprietà illustrate nel diagramma restituiscono istanze di <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>.  
   
-    -   Il relativo metodo <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> restituisce un'istanza di `MyClientCredentialsSecurityTokenManager`.  
+    - Il relativo metodo <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> restituisce un'istanza di `MyClientCredentialsSecurityTokenManager`.  
   
--   `MyClientCredentialsSecurityTokenManager` è un'implementazione personalizzata di <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+- `MyClientCredentialsSecurityTokenManager` è un'implementazione personalizzata di <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
-    -   Il relativo metodo <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> restituisce un'istanza di <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
+    - Il relativo metodo <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> restituisce un'istanza di <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.  
   
  ![Nel grafico vengono mostrati come credenziali client vengono usate](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   

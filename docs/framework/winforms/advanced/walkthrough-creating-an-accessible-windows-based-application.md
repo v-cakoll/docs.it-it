@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
 ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747549"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Procedura dettagliata: Creazione di un'applicazione Windows ad accesso facilitato
 La creazione di un'applicazione accessibile ha risvolti importanti per l'azienda. Molti governi hanno norme relative all'accessibilità per l'acquisto del software. Il logo Certified for Windows include requisiti di accessibilità. È stato stimato che solo negli Stati Uniti risiedono 30 milioni di persone, molte delle quali potenziali clienti, interessate all'accessibilità del software.  

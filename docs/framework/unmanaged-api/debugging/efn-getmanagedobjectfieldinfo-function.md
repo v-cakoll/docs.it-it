@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e7d031d4a4f4e67134f4b88f3e3ff47316ce3b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698336"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a>Funzione _EFN_GetManagedObjectFieldInfo
 Ottiene l'offset per un campo dall'inizio di un oggetto e il valore del campo, usando il puntatore all'oggetto e il nome di campo forniti.  

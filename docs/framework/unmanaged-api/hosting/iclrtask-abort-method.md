@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57efd4f29ba7e28adf1af03030d7f83eb32c1c2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763672"
 ---
 # <a name="iclrtaskabort-method"></a>Metodo ICLRTask::Abort
 Richiede che common language runtime (CLR) di interrompere l'attività che l'oggetto corrente [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) istanza rappresenta.  

@@ -3,18 +3,18 @@ title: 3502 - InferredOperationDescription
 ms.date: 03/30/2017
 ms.assetid: 6aebb614-3c72-4537-ba11-3cc7200ef1f1
 ms.openlocfilehash: 752cd73066c3c15ecbb36c40c417ee84b3fcf184
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756091"
 ---
 # <a name="3502---inferredoperationdescription"></a>3502 - InferredOperationDescription
 ## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
-|ID|3502|  
+|Id|3502|  
 |Parole chiave|WFServices|  
 |Livello|Informazioni|  
 |Canale|Microsoft-Windows-Application Server-Applications/Analytic|  

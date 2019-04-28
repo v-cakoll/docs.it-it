@@ -3,11 +3,11 @@ title: Sessioni, istanze e concorrenza
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748018"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessioni, istanze e concorrenza
 Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint. La*creazione di istanze* fa riferimento al controllo della durata di oggetti servizio definiti dall'utente e di oggetti <xref:System.ServiceModel.InstanceContext> correlati. La*concorrenza* è il termine dato al controllo del numero di thread in esecuzione contemporaneamente in un <xref:System.ServiceModel.InstanceContext> .  
@@ -19,21 +19,21 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
  Le sessioni WCF hanno le principali funzionalità concettuale seguente:  
   
--   Vengono avviate e terminate esplicitamente dall'applicazione chiamante.  
+- Vengono avviate e terminate esplicitamente dall'applicazione chiamante.  
   
--   I messaggi recapitati durante una sessione vengono elaborati nell'ordine in cui vengono ricevuti.  
+- I messaggi recapitati durante una sessione vengono elaborati nell'ordine in cui vengono ricevuti.  
   
--   Le sessioni consentono di correlare un gruppo di messaggi in una conversazione. Il significato di tale correlazione è un'astrazione. Un canale basato sulla sessione, ad esempio, è in grado di correlare messaggi basati su una connessione di rete condivisa mentre un altro canale basato sulla sessione è in grado di correlare messaggi basati su un tag condiviso nel corpo del messaggio. Le funzionalità che possono derivare dalla sessione dipendono dalla natura della correlazione.  
+- Le sessioni consentono di correlare un gruppo di messaggi in una conversazione. Il significato di tale correlazione è un'astrazione. Un canale basato sulla sessione, ad esempio, è in grado di correlare messaggi basati su una connessione di rete condivisa mentre un altro canale basato sulla sessione è in grado di correlare messaggi basati su un tag condiviso nel corpo del messaggio. Le funzionalità che possono derivare dalla sessione dipendono dalla natura della correlazione.  
   
--   Non vi è alcun archivio dati generale associato a una sessione WCF.  
+- Non vi è alcun archivio dati generale associato a una sessione WCF.  
   
  Se si ha familiarità con le <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> classe [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazioni e le funzionalità offre, è possibile notare le differenze seguenti tra quel tipo di sessioni e le sessioni WCF:  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
+- Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono sempre avviate dal server.  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono implicitamente non ordinate.  
+- Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sono implicitamente non ordinate.  
   
--   Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] forniscono un meccanismo di archiviazione dati generale tramite richieste.  
+- Le sessioni[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] forniscono un meccanismo di archiviazione dati generale tramite richieste.  
   
  Le applicazioni client e le applicazioni di servizio interagiscono con le sessioni in modi diversi. Le applicazioni client avviano sessioni e quindi ricevono ed elaborano i messaggi inviati all'interno della sessione. Le applicazioni di servizio possono utilizzare le sessioni come punto di estensibilità per aggiungere comportamenti. Ciò si ottiene utilizzando direttamente <xref:System.ServiceModel.InstanceContext> o implementando un provider di contesto dell'istanza personalizzato.  
   
@@ -42,11 +42,11 @@ Una *sessione* è una correlazione di tutti i messaggi inviati tra due endpoint.
   
  Sono disponibili le modalità di istanza seguenti:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Un nuovo <xref:System.ServiceModel.InstanceContext> (e pertanto l'oggetto servizio) viene creato per ogni richiesta del client.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Un nuovo <xref:System.ServiceModel.InstanceContext> (e pertanto l'oggetto servizio) viene creato per ogni richiesta del client.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Un nuovo <xref:System.ServiceModel.InstanceContext> (e pertanto l'oggetto servizio) viene creata per ogni sessione client nuova e mantenuta per tutta la durata della sessione (richiede un'associazione che supporti sessioni).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Un nuovo <xref:System.ServiceModel.InstanceContext> (e pertanto l'oggetto servizio) viene creata per ogni sessione client nuova e mantenuta per tutta la durata della sessione (richiede un'associazione che supporti sessioni).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Un singolo <xref:System.ServiceModel.InstanceContext> (e pertanto l'oggetto servizio) gestisce tutte le richieste client per la durata dell'applicazione.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Un singolo <xref:System.ServiceModel.InstanceContext> (e pertanto l'oggetto servizio) gestisce tutte le richieste client per la durata dell'applicazione.  
   
  Nell'esempio di codice seguente viene illustrato il valore <xref:System.ServiceModel.InstanceContextMode> predefinito, con <xref:System.ServiceModel.InstanceContextMode.PerSession> impostato esplicitamente su una classe del servizio.  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  Sono disponibili le tre modalità di concorrenza seguenti:  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>: Ogni contesto dell'istanza può avere un massimo di un thread di elaborazione dei messaggi nel contesto dell'istanza alla volta. Altri thread che devono utilizzare lo stesso contesto dell'istanza, devono restare bloccati fino alla chiusura del thread originale dal contesto dell'istanza.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: Ogni contesto dell'istanza può avere un massimo di un thread di elaborazione dei messaggi nel contesto dell'istanza alla volta. Altri thread che devono utilizzare lo stesso contesto dell'istanza, devono restare bloccati fino alla chiusura del thread originale dal contesto dell'istanza.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Ogni istanza del servizio può avere più thread che elaborano i messaggi contemporaneamente. Per essere in grado di usare questa modalità di concorrenza, l'implementazione del servizio deve essere thread-safe.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Ogni istanza del servizio può avere più thread che elaborano i messaggi contemporaneamente. Per essere in grado di usare questa modalità di concorrenza, l'implementazione del servizio deve essere thread-safe.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Ogni istanza del servizio elabora uno messaggio alla volta ma accetta chiamate di operazioni rientranti. Il servizio accetta queste chiamate solo quando esegue chiamate in uscita tramite un oggetto client WCF.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Ogni istanza del servizio elabora uno messaggio alla volta ma accetta chiamate di operazioni rientranti. Il servizio accetta queste chiamate solo quando esegue chiamate in uscita tramite un oggetto client WCF.  
   
 > [!NOTE]
 >  Può essere difficile comprendere, scrivere correttamente e sviluppare codice che utilizza in modo sicuro più di un thread. Prima di utilizzare valori <xref:System.ServiceModel.ConcurrencyMode.Multiple> o <xref:System.ServiceModel.ConcurrencyMode.Reentrant> , verificare che il servizio sia progettato correttamente per queste modalità. Per altre informazioni, vedere <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

@@ -13,11 +13,11 @@ ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753712"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall (MDA)
 L'assistente al debug gestito `openGenericCERCall` viene attivato per avvisare che il grafico dell'area a esecuzione vincolata con variabili di tipo generico in corrispondenza del metodo radice viene elaborato in fase di compilazione JIT o di generazione delle immagini native e almeno una delle variabili di tipo generico è un tipo riferimento oggetto.  

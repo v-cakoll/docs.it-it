@@ -6,11 +6,11 @@ helpviewer_keywords:
 - system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
 ms.openlocfilehash: 55c99640907a0c372f8c7bbc50b9b45c9f15ef3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769239"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Procedura: Usare i colori di sistema in una sfumatura
 Per usare un colore di sistema in una sfumatura, si utilizza il  *\<SystemColor >* colore e  *\<SystemColor >* ColorKey proprietà statiche del <xref:System.Windows.SystemColors> classe per ottenere una riferimento al colore, dove  *\<SystemColor >* è il nome del colore di sistema desiderato. Usare la  *\<SystemColor >* ColorKey proprietà quando si desidera creare un riferimento dinamico che viene aggiornato automaticamente quando cambia il tema del sistema. In caso contrario, usare il  *\<SystemColor >* proprietà dei colori.  

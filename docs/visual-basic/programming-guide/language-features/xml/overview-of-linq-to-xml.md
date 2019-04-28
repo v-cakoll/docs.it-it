@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
 ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761844"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Cenni preliminari su LINQ to XML in Visual Basic
 Visual Basic fornisce il supporto per [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] tramite valori letterali XML e proprietà axis XML. In questo modo è possibile usare una sintassi familiare e conveniente per l'utilizzo di XML nel codice Visual Basic. *Valori letterali XML* consentono di includere dati XML direttamente nel codice. *Proprietà axis XML* consentono di accedere a nodi figlio, i nodi discendente e gli attributi di un valore letterale XML. Per altre informazioni, vedere [Cenni preliminari sui valori letterali XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) e [l'accesso a XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  

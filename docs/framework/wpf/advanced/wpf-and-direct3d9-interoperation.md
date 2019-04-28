@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669207"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interoperatività di WPF e Direct3D9
 È possibile includere contenuto Direct3D9 in un'applicazione Windows Presentation Foundation (WPF). In questo argomento viene descritto come creare contenuto Direct3D9 in modo che interagisce in modo efficiente con WPF.  
@@ -32,9 +32,9 @@ ms.locfileid: "59307730"
   
  Creare un dispositivo chiamando uno dei metodi seguenti.  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  In Windows Vista o versioni successive del sistema operativo, usare il `Direct3DCreate9Ex` metodo con una visualizzazione che è configurata per utilizzare Windows Visualizza Driver Model (WDDM). Usare il `Direct3DCreate9` metodo su qualsiasi altra piattaforma.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "59307730"
   
  Esistono tre possibili approcci per gestire il ridimensionamento.  
   
--   Partecipare al sistema di layout e creare una nuova area quando cambiano le dimensioni. Non creare troppi risulta rilevante, perché è possibile esaurire o frammentare la memoria video.  
+- Partecipare al sistema di layout e creare una nuova area quando cambiano le dimensioni. Non creare troppi risulta rilevante, perché è possibile esaurire o frammentare la memoria video.  
   
--   Attendere un evento di ridimensionamento non verificato per un periodo fisso di tempo per creare la nuova area.  
+- Attendere un evento di ridimensionamento non verificato per un periodo fisso di tempo per creare la nuova area.  
   
--   Creare un <xref:System.Windows.Threading.DispatcherTimer> che controlla le dimensioni del contenitore più volte al secondo.  
+- Creare un <xref:System.Windows.Threading.DispatcherTimer> che controlla le dimensioni del contenitore più volte al secondo.  
   
 ## <a name="multi-monitor-optimization"></a>Ottimizzazione di più monitor  
  In modo significativo calo delle prestazioni può verificarsi quando il sistema di rendering sposta un <xref:System.Windows.Interop.D3DImage> in un altro monitor.  
@@ -132,11 +132,11 @@ ms.locfileid: "59307730"
 ## <a name="wpf-software-rendering"></a>Rendering Software WPF  
  WPF esegue il rendering in modo sincrono sul thread dell'interfaccia utente in software nelle situazioni seguenti.  
   
--   Stampa  
+- Stampa  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  Quando si verifica una di queste situazioni, il sistema di rendering chiama il <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> metodo per copiare il buffer di hardware per il software. L'implementazione predefinita chiama il `GetRenderTargetData` metodo con la superficie. Poiché questa chiamata si verifica di fuori il criterio di blocco, sblocco, potrebbe non riuscire. In questo caso, il `CopyBackBuffer` restituzione del metodo `null` e viene visualizzata alcuna immagine.  
   

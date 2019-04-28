@@ -3,11 +3,11 @@ title: Protezione del canale peer
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
 ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769395"
 ---
 # <a name="peer-channel-security"></a>Protezione del canale peer
 Il canale peer attiva diversi tipi di applicazioni distribuite che dipendono da messaggistica a più parti. Ne è un esempio la distribuzione di contenuto Internet, in cui un'origine attendibile distribuisce il contenuto (ad esempio aggiornamenti di supporti o software), un gruppo di amici si scambiano musica e foto o un team di colleghi lavora in modo collaborativo a un documento. Ognuno di questi scenari richiede un modello di sicurezza univoco. Il modello di sicurezza del canale peer ha lo scopo di affrontare tali scenari e offrire un modello sicuro per le rispettive esigenze di diversi modelli di identità, autenticazione e autorizzazione.  

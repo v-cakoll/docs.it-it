@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Regolare la spaziatura tra paragrafi'
+title: 'Procedura: Regolare la spaziatura tra i paragrafi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - spacing between paragraphs [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
 ms.openlocfilehash: e2a6ba34e3ab15eb316671fef7c11bea03d53c73
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777013"
 ---
-# <a name="how-to-adjust-spacing-between-paragraphs"></a>Procedura: Regolare la spaziatura tra paragrafi
+# <a name="how-to-adjust-spacing-between-paragraphs"></a>Procedura: Regolare la spaziatura tra i paragrafi
 In questo esempio viene illustrato come modificare o eliminare la spaziatura tra paragrafi nel contenuto dinamico.  
   
  Nel contenuto dinamico, lo spazio aggiuntivo che viene visualizzato tra i paragrafi è il risultato dei margini impostati per queste paragrafi. di conseguenza, la spaziatura tra paragrafi può essere controllata regolando i margini in paragrafi.  Per eliminare completamente la spaziatura aggiuntiva tra due paragrafi, impostare i margini di paragrafi vengano **0**.  Per ottenere la spaziatura uniforme tra i paragrafi di un intero <xref:System.Windows.Documents.FlowDocument>, applicare uno stile per impostare un valore di un margine uniforme per tutti i paragrafi di <xref:System.Windows.Documents.FlowDocument>.  

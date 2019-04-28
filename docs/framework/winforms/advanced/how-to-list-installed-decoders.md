@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723043"
 ---
 # <a name="how-to-list-installed-decoders"></a>Procedura: Elencare i decodificatori installati
 È possibile elencare i decodificatori di immagini disponibili in un computer, per determinare se l'applicazione può leggere un formato di file di immagine specifico. Il <xref:System.Drawing.Imaging.ImageCodecInfo> classe fornisce il <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> metodi statici in modo da poter determinare quale immagine di decodificatori di immagini sono disponibili. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> Restituisce una matrice di <xref:System.Drawing.Imaging.ImageCodecInfo> oggetti.  
@@ -27,9 +27,9 @@ ms.locfileid: "59079415"
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Applicazione Windows Forms.  
+- Applicazione Windows Forms.  
   
--   Oggetto <xref:System.Windows.Forms.PaintEventArgs>, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+- Oggetto <xref:System.Windows.Forms.PaintEventArgs>, ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 

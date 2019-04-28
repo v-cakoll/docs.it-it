@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749020"
 ---
 # <a name="put-function"></a>Funzione Put
 
@@ -66,7 +66,7 @@ HRESULT Put (
 
 I seguenti valori restituiti da questa funzione sono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Si è verificato un errore generale. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o più parametri non vengono. |

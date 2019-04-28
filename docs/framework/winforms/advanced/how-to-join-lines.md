@@ -15,11 +15,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
 ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723303"
 ---
 # <a name="how-to-join-lines"></a>Procedura: Unire le linee
 Un join di riga è l'area comune in cui è costituito da due righe di cui end soddisfare o si sovrappongono. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sono disponibili tre stili di linea join: decorato, rilievo e arrotondato. Stile di linea join è una proprietà del <xref:System.Drawing.Pen> classe. Quando si specifica un stile della linea join per un <xref:System.Drawing.Pen> dell'oggetto, che verrà applicata a tutte le righe connessione in qualsiasi tipo di join <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto viene disegnato utilizzando la penna.  

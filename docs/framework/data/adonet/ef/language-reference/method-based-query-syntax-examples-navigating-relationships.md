@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
 ms.openlocfilehash: 87f8132fc8bc9d64fb02a78bc38d1261db032b5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760649"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Esempi di sintassi delle query basate su metodo: Spostamento tra relazioni
 Le proprietà di navigazione in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sono proprietà di collegamento usate per individuare le entità finali di un'associazione. Le proprietà di navigazione consentono a un utente di spostarsi da un'entità a un'altra o da un entità alle entità correlate tramite un set di associazioni. In questo argomento sono inclusi alcuni esempi nella sintassi delle query basate su metodo in cui viene illustrato come spostarsi tra relazioni tramite proprietà di navigazione in query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  

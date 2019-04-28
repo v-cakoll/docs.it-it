@@ -3,11 +3,11 @@ title: <httpDigest> Elemento
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
 ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751046"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest > elemento
 Specifica una credenziale di tipo digest usata per autenticare il client presso un servizio.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19ef7cb78791496de76e5741f8254ee88563c776
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763373"
 ---
 # <a name="iclrtaskmanager-interface"></a>Interfaccia ICLRTaskManager
 Fornisce metodi che consentono all'host per richiedere in modo esplicito che common language runtime (CLR) creare una nuova attività, ottenere l'attività attualmente in esecuzione e impostare il linguaggio geografica e le impostazioni cultura per l'attività.  

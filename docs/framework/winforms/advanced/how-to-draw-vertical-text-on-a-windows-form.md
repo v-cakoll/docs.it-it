@@ -15,11 +15,11 @@ helpviewer_keywords:
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
 ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722913"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Procedura: Disegnare testo verticale in un Windows Form
 Esempio di codice seguente viene illustrato come disegnare testo verticale in un form utilizzando la <xref:System.Drawing.Graphics.DrawString%2A> metodo <xref:System.Drawing.Graphics>.  
@@ -35,7 +35,7 @@ Esempio di codice seguente viene illustrato come disegnare testo verticale in un
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Non è installato il tipo di carattere Arial.  
+- Non è installato il tipo di carattere Arial.  
   
 ## <a name="see-also"></a>Vedere anche
 

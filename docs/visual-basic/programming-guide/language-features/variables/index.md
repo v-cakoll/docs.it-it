@@ -6,11 +6,11 @@ helpviewer_keywords:
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756611"
 ---
 # <a name="variables-in-visual-basic"></a>Variabili in Visual Basic
 È spesso necessario archiviare i valori quando si eseguono calcoli con Visual Basic. È possibile ad esempio che si vogliano calcolare valori diversi, confrontarli ed eseguire operazioni su di essi a seconda del risultato del confronto. Per poter confrontare i valori è necessario archiviarli.  

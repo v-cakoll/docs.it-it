@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746628"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Forms
 Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo riceve lo stato attivo, l'inserimento dell'impostazione predefinita all'interno della casella di testo è a sinistra del testo esistente. L'utente può spostare il punto di inserimento con il mouse o tastiera. Se la casella di testo perde e riacquisisce quindi lo stato attivo, il punto di inserimento sarà ovunque l'utente ultima posizione assegnata.  
@@ -59,7 +59,7 @@ Quando un controllo Windows Form <xref:System.Windows.Forms.TextBox> controllo r
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Per rendere visibile punto di inserimento della casella di testo per impostazione predefinita in un nuovo modulo  
   
--   Impostare il <xref:System.Windows.Forms.TextBox> del controllo <xref:System.Windows.Forms.Control.TabIndex%2A> proprietà `0`.  
+- Impostare il <xref:System.Windows.Forms.TextBox> del controllo <xref:System.Windows.Forms.Control.TabIndex%2A> proprietà `0`.  
   
 ## <a name="see-also"></a>Vedere anche
 

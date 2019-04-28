@@ -5,28 +5,28 @@ helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
 ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761715"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Valori letterali XML e specifica XML 1.0 (Visual Basic)
 La sintassi dei valori letterali XML in Visual Basic supporta la maggior parte della specifica Extensible Markup Language (XML) 1.0. Per informazioni dettagliate sulla specifica XML 1.0, vedere [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) sul sito Web W3C.  
   
 ## <a name="what-visual-basic-does-not-support"></a>Che cosa non supporta Visual Basic  
   
--   Un valore letterale XML non può contenere una definizione di tipo di documento (DTD).  
+- Un valore letterale XML non può contenere una definizione di tipo di documento (DTD).  
   
--   Un valore letterale documento XML deve iniziare con una dichiarazione del documento XML.  
+- Un valore letterale documento XML deve iniziare con una dichiarazione del documento XML.  
   
--   Un valore letterale XML non può contenere più di 65.535 caratteri in una sola riga.  
+- Un valore letterale XML non può contenere più di 65.535 caratteri in una sola riga.  
   
--   I prefissi dello spazio dei nomi XML, i nomi degli elementi e i nomi di attributo non possono contenere più di 1.024 caratteri.  
+- I prefissi dello spazio dei nomi XML, i nomi degli elementi e i nomi di attributo non possono contenere più di 1.024 caratteri.  
   
 ## <a name="extra-features-that-visual-basic-supports"></a>Funzionalità aggiuntive supportate da Visual Basic  
   
--   La sintassi delle espressioni incorporate nei valori letterali documento ed elemento consentita non è un XML valido.  
+- La sintassi delle espressioni incorporate nei valori letterali documento ed elemento consentita non è un XML valido.  
   
 ## <a name="see-also"></a>Vedere anche
 

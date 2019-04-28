@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698577"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > (impostazioni Web)
 Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET per gestire il comportamento a livello di processo quando un'applicazione ASP.NET viene eseguito in modalità integrata in [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versione successiva.  
@@ -66,11 +66,11 @@ Specifica le impostazioni di configurazione che vengono utilizzate da ASP.NET pe
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo ASP.NET nel file Aspnet. config nelle circostanze seguenti:  
   
--   L'applicazione è ospitata un [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] pool di applicazioni.  
+- L'applicazione è ospitata un [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] pool di applicazioni.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] è in esecuzione in modalità integrata.  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] è in esecuzione in modalità integrata.  
   
--   L'applicazione usa il [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o versione successiva.  
+- L'applicazione usa il [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o versione successiva.  
   
  I valori nell'esempio sono i valori predefiniti.  
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
 ms.openlocfilehash: 410fc0134046c5fa7e05bfcd38ce6818244a0a54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746864"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Procedura: Creare tasti di scelta per i controlli Windows Forms usando la finestra di progettazione
 Un' *chiave di accesso* è un carattere di sottolineato nel testo di un menu, voce di menu o l'etichetta di un controllo, ad esempio un pulsante. Consente all'utente di "fare clic su" un pulsante premendo il tasto ALT in combinazione con la chiave di accesso predefinite. Ad esempio, se un pulsante viene eseguita una procedura per stampare un form e pertanto relativo `Text` proprietà è impostata su "Stampa", aggiungendo una e commerciale (&) prima della lettera "P", la lettera "P" per essere sottolineati nel testo del pulsante in fase di esecuzione. L'utente può eseguire il comando associato al pulsante premendo ALT + P. Non è possibile avere una chiave di accesso per un controllo che non può ricevere lo stato attivo.  

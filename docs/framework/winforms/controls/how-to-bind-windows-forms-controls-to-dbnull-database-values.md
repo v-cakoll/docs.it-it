@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666560"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Procedura: Associare i controlli di Windows Forms a valori di database DBNull
 Quando si associano controlli Windows Form a un'origine dati e questa restituisce un valore <xref:System.DBNull>, è possibile sostituire un valore appropriato senza gestire, formattare o analizzare eventi. La proprietà <xref:System.Windows.Forms.Binding.NullValue%2A> eseguirà la conversione del valore <xref:System.DBNull> in un oggetto specificato durante la formattazione o l'analisi dei valori dell'origine dati.  
@@ -30,7 +30,7 @@ Quando si associano controlli Windows Form a un'origine dati e questa restituisc
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System, System.Data, System.Drawing e System.Windows.Forms.  
+- Riferimenti agli assembly System, System.Data, System.Drawing e System.Windows.Forms.  
   
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   

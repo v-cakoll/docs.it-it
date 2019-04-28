@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665767"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Procedura: Dichiarare e chiamare una proprietà predefinita in Visual Basic
 Oggetto *predefiniti delle proprietà* è una proprietà di classe o struttura che il codice possa accedere senza specificarla. Quando si chiama codice nomi una classe o struttura, ma non una proprietà e il contesto consente l'accesso a una proprietà, Visual Basic viene risolto l'accesso a tale classe o una proprietà predefinita della struttura, se disponibile.  

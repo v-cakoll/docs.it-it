@@ -13,11 +13,11 @@ helpviewer_keywords:
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: 33825f92-7a22-40ee-86d9-9a2ed1ead7b7
 ms.openlocfilehash: 6fdf2bd16297820026fa84bdaefe61cc495cea4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759960"
 ---
 # <a name="how-to-implement-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Procedura: Implementare la modalità virtuale con caricamento dati JIT nel controllo DataGridView di Windows Forms
 Il seguente esempio di codice mostra come usare la modalità virtuale nel controllo <xref:System.Windows.Forms.DataGridView> con una cache dei dati che carica i dati da un server solo quando è necessario. In questo esempio viene descritto dettagliatamente [implementazione della modalità virtuale con caricamento dati JIT nel controllo DataGridView Windows Form](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
@@ -29,9 +29,9 @@ Il seguente esempio di codice mostra come usare la modalità virtuale nel contro
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System, System.Data, System.Xml e System.Windows.Forms.  
+- Riferimenti agli assembly System, System.Data, System.Xml e System.Windows.Forms.  
   
--   Accesso a un server in cui sia installato il database SQL Server di esempio Northwind.  
+- Accesso a un server in cui sia installato il database SQL Server di esempio Northwind.  
   
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   

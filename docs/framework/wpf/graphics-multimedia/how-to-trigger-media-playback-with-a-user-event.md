@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multimedia [WPF], synchronizing media playback with events
 ms.assetid: c4dbe632-6e7f-4d7f-9df5-98737a758bc3
 ms.openlocfilehash: ae8ba54cc852bb85350492c95e3e890aebf6534f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769278"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>Procedura: Attivare la riproduzione multimediale con un evento utente
 Questo esempio spiega come sincronizzare la riproduzione multimediale con un evento.  

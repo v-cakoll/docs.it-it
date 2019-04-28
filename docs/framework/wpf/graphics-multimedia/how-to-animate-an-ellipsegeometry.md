@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [WPF], animation
 ms.assetid: 767b9b6e-9cb7-482e-b6c2-fee7750c3995
 ms.openlocfilehash: 0f8174a2144435c9ad65904ee587355e8b38e935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760922"
 ---
 # <a name="how-to-animate-an-ellipsegeometry"></a>Procedura: Aggiungere un'animazione a un oggetto EllipseGeometry
 In questo esempio illustra come animare un <xref:System.Windows.Media.Geometry> all'interno di un <xref:System.Windows.Shapes.Path> elemento. Nell'esempio seguente, un <xref:System.Windows.Media.Animation.PointAnimation> viene usato per animare la <xref:System.Windows.Media.EllipseGeometry.Center%2A> di un <xref:System.Windows.Media.EllipseGeometry>.  

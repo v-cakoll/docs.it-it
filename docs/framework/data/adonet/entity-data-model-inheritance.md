@@ -3,11 +3,11 @@ title: 'Entity Data Model: Ereditarietà'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667205"
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model: Ereditarietà
 Entity Data Model (EDM) supporta l'ereditarietà per [tipi di entità](../../../../docs/framework/data/adonet/entity-type.md). L'ereditarietà in EDM è analoga all'ereditarietà per le classi nei linguaggi di programmazione orientati a oggetti. Come con le classi nei linguaggi orientate a oggetti, in un modello concettuale è possibile definire un tipo di entità (un *tipo derivato*) che eredita da un altro tipo di entità (il *tipo di base*). Tuttavia, a differenza delle classi nella programmazione orientata agli oggetti, in un modello concettuale il tipo derivato eredita sempre tutte le [delle proprietà](../../../../docs/framework/data/adonet/property.md) e [le proprietà di navigazione](../../../../docs/framework/data/adonet/navigation-property.md) del tipo di base. Non è possibile eseguire l'override delle proprietà ereditate in un tipo derivato.  

@@ -3,11 +3,11 @@ title: <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
 ms.openlocfilehash: 2910f47b85ee67694cae0c3a725c3c7c7b3803c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701723"
 ---
 # <a name="authorizationpolicies"></a>\<authorizationPolicies>
 Questa sezione di configurazione contiene una raccolta di tipi di criteri di autorizzazione che possono essere aggiunti mediante la parola chiave `add`. Ciascun criterio di autorizzazione contiene un solo attributo `policyType` obbligatorio che è una stringa. L'attributo specifica un criterio di autorizzazione che consente la trasformazione di un set di attestazioni di input in un altro set di attestazioni. Su questa base può essere concesso o negato il controllo di accesso. Per altre informazioni sul funzionamento dei criteri di autorizzazione, vedere <xref:System.IdentityModel.Policy.IAuthorizationPolicy> e [criteri di autorizzazione](../../../../../docs/framework/wcf/samples/authorization-policy.md).  

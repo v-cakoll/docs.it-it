@@ -11,26 +11,26 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746694"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Procedura: Creare un controllo di Windows Forms che visualizzi lo stato di avanzamento
 L'esempio di codice seguente visualizza un controllo personalizzato denominato `FlashTrackBar` che può essere usato per visualizzare all'utente il livello o lo stato di avanzamento di un'applicazione. Usa una sfumatura per rappresentare visivamente lo stato di avanzamento.  
   
  Il controllo `FlashTrackBar` illustra i concetti seguenti:  
   
--   Definizione di proprietà personalizzate.  
+- Definizione di proprietà personalizzate.  
   
--   Definizione di eventi personalizzati. (`FlashTrackBar` definisce l'evento `ValueChanged`.)  
+- Definizione di eventi personalizzati. (`FlashTrackBar` definisce l'evento `ValueChanged`.)  
   
--   Si esegue l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo per fornire la logica per disegnare il controllo.  
+- Si esegue l'override di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo per fornire la logica per disegnare il controllo.  
   
--   Calcolo dell'area disponibile per il disegno del controllo utilizzando il <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà. `FlashTrackBar` esegue questa operazione nel relativo metodo `OptimizedInvalidate`.  
+- Calcolo dell'area disponibile per il disegno del controllo utilizzando il <xref:System.Windows.Forms.Control.ClientRectangle%2A> proprietà. `FlashTrackBar` esegue questa operazione nel relativo metodo `OptimizedInvalidate`.  
   
--   Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form. `FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle relative proprietà `StartColor` e `EndColor`.  
+- Implementazione della serializzazione o del salvataggio permanente per una proprietà quando viene modificata nella Progettazione Windows Form. `FlashTrackBar` definisce i metodi `ShouldSerializeStartColor` e `ShouldSerializeEndColor` per la serializzazione delle relative proprietà `StartColor` e `EndColor`.  
   
  La tabella seguente elenca le proprietà personalizzate definite da `FlashTrackBar`.  
   
@@ -59,23 +59,23 @@ L'esempio di codice seguente visualizza un controllo personalizzato denominato `
   
  Per gestire il corrispondente *NomeEvento* eventi `FlashTrackBar` esegue l'override di metodi seguenti che eredita da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnPaint%2A>  
+- <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
   
--   <xref:System.Windows.Forms.Control.OnResize%2A>  
+- <xref:System.Windows.Forms.Control.OnResize%2A>  
   
  Per gestire gli eventi di modifica della proprietà corrispondenti, `FlashTrackBar` esegue l'override di metodi seguenti che eredita da <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>Esempio  
  Il controllo `FlashTrackBar` definisce due editor di tipi dell'interfaccia utente, `FlashTrackBarValueEditor` e `FlashTrackBarDarkenByEditor`, visualizzati negli elenchi di codice seguenti. La classe `HostApp` usa il controllo `FlashTrackBar` in un Windows Form.  

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775934"
 ---
 # <a name="interfaces-visual-basic"></a>Interfacce (Visual Basic)
 Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi possono implementare. Le interfacce consentono di definire funzionalità come piccoli gruppi di proprietà, metodi ed eventi strettamente correlati fra loro. In questo modo si riducono i problemi di compatibilità, grazie alla possibilità di sviluppare implementazioni migliorate per le interfacce senza compromettere il codice esistente. È possibile aggiungere nuove funzionalità in qualsiasi momento, sviluppando interfacce e implementazioni aggiuntive.  
   
  Le interfacce offrono anche altri vantaggi rispetto all'ereditarietà di classe:  
   
--   Sono più adatte a situazioni in cui l'applicazione richiede molti tipi di oggetti anche non correlati per fornire determinate funzionalità.  
+- Sono più adatte a situazioni in cui l'applicazione richiede molti tipi di oggetti anche non correlati per fornire determinate funzionalità.  
   
--   Sono più flessibili delle classi base perché consentono di definire un'unica implementazione in grado di implementare più interfacce.  
+- Sono più flessibili delle classi base perché consentono di definire un'unica implementazione in grado di implementare più interfacce.  
   
--   Sono più adatte nelle situazioni in cui non è necessario ereditare l'implementazione da una classe base.  
+- Sono più adatte nelle situazioni in cui non è necessario ereditare l'implementazione da una classe base.  
   
--   Sono utili quando non è possibile usare l'ereditarietà di classe. Le strutture, ad esempio, non possono ereditare dalle classi, ma possono implementare interfacce.  
+- Sono utili quando non è possibile usare l'ereditarietà di classe. Le strutture, ad esempio, non possono ereditare dalle classi, ma possono implementare interfacce.  
   
 ## <a name="declaring-interfaces"></a>Dichiarazione di interfacce  
  Le definizioni di interfaccia sono racchiuse tra istruzioni `Interface` e `End Interface`. Subito dopo l'istruzione `Interface` è possibile aggiungere un'istruzione `Inherits` facoltativa in cui sono elencate una o più interfacce ereditate. Le istruzioni `Inherits` devono precedere qualsiasi altra istruzione della dichiarazione, ad eccezione dei commenti. Le restanti istruzioni della definizione di interfaccia dovrebbero essere istruzioni `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` e `Enum`. Le interfacce non possono contenere codice di implementazione o istruzioni ad esso associate, come `End Sub` o `End Property`.  

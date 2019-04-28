@@ -3,11 +3,11 @@ title: Operazioni di proiezione (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766689"
 ---
 # <a name="projection-operations-visual-basic"></a>Operazioni di proiezione (Visual Basic)
 La proiezione si riferisce all'operazione di trasformazione di un oggetto in un nuovo form costituito spesso solo dalle proprietà che verranno usate successivamente. Utilizzando la proiezione, è possibile costruire un nuovo tipo compilato in base a ogni oggetto. È possibile proiettare una proprietà ed eseguirvi una funzione matematica. È anche possibile proiettare l'oggetto originale senza modificarlo.  

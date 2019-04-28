@@ -3,20 +3,20 @@ title: Trasferimento dei messaggi di flusso
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747576"
 ---
 # <a name="streaming-message-transfer"></a>Trasferimento dei messaggi di flusso
 I trasporti di Windows Communication Foundation (WCF) supportano due modalità di trasferimento dei messaggi:  
   
--   Trasferimento con memorizzazione nel buffer: in questa modalità, l'intero messaggio viene memorizzato in un buffer fino al completamento del trasferimento. Un messaggio memorizzato nel buffer deve essere completamente recapitato prima che un destinatario sia in grado di leggerlo.  
+- Trasferimento con memorizzazione nel buffer: in questa modalità, l'intero messaggio viene memorizzato in un buffer fino al completamento del trasferimento. Un messaggio memorizzato nel buffer deve essere completamente recapitato prima che un destinatario sia in grado di leggerlo.  
   
--   Trasferimento con flusso: in questa modalità il messaggio viene esposto come flusso. Il destinatario inizia a elaborare il messaggio prima che quest'ultimo venga recapitato per intero.  
+- Trasferimento con flusso: in questa modalità il messaggio viene esposto come flusso. Il destinatario inizia a elaborare il messaggio prima che quest'ultimo venga recapitato per intero.  
   
--   I trasferimenti con flusso possono migliorare la scalabilità di un servizio eliminando l'esigenza di utilizzare buffer di memoria di grandi dimensioni. La capacità di migliorare la scalabilità mediante l'impostazione della modalità di trasferimento con flusso dipende dalle dimensioni dei messaggi da trasferire. In particolare, la modalità di trasferimento con flusso risulta essere più efficiente negli scenari che prevedono messaggi di grandi dimensioni.  
+- I trasferimenti con flusso possono migliorare la scalabilità di un servizio eliminando l'esigenza di utilizzare buffer di memoria di grandi dimensioni. La capacità di migliorare la scalabilità mediante l'impostazione della modalità di trasferimento con flusso dipende dalle dimensioni dei messaggi da trasferire. In particolare, la modalità di trasferimento con flusso risulta essere più efficiente negli scenari che prevedono messaggi di grandi dimensioni.  
   
  Per impostazione predefinita, i trasporti HTTP, TCP/IP e pipe con nome utilizzano la modalità di trasferimento con memorizzazione nel buffer. Questo documento descrive come configurare questi trasporti in modo che utilizzino la modalità di trasferimento con flusso e le relative conseguenze.  
   

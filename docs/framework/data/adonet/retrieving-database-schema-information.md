@@ -3,11 +3,11 @@ title: Recupero di informazioni dello schema del database
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
 ms.openlocfilehash: 885d3c9ad61c9099c960ddb0c0f77fa8a98dbefa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664246"
 ---
 # <a name="retrieving-database-schema-information"></a>Recupero di informazioni dello schema del database
 Il recupero di informazioni sullo schema da un database viene eseguito tramite il processo di individuazione dello schema. Individuazione dello schema consente alle applicazioni di richiedere che i provider gestiti trovano e restituiscono informazioni sullo schema di database, noto anche come *metadati*, di un determinato database. Nella raccolta di schemi vengono esposti vari elementi dello schema del database, quali tabelle, colonne e stored procedure. Ogni raccolta di schemi contiene una varietà di informazioni sullo schema specifiche del provider usato.  

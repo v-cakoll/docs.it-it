@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763737"
 ---
 # <a name="icordebugstepper-interface"></a>Interfaccia ICorDebugStepper
 Rappresenta un'istruzione nell'esecuzione di codice da parte di un debugger, opera da identificatore tra l'invio e il completamento di un comando e consente di annullare un'istruzione.  
@@ -42,11 +42,11 @@ Rappresenta un'istruzione nell'esecuzione di codice da parte di un debugger, ope
 ## <a name="remarks"></a>Note  
  Il `ICorDebugStepper` interfaccia ha gli scopi seguenti:  
   
--   Funge da identificatore tra un comando di passaggio che viene generato e il completamento del comando.  
+- Funge da identificatore tra un comando di passaggio che viene generato e il completamento del comando.  
   
--   Fornisce un'interfaccia centrale per incapsulare tutte le istruzioni che può essere eseguita.  
+- Fornisce un'interfaccia centrale per incapsulare tutte le istruzioni che può essere eseguita.  
   
--   Fornisce un modo per annullare in modo anomalo un'operazione di debug passo a passo.  
+- Fornisce un modo per annullare in modo anomalo un'operazione di debug passo a passo.  
   
  Può essere presente più di un gestore di istruzioni per ogni thread. Ad esempio, può essere raggiunto un punto di interruzione durante l'esecuzione di istruzioni/routine di una funzione e l'utente può essere utile avviare una nuova operazione di debug passo a passo all'interno della funzione. Spetta al debugger di determinare come gestire questa situazione. Il debugger potrebbe voler annullare l'operazione di debug passo a passo originale o annidare le due operazioni. Il `ICorDebugStepper` interfaccia supporta entrambe le opzioni.  
   

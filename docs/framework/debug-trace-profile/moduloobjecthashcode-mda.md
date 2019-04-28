@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753802"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode (MDA)
 L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento della classe <xref:System.Object> per eseguire un'operazione modulo sul codice hash restituito dal metodo <xref:System.Object.GetHashCode%2A>. Il modulo predefinito per questo assistente al debug gestito è 1, che fa sì che <xref:System.Object.GetHashCode%2A> restituisca 0 per tutti gli oggetti.  
@@ -25,13 +25,13 @@ L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento d
 ## <a name="symptoms"></a>Sintomi  
  Dopo la migrazione a una nuova versione di Common Language Runtime (CLR), un programma non viene più eseguito correttamente:  
   
--   Il programma ottiene un oggetto non corretto da una <xref:System.Collections.Hashtable>.  
+- Il programma ottiene un oggetto non corretto da una <xref:System.Collections.Hashtable>.  
   
--   L'ordine di enumerazione da una <xref:System.Collections.Hashtable> include una modifica che compromette il funzionamento del programma.  
+- L'ordine di enumerazione da una <xref:System.Collections.Hashtable> include una modifica che compromette il funzionamento del programma.  
   
--   Due oggetti che erano uguali non sono più uguali.  
+- Due oggetti che erano uguali non sono più uguali.  
   
--   Due oggetti che erano diversi sono ora uguali.  
+- Due oggetti che erano diversi sono ora uguali.  
   
 ## <a name="cause"></a>Causa  
  È possibile che il programma ottenga l'oggetto non corretto da una <xref:System.Collections.Hashtable> perché l'implementazione del metodo <xref:System.Object.Equals%2A> nella classe per la chiave in <xref:System.Collections.Hashtable> verifica l'uguaglianza degli oggetti confrontando i risultati della chiamata al metodo <xref:System.Object.GetHashCode%2A>. Non è consigliabile usare i codici hash per verificare l'uguaglianza di oggetti perché due oggetti possono avere lo stesso codice hash, anche se i rispettivi campi hanno valori diversi. Queste collisioni di codici hash, anche se nella pratica si tratta di eventi rari, possono verificarsi. L'effetto su una ricerca <xref:System.Collections.Hashtable> è che due chiavi diverse risultano apparentemente uguali e <xref:System.Collections.Hashtable> restituisce un oggetto non corretto. Per motivi di prestazioni, l'implementazione di <xref:System.Object.GetHashCode%2A> può cambiare tra versioni di runtime diverse, quindi potrebbero verificarsi collisioni in una versione e non nelle versioni successive. Abilitare questo assistente al debug gestito per verificare se il codice include bug in caso di collisioni di codici hash. Quando questo assistente al debug gestito viene abilitato, il metodo <xref:System.Object.GetHashCode%2A> restituisce 0, quindi tutti i codici hash risultano in collisione. L'unico effetto dell'abilitazione di questo assistente al debug gestito sul programma è un rallentamento dell'esecuzione.  

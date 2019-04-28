@@ -7,11 +7,11 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746660"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedura: Creare un'interfaccia di tipo Esplora risorse in un Windows Form
 Windows Explorer è una soluzione di interfaccia utente comune per le applicazioni a causa di relativa familiarità pronto.  
@@ -29,11 +29,11 @@ Windows Explorer è una soluzione di interfaccia utente comune per le applicazio
   
 2. Dal **casella degli strumenti**:  
   
-    1.  Trascinare un <xref:System.Windows.Forms.SplitContainer> controllo nel form.  
+    1. Trascinare un <xref:System.Windows.Forms.SplitContainer> controllo nel form.  
   
-    2.  Trascinare un <xref:System.Windows.Forms.TreeView> controllo in **SplitterPanel1** (il pannello del <xref:System.Windows.Forms.SplitContainer> controllo contrassegnato **Panel1**).  
+    2. Trascinare un <xref:System.Windows.Forms.TreeView> controllo in **SplitterPanel1** (il pannello del <xref:System.Windows.Forms.SplitContainer> controllo contrassegnato **Panel1**).  
   
-    3.  Trascinare un <xref:System.Windows.Forms.ListView> controllo in **pannello SplitterPanel2** (il pannello del <xref:System.Windows.Forms.SplitContainer> controllo contrassegnato **Panel2**).  
+    3. Trascinare un <xref:System.Windows.Forms.ListView> controllo in **pannello SplitterPanel2** (il pannello del <xref:System.Windows.Forms.SplitContainer> controllo contrassegnato **Panel2**).  
   
 3. Selezionare tutti i tre controlli premendo il tasto CTRL e facendo clic su essi, a sua volta. Quando si seleziona il <xref:System.Windows.Forms.SplitContainer> controllo, fare clic sulla barra di divisione, anziché i pannelli.  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756273"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aggiornamento di origini dati con DataAdapter
 Il metodo `Update` di <xref:System.Data.Common.DataAdapter> viene chiamato per applicare le modifiche apportate a un oggetto <xref:System.Data.DataSet> nell'origine dati. Il metodo `Update`, analogamente al metodo `Fill`, accetta come argomenti un'istanza di un oggetto `DataSet` e un oggetto <xref:System.Data.DataTable> o nome di `DataTable` facoltativi. L'istanza di `DataSet` rappresenta l'oggetto `DataSet` contenente le modifiche che sono state apportate e l'oggetto `DataTable` identifica la tabella da cui recuperare le modifiche. Se non viene specificato nessun oggetto `DataTable`, verrà usato il primo oggetto `DataTable` di `DataSet`.  
@@ -98,13 +98,13 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>Uso di un oggetto DataAdapter per recuperare e aggiornare dati  
  È possibile usare un oggetto DataAdapter per recuperare e aggiornare i dati.  
   
--   Nell'esempio viene usato DataAdapter.AcceptChangesDuringFill per clonare i dati nel database. Se la proprietà è impostata su false, AcceptChanges non viene chiamato quando viene compilata la tabella e le righe appena aggiunte sono considerate righe inserite. Di conseguenza, nell'esempio queste righe vengono usate per inserire nuove righe nel database.  
+- Nell'esempio viene usato DataAdapter.AcceptChangesDuringFill per clonare i dati nel database. Se la proprietà è impostata su false, AcceptChanges non viene chiamato quando viene compilata la tabella e le righe appena aggiunte sono considerate righe inserite. Di conseguenza, nell'esempio queste righe vengono usate per inserire nuove righe nel database.  
   
--   Negli esempi viene usato DataAdapter.TableMappings per definire il mapping tra la tabella di origine e DataTable.  
+- Negli esempi viene usato DataAdapter.TableMappings per definire il mapping tra la tabella di origine e DataTable.  
   
--   Nell'esempio viene usato DataAdapter.FillLoadOption per determinare come l'adattatore riempie l'elemento DataTable dall'elemento DbDataReader. Quando si crea un oggetto DataTable, è possibile scrivere i dati solo da un database alla versione corrente o alla versione originale impostando la proprietà come LoadOption.Upsert o LoadOption.PreserveChanges.  
+- Nell'esempio viene usato DataAdapter.FillLoadOption per determinare come l'adattatore riempie l'elemento DataTable dall'elemento DbDataReader. Quando si crea un oggetto DataTable, è possibile scrivere i dati solo da un database alla versione corrente o alla versione originale impostando la proprietà come LoadOption.Upsert o LoadOption.PreserveChanges.  
   
--   Viene inoltre aggiornata la tabella usando DbDataAdapter.UpdateBatchSize per eseguire operazioni batch.  
+- Viene inoltre aggiornata la tabella usando DbDataAdapter.UpdateBatchSize per eseguire operazioni batch.  
   
  Prima di compilare ed eseguire l'esempio, è necessario creare il database di esempio:  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757377"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Procedura: Aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Forms
 Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:System.Windows.Forms.ToolStrip> controllo specifico per la navigazione e modifica dei controlli sul form che vengono associati ai dati.  
@@ -40,15 +40,15 @@ Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:
   
 7. Nel **Editor della raccolta Items**, completare le operazioni seguenti:  
   
-    1.  Aggiungi un <xref:System.Windows.Forms.ToolStripSeparator> e tre <xref:System.Windows.Forms.ToolStripButton> selezionando il tipo appropriato di elementi <xref:System.Windows.Forms.ToolStripItem> e facendo clic sui **Add** pulsante.  
+    1. Aggiungi un <xref:System.Windows.Forms.ToolStripSeparator> e tre <xref:System.Windows.Forms.ToolStripButton> selezionando il tipo appropriato di elementi <xref:System.Windows.Forms.ToolStripItem> e facendo clic sui **Add** pulsante.  
   
-    2.  Impostare il <xref:System.Windows.Forms.ToolStripItem.Name%2A> proprietà dei pulsanti per **LoadButton**, **PulsanteSalva**, e **CancelButton**, rispettivamente.  
+    2. Impostare il <xref:System.Windows.Forms.ToolStripItem.Name%2A> proprietà dei pulsanti per **LoadButton**, **PulsanteSalva**, e **CancelButton**, rispettivamente.  
   
-    3.  Impostare il <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà dei pulsanti per **Load**, **salvare**, e **Annulla**.  
+    3. Impostare il <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà dei pulsanti per **Load**, **salvare**, e **Annulla**.  
   
-    4.  Impostare il <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> proprietà per ognuno dei pulsanti per **testo**. In alternativa, è possibile impostare questa proprietà **immagine** oppure **ImageAndText**e impostare l'immagine da visualizzare nel <xref:System.Windows.Forms.ToolStripItem.Image%2A> proprietà.  
+    4. Impostare il <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> proprietà per ognuno dei pulsanti per **testo**. In alternativa, è possibile impostare questa proprietà **immagine** oppure **ImageAndText**e impostare l'immagine da visualizzare nel <xref:System.Windows.Forms.ToolStripItem.Image%2A> proprietà.  
   
-    5.  Fare clic su **OK** per chiudere la finestra di dialogo. Vengono aggiunti i pulsanti per il <xref:System.Windows.Forms.ToolStrip>.  
+    5. Fare clic su **OK** per chiudere la finestra di dialogo. Vengono aggiunti i pulsanti per il <xref:System.Windows.Forms.ToolStrip>.  
   
 8. Fare clic sulla forma e scegliere **Visualizza codice**.  
   

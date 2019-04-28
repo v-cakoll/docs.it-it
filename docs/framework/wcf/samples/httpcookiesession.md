@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752737"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 In questo esempio viene illustrato come compilare un canale di protocollo personalizzato per utilizzare cookie HTTP per la gestione della sessione. Questo canale consente la comunicazione tra servizi Windows Communication Foundation (WCF) e i client ASMX o tra i client WCF e servizi ASMX.  
   
  Quando un client chiama un metodo Web in un servizio Web ASMX che è basato sulla sessione, il motore [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] esegue le operazioni seguenti:  
   
--   Genera un ID univoco (ID sessione).  
+- Genera un ID univoco (ID sessione).  
   
--   Genera l'oggetto sessione e lo associa all'ID univoco.  
+- Genera l'oggetto sessione e lo associa all'ID univoco.  
   
--   Aggiunge l'ID univoco a un'intestazione della risposta HTTP Set-Cookie e la invia al client.  
+- Aggiunge l'ID univoco a un'intestazione della risposta HTTP Set-Cookie e la invia al client.  
   
--   Identifica il client su chiamate successive in base all'ID di sessione inviato.  
+- Identifica il client su chiamate successive in base all'ID di sessione inviato.  
   
  Il client include questo ID di sessione nelle richieste successive al server. Il server utilizza l'ID di sessione dal client per caricare l'oggetto sessione appropriato per il contesto HTTP corrente.  
   
@@ -39,7 +39,7 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
 ## <a name="service-channel"></a>Canale del servizio  
  Nell'esempio viene fornito un canale del servizio nella classe `HttpCookieReplySessionChannelListener`. Questa classe implementa l'interfaccia <xref:System.ServiceModel.Channels.IChannelListener> e converte il canale <xref:System.ServiceModel.Channels.IReplyChannel> da una posizione inferiore nello stack dei canali a un'interfaccia <xref:System.ServiceModel.Channels.IReplySessionChannel>. Questo processo può essere suddiviso nelle parti seguenti:  
   
--   Quando il listener del canale è aperto, accetta un canale interno dal listener interno. Poiché il listener interno è un listener del datagramma e la durata di un canale accettato è separata dalla durata del listener, è possibile chiudere il listener interno e utilizzare solo il canale interno  
+- Quando il listener del canale è aperto, accetta un canale interno dal listener interno. Poiché il listener interno è un listener del datagramma e la durata di un canale accettato è separata dalla durata del listener, è possibile chiudere il listener interno e utilizzare solo il canale interno  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   Quando il processo aperto viene completato, si imposta un ciclo di messaggi per ricevere messaggi dal canale interno.  
+- Quando il processo aperto viene completato, si imposta un ciclo di messaggi per ricevere messaggi dal canale interno.  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ In questo esempio viene illustrato come compilare un canale di protocollo person
     }  
     ```  
   
--   Quando arriva un messaggio, il canale del servizio esamina l'identificatore di sessione ed esegue il demultiplexing al canale della sessione appropriato. Il listener del canale gestisce un dizionario che esegue il mapping degli identificatori di sessione alle istanze del canale della sessione.  
+- Quando arriva un messaggio, il canale del servizio esamina l'identificatore di sessione ed esegue il demultiplexing al canale della sessione appropriato. Il listener del canale gestisce un dizionario che esegue il mapping degli identificatori di sessione alle istanze del canale della sessione.  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

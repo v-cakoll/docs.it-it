@@ -3,11 +3,11 @@ title: Recupero di metadati
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
 ms.openlocfilehash: 48cac2b4b5a625546ab0c8ac9662fde01c7074b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703367"
 ---
 # <a name="retrieve-metadata"></a>Recupero di metadati
 Questo esempio dimostra come implementare un client che recupera dinamicamente metadati da un servizio per scegliere un endpoint con il quale comunicare. In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md). Il servizio è stato modificato per esporre due endpoint, ovvero un endpoint all'indirizzo di base utilizzando il `basicHttpBinding` associazione e un endpoint protetto a {*baseaddress*} /Secure utilizzando il `wsHttpBinding` associazione. Anziché configurare il client con gli indirizzi e le associazioni dell'endpoint, il client recupera dinamicamente i metadati per il servizio usando la classe <xref:System.ServiceModel.Description.MetadataExchangeClient> e quindi importa i metadati come un <xref:System.ServiceModel.Description.ServiceEndpointCollection> usando la classe <xref:System.ServiceModel.Description.WsdlImporter>.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703686"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Panoramica sulle associazioni di Windows Communication Foundation
 Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli di comunicazione necessarie per connettersi all'endpoint di un servizio Windows Communication Foundation (WCF). Ogni endpoint in un servizio WCF richiede un'associazione essere specificato bene. Questo argomento descrive i tipi dei dettagli di comunicazione definiti dalle associazioni, gli elementi di un'associazione, le associazioni incluse in WCF e come specificare un'associazione per un endpoint.  
@@ -32,13 +32,13 @@ Le associazioni sono oggetti che vengono utilizzati per specificare i dettagli d
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema  
  Le informazioni in un'associazione possono essere complesse e alcune impostazioni potrebbero non essere compatibili con altre. Per questo motivo, WCF include un set di associazioni fornite dal sistema. Queste associazioni sono progettate per soddisfare la maggior parte dei requisiti delle applicazioni. Le classi seguenti rappresentano alcuni esempi di associazioni fornite dal sistema:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Un'associazione di protocollo HTTP adatta alla connessione ai servizi Web conformi a WS-I specifica Basic Profile (ad esempio, servizi Web ASP.NET basata sui servizi).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Un'associazione di protocollo HTTP adatta alla connessione ai servizi Web conformi a WS-I specifica Basic Profile (ad esempio, servizi Web ASP.NET basata sui servizi).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Un'associazione interoperativa adatta per la connessione agli endpoint conformi a WS-* protocolli.  
+- <xref:System.ServiceModel.WSHttpBinding>: Un'associazione interoperativa adatta per la connessione agli endpoint conformi a WS-* protocolli.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Usa il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per connettersi agli altri endpoint WCF nello stesso computer.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per connettersi agli altri endpoint WCF nello stesso computer.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Usa il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per creare connessioni di messaggi in coda con altri endpoint WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usa il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] per creare connessioni di messaggi in coda con altri endpoint WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Questa associazione offre prestazioni più elevate rispetto a binding HTTP ed è ideale per l'uso in una rete locale.
   

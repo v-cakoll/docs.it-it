@@ -8,11 +8,11 @@ ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723602"
 ---
 # <a name="etw-events-in-the-net-framework"></a>Eventi ETW in .NET Framework
 Event Tracing for Windows (ETW) è un sistema di traccia scalabile con prestazioni elevate e sovraccarico ridotto fornito dai sistemi operativi Windows. Integra il supporto per la profilatura e il debug offerto da .NET Framework e può essere usato per risolvere i problemi di svariati scenari.  

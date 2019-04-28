@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: KrzysztofCwalina
 ms.openlocfilehash: d0a2f11b53f50f2ec2f301f7b88df65e1cd7b811
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762046"
 ---
 # <a name="static-class-design"></a>Progettazione di classi statiche
-Una classe statica viene definita come una classe che contiene solo membri statici (naturalmente oltre i membri di istanza ereditati da <xref:System.Object?displayProperty=nameWithType> e possibilmente un costruttore privato). Alcuni linguaggi offrono il supporto incorporato per le classi statiche. In C# 2.0 e versioni successive, quando una classe viene dichiarata come statico, è sealed, abstract e non i membri di istanza possono essere sottoposto a override o dichiarati.  
+Una classe statica viene definita come una classe che contiene solo membri statici (naturalmente oltre i membri di istanza ereditati da <xref:System.Object?displayProperty=nameWithType> e possibilmente un costruttore privato). Alcuni linguaggi offrono il supporto incorporato per le classi statiche. In c# 2.0 e versioni successive, quando una classe viene dichiarata come statico, è sealed, abstract e non i membri di istanza possono essere sottoposto a override o dichiarati.  
   
  Le classi statiche sono un compromesso tra la progettazione orientata agli oggetti pura e alla semplicità. Vengono comunemente usati per fornire collegamenti ad altre operazioni (ad esempio <xref:System.IO.File?displayProperty=nameWithType>), titolari dei metodi di estensione o la funzionalità per il quale un wrapper completa orientata agli oggetti è non autorizzato (ad esempio <xref:System.Environment?displayProperty=nameWithType>).  
   

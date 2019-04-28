@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fac87410d4e9b23fd532582b9ce1500e2c08a301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700433"
 ---
 # <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a>Metodo ICorDebugHeapValue::CreateRelocBreakpoint
 Questo metodo non è implementato nella versione corrente di .NET Framework.  
@@ -36,8 +36,8 @@ HRESULT CreateRelocBreakpoint (
 ```  
   
 ## <a name="requirements"></a>Requisiti  
- **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Intestazione:** Cordebug. idl, Cordebug. H  
+ **Intestazione:** CorDebug.idl, CorDebug.h  
   
- **Libreria:** CorGuids. lib
+ **Libreria:** CorGuids.lib

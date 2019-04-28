@@ -3,11 +3,11 @@ title: Differenze tra Entity SQL e Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774751"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Differenze tra Entity SQL e Transact-SQL
 In questo argomento vengono descritte le differenze tra [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -20,15 +20,15 @@ In questo argomento vengono descritte le differenze tra [!INCLUDE[esql](../../..
 ## <a name="support-for-collections"></a>Supporto per le raccolte  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] considera le raccolte come entità di prima classe. Ad esempio:  
   
--   Le espressioni della Collection sono valide in una clausola `from`.  
+- Le espressioni della Collection sono valide in una clausola `from`.  
   
--   Le sottoquery `in` e `exists` sono state generalizzate per consentire qualsiasi raccolta.  
+- Le sottoquery `in` e `exists` sono state generalizzate per consentire qualsiasi raccolta.  
   
      Una sottoquery è un tipo di raccolta. `e1 in e2` e `exists(e)` sono i construct [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usati per eseguire queste operazioni.  
   
--   Le operazioni Set, ad esempio `union`, `intersect` ed `except`, possono ora essere usate sulle raccolte.  
+- Le operazioni Set, ad esempio `union`, `intersect` ed `except`, possono ora essere usate sulle raccolte.  
   
--   I join funzionano sulle raccolte.  
+- I join funzionano sulle raccolte.  
   
 ## <a name="support-for-expressions"></a>Supporto per le espressioni  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] dispone di sottoquery (tabelle) ed espressioni (righe e colonne).  
