@@ -3,11 +3,11 @@ title: Provider di appartenenza e di ruoli
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756117"
 ---
 # <a name="membership-and-role-provider"></a>Provider di appartenenza e di ruoli
 Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che modo un servizio può utilizzare i provider di appartenenza e di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] per autenticare e autorizzare i client.  
@@ -19,15 +19,15 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
   
  In questo esempio viene illustrato come eseguire le seguenti operazioni:  
   
--   Un client può eseguire l'autenticazione utilizzando una combinazione nome utente-password.  
+- Un client può eseguire l'autenticazione utilizzando una combinazione nome utente-password.  
   
--   Il server può convalidare le credenziali client in base al provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Il server può convalidare le credenziali client in base al provider di appartenenza [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
--   Il server può essere autenticato tramite il certificato X.509 del server.  
+- Il server può essere autenticato tramite il certificato X.509 del server.  
   
--   Il server può eseguire il mapping del client autenticato a un ruolo utilizzando il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- Il server può eseguire il mapping del client autenticato a un ruolo utilizzando il provider di ruoli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
--   Il server può utilizzare `PrincipalPermissionAttribute` per controllare l'accesso a determinati metodi esposti dal servizio.  
+- Il server può utilizzare `PrincipalPermissionAttribute` per controllare l'accesso a determinati metodi esposti dal servizio.  
   
  I provider di appartenenza e di ruoli sono configurati per utilizzare un archivio supportato da SQL Server. Una stringa di connessione e varie opzioni sono specificate nel file di configurazione del servizio. Al provider di appartenenza viene assegnato il nome `SqlMembershipProvider` mentre al provider di ruoli viene assegnato il nome `SqlRoleProvider`.  
   
@@ -164,7 +164,7 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
--   Eseguire Cleanup.bat nella cartella degli esempi dopo che l'esempio è stato completato.  
+- Eseguire Cleanup.bat nella cartella degli esempi dopo che l'esempio è stato completato.  
   
 > [!NOTE]
 >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
@@ -174,7 +174,7 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
   
  Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.  
   
--   Creazione del certificato server.  
+- Creazione del certificato server.  
   
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile %SERVER_NAME% specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito di questo file batch è localhost.  
   
@@ -190,7 +190,7 @@ Nell'esempio del provider di appartenenza e di ruoli viene illustrato in che mod
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Installazione del certificato server nell'archivio certificati attendibili del client.  
+- Installazione del certificato server nell'archivio certificati attendibili del client.  
   
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.  
   

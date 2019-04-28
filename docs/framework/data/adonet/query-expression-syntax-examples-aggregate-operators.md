@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 85dafa07-e102-46e7-ab78-37bf06f257a6
 ms.openlocfilehash: e7151fd85c7e3988051ed87a60acc2b53a8af646
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878696"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators-linq-to-dataset"></a>Esempi di sintassi delle espressioni di query: Operatori di aggregazione (LINQ to DataSet)
 Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> e <xref:System.Linq.Enumerable.Sum%2A> per eseguire una query su un oggetto <xref:System.Data.DataSet> e aggregare i dati usando la sintassi delle espressioni di query.  

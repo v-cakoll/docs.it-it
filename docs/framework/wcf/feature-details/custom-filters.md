@@ -3,11 +3,11 @@ title: Filtri personalizzati
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
 ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857220"
 ---
 # <a name="custom-filters"></a>Filtri personalizzati
 I filtri personalizzati consentono di definire la logica corrispondente che non è possibile conseguire utilizzando i filtri messaggi forniti dal sistema. È ad esempio possibile creare un filtro personalizzato che esegue l'hash di un particolare elemento del messaggio, quindi esamina il valore per determinare se il filtro debba restituire True o False.  
@@ -39,23 +39,23 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
->  In un'implementazione effettiva, il metodo Match contiene la logica che esaminerà il messaggio per determinare se il filtro debba restituire **true** o **false**.  
+>  In un'implementazione effettiva, il metodo Match contiene logica che esaminerà il messaggio per determinare se il filtro deve restituire **true** oppure **false**.  
   
 ### <a name="performance"></a>Prestazioni  
  Quando si implementa un filtro personalizzato, è importante considerare la durata di tempo massima richiesta per il completamento della valutazione di un messaggio da parte del filtro. Poiché un messaggio può essere valutato rispetto a più filtri prima che venga individuata una corrispondenza, è importante assicurarsi che non si verifichi il timeout della richiesta del client prima della valutazione di tutti i filtri. Un filtro personalizzato deve pertanto contenere solo il codice necessario per valutare il contenuto o gli attributi di un messaggio in modo da determinare se corrisponde o meno ai criteri di filtro.  
   
  In generale, quando si implementa un filtro personalizzato è necessario evitare quanto segue:  
   
--   I/O, ad esempio salvataggio dei dati su disco o in un database.  
+- I/O, ad esempio salvataggio dei dati su disco o in un database.  
   
--   Elaborazione non necessaria, ad esempio cicli su più record in un documento.  
+- Elaborazione non necessaria, ad esempio cicli su più record in un documento.  
   
--   Operazioni di blocco, ad esempio chiamate che comportano l'acquisizione di un blocco su risorse condivise o l'esecuzione di ricerche in un database.  
+- Operazioni di blocco, ad esempio chiamate che comportano l'acquisizione di un blocco su risorse condivise o l'esecuzione di ricerche in un database.  
   
  Prima di utilizzare un filtro personalizzato in un ambiente di produzione, è necessario eseguire test delle prestazioni per determinare la durata di tempo media richiesta dal filtro per la valutazione di un messaggio. In combinazione con il tempo di elaborazione medio degli altri filtri utilizzati nella tabella dei filtri, sarà in tal modo possibile determinare in maniera accurata il valore di timeout massimo che deve essere specificato dall'applicazione client.  
   
 ## <a name="usage"></a>Utilizzo  
- Per utilizzare il filtro personalizzato con il servizio di Routing, aggiungerla alla tabella dei filtri specificando una nuova voce di filtro di tipo "Personalizzata", il nome completo del tipo di filtro del messaggio e il nome dell'assembly.  Come nel caso di altri elementi MessageFilters, è possibile specificare la stringa filterData che verrà passata al costruttore del filtro personalizzato.  
+ Per poter utilizzare i filtro personalizzato con il servizio di Routing, è necessario aggiungerlo alla tabella dei filtri specificando una nuova voce di filtro del tipo "Personalizzata", il nome completo del tipo di filtro del messaggio e il nome dell'assembly.  Come nel caso di altri elementi MessageFilters, è possibile specificare la stringa filterData che verrà passata al costruttore del filtro personalizzato.  
   
  Negli esempi seguenti viene illustrato l'utilizzo di un filtro personalizzato con il servizio di routing:  
   

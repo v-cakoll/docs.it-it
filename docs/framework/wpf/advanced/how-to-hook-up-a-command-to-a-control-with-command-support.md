@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
 ms.openlocfilehash: 981fecf33b60c76ecab760185db7dab4bbb254d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757248"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Procedura: Associare un comando a un controllo con supporto del comando
 Nell'esempio seguente viene illustrato come associare una classe <xref:System.Windows.Input.RoutedCommand> a una classe <xref:System.Windows.Controls.Control> che dispone del supporto incorporato per il comando.  Per un esempio completo in cui i comandi sono associati a più origini, vedere l'esempio [Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) (Creare un esempio di oggetto RoutedCommand personalizzato).  
