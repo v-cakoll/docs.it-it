@@ -3,11 +3,11 @@ title: <state> di WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
 ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757963"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<stato > di WCF, \<workflowInstanceQuery >
 Rappresenta una raccolta di stati sottoscritti dell'istanza del flusso di lavoro rilevata che si riferiscono alla fase di creazione dei record di rilevamento.  
@@ -73,16 +73,16 @@ I valori di stato possibili sono descritti nella tabella seguente:
 |Stato|Descrizione|  
 |-----------|-----------------|  
 |Aborted|L'istanza del flusso di lavoro viene interrotta.|  
-|Completata|L'istanza del flusso di lavoro viene completata.|  
+|Operazione completata|L'istanza del flusso di lavoro viene completata.|  
 |Eliminato|L'istanza del flusso di lavoro viene eliminata.|  
 |Idle|L'istanza del flusso di lavoro è inattiva.|  
 |Persisted|L'istanza del flusso di lavoro è persistente.|  
 |Resumed|L'istanza del flusso di lavoro viene ripresa.|  
-|Started|L'istanza del flusso di lavoro è avviata.|  
+|Avviata|L'istanza del flusso di lavoro è avviata.|  
 |UnhandledException|L'istanza del flusso di lavoro ha rilevato un'eccezione non gestita.|  
-|Unloaded|L'istanza del flusso di lavoro viene scaricata.|  
+|Scaricato|L'istanza del flusso di lavoro viene scaricata.|  
 |Annullato|L'istanza del flusso di lavoro viene annullata.|  
-|Suspended|L'istanza del flusso di lavoro è sospesa.|  
+|Sospeso|L'istanza del flusso di lavoro è sospesa.|  
 |Terminated|L'istanza del flusso di lavoro è terminata.|  
 |Unsuspended|L'istanza del flusso di lavoro non è sospesa.|  
   

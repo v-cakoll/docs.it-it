@@ -3,18 +3,18 @@ title: Autenticazione in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879014"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticazione in SQL Server
 In SQL Server sono supportate due modalità di autenticazione: la modalità dell'autenticazione di Windows e la modalità mista.  
   
--   L'autenticazione di Windows è l'impostazione predefinita e viene spesso definita sicurezza integrata perché questo modello di sicurezza di SQL Server è strettamente integrato con Windows. Determinati account utente e gruppi di Windows vengono considerati attendibili per l'accesso a SQL Server. Gli utenti di Windows che sono già stati autenticati non devono presentare credenziali aggiuntive.  
+- L'autenticazione di Windows è l'impostazione predefinita e viene spesso definita sicurezza integrata perché questo modello di sicurezza di SQL Server è strettamente integrato con Windows. Determinati account utente e gruppi di Windows vengono considerati attendibili per l'accesso a SQL Server. Gli utenti di Windows che sono già stati autenticati non devono presentare credenziali aggiuntive.  
   
--   La modalità mista supporta l'autenticazione di Windows e quella di SQL Server. Le coppie di nome utente e password vengono mantenute in SQL Server.  
+- La modalità mista supporta l'autenticazione di Windows e quella di SQL Server. Le coppie di nome utente e password vengono mantenute in SQL Server.  
   
 > [!IMPORTANT]
 >  Se possibile, si consiglia di usare l'autenticazione di Windows. In questa modalità viene utilizzata una serie di messaggi crittografati per autenticare gli utenti in SQL Server. Quando vengono utilizzati gli account di accesso di SQL Server, i nomi di account di accesso di SQL Server e le password crittografate vengono passate attraverso la rete, che li rende meno sicura.  
@@ -31,19 +31,19 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
 ## <a name="authentication-scenarios"></a>Scenari di autenticazione  
  L'autenticazione di Windows risulta in genere la soluzione ideale nelle seguenti situazioni:  
   
--   È presente un controller di dominio.  
+- È presente un controller di dominio.  
   
--   L'applicazione e il database si trovano nello stesso computer.  
+- L'applicazione e il database si trovano nello stesso computer.  
   
--   Si usa un'istanza di SQL Server Express o LocalDB.  
+- Si usa un'istanza di SQL Server Express o LocalDB.  
   
  Gli account di accesso di SQL Server vengono in genere usati nelle seguenti situazioni:  
   
--   Si dispone di un gruppo di lavoro.  
+- Si dispone di un gruppo di lavoro.  
   
--   Gli utenti si connettono da domini diversi, non attendibili.  
+- Gli utenti si connettono da domini diversi, non attendibili.  
   
--   Si usano applicazioni Internet, ad esempio [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
+- Si usano applicazioni Internet, ad esempio [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
 >  Se si specifica l'autenticazione di Windows, gli account di accesso di SQL Server non vengono disabilitati. Usare ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] istruzione per disabilitare gli accessi di SQL Server con privilegi elevati.  
@@ -51,11 +51,11 @@ In SQL Server sono supportate due modalità di autenticazione: la modalità dell
 ## <a name="login-types"></a>Tipi di account di accesso  
  SQL Server supporta tre tipi di account di accesso:  
   
--   Account utente di Windows locale o account di dominio attendibile. SQL Server si affida a Windows per l'autenticazione degli account utente di Windows.  
+- Account utente di Windows locale o account di dominio attendibile. SQL Server si affida a Windows per l'autenticazione degli account utente di Windows.  
   
--   Gruppo di Windows. L'accesso concesso a un gruppo di Windows viene assegnato a tutti gli account di accesso degli utenti di Windows che sono membri di tale gruppo.  
+- Gruppo di Windows. L'accesso concesso a un gruppo di Windows viene assegnato a tutti gli account di accesso degli utenti di Windows che sono membri di tale gruppo.  
   
--   Account di accesso di SQL Server. In SQL Server sia il nome utente che un hash della password vengono archiviati nel database master, utilizzando metodi di autenticazione interni per verificare i tentativi di accesso.  
+- Account di accesso di SQL Server. In SQL Server sia il nome utente che un hash della password vengono archiviati nel database master, utilizzando metodi di autenticazione interni per verificare i tentativi di accesso.  
   
 > [!NOTE]
 >  SQL Server sono disponibili account di accesso creati da certificati o chiavi asimmetriche che vengono usate solo per la firma del codice. che non possono essere utilizzati per la connessione a SQL Server.  

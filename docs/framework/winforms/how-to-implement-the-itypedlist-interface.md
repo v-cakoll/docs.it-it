@@ -11,11 +11,11 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800856"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Procedura: Implementare l'interfaccia ITypedList
 Implementare il <xref:System.ComponentModel.ITypedList> interfaccia per abilitare l'individuazione dello schema per un elenco associabile.  
@@ -35,7 +35,7 @@ Implementare il <xref:System.ComponentModel.ITypedList> interfaccia per abilitar
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
+- Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Vedere anche
 

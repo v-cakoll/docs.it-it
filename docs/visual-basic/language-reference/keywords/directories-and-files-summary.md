@@ -7,11 +7,11 @@ helpviewer_keywords:
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
 ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802954"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Riepilogo di directory e file (Visual Basic)
 Parole chiave del linguaggio Visual Basic e membri delle librerie di runtime sono organizzati in base allo scopo e usano.  

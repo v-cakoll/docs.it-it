@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768290"
 ---
 # <a name="-operator-visual-basic"></a>\<\< Operatore (Visual Basic)
 Esegue uno spostamento a sinistra aritmetico in uno schema di bit.  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  I risultati dell'esempio precedente sono come segue:  
   
--   `result1` is 192 (0000 0000 1100 0000).  
+- `result1` is 192 (0000 0000 1100 0000).  
   
--   `result2` is 3072 (0000 1100 0000 0000).  
+- `result2` is 3072 (0000 1100 0000 0000).  
   
--   `result3` is -32768 (1000 0000 0000 0000).  
+- `result3` is -32768 (1000 0000 0000 0000).  
   
--   `result4` is 384 (0000 0001 1000 0000).  
+- `result4` is 384 (0000 0001 1000 0000).  
   
--   `result5` è uguale a 0 (spostate 15 cifre a sinistra).  
+- `result5` è uguale a 0 (spostate 15 cifre a sinistra).  
   
  L'entità dello spostamento per `result4` è pari a 17 e 15, quali uguale a 1.  
   

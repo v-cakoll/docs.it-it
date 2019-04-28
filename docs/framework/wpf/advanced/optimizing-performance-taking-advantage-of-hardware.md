@@ -10,11 +10,11 @@ helpviewer_keywords:
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
 ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773155"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Ottimizzazione delle prestazioni: Sfruttare appieno l'hardware
 L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispone di due pipeline di rendering, hardware e software. In questo argomento fornisce informazioni su queste pipeline di rendering che consentono di prendere decisioni sull'ottimizzazione delle prestazioni delle applicazioni.  
@@ -34,23 +34,23 @@ L'architettura interna di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
  Le funzionalità dell'hardware grafico che hanno effetto sui livelli di rendering sono:  
   
--   **RAM video** La quantità di memoria video sull'hardware grafico determina le dimensioni e il numero di buffer che possono essere usati per la composizione della grafica.  
+- **RAM video** La quantità di memoria video sull'hardware grafico determina le dimensioni e il numero di buffer che possono essere usati per la composizione della grafica.  
   
--   **Pixel shader** Un pixel shader è una funzione di elaborazione grafica che calcola gli effetti sui singoli pixel. A seconda della risoluzione della grafica visualizzata, potrebbe essere necessario elaborare diversi milioni di pixel per ogni fotogramma visualizzato.  
+- **Pixel shader** Un pixel shader è una funzione di elaborazione grafica che calcola gli effetti sui singoli pixel. A seconda della risoluzione della grafica visualizzata, potrebbe essere necessario elaborare diversi milioni di pixel per ogni fotogramma visualizzato.  
   
--   **Vertex shader** Un vertex shader è una funzione di elaborazione grafica che esegue operazioni matematiche sui dati dei vertici dell'oggetto.  
+- **Vertex shader** Un vertex shader è una funzione di elaborazione grafica che esegue operazioni matematiche sui dati dei vertici dell'oggetto.  
   
--   **Supporto per più trame** Il supporto per più trame è la possibilità di applicare due o più trame distinte durante un'operazione di fusione su un oggetto grafico 3D. Il grado di supporto per più trame è determinato dal numero di unità a più trame nell'hardware grafico.  
+- **Supporto per più trame** Il supporto per più trame è la possibilità di applicare due o più trame distinte durante un'operazione di fusione su un oggetto grafico 3D. Il grado di supporto per più trame è determinato dal numero di unità a più trame nell'hardware grafico.  
   
  Il shader pixel, vertex shader e le funzionalità più trame vengono usate per definire specifiche [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] livelli di versione, che a sua volta, vengono usati per definire i diversi livelli di rendering in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Le funzionalità dell'hardware grafico determinano la capacità di rendering di un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Il sistema [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definisce tre livelli di rendering:  
   
--   **Livello di rendering 0** Nessuna accelerazione hardware grafico. Il [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] a livello di versione è precedente alla versione 7.0.  
+- **Livello di rendering 0** Nessuna accelerazione hardware grafico. Il [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] a livello di versione è precedente alla versione 7.0.  
   
--   **Livello di rendering 1** l'accelerazione hardware grafico parziale. Il [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] a livello di versione è maggiore o uguale alla versione 7.0, e **minore** alla versione 9.0.  
+- **Livello di rendering 1** l'accelerazione hardware grafico parziale. Il [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] a livello di versione è maggiore o uguale alla versione 7.0, e **minore** alla versione 9.0.  
   
--   **Livello di rendering 2** La maggior parte delle funzionalità grafiche usa l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
+- **Livello di rendering 2** La maggior parte delle funzionalità grafiche usa l'accelerazione hardware grafico. Il livello della versione di [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] è superiore o uguale alla versione 9.0.  
   
  Per ulteriori informazioni sul [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] livelli di rendering, vedere [livelli di Rendering della grafica](graphics-rendering-tiers.md).  
   

@@ -3,11 +3,11 @@ title: Esecuzione di query su dataset (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
 ms.openlocfilehash: a1c316811ce08141999bcec4c9c8504f86c2e285
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878683"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Esecuzione di query su dataset (LINQ to DataSet)
 È possibile iniziare a eseguire query su un oggetto <xref:System.Data.DataSet> dopo averlo popolato con i dati. La formulazione di query con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] è simile all'utilizzo di [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] su altre origini dati con supporto [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. È tuttavia importante ricordare che quando si usa [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] esegue una query su una <xref:System.Data.DataSet> sottoposte a query un'enumerazione dell'oggetto <xref:System.Data.DataRow> oggetti, invece di un'enumerazione di un tipo personalizzato. Ciò significa che è possibile usare uno qualsiasi dei membri del <xref:System.Data.DataRow> classe di [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] le query. e creare query dettagliate e complesse.  

@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754557"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Procedura: Compilare in modo condizionale con traccia e debug
 Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'output di tracciatura che l'output di debug vengono inviati alla finestra di output in Visual Studio. Tuttavia, per includere funzionalità di tracciatura in un'applicazione distribuita, è necessario compilare le applicazioni instrumentate con la direttiva del compilatore **TRACE** abilitata. In questo modo è possibile tracciare il codice da compilare nella versione di rilascio dell'applicazione. Se non si abilita la direttiva **TRACE**, tutto il codice di tracciatura verrà ignorato durante la compilazione e non sarà incluso nel codice eseguibile da distribuire.  
@@ -28,11 +28,11 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
  Le impostazioni del compilatore per l'applicazione possono essere specificate in diversi modi:  
   
--   Pagine delle proprietà  
+- Pagine delle proprietà  
   
--   Riga di comando  
+- Riga di comando  
   
--   **#CONST** (per Visual Basic) e **#define** (per C#)  
+- **#CONST** (per Visual Basic) e **#define** (per C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Per modificare le impostazioni di compilazione dalla finestra di dialogo delle pagine delle proprietà  
   
@@ -40,9 +40,9 @@ Quando si sottopone a debug l'applicazione durante la fase di sviluppo, sia l'ou
   
 2. Scegliere **Proprietà** dal menu di scelta rapida.  
   
-    -   In Visual Basic fare clic sulla scheda **Compila** nel riquadro sinistro della pagina delle proprietà e quindi fare clic sul pulsante **Opzioni di compilazione avanzate** per visualizzare la finestra di dialogo **Impostazioni del compilatore avanzate**. Selezionare le caselle di controllo per le impostazioni del compilatore che si vogliono attivare. Deselezionare le caselle di controllo per le impostazioni che si vogliono disabilitare.  
+    - In Visual Basic fare clic sulla scheda **Compila** nel riquadro sinistro della pagina delle proprietà e quindi fare clic sul pulsante **Opzioni di compilazione avanzate** per visualizzare la finestra di dialogo **Impostazioni del compilatore avanzate**. Selezionare le caselle di controllo per le impostazioni del compilatore che si vogliono attivare. Deselezionare le caselle di controllo per le impostazioni che si vogliono disabilitare.  
   
-    -   In C# fare clic sulla scheda **Compila** nel riquadro sinistro della pagina delle proprietà e quindi selezionare le caselle di controllo per le impostazioni del compilatore che si vogliono abilitare. Deselezionare le caselle di controllo per le impostazioni che si vogliono disabilitare.  
+    - In C# fare clic sulla scheda **Compila** nel riquadro sinistro della pagina delle proprietà e quindi selezionare le caselle di controllo per le impostazioni del compilatore che si vogliono abilitare. Deselezionare le caselle di controllo per le impostazioni che si vogliono disabilitare.  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Per compilare il codice instrumentato usando la riga di comando  
   

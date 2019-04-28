@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855842"
 ---
 # <a name="hosting"></a>Hosting
 Negli argomenti di questa sezione viene descritto l'hosting dei servizi. Un servizio può essere ospitato da Internet Information Services (IIS), Windows Process Activation Service (WAS), Windows Server AppFabric, un servizio di Windows o da un'applicazione gestita, questa opzione è spesso detta *self-hosting*.  

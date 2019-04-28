@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
 ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863623"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Procedura: Forzare un argomento può essere passato per valore (Visual Basic)
 La dichiarazione di routine determina il meccanismo di passaggio. Se un parametro dichiarato [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic prevede di passare l'argomento corrispondente per riferimento. In questo modo la procedura modificare il valore dell'elemento di programmazione sottostante all'argomento nel codice chiamante. Se si vuole proteggere l'elemento sottostante da tali modifiche, è possibile eseguire l'override di `ByRef` meccanismo di passaggio della procedura chiamata racchiudendo il nome dell'argomento racchiuso tra parentesi. Tali parentesi vengono aggiunte le parentesi che racchiudono l'elenco di argomenti nella chiamata.  
@@ -28,9 +28,9 @@ La dichiarazione di routine determina il meccanismo di passaggio. Se un parametr
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>Per forzare un argomento da passare per valore  
   
--   Se viene dichiarato il parametro corrispondente `ByVal` nella procedura, non è necessario eseguire passaggi aggiuntivi. Visual Basic prevede già passare l'argomento per valore.  
+- Se viene dichiarato il parametro corrispondente `ByVal` nella procedura, non è necessario eseguire passaggi aggiuntivi. Visual Basic prevede già passare l'argomento per valore.  
   
--   Se viene dichiarato il parametro corrispondente `ByRef` nella procedura, racchiudere l'argomento racchiuso tra parentesi nella chiamata di procedura.  
+- Se viene dichiarato il parametro corrispondente `ByRef` nella procedura, racchiudere l'argomento racchiuso tra parentesi nella chiamata di procedura.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente esegue l'override di un `ByRef` dichiarazione del parametro. Nella chiamata che forza `ByVal`, notare i due livelli di parentesi.  

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Disegnare testo in un oggetto Visual'
+title: 'Procedura: Disegnare testo in un oggetto visivo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - drawing [WPF], text to visuals
 ms.assetid: fee4003c-e8a6-46ec-babd-2c7f4231a101
 ms.openlocfilehash: 1ea31540ad59ab419e209e4133bcb88640cc01fe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776168"
 ---
-# <a name="how-to-draw-text-to-a-visual"></a>Procedura: Disegnare testo in un oggetto Visual
+# <a name="how-to-draw-text-to-a-visual"></a>Procedura: Disegnare testo in un oggetto visivo
 Nell'esempio seguente illustra come disegnare testo in un <xref:System.Windows.Media.DrawingVisual> usando un <xref:System.Windows.Media.DrawingContext> oggetto. Un contesto di disegno viene restituito chiamando il <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> metodo di un <xref:System.Windows.Media.DrawingVisual> oggetto. È possibile disegnare grafica e testo in un contesto di disegno.  
   
  Per disegnare il testo nel contesto di disegno, usare il <xref:System.Windows.Media.DrawingContext.DrawText%2A> metodo di un <xref:System.Windows.Media.DrawingContext> oggetto. Quando si è finito di disegno del contenuto nel contesto di disegno, chiamare il <xref:System.Windows.Media.DrawingContext.Close%2A> Close per chiudere il contesto di disegno e mantenere il contenuto.  

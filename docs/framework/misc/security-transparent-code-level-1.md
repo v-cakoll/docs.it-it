@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868758"
 ---
 # <a name="security-transparent-code-level-1"></a>Codice SecurityTransparent, livello 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "59161070"
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Il modello di trasparenza di livello 1](#the_level_1_transparency_model)  
+- [Il modello di trasparenza di livello 1](#the_level_1_transparency_model)  
   
--   [Attributi di trasparenza](#transparency_attributes)  
+- [Attributi di trasparenza](#transparency_attributes)  
   
--   [Esempi di trasparenza della sicurezza](#security_transparency_examples)  
+- [Esempi di trasparenza della sicurezza](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Modello di trasparenza di livello 1  
@@ -40,11 +40,11 @@ ms.locfileid: "59161070"
   
  È possibile contrassegnare un intero assembly, alcune classi di un assembly o alcuni metodi di una classe. Il codice SecurityTransparent non può elevare il livello di privilegi. Questa restrizione implica tre conseguenze:  
   
--   Il codice SecurityTransparent non può eseguire azioni <xref:System.Security.Permissions.SecurityAction.Assert>.  
+- Il codice SecurityTransparent non può eseguire azioni <xref:System.Security.Permissions.SecurityAction.Assert>.  
   
--   Tutte le richieste di collegamento soddisfatte dal codice SecurityTransparent diventano richieste complete.  
+- Tutte le richieste di collegamento soddisfatte dal codice SecurityTransparent diventano richieste complete.  
   
--   Il codice unsafe (non verificabile) che deve essere eseguito nel codice SecurityTransparent provoca una richiesta completa per l'autorizzazione di sicurezza <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
+- Il codice unsafe (non verificabile) che deve essere eseguito nel codice SecurityTransparent provoca una richiesta completa per l'autorizzazione di sicurezza <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
   
  Queste regole vengono applicate durante l'esecuzione da Common Language Runtime (CLR). Il codice SecurityTransparent passa tutti i requisiti di sicurezza del codice richiamato ai relativi chiamanti. Le richieste trasmesse con il codice SecurityTransparent non possono elevare il livello di privilegi. Se un'applicazione con attendibilità bassa chiama il codice SecurityTransparent e provoca una richiesta di un livello di privilegi più alto, la richiesta verrà trasferita di nuovo al codice con attendibilità bassa generando un errore. Il codice SecurityTransparent non può arrestare la richiesta perché non può eseguire azioni di asserzione. Se lo stesso codice SecurityTransparent viene chiamato dal codice con attendibilità totale, la richiesta avrà esito positivo.  
   

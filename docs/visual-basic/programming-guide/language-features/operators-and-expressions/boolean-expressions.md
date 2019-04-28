@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
 ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864667"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Espressioni booleane (Visual Basic)
 Oggetto *espressione booleana* è un'espressione che restituisce un valore delle [tipo di dati Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`. `Boolean` le espressioni possono assumere forme diverse. È la più semplice il confronto diretto del valore di una `Boolean` variabile in un `Boolean` letterale, come illustrato nell'esempio seguente.  

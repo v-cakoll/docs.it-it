@@ -3,11 +3,11 @@ title: "Procedura: Implementare un'applicazione client per usare il proxy di ind
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784267"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedura: Implementare un'applicazione client per usare il proxy di individuazione e cercare un servizio
 Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [come: Implementare un servizio individuabile che esegue la registrazione al Proxy di individuazione](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), è stato implementato un servizio WCF che si registra con il proxy di individuazione. In questo argomento viene creato un client WCF che usa il proxy di individuazione per trovare il servizio WCF.  
@@ -18,9 +18,9 @@ Quello che segue è il terzo di tre argomenti incentrato sull'implementazione di
   
 2. Aggiungere riferimenti agli assembly riportati di seguito:  
   
-    1.  System.ServiceModel  
+    1. System.ServiceModel  
   
-    2.  System.ServiceModel.Discovery  
+    2. System.ServiceModel.Discovery  
   
 3. Aggiungere al progetto il file GeneratedClient.cs individuato nella parte inferiore di questo argomento.  
   

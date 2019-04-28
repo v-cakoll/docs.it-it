@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
 ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876356"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolamento dello snapshot in SQL Server
 L'isolamento dello snapshot migliora la concorrenza per le applicazioni OLTP.  
@@ -41,35 +41,35 @@ SET READ_COMMITTED_SNAPSHOT ON
   
  I quattro livelli di isolamento definiti nello standard SQL-92 sono supportati nelle prime versioni di SQL Server:  
   
--   READ UNCOMMITTED rappresenta il livello di isolamento meno restrittivo perché ignora i blocchi inseriti da altre transazioni. Le transazioni eseguite in READ UNCOMMITTED possono leggere i valori dei dati modificati non ancora sottoposti a commit da altre transazioni. Queste letture vengono definite "dirty".  
+- READ UNCOMMITTED rappresenta il livello di isolamento meno restrittivo perché ignora i blocchi inseriti da altre transazioni. Le transazioni eseguite in READ UNCOMMITTED possono leggere i valori dei dati modificati non ancora sottoposti a commit da altre transazioni. Queste letture vengono definite "dirty".  
   
--   READ COMMITTED è il livello di isolamento predefinito per SQL Server. Questo livello consente di impedire le letture dirty, specificando che le istruzioni non possono leggere i valori dei dati modificati ma non ancora sottoposti a commit da altre transazioni. Altre transazioni possono ancora modificare, inserire o eliminare dati tra le esecuzioni di singole istruzioni all'interno della transazione corrente, dando luogo a letture non ripetibili o dati "fantasma".  
+- READ COMMITTED è il livello di isolamento predefinito per SQL Server. Questo livello consente di impedire le letture dirty, specificando che le istruzioni non possono leggere i valori dei dati modificati ma non ancora sottoposti a commit da altre transazioni. Altre transazioni possono ancora modificare, inserire o eliminare dati tra le esecuzioni di singole istruzioni all'interno della transazione corrente, dando luogo a letture non ripetibili o dati "fantasma".  
   
--   REPEATABLE READ è un livello di isolamento più restrittivo di READ COMMITTED. Esso include il livello READ COMMITTED e aggiunge la limitazione in base alla quale nessun'altra transazione può modificare o eliminare dati letti dalla transazione corrente finché questa non viene sottoposta a commit. La concorrenza è minore rispetto al livello READ COMMITTED in quanto i blocchi condivisi sui dati letti vengono conservati per la durata della transazione anziché rilasciati al termine di ciascuna istruzione.  
+- REPEATABLE READ è un livello di isolamento più restrittivo di READ COMMITTED. Esso include il livello READ COMMITTED e aggiunge la limitazione in base alla quale nessun'altra transazione può modificare o eliminare dati letti dalla transazione corrente finché questa non viene sottoposta a commit. La concorrenza è minore rispetto al livello READ COMMITTED in quanto i blocchi condivisi sui dati letti vengono conservati per la durata della transazione anziché rilasciati al termine di ciascuna istruzione.  
   
--   SERIALIZABLE è il livello di isolamento più restrittivo, in quanto blocca intere gamme di chiavi e trattiene i blocchi finché la transazione non è stata completata. Esso include il livello REPEATABLE READ e aggiunge la limitazione in base alla quale altre transazioni non possono inserire nuove righe negli intervalli letti dalla transazione finché quest'ultima non è stata completata.  
+- SERIALIZABLE è il livello di isolamento più restrittivo, in quanto blocca intere gamme di chiavi e trattiene i blocchi finché la transazione non è stata completata. Esso include il livello REPEATABLE READ e aggiunge la limitazione in base alla quale altre transazioni non possono inserire nuove righe negli intervalli letti dalla transazione finché quest'ultima non è stata completata.  
   
  Per altre informazioni, vedere la [Guida di controllo delle versioni delle righe e il blocco delle transazioni](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Estensione del livello di isolamento dello snapshot  
  In SQL Server sono state introdotte estensioni ai livelli di isolamento SQL-92 sotto forma del livello di isolamento SNAPSHOT e un'implementazione aggiuntiva di READ COMMITTED. Il livello di isolamento READ_COMMITTED_SNAPSHOT può sostituire READ COMMITTED per tutte le transazioni.  
   
--   L'isolamento SNAPSHOT specifica che i dati letti all'interno di una transazione non rifletteranno mai le modifiche apportate da altre transazioni simultanee. La transazione usa le versioni delle righe dei dati esistenti al momento in cui tale transazione viene iniziata. Sui dati non viene posizionato alcun blocco al momento della lettura, quindi le transazioni SNAPSHOT non impediscono la scrittura di dati da parte di altre transazioni. Le transazioni di scrittura dei dati non bloccano la lettura dei dati da parte delle transazioni snapshot. È necessario abilitare l'isolamento dello snapshot impostando l'opzione di database ALLOW_SNAPSHOT_ISOLATION.  
+- L'isolamento SNAPSHOT specifica che i dati letti all'interno di una transazione non rifletteranno mai le modifiche apportate da altre transazioni simultanee. La transazione usa le versioni delle righe dei dati esistenti al momento in cui tale transazione viene iniziata. Sui dati non viene posizionato alcun blocco al momento della lettura, quindi le transazioni SNAPSHOT non impediscono la scrittura di dati da parte di altre transazioni. Le transazioni di scrittura dei dati non bloccano la lettura dei dati da parte delle transazioni snapshot. È necessario abilitare l'isolamento dello snapshot impostando l'opzione di database ALLOW_SNAPSHOT_ISOLATION.  
   
--   L'opzione di database READ_COMMITTED_SNAPSHOT determina il comportamento del livello di isolamento READ COMMITTED predefinito quando nel database viene abilitato l'isolamento dello snapshot. Se non si specifica in maniera esplicita l'opzione READ_COMMITTED_SNAPSHOT ON, il livello READ COMMITTED viene applicato a tutte le transazioni implicite. Ciò provoca lo stesso comportamento dell'impostazione READ_COMMITTED_SNAPSHOT OFF (predefinita). Quando è attiva l'impostazione READ_COMMITTED_SNAPSHOT OFF, il motore di database usa i blocchi condivisi per l'applicazione del livello di isolamento. Se si imposta l'opzione di database READ_COMMITTED_SNAPSHOT su ON, per impostazione predefinita il motore di database usa il controllo delle versioni delle righe e l'isolamento dello snapshot, anziché usare i blocchi per proteggere i dati.  
+- L'opzione di database READ_COMMITTED_SNAPSHOT determina il comportamento del livello di isolamento READ COMMITTED predefinito quando nel database viene abilitato l'isolamento dello snapshot. Se non si specifica in maniera esplicita l'opzione READ_COMMITTED_SNAPSHOT ON, il livello READ COMMITTED viene applicato a tutte le transazioni implicite. Ciò provoca lo stesso comportamento dell'impostazione READ_COMMITTED_SNAPSHOT OFF (predefinita). Quando è attiva l'impostazione READ_COMMITTED_SNAPSHOT OFF, il motore di database usa i blocchi condivisi per l'applicazione del livello di isolamento. Se si imposta l'opzione di database READ_COMMITTED_SNAPSHOT su ON, per impostazione predefinita il motore di database usa il controllo delle versioni delle righe e l'isolamento dello snapshot, anziché usare i blocchi per proteggere i dati.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Funzionamento dell'isolamento dello snapshot e del controllo delle versioni delle righe  
  Quando il livello di isolamento dello SNAPSHOT è abilitato, ogni volta che viene aggiornata una riga, il motore di Database di SQL Server archivia una copia della riga di originale **tempdb**e aggiunge un numero di sequenza della transazione alla riga. Di seguito è riportata la sequenza degli eventi che si verificano:  
   
--   Viene avviata una nuova transazione alla quale viene assegnato un numero di sequenza.  
+- Viene avviata una nuova transazione alla quale viene assegnato un numero di sequenza.  
   
--   Il motore di Database legge una riga all'interno della transazione e recupera la versione di riga dal **tempdb** il cui numero di sequenza è più vicino e inferiore, il numero di sequenza della transazione.  
+- Il motore di Database legge una riga all'interno della transazione e recupera la versione di riga dal **tempdb** il cui numero di sequenza è più vicino e inferiore, il numero di sequenza della transazione.  
   
--   Il motore di database controlla se il numero di sequenza della transazione è presente nell'elenco dei numeri di sequenza delle transazioni attive non sottoposte a commit al momento dell'avvio della transazione snapshot.  
+- Il motore di database controlla se il numero di sequenza della transazione è presente nell'elenco dei numeri di sequenza delle transazioni attive non sottoposte a commit al momento dell'avvio della transazione snapshot.  
   
--   La transazione legge la versione della riga dal **tempdb** che è corrente al momento dell'avvio della transazione. Non rileverà nuove righe inserite dopo che la transazione è stata avviata in quanto questi valori del numero di sequenza sono maggiori del valore del numero di sequenza della transazione.  
+- La transazione legge la versione della riga dal **tempdb** che è corrente al momento dell'avvio della transazione. Non rileverà nuove righe inserite dopo che la transazione è stata avviata in quanto questi valori del numero di sequenza sono maggiori del valore del numero di sequenza della transazione.  
   
--   La transazione corrente rileverà righe eliminate dopo l'inizio della transazione, poiché sarà disponibile una versione di riga in **tempdb** con un valore numerico di sequenza più basso.  
+- La transazione corrente rileverà righe eliminate dopo l'inizio della transazione, poiché sarà disponibile una versione di riga in **tempdb** con un valore numerico di sequenza più basso.  
   
  L'effetto dell'isolamento consiste nel fatto che la transazione rileva tutti i dati esattamente come erano al momento dell'avvio della transazione stessa, senza rispettare o posizionare blocchi sulle tabelle sottostanti. Ciò può comportare un miglioramento delle prestazioni in situazioni di conflitto.  
   
@@ -93,15 +93,15 @@ SqlTransaction sqlTran =
   
  Il codice si connette per la **AdventureWorks** in SQL Server database di esempio e crea una tabella denominata **TestSnapshot** e inserisce una riga di dati. Il codice usa l'istruzione ALTER DATABASE di Transact-SQL per attivare l'isolamento dello snapshot per il database, ma non imposta l'opzione READ_COMMITTED_SNAPSHOT, lasciando attivo il comportamento a livello di isolamento READ COMMITTED predefinito. Nel codice vengono eseguite le seguenti azioni:  
   
--   Inizia, ma non completa, sqlTransaction1, che usa il livello di isolamento SERIALIZABLE per avviare la transazione di aggiornamento. Ciò consente di bloccare la tabella.  
+- Inizia, ma non completa, sqlTransaction1, che usa il livello di isolamento SERIALIZABLE per avviare la transazione di aggiornamento. Ciò consente di bloccare la tabella.  
   
--   Apre una seconda connessione e avvia una seconda transazione usando il livello di isolamento dello SNAPSHOT per leggere i dati nel **TestSnapshot** tabella. Poiché l'isolamento dello snapshot è abilitato, la transazione può leggere i dati esistenti prima che venga avviata sqlTransaction1.  
+- Apre una seconda connessione e avvia una seconda transazione usando il livello di isolamento dello SNAPSHOT per leggere i dati nel **TestSnapshot** tabella. Poiché l'isolamento dello snapshot è abilitato, la transazione può leggere i dati esistenti prima che venga avviata sqlTransaction1.  
   
--   Apre una terza connessione e avvia una transazione usando il livello di isolamento READ COMMITTED per tentare di leggere i dati nella tabella. In tal caso, il codice non può leggere i dati perché non è in grado di leggere informazioni successive al posizionamento dei blocchi sulla tabella nella prima transazione, pertanto verrà eseguito il timeout. Lo stesso risultato si ottiene con i livelli di isolamento REPEATABLE READ e SERIALIZABLE poiché questi non possono leggere le informazioni successive al posizionamento dei blocchi nella prima transazione.  
+- Apre una terza connessione e avvia una transazione usando il livello di isolamento READ COMMITTED per tentare di leggere i dati nella tabella. In tal caso, il codice non può leggere i dati perché non è in grado di leggere informazioni successive al posizionamento dei blocchi sulla tabella nella prima transazione, pertanto verrà eseguito il timeout. Lo stesso risultato si ottiene con i livelli di isolamento REPEATABLE READ e SERIALIZABLE poiché questi non possono leggere le informazioni successive al posizionamento dei blocchi nella prima transazione.  
   
--   Apre una quarta connessione e avvia una transazione usando il livello di isolamento READ UNCOMMITTED, che esegue una lettura dirty del valore del quale non è stato eseguito il commit in sqlTransaction1. Se non è stato eseguito il commit della prima transazione, questo valore non può esistere nel database.  
+- Apre una quarta connessione e avvia una transazione usando il livello di isolamento READ UNCOMMITTED, che esegue una lettura dirty del valore del quale non è stato eseguito il commit in sqlTransaction1. Se non è stato eseguito il commit della prima transazione, questo valore non può esistere nel database.  
   
--   Rollback della transazione prima e pulitura, eliminando la **TestSnapshot** tabella e la disattivazione di isolamento dello snapshot per il **AdventureWorks** database.  
+- Rollback della transazione prima e pulitura, eliminando la **TestSnapshot** tabella e la disattivazione di isolamento dello snapshot per il **AdventureWorks** database.  
   
 > [!NOTE]
 >  Negli esempi seguenti viene usata la stessa stringa di connessione con il pool di connessioni disattivato. Se una connessione è in pool, la reimpostazione del relativo livello di isolamento non implica quella del livello di isolamento nel server. Di conseguenza, le connessioni successive che usano la stessa connessione interna in pool vengono avviate con i livelli di isolamento impostati su quello della connessione in pool. In alternativa a disattivare il pool di connessioni, è possibile impostare il livello di isolamento in modo esplicito per ogni connessione.  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato il comportamento dell'isolamento dello snapshot durante la modifica dei dati. Nel codice vengono eseguite le seguenti azioni:  
   
--   Si connette per la **AdventureWorks** isolamento dello SNAPSHOT del database e consente di esempio.  
+- Si connette per la **AdventureWorks** isolamento dello SNAPSHOT del database e consente di esempio.  
   
--   Crea una tabella denominata **TestSnapshotUpdate** e inserisce tre righe di dati di esempio.  
+- Crea una tabella denominata **TestSnapshotUpdate** e inserisce tre righe di dati di esempio.  
   
--   Inizia, ma non completa, sqlTransaction1 usando l'isolamento SNAPSHOT. Nella transazione vengono selezionate tre righe di dati.  
+- Inizia, ma non completa, sqlTransaction1 usando l'isolamento SNAPSHOT. Nella transazione vengono selezionate tre righe di dati.  
   
--   Crea una seconda **SqlConnection** al **AdventureWorks** e crea una seconda transazione usando il livello di isolamento READ COMMITTED che aggiorna un valore in una delle righe selezionate in sqlTransaction1.  
+- Crea una seconda **SqlConnection** al **AdventureWorks** e crea una seconda transazione usando il livello di isolamento READ COMMITTED che aggiorna un valore in una delle righe selezionate in sqlTransaction1.  
   
--   Esegue il commit di sqlTransaction2.  
+- Esegue il commit di sqlTransaction2.  
   
--   Torna a sqlTransaction1 e tenta di aggiornare la stessa riga di cui è già stato eseguito il commit da sqlTransaction1. Viene generato l'errore 3960 e viene eseguito il rollback automatico di sqlTransaction1. Il **SqlException. Number** e **SqlException. Message** vengono visualizzati nella finestra della Console.  
+- Torna a sqlTransaction1 e tenta di aggiornare la stessa riga di cui è già stato eseguito il commit da sqlTransaction1. Viene generato l'errore 3960 e viene eseguito il rollback automatico di sqlTransaction1. Il **SqlException. Number** e **SqlException. Message** vengono visualizzati nella finestra della Console.  
   
--   Esegue il codice di pulizia per disattivare l'isolamento dello snapshot nella **AdventureWorks** ed eliminare le **TestSnapshotUpdate** tabella.  
+- Esegue il codice di pulizia per disattivare l'isolamento dello snapshot nella **AdventureWorks** ed eliminare le **TestSnapshotUpdate** tabella.  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  

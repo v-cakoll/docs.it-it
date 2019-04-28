@@ -3,11 +3,11 @@ title: Rilevamento di variabili e argomenti
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755519"
 ---
 # <a name="variable-and-argument-tracking"></a>Rilevamento di variabili e argomenti
 Quando si rileva l'esecuzione di un flusso di lavoro, spesso è utile estrarre i dati. Tali dati offrono un contesto aggiuntivo quando si accede alla post-esecuzione di un record di rilevamento. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], usando il rilevamento, è possibile estrarre qualsiasi variabile o argomento visibile all'interno dell'ambito di tutte le attività di un flusso di lavoro. I profili di rilevamento semplificano l'estrazione dei dati.  
@@ -15,9 +15,9 @@ Quando si rileva l'esecuzione di un flusso di lavoro, spesso è utile estrarre i
 ## <a name="variables-and-arguments"></a>Variabili e argomenti  
  Le variabili e gli argomenti vengono estratti quando un'attività crea un oggetto ActivityStateRecord.  Una variabile può essere estratta solo se è inclusa nell'ambito dell'attività. Una variabile da estrarre in un'attività viene specificata nel modo seguente:  
   
--   Se una variabile viene specificata con il relativo nome, il rilevamento cerca la variabile all'interno dell'attività in fase di rilevamento e nelle attività padre. La variabile viene ricercata nell'ambito dell'attività corrente e nell'ambito padre.  
+- Se una variabile viene specificata con il relativo nome, il rilevamento cerca la variabile all'interno dell'attività in fase di rilevamento e nelle attività padre. La variabile viene ricercata nell'ambito dell'attività corrente e nell'ambito padre.  
   
--   Se le variabili da estrarre vengono specificate con name = "*", vengono estratte tutte le variabili all'interno dell'attività corrente in fase di rilevamento. In questo caso, le variabili incluse nell'ambito ma definite nelle attività padre non vengono estratte.  
+- Se le variabili da estrarre vengono specificate con name = "*", vengono estratte tutte le variabili all'interno dell'attività corrente in fase di rilevamento. In questo caso, le variabili incluse nell'ambito ma definite nelle attività padre non vengono estratte.  
   
  Gli argomenti estratti dipendono dallo stato dell'attività. Quando lo stato di un'attività è Executing, possono essere estratti solo gli argomenti `InArguments`. Per qualsiasi altro stato dell'attività (Closed, Faulted, Canceled), entrambi gli argomenti InArguments e OutArguments sono disponibili per l'estrazione.  
   

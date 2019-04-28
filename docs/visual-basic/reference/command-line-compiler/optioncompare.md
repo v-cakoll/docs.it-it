@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
 ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788960"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Specifica la modalità con cui vengono confrontate le stringhe.  
@@ -46,7 +46,7 @@ Specifica la modalità con cui vengono confrontate le stringhe.
   
 ### <a name="to-set--optioncompare-programmatically"></a>Per impostare a livello di codice - optioncompare  
   
--   Visualizzare [istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+- Visualizzare [istruzione Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Esempio  
  Il codice seguente Compila `ProjFile.vb` e confronti tra stringhe binarie.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781498"
 ---
 # <a name="collection-types-in-data-contracts"></a>Tipi di raccolta nei contratti dati
 Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]tali elenchi possono essere rappresentati mediante matrici o una varietà di altri tipi (elenco generico, <xref:System.ComponentModel.BindingList%601>generico, <xref:System.Collections.Specialized.StringCollection>o <xref:System.Collections.ArrayList>). Una raccolta, ad esempio, può contenere un elenco di indirizzi per un determinato cliente. Queste raccolte vengono denominate *raccolte di elenchi*, indipendentemente dal tipo effettivo.  
@@ -83,9 +83,9 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
 ### <a name="collection-data-contract-naming"></a>Denominazione del contratto dati della raccolta  
  Le regole per la denominazione dei tipi di raccolta sono simili a quelle per la denominazione dei tipi di contratto dati normali, come viene descritto in [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md), ad eccezione di alcune importanti differenze:  
   
--   Per personalizzare il nome viene utilizzato l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> anziché l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> . Anche l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> dispone delle proprietà `Name` e `Namespace` .  
+- Per personalizzare il nome viene utilizzato l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> anziché l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> . Anche l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> dispone delle proprietà `Name` e `Namespace` .  
   
--   Quando l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> non viene applicato, il nome e lo spazio dei nomi predefiniti per i tipi di raccolta dipendono dai nomi e dagli spazi dei nomi dei tipi contenuti nella raccolta. Non vengono influenzati dal nome e dallo spazio dei nomi del tipo di raccolta stesso. Per un esempio, vedere i tipi seguenti.  
+- Quando l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> non viene applicato, il nome e lo spazio dei nomi predefiniti per i tipi di raccolta dipendono dai nomi e dagli spazi dei nomi dei tipi contenuti nella raccolta. Non vengono influenzati dal nome e dallo spazio dei nomi del tipo di raccolta stesso. Per un esempio, vedere i tipi seguenti.  
   
     ```csharp  
     public CustomerList1 : Collection<string> {}  
@@ -123,7 +123,7 @@ Una *raccolta* costituisce un elenco di elementi di un certo tipo. In [!INCLUDE[
   
  Si noti che questo codice non è più equivalente alla rappresentazione XML dei tipi non personalizzati.  
   
--   È quindi possibile utilizzare le proprietà `Name` e `Namespace` per personalizzare ulteriormente la denominazione. Fare riferimento alla classe seguente.  
+- È quindi possibile utilizzare le proprietà `Name` e `Namespace` per personalizzare ulteriormente la denominazione. Fare riferimento alla classe seguente.  
   
      [!code-csharp[c_collection_types_in_data_contracts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#3)]
      [!code-vb[c_collection_types_in_data_contracts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#3)]  
@@ -278,9 +278,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Se un tipo implementa più di un'interfaccia della raccolta di elenco, vengono applicate le restrizioni seguenti:  
   
--   Se il tipo implementa <xref:System.Collections.Generic.IEnumerable%601> generico (o le interfacce derivate) più volte per tipi diversi, non viene considerato un tipo di raccolta a cui fare riferimento valido e viene ignorato. Questa condizione è vera anche se alcune implementazioni non sono valide o utilizzano generics aperti. Un tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> generico di `int` e <xref:System.Collections.Generic.IEnumerable%601> generico di T, ad esempio, non verrebbe mai utilizzato come raccolta a cui si fa riferimento di `int` o di qualsiasi altro tipo, indipendentemente dalla circostanza che il tipo abbia un metodo `Add` che accetta `int` o un metodo `Add` che accetta un parametro di tipo T o entrambi.  
+- Se il tipo implementa <xref:System.Collections.Generic.IEnumerable%601> generico (o le interfacce derivate) più volte per tipi diversi, non viene considerato un tipo di raccolta a cui fare riferimento valido e viene ignorato. Questa condizione è vera anche se alcune implementazioni non sono valide o utilizzano generics aperti. Un tipo che implementa <xref:System.Collections.Generic.IEnumerable%601> generico di `int` e <xref:System.Collections.Generic.IEnumerable%601> generico di T, ad esempio, non verrebbe mai utilizzato come raccolta a cui si fa riferimento di `int` o di qualsiasi altro tipo, indipendentemente dalla circostanza che il tipo abbia un metodo `Add` che accetta `int` o un metodo `Add` che accetta un parametro di tipo T o entrambi.  
   
--   Se il tipo implementa un'interfaccia di raccolta generica oltre a <xref:System.Collections.IList>, non viene mai utilizzato come tipo di raccolta a cui si fa riferimento, a meno che l'interfaccia di raccolta generica non sia una generica chiusa di tipo <xref:System.Object>.  
+- Se il tipo implementa un'interfaccia di raccolta generica oltre a <xref:System.Collections.IList>, non viene mai utilizzato come tipo di raccolta a cui si fa riferimento, a meno che l'interfaccia di raccolta generica non sia una generica chiusa di tipo <xref:System.Object>.  
   
  Per le raccolte di dizionario, sono supportati solo i casi illustrati nella tabella seguente:  
   
@@ -303,21 +303,21 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="serializing-collections"></a>Serializzazione delle raccolte  
  Di seguito vengono elencate le regole per la serializzazione delle raccolte:  
   
--   La combinazione di tipi di raccolta (con raccolte di raccolte) è consentita. Le matrici di matrici vengono trattate come raccolte di raccolte. Le matrici multidimensionali non sono supportate.  
+- La combinazione di tipi di raccolta (con raccolte di raccolte) è consentita. Le matrici di matrici vengono trattate come raccolte di raccolte. Le matrici multidimensionali non sono supportate.  
   
--   Matrici di byte e matrici di <xref:System.Xml.XmlNode> sono tipi speciali di matrici trattati come primitivi, non come raccolte. La serializzazione di una matrice di byte genera un singolo elemento XML contenente un blocco di dati con codifica Base64 anziché un elemento separato per ogni byte. Per altre informazioni su come una matrice di <xref:System.Xml.XmlNode> viene considerato, vedere [tipi XML e ADO.NET nei contratti dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Questi tipi speciali, naturalmente, possono fare parte delle raccolte: una matrice di matrice di byte sfocia in più elementi XML, ognuno dei quali contiene un blocco di dati con codifica Base64.  
+- Matrici di byte e matrici di <xref:System.Xml.XmlNode> sono tipi speciali di matrici trattati come primitivi, non come raccolte. La serializzazione di una matrice di byte genera un singolo elemento XML contenente un blocco di dati con codifica Base64 anziché un elemento separato per ogni byte. Per altre informazioni su come una matrice di <xref:System.Xml.XmlNode> viene considerato, vedere [tipi XML e ADO.NET nei contratti dati](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Questi tipi speciali, naturalmente, possono fare parte delle raccolte: una matrice di matrice di byte sfocia in più elementi XML, ognuno dei quali contiene un blocco di dati con codifica Base64.  
   
--   Se l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato a un tipo di raccolta, il tipo viene trattato come tipo di contratto dati normale, non come una raccolta.  
+- Se l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> viene applicato a un tipo di raccolta, il tipo viene trattato come tipo di contratto dati normale, non come una raccolta.  
   
--   Se un tipo di raccolta implementa l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> , vengono applicate le regole seguenti, dato un tipo `myType:IList<string>, IXmlSerializable`:  
+- Se un tipo di raccolta implementa l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> , vengono applicate le regole seguenti, dato un tipo `myType:IList<string>, IXmlSerializable`:  
   
-    -   Il tipo di dichiarato è `IList<string>`, il tipo è serializzato come elenco.  
+    - Il tipo di dichiarato è `IList<string>`, il tipo è serializzato come elenco.  
   
-    -   Il tipo di dichiarato è `myType`, ed è serializzato come `IXmlSerializable`.  
+    - Il tipo di dichiarato è `myType`, ed è serializzato come `IXmlSerializable`.  
   
-    -   Se il tipo dichiarato è `IXmlSerializable`, viene serializzato come `IXmlSerializable`, ma solo se si aggiunge `myType` all'elenco dei tipi noti.  
+    - Se il tipo dichiarato è `IXmlSerializable`, viene serializzato come `IXmlSerializable`, ma solo se si aggiunge `myType` all'elenco dei tipi noti.  
   
--   Le raccolte vengono serializzate e deserializzate tramite i metodi illustrati nella tabella seguente:  
+- Le raccolte vengono serializzate e deserializzate tramite i metodi illustrati nella tabella seguente:  
   
 |Il tipo di raccolta implementa|Metodo/i chiamato/i durante la serializzazione|Metodo/i chiamato/i durante la deserializzazione|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
@@ -331,22 +331,22 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Nella tabella precedente sono elencate le interfacce di raccolta in ordine decrescente di precedenza. Se un tipo implementa sia <xref:System.Collections.IList> che <xref:System.Collections.Generic.IEnumerable%601>generico, ad esempio, la raccolta viene serializzata e deserializzata secondo le regole di <xref:System.Collections.IList> :  
   
--   In fase di deserializzazione, tutte le raccolte vengono deserializzate creando innanzitutto un'istanza del tipo chiamando il costruttore predefinito, che deve essere presente affinché il serializzatore sia in grado di trattare un tipo di raccolta come raccolta durante la serializzazione e la deserializzazione.  
+- In fase di deserializzazione, tutte le raccolte vengono deserializzate creando innanzitutto un'istanza del tipo chiamando il costruttore predefinito, che deve essere presente affinché il serializzatore sia in grado di trattare un tipo di raccolta come raccolta durante la serializzazione e la deserializzazione.  
   
--   Se la stessa interfaccia di raccolta generica viene implementata più di una volta (ad esempio se un tipo implementa sia <xref:System.Collections.Generic.ICollection%601> generica di `Integer` che <xref:System.Collections.Generic.ICollection%601> generica di <xref:System.String>) e non viene trovata nessuna interfaccia con un livello di precedenza maggiore, la raccolta non viene trattata come raccolta valida.  
+- Se la stessa interfaccia di raccolta generica viene implementata più di una volta (ad esempio se un tipo implementa sia <xref:System.Collections.Generic.ICollection%601> generica di `Integer` che <xref:System.Collections.Generic.ICollection%601> generica di <xref:System.String>) e non viene trovata nessuna interfaccia con un livello di precedenza maggiore, la raccolta non viene trattata come raccolta valida.  
   
--   L'attributo <xref:System.SerializableAttribute> può essere applicato ai tipi di raccolta, i quali possono implementare l'interfaccia <xref:System.Runtime.Serialization.ISerializable> . Entrambi vengono ignorati. Se, tuttavia, il tipo non soddisfa pienamente i requisiti del tipo di raccolta (ad esempio, manca il metodo `Add` ), il tipo non viene considerato un tipo di raccolta, di conseguenza per stabilire se il tipo può essere serializzato, vengono utilizzati l'attributo <xref:System.SerializableAttribute> e l'interfaccia <xref:System.Runtime.Serialization.ISerializable> .  
+- L'attributo <xref:System.SerializableAttribute> può essere applicato ai tipi di raccolta, i quali possono implementare l'interfaccia <xref:System.Runtime.Serialization.ISerializable> . Entrambi vengono ignorati. Se, tuttavia, il tipo non soddisfa pienamente i requisiti del tipo di raccolta (ad esempio, manca il metodo `Add` ), il tipo non viene considerato un tipo di raccolta, di conseguenza per stabilire se il tipo può essere serializzato, vengono utilizzati l'attributo <xref:System.SerializableAttribute> e l'interfaccia <xref:System.Runtime.Serialization.ISerializable> .  
   
--   L'applicazione dell'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a una raccolta per personalizzarlo rimuove il meccanismo di fallback di <xref:System.SerializableAttribute> precedente. Se invece una raccolta personalizzata non soddisfa i requisiti del tipo di raccolta, viene generata un'eccezione <xref:System.Runtime.Serialization.InvalidDataContractException> . Poiché spesso la stringa dell'eccezione contiene informazioni che spiegano il motivo per il quale un determinato tipo non viene considerato una raccolta valida (nessun metodo `Add` , nessun costruttore predefinito e così via), risulta utile applicare l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a scopo di debug.  
+- L'applicazione dell'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a una raccolta per personalizzarlo rimuove il meccanismo di fallback di <xref:System.SerializableAttribute> precedente. Se invece una raccolta personalizzata non soddisfa i requisiti del tipo di raccolta, viene generata un'eccezione <xref:System.Runtime.Serialization.InvalidDataContractException> . Poiché spesso la stringa dell'eccezione contiene informazioni che spiegano il motivo per il quale un determinato tipo non viene considerato una raccolta valida (nessun metodo `Add` , nessun costruttore predefinito e così via), risulta utile applicare l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a scopo di debug.  
   
 ### <a name="collection-naming"></a>Denominazione di raccolte  
  Di seguito vengono elencate le regole di denominazione delle raccolte:  
   
--   Spazio dei nomi predefinito per tutti i contratti di dati di raccolta dizionario, nonché per contratti di dati raccolte di elenco contenenti tipi primitivi, è `http://schemas.microsoft.com/2003/10/Serialization/Arrays` a meno che non viene sottoposto a override utilizzando Namespace. I tipi che eseguono il mapping a tipi XSD incorporati, nonché i tipi `char`, `Timespan`e `Guid` , vengono considerati primitivi a questo scopo.  
+- Spazio dei nomi predefinito per tutti i contratti di dati di raccolta dizionario, nonché per contratti di dati raccolte di elenco contenenti tipi primitivi, è `http://schemas.microsoft.com/2003/10/Serialization/Arrays` a meno che non viene sottoposto a override utilizzando Namespace. I tipi che eseguono il mapping a tipi XSD incorporati, nonché i tipi `char`, `Timespan`e `Guid` , vengono considerati primitivi a questo scopo.  
   
--   Lo spazio dei nomi predefinito per tipi di raccolta che contengono tipi non primitivi corrisponde allo spazio dei nomi del contratto dati del tipo contenuto nella raccolta, a meno che non venga eseguito l'override utilizzando Namespace.  
+- Lo spazio dei nomi predefinito per tipi di raccolta che contengono tipi non primitivi corrisponde allo spazio dei nomi del contratto dati del tipo contenuto nella raccolta, a meno che non venga eseguito l'override utilizzando Namespace.  
   
--   Il nome predefinito per i contratti dati delle raccolte di elenco, a meno che non venga sottoposto a override utilizzando Name, è la stringa "ArrayOf" associata al nome del contratto dati del tipo contenuto nella raccolta. Il nome del contratto dati per un elenco generico di numeri interi è, ad esempio, "ArrayOfint". È importante ricordare che il nome del contratto dati di `Object` è "anyType", quindi il nome del contratto dati di elenchi non generici come <xref:System.Collections.ArrayList> è "ArrayOfanyType".  
+- Il nome predefinito per i contratti dati delle raccolte di elenco, a meno che non venga sottoposto a override utilizzando Name, è la stringa "ArrayOf" associata al nome del contratto dati del tipo contenuto nella raccolta. Il nome del contratto dati per un elenco generico di numeri interi è, ad esempio, "ArrayOfint". È importante ricordare che il nome del contratto dati di `Object` è "anyType", quindi il nome del contratto dati di elenchi non generici come <xref:System.Collections.ArrayList> è "ArrayOfanyType".  
   
  Il nome predefinito per i contratti dati delle raccolte di dizionario, a meno che non venga sottoposto a override utilizzando `Name`, è la stringa "ArrayOfKeyValueOf" associata al nome del contratto dati del tipo di chiave seguito dal nome del contratto dati del tipo di valore. Il nome del contratto dati per un dizionario generico di stringa e numero intero, ad esempio, è "ArrayOfKeyValueOfstringint". Inoltre, se il tipo di chiave o il tipo di valore non sono tipi primitivi, un hash di spazio dei nomi degli spazi dei nomi del contratto dati dei tipi di chiave e valore viene aggiunto al nome. Per altre informazioni sugli hash di spazio dei nomi, vedere [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
@@ -357,13 +357,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collection-customization"></a>Personalizzazione di raccolte  
  Gli utilizzi seguenti dell'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> non sono consentiti e generano un'eccezione <xref:System.Runtime.Serialization.InvalidDataContractException> :  
   
--   Applicare l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> a un tipo al quale è stato applicato l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> oppure a uno dei tipi derivati.  
+- Applicare l'attributo <xref:System.Runtime.Serialization.DataContractAttribute> a un tipo al quale è stato applicato l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> oppure a uno dei tipi derivati.  
   
--   Applicare l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a un tipo che implementa l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> .  
+- Applicare l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a un tipo che implementa l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> .  
   
--   Applicare l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a un tipo diverso da una raccolta.  
+- Applicare l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> a un tipo diverso da una raccolta.  
   
--   Tentare di impostare <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> o <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> su un attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> applicato a un tipo diverso da un dizionario.  
+- Tentare di impostare <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> o <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> su un attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> applicato a un tipo diverso da un dizionario.  
   
 ### <a name="polymorphism-rules"></a>Regole del polimorfismo  
  Come indicato in precedenza, la personalizzazione delle raccolte mediante l'attributo <xref:System.Runtime.Serialization.CollectionDataContractAttribute> può interferire con l'intercambiabilità delle stesse. Due tipi di raccolta personalizzati possono essere considerati equivalenti solo se il nome, lo spazio dei nomi, il nome dell'elemento nonché il nome di chiave e valore (se raccolte di dizionari) corrispondono.  
