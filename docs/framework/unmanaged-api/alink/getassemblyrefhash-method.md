@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6fa8d42f9e849db6a02f6c62b37e04cf5dee016e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789857"
 ---
-# <a name="getassemblyrefhash-method"></a><span data-ttu-id="f826c-102">Metodo GetAssemblyRefHash</span><span class="sxs-lookup"><span data-stu-id="f826c-102">GetAssemblyRefHash Method</span></span>
-<span data-ttu-id="f826c-103">Recupera un blob di hash per un determinato assembly.</span><span class="sxs-lookup"><span data-stu-id="f826c-103">Retrieves a hash blob for a given assembly.</span></span>  
+# <a name="getassemblyrefhash-method"></a><span data-ttu-id="a224b-102">Metodo GetAssemblyRefHash</span><span class="sxs-lookup"><span data-stu-id="a224b-102">GetAssemblyRefHash Method</span></span>
+<span data-ttu-id="a224b-103">Recupera un blob di hash per un determinato assembly.</span><span class="sxs-lookup"><span data-stu-id="a224b-103">Retrieves a hash blob for a given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f826c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f826c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a224b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a224b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyRefHash(  
@@ -36,24 +36,24 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f826c-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f826c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a224b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="a224b-105">Parameters</span></span>  
  `FileToken`  
- <span data-ttu-id="f826c-106">ID dell'assembly a cui farà riferimento il valore hash.</span><span class="sxs-lookup"><span data-stu-id="f826c-106">ID of assembly to which the hash will refer.</span></span>  
+ <span data-ttu-id="a224b-106">ID dell'assembly a cui farà riferimento il valore hash.</span><span class="sxs-lookup"><span data-stu-id="a224b-106">ID of assembly to which the hash will refer.</span></span>  
   
  `ppvHash`  
- <span data-ttu-id="f826c-107">Riceve il blob hash risultante.</span><span class="sxs-lookup"><span data-stu-id="f826c-107">Receives the resulting hash blob.</span></span>  
+ <span data-ttu-id="a224b-107">Riceve il blob hash risultante.</span><span class="sxs-lookup"><span data-stu-id="a224b-107">Receives the resulting hash blob.</span></span>  
   
  `pcbHash`  
- <span data-ttu-id="f826c-108">Riceve le dimensioni, in byte del blob hash.</span><span class="sxs-lookup"><span data-stu-id="f826c-108">Receives size, in bytes, of hash blob.</span></span>  
+ <span data-ttu-id="a224b-108">Riceve le dimensioni, in byte del blob hash.</span><span class="sxs-lookup"><span data-stu-id="a224b-108">Receives size, in bytes, of hash blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f826c-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f826c-109">Return Value</span></span>  
- <span data-ttu-id="f826c-110">Restituisce S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="f826c-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a224b-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="a224b-109">Return Value</span></span>  
+ <span data-ttu-id="a224b-110">Restituisce S_OK se il metodo ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="a224b-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f826c-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f826c-111">Requirements</span></span>  
- <span data-ttu-id="f826c-112">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="f826c-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a224b-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="a224b-111">Requirements</span></span>  
+ <span data-ttu-id="a224b-112">Richiede alink.h</span><span class="sxs-lookup"><span data-stu-id="a224b-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f826c-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f826c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a224b-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a224b-113">See also</span></span>
 
-- [<span data-ttu-id="f826c-114">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="f826c-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="f826c-115">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="f826c-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="f826c-116">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="f826c-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="a224b-114">Interfaccia IALink</span><span class="sxs-lookup"><span data-stu-id="a224b-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="a224b-115">Interfaccia IALink2</span><span class="sxs-lookup"><span data-stu-id="a224b-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="a224b-116">Alink (API)</span><span class="sxs-lookup"><span data-stu-id="a224b-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

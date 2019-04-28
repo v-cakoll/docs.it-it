@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
 ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790507"
 ---
-# <a name="tokenreplaycache"></a><span data-ttu-id="966de-101">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="966de-101">\<tokenReplayCache></span></span>
-<span data-ttu-id="966de-102">Registra una cache di riproduzione dei token con un servizio o una raccolta di gestori di token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="966de-102">Registers a token replay cache with a service or a security token handler collection.</span></span>  
+# <a name="tokenreplaycache"></a><span data-ttu-id="9ee09-101">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="9ee09-101">\<tokenReplayCache></span></span>
+<span data-ttu-id="9ee09-102">Registra una cache di riproduzione dei token con un servizio o una raccolta di gestori di token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="9ee09-102">Registers a token replay cache with a service or a security token handler collection.</span></span>  
   
- <span data-ttu-id="966de-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="966de-103">\<system.identityModel></span></span>  
-<span data-ttu-id="966de-104">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="966de-104">\<identityConfiguration></span></span>  
-<span data-ttu-id="966de-105">\<caches></span><span class="sxs-lookup"><span data-stu-id="966de-105">\<caches></span></span>  
-<span data-ttu-id="966de-106">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="966de-106">\<tokenReplayCache></span></span>  
+ <span data-ttu-id="9ee09-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="9ee09-103">\<system.identityModel></span></span>  
+<span data-ttu-id="9ee09-104">\<identityConfiguration></span><span class="sxs-lookup"><span data-stu-id="9ee09-104">\<identityConfiguration></span></span>  
+<span data-ttu-id="9ee09-105">\<caches></span><span class="sxs-lookup"><span data-stu-id="9ee09-105">\<caches></span></span>  
+<span data-ttu-id="9ee09-106">\<tokenReplayCache></span><span class="sxs-lookup"><span data-stu-id="9ee09-106">\<tokenReplayCache></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="966de-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="966de-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ee09-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9ee09-107">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -31,29 +31,29 @@ ms.locfileid: "59113386"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="966de-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="966de-108">Attributes and Elements</span></span>  
- <span data-ttu-id="966de-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="966de-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="9ee09-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="9ee09-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="9ee09-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="9ee09-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="966de-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="966de-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="9ee09-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="9ee09-110">Attributes</span></span>  
   
-|<span data-ttu-id="966de-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="966de-111">Attribute</span></span>|<span data-ttu-id="966de-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="966de-112">Description</span></span>|  
+|<span data-ttu-id="9ee09-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="9ee09-111">Attribute</span></span>|<span data-ttu-id="9ee09-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9ee09-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="966de-113">tipo</span><span class="sxs-lookup"><span data-stu-id="966de-113">type</span></span>|<span data-ttu-id="966de-114">Un tipo da cui deriva il <xref:System.IdentityModel.Tokens.TokenReplayCache> classe.</span><span class="sxs-lookup"><span data-stu-id="966de-114">A type that derives from the <xref:System.IdentityModel.Tokens.TokenReplayCache> class.</span></span> <span data-ttu-id="966de-115">Per altre informazioni su come specificare un oggetto personalizzato `type`, vedere [riferimenti a tipi personalizzati].</span><span class="sxs-lookup"><span data-stu-id="966de-115">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>
+|<span data-ttu-id="9ee09-113">tipo</span><span class="sxs-lookup"><span data-stu-id="9ee09-113">type</span></span>|<span data-ttu-id="9ee09-114">Un tipo da cui deriva il <xref:System.IdentityModel.Tokens.TokenReplayCache> classe.</span><span class="sxs-lookup"><span data-stu-id="9ee09-114">A type that derives from the <xref:System.IdentityModel.Tokens.TokenReplayCache> class.</span></span> <span data-ttu-id="9ee09-115">Per altre informazioni su come specificare un oggetto personalizzato `type`, vedere [riferimenti a tipi personalizzati].</span><span class="sxs-lookup"><span data-stu-id="9ee09-115">For more information about how to specify a custom `type`, see [Custom Type References].</span></span>
   
-### <a name="child-elements"></a><span data-ttu-id="966de-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="966de-116">Child Elements</span></span>  
- <span data-ttu-id="966de-117">nessuno</span><span class="sxs-lookup"><span data-stu-id="966de-117">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="9ee09-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="9ee09-116">Child Elements</span></span>  
+ <span data-ttu-id="9ee09-117">nessuno</span><span class="sxs-lookup"><span data-stu-id="9ee09-117">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="966de-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="966de-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="9ee09-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="9ee09-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="966de-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="966de-119">Element</span></span>|<span data-ttu-id="966de-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="966de-120">Description</span></span>|  
+|<span data-ttu-id="9ee09-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="9ee09-119">Element</span></span>|<span data-ttu-id="9ee09-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9ee09-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="966de-121">\<caches></span><span class="sxs-lookup"><span data-stu-id="966de-121">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="966de-122">Registra le cache utilizzate da un servizio o una raccolta di gestori di token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="966de-122">Registers the caches used by a service or a security token handler collection.</span></span>|  
+|[<span data-ttu-id="9ee09-121">\<caches></span><span class="sxs-lookup"><span data-stu-id="9ee09-121">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="9ee09-122">Registra le cache utilizzate da un servizio o una raccolta di gestori di token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="9ee09-122">Registers the caches used by a service or a security token handler collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="966de-123">Note</span><span class="sxs-lookup"><span data-stu-id="966de-123">Remarks</span></span>  
- <span data-ttu-id="966de-124">La cache di riproduzione del token viene usata per rilevare i token riprodotti.</span><span class="sxs-lookup"><span data-stu-id="966de-124">The token replay cache is used to detect replayed tokens.</span></span> <span data-ttu-id="966de-125">Rilevamento riproduzione token è abilitato per il [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) elemento che specifica anche l'ora di scadenza massimo per i token.</span><span class="sxs-lookup"><span data-stu-id="966de-125">Token replay detection is enabled by the [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) element, which also specifies the maximum expiration time for tokens.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9ee09-123">Note</span><span class="sxs-lookup"><span data-stu-id="9ee09-123">Remarks</span></span>  
+ <span data-ttu-id="9ee09-124">La cache di riproduzione del token viene usata per rilevare i token riprodotti.</span><span class="sxs-lookup"><span data-stu-id="9ee09-124">The token replay cache is used to detect replayed tokens.</span></span> <span data-ttu-id="9ee09-125">Rilevamento riproduzione token è abilitato per il [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) elemento che specifica anche l'ora di scadenza massimo per i token.</span><span class="sxs-lookup"><span data-stu-id="9ee09-125">Token replay detection is enabled by the [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) element, which also specifies the maximum expiration time for tokens.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="966de-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="966de-126">Example</span></span>  
- <span data-ttu-id="966de-127">Il codice XML seguente viene illustrata la configurazione di una cache personalizzata per rilevare i token riprodotti.</span><span class="sxs-lookup"><span data-stu-id="966de-127">The following XML shows the configuration of a custom cache for detecting replayed tokens.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ee09-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="9ee09-126">Example</span></span>  
+ <span data-ttu-id="9ee09-127">Il codice XML seguente viene illustrata la configurazione di una cache personalizzata per rilevare i token riprodotti.</span><span class="sxs-lookup"><span data-stu-id="9ee09-127">The following XML shows the configuration of a custom cache for detecting replayed tokens.</span></span>  
   
 ```xml  
 <caches>  
@@ -62,7 +62,7 @@ ms.locfileid: "59113386"
 </caches>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="966de-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="966de-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9ee09-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9ee09-128">See also</span></span>
 
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
-- [<span data-ttu-id="966de-129">\<tokenReplayDetection></span><span class="sxs-lookup"><span data-stu-id="966de-129">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+- [<span data-ttu-id="9ee09-129">\<tokenReplayDetection></span><span class="sxs-lookup"><span data-stu-id="9ee09-129">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)

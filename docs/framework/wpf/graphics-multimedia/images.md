@@ -10,27 +10,27 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785723"
 ---
-# <a name="images"></a><span data-ttu-id="b35d6-102">Immagini</span><span class="sxs-lookup"><span data-stu-id="b35d6-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="b35d6-103">fornisce supporto incorporato per più formati di immagine, rendering delle immagini ad alta fedeltà ed estendibilità dei codec.</span><span class="sxs-lookup"><span data-stu-id="b35d6-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="56c1e-102">Immagini</span><span class="sxs-lookup"><span data-stu-id="56c1e-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="56c1e-103">fornisce supporto incorporato per più formati di immagine, rendering delle immagini ad alta fedeltà ed estendibilità dei codec.</span><span class="sxs-lookup"><span data-stu-id="56c1e-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b35d6-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="b35d6-104">In This Section</span></span>  
- [<span data-ttu-id="b35d6-105">Cenni preliminari sulla creazione dell'immagine</span><span class="sxs-lookup"><span data-stu-id="b35d6-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="b35d6-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="b35d6-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="56c1e-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="56c1e-104">In This Section</span></span>  
+ [<span data-ttu-id="56c1e-105">Cenni preliminari sulla creazione dell'immagine</span><span class="sxs-lookup"><span data-stu-id="56c1e-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="56c1e-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="56c1e-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="b35d6-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="b35d6-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="56c1e-107">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="56c1e-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="b35d6-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b35d6-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56c1e-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="56c1e-108">See also</span></span>
 
-- [<span data-ttu-id="b35d6-109">Grafica bidimensionale e creazione di immagini</span><span class="sxs-lookup"><span data-stu-id="b35d6-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="b35d6-110">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="b35d6-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="56c1e-109">Grafica bidimensionale e creazione di immagini</span><span class="sxs-lookup"><span data-stu-id="56c1e-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="56c1e-110">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="56c1e-110">Graphics and Multimedia</span></span>](index.md)

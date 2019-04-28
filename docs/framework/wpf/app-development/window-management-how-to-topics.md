@@ -7,29 +7,29 @@ helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
 ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788687"
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="bb00f-102">Procedure relative alla finestra Gestione</span><span class="sxs-lookup"><span data-stu-id="bb00f-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="bb00f-103">Gli argomenti seguenti illustrano come gestire [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="bb00f-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="5a57d-102">Procedure relative alla finestra Gestione</span><span class="sxs-lookup"><span data-stu-id="5a57d-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="5a57d-103">Gli argomenti seguenti illustrano come gestire [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="5a57d-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bb00f-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="bb00f-104">In This Section</span></span>  
- [<span data-ttu-id="bb00f-105">Ridimensionare automaticamente una finestra per adattarla al contenuto</span><span class="sxs-lookup"><span data-stu-id="bb00f-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="bb00f-106">Ottenere tutte le finestre in un'applicazione</span><span class="sxs-lookup"><span data-stu-id="bb00f-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="bb00f-107">Ottenere e impostare la finestra principale dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="bb00f-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="bb00f-108">Aprire una finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="bb00f-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="bb00f-109">Aprire una finestra di messaggio</span><span class="sxs-lookup"><span data-stu-id="bb00f-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
-  [<span data-ttu-id="bb00f-110">Aprire una finestra</span><span class="sxs-lookup"><span data-stu-id="bb00f-110">Open a Window</span></span>](how-to-open-a-window.md)  
-  [<span data-ttu-id="bb00f-111">Restituire il risultato di una finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="bb00f-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5a57d-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="5a57d-104">In This Section</span></span>  
+ [<span data-ttu-id="5a57d-105">Ridimensionare automaticamente una finestra per adattarla al contenuto</span><span class="sxs-lookup"><span data-stu-id="5a57d-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="5a57d-106">Ottenere tutte le finestre in un'applicazione</span><span class="sxs-lookup"><span data-stu-id="5a57d-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="5a57d-107">Ottenere e impostare la finestra principale dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="5a57d-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="5a57d-108">Aprire una finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="5a57d-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="5a57d-109">Aprire una finestra di messaggio</span><span class="sxs-lookup"><span data-stu-id="5a57d-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
+  [<span data-ttu-id="5a57d-110">Aprire una finestra</span><span class="sxs-lookup"><span data-stu-id="5a57d-110">Open a Window</span></span>](how-to-open-a-window.md)  
+  [<span data-ttu-id="5a57d-111">Restituire il risultato di una finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="5a57d-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="bb00f-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="bb00f-112">Related Sections</span></span>  
- [<span data-ttu-id="bb00f-113">Cenni preliminari sulla gestione di applicazioni</span><span class="sxs-lookup"><span data-stu-id="bb00f-113">Application Management Overview</span></span>](application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="5a57d-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="5a57d-112">Related Sections</span></span>  
+ [<span data-ttu-id="5a57d-113">Cenni preliminari sulla gestione di applicazioni</span><span class="sxs-lookup"><span data-stu-id="5a57d-113">Application Management Overview</span></span>](application-management-overview.md)  
   
- [<span data-ttu-id="bb00f-114">Cenni preliminari sulla navigazione</span><span class="sxs-lookup"><span data-stu-id="bb00f-114">Navigation Overview</span></span>](navigation-overview.md)  
+ [<span data-ttu-id="5a57d-114">Cenni preliminari sulla navigazione</span><span class="sxs-lookup"><span data-stu-id="5a57d-114">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="bb00f-115">Hosting</span><span class="sxs-lookup"><span data-stu-id="bb00f-115">Hosting</span></span>](hosting-wpf-applications.md)  
+ [<span data-ttu-id="5a57d-115">Hosting</span><span class="sxs-lookup"><span data-stu-id="5a57d-115">Hosting</span></span>](hosting-wpf-applications.md)  
   
- [<span data-ttu-id="bb00f-116">Compilazione e distribuzione di applicazioni WPF</span><span class="sxs-lookup"><span data-stu-id="bb00f-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="5a57d-116">Compilazione e distribuzione di applicazioni WPF</span><span class="sxs-lookup"><span data-stu-id="5a57d-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

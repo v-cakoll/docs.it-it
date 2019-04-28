@@ -17,32 +17,32 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd46ea26532074c9ea42da4d07a38ed583aad076
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789680"
 ---
-# <a name="ireferenceidentity-interface"></a><span data-ttu-id="765c6-102">Interfaccia IReferenceIdentity</span><span class="sxs-lookup"><span data-stu-id="765c6-102">IReferenceIdentity Interface</span></span>
-<span data-ttu-id="765c6-103">Rappresenta un riferimento a una firma univoca di un oggetto di codice.</span><span class="sxs-lookup"><span data-stu-id="765c6-103">Represents a reference to the unique signature of a code object.</span></span>  
+# <a name="ireferenceidentity-interface"></a><span data-ttu-id="787a1-102">Interfaccia IReferenceIdentity</span><span class="sxs-lookup"><span data-stu-id="787a1-102">IReferenceIdentity Interface</span></span>
+<span data-ttu-id="787a1-103">Rappresenta un riferimento a una firma univoca di un oggetto di codice.</span><span class="sxs-lookup"><span data-stu-id="787a1-103">Represents a reference to the unique signature of a code object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="765c6-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="765c6-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="787a1-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="787a1-104">Methods</span></span>  
   
-|<span data-ttu-id="765c6-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="765c6-105">Method</span></span>|<span data-ttu-id="765c6-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="765c6-106">Description</span></span>|  
+|<span data-ttu-id="787a1-105">Metodo</span><span class="sxs-lookup"><span data-stu-id="787a1-105">Method</span></span>|<span data-ttu-id="787a1-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="787a1-106">Description</span></span>|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|<span data-ttu-id="765c6-107">Ottiene un puntatore a interfaccia a una nuova `IReferenceIdentity` identica a questa istanza `IReferenceIdentity`, fatta eccezione per le modifiche di attributo specificato.</span><span class="sxs-lookup"><span data-stu-id="765c6-107">Gets an interface pointer to a new `IReferenceIdentity` instance that is identical to this `IReferenceIdentity`, except for the specified attribute changes.</span></span>|  
-|`IReferenceIdentity::EnumAttributes`|<span data-ttu-id="765c6-108">Ottiene un puntatore a interfaccia a un `IEnumIDENTITY_ATTRIBUTE` istanza che contiene gli attributi associati a questo `IReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="765c6-108">Gets an interface pointer to an `IEnumIDENTITY_ATTRIBUTE` instance that contains the attributes associated with this `IReferenceIdentity`.</span></span>|  
-|`IReferenceIdentity::GetAttribute`|<span data-ttu-id="765c6-109">Ottiene il valore dell'attributo nello spazio dei nomi specificato, con il nome specificato.</span><span class="sxs-lookup"><span data-stu-id="765c6-109">Gets the value of the attribute in the specified namespace, with the specified name.</span></span>|  
-|`IReferenceIdentity::SetAttribute`|<span data-ttu-id="765c6-110">Imposta l'attributo con lo spazio dei nomi specificato e il nome specificato al valore specificato.</span><span class="sxs-lookup"><span data-stu-id="765c6-110">Sets the attribute that has the specified namespace and the specified name to the specified value.</span></span>|  
+|`IReferenceIdentity::Clone`|<span data-ttu-id="787a1-107">Ottiene un puntatore a interfaccia a una nuova `IReferenceIdentity` identica a questa istanza `IReferenceIdentity`, fatta eccezione per le modifiche di attributo specificato.</span><span class="sxs-lookup"><span data-stu-id="787a1-107">Gets an interface pointer to a new `IReferenceIdentity` instance that is identical to this `IReferenceIdentity`, except for the specified attribute changes.</span></span>|  
+|`IReferenceIdentity::EnumAttributes`|<span data-ttu-id="787a1-108">Ottiene un puntatore a interfaccia a un `IEnumIDENTITY_ATTRIBUTE` istanza che contiene gli attributi associati a questo `IReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="787a1-108">Gets an interface pointer to an `IEnumIDENTITY_ATTRIBUTE` instance that contains the attributes associated with this `IReferenceIdentity`.</span></span>|  
+|`IReferenceIdentity::GetAttribute`|<span data-ttu-id="787a1-109">Ottiene il valore dell'attributo nello spazio dei nomi specificato, con il nome specificato.</span><span class="sxs-lookup"><span data-stu-id="787a1-109">Gets the value of the attribute in the specified namespace, with the specified name.</span></span>|  
+|`IReferenceIdentity::SetAttribute`|<span data-ttu-id="787a1-110">Imposta l'attributo con lo spazio dei nomi specificato e il nome specificato al valore specificato.</span><span class="sxs-lookup"><span data-stu-id="787a1-110">Sets the attribute that has the specified namespace and the specified name to the specified value.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="765c6-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="765c6-111">Requirements</span></span>  
- <span data-ttu-id="765c6-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="765c6-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="787a1-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="787a1-111">Requirements</span></span>  
+ <span data-ttu-id="787a1-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="787a1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="765c6-113">**Intestazione:** Isolation. h</span><span class="sxs-lookup"><span data-stu-id="765c6-113">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="787a1-113">**Intestazione:** Isolation. h</span><span class="sxs-lookup"><span data-stu-id="787a1-113">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="765c6-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="765c6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="787a1-114">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="787a1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="765c6-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="765c6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="787a1-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="787a1-115">See also</span></span>
 
-- [<span data-ttu-id="765c6-116">Interfacce Fusion</span><span class="sxs-lookup"><span data-stu-id="765c6-116">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="765c6-117">Interfaccia IEnumIDENTITY_ATTRIBUTE</span><span class="sxs-lookup"><span data-stu-id="765c6-117">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [<span data-ttu-id="787a1-116">Interfacce Fusion</span><span class="sxs-lookup"><span data-stu-id="787a1-116">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="787a1-117">Interfaccia IEnumIDENTITY_ATTRIBUTE</span><span class="sxs-lookup"><span data-stu-id="787a1-117">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)

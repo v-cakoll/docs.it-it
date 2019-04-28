@@ -8,37 +8,37 @@ helpviewer_keywords:
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
 ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785645"
 ---
-# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="d5d42-102">Procedure relative alle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-102">Key-Frame Animation How-to Topics</span></span>
-<span data-ttu-id="d5d42-103">Negli argomenti di questa sezione illustrano come usare le animazioni con fotogrammi chiave per aggiungere un'animazione a più di due valori di proprietà e controllare l'interpolazione.</span><span class="sxs-lookup"><span data-stu-id="d5d42-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
+# <a name="key-frame-animation-how-to-topics"></a><span data-ttu-id="eeefb-102">Procedure relative alle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-102">Key-Frame Animation How-to Topics</span></span>
+<span data-ttu-id="eeefb-103">Negli argomenti di questa sezione illustrano come usare le animazioni con fotogrammi chiave per aggiungere un'animazione a più di due valori di proprietà e controllare l'interpolazione.</span><span class="sxs-lookup"><span data-stu-id="eeefb-103">The topics in this section demonstrate how to use key frame animations to animate more than two property values and control interpolation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d5d42-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d5d42-104">In This Section</span></span>  
- [<span data-ttu-id="d5d42-105">Animare un oggetto usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-106">Animare un valore Boolean usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-107">Animare un oggetto Double usando i fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-108">Animare una matrice usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-109">Animare un punto usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-110">Animare un rettangolo usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-111">Animare una stringa usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-112">Animare il colore usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-113">Animare le modifiche di dimensione usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-114">Animare lo spessore di un bordo usando i fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [<span data-ttu-id="d5d42-115">Controllare la durata delle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
+## <a name="in-this-section"></a><span data-ttu-id="eeefb-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="eeefb-104">In This Section</span></span>  
+ [<span data-ttu-id="eeefb-105">Animare un oggetto usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-105">Animate an Object by Using Key Frames</span></span>](how-to-animate-an-object-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-106">Animare un valore Boolean usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-106">Animate a Boolean by Using Key Frames</span></span>](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-107">Animare un oggetto Double usando i fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-107">Animate a Double by Using Key Frames</span></span>](how-to-animate-a-double-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-108">Animare una matrice usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-108">Animate a Matrix by Using Key Frames</span></span>](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-109">Animare un punto usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-109">Animate a Point by Using Key Frames</span></span>](how-to-animate-a-point-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-110">Animare un rettangolo usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-110">Animate a Rectangle Geometry by Using Key Frames</span></span>](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-111">Animare una stringa usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-111">Animate a String by Using Key Frames</span></span>](how-to-animate-a-string-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-112">Animare il colore usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-112">Animate Color by Using Key Frames</span></span>](how-to-animate-color-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-113">Animare le modifiche di dimensione usando fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-113">Animate Size Changes by Using Key Frames</span></span>](how-to-animate-size-changes-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-114">Animare lo spessore di un bordo usando i fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-114">Animate the Thickness of a Border by Using Key Frames</span></span>](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [<span data-ttu-id="eeefb-115">Controllare la durata delle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-115">Control Key-Frame Animation Timing</span></span>](how-to-control-key-frame-animation-timing.md)  
   
-## <a name="reference"></a><span data-ttu-id="d5d42-116">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="d5d42-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="eeefb-116">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="eeefb-116">Reference</span></span>  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a><span data-ttu-id="d5d42-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d5d42-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eeefb-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eeefb-117">See also</span></span>
 
-- [<span data-ttu-id="d5d42-118">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="d5d42-118">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="d5d42-119">Cenni preliminari sull'animazione</span><span class="sxs-lookup"><span data-stu-id="d5d42-119">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="d5d42-120">Cenni preliminari sulle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d5d42-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="eeefb-118">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="eeefb-118">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="eeefb-119">Cenni preliminari sull'animazione</span><span class="sxs-lookup"><span data-stu-id="eeefb-119">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="eeefb-120">Cenni preliminari sulle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="eeefb-120">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
