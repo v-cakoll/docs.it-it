@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920666"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Specifica che un argomento di routine può essere omessa quando viene chiamata la procedura.  
@@ -25,13 +25,13 @@ Specifica che un argomento di routine può essere omessa quando viene chiamata l
   
  Il modificatore `Optional` può essere usato nei contesti seguenti:  
   
--   [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  Quando si chiama una routine con o senza parametri facoltativi, è possibile passare argomenti in base alla posizione o al nome. Per altre informazioni, vedere [il passaggio di argomenti in base alla posizione e al nome](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

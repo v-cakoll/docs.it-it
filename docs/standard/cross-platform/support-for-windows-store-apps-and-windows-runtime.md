@@ -12,41 +12,41 @@ ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921862"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Supporto .NET Framework per applicazioni Windows Store e Windows Runtime
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] supporta numerosi scenari di sviluppo software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Questi scenari sono suddivisi in tre categorie:
 
--   Sviluppare [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] le app con controlli XAML, come descritto in [app di Guida di orientamento per Windows Store scritte in c# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [come procedure (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), e [panoramica delle app .NET per Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
+- Sviluppare [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] le app con controlli XAML, come descritto in [app di Guida di orientamento per Windows Store scritte in c# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [come procedure (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), e [panoramica delle app .NET per Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
--   Sviluppo di librerie di classi da utilizzare nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] create con .NET Framework.
+- Sviluppo di librerie di classi da utilizzare nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] create con .NET Framework.
 
--   Sviluppo di componenti [!INCLUDE[wrt](../../../includes/wrt-md.md)], inclusi in un pacchetto in file con estensione WinMD, che possono essere utilizzati con qualsiasi linguaggio di programmazione che supporti [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ad esempio, vedere [creazione di componenti Windows Runtime in c# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
+- Sviluppo di componenti [!INCLUDE[wrt](../../../includes/wrt-md.md)], inclusi in un pacchetto in file con estensione WinMD, che possono essere utilizzati con qualsiasi linguaggio di programmazione che supporti [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ad esempio, vedere [creazione di componenti Windows Runtime in c# e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
  In questo argomento viene descritto il supporto fornito da .NET Framework per tutte e tre le categorie e vengono illustrati gli scenari per i componenti [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Nella prima sezione sono incluse informazioni di base sulla relazione tra .NET Framework e [!INCLUDE[wrt](../../../includes/wrt-md.md)] e vengono spiegate alcune singolarità che si possono verificare nel sistema della Guida e nell'IDE. Il [seconda sezione](#WindowsRuntimeComponents) vengono illustrati gli scenari per lo sviluppo [!INCLUDE[wrt](../../../includes/wrt-md.md)] componenti.
 
 ## <a name="the-basics"></a>Nozioni di base
  .NET Framework supporta i tre scenari di sviluppo elencati in precedenza fornendo [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e supportando [!INCLUDE[wrt](../../../includes/wrt-md.md)] stesso.
 
--   [Gli spazi dei nomi .NET framework e Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) fornisce una visualizzazione semplice delle librerie di classi .NET Framework e includono solo i tipi e membri che è possibile utilizzare per creare [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] App e [!INCLUDE[wrt](../../../includes/wrt-md.md)] componenti.
+- [Gli spazi dei nomi .NET framework e Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) fornisce una visualizzazione semplice delle librerie di classi .NET Framework e includono solo i tipi e membri che è possibile utilizzare per creare [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] App e [!INCLUDE[wrt](../../../includes/wrt-md.md)] componenti.
 
-    -   Quando si usa Visual Studio (Visual Studio 2012 o versione successiva) per lo sviluppo di un [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app o un [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente, un set di assembly di riferimento modo si garantisce che si vedano solo i tipi pertinenti e i membri.
+    - Quando si usa Visual Studio (Visual Studio 2012 o versione successiva) per lo sviluppo di un [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app o un [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente, un set di assembly di riferimento modo si garantisce che si vedano solo i tipi pertinenti e i membri.
 
-    -   Questo set di API efficace viene semplificato ulteriormente con la rimozione di funzionalità che sono duplicate in .NET Framework o tramite cui vengono duplicate funzionalità di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ad esempio, sono incluse solo le versioni generiche di tipi di raccolta e il modello a oggetti del documento XML viene eliminato a favore del set di API XML di [!INCLUDE[wrt](../../../includes/wrt-md.md)].
+    - Questo set di API efficace viene semplificato ulteriormente con la rimozione di funzionalità che sono duplicate in .NET Framework o tramite cui vengono duplicate funzionalità di [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ad esempio, sono incluse solo le versioni generiche di tipi di raccolta e il modello a oggetti del documento XML viene eliminato a favore del set di API XML di [!INCLUDE[wrt](../../../includes/wrt-md.md)].
 
-    -   Anche le funzionalità tramite cui viene eseguito semplicemente il wrapping delle API del sistema operativo vengono rimosse, dal momento che [!INCLUDE[wrt](../../../includes/wrt-md.md)] è semplice da chiamare dal codice gestito.
+    - Anche le funzionalità tramite cui viene eseguito semplicemente il wrapping delle API del sistema operativo vengono rimosse, dal momento che [!INCLUDE[wrt](../../../includes/wrt-md.md)] è semplice da chiamare dal codice gestito.
 
      Per altre informazioni, vedere la [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], vedere la [panoramica delle app .NET per Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Per informazioni sul processo di selezione di API, vedere la [.NET per App in stile Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) nel blog di .NET.
 
--   Il [Windows Runtime](/uwp/api/) fornisce all'utente gli elementi dell'interfaccia per la compilazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] le App e fornisce l'accesso alle funzionalità del sistema operativo. Come per .NET Framework, in [!INCLUDE[wrt](../../../includes/wrt-md.md)] sono disponibili metadati che consentono ai compilatori C# e Visual Basic di utilizzare [!INCLUDE[wrt](../../../includes/wrt-md.md)] nello stesso modo in cui utilizzano le librerie di classi .NET Framework. .NET Framework semplifica l'utilizzo di [!INCLUDE[wrt](../../../includes/wrt-md.md)] nascondendo alcune differenze:
+- Il [Windows Runtime](/uwp/api/) fornisce all'utente gli elementi dell'interfaccia per la compilazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] le App e fornisce l'accesso alle funzionalità del sistema operativo. Come per .NET Framework, in [!INCLUDE[wrt](../../../includes/wrt-md.md)] sono disponibili metadati che consentono ai compilatori C# e Visual Basic di utilizzare [!INCLUDE[wrt](../../../includes/wrt-md.md)] nello stesso modo in cui utilizzano le librerie di classi .NET Framework. .NET Framework semplifica l'utilizzo di [!INCLUDE[wrt](../../../includes/wrt-md.md)] nascondendo alcune differenze:
 
-    -   Vengono celate alcune differenze nei modelli di programmazione tra .NET Framework e [!INCLUDE[wrt](../../../includes/wrt-md.md)], ad esempio il modello per aggiungere e rimuovere i gestori di eventi. È sufficiente usare il modello di .NET Framework.
+    - Vengono celate alcune differenze nei modelli di programmazione tra .NET Framework e [!INCLUDE[wrt](../../../includes/wrt-md.md)], ad esempio il modello per aggiungere e rimuovere i gestori di eventi. È sufficiente usare il modello di .NET Framework.
 
-    -   Vengono celate alcune differenze nei tipi comunemente utilizzati, ad esempio i tipi primitivi e le raccolte. Utilizzare semplicemente il tipo di .NET Framework, come descritto nella [differenze visibili nell'IDE](#DifferencesVisibleInIDE), più avanti in questo articolo.
+    - Vengono celate alcune differenze nei tipi comunemente utilizzati, ad esempio i tipi primitivi e le raccolte. Utilizzare semplicemente il tipo di .NET Framework, come descritto nella [differenze visibili nell'IDE](#DifferencesVisibleInIDE), più avanti in questo articolo.
 
  In genere, il supporto di .NET Framework per [!INCLUDE[wrt](../../../includes/wrt-md.md)] è trasparente. Nella sezione successiva vengono illustrate alcune delle differenze evidenti tra il codice gestito e [!INCLUDE[wrt](../../../includes/wrt-md.md)].
 
@@ -54,13 +54,13 @@ ms.locfileid: "57708405"
 ### <a name="the-net-framework-and-the-includewrtincludeswrt-mdmd-reference-documentation"></a>Documentazione di riferimento di .NET Framework e [!INCLUDE[wrt](../../../includes/wrt-md.md)]
  Il Runtime di Windows e i set di documentazione di .NET Framework sono separati. Se si preme F1 per visualizzare la Guida su un tipo o un membro, viene visualizzata la documentazione di riferimento del set appropriato. Tuttavia, se si scorre la [riferimento a Windows Runtime](/uwp/api/) è possibile riscontrare esempi dubbi:
 
--   Argomenti come quello di <xref:Windows.Foundation.Collections.IIterable%601> interfaccia non dispongono di sintassi di dichiarazione per Visual Basic o c#. Al contrario, viene visualizzata una nota sopra la sezione sintassi (in questo caso, ".NET: Questa interfaccia viene visualizzato come IEnumerable\<T > "). Ciò si verifica perché .NET Framework e [!INCLUDE[wrt](../../../includes/wrt-md.md)] forniscono funzionalità simili con interfacce differenti. Inoltre, vi sono differenze di comportamento: `IIterable` dispone di un metodo `First` anziché di un metodo <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> per restituire l'enumeratore. Anziché dover apprendere un modo diverso per eseguire un'attività comune, .NET Framework supporta [!INCLUDE[wrt](../../../includes/wrt-md.md)] visualizzando il codice gestito per utilizzare il tipo noto all'utente. L'interfaccia `IIterable` non verrà visualizzata nell'IDE e, pertanto, l'unico modo per riscontrarla nella documentazione di riferimento di [!INCLUDE[wrt](../../../includes/wrt-md.md)] è scorrere direttamente la documentazione in questione.
+- Argomenti come quello di <xref:Windows.Foundation.Collections.IIterable%601> interfaccia non dispongono di sintassi di dichiarazione per Visual Basic o c#. Al contrario, viene visualizzata una nota sopra la sezione sintassi (in questo caso, ".NET: Questa interfaccia viene visualizzato come IEnumerable\<T > "). Ciò si verifica perché .NET Framework e [!INCLUDE[wrt](../../../includes/wrt-md.md)] forniscono funzionalità simili con interfacce differenti. Inoltre, vi sono differenze di comportamento: `IIterable` dispone di un metodo `First` anziché di un metodo <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> per restituire l'enumeratore. Anziché dover apprendere un modo diverso per eseguire un'attività comune, .NET Framework supporta [!INCLUDE[wrt](../../../includes/wrt-md.md)] visualizzando il codice gestito per utilizzare il tipo noto all'utente. L'interfaccia `IIterable` non verrà visualizzata nell'IDE e, pertanto, l'unico modo per riscontrarla nella documentazione di riferimento di [!INCLUDE[wrt](../../../includes/wrt-md.md)] è scorrere direttamente la documentazione in questione.
 
--   Il <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> documentazione viene illustrato un problema strettamente correlato: I tipi di parametro sembrano essere differenti per le diverse lingue. Per C# e Visual Basic, i tipi di parametro sono <xref:System.String?displayProperty=nameWithType> e <xref:System.Uri?displayProperty=nameWithType>. Inoltre, questa situazione si verifica in quanto .NET Framework dispone di propri tipi `String` e `Uri` e, per questi tipi comunemente utilizzati, non ha senso imporre agli utenti di .NET Framework di apprendere un modo diverso per eseguire le operazioni. Nell'IDE .NET Framework nasconde i corrispondenti tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)].
+- Il <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> documentazione viene illustrato un problema strettamente correlato: I tipi di parametro sembrano essere differenti per le diverse lingue. Per C# e Visual Basic, i tipi di parametro sono <xref:System.String?displayProperty=nameWithType> e <xref:System.Uri?displayProperty=nameWithType>. Inoltre, questa situazione si verifica in quanto .NET Framework dispone di propri tipi `String` e `Uri` e, per questi tipi comunemente utilizzati, non ha senso imporre agli utenti di .NET Framework di apprendere un modo diverso per eseguire le operazioni. Nell'IDE .NET Framework nasconde i corrispondenti tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)].
 
--   In alcuni casi, ad esempio il <xref:Windows.UI.Xaml.GridLength> struttura, .NET Framework fornisce un tipo con lo stesso nome ma con più funzionalità. Ad esempio, un set di argomenti su costruttori e proprietà è associato a `GridLength`, ma con blocchi di sintassi solo per Visual Basic e C# perché i membri sono disponibili solo nel codice gestito. In [!INCLUDE[wrt](../../../includes/wrt-md.md)] le strutture dispongono solo di campi. Il [!INCLUDE[wrt](../../../includes/wrt-md.md)] struttura richiede una classe helper, <xref:Windows.UI.Xaml.GridLengthHelper>, per offrire funzionalità equivalenti. Non verrà visualizzata la classe di supporto nell'IDE quando si scrive il codice gestito.
+- In alcuni casi, ad esempio il <xref:Windows.UI.Xaml.GridLength> struttura, .NET Framework fornisce un tipo con lo stesso nome ma con più funzionalità. Ad esempio, un set di argomenti su costruttori e proprietà è associato a `GridLength`, ma con blocchi di sintassi solo per Visual Basic e C# perché i membri sono disponibili solo nel codice gestito. In [!INCLUDE[wrt](../../../includes/wrt-md.md)] le strutture dispongono solo di campi. Il [!INCLUDE[wrt](../../../includes/wrt-md.md)] struttura richiede una classe helper, <xref:Windows.UI.Xaml.GridLengthHelper>, per offrire funzionalità equivalenti. Non verrà visualizzata la classe di supporto nell'IDE quando si scrive il codice gestito.
 
--   Nell'IDE, i tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)] sembrano derivare da <xref:System.Object?displayProperty=nameWithType>. Sembrano disporre di membri ereditati da <xref:System.Object>, ad esempio <xref:System.Object.ToString%2A?displayProperty=nameWithType>. Questi membri funzionano come se i tipi ereditassero effettivamente da <xref:System.Object> e se fosse possibile eseguire il cast dei tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)] a <xref:System.Object>. Questa funzionalità fa parte del supporto fornito da .NET Framework per [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Tuttavia, se si visualizzano i tipi nella documentazione di riferimento di [!INCLUDE[wrt](../../../includes/wrt-md.md)], non viene visualizzato alcun membro. La documentazione per questi membri apparentemente ereditati viene fornita dalla documentazione di riferimento a <xref:System.Object?displayProperty=nameWithType>.
+- Nell'IDE, i tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)] sembrano derivare da <xref:System.Object?displayProperty=nameWithType>. Sembrano disporre di membri ereditati da <xref:System.Object>, ad esempio <xref:System.Object.ToString%2A?displayProperty=nameWithType>. Questi membri funzionano come se i tipi ereditassero effettivamente da <xref:System.Object> e se fosse possibile eseguire il cast dei tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)] a <xref:System.Object>. Questa funzionalità fa parte del supporto fornito da .NET Framework per [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Tuttavia, se si visualizzano i tipi nella documentazione di riferimento di [!INCLUDE[wrt](../../../includes/wrt-md.md)], non viene visualizzato alcun membro. La documentazione per questi membri apparentemente ereditati viene fornita dalla documentazione di riferimento a <xref:System.Object?displayProperty=nameWithType>.
 
 <a name="DifferencesVisibleInIDE"></a>
 ### <a name="differences-that-are-visible-in-the-ide"></a>Differenze visibili nell'IDE
@@ -89,15 +89,15 @@ ms.locfileid: "57708405"
 ### <a name="primitive-types"></a>Tipi primitivi
  Per abilitare l'utilizzo naturale di [!INCLUDE[wrt](../../../includes/wrt-md.md)] nel codice gestito, vengono visualizzati i tipi primitivi di .NET Framework anziché quelli di [!INCLUDE[wrt](../../../includes/wrt-md.md)] nel codice. In .NET Framework i tipi primitivi quali la struttura `Int32` presentano numerosi metodi e proprietà utili, ad esempio il metodo `Int32.TryParse`. Al contrario, i tipi primitivi e le strutture di [!INCLUDE[wrt](../../../includes/wrt-md.md)] dispongono solo di campi. Quando si utilizzano le primitive nel codice gestito, sembrano essere tipi .NET Framework e si possono utilizzare le proprietà e i metodi dei tipi .NET Framework normalmente. Nell'elenco seguente viene fornito un riepilogo:
 
--   Per le primitive [!INCLUDE[wrt](../../../includes/wrt-md.md)]`Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (una raccolta non modificabile di caratteri Unicode), `Enum`, `UInt32`, `UInt64` e `Guid`, utilizzare il tipo con lo stesso nome nello spazio dei nomi `System`.
+- Per le primitive [!INCLUDE[wrt](../../../includes/wrt-md.md)]`Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (una raccolta non modificabile di caratteri Unicode), `Enum`, `UInt32`, `UInt64` e `Guid`, utilizzare il tipo con lo stesso nome nello spazio dei nomi `System`.
 
--   Per `UInt8`, utilizzare `System.Byte`.
+- Per `UInt8`, utilizzare `System.Byte`.
 
--   Per `Char16`, utilizzare `System.Char`.
+- Per `Char16`, utilizzare `System.Char`.
 
--   Per l'interfaccia `IInspectable`, utilizzare `System.Object`.
+- Per l'interfaccia `IInspectable`, utilizzare `System.Object`.
 
--   Per `HRESULT`, utilizzare una struttura con un membro `System.Int32`.
+- Per `HRESULT`, utilizzare una struttura con un membro `System.Int32`.
 
  Analogamente ai tipi di interfaccia, l'unico caso in cui si potrebbe verificare l'evidenza di questa rappresentazione è quando il progetto .NET Framework è un componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilizzato da un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] compilata tramite JavaScript.
 
@@ -110,26 +110,26 @@ ms.locfileid: "57708405"
 ## <a name="scenarios-for-developing-windows-runtime-components"></a>Scenari per lo sviluppo di componenti Windows Runtime
  Gli scenari supportati per i componenti [!INCLUDE[wrt](../../../includes/wrt-md.md)] gestiti dipendono dai seguenti principi generali:
 
--   I componenti [!INCLUDE[wrt](../../../includes/wrt-md.md)] compilati tramite .NET Framework non presentano differenze evidenti rispetto ad altre librerie [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ad esempio, se si implementa di nuovo un componente nativo [!INCLUDE[wrt](../../../includes/wrt-md.md)] tramite codice gestito, i due componenti sono apparentemente indistinguibili. Il fatto che il componente sia scritto in codice gestito non è visibile al codice in cui viene utilizzato, anche se il codice è esso stesso codice gestito. Tuttavia, internamente, il componente è realmente codice gestito e viene eseguito in Common Language Runtime (CLR).
+- I componenti [!INCLUDE[wrt](../../../includes/wrt-md.md)] compilati tramite .NET Framework non presentano differenze evidenti rispetto ad altre librerie [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ad esempio, se si implementa di nuovo un componente nativo [!INCLUDE[wrt](../../../includes/wrt-md.md)] tramite codice gestito, i due componenti sono apparentemente indistinguibili. Il fatto che il componente sia scritto in codice gestito non è visibile al codice in cui viene utilizzato, anche se il codice è esso stesso codice gestito. Tuttavia, internamente, il componente è realmente codice gestito e viene eseguito in Common Language Runtime (CLR).
 
--   Nei componenti possono essere contenuti tipi tramite cui viene implementata la logica dell'applicazione, i controlli dell'interfaccia utente di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] o entrambi.
+- Nei componenti possono essere contenuti tipi tramite cui viene implementata la logica dell'applicazione, i controlli dell'interfaccia utente di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] o entrambi.
 
     > [!NOTE]
     >  È consigliabile separare gli elementi dell'interfaccia utente dalla logica dell'applicazione. Inoltre, non è possibile utilizzare i controlli dell'interfaccia utente di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] compilata per Windows utilizzando JavaScript e HTML.
 
--   Un componente può essere un progetto all'interno di una soluzione Visual Studio per un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] oppure un componente riutilizzabile che è possibile aggiungere a più soluzioni.
+- Un componente può essere un progetto all'interno di una soluzione Visual Studio per un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] oppure un componente riutilizzabile che è possibile aggiungere a più soluzioni.
 
     > [!NOTE]
     >  Se il componente verrà utilizzato solo con C# o Visual Basic, non vi è alcun motivo di convertirlo in un componente [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Se lo si rende invece una comune libreria di classi .NET Framework, non è necessario limitare la relativa superficie dell'API pubblica a tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)].
 
--   È possibile rilasciare versioni di componenti riusabili tramite il [!INCLUDE[wrt](../../../includes/wrt-md.md)] <xref:Windows.Foundation.Metadata.VersionAttribute> attributo per identificare i tipi (e i membri all'interno di un tipo) sono stati aggiunti nelle differenti versioni.
+- È possibile rilasciare versioni di componenti riusabili tramite il [!INCLUDE[wrt](../../../includes/wrt-md.md)] <xref:Windows.Foundation.Metadata.VersionAttribute> attributo per identificare i tipi (e i membri all'interno di un tipo) sono stati aggiunti nelle differenti versioni.
 
--   I tipi nel componente possono derivare da tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)]. I controlli possono derivare da tipi di controllo primitivi nel <xref:Windows.UI.Xaml.Controls.Primitives> dello spazio dei nomi o da controlli più avanzati, ad esempio <xref:Windows.UI.Xaml.Controls.Button>.
+- I tipi nel componente possono derivare da tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)]. I controlli possono derivare da tipi di controllo primitivi nel <xref:Windows.UI.Xaml.Controls.Primitives> dello spazio dei nomi o da controlli più avanzati, ad esempio <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
     >  A partire da [!INCLUDE[win8](../../../includes/win8-md.md)] e [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], tutti i tipi pubblici in un componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] gestito devono essere sealed. Un tipo in un altro componente [!INCLUDE[wrt](../../../includes/wrt-md.md)] non può derivare da questi. Se si desidera fornire il comportamento polimorfico nel componente, è possibile creare un'interfaccia e implementarla nei tipi polimorfici.
 
--   Tutti i parametri e i tipi restituiti nei tipi pubblici nel componente devono essere tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)], inclusi i tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)] definiti dal componente in questione.
+- Tutti i parametri e i tipi restituiti nei tipi pubblici nel componente devono essere tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)], inclusi i tipi [!INCLUDE[wrt](../../../includes/wrt-md.md)] definiti dal componente in questione.
 
  Nelle sezioni seguenti vengono forniti esempi di scenari comuni.
 

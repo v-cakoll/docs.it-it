@@ -2,17 +2,12 @@
 title: Inizializzatori di raccolta (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-- vb.CollectionInitializer
+  - vb.CollectionInitializer
 helpviewer_keywords:
-- collection initializers [Visual Basic]
+  - 'collection initializers [Visual Basic]'
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906828"
 ---
+
 # <a name="collection-initializers-visual-basic"></a>Inizializzatori di raccolta (Visual Basic)
 
 Gli *inizializzatori di insieme* consentono di creare una raccolta e popolarla con un set iniziale di valori. Gli inizializzatori di insieme sono utili quando si crea una raccolta da un set di valori noti, ad esempio un elenco di opzioni di menu o categorie, un set iniziale di valori numerici, un elenco statico di stringhe quali nomi di giorni o mesi o un elenco di aree geografiche, ad esempio un elenco di stati che viene usato per la convalida.

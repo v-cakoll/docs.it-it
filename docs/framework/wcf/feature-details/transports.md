@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933731"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Trasporti in Windows Communication Foundation
 Il livello di trasporto è al livello più basso dello stack dei canali. I trasporti principali usati in Windows Communication Foundation (WCF) sono HTTP, HTTPS, TCP e named pipe. Negli argomenti di questa sezione vengono fornite informazioni sulla scelta fra questi trasporti, la configurazione del trasporto e l'impostazione delle proprietà di ottimizzazione.  
   
- WCF sono inclusi trasporti aggiuntivi. Per informazioni sul trasporto di Accodamento messaggi (noto anche come MSMQ), vedere [code e sessioni affidabili](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Per informazioni sul trasporto peer-to-peer, vedere [rete Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF sono inclusi trasporti aggiuntivi. Per informazioni sul trasporto Accodamento messaggi (noto anche come MSMQ), vedere [code e sessioni affidabili](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Per informazioni sul trasporto peer-to-peer, vedere [Peer-to-Peer Networking](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -32,7 +32,7 @@ Il livello di trasporto è al livello più basso dello stack dei canali. I trasp
  Descrive come configurare gli elementi di associazione del trasporto HTTP e HTTPS.  
   
  [Procedura: Sostituire la prenotazione URL WCF con una prenotazione limitata](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Viene descritto come utilizzare le prenotazioni WCFURL con restrizioni.  
+ Viene descritto come utilizzare le prenotazioni WCFURL limitato.  
   
  [Quote dei trasporti](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  Vengono fornite considerazioni per l'impostazione delle quote disponibili nel livello di trasporto.  
