@@ -7,16 +7,16 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms]
 ms.assetid: 3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9
 ms.openlocfilehash: 54639edb512a8bc6c5909282d5e4c210439e2a6e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683418"
 ---
 # <a name="bindingsource-component"></a>Componente BindingSource
 Incapsula un'origine dati per l'associazione ai controlli.  
   
- Il componente <xref:System.Windows.Forms.BindingSource> ha due scopi. Innanzitutto fornisce un livello di riferimento indiretto durante il binding dei controlli di un form ai dati. Questo si ottiene associando il componente <xref:System.Windows.Forms.BindingSource> all'origine dati e quindi associando i controlli del form al componente <xref:System.Windows.Forms.BindingSource>. Tutte le altre interazioni con i dati, tra cui l'esplorazione, l'ordinamento, il filtro e l'aggiornamento, vengono eseguite mediante chiamate al componente <xref:System.Windows.Forms.BindingSource>.  
+ Il componente <xref:System.Windows.Forms.BindingSource> ha due scopi. Innanzitutto fornisce un livello di riferimento indiretto durante l'associazione dei controlli di un form ai dati. Questo si ottiene associando il componente <xref:System.Windows.Forms.BindingSource> all'origine dati e quindi associando i controlli del form al componente <xref:System.Windows.Forms.BindingSource>. Tutte le altre interazioni con i dati, tra cui l'esplorazione, l'ordinamento, il filtro e l'aggiornamento, vengono eseguite mediante chiamate al componente <xref:System.Windows.Forms.BindingSource>.  
   
  In secondo luogo, il componente <xref:System.Windows.Forms.BindingSource> può fungere da origine dati fortemente tipizzata. Aggiungendo un tipo al componente <xref:System.Windows.Forms.BindingSource> con il metodo <xref:System.Windows.Forms.BindingSource.Add%2A>, viene creato un elenco di tale tipo.  
   

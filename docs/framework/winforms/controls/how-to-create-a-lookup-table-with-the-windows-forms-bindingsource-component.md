@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747057"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Procedura: Creare una tabella di ricerca con il componente BindingSource di Windows Forms
 Una tabella di ricerca è una tabella di dati che include una colonna che mostra i dati presenti nei record di una tabella correlata. Nelle procedure seguenti sarà usato un controllo <xref:System.Windows.Forms.ComboBox> per visualizzare il campo che include la relazione di chiave esterna dalla tabella padre alla tabella figlio.  
@@ -37,13 +37,13 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
  Nel controllo [ComboBox](combobox-control-windows-forms.md) sono impostate quattro proprietà importanti per creare la tabella di ricerca.  
   
--   La proprietà <xref:System.Windows.Forms.ComboBox.DataSource%2A> include il nome della tabella.  
+- La proprietà <xref:System.Windows.Forms.ComboBox.DataSource%2A> include il nome della tabella.  
   
--   La proprietà <xref:System.Windows.Forms.ListControl.DisplayMember%2A> include la colonna di dati della tabella da visualizzare per il testo del controllo (nome del cliente).  
+- La proprietà <xref:System.Windows.Forms.ListControl.DisplayMember%2A> include la colonna di dati della tabella da visualizzare per il testo del controllo (nome del cliente).  
   
--   La proprietà <xref:System.Windows.Forms.ListControl.ValueMember%2A> include la colonna di dati della tabella con le informazioni archiviate (numero di ID nella tabella padre).  
+- La proprietà <xref:System.Windows.Forms.ListControl.ValueMember%2A> include la colonna di dati della tabella con le informazioni archiviate (numero di ID nella tabella padre).  
   
--   La proprietà <xref:System.Windows.Forms.ListControl.SelectedValue%2A> fornisce il valore di ricerca per la tabella figlio, in base a <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+- La proprietà <xref:System.Windows.Forms.ListControl.SelectedValue%2A> fornisce il valore di ricerca per la tabella figlio, in base a <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
   
  Le procedure seguenti mostrano come definire il layout del form come tabella di ricerca e associare i dati ai controlli disponibili nel form. Per completare correttamente le procedure, è necessario avere un'origine dati con tabelle padre e figlio con una relazione di chiave esterna, come indicato in precedenza.  
   
@@ -65,21 +65,21 @@ Una tabella di ricerca è una tabella di dati che include una colonna che mostra
   
 3. Fare clic sulla freccia accanto alla casella di riepilogo a discesa **Origine dati**. Se un'origine dati è stata configurata in precedenza per il progetto o il form, sarà visualizzata. In caso contrario, completare i passaggi seguenti. In questo esempio sono usate le tabelle Customers e Orders del database di esempio Northwind e tali tabelle sono indicate tra parentesi.  
   
-    1.  Fare clic su **Aggiungi origine dati progetto** per connettersi ai dati e creare un'origine dati.  
+    1. Fare clic su **Aggiungi origine dati progetto** per connettersi ai dati e creare un'origine dati.  
   
-    2.  Nella pagina iniziale della **Configurazione guidata origine dati** fare clic su **Avanti**.  
+    2. Nella pagina iniziale della **Configurazione guidata origine dati** fare clic su **Avanti**.  
   
-    3.  Selezionare **Database** nella pagina **Seleziona un tipo di origine dati**.  
+    3. Selezionare **Database** nella pagina **Seleziona un tipo di origine dati**.  
   
-    4.  Selezionare una connessione dati dall'elenco di connessioni disponibili nella pagina **Seleziona connessione dati**. Se la connessione dati voluta non è disponibile, selezionare **Nuova connessione** per creare una nuova connessione dati.  
+    4. Selezionare una connessione dati dall'elenco di connessioni disponibili nella pagina **Seleziona connessione dati**. Se la connessione dati voluta non è disponibile, selezionare **Nuova connessione** per creare una nuova connessione dati.  
   
-    5.  Fare clic su **Sì, salva la connessione con nome** per salvare la stringa di connessione nel file di configurazione dell'applicazione.  
+    5. Fare clic su **Sì, salva la connessione con nome** per salvare la stringa di connessione nel file di configurazione dell'applicazione.  
   
-    6.  Selezionare gli oggetti database da inserire nell'applicazione. In questo caso, selezionare la tabella padre e la tabella figlio (ad esempio, Customers e Orders) con una relazione di chiave esterna.  
+    6. Selezionare gli oggetti database da inserire nell'applicazione. In questo caso, selezionare la tabella padre e la tabella figlio (ad esempio, Customers e Orders) con una relazione di chiave esterna.  
   
-    7.  Se si vuole, sostituire il nome predefinito del set di dati.  
+    7. Se si vuole, sostituire il nome predefinito del set di dati.  
   
-    8.  Scegliere **Fine**.  
+    8. Scegliere **Fine**.  
   
 4. Nella casella di riepilogo a discesa **Visualizza membro** selezionare il nome di colonna (ad esempio, ContactName) da visualizzare nella casella combinata.  
   

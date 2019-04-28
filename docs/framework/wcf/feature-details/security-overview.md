@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748538"
 ---
 # <a name="security-overview"></a>Cenni preliminari sulla sicurezza
 Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaforma di programmazione distribuita e sicurezza dei messaggi tra client e servizi è essenziale per la protezione dei dati. WCF fornisce una piattaforma versatile e interoperativa per lo scambio di messaggi protetti basato sull'infrastruttura di sicurezza esistente e gli standard di sicurezza riconosciuti per i messaggi SOAP.  
@@ -25,27 +25,27 @@ Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaform
 ## <a name="windows-communication-foundation-security-benefits"></a>Vantaggi della sicurezza di Windows Communication Foundation  
  WCF è una piattaforma di programmazione distribuita basata su messaggi SOAP. Utilizzo di WCF, è possibile creare applicazioni tale funzione come servizi e client di servizio, creando ed elaborando messaggi da un numero illimitato di altri servizi e client. In un'applicazione distribuita di questo tipo i messaggi possono fluire da nodo a nodo, attraverso firewall, su Internet e attraverso numerosi intermediari SOAP. Ciò introduce tutta una serie di rischi per la sicurezza dei messaggi. Gli esempi seguenti illustrano alcune minacce comuni in grado di sicurezza WCF è possibile mitigare durante lo scambio di messaggi tra entità:  
   
--   Osservazione del traffico di rete per ottenere informazioni riservate. In uno scenario di online banking, ad esempio, un cliente richiede il trasferimento di fondi da un conto a un altro. Un utente malintenzionato intercetta il messaggio e, disponendo del numero di conto e della password, esegue successivamente un trasferimento di fondi dal conto compromesso.  
+- Osservazione del traffico di rete per ottenere informazioni riservate. In uno scenario di online banking, ad esempio, un cliente richiede il trasferimento di fondi da un conto a un altro. Un utente malintenzionato intercetta il messaggio e, disponendo del numero di conto e della password, esegue successivamente un trasferimento di fondi dal conto compromesso.  
   
--   Entità non autorizzate che agiscono come servizi all'insaputa del cliente. In questo scenario un utente malintenzionato (l'entità non autorizzata) agisce come un servizio online e intercetta messaggi inviati dal cliente per ottenere informazioni riservate. L'entità non autorizzata usa quindi i dati rubati per trasferire fondi dal conto compromesso. Questo tipo di attacco è noto anche un *attacchi di phishing*.  
+- Entità non autorizzate che agiscono come servizi all'insaputa del cliente. In questo scenario un utente malintenzionato (l'entità non autorizzata) agisce come un servizio online e intercetta messaggi inviati dal cliente per ottenere informazioni riservate. L'entità non autorizzata usa quindi i dati rubati per trasferire fondi dal conto compromesso. Questo tipo di attacco è noto anche un *attacchi di phishing*.  
   
--   Modifica di messaggi per ottenere un risultato diverso da quello voluto dal chiamante. Ad esempio, la modifica del numero di conto nel quale viene effettuato un deposito consente il trasferimento di fondi in un conto non autorizzato.  
+- Modifica di messaggi per ottenere un risultato diverso da quello voluto dal chiamante. Ad esempio, la modifica del numero di conto nel quale viene effettuato un deposito consente il trasferimento di fondi in un conto non autorizzato.  
   
--   Riproduzioni hacker in cui un hacker "nuisance" riproduce lo stesso ordine di acquisto. Ad esempio, una libreria online riceve centinaia di ordini e invia i libri a un cliente che non li ha ordinati.  
+- Riproduzioni hacker in cui un hacker "nuisance" riproduce lo stesso ordine di acquisto. Ad esempio, una libreria online riceve centinaia di ordini e invia i libri a un cliente che non li ha ordinati.  
   
--   Incapacità di un servizio di autenticare un client. In questo caso, il servizio non può assicurare che la transazione sia stata eseguita dalla persona appropriata.  
+- Incapacità di un servizio di autenticare un client. In questo caso, il servizio non può assicurare che la transazione sia stata eseguita dalla persona appropriata.  
   
  In sintesi, la sicurezza del trasferimento fornisce le garanzie seguenti:  
   
--   Autenticazione dell'endpoint servizio (rispondente).  
+- Autenticazione dell'endpoint servizio (rispondente).  
   
--   Autenticazione dell'entità client (iniziatore).  
+- Autenticazione dell'entità client (iniziatore).  
   
--   Integrità del messaggio.  
+- Integrità del messaggio.  
   
--   Riservatezza del messaggio.  
+- Riservatezza del messaggio.  
   
--   Rilevamento riproduzione.  
+- Rilevamento riproduzione.  
   
 ### <a name="integration-with-existing-security-infrastructures"></a>Integrazione con infrastrutture di sicurezza esistenti  
  Nelle distribuzioni di servizi Web sono spesso già presenti soluzioni di sicurezza quali Secure Sockets Layer (SSL) o il protocollo Kerberos. Alcune distribuzioni sfruttano un'infrastruttura di sicurezza che è già stata distribuita, come i domini Windows che usano Active Directory. Spesso è necessario integrare le distribuzioni con queste tecnologie esistenti, nonché valutare e adottare nuove tecnologie.  
@@ -57,13 +57,13 @@ Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaform
   
  Così, nel mondo dei servizi Web, dove lo stesso servizio può essere esposto ai clienti interni dell'azienda così come a partner esterni o a clienti Internet, è importante che l'infrastruttura consenta l'integrazione con questi modelli di autenticazione della sicurezza esistenti. Sicurezza WCF supporta un'ampia gamma di tipi di credenziali (modelli di autenticazione) tra cui:  
   
--   Chiamante anonimo.  
+- Chiamante anonimo.  
   
--   Credenziale client nome utente.  
+- Credenziale client nome utente.  
   
--   Credenziale client certificato.  
+- Credenziale client certificato.  
   
--   Windows (sia protocollo Kerberos che NT LanMan [NTLM]).  
+- Windows (sia protocollo Kerberos che NT LanMan [NTLM]).  
   
 ### <a name="standards-and-interoperability"></a>Standard e interoperabilità  
  In un panorama caratterizzato da grandi distribuzioni esistenti, l'omogeneità è rara. Le piattaforme di calcolo/comunicazione distribuite devono poter interagire con le tecnologie offerte dai diversi fornitori. Anche la sicurezza deve essere quindi interoperativa.  
@@ -81,9 +81,9 @@ Windows Communication Foundation (WCF) è una SOAP basata su messaggi piattaform
 #### <a name="transport-and-message-security-modes"></a>Modalità di sicurezza del trasporto e dei messaggi  
  Per implementare la protezione di trasferimento in WCF vengono utilizzati due meccanismi principali: *trasporto* modalità di sicurezza e *messaggio* modalità di sicurezza.  
   
--   *Modalità sicurezza trasporto* utilizza un protocollo a livello di trasporto, ad esempio HTTPS, per garantire la protezione di trasferimento. La modalità di sicurezza del trasporto ha il vantaggio di essere ampiamente diffusa, disponibile su più piattaforme e meno complessa dal punto di vista computazionale. Ha tuttavia lo svantaggio di proteggere i messaggi solo da punto a punto.  
+- *Modalità sicurezza trasporto* utilizza un protocollo a livello di trasporto, ad esempio HTTPS, per garantire la protezione di trasferimento. La modalità di sicurezza del trasporto ha il vantaggio di essere ampiamente diffusa, disponibile su più piattaforme e meno complessa dal punto di vista computazionale. Ha tuttavia lo svantaggio di proteggere i messaggi solo da punto a punto.  
   
--   *Modalità di sicurezza messaggio*, invece, utilizza WS-Security (e altre specifiche) per implementare la sicurezza del trasferimento. Poiché la sicurezza del messaggio viene applicata direttamente ai messaggi SOAP ed è contenuta negli elementi SOAP Envelope unitamente ai dati dell'applicazione, ha il vantaggio di essere indipendente dal protocollo di trasporto, di essere maggiormente estensibile e di garantire la sicurezza end-to-end (anziché point-to-point). Ha lo svantaggio di essere notevolmente più lenta rispetto alla modalità di sicurezza del trasporto perché deve trattare con la natura XML dei messaggi SOAP.  
+- *Modalità di sicurezza messaggio*, invece, utilizza WS-Security (e altre specifiche) per implementare la sicurezza del trasferimento. Poiché la sicurezza del messaggio viene applicata direttamente ai messaggi SOAP ed è contenuta negli elementi SOAP Envelope unitamente ai dati dell'applicazione, ha il vantaggio di essere indipendente dal protocollo di trasporto, di essere maggiormente estensibile e di garantire la sicurezza end-to-end (anziché point-to-point). Ha lo svantaggio di essere notevolmente più lenta rispetto alla modalità di sicurezza del trasporto perché deve trattare con la natura XML dei messaggi SOAP.  
   
  Per altre informazioni su queste differenze, vedere [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   

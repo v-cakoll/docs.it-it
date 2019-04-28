@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747523"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procedura dettagliata: Dimostrazione dell'ereditarietà visiva
 L'ereditarietà visiva consente di visualizzare i controlli nel form di base e di aggiungere nuovi controlli. In questa procedura dettagliata verrà creato un form di base che verrà compilato in una libreria di classi. La libreria di classi verrà importata in un altro progetto e verrà creato un nuovo form che eredita dal form di base. Durante questa procedura dettagliata, si apprenderà come:  
   
--   Creare un progetto di libreria di classi contenente un form di base.  
+- Creare un progetto di libreria di classi contenente un form di base.  
   
--   Aggiungere un pulsante con proprietà che le classi derivate del form di base possono modificare.  
+- Aggiungere un pulsante con proprietà che le classi derivate del form di base possono modificare.  
   
--   Aggiungere un pulsante che non può essere modificato dagli eredi del form di base.  
+- Aggiungere un pulsante che non può essere modificato dagli eredi del form di base.  
   
--   Creare un progetto contenente un form che eredita da `BaseForm`.  
+- Creare un progetto contenente un form che eredita da `BaseForm`.  
   
  Infine, questa procedura dettagliata illustrerà la differenza tra controlli privati e protetti in un form ereditato.  
   
@@ -76,11 +76,11 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
   
 3. Nella finestra Proprietà impostare le seguenti proprietà del pulsante:  
   
-    -   Impostare il **testo** proprietà **Say Hello**.  
+    - Impostare il **testo** proprietà **Say Hello**.  
   
-    -   Impostare il **(nome)** proprietà **btnProtected**.  
+    - Impostare il **(nome)** proprietà **btnProtected**.  
   
-    -   Impostare il **modificatori** proprietà **Protected**. Questo rende possibile per i moduli da cui ereditare **Form1** per modificare le proprietà di **btnProtected**.  
+    - Impostare il **modificatori** proprietà **Protected**. Questo rende possibile per i moduli da cui ereditare **Form1** per modificare le proprietà di **btnProtected**.  
   
 4. Fare doppio clic il **Say Hello** per aggiungere un gestore eventi per il **fare clic su** evento.  
   
@@ -100,11 +100,11 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
   
 2. Aggiungere un secondo pulsante e impostarne le proprietà come indicato di seguito:  
   
-    -   Impostare il **testo** proprietà **Say Goodbye**.  
+    - Impostare il **testo** proprietà **Say Goodbye**.  
   
-    -   Impostare il **(nome)** proprietà **btnPrivate**.  
+    - Impostare il **(nome)** proprietà **btnPrivate**.  
   
-    -   Impostare il **modificatori** proprietà **privati**. Ciò rende impossibile per i moduli da cui ereditare **Form1** per modificare le proprietà di **btnPrivate**.  
+    - Impostare il **modificatori** proprietà **privati**. Ciò rende impossibile per i moduli da cui ereditare **Form1** per modificare le proprietà di **btnPrivate**.  
   
 3. Fare doppio clic il **Say Goodbye** per aggiungere un gestore eventi per il **fare clic su** evento. Inserire la riga di codice seguente nella routine evento:  
   
@@ -148,9 +148,9 @@ L'ereditarietà visiva consente di visualizzare i controlli nel form di base e d
   
 8. Se si usa Visual c#:  
   
-    1.  Nelle **Esplora soluzioni**, fare doppio clic su **Form1** nel **InheritanceTest** del progetto e quindi scegliere **Elimina**. Nella finestra di messaggio che viene visualizzato, fare clic su **OK** per confermare l'eliminazione.  
+    1. Nelle **Esplora soluzioni**, fare doppio clic su **Form1** nel **InheritanceTest** del progetto e quindi scegliere **Elimina**. Nella finestra di messaggio che viene visualizzato, fare clic su **OK** per confermare l'eliminazione.  
   
-    2.  Aprire il file Program.cs e modificare la riga `Application.Run(new Form1());` in `Application.Run(new Form2());`.  
+    2. Aprire il file Program.cs e modificare la riga `Application.Run(new Form1());` in `Application.Run(new Form2());`.  
   
 9. Nella **Esplora soluzioni**, fare doppio clic il **InheritanceTest** del progetto e selezionare **imposta come progetto di avvio**.  
   

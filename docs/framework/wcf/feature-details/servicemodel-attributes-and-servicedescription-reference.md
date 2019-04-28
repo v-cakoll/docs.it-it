@@ -3,11 +3,11 @@ title: Attributi ServiceModel e riferimento a ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747736"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributi ServiceModel e riferimento a ServiceDescription
 Il *albero di descrizione* è la gerarchia dei tipi (a partire dal <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) che descrivono ogni aspetto di un servizio. Windows Communication Foundation (WCF) viene utilizzato un albero di descrizione per compilare un runtime di servizio valido, per pubblicare Web Services Description Language (WSDL), il linguaggio XML Schema definition (XSD) e asserzioni di criteri (metadati) sul servizio che i client possono usare per connettersi e usare il servizio e per generare rappresentazioni diverse di file di codice e la configurazione dei valori di struttura ad albero di descrizione.  

@@ -9,11 +9,11 @@ ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697732"
 ---
 # <a name="fusion-structures"></a>Strutture Fusion
 In questa sezione descrive le strutture non gestite utilizzate dall'API Fusion.  
@@ -26,7 +26,7 @@ In questa sezione descrive le strutture non gestite utilizzate dall'API Fusion.
  Rappresenta un riferimento da un'applicazione a un assembly che l'applicazione è installata nella global assembly cache.  
   
  [Struttura IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- Contiene informazioni sugli attributi di metadati su un [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) istanza.  
+ Contiene informazioni sugli attributi di metadati su un' [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) istanza.  
   
  [Struttura IDENTITY_ATTRIBUTE_BLOB](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
  Contiene le informazioni sugli offset per un oggetto associato [IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) struttura.  
