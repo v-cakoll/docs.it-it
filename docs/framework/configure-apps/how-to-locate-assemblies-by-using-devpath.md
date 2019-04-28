@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Individuare assembly mediante DEVPATH'
+title: 'Procedura: Individuare assembly usando DEVPATH'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775830"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedura: Individuare assembly mediante DEVPATH
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedura: Individuare assembly usando DEVPATH
 Gli sviluppatori desiderano assicurarsi che funzioni correttamente un assembly condiviso in corso di sviluppo con più applicazioni. Anziché inserire continuamente l'assembly nella global assembly cache durante il ciclo di sviluppo, lo sviluppatore può creare una variabile di ambiente DEVPATH che punta alla directory di output di compilazione per l'assembly.  
   
  Ad esempio, si supponga che si sta creando un assembly condiviso denominato MySharedAssembly e la directory di output è C:\MySharedAssembly\Debug. È possibile inserire C:\MySharedAssembly\Debug nella variabile DEVPATH. È quindi necessario specificare il [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) elemento nel file di configurazione del computer. Questo elemento indica a common language runtime da usare DEVPATH per individuare gli assembly.  

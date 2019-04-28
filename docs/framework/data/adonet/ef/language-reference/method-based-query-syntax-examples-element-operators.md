@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
 ms.openlocfilehash: 3656ea6d2d9602c3790ab4113b5c2f153b4f7c73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760558"
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>Esempi di sintassi delle query basate su metodo: Operatori di elemento
 Gli esempi in questo argomento illustrano come usare il <xref:System.Linq.Enumerable.First%2A> metodo di query il [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di query basate su metodo. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

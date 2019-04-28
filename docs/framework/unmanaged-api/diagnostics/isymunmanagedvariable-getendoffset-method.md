@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 325db05cc322d85e836ca9ba62b6a169e8965241
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766357"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>Metodo ISymUnmanagedVariable::GetEndOffset
 Ottiene l'offset finale della variabile all'interno di relativo elemento padre. Se si tratta di una variabile locale all'interno di un ambito, l'offset finale rientrerà negli offset definiti per l'ambito.  

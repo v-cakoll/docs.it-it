@@ -8,11 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762215"
 ---
 # <a name="graphics"></a>Grafica
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre supporto integrato per funzionalità multimediali, grafica vettoriale, animazione e composizione del contenuto, rendendo più semplice per gli sviluppatori di compilare interfacce utente e contenuto interessanti.  

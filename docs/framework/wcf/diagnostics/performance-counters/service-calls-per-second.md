@@ -1,16 +1,16 @@
 ---
-title: 'Servizio: chiamate al secondo'
+title: 'Servizio: Chiamate al secondo'
 ms.date: 03/30/2017
 ms.assetid: 6261d28d-d449-425a-b9fc-a4ee14079134
 ms.openlocfilehash: 5189a78e2655707d165f187e06ac9a60d055eac0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773331"
 ---
-# <a name="service-calls-per-second"></a>Servizio: chiamate al secondo
-Nome contatore: chiamate al secondo  
+# <a name="service-calls-per-second"></a>Servizio: Chiamate al secondo
+Nome contatore: Chiamate al secondo.  
   
 ## <a name="description"></a>Descrizione  
  Numero di chiamate al servizio al secondo.  

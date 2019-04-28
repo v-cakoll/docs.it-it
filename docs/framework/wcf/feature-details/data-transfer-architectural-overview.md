@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856598"
 ---
 # <a name="data-transfer-architectural-overview"></a>Panoramica dell'architettura di trasferimento dei dati
 Windows Communication Foundation (WCF) può essere considerato come un'infrastruttura di messaggistica. Può ricevere messaggi, elaborarli e inviarli a codice utente per ulteriori azioni, oppure può costruire messaggi dai dati forniti dal codice utente e recapitarli a una destinazione. In questo argomento, rivolto agli sviluppatori avanzati, viene illustrata l'architettura per la gestione dei messaggi e dei dati in essi contenuti. Per informazioni più semplici e orientate alle attività su come inviare e ricevere dati, vedere [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) può essere considerato come un'infrastru
 ### <a name="getting-data-from-a-message-body"></a>Ottenimento di dati da un corpo del messaggio  
  Esistono due modalità principali per estrarre i dati archiviati in un corpo del messaggio:  
   
--   È possibile ottenere l'intero corpo del messaggio chiamando il metodo <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> e passando contemporaneamente un writer XML. L'intero corpo del messaggio viene scritto in questo writer. L'ottenimento contemporaneo dell'intero corpo del messaggio viene detto anche *scrittura di un messaggio*. La scrittura viene eseguita principalmente dallo stack dei canali all'invio dei messaggi. Parte dello stack dei canali di solito otterrà l'accesso all'intero corpo del messaggio, lo codificherà e l'invierà.  
+- È possibile ottenere l'intero corpo del messaggio chiamando il metodo <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> e passando contemporaneamente un writer XML. L'intero corpo del messaggio viene scritto in questo writer. L'ottenimento contemporaneo dell'intero corpo del messaggio viene detto anche *scrittura di un messaggio*. La scrittura viene eseguita principalmente dallo stack dei canali all'invio dei messaggi. Parte dello stack dei canali di solito otterrà l'accesso all'intero corpo del messaggio, lo codificherà e l'invierà.  
   
--   Un'altra modalità per estrarre informazioni dal corpo del messaggio consiste nel chiamare <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> e ottenere un lettore XML. Se necessario, sarà quindi possibile accedere al corpo del messaggio in sequenza, chiamando i metodi nel lettore. L'ottenimento del corpo del messaggio un pezzo alla volta viene detto anche *lettura di un messaggio*. La lettura del messaggio è utilizzata principalmente dal framework del servizio alla ricezione dei messaggi. Quando, ad esempio, è utilizzato <xref:System.Runtime.Serialization.DataContractSerializer> , il framework del servizio otterrà un lettore XML sul corpo e lo passerà al motore di deserializzazione che avvierà la lettura del messaggio, elemento per elemento, e costruirà l'oggetto grafico corrispondente.  
+- Un'altra modalità per estrarre informazioni dal corpo del messaggio consiste nel chiamare <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> e ottenere un lettore XML. Se necessario, sarà quindi possibile accedere al corpo del messaggio in sequenza, chiamando i metodi nel lettore. L'ottenimento del corpo del messaggio un pezzo alla volta viene detto anche *lettura di un messaggio*. La lettura del messaggio è utilizzata principalmente dal framework del servizio alla ricezione dei messaggi. Quando, ad esempio, è utilizzato <xref:System.Runtime.Serialization.DataContractSerializer> , il framework del servizio otterrà un lettore XML sul corpo e lo passerà al motore di deserializzazione che avvierà la lettura del messaggio, elemento per elemento, e costruirà l'oggetto grafico corrispondente.  
   
  Un corpo del messaggio può essere recuperato solo una volta. Ciò consente di lavorare con flussi di tipo forward-only. È ad esempio possibile scrivere un override <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> che legge da un <xref:System.IO.FileStream> e restituisce i risultati come Infoset XML. Non dovrai mai "rewind" all'inizio del file.  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) può essere considerato come un'infrastru
 ### <a name="the-istreamprovider-interface"></a>Interfaccia IStreamProvider  
  Quando si scrive in un writer XML un messaggio in uscita che contiene un corpo inviato nel flusso, <xref:System.ServiceModel.Channels.Message> utilizza una sequenza di chiamate simili alle seguenti nell'implementazione di <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> :  
   
--   Scrivere tutte le informazioni necessarie che precedono il flusso (ad esempio, il tag di apertura XML).  
+- Scrivere tutte le informazioni necessarie che precedono il flusso (ad esempio, il tag di apertura XML).  
   
--   Scrivere il flusso.  
+- Scrivere il flusso.  
   
--   Scrivere tutte le informazioni dopo il flusso (ad esempio, il tag di chiusura XML).  
+- Scrivere tutte le informazioni dopo il flusso (ad esempio, il tag di chiusura XML).  
   
  Questa procedura funziona bene con codifiche simili alla codifica XML testuale. Esistono, tuttavia, alcune codifiche che non inseriscono informazioni InfoSet XML (ad esempio, i tag di inizio e fine di elementi XML) insieme ai dati contenuti all'interno di elementi. Nella codifica MTOM, ad esempio, il messaggio è suddiviso in più parti. Una parte contiene l'InfoSet XML, che può contenere riferimenti ad altre parti per il contenuto effettivo degli elementi. Dato che, in genere, l'InfoSet XML è di piccole dimensioni rispetto al contenuto inviato nel flusso, è consigliabile memorizzarlo nel buffer, scriverlo e quindi scrivere il contenuto in un flusso. Ciò significa che quando viene scritto il tag dell'elemento di chiusura, il flusso non dovrebbe essere stato ancora scritto.  
   

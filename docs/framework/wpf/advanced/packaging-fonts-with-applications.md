@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773233"
 ---
 # <a name="packaging-fonts-with-applications"></a>Includere i tipi di carattere nel pacchetto delle applicazioni
 In questo argomento viene fornita una panoramica di come per i tipi di carattere del pacchetto con il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione.  
@@ -158,17 +158,17 @@ In questo argomento viene fornita una panoramica di come per i tipi di carattere
 ## <a name="limitations-on-font-usage"></a>Limitazioni all'utilizzo dei tipi di carattere  
  L'elenco seguente descrive alcune limitazioni sulla creazione di pacchetti e l'utilizzo di tipi di carattere in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni:  
   
--   **Bit autorizzazione per l'incorporamento tipi di carattere:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni non controllano né applicano bit di autorizzazione per l'incorporamento tipi di carattere. Vedere le [inclusione i tipi di carattere](#introduction_to_packaging_fonts) sezione per altre informazioni.  
+- **Bit autorizzazione per l'incorporamento tipi di carattere:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni non controllano né applicano bit di autorizzazione per l'incorporamento tipi di carattere. Vedere le [inclusione i tipi di carattere](#introduction_to_packaging_fonts) sezione per altre informazioni.  
   
--   **Sito di tipi di carattere di origine:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni non consentono un riferimento di tipo di carattere a un http o ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
+- **Sito di tipi di carattere di origine:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazioni non consentono un riferimento di tipo di carattere a un http o ftp [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)].  
   
--   **URI assoluto usando il pacchetto: notazione:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni non consentono di creare un <xref:System.Windows.Media.FontFamily> dell'oggetto a livello di codice usando "Service pack:" come parte di assoluto [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] riferimento a un tipo di carattere. Ad esempio, `"pack://application:,,,/resources/#Pericles Light"` è un riferimento a un tipo di carattere non valido.  
+- **URI assoluto usando il pacchetto: notazione:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni non consentono di creare un <xref:System.Windows.Media.FontFamily> dell'oggetto a livello di codice usando "Service pack:" come parte di assoluto [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] riferimento a un tipo di carattere. Ad esempio, `"pack://application:,,,/resources/#Pericles Light"` è un riferimento a un tipo di carattere non valido.  
   
--   **Incorporamento di tipi di carattere automatico:** Durante la fase di progettazione, non vi è alcun supporto per l'uso di un'applicazione dei tipi di carattere di ricerca e incorporare automaticamente i tipi di carattere nelle risorse dell'applicazione.  
+- **Incorporamento di tipi di carattere automatico:** Durante la fase di progettazione, non vi è alcun supporto per l'uso di un'applicazione dei tipi di carattere di ricerca e incorporare automaticamente i tipi di carattere nelle risorse dell'applicazione.  
   
--   **Subset di tipi di carattere:** le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non supportano la creazione di subset di tipi di carattere per documenti non statici.  
+- **Subset di tipi di carattere:** le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non supportano la creazione di subset di tipi di carattere per documenti non statici.  
   
--   Se è presente un riferimento non corretto, l'applicazione torna a usare un tipo di carattere disponibile.  
+- Se è presente un riferimento non corretto, l'applicazione torna a usare un tipo di carattere disponibile.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -3,11 +3,11 @@ title: Procedure consigliate in ambienti parzialmente attendibili
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769460"
 ---
 # <a name="partial-trust-best-practices"></a>Procedure consigliate in ambienti parzialmente attendibili
 In questo argomento descrive le procedure consigliate durante l'esecuzione di Windows Communication Foundation (WCF) in un ambiente parzialmente attendibile.  
@@ -15,34 +15,34 @@ In questo argomento descrive le procedure consigliate durante l'esecuzione di Wi
 ## <a name="serialization"></a>Serializzazione  
  Applicare le procedure seguenti quando si utilizza <xref:System.Runtime.Serialization.DataContractSerializer> in un'applicazione parzialmente attendibile.  
   
--   Tutti i tipi serializzabili devono essere contrassegnati in modo esplicito con l'attributo `[DataContract]`. Le tecniche seguenti non sono supportate in un ambiente parzialmente attendibile:  
+- Tutti i tipi serializzabili devono essere contrassegnati in modo esplicito con l'attributo `[DataContract]`. Le tecniche seguenti non sono supportate in un ambiente parzialmente attendibile:  
   
--   Contrassegno delle classi da serializzare con <xref:System.SerializableAttribute>.  
+- Contrassegno delle classi da serializzare con <xref:System.SerializableAttribute>.  
   
--   Implementazione dell'interfaccia <xref:System.Runtime.Serialization.ISerializable> per consentire a una classe di controllare il suo processo di serializzazione.  
+- Implementazione dell'interfaccia <xref:System.Runtime.Serialization.ISerializable> per consentire a una classe di controllare il suo processo di serializzazione.  
   
 ### <a name="using-datacontractserializer"></a>Utilizzo di DataContractSerializer  
   
--   Tutti i tipi contrassegnati con l'attributo `[DataContract]` devono essere pubblici. Impossibile serializzare tipi non pubblici in un ambiente parzialmente attendibile.  
+- Tutti i tipi contrassegnati con l'attributo `[DataContract]` devono essere pubblici. Impossibile serializzare tipi non pubblici in un ambiente parzialmente attendibile.  
   
--   I membri `[DataContract]` in un tipo `[DataContract]` serializzabile devono essere pubblici. Un tipo con un `[DataMember]` non pubblico non può essere serializzato in un ambiente parzialmente attendibile.  
+- I membri `[DataContract]` in un tipo `[DataContract]` serializzabile devono essere pubblici. Un tipo con un `[DataMember]` non pubblico non può essere serializzato in un ambiente parzialmente attendibile.  
   
--   I metodi che gestiscono eventi di serializzazione (ad esempio `OnSerializing`, `OnSerialized`, `OnDeserializing` e `OnDeserialized`) devono essere dichiarati pubblici. Sono tuttavia supportate le implementazioni sia esplicite che implicite di <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29>.  
+- I metodi che gestiscono eventi di serializzazione (ad esempio `OnSerializing`, `OnSerialized`, `OnDeserializing` e `OnDeserialized`) devono essere dichiarati pubblici. Sono tuttavia supportate le implementazioni sia esplicite che implicite di <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29>.  
   
--   I tipi `[DataContract]` implementati in assembly contrassegnati con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> non devono eseguire azioni correlate alla protezione nel costruttore del tipo, poiché <xref:System.Runtime.Serialization.DataContractSerializer> non chiama il costruttore dell'oggetto di cui è appena stata creata un'istanza durante la deserializzazione. In particolare, è necessario evitare le tecniche di sicurezza comuni seguenti per i tipi `[DataContract]`:  
+- I tipi `[DataContract]` implementati in assembly contrassegnati con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> non devono eseguire azioni correlate alla protezione nel costruttore del tipo, poiché <xref:System.Runtime.Serialization.DataContractSerializer> non chiama il costruttore dell'oggetto di cui è appena stata creata un'istanza durante la deserializzazione. In particolare, è necessario evitare le tecniche di sicurezza comuni seguenti per i tipi `[DataContract]`:  
   
--   Tentare di limitare l'accesso parzialmente attendibile rendendo interno o privato il costruttore del tipo.  
+- Tentare di limitare l'accesso parzialmente attendibile rendendo interno o privato il costruttore del tipo.  
   
--   Limitare l'accesso al tipo aggiungendo un `[LinkDemand]` al costruttore del tipo.  
+- Limitare l'accesso al tipo aggiungendo un `[LinkDemand]` al costruttore del tipo.  
   
--   Dare per scontato che, dato che l'istanza dell'oggetto è stata creata correttamente, qualsiasi controllo di convalida applicato dal costruttore abbia avuto esito positivo.  
+- Dare per scontato che, dato che l'istanza dell'oggetto è stata creata correttamente, qualsiasi controllo di convalida applicato dal costruttore abbia avuto esito positivo.  
   
 ### <a name="using-ixmlserializable"></a>Utilizzo di IXmlSerializable  
  Le procedure consigliate seguenti si applicano ai tipi che implementano <xref:System.Xml.Serialization.IXmlSerializable> e che vengono serializzati tramite <xref:System.Runtime.Serialization.DataContractSerializer>:  
   
--   Le implementazioni del metodo statico <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> devono essere `public`.  
+- Le implementazioni del metodo statico <xref:System.Xml.Serialization.IXmlSerializable.GetSchema%2A> devono essere `public`.  
   
--   I metodi di istanza che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> devono essere `public`.  
+- I metodi di istanza che implementano l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable> devono essere `public`.  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>Utilizzo di WCF da codice della piattaforma completamente attendibile che consente chiamate da chiamanti parzialmente attendibili  
  Il modello di sicurezza parzialmente attendibile WCF si presuppone che qualsiasi chiamante di una proprietà o un metodo pubblico di WCF è in esecuzione nel contesto di sicurezza dall'accesso codice dell'applicazione host. WCF si presuppone inoltre tale contesto di sicurezza solo un'applicazione disponibile per ogni <xref:System.AppDomain>, e che questo contesto viene stabilito a <xref:System.AppDomain> ora di creazione da un host attendibile (ad esempio, da una chiamata a <xref:System.AppDomain.CreateDomain%2A> o da Gestione applicazioni ASP.NET).  
@@ -53,13 +53,13 @@ In questo argomento descrive le procedure consigliate durante l'esecuzione di Wi
   
  Codice che chiama in WCF utilizzando un contesto di autorizzazione specifico del thread deve essere preparato a gestire le situazioni seguenti che possono verificarsi:  
   
--   Il contesto di sicurezza specifico del thread potrebbe non essere mantenuto per la durata dell'operazione, il che comporta potenziali eccezioni di sicurezza.  
+- Il contesto di sicurezza specifico del thread potrebbe non essere mantenuto per la durata dell'operazione, il che comporta potenziali eccezioni di sicurezza.  
   
--   Il codice WCF interno, nonché qualsiasi callback fornito dall'utente possono essere eseguite in un contesto di sicurezza diverso da quello in cui è iniziata originariamente la chiamata. Questi contesti includono:  
+- Il codice WCF interno, nonché qualsiasi callback fornito dall'utente possono essere eseguite in un contesto di sicurezza diverso da quello in cui è iniziata originariamente la chiamata. Questi contesti includono:  
   
-    -   Il contesto di autorizzazione dell'applicazione.  
+    - Il contesto di autorizzazione dell'applicazione.  
   
-    -   Qualsiasi contesto di autorizzazione specifico del thread creato in precedenza da altri thread utente usato per chiamare WCF nel corso della durata di esecuzione <xref:System.AppDomain>.  
+    - Qualsiasi contesto di autorizzazione specifico del thread creato in precedenza da altri thread utente usato per chiamare WCF nel corso della durata di esecuzione <xref:System.AppDomain>.  
   
  WCF garantisce che codice parzialmente attendibile non è possibile ottenere le autorizzazioni di attendibilità, a meno che tali autorizzazioni vengano asserite da un componente completamente attendibile prima della chiamata alle API pubbliche di WCF. Non garantisce, tuttavia, che gli effetti dell'asserzione di attendibilità totale siano isolati in un thread, operazione o azione dell'utente specifico.  
   

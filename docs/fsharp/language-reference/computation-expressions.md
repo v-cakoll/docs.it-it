@@ -3,11 +3,11 @@ title: Espressioni di calcolo
 description: Informazioni su come creare una sintassi efficiente per la scrittura di calcoli F# che può essere in sequenza e combinati tramite controllo costrutti del flusso e le associazioni.
 ms.date: 03/15/2019
 ms.openlocfilehash: 3c2abb5c6204309fc8d5215a53ce8af46c01d218
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766064"
 ---
 # <a name="computation-expressions"></a>Espressioni di calcolo
 
@@ -112,7 +112,7 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-Come con le [yield (parola chiave) in C#](../../csharp/language-reference/keywords/yield.md), ogni elemento nell'espressione di calcolo viene restituito perché viene scorsa.
+Come con le [yield (parola chiave) in c#](../../csharp/language-reference/keywords/yield.md), ogni elemento nell'espressione di calcolo viene restituito perché viene scorsa.
 
 `yield` è definito dal `Yield(x)` membro del tipo di generatore, in cui `x` è l'elemento per produrre nuovamente.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
 ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785684"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Ottimizzazione delle prestazioni tridimensionali di WPF
 Quando si utilizza il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] per costruire controlli 3D e includono le scene 3D nelle applicazioni, è importante prendere in considerazione l'ottimizzazione delle prestazioni. In questo argomento fornisce un elenco di classi 3D e le proprietà che avere implicazioni sulle prestazioni per l'applicazione, insieme a consigli per ottimizzare le prestazioni quando vengono utilizzati.  

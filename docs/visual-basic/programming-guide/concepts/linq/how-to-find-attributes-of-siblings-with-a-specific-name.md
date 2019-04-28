@@ -3,11 +3,11 @@ title: 'Procedura: Trovare attributi di pari livello con un nome specifico (XPat
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
 ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780575"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Procedura: Trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come trovare tutti gli attributi degli elementi di pari livello del nodo di contesto. Nella raccolta vengono restituiti solo gli attributi con un nome specifico.  

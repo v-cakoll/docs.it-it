@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759908"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati
 Se i componenti vengono definiti da un progetto nella soluzione attualmente aperta, verranno automaticamente visualizzati nei **casella degli strumenti**, senza alcun intervento da parte dell'utente. È anche possibile inserire manualmente il **casella degli strumenti** con i componenti personalizzati usando la [Scegli elementi della finestra della casella (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ma il **della casella degli strumenti** tengano conto elementi della soluzione di output con tutte le caratteristiche seguenti di compilazione:  
   
--   Implementa <xref:System.ComponentModel.IComponent>;  
+- Implementa <xref:System.ComponentModel.IComponent>;  
   
--   Non dispone <xref:System.ComponentModel.ToolboxItemAttribute> impostato su `false`;  
+- Non dispone <xref:System.ComponentModel.ToolboxItemAttribute> impostato su `false`;  
   
--   Non dispone <xref:System.ComponentModel.DesignTimeVisibleAttribute> impostato su `false`.  
+- Non dispone <xref:System.ComponentModel.DesignTimeVisibleAttribute> impostato su `false`.  
   
 > [!NOTE]
 >  Il **casella degli strumenti** non rispetta le catene di riferimento, in modo da non visualizzerà gli elementi che non vengono compilati da un progetto nella soluzione.  
   
  Questa procedura dettagliata illustra come un componente personalizzato viene visualizzato automaticamente nel **casella degli strumenti** dopo aver compilato il componente. Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione di un progetto Windows Form.  
+- Creazione di un progetto Windows Form.  
   
--   Creazione di un componente personalizzato.  
+- Creazione di un componente personalizzato.  
   
--   Creazione di un'istanza di un componente personalizzato.  
+- Creazione di un'istanza di un componente personalizzato.  
   
--   Scaricare e ricaricare un componente personalizzato.  
+- Scaricare e ricaricare un componente personalizzato.  
   
  Al termine, si noterà che il **casella degli strumenti** viene popolato con un componente che è stato creato.  
   

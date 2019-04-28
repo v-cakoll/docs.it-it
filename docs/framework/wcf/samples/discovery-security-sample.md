@@ -6,8 +6,8 @@ ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773002"
 ---
 # <a name="discovery-security-sample"></a>Esempio di sicurezza di individuazione
 La specifica Discovery non richiede che gli endpoint che partecipano al processo di individuazione siano sicuri. Il potenziamento dei messaggi di individuazione tramite la sicurezza riduce tuttavia la possibilità di vari tipi di attacchi (modifica del messaggio, Denial of Service, replay, spoofing). In questo esempio vengono implementati canali personalizzati che calcolano e verificano le firme dei messaggi usando il formato di firma compatto (descritto nella Sezione 8.2 della specifica WS-Discovery). Questo esempio supporta sia la [specifica Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e il [versione 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ La specifica Discovery non richiede che gli endpoint che partecipano al processo
 ## <a name="sample-details"></a>Dettagli dell'esempio  
  In questo esempio sono incluse un'applicazione di libreria e 4 applicazioni console:  
   
--   **DiscoverySecurityChannels**: Una libreria che espone l'associazione protetta. La libreria calcola e verifica la firma compatta per i messaggi in uscita/in arrivo.  
+- **DiscoverySecurityChannels**: Una libreria che espone l'associazione protetta. La libreria calcola e verifica la firma compatta per i messaggi in uscita/in arrivo.  
   
--   **Servizio**: Un servizio che espone il contratto ICalculatorService, self-hosted. Il servizio è contrassegnato come individuabile. L'utente specifica i dettagli del certificato usato per firmare i messaggi specificando il percorso e il nome dell'archivio e il nome del soggetto o di un altro identificatore univoco per il certificato, nonché l'archivio in cui si trovano i certificati client (i certificati usati per il controllo della firma dei messaggi in arrivo). In base a questi dettagli, viene compilato e usato un oggetto UdpDiscoveryEndpoint con sicurezza aggiunta.  
+- **Servizio**: Un servizio che espone il contratto ICalculatorService, self-hosted. Il servizio è contrassegnato come individuabile. L'utente specifica i dettagli del certificato usato per firmare i messaggi specificando il percorso e il nome dell'archivio e il nome del soggetto o di un altro identificatore univoco per il certificato, nonché l'archivio in cui si trovano i certificati client (i certificati usati per il controllo della firma dei messaggi in arrivo). In base a questi dettagli, viene compilato e usato un oggetto UdpDiscoveryEndpoint con sicurezza aggiunta.  
   
--   **Client**: Questa classe tenta di individuare un oggetto ICalculatorService e di chiamare metodi sul servizio. Un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con sicurezza aggiunta viene di nuovo compilato e usato per firmare e verificare i messaggi.  
+- **Client**: Questa classe tenta di individuare un oggetto ICalculatorService e di chiamare metodi sul servizio. Un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> con sicurezza aggiunta viene di nuovo compilato e usato per firmare e verificare i messaggi.  
   
--   **AnnouncementListener**: Un servizio self-hosted è in ascolto degli annunci online e offline e che utilizza l'endpoint degli annunci protetto.  
+- **AnnouncementListener**: Un servizio self-hosted è in ascolto degli annunci online e offline e che utilizza l'endpoint degli annunci protetto.  
   
 > [!NOTE]
 >  Se Setup.bat viene eseguito più volte, il gestore di certificati richiederà di scegliere un certificato da aggiungere, in quanto esistono certificati duplicati. In tal caso, Setup.bat dovrà essere interrotto e sarà necessario chiamare Cleanup.bat, poiché i duplicati sono già stati creati. Cleanup.bat richiederà inoltre di scegliere un certificato da eliminare. Selezionare un certificato nell'elenco e continuare a eseguire Cleanup.bat fino a quando non rimarrà alcun certificato.  
