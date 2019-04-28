@@ -9,20 +9,20 @@ helpviewer_keywords:
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
 ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906451"
 ---
-# <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="bd1f4-102">Strutture e altri elementi di programmazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bd1f4-102">Structures and Other Programming Elements (Visual Basic)</span></span>
-<span data-ttu-id="bd1f4-103">È possibile usare le strutture in combinazione con le matrici, oggetti e le procedure, nonché tra loro.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="bd1f4-104">Le interazioni di utilizzano la stessa sintassi come questi elementi singolarmente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-104">The interactions use the same syntax as these elements use individually.</span></span>  
+# <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="92d42-102">Strutture e altri elementi di programmazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92d42-102">Structures and Other Programming Elements (Visual Basic)</span></span>
+<span data-ttu-id="92d42-103">È possibile usare le strutture in combinazione con le matrici, oggetti e le procedure, nonché tra loro.</span><span class="sxs-lookup"><span data-stu-id="92d42-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="92d42-104">Le interazioni di utilizzano la stessa sintassi come questi elementi singolarmente.</span><span class="sxs-lookup"><span data-stu-id="92d42-104">The interactions use the same syntax as these elements use individually.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bd1f4-105">Non è possibile inizializzare uno degli elementi struttura nella dichiarazione di struttura.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-105">You cannot initialize any of the structure elements in the structure declaration.</span></span> <span data-ttu-id="bd1f4-106">È possibile assegnare valori solo agli elementi di una variabile che è stato dichiarato un tipo di struttura.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-106">You can assign values only to elements of a variable that has been declared to be of a structure type.</span></span>  
+>  <span data-ttu-id="92d42-105">Non è possibile inizializzare uno degli elementi struttura nella dichiarazione di struttura.</span><span class="sxs-lookup"><span data-stu-id="92d42-105">You cannot initialize any of the structure elements in the structure declaration.</span></span> <span data-ttu-id="92d42-106">È possibile assegnare valori solo agli elementi di una variabile che è stato dichiarato un tipo di struttura.</span><span class="sxs-lookup"><span data-stu-id="92d42-106">You can assign values only to elements of a variable that has been declared to be of a structure type.</span></span>  
   
-## <a name="structures-and-arrays"></a><span data-ttu-id="bd1f4-107">Strutture e le matrici</span><span class="sxs-lookup"><span data-stu-id="bd1f4-107">Structures and Arrays</span></span>  
- <span data-ttu-id="bd1f4-108">Una struttura può contenere una matrice come uno o più dei relativi elementi.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-108">A structure can contain an array as one or more of its elements.</span></span> <span data-ttu-id="bd1f4-109">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-109">The following example illustrates this.</span></span>  
+## <a name="structures-and-arrays"></a><span data-ttu-id="92d42-107">Strutture e le matrici</span><span class="sxs-lookup"><span data-stu-id="92d42-107">Structures and Arrays</span></span>  
+ <span data-ttu-id="92d42-108">Una struttura può contenere una matrice come uno o più dei relativi elementi.</span><span class="sxs-lookup"><span data-stu-id="92d42-108">A structure can contain an array as one or more of its elements.</span></span> <span data-ttu-id="92d42-109">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-109">The following example illustrates this.</span></span>  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- <span data-ttu-id="bd1f4-110">Accedere ai valori di una matrice all'interno di una struttura allo stesso modo si accede a una proprietà su un oggetto.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-110">You access the values of an array within a structure the same way you access a property on an object.</span></span> <span data-ttu-id="bd1f4-111">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-111">The following example illustrates this.</span></span>  
+ <span data-ttu-id="92d42-110">Accedere ai valori di una matrice all'interno di una struttura allo stesso modo si accede a una proprietà su un oggetto.</span><span class="sxs-lookup"><span data-stu-id="92d42-110">You access the values of an array within a structure the same way you access a property on an object.</span></span> <span data-ttu-id="92d42-111">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-111">The following example illustrates this.</span></span>  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- <span data-ttu-id="bd1f4-112">È anche possibile dichiarare una matrice di strutture.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-112">You can also declare an array of structures.</span></span> <span data-ttu-id="bd1f4-113">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-113">The following example illustrates this.</span></span>  
+ <span data-ttu-id="92d42-112">È anche possibile dichiarare una matrice di strutture.</span><span class="sxs-lookup"><span data-stu-id="92d42-112">You can also declare an array of structures.</span></span> <span data-ttu-id="92d42-113">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-113">The following example illustrates this.</span></span>  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- <span data-ttu-id="bd1f4-114">Si seguono le stesse regole per accedere ai componenti di questa architettura di dati.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-114">You follow the same rules to access the components of this data architecture.</span></span> <span data-ttu-id="bd1f4-115">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-115">The following example illustrates this.</span></span>  
+ <span data-ttu-id="92d42-114">Si seguono le stesse regole per accedere ai componenti di questa architettura di dati.</span><span class="sxs-lookup"><span data-stu-id="92d42-114">You follow the same rules to access the components of this data architecture.</span></span> <span data-ttu-id="92d42-115">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-115">The following example illustrates this.</span></span>  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a><span data-ttu-id="bd1f4-116">Oggetti e strutture</span><span class="sxs-lookup"><span data-stu-id="bd1f4-116">Structures and Objects</span></span>  
- <span data-ttu-id="bd1f4-117">Una struttura può contenere un oggetto come uno o più dei relativi elementi.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-117">A structure can contain an object as one or more of its elements.</span></span> <span data-ttu-id="bd1f4-118">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-118">The following example illustrates this.</span></span>  
+## <a name="structures-and-objects"></a><span data-ttu-id="92d42-116">Oggetti e strutture</span><span class="sxs-lookup"><span data-stu-id="92d42-116">Structures and Objects</span></span>  
+ <span data-ttu-id="92d42-117">Una struttura può contenere un oggetto come uno o più dei relativi elementi.</span><span class="sxs-lookup"><span data-stu-id="92d42-117">A structure can contain an object as one or more of its elements.</span></span> <span data-ttu-id="92d42-118">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-118">The following example illustrates this.</span></span>  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- <span data-ttu-id="bd1f4-119">È consigliabile usare una classe di oggetto specifico in tale dichiarazione, anziché `Object`.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-119">You should use a specific object class in such a declaration, rather than `Object`.</span></span>  
+ <span data-ttu-id="92d42-119">È consigliabile usare una classe di oggetto specifico in tale dichiarazione, anziché `Object`.</span><span class="sxs-lookup"><span data-stu-id="92d42-119">You should use a specific object class in such a declaration, rather than `Object`.</span></span>  
   
-## <a name="structures-and-procedures"></a><span data-ttu-id="bd1f4-120">Strutture e procedure</span><span class="sxs-lookup"><span data-stu-id="bd1f4-120">Structures and Procedures</span></span>  
- <span data-ttu-id="bd1f4-121">È possibile passare una struttura come argomento di routine.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-121">You can pass a structure as a procedure argument.</span></span> <span data-ttu-id="bd1f4-122">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-122">The following example illustrates this.</span></span>  
+## <a name="structures-and-procedures"></a><span data-ttu-id="92d42-120">Strutture e procedure</span><span class="sxs-lookup"><span data-stu-id="92d42-120">Structures and Procedures</span></span>  
+ <span data-ttu-id="92d42-121">È possibile passare una struttura come argomento di routine.</span><span class="sxs-lookup"><span data-stu-id="92d42-121">You can pass a structure as a procedure argument.</span></span> <span data-ttu-id="92d42-122">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-122">The following example illustrates this.</span></span>  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- <span data-ttu-id="bd1f4-123">Nell'esempio precedente passa la struttura *per riferimento*, che consente la procedura per modificare gli elementi in modo che le modifiche diventano effettive nel codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-123">The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code.</span></span> <span data-ttu-id="bd1f4-124">Se si desidera proteggere una struttura da tali modifiche, passarlo come valore.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-124">If you want to protect a structure against such modification, pass it by value.</span></span>  
+ <span data-ttu-id="92d42-123">Nell'esempio precedente passa la struttura *per riferimento*, che consente la procedura per modificare gli elementi in modo che le modifiche diventano effettive nel codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="92d42-123">The preceding example passes the structure *by reference*, which allows the procedure to modify its elements so that the changes take effect in the calling code.</span></span> <span data-ttu-id="92d42-124">Se si desidera proteggere una struttura da tali modifiche, passarlo come valore.</span><span class="sxs-lookup"><span data-stu-id="92d42-124">If you want to protect a structure against such modification, pass it by value.</span></span>  
   
- <span data-ttu-id="bd1f4-125">È inoltre possibile restituire una struttura da una `Function` procedure.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-125">You can also return a structure from a `Function` procedure.</span></span> <span data-ttu-id="bd1f4-126">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-126">The following example illustrates this.</span></span>  
+ <span data-ttu-id="92d42-125">È inoltre possibile restituire una struttura da una `Function` procedure.</span><span class="sxs-lookup"><span data-stu-id="92d42-125">You can also return a structure from a `Function` procedure.</span></span> <span data-ttu-id="92d42-126">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-126">The following example illustrates this.</span></span>  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a><span data-ttu-id="bd1f4-127">Strutture all'interno delle strutture</span><span class="sxs-lookup"><span data-stu-id="bd1f4-127">Structures Within Structures</span></span>  
- <span data-ttu-id="bd1f4-128">Le strutture possono contenere altre strutture.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-128">Structures can contain other structures.</span></span> <span data-ttu-id="bd1f4-129">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-129">The following example illustrates this.</span></span>  
+## <a name="structures-within-structures"></a><span data-ttu-id="92d42-127">Strutture all'interno delle strutture</span><span class="sxs-lookup"><span data-stu-id="92d42-127">Structures Within Structures</span></span>  
+ <span data-ttu-id="92d42-128">Le strutture possono contenere altre strutture.</span><span class="sxs-lookup"><span data-stu-id="92d42-128">Structures can contain other structures.</span></span> <span data-ttu-id="92d42-129">Questa condizione è illustrata nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="92d42-129">The following example illustrates this.</span></span>  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,19 +118,19 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- <span data-ttu-id="bd1f4-130">È anche possibile usare questa tecnica per incapsulare una struttura definita in un modulo all'interno di una struttura definita in un modulo diverso.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-130">You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.</span></span>  
+ <span data-ttu-id="92d42-130">È anche possibile usare questa tecnica per incapsulare una struttura definita in un modulo all'interno di una struttura definita in un modulo diverso.</span><span class="sxs-lookup"><span data-stu-id="92d42-130">You can also use this technique to encapsulate a structure defined in one module within a structure defined in a different module.</span></span>  
   
- <span data-ttu-id="bd1f4-131">Le strutture possono contenere altre strutture a una profondità arbitraria.</span><span class="sxs-lookup"><span data-stu-id="bd1f4-131">Structures can contain other structures to an arbitrary depth.</span></span>  
+ <span data-ttu-id="92d42-131">Le strutture possono contenere altre strutture a una profondità arbitraria.</span><span class="sxs-lookup"><span data-stu-id="92d42-131">Structures can contain other structures to an arbitrary depth.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd1f4-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bd1f4-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92d42-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="92d42-132">See also</span></span>
 
-- [<span data-ttu-id="bd1f4-133">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="bd1f4-133">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [<span data-ttu-id="bd1f4-134">Tipi di dati elementari</span><span class="sxs-lookup"><span data-stu-id="bd1f4-134">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [<span data-ttu-id="bd1f4-135">Tipi di dati compositi</span><span class="sxs-lookup"><span data-stu-id="bd1f4-135">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [<span data-ttu-id="bd1f4-136">Value Types and Reference Types</span><span class="sxs-lookup"><span data-stu-id="bd1f4-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [<span data-ttu-id="bd1f4-137">Strutture</span><span class="sxs-lookup"><span data-stu-id="bd1f4-137">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [<span data-ttu-id="bd1f4-138">Risoluzione dei problemi relativi ai tipi di dati</span><span class="sxs-lookup"><span data-stu-id="bd1f4-138">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [<span data-ttu-id="bd1f4-139">Procedura: Dichiarare una struttura</span><span class="sxs-lookup"><span data-stu-id="bd1f4-139">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [<span data-ttu-id="bd1f4-140">Variabili di struttura</span><span class="sxs-lookup"><span data-stu-id="bd1f4-140">Structure Variables</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
-- [<span data-ttu-id="bd1f4-141">Strutture e classi</span><span class="sxs-lookup"><span data-stu-id="bd1f4-141">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [<span data-ttu-id="bd1f4-142">Istruzione Structure</span><span class="sxs-lookup"><span data-stu-id="bd1f4-142">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="92d42-133">Tipi di dati</span><span class="sxs-lookup"><span data-stu-id="92d42-133">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [<span data-ttu-id="92d42-134">Tipi di dati elementari</span><span class="sxs-lookup"><span data-stu-id="92d42-134">Elementary Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [<span data-ttu-id="92d42-135">Tipi di dati compositi</span><span class="sxs-lookup"><span data-stu-id="92d42-135">Composite Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [<span data-ttu-id="92d42-136">Value Types and Reference Types</span><span class="sxs-lookup"><span data-stu-id="92d42-136">Value Types and Reference Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [<span data-ttu-id="92d42-137">Strutture</span><span class="sxs-lookup"><span data-stu-id="92d42-137">Structures</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [<span data-ttu-id="92d42-138">Risoluzione dei problemi relativi ai tipi di dati</span><span class="sxs-lookup"><span data-stu-id="92d42-138">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [<span data-ttu-id="92d42-139">Procedura: Dichiarare una struttura</span><span class="sxs-lookup"><span data-stu-id="92d42-139">How to: Declare a Structure</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [<span data-ttu-id="92d42-140">Variabili di struttura</span><span class="sxs-lookup"><span data-stu-id="92d42-140">Structure Variables</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [<span data-ttu-id="92d42-141">Strutture e classi</span><span class="sxs-lookup"><span data-stu-id="92d42-141">Structures and Classes</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [<span data-ttu-id="92d42-142">Istruzione Structure</span><span class="sxs-lookup"><span data-stu-id="92d42-142">Structure Statement</span></span>](../../../../visual-basic/language-reference/statements/structure-statement.md)
