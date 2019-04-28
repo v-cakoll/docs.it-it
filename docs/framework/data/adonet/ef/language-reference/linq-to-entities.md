@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760714"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che consente agli sviluppatori di scrivere query sul modello concettuale di Entity Framework usando Visual Basic o Visual C#. Le query su Entity Framework sono rappresentate da query ad albero dei comandi, eseguite sul contesto dell'oggetto. LINQ to Entities consente di convertire query LINQ (Language Integrated Query) in query ad albero dei comandi, eseguire le query su Entity Framework e restituire oggetti che possono essere usati sia da Entity Framework sia da LINQ. Di seguito viene descritto il processo di creazione ed esecuzione di una query LINQ to Entities:  
@@ -57,13 +57,13 @@ LINQ to Entities fornisce il supporto LINQ (Language Integrated Query) che conse
   
  I risultati della query vengono in genere restituiti come uno degli elementi seguenti:  
   
--   Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi definiti nel modello concettuale.  
+- Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi definiti nel modello concettuale.  
   
--   Tipi CLR supportati da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Tipi CLR supportati da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Raccolte inline.  
+- Raccolte inline.  
   
--   Tipi anonimi.  
+- Tipi anonimi.  
   
  Per altre informazioni, vedere [risultati della Query](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   

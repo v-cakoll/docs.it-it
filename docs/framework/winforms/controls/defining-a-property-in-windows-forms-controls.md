@@ -9,20 +9,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
 ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780653"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definizione di una proprietà nei controlli Windows Form
 Per una panoramica delle proprietà, vedere [Cenni preliminari sulle proprietà](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Quando si definisce una proprietà sono da considerare i seguenti elementi:  
   
--   È necessario applicare attributi alle proprietà definite. Gli attributi specificano l'aspetto di una proprietà in una progettazione. Per informazioni dettagliate, vedere [Attributi per componenti in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+- È necessario applicare attributi alle proprietà definite. Gli attributi specificano l'aspetto di una proprietà in una progettazione. Per informazioni dettagliate, vedere [Attributi per componenti in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
--   Se la modifica della proprietà ha effetto sulla visualizzazione del controllo, chiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo (che il controllo eredita da <xref:System.Windows.Forms.Control>) dal `set` della funzione di accesso. <xref:System.Windows.Forms.Control.Invalidate%2A> a sua volta chiama il <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo), che consente di ricreare il controllo. Più chiamate alla <xref:System.Windows.Forms.Control.Invalidate%2A> comportare una singola chiamata a <xref:System.Windows.Forms.Control.OnPaint%2A> per migliorare l'efficienza.  
+- Se la modifica della proprietà ha effetto sulla visualizzazione del controllo, chiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo (che il controllo eredita da <xref:System.Windows.Forms.Control>) dal `set` della funzione di accesso. <xref:System.Windows.Forms.Control.Invalidate%2A> a sua volta chiama il <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo), che consente di ricreare il controllo. Più chiamate alla <xref:System.Windows.Forms.Control.Invalidate%2A> comportare una singola chiamata a <xref:System.Windows.Forms.Control.OnPaint%2A> per migliorare l'efficienza.  
   
--   La libreria di classi .NET Framework fornisce convertitori di tipi per tipi di dati comuni, ad esempio numeri interi, numeri decimali, valori booleani e altri. Lo scopo di un convertitore di tipi è in genere quello di fornire la conversione da stringa a valore (da dati stringa in altri tipi di dati). I tipi di dati comuni sono associati a convertitori di tipi predefiniti che convertono i valori in stringhe e le stringhe in tipi di dati appropriati. Se si definisce una proprietà che è un tipo di dati personalizzati (vale a dire non standard), è necessario applicare un attributo che specifica il convertitore di tipi da associare a tale proprietà. È inoltre possibile usare un attributo per associare un editor di tipi dell'interfaccia utente personalizzato a una proprietà. Un editor di tipi dell'interfaccia utente fornisce un'interfaccia utente per la modifica di un tipo di dati o proprietà. La selezione colori è un esempio di un editor di tipi dell'interfaccia utente. Alla fine di questo argomento vengono forniti esempi di attributi.  
+- La libreria di classi .NET Framework fornisce convertitori di tipi per tipi di dati comuni, ad esempio numeri interi, numeri decimali, valori booleani e altri. Lo scopo di un convertitore di tipi è in genere quello di fornire la conversione da stringa a valore (da dati stringa in altri tipi di dati). I tipi di dati comuni sono associati a convertitori di tipi predefiniti che convertono i valori in stringhe e le stringhe in tipi di dati appropriati. Se si definisce una proprietà che è un tipo di dati personalizzati (vale a dire non standard), è necessario applicare un attributo che specifica il convertitore di tipi da associare a tale proprietà. È inoltre possibile usare un attributo per associare un editor di tipi dell'interfaccia utente personalizzato a una proprietà. Un editor di tipi dell'interfaccia utente fornisce un'interfaccia utente per la modifica di un tipo di dati o proprietà. La selezione colori è un esempio di un editor di tipi dell'interfaccia utente. Alla fine di questo argomento vengono forniti esempi di attributi.  
   
     > [!NOTE]
     >  Se un convertitore di tipi o un editor di tipi dell'interfaccia utente non è disponibile per la proprietà personalizzata, è possibile implementarne uno come descritto in [Estensione del supporto in fase di progettazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  

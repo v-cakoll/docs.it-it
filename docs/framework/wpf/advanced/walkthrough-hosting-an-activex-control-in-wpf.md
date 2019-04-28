@@ -9,31 +9,31 @@ helpviewer_keywords:
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
 ms.openlocfilehash: c27449da5ee0351e472eaba7d930a774979db65f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781381"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Procedura dettagliata: Hosting di un controllo ActiveX in WPF
 Per consentire di migliorare l'interazione con i browser, è possibile usare [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlli di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su. Questa procedura dettagliata illustra come è possibile ospitare le [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] come un controllo in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pagina.
 
  Le attività illustrate nella procedura dettagliata sono le seguenti:
 
--   Creazione del progetto.
+- Creazione del progetto.
 
--   Creazione del controllo ActiveX.
+- Creazione del controllo ActiveX.
 
--   Hosting del controllo ActiveX in una pagina WPF.
+- Hosting del controllo ActiveX in una pagina WPF.
 
  Dopo aver completato questa procedura dettagliata, si sarà in grado di utilizzare [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlli di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su.
 
 ## <a name="prerequisites"></a>Prerequisiti
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
 
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] installato nel computer in cui è installato Visual Studio.
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] installato nel computer in cui è installato Visual Studio.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
 ## <a name="creating-the-project"></a>Creazione del progetto
 

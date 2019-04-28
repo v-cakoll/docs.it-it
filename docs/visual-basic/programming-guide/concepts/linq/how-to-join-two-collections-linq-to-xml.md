@@ -3,11 +3,11 @@ title: 'Procedura: Unire due raccolte (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 85689fa756ab20a4dcd054b70eb3003c767936ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778053"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Procedura: Unire due raccolte (LINQ to XML) (Visual Basic)
 Un elemento o un attributo di un documento XML può talvolta fare riferimento a un altro elemento o attributo. Ad esempio, il documento XML [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) contiene un elenco di clienti e un elenco di ordini. Ogni elemento `Customer` contiene un attributo `CustomerID`. Ogni elemento `Order` contiene un elemento `CustomerID`. L'elemento `CustomerID` di ciascun ordine si riferisce all'attributo `CustomerID` di un cliente.  

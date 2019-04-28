@@ -3,16 +3,16 @@ title: Guida per programmatori
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
 ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794459"
 ---
 # <a name="programming-guide"></a>Guida per programmatori
 Questa sezione fornisce informazioni sulla creazione e sull'uso del modello a oggetti di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Se si usa Visual Studio, è anche possibile usare il [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per eseguire molte di queste stesse attività.  
   
- È possibile anche cercare problemi specifici di Docs Microsoft e per partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. Infine, il [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) white paper su Dettagli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e C#.  
+ È possibile anche cercare problemi specifici di Docs Microsoft e per partecipare il [forum su LINQ](https://go.microsoft.com/fwlink/?LinkId=76488)in cui è possibile discutere in dettaglio argomenti più complessi con gli esperti. Infine, il [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) white paper su Dettagli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnologia, con esempi di codice Visual Basic e c#.  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Creazione del modello a oggetti](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  

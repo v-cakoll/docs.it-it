@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791235"
 ---
 # <a name="wcf-client-overview"></a>Panoramica dei client WCF
 Questa sezione descrive come proteggere le applicazioni client, come configurare, creare e usare un client Windows Communication Foundation (WCF) e cosa fare delle applicazioni client.  
@@ -30,15 +30,15 @@ Questa sezione descrive come proteggere le applicazioni client, come configurare
   
  Nelle sezioni seguenti vengono illustrate queste procedure e vengono fornite informazioni introduttive sugli argomenti seguenti:  
   
--   Gestione degli errori.  
+- Gestione degli errori.  
   
--   Configurazione e protezione dei client.  
+- Configurazione e protezione dei client.  
   
--   Creazione di oggetti di callback per i servizi duplex.  
+- Creazione di oggetti di callback per i servizi duplex.  
   
--   Chiamate ai servizi in modo asincrono.  
+- Chiamate ai servizi in modo asincrono.  
   
--   Chiamate ai servizi mediante canali client.  
+- Chiamate ai servizi mediante canali client.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Ottenere informazioni sul contratto di servizio, sulle associazioni e sugli indirizzi  
  In WCF, servizi e client modellano i contratti usando attributi gestiti, interfacce e metodi. Per eseguire la connessione a un servizio in un'applicazione client è necessario ottenere le informazioni sul tipo per il contratto di servizio. In genere, è possibile utilizzando il [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), che consente di scaricare i metadati dal servizio, lo converte in un file di codice sorgente gestito nel linguaggio di propria scelta e crea un client file di configurazione dell'applicazione che è possibile usare per configurare l'oggetto client WCF. Ad esempio, se si intende creare un oggetto client WCF per richiamare una `MyCalculatorService`, e si è certi che i metadati per il servizio sia pubblicato nel `http://computerName/MyCalculatorService/Service.svc?wsdl`, quindi il codice seguente viene illustrato come utilizzare Svcutil.exe per ottenere un `ClientCode.vb` file contiene il contratto di servizio nel codice gestito.  
@@ -146,11 +146,11 @@ End Interface
   
  I client di servizi duplex devono:  
   
--   Implementare una classe di contratto di callback.  
+- Implementare una classe di contratto di callback.  
   
--   Creare un'istanza della classe di implementazione del contratto di callback e usarla per creare il <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> oggetto passato al costruttore del client WCF.  
+- Creare un'istanza della classe di implementazione del contratto di callback e usarla per creare il <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> oggetto passato al costruttore del client WCF.  
   
--   Richiamare operazioni e gestire callback di operazioni.  
+- Richiamare operazioni e gestire callback di operazioni.  
   
  Duplex WCF client gli oggetti funzione, ad esempio le rispettive controparti non duplex, con l'eccezione che espongono le funzionalità necessarie per supportare i callback, inclusa la configurazione del servizio di callback.  
   

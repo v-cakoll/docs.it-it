@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2dc1064656f3493db78d858cf1e86db0cb83d6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782863"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>Metodo ICorDebugRegisterSet2::GetRegisters
 Ottiene il valore di ogni registro (per la piattaforma su cui è attualmente in esecuzione codice) specificato dalla maschera di bit.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778820"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Procedura dettagliata: Creazione della prima applicazione a tocco
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consente alle applicazioni rispondere al tocco. Ad esempio, è possibile interagire con un'applicazione utilizzando uno o più dita su un dispositivo sensibile al tocco, ad esempio un touchscreen che questa procedura dettagliata viene creata un'applicazione che consente all'utente di spostare, ridimensionare o ruotare un oggetto tramite tocco.  
@@ -23,9 +23,9 @@ ms.locfileid: "59326983"
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
--   Visual Studio.  
+- Visual Studio.  
   
--   Un dispositivo che accetta un input tocco, ad esempio un touchscreen, che supporta Windows Touch.  
+- Un dispositivo che accetta un input tocco, ad esempio un touchscreen, che supporta Windows Touch.  
   
  Inoltre, si deve avere una conoscenza di base di come creare un'applicazione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], in particolare la modalità sottoscrivere e gestire un evento. Per altre informazioni, vedere [Procedura dettagliata: Prima applicazione desktop WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326983"
 ## <a name="testing-the-application"></a>Verifica dell'applicazione
  Per testare l'applicazione, provare le modifiche che seguono. Si noti che è possibile eseguire più di una delle seguenti operazioni nello stesso momento.
 
--   Per spostare il <xref:System.Windows.Shapes.Rectangle>, posizionare un dito sul <xref:System.Windows.Shapes.Rectangle> e muovere il dito sullo schermo.
+- Per spostare il <xref:System.Windows.Shapes.Rectangle>, posizionare un dito sul <xref:System.Windows.Shapes.Rectangle> e muovere il dito sullo schermo.
 
--   Per ridimensionare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e sposta le dita o chiudere ogni.
+- Per ridimensionare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e sposta le dita o chiudere ogni.
 
--   Per ruotare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e ruotare le dita una attorno a altra.
+- Per ruotare il <xref:System.Windows.Shapes.Rectangle>, posizionare due dita sul <xref:System.Windows.Shapes.Rectangle> e ruotare le dita una attorno a altra.
 
  Affinché l'inerzia, generare rapidamente le dita dalla schermata quando si eseguono modifiche precedenti. Il <xref:System.Windows.Shapes.Rectangle> continueranno a spostare, ridimensionare o ruotare per alcuni secondi prima che venga interrotta.
 

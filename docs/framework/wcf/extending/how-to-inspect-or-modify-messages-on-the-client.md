@@ -3,11 +3,11 @@ title: 'Procedura: Ispezionare o modificare i messaggi sul client'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766840"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Procedura: Ispezionare o modificare i messaggi sul client
 È possibile ispezionare o modificare i messaggi in ingresso o in uscita tra un client WCF implementando un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> e inserendola nel runtime del client. Per altre informazioni, vedere [estensione client](../../../../docs/framework/wcf/extending/extending-clients.md). La funzionalità equivalente nel servizio è <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Per un esempio di codice completo, vedere la [i controlli messaggi](../../../../docs/framework/wcf/samples/message-inspectors.md) esempio.  
@@ -23,13 +23,13 @@ ms.locfileid: "59343298"
 ## <a name="example"></a>Esempio  
  Negli esempi di codice seguenti vengono illustrati, nell'ordine:  
   
--   Un'implementazione del controllo client.  
+- Un'implementazione del controllo client.  
   
--   Un comportamento dell'endpoint che inserisce il controllo.  
+- Un comportamento dell'endpoint che inserisce il controllo.  
   
--   Una classe derivata da <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>che consente di aggiungere il comportamento in un file di configurazione.  
+- Una classe derivata da <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>che consente di aggiungere il comportamento in un file di configurazione.  
   
--   Un file di configurazione che aggiunge il comportamento dell'endpoint che inserisce il controllo dei messaggi client nel runtime del client.  
+- Un file di configurazione che aggiunge il comportamento dell'endpoint che inserisce il controllo dei messaggi client nel runtime del client.  
   
 ```csharp  
 // Client message inspector  

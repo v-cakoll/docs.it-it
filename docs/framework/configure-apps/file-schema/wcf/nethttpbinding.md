@@ -3,11 +3,11 @@ title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
 ms.openlocfilehash: 14c1b6940099fa2b34716ed785bd00756c3e435e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774740"
 ---
 # <a name="nethttpbinding"></a>\<netHttpBinding>
 Rappresenta un'associazione che un servizio Windows Communication Foundation (WCF) è possibile usare per configurare ed esporre endpoint che sono in grado di comunicare tramite HTTP. Nel caso di un contratto duplex, verrà usato Web Sockets. In caso contrario, verrà usato HTTP.  

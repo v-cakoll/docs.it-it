@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791976"
 ---
 # <a name="operator-procedures-visual-basic"></a>Routine di operatore (Visual Basic)
 Una routine di operatore è una serie di istruzioni di Visual Basic che definiscono il comportamento di un operatore standard (ad esempio `*`, `<>`, o `And`) in una classe o struttura definita. Questo è l'acronimo *overload degli operatori*.  
@@ -31,13 +31,13 @@ Una routine di operatore è una serie di istruzioni di Visual Basic che definisc
 ## <a name="types-of-operator-procedure"></a>Tipi di routine di operatore  
  Una routine di operatore può essere uno dei tipi seguenti:  
   
--   Una definizione di un operatore unario dove l'argomento è del tipo di classe o struttura.  
+- Una definizione di un operatore unario dove l'argomento è del tipo di classe o struttura.  
   
--   Una definizione di un operatore binario in cui almeno uno degli argomenti è del tipo di classe o struttura.  
+- Una definizione di un operatore binario in cui almeno uno degli argomenti è del tipo di classe o struttura.  
   
--   Una definizione di un operatore di conversione in cui l'argomento è del tipo di classe o struttura.  
+- Una definizione di un operatore di conversione in cui l'argomento è del tipo di classe o struttura.  
   
--   Una definizione di un operatore di conversione che restituisce il tipo di classe o struttura.  
+- Una definizione di un operatore di conversione che restituisce il tipo di classe o struttura.  
   
  Gli operatori di conversione sono sempre unario e utilizzare sempre `CType` dell'operatore a cui si sta definendo.  
   

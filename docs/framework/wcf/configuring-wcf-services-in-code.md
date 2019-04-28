@@ -3,11 +3,11 @@ title: Configurazione dei servizi WCF nel codice
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779756"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configurazione dei servizi WCF nel codice
 Windows Communication Foundation (WCF) consente agli sviluppatori di configurare i servizi tramite file di configurazione o codice.  I file di configurazione sono utili quando è necessario configurare un servizio dopo la relativa distribuzione. Quando si utilizzano i file di configurazione, un professionista IT deve solo aggiornare il file di configurazione. Non è necessario eseguire la ricompilazione. I file di configurazione, tuttavia, possono risultare complessi e difficili da gestire. Non è disponibile alcun supporto per il debug dei file di configurazione e, poiché il riferimento agli elementi di configurazione viene fatto in base ai nomi, i file di configurazione della creazione possono risultare difficili e soggetti a errori. WCF consente anche di configurare i servizi nel codice. Nelle versioni precedenti di servizi di configurazione WCF (4.0 e versioni precedenti) nel codice era semplice negli scenari self-hosted, il <xref:System.ServiceModel.ServiceHost> classe consentiva di configurare gli endpoint e comportamenti prima di chiamare ServiceHost. Open. Negli scenari ospitati dal Web, tuttavia, non è possibile accedere direttamente alla classe <xref:System.ServiceModel.ServiceHost>. Per configurare un servizio ospitato dal Web era necessario creare un oggetto `System.ServiceModel.ServiceHostFactory` che creava l'oggetto <xref:System.ServiceModel.Activation.ServiceHostFactory> ed effettuava qualsiasi configurazione richiesta. A partire da .NET 4.5, WCF fornisce un modo più semplice configurare entrambi self-hosted e dei servizi in codice ospitato sul web.  

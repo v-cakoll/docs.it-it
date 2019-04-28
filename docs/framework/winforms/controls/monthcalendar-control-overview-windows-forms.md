@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
 ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768485"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>Cenni preliminari sul controllo MonthCalendar (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo presenta un'interfaccia grafica intuitiva per gli utenti possono visualizzare e impostare le informazioni sulla data. Il controllo verrà visualizzato un calendario: una griglia contenente i giorni del mese, distribuiti in colonne sotto i giorni della settimana, con l'intervallo di date evidenziate selezionato numerati. È possibile selezionare un altro mese facendo clic sui pulsanti freccia su entrambi i lati della didascalia del mese. A differenza dell'analoga <xref:System.Windows.Forms.DateTimePicker> (controllo), è possibile selezionare più di una data con questo controllo. Per altre informazioni sul <xref:System.Windows.Forms.DateTimePicker> controllano, vedere [controllo DateTimePicker](datetimepicker-control-windows-forms.md).  

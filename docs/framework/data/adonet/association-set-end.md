@@ -3,20 +3,20 @@ title: entità finale del set di associazioni
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
 ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769578"
 ---
 # <a name="association-set-end"></a>entità finale del set di associazioni
 Un *fine del set di associazioni* identifica le [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) e il [set di entità](../../../../docs/framework/data/adonet/entity-set.md) alla fine di un [set di associazioni](../../../../docs/framework/data/adonet/association-set.md). Le entità finali del set di associazioni sono definite come parte di un set di associazioni. Un set di associazioni deve disporre esattamente di due entità finali.  
   
  Una definizione di entità finale del set di associazioni contiene le informazioni seguenti:  
   
--   Uno dei tipi di entità coinvolti nel set di associazioni (obbligatorio).  
+- Uno dei tipi di entità coinvolti nel set di associazioni (obbligatorio).  
   
--   Il set di entità per il tipo di entità coinvolto nel set di associazioni (obbligatorio).  
+- Il set di entità per il tipo di entità coinvolto nel set di associazioni (obbligatorio).  
   
 ## <a name="example"></a>Esempio  
  Nel diagramma seguente viene illustrato un modello concettuale con due associazioni: `WrittenBy` e `PublishedBy`.  

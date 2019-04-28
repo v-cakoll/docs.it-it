@@ -3,11 +3,11 @@ title: 'Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773061"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Schemi progettuali: pubblicazione-sottoscrizione basata su elenchi
 Questo esempio viene illustrato il modello basato su elenchi di pubblicazione-sottoscrizione implementato come un programma di Windows Communication Foundation (WCF).  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Configurare il computer del servizio:  
   
-    1.  Sul computer del servizio, creare una directory virtuale denominata ServiceModelSamples. Il file batch setupvroot dal [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) può essere utilizzato per creare la directory del disco e una directory virtuale.  
+    1. Sul computer del servizio, creare una directory virtuale denominata ServiceModelSamples. Il file batch setupvroot dal [monouso procedura di installazione per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) può essere utilizzato per creare la directory del disco e una directory virtuale.  
   
-    2.  Copiare i file del programma del servizio da %SystemDrive%\Inetpub\wwwroot\servicemodelsamples alla directory virtuale di ServiceModelSamples sul computer del servizio. Verificare di includere i file nella directory \bin.  
+    2. Copiare i file del programma del servizio da %SystemDrive%\Inetpub\wwwroot\servicemodelsamples alla directory virtuale di ServiceModelSamples sul computer del servizio. Verificare di includere i file nella directory \bin.  
   
-    3.  Verificare che sia possibile accedere al servizio dal computer client usando un browser.  
+    3. Verificare che sia possibile accedere al servizio dal computer client usando un browser.  
   
 2. Configurare i computer client:  
   
-    1.  Copiare i file del programma client dalla cartella \client\bin\, nella cartella specifica del linguaggio, all'interno dei computer client.  
+    1. Copiare i file del programma client dalla cartella \client\bin\, nella cartella specifica del linguaggio, all'interno dei computer client.  
   
-    2.  In ogni file di configurazione del client modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
+    2. In ogni file di configurazione del client modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
   
 3. Configurare il computer dell'origine dati:  
   
-    1.  Copiare i file del programma dell'origine dati dalla cartella \datasource\bin\, nella cartella specifica del linguaggio, all'interno del computer dell'origine dati.  
+    1. Copiare i file del programma dell'origine dati dalla cartella \datasource\bin\, nella cartella specifica del linguaggio, all'interno del computer dell'origine dati.  
   
-    2.  Nel file di configurazione dell'origine dati modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
+    2. Nel file di configurazione dell'origine dati modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
   
 4. Nei computer client avviare Client.exe da un prompt dei comandi.  
   

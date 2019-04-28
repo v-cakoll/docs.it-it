@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778781"
 ---
 # <a name="choosing-between-class-and-struct"></a>Scelta tra classi e struct
 Una delle decisioni di progettazione di base che deve affrontare ogni finestra di progettazione di framework è se un tipo di progettazione come una classe (un tipo riferimento) o uno struct (tipo di valore). Buona conoscenza delle differenze nel comportamento dei tipi di riferimento e tipi di valore è essenziale per effettuare questa scelta.  
@@ -39,13 +39,13 @@ Una delle decisioni di progettazione di base che deve affrontare ogni finestra d
   
  **X AVOID** che definisce uno struct, a meno che il tipo dispone di tutte le caratteristiche seguenti:  
   
--   In modo logico rappresenta un singolo valore, simile ai tipi primitivi (`int`, `double`e così via.).  
+- In modo logico rappresenta un singolo valore, simile ai tipi primitivi (`int`, `double`e così via.).  
   
--   Ha una dimensione di istanza inferiore a 16 byte.  
+- Ha una dimensione di istanza inferiore a 16 byte.  
   
--   Non è modificabile.  
+- Non è modificabile.  
   
--   Non dovrà eseguire la conversione boxing di frequente.  
+- Non dovrà eseguire la conversione boxing di frequente.  
   
  In tutti gli altri casi, è necessario definire i tipi come classi.  
   

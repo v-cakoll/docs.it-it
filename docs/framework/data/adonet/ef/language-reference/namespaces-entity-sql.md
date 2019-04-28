@@ -3,11 +3,11 @@ title: Spazi dei nomi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 83991c21-60db-4af9-aca3-b416f6cae98e
 ms.openlocfilehash: bef2fa96ce090a600155d68ecc3daea55b675840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760441"
 ---
 # <a name="namespaces-entity-sql"></a>Spazi dei nomi (Entity SQL)
 In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono introdotti gli spazi dei nomi per evitare conflitti di nome per gli identificatori globali, ad esempio nomi di tipi, set di entità, funzioni e così via. Il supporto dello spazio dei nomi in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è simile al supporto dello spazio dei nomi nel [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].  

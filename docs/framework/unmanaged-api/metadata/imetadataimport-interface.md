@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777455"
 ---
 # <a name="imetadataimport-interface"></a>Interfaccia IMetaDataImport
 Fornisce metodi per importare e modificare i metadati esistenti da un file eseguibile portabile (PE) o da un'altra origine, ad esempio una libreria dei tipi o un binario dei metadati di runtime autonomo.  
@@ -96,13 +96,13 @@ Fornisce metodi per importare e modificare i metadati esistenti da un file esegu
 ## <a name="remarks"></a>Note  
  L'interfaccia `IMetaDataImport` è progettata principalmente per essere usata da strumenti e servizi che importeranno informazioni sul tipo, ad esempio strumenti di sviluppo, o gestiranno componenti distribuiti, quali servizi di risoluzione o attivazione. I metodi di `IMetaDataImport` rientrano nelle seguenti categorie di attività:  
   
--   Enumerazione di raccolte di elementi nell'ambito dei metadati.  
+- Enumerazione di raccolte di elementi nell'ambito dei metadati.  
   
--   Ricerca di un elemento con una serie specifica di caratteristiche.  
+- Ricerca di un elemento con una serie specifica di caratteristiche.  
   
--   Recupero delle proprietà di un elemento specificato.  
+- Recupero delle proprietà di un elemento specificato.  
   
--   I metodi Get sono progettati specificamente per restituire le proprietà a valore singolo di un elemento dei metadati. Quando la proprietà è un riferimento a un altro elemento, viene restituito un token per tale elemento. Qualunque tipo di input del puntatore può essere NULL per indicare che il valore in questione non è richiesto. Per ottenere proprietà che siano essenzialmente oggetti Collection, ad esempio la raccolta di interfacce implementate da una classe, usare i metodi di enumerazione.  
+- I metodi Get sono progettati specificamente per restituire le proprietà a valore singolo di un elemento dei metadati. Quando la proprietà è un riferimento a un altro elemento, viene restituito un token per tale elemento. Qualunque tipo di input del puntatore può essere NULL per indicare che il valore in questione non è richiesto. Per ottenere proprietà che siano essenzialmente oggetti Collection, ad esempio la raccolta di interfacce implementate da una classe, usare i metodi di enumerazione.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

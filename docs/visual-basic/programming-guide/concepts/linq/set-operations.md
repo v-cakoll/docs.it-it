@@ -3,11 +3,11 @@ title: Operazioni set (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
 ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786868"
 ---
 # <a name="set-operations-visual-basic"></a>Operazioni set (Visual Basic)
 Le operazioni sui set in LINQ si riferiscono alle operazioni di query che generano un set di risultati basato sulla presenza o sull'assenza di elementi equivalenti all'interno delle stesse Collection oppure di Collection (o set) distinte.  

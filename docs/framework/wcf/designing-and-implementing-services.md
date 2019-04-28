@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
 ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785021"
 ---
 # <a name="designing-and-implementing-services"></a>Progettazione e implementazione di servizi
 Questa sezione illustra come definire e implementare contratti WCF. Un contratto di servizio specifica quale endpoint comunica con il mondo esterno. A un livello più concreto, è un'istruzione su un set di messaggi specifici organizzati in modelli di scambio di messaggi di base (MEP, Message Exchange Pattern) quali, ad esempio, request/reply, unidirezionale e duplex. Se un contratto di servizio è un set logicamente correlato di scambi di messaggi, un'operazione di servizio è un singolo scambio di messaggi. Un'operazione `Hello` deve, ad esempio, accettare un messaggio (quindi il chiamante può annunciare il saluto) e può o non può restituire un messaggio (a seconda del livello di cortesia dell'operazione).  
@@ -19,22 +19,22 @@ Questa sezione illustra come definire e implementare contratti WCF. Un contratto
 ## <a name="overview"></a>Panoramica  
  In questo argomento fornisce un orientamento concettuale di alto livello alla progettazione e implementazione di servizi WCF. Negli argomenti correlati vengono fornite informazioni più dettagliate sulle specifiche di progettazione e implementazione. Prima di progettare e implementare un'applicazione WCF, è consigliabile che si:  
   
--   Comprendere cosa siano i contratti di servizio, come funzionino e come sia possibile crearne uno.  
+- Comprendere cosa siano i contratti di servizio, come funzionino e come sia possibile crearne uno.  
   
--   Comprendere che i contratti prevedono requisiti minimi che la configurazione di runtime o l'ambiente host potrebbe non supportare.  
+- Comprendere che i contratti prevedono requisiti minimi che la configurazione di runtime o l'ambiente host potrebbe non supportare.  
   
 ## <a name="service-contracts"></a>Contratti di servizio  
  In un contratto di servizio viene specificato quanto segue:  
   
--   Le operazioni esposte nel contratto.  
+- Le operazioni esposte nel contratto.  
   
--   Forma delle operazioni in termini di messaggi scambiati.  
+- Forma delle operazioni in termini di messaggi scambiati.  
   
--   Tipi di dati di questi messaggi.  
+- Tipi di dati di questi messaggi.  
   
--   Posizione delle operazioni.  
+- Posizione delle operazioni.  
   
--   Protocolli e formati di serializzazione specifici usati per supportare la corretta comunicazione con il servizio.  
+- Protocolli e formati di serializzazione specifici usati per supportare la corretta comunicazione con il servizio.  
   
  Un contratto di ordine di acquisto può, ad esempio, includere un'operazione `CreateOrder` che accetta un input di tipi di informazioni sull'ordine e restituisce informazioni sull'esito positivo o negativo, incluso un identificatore di ordine. Può inoltre includere un'operazione `GetOrderStatus` che accetta un identificatore di ordine e restituisce informazioni sullo stato dell'ordine. Un contratto di servizio di questo tipo specificherebbe:  
   

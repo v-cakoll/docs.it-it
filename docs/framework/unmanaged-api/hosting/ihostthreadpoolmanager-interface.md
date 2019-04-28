@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2e7976740a79efda8e5ab569f2efb55444012c5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796569"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>Interfaccia IHostThreadPoolManager
 Fornisce metodi che consentono a common language runtime (CLR) per configurare il pool di thread e accodare elementi di lavoro al pool di thread.  

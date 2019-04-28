@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765573"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting del servizio dati (WCF Data Services)
 Tramite WCF Data Services, è possibile creare un servizio che espone dati come un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Questo servizio dati è definito come una classe che eredita da <xref:System.Data.Services.DataService%601>. Questa classe fornisce la funzionalità necessaria per elaborare i messaggi di richiesta, eseguire aggiornamenti sull'origine dati e generare messaggi di risposta, come richiesto da OData. Tuttavia, un servizio dati non è possibile associare a e restare in ascolto su un socket di rete per le richieste HTTP in ingresso. Per questa funzionalità obbligatoria, il servizio dati si basa su un componente di hosting.
 
  L'host del servizio dati esegue le attività seguenti per conto del servizio dati:
 
--   È in attesa delle richieste e le indirizza al servizio dati.
+- È in attesa delle richieste e le indirizza al servizio dati.
 
--   Crea un'istanza del servizio dati per ogni richiesta.
+- Crea un'istanza del servizio dati per ogni richiesta.
 
--   Richiede che il servizio dati elabori la richiesta in ingresso.
+- Richiede che il servizio dati elabori la richiesta in ingresso.
 
--   Invia la risposta per conto del servizio dati.
+- Invia la risposta per conto del servizio dati.
 
  Per semplificare l'hosting di un servizio dati, WCF Data Services è progettato per l'integrazione con Windows Communication Foundation (WCF). Il servizio dati fornisce un'implementazione WCF predefinita che funge da host del servizio dati in un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dell'applicazione. È pertanto possibile ospitare un servizio dati in uno dei modi seguenti:
 
--   In un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].
+- In un'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].
 
--   In un'applicazione gestita che supporta servizi WCF indipendenti.
+- In un'applicazione gestita che supporta servizi WCF indipendenti.
 
--   In un altro host del servizio dati personalizzato.
+- In un altro host del servizio dati personalizzato.
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hosting di un servizio dati in un'applicazione ASP.NET
 
@@ -65,13 +65,13 @@ Quando si usa la **Aggiungi nuovo elemento** finestra di dialogo in Visual Studi
 ## <a name="defining-a-custom-data-service-host"></a>Definizione di un host del servizio dati personalizzato
  Per i casi in cui l'implementazione dell'host WCF è troppo restrittiva, è anche possibile definire un host personalizzato per un servizio dati. Qualsiasi classe che implementi l'interfaccia <xref:System.Data.Services.IDataServiceHost> può essere usata come host di rete per un servizio dati. Un host personalizzato deve implementare l'interfaccia <xref:System.Data.Services.IDataServiceHost> e deve essere in grado di gestire le responsabilità di base seguenti dell'host del servizio dati:
 
--   Fornire al servizio dati il percorso radice del servizio.
+- Fornire al servizio dati il percorso radice del servizio.
 
--   Elaborare le informazioni delle intestazioni di richieste e risposte per l'implementazione del membro <xref:System.Data.Services.IDataServiceHost> appropriato.
+- Elaborare le informazioni delle intestazioni di richieste e risposte per l'implementazione del membro <xref:System.Data.Services.IDataServiceHost> appropriato.
 
--   Gestire le eccezioni generate dal servizio dati.
+- Gestire le eccezioni generate dal servizio dati.
 
--   Convalidare i parametri contenuti nella stringa di query.
+- Convalidare i parametri contenuti nella stringa di query.
 
 ## <a name="see-also"></a>Vedere anche
 

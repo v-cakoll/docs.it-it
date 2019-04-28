@@ -3,11 +3,11 @@ title: Panoramica sulla diffusione WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 ms.openlocfilehash: ef62c4460ff5dd4890de174afda671facee97f2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768563"
 ---
 # <a name="wcf-syndication-overview"></a>Panoramica sulla diffusione WCF
 Windows Communication Foundation (WCF) offre supporto per l'esposizione di feed di diffusione da un servizio WCF. La diffusione è un meccanismo di integrazione delle applicazioni in cui un server espone alcuni dati dell'applicazione in un formato interoperativo noto come feed. Un feed è una raccolta di dati dell'applicazione costituito da alcuni metadati a livello feed (titolo, autore, URL e altri metadati) e da una serie di elementi feed. All'interno del feed, gli elementi feed sono di solito organizzati in ordine cronologico inverso. Un elemento feed è costituito da un set standard di metadati di livello feed (titolo, URL, data di creazione, categoria e altri metadati di livello elemento) e da una quantità arbitraria di dati specifici dell'applicazione. I due tipi più comuni di feed di diffusione sono RSS Really Simple Syndication () 2.0 e Atom 1.0, entrambi sono supportati da WCF.  

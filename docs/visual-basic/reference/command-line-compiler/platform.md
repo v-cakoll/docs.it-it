@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788908"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Consente di specificare la versione di Common Language Runtime (CLR) in grado di eseguire il file di output.  
@@ -38,31 +38,31 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
  In genere, gli assembly .NET Framework scritti in Visual Basic vengono sempre eseguiti, indipendentemente dalla piattaforma. L'elaborazione di alcuni elementi può tuttavia risultare influenzata dalla piattaforma in uso. I casi più comuni sono:  
   
--   Strutture contenenti membri che cambiano dimensione in base alla piattaforma, ad esempio tutti i tipi puntatore.  
+- Strutture contenenti membri che cambiano dimensione in base alla piattaforma, ad esempio tutti i tipi puntatore.  
   
--   Operazioni aritmetiche che includono dimensioni costanti.  
+- Operazioni aritmetiche che includono dimensioni costanti.  
   
--   Dichiarazioni pInvoke o COM non corrette che usano `Integer` anziché <xref:System.IntPtr> per gli handle.  
+- Dichiarazioni pInvoke o COM non corrette che usano `Integer` anziché <xref:System.IntPtr> per gli handle.  
   
--   Casting di <xref:System.IntPtr> su `Integer`.  
+- Casting di <xref:System.IntPtr> su `Integer`.  
   
--   Uso dell'interoperabilità pInvoke o COM con componenti non disponibili in tutte le piattaforme.  
+- Uso dell'interoperabilità pInvoke o COM con componenti non disponibili in tutte le piattaforme.  
   
  Il **-piattaforma** opzione sarà possibile limitare alcuni problemi se si conosce presenti le premesse sull'architettura in cui verrà eseguito il codice. In particolare:  
   
--   Se si specifica l'opzione per una piattaforma a 64 bit e l'applicazione viene eseguita su un computer a 32 bit, il messaggio di errore verrà visualizzato con maggiore anticipo e sarà maggiormente descrittivo del problema specifico rispetto all'errore che si verifica senza usare questa opzione.  
+- Se si specifica l'opzione per una piattaforma a 64 bit e l'applicazione viene eseguita su un computer a 32 bit, il messaggio di errore verrà visualizzato con maggiore anticipo e sarà maggiormente descrittivo del problema specifico rispetto all'errore che si verifica senza usare questa opzione.  
   
--   Se si imposta il flag `x86` e successivamente si usa un computer a 64 bit per l'elaborazione dell'applicazione, questa verrà eseguita nel sottosistema WOW e non a livello nativo.  
+- Se si imposta il flag `x86` e successivamente si usa un computer a 64 bit per l'elaborazione dell'applicazione, questa verrà eseguita nel sottosistema WOW e non a livello nativo.  
   
  In un sistema operativo Windows a 64 bit:  
   
--   Gli assembly compilati con l'opzione `-platform:x86` potranno essere eseguiti da CLR a 32 bit in WOW64.  
+- Gli assembly compilati con l'opzione `-platform:x86` potranno essere eseguiti da CLR a 32 bit in WOW64.  
   
--   Gli eseguibili compilati con l'opzione `-platform:anycpu` potranno essere eseguiti da CLR a 64 bit.  
+- Gli eseguibili compilati con l'opzione `-platform:anycpu` potranno essere eseguiti da CLR a 64 bit.  
   
--   Una DLL compilata con l'opzione `-platform:anycpu` potrà essere eseguita dallo stesso CLR del processo in cui viene caricata.  
+- Una DLL compilata con l'opzione `-platform:anycpu` potrà essere eseguita dallo stesso CLR del processo in cui viene caricata.  
   
--   Gli eseguibili compilati con l'opzione `-platform:anycpu32bitpreferred` potranno essere eseguiti da CLR a 32 bit.  
+- Gli eseguibili compilati con l'opzione `-platform:anycpu32bitpreferred` potranno essere eseguiti da CLR a 32 bit.  
   
  Per altre informazioni su come sviluppare un'applicazione da eseguire su una versione a 64 bit di Windows, vedere [applicazioni a 64 bit](../../../framework/64-bit-apps.md).  
   

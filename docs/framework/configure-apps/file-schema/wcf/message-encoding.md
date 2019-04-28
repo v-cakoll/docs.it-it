@@ -3,11 +3,11 @@ title: Codifica dei messaggi
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
 ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768992"
 ---
 # <a name="message-encoding"></a>Codifica dei messaggi
 La codifica è il processo di trasformazione di un insieme di caratteri Unicode in una sequenza di byte. La decodifica è il processo inverso. Windows Communication Foundation (WCF) include tre tipi di codifica per i messaggi SOAP: Testo, binaria e MTOM (MTOM).  

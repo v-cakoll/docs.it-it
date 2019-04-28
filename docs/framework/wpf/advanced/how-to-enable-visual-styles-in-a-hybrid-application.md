@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
 ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776142"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Procedura: Abilitare stili di visualizzazione in un'applicazione ibrida
 In questo argomento viene illustrato come abilitare [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] gli stili di visualizzazione in un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controllo ospitato in un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-applicazione basata su.  
@@ -30,9 +30,9 @@ In questo argomento viene illustrato come abilitare [!INCLUDE[TLA#tla_winxp](../
   
 2. In Esplora soluzioni aggiungere riferimenti agli assembly seguenti.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. Nella casella degli strumenti, fare doppio clic il <xref:System.Windows.Controls.Grid> icona per posizionare un <xref:System.Windows.Controls.Grid> elemento nell'area di progettazione.  
   

@@ -3,11 +3,11 @@ title: "Procedura: Accesso a un servizio da un'applicazione per la gestione del 
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779645"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Procedura: Accesso a un servizio da un'applicazione per la gestione del flusso di lavoro
 In questo argomento viene descritto come chiamare un servizio flusso di lavoro da un'applicazione console del flusso di lavoro. Dipende dal completamento del [come: Creare un servizio del flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) argomento. Sebbene in questo argomento viene descritto come chiamare un servizio del flusso di lavoro da un'applicazione flusso di lavoro, gli stessi metodi sono utilizzabile per chiamare qualsiasi servizio Windows Communication Foundation (WCF) da un'applicazione flusso di lavoro.

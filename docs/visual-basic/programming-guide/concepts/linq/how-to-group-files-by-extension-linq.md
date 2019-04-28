@@ -3,11 +3,11 @@ title: 'Procedura: Raggruppa file per estensione (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
 ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778079"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procedura: Raggruppa file per estensione (LINQ) (Visual Basic)
 Questo esempio illustra come usare LINQ per eseguire operazioni avanzate di raggruppamento e ordinamento su elenchi di file o cartelle. Illustra anche come disporre l'output nella finestra della console usando i metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  

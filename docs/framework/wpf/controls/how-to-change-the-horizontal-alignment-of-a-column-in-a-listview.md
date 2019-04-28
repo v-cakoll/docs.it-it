@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
 ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911066"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Procedura: Modificare l'allineamento orizzontale di una colonna in ListView
 Per impostazione predefinita, il contenuto di ogni colonna in un <xref:System.Windows.Controls.ListViewItem> è allineato a sinistra. È possibile modificare l'allineamento di ogni colonna, fornendo una <xref:System.Windows.DataTemplate> e impostando il <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> proprietà dell'elemento all'interno di <xref:System.Windows.DataTemplate>. Questo argomento viene illustrato come un <xref:System.Windows.Controls.ListView> Allinea il contenuto per impostazione predefinita e come modificare l'allineamento di una colonna in un <xref:System.Windows.Controls.ListView>.  

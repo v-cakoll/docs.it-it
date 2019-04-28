@@ -3,30 +3,30 @@ title: Autenticatore token
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
 ms.openlocfilehash: 501f1801c1cb475a87c586f8bbc14146b9141047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779171"
 ---
 # <a name="token-authenticator"></a>Autenticatore token
 In questo esempio viene illustrato come implementare un autenticatore di token personalizzato. Un autenticatore del token in Windows Communication Foundation (WCF) viene usato per la convalida del token utilizzato con il messaggio di verifica che è coerente e l'autenticazione dell'identità associata al token.
 
  Gli autenticatori di token personalizzati sono utili in molti casi, ad esempio:
 
--   Quando si vuole eseguire l'override del meccanismo di autenticazione predefinito associato a un token.
+- Quando si vuole eseguire l'override del meccanismo di autenticazione predefinito associato a un token.
 
--   Quando si sta compilando un token personalizzato.
+- Quando si sta compilando un token personalizzato.
 
  Questo esempio illustra i seguenti elementi:
 
--   Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.
+- Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.
 
--   Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.
+- Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.
 
--   Modo in cui è strettamente il codice del servizio WCF con l'autenticatore del token personalizzato.
+- Modo in cui è strettamente il codice del servizio WCF con l'autenticatore del token personalizzato.
 
--   Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.
+- Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.
 
  Questo esempio viene inoltre illustrato come l'identità del chiamante sia accessibile da WCF dopo il processo di autenticazione del token personalizzato.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
 
--   Creazione del certificato server.
+- Creazione del certificato server.
 
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato server nell'archivio certificati attendibili del client
+- Installazione del certificato server nell'archivio certificati attendibili del client
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
 

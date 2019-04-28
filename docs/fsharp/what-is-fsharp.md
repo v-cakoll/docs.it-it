@@ -3,11 +3,11 @@ title: Che cos'èF#
 description: Informazioni sugli aspetti di F# linguaggio di programmazione è e cosa F# programmazione è ad esempio. Informazioni sui tipi di dati avanzato, funzioni e come interagiscono.
 ms.date: 08/03/2018
 ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756338"
 ---
 # <a name="what-is-f"></a>Che cos'è F\#
 
