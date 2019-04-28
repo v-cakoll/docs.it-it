@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649998"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Poiché la chiamata non può essere attesa, l'esecuzione del metodo corrente continua prima del completamento della chiamata
 Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrente continuerà prima del completamento della chiamata. È possibile applicare l'operatore "Await" al risultato della chiamata.  
@@ -29,7 +29,7 @@ Non è possibile attendere la chiamata, pertanto l'esecuzione del metodo corrent
   
 ### <a name="to-address-this-warning"></a>Per risolvere questo avviso  
   
--   Si consideri la possibilità di eliminare l'avviso solo se si è certi che non si desidera attendere il completamento della chiamata asincrona e che il metodo chiamato non generi alcuna eccezione. In tal caso, è possibile eliminare l'avviso assegnando il risultato dell'attività della chiamata a una variabile.  
+- Si consideri la possibilità di eliminare l'avviso solo se si è certi che non si desidera attendere il completamento della chiamata asincrona e che il metodo chiamato non generi alcuna eccezione. In tal caso, è possibile eliminare l'avviso assegnando il risultato dell'attività della chiamata a una variabile.  
   
      Nell'esempio seguente viene illustrato come generare l'avviso, come eliminarlo e come attendere la chiamata.  
   

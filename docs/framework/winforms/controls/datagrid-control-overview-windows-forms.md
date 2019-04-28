@@ -21,11 +21,11 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904451"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGrid (Windows Form)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "59304734"
   
  Le origini dati valide per <xref:System.Windows.Forms.DataGrid> includono:  
   
--   Classe <xref:System.Data.DataTable>  
+- Classe <xref:System.Data.DataTable>  
   
--   Classe <xref:System.Data.DataView>  
+- Classe <xref:System.Data.DataView>  
   
--   Classe <xref:System.Data.DataSet>  
+- Classe <xref:System.Data.DataSet>  
   
--   Classe <xref:System.Data.DataViewManager>  
+- Classe <xref:System.Data.DataViewManager>  
   
  Se l'origine è un set di dati, il set di dati potrebbe essere un oggetto nel form o un oggetto passato al form da un servizio Web XML. È possibile eseguire il binding sia a set di dati tipizzati che non tipizzati.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "59304734"
   
  È possibile eseguire il binding alle seguenti strutture se gli elementi espongono proprietà pubbliche:  
   
--   Qualsiasi componente che implementa l'interfaccia <xref:System.Collections.IList>, incluse le matrici unidimensionali.  
+- Qualsiasi componente che implementa l'interfaccia <xref:System.Collections.IList>, incluse le matrici unidimensionali.  
   
--   Qualsiasi componente che implementa l'interfaccia <xref:System.ComponentModel.IListSource>.  
+- Qualsiasi componente che implementa l'interfaccia <xref:System.ComponentModel.IListSource>.  
   
--   Qualsiasi componente che implementa l'interfaccia <xref:System.ComponentModel.IBindingList>,  
+- Qualsiasi componente che implementa l'interfaccia <xref:System.ComponentModel.IBindingList>,  
   
  Per altre informazioni sulle possibili origini dati, vedere [Origini dati supportate da Windows Form](../data-sources-supported-by-windows-forms.md).  
   

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902317"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Cenni preliminari sul controllo DataGridView (Windows Form)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "59112879"
   
  Il <xref:System.Windows.Forms.DataGridView> controllo supporta il modello di associazione dati standard di Windows Form, in modo che consente l'associazione alle istanze delle classi descritte nell'elenco seguente:  
   
--   Qualsiasi classe che implementa il <xref:System.Collections.IList> interfaccia, incluse le matrici unidimensionali.  
+- Qualsiasi classe che implementa il <xref:System.Collections.IList> interfaccia, incluse le matrici unidimensionali.  
   
--   Qualsiasi classe che implementa il <xref:System.ComponentModel.IListSource> dell'interfaccia, ad esempio il <xref:System.Data.DataTable> e <xref:System.Data.DataSet> classi.  
+- Qualsiasi classe che implementa il <xref:System.ComponentModel.IListSource> dell'interfaccia, ad esempio il <xref:System.Data.DataTable> e <xref:System.Data.DataSet> classi.  
   
--   Qualsiasi classe che implementa il <xref:System.ComponentModel.IBindingList> dell'interfaccia, ad esempio il <xref:System.ComponentModel.BindingList%601> classe.  
+- Qualsiasi classe che implementa il <xref:System.ComponentModel.IBindingList> dell'interfaccia, ad esempio il <xref:System.ComponentModel.BindingList%601> classe.  
   
--   Qualsiasi classe che implementa il <xref:System.ComponentModel.IBindingListView> dell'interfaccia, ad esempio il <xref:System.Windows.Forms.BindingSource> classe.  
+- Qualsiasi classe che implementa il <xref:System.ComponentModel.IBindingListView> dell'interfaccia, ad esempio il <xref:System.Windows.Forms.BindingSource> classe.  
   
  Il <xref:System.Windows.Forms.DataGridView> controllo supporta il data binding per le proprietà degli oggetti restituiti da queste interfacce pubbliche o alla raccolta di proprietà restituito da un <xref:System.ComponentModel.ICustomTypeDescriptor> interfaccia, se implementata in oggetti restituiti.  
   

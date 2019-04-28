@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903357"
 ---
 # <a name="frequently-asked-questions"></a>Domande frequenti
 Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che possono verificarsi durante l'implementazione di [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -34,18 +34,18 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
   
  I dettagli esatti di utilizzo della connessione dipendono dagli elementi seguenti:  
   
--   Stato della connessione se <xref:System.Data.Linq.DataContext> viene costruito con un oggetto connessione.  
+- Stato della connessione se <xref:System.Data.Linq.DataContext> viene costruito con un oggetto connessione.  
   
--   Impostazioni della stringa di connessione, ad esempio abilitando MARS (Multiple Active Result Sets). Per altre informazioni, vedere [MARS (Multiple Active Result Sets)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+- Impostazioni della stringa di connessione, ad esempio abilitando MARS (Multiple Active Result Sets). Per altre informazioni, vedere [MARS (Multiple Active Result Sets)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Aggiornamento senza query  
  D. È possibile aggiornare i dati della tabella senza prima eseguire una query sul database?  
   
  Un  Sebbene [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non disponga di comandi di aggiornamento basati su set, è possibile usare le tecniche seguenti per aggiornare senza prima eseguire una query:  
   
--   Usare <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> per inviare il codice SQL.  
+- Usare <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> per inviare il codice SQL.  
   
--   Creare una nuova istanza dell'oggetto e inizializzare tutti i valori (campi) correnti che influiscono sull'aggiornamento. Associare quindi l'oggetto a <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.Table%601.Attach%2A> e modificare il campo desiderato.  
+- Creare una nuova istanza dell'oggetto e inizializzare tutti i valori (campi) correnti che influiscono sull'aggiornamento. Associare quindi l'oggetto a <xref:System.Data.Linq.DataContext> usando <xref:System.Data.Linq.Table%601.Attach%2A> e modificare il campo desiderato.  
   
 ## <a name="unexpected-query-results"></a>Risultati imprevisti delle query  
  D. La query restituisce risultati imprevisti. Come è possibile controllare quello che si sta verificando?  
@@ -57,9 +57,9 @@ Nelle sezioni seguenti vengono fornite le risposte ad alcuni problemi comuni che
   
  Un  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce due modalità per restituire i valori generati dal database tramite le stored procedure:  
   
--   Assegnando un nome al risultato di output.  
+- Assegnando un nome al risultato di output.  
   
--   Specificando in modo esplicito un parametro di output.  
+- Specificando in modo esplicito un parametro di output.  
   
  Di seguito viene riportato un esempio di output non corretto. Poiché in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non è possibile eseguire il mapping dei risultati, viene restituito sempre 0:  
   

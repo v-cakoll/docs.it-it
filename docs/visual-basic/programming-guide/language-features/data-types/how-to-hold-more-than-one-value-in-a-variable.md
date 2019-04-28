@@ -12,11 +12,11 @@ helpviewer_keywords:
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
 ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906490"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Procedura: Inserire più valori in una variabile (Visual Basic)
 Una variabile contiene più di un valore se si dichiara che questo sia di un *tipo di dati composito*.  
@@ -29,11 +29,11 @@ Una variabile contiene più di un valore se si dichiara che questo sia di un *ti
   
 2. Se non è già stato definito il tipo di dati compositi, definirlo in modo che la variabile può usarlo.  
   
-    -   Definire una struttura con un [istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    - Definire una struttura con un [istruzione Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Definire una matrice con un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    - Definire una matrice con un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   Definire una classe con un [istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    - Definire una classe con un [istruzione Class](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
 3. Dichiarare la variabile con un `Dim` istruzione.  
   

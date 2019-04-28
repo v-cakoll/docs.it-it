@@ -14,11 +14,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
 ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913185"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Procedura: Stampare con un controllo WebBrowser
 L'esempio di codice seguente illustra come usare il <xref:System.Windows.Forms.WebBrowser> controllo per stampare una pagina Web senza visualizzarla.  
@@ -30,7 +30,7 @@ L'esempio di codice seguente illustra come usare il <xref:System.Windows.Forms.W
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly `System` e `System.Windows.Forms`.  
+- Riferimenti agli assembly `System` e `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Vedere anche
 

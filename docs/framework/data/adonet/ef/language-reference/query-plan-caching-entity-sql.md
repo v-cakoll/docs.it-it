@@ -3,11 +3,11 @@ title: Memorizzazione nella cache di piani di query (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613664"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Memorizzazione nella cache di piani di query (Entity SQL)
 Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di query analizza il proprio piano di query per verificare se la query esatta è già stata compilata ed è disponibile. In caso affermativo, viene riutilizzato il piano memorizzato nella cache anziché compilarne un nuovo. Se non viene individuata una corrispondenza nella cache dei piani di query, la query viene compilata e memorizzata nella cache. Una query è identificata dal testo [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e dalla raccolta di parametri (nomi e tipi). In tutti i confronti di testo viene fatta distinzione tra maiuscole e minuscole.  
@@ -34,19 +34,19 @@ Ogni volta che viene fatto un tentativo di eseguire una query, la pipeline di qu
   
  Per garantire una corretta individuazione della corrispondenza delle query con la cache dei piani di query, è necessario che le query siano conformi ai requisiti seguenti:  
   
--   Il testo delle query deve essere un modello costante, preferibilmente una risorsa o una stringa costante.  
+- Il testo delle query deve essere un modello costante, preferibilmente una risorsa o una stringa costante.  
   
--   È necessario usare <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> in ogni situazione in cui deve essere passato un valore fornito dall'utente.  
+- È necessario usare <xref:System.Data.EntityClient.EntityParameter> o <xref:System.Data.Objects.ObjectParameter> in ogni situazione in cui deve essere passato un valore fornito dall'utente.  
   
  È necessario evitare i modelli di query seguenti, che usano inutilmente slot nella cache dei piani di query:  
   
--   Conversione di caratteri maiuscoli in minuscoli o viceversa nel testo.  
+- Conversione di caratteri maiuscoli in minuscoli o viceversa nel testo.  
   
--   Modifiche degli spazi vuoti.  
+- Modifiche degli spazi vuoti.  
   
--   Modifiche dei valori letterali.  
+- Modifiche dei valori letterali.  
   
--   Modifiche del testo nei commenti.  
+- Modifiche del testo nei commenti.  
   
 ## <a name="see-also"></a>Vedere anche
 
