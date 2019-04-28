@@ -12,206 +12,209 @@ helpviewer_keywords:
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
 ms.openlocfilehash: 7b2d388cbcd1995178adf4102520ecaa1c9b1889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783994"
 ---
-# <a name="property-statement"></a><span data-ttu-id="4d8d5-102">Property Statement</span><span class="sxs-lookup"><span data-stu-id="4d8d5-102">Property Statement</span></span>
-<span data-ttu-id="4d8d5-103">Dichiara il nome di una proprietà e le routine della proprietà utilizzate per archiviare e recuperare il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-103">Declares the name of a property, and the property procedures used to store and retrieve the value of the property.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="4d8d5-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4d8d5-104">Syntax</span></span>  
-  
-```vb  
-[ <attributelist> ] [ Default ] [ accessmodifier ]   
-[ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
-Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
-    [ <attributelist> ] [ accessmodifier ] Get  
-        [ statements ]  
-    End Get  
-    [ <attributelist> ] [ accessmodifier ] Set ( ByVal value As returntype [, parameterlist ] )  
-        [ statements ]  
-    End Set  
-End Property  
-- or -  
-[ <attributelist> ] [ Default ] [ accessmodifier ]   
-[ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ]   
-Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
-```  
-  
-## <a name="parts"></a><span data-ttu-id="4d8d5-105">Parti</span><span class="sxs-lookup"><span data-stu-id="4d8d5-105">Parts</span></span>  
-  
--   `attributelist`  
-  
-     <span data-ttu-id="4d8d5-106">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-106">Optional.</span></span> <span data-ttu-id="4d8d5-107">Elenco di attributi che si applicano a questa proprietà o `Get` o `Set` procedure.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-107">List of attributes that apply to this property or `Get` or `Set` procedure.</span></span> <span data-ttu-id="4d8d5-108">Visualizzare [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-108">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>  
-  
--   `Default`  
-  
-     <span data-ttu-id="4d8d5-109">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-109">Optional.</span></span> <span data-ttu-id="4d8d5-110">Specifica che questa proprietà è la proprietà predefinita per la classe o struttura in cui è definito.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-110">Specifies that this property is the default property for the class or structure on which it is defined.</span></span> <span data-ttu-id="4d8d5-111">Impostazione predefinita deve accettare parametri e possono essere impostare e recuperare proprietà senza specificare il nome della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-111">Default properties must accept parameters and can be set and retrieved without specifying the property name.</span></span> <span data-ttu-id="4d8d5-112">Se si dichiara la proprietà come `Default`, non è possibile usare `Private` sulla proprietà o in una delle routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-112">If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.</span></span>  
-  
--   `accessmodifier`  
-  
-     <span data-ttu-id="4d8d5-113">Facoltativo nella `Property` istruzione e al massimo uno tra il `Get` e `Set` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-113">Optional on the `Property` statement and on at most one of the `Get` and `Set` statements.</span></span> <span data-ttu-id="4d8d5-114">Può essere uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="4d8d5-114">Can be one of the following:</span></span>  
-  
-    -   [<span data-ttu-id="4d8d5-115">Public</span><span class="sxs-lookup"><span data-stu-id="4d8d5-115">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
-  
-    -   [<span data-ttu-id="4d8d5-116">Protected</span><span class="sxs-lookup"><span data-stu-id="4d8d5-116">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
-  
-    -   [<span data-ttu-id="4d8d5-117">Friend</span><span class="sxs-lookup"><span data-stu-id="4d8d5-117">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
-  
-    -   [<span data-ttu-id="4d8d5-118">Private</span><span class="sxs-lookup"><span data-stu-id="4d8d5-118">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
-  
-    - [<span data-ttu-id="4d8d5-119">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="4d8d5-119">Protected Friend</span></span>](../../language-reference/modifiers/protected-friend.md) 
+# <a name="property-statement"></a><span data-ttu-id="85118-102">Property Statement</span><span class="sxs-lookup"><span data-stu-id="85118-102">Property Statement</span></span>
 
-    - [<span data-ttu-id="4d8d5-120">Private Protected</span><span class="sxs-lookup"><span data-stu-id="4d8d5-120">Private Protected</span></span>](../../language-reference/modifiers/private-protected.md)
-  
-     <span data-ttu-id="4d8d5-121">Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-121">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
-  
--   `propertymodifiers`  
-  
-     <span data-ttu-id="4d8d5-122">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-122">Optional.</span></span> <span data-ttu-id="4d8d5-123">Può essere uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="4d8d5-123">Can be one of the following:</span></span>  
-  
-    -   [<span data-ttu-id="4d8d5-124">Overload</span><span class="sxs-lookup"><span data-stu-id="4d8d5-124">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)  
-  
-    -   [<span data-ttu-id="4d8d5-125">Overrides</span><span class="sxs-lookup"><span data-stu-id="4d8d5-125">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)  
-  
-    -   [<span data-ttu-id="4d8d5-126">Overridable</span><span class="sxs-lookup"><span data-stu-id="4d8d5-126">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
-  
-    -   [<span data-ttu-id="4d8d5-127">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="4d8d5-127">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
-  
-    -   [<span data-ttu-id="4d8d5-128">MustOverride</span><span class="sxs-lookup"><span data-stu-id="4d8d5-128">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
-  
-    -   `MustOverride Overrides`  
-  
-    -   `NotOverridable Overrides`  
-  
--   `Shared`  
-  
-     <span data-ttu-id="4d8d5-129">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-129">Optional.</span></span> <span data-ttu-id="4d8d5-130">Visualizzare [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-130">See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span></span>  
-  
--   `Shadows`  
-  
-     <span data-ttu-id="4d8d5-131">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-131">Optional.</span></span> <span data-ttu-id="4d8d5-132">Visualizzare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-132">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>  
-  
--   `ReadOnly`  
-  
-     <span data-ttu-id="4d8d5-133">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-133">Optional.</span></span> <span data-ttu-id="4d8d5-134">Visualizzare [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-134">See [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>  
-  
--   `WriteOnly`  
-  
-     <span data-ttu-id="4d8d5-135">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-135">Optional.</span></span> <span data-ttu-id="4d8d5-136">Visualizzare [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-136">See [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).</span></span>  
-  
--   `Iterator`  
-  
-     <span data-ttu-id="4d8d5-137">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-137">Optional.</span></span> <span data-ttu-id="4d8d5-138">Visualizzare [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-138">See [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).</span></span>  
-  
--   `name`  
-  
-     <span data-ttu-id="4d8d5-139">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-139">Required.</span></span> <span data-ttu-id="4d8d5-140">Nome della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-140">Name of the property.</span></span> <span data-ttu-id="4d8d5-141">Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-141">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
-  
--   `parameterlist`  
-  
-     <span data-ttu-id="4d8d5-142">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-142">Optional.</span></span> <span data-ttu-id="4d8d5-143">Elenco di nomi delle variabili locali che rappresentano i parametri di questa proprietà e gli eventuali parametri aggiuntivi del `Set` procedure.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-143">List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure.</span></span> <span data-ttu-id="4d8d5-144">Visualizzare [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-144">See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).</span></span>  
-  
--   `returntype`  
-  
-     <span data-ttu-id="4d8d5-145">Obbligatorio se `Option Strict` è `On`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-145">Required if `Option Strict` is `On`.</span></span> <span data-ttu-id="4d8d5-146">Tipo di dati del valore restituito da questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-146">Data type of the value returned by this property.</span></span>  
-  
--   `Implements`  
-  
-     <span data-ttu-id="4d8d5-147">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-147">Optional.</span></span> <span data-ttu-id="4d8d5-148">Indica che questa proprietà implementa una o più proprietà, ognuno dei quali definito in un'interfaccia implementata dalla classe o struttura contenente questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-148">Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure.</span></span> <span data-ttu-id="4d8d5-149">Visualizzare [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-149">See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span>  
-  
--   `implementslist`  
-  
-     <span data-ttu-id="4d8d5-150">Necessario se si fornisce `Implements`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-150">Required if `Implements` is supplied.</span></span> <span data-ttu-id="4d8d5-151">Elenco di proprietà in fase di implementazione.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-151">List of properties being implemented.</span></span>  
-  
-     `implementedproperty [ , implementedproperty ... ]`  
-  
-     <span data-ttu-id="4d8d5-152">Ogni `implementedproperty` presenta la sintassi e le parti seguenti:</span><span class="sxs-lookup"><span data-stu-id="4d8d5-152">Each `implementedproperty` has the following syntax and parts:</span></span>  
-  
-     `interface.definedname`  
-  
-    |<span data-ttu-id="4d8d5-153">Parte</span><span class="sxs-lookup"><span data-stu-id="4d8d5-153">Part</span></span>|<span data-ttu-id="4d8d5-154">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4d8d5-154">Description</span></span>|  
-    |---|---|  
-    |`interface`|<span data-ttu-id="4d8d5-155">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-155">Required.</span></span> <span data-ttu-id="4d8d5-156">Nome di un'interfaccia implementata da questa proprietà che contiene classe o struttura.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-156">Name of an interface implemented by this property's containing class or structure.</span></span>|  
-    |`definedname`|<span data-ttu-id="4d8d5-157">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-157">Required.</span></span> <span data-ttu-id="4d8d5-158">Nome mediante il quale la proprietà è definita in `interface`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-158">Name by which the property is defined in `interface`.</span></span>|  
-  
--   `Get`  
-  
-     <span data-ttu-id="4d8d5-159">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-159">Optional.</span></span> <span data-ttu-id="4d8d5-160">Obbligatorio se la proprietà è contrassegnata `WriteOnly`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-160">Required if the property is marked `WriteOnly`.</span></span> <span data-ttu-id="4d8d5-161">Avvia un `Get` routine della proprietà che viene utilizzato per restituire il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-161">Starts a `Get` property procedure that is used to return the value of the property.</span></span>  
-  
--   `statements`  
-  
-     <span data-ttu-id="4d8d5-162">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-162">Optional.</span></span> <span data-ttu-id="4d8d5-163">Blocco di istruzioni da eseguire all'interno di `Get` o `Set` procedure.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-163">Block of statements to run within the `Get` or `Set` procedure.</span></span>  
-  
--   `End Get`  
-  
-     <span data-ttu-id="4d8d5-164">Termina il `Get` routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-164">Terminates the `Get` property procedure.</span></span>  
-  
--   `Set`  
-  
-     <span data-ttu-id="4d8d5-165">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-165">Optional.</span></span> <span data-ttu-id="4d8d5-166">Obbligatorio se la proprietà è contrassegnata `ReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-166">Required if the property is marked `ReadOnly`.</span></span> <span data-ttu-id="4d8d5-167">Avvia un `Set` routine della proprietà che viene usato per archiviare il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-167">Starts a `Set` property procedure that is used to store the value of the property.</span></span>  
-  
--   `End Set`  
-  
-     <span data-ttu-id="4d8d5-168">Termina il `Set` routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-168">Terminates the `Set` property procedure.</span></span>  
-  
--   `End Property`  
-  
-     <span data-ttu-id="4d8d5-169">Termina la definizione di questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-169">Terminates the definition of this property.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="4d8d5-170">Note</span><span class="sxs-lookup"><span data-stu-id="4d8d5-170">Remarks</span></span>  
- <span data-ttu-id="4d8d5-171">Il `Property` istruzione introduce la dichiarazione di una proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-171">The `Property` statement introduces the declaration of a property.</span></span> <span data-ttu-id="4d8d5-172">Una proprietà può avere una `Get` procedure (sola lettura), un `Set` procedure (sola scrittura) o entrambe (lettura-scrittura).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-172">A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write).</span></span> <span data-ttu-id="4d8d5-173">È possibile omettere il `Get` e `Set` procedura quando si usa una proprietà implementata automaticamente.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-173">You can omit the `Get` and `Set` procedure when using an auto-implemented property.</span></span> <span data-ttu-id="4d8d5-174">Per altre informazioni, vedere [Proprietà implementate automaticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-174">For more information, see [Auto-Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).</span></span>  
-  
- <span data-ttu-id="4d8d5-175">È possibile usare `Property` solo a livello di classe.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-175">You can use `Property` only at class level.</span></span> <span data-ttu-id="4d8d5-176">Ciò significa che il *contesto della dichiarazione* per una proprietà deve essere una classe, struttura, modulo o interfaccia e non può essere un file di origine, lo spazio dei nomi, procedura o blocco.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-176">This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block.</span></span> <span data-ttu-id="4d8d5-177">Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-177">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
-  
- <span data-ttu-id="4d8d5-178">Per impostazione predefinita, le proprietà usano l'accesso pubblico.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-178">By default, properties use public access.</span></span> <span data-ttu-id="4d8d5-179">È possibile modificare il livello di accesso della proprietà con un modificatore di accesso nella `Property` istruzione ed è anche possibile impostare una delle routine della proprietà a un livello di accesso più restrittivo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-179">You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.</span></span>  
-  
- <span data-ttu-id="4d8d5-180">Visual Basic passa un parametro per il `Set` procedura durante le assegnazioni di proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-180">Visual Basic passes a parameter to the `Set` procedure during property assignments.</span></span> <span data-ttu-id="4d8d5-181">Se non si specifica un parametro per `Set`, l'ambiente di sviluppo integrato (IDE) usa un parametro implicito denominato `value`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-181">If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`.</span></span> <span data-ttu-id="4d8d5-182">Questo parametro contiene il valore da assegnare alla proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-182">This parameter holds the value to be assigned to the property.</span></span> <span data-ttu-id="4d8d5-183">In genere archivia questo valore in una variabile locale privata e restituirlo ogni volta che il `Get` routine viene chiamata.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-183">You typically store this value in a private local variable and return it whenever the `Get` procedure is called.</span></span>  
-  
-## <a name="rules"></a><span data-ttu-id="4d8d5-184">Regole</span><span class="sxs-lookup"><span data-stu-id="4d8d5-184">Rules</span></span>  
-  
--   <span data-ttu-id="4d8d5-185">**Livelli di accesso misti.**</span><span class="sxs-lookup"><span data-stu-id="4d8d5-185">**Mixed Access Levels.**</span></span> <span data-ttu-id="4d8d5-186">Se si sta definendo una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diversi per il `Get` o il `Set` procedure, ma non entrambi.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-186">If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both.</span></span> <span data-ttu-id="4d8d5-187">In questo caso, il livello di accesso di routine deve essere più restrittivo rispetto a livello di accesso della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-187">If you do this, the procedure access level must be more restrictive than the property's access level.</span></span> <span data-ttu-id="4d8d5-188">Ad esempio, se la proprietà è dichiarata `Friend`, è possibile dichiarare il `Set` routine `Private`, ma non `Public`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-188">For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.</span></span>  
-  
-     <span data-ttu-id="4d8d5-189">Se si sta definendo un `ReadOnly` oppure `WriteOnly` proprietà, la procedura singola proprietà (`Get` o `Set`rispettivamente) rappresenta tutte le proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-189">If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property.</span></span> <span data-ttu-id="4d8d5-190">È possibile dichiarare un livello di accesso diversi per una procedura, poiché verrebbero specificati due livelli di accesso per la proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-190">You cannot declare a different access level for such a procedure, because that would set two access levels for the property.</span></span>  
-  
--   <span data-ttu-id="4d8d5-191">**Tipo restituito.**</span><span class="sxs-lookup"><span data-stu-id="4d8d5-191">**Return Type.**</span></span> <span data-ttu-id="4d8d5-192">Il `Property` istruzione può dichiarare il tipo di dati del valore restituito.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-192">The `Property` statement can declare the data type of the value it returns.</span></span> <span data-ttu-id="4d8d5-193">È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-193">You can specify any data type or the name of an enumeration, structure, class, or interface.</span></span>  
-  
-     <span data-ttu-id="4d8d5-194">Se non si specifica `returntype`, la proprietà restituisce `Object`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-194">If you do not specify `returntype`, the property returns `Object`.</span></span>  
-  
--   <span data-ttu-id="4d8d5-195">**Implementazione.**</span><span class="sxs-lookup"><span data-stu-id="4d8d5-195">**Implementation.**</span></span> <span data-ttu-id="4d8d5-196">Se questa proprietà Usa il `Implements` parola chiave, alla classe o struttura deve avere un' `Implements` istruzione immediatamente successiva a relativo `Class` o `Structure` istruzione.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-196">If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement.</span></span> <span data-ttu-id="4d8d5-197">Il `Implements` istruzione deve includere ogni interfaccia specificata `implementslist`.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-197">The `Implements` statement must include each interface specified in `implementslist`.</span></span> <span data-ttu-id="4d8d5-198">Tuttavia, il nome mediante il quale definisce un'interfaccia di `Property` (in `definedname`) non deve essere identico al nome di questa proprietà (in `name`).</span><span class="sxs-lookup"><span data-stu-id="4d8d5-198">However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).</span></span>  
-  
-## <a name="behavior"></a><span data-ttu-id="4d8d5-199">Comportamento</span><span class="sxs-lookup"><span data-stu-id="4d8d5-199">Behavior</span></span>  
-  
--   <span data-ttu-id="4d8d5-200">**Restituzione da una routine di proprietà.**</span><span class="sxs-lookup"><span data-stu-id="4d8d5-200">**Returning from a Property Procedure.**</span></span> <span data-ttu-id="4d8d5-201">Quando la `Get` o `Set` routine restituisce al codice chiamante, l'esecuzione continua con l'istruzione successiva all'istruzione che lo ha richiamato.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-201">When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.</span></span>  
-  
-     <span data-ttu-id="4d8d5-202">Il `Exit Property` e `Return` istruzioni di uscire immediatamente da una routine di proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-202">The `Exit Property` and `Return` statements cause an immediate exit from a property procedure.</span></span> <span data-ttu-id="4d8d5-203">Un numero qualsiasi di `Exit Property` e `Return` istruzioni possono trovarsi in qualsiasi punto della procedura, ed è possibile combinare `Exit Property` e `Return` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-203">Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.</span></span>  
-  
--   <span data-ttu-id="4d8d5-204">**Valore restituito.**</span><span class="sxs-lookup"><span data-stu-id="4d8d5-204">**Return Value.**</span></span> <span data-ttu-id="4d8d5-205">Per restituire un valore da un `Get` procedure, è possibile assegnare il valore per il nome della proprietà o includerlo in un `Return` istruzione.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-205">To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement.</span></span> <span data-ttu-id="4d8d5-206">L'esempio seguente assegna il valore restituito per il nome della proprietà `quoteForTheDay` e quindi Usa il `Exit Property` istruzione da restituire.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-206">The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.</span></span>  
-  
-     [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
-  
-     [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]  
-  
-     <span data-ttu-id="4d8d5-207">Se si usa `Exit Property` senza assegnarle un valore per `name`, il `Get` procedure restituisce il valore predefinito per il tipo di dati della proprietà.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-207">If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.</span></span>  
-  
-     <span data-ttu-id="4d8d5-208">Il `Return` istruzione allo stesso tempo assegna il `Get` procedure restituire valore e viene chiuso la procedura.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-208">The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure.</span></span> <span data-ttu-id="4d8d5-209">L'esempio seguente illustra questo.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-209">The following example shows this.</span></span>  
-  
-     [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
-  
-     [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
-  
-## <a name="example"></a><span data-ttu-id="4d8d5-210">Esempio</span><span class="sxs-lookup"><span data-stu-id="4d8d5-210">Example</span></span>  
- <span data-ttu-id="4d8d5-211">Nell'esempio seguente dichiara una proprietà in una classe.</span><span class="sxs-lookup"><span data-stu-id="4d8d5-211">The following example declares a property in a class.</span></span>  
-  
- [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]  
-  
-## <a name="see-also"></a><span data-ttu-id="4d8d5-212">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4d8d5-212">See also</span></span>
+<span data-ttu-id="85118-103">Dichiara il nome di una proprietà e le routine della proprietà utilizzate per archiviare e recuperare il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-103">Declares the name of a property, and the property procedures used to store and retrieve the value of the property.</span></span>
 
-- [<span data-ttu-id="4d8d5-213">Proprietà implementate automaticamente</span><span class="sxs-lookup"><span data-stu-id="4d8d5-213">Auto-Implemented Properties</span></span>](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [<span data-ttu-id="4d8d5-214">Oggetti e classi</span><span class="sxs-lookup"><span data-stu-id="4d8d5-214">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [<span data-ttu-id="4d8d5-215">Istruzione Get</span><span class="sxs-lookup"><span data-stu-id="4d8d5-215">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)
-- [<span data-ttu-id="4d8d5-216">Istruzione Set</span><span class="sxs-lookup"><span data-stu-id="4d8d5-216">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
-- [<span data-ttu-id="4d8d5-217">Elenco dei parametri</span><span class="sxs-lookup"><span data-stu-id="4d8d5-217">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
-- [<span data-ttu-id="4d8d5-218">Default</span><span class="sxs-lookup"><span data-stu-id="4d8d5-218">Default</span></span>](../../../visual-basic/language-reference/modifiers/default.md)
+## <a name="syntax"></a><span data-ttu-id="85118-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="85118-104">Syntax</span></span>
+
+```vb
+[ <attributelist> ] [ Default ] [ accessmodifier ]
+[ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]
+Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]
+    [ <attributelist> ] [ accessmodifier ] Get
+        [ statements ]
+    End Get
+    [ <attributelist> ] [ accessmodifier ] Set ( ByVal value As returntype [, parameterlist ] )
+        [ statements ]
+    End Set
+End Property
+- or -
+[ <attributelist> ] [ Default ] [ accessmodifier ]
+[ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ]
+Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]
+```
+
+## <a name="parts"></a><span data-ttu-id="85118-105">Parti</span><span class="sxs-lookup"><span data-stu-id="85118-105">Parts</span></span>
+
+- `attributelist`
+
+  <span data-ttu-id="85118-106">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-106">Optional.</span></span> <span data-ttu-id="85118-107">Elenco di attributi che si applicano a questa proprietà o `Get` o `Set` procedure.</span><span class="sxs-lookup"><span data-stu-id="85118-107">List of attributes that apply to this property or `Get` or `Set` procedure.</span></span> <span data-ttu-id="85118-108">Visualizzare [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).</span><span class="sxs-lookup"><span data-stu-id="85118-108">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>
+
+- `Default`
+
+  <span data-ttu-id="85118-109">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-109">Optional.</span></span> <span data-ttu-id="85118-110">Specifica che questa proprietà è la proprietà predefinita per la classe o struttura in cui è definito.</span><span class="sxs-lookup"><span data-stu-id="85118-110">Specifies that this property is the default property for the class or structure on which it is defined.</span></span> <span data-ttu-id="85118-111">Impostazione predefinita deve accettare parametri e possono essere impostare e recuperare proprietà senza specificare il nome della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-111">Default properties must accept parameters and can be set and retrieved without specifying the property name.</span></span> <span data-ttu-id="85118-112">Se si dichiara la proprietà come `Default`, non è possibile usare `Private` sulla proprietà o in una delle routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-112">If you declare the property as `Default`, you cannot use `Private` on the property or on either of its property procedures.</span></span>
+
+- `accessmodifier`
+
+  <span data-ttu-id="85118-113">Facoltativo nella `Property` istruzione e al massimo uno tra il `Get` e `Set` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="85118-113">Optional on the `Property` statement and on at most one of the `Get` and `Set` statements.</span></span> <span data-ttu-id="85118-114">Può essere uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="85118-114">Can be one of the following:</span></span>
+
+  - [<span data-ttu-id="85118-115">Public</span><span class="sxs-lookup"><span data-stu-id="85118-115">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)
+
+  - [<span data-ttu-id="85118-116">Protected</span><span class="sxs-lookup"><span data-stu-id="85118-116">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)
+
+  - [<span data-ttu-id="85118-117">Friend</span><span class="sxs-lookup"><span data-stu-id="85118-117">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)
+
+  - [<span data-ttu-id="85118-118">Private</span><span class="sxs-lookup"><span data-stu-id="85118-118">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)
+
+  - [<span data-ttu-id="85118-119">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="85118-119">Protected Friend</span></span>](../../language-reference/modifiers/protected-friend.md)
+
+  - [<span data-ttu-id="85118-120">Private Protected</span><span class="sxs-lookup"><span data-stu-id="85118-120">Private Protected</span></span>](../../language-reference/modifiers/private-protected.md)
+
+  <span data-ttu-id="85118-121">Vedere [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="85118-121">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>
+
+- `propertymodifiers`
+
+  <span data-ttu-id="85118-122">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-122">Optional.</span></span> <span data-ttu-id="85118-123">Può essere uno dei seguenti:</span><span class="sxs-lookup"><span data-stu-id="85118-123">Can be one of the following:</span></span>
+
+  - [<span data-ttu-id="85118-124">Overload</span><span class="sxs-lookup"><span data-stu-id="85118-124">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)
+
+  - [<span data-ttu-id="85118-125">Overrides</span><span class="sxs-lookup"><span data-stu-id="85118-125">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)
+
+  - [<span data-ttu-id="85118-126">Overridable</span><span class="sxs-lookup"><span data-stu-id="85118-126">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)
+
+  - [<span data-ttu-id="85118-127">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="85118-127">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+
+  - [<span data-ttu-id="85118-128">MustOverride</span><span class="sxs-lookup"><span data-stu-id="85118-128">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+
+  - `MustOverride Overrides`
+
+  - `NotOverridable Overrides`
+
+- `Shared`
+
+  <span data-ttu-id="85118-129">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-129">Optional.</span></span> <span data-ttu-id="85118-130">Visualizzare [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).</span><span class="sxs-lookup"><span data-stu-id="85118-130">See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span></span>
+
+- `Shadows`
+
+  <span data-ttu-id="85118-131">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-131">Optional.</span></span> <span data-ttu-id="85118-132">Visualizzare [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="85118-132">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>
+
+- `ReadOnly`
+
+  <span data-ttu-id="85118-133">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-133">Optional.</span></span> <span data-ttu-id="85118-134">Visualizzare [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span><span class="sxs-lookup"><span data-stu-id="85118-134">See [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).</span></span>
+
+- `WriteOnly`
+
+  <span data-ttu-id="85118-135">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-135">Optional.</span></span> <span data-ttu-id="85118-136">Visualizzare [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).</span><span class="sxs-lookup"><span data-stu-id="85118-136">See [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).</span></span>
+
+- `Iterator`
+
+  <span data-ttu-id="85118-137">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-137">Optional.</span></span> <span data-ttu-id="85118-138">Visualizzare [iteratore](../../../visual-basic/language-reference/modifiers/iterator.md).</span><span class="sxs-lookup"><span data-stu-id="85118-138">See [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).</span></span>
+
+- `name`
+
+  <span data-ttu-id="85118-139">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="85118-139">Required.</span></span> <span data-ttu-id="85118-140">Nome della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-140">Name of the property.</span></span> <span data-ttu-id="85118-141">Vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="85118-141">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>
+
+- `parameterlist`
+
+  <span data-ttu-id="85118-142">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-142">Optional.</span></span> <span data-ttu-id="85118-143">Elenco di nomi delle variabili locali che rappresentano i parametri di questa proprietà e gli eventuali parametri aggiuntivi del `Set` procedure.</span><span class="sxs-lookup"><span data-stu-id="85118-143">List of local variable names representing the parameters of this property, and possible additional parameters of the `Set` procedure.</span></span> <span data-ttu-id="85118-144">Visualizzare [elenco di parametri](../../../visual-basic/language-reference/statements/parameter-list.md).</span><span class="sxs-lookup"><span data-stu-id="85118-144">See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).</span></span>
+
+- `returntype`
+
+  <span data-ttu-id="85118-145">Obbligatorio se `Option Strict` è `On`.</span><span class="sxs-lookup"><span data-stu-id="85118-145">Required if `Option Strict` is `On`.</span></span> <span data-ttu-id="85118-146">Tipo di dati del valore restituito da questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-146">Data type of the value returned by this property.</span></span>
+
+- `Implements`
+
+  <span data-ttu-id="85118-147">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-147">Optional.</span></span> <span data-ttu-id="85118-148">Indica che questa proprietà implementa una o più proprietà, ognuno dei quali definito in un'interfaccia implementata dalla classe o struttura contenente questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-148">Indicates that this property implements one or more properties, each one defined in an interface implemented by this property's containing class or structure.</span></span> <span data-ttu-id="85118-149">Visualizzare [implementa istruzione](../../../visual-basic/language-reference/statements/implements-statement.md).</span><span class="sxs-lookup"><span data-stu-id="85118-149">See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span>
+
+- `implementslist`
+
+  <span data-ttu-id="85118-150">Necessario se si fornisce `Implements`.</span><span class="sxs-lookup"><span data-stu-id="85118-150">Required if `Implements` is supplied.</span></span> <span data-ttu-id="85118-151">Elenco di proprietà in fase di implementazione.</span><span class="sxs-lookup"><span data-stu-id="85118-151">List of properties being implemented.</span></span>
+
+  `implementedproperty [ , implementedproperty ... ]`
+
+  <span data-ttu-id="85118-152">Ogni `implementedproperty` presenta la sintassi e le parti seguenti:</span><span class="sxs-lookup"><span data-stu-id="85118-152">Each `implementedproperty` has the following syntax and parts:</span></span>
+
+  `interface.definedname`
+
+  |<span data-ttu-id="85118-153">Parte</span><span class="sxs-lookup"><span data-stu-id="85118-153">Part</span></span>|<span data-ttu-id="85118-154">Descrizione</span><span class="sxs-lookup"><span data-stu-id="85118-154">Description</span></span>|
+  |---|---|
+  |`interface`|<span data-ttu-id="85118-155">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="85118-155">Required.</span></span> <span data-ttu-id="85118-156">Nome di un'interfaccia implementata da questa proprietà che contiene classe o struttura.</span><span class="sxs-lookup"><span data-stu-id="85118-156">Name of an interface implemented by this property's containing class or structure.</span></span>|
+  |`definedname`|<span data-ttu-id="85118-157">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="85118-157">Required.</span></span> <span data-ttu-id="85118-158">Nome mediante il quale la proprietà è definita in `interface`.</span><span class="sxs-lookup"><span data-stu-id="85118-158">Name by which the property is defined in `interface`.</span></span>|
+
+- `Get`
+
+  <span data-ttu-id="85118-159">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-159">Optional.</span></span> <span data-ttu-id="85118-160">Obbligatorio se la proprietà è contrassegnata `WriteOnly`.</span><span class="sxs-lookup"><span data-stu-id="85118-160">Required if the property is marked `WriteOnly`.</span></span> <span data-ttu-id="85118-161">Avvia un `Get` routine della proprietà che viene utilizzato per restituire il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-161">Starts a `Get` property procedure that is used to return the value of the property.</span></span>
+
+- `statements`
+
+  <span data-ttu-id="85118-162">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-162">Optional.</span></span> <span data-ttu-id="85118-163">Blocco di istruzioni da eseguire all'interno di `Get` o `Set` procedure.</span><span class="sxs-lookup"><span data-stu-id="85118-163">Block of statements to run within the `Get` or `Set` procedure.</span></span>
+
+- `End Get`
+
+  <span data-ttu-id="85118-164">Termina il `Get` routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-164">Terminates the `Get` property procedure.</span></span>
+
+- `Set`
+
+  <span data-ttu-id="85118-165">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="85118-165">Optional.</span></span> <span data-ttu-id="85118-166">Obbligatorio se la proprietà è contrassegnata `ReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="85118-166">Required if the property is marked `ReadOnly`.</span></span> <span data-ttu-id="85118-167">Avvia un `Set` routine della proprietà che viene usato per archiviare il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-167">Starts a `Set` property procedure that is used to store the value of the property.</span></span>
+
+- `End Set`
+
+  <span data-ttu-id="85118-168">Termina il `Set` routine della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-168">Terminates the `Set` property procedure.</span></span>
+
+- `End Property`
+
+  <span data-ttu-id="85118-169">Termina la definizione di questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-169">Terminates the definition of this property.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="85118-170">Note</span><span class="sxs-lookup"><span data-stu-id="85118-170">Remarks</span></span>
+
+<span data-ttu-id="85118-171">Il `Property` istruzione introduce la dichiarazione di una proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-171">The `Property` statement introduces the declaration of a property.</span></span> <span data-ttu-id="85118-172">Una proprietà può avere una `Get` procedure (sola lettura), un `Set` procedure (sola scrittura) o entrambe (lettura-scrittura).</span><span class="sxs-lookup"><span data-stu-id="85118-172">A property can have a `Get` procedure (read only), a `Set` procedure (write only), or both (read-write).</span></span> <span data-ttu-id="85118-173">È possibile omettere il `Get` e `Set` procedura quando si usa una proprietà implementata automaticamente.</span><span class="sxs-lookup"><span data-stu-id="85118-173">You can omit the `Get` and `Set` procedure when using an auto-implemented property.</span></span> <span data-ttu-id="85118-174">Per altre informazioni, vedere [Proprietà implementate automaticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="85118-174">For more information, see [Auto-Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).</span></span>
+
+<span data-ttu-id="85118-175">È possibile usare `Property` solo a livello di classe.</span><span class="sxs-lookup"><span data-stu-id="85118-175">You can use `Property` only at class level.</span></span> <span data-ttu-id="85118-176">Ciò significa che il *contesto della dichiarazione* per una proprietà deve essere una classe, struttura, modulo o interfaccia e non può essere un file di origine, lo spazio dei nomi, procedura o blocco.</span><span class="sxs-lookup"><span data-stu-id="85118-176">This means the *declaration context* for a property must be a class, structure, module, or interface, and cannot be a source file, namespace, procedure, or block.</span></span> <span data-ttu-id="85118-177">Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="85118-177">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>
+
+<span data-ttu-id="85118-178">Per impostazione predefinita, le proprietà usano l'accesso pubblico.</span><span class="sxs-lookup"><span data-stu-id="85118-178">By default, properties use public access.</span></span> <span data-ttu-id="85118-179">È possibile modificare il livello di accesso della proprietà con un modificatore di accesso nella `Property` istruzione ed è anche possibile impostare una delle routine della proprietà a un livello di accesso più restrittivo.</span><span class="sxs-lookup"><span data-stu-id="85118-179">You can adjust a property's access level with an access modifier on the `Property` statement, and you can optionally adjust one of its property procedures to a more restrictive access level.</span></span>
+
+<span data-ttu-id="85118-180">Visual Basic passa un parametro per il `Set` procedura durante le assegnazioni di proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-180">Visual Basic passes a parameter to the `Set` procedure during property assignments.</span></span> <span data-ttu-id="85118-181">Se non si specifica un parametro per `Set`, l'ambiente di sviluppo integrato (IDE) usa un parametro implicito denominato `value`.</span><span class="sxs-lookup"><span data-stu-id="85118-181">If you do not supply a parameter for `Set`, the integrated development environment (IDE) uses an implicit parameter named `value`.</span></span> <span data-ttu-id="85118-182">Questo parametro contiene il valore da assegnare alla proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-182">This parameter holds the value to be assigned to the property.</span></span> <span data-ttu-id="85118-183">In genere archivia questo valore in una variabile locale privata e restituirlo ogni volta che il `Get` routine viene chiamata.</span><span class="sxs-lookup"><span data-stu-id="85118-183">You typically store this value in a private local variable and return it whenever the `Get` procedure is called.</span></span>
+
+## <a name="rules"></a><span data-ttu-id="85118-184">Regole</span><span class="sxs-lookup"><span data-stu-id="85118-184">Rules</span></span>
+
+- <span data-ttu-id="85118-185">**Livelli di accesso misti.**</span><span class="sxs-lookup"><span data-stu-id="85118-185">**Mixed Access Levels.**</span></span> <span data-ttu-id="85118-186">Se si sta definendo una proprietà di lettura / scrittura, è possibile specificare facoltativamente un livello di accesso diversi per il `Get` o il `Set` procedure, ma non entrambi.</span><span class="sxs-lookup"><span data-stu-id="85118-186">If you are defining a read-write property, you can optionally specify a different access level for either the `Get` or the `Set` procedure, but not both.</span></span> <span data-ttu-id="85118-187">In questo caso, il livello di accesso di routine deve essere più restrittivo rispetto a livello di accesso della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-187">If you do this, the procedure access level must be more restrictive than the property's access level.</span></span> <span data-ttu-id="85118-188">Ad esempio, se la proprietà è dichiarata `Friend`, è possibile dichiarare il `Set` routine `Private`, ma non `Public`.</span><span class="sxs-lookup"><span data-stu-id="85118-188">For example, if the property is declared `Friend`, you can declare the `Set` procedure `Private`, but not `Public`.</span></span>
+
+  <span data-ttu-id="85118-189">Se si sta definendo un `ReadOnly` oppure `WriteOnly` proprietà, la procedura singola proprietà (`Get` o `Set`rispettivamente) rappresenta tutte le proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-189">If you are defining a `ReadOnly` or `WriteOnly` property, the single property procedure (`Get` or `Set`, respectively) represents all of the property.</span></span> <span data-ttu-id="85118-190">È possibile dichiarare un livello di accesso diversi per una procedura, poiché verrebbero specificati due livelli di accesso per la proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-190">You cannot declare a different access level for such a procedure, because that would set two access levels for the property.</span></span>
+
+- <span data-ttu-id="85118-191">**Tipo restituito.**</span><span class="sxs-lookup"><span data-stu-id="85118-191">**Return Type.**</span></span> <span data-ttu-id="85118-192">Il `Property` istruzione può dichiarare il tipo di dati del valore restituito.</span><span class="sxs-lookup"><span data-stu-id="85118-192">The `Property` statement can declare the data type of the value it returns.</span></span> <span data-ttu-id="85118-193">È possibile specificare qualsiasi tipo di dati o il nome di un'enumerazione, struttura, classe o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="85118-193">You can specify any data type or the name of an enumeration, structure, class, or interface.</span></span>
+
+  <span data-ttu-id="85118-194">Se non si specifica `returntype`, la proprietà restituisce `Object`.</span><span class="sxs-lookup"><span data-stu-id="85118-194">If you do not specify `returntype`, the property returns `Object`.</span></span>
+
+- <span data-ttu-id="85118-195">**Implementazione.**</span><span class="sxs-lookup"><span data-stu-id="85118-195">**Implementation.**</span></span> <span data-ttu-id="85118-196">Se questa proprietà Usa il `Implements` parola chiave, alla classe o struttura deve avere un' `Implements` istruzione immediatamente successiva a relativo `Class` o `Structure` istruzione.</span><span class="sxs-lookup"><span data-stu-id="85118-196">If this property uses the `Implements` keyword, the containing class or structure must have an `Implements` statement immediately following its `Class` or `Structure` statement.</span></span> <span data-ttu-id="85118-197">Il `Implements` istruzione deve includere ogni interfaccia specificata `implementslist`.</span><span class="sxs-lookup"><span data-stu-id="85118-197">The `Implements` statement must include each interface specified in `implementslist`.</span></span> <span data-ttu-id="85118-198">Tuttavia, il nome mediante il quale definisce un'interfaccia di `Property` (in `definedname`) non deve essere identico al nome di questa proprietà (in `name`).</span><span class="sxs-lookup"><span data-stu-id="85118-198">However, the name by which an interface defines the `Property` (in `definedname`) does not have to be the same as the name of this property (in `name`).</span></span>
+
+## <a name="behavior"></a><span data-ttu-id="85118-199">Comportamento</span><span class="sxs-lookup"><span data-stu-id="85118-199">Behavior</span></span>
+
+- <span data-ttu-id="85118-200">**Restituzione da una routine di proprietà.**</span><span class="sxs-lookup"><span data-stu-id="85118-200">**Returning from a Property Procedure.**</span></span> <span data-ttu-id="85118-201">Quando la `Get` o `Set` routine restituisce al codice chiamante, l'esecuzione continua con l'istruzione successiva all'istruzione che lo ha richiamato.</span><span class="sxs-lookup"><span data-stu-id="85118-201">When the `Get` or `Set` procedure returns to the calling code, execution continues with the statement following the statement that invoked it.</span></span>
+
+  <span data-ttu-id="85118-202">Il `Exit Property` e `Return` istruzioni di uscire immediatamente da una routine di proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-202">The `Exit Property` and `Return` statements cause an immediate exit from a property procedure.</span></span> <span data-ttu-id="85118-203">Un numero qualsiasi di `Exit Property` e `Return` istruzioni possono trovarsi in qualsiasi punto della procedura, ed è possibile combinare `Exit Property` e `Return` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="85118-203">Any number of `Exit Property` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Property` and `Return` statements.</span></span>
+
+- <span data-ttu-id="85118-204">**Valore restituito.**</span><span class="sxs-lookup"><span data-stu-id="85118-204">**Return Value.**</span></span> <span data-ttu-id="85118-205">Per restituire un valore da un `Get` procedure, è possibile assegnare il valore per il nome della proprietà o includerlo in un `Return` istruzione.</span><span class="sxs-lookup"><span data-stu-id="85118-205">To return a value from a `Get` procedure, you can either assign the value to the property name or include it in a `Return` statement.</span></span> <span data-ttu-id="85118-206">L'esempio seguente assegna il valore restituito per il nome della proprietà `quoteForTheDay` e quindi Usa il `Exit Property` istruzione da restituire.</span><span class="sxs-lookup"><span data-stu-id="85118-206">The following example assigns the return value to the property name `quoteForTheDay` and then uses the `Exit Property` statement to return.</span></span>
+
+  [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
+
+  [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]
+
+  <span data-ttu-id="85118-207">Se si usa `Exit Property` senza assegnarle un valore per `name`, il `Get` procedure restituisce il valore predefinito per il tipo di dati della proprietà.</span><span class="sxs-lookup"><span data-stu-id="85118-207">If you use `Exit Property` without assigning a value to `name`, the `Get` procedure returns the default value for the property's data type.</span></span>
+
+  <span data-ttu-id="85118-208">Il `Return` istruzione allo stesso tempo assegna il `Get` procedure restituire valore e viene chiuso la procedura.</span><span class="sxs-lookup"><span data-stu-id="85118-208">The `Return` statement at the same time assigns the `Get` procedure return value and exits the procedure.</span></span> <span data-ttu-id="85118-209">L'esempio seguente illustra questo.</span><span class="sxs-lookup"><span data-stu-id="85118-209">The following example shows this.</span></span>
+
+  [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]
+
+  [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]
+
+## <a name="example"></a><span data-ttu-id="85118-210">Esempio</span><span class="sxs-lookup"><span data-stu-id="85118-210">Example</span></span>
+
+<span data-ttu-id="85118-211">Nell'esempio seguente dichiara una proprietà in una classe.</span><span class="sxs-lookup"><span data-stu-id="85118-211">The following example declares a property in a class.</span></span>
+
+[!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]
+
+## <a name="see-also"></a><span data-ttu-id="85118-212">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="85118-212">See also</span></span>
+
+- [<span data-ttu-id="85118-213">Proprietà implementate automaticamente</span><span class="sxs-lookup"><span data-stu-id="85118-213">Auto-Implemented Properties</span></span>](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
+- [<span data-ttu-id="85118-214">Oggetti e classi</span><span class="sxs-lookup"><span data-stu-id="85118-214">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [<span data-ttu-id="85118-215">Istruzione Get</span><span class="sxs-lookup"><span data-stu-id="85118-215">Get Statement</span></span>](../../../visual-basic/language-reference/statements/get-statement.md)
+- [<span data-ttu-id="85118-216">Istruzione Set</span><span class="sxs-lookup"><span data-stu-id="85118-216">Set Statement</span></span>](../../../visual-basic/language-reference/statements/set-statement.md)
+- [<span data-ttu-id="85118-217">Elenco dei parametri</span><span class="sxs-lookup"><span data-stu-id="85118-217">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [<span data-ttu-id="85118-218">Default</span><span class="sxs-lookup"><span data-stu-id="85118-218">Default</span></span>](../../../visual-basic/language-reference/modifiers/default.md)
