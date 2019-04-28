@@ -8,19 +8,19 @@ helpviewer_keywords:
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
 ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911872"
 ---
-# <a name="dockpanel"></a><span data-ttu-id="f59ee-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="f59ee-102">DockPanel</span></span>
-<span data-ttu-id="f59ee-103">Il <xref:System.Windows.Controls.DockPanel> elemento viene usato per posizionare il contenuto figlio lungo il bordo di un contenitore di layout.</span><span class="sxs-lookup"><span data-stu-id="f59ee-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
+# <a name="dockpanel"></a><span data-ttu-id="04133-102">DockPanel</span><span class="sxs-lookup"><span data-stu-id="04133-102">DockPanel</span></span>
+<span data-ttu-id="04133-103">Il <xref:System.Windows.Controls.DockPanel> elemento viene usato per posizionare il contenuto figlio lungo il bordo di un contenitore di layout.</span><span class="sxs-lookup"><span data-stu-id="04133-103">The <xref:System.Windows.Controls.DockPanel> element is used to position child content along the edge of a layout container.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f59ee-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="f59ee-104">In This Section</span></span>  
- [<span data-ttu-id="f59ee-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="f59ee-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="04133-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="04133-104">In This Section</span></span>  
+ [<span data-ttu-id="04133-105">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="04133-105">How-to Topics</span></span>](dockpanel-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="f59ee-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="f59ee-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="04133-106">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="04133-106">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -35,9 +35,9 @@ ms.locfileid: "57361876"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="f59ee-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="f59ee-107">Related Sections</span></span>  
- [<span data-ttu-id="f59ee-108">Layout</span><span class="sxs-lookup"><span data-stu-id="f59ee-108">Layout</span></span>](../advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="04133-107">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="04133-107">Related Sections</span></span>  
+ [<span data-ttu-id="04133-108">Layout</span><span class="sxs-lookup"><span data-stu-id="04133-108">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="f59ee-109">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="f59ee-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="04133-109">Procedura dettagliata: Prima applicazione desktop WPF</span><span class="sxs-lookup"><span data-stu-id="04133-109">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="f59ee-110">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="f59ee-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)
+ [<span data-ttu-id="04133-110">Panoramica sull'elemento ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="04133-110">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

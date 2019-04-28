@@ -6,19 +6,19 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704297"
 ---
-# <a name="client"></a><span data-ttu-id="2843e-101">\<client></span><span class="sxs-lookup"><span data-stu-id="2843e-101">\<client></span></span>
-<span data-ttu-id="2843e-102">L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un client.</span><span class="sxs-lookup"><span data-stu-id="2843e-102">The `client` element defines a list of endpoints that a client can connect to.</span></span>  
+# <a name="client"></a><span data-ttu-id="2b7b8-101">\<client></span><span class="sxs-lookup"><span data-stu-id="2b7b8-101">\<client></span></span>
+<span data-ttu-id="2b7b8-102">L'elemento `client` definisce un elenco di endpoint ai quali può connettersi un client.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-102">The `client` element defines a list of endpoints that a client can connect to.</span></span>  
   
- <span data-ttu-id="2843e-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2843e-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="2843e-104">\<client></span><span class="sxs-lookup"><span data-stu-id="2843e-104">\<client></span></span>  
+ <span data-ttu-id="2b7b8-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2b7b8-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="2b7b8-104">\<client></span><span class="sxs-lookup"><span data-stu-id="2b7b8-104">\<client></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2843e-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2843e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b7b8-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="2b7b8-105">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -31,31 +31,31 @@ ms.locfileid: "59164359"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2843e-106">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="2843e-106">Attributes and Elements</span></span>  
- <span data-ttu-id="2843e-107">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="2843e-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2b7b8-106">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="2b7b8-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="2b7b8-107">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2843e-108">Attributi</span><span class="sxs-lookup"><span data-stu-id="2843e-108">Attributes</span></span>  
- <span data-ttu-id="2843e-109">nessuno</span><span class="sxs-lookup"><span data-stu-id="2843e-109">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2b7b8-108">Attributi</span><span class="sxs-lookup"><span data-stu-id="2b7b8-108">Attributes</span></span>  
+ <span data-ttu-id="2b7b8-109">nessuno</span><span class="sxs-lookup"><span data-stu-id="2b7b8-109">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="2843e-110">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="2843e-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2b7b8-110">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="2b7b8-110">Child Elements</span></span>  
   
-|<span data-ttu-id="2843e-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="2843e-111">Element</span></span>|<span data-ttu-id="2843e-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2843e-112">Description</span></span>|  
+|<span data-ttu-id="2b7b8-111">Elemento</span><span class="sxs-lookup"><span data-stu-id="2b7b8-111">Element</span></span>|<span data-ttu-id="2b7b8-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2b7b8-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2843e-113">\<endpoint></span><span class="sxs-lookup"><span data-stu-id="2843e-113">\<endpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|<span data-ttu-id="2843e-114">Contiene una raccolta di elementi dell'endpoint che specifica a quali endpoint può connettersi questo client.</span><span class="sxs-lookup"><span data-stu-id="2843e-114">Contains a collection of endpoint elements, that specify the endpoints that this client can connect to.</span></span>|  
-|[<span data-ttu-id="2843e-115">\<metadata></span><span class="sxs-lookup"><span data-stu-id="2843e-115">\<metadata></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|<span data-ttu-id="2843e-116">Contiene impostazioni per l'elaborazione di metadati.</span><span class="sxs-lookup"><span data-stu-id="2843e-116">Contains settings for processing metadata.</span></span>|  
+|[<span data-ttu-id="2b7b8-113">\<endpoint></span><span class="sxs-lookup"><span data-stu-id="2b7b8-113">\<endpoint></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|<span data-ttu-id="2b7b8-114">Contiene una raccolta di elementi dell'endpoint che specifica a quali endpoint può connettersi questo client.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-114">Contains a collection of endpoint elements, that specify the endpoints that this client can connect to.</span></span>|  
+|[<span data-ttu-id="2b7b8-115">\<metadata></span><span class="sxs-lookup"><span data-stu-id="2b7b8-115">\<metadata></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|<span data-ttu-id="2b7b8-116">Contiene impostazioni per l'elaborazione di metadati.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-116">Contains settings for processing metadata.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2843e-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="2843e-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2b7b8-117">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="2b7b8-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="2843e-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="2843e-118">Element</span></span>|<span data-ttu-id="2843e-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2843e-119">Description</span></span>|  
+|<span data-ttu-id="2b7b8-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="2b7b8-118">Element</span></span>|<span data-ttu-id="2b7b8-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="2b7b8-119">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2843e-120">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="2843e-120">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|<span data-ttu-id="2843e-121">L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="2843e-121">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
+|[<span data-ttu-id="2b7b8-120">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="2b7b8-120">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|<span data-ttu-id="2b7b8-121">L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="2b7b8-121">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2843e-122">Note</span><span class="sxs-lookup"><span data-stu-id="2843e-122">Remarks</span></span>  
- <span data-ttu-id="2843e-123">La sezione `client` definisce un elenco di endpoint ai quali può connettersi un client.</span><span class="sxs-lookup"><span data-stu-id="2843e-123">The `client` section defines a list of endpoints that a client can connect to.</span></span> <span data-ttu-id="2843e-124">Ogni endpoint elencato nella sezione client definisce la propria associazione, comportamento e contratto.</span><span class="sxs-lookup"><span data-stu-id="2843e-124">Each endpoint listed in the client section defines its own binding, behavior, and contract.</span></span> <span data-ttu-id="2843e-125">È identificato in modo univoco dalla combinazione degli attributi `name` e `contract`.</span><span class="sxs-lookup"><span data-stu-id="2843e-125">It is uniquely identified by the combination of the `name` and `contract` attributes.</span></span> <span data-ttu-id="2843e-126">Il codice client specifica il `name` al quale connettere un endpoint per il servizio implementato dal client.</span><span class="sxs-lookup"><span data-stu-id="2843e-126">The client code specifies the `name` to connect to an endpoint for the service that the client implements.</span></span> <span data-ttu-id="2843e-127">Se l'attributo `name` è omesso, l'endpoint si comporta come endpoint predefinito per il contratto che implementa.</span><span class="sxs-lookup"><span data-stu-id="2843e-127">If the `name` attribute is omitted, the endpoint acts as the default endpoint for the contract it implements.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b7b8-122">Note</span><span class="sxs-lookup"><span data-stu-id="2b7b8-122">Remarks</span></span>  
+ <span data-ttu-id="2b7b8-123">La sezione `client` definisce un elenco di endpoint ai quali può connettersi un client.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-123">The `client` section defines a list of endpoints that a client can connect to.</span></span> <span data-ttu-id="2b7b8-124">Ogni endpoint elencato nella sezione client definisce la propria associazione, comportamento e contratto.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-124">Each endpoint listed in the client section defines its own binding, behavior, and contract.</span></span> <span data-ttu-id="2b7b8-125">È identificato in modo univoco dalla combinazione degli attributi `name` e `contract`.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-125">It is uniquely identified by the combination of the `name` and `contract` attributes.</span></span> <span data-ttu-id="2b7b8-126">Il codice client specifica il `name` al quale connettere un endpoint per il servizio implementato dal client.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-126">The client code specifies the `name` to connect to an endpoint for the service that the client implements.</span></span> <span data-ttu-id="2b7b8-127">Se l'attributo `name` è omesso, l'endpoint si comporta come endpoint predefinito per il contratto che implementa.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-127">If the `name` attribute is omitted, the endpoint acts as the default endpoint for the contract it implements.</span></span>  
   
- <span data-ttu-id="2843e-128">In aggiunta, questa sezione specifica anche impostazioni per l'elaborazione di metadati.</span><span class="sxs-lookup"><span data-stu-id="2843e-128">In addition, this section also specifies settings for processing metadata.</span></span>  
+ <span data-ttu-id="2b7b8-128">In aggiunta, questa sezione specifica anche impostazioni per l'elaborazione di metadati.</span><span class="sxs-lookup"><span data-stu-id="2b7b8-128">In addition, this section also specifies settings for processing metadata.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2843e-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="2843e-129">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2b7b8-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="2b7b8-129">Example</span></span>  
   
 ```xml  
 <client>
@@ -72,9 +72,9 @@ ms.locfileid: "59164359"
 </client>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2843e-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2843e-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b7b8-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2b7b8-130">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [<span data-ttu-id="2843e-131">Configurazione del client WCF</span><span class="sxs-lookup"><span data-stu-id="2843e-131">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [<span data-ttu-id="2843e-132">Client</span><span class="sxs-lookup"><span data-stu-id="2843e-132">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [<span data-ttu-id="2b7b8-131">Configurazione del client WCF</span><span class="sxs-lookup"><span data-stu-id="2b7b8-131">WCF Client Configuration</span></span>](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [<span data-ttu-id="2b7b8-132">Client</span><span class="sxs-lookup"><span data-stu-id="2b7b8-132">Clients</span></span>](../../../../../docs/framework/wcf/feature-details/clients.md)

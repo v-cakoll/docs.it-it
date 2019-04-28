@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91b09be04499396a2229962fd592f29cb8bc8d04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609030"
 ---
-# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="4d3c7-102">Enumerazione CorDebugExceptionCallbackType</span><span class="sxs-lookup"><span data-stu-id="4d3c7-102">CorDebugExceptionCallbackType Enumeration</span></span>
-<span data-ttu-id="4d3c7-103">Indica il tipo di callback che viene eseguita da un [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) evento.</span><span class="sxs-lookup"><span data-stu-id="4d3c7-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="9d6ff-102">Enumerazione CorDebugExceptionCallbackType</span><span class="sxs-lookup"><span data-stu-id="9d6ff-102">CorDebugExceptionCallbackType Enumeration</span></span>
+<span data-ttu-id="9d6ff-103">Indica il tipo di callback che viene eseguita da un [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) evento.</span><span class="sxs-lookup"><span data-stu-id="9d6ff-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4d3c7-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4d3c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9d6ff-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9d6ff-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionCallbackType {  
@@ -37,24 +37,24 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4d3c7-105">Membri</span><span class="sxs-lookup"><span data-stu-id="4d3c7-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9d6ff-105">Membri</span><span class="sxs-lookup"><span data-stu-id="9d6ff-105">Members</span></span>  
   
-|<span data-ttu-id="4d3c7-106">Member</span><span class="sxs-lookup"><span data-stu-id="4d3c7-106">Member</span></span>|<span data-ttu-id="4d3c7-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4d3c7-107">Description</span></span>|  
+|<span data-ttu-id="9d6ff-106">Member</span><span class="sxs-lookup"><span data-stu-id="9d6ff-106">Member</span></span>|<span data-ttu-id="9d6ff-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9d6ff-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="4d3c7-108">È stata generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="4d3c7-108">An exception was thrown.</span></span>|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="4d3c7-109">Il processo di chiusura eccezione immesso il codice utente.</span><span class="sxs-lookup"><span data-stu-id="4d3c7-109">The exception windup process entered user code.</span></span>|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="4d3c7-110">Il processo di chiusura di eccezione trovato un `catch` blocco nel codice utente.</span><span class="sxs-lookup"><span data-stu-id="4d3c7-110">The exception windup process found a `catch` block in user code.</span></span>|  
-|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="4d3c7-111">L'eccezione non gestita.</span><span class="sxs-lookup"><span data-stu-id="4d3c7-111">The exception was not handled.</span></span>|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="9d6ff-108">È stata generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="9d6ff-108">An exception was thrown.</span></span>|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="9d6ff-109">Il processo di chiusura eccezione immesso il codice utente.</span><span class="sxs-lookup"><span data-stu-id="9d6ff-109">The exception windup process entered user code.</span></span>|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="9d6ff-110">Il processo di chiusura di eccezione trovato un `catch` blocco nel codice utente.</span><span class="sxs-lookup"><span data-stu-id="9d6ff-110">The exception windup process found a `catch` block in user code.</span></span>|  
+|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="9d6ff-111">L'eccezione non gestita.</span><span class="sxs-lookup"><span data-stu-id="9d6ff-111">The exception was not handled.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4d3c7-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4d3c7-112">Requirements</span></span>  
- <span data-ttu-id="4d3c7-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d3c7-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9d6ff-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9d6ff-112">Requirements</span></span>  
+ <span data-ttu-id="9d6ff-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9d6ff-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d3c7-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d3c7-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9d6ff-114">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9d6ff-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4d3c7-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d3c7-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9d6ff-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9d6ff-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4d3c7-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d3c7-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9d6ff-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9d6ff-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d3c7-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4d3c7-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9d6ff-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d6ff-117">See also</span></span>
 
-- [<span data-ttu-id="4d3c7-118">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="4d3c7-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="9d6ff-118">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="9d6ff-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

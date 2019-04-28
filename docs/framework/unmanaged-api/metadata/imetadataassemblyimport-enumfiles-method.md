@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b2ab06419491093a2de41d2ef25d16c01c03ebaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905333"
 ---
-# <a name="imetadataassemblyimportenumfiles-method"></a><span data-ttu-id="9de17-102">Metodo IMetaDataAssemblyImport::EnumFiles</span><span class="sxs-lookup"><span data-stu-id="9de17-102">IMetaDataAssemblyImport::EnumFiles Method</span></span>
-<span data-ttu-id="9de17-103">Enumera i file di cui viene fatto riferimento nel manifesto dell'assembly corrente.</span><span class="sxs-lookup"><span data-stu-id="9de17-103">Enumerates the files referenced in the current assembly manifest.</span></span>  
+# <a name="imetadataassemblyimportenumfiles-method"></a><span data-ttu-id="f576b-102">Metodo IMetaDataAssemblyImport::EnumFiles</span><span class="sxs-lookup"><span data-stu-id="f576b-102">IMetaDataAssemblyImport::EnumFiles Method</span></span>
+<span data-ttu-id="f576b-103">Enumera i file di cui viene fatto riferimento nel manifesto dell'assembly corrente.</span><span class="sxs-lookup"><span data-stu-id="f576b-103">Enumerates the files referenced in the current assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9de17-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9de17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f576b-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f576b-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumFiles (  
@@ -38,35 +38,35 @@ HRESULT EnumFiles (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9de17-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9de17-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f576b-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="f576b-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="9de17-106">[in, out] Un puntatore all'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="9de17-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="9de17-107">Deve trattarsi di un valore null per la prima chiamata di questo metodo.</span><span class="sxs-lookup"><span data-stu-id="9de17-107">This must be a null value for the first call of this method.</span></span>  
+ <span data-ttu-id="f576b-106">[in, out] Un puntatore all'enumeratore.</span><span class="sxs-lookup"><span data-stu-id="f576b-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="f576b-107">Deve trattarsi di un valore null per la prima chiamata di questo metodo.</span><span class="sxs-lookup"><span data-stu-id="f576b-107">This must be a null value for the first call of this method.</span></span>  
   
  `rFiles`  
- <span data-ttu-id="9de17-108">[out] La matrice utilizzata per archiviare il `mdFile` i token di metadati.</span><span class="sxs-lookup"><span data-stu-id="9de17-108">[out] The array used to store the `mdFile` metadata tokens.</span></span>  
+ <span data-ttu-id="f576b-108">[out] La matrice utilizzata per archiviare il `mdFile` i token di metadati.</span><span class="sxs-lookup"><span data-stu-id="f576b-108">[out] The array used to store the `mdFile` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="9de17-109">[in] Il numero massimo di `mdFile` i token che possono essere inseriti in `rFiles`.</span><span class="sxs-lookup"><span data-stu-id="9de17-109">[in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.</span></span>  
+ <span data-ttu-id="f576b-109">[in] Il numero massimo di `mdFile` i token che possono essere inseriti in `rFiles`.</span><span class="sxs-lookup"><span data-stu-id="f576b-109">[in] The maximum number of `mdFile` tokens that can be placed in `rFiles`.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="9de17-110">[out] I numerosi `mdFile` token effettivamente posizionati nella `rFiles`.</span><span class="sxs-lookup"><span data-stu-id="9de17-110">[out] The number of `mdFile` tokens actually placed in `rFiles`.</span></span>  
+ <span data-ttu-id="f576b-110">[out] I numerosi `mdFile` token effettivamente posizionati nella `rFiles`.</span><span class="sxs-lookup"><span data-stu-id="f576b-110">[out] The number of `mdFile` tokens actually placed in `rFiles`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9de17-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="9de17-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f576b-111">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="f576b-111">Return Value</span></span>  
   
-|<span data-ttu-id="9de17-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9de17-112">HRESULT</span></span>|<span data-ttu-id="9de17-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9de17-113">Description</span></span>|  
+|<span data-ttu-id="f576b-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f576b-112">HRESULT</span></span>|<span data-ttu-id="f576b-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f576b-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="9de17-114">`EnumFiles` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="9de17-114">`EnumFiles` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="9de17-115">Non sono presenti token da enumerare.</span><span class="sxs-lookup"><span data-stu-id="9de17-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="9de17-116">In questo caso, `pcTokens` è impostato su zero.</span><span class="sxs-lookup"><span data-stu-id="9de17-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="f576b-114">`EnumFiles` stato restituito correttamente.</span><span class="sxs-lookup"><span data-stu-id="f576b-114">`EnumFiles` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="f576b-115">Non sono presenti token da enumerare.</span><span class="sxs-lookup"><span data-stu-id="f576b-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="f576b-116">In questo caso, `pcTokens` è impostato su zero.</span><span class="sxs-lookup"><span data-stu-id="f576b-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9de17-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9de17-117">Requirements</span></span>  
- <span data-ttu-id="9de17-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9de17-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f576b-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="f576b-117">Requirements</span></span>  
+ <span data-ttu-id="f576b-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f576b-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9de17-119">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="9de17-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f576b-119">**Intestazione:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="f576b-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="9de17-120">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="9de17-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f576b-120">**Libreria:** Usato come risorsa in Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="f576b-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9de17-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9de17-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f576b-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f576b-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9de17-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9de17-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f576b-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f576b-122">See also</span></span>
 
-- [<span data-ttu-id="9de17-123">Interfaccia IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="9de17-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="f576b-123">Interfaccia IMetaDataAssemblyImport</span><span class="sxs-lookup"><span data-stu-id="f576b-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

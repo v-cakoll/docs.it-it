@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c1cea8adcd12ecb3078e4469e6b018ed49064e0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723316"
 ---
-# <a name="cordebugunmappedstop-enumeration"></a><span data-ttu-id="c4d40-102">Enumerazione CorDebugUnmappedStop</span><span class="sxs-lookup"><span data-stu-id="c4d40-102">CorDebugUnmappedStop Enumeration</span></span>
-<span data-ttu-id="c4d40-103">Specifica il tipo di codice non mappato che può attivare un arresto nell'esecuzione del codice da parte del gestore di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="c4d40-103">Specifies the type of unmapped code that can trigger a halt in code execution by the stepper.</span></span>  
+# <a name="cordebugunmappedstop-enumeration"></a><span data-ttu-id="694bd-102">Enumerazione CorDebugUnmappedStop</span><span class="sxs-lookup"><span data-stu-id="694bd-102">CorDebugUnmappedStop Enumeration</span></span>
+<span data-ttu-id="694bd-103">Specifica il tipo di codice non mappato che può attivare un arresto nell'esecuzione del codice da parte del gestore di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="694bd-103">Specifies the type of unmapped code that can trigger a halt in code execution by the stepper.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4d40-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c4d40-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="694bd-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="694bd-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugUnmappedStop {  
@@ -40,30 +40,30 @@ typedef enum CorDebugUnmappedStop {
 } CorDebugUnmappedStop;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c4d40-105">Membri</span><span class="sxs-lookup"><span data-stu-id="c4d40-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="694bd-105">Membri</span><span class="sxs-lookup"><span data-stu-id="694bd-105">Members</span></span>  
   
-|<span data-ttu-id="c4d40-106">Member</span><span class="sxs-lookup"><span data-stu-id="c4d40-106">Member</span></span>|<span data-ttu-id="c4d40-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="c4d40-107">Description</span></span>|  
+|<span data-ttu-id="694bd-106">Member</span><span class="sxs-lookup"><span data-stu-id="694bd-106">Member</span></span>|<span data-ttu-id="694bd-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="694bd-107">Description</span></span>|  
 |------------|-----------------|  
-|`STOP_NONE`|<span data-ttu-id="c4d40-108">Non arrestare in qualsiasi tipo di codice non mappato.</span><span class="sxs-lookup"><span data-stu-id="c4d40-108">Do not stop in any type of unmapped code.</span></span>|  
-|`STOP_PROLOG`|<span data-ttu-id="c4d40-109">Interrompere il codice di prologo.</span><span class="sxs-lookup"><span data-stu-id="c4d40-109">Stop in prolog code.</span></span>|  
-|`STOP_EPILOG`|<span data-ttu-id="c4d40-110">Arrestare il codice dell'epilogo.</span><span class="sxs-lookup"><span data-stu-id="c4d40-110">Stop in epilog code.</span></span>|  
-|`STOP_NO_MAPPING_INFO`|<span data-ttu-id="c4d40-111">Interrompere il codice che non è disponibili informazioni di mapping.</span><span class="sxs-lookup"><span data-stu-id="c4d40-111">Stop in code that has no mapping information.</span></span>|  
-|`STOP_OTHER_UNMAPPED`|<span data-ttu-id="c4d40-112">Interrompere il codice non mappato che non è sufficiente il prologo della query, epilogo, senza informazioni di mapping o categoria non gestito.</span><span class="sxs-lookup"><span data-stu-id="c4d40-112">Stop in unmapped code that does not fit into the prolog, epilog, no-mapping-information, or unmanaged category.</span></span>|  
-|`STOP_UNMANAGED`|<span data-ttu-id="c4d40-113">Arrestare in codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="c4d40-113">Stop in unmanaged code.</span></span> <span data-ttu-id="c4d40-114">Questo valore è valido solo con il debug di interoperabilità.</span><span class="sxs-lookup"><span data-stu-id="c4d40-114">This value is valid only with interop debugging.</span></span>|  
-|`STOP_ALL`|<span data-ttu-id="c4d40-115">Arrestare tutti i tipi di codice non mappato.</span><span class="sxs-lookup"><span data-stu-id="c4d40-115">Stop in all types of unmapped code.</span></span>|  
+|`STOP_NONE`|<span data-ttu-id="694bd-108">Non arrestare in qualsiasi tipo di codice non mappato.</span><span class="sxs-lookup"><span data-stu-id="694bd-108">Do not stop in any type of unmapped code.</span></span>|  
+|`STOP_PROLOG`|<span data-ttu-id="694bd-109">Interrompere il codice di prologo.</span><span class="sxs-lookup"><span data-stu-id="694bd-109">Stop in prolog code.</span></span>|  
+|`STOP_EPILOG`|<span data-ttu-id="694bd-110">Arrestare il codice dell'epilogo.</span><span class="sxs-lookup"><span data-stu-id="694bd-110">Stop in epilog code.</span></span>|  
+|`STOP_NO_MAPPING_INFO`|<span data-ttu-id="694bd-111">Interrompere il codice che non è disponibili informazioni di mapping.</span><span class="sxs-lookup"><span data-stu-id="694bd-111">Stop in code that has no mapping information.</span></span>|  
+|`STOP_OTHER_UNMAPPED`|<span data-ttu-id="694bd-112">Interrompere il codice non mappato che non è sufficiente il prologo della query, epilogo, senza informazioni di mapping o categoria non gestito.</span><span class="sxs-lookup"><span data-stu-id="694bd-112">Stop in unmapped code that does not fit into the prolog, epilog, no-mapping-information, or unmanaged category.</span></span>|  
+|`STOP_UNMANAGED`|<span data-ttu-id="694bd-113">Arrestare in codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="694bd-113">Stop in unmanaged code.</span></span> <span data-ttu-id="694bd-114">Questo valore è valido solo con il debug di interoperabilità.</span><span class="sxs-lookup"><span data-stu-id="694bd-114">This value is valid only with interop debugging.</span></span>|  
+|`STOP_ALL`|<span data-ttu-id="694bd-115">Arrestare tutti i tipi di codice non mappato.</span><span class="sxs-lookup"><span data-stu-id="694bd-115">Stop in all types of unmapped code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c4d40-116">Note</span><span class="sxs-lookup"><span data-stu-id="c4d40-116">Remarks</span></span>  
- <span data-ttu-id="c4d40-117">Usare la [SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) metodo per impostare il flag che specificano il codice non mappato in cui si interromperà il gestore di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="c4d40-117">Use the [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) method to set the flags that specify the unmapped code in which the stepper will stop.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="694bd-116">Note</span><span class="sxs-lookup"><span data-stu-id="694bd-116">Remarks</span></span>  
+ <span data-ttu-id="694bd-117">Usare la [SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) metodo per impostare il flag che specificano il codice non mappato in cui si interromperà il gestore di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="694bd-117">Use the [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) method to set the flags that specify the unmapped code in which the stepper will stop.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4d40-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c4d40-118">Requirements</span></span>  
- <span data-ttu-id="c4d40-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4d40-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="694bd-118">Requisiti</span><span class="sxs-lookup"><span data-stu-id="694bd-118">Requirements</span></span>  
+ <span data-ttu-id="694bd-119">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="694bd-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4d40-120">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4d40-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="694bd-120">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="694bd-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c4d40-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4d40-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="694bd-121">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="694bd-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c4d40-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4d40-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="694bd-122">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="694bd-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c4d40-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c4d40-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="694bd-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="694bd-123">See also</span></span>
 
-- [<span data-ttu-id="c4d40-124">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="c4d40-124">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="694bd-124">Enumerazioni di debug</span><span class="sxs-lookup"><span data-stu-id="694bd-124">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

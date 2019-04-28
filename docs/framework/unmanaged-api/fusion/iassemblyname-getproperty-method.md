@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697381"
 ---
-# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="6d4f6-102">Metodo IAssemblyName::GetProperty</span><span class="sxs-lookup"><span data-stu-id="6d4f6-102">IAssemblyName::GetProperty Method</span></span>
-<span data-ttu-id="6d4f6-103">Ottiene un puntatore per la proprietà fa riferimento l'identificatore della proprietà specificata.</span><span class="sxs-lookup"><span data-stu-id="6d4f6-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
+# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="bec4a-102">Metodo IAssemblyName::GetProperty</span><span class="sxs-lookup"><span data-stu-id="bec4a-102">IAssemblyName::GetProperty Method</span></span>
+<span data-ttu-id="bec4a-103">Ottiene un puntatore per la proprietà fa riferimento l'identificatore della proprietà specificata.</span><span class="sxs-lookup"><span data-stu-id="bec4a-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d4f6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6d4f6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bec4a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bec4a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetProperty (  
@@ -37,23 +37,23 @@ HRESULT GetProperty (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6d4f6-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6d4f6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bec4a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bec4a-105">Parameters</span></span>  
  `PropertyId`  
- <span data-ttu-id="6d4f6-106">[in] Identificatore univoco per la proprietà richiesta.</span><span class="sxs-lookup"><span data-stu-id="6d4f6-106">[in] The unique identifier for the requested property.</span></span>  
+ <span data-ttu-id="bec4a-106">[in] Identificatore univoco per la proprietà richiesta.</span><span class="sxs-lookup"><span data-stu-id="bec4a-106">[in] The unique identifier for the requested property.</span></span>  
   
  `pvProperty`  
- <span data-ttu-id="6d4f6-107">[out] I dati di proprietà restituita.</span><span class="sxs-lookup"><span data-stu-id="6d4f6-107">[out] The returned property data.</span></span>  
+ <span data-ttu-id="bec4a-107">[out] I dati di proprietà restituita.</span><span class="sxs-lookup"><span data-stu-id="bec4a-107">[out] The returned property data.</span></span>  
   
  `pcbProperty`  
- <span data-ttu-id="6d4f6-108">[in, out] Le dimensioni, in byte, di `pvProperty`.</span><span class="sxs-lookup"><span data-stu-id="6d4f6-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
+ <span data-ttu-id="bec4a-108">[in, out] Le dimensioni, in byte, di `pvProperty`.</span><span class="sxs-lookup"><span data-stu-id="bec4a-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d4f6-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6d4f6-109">Requirements</span></span>  
- <span data-ttu-id="6d4f6-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d4f6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bec4a-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bec4a-109">Requirements</span></span>  
+ <span data-ttu-id="bec4a-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bec4a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d4f6-111">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="6d4f6-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="bec4a-111">**Intestazione:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="bec4a-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="6d4f6-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d4f6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bec4a-112">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bec4a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d4f6-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6d4f6-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bec4a-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bec4a-113">See also</span></span>
 
-- [<span data-ttu-id="6d4f6-114">Interfaccia IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="6d4f6-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="bec4a-114">Interfaccia IAssemblyName</span><span class="sxs-lookup"><span data-stu-id="bec4a-114">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

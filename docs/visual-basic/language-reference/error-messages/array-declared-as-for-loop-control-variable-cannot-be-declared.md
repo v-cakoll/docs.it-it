@@ -8,16 +8,16 @@ helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
 ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935382"
 ---
-# <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="5f800-102">La matrice dichiarata come variabile per il controllo del ciclo non può essere dichiarata con dimensione iniziale</span><span class="sxs-lookup"><span data-stu-id="5f800-102">Array declared as for loop control variable cannot be declared with an initial size</span></span>
-<span data-ttu-id="5f800-103">Oggetto `For Each` ciclo viene utilizzato come una matrice relativa *elemento* esegue l'inizializzazione della variabile di iterazione della matrice.</span><span class="sxs-lookup"><span data-stu-id="5f800-103">A `For Each` loop uses an array as its *element* iteration variable but initializes that array.</span></span>  
+# <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="df475-102">La matrice dichiarata come variabile per il controllo del ciclo non può essere dichiarata con dimensione iniziale</span><span class="sxs-lookup"><span data-stu-id="df475-102">Array declared as for loop control variable cannot be declared with an initial size</span></span>
+<span data-ttu-id="df475-103">Oggetto `For Each` ciclo viene utilizzato come una matrice relativa *elemento* esegue l'inizializzazione della variabile di iterazione della matrice.</span><span class="sxs-lookup"><span data-stu-id="df475-103">A `For Each` loop uses an array as its *element* iteration variable but initializes that array.</span></span>  
   
- <span data-ttu-id="5f800-104">Le istruzioni seguenti mostrano come questo errore può essere generato.</span><span class="sxs-lookup"><span data-stu-id="5f800-104">The following statements show how this error can be generated.</span></span>  
+ <span data-ttu-id="df475-104">Le istruzioni seguenti mostrano come questo errore può essere generato.</span><span class="sxs-lookup"><span data-stu-id="df475-104">The following statements show how this error can be generated.</span></span>  
   
 ```  
 Dim arrayList As New List(Of Integer())  
@@ -25,16 +25,16 @@ For Each listElement() As Integer In arrayList
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- <span data-ttu-id="5f800-105">Il primo `For Each` istruzione è il modo corretto per accedere agli elementi di `arrayList`.</span><span class="sxs-lookup"><span data-stu-id="5f800-105">The first `For Each` statement is the correct way to access elements of `arrayList`.</span></span> <span data-ttu-id="5f800-106">Il secondo `For Each` istruzione genera questo errore.</span><span class="sxs-lookup"><span data-stu-id="5f800-106">The second `For Each` statement generates this error.</span></span>  
+ <span data-ttu-id="df475-105">Il primo `For Each` istruzione è il modo corretto per accedere agli elementi di `arrayList`.</span><span class="sxs-lookup"><span data-stu-id="df475-105">The first `For Each` statement is the correct way to access elements of `arrayList`.</span></span> <span data-ttu-id="df475-106">Il secondo `For Each` istruzione genera questo errore.</span><span class="sxs-lookup"><span data-stu-id="df475-106">The second `For Each` statement generates this error.</span></span>  
   
- <span data-ttu-id="5f800-107">**ID errore:** BC32039</span><span class="sxs-lookup"><span data-stu-id="5f800-107">**Error ID:** BC32039</span></span>  
+ <span data-ttu-id="df475-107">**ID errore:** BC32039</span><span class="sxs-lookup"><span data-stu-id="df475-107">**Error ID:** BC32039</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="5f800-108">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="5f800-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="df475-108">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="df475-108">To correct this error</span></span>  
   
--   <span data-ttu-id="5f800-109">Rimuovere l'inizializzazione dalla dichiarazione del *elemento* variabile di iterazione.</span><span class="sxs-lookup"><span data-stu-id="5f800-109">Remove the initialization from the declaration of the *element* iteration variable.</span></span>  
+- <span data-ttu-id="df475-109">Rimuovere l'inizializzazione dalla dichiarazione del *elemento* variabile di iterazione.</span><span class="sxs-lookup"><span data-stu-id="df475-109">Remove the initialization from the declaration of the *element* iteration variable.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f800-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5f800-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df475-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="df475-110">See also</span></span>
 
-- [<span data-ttu-id="5f800-111">Istruzione For...Next</span><span class="sxs-lookup"><span data-stu-id="5f800-111">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [<span data-ttu-id="5f800-112">Matrici</span><span class="sxs-lookup"><span data-stu-id="5f800-112">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [<span data-ttu-id="5f800-113">Raccolte</span><span class="sxs-lookup"><span data-stu-id="5f800-113">Collections</span></span>](../../../standard/collections/index.md)
+- [<span data-ttu-id="df475-111">Istruzione For...Next</span><span class="sxs-lookup"><span data-stu-id="df475-111">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [<span data-ttu-id="df475-112">Matrici</span><span class="sxs-lookup"><span data-stu-id="df475-112">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="df475-113">Raccolte</span><span class="sxs-lookup"><span data-stu-id="df475-113">Collections</span></span>](../../../standard/collections/index.md)

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
 ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932577"
 ---
-# <a name="listview-overviews"></a><span data-ttu-id="c1b91-102">Cenni preliminari sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="c1b91-102">ListView Overviews</span></span>
-<span data-ttu-id="c1b91-103">Gli argomenti in questa sezione illustrano come usare un <xref:System.Windows.Controls.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="c1b91-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
+# <a name="listview-overviews"></a><span data-ttu-id="a4689-102">Cenni preliminari sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="a4689-102">ListView Overviews</span></span>
+<span data-ttu-id="a4689-103">Gli argomenti in questa sezione illustrano come usare un <xref:System.Windows.Controls.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="a4689-103">The topics in this section show you how to use a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c1b91-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="c1b91-104">In This Section</span></span>  
- [<span data-ttu-id="c1b91-105">Panoramica sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="c1b91-105">ListView Overview</span></span>](listview-overview.md)  
- [<span data-ttu-id="c1b91-106">Cenni preliminari su GridView</span><span class="sxs-lookup"><span data-stu-id="c1b91-106">GridView Overview</span></span>](gridview-overview.md)  
- [<span data-ttu-id="c1b91-107">Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView</span><span class="sxs-lookup"><span data-stu-id="c1b91-107">GridView Column Header Styles and Templates Overview</span></span>](gridview-column-header-styles-and-templates-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a4689-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="a4689-104">In This Section</span></span>  
+ [<span data-ttu-id="a4689-105">Panoramica sul controllo ListView</span><span class="sxs-lookup"><span data-stu-id="a4689-105">ListView Overview</span></span>](listview-overview.md)  
+ [<span data-ttu-id="a4689-106">Cenni preliminari su GridView</span><span class="sxs-lookup"><span data-stu-id="a4689-106">GridView Overview</span></span>](gridview-overview.md)  
+ [<span data-ttu-id="a4689-107">Panoramica sui modelli e sugli stili di intestazione delle colonne in GridView</span><span class="sxs-lookup"><span data-stu-id="a4689-107">GridView Column Header Styles and Templates Overview</span></span>](gridview-column-header-styles-and-templates-overview.md)  
   
-## <a name="reference"></a><span data-ttu-id="c1b91-108">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="c1b91-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a4689-108">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="a4689-108">Reference</span></span>  
  <xref:System.Windows.Controls.ListView>  
   
  <xref:System.Windows.Controls.GridView>  
   
-## <a name="related-sections"></a><span data-ttu-id="c1b91-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="c1b91-109">Related Sections</span></span>  
- [<span data-ttu-id="c1b91-110">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="c1b91-110">How-to Topics</span></span>](listview-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="a4689-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="a4689-109">Related Sections</span></span>  
+ [<span data-ttu-id="a4689-110">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="a4689-110">How-to Topics</span></span>](listview-how-to-topics.md)
