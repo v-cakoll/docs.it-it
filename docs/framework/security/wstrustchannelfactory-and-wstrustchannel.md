@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780068"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
 Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che un client WCF supporta già la federazione. Configurando un client WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un binding personalizzato simile, è possibile abilitare l'autenticazione federata in un servizio.
@@ -25,7 +25,7 @@ Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che
 
 - Uso solo di WIF per ottenere un token dal servizio token di sicurezza e quindi consentire a un client WCF di eseguire l'autenticazione con questo token. Per altre informazioni, vedere l'esempio [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- Il primo scenario è ovvio: i client WCF esistenti continueranno a usare i servizi token di sicurezza e le relying party WIF. Questo argomento illustra i due scenari rimanenti.
+ Il primo scenario è ovvio: I client WCF esistenti continueranno a funzionare con le relying party WIF e ai ruoli STS. Questo argomento illustra i due scenari rimanenti.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Miglioramento di un client WCF esistente con ActAs/OnBehalfOf
 In uno scenario di delega di identità tipico, un client chiama un servizio di livello intermedio, che chiama quindi un servizio back-end. Il servizio di livello intermedio funge da client o agisce per conto del client.

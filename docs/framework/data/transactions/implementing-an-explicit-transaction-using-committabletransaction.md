@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793718"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementazione di una transazione esplicita utilizzando CommittableTransaction
 A differenza della classe <xref:System.Transactions.CommittableTransaction>, che consente di utilizzare le transazioni in modo implicito, la classe <xref:System.Transactions.TransactionScope> consente di utilizzare le transazioni in modo esplicito. Questa classe è utile nelle applicazioni che utilizzano la stessa transazione per più chiamate di funzione o di thread. A differenza della classe <xref:System.Transactions.TransactionScope>, il writer di applicazione deve chiamare in modo specifico i metodi <xref:System.Transactions.CommittableTransaction.Commit%2A> e <xref:System.Transactions.Transaction.Rollback%2A>, rispettivamente per interrompere la transazione o per eseguirne il commit.  
@@ -22,9 +22,9 @@ A differenza della classe <xref:System.Transactions.CommittableTransaction>, che
   
  Quando si utilizza la classe <xref:System.Transactions.CommittableTransaction> è opportuno tenere presente i punti seguenti.  
   
--   La creazione di una transazione <xref:System.Transactions.CommittableTransaction> non comporta l'impostazione della transazione di ambiente. Questa transazione deve essere impostata e reimpostata in modo specifico, in modo da garantire che i gestori di risorse possano funzionare nel contesto temporale e transazionale appropriato. Per definire la transazione di ambiente corrente è necessario impostare la proprietà statica <xref:System.Transactions.Transaction.Current%2A> dell'oggetto globale <xref:System.Transactions.Transaction>.  
+- La creazione di una transazione <xref:System.Transactions.CommittableTransaction> non comporta l'impostazione della transazione di ambiente. Questa transazione deve essere impostata e reimpostata in modo specifico, in modo da garantire che i gestori di risorse possano funzionare nel contesto temporale e transazionale appropriato. Per definire la transazione di ambiente corrente è necessario impostare la proprietà statica <xref:System.Transactions.Transaction.Current%2A> dell'oggetto globale <xref:System.Transactions.Transaction>.  
   
--   Gli oggetti <xref:System.Transactions.CommittableTransaction> non possono essere riutilizzati. In particolare, un oggetto <xref:System.Transactions.CommittableTransaction> per cui è stato eseguito il commit o il rollback non può essere utilizzato nuovamente in una transazione. In altre parole, non può essere impostato come contesto della transazione di ambiente corrente.  
+- Gli oggetti <xref:System.Transactions.CommittableTransaction> non possono essere riutilizzati. In particolare, un oggetto <xref:System.Transactions.CommittableTransaction> per cui è stato eseguito il commit o il rollback non può essere utilizzato nuovamente in una transazione. In altre parole, non può essere impostato come contesto della transazione di ambiente corrente.  
   
 ## <a name="creating-a-committabletransaction"></a>Creazione di una transazione CommittableTransaction  
  Nell'esempio seguente viene creata una nuova istanza della classe <xref:System.Transactions.CommittableTransaction> e quindi ne viene eseguito il commit.  

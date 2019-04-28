@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762059"
 ---
 # <a name="sealing"></a>sealed
 Una delle funzionalità orientate a oggetti Framework è che gli sviluppatori possono estendere e personalizzarli in modi non previsti per i progettisti del framework. Questa è la potenza e pericolo di progettazione estendibile. Quando si progetta il tuo framework, è quindi molto importante per progettare con attenzione per l'estensibilità quando lo si desidera e per limitare l'estendibilità è pericoloso.  
@@ -27,13 +27,13 @@ Una delle funzionalità orientate a oggetti Framework è che gli sviluppatori po
   
  Buone ragioni per una classe includono quanto segue:  
   
--   La classe è una classe statica. Visualizzare [progettazione di classi statiche](../../../docs/standard/design-guidelines/static-class.md).  
+- La classe è una classe statica. Visualizzare [progettazione di classi statiche](../../../docs/standard/design-guidelines/static-class.md).  
   
--   La classe archivia i segreti sensibili alla sicurezza in membri protetti ereditati.  
+- La classe archivia i segreti sensibili alla sicurezza in membri protetti ereditati.  
   
--   La classe eredita molte membri virtuali e il costo del sealing li singolarmente sarebbe superano i vantaggi di lasciare la classe non sealed.  
+- La classe eredita molte membri virtuali e il costo del sealing li singolarmente sarebbe superano i vantaggi di lasciare la classe non sealed.  
   
--   La classe è un attributo che richiede la ricerca di runtime molto veloce. Gli attributi sealed hanno livelli di prestazioni leggermente superiori rispetto a quelli non sealed. visualizzare [attributi](../../../docs/standard/design-guidelines/attributes.md).  
+- La classe è un attributo che richiede la ricerca di runtime molto veloce. Gli attributi sealed hanno livelli di prestazioni leggermente superiori rispetto a quelli non sealed. visualizzare [attributi](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** dichiarare membri protetti o virtuali su tipi sealed.  
   

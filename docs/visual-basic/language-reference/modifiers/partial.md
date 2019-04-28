@@ -15,11 +15,11 @@ helpviewer_keywords:
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
 ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920614"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indica che una dichiarazione di tipo è una definizione parziale del tipo.  
@@ -68,15 +68,15 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="best-practices"></a>Suggerimenti  
   
--   In condizioni normali, non è consigliabile suddividere lo sviluppo di un singolo tipo in due o più dichiarazioni. Pertanto, nella maggior parte dei casi non occorre specificare la parola chiave `Partial`.  
+- In condizioni normali, non è consigliabile suddividere lo sviluppo di un singolo tipo in due o più dichiarazioni. Pertanto, nella maggior parte dei casi non occorre specificare la parola chiave `Partial`.  
   
--   Per migliorare la leggibilità, ogni dichiarazione parziale di un tipo deve includere la parola chiave `Partial`. Il compilatore consente che la parola chiave venga omessa al massimo in una dichiarazione parziale. Se viene omessa in due o più dichiarazioni, viene segnalato un errore.  
+- Per migliorare la leggibilità, ogni dichiarazione parziale di un tipo deve includere la parola chiave `Partial`. Il compilatore consente che la parola chiave venga omessa al massimo in una dichiarazione parziale. Se viene omessa in due o più dichiarazioni, viene segnalato un errore.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Unione delle dichiarazioni.** Il compilatore considera il tipo come l'unione di tutte le relative dichiarazioni parziali. Ogni modificatore di ciascuna definizione parziale si applica all'intero tipo e ogni membro di ciascuna definizione parziale è disponibile per l'intero tipo.  
+- **Unione delle dichiarazioni.** Il compilatore considera il tipo come l'unione di tutte le relative dichiarazioni parziali. Ogni modificatore di ciascuna definizione parziale si applica all'intero tipo e ogni membro di ciascuna definizione parziale è disponibile per l'intero tipo.  
   
--   **Promozione tipo non consentita per i tipi parziali nei moduli.** Se una definizione parziale si trova all'interno di un modulo, l'effetto della promozione tipo di tale tipo viene automaticamente annullato. In questo caso, un set di definizioni parziali può generare risultati imprevisti e persino errori del compilatore. Per altre informazioni, vedere [promozione tipo](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Promozione tipo non consentita per i tipi parziali nei moduli.** Se una definizione parziale si trova all'interno di un modulo, l'effetto della promozione tipo di tale tipo viene automaticamente annullato. In questo caso, un set di definizioni parziali può generare risultati imprevisti e persino errori del compilatore. Per altre informazioni, vedere [promozione tipo](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
      Il compilatore unisce le definizioni parziali solo se i relativi percorsi completi sono identici.  
   

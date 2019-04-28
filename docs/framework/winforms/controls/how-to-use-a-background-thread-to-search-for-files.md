@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785853"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Procedura: Usare un thread in background per la ricerca di file
 Il <xref:System.ComponentModel.BackgroundWorker> componente sostituisce e aggiunge funzionalità per il <xref:System.Threading> dello spazio dei nomi, tuttavia, il <xref:System.Threading> dello spazio dei nomi è stato mantenuto per compatibilità con le versioni precedenti e per un uso futuro, se necessario. Per altre informazioni, vedere [Cenni preliminari sul componente BackgroundWorker](backgroundworker-component-overview.md).  
@@ -28,13 +28,13 @@ Il <xref:System.ComponentModel.BackgroundWorker> componente sostituisce e aggiun
   
  L'esempio seguente (`DirectorySearcher`) Mostra un controllo Windows Form multithreading che usa un thread in background per cercare in modo ricorsivo una directory per file che corrispondono a una stringa di ricerca specificato e quindi popola una casella di riepilogo con il risultato della ricerca. I principali concetti illustrati dall'esempio sono come segue:  
   
--   `DirectorySearcher` Avvia un nuovo thread per eseguire la ricerca. Il thread viene eseguito il `ThreadProcedure` metodo che a sua volta chiama l'helper `RecurseDirectory` metodo per eseguire la ricerca effettiva e popolare la casella di riepilogo. Tuttavia, popolare la casella di riepilogo richiede una chiamata tra thread, come illustrato nelle due punti seguenti.  
+- `DirectorySearcher` Avvia un nuovo thread per eseguire la ricerca. Il thread viene eseguito il `ThreadProcedure` metodo che a sua volta chiama l'helper `RecurseDirectory` metodo per eseguire la ricerca effettiva e popolare la casella di riepilogo. Tuttavia, popolare la casella di riepilogo richiede una chiamata tra thread, come illustrato nelle due punti seguenti.  
   
--   `DirectorySearcher` Definisce i `AddFiles` per aggiungere i file in una casella di riepilogo; tuttavia `RecurseDirectory` non è possibile richiamare direttamente `AddFiles` perché `AddFiles` può eseguire solo nel thread dell'APARTMENT che ha creato `DirectorySearcher`.  
+- `DirectorySearcher` Definisce i `AddFiles` per aggiungere i file in una casella di riepilogo; tuttavia `RecurseDirectory` non è possibile richiamare direttamente `AddFiles` perché `AddFiles` può eseguire solo nel thread dell'APARTMENT che ha creato `DirectorySearcher`.  
   
--   L'unico modo `RecurseDirectory` può chiamare `AddFiles` avviene tramite una chiamata tra thread, vale a dire, chiamando il metodo <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> per effettuare il marshalling `AddFiles` al thread di creazione di `DirectorySearcher`. `RecurseDirectory` Usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> in modo che la chiamata può essere effettuata in modo asincrono.  
+- L'unico modo `RecurseDirectory` può chiamare `AddFiles` avviene tramite una chiamata tra thread, vale a dire, chiamando il metodo <xref:System.Windows.Forms.Control.Invoke%2A> o <xref:System.Windows.Forms.Control.BeginInvoke%2A> per effettuare il marshalling `AddFiles` al thread di creazione di `DirectorySearcher`. `RecurseDirectory` Usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> in modo che la chiamata può essere effettuata in modo asincrono.  
   
--   Marshalling di un metodo richiede l'equivalente di un puntatore a funzione o un callback. Questa operazione viene eseguita usando i delegati in .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> accetta un delegato come argomento. `DirectorySearcher` quindi definisce un delegato (`FileListDelegate`), associa `AddFiles` a un'istanza di `FileListDelegate` nel relativo costruttore e passa il delegato dell'istanza per <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` definisce anche un delegato di evento che viene effettuato il marshalling al termine di ricerca.  
+- Marshalling di un metodo richiede l'equivalente di un puntatore a funzione o un callback. Questa operazione viene eseguita usando i delegati in .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> accetta un delegato come argomento. `DirectorySearcher` quindi definisce un delegato (`FileListDelegate`), associa `AddFiles` a un'istanza di `FileListDelegate` nel relativo costruttore e passa il delegato dell'istanza per <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` definisce anche un delegato di evento che viene effettuato il marshalling al termine di ricerca.  
   
 ```vb  
 Option Strict  

@@ -18,11 +18,11 @@ ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795278"
 ---
 # <a name="time-zone-overview"></a>Panoramica sui fusi orari
 
@@ -59,7 +59,7 @@ In .NET un <xref:System.TimeZoneInfo> oggetto rappresenta un fuso orario. Il <xr
 
 La dipendenza del <xref:System.TimeZoneInfo> classe nel Registro di sistema significa che un'applicazione compatibile con fuso orario può essere certi che un determinato fuso orario viene definito nel Registro di sistema. Di conseguenza, se si prevede di creare un'istanza di un fuso orario specifico (diverso dal fuso orario locale o da quello che rappresenta l'ora UTC) è consigliabile usare la gestione delle eccezioni. Inoltre necessario fornire un metodo che consente all'applicazione di continuare se necessaria <xref:System.TimeZoneInfo> dal Registro di sistema non è possibile creare un'istanza di oggetto.
 
-Per gestire l'assenza di un fuso orario richiesto, il <xref:System.TimeZoneInfo> classe include una <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metodo, che è possibile usare per creare fusi orari personalizzati che non si trovano nel Registro di sistema. Per informazioni dettagliate sulla creazione di un fuso orario personalizzato, vedere [come: Creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [come: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Inoltre, è possibile usare il <xref:System.TimeZoneInfo.ToSerializedString%2A> metodo per convertire un fuso orario appena creato in una stringa e salvarlo in un archivio dati (ad esempio, un database, un file di testo, il Registro di sistema o una risorsa applicazione). È quindi possibile usare la <xref:System.TimeZoneInfo.FromSerializedString%2A> eseguire il metodo per convertire questa stringa in un <xref:System.TimeZoneInfo> oggetto. Per informazioni dettagliate, vedere [come: Salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [come: Ripristinare i fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Per gestire l'assenza di un fuso orario richiesto, il <xref:System.TimeZoneInfo> classe include una <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metodo, che è possibile usare per creare fusi orari personalizzati che non si trovano nel Registro di sistema. Per informazioni dettagliate sulla creazione di un fuso orario personalizzato, vedere [come: Creare fusi orari senza regole di regolazione](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) e [come: Creare fusi orari con regole di regolazione](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Inoltre, è possibile usare il <xref:System.TimeZoneInfo.ToSerializedString%2A> metodo per convertire un fuso orario appena creato in una stringa e salvarlo in un archivio dati (ad esempio, un database, un file di testo, il Registro di sistema o una risorsa applicazione). È quindi possibile usare la <xref:System.TimeZoneInfo.FromSerializedString%2A> eseguire il metodo per convertire questa stringa in un <xref:System.TimeZoneInfo> oggetto. Per informazioni dettagliate, vedere [Procedura: Salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [come: Ripristinare i fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
 Dato che ogni fuso orario è caratterizzato da un offset di base rispetto al fuso orario UTC, nonché da un offset da UTC che riflette eventuali regole di rettifica, un'ora in un fuso orario può essere convertita facilmente nell'ora corrispondente in un altro fuso orario. A tale scopo, il <xref:System.TimeZoneInfo> oggetto include diversi metodi di conversione, tra cui:
 

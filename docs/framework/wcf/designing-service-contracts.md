@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785034"
 ---
 # <a name="designing-service-contracts"></a>Progettazione dei contratti di servizio
 In questo argomento vengono descritti i contratti di servizio, la relativa modalità di definizione, le operazioni disponibili (e le implicazioni per gli scambi di messaggi sottostanti), i tipi di dati utilizzati e altri temi che consentono di progettare operazioni in linea con i requisiti del proprio scenario.  
@@ -24,28 +24,28 @@ In questo argomento vengono descritti i contratti di servizio, la relativa modal
   
  In questo argomento vengono descritte le decisioni seguenti da prendere durante la progettazione di un contratto di servizio:  
   
--   Utilizzo di classi o interfacce.  
+- Utilizzo di classi o interfacce.  
   
--   Modalità di indicazione dei tipi di dati che si desidera scambiare.  
+- Modalità di indicazione dei tipi di dati che si desidera scambiare.  
   
--   Tipi di modello di scambio che è possibile usare.  
+- Tipi di modello di scambio che è possibile usare.  
   
--   Possibilità di inserimento nel contratto di requisiti di sicurezza espliciti.  
+- Possibilità di inserimento nel contratto di requisiti di sicurezza espliciti.  
   
--   Restrizioni per input e output dell'operazione.  
+- Restrizioni per input e output dell'operazione.  
   
 ## <a name="classes-or-interfaces"></a>Classi o interfacce  
  Entrambe le classi e interfacce rappresentano un raggruppamento di funzionalità e, pertanto, entrambi possono essere usati per definire un contratto di servizio WCF. È tuttavia consigliabile utilizzare le interfacce dal momento che modellano direttamente i contratti di servizio. Senza implementazione, le interfacce si limitano a definire un raggruppamento di metodi con determinate firme. Implementare un'interfaccia del contratto di servizio e si è implementato un servizio WCF.  
   
  Le interfacce del contratto di servizio assumono tutti i vantaggi delle interfacce gestite:  
   
--   Le interfacce del contratto di servizio possono estendere un numero qualsiasi di altre interfacce del contratto di servizio.  
+- Le interfacce del contratto di servizio possono estendere un numero qualsiasi di altre interfacce del contratto di servizio.  
   
--   Una sola classe è in grado di implementare più contratti di servizio implementandone le interfacce.  
+- Una sola classe è in grado di implementare più contratti di servizio implementandone le interfacce.  
   
--   È possibile modificare l'implementazione di un contratto di servizio modificando l'implementazione dell'interfaccia mentre il contratto di servizio rimane lo stesso.  
+- È possibile modificare l'implementazione di un contratto di servizio modificando l'implementazione dell'interfaccia mentre il contratto di servizio rimane lo stesso.  
   
--   È possibile modificare la versione del servizio implementando l'interfaccia obsoleta e l'interfaccia nuova. I client obsoleti si connettono alla versione originale mentre i client più recenti possono connettersi alla versione nuova.  
+- È possibile modificare la versione del servizio implementando l'interfaccia obsoleta e l'interfaccia nuova. I client obsoleti si connettono alla versione originale mentre i client più recenti possono connettersi alla versione nuova.  
   
 > [!NOTE]
 >  Quando si eredita da altre interfacce del contratto di servizio, non è possibile eseguire l'override delle proprietà dell'operazione, ad esempio il nome o lo spazio dei nomi. Se si tenta di farlo, si crea una nuova operazione nel contratto di servizio corrente.  
@@ -251,11 +251,11 @@ End Interface
   
  Un servizio che implementa questo contratto `IExplicitProtectionLevelSampleService` e dispone di un endpoint che utilizza l'elemento <xref:System.ServiceModel.WSHttpBinding> predefinito (l'elemento <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> predefinito, ovvero <xref:System.ServiceModel.SecurityMode.Message>) presenta il comportamento seguente:  
   
--   I messaggi dell'operazione `GetString` sono crittografati e firmati.  
+- I messaggi dell'operazione `GetString` sono crittografati e firmati.  
   
--   I messaggi dell'operazione `GetInt` sono inviati come testo non crittografato né firmato, ovvero come testo normale.  
+- I messaggi dell'operazione `GetInt` sono inviati come testo non crittografato né firmato, ovvero come testo normale.  
   
--   L'elemento `GetGuid` dell'operazione <xref:System.Guid?displayProperty=nameWithType> viene restituito in un messaggio crittografato e firmato.  
+- L'elemento `GetGuid` dell'operazione <xref:System.Guid?displayProperty=nameWithType> viene restituito in un messaggio crittografato e firmato.  
   
  Per altre informazioni sui livelli di protezione e come usarli, vedere [Understanding Protection Level](../../../docs/framework/wcf/understanding-protection-level.md). Per altre informazioni sulla sicurezza, vedere [Securing Services](../../../docs/framework/wcf/securing-services.md).  
   

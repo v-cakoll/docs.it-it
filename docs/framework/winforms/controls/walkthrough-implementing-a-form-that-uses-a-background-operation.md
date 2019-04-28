@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792197"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Procedura dettagliata: Implementazione di un modulo che usa un'operazione in background
 Se si dispone di un'operazione che richiederà molto tempo per il completamento, e il blocco non desiderate l'interfaccia utente (UI) o "blocco", è possibile usare il <xref:System.ComponentModel.BackgroundWorker> classe per eseguire l'operazione in un altro thread.  
@@ -29,13 +29,13 @@ Se si dispone di un'operazione che richiederà molto tempo per il completamento,
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione di un'applicazione basata su Windows  
+- Creazione di un'applicazione basata su Windows  
   
--   Creazione di un <xref:System.ComponentModel.BackgroundWorker> nel Form  
+- Creazione di un <xref:System.ComponentModel.BackgroundWorker> nel Form  
   
--   Aggiunta dei gestori eventi asincroni  
+- Aggiunta dei gestori eventi asincroni  
   
--   Aggiunta dei report sullo stato di avanzamento e supporto per l'annullamento  
+- Aggiunta dei report sullo stato di avanzamento e supporto per l'annullamento  
   
  Per un elenco completo del codice usato in questo esempio, vedere [come: Implementare un Form che usa un'operazione in Background](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
@@ -68,7 +68,7 @@ Se si dispone di un'operazione che richiederà molto tempo per il completamento,
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>Per creare un BackgroundWorker con la finestra di progettazione  
   
--   Dal **componenti** scheda della finestra di **della casella degli strumenti**, trascinare un <xref:System.ComponentModel.BackgroundWorker> nel form.  
+- Dal **componenti** scheda della finestra di **della casella degli strumenti**, trascinare un <xref:System.ComponentModel.BackgroundWorker> nel form.  
   
 ## <a name="adding-asynchronous-event-handlers"></a>Aggiunta dei gestori eventi asincroni  
  Ora si è pronti per aggiungere i gestori eventi per il <xref:System.ComponentModel.BackgroundWorker> eventi asincroni del componente. L'operazione dispendiosa in termini di tempo che verrà eseguita in background, ossia quella che calcola i numeri Fibonacci, viene chiamata da uno di questi gestori eventi.  
@@ -145,7 +145,7 @@ Se si dispone di un'operazione che richiederà molto tempo per il completamento,
   
 #### <a name="to-test-your-project"></a>Per eseguire il test del progetto  
   
--   Premere F5 per compilare ed eseguire l'applicazione.  
+- Premere F5 per compilare ed eseguire l'applicazione.  
   
      Durante l'esecuzione del calcolo in background, verrà visualizzato il <xref:System.Windows.Forms.ProgressBar> visualizzando lo stato di avanzamento del calcolo in fase di completamento. È anche possibile annullare l'operazione in sospeso.  
   
@@ -154,11 +154,11 @@ Se si dispone di un'operazione che richiederà molto tempo per il completamento,
 ## <a name="next-steps"></a>Passaggi successivi  
  Ora che è stato implementato un modulo che utilizza un <xref:System.ComponentModel.BackgroundWorker> componente per eseguire un calcolo in background, è possibile esplorare altre possibilità per le operazioni asincrone:  
   
--   Usare più <xref:System.ComponentModel.BackgroundWorker> oggetti per diverse operazioni simultanee.  
+- Usare più <xref:System.ComponentModel.BackgroundWorker> oggetti per diverse operazioni simultanee.  
   
--   Per eseguire il debug dell'applicazione con multithreading, vedere [come: Utilizzare la finestra thread](/visualstudio/debugger/how-to-use-the-threads-window).  
+- Per eseguire il debug dell'applicazione con multithreading, vedere [come: Utilizzare la finestra thread](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Implementare il componente che supporta il modello di programmazione asincrona. Per ulteriori informazioni, vedere [Cenni preliminari sul modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+- Implementare il componente che supporta il modello di programmazione asincrona. Per ulteriori informazioni, vedere [Cenni preliminari sul modello asincrono basato su eventi](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
     > [!CAUTION]
     >  L'uso di qualsiasi tipo di multithreading determina la potenziale esposizione a bug seri e complessi. Vedere [Procedure consigliate per l'uso del threading gestito](../../../standard/threading/managed-threading-best-practices.md) prima di implementare soluzioni che usano il multithreading.  

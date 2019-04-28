@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921108"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Impossibile applicare la risoluzione dell'overload con associazione tardiva a '\<nomeroutine >' perché l'istanza di accesso è un tipo interfaccia
 Il compilatore sta provando a risolvere un riferimento a una proprietà in overload o una routine, ma il riferimento ha esito negativo perché è un argomento di tipo `Object` e l'oggetto che fa riferimento ha il tipo di dati di un'interfaccia. Il `Object` argomento induce il compilatore a risolvere il riferimento come associazione tardiva.  
@@ -24,7 +24,7 @@ Il compilatore sta provando a risolvere un riferimento a una proprietà in overl
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Uso `CType` per eseguire il cast dell'argomento da `Object` nel tipo specificato per la firma di overload da chiamare.  
+- Uso `CType` per eseguire il cast dell'argomento da `Object` nel tipo specificato per la firma di overload da chiamare.  
   
      Si noti che non consente di eseguire il cast l'oggetto che fa riferimento all'interfaccia sottostante. È necessario eseguire il cast dell'argomento per evitare questo errore.  
   

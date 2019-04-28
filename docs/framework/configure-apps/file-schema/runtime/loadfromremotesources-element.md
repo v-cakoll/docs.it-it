@@ -8,11 +8,11 @@ ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704596"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > elemento
 Specifica se gli assembly caricati da origini remote devono essere concessa l'attendibilità in .NET Framework 4 e versioni successive.
@@ -42,7 +42,7 @@ Specifica se gli assembly caricati da origini remote devono essere concessa l'at
   
 ## <a name="enabled-attribute"></a>attributo Enabled  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |`false`|Non concedere l'attendibilità totale alle applicazioni da origini remote. Questa è l'impostazione predefinita.|  
 |`true`|Concedere l'attendibilità totale alle applicazioni da origini remote.|  

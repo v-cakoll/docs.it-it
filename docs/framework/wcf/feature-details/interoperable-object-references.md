@@ -3,11 +3,11 @@ title: Riferimenti a oggetti interoperativi
 ms.date: 04/15/2019
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
 ms.openlocfilehash: ada9084f6ac3c97dc641571c0cb8379a2fac68a8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918970"
 ---
 # <a name="interoperable-object-references"></a>Riferimenti a oggetti interoperativi
 Per impostazione predefinita, <xref:System.Runtime.Serialization.DataContractSerializer> serializza gli oggetti per valore. È possibile usare il <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> proprietà per indicare il serializzatore dei contratti dati per mantenere i riferimenti all'oggetto durante la serializzazione di oggetti.  

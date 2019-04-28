@@ -10,11 +10,11 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
 ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791924"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passaggio di argomenti per valore e per riferimento (Visual Basic)
 In Visual Basic, è possibile passare un argomento a una routine *dal valore* oppure *per riferimento*. Questo è noto come il *meccanismo di trasferimento*, e determina se la routine può modificare l'elemento di programmazione sottostante all'argomento nel codice chiamante. La dichiarazione di routine determina il meccanismo di passaggio per ogni parametro specificando il [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oppure [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (parola chiave).  
@@ -22,22 +22,22 @@ In Visual Basic, è possibile passare un argomento a una routine *dal valore* op
 ## <a name="distinctions"></a>Differenze  
  Quando si passa un argomento a una routine, occorre considerare diverse differenze diversi che interagiscono tra loro:  
   
--   Se l'elemento di programmazione sottostante è modificabile o meno  
+- Se l'elemento di programmazione sottostante è modificabile o meno  
   
--   Indica se l'argomento stesso è modificabile o meno  
+- Indica se l'argomento stesso è modificabile o meno  
   
--   Indica se l'argomento viene passato per valore o per riferimento  
+- Indica se l'argomento viene passato per valore o per riferimento  
   
--   Indica se il tipo di dati di argomento è un tipo di valore o un tipo riferimento  
+- Indica se il tipo di dati di argomento è un tipo di valore o un tipo riferimento  
   
  Per altre informazioni, vedere [argomenti non è modificabile e le differenze tra modificabile](./differences-between-modifiable-and-nonmodifiable-arguments.md) e [le differenze tra il passaggio di un argomento per valore e per riferimento](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
 ## <a name="choice-of-passing-mechanism"></a>Scelta del meccanismo di trasferimento  
  È consigliabile scegliere il meccanismo di passaggio con attenzione per ogni argomento.  
   
--   **Protezione**. Nella scelta tra i due meccanismi di passaggio, il criterio più importante è l'esposizione della chiamata al metodo le variabili da modificare. Il vantaggio di passaggio di un argomento `ByRef` è che la procedura può restituire un valore al codice chiamante tramite l'argomento. Il vantaggio di passaggio di un argomento `ByVal` è che impedisce che la variabile viene modificato dalla procedura.  
+- **Protezione**. Nella scelta tra i due meccanismi di passaggio, il criterio più importante è l'esposizione della chiamata al metodo le variabili da modificare. Il vantaggio di passaggio di un argomento `ByRef` è che la procedura può restituire un valore al codice chiamante tramite l'argomento. Il vantaggio di passaggio di un argomento `ByVal` è che impedisce che la variabile viene modificato dalla procedura.  
   
--   **Prestazioni**. Anche se il meccanismo di passaggio può influire sulle prestazioni del codice, la differenza non è in genere significativo. Unica eccezione è un tipo di valore passato `ByVal`. In questo caso, Visual Basic copia il contenuto di tutti i dati dell'argomento. Pertanto, per un tipo di valori di grandi dimensioni, ad esempio una struttura, può essere più efficiente per passarlo `ByRef`.  
+- **Prestazioni**. Anche se il meccanismo di passaggio può influire sulle prestazioni del codice, la differenza non è in genere significativo. Unica eccezione è un tipo di valore passato `ByVal`. In questo caso, Visual Basic copia il contenuto di tutti i dati dell'argomento. Pertanto, per un tipo di valori di grandi dimensioni, ad esempio una struttura, può essere più efficiente per passarlo `ByRef`.  
   
      Per i tipi di riferimento, solo il puntatore ai dati viene copiati (quattro byte sulle piattaforme a 32 bit, otto byte sulle piattaforme a 64 bit). Pertanto, è possibile passare argomenti di tipo `String` o `Object` dal valore senza compromettere le prestazioni.  
   
@@ -50,15 +50,15 @@ In Visual Basic, è possibile passare un argomento a una routine *dal valore* op
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Quando un argomento venga passato per valore  
   
--   Se l'elemento di codice chiamante sottostante l'argomento non è modificabile, dichiarare il parametro corrispondente [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Codice non è possibile modificare il valore di un elemento non è modificabile.  
+- Se l'elemento di codice chiamante sottostante l'argomento non è modificabile, dichiarare il parametro corrispondente [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Codice non è possibile modificare il valore di un elemento non è modificabile.  
   
--   Se l'elemento sottostante è modificabile, ma non si desidera la procedura per essere in grado di modificare il relativo valore, dichiarare il parametro `ByVal`. Solo il codice chiamante può modificare il valore di un elemento modificabile passato per valore.  
+- Se l'elemento sottostante è modificabile, ma non si desidera la procedura per essere in grado di modificare il relativo valore, dichiarare il parametro `ByVal`. Solo il codice chiamante può modificare il valore di un elemento modificabile passato per valore.  
   
 ## <a name="when-to-pass-an-argument-by-reference"></a>Quando un argomento venga passato per riferimento  
   
--   Se la procedura richiede la modifica dell'elemento sottostante nel codice chiamante, dichiarare il parametro corrispondente [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- Se la procedura richiede la modifica dell'elemento sottostante nel codice chiamante, dichiarare il parametro corrispondente [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
   
--   Se l'esecuzione corretta del codice dipende la procedura di modifica dell'elemento nel codice chiamante, dichiarare il parametro `ByRef`. Se viene passato per valore o se il codice chiamante esegue l'override di `ByRef` meccanismo di trasferimento racchiudendo l'argomento racchiuso tra parentesi, la chiamata di procedura può produrre risultati imprevisti.  
+- Se l'esecuzione corretta del codice dipende la procedura di modifica dell'elemento nel codice chiamante, dichiarare il parametro `ByRef`. Se viene passato per valore o se il codice chiamante esegue l'override di `ByRef` meccanismo di trasferimento racchiudendo l'argomento racchiuso tra parentesi, la chiamata di procedura può produrre risultati imprevisti.  
   
 ## <a name="example"></a>Esempio  
   

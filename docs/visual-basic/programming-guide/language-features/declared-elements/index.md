@@ -2,12 +2,6 @@
 title: Elementi dichiarati in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918008"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Elementi dichiarati in Visual Basic
 Un *elemento dichiarato* è un elemento di programmazione definito in un'istruzione di dichiarazione. Gli elementi dichiarati includono variabili, costanti, enumerazioni, classi, strutture, moduli, interfacce, procedure, parametri di procedura, risultati di funzioni, riferimenti a routine esterne, operatori, proprietà, eventi e delegati.  

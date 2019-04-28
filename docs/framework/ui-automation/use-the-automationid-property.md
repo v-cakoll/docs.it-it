@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775751"
 ---
 # <a name="use-the-automationid-property"></a>Utilizzare la proprietà AutomationID
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59173095"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Usare un oggetto AutomationID univoco e individuabile per trovare un elemento specifico nell'albero di automazione interfaccia utente  
   
--   Usare uno strumento come [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] per segnalare l'oggetto <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> di un elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] di interesse. Questo valore può quindi essere copiato e incollato in un'applicazione client, ad esempio uno script di test, per il successivo test automatizzato. Questo approccio riduce e semplifica il codice necessario per identificare e individuare un elemento in fase di esecuzione.  
+- Usare uno strumento come [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] per segnalare l'oggetto <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> di un elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] di interesse. Questo valore può quindi essere copiato e incollato in un'applicazione client, ad esempio uno script di test, per il successivo test automatizzato. Questo approccio riduce e semplifica il codice necessario per identificare e individuare un elemento in fase di esecuzione.  
   
 > [!CAUTION]
 >  In generale, è consigliabile cercare di ottenere solo elementi figlio diretti di <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una ricerca dei discendenti può scorrere centinaia o anche migliaia di elementi, con la possibilità che venga generato un overflow dello stack. Per ottenere un elemento specifico a un livello inferiore, è consigliabile avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
@@ -45,7 +45,7 @@ ms.locfileid: "59173095"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Usare un percorso persistente per tornare a un oggetto AutomationElement identificato in precedenza  
   
--   Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. Questi elementi è possibile creare solo istanze da riprodurre, o "riproduzione", una sequenza specifica di azioni dell'interfaccia utente tramite l'utilizzo di proprietà di automazione interfaccia utente, ad esempio AutomationID, i pattern di controllo e i listener di eventi.
+- Le applicazioni client, dai semplici script di test alle solide utilità di registrazione e riproduzione, potrebbero richiedere l'accesso a elementi di cui non è ancora stata creata un'istanza, ad esempio una finestra di dialogo di apertura file o una voce di menu, e che quindi non esistono nell'albero di automazione interfaccia utente. Questi elementi è possibile creare solo istanze da riprodurre, o "riproduzione", una sequenza specifica di azioni dell'interfaccia utente tramite l'utilizzo di proprietà di automazione interfaccia utente, ad esempio AutomationID, i pattern di controllo e i listener di eventi.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59173095"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Usare un percorso relativo per tornare a un oggetto AutomationElement identificato in precedenza  
   
--   In alcune circostanze, poiché è garantito che AutomationID sia univoco solo tra gli elementi di pari livello, più elementi dell'albero di automazione interfaccia utente possono avere valori identici per la proprietà AutomationID. In questi casi, gli elementi possono essere identificati in modo univoco in base a un elemento padre e, se necessario, a un elemento padre del padre. Uno sviluppatore, ad esempio, potrebbe fornire una barra dei menu con più voci di menu, tutte con più voci di menu figlio, dove gli elementi figlio vengono identificati con AutomationID sequenziali, ad esempio "Item1", "Item2" e così via. Ogni voce di menu può quindi essere identificata in modo univoco dal rispettivo AutomationID insieme all'AutomationID del padre e, se necessario, del padre del padre.  
+- In alcune circostanze, poiché è garantito che AutomationID sia univoco solo tra gli elementi di pari livello, più elementi dell'albero di automazione interfaccia utente possono avere valori identici per la proprietà AutomationID. In questi casi, gli elementi possono essere identificati in modo univoco in base a un elemento padre e, se necessario, a un elemento padre del padre. Uno sviluppatore, ad esempio, potrebbe fornire una barra dei menu con più voci di menu, tutte con più voci di menu figlio, dove gli elementi figlio vengono identificati con AutomationID sequenziali, ad esempio "Item1", "Item2" e così via. Ogni voce di menu può quindi essere identificata in modo univoco dal rispettivo AutomationID insieme all'AutomationID del padre e, se necessario, del padre del padre.  
   
 ## <a name="see-also"></a>Vedere anche
 

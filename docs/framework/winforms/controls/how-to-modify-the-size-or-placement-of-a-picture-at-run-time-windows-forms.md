@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913731"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione (Windows Form)
 Se si usa moduli di Windows <xref:System.Windows.Forms.PictureBox> controllo in un form, è possibile impostare il <xref:System.Windows.Forms.PictureBox.SizeMode%2A> proprietà in modo da:  
   
--   Allineamento nell'angolo superiore sinistro dell'immagine con l'angolo superiore sinistro del controllo  
+- Allineamento nell'angolo superiore sinistro dell'immagine con l'angolo superiore sinistro del controllo  
   
--   Centrare l'immagine all'interno del controllo  
+- Centrare l'immagine all'interno del controllo  
   
--   Regolare le dimensioni del controllo da adattare l'immagine da visualizzare.  
+- Regolare le dimensioni del controllo da adattare l'immagine da visualizzare.  
   
--   Estendere qualsiasi immagine da visualizzare per adattarla al controllo  
+- Estendere qualsiasi immagine da visualizzare per adattarla al controllo  
   
  Estensione di un'immagine (specialmente uno in formato bitmap) può causare una perdita della qualità dell'immagine. Metafile, che sono elenchi di istruzioni di grafica per la creazione di immagini in fase di esecuzione, sono più adatti per l'estensione rispetto alle immagini bitmap.  
   

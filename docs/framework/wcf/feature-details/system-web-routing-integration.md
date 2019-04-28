@@ -3,11 +3,11 @@ title: Integrazione di System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
 ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933887"
 ---
 # <a name="systemwebrouting-integration"></a>Integrazione di System.Web.Routing
 Quando si ospita un servizio Windows Communication Foundation (WCF) in Internet Information Service (IIS) si inserisce un file con estensione svc nella directory virtuale. Questo file con estensione svc specifica la factory di host del servizio da utilizzare e la classe che implementa il servizio. Quando si effettuano richieste al servizio è specificare il file con estensione svc nell'URI, ad esempio: `http://contoso.com/EmployeeServce.svc`. Per i programmatori che scrivono servizi REST, questo tipo di URI non è ottimale. Gli URI per i servizi REST indicano una risorsa specifica e in genere non presentano estensioni. Il <xref:System.Web.Routing> caratteristica di integrazione consente di ospitare un servizio WCF REST che risponde a URI sprovvisti di estensione. Per altre informazioni, vedere routing [Routing ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  

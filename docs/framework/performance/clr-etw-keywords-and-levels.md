@@ -10,11 +10,11 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788076"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Parole chiave e livelli ETW di CLR
 <a name="top"></a> Gli eventi Event Tracing for Windows (ETW) possono essere filtrati in base a categoria e livello. Le [Parole chiave ETW di CLR](#keywords) degli eventi permettono di filtrare gli eventi per categoria e vengono usate in diverse combinazioni per i provider di runtime e rundown. I [livelli evento](#levels) vengono identificati da flag.  
@@ -25,13 +25,13 @@ ms.locfileid: "59105742"
   
  Le parole chiave vengono descritte nelle tabelle seguenti.  
   
--   [Parole chiave di runtime ETW di CLR](#runtime)  
+- [Parole chiave di runtime ETW di CLR](#runtime)  
   
--   [Parole chiave di rundown ETW di CLR](#rundown)  
+- [Parole chiave di rundown ETW di CLR](#rundown)  
   
--   [Combinazioni di parole chiave per la risoluzione dei simboli per il provider di runtime](#runtime_combo)  
+- [Combinazioni di parole chiave per la risoluzione dei simboli per il provider di runtime](#runtime_combo)  
   
--   [Combinazioni di parole chiave per la risoluzione dei simboli per il provider di rundown](#rundown_combo)  
+- [Combinazioni di parole chiave per la risoluzione dei simboli per il provider di rundown](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>Parole chiave di runtime ETW di CLR  

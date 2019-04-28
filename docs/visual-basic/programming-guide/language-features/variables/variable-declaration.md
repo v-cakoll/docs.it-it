@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757001"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Dichiarazione di variabili in Visual Basic
 Si dichiara una variabile per specificare il nome e le caratteristiche. Istruzione di dichiarazione delle variabili è il [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). La posizione e il contenuto determinano le caratteristiche della variabile.  
@@ -42,15 +42,15 @@ Si dichiara una variabile per specificare il nome e le caratteristiche. Istruzio
 ## <a name="declaring-data-type"></a>La dichiarazione di tipo di dati  
  Il [come](../../../../visual-basic/language-reference/statements/as-clause.md) clausola nell'istruzione di dichiarazione consente di definire il tipo di dati o un tipo di oggetto della variabile che si sta dichiarando. È possibile specificare uno dei seguenti tipi per una variabile:  
   
--   Digitare un dati elementari, ad esempio `Boolean`, `Long`, o `Decimal`  
+- Digitare un dati elementari, ad esempio `Boolean`, `Long`, o `Decimal`  
   
--   Un tipo di dati composta, ad esempio una matrice o una struttura  
+- Un tipo di dati composta, ad esempio una matrice o una struttura  
   
--   Un tipo di oggetto o classe, definito nell'applicazione o in un'altra applicazione  
+- Un tipo di oggetto o classe, definito nell'applicazione o in un'altra applicazione  
   
--   Oggetto [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, ad esempio <xref:System.Windows.Forms.Label> o <xref:System.Windows.Forms.TextBox>  
+- Oggetto [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classe, ad esempio <xref:System.Windows.Forms.Label> o <xref:System.Windows.Forms.TextBox>  
   
--   Tipo di un'interfaccia, ad esempio <xref:System.IComparable> o <xref:System.IDisposable>  
+- Tipo di un'interfaccia, ad esempio <xref:System.IComparable> o <xref:System.IDisposable>  
   
  È possibile dichiarare più variabili in un'unica istruzione senza dover ripetere il tipo di dati. Nelle istruzioni seguenti, le variabili `i`, `j`, e `k` vengono dichiarati come tipo `Integer`, `l` e `m` come `Long`, e `x` e `y` come `Single`:  
   

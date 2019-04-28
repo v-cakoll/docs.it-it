@@ -2,16 +2,10 @@
 title: Guida per programmatori Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, language guide
-- Visual Basic, programming in
-- Visual Basic, language reference
+  - 'Visual Basic code, language guide'
+  - 'Visual Basic, programming in'
+  - 'Visual Basic, language reference'
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-ms.openlocfilehash: 32654012343fc919dbadbfa4515c1e8e2b686ed1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907699"
 ---
 # <a name="visual-basic-programming-guide"></a>Guida per programmatori Visual Basic
 Come con qualsiasi linguaggio di programmazione moderno, Visual Basic supporta molti costrutti di programmazione comuni e gli elementi del linguaggio. Questa guida descrive tutti gli elementi principali della programmazione con Visual Basic.  

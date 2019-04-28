@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
 ms.openlocfilehash: 618fc88a2ca92ec911a3fbd82de580403d924430
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774842"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>L'utilizzo della variabile di iterazione in un'espressione lambda può produrre risultati imprevisti
 Uso della variabile di iterazione in un'espressione lambda può produrre risultati imprevisti. In alternativa, creare una variabile locale all'interno del ciclo e assegnare il valore della variabile di iterazione.  
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Assegnare il valore della variabile di iterazione a una variabile locale e usare la variabile locale nell'espressione lambda.  
+- Assegnare il valore della variabile di iterazione a una variabile locale e usare la variabile locale nell'espressione lambda.  
   
 ```vb  
 Module Module1  

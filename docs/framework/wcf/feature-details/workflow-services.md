@@ -3,11 +3,11 @@ title: Servizi flusso di lavoro
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
 ms.openlocfilehash: e7295041fe4b17e7e2b1560704badf20992d4b92
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929701"
 ---
 # <a name="workflow-services"></a>Servizi flusso di lavoro
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] consente di descrivere in modo completo e dichiarativo un servizio basato sul flusso di lavoro in XAML. È possibile definire un flusso di lavoro che implementa il servizio e descrivere l'endpoint esposto dal servizio, il tutto in XAML. Negli argomenti di questa sezione viene descritto in dettaglio il modello di programmazione che supporta la scrittura dei servizi in modo dichiarativo.  
@@ -19,7 +19,7 @@ ms.locfileid: "47397241"
  [Attività di messaggistica](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
  Descrive le attività che consentono ai flussi di lavoro di inviare e ricevere messaggi.  
   
- [Procedura: Creare un servizio flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [Procedura: Creare un servizio del flusso di lavoro con attività di messaggistica](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  Descrive come utilizzare le attività di messaggistica per creare un servizio flusso di lavoro.  
   
  [Procedura: Accedere a un servizio da un'applicazione flusso di lavoro](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "47397241"
  [Sviluppo del servizio del flusso di lavoro con priorità al contratto ("contract-first")](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
  Viene descritta la creazione di un servizio di flusso di lavoro basato su un contratto di servizio esistente.  
   
- [Procedura: Creare un servizio di flusso di lavoro che utilizza un contratto di servizio esistente](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)  
+ [Procedura: Creare un servizio del flusso di lavoro che utilizza un contratto di servizio esistente](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)  
  Fornisce un esempio dettagliato di creazione di un servizio di flusso di lavoro tramite un contratto di servizio esistente.  
   
  [Panoramica dell'hosting dei servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  

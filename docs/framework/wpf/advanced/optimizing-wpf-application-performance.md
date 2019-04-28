@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772983"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Ottimizzazione delle prestazioni di applicazioni WPF
 In questa sezione è da intendersi come riferimento per [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] agli sviluppatori di applicazioni che mirano a migliorare le prestazioni delle applicazioni. Se sei uno sviluppatore che è una novità di Microsoft .NET Framework e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], è innanzitutto consigliabile acquisire familiarità con entrambe le piattaforme. In questa sezione presuppone una conoscenza pratica di entrambi e viene scritto per i programmatori che già conoscono abbastanza per poter eseguire le proprie applicazioni in esecuzione.  

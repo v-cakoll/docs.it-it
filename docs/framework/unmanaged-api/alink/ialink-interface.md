@@ -9,11 +9,11 @@ ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789779"
 ---
 # <a name="ialink-interface"></a>Interfaccia IALink
 Utile per la costruzione di assembly .NET Framework. Tra le altre cose, l'interfaccia contiene i metodi di supporto per la scrittura di manifesti dell'assembly per gli assembly multimodulo, la firma degli assembly con nomi sicuri e la creazione netmodule.  

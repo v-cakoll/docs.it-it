@@ -3,11 +3,11 @@ title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
 ms.openlocfilehash: 24cf36aba81b5bb31eaac475361e2d07bc6f8b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788401"
 ---
 # <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'istanza per un determinato trasporto. Se questo elemento è vuoto, viene usato il tipo predefinito. Questo elemento può essere usato solo nei file di configurazione a livello di applicazione o computer.  
@@ -63,25 +63,25 @@ Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'is
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, i servizi WCF vengono eseguiti side-by-side con ASP.NET nei domini applicazioni ospitati. Benché WCF e ASP.NET possano coesistere nello stesso dominio applicazione, per impostazione predefinita le richieste WCF non vengono elaborate dalla pipeline HTTP ASP.NET. Di conseguenza, diversi elementi della piattaforma delle applicazioni ASP.NET non sono disponibili per i servizi WCF. Segue un elenco di tali elementi.  
   
--   Autorizzazione file/URL di ASP.NET  
+- Autorizzazione file/URL di ASP.NET  
   
--   Rappresentazione di ASP.NET  
+- Rappresentazione di ASP.NET  
   
--   Stato sessione basato su cookie  
+- Stato sessione basato su cookie  
   
--   HttpContext.Current  
+- HttpContext.Current  
   
--   Estensibilità della pipeline tramite HttpModule personalizzato  
+- Estensibilità della pipeline tramite HttpModule personalizzato  
   
  Se i servizi WCF devono funzionare nel contesto ASP.NET e comunicano solo su HTTP, è possibile usare la modalità di compatibilità con ASP.NET di WCF. Questa modalità viene attivata quando l'attributo `aspNetCompatibilityEnabled` è impostato su `true` a livello di applicazione. Le implementazioni dei servizi devono usare la classe <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> per dichiarare la propria capacità di essere in esecuzione in tale modalità di compatibilità. Quando la modalità di compatibilità è attiva si verifica quanto segue:  
   
--   L'autorizzazione file/URL di ASP.NET viene applicata prima dell'autorizzazione WCF. Le decisioni di autorizzazione si basano sull'identità a livello di trasporto della richiesta. Le identità a livello di messaggio vengono ignorate.  
+- L'autorizzazione file/URL di ASP.NET viene applicata prima dell'autorizzazione WCF. Le decisioni di autorizzazione si basano sull'identità a livello di trasporto della richiesta. Le identità a livello di messaggio vengono ignorate.  
   
--   L'esecuzione delle operazioni dei servizi WCF inizia nel contesto di rappresentazione di ASP.NET. Se per un servizio specifico sono attivate sia la rappresentazione di ASP.NET sia la rappresentazione di WCF, il sistema applica il contesto di rappresentazione di WCF.  
+- L'esecuzione delle operazioni dei servizi WCF inizia nel contesto di rappresentazione di ASP.NET. Se per un servizio specifico sono attivate sia la rappresentazione di ASP.NET sia la rappresentazione di WCF, il sistema applica il contesto di rappresentazione di WCF.  
   
--   HttpContext.Current può essere usato dal codice dei servizi WCF. Inoltre, ai servizi viene impedito di esporre endpoint non HTTP.  
+- HttpContext.Current può essere usato dal codice dei servizi WCF. Inoltre, ai servizi viene impedito di esporre endpoint non HTTP.  
   
--   Le richieste WCF vengono elaborate dalla pipeline ASP.NET. Le richieste WCF possono inoltre essere elaborate dagli elementi HttpModules configurati per agire sulle richieste in ingresso. Questi elementi possono includere componenti della piattaforma di ASP.NET (ad esempio <xref:System.Web.SessionState.SessionStateModule>) nonché moduli personalizzati di terze parti.  
+- Le richieste WCF vengono elaborate dalla pipeline ASP.NET. Le richieste WCF possono inoltre essere elaborate dagli elementi HttpModules configurati per agire sulle richieste in ingresso. Questi elementi possono includere componenti della piattaforma di ASP.NET (ad esempio <xref:System.Web.SessionState.SessionStateModule>) nonché moduli personalizzati di terze parti.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene mostrato come abilitare la modalità di compatibilità con ASP.  

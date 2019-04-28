@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777182"
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilizzo delle impostazioni applicazione e delle impostazioni utente
 A partire da .NET Framework 2.0, è possibile creare e accedere ai valori che vengono rese persistenti tra le sessioni di esecuzione dell'applicazione. Questi valori sono denominati *impostazioni*. Le impostazioni possono rappresentare le preferenze dell'utente, o informazioni importanti dell'applicazione devono usare. Ad esempio, si potrebbe creare una serie di impostazioni che memorizzano le preferenze utente per la combinazione di colori di un'applicazione. Oppure è possibile archiviare la stringa di connessione che specifica un database che usa l'applicazione. Le impostazioni consentono di mantenere le informazioni essenziali per l'applicazione all'esterno del codice e creare i profili che archiviano le preferenze dell'utente.  

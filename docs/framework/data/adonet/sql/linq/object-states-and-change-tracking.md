@@ -3,11 +3,11 @@ title: Stati di oggetti e rilevamento di modifiche
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794394"
 ---
 # <a name="object-states-and-change-tracking"></a>Stati di oggetti e rilevamento di modifiche
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gli oggetti sempre associato uno *stato*. Ad esempio, quando in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene creato un nuovo oggetto, lo stato dell'oggetto è `Unchanged`. Un nuovo oggetto creato dall'utente è sconosciuto per il <xref:System.Data.Linq.DataContext> e si trova in `Untracked` dello stato. Dopo la corretta esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, tutti gli oggetti riconosciuti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono nello stato `Unchanged`. La sola eccezione è rappresentata dagli oggetti eliminati dal database che sono nello stato `Deleted` e di conseguenza inutilizzabili in quell'istanza di <xref:System.Data.Linq.DataContext>.  
@@ -38,11 +38,11 @@ ms.locfileid: "59191155"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] esegue l'elaborazione seguente quando viene eliminato un oggetto (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) dalla relativa tabella:  
   
--   Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, per quell'oggetto viene eseguita un'operazione `DELETE`.  
+- Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, per quell'oggetto viene eseguita un'operazione `DELETE`.  
   
--   La rimozione non viene propagata agli oggetti correlati, indipendentemente dallo stato di caricamento. In particolare, gli oggetti correlati non vengono caricati per aggiornare la proprietà della relazione.  
+- La rimozione non viene propagata agli oggetti correlati, indipendentemente dallo stato di caricamento. In particolare, gli oggetti correlati non vengono caricati per aggiornare la proprietà della relazione.  
   
--   Dopo la corretta esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, gli oggetti vengono impostati sullo stato `Deleted`. Di conseguenza non sarà possibile usare l'oggetto o il relativo `id` in un'istanza di <xref:System.Data.Linq.DataContext>. La cache interna gestita da un'istanza di <xref:System.Data.Linq.DataContext> non elimina gli oggetti recuperati o aggiunti come nuovi, anche dopo che sono stati eliminati nel database.  
+- Dopo la corretta esecuzione di <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, gli oggetti vengono impostati sullo stato `Deleted`. Di conseguenza non sarà possibile usare l'oggetto o il relativo `id` in un'istanza di <xref:System.Data.Linq.DataContext>. La cache interna gestita da un'istanza di <xref:System.Data.Linq.DataContext> non elimina gli oggetti recuperati o aggiunti come nuovi, anche dopo che sono stati eliminati nel database.  
   
  È possibile chiamare <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> solo su un oggetto registrato da <xref:System.Data.Linq.DataContext>. Per un oggetto `Untracked` è necessario chiamare <xref:System.Data.Linq.Table%601.Attach%2A> prima di <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>. Chiamando <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> su un oggetto`Untracked`, verrà generata un'eccezione.  
   

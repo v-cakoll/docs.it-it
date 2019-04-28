@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778846"
 ---
 # <a name="how-to-validate-application-settings"></a>Procedura: Convalidare le impostazioni applicazione
 In questo argomento viene illustrato come convalidare le impostazioni dell'applicazione prima dell'operazione che le rende persistenti.  
@@ -34,11 +34,11 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
  Un gestore eventi esegue in genere una delle azioni seguenti quando rileva un valore non valido:  
   
--   Fornisce automaticamente un valore noto da correggere, ad esempio il valore predefinito.  
+- Fornisce automaticamente un valore noto da correggere, ad esempio il valore predefinito.  
   
--   Richiede informazioni all'utente del codice del server.  
+- Richiede informazioni all'utente del codice del server.  
   
--   Per gli eventi generati prima delle azioni associate, quali <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> e <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, viene utilizzato il <xref:System.ComponentModel.CancelEventArgs> argomento per annullare l'operazione.  
+- Per gli eventi generati prima delle azioni associate, quali <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> e <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, viene utilizzato il <xref:System.ComponentModel.CancelEventArgs> argomento per annullare l'operazione.  
   
  Per altre informazioni sulla gestione degli eventi, vedere [Informazioni generali sui gestori eventi](../event-handlers-overview-windows-forms.md).  
   
@@ -46,9 +46,9 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
 ### <a name="to-obtain-the-application-settings-object"></a>Per ottenere l'oggetto delle impostazioni dell'applicazione  
   
--   Ottenere un riferimento all'oggetto delle impostazioni applicazione (l'istanza wrapper), completando uno degli elementi puntati seguenti:  
+- Ottenere un riferimento all'oggetto delle impostazioni applicazione (l'istanza wrapper), completando uno degli elementi puntati seguenti:  
   
-    -   Se le impostazioni sono state create usando la finestra di dialogo Impostazione applicazione di Visual Studio in **Editor proprietà**, è possibile recuperare l'oggetto predefinito delle impostazioni generato per la propria lingua tramite l'espressione seguente.  
+    - Se le impostazioni sono state create usando la finestra di dialogo Impostazione applicazione di Visual Studio in **Editor proprietà**, è possibile recuperare l'oggetto predefinito delle impostazioni generato per la propria lingua tramite l'espressione seguente.  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ In questo argomento viene illustrato come convalidare le impostazioni dell'appli
   
          -oppure-  
   
-    -   Se si è uno sviluppatore di Visual Basic e si sono create le impostazioni dell'applicazione tramite Creazione progetti, è possibile recuperare le impostazioni usando [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
+    - Se si è uno sviluppatore di Visual Basic e si sono create le impostazioni dell'applicazione tramite Creazione progetti, è possibile recuperare le impostazioni usando [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md).  
   
          -oppure-  
   
-    -   Se le impostazioni sono state create mediante la derivazione da <xref:System.Configuration.ApplicationSettingsBase> direttamente, è necessario creare manualmente un'istanza della classe.  
+    - Se le impostazioni sono state create mediante la derivazione da <xref:System.Configuration.ApplicationSettingsBase> direttamente, è necessario creare manualmente un'istanza della classe.  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

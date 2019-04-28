@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932600"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procedura dettagliata: Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form
 Come si costruisce form e controlli per l'applicazione Windows Forms, esistono molte attività che verranno eseguite più volte. Queste sono alcune delle attività comuni eseguite che si verifica:  
   
--   Aggiunta o rimozione di una scheda in un <xref:System.Windows.Forms.TabControl>.  
+- Aggiunta o rimozione di una scheda in un <xref:System.Windows.Forms.TabControl>.  
   
--   Ancoraggio di un controllo all'elemento padre.  
+- Ancoraggio di un controllo all'elemento padre.  
   
--   Modifica dell'orientamento di un <xref:System.Windows.Forms.SplitContainer> controllo.  
+- Modifica dell'orientamento di un <xref:System.Windows.Forms.SplitContainer> controllo.  
   
  Per velocizzare lo sviluppo, molti controlli dispongono di smart tag, che sono menu sensibili al contesto che consentono di eseguire attività comuni, ad esempio in una singola operazione in fase di progettazione. Queste attività vengono chiamate *smart tag verbi*.  
   
@@ -28,11 +28,11 @@ Come si costruisce form e controlli per l'applicazione Windows Forms, esistono m
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione di un progetto Windows Form  
+- Creazione di un progetto Windows Form  
   
--   Usando gli smart tag  
+- Usando gli smart tag  
   
--   Abilitazione e disabilitazione degli Smart tag  
+- Abilitazione e disabilitazione degli Smart tag  
   
  Al termine, si avrà una migliore comprensione del ruolo svolto da queste importanti funzionalità di layout.  
   

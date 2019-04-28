@@ -3,11 +3,11 @@ title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
 ms.openlocfilehash: b83020601373ba93124dfb24308dd048bfa3c6dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797826"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Consente di costruire record anonimi strutturalmente tipizzati da uno o più valori.  
@@ -39,9 +39,9 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
  Le regole seguenti riguardano l'uso di alias nelle espressioni in un costruttore di riga:  
   
--   Le espressioni in un costruttore ROW non possono fare riferimento ad altri alias nello stesso costruttore.  
+- Le espressioni in un costruttore ROW non possono fare riferimento ad altri alias nello stesso costruttore.  
   
--   Due espressioni nello stesso costruttore di riga non possono avere lo stesso alias.  
+- Due espressioni nello stesso costruttore di riga non possono avere lo stesso alias.  
   
  Per altre informazioni sui costruttori di query, vedere [tipi di costruzione](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
   

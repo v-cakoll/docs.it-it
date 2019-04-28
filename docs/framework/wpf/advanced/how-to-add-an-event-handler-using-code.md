@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
 ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777065"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Procedura: Aggiungere un gestore eventi usando il codice
 In questo esempio viene illustrato come aggiungere un gestore eventi a un elemento tramite il codice.  
@@ -25,9 +25,9 @@ In questo esempio viene illustrato come aggiungere un gestore eventi a un elemen
   
  Il C# esempio Usa la `+=` operatore per assegnare un gestore a un evento. Questo è lo stesso operatore che consente di assegnare un gestore nel [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Gestione modelli di eventi. Microsoft Visual Basic non supporta questo operatore come strumento di aggiunta di gestori eventi. Richiede invece una delle due tecniche seguenti:  
   
--   Usare la <xref:System.Windows.UIElement.AddHandler%2A> metodo, insieme a un `AddressOf` operatore, fare riferimento l'implementazione del gestore eventi.  
+- Usare la <xref:System.Windows.UIElement.AddHandler%2A> metodo, insieme a un `AddressOf` operatore, fare riferimento l'implementazione del gestore eventi.  
   
--   Usare il `Handles` (parola chiave) come parte della definizione del gestore eventi. Questa tecnica non viene visualizzata in questa sede. visualizzare [Visual Basic e gestione degli eventi WPF](visual-basic-and-wpf-event-handling.md).  
+- Usare il `Handles` (parola chiave) come parte della definizione del gestore eventi. Questa tecnica non viene visualizzata in questa sede. visualizzare [Visual Basic e gestione degli eventi WPF](visual-basic-and-wpf-event-handling.md).  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   

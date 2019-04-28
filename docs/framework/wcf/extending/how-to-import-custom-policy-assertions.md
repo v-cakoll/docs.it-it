@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
 ms.openlocfilehash: 64e639e5fd6200b525ef6face56f7df2e804d7ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767104"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Procedura: Importare asserzioni di criteri personalizzate
 Le asserzioni di criteri descrivono le funzionalità e i requisiti di un endpoint del servizio.  Le applicazioni client possono utilizzare asserzioni di criteri nei metadati del servizio per configurare l'associazione del client o per personalizzare il contratto di servizio per un endpoint del servizio.  

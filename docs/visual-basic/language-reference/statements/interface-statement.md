@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
 ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784189"
 ---
 # <a name="interface-statement-visual-basic"></a>Istruzione Interface (Visual Basic)
 Dichiara il nome di un'interfaccia e introduce le definizioni dei membri che comprende l'interfaccia.  
@@ -67,31 +67,31 @@ End Interface
   
 ## <a name="rules"></a>Regole  
   
--   **Annidamento delle interfacce.** È possibile definire un'interfaccia all'interno di altra. L'interfaccia esterna viene denominata la *contenente l'interfaccia*, e l'interfaccia interna viene chiamata una *interfaccia annidata*.  
+- **Annidamento delle interfacce.** È possibile definire un'interfaccia all'interno di altra. L'interfaccia esterna viene denominata la *contenente l'interfaccia*, e l'interfaccia interna viene chiamata una *interfaccia annidata*.  
   
--   **Dichiarazione di membro.** Quando si dichiara una proprietà o routine come membro di un'interfaccia, si sta definendo solo il *firma* di tale proprietà o routine. Ciò include il tipo di elemento (proprietà o routine), i relativi parametri e tipi di parametro e il relativo tipo restituito. Per questo motivo, la definizione del membro utilizza solo una riga di codice le istruzioni di chiusura, ad esempio `End Function` o `End Property` non sono validi in un'interfaccia.  
+- **Dichiarazione di membro.** Quando si dichiara una proprietà o routine come membro di un'interfaccia, si sta definendo solo il *firma* di tale proprietà o routine. Ciò include il tipo di elemento (proprietà o routine), i relativi parametri e tipi di parametro e il relativo tipo restituito. Per questo motivo, la definizione del membro utilizza solo una riga di codice le istruzioni di chiusura, ad esempio `End Function` o `End Property` non sono validi in un'interfaccia.  
   
      Al contrario, quando si definisce un'enumerazione o struttura, o una classe annidata o un'interfaccia, è necessario includere i relativi membri dati.  
   
--   **Modificatori dei membri.** Non è possibile utilizzare tutti i modificatori di accesso quando si definiscono i membri del modulo, né è possibile specificare [Shared](../../../visual-basic/language-reference/modifiers/shared.md) o qualsiasi altro modificatore procedure tranne [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md). È possibile dichiarare qualsiasi membro con [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), ed è possibile usare [predefinito](../../../visual-basic/language-reference/modifiers/default.md) quando si definisce una proprietà, nonché [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) oppure [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+- **Modificatori dei membri.** Non è possibile utilizzare tutti i modificatori di accesso quando si definiscono i membri del modulo, né è possibile specificare [Shared](../../../visual-basic/language-reference/modifiers/shared.md) o qualsiasi altro modificatore procedure tranne [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md). È possibile dichiarare qualsiasi membro con [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md), ed è possibile usare [predefinito](../../../visual-basic/language-reference/modifiers/default.md) quando si definisce una proprietà, nonché [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) oppure [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
--   **Ereditarietà.** Se l'interfaccia utilizza il [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), è possibile specificare uno o più interfacce di base. È possibile ereditare da due interfacce, anche se ognuno definisce un membro con lo stesso nome. Se in questo caso, il codice di implementazione deve usare la qualificazione di nomi per specificare quale membro che sta implementando.  
+- **Ereditarietà.** Se l'interfaccia utilizza il [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), è possibile specificare uno o più interfacce di base. È possibile ereditare da due interfacce, anche se ognuno definisce un membro con lo stesso nome. Se in questo caso, il codice di implementazione deve usare la qualificazione di nomi per specificare quale membro che sta implementando.  
   
      Un'interfaccia non può ereditare da un'altra interfaccia con un livello di accesso più restrittivo. Ad esempio, un `Public` interfaccia non può ereditare da un `Friend` interfaccia.  
   
      Un'interfaccia non può ereditare da un'interfaccia annidata al suo interno.  
   
--   **Implementazione.** Quando una classe Usa il [implementa](../../../visual-basic/language-reference/statements/implements-clause.md) istruzione per implementare questa interfaccia, deve implementare tutti i membri definiti all'interno dell'interfaccia. Inoltre, ogni firma nel codice di implementazione deve corrispondere esattamente alla firma corrispondente definita in questa interfaccia. Tuttavia, il nome del membro nel codice di implementazione non hanno corrisponda al nome di membro, come definito nell'interfaccia.  
+- **Implementazione.** Quando una classe Usa il [implementa](../../../visual-basic/language-reference/statements/implements-clause.md) istruzione per implementare questa interfaccia, deve implementare tutti i membri definiti all'interno dell'interfaccia. Inoltre, ogni firma nel codice di implementazione deve corrispondere esattamente alla firma corrispondente definita in questa interfaccia. Tuttavia, il nome del membro nel codice di implementazione non hanno corrisponda al nome di membro, come definito nell'interfaccia.  
   
      Quando una classe implementa una routine, non è designata come `Shared`.  
   
--   **Proprietà predefinita.** Un'interfaccia è possibile specificare al massimo una proprietà come relativo *predefiniti delle proprietà*, che è possibile fare riferimento senza usare il nome della proprietà. Si specifica una proprietà di questo tipo dichiarando la variabile con il [predefinito](../../../visual-basic/language-reference/modifiers/default.md) modificatore.  
+- **Proprietà predefinita.** Un'interfaccia è possibile specificare al massimo una proprietà come relativo *predefiniti delle proprietà*, che è possibile fare riferimento senza usare il nome della proprietà. Si specifica una proprietà di questo tipo dichiarando la variabile con il [predefinito](../../../visual-basic/language-reference/modifiers/default.md) modificatore.  
   
      Si noti che ciò significa che un'interfaccia può definire una proprietà predefinita solo se nessuno eredita.  
   
 ## <a name="behavior"></a>Comportamento  
   
--   **Livello di accesso.** Tutti i membri di interfaccia dispongono implicitamente [pubblica](../../../visual-basic/language-reference/modifiers/public.md) accesso. È possibile usare il modificatore di accesso quando si definisce un membro. Tuttavia, una classe che implementa l'interfaccia può dichiarare un livello di accesso per ogni membro implementato.  
+- **Livello di accesso.** Tutti i membri di interfaccia dispongono implicitamente [pubblica](../../../visual-basic/language-reference/modifiers/public.md) accesso. È possibile usare il modificatore di accesso quando si definisce un membro. Tuttavia, una classe che implementa l'interfaccia può dichiarare un livello di accesso per ogni membro implementato.  
   
      Se si assegna un'istanza della classe a una variabile, il livello di accesso dei membri può dipendere dal fatto che il tipo di dati della variabile è l'interfaccia sottostante o alla classe che implementa. Questa condizione è illustrata nell'esempio seguente.  
   
@@ -99,11 +99,11 @@ End Interface
   
      Se si accede a membri della classe tramite `varAsInterface`, hanno tutti accesso pubblico. Tuttavia, se si accede ai membri attraverso `varAsClass`, il `Sub` procedure `doSomething` con accesso privato.  
   
--   **Ambito.** Un'interfaccia è l'ambito relativo dello spazio dei nomi, classe, struttura o modulo.  
+- **Ambito.** Un'interfaccia è l'ambito relativo dello spazio dei nomi, classe, struttura o modulo.  
   
      L'ambito di ogni membro di interfaccia è l'intera interfaccia.  
   
--   **Ciclo di vita.** Un'interfaccia non include una durata, né eseguire i relativi membri. Quando una classe implementa un'interfaccia e un oggetto viene creato come un'istanza di che (classe), l'oggetto ha una durata all'interno dell'applicazione in cui è in esecuzione. Per altre informazioni, vedere "Durata" nella [istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md).  
+- **Ciclo di vita.** Un'interfaccia non include una durata, né eseguire i relativi membri. Quando una classe implementa un'interfaccia e un oggetto viene creato come un'istanza di che (classe), l'oggetto ha una durata all'interno dell'applicazione in cui è in esecuzione. Per altre informazioni, vedere "Durata" nella [istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente usa il `Interface` istruzione per definire un'interfaccia denominata `thisInterface`, che deve essere implementata con un `Property` istruzione e una `Function` istruzione.  

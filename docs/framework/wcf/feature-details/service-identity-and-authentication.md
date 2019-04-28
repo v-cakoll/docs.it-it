@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748265"
 ---
 # <a name="service-identity-and-authentication"></a>Identità del servizio e autenticazione
 Un servizio *identità endpoint* è un valore generato dal servizio Web Services Description Language (WSDL). Questo valore, propagato a tutti i client, viene utilizzato per autenticare il servizio. Dopo che il client ha avviato una comunicazione con un endpoint e il servizio è stato autenticato nel client, quest'ultimo confronta il valore dell'identità endpoint con il valore effettivo restituito dal processo di autenticazione dell'endpoint. La corrispondenza di questi due valori costituisce garanzia per il client di aver contattato l'endpoint del servizio previsto. Questo meccanismo funziona come una protezione contro *phishing* impedendo a un client di essere reindirizzati a un endpoint ospitato da un servizio dannoso.  
@@ -26,9 +26,9 @@ Un servizio *identità endpoint* è un valore generato dal servizio Web Services
   
  L'elaborazione dell'identità si articola nelle fasi seguenti:  
   
--   In fase di progettazione, lo sviluppatore del client determina l'identità del servizio dai metadati dell'endpoint (esposti tramite WSDL).  
+- In fase di progettazione, lo sviluppatore del client determina l'identità del servizio dai metadati dell'endpoint (esposti tramite WSDL).  
   
--   In fase di esecuzione, l'applicazione client controlla le attestazioni delle credenziali di sicurezza del servizio, prima di inviare messaggi al servizio.  
+- In fase di esecuzione, l'applicazione client controlla le attestazioni delle credenziali di sicurezza del servizio, prima di inviare messaggi al servizio.  
   
  L'elaborazione dell'identità nel client è analoga all'autenticazione del client nel servizio. Un servizio protetto non esegue codice fino a quando non vengono autenticate le credenziali del client. Allo stesso modo, il client non invia messaggi al servizio fino a quando le credenziali del servizio non sono state autenticate in base a ciò che è noto in anticipo dai metadati del servizio.  
   
@@ -78,21 +78,21 @@ Un servizio *identità endpoint* è un valore generato dal servizio Web Services
   
  Se il canale è configurato per l'autenticazione tramite SSL (Secure Sockets Layer) a livello di messaggio o di trasporto con certificati X.509, sono validi i valori di identità seguenti:  
   
--   DNS. WCF garantisce che il certificato fornito durante l'handshake SSL contenga un DNS o `CommonName` attributo (CN) uguale al valore specificato nell'identità DNS sul client. Si noti che questi controlli vengono eseguiti in aggiunta alla determinazione della validità del certificato server. Per impostazione predefinita, WCF verifica che il certificato del server è emesso da un'autorità radice attendibile.  
+- DNS. WCF garantisce che il certificato fornito durante l'handshake SSL contenga un DNS o `CommonName` attributo (CN) uguale al valore specificato nell'identità DNS sul client. Si noti che questi controlli vengono eseguiti in aggiunta alla determinazione della validità del certificato server. Per impostazione predefinita, WCF verifica che il certificato del server è emesso da un'autorità radice attendibile.  
   
--   Certificato. Durante l'handshake SSL, WCF garantisce che l'endpoint remoto fornisca il valore del certificato esatto specificato nell'identità.  
+- Certificato. Durante l'handshake SSL, WCF garantisce che l'endpoint remoto fornisca il valore del certificato esatto specificato nell'identità.  
   
--   Riferimento del certificato. Uguale a Certificato.  
+- Riferimento del certificato. Uguale a Certificato.  
   
--   RSA. Durante l'handshake SSL, WCF garantisce che l'endpoint remoto fornisca la chiave RSA esatta specificata nell'identità.  
+- RSA. Durante l'handshake SSL, WCF garantisce che l'endpoint remoto fornisca la chiave RSA esatta specificata nell'identità.  
   
  Se il servizio esegue l'autenticazione utilizzando SSL a livello di messaggio o di trasporto con una credenziale Windows e negozia la credenziale, sono validi i valori di identità seguenti:  
   
--   DNS. La negoziazione passa il nome SPN del servizio, in modo che il nome DNS possa essere controllato. Il nome SPN presenta il formato `host/<dns name>`.  
+- DNS. La negoziazione passa il nome SPN del servizio, in modo che il nome DNS possa essere controllato. Il nome SPN presenta il formato `host/<dns name>`.  
   
--   SPN. Viene restituito un SPN del servizio esplicito, ad esempio, `host/myservice`.  
+- SPN. Viene restituito un SPN del servizio esplicito, ad esempio, `host/myservice`.  
   
--   UPN. UPN dell'account di servizio. L'UPN è nel formato `username` @ `domain`. Ad esempio, quando il servizio è in esecuzione con un account utente, l'UPN può essere `username@contoso.com`.  
+- UPN. UPN dell'account di servizio. L'UPN è nel formato `username` @ `domain`. Ad esempio, quando il servizio è in esecuzione con un account utente, l'UPN può essere `username@contoso.com`.  
   
  L'impostazione dell'identità a livello di programmazione (utilizzando la proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>) è facoltativa. Se non viene specificata alcuna identità, e il tipo di credenziale client è Windows, l'impostazione predefinita è SPN con il valore impostato sulla parte del nome host dell'indirizzo dell'endpoint del servizio preceduta dal valore letterale "host/". Se non viene specificata alcuna identità, e il tipo di credenziale client è un certificato, l'impostazione predefinita è `Certificate`. Questo vale per la protezione a livello di messaggio e di trasporto.  
   

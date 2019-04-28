@@ -10,11 +10,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
 ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778521"
 ---
 # <a name="-operator-visual-basic"></a>Operatore ^= (Visual Basic)
 Genera il valore di una variabile o proprietà alla potenza di un'espressione e assegna il risultato alla variabile o proprietà.  

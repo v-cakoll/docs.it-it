@@ -11,11 +11,11 @@ ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933783"
 ---
 # <a name="security-and-user-input"></a>Sicurezza e input dell'utente
 I dati utente, ovvero tutti i tipi di input, ad esempio i dati di una richiesta Web o di un URL, gli input in controlli di un'applicazione Microsoft Windows Forms e così via, possono avere effetti negativi sul codice in quanto questi dati sono spesso utilizzati direttamente come parametri per chiamare altro codice. Questa situazione è analoga a quella della chiamata del codice da parte di codice dannoso con parametri insoliti ed è necessario adottare le stesse precauzioni. La sicurezza dell'input dell'utente è un'operazione difficile in quanto non è disponibile alcuno stack frame per registrare la presenza dei dati potenzialmente inattendibili.  
@@ -24,39 +24,39 @@ I dati utente, ovvero tutti i tipi di input, ad esempio i dati di una richiesta 
   
  Tra gli aspetti importanti dei dati utente sono inclusi i seguenti:  
   
--   I dati utente in una risposta server sono eseguiti nel contesto del sito del server sul client. Se il server Web accetta dati utente e li inserisce nella pagina Web restituita, può, ad esempio, includere un tag **\<script>** e consentire l'esecuzione come se questa avvenisse dal server.  
+- I dati utente in una risposta server sono eseguiti nel contesto del sito del server sul client. Se il server Web accetta dati utente e li inserisce nella pagina Web restituita, può, ad esempio, includere un tag **\<script>** e consentire l'esecuzione come se questa avvenisse dal server.  
   
--   Tenere presente che il client può richiedere qualsiasi URL.  
+- Tenere presente che il client può richiedere qualsiasi URL.  
   
--   Prendere in considerazione i percorsi complessi o non validi:  
+- Prendere in considerazione i percorsi complessi o non validi:  
   
-    -   ..\ , percorsi estremamente lunghi.  
+    - ..\ , percorsi estremamente lunghi.  
   
-    -   Utilizzo di caratteri jolly (*).  
+    - Utilizzo di caratteri jolly (*).  
   
-    -   Espansione del token (% token%).  
+    - Espansione del token (% token%).  
   
-    -   Forme insolite di percorsi con significati speciali.  
+    - Forme insolite di percorsi con significati speciali.  
   
-    -   Nomi di flusso del file system alternativi come filename: `filename::$DATA`.  
+    - Nomi di flusso del file system alternativi come filename: `filename::$DATA`.  
   
-    -   Versioni abbreviate dei nomi file come `longfi~1` per `longfilename`.  
+    - Versioni abbreviate dei nomi file come `longfi~1` per `longfilename`.  
   
--   Ricordare che Eval(userdata) consente di eseguire qualsiasi operazione.  
+- Ricordare che Eval(userdata) consente di eseguire qualsiasi operazione.  
   
--   Tenere conto dell'associazione tardiva a un nome che include dati utente.  
+- Tenere conto dell'associazione tardiva a un nome che include dati utente.  
   
--   Se si utilizzano dati Web, prendere in considerazione le varie forme di escape consentite, inclusi:  
+- Se si utilizzano dati Web, prendere in considerazione le varie forme di escape consentite, inclusi:  
   
-    -   Escape esadecimali escape (%nn).  
+    - Escape esadecimali escape (%nn).  
   
-    -   Escape Unicode (%nnn).  
+    - Escape Unicode (%nnn).  
   
-    -   Escape lunghi UTF-8 (%nn%nn).  
+    - Escape lunghi UTF-8 (%nn%nn).  
   
-    -   Escape doppi (%nn diviene %mmnn, dove %mm è il carattere di escape per '%').  
+    - Escape doppi (%nn diviene %mmnn, dove %mm è il carattere di escape per '%').  
   
--   Prestare attenzione ai nomi utente che possono avere più di un formato canonico. Ad esempio, è spesso possibile utilizzare la forma MYDOMAIN\\*nomeutente* o la forma *nomeutente@mydomain.example.com*@mydomain.example.com.  
+- Prestare attenzione ai nomi utente che possono avere più di un formato canonico. Ad esempio, è spesso possibile utilizzare la forma MYDOMAIN\\*nomeutente* o la forma *nomeutente@mydomain.example.com*@mydomain.example.com.  
   
 ## <a name="see-also"></a>Vedere anche
 

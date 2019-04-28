@@ -3,11 +3,11 @@ title: 'Procedura: Leggere dati oggetto in un File XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907348"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Procedura: Leggere dati oggetto in un File XML (Visual Basic)
 Questo esempio legge i dati oggetto scritti in precedenza in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   La classe da serializzare non ha un costruttore pubblico senza parametri.  
+- La classe da serializzare non ha un costruttore pubblico senza parametri.  
   
--   I dati nel file non rappresentano i dati della classe da deserializzare.  
+- I dati nel file non rappresentano i dati della classe da deserializzare.  
   
--   Il file non esiste (<xref:System.IO.IOException>).  
+- Il file non esiste (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
  Verificare sempre gli input e non deserializzare mai i dati proveniente da un'origine non attendibile. L'oggetto ricreato viene eseguito in un computer locale con le autorizzazioni del codice che ha eseguito la deserializzazione. Prima di usare i dati nell'applicazione verificare tutti gli input.  

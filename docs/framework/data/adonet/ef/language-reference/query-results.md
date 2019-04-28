@@ -6,26 +6,26 @@ dev_langs:
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
 ms.openlocfilehash: 70aa2ad6385ec4791b05b202dc5dc6d4fe9e57b9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797839"
 ---
 # <a name="query-results"></a>Risultati delle query
 Dopo che una query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] è stata convertita in un albero dei comandi ed eseguita, i risultati della query vengono in genere restituiti in una delle forme seguenti:  
   
--   Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi nel modello concettuale.  
+- Raccolta di zero o più oggetti entità tipizzate o proiezione di tipi complessi nel modello concettuale.  
   
--   Tipi CLR supportati dal modello concettuale.  
+- Tipi CLR supportati dal modello concettuale.  
   
--   Raccolte inline.  
+- Raccolte inline.  
   
--   Tipi anonimi.  
+- Tipi anonimi.  
   
  Una volta eseguita la query sull'origine dati, i risultati vengono materializzati in tipi CLR e restituiti al client. La materializzazione degli oggetti viene eseguita da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Qualsiasi errore dovuto all'impossibilità di eseguire il mapping tra [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] e CLR comporta la generazione di eccezioni durante la materializzazione degli oggetti.  
   
- Se l'esecuzione di una query restituisce tipi primitivi del modello concettuale, i risultati sono costituiti da tipi CLR autonomi e disconnessi da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Se tuttavia la query restituisce una raccolta di oggetti entità tipizzati, rappresentati da <xref:System.Data.Objects.ObjectQuery%601>, questi tipi vengono registrati dal contesto dell'oggetto. Tutti i comportamenti degli oggetti (ad esempio raccolte figlio/padre, rilevamento delle modifiche, polimorfismo e così via) sono definiti nel [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Questa funzionalità può essere utilizzata come definito in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Per ulteriori informazioni, vedere [lavora con gli oggetti](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+ Se l'esecuzione di una query restituisce tipi primitivi del modello concettuale, i risultati sono costituiti da tipi CLR autonomi e disconnessi da [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Se tuttavia la query restituisce una raccolta di oggetti entità tipizzati, rappresentati da <xref:System.Data.Objects.ObjectQuery%601>, questi tipi vengono registrati dal contesto dell'oggetto. Tutti i comportamento degli oggetti (ad esempio raccolte figlio/padre, rilevamento delle modifiche, polimorfismo e così via) sono definite nel [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Questa funzionalità può essere utilizzata come definito in [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Per altre informazioni, vedere [utilizzo di oggetti](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
   
  I tipi di struct restituiti dalle query (ad esempio tipi anonimi e tipi complessi che ammettono i valori Null) possono avere valore `null`. Anche una proprietà <xref:System.Data.Objects.DataClasses.EntityCollection%601> di un'entità restituita può avere valore `null`. Questo può essere dovuto alla proiezione della proprietà della raccolta di un'entità con valore `null`, ad esempio la chiamata a <xref:System.Linq.Queryable.FirstOrDefault%2A> su un oggetto <xref:System.Data.Objects.ObjectQuery%601> che non dispone di elementi.  
   

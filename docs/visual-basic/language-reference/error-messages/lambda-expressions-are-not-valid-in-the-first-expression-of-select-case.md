@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
 ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921277"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Le espressioni lambda non sono valide nella prima espressione di un'istruzione 'Select Case'
 È possibile usare un'espressione lambda per l'espressione di test in un `Select Case` istruzione. Le definizioni delle espressioni lambda restituiscono le funzioni e l'espressione di test di un `Select Case` istruzione deve essere un tipo di dati elementare.  
@@ -29,9 +29,9 @@ ms.locfileid: "58843453"
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Esaminare il codice per determinare se funziona una costruzione condizionale diversa, ad esempio un'istruzione `If...Then...Else` .  
+- Esaminare il codice per determinare se funziona una costruzione condizionale diversa, ad esempio un'istruzione `If...Then...Else` .  
   
--   Se si intende chiamare la funzione, come illustrato nel codice seguente:  
+- Se si intende chiamare la funzione, come illustrato nel codice seguente:  
   
 ```vb  
 Dim num? As Integer  

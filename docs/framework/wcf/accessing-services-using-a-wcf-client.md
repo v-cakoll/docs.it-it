@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782434"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Accesso ai servizi tramite client WCF
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Molte eccezioni generate da un client WCF sono causate da un'eccezione nel servizio. Di seguito ne vengono riportati alcuni esempi:
 
--   <xref:System.Net.Sockets.SocketException>: Una connessione esistente chiusa forzatamente dall'host remoto.
+- <xref:System.Net.Sockets.SocketException>: Una connessione esistente chiusa forzatamente dall'host remoto.
 
--   <xref:System.ServiceModel.CommunicationException>: La connessione sottostante chiusa in modo imprevisto.
+- <xref:System.ServiceModel.CommunicationException>: La connessione sottostante chiusa in modo imprevisto.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: La connessione socket è stata interrotta. Questo problema può essere causato da un errore durante l'elaborazione del messaggio, da un timeout di ricezione superato dall'host remoto o da un problema della risorsa di rete sottostante.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: La connessione socket è stata interrotta. Questo problema può essere causato da un errore durante l'elaborazione del messaggio, da un timeout di ricezione superato dall'host remoto o da un problema della risorsa di rete sottostante.
 
 Quando si verificano questi tipi di eccezioni, il modo migliore per risolvere il problema è attivare la traccia sul lato servizio e individuare l'eccezione che si è verificata. Per ulteriori informazioni sulla traccia, vedere [Tracing](../../../docs/framework/wcf/diagnostics/tracing/index.md) e [tramite la traccia per risolvere i problemi dell'applicazione](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

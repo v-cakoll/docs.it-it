@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914524"
 ---
 # <a name="compareassemblyidentity-function"></a>Funzione CompareAssemblyIdentity
 Confronta due identità di assembly per determinare se sono equivalenti.  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>Note  
  `CompareAssemblyIdentity` Controlla se `pwzAssemblyIdentity1` e `pwzAssemblyIdentity2` sono equivalenti. `pfEquivalent` è impostato su `true` in uno o più delle condizioni seguenti:  
   
--   Le identità di due assembly sono equivalenti. Per assembly con nome sicuro, equivalency richiede il nome dell'assembly, versione, token di chiave pubblica e le impostazioni cultura in modo identico. Per gli assembly di nome semplice, equivalency richiede una corrispondenza per il nome dell'assembly e le impostazioni cultura.  
+- Le identità di due assembly sono equivalenti. Per assembly con nome sicuro, equivalency richiede il nome dell'assembly, versione, token di chiave pubblica e le impostazioni cultura in modo identico. Per gli assembly di nome semplice, equivalency richiede una corrispondenza per il nome dell'assembly e le impostazioni cultura.  
   
--   Entrambe le identità di assembly fare riferimento ad assembly in esecuzione su .NET Framework. Questa condizione restituisce `true` anche se i numeri di versione di assembly non corrispondono.  
+- Entrambe le identità di assembly fare riferimento ad assembly in esecuzione su .NET Framework. Questa condizione restituisce `true` anche se i numeri di versione di assembly non corrispondono.  
   
--   I due assembly non sono gestiti, ma `fUnified1` oppure `fUnified2` è stata impostata su `true`.  
+- I due assembly non sono gestiti, ma `fUnified1` oppure `fUnified2` è stata impostata su `true`.  
   
  Il `fUnified` flag indica che tutti i numeri di versione fino al numero di versione dell'assembly con nome sicuro vengono considerati equivalenti all'assembly con nome sicuro. Ad esempio, se il valore di `pwzAssemblyIndentity1` è "MyAssembly, versione = 3.0.0.0, culture = neutral, publicKeyToken =..." e il valore di `fUnified1` è `true`, ciò indica che tutte le versioni di MyAssembly dalla versione è 0.0.0.0 a 3.0.0.0 devono essere considerati equivalenti. In tal caso, se `pwzAssemblyIndentity2` fa riferimento allo stesso assembly come `pwzAssemblyIndentity1`, ad eccezione del fatto che abbia un numero di versione inferiore `pfEquivalent` è impostata su `true`. Se `pwzAssemblyIdentity2` fa riferimento a un numero di versione superiore `pfEquivalent` è impostata su `true` solo se il valore di `fUnified2` è `true`.  
   

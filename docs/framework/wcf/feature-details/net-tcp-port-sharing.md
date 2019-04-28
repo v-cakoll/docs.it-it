@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762752"
 ---
 # <a name="nettcp-port-sharing"></a>Condivisione delle porte Net.TCP
 Windows Communication Foundation (WCF) offre un nuovo protocollo di rete basata su TCP (net.tcp://) per la comunicazione ad alte prestazioni. WCF introduce inoltre un nuovo componente di sistema, il servizio condivisione porte NET che consente la condivisione tra più processi utente delle porte Net. TCP.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) offre un nuovo protocollo di rete basata 
 ## <a name="port-sharing-architecture"></a>Architettura di condivisione delle porte  
  L'architettura di condivisione delle porte in WCF include tre componenti principali:  
   
--   Un processo di lavoro: Qualsiasi processo che comunica su net.tcp:// usando porte condivise.  
+- Un processo di lavoro: Qualsiasi processo che comunica su net.tcp:// usando porte condivise.  
   
--   Il trasporto TCP WCF: Implementa il protocollo net.tcp://.  
+- Il trasporto TCP WCF: Implementa il protocollo net.tcp://.  
   
--   Il servizio di condivisione porte Net. TCP: Consente a molti processi di lavoro condividere la stessa porta TCP.  
+- Il servizio di condivisione porte Net. TCP: Consente a molti processi di lavoro condividere la stessa porta TCP.  
   
  Il Servizio di condivisione porte Net.TCP è un servizio Windows in modalità utente che accetta connessioni net.tcp:// per conto dei processi di lavoro che stabiliscono connessioni tramite esso. Quando arriva una connessione socket, il servizio di condivisione delle porte esamina il flusso di messaggi in ingresso per ottenerne l'indirizzo di destinazione. In base a questo indirizzo, il servizio di condivisione delle porte può instradare il flusso di dati all'applicazione che in definitiva lo elaborerà.  
   

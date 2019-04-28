@@ -3,14 +3,14 @@ title: Esempi di query
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783110"
 ---
 # <a name="query-examples"></a>Esempi di query
-In questa sezione vengono forniti esempi di Visual Basic e C# di tipico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query. Gli sviluppatori che usano Visual Studio è possono trovare ulteriori esempi in una soluzione di esempio disponibile nella sezione esempi. Per altre informazioni, vedere [esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+In questa sezione vengono forniti esempi di Visual Basic e c# di tipico [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] le query. Gli sviluppatori che usano Visual Studio è possono trovare ulteriori esempi in una soluzione di esempio disponibile nella sezione esempi. Per altre informazioni, vedere [esempi](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
 >  *DB* viene spesso usato negli esempi di codice in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentazione. *DB* presuppone che sia un'istanza di un *Northwind* classe che eredita da <xref:System.Data.Linq.DataContext>.  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3a574a04e5746a8b2c9c32160e82aa503b392729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792639"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>Metodo ICorProfilerInfo::SetILInstrumentedCodeMap
 Imposta una mappa codici per la funzione specificata utilizzando voci della mappa specificate Microsoft intermediate language (MSIL).  
@@ -58,11 +58,11 @@ HRESULT SetILInstrumentedCodeMap(
   
  Il debugger presuppone che ogni offset precedente fa riferimento a un offset all'interno del codice MSIL originale, non modificato MSIL e che ogni nuovo offset fa riferimento all'offset all'interno del nuovo codice instrumentato MSIL. La mappa deve essere disposti in ordine crescente. Per l'esecuzione di istruzioni per il corretto funzionamento, seguire queste linee guida:  
   
--   Non riordinano le codice instrumentato MSIL.  
+- Non riordinano le codice instrumentato MSIL.  
   
--   Non rimuovere il codice MSIL originale.  
+- Non rimuovere il codice MSIL originale.  
   
--   Includere le voci per tutti i punti di sequenza dal file di database (PDB) di programma nella mappa. La mappa non esegue l'interpolazione voci mancanti. Pertanto, data la mappa seguente:  
+- Includere le voci per tutti i punti di sequenza dal file di database (PDB) di programma nella mappa. La mappa non esegue l'interpolazione voci mancanti. Pertanto, data la mappa seguente:  
   
      (0 precedente, 0 nuovi)  
   
@@ -70,17 +70,17 @@ HRESULT SetILInstrumentedCodeMap(
   
      (9 precedente, 20 nuovi)  
   
-    -   Verrà eseguito il mapping di un offset 0, 1, 2, 3 o 4 precedente al nuovo offset 0.  
+    - Verrà eseguito il mapping di un offset 0, 1, 2, 3 o 4 precedente al nuovo offset 0.  
   
-    -   Verrà eseguito il mapping di un offset precedente del 5, 6, 7 o 8 al nuovo offset 10.  
+    - Verrà eseguito il mapping di un offset precedente del 5, 6, 7 o 8 al nuovo offset 10.  
   
-    -   Verrà eseguito il mapping di un offset precedente del 9 o versione successiva al nuovo offset 20.  
+    - Verrà eseguito il mapping di un offset precedente del 9 o versione successiva al nuovo offset 20.  
   
-    -   Verrà eseguito il mapping di un nuovo offset 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.  
+    - Verrà eseguito il mapping di un nuovo offset 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 al vecchio offset 0.  
   
-    -   Verrà eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.  
+    - Verrà eseguito il mapping di un nuovo offset di 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 al vecchio offset 5.  
   
-    -   Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.  
+    - Verrà eseguito il mapping di un nuovo offset pari a 20 o superiore al vecchio offset 9.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

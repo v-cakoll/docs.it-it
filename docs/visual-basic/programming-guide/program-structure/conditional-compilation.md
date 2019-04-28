@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758457"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Compilazione condizionale in Visual Basic
 Nelle *compilazione condizionale*, determinati blocchi di codice in un programma vengono compilati in modo selettivo, mentre altre vengono ignorate.  
@@ -29,11 +29,11 @@ Nelle *compilazione condizionale*, determinati blocchi di codice in un programma
 ## <a name="declaring-conditional-compilation-constants"></a>La dichiarazione di costanti di compilazione condizionale  
  È possibile impostare le costanti di compilazione condizionale in uno dei tre modi:  
   
--   Nel **Progettazione progetti**  
+- Nel **Progettazione progetti**  
   
--   Nella riga di comando quando si usa il compilatore della riga di comando  
+- Nella riga di comando quando si usa il compilatore della riga di comando  
   
--   Nel codice  
+- Nel codice  
   
  Costanti di compilazione condizionale hanno un ambito speciale e non è possibile accedervi dal codice standard. L'ambito di una costante di compilazione condizionale dipende dal modo in cui è impostata. La tabella seguente elenca l'ambito delle costanti dichiarato tramite ognuno dei tre metodi indicati in precedenza.  
   

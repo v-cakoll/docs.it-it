@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776259"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Procedura: Diagnosticare un processo di stampa problematico
 Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su processi di stampa lenti o che non vengono eseguiti affatto. Il set completo di proprietà di processo di stampa esposto nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di Microsoft .NET Framework forniscono un mezzo per eseguire una rapida diagnosi remota dei processi di stampa.  
@@ -25,13 +25,13 @@ Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su proces
   
 1. Identificare il processo di stampa oggetto del reclamo dell'utente. Gli utenti spesso non sono in grado di eseguire questa verifica con precisione. Non conoscono i nomi dei server di stampa o delle stampanti. Potrebbero descrivere il percorso della stampante con una terminologia diversa da quella usata durante l'impostazione relativa <xref:System.Printing.PrintQueue.Location%2A> proprietà. È consigliabile quindi generare un elenco dei processi inviati dall'utente. Nel caso ci siano più processi, la comunicazione tra l'utente e l'amministratore del sistema di stampa può essere quindi usata per individuare il processo problematico. Di seguito sono indicati i passaggi secondari.  
   
-    1.  Ottenere un elenco di tutti i server di stampa.  
+    1. Ottenere un elenco di tutti i server di stampa.  
   
-    2.  Riprodurre il ciclo dei server per eseguire una query sulle code di stampa.  
+    2. Riprodurre il ciclo dei server per eseguire una query sulle code di stampa.  
   
-    3.  In ogni passaggio del ciclo del server, riprodurre il ciclo di tutte le code del server per eseguire query sui processi.  
+    3. In ogni passaggio del ciclo del server, riprodurre il ciclo di tutte le code del server per eseguire query sui processi.  
   
-    4.  In ogni passaggio del ciclo di code, eseguire il ciclo dei processi e raccogliere informazioni di identificazione su quelli che sono stati inviati dall'utente del reclamo.  
+    4. In ogni passaggio del ciclo di code, eseguire il ciclo dei processi e raccogliere informazioni di identificazione su quelli che sono stati inviati dall'utente del reclamo.  
   
 2. Quando viene individuato il processo di stampa problematico, esaminare le proprietà rilevanti per vedere quale potrebbe essere la causa del problema. Ad esempio, se si tratta di un errore di stato del processo oppure la stampante che gestisce la coda è passata alla modalità offline prima della stampa.  
   
@@ -49,9 +49,9 @@ Gli amministratori di rete fanno spesso fronte ai reclami degli utenti su proces
   
  A questo punto l'applicazione contiene una struttura ramificata corrispondente ai due modi di controllo dello stato del processo di stampa:  
   
--   È possibile leggere i flag del <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> proprietà che è di tipo <xref:System.Printing.PrintJobStatus>.  
+- È possibile leggere i flag del <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> proprietà che è di tipo <xref:System.Printing.PrintJobStatus>.  
   
--   È possibile leggere tutte le proprietà rilevanti, ad esempio <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> e <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- È possibile leggere tutte le proprietà rilevanti, ad esempio <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> e <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
  In questo esempio illustra entrambi i metodi, in modo che l'utente è stato chiesto di specificare il metodo da usare in precedenza e ha risposto con "Y" se voleva usare i flag del <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> proprietà. Per i dettagli dei due metodi, vedere di seguito. Infine, l'applicazione usa un metodo denominato **ReportQueueAndJobAvailability** per segnalare se il processo può essere stampato all'ora indicata. Questo metodo viene illustrato in [Individuare se è possibile eseguire o meno un processo di stampa all'orario indicato](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md).  
   

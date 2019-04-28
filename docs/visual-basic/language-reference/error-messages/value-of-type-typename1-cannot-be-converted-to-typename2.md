@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766805"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'
 Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'. Mancata corrispondenza del tipo potrebbe essere dovuto a combinare un riferimento al file con un riferimento progetto all'assembly '\<assemblyname >'. Provare a sostituire il riferimento file a '\<percorsofile >' nel progetto '\<projectname1 >' con un riferimento al progetto '\<projectname2 >'.  
@@ -57,7 +57,7 @@ Valore di tipo '\<NomeTipo1 >' non può essere convertito in '\<in NomeTipo2 >'.
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Modificare il riferimento file a un riferimento al progetto.  
+- Modificare il riferimento file a un riferimento al progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 

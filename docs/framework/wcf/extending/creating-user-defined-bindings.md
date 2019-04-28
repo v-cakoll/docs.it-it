@@ -5,20 +5,20 @@ helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
 ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923240"
 ---
 # <a name="creating-user-defined-bindings"></a>Creazione di associazioni definite dall'utente
 Esistono diversi modi per creare associazioni non fornite dal sistema:  
   
--   Creare un'associazione personalizzata, basata sulla classe <xref:System.ServiceModel.Channels.CustomBinding>, che è un contenitore riempito con elementi di associazione. L'associazione personalizzata viene quindi aggiunta a un endpoint del servizio. È possibile creare l'associazione personalizzata a livello di programmazione o in un file di configurazione dell'applicazione. Per usare un elemento di associazione da un file di configurazione dell'applicazione, è necessario che l'elemento di associazione estenda <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Per altre informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Creare un'associazione personalizzata, basata sulla classe <xref:System.ServiceModel.Channels.CustomBinding>, che è un contenitore riempito con elementi di associazione. L'associazione personalizzata viene quindi aggiunta a un endpoint del servizio. È possibile creare l'associazione personalizzata a livello di programmazione o in un file di configurazione dell'applicazione. Per usare un elemento di associazione da un file di configurazione dell'applicazione, è necessario che l'elemento di associazione estenda <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Per altre informazioni sulle associazioni personalizzate, vedere [associazioni personalizzate](../../../../docs/framework/wcf/extending/custom-bindings.md) e <xref:System.ServiceModel.Channels.CustomBinding>.  
   
--   È possibile creare una classe derivata da un'associazione standard. È, ad esempio, possibile derivare una classe da <xref:System.ServiceModel.WSHttpBinding> ed eseguire l'override del metodo <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> per ottenere gli elementi di associazione e inserire un elemento di associazione personalizzato o stabilire un particolare valore per la protezione.  
+- È possibile creare una classe derivata da un'associazione standard. È, ad esempio, possibile derivare una classe da <xref:System.ServiceModel.WSHttpBinding> ed eseguire l'override del metodo <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> per ottenere gli elementi di associazione e inserire un elemento di associazione personalizzato o stabilire un particolare valore per la protezione.  
   
--   È possibile creare un nuovo tipo <xref:System.ServiceModel.Channels.Binding> per controllare completamente l'intera implementazione dell'associazione.  
+- È possibile creare un nuovo tipo <xref:System.ServiceModel.Channels.Binding> per controllare completamente l'intera implementazione dell'associazione.  
   
 ## <a name="the-order-of-binding-elements"></a>Ordine degli elementi di associazione  
  Ogni elemento di associazione rappresenta una fase di elaborazione durante l'invio o la ricezione di messaggi. In fase di esecuzione, gli elementi di associazione creano i canali e i listener necessari per generare stack di canali in uscita e in ingresso.  

@@ -3,11 +3,11 @@ title: 'Procedura: Esportare informazioni WSDL personalizzate'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
 ms.openlocfilehash: 725e1b27f36716002ad7cd05183181da9e05fa65
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767130"
 ---
 # <a name="how-to-export-custom-wsdl"></a>Procedura: Esportare informazioni WSDL personalizzate
 In questo argomento viene illustrato come esportare informazioni WSDL personalizzate. A tale scopo è necessario definire un nuovo attributo di codice denominato `WsdlDocumentationAttribute` che consente di aggiungere informazioni personalizzate nel codice WSDL generato dal servizio.  

@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780548"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemi noti e considerazioni in LINQ to Entities
 Contenuto della sezione vengono fornite informazioni sui problemi noti relativi alle query [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
   
--   [Query LINQ che non possono essere memorizzati nella cache](#LINQQueriesThatAreNotCached)  
+- [Query LINQ che non possono essere memorizzati nella cache](#LINQQueriesThatAreNotCached)  
   
--   [Perdita di informazioni di ordinamento](#OrderingInfoLost)  
+- [Perdita di informazioni di ordinamento](#OrderingInfoLost)  
   
--   [Interi senza segno non è supportati](#UnsignedIntsUnsupported)  
+- [Interi senza segno non è supportati](#UnsignedIntsUnsupported)  
   
--   [Errori di conversione tipo](#TypeConversionErrors)  
+- [Errori di conversione tipo](#TypeConversionErrors)  
   
--   [Riferimento alle variabili Non scalari non supportate](#RefNonScalarClosures)  
+- [Riferimento alle variabili Non scalari non supportate](#RefNonScalarClosures)  
   
--   [Query nidificata potrebbe non riuscire con SQL Server 2000](#NestedQueriesSQL2000)  
+- [Query nidificata potrebbe non riuscire con SQL Server 2000](#NestedQueriesSQL2000)  
   
--   [Proiezione di un tipo anonimo](#ProjectToAnonymousType)  
+- [Proiezione di un tipo anonimo](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>Query LINQ che non possono essere memorizzate nella cache  

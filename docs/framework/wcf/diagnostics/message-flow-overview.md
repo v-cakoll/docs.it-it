@@ -3,20 +3,20 @@ title: Cenni preliminari sul flusso di messaggi
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797482"
 ---
 # <a name="message-flow-overview"></a>Cenni preliminari sul flusso di messaggi
 In un sistema distribuito che contiene servizi interconnessi è necessario determinare relazioni causali tra i servizi. È importante comprendere i vari componenti che appartengono a un flusso di richiesta per supportare scenari critici, ad esempio monitoraggio dello stato, risoluzione dei problemi e analisi della causa radice. Per abilitare la correlazione di tracce tra i vari servizi, in .NET Framework 4 è stato aggiunto supporto tramite le funzionalità seguenti:
 
--   Traccia analitica: A prestazioni elevate e verbosità ridotta funzionalità di traccia Event Tracing for Windows (ETW).
+- Traccia analitica: A prestazioni elevate e verbosità ridotta funzionalità di traccia Event Tracing for Windows (ETW).
 
--   Modello di attività end-to-end per i servizi WCF/WF: Questa funzionalità supporta la correlazione di tracce generate dal <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> gli spazi dei nomi.
+- Modello di attività end-to-end per i servizi WCF/WF: Questa funzionalità supporta la correlazione di tracce generate dal <xref:System.ServiceModel> e <xref:System.Workflow.ComponentModel> gli spazi dei nomi.
 
--   Rilevamento ETW per WF: Questa funzionalità Usa record di rilevamento generati dai servizi WF per fornire visibilità nello stato corrente e lo stato di avanzamento del flusso di lavoro.
+- Rilevamento ETW per WF: Questa funzionalità Usa record di rilevamento generati dai servizi WF per fornire visibilità nello stato corrente e lo stato di avanzamento del flusso di lavoro.
 
  Gli errori registrati in un record di rilevamento o di traccia possono essere usati per individuare difetti del codice o messaggi in formato non corretto. La proprietà ActivityId del nodo relativo alla correlazione nell'intestazione del messaggio dell'evento può essere usata per determinare l'attività in cui si è verificato l'errore. Per abilitare la traccia del flusso di messaggi dall'ID attività, vedere [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). In questo argomento viene illustrato come abilitare la traccia del flusso di messaggi nel progetto creato nell'Esercitazione introduttiva.
 

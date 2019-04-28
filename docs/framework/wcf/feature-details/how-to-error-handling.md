@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772970"
 ---
 # <a name="how-to-error-handling"></a>Procedura: Gestione degli errori
 In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che usa la gestione degli errori. In questo esempio i messaggi vengono indirizzati a un endpoint di destinazione. Se non è possibile recapitare un messaggio a causa di un errore di rete o relativo alle comunicazioni (<xref:System.ServiceModel.CommunicationException>), il messaggio viene nuovamente inviato a un endpoint alternativo.  

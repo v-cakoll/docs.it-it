@@ -3,32 +3,32 @@ title: Provider di token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787504"
 ---
 # <a name="saml-token-provider"></a>Provider di token SAML
 Questo esempio dimostra come implementare un provider di token SAML client personalizzato. Un provider di token in Windows Communication Foundation (WCF) viene usato per fornire credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con il Provider di Token di gestione credenziali predefinito. WCF viene inoltre fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:
 
--   Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.
+- Se è disponibile un archivio di credenziali con cui questi provider di token non sono in grado di operare.
 
--   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework del client WCF utilizza le credenziali.
+- Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il framework del client WCF utilizza le credenziali.
 
--   Se si sta compilando un token personalizzato.
+- Se si sta compilando un token personalizzato.
 
  Questo esempio viene illustrato come creare un provider di token personalizzato che consente a un token SAML ottenuto da all'esterno del framework client WCF da usare.
 
  Per riassumere, questo esempio dimostra quanto segue.
 
--   Come è possibile configurare un client con un provider personalizzato.
+- Come è possibile configurare un client con un provider personalizzato.
 
--   Come è possibile passare un token SAML alle credenziali client personalizzate.
+- Come è possibile passare un token SAML alle credenziali client personalizzate.
 
--   Modo in cui il token SAML viene fornito per il framework del client WCF.
+- Modo in cui il token SAML viene fornito per il framework del client WCF.
 
--   Come viene autenticato il servizio dal client mediante il certificato X.509 del server.
+- Come viene autenticato il servizio dal client mediante il certificato X.509 del server.
 
  Il servizio espone due endpoint per comunicare con il servizio definito mediante il file di configurazione App.config. Ciascun endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe `wsFederationHttpBinding` standard che usa la sicurezza del messaggio. Un endpoint attende che il client si autentichi con un token SAML che usa una chiave di prova simmetrica mentre l'altro attende che il client si autentichi con un token SAML che usa una chiave di prova asimmetrica. Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`. Il comportamento `serviceCredentials` consente di configurare un certificato del servizio. Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio. La configurazione seguente fa riferimento al certificato "localhost" installato durante l'installazione dell'esempio come descritto nelle istruzioni fornite alla fine di questo argomento. Il comportamento `serviceCredentials` consente anche di configurare certificati che sono attendibili per la firma di token SAML. La configurazione seguente fa riferimento al certificato 'Alice' installato durante l'esempio.
 
@@ -303,7 +303,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
 
  Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
 
--   Creazione del certificato server:
+- Creazione del certificato server:
 
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile `%SERVER_NAME%` specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito in questo file batch è localhost.
 
@@ -319,7 +319,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato server nell'archivio certificati attendibile del client:
+- Installazione del certificato server nell'archivio certificati attendibile del client:
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.
 
@@ -327,7 +327,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Creazione del certificato emittente:
+- Creazione del certificato emittente:
 
      Le righe seguenti del file batch Setup.bat creano il certificato emittente da usare. La variabile `%USER_NAME%` specifica il nome dell'emittente. Modificare questa variabile per specificare nome dell'emittente. Il valore predefinito in questo file batch è Alice.
 
@@ -343,7 +343,7 @@ Questo esempio dimostra come implementare un provider di token SAML client perso
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato emittente nell'archivio certificati attendibile del server:
+- Installazione del certificato emittente nell'archivio certificati attendibile del server:
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato che impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati server con il certificato emittente  non è necessario.
 

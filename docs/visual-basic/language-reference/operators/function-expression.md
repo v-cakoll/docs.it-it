@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778534"
 ---
 # <a name="function-expression-visual-basic"></a>Espressione di funzione (Visual Basic)
 Dichiara i parametri e il codice che definiscono un'espressione lambda function.  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda  
  La sintassi di un'espressione lambda è simile a quello di una funzione standard. Le differenze sono i seguenti:  
   
--   Un'espressione lambda non ha un nome.  
+- Un'espressione lambda non ha un nome.  
   
--   Le espressioni lambda non possono avere modificatori, ad esempio `Overloads` o `Overrides`.  
+- Le espressioni lambda non possono avere modificatori, ad esempio `Overloads` o `Overrides`.  
   
--   Le espressioni lambda non utilizzano un `As` clausola per designare il tipo restituito della funzione. Al contrario, il tipo viene dedotto dal valore che restituisce il corpo di un'espressione lambda a riga singola, o il valore restituito di un'espressione lambda su più righe. Ad esempio, se il corpo di un'espressione lambda a riga singola `Where cust.City = "London"`, il tipo restituito è `Boolean`.  
+- Le espressioni lambda non utilizzano un `As` clausola per designare il tipo restituito della funzione. Al contrario, il tipo viene dedotto dal valore che restituisce il corpo di un'espressione lambda a riga singola, o il valore restituito di un'espressione lambda su più righe. Ad esempio, se il corpo di un'espressione lambda a riga singola `Where cust.City = "London"`, il tipo restituito è `Boolean`.  
   
--   Il corpo di un'espressione lambda a riga singola deve essere un'espressione, non un'istruzione. Il corpo può essere costituito da una chiamata a una routine di funzione, ma non una chiamata a una routine sub.  
+- Il corpo di un'espressione lambda a riga singola deve essere un'espressione, non un'istruzione. Il corpo può essere costituito da una chiamata a una routine di funzione, ma non una chiamata a una routine sub.  
   
--   Tutti i parametri devono avere specificati tipi di dati o tutti devono essere dedotti.  
+- Tutti i parametri devono avere specificati tipi di dati o tutti devono essere dedotti.  
   
--   I parametri Paramarray e Optional non sono consentiti.  
+- I parametri Paramarray e Optional non sono consentiti.  
   
--   I parametri generici non sono consentiti.  
+- I parametri generici non sono consentiti.  
   
 ## <a name="example"></a>Esempio  
  Gli esempi seguenti illustrano due modi per creare le espressioni lambda semplice. Il primo Usa un `Dim` per fornire un nome per la funzione. Per chiamare la funzione, si invia un valore per il parametro.  

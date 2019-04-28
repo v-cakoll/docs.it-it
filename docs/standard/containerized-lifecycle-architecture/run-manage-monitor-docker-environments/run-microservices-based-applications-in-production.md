@@ -1,17 +1,17 @@
 ---
-title: Eseguire applicazioni basate su microservizi e composte negli ambienti di produzione
+title: Eseguire applicazioni composte e basate su microservizi in ambienti di produzione
 description: Scopri i componenti chiave per eseguire applicazioni basate su contenitori nell'ambiente di produzione
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921589"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Eseguire applicazioni basate su microservizi e composte negli ambienti di produzione
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Eseguire applicazioni composte e basate su microservizi in ambienti di produzione
 
 Le applicazioni composte da più microservizi devono essere distribuite in cluster dell'agente di orchestrazione per semplificare la complessità della distribuzione e renderlo utilizzabile dal punto di vista dell'IT. Senza un cluster dell'agente di orchestrazione, sarebbe difficile da distribuire e scalare orizzontalmente un'applicazione di microservizi complessi.
 

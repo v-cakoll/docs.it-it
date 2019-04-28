@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748252"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Procedura dettagliata: Disposizione del contenuto WPF in Windows Form in fase di progettazione
 Questa procedura dettagliata illustra come usare le funzionalità di layout di Windows Form, ad esempio l'ancoraggio e le guide di allineamento, per disporre i controlli di Windows Presentation Foundation (WPF).
 
  Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:
 
--   Creare il progetto.
+- Creare il progetto.
 
--   Creare il controllo WPF.
+- Creare il controllo WPF.
 
--   Ospitare i controlli WPF in un pannello di layout.
+- Ospitare i controlli WPF in un pannello di layout.
 
--   Allineare i controlli WPF mediante le guide di allineamento.
+- Allineare i controlli WPF mediante le guide di allineamento.
 
--   Ancorare e agganciare i controlli WPF.
+- Ancorare e agganciare i controlli WPF.
 
 > [!NOTE]
 >  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzare l'IDE di Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -37,7 +37,7 @@ Questa procedura dettagliata illustra come usare le funzionalità di layout di W
 ## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Creazione del progetto  
  Il primo passaggio consiste nella creazione del progetto Windows Form.  
@@ -47,7 +47,7 @@ Questa procedura dettagliata illustra come usare le funzionalità di layout di W
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
--   Creare un nuovo progetto Windows Forms Application in Visual Basic o Visual c# denominato `ArrangeElementHost`.  
+- Creare un nuovo progetto Windows Forms Application in Visual Basic o Visual c# denominato `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Creazione del controllo WPF  
  Dopo avere aggiunto un controllo WPF al progetto, è possibile disporlo sul form.  

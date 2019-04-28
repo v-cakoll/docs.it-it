@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765505"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Procedura: Associare dati utilizzando un'origine dati di progetto (WCF Data Services)
 
@@ -31,19 +31,19 @@ ms.locfileid: "59517070"
 
      Nel file XAML per la finestra verranno creati gli elementi oggetto seguenti:
 
-    -   Un elemento <xref:System.Windows.Data.CollectionViewSource> denominato `customersViewSource`. La proprietà <xref:System.Windows.FrameworkElement.DataContext%2A> dell'elemento oggetto <xref:System.Windows.Controls.Grid> di primo livello viene impostata sul nuovo oggetto <xref:System.Windows.Data.CollectionViewSource>.
+    - Un elemento <xref:System.Windows.Data.CollectionViewSource> denominato `customersViewSource`. La proprietà <xref:System.Windows.FrameworkElement.DataContext%2A> dell'elemento oggetto <xref:System.Windows.Controls.Grid> di primo livello viene impostata sul nuovo oggetto <xref:System.Windows.Data.CollectionViewSource>.
 
-    -   Un oggetto <xref:System.Windows.Controls.ComboBox> con associazione a dati denominato `CustomerID`.
+    - Un oggetto <xref:System.Windows.Controls.ComboBox> con associazione a dati denominato `CustomerID`.
 
-    -   Oggetto <xref:System.Windows.Controls.Label>.
+    - Oggetto <xref:System.Windows.Controls.Label>.
 
 4. Trascinare il **ordini** proprietà di navigazione nella finestra di progettazione.
 
      Nel file XAML per la finestra verranno creati gli elementi oggetto aggiuntivi seguenti:
 
-    -   Un secondo elemento <xref:System.Windows.Data.CollectionViewSource> denominato `customersOrdersViewSource`, la cui origine è `customerViewSource`.
+    - Un secondo elemento <xref:System.Windows.Data.CollectionViewSource> denominato `customersOrdersViewSource`, la cui origine è `customerViewSource`.
 
-    -   Un controllo <xref:System.Windows.Controls.DataGrid> con associazione a dati denominato `ordersDataGrid`.
+    - Un controllo <xref:System.Windows.Controls.DataGrid> con associazione a dati denominato `ordersDataGrid`.
 
 5. (Facoltativo) Trascinare gli elementi aggiuntivi dal **clienti** nodo nella finestra di progettazione.
 
@@ -82,13 +82,13 @@ ms.locfileid: "59517070"
 
      Nel form verranno creati i controlli seguenti:
 
-    -   Un'istanza di <xref:System.Windows.Forms.BindingSource> denominata `customersBindingSource`.
+    - Un'istanza di <xref:System.Windows.Forms.BindingSource> denominata `customersBindingSource`.
 
-    -   Un'istanza di <xref:System.Windows.Forms.BindingNavigator> denominata `customersBindingNavigator`. È possibile eliminare questo controllo in quanto non necessario.
+    - Un'istanza di <xref:System.Windows.Forms.BindingNavigator> denominata `customersBindingNavigator`. È possibile eliminare questo controllo in quanto non necessario.
 
-    -   Un oggetto <xref:System.Windows.Forms.ComboBox> con associazione a dati denominato `CustomerID`.
+    - Un oggetto <xref:System.Windows.Forms.ComboBox> con associazione a dati denominato `CustomerID`.
 
-    -   Oggetto <xref:System.Windows.Forms.Label>.
+    - Oggetto <xref:System.Windows.Forms.Label>.
 
 3. Trascinare il **ordini** proprietà di navigazione al form.
 

@@ -3,22 +3,22 @@ title: molteplicità di entità finale dell'associazione
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769667"
 ---
 # <a name="association-end-multiplicity"></a>molteplicità di entità finale dell'associazione
 *Molteplicità di estremità dell'associazione* definisce il numero di [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) istanze che possono essere a un estremo di una [associazione](../../../../docs/framework/data/adonet/association-type.md).  
   
  Una molteplicità di entità finale dell'associazione può disporre di uno dei valori seguenti:  
   
--   uno (1): Indica a che tale istanza del tipo esattamente un'entità è presente l'estremità dell'associazione.  
+- uno (1): Indica a che tale istanza del tipo esattamente un'entità è presente l'estremità dell'associazione.  
   
--   zero o uno (0..1): Indica che presenti zero o più istanze del tipo di entità finale dell'associazione.  
+- zero o uno (0..1): Indica che presenti zero o più istanze del tipo di entità finale dell'associazione.  
   
--   molte (\*): indica che da zero, uno o più istanze del tipo di entità sono presenti entità finale dell'associazione.  
+- molte (\*): indica che da zero, uno o più istanze del tipo di entità sono presenti entità finale dell'associazione.  
   
  Un'associazione è spesso caratterizzata dalle molteplicità di entità finale dell'associazione. Ad esempio, se le entità finali di un'associazione dispongono di molteplicità uno (1) e molti (\*), l'associazione viene definita un'associazione uno-a-molti. Nell'esempio seguente, l'associazione `PublishedBy` è un'associazione uno-a-molti (un editore pubblica molti libri e un libro viene pubblicato da un solo editore). L'associazione `WrittenBy` è un'associazione molti-a-molti (un libro può avere più autori e un autore può scrivere più libri).  
   

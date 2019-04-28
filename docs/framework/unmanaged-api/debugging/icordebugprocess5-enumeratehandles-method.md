@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61930273"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>Metodo ICorDebugProcess5::EnumerateHandles
 Ottiene un enumeratore per gli handle di oggetto in un processo.  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  Il `types` parametro specifica i tipi di handle da includere nella raccolta. `types` può essere uno dei seguenti tre membri della [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) enumerazione:  
   
--   `CorHandleStrongOnly` (handle per solo i riferimenti sicuri).  
+- `CorHandleStrongOnly` (handle per solo i riferimenti sicuri).  
   
--   `CorHandleWeakOnly` (handle per solo i riferimenti deboli).  
+- `CorHandleWeakOnly` (handle per solo i riferimenti deboli).  
   
--   `CorHandleAll` (tutti gli handle).  
+- `CorHandleAll` (tutti gli handle).  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

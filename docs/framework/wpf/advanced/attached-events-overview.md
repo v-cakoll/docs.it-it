@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777143"
 ---
 # <a name="attached-events-overview"></a>Cenni preliminari sugli eventi associati
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definisce un componente del linguaggio e un tipo di evento noto come *evento associato*. Il concetto di evento associato consente di aggiungere un gestore per un determinato evento a un elemento arbitrario, anziché a un elemento che definisce o eredita effettivamente l'evento. In questo caso, né l'oggetto che genera potenzialmente l'evento, né l'istanza di gestione di destinazione definisce o possiede in altro modo l'evento.  
@@ -64,9 +64,9 @@ ms.locfileid: "59613590"
   
  Il modello è il seguente:  
   
--   Un metodo **Add*EventName*gestore** con due parametri. Il primo parametro è l'istanza a cui viene aggiunto il gestore dell'evento. Il secondo parametro è il gestore di evento da aggiungere. Il metodo deve essere `public` e `static`, non prevede alcun valore restituito.  
+- Un metodo **Add*EventName*gestore** con due parametri. Il primo parametro è l'istanza a cui viene aggiunto il gestore dell'evento. Il secondo parametro è il gestore di evento da aggiungere. Il metodo deve essere `public` e `static`, non prevede alcun valore restituito.  
   
--   Un metodo **rimuovere*EventName*gestore** con due parametri. Il primo parametro è l'istanza da cui viene rimosso il gestore dell'evento. Il secondo parametro è il gestore eventi da rimuovere. Il metodo deve essere `public` e `static`, non prevede alcun valore restituito.  
+- Un metodo **rimuovere*EventName*gestore** con due parametri. Il primo parametro è l'istanza da cui viene rimosso il gestore dell'evento. Il secondo parametro è il gestore eventi da rimuovere. Il metodo deve essere `public` e `static`, non prevede alcun valore restituito.  
   
  Il **Add*EventName*gestore** metodo della funzione facilita la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elaborazione quando gestore dell'evento attributi vengono dichiarati in un elemento associato. Il **Add*EventName*gestore** e **Rimuovi*EventName*gestore** metodi abilitano anche l'accesso di codice nell'archivio del gestore eventi per il l'evento associato.  
   

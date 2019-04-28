@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791859"
 ---
 # <a name="property-procedures-visual-basic"></a>Routine Property (Visual Basic)
 Una routine di proprietà è una serie di istruzioni di Visual Basic che consentono di modificare una proprietà personalizzata in un modulo, classe o struttura. Le routine della proprietà sono dette anche *funzioni di accesso proprietà*.  
   
  Visual Basic fornisce le routine della proprietà seguente:  
   
--   Oggetto `Get` procedure restituisce il valore di una proprietà. Viene chiamato quando si accede alla proprietà in un'espressione.  
+- Oggetto `Get` procedure restituisce il valore di una proprietà. Viene chiamato quando si accede alla proprietà in un'espressione.  
   
--   Oggetto `Set` routine imposta una proprietà su un valore, incluso un riferimento all'oggetto. Viene chiamato quando si assegna un valore alla proprietà.  
+- Oggetto `Set` routine imposta una proprietà su un valore, incluso un riferimento all'oggetto. Viene chiamato quando si assegna un valore alla proprietà.  
   
  Le routine della proprietà in genere definite in coppie, mediante il `Get` e `Set` istruzioni, ma è possibile definire entrambe le procedure da solo se la proprietà è di sola lettura ([l'istruzione Get](../../../../visual-basic/language-reference/statements/get-statement.md)) o in sola lettura ([impostata Istruzione](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   

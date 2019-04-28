@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791794"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Risoluzione dei problemi relativi alle routine (Visual Basic)
 Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si lavora con le procedure.  
@@ -46,9 +46,9 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argomento non viene modificato dalla chiamata di routine  
  Se si prevede di consentire una procedura per modificare un elemento di programmazione sottostante a un argomento nel codice chiamante, è necessario passarlo per riferimento. Ma una procedura può accedere agli elementi di un argomento di tipo riferimento anche se viene passato per valore.  
   
--   **Variabile sottostante**. Per consentire la procedura sostituire il valore dell'elemento variabile sottostante stesso, la procedura è necessario dichiarare il parametro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Inoltre, il codice chiamante non deve racchiudere l'argomento racchiuso tra parentesi, perché che sostituirebbe il `ByRef` meccanismo di trasferimento.  
+- **Variabile sottostante**. Per consentire la procedura sostituire il valore dell'elemento variabile sottostante stesso, la procedura è necessario dichiarare il parametro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Inoltre, il codice chiamante non deve racchiudere l'argomento racchiuso tra parentesi, perché che sostituirebbe il `ByRef` meccanismo di trasferimento.  
   
--   **Fare riferimento agli elementi di tipo**. Se si dichiara un parametro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), la procedura non è possibile modificare l'elemento variabile sottostante. Tuttavia, se l'argomento è un tipo riferimento, la procedura può modificare i membri dell'oggetto a cui fa riferimento, anche se Impossibile sostituire il valore della variabile. Ad esempio, se l'argomento è una variabile di matrice, la procedura non è possibile assegnare una nuova matrice a esso, ma è possibile modificare uno o più dei relativi elementi. Gli elementi modificati vengono riflesse nella variabile di matrice sottostante nel codice chiamante.  
+- **Fare riferimento agli elementi di tipo**. Se si dichiara un parametro [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), la procedura non è possibile modificare l'elemento variabile sottostante. Tuttavia, se l'argomento è un tipo riferimento, la procedura può modificare i membri dell'oggetto a cui fa riferimento, anche se Impossibile sostituire il valore della variabile. Ad esempio, se l'argomento è una variabile di matrice, la procedura non è possibile assegnare una nuova matrice a esso, ma è possibile modificare uno o più dei relativi elementi. Gli elementi modificati vengono riflesse nella variabile di matrice sottostante nel codice chiamante.  
   
  L'esempio seguente definisce due procedure che accettano una variabile di matrice per valore e operano sui relativi elementi. Procedure `increase` aggiunge semplicemente uno per ogni elemento. Routine `replace` assegna una nuova matrice al parametro `a()` , quindi aggiunge uno per ogni elemento. Tuttavia, la riassegnazione non influiscono sulla variabile di matrice sottostante nel codice chiamante perché `a()` viene dichiarato `ByVal`.  
   
@@ -75,13 +75,13 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
  Gli elementi seguenti, anche se si riferiscono all'elenco di parametri, non sono componenti della firma di una routine:  
   
--   Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e `Static`  
+- Parole chiave di modificatore di routine, ad esempio `Public`, `Shared`, e `Static`  
   
--   Nomi dei parametri  
+- Nomi dei parametri  
   
--   Parole chiave di modificatori di parametro, ad esempio `ByRef` e `Optional`  
+- Parole chiave di modificatori di parametro, ad esempio `ByRef` e `Optional`  
   
--   il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)  
+- il tipo di dati del valore restituito (ad eccezione di un operatore di conversione)  
   
  È possibile eseguire l'overload di una procedura variando solo uno o più degli elementi precedenti.  
   
@@ -95,11 +95,11 @@ Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si la
   
  Dopo aver stabilito quale eseguire l'overload che si desidera chiamare, prestare attenzione a osservare le regole seguenti:  
   
--   Specificare il numero corretto di argomenti e nell'ordine corretto.  
+- Specificare il numero corretto di argomenti e nell'ordine corretto.  
   
--   In teoria, gli argomenti devono avere esattamente gli stessi tipi di dati dei parametri corrispondenti. In ogni caso, il tipo di dati di ogni argomento deve ampliarsi a quello del parametro corrispondente. Questo vale anche con il [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) impostato su `Off`. Se un overload richiede qualsiasi conversione di narrowing dall'elenco di argomenti, che eseguono l'overload non è idoneo a essere chiamato.  
+- In teoria, gli argomenti devono avere esattamente gli stessi tipi di dati dei parametri corrispondenti. In ogni caso, il tipo di dati di ogni argomento deve ampliarsi a quello del parametro corrispondente. Questo vale anche con il [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) impostato su `Off`. Se un overload richiede qualsiasi conversione di narrowing dall'elenco di argomenti, che eseguono l'overload non è idoneo a essere chiamato.  
   
--   Se si forniscono argomenti che richiedono un ampliamento, rendere i relativi tipi di dati più vicino possibile ai tipi di dati di parametro corrispondente. Se due o più overload accettano i tipi di dati di argomento, il compilatore risolve la chiamata all'overload che richiede la quantità minima di ampliamento.  
+- Se si forniscono argomenti che richiedono un ampliamento, rendere i relativi tipi di dati più vicino possibile ai tipi di dati di parametro corrispondente. Se due o più overload accettano i tipi di dati di argomento, il compilatore risolve la chiamata all'overload che richiede la quantità minima di ampliamento.  
   
  È possibile ridurre il rischio di mancate corrispondenze tra tipi di dati usando il [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) parola chiave di conversione durante la preparazione degli argomenti.  
   

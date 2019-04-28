@@ -2,14 +2,8 @@
 title: Contatori delle prestazioni di WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance counters [WCF]
+  - 'performance counters [WCF]'
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
-ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087859"
 ---
 # <a name="wcf-performance-counters"></a>Contatori delle prestazioni di WCF
 Windows Communication Foundation (WCF) include un vasto set di contatori delle prestazioni che consentono di misurare le prestazioni dell'applicazione.  
@@ -27,11 +21,11 @@ Windows Communication Foundation (WCF) include un vasto set di contatori delle p
   
  L'attributo `performanceCounters` può essere impostato per attivare un tipo specifico di contatori delle prestazioni. I valori validi sono:  
   
--   Tutte: Tutti i contatori di categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) sono abilitati.  
+- Tutte: Tutti i contatori di categoria (ServiceModelService, ServiceModelEndpoint e ServiceModelOperation) sono abilitati.  
   
--   ServiceOnly: Sono abilitati solo i contatori della categoria ServiceModelService. Rappresenta il valore predefinito.  
+- ServiceOnly: Sono abilitati solo i contatori della categoria ServiceModelService. Rappresenta il valore predefinito.  
   
--   OFF: I contatori delle prestazioni ServiceModel * sono disabilitati.  
+- OFF: I contatori delle prestazioni ServiceModel * sono disabilitati.  
   
  Se si desidera abilitare contatori delle prestazioni per tutte le applicazioni WCF, è possibile inserire le impostazioni di configurazione nel file Machine. config.  Vedere le **aumento della dimensione della memoria per i contatori delle prestazioni** sezione di seguito per altre informazioni sulla configurazione di memoria sufficiente per i contatori delle prestazioni nel computer.  
   
@@ -63,11 +57,11 @@ config.Save();
   
  È possibile modificare la quantità di memoria dei contatori delle prestazioni per le categorie WCF nel Registro di sistema. A tale scopo, è necessario aggiungere un nuovo valore DWORD denominato `FileMappingSize` ai tre percorsi specificati di seguito e impostarlo sul valore desiderato espresso in byte. Riavviare il computer per rendere effettive le modifiche.  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  Quando numerosi oggetti (ad esempio, ServiceHost) vengono eliminati ma rimangono in attesa di essere sottoposti all'operazione di Garbage Collection, il contatore delle prestazioni `PrivateBytes` registra un valore insolitamente elevato. Per risolvere questo problema è possibile aggiungere contatori specifici dell'applicazione o usare l'attributo `performanceCounters` per attivare soltanto i contatori a livello di servizio.  
   
@@ -76,11 +70,11 @@ config.Save();
   
  Per recuperare il nome di un'istanza di contatore delle prestazioni è possibile usare WMI. Ad esempio,  
   
--   Nome dell'istanza del contatore del servizio può essere ottenuto tramite WMI [servizio](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) proprietà "CounterInstanceName" dell'istanza.  
+- Nome dell'istanza del contatore del servizio può essere ottenuto tramite WMI [servizio](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) proprietà "CounterInstanceName" dell'istanza.  
   
--   Nome dell'istanza del contatore dell'endpoint può essere ottenuto tramite WMI [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) proprietà "CounterInstanceName" dell'istanza.  
+- Nome dell'istanza del contatore dell'endpoint può essere ottenuto tramite WMI [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) proprietà "CounterInstanceName" dell'istanza.  
   
--   Nome dell'istanza del contatore operazione può essere ottenuto tramite WMI [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) metodo "GetOperationCounterInstanceName" dell'istanza.  
+- Nome dell'istanza del contatore operazione può essere ottenuto tramite WMI [Endpoint](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) metodo "GetOperationCounterInstanceName" dell'istanza.  
   
  Per altre informazioni su WMI, vedere [uso di Strumentazione gestione Windows per la diagnostica](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
@@ -126,15 +120,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>Programmazione dei contatori delle prestazioni di WCF  
  Diversi file vengono installati nella cartella di installazione del SDK in modo da poter accedere a livello di programmazione i contatori delle prestazioni di WCF. Di seguito è riportato l'elenco di questi file.  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  Per altre informazioni sull'accesso ai contatori a livello di codice, vedere [architettura di programmazione dei contatori delle prestazioni](https://go.microsoft.com/fwlink/?LinkId=95179).  
   

@@ -3,11 +3,11 @@ title: Modifica dei livelli di condivisione della cache per le attività Send
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
 ms.openlocfilehash: e439edc14183c2ba2bf9af67e177dddb52c43708
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784293"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Modifica dei livelli di condivisione della cache per le attività Send
 L'estensione <xref:System.ServiceModel.Activities.SendMessageChannelCache> consente di personalizzare i livelli di condivisione della cache, le impostazioni della cache della channel factory e della cache del canale per i flussi di lavoro che inviano messaggi agli endpoint del servizio tramite le attività di messaggistica <xref:System.ServiceModel.Activities.Send>. Questi sono in genere flussi di lavoro del client ma potrebbero essere anche servizi del flusso di lavoro ospitati in un oggetto <xref:System.ServiceModel.WorkflowServiceHost>. La cache della channel factory contiene gli oggetti <xref:System.ServiceModel.ChannelFactory%601> memorizzati nella cache. La cache del canale contiene i canali memorizzati nella cache.  
@@ -20,11 +20,11 @@ L'estensione <xref:System.ServiceModel.Activities.SendMessageChannelCache> conse
   
  Di seguito sono riportati i diversi livelli di condivisione della cache disponibili per le attività <xref:System.ServiceModel.Activities.Send> in un flusso di lavoro e il relativo utilizzo consigliato:  
   
--   **Livello host**: Nel livello di condivisione host, la cache è disponibile solo per le istanze del flusso di lavoro ospitate nell'host del servizio del flusso di lavoro. Una cache può essere condivisa anche tra host del servizio flusso di lavoro di una cache a livello di processo.  
+- **Livello host**: Nel livello di condivisione host, la cache è disponibile solo per le istanze del flusso di lavoro ospitate nell'host del servizio del flusso di lavoro. Una cache può essere condivisa anche tra host del servizio flusso di lavoro di una cache a livello di processo.  
   
--   **Livello di istanza**: Nell'istanza del livello di condivisione, la cache è disponibile per una particolare istanza tutta la sua durata ma la cache non è disponibile ad altre istanze del flusso di lavoro.  
+- **Livello di istanza**: Nell'istanza del livello di condivisione, la cache è disponibile per una particolare istanza tutta la sua durata ma la cache non è disponibile ad altre istanze del flusso di lavoro.  
   
--   **Nessuna Cache**: La cache è disattivata per impostazione predefinita se si dispone di un flusso di lavoro che utilizza gli endpoint definiti nella configurazione. In questo caso, è consigliabile mantenere disattivata la cache anche perché l'attivazione potrebbe risultare non sicura, ad esempio, se per ogni invio è necessaria un'identità diversa (credenziali diverse o utilizzo della rappresentazione).  
+- **Nessuna Cache**: La cache è disattivata per impostazione predefinita se si dispone di un flusso di lavoro che utilizza gli endpoint definiti nella configurazione. In questo caso, è consigliabile mantenere disattivata la cache anche perché l'attivazione potrebbe risultare non sicura, ad esempio, se per ogni invio è necessaria un'identità diversa (credenziali diverse o utilizzo della rappresentazione).  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Modifica del livello di condivisione della cache per un flusso di lavoro client  
  Per impostare la condivisione della cache in un flusso di lavoro client, aggiungere un'istanza della classe <xref:System.ServiceModel.Activities.SendMessageChannelCache> come estensione al set desiderato di istanze del flusso di lavoro. In questo modo la cache viene condivisa in tutte le istanze del flusso di lavoro. Negli esempi di codice seguenti viene mostrato come eseguire questi passaggi.  

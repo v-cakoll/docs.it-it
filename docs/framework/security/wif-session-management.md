@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780081"
 ---
 # <a name="wif-session-management"></a>Gestione delle sessioni WIF
 Quando un client tenta di accedere per la prima volta a una risorsa protetta ospitata da una relying party, deve prima di tutto autenticarsi in un servizio token di sicurezza considerato attendibile dalla relying party. Il servizio token di sicurezza rilascia quindi un token di sicurezza al client. Il client presenta questo token alla relying party, che quindi concede al client l'accesso alla risorsa protetta. Non si vuole, tuttavia, che il client debba eseguire una nuova autenticazione nel servizio token di sicurezza per ogni richiesta, in particolare perché potrebbe anche non trovarsi nello stesso computer o nello stesso dominio della relying party. Windows Identity Foundation (WIF) fa invece in modo che il client e la relying party stabiliscano una sessione nella quale il client usa un token di sicurezza della sessione per autenticarsi nella relying party per tutte le richieste successive alla prima. La relying party può usare questo token di sicurezza della sessione, archiviato all'interno di un cookie, per ricostruire l'oggetto <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> del client.  
@@ -26,7 +26,7 @@ Quando un client tenta di accedere per la prima volta a una risorsa protetta osp
   
  Per usare la modalità di riferimento, Microsoft consiglia di fornire un gestore per l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SessionSecurityTokenCreated> nel file **global.asax.cs** e di impostare la proprietà **IsReferenceMode** nel token passato nella proprietà <xref:System.IdentityModel.Services.SessionSecurityTokenCreatedEventArgs.SessionToken%2A>. Questi aggiornamenti garantiscono che il token di sessione funzioni in modalità di riferimento per ogni richiesta è ciò è preferibile rispetto a impostare semplicemente la proprietà <xref:System.IdentityModel.Services.SessionAuthenticationModule.IsReferenceMode%2A> nel modulo di autenticazione della sessione.  
   
-## <a name="extensibility"></a>Extensibility  
+## <a name="extensibility"></a>Estendibilità  
  È possibile estendere il meccanismo di gestione della sessione. In tal modo è possibile migliorare le prestazioni. È possibile, ad esempio, creare un gestore di cookie personalizzato che trasforma o ottimizza il token di sicurezza della sessione tra lo stato in memoria e ciò che viene inserito nel cookie. A tale scopo, è possibile configurare la proprietà <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> di <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> per usare un gestore di cookie personalizzato che deriva da <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> è il gestore di cookie predefinito, perché i cookie superano la dimensione consentita per HTTP (Hypertext Transfer Protocol). Se si usa invece un gestore di cookie personalizzato, è necessario implementare la suddivisione in blocchi.  
   
  Per altre informazioni, vedere [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) esempio. Questo esempio illustra un cache di sessione compatibile con la farm (in contrapposizione a tokenreplycache) grazie a cui è possibile usare le sessioni tramite riferimento invece di scambiare cookie di grandi dimensioni. L'esempio illustra anche un modo più semplice per proteggere i cookie in una farm. La cache di sessione è basata su WCF. Per quanto riguarda la protezione della sessione, l'esempio illustra una nuova funzionalità di WIF 4.5 relativa a una trasformazione di cookie basata su MachineKey, che è possibile attivare semplicemente incollando il frammento di codice appropriato in web.config. L'esempio non è inserito in un ambiente farm, ma illustra cosa occorre per rendere l'app compatibile con la farm.

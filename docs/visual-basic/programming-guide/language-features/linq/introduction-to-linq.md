@@ -13,11 +13,11 @@ helpviewer_keywords:
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781004"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introduzione a LINQ in Visual Basic
 Language-Integrated Query (LINQ) aggiunge funzionalità di query a Visual Basic e fornisce semplici e potenti funzionalità quando si lavora con tutti i tipi di dati. Anziché inviare una query a un database da elaborare, o utilizzare sintassi di query differenti per ogni tipo di dati che si stanno cercando, LINQ introduce le query come parte del linguaggio Visual Basic. Utilizza una sintassi unificata indipendentemente dal tipo di dati.  
@@ -182,11 +182,11 @@ Facoltativo. Oggetto [ `Take While` clausola](../../../../visual-basic/language-
 ## <a name="visual-basic-features-that-support-linq"></a>Funzionalità di Visual Basic che supportano LINQ  
  Visual Basic include altre importanti funzionalità che semplificano l'uso di LINQ e ridurre la quantità di codice da scrivere per eseguire query LINQ. tra cui:  
   
--   **I tipi anonimi**, che consentono di creare un nuovo tipo basato su un risultato della query.  
+- **I tipi anonimi**, che consentono di creare un nuovo tipo basato su un risultato della query.  
   
--   **Variabili tipizzate in modo implicito**, che consentono di rinviare la specifica di un tipo e permettere al compilatore di dedurre il tipo in base al risultato della query.  
+- **Variabili tipizzate in modo implicito**, che consentono di rinviare la specifica di un tipo e permettere al compilatore di dedurre il tipo in base al risultato della query.  
   
--   **I metodi di estensione**, che consentono di estendere un tipo esistente con i propri metodi senza modificare il tipo stesso.  
+- **I metodi di estensione**, che consentono di estendere un tipo esistente con i propri metodi senza modificare il tipo stesso.  
   
  Per informazioni dettagliate, vedere [le funzionalità che il supporto LINQ per Visual Basic](../../concepts/linq/features-that-support-linq.md).  
   

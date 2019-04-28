@@ -3,21 +3,21 @@ title: Gestione
 ms.date: 03/30/2017
 ms.assetid: 52f4825b-91a2-4f23-94f4-cfd76a7980cf
 ms.openlocfilehash: b5bb0b72f5290548bb844ac4f00b6fbbd9891cb7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787543"
 ---
 # <a name="management"></a>Gestione
-In questa sezione è contenuti esempi che illustrano management di Windows Communication Foundation (WCF).  
+In questa sezione è inclusi esempi che illustrano management di Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [WCF Services e Event Tracing for Windows](../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)  
- Di seguito viene illustrato come utilizzare la traccia analitica WCF per generare eventi in traccia eventi per Windows (ETW).  
+ Di seguito viene illustrato come utilizzare la traccia analitica WCF per generare eventi di Event Tracing for Windows (ETW).  
   
  [Traccia analitica WCF](../../../../docs/framework/wcf/samples/wcf-analytic-tracing.md)  
- Viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche che WCF scrive in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Viene illustrato come aggiungere eventi di traccia nel flusso di tracce analitiche che WCF consente di scrivere in ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
  [Analisi circolare](../../../../docs/framework/wcf/samples/circular-tracing.md)  
  Viene descritta l'implementazione di un listener di traccia circolare del buffer.  
@@ -29,7 +29,7 @@ In questa sezione è contenuti esempi che illustrano management di Windows Commu
  Viene illustrato come estendere la funzionalità di traccia WCF scrivendo le tracce di attività definite dall'utente nel codice client e del servizio.  
   
  [Blocco della sicurezza delle informazioni personali](../../../../docs/framework/wcf/samples/pii-security-lockdown.md)  
- Viene illustrato come controllare svariate funzionalità correlate alla sicurezza di un servizio WCF.  
+ Viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio WCF.  
   
  [Uso dei contatori delle prestazioni](../../../../docs/framework/wcf/samples/using-performance-counters.md)  
  Viene illustrato come accedere ai contatori delle prestazioni WCF e come creare contatori delle prestazioni definiti dall'utente.  

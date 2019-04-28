@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i servizi del flusso di lavoro'
+title: 'Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
 ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779210"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i servizi del flusso di lavoro
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procedura: Abilitare la persistenza SQL per i flussi di lavoro e i relativi servizi
 
 In questo argomento viene descritto come configurare la funzionalità di archivio di istanze del flusso di lavoro SQL per abilitare la persistenza per i flussi di lavoro e i relativi servizi sia a livello di codice sia tramite un file di configurazione.
 

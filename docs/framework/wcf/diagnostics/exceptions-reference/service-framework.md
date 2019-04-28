@@ -3,11 +3,11 @@ title: Framework dei servizi
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
 ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780757"
 ---
 # <a name="service-framework"></a>Framework dei servizi
 In questo argomento vengono elencate tutte le eccezioni generate dai dati del framework dei servizi.  
@@ -33,15 +33,15 @@ In questo argomento vengono elencate tutte le eccezioni generate dai dati del fr
 |BindingDoesnTSupportTwoWayButContractRequires1|Il contratto richiede la modalità bidirezionale (request/reply o duplex). L'associazione specificata non supporta tale modalità o non è configurata correttamente per supportarla.|  
 |BindingRequirementsAttributeDisallowsQueuedDelivery1|DeliveryRequirementsAttribute non consente QueuedDelivery, ma l'associazione per l'endpoint con il contratto specificato lo supporta.|  
 |BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute richiede QueuedDelivery, ma l'associazione per l'endpoint con il contratto specificato non lo supporta o non è configurato correttamente per supportarlo.|  
-|channelDoesNotHaveADuplexSession0|Il canale corrente non supporta la chiusura della sessione di output Il canale non implementa ISessionChannel\<IDuplexSession >.|  
+|channelDoesNotHaveADuplexSession0|Il canale corrente non supporta la chiusura della sessione di output Questo canale non implementa ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|L'elemento ClientOperation specificato richiede un formattatore, poiché SerializeRequest e DeserializeReply non sono entrambi False.|  
 |CommunicationObjectAborted1|Impossibile utilizzare l'oggetto di comunicazione specificato per la comunicazione perché è stato interrotto.|  
-|CommunicationObjectAbortedStack2|L'oggetto di comunicazione specificato non può essere utilizzato per la comunicazione perché è stato interrotto: {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|L'oggetto di comunicazione specificato ha sostituito la funzione virtuale {1} ma non effettua una chiamata alla versione definita nella classe base.|  
+|CommunicationObjectAbortedStack2|Oggetto di comunicazione specificato non può essere utilizzato per la comunicazione perché è stato interrotto: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|L'oggetto di comunicazione specificato ha sostituito la funzione virtuale {1} ma non effettua una chiamata alla versione definita nella classe di base.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Il contratto specificato dispone di una o più operazioni IsTerminating o diverse da IsInitiating, ma la proprietà SessionMode non è impostata su SessionMode.Required. Gli attributi IsInitiating e IsTerminating possono essere utilizzati solo nel contesto di una sessione.|  
 |CouldnTCreateChannelForChannelType2|È stato richiesto il tipo di canale specificato, ma l'associazione specificata non lo supporta o non è configurato correttamente per supportarlo.|  
 |DispatchRuntimeRequiresFormatter0|L'elemento DispatchOperation specificato richiede un formattatore, poiché DeserializeRequest e SerializeReply non sono entrambi False.|  
-|EndMethodsCannotBeDecoratedWithOperationContractAttribute|Quando si utilizza il modello di struttura IAsyncResult, il metodo End non può essere decorato con OperationContractAttribute. Solo il metodo Begin corrispondente può essere decorato con OperationContractAttribute. Tale attributo viene applicato alla coppia di metodi Begin-End.|  
+|EndMethodsCannotBeDecoratedWithOperationContractAttribute|Quando si usa il modello di struttura IAsyncResult, il metodo End non può essere decorato con OperationContractAttribute. Solo il metodo Begin corrispondente può essere decorato con OperationContractAttribute. Tale attributo viene applicato alla coppia di metodi Begin-End.|  
 |EndpointListenerRequirementsCannotBeMetBy3|I requisiti ChannelDispatcher non possono essere soddisfatti da IChannelListener per l'associazione specificata perché il contratto richiede il supporto per uno dei tipi di canale specificati. Tuttavia, l'associazione supporta solo altri tipi di canale specificati.|  
 |EndpointsMustHaveAValidBinding0|Gli endpoint devono presentare un'associazione valida.|  
 |InvalidOrUnrecognizedAction|Impossibile elaborare il messaggio perché l'azione specificata non è valida o non è stata riconosciuta.|  
@@ -122,7 +122,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dai dati del fr
 |SFxInvalidMessageContractSignature|L'operazione specificata ha un parametro o un tipo restituito con attributo MessageContractAttribute. Per rappresentare il messaggio di richiesta tramite un contratto messaggio, l'operazione deve avere un parametro singolo con attributo MessageContractAttribute. Per rappresentare il messaggio di risposta tramite un contratto messaggio, il valore restituito dall'operazione deve essere di un tipo con attributo MessageContractAttribute e l'operazione non deve avere nessun parametro "out" o "ref".|  
 |SFxInvalidReplyAction|Il messaggio di risposta in uscita per l'operazione contiene il valore di Action specificato, ma il contratto per tale operazione specifica un valore diverso di ReplyAction. Il valore di Action specificato nel messaggio deve corrispondere al valore di ReplyAction nel contratto, oppure il contratto dell'operazione deve specificare ReplyAction='*'.|  
 |SFxInvalidRequestAction|Il messaggio di richiesta in uscita per l'operazione contiene il valore di Action specificato, ma il contratto per tale operazione specifica un valore diverso di RequestAction. Il valore di Action specificato nel messaggio deve corrispondere al valore di RequestAction nel contratto, oppure il contratto dell'operazione deve specificare RequestAction='*'.|  
-|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|Impossibile utilizzare il metodo CreateChannel statico con il contratto specificato perché quest'ultimo definisce un contratto di callback. Utilizzare uno degli overload CreateChannel statici in DuplexChannelFactory\<TChannel >.|  
+|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|Impossibile utilizzare il metodo CreateChannel statico con il contratto specificato perché quest'ultimo definisce un contratto di callback. Usare uno degli overload statici di CreateChannel su DuplexChannelFactory\<TChannel >.|  
 |SFxInvalidStreamInRequest|Affinché la richiesta nell'operazione specificata possa essere un flusso, l'operazione deve avere un unico parametro di tipo Stream.|  
 |SFxInvalidStreamInResponse|Affinché la risposta nell'operazione specificata possa essere un flusso, l'operazione deve avere un unico parametro out o valore restituito di tipo Stream.|  
 |SFxInvalidStreamInTypedMessage|Per poter utilizzare i flussi con il modello di programmazione di contratto messaggio, il tipo specificato deve avere un unico membro MessageBody il cui tipo sia Stream.|  
@@ -145,7 +145,7 @@ In questo argomento vengono elencate tutte le eccezioni generate dai dati del fr
 |SFxSchemaDoesNotContainType|Lo schema avente lo spazio dei nomi di destinazione specificato non contiene un tipo avente il nome indicato.|  
 |SfxServiceContractAttributeNotFound|Al tipo di contratto specificato non è stato assegnato un attributo ServiceContractAttribute. Per definire un contratto valido, il tipo specificato deve avere l'attributo ServiceContractAttribute. Il tipo può essere un'interfaccia di contratto o una classe di servizio.|  
 |SFxServiceContractGeneratorConfigRequired|Per generare le informazioni di configurazione utilizzando il metodo GenerateServiceEndpoint, l'istanza ServiceContractGenerator deve essere stata inizializzata con un oggetto Configuration valido.|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|Gli endpoint non possono essere aggiunti quando ServiceHost si trova in uno degli stati seguenti:<br /><br /> -Aperto<br />-Errore<br />-Terminata<br />-Chiuso|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|Gli endpoint non possono essere aggiunti quando ServiceHost si trova in uno degli stati seguenti:<br /><br /> -Aperto<br />-Errore<br />-Terminato<br />-Chiuso|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Impossibile aggiungere gli endpoint prima dell'inizializzazione della proprietà Description.|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|La proprietà HttpGetEnabled di ServiceMetadataBehavior è impostata su True e la proprietà HttpGetUrl è un indirizzo relativo, ma non è disponibile alcun indirizzo HTTP di base. Specificare un indirizzo HTTP di base o impostare HttpGetUrl su un indirizzo assoluto.|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|La proprietà HttpsGetEnabled di ServiceMetadataBehavior è impostata su True e la proprietà HttpsGetUrl è un indirizzo relativo, ma non è disponibile alcun indirizzo HTTPS di base. Specificare un indirizzo HTTPS di base o impostare HttpsGetUrl su un indirizzo assoluto.|  

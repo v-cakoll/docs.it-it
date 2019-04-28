@@ -3,11 +3,11 @@ title: Oggetti BFILE Oracle
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771969"
 ---
 # <a name="oracle-bfiles"></a>Oggetti BFILE Oracle
 Il provider di dati .NET Framework per Oracle include la classe <xref:System.Data.OracleClient.OracleBFile>, usata per i tipi di dati <xref:System.Data.OracleClient.OracleType.BFile> Oracle.  
@@ -16,11 +16,11 @@ Il provider di dati .NET Framework per Oracle include la classe <xref:System.Dat
   
  Altre caratteristiche di un **BFILE** tipo di dati che distingue da un **LOB** tipo di dati di seguito sono:  
   
--   Contiene dati non strutturati.  
+- Contiene dati non strutturati.  
   
--   Supporta il chunking sul lato server.  
+- Supporta il chunking sul lato server.  
   
--   Usa la semantica di copia di riferimenti. Ad esempio, se si esegue un'operazione di copia in una **BFILE**, solo le **BFILE** localizzatore, ovvero un riferimento al file, viene copiato. I dati nel file non vengono copiati.  
+- Usa la semantica di copia di riferimenti. Ad esempio, se si esegue un'operazione di copia in una **BFILE**, solo le **BFILE** localizzatore, ovvero un riferimento al file, viene copiato. I dati nel file non vengono copiati.  
   
  Il **BFILE** tipo di dati deve essere utilizzato per fare riferimento a LOB di grandi dimensioni e di conseguenza, non è pratico archiviare nel database. Più client, server e comunicazioni sovraccarico quando si usa una **BFILE** confrontato con tipo di dati di **LOB** tipo di dati. È più efficiente per accedere a un **BFILE** se è necessario solo ottenere una piccola quantità di dati. Se è necessario ottenere l'intero oggetto, è opportuno accedere a LOB residenti nel database.  
   
