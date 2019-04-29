@@ -2,12 +2,12 @@
 title: Esercitazioni su C#
 description: Esplorare queste esercitazioni di C# per apprendere come si compilano i programmi in C# e conoscere le funzionalità del linguaggio C#.
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706312"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773907"
 ---
 # <a name="c-tutorials"></a>Esercitazioni su C#
 
@@ -50,6 +50,7 @@ Tutte le esercitazioni introduttive successive alla lezione relativa a Hello Wor
 * [Tipi riferimento nullable](nullable-reference-types.md): viene illustrato come usare i tipi riferimento nullable per esprimere le proprie intenzioni per i riferimenti Null.
 * [Aggiornare un progetto per usare i tipi riferimento nullable](upgrade-to-nullable-references.md): illustra le tecniche per aggiornare un progetto esistente per poter usare i tipi riferimento nullable.
 * [Estendere le funzionalità per i dati usando i criteri di ricerca](pattern-matching.md): illustra come usare i criteri di ricerca per estendere i tipi oltre le funzionalità di base.
+* [Lavorare con sequenze di dati usando indici e intervalli](ranges-indexes.md): illustra la nuova sintassi efficiente per l'accesso ai singoli elementi o intervalli di un contenitore di dati sequenziali.
 
 ## <a name="general-tutorials"></a>Esercitazioni generali
 
