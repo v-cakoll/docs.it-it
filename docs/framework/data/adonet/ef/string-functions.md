@@ -3,11 +3,11 @@ title: Funzioni stringa
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879119"
 ---
 # <a name="string-functions"></a>Funzioni stringa
 Il provider di dati .NET Framework per SQL Server (SqlClient) fornisce funzioni `String` che eseguono operazioni in un input `String` e restituiscono un risultato di tipo `String` o un valore numerico. Tali funzioni si trovano nello spazio dei nomi SqlServer, disponibile quando si usa SqlClient. Una proprietà dello spazio dei nomi del provider consente a Entity Framework di individuare il prefisso usato dal provider per costrutti specifici, ad esempio tipi e funzioni.  
