@@ -9,11 +9,11 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674753"
 ---
 # <a name="oidentry-element"></a>\<oidEntry > elemento
 Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descrittivo.  
@@ -56,7 +56,7 @@ Esegue il mapping di un identificatore di oggetto (OID) ASN.1 a un nome descritt
  Gli identificatori di oggetto ASN.1 identificano gli algoritmi in alcuni formati di crittografia. Eseguire il mapping ai nomi descrittivi per gli algoritmi che si desidera identificare gli identificatori di oggetto.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare il  **\<oidEntry >** elemento per eseguire il mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo di hash.  
+ Nell'esempio seguente viene illustrato come utilizzare il **\<oidEntry >** elemento per eseguire il mapping di un identificatore di oggetto per l'algoritmo hash RIPEMD-160 a un'implementazione dell'algoritmo di hash.  
   
 ```xml  
 <configuration>  
