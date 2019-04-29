@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
 ms.openlocfilehash: 0a4aa57ba709852c30223598b9d1af146eaf6013
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613586"
 ---
 # <a name="query-expression-syntax-examples-grouping"></a>Esempi di sintassi delle espressioni di query: Raggruppamento
 Gli esempi in questo argomento illustrano come usare il `GroupBy` metodo di query di [modello Sales di AdventureWorks](https://archive.codeplex.com/?p=msftdbprodsamples) usando la sintassi di espressione di query. Il modello Sales di AdventureWorks usato in questi esempi è compilato in base alle tabelle Contact, Address, Product, SalesOrderHeader e SalesOrderDetail del database di esempio AdventureWorks.  

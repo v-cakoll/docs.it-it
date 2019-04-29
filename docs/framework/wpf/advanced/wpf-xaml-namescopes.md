@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764647"
 ---
 # <a name="wpf-xaml-namescopes"></a>Ambiti dei nomi XAML WPF
 Un ambito dei nomi XAML è un concetto che identifica gli oggetti definiti in XAML. I nomi in un ambito dei nomi XAML possono essere usati per stabilire relazioni tra i nomi definiti da XAML degli oggetti e i rispettivi equivalenti di istanza in un albero di oggetti. In genere gli ambiti dei nomi nel codice gestito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vengono creati durante il caricamento degli elementi radice delle singole pagine XAML per un'applicazione XAML. Ambiti dei nomi XAML come oggetto di programmazione sono definiti dal <xref:System.Windows.Markup.INameScope> dell'interfaccia e vengono anche implementati dalla classe pratica <xref:System.Windows.NameScope>.  
@@ -76,13 +76,13 @@ Un ambito dei nomi XAML è un concetto che identifica gli oggetti definiti in XA
 ### <a name="xaml-namescope-implementations"></a>Implementazioni di ambiti dei nomi XAML  
  Le seguenti classi implementano <xref:System.Windows.Markup.INameScope> direttamente:  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> non usa XAML o ambiti dei nomi; ma Usa chiavi, perché è un'implementazione di dizionario. L'unico motivo per cui <xref:System.Windows.ResourceDictionary> implementa <xref:System.Windows.Markup.INameScope> è in modo che può generare eccezioni per il codice utente che consentono di chiarire la distinzione tra un namescope XAML true e la modalità un <xref:System.Windows.ResourceDictionary> gestisce le chiavi, oltre ad assicurare che gli ambiti dei nomi XAML non vengono applicati a un <xref:System.Windows.ResourceDictionary> dagli elementi padre.  
   
@@ -90,9 +90,9 @@ Un ambito dei nomi XAML è un concetto che identifica gli oggetti definiti in XA
   
  Le classi seguenti definiscono i propri namescope XAML, usando il <xref:System.Windows.NameScope?displayProperty=nameWithType> classe helper e ci si connette alla relativa implementazione namescope XAML tramite il <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> proprietà associata:  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Vedere anche
 
