@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0b9a1618bd37fa29e6db0ad09649ba2eba3a32d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994370"
 ---
-# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="8fb6d-102">Metodo ICorDebugProcess::ThreadForFiberCookie</span><span class="sxs-lookup"><span data-stu-id="8fb6d-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
-<span data-ttu-id="8fb6d-103">Questo metodo non è implementato.</span><span class="sxs-lookup"><span data-stu-id="8fb6d-103">This method is not implemented.</span></span>  
+# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="40944-102">Metodo ICorDebugProcess::ThreadForFiberCookie</span><span class="sxs-lookup"><span data-stu-id="40944-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
+<span data-ttu-id="40944-103">Questo metodo non è implementato.</span><span class="sxs-lookup"><span data-stu-id="40944-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8fb6d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8fb6d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="40944-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="40944-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadForFiberCookie (  
@@ -36,11 +36,11 @@ HRESULT ThreadForFiberCookie (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="8fb6d-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="8fb6d-105">Requirements</span></span>  
- <span data-ttu-id="8fb6d-106">**Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8fb6d-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="40944-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="40944-105">Requirements</span></span>  
+ <span data-ttu-id="40944-106">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="40944-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8fb6d-107">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="8fb6d-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="40944-107">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="40944-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8fb6d-108">**Libreria:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="8fb6d-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="40944-108">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="40944-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8fb6d-109">**Versioni di .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fb6d-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="40944-109">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="40944-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
