@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af9ca932a4c4a12a2c89571f40162a4ecbd5c33d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046137"
 ---
 # <a name="corargtype-enumeration"></a>Enumerazione CorArgType
 Contiene valori che descrivono il tipo nativo di un handle di runtime.  

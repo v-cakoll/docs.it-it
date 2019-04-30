@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022384"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedura: Oggetti di riferimento COM da Visual Basic
 In Visual Basic, l'aggiunta di riferimenti a oggetti COM con librerie dei tipi richiede la creazione di un assembly di interoperabilità per la libreria COM. I riferimenti ai membri dell'oggetto COM vengono indirizzati all'assembly di interoperabilità e quindi inoltrati all'oggetto COM effettivo. Le risposte dall'oggetto COM vengono indirizzate all'assembly di interoperabilità e inoltrate al [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] dell'applicazione.  
@@ -38,11 +38,11 @@ In Visual Basic, l'aggiunta di riferimenti a oggetti COM con librerie dei tipi r
   
 2. Tlbimp chiamata da un prompt dei comandi, fornendo le informazioni seguenti:  
   
-    -   Nome e il percorso della DLL che contiene la libreria dei tipi  
+    - Nome e il percorso della DLL che contiene la libreria dei tipi  
   
-    -   Nome e il percorso dello spazio dei nomi in cui devono essere inserite le informazioni  
+    - Nome e il percorso dello spazio dei nomi in cui devono essere inserite le informazioni  
   
-    -   Nome e percorso dell'assembly di interoperabilità.  
+    - Nome e percorso dell'assembly di interoperabilità.  
   
      Nel codice seguente ne viene illustrato un esempio:  
   

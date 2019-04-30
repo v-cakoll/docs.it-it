@@ -3,11 +3,11 @@ title: Gestione dei messaggi non elaborabili
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046438"
 ---
 # <a name="poison-message-handling"></a>Gestione dei messaggi non elaborabili
 Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero massimo di tentativi di recapito all'applicazione. Questa situazione può insorgere quando un'applicazione basata sulla coda non è in grado di elaborare un messaggio a causa di errori. Per far fronte a richieste di affidabilità, un'applicazione in coda riceve messaggi nell'ambito di una transazione. Se la transazione nella quale è stato ricevuto un messaggio in coda viene interrotta, il messaggio resta nella coda, quindi viene eseguito un nuovo tentativo nell'ambito di una nuova transazione. Se il problema che ha determinato l'interruzione della transazione non viene risolto, l'applicazione ricevente può rimanere bloccata in una successione continua di ricezioni e interruzioni dello stesso messaggio fino al raggiungimento del numero massimo di tentativi di recapito. Ne consegue l'impossibilità di elaborare il messaggio.  
@@ -19,27 +19,27 @@ Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero
 ## <a name="handling-poison-messages"></a>Gestione di messaggi non elaborabili  
  In WCF, gestione messaggi non elaborabili fornisce un meccanismo per un'applicazione ricevente gestire i messaggi che non possono essere distribuiti all'applicazione o che vengono inviati all'applicazione, ma che non vengano elaborati a causa di specifici dell'applicazione motivi. La gestione dei messaggi non elaborabili è configurata in base alle proprietà seguenti in ogni associazione in coda disponibile:  
   
--   `ReceiveRetryCount`. Valore integer che indica il numero massimo di tentativi di recapito di un messaggio dalla coda dell'applicazione all'applicazione. Il valore predefinito è 5. È sufficiente nei casi in cui un tentativo immediato corregge il problema, ad esempio con un deadlock temporaneo su un database.  
+- `ReceiveRetryCount`. Valore integer che indica il numero massimo di tentativi di recapito di un messaggio dalla coda dell'applicazione all'applicazione. Il valore predefinito è 5. È sufficiente nei casi in cui un tentativo immediato corregge il problema, ad esempio con un deadlock temporaneo su un database.  
   
--   `MaxRetryCycles`. Valore integer che indica il numero massimo di cicli di ripetizione. Un ciclo di ripetizione consiste nel trasferimento di un messaggio dalla coda dell'applicazione alla coda secondaria dei tentativi e, dopo un intervallo di tempo configurabile, dalla coda secondaria dei tentativi alla coda dell'applicazione per tentare di nuovo il recapito. Il valore predefinito è 2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] i tentativi vengono ripetuti un numero massimo di (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) volte. `MaxRetryCycles` viene ignorato in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- `MaxRetryCycles`. Valore integer che indica il numero massimo di cicli di ripetizione. Un ciclo di ripetizione consiste nel trasferimento di un messaggio dalla coda dell'applicazione alla coda secondaria dei tentativi e, dopo un intervallo di tempo configurabile, dalla coda secondaria dei tentativi alla coda dell'applicazione per tentare di nuovo il recapito. Il valore predefinito è 2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] i tentativi vengono ripetuti un numero massimo di (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) volte. `MaxRetryCycles` viene ignorato in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. Intervallo di tempo tra cicli di ripetizione. Il valore predefinito è 30 minuti. `MaxRetryCycles` e `RetryCycleDelay` forniscono insieme un meccanismo per risolvere il problema con un nuovo tentativo eseguito dopo un certo tempo. È ad esempio in grado di gestire un set di righe bloccate in un commit di transazioni in sospeso di SQL Server.  
+- `RetryCycleDelay`. Intervallo di tempo tra cicli di ripetizione. Il valore predefinito è 30 minuti. `MaxRetryCycles` e `RetryCycleDelay` forniscono insieme un meccanismo per risolvere il problema con un nuovo tentativo eseguito dopo un certo tempo. È ad esempio in grado di gestire un set di righe bloccate in un commit di transazioni in sospeso di SQL Server.  
   
--   `ReceiveErrorHandling`. Enumerazione che indica l'azione da intraprendere per un messaggio non recapitato dopo il numero massimo di tentativi. I valori possono essere Errore, Rilascia, Rifiuta e Sposta. L'opzione predefinita è Errore.  
+- `ReceiveErrorHandling`. Enumerazione che indica l'azione da intraprendere per un messaggio non recapitato dopo il numero massimo di tentativi. I valori possono essere Errore, Rilascia, Rifiuta e Sposta. L'opzione predefinita è Errore.  
   
--   Errore. Viene inviato un errore al listener che ha determinato l'errore di `ServiceHost`. È necessario che il messaggio venga rimosso dalla coda dell'applicazione da un meccanismo esterno perché l'applicazione possa continuare a elaborare i messaggi in coda.  
+- Errore. Viene inviato un errore al listener che ha determinato l'errore di `ServiceHost`. È necessario che il messaggio venga rimosso dalla coda dell'applicazione da un meccanismo esterno perché l'applicazione possa continuare a elaborare i messaggi in coda.  
   
--   Rilascia. Il messaggio non elaborabile viene eliminato e non verrà mai recapitato all'applicazione. Se a questo punto la proprietà `TimeToLive` del messaggio è scaduta, è possibile che il messaggio venga visualizzato nella coda dei messaggi non recapitabili del mittente. In caso contrario, il messaggio non viene visualizzato mai. L'opzione indica che l'utente non ha specificato l'operazione da eseguire in caso di perdita del messaggio.  
+- Rilascia. Il messaggio non elaborabile viene eliminato e non verrà mai recapitato all'applicazione. Se a questo punto la proprietà `TimeToLive` del messaggio è scaduta, è possibile che il messaggio venga visualizzato nella coda dei messaggi non recapitabili del mittente. In caso contrario, il messaggio non viene visualizzato mai. L'opzione indica che l'utente non ha specificato l'operazione da eseguire in caso di perdita del messaggio.  
   
--   Rifiuta. Opzione disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene indicato a MSMQ di inviare al gestore code mittente un acknowledgement negativo che indichi che l'applicazione non è in grado di ricevere il messaggio. Il messaggio viene inserito nella coda di messaggi non recapitabili del gestore code mittente.  
+- Rifiuta. Opzione disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene indicato a MSMQ di inviare al gestore code mittente un acknowledgement negativo che indichi che l'applicazione non è in grado di ricevere il messaggio. Il messaggio viene inserito nella coda di messaggi non recapitabili del gestore code mittente.  
   
--   Sposta. Opzione disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Il messaggio non elaborabile viene spostato in una coda di messaggi non elaborabili per l'elaborazione successiva da parte di un'applicazione di gestione apposita. La coda di messaggi non elaborabili è una coda secondaria della coda dell'applicazione. Un'applicazione di messaggi non elaborabili può essere un servizio WCF che legge i messaggi dalla coda non elaborabile. La coda non elaborabile è una coda secondaria della coda dell'applicazione e possono essere indirizzata come net.msmq://\<*machine-name*>/*applicationQueue*; poison, dove  *nome macchina* è il nome del computer in cui risiede la coda e il *applicationQueue* è il nome della coda specifica dell'applicazione.  
+- Sposta. Opzione disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Il messaggio non elaborabile viene spostato in una coda di messaggi non elaborabili per l'elaborazione successiva da parte di un'applicazione di gestione apposita. La coda di messaggi non elaborabili è una coda secondaria della coda dell'applicazione. Un'applicazione di messaggi non elaborabili può essere un servizio WCF che legge i messaggi dalla coda non elaborabile. La coda non elaborabile è una coda secondaria della coda dell'applicazione e possono essere indirizzata come net.msmq://\<*machine-name*>/*applicationQueue*; poison, dove  *nome macchina* è il nome del computer in cui risiede la coda e il *applicationQueue* è il nome della coda specifica dell'applicazione.  
   
  Di seguito è indicato il numero massimo di tentativi di recapito possibili per un messaggio:  
   
--   ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) in [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+- ((ReceiveRetryCount+1) * (MaxRetryCycles + 1)) in [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
--   (ReceiveRetryCount + 1) in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 > [!NOTE]
 >  Non vengono eseguiti altri tentativi per i messaggi recapitati correttamente.  
@@ -52,9 +52,9 @@ Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero
   
  WCF fornisce due associazioni in coda standard:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. Oggetto [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associazione adatta per l'esecuzione di comunicazione basata su coda con altri endpoint WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Oggetto [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] associazione adatta per l'esecuzione di comunicazione basata su coda con altri endpoint WCF.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Associazione idonea per la comunicazione con applicazioni di accodamento messaggi esistenti.  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Associazione idonea per la comunicazione con applicazioni di accodamento messaggi esistenti.  
   
 > [!NOTE]
 >  È possibile modificare le proprietà di queste associazioni in base ai requisiti del servizio WCF. L'intero meccanismo di gestione dei messaggi non elaborabili è locale nell'applicazione ricevente. A meno che l'applicazione ricevente non venga arrestata e non venga inviato un acknowledgment negativo al mittente, il processo è invisibile all'applicazione mittente. In questo caso il messaggio viene spostato nella coda dei messaggi non recapitabili del mittente.  
@@ -97,11 +97,11 @@ Oggetto *dei messaggi non elaborabili* è un messaggio che ha superato il numero
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Differenze tra Windows Vista, Windows Server 2003 e Windows XP  
  Come notato più indietro, non tutte le impostazioni della gestione di messaggi non elaborabili sono valide per [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Le differenze principali seguenti tra [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[wv](../../../../includes/wv-md.md)] relative ad Accodamento messaggi riguardano la gestione di messaggi non elaborabili:  
   
--   Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta le code secondarie, che in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] non sono supportate. Le code secondarie vengono utilizzate nella gestione dei messaggi non elaborabili. Le code di tentativi e la coda non elaborabile sono code secondarie della coda dell'applicazione creata in base alle impostazioni di gestione dei messaggi non elaborabili. `MaxRetryCycles` stabilisce il numero delle code secondarie dei tentativi che verranno create. Di conseguenza, in caso di esecuzione in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` viene ignorato e `ReceiveErrorHandling.Move` non è consentito.  
+- Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta le code secondarie, che in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] non sono supportate. Le code secondarie vengono utilizzate nella gestione dei messaggi non elaborabili. Le code di tentativi e la coda non elaborabile sono code secondarie della coda dell'applicazione creata in base alle impostazioni di gestione dei messaggi non elaborabili. `MaxRetryCycles` stabilisce il numero delle code secondarie dei tentativi che verranno create. Di conseguenza, in caso di esecuzione in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` viene ignorato e `ReceiveErrorHandling.Move` non è consentito.  
   
--   Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta il riconoscimento negativo, diversamente da quanto avviene in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Un negative acknowledgment dal gestore delle code ricevente determina l'inserimento, da parte del gestore delle code mittente, del messaggio respinto nella coda dei messaggi non recapitabili. Per questa ragione, `ReceiveErrorHandling.Reject` non è consentito con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta il riconoscimento negativo, diversamente da quanto avviene in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Un negative acknowledgment dal gestore delle code ricevente determina l'inserimento, da parte del gestore delle code mittente, del messaggio respinto nella coda dei messaggi non recapitabili. Per questa ragione, `ReceiveErrorHandling.Reject` non è consentito con [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta una proprietà del messaggio che conta il numero di volte che viene tentato di recapitare il messaggio. Questa proprietà del numero di interruzioni non è disponibile in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF gestisce il conteggio delle interruzioni in memoria, pertanto è possibile che questa proprietà non può contenere un valore accurato quando lo stesso messaggio viene letto da più di un servizio WCF in una farm.  
+- Accodamento messaggi in [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta una proprietà del messaggio che conta il numero di volte che viene tentato di recapitare il messaggio. Questa proprietà del numero di interruzioni non è disponibile in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF gestisce il conteggio delle interruzioni in memoria, pertanto è possibile che questa proprietà non può contenere un valore accurato quando lo stesso messaggio viene letto da più di un servizio WCF in una farm.  
   
 ## <a name="see-also"></a>Vedere anche
 

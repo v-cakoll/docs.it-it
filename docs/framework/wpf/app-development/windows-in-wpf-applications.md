@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
 ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971151"
 ---
 # <a name="windows-in-wpf-applications"></a>Finestre delle applicazioni WPF
 Gli utenti interagiscono con le applicazioni in windows. Lo scopo fondamentale di una finestra è ospitare e visualizzare il contenuto. Il tipo di contenuto che ospita una finestra varia a seconda del tipo di dati utilizzati nell'applicazione, che può includere supporti, le pagine di Extensible Application Markup Language (XAML), pagine Web, documenti, tabelle di database e i record e le informazioni di sistema.  

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011879"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notifica delle modifiche nell'associazione dati dei Windows Form
 Uno dei principali concetti di data binding in Windows Form consiste *notifica delle modifiche*. Per assicurarsi che l'origine dati e i controlli associati dispongano sempre dei dati più recenti, è necessario aggiungere la notifica delle modifiche per il data binding. In particolare, per assicurarsi che i controlli associati vengono notificati le modifiche apportate all'origine dati e l'origine dati viene informato delle modifiche apportate alle proprietà di un controllo associata.  
   
  Esistono diversi tipi di notifica delle modifiche, a seconda del tipo di associazione dati:  
   
--   Associazione semplice, in cui la proprietà di un singolo controllo è associata a una singola istanza di un oggetto.  
+- Associazione semplice, in cui la proprietà di un singolo controllo è associata a una singola istanza di un oggetto.  
   
--   Associazione basato su elenchi, che può includere una proprietà del controllo singolo associata alla proprietà di un elemento in un elenco o una proprietà del controllo associato a un elenco di oggetti.  
+- Associazione basato su elenchi, che può includere una proprietà del controllo singolo associata alla proprietà di un elemento in un elenco o una proprietà del controllo associato a un elenco di oggetti.  
   
  Inoltre, se si siano creando i controlli Windows Form che si desidera utilizzare per il data binding, è necessario applicare il *PropertyName*modificata modello ai controlli, in modo che le modifiche alla proprietà associata di un controllo vengono propagate le origine dati.  
   

@@ -3,11 +3,11 @@ title: Generazione di comandi SQL di modifica
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034140"
 ---
 # <a name="modification-sql-generation"></a>Generazione di comandi SQL di modifica
 
@@ -70,7 +70,7 @@ Property specifica la proprietà che deve essere aggiornata. È sempre un oggett
 
 Value specifica il nuovo valore con cui aggiornare la proprietà. È di tipo DbConstantExpression o DbNullExpression.
 
-#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>Predicate in DbUpdateCommandTree e DbDeleteCommandTree
+#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>Predicato in DbUpdateCommandTree e DbDeleteCommandTree
 
 Predicate specifica il predicato usato per determinare i membri della raccolta di destinazione da aggiornare o eliminare. Si tratta di un albero delle espressioni costituito dal subset di DbExpression seguente:
 

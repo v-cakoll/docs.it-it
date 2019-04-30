@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046569"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Protezione dei messaggi tramite client con tipo di credenziale UserName
 La figura seguente mostra un servizio Windows Communication Foundation (WCF) e un client protetto usando la sicurezza a livello di messaggio. Il servizio viene autenticato con un certificato X.509. Il client esegue l'autenticazione utilizzando un nome utente e una password.  
@@ -33,9 +33,9 @@ La figura seguente mostra un servizio Windows Communication Foundation (WCF) e u
 ## <a name="service"></a>Service  
  Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente. Eseguire una delle operazioni seguenti:  
   
--   Creare un servizio autonomo usando il codice senza alcuna configurazione.  
+- Creare un servizio autonomo usando il codice senza alcuna configurazione.  
   
--   Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
+- Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.  
   
 ### <a name="code"></a>Codice  
  Nel codice seguente viene illustrato come creare un endpoint del servizio che usa la protezione del messaggio.  
