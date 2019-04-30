@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949266"
 ---
 # <a name="loader-etw-events"></a>Eventi ETW del caricatore
 <a name="top"></a> Questi eventi raccolgono le informazioni relative al caricamento e allo scaricamento di domini applicazioni, assembly e moduli.  
@@ -21,15 +21,15 @@ ms.locfileid: "59141531"
   
  Gli eventi del caricatore sono suddivisi in:  
   
--   [Eventi del dominio applicazioni](#application_domain_events)  
+- [Eventi del dominio applicazioni](#application_domain_events)  
   
--   [Eventi assembly del caricatore CLR](#clr_loader_assembly_events)  
+- [Eventi assembly del caricatore CLR](#clr_loader_assembly_events)  
   
--   [Eventi modulo](#module_events)  
+- [Eventi modulo](#module_events)  
   
--   [Eventi modulo del dominio CLR](#clr_domain_module_events)  
+- [Eventi modulo del dominio CLR](#clr_domain_module_events)  
   
--   [Eventi di intervallo modulo](#module_range_events)  
+- [Eventi di intervallo modulo](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>Eventi del dominio applicazioni  
@@ -134,11 +134,11 @@ ms.locfileid: "59141531"
   
 ### <a name="remarks"></a>Note  
   
--   I campi che contengono "Pdb" nel nome possono essere usati dagli strumenti di profilazione per individuare i PDB che corrispondono ai moduli caricati durante la sessione di profilazione. I valori di questi campi corrispondono ai dati scritti nelle sezioni IMAGE_DIRECTORY_ENTRY_DEBUG del modulo normalmente usato dai debugger per individuare i PDB che corrispondono ai moduli caricati.  
+- I campi che contengono "Pdb" nel nome possono essere usati dagli strumenti di profilazione per individuare i PDB che corrispondono ai moduli caricati durante la sessione di profilazione. I valori di questi campi corrispondono ai dati scritti nelle sezioni IMAGE_DIRECTORY_ENTRY_DEBUG del modulo normalmente usato dai debugger per individuare i PDB che corrispondono ai moduli caricati.  
   
--   I nomi dei campi che iniziano con "ManagedPdb" fanno riferimento al PDB gestito che corrisponde al modulo MSIL generato dal compilatore gestito (ad esempio, il compilatore C# o Visual Basic). Questo PDB usa il formato PDB gestito e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi MSIL compilati nel form MSIL.  
+- I nomi dei campi che iniziano con "ManagedPdb" fanno riferimento al PDB gestito che corrisponde al modulo MSIL generato dal compilatore gestito (ad esempio, il compilatore C# o Visual Basic). Questo PDB usa il formato PDB gestito e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi MSIL compilati nel form MSIL.  
   
--   I nomi dei campi che iniziano con "NativePdb" fanno riferimento al PDB di NGen generato chiamando `NGEN createPDB`. Questo PDB usa il formato PDB nativo e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi nativi compilati nel modulo NGen.  
+- I nomi dei campi che iniziano con "NativePdb" fanno riferimento al PDB di NGen generato chiamando `NGEN createPDB`. Questo PDB usa il formato PDB nativo e descrive in che modo gli elementi del codice sorgente gestito originale, ad esempio file, numeri di riga e nomi di simboli, eseguono il mapping agli elementi nativi compilati nel modulo NGen.  
   
  [Torna all'inizio](#top)  
   

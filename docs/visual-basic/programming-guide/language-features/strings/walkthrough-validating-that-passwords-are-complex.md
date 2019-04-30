@@ -5,11 +5,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
 ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938255"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Procedura dettagliata: Verifica della complesse delle password (Visual Basic)
 Questo metodo verifica la presenza di alcune caratteristiche di password complesse e aggiorna un parametro di stringa con le informazioni sui controlli che la password ha esito negativo.  
@@ -28,20 +28,20 @@ Questo metodo verifica la presenza di alcune caratteristiche di password comples
   
  L'esempio presenta i requisiti seguenti:  
   
--   Accedere ai membri dello spazio dei nomi <xref:System.Text.RegularExpressions>. Aggiungere un'istruzione `Imports` se i nomi dei membri all'interno del codice non sono specificati in modo completo. Per altre informazioni, vedere [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Accedere ai membri dello spazio dei nomi <xref:System.Text.RegularExpressions>. Aggiungere un'istruzione `Imports` se i nomi dei membri all'interno del codice non sono specificati in modo completo. Per altre informazioni, vedere [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Sicurezza  
  Se stai spostando la password attraverso una rete, è necessario usare un metodo sicuro per il trasferimento dei dati. Per altre informazioni, vedere [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  È possibile migliorare l'accuratezza del `ValidatePassword` funzione mediante l'aggiunta di controlli di complessità aggiuntiva:  
   
--   Confronta le sottostringhe da un dizionario definito dall'applicazione, identificatore utente e il nome dell'utente e la password. Considerare inoltre visivamente simili caratteri come equivalenti quando si esegue il confronto. Ad esempio, considerare le lettere "l" e "e" come equivalenti ai numeri "1" e "3".  
+- Confronta le sottostringhe da un dizionario definito dall'applicazione, identificatore utente e il nome dell'utente e la password. Considerare inoltre visivamente simili caratteri come equivalenti quando si esegue il confronto. Ad esempio, considerare le lettere "l" e "e" come equivalenti ai numeri "1" e "3".  
   
--   Se è presente un solo carattere maiuscolo, assicurarsi che non è primo carattere della password.  
+- Se è presente un solo carattere maiuscolo, assicurarsi che non è primo carattere della password.  
   
--   Assicurarsi che gli ultimi due caratteri della password sono caratteri letterali.  
+- Assicurarsi che gli ultimi due caratteri della password sono caratteri letterali.  
   
--   Non consentire password in cui vengono immessi tutti i simboli dalla prima riga della tastiera.  
+- Non consentire password in cui vengono immessi tutti i simboli dalla prima riga della tastiera.  
   
 ## <a name="see-also"></a>Vedere anche
 

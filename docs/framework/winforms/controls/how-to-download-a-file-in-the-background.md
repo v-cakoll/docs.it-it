@@ -15,11 +15,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
 ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941499"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Procedura: Scaricare un file in background
 Il download di file è un'attività comune. Spesso è utile eseguire questa operazione potenzialmente dispendiosa in termini di tempo in un thread separato. Usare il componente <xref:System.ComponentModel.BackgroundWorker> per eseguire questa attività con una quantità di codice molto ridotta.   
@@ -58,7 +58,7 @@ Il download di file è un'attività comune. Spesso è utile eseguire questa oper
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System.Drawing, System.Windows.Forms e System.Xml.  
+- Riferimenti agli assembly System.Drawing, System.Windows.Forms e System.Xml.  
   
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   

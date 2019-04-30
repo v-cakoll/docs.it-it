@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940439"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Procedura: Trasformare le attestazioni in ingresso
 ## <a name="applies-to"></a>Si applica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Form ASP.NET®  
+- Web Form ASP.NET®  
   
 ## <a name="summary"></a>Riepilogo  
  Questo argomento include le procedure dettagliate per creare una semplice applicazione Web Form ASP.NET in grado di riconoscere attestazioni e trasformare le attestazioni in ingresso. Sono inoltre disponibili istruzioni su come testare l'applicazione per verificare che le attestazioni trasformate vengano presentate quando l'applicazione viene eseguita.  
   
 ## <a name="contents"></a>Sommario  
   
--   Obiettivi  
+- Obiettivi  
   
--   Panoramica  
+- Panoramica  
   
--   Riepilogo dei passaggi  
+- Riepilogo dei passaggi  
   
--   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+- Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2: implementare la trasformazione delle attestazioni con un ClaimsAuthenticationManager personalizzato  
+- Passaggio 2: implementare la trasformazione delle attestazioni con un ClaimsAuthenticationManager personalizzato  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="objectives"></a>Obiettivi  
   
--   Configurare un'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
+- Configurare un'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
   
--   Trasformare le attestazioni in ingresso tramite l'aggiunta di un'attestazione per il ruolo di amministratore  
+- Trasformare le attestazioni in ingresso tramite l'aggiunta di un'attestazione per il ruolo di amministratore  
   
--   Testare l'applicazione Web Form ASP.NET per verificare se funziona correttamente  
+- Testare l'applicazione Web Form ASP.NET per verificare se funziona correttamente  
   
 ## <a name="overview"></a>Panoramica  
  WIF espone una classe denominata <xref:System.Security.Claims.ClaimsAuthenticationManager> che consente agli utenti di modificare le attestazioni prima che vengano presentate a un'applicazione relying party. La classe <xref:System.Security.Claims.ClaimsAuthenticationManager> è utile per la separazione dei compiti tra l'autenticazione e il codice dell'applicazione sottostante. L'esempio seguente dimostra come aggiungere un ruolo alle attestazioni nel <xref:System.Security.Claims.ClaimsPrincipal> in ingresso che potrebbe essere richiesto dalla relying party.  
   
 ## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+- Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2: implementare la trasformazione delle attestazioni con un ClaimsAuthenticationManager personalizzato  
+- Passaggio 2: implementare la trasformazione delle attestazioni con un ClaimsAuthenticationManager personalizzato  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
  In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.  

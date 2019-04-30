@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946744"
 ---
 # <a name="application-settings-architecture"></a>Architettura Impostazioni applicazione
 Questo argomento descrive il funzionamento dell'architettura Impostazioni applicazione e ne analizza le funzionalità avanzate, come i raggruppamenti e le chiavi delle impostazioni.  
@@ -24,15 +24,15 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
 ## <a name="defining-settings"></a>Definizione delle impostazioni  
  L'architettura delle impostazioni applicazione viene usata sia in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] che in Windows Form e contiene un numero di classi di base condivise in entrambi gli ambienti. La più importante è <xref:System.Configuration.SettingsBase>, fornisce l'accesso alle impostazioni attraverso una raccolta che fornisce metodi di basso livello per il caricamento e salvataggio delle impostazioni. Ogni ambiente implementa una propria classe derivata da <xref:System.Configuration.SettingsBase> per fornire funzionalità aggiuntive delle impostazioni per quell'ambiente. In un'applicazione basata su Windows Form, tutte le impostazioni dell'applicazione devono essere definite in una classe derivata dal <xref:System.Configuration.ApplicationSettingsBase> (classe), che consente di aggiungere le funzionalità seguenti alla classe di base:  
   
--   Caricamento e salvataggio delle operazioni di livello superiore  
+- Caricamento e salvataggio delle operazioni di livello superiore  
   
--   Supporto per le impostazioni con ambito utente  
+- Supporto per le impostazioni con ambito utente  
   
--   Ripristino delle impostazioni dell'utente alle impostazioni predefinite  
+- Ripristino delle impostazioni dell'utente alle impostazioni predefinite  
   
--   Aggiornamento delle impostazioni da una versione precedente dell'applicazione  
+- Aggiornamento delle impostazioni da una versione precedente dell'applicazione  
   
--   Convalida delle impostazioni, prima che vengano modificate o prima che vengano salvate  
+- Convalida delle impostazioni, prima che vengano modificate o prima che vengano salvate  
   
  Le impostazioni possono essere descritte usando una serie di attributi definiti all'interno di <xref:System.Configuration> dello spazio dei nomi; questi sono descritti nella [Application Settings Attributes](application-settings-attributes.md). Quando si definisce un'impostazione, è necessario applicarlo con uno <xref:System.Configuration.ApplicationScopedSettingAttribute> o <xref:System.Configuration.UserScopedSettingAttribute>, che descrive se l'impostazione si applica all'intera applicazione o semplicemente per l'utente corrente.  
   
@@ -46,11 +46,11 @@ Questo argomento descrive il funzionamento dell'architettura Impostazioni applic
   
  Il sistema di configurazione che è stato rilasciato originariamente con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] supporta l'offerta di dati di configurazione dell'applicazione statici tramite file machine.config del computer locale o in un file `app.`.exe.config da distribuire con l'applicazione. Il <xref:System.Configuration.LocalFileSettingsProvider> classe espande tale supporto nativo nei modi seguenti:  
   
--   Le impostazioni con ambito applicazione possono essere archiviate in entrambi i file machine.config o `app.`exe.config. Il file machine.config è sempre di sola lettura, mentre `app`.exe.config è limitato dalle considerazioni sulla sicurezza alla sola lettura per la maggior parte delle applicazioni.  
+- Le impostazioni con ambito applicazione possono essere archiviate in entrambi i file machine.config o `app.`exe.config. Il file machine.config è sempre di sola lettura, mentre `app`.exe.config è limitato dalle considerazioni sulla sicurezza alla sola lettura per la maggior parte delle applicazioni.  
   
--   Le impostazioni con ambito di utente possono essere archiviate in `app`.exe.config, in questo caso vengono considerate come valori predefiniti statici.  
+- Le impostazioni con ambito di utente possono essere archiviate in `app`.exe.config, in questo caso vengono considerate come valori predefiniti statici.  
   
--   Le impostazioni con ambito di utente non predefinite sono archiviate in un nuovo file *utente*.config, dove *user* è il nome dell'utente che esegue l'applicazione in quel momento. È possibile specificare un valore predefinito per un'impostazione con ambito di utente con <xref:System.Configuration.DefaultSettingValueAttribute>. Poiché le impostazioni con ambito utente spesso cambiano durante l'esecuzione dell'applicazione, `user`.config è sempre di lettura o scrittura.  
+- Le impostazioni con ambito di utente non predefinite sono archiviate in un nuovo file *utente*.config, dove *user* è il nome dell'utente che esegue l'applicazione in quel momento. È possibile specificare un valore predefinito per un'impostazione con ambito di utente con <xref:System.Configuration.DefaultSettingValueAttribute>. Poiché le impostazioni con ambito utente spesso cambiano durante l'esecuzione dell'applicazione, `user`.config è sempre di lettura o scrittura.  
   
  I tre file di configurazione archiviano le impostazioni in formato XML. L'elemento XML di livello superiore per le impostazioni con ambito di applicazione è `<appSettings>`, mentre `<userSettings>` viene usato per le impostazioni con ambito di utente. Un file `app`.exe.config che contiene sia le impostazioni con ambito di applicazione che quelle predefinite per le impostazioni con ambito utente si presenta come segue:  
   

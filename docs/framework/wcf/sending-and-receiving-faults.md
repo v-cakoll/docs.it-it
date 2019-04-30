@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949604"
 ---
 # <a name="sending-and-receiving-faults"></a>Invio e ricezione degli errori
 Gli errori SOAP trasportano informazioni sulla condizione di errore da un servizio a un client e, nel caso duplex, da un client a un servizio in modo interoperativo. In genere, un servizio definisce un contenuto di errore personalizzato e specifica quali operazioni possono restituirlo. (Per altre informazioni, vedere [definizione e specifica gli errori](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In questo argomento vengono descritti il modo in cui un servizio o un client duplex può inviare tali errori quando si verifica la condizione di errore corrispondente e la modalità con cui un'applicazione client o server gestisce tali errori. Per una panoramica di gestione degli errori nelle applicazioni Windows Communication Foundation (WCF), vedere [se si specifica e gestione degli errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,9 +47,9 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
 ## <a name="handling-faults"></a>Gestione degli errori  
  Nei client WCF, gli errori SOAP che si verificano durante la comunicazione di interesse per le applicazioni client vengono generati come eccezioni gestite. Sebbene esistano molte eccezioni che possono verificarsi durante l'esecuzione di qualsiasi programma, le applicazioni usando il modello di programmazione client WCF possono prevedere di gestire le eccezioni dei due tipi seguente come risultato di comunicazione.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  Gli oggetti <xref:System.TimeoutException> vengono generati quando un'operazione supera il periodo di timeout specificato.  
   
@@ -81,13 +81,13 @@ Gli errori SOAP trasportano informazioni sulla condizione di errore da un serviz
   
  In genere i canali dell'oggetto client vengono chiusi in uno dei casi seguenti:  
   
--   Quando l'oggetto client WCF viene riciclato.  
+- Quando l'oggetto client WCF viene riciclato.  
   
--   Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
+- Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType>.  
   
--   Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
+- Quando l'applicazione client chiama il metodo <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>.  
   
--   Quando l'applicazione client chiama un'operazione di chiusura di una sessione.  
+- Quando l'applicazione client chiama un'operazione di chiusura di una sessione.  
   
  In tutti i casi, quando viene chiuso, il canale inizia a chiudere qualsiasi canale sottostante in grado di inviare messaggi allo scopo di supportare funzionalità complesse al livello applicazione. Ad esempio, quando un contratto richiede le sessioni, un'associazione tenta di stabilire una sessione scambiando messaggi con il canale del servizio fino a stabilire una sessione. Quando il canale viene chiuso, il canale della sessione sottostante comunica al servizio che la sessione è terminata. In questo caso, se il canale risulta interrotto, chiuso o comunque inutilizzabile (ad esempio quando si scollega un cavo di rete), il canale client non può comunicare al canale del servizio che la sessione è terminata e pertanto è possibile che venga generata un'eccezione.  
   

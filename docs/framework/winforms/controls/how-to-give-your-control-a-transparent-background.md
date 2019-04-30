@@ -7,11 +7,11 @@ helpviewer_keywords:
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
 ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941336"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Procedura: Assegnare uno sfondo trasparente al controllo
 Nelle versioni precedenti di .NET Framework, i controlli non supportavano gli sfondi trasparenti senza aver prima impostato il metodo <xref:System.Windows.Forms.Control.SetStyle%2A> nel costruttore del modulo. Nella versione corrente del framework è possibile impostare il colore di sfondo per la maggior parte dei controlli su <xref:System.Drawing.Color.Transparent%2A> nella finestra **Proprietà** in fase di progettazione o nel codice nel costruttore del modulo.  
@@ -24,7 +24,7 @@ Nelle versioni precedenti di .NET Framework, i controlli non supportavano gli sf
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>Per assegnare al controllo uno sfondo trasparente  
   
--   Nella finestra Proprietà scegliere la proprietà <xref:System.Windows.Forms.ButtonBase.BackColor%2A> e impostarla su <xref:System.Drawing.Color.Transparent%2A>.  
+- Nella finestra Proprietà scegliere la proprietà <xref:System.Windows.Forms.ButtonBase.BackColor%2A> e impostarla su <xref:System.Drawing.Color.Transparent%2A>.  
   
 ## <a name="see-also"></a>Vedere anche
 

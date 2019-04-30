@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938788"
 ---
 # <a name="xaml-security-considerations"></a>Considerazioni sulla sicurezza in XAML
 In questo argomento descrive le procedure consigliate per la sicurezza in applicazioni quando si usa XAML e l'API di servizi XAML di .NET Framework.  
@@ -34,9 +34,9 @@ In questo argomento descrive le procedure consigliate per la sicurezza in applic
 ## <a name="xaml-namespaces-and-assembly-trust"></a>Spazi dei nomi XAML e attendibilità degli Assembly  
  La sintassi non qualificata di base e una definizione per il modo in cui XAML interpreta un mapping dello spazio dei nomi XAML personalizzato a un assembly non viene fatta distinzione tra un assembly attendibile e come caricati nel dominio dell'applicazione. Di conseguenza, è tecnicamente possibile per un assembly non attendibile effettuare lo spoofing il mapping dello spazio dei nomi XAML desiderato dell'assembly attendibili e acquisire informazioni sulle proprietà e oggetto dichiarato di un'origine XAML. Se si dispone di requisiti di sicurezza per evitare questa situazione, il mapping dello spazio dei nomi XAML previsto deve essere effettuato utilizzando una delle tecniche seguenti:  
   
--   Usare un nome completo dell'assembly con nome sicuro in qualsiasi mapping dello spazio dei nomi XAML effettuate da XAML dell'applicazione.  
+- Usare un nome completo dell'assembly con nome sicuro in qualsiasi mapping dello spazio dei nomi XAML effettuate da XAML dell'applicazione.  
   
--   Limitare il mapping a un set fisso di assembly di riferimento, costruendo un oggetto specifico di assembly <xref:System.Xaml.XamlSchemaContext> per il XAML reader e XAML writer di oggetti. Vedere <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+- Limitare il mapping a un set fisso di assembly di riferimento, costruendo un oggetto specifico di assembly <xref:System.Xaml.XamlSchemaContext> per il XAML reader e XAML writer di oggetti. Vedere <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>Mapping dei tipi XAML e l'accesso di sistema di tipo  
  XAML supporta un proprio sistema di tipi, che in molti modi è un peer a come CLR implementa il sistema di tipi CLR. Tuttavia, per alcuni aspetti di consapevolezza di tipo in cui si apportano le decisioni sull'attendibilità relative a un tipo basato su informazioni relative al tipo, è necessario fare riferimento le informazioni sui tipi in CLR i tipi di supporto. Infatti, alcune delle funzionalità di creazione di report specifiche del sistema di tipi XAML vengono lasciate aperte come metodi virtuali e di conseguenza, non sono completamente sotto il controllo delle implementazioni dei servizi XAML di .NET Framework originale. Questi punti di estendibilità esistono perché il sistema di tipi XAML è estensibile, in base l'estensibilità di XAML stesso e le strategie di mapping dei tipi alternative possibili e l'implementazione predefinita supportata da Common Language Runtime e il contesto dello schema XAML predefinito. Per altre informazioni, vedere le note specifiche su alcune delle proprietà del <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>.  

@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940491"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Procedura: Eseguire il debug di servizi e applicazioni in grado di riconoscere attestazioni con le funzionalità di traccia WIF
 ## <a name="applies-to"></a>Si applica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)  
+- Strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)  
   
--   Risoluzione dei problemi e debug di applicazioni WIF  
+- Risoluzione dei problemi e debug di applicazioni WIF  
   
 ## <a name="summary"></a>Riepilogo  
  Questa procedura descrive i passaggi necessari per configurare le funzionalità di traccia di WIF, raccogliere i log di traccia e analizzarli mediante lo strumento visualizzatore di tracce dei servizi. Fornisce un mapping generale delle voci di traccia alle azioni necessarie per la risoluzione dei problemi correlati a WIF.  
   
 ## <a name="contents"></a>Sommario  
   
--   Obiettivi  
+- Obiettivi  
   
--   Riepilogo dei passaggi  
+- Riepilogo dei passaggi  
   
--   Passaggio 1 - Configurare le funzionalità di traccia di WIF usando il file Web.config  
+- Passaggio 1 - Configurare le funzionalità di traccia di WIF usando il file Web.config  
   
--   Passaggio 2 - Analizzare i file di traccia di WIF usando lo strumento visualizzatore di tracce dei servizi  
+- Passaggio 2 - Analizzare i file di traccia di WIF usando lo strumento visualizzatore di tracce dei servizi  
   
--   Passaggio 3 - Identificare soluzioni per la risoluzione dei problemi correlati a WIF  
+- Passaggio 3 - Identificare soluzioni per la risoluzione dei problemi correlati a WIF  
   
--   Elementi correlati  
+- Elementi correlati  
   
 ## <a name="objectives"></a>Obiettivi  
   
--   Configurare le funzionalità di traccia WIF.  
+- Configurare le funzionalità di traccia WIF.  
   
--   Visualizzare i log di traccia nello strumento visualizzatore di tracce dei servizi.  
+- Visualizzare i log di traccia nello strumento visualizzatore di tracce dei servizi.  
   
--   Identificare i problemi relativi a WIF nei log di traccia.  
+- Identificare i problemi relativi a WIF nei log di traccia.  
   
--   Applicare azioni correttive ai problemi correlati a WIF riscontrati nei log di traccia.  
+- Applicare azioni correttive ai problemi correlati a WIF riscontrati nei log di traccia.  
   
 ## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1 - Configurare le funzionalità di traccia di WIF usando il file Web.config  
+- Passaggio 1 - Configurare le funzionalità di traccia di WIF usando il file Web.config  
   
--   Passaggio 2 - Analizzare i file di traccia di WIF usando lo strumento visualizzatore di tracce dei servizi  
+- Passaggio 2 - Analizzare i file di traccia di WIF usando lo strumento visualizzatore di tracce dei servizi  
   
--   Passaggio 3 - Identificare soluzioni per la risoluzione dei problemi correlati a WIF  
+- Passaggio 3 - Identificare soluzioni per la risoluzione dei problemi correlati a WIF  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>Passaggio 1 - Configurare le funzionalità di traccia di WIF usando il file Web.config  
  In questo passaggio si aggiungeranno modifiche alle sezioni di configurazione del file *Web.config* in modo da abilitare la traccia e l'archiviazione degli eventi WIF in un log di traccia.  
@@ -108,4 +108,4 @@ ms.locfileid: "59321549"
   
 ## <a name="related-items"></a>Elementi correlati  
   
--   [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Uso del visualizzatore di tracce dei servizi per la visualizzazione di tracce correlate e la risoluzione dei problemi](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

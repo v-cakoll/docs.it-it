@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942922"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrazione della Guida dell'utente in Windows Form
 Un aspetto essenziale, ma spesso trascurato, di creare applicazioni basate su Windows è il sistema di Guida in linea, poiché si tratta in cui gli utenti attivano per ottenere assistenza nei periodi di confusione. Windows Forms supporta due tipi diversi di Guida in linea, fornito dal [sul componente HelpProvider](../controls/helpprovider-component-windows-forms.md). Il primo consiste nel fatto che punta all'utente a un file della Guida di HTML o 1 della Guida HTML. *x* o formato maggiore. Il secondo può visualizzare breve "Che cos'è questa"-tipo di Guida sui singoli controlli; Ciò è particolarmente utile nelle finestre di dialogo. Entrambi i tipi di Guida in linea sono utilizzabile nello stesso form.  

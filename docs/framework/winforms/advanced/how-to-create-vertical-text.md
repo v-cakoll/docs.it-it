@@ -11,11 +11,11 @@ helpviewer_keywords:
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
 ms.openlocfilehash: 75f5d8faa4dc4b7e022cd6de2e6db49f4fa9030c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937612"
 ---
 # <a name="how-to-create-vertical-text"></a>Procedura: Creare testo verticale
 È possibile usare un <xref:System.Drawing.StringFormat> oggetto per specificare che il testo da disegnare verticalmente anziché in orizzontale.  
@@ -32,7 +32,7 @@ ms.locfileid: "59190223"
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e` , ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
+- L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e` , ovvero un parametro di <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
 ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971327"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Procedura: Ottenere e impostare la cella corrente nel controllo DataGridView di Windows Forms
 L'interazione con il <xref:System.Windows.Forms.DataGridView> spesso richiede il rilevamento a livello di programmazione quale cella attualmente attiva. È necessario anche modificare la cella corrente. È possibile eseguire queste attività con il <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà.  
@@ -26,14 +26,14 @@ L'interazione con il <xref:System.Windows.Forms.DataGridView> spesso richiede il
   
 ### <a name="to-get-the-current-cell-programmatically"></a>Per ottenere la cella corrente a livello di codice  
   
--   Usare la <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà.  
+- Usare la <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
 ### <a name="to-set-the-current-cell-programmatically"></a>Per impostare la cella corrente a livello di codice  
   
--   Impostare il <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà del <xref:System.Windows.Forms.DataGridView> controllo. Nell'esempio di codice seguente, la cella corrente è impostata su 0, colonna 1 di riga.  
+- Impostare il <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà del <xref:System.Windows.Forms.DataGridView> controllo. Nell'esempio di codice seguente, la cella corrente è impostata su 0, colonna 1 di riga.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
@@ -41,11 +41,11 @@ L'interazione con il <xref:System.Windows.Forms.DataGridView> spesso richiede il
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   <xref:System.Windows.Forms.Button> controlli denominati `getCurrentCellButton` e `setCurrentCellButton`. Nell'oggetto visivo C#, è necessario associare il <xref:System.Windows.Forms.Control.Click> degli eventi per ogni pulsante per il gestore eventi associato nel codice di esempio.  
+- <xref:System.Windows.Forms.Button> controlli denominati `getCurrentCellButton` e `setCurrentCellButton`. Nell'oggetto visivo C#, è necessario associare il <xref:System.Windows.Forms.Control.Click> degli eventi per ogni pulsante per il gestore eventi associato nel codice di esempio.  
   
--   Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.  
+- Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.  
   
--   Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
+- Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 

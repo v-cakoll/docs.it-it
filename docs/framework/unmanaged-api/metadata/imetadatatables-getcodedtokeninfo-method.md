@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 153aa7d6b8c35129638de3d47ffa6aff72f550c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946783"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>Metodo IMetaDataTables::GetCodedTokenInfo
 Ottiene un puntatore a una matrice dei token associato con l'indice di riga specificato.  

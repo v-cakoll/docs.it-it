@@ -3,11 +3,11 @@ title: Vincoli dichiarativi
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945821"
 ---
 # <a name="declarative-constraints"></a>Vincoli dichiarativi
 I vincoli dichiarativi offrono un metodo potente di convalida per un'attività e le relative relazioni con altre attività. I vincoli vengono configurati per un'attività durante il processo di creazione, ma vincoli aggiuntivi possono essere specificati anche dall'host del flusso di lavoro. In questo argomento viene fornita una panoramica sull'utilizzo di vincoli dichiarativi per la convalida delle attività.  

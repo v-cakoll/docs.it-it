@@ -3,11 +3,11 @@ title: Un altro log eventi ha già registrato un'origine con questo nome
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
 ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940611"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Un altro log eventi ha già registrato un'origine con questo nome
 Si è provato a scrivere una voce in un log eventi ma l'origine specificata è stata registrata in un altro log eventi.  

@@ -3,11 +3,11 @@ title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
 ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943923"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator è un strumento che consente di esporre le implementazioni del canale personalizzate nel sistema di configurazione. In questo modo gli utenti del canale personalizzato possono configurare il canale utilizzando un file con estensione config nello stesso modo in cui configurerebbero un'associazione fornita dal sistema, ad esempio `NetTcpBinding`, o un'associazione personalizzata utilizzando `TcpTransportBindingElement`.  
@@ -42,9 +42,9 @@ ConfigurationCodeGenerator è un strumento che consente di esporre le implementa
   
      Il comando genera tre file con estensione cs per `BindingElement` (se si specifica l'opzione /be:), cinque file cs per l'elemento `Binding` standard (se si specifica l'opzione /sb:) e un file xml.  
   
-    1.  Se si utilizza l'opzione /be, uno dei file cs implementa `BindingElementExtensionSection` per l'elemento di associazione. Questo codice espone `BindingElement` al sistema di configurazione, in modo che le altre associazioni personalizzate possono utilizzare l'elemento di associazione. Gli altri file dispongono di classi che rappresentano impostazioni predefinite e costanti. Nei file sono presenti i commenti `//TODO` per ricordare l'aggiornamento dei valori predefiniti.  
+    1. Se si utilizza l'opzione /be, uno dei file cs implementa `BindingElementExtensionSection` per l'elemento di associazione. Questo codice espone `BindingElement` al sistema di configurazione, in modo che le altre associazioni personalizzate possono utilizzare l'elemento di associazione. Gli altri file dispongono di classi che rappresentano impostazioni predefinite e costanti. Nei file sono presenti i commenti `//TODO` per ricordare l'aggiornamento dei valori predefiniti.  
   
-    2.  Se si specifica il l'opzione /sb, due dei file cs implementano rispettivamente un `StandardBindingElement` e un `StandardBindingCollectionElement` che espongono l'associazione standard al sistema di configurazione. Gli altri file dispongono di classi che rappresentano impostazioni predefinite e costanti. Nei file sono presenti i commenti `//TODO` per ricordare l'aggiornamento dei valori predefiniti.  
+    2. Se si specifica il l'opzione /sb, due dei file cs implementano rispettivamente un `StandardBindingElement` e un `StandardBindingCollectionElement` che espongono l'associazione standard al sistema di configurazione. Gli altri file dispongono di classi che rappresentano impostazioni predefinite e costanti. Nei file sono presenti i commenti `//TODO` per ricordare l'aggiornamento dei valori predefiniti.  
   
          Se è stato specificato il /sb: opzione il file CodeToAddTo\<*YourStdBinding*>. cs include il codice che è necessario aggiungere manualmente nella classe che implementa l'associazione standard.  
   

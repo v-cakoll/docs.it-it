@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
 ms.openlocfilehash: fb6411efc190dce335422369a8d2bbff564b9523
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938216"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Procedura: Dichiarare una variabile oggetto e assegnarle un oggetto in Visual Basic
 Si dichiara una variabile del [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) specificando `As Object` in un [istruzione Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Si assegna un oggetto a tale variabile posizionando l'oggetto dopo il segno di uguale (`=`) in una clausola di istruzione o l'inizializzazione di assegnazione.  
@@ -32,11 +32,11 @@ Dim thisObject As Object= "This is an Object"
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Un riferimento allo spazio dei nomi <xref:System>.  
+- Un riferimento allo spazio dei nomi <xref:System>.  
   
--   Una classe, struttura o modulo in cui inserire il `Dim` istruzione.  
+- Una classe, struttura o modulo in cui inserire il `Dim` istruzione.  
   
--   Una procedura in cui inserire l'istruzione di assegnazione.  
+- Una procedura in cui inserire l'istruzione di assegnazione.  
   
 ## <a name="see-also"></a>Vedere anche
 

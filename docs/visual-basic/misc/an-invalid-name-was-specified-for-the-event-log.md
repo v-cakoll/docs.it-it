@@ -3,22 +3,22 @@ title: È stato specificato un nome non valido per il log eventi
 ms.date: 07/20/2015
 ms.assetid: b1b158bd-f13f-4371-a8af-31c0e86ae6be
 ms.openlocfilehash: 2b9c934272d0f3392c845dcd2f0062a98dc50c7b
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940673"
 ---
 # <a name="an-invalid-name-was-specified-for-the-event-log"></a>È stato specificato un nome non valido per il log eventi
 È stato specificato un nome non valido per il log eventi. Generalmente è l'effetto della presenza di caratteri non validi nel nome, di un nome file vuoto o di un nome file troppo lungo.  
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Se la lunghezza del nome specificato supera otto caratteri, accertarsi che non vi sia un conflitto con i nomi di altri log eventi. Quando si determina se il nome è univoco vengono presi in considerazione solo i primi otto caratteri.  
+- Se la lunghezza del nome specificato supera otto caratteri, accertarsi che non vi sia un conflitto con i nomi di altri log eventi. Quando si determina se il nome è univoco vengono presi in considerazione solo i primi otto caratteri.  
   
--   Se si fornisce un percorso, accertarsi che venga analizzato correttamente.  
+- Se si fornisce un percorso, accertarsi che venga analizzato correttamente.  
   
--   Verificare che il nome non contenga caratteri non validi. I caratteri che non è possibile usare in un nome file comprendono `<`, `>`, `:`, `"`, `/`, `\`e `|`.  
+- Verificare che il nome non contenga caratteri non validi. I caratteri che non è possibile usare in un nome file comprendono `<`, `>`, `:`, `"`, `/`, `\`e `|`.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
 ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960940"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Linee e riempimenti con fusione alfa
 In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un colore è un valore a 32 bit con 8 bit per ciascun alfa, rosso, verde e blu. Il valore alfa indica la trasparenza del colore, ovvero l'entità a cui il colore viene sfumato con il colore di sfondo. I valori alfa sono compresi tra 0 e 255 e 255, dove 0 rappresenta un colore completamente trasparente, rappresenta un colore completamente opaco.  

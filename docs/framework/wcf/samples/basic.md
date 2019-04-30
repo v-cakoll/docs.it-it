@@ -3,14 +3,14 @@ title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
 ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944118"
 ---
 # <a name="basic"></a>Basic
-In questa sezione sono incluse sezioni di esempi che descrivono funzionalità di base di Windows Communication Foundation (WCF).  
+In questa sezione include le sezioni di esempi che illustrano le funzionalità di base Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
@@ -44,7 +44,7 @@ In questa sezione sono incluse sezioni di esempi che descrivono funzionalità di
  Vengono illustrati i servizi WCF.  
   
  [Diffusione](../../../../docs/framework/wcf/samples/syndication.md)  
- DemonstratesWCF diffusione.  
+ Diffusione DemonstratesWCF.  
   
  [Web](../../../../docs/framework/wcf/samples/web.md)  
- Viene descritto l'hosting Web in WCF.
+ Viene illustrato l'hosting Web in WCF.

@@ -8,20 +8,20 @@ ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949162"
 ---
 # <a name="thread-pool-etw-events"></a>Eventi ETW del pool di thread
 <a name="top"></a> Questi eventi raccolgono informazioni sui thread di lavoro e di I/O.  
   
  Esistono due gruppi di eventi del pool di thread:  
   
--   [Eventi del pool di thread di lavoro](#worker), che forniscono informazioni su come un'applicazione usa il pool di thread e l'effetto dei carichi di lavoro sul controllo della concorrenza.  
+- [Eventi del pool di thread di lavoro](#worker), che forniscono informazioni su come un'applicazione usa il pool di thread e l'effetto dei carichi di lavoro sul controllo della concorrenza.  
   
--   [Eventi del pool di thread di I/O](#io), che forniscono informazioni sui thread di I/O che vengono creati, ritirati, non ritirati o terminati nel pool di thread.  
+- [Eventi del pool di thread di I/O](#io), che forniscono informazioni sui thread di I/O che vengono creati, ritirati, non ritirati o terminati nel pool di thread.  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>Eventi del pool di thread di lavoro  

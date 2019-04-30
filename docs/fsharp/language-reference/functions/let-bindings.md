@@ -3,11 +3,11 @@ title: Associazioni let
 description: Informazioni su come usare un F# 'let' associazione, che associa un identificatore con un valore o una funzione.
 ms.date: 05/16/2016
 ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941003"
 ---
 # <a name="let-bindings"></a>Associazioni let
 

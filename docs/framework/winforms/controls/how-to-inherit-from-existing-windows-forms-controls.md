@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941154"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procedura: Ereditare da controlli Windows Forms esistenti
 Se si desidera estendere le funzionalità di un controllo esistente, è possibile creare un controllo derivato da un controllo esistente tramite l'ereditarietà. Quando si eredita da un controllo esistente, si ereditano tutte le funzionalità e le proprietà visive di tale controllo. Ad esempio, se si crea un controllo che eredita da <xref:System.Windows.Forms.Button>, il nuovo controllo avrà un aspetto e funzionano esattamente come standard <xref:System.Windows.Forms.Button> controllo. È quindi possibile estendere o modificare la funzionalità del nuovo controllo tramite l'implementazione di metodi e proprietà personalizzati. In alcuni controlli, è anche possibile modificare l'aspetto visivo del controllo ereditato eseguendo l'override relativo <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo).  

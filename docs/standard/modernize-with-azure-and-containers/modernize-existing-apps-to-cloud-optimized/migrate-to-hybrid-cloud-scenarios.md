@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936728"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Eseguire la migrazione a scenari di cloud ibrido
 
@@ -33,9 +33,9 @@ Figura 4-13 mostra una panoramica della piattaforma di cloud ibrido davvero offe
 
 Azure Stack è disponibile in due opzioni di distribuzione, in base alle esigenze:
 
--   Sistemi integrati di Azure Stack
+- Sistemi integrati di Azure Stack
 
--   Azure Stack Development Kit
+- Azure Stack Development Kit
 
 ### <a name="azure-stack-integrated-systems"></a>Sistemi integrati di Azure Stack
 
@@ -47,23 +47,23 @@ Microsoft Azure Stack Development Kit è una distribuzione a nodo singolo di Azu
 
 ### <a name="additional-resources"></a>Risorse aggiuntive
 
--   **Cloud ibrido di Azure**
+- **Cloud ibrido di Azure**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Account del servizio Active Directory per i contenitori Windows**
+- **Account del servizio Active Directory per i contenitori Windows**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Creare un contenitore con supporto di Active Directory**
+- **Creare un contenitore con supporto di Active Directory**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Azure vantaggio Hybrid Use**
+- **Azure vantaggio Hybrid Use**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

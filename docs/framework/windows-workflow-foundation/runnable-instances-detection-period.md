@@ -3,11 +3,11 @@ title: Runnable Instances Detection Period
 ms.date: 03/30/2017
 ms.assetid: 4ea5c787-b638-47fd-bfc8-ede8c2898ce6
 ms.openlocfilehash: 9652dd811f64e5324219b8aa0700ab8219edeeb0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937956"
 ---
 # <a name="runnable-instances-detection-period"></a>Runnable Instances Detection Period
 L'archivio di istanze del flusso di lavoro SQL esegue un'attività interna che attiva e rileva periodicamente istanze eseguibili o attivabili nel database di persistenza. Il **Runnable Instances Detection Period** proprietà di Store di istanza del flusso di lavoro di SQL specifica il periodo di tempo dopo il quale la Store di istanza del flusso di lavoro SQL esegue un'attività di rilevamento per rilevare qualsiasi flusso di lavoro eseguibile o attivabili istanze nel database di persistenza dopo il ciclo di rilevamento precedente.  

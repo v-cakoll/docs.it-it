@@ -12,11 +12,11 @@ helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], layout engine
 ms.assetid: f91aa91c-29f4-4089-95ca-5d48b774b00e
 ms.openlocfilehash: 8e5043e2b42b1e7449c6dab51691b6d57e28cd53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941245"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>Procedura: Implementare un motore di layout personalizzato
 Esempio di codice seguente viene illustrato come creare un motore di layout personalizzato che esegue un layout di flusso semplici. Implementa un pannello di controllo denominato `DemoFlowPanel`, che esegue l'override di <xref:System.Windows.Forms.Control.LayoutEngine%2A> proprietà per fornire un'istanza del `DemoFlowLayout` classe.  

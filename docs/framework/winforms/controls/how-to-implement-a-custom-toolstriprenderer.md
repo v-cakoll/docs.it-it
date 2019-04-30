@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
 ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941187"
 ---
 # <a name="how-to-implement-a-custom-toolstriprenderer"></a>Procedura: Implementare un oggetto ToolStripRenderer personalizzato
 È possibile personalizzare l'aspetto di un controllo <xref:System.Windows.Forms.ToolStrip> implementando una classe che deriva da <xref:System.Windows.Forms.ToolStripRenderer>. In questo modo è possibile creare un aspetto differente da quello fornito dalle classi <xref:System.Windows.Forms.ToolStripProfessionalRenderer> e <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
@@ -23,11 +23,11 @@ ms.locfileid: "59151918"
   
  La classe `GridStripRenderer` consente di definire tre componenti relativi all'aspetto del controllo `GridStrip`:  
   
--   Bordo di `GridStrip`  
+- Bordo di `GridStrip`  
   
--   Bordo di <xref:System.Windows.Forms.ToolStripButton>  
+- Bordo di <xref:System.Windows.Forms.ToolStripButton>  
   
--   immagine di <xref:System.Windows.Forms.ToolStripButton>  
+- immagine di <xref:System.Windows.Forms.ToolStripButton>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -35,7 +35,7 @@ ms.locfileid: "59151918"
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
+- Riferimenti agli assembly System.Drawing e System.Windows.Forms.  
   
  Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   

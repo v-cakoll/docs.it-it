@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Navigare in avanti o indietro nella cronologia di navigazione'
+title: 'Procedura: Spostarsi in avanti o indietro nella cronologia di spostamento'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
 ms.openlocfilehash: 4c20ebfab45a24cf34b1476fb94dae6913fb4d99
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947758"
 ---
-# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Procedura: Navigare in avanti o indietro nella cronologia di navigazione
+# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Procedura: Spostarsi in avanti o indietro nella cronologia di spostamento
 In questo esempio viene illustrato come spostarsi in avanti o indietro per le voci nella cronologia di navigazione.  
   
 ## <a name="example"></a>Esempio  
  Codice eseguito dai contenuti i seguenti host possibile spostarsi in avanti o indietro nella cronologia di navigazione, una voce alla volta.  
   
--   <xref:System.Windows.Navigation.NavigationWindow> Utilizzo <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow> Utilizzo <xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> Utilizzo <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame> Utilizzo <xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
   
  Prima è possibile spostarsi in avanti di una voce, è necessario verificare che siano presenti voci nella cronologia di navigazione avanti controllando il **CanGoForward** proprietà. Per spostarsi avanti di una voce, si chiama il **GoForward** (metodo). Come illustrato nell'esempio seguente:  
   

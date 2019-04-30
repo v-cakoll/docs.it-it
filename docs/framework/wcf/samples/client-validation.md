@@ -3,11 +3,11 @@ title: Convalida client
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
 ms.openlocfilehash: 9659c262377af76294c52d1be97146923bc91b71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943975"
 ---
 # <a name="client-validation"></a>Convalida client
 I servizi pubblicano spesso metadati per consentire la generazione e configurazione automatica di tipi di proxy client. Quando il servizio non è considerato attendibile, le applicazioni client devono convalidare che i metadati siano conformi ai criteri dell'applicazione client riguardanti la sicurezza, le transazioni, il tipo di contratto di servizio e così via. Nell'esempio seguente viene dimostrato come scrivere un comportamento dell'endpoint client che convalida l'endpoint del servizio per garantire che quest'ultimo possa essere usato senza rischi.  
@@ -54,11 +54,11 @@ I servizi pubblicano spesso metadati per consentire la generazione e configurazi
   
 10. Nel computer client eseguire client.exe.  
   
-    1.  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+    1. Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
--   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
+- Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
     > [!NOTE]
     >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se sono stati eseguiti esempi WCF che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati in CurrentUser - TrustedPeople archiviare. A tale scopo, utilizzare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

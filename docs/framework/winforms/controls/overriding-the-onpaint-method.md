@@ -9,11 +9,11 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
 ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936448"
 ---
 # <a name="overriding-the-onpaint-method"></a>Override del metodo OnPaint
 I passaggi di base per eseguire l'override di qualsiasi evento definito nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sono identiche e sono riepilogate nell'elenco seguente.  

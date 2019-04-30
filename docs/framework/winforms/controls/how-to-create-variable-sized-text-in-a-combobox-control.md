@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
 ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965495"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Procedura: Creare testo di dimensioni variabili in un controllo ComboBox
 Questo esempio viene illustrato il disegno personalizzato di testo in un <xref:System.Windows.Forms.ComboBox> controllo. Quando un elemento soddisfa determinati criteri, viene creato un tipo di carattere più grande e colore rosso.  
@@ -58,14 +58,14 @@ End Sub
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Un modulo di Windows.  
+- Un modulo di Windows.  
   
--   Oggetto <xref:System.Windows.Forms.ComboBox> controllo denominato `ListBox1` con tre elementi di <xref:System.Windows.Forms.ComboBox.Items%2A> proprietà. In questo esempio, i tre elementi sono denominati `"One", Two", and Three"`. Il <xref:System.Windows.Forms.ComboBox.DrawMode%2A> proprietà di `ComboBox1` deve essere impostata su <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
+- Oggetto <xref:System.Windows.Forms.ComboBox> controllo denominato `ListBox1` con tre elementi di <xref:System.Windows.Forms.ComboBox.Items%2A> proprietà. In questo esempio, i tre elementi sono denominati `"One", Two", and Three"`. Il <xref:System.Windows.Forms.ComboBox.DrawMode%2A> proprietà di `ComboBox1` deve essere impostata su <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
   
     > [!NOTE]
     >  Questa tecnica è applicabile anche al <xref:System.Windows.Forms.ListBox> controllo, è possibile sostituirlo con un <xref:System.Windows.Forms.ListBox> per il <xref:System.Windows.Forms.ComboBox>.  
   
--   Riferimenti agli spazi dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> e <xref:System.Drawing?displayProperty=nameWithType>.  
+- Riferimenti agli spazi dei nomi <xref:System.Windows.Forms?displayProperty=nameWithType> e <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vedere anche
 

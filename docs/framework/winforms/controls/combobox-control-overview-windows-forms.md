@@ -10,11 +10,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
 ms.openlocfilehash: 80056771744c9b97828a024adf32638e545a839e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956169"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>Cenni preliminari sul controllo ComboBox (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.ComboBox> controllo viene usato per visualizzare i dati in una casella combinata a discesa. Per impostazione predefinita, il <xref:System.Windows.Forms.ComboBox> controllo viene visualizzato in due parti: la parte superiore è una casella di testo che consente all'utente di digitare una voce di elenco. La seconda parte è una casella di riepilogo che visualizza un elenco di elementi da cui l'utente può selezionare uno. Per altre informazioni sugli altri stili di casella combinata, vedere [quando utilizzare un Windows Form casella combinata anziché un controllo ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).  

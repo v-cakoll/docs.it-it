@@ -9,11 +9,11 @@ helpviewer_keywords:
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
 ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947927"
 ---
 # <a name="hosting-wpf-applications"></a>Hosting di applicazioni WPF
 Le applicazioni Browser XAML di WPF (XBAP) sono applicazioni rich client che possono essere distribuite in un server Web e avviate in un browser. Host WPF (PresentationHost.exe) viene registrata come la shell e gestore MIME per i file XAML e XBAP. Di conseguenza, Internet Explorer SA per l'avvio dell'Host WPF quando viene avviata un'applicazione XBAP. Gli utenti di Firefox possono installare componenti aggiuntivi di Firefox che consentono di Firefox per ospitare le applicazioni XBAP. Un'applicazione XBAP possono essere ospitate in altri browser o applicazioni autonome tramite il browser nativo che ospitano le API fornite da WPF.  

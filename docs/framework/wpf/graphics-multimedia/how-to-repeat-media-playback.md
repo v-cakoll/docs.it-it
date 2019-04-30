@@ -8,11 +8,11 @@ helpviewer_keywords:
 - playback of media [WPF], repeating
 ms.assetid: 02ab486d-c6b6-4918-9edd-45a12aca4683
 ms.openlocfilehash: 788bc6f31d61626f15548791135adb8c60258b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942051"
 ---
 # <a name="how-to-repeat-media-playback"></a>Procedura: Ripetere la riproduzione di contenuti multimediali
 Questo esempio illustra come riprodurre i file multimediali in modo indefinito, ovvero come impostare i file multimediali in modo che vengano eseguiti in un ciclo infinito.  

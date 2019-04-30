@@ -13,11 +13,11 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971314"
 ---
 # <a name="wpf-add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi di WPF
 <a name="Introduction"></a> .NET Framework include un modello di componente aggiuntivo che gli sviluppatori possono usare per creare applicazioni che supportano l'estendibilità mediante componenti aggiuntivi. Questo modello consente di creare componenti aggiuntivi che si integrano con le funzionalità dell'applicazione estendendole. In alcuni scenari, le applicazioni devono anche visualizzare le interfacce utente fornite dai componenti aggiuntivi. In questo argomento viene illustrato come WPF integra il modello di componente aggiuntivo .NET Framework per consentire questi scenari, l'architettura sottostante, i vantaggi e le relative limitazioni.  
@@ -30,33 +30,33 @@ ms.locfileid: "59304805"
 ## <a name="add-ins-overview"></a>Cenni preliminari sui componenti aggiuntivi  
  Per evitare le complessità legate alla ricompilazione e alla ridistribuzione di un'applicazione per incorporare nuove funzionalità, le applicazioni implementano meccanismi di estendibilità che consentono agli sviluppatori dell'applicazione e a quelli di terze parti di creare altre applicazioni che si integrano con esse. Il metodo più comune per supportare questo tipo di estendibilità consiste nell'usare i componenti aggiuntivi, noti anche come "plug-in". Di seguito sono riportati alcuni esempi di applicazioni reali che espongono l'estendibilità mediante componenti aggiuntivi:  
   
--   Componenti aggiuntivi di Internet Explorer.  
+- Componenti aggiuntivi di Internet Explorer.  
   
--   Plug-in di Windows Media Player.  
+- Plug-in di Windows Media Player.  
   
--   Componenti aggiuntivi di Visual Studio.  
+- Componenti aggiuntivi di Visual Studio.  
   
  Il modello di componente aggiuntivo di Windows Media Player, ad esempio, consente agli sviluppatori di terze parti di implementare "plug-in" che estendono Windows Media Player in diversi modi, come tramite la creazione di decodificatori e codificatori per formati multimediali non supportati a livello nativo da Windows Media Player (ad esempio DVD, MP3), effetti audio e interfacce. Ogni modello di componente aggiuntivo è creato per esporre funzionalità univoche di un'applicazione, anche se ci sono diversi comportamenti ed entità comuni a tutti i modelli.  
   
  Le tre entità principali delle soluzioni tipiche di estendibilità mediante componenti aggiuntivi sono *contratti*, *componenti aggiuntivi* e *applicazioni host*. I contratti definiscono la modalità di integrazione dei componenti aggiuntivi con le applicazioni host in due modi:  
   
--   I componenti aggiuntivi si integrano con le funzionalità implementate dalle applicazioni host.  
+- I componenti aggiuntivi si integrano con le funzionalità implementate dalle applicazioni host.  
   
--   Le applicazioni host espongono funzionalità con cui i componenti aggiuntivi si integrano.  
+- Le applicazioni host espongono funzionalità con cui i componenti aggiuntivi si integrano.  
   
  Per poter usare i componenti aggiuntivi, le applicazioni host devono trovarli e caricarli in fase di esecuzione. Di conseguenza, le applicazioni che supportano i componenti aggiuntivi hanno le ulteriori responsabilità seguenti:  
   
--   **Individuazione**: Ricerca di componenti aggiuntivi conformi ai contratti supportati dalle applicazioni host.  
+- **Individuazione**: Ricerca di componenti aggiuntivi conformi ai contratti supportati dalle applicazioni host.  
   
--   **Attivazione**: Il caricamento, esecuzione e stabilire la comunicazione con componenti aggiuntivi.  
+- **Attivazione**: Il caricamento, esecuzione e stabilire la comunicazione con componenti aggiuntivi.  
   
--   **Isolamento**: Utilizzare i processi o domini applicazione per stabilire i limiti di isolamento che proteggono le applicazioni di sicurezza potenziali e i problemi di esecuzione con i componenti aggiuntivi.  
+- **Isolamento**: Utilizzare i processi o domini applicazione per stabilire i limiti di isolamento che proteggono le applicazioni di sicurezza potenziali e i problemi di esecuzione con i componenti aggiuntivi.  
   
--   **Comunicazione**: Consentire ai componenti aggiuntivi e ospitare applicazioni di comunicare tra loro attraverso i limiti di isolamento chiamando i metodi e passando i dati.  
+- **Comunicazione**: Consentire ai componenti aggiuntivi e ospitare applicazioni di comunicare tra loro attraverso i limiti di isolamento chiamando i metodi e passando i dati.  
   
--   **Gestione della durata**: Caricamento e scaricamento di domini applicazione e i processi in modo netto e prevedibile (vedere [domini applicazione](../../app-domains/application-domains.md)).  
+- **Gestione della durata**: Caricamento e scaricamento di domini applicazione e i processi in modo netto e prevedibile (vedere [domini applicazione](../../app-domains/application-domains.md)).  
   
--   **Controllo delle versioni**: Verificare che le applicazioni host e componenti aggiuntivi possono comunque comunicare quando vengono create nuove versioni.  
+- **Controllo delle versioni**: Verificare che le applicazioni host e componenti aggiuntivi possono comunque comunicare quando vengono create nuove versioni.  
   
  In definitiva, lo sviluppo di un modello di componente aggiuntivo affidabile è un'operazione tutt'altro che banale. Per questo motivo, .NET Framework fornisce un'infrastruttura per la creazione di modelli di componente aggiuntivo.  
   
@@ -75,27 +75,27 @@ ms.locfileid: "59304805"
   
 1. **Componente aggiuntivo che restituisce un'interfaccia utente**. Un componente aggiuntivo restituisce un'interfaccia utente all'applicazione host tramite una chiamata al metodo, come definito dal contratto. Questo scenario viene usato nei casi seguenti:  
   
-    -   L'aspetto di un'interfaccia utente che viene restituita da un componente aggiuntivo è dipenda da dati o condizioni che esiste solo in fase di esecuzione, ad esempio in modo dinamico i report generati.  
+    - L'aspetto di un'interfaccia utente che viene restituita da un componente aggiuntivo è dipenda da dati o condizioni che esiste solo in fase di esecuzione, ad esempio in modo dinamico i report generati.  
   
-    -   L'interfaccia utente per i servizi forniti da un componente aggiuntivo è diverso dall'interfaccia utente delle applicazioni host che è possibile usare il componente aggiuntivo.  
+    - L'interfaccia utente per i servizi forniti da un componente aggiuntivo è diverso dall'interfaccia utente delle applicazioni host che è possibile usare il componente aggiuntivo.  
   
-    -   Il componente aggiuntivo principalmente esegue un servizio per l'applicazione host e segnala lo stato all'applicazione host con un'interfaccia utente.  
+    - Il componente aggiuntivo principalmente esegue un servizio per l'applicazione host e segnala lo stato all'applicazione host con un'interfaccia utente.  
   
 2. **Componente aggiuntivo che costituisce un'interfaccia utente**. Un componente aggiuntivo è un'interfaccia utente, come definito dal contratto. Questo scenario viene usato nei casi seguenti:  
   
-    -   Un componente aggiuntivo non fornisce alcun servizio eccetto la sua visualizzazione, come nel caso di un annuncio.  
+    - Un componente aggiuntivo non fornisce alcun servizio eccetto la sua visualizzazione, come nel caso di un annuncio.  
   
-    -   L'interfaccia utente per i servizi forniti da un componente aggiuntivo è comune a tutte le applicazioni host possono utilizzare tale componente aggiuntivo, ad esempio una calcolatrice o selezione colori.  
+    - L'interfaccia utente per i servizi forniti da un componente aggiuntivo è comune a tutte le applicazioni host possono utilizzare tale componente aggiuntivo, ad esempio una calcolatrice o selezione colori.  
   
  Questi scenari richiedono che gli oggetti dell'interfaccia utente possono essere passati tra domini applicazione componente aggiuntivo e dell'applicazione host. Poiché .NET Framework modello di componente aggiuntivo si basa sulla comunicazione tra i domini applicazione remota, gli oggetti che vengono passati tra di essi devono essere utilizzabili in remoto.  
   
  Un oggetto che può essere usato in remoto è un'istanza di una classe che soddisfa una o più delle condizioni seguenti:  
   
--   Deriva dal <xref:System.MarshalByRefObject> classe.  
+- Deriva dal <xref:System.MarshalByRefObject> classe.  
   
--   Implementa l'interfaccia <xref:System.Runtime.Serialization.ISerializable>.  
+- Implementa l'interfaccia <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Ha il <xref:System.SerializableAttribute> attributo viene applicato.  
+- Ha il <xref:System.SerializableAttribute> attributo viene applicato.  
   
 > [!NOTE]
 >  Per altre informazioni sulla creazione di oggetti di .NET Framework utilizzabili in remoto, vedere [rendere utilizzabile in remoto gli oggetti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
@@ -156,11 +156,11 @@ ms.locfileid: "59304805"
 ## <a name="add-ins-and-xaml-browser-applications"></a>Componenti aggiuntivi e applicazioni browser XAML  
  Negli esempi illustrati fino a questo momento l'applicazione host era un'applicazione autonoma installata. Anche le [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] possono però ospitare componenti aggiuntivi, sebbene con i requisiti di compilazione e implementazione aggiuntivi seguenti:  
   
--   Il manifesto dell'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve essere appositamente configurato per scaricare la pipeline (cartelle e assembly) e l'assembly del componente aggiuntivo nella cache dell'applicazione [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] sul computer client, nella stessa cartella dell'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
+- Il manifesto dell'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve essere appositamente configurato per scaricare la pipeline (cartelle e assembly) e l'assembly del componente aggiuntivo nella cache dell'applicazione [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] sul computer client, nella stessa cartella dell'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].  
   
--   Il codice [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] che consente di individuare e caricare i componenti aggiuntivi deve usare la cache dell'applicazione [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] per [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] come percorso della pipeline e del componente aggiuntivo.  
+- Il codice [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] che consente di individuare e caricare i componenti aggiuntivi deve usare la cache dell'applicazione [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] per [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] come percorso della pipeline e del componente aggiuntivo.  
   
--   L'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve caricare il componente aggiuntivo in un contesto di sicurezza speciale se tale componente fa riferimento a file separati che si trovano nel sito di origine. Se sono ospitati da applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], i componenti aggiuntivi possono fare riferimento unicamente ai file separati che si trovano nel sito di origine dell'applicazione host.  
+- L'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve caricare il componente aggiuntivo in un contesto di sicurezza speciale se tale componente fa riferimento a file separati che si trovano nel sito di origine. Se sono ospitati da applicazioni [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], i componenti aggiuntivi possono fare riferimento unicamente ai file separati che si trovano nel sito di origine dell'applicazione host.  
   
  Queste attività sono descritte in dettaglio nelle sottosezioni seguenti.  
   
@@ -194,13 +194,13 @@ ms.locfileid: "59304805"
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Uso della pipeline e del componente aggiuntivo dalla base dell'applicazione  
  Quando la pipeline e il componente aggiuntivo sono configurati per la distribuzione [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], vengono scaricati nella stessa cartella della cache [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] in cui si trova l'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Per usare la pipeline e il componente aggiuntivo dall'applicazione [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], il codice [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve ottenerli dalla base dell'applicazione. I diversi tipi e membri del modello di componente aggiuntivo .NET Framework per l'uso di pipeline e componenti aggiuntivi forniscono uno speciale supporto per questo scenario. In primo luogo, il percorso è identificato dal <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> valore di enumerazione. Questo valore viene usato con gli overload dei membri pertinenti del componente aggiuntivo per l'uso delle pipeline, che includono quanto segue:  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
 ### <a name="accessing-the-hosts-site-of-origin"></a>Accesso al sito di origine dell'host  
  Per assicurare che un componente aggiuntivo possa fare riferimento ai file del sito di origine, tale componente deve essere caricato con lo stesso isolamento di sicurezza dell'applicazione host. Questo livello di sicurezza è identificato dal <xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType> valore di enumerazione e passato al <xref:System.AddIn.Hosting.AddInToken.Activate%2A> metodo quando un componente aggiuntivo viene attivato.  
@@ -213,9 +213,9 @@ ms.locfileid: "59304805"
   
  Fondamentalmente, WPF non passare un'interfaccia utente da un componente aggiuntivo a un'applicazione host. WPF invece passa l'handle della finestra Win32 per l'interfaccia utente usando l'interoperabilità WPF. Di conseguenza, quando un'interfaccia utente da un componente aggiuntivo viene passata a un'applicazione host, si verifica quanto segue:  
   
--   Sul lato del componente aggiuntivo, WPF acquisisce un handle di finestra per l'interfaccia utente che verrà visualizzato dall'applicazione host. L'handle di finestra viene incapsulato da una classe WPF interna che deriva da <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Un'istanza di questa classe viene restituita da <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e viene effettuato il marshalling dal dominio di applicazione del componente aggiuntivo al dominio dell'applicazione host.  
+- Sul lato del componente aggiuntivo, WPF acquisisce un handle di finestra per l'interfaccia utente che verrà visualizzato dall'applicazione host. L'handle di finestra viene incapsulato da una classe WPF interna che deriva da <xref:System.Windows.Interop.HwndSource> e implementa <xref:System.AddIn.Contract.INativeHandleContract>. Un'istanza di questa classe viene restituita da <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> e viene effettuato il marshalling dal dominio di applicazione del componente aggiuntivo al dominio dell'applicazione host.  
   
--   Sul lato dell'applicazione host WPF riassembla il <xref:System.Windows.Interop.HwndSource> come classe interna che deriva da WPF <xref:System.Windows.Interop.HwndHost> e consuma <xref:System.AddIn.Contract.INativeHandleContract>. Un'istanza di questa classe viene restituita da <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> all'applicazione host.  
+- Sul lato dell'applicazione host WPF riassembla il <xref:System.Windows.Interop.HwndSource> come classe interna che deriva da WPF <xref:System.Windows.Interop.HwndHost> e consuma <xref:System.AddIn.Contract.INativeHandleContract>. Un'istanza di questa classe viene restituita da <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> all'applicazione host.  
   
  <xref:System.Windows.Interop.HwndHost> disponibile per visualizzare le interfacce utente, identificate dagli handle di finestra, dalle interfacce utente WPF. Per altre informazioni, vedere [Interoperatività di WPF e Win32](../advanced/wpf-and-win32-interoperation.md).  
   
@@ -230,51 +230,51 @@ ms.locfileid: "59304805"
 ## <a name="wpf-add-in-benefits"></a>Vantaggi dei componenti aggiuntivi WPF  
  Poiché le interfacce utente del componente aggiuntivo di WPF sono visualizzate dalle applicazioni host tramite una classe interna che deriva da <xref:System.Windows.Interop.HwndHost>, le interfacce utente sono vincolate dalle funzionalità di <xref:System.Windows.Interop.HwndHost> rispetto a servizi WPF UI come layout, per il rendering, l'associazione dati, stili, modelli e le risorse. Tuttavia, WPF integra interna di quest ' <xref:System.Windows.Interop.HwndHost> sottoclasse con funzionalità aggiuntive che includono quanto segue:  
   
--   La tabulazione tra dell'interfaccia utente di un'applicazione host e un'interfaccia utente di un componente aggiuntivo. Si noti che il modello di programmazione "componente aggiuntivo è un'interfaccia utente" richiede che l'adattatore lato componente aggiuntivo eseguire l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> per abilitare la tabulazione, se il componente aggiuntivo sia completamente attendibile o parzialmente attendibile.  
+- La tabulazione tra dell'interfaccia utente di un'applicazione host e un'interfaccia utente di un componente aggiuntivo. Si noti che il modello di programmazione "componente aggiuntivo è un'interfaccia utente" richiede che l'adattatore lato componente aggiuntivo eseguire l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> per abilitare la tabulazione, se il componente aggiuntivo sia completamente attendibile o parzialmente attendibile.  
   
--   Rispetta i requisiti di accessibilità per le interfacce utente di componenti aggiuntivi visualizzate dalle interfacce utente dell'applicazione host.  
+- Rispetta i requisiti di accessibilità per le interfacce utente di componenti aggiuntivi visualizzate dalle interfacce utente dell'applicazione host.  
   
--   Abilitazione delle applicazioni WPF per l'esecuzione in modo sicuro in diversi scenari di dominio dell'applicazione.  
+- Abilitazione delle applicazioni WPF per l'esecuzione in modo sicuro in diversi scenari di dominio dell'applicazione.  
   
--   Finestra che impedisce l'accesso non valido per il componente aggiuntivo dell'interfaccia utente gestisce quando eseguono componenti aggiuntivi con isolamento di sicurezza (vale a dire un sandbox di sicurezza con attendibilità parziale). La chiamata a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garantisce questa sicurezza:  
+- Finestra che impedisce l'accesso non valido per il componente aggiuntivo dell'interfaccia utente gestisce quando eseguono componenti aggiuntivi con isolamento di sicurezza (vale a dire un sandbox di sicurezza con attendibilità parziale). La chiamata a <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> garantisce questa sicurezza:  
   
-    -   Per il modello di programmazione "componente aggiuntivo restituisce un'interfaccia utente", l'unico modo per passare l'handle della finestra per un componente aggiuntivo dell'interfaccia utente attraverso il limite di isolamento consiste nel chiamare <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    - Per il modello di programmazione "componente aggiuntivo restituisce un'interfaccia utente", l'unico modo per passare l'handle della finestra per un componente aggiuntivo dell'interfaccia utente attraverso il limite di isolamento consiste nel chiamare <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   Per il modello di programmazione "componente aggiuntivo è un'interfaccia utente", si esegue l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> sull'adattatore lato componente aggiuntivo e chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (come illustrato negli esempi precedenti) è obbligatorio, nonché la chiamata dell'adattatore lato componente aggiuntivo `QueryContract` dall'implementazione di adattatore lato host.  
+    - Per il modello di programmazione "componente aggiuntivo è un'interfaccia utente", si esegue l'override <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> sull'adattatore lato componente aggiuntivo e chiamando <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (come illustrato negli esempi precedenti) è obbligatorio, nonché la chiamata dell'adattatore lato componente aggiuntivo `QueryContract` dall'implementazione di adattatore lato host.  
   
--   Protezione dell'esecuzione per più domini dell'applicazione. A causa delle limitazioni relative ai domini dell'applicazione, le eccezioni non gestite generate nei domini dell'applicazione del componente aggiuntivo provocano un arresto anomalo dell'intera applicazione, anche in presenza di un limite di isolamento. Tuttavia, WPF e il modello di componente aggiuntivo di .NET Framework forniscono un modo semplice per risolvere questo problema e migliorare la stabilità dell'applicazione. Un componente aggiuntivo che visualizza un'interfaccia utente WPF crea un <xref:System.Windows.Threading.Dispatcher> per il thread che il dominio dell'applicazione viene eseguita, se l'applicazione host è un'applicazione WPF. È possibile rilevare le eccezioni tutti non gestite che si verificano nel dominio dell'applicazione tramite la gestione di <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventi di WPF del componente aggiuntivo <xref:System.Windows.Threading.Dispatcher>. È possibile ottenere il <xref:System.Windows.Threading.Dispatcher> dal <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> proprietà.  
+- Protezione dell'esecuzione per più domini dell'applicazione. A causa delle limitazioni relative ai domini dell'applicazione, le eccezioni non gestite generate nei domini dell'applicazione del componente aggiuntivo provocano un arresto anomalo dell'intera applicazione, anche in presenza di un limite di isolamento. Tuttavia, WPF e il modello di componente aggiuntivo di .NET Framework forniscono un modo semplice per risolvere questo problema e migliorare la stabilità dell'applicazione. Un componente aggiuntivo che visualizza un'interfaccia utente WPF crea un <xref:System.Windows.Threading.Dispatcher> per il thread che il dominio dell'applicazione viene eseguita, se l'applicazione host è un'applicazione WPF. È possibile rilevare le eccezioni tutti non gestite che si verificano nel dominio dell'applicazione tramite la gestione di <xref:System.Windows.Threading.Dispatcher.UnhandledException> eventi di WPF del componente aggiuntivo <xref:System.Windows.Threading.Dispatcher>. È possibile ottenere il <xref:System.Windows.Threading.Dispatcher> dal <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> proprietà.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>Limitazioni dei componenti aggiuntivi WPF  
  Oltre ai vantaggi aggiunti ai comportamenti predefiniti forniti da WPF <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>e gli handle di finestra, esistono anche alcune limitazioni per le interfacce utente di componenti aggiuntivi visualizzate dalle applicazioni host:  
   
--   Interfacce utente del componente aggiuntivo visualizzate da un'applicazione host non rispettano la modalità di ritaglio dell'applicazione host.  
+- Interfacce utente del componente aggiuntivo visualizzate da un'applicazione host non rispettano la modalità di ritaglio dell'applicazione host.  
   
--   Il concetto di *spazio aereo* negli scenari di interoperabilità si applica anche ai componenti aggiuntivi (vedere [Cenni preliminari sulle aree di tecnologia](../advanced/technology-regions-overview.md)).  
+- Il concetto di *spazio aereo* negli scenari di interoperabilità si applica anche ai componenti aggiuntivi (vedere [Cenni preliminari sulle aree di tecnologia](../advanced/technology-regions-overview.md)).  
   
--   Interfaccia utente dell'applicazione di un host dei servizi, ad esempio ereditarietà delle risorse, l'associazione dati e i comandi non sono automaticamente disponibili per il componente aggiuntivo interfacce utente. Per fornire questi servizi al componente aggiuntivo è necessario aggiornare la pipeline.  
+- Interfaccia utente dell'applicazione di un host dei servizi, ad esempio ereditarietà delle risorse, l'associazione dati e i comandi non sono automaticamente disponibili per il componente aggiuntivo interfacce utente. Per fornire questi servizi al componente aggiuntivo è necessario aggiornare la pipeline.  
   
--   Un componente aggiuntivo dell'interfaccia utente non può essere ruotata, ridimensionata, inclinata o è coinvolta in una trasformazione (vedere [Cenni preliminari sulle trasformazioni](../graphics-multimedia/transforms-overview.md)).  
+- Un componente aggiuntivo dell'interfaccia utente non può essere ruotata, ridimensionata, inclinata o è coinvolta in una trasformazione (vedere [Cenni preliminari sulle trasformazioni](../graphics-multimedia/transforms-overview.md)).  
   
--   Contenuto all'interno di interfacce utente del componente aggiuntivo che viene eseguito il rendering mediante operazioni di disegno di <xref:System.Drawing> dello spazio dei nomi può includere la fusione alfa. Deve essere 100% di opacità; tuttavia, sia un componente aggiuntivo dell'interfaccia utente e l'applicazione host dell'interfaccia utente che lo contiene in altre parole, il `Opacity` proprietà sia deve essere impostata su 1.  
+- Contenuto all'interno di interfacce utente del componente aggiuntivo che viene eseguito il rendering mediante operazioni di disegno di <xref:System.Drawing> dello spazio dei nomi può includere la fusione alfa. Deve essere 100% di opacità; tuttavia, sia un componente aggiuntivo dell'interfaccia utente e l'applicazione host dell'interfaccia utente che lo contiene in altre parole, il `Opacity` proprietà sia deve essere impostata su 1.  
   
--   Se il <xref:System.Windows.Window.AllowsTransparency%2A> di una finestra nell'applicazione host che contiene un componente aggiuntivo dell'interfaccia utente è impostata su `true`, il componente aggiuntivo è invisibile. Questo vale anche se l'interfaccia utente del componente aggiuntivo è opaca al 100% (vale a dire il `Opacity` proprietà ha un valore pari a 1).  
+- Se il <xref:System.Windows.Window.AllowsTransparency%2A> di una finestra nell'applicazione host che contiene un componente aggiuntivo dell'interfaccia utente è impostata su `true`, il componente aggiuntivo è invisibile. Questo vale anche se l'interfaccia utente del componente aggiuntivo è opaca al 100% (vale a dire il `Opacity` proprietà ha un valore pari a 1).  
   
--   Un'interfaccia utente del componente aggiuntivo deve essere visualizzata sopra altri elementi WPF nella stessa finestra di primo livello.  
+- Un'interfaccia utente del componente aggiuntivo deve essere visualizzata sopra altri elementi WPF nella stessa finestra di primo livello.  
   
--   Non eseguire il rendering la parte di UI di un componente aggiuntivo utilizzando un <xref:System.Windows.Media.VisualBrush>. Il componente aggiuntivo può invece eseguire uno snapshot dell'interfaccia utente generata per creare una bitmap che può essere passata all'applicazione host usando i metodi definiti dal contratto.  
+- Non eseguire il rendering la parte di UI di un componente aggiuntivo utilizzando un <xref:System.Windows.Media.VisualBrush>. Il componente aggiuntivo può invece eseguire uno snapshot dell'interfaccia utente generata per creare una bitmap che può essere passata all'applicazione host usando i metodi definiti dal contratto.  
   
--   Non è possibile riprodurre file multimediali da un <xref:System.Windows.Controls.MediaElement> in un'interfaccia utente del componente aggiuntivo.  
+- Non è possibile riprodurre file multimediali da un <xref:System.Windows.Controls.MediaElement> in un'interfaccia utente del componente aggiuntivo.  
   
--   Gli eventi del mouse generati per l'interfaccia utente del componente aggiuntivo non vengono ricevuti né generati dall'applicazione host e il `IsMouseOver` un valore della proprietà per l'interfaccia utente dell'applicazione host è `false`.  
+- Gli eventi del mouse generati per l'interfaccia utente del componente aggiuntivo non vengono ricevuti né generati dall'applicazione host e il `IsMouseOver` un valore della proprietà per l'interfaccia utente dell'applicazione host è `false`.  
   
--   Quando lo stato attivo passa tra i controlli in un componente aggiuntivo dell'interfaccia utente, il `GotFocus` e `LostFocus` eventi non vengono ricevuti né generati dall'applicazione host.  
+- Quando lo stato attivo passa tra i controlli in un componente aggiuntivo dell'interfaccia utente, il `GotFocus` e `LostFocus` eventi non vengono ricevuti né generati dall'applicazione host.  
   
--   La parte di un'applicazione host che contiene un'interfaccia utente del componente aggiuntivo appare bianca quando viene stampata.  
+- La parte di un'applicazione host che contiene un'interfaccia utente del componente aggiuntivo appare bianca quando viene stampata.  
   
--   Tutti i dispatcher (vedere <xref:System.Windows.Threading.Dispatcher>) creato dal componente aggiuntivo dell'interfaccia utente deve essere arrestati manualmente prima che il componente aggiuntivo proprietario venga scaricato se l'applicazione host continua l'esecuzione. Il contratto può implementare i metodi che consentono all'applicazione host di segnalare il componente aggiuntivo prima che il componente aggiuntivo viene scaricato, permettendo l'interfaccia utente di componente aggiuntivo arrestare i dispatcher.  
+- Tutti i dispatcher (vedere <xref:System.Windows.Threading.Dispatcher>) creato dal componente aggiuntivo dell'interfaccia utente deve essere arrestati manualmente prima che il componente aggiuntivo proprietario venga scaricato se l'applicazione host continua l'esecuzione. Il contratto può implementare i metodi che consentono all'applicazione host di segnalare il componente aggiuntivo prima che il componente aggiuntivo viene scaricato, permettendo l'interfaccia utente di componente aggiuntivo arrestare i dispatcher.  
   
--   Se un componente aggiuntivo dell'interfaccia utente è un <xref:System.Windows.Controls.InkCanvas> o contiene un <xref:System.Windows.Controls.InkCanvas>, non è possibile scaricare il componente aggiuntivo.  
+- Se un componente aggiuntivo dell'interfaccia utente è un <xref:System.Windows.Controls.InkCanvas> o contiene un <xref:System.Windows.Controls.InkCanvas>, non è possibile scaricare il componente aggiuntivo.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Ottimizzazione delle prestazioni  

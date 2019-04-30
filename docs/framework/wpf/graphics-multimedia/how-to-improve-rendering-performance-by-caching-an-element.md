@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
 ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947277"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Procedura: Migliorare le prestazioni di rendering memorizzando nella cache un elemento
 Usare la <xref:System.Windows.Media.BitmapCache> classe per migliorare le prestazioni di rendering di un oggetto complesso <xref:System.Windows.UIElement>. Per memorizzare nella cache un elemento, creare una nuova istanza di <xref:System.Windows.Media.BitmapCache> classi e assegnarla alla proprietà dell'elemento <xref:System.Windows.UIElement.CacheMode%2A> proprietà. È possibile riutilizzare una <xref:System.Windows.Media.BitmapCache> in modo efficiente in un <xref:System.Windows.Media.BitmapCacheBrush>.  

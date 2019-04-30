@@ -7,11 +7,11 @@ ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08937e87b8bd2249b8608f8ec1ed1f7734961b3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948564"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>Metodo ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode
 [Supportato in [!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] e versioni successive]  
@@ -33,9 +33,9 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 ## <a name="remarks"></a>Note  
  Se il valore di `enableExceptionsOutsideOfJMC` è `false`:  
   
--   Un'eccezione DEBUG_EXCEPTION_FIRST_CHANCE non comporterà un callback al debugger.  
+- Un'eccezione DEBUG_EXCEPTION_FIRST_CHANCE non comporterà un callback al debugger.  
   
--   Un'eccezione DEBUG_EXCEPTION_CATCH_HANDLER_FOUND non comporterà un callback al debugger se l'eccezione non ignora mai nel codice utente (vale a dire, il percorso dall'origine di un gestore di eccezioni non ha metodi contrassegnati JustMyCode o JMC).  
+- Un'eccezione DEBUG_EXCEPTION_CATCH_HANDLER_FOUND non comporterà un callback al debugger se l'eccezione non ignora mai nel codice utente (vale a dire, il percorso dall'origine di un gestore di eccezioni non ha metodi contrassegnati JustMyCode o JMC).  
   
  Il valore predefinito di `enableExceptionsOutsideOfJMC` è `true`.  
   

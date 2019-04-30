@@ -14,8 +14,8 @@ ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937919"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procedura: Creare una sfumatura lineare
 GDI+ fornisce orizzontali, verticali e diagonali sfumature lineari. Per impostazione predefinita, il colore in una sfumatura lineare viene modificato in modo uniforme. Tuttavia, è possibile personalizzare una sfumatura lineare in modo che il colore viene modificato in modo non uniforme.  
@@ -35,7 +35,7 @@ Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore ri
   
 ### <a name="to-use-horizontal-linear-gradients"></a>Per utilizzare sfumature lineari orizzontali  
   
--   Passare blu rosso ed è opaco opaco come il terzo e quarto argomento, rispettivamente.  
+- Passare blu rosso ed è opaco opaco come il terzo e quarto argomento, rispettivamente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
      [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
@@ -60,7 +60,7 @@ Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore ri
 
 ### <a name="to-customize-linear-gradients"></a>Per personalizzare le sfumature lineari  
   
--   Passare il rosso opaco e nero opaco come il terzo e quarto argomento, rispettivamente.  
+- Passare il rosso opaco e nero opaco come il terzo e quarto argomento, rispettivamente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
      [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
@@ -75,7 +75,7 @@ Il <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> costruttore ri
   
 ### <a name="to-create-diagonal-linear-gradients"></a>Per creare diagonale sfumature lineari  
   
--   Passare l'opaco blu e verde opaco come il terzo e quarto argomento, rispettivamente.  
+- Passare l'opaco blu e verde opaco come il terzo e quarto argomento, rispettivamente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  

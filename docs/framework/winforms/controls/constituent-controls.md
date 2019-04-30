@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956071"
 ---
 # <a name="constituent-controls"></a>Controlli costitutivi
 I controlli che costituiscono un controllo utente, detti anche *controlli costitutivi*, offrono scarsa flessibilità in termini di rendering personalizzato della grafica. Tutti i controlli Windows Form gestiscono il proprio rendering tramite i propri <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo). Poiché questo metodo è protetto, non è accessibile allo sviluppatore e quindi non è possibile evitarne l'esecuzione quando il controllo viene disegnato. Ciò non implica tuttavia che non sia possibile aggiungere codice per modificare l'aspetto dei controlli costitutivi. Per eseguire un altro rendering, è possibile aggiungere un gestore eventi. Ad esempio, si supponga di creare un <xref:System.Windows.Forms.UserControl> con un pulsante denominato `MyButton`. Se fosse necessario ottenere un altro rendering oltre a ciò che ha fornito il <xref:System.Web.UI.WebControls.Button>, è necessario aggiungere codice al controllo utente simile al seguente:  

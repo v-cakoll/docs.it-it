@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941141"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Procedura: Ereditare dalla classe Control
 Se si desidera creare un controllo completamente personalizzato da usare in un Form di Windows, è necessario ereditare dal <xref:System.Windows.Forms.Control> classe. Durante l'eredità dal <xref:System.Windows.Forms.Control> classe richiede che si esegue la pianificazione e implementazione più, nonché è la più vasta gamma di opzioni. Quando si eredita da <xref:System.Windows.Forms.Control>, si ereditano le funzionalità di base che consentono di attivare i controlli. La funzionalità riguardante il <xref:System.Windows.Forms.Control> classe gestisce l'input dell'utente tramite tastiera e mouse, definisce i limiti e le dimensioni del controllo, fornisce un handle di windows e fornisce la gestione dei messaggi e sicurezza. Non incorpora nessun disegno, che in questo caso è il rendering reale dell'interfaccia grafica del controllo, e non consente di incorporare alcuna funzionalità di interazione utente specifica. È necessario fornire tutti questi aspetti tramite codice personalizzato.  

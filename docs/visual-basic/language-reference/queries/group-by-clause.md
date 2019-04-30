@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945327"
 ---
 # <a name="group-by-clause-visual-basic"></a>Clausola Group By (Visual Basic)
 Raggruppa gli elementi di un risultato della query. Può essere usata anche per applicare funzioni di aggregazione a ogni gruppo. L'operazione di raggruppamento è basata su una o più chiavi.  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>Parti  
   
--   `listField1`, `listField2`  
+- `listField1`, `listField2`  
   
      Facoltativo. Uno o più campi della variabile o delle variabili di query che identificano in modo esplicito i campi da includere nel risultato raggruppato. Se non sono specificati campi, tutti i campi della variabile o delle variabili di query vengono inclusi nel risultato raggruppato.  
   
--   `keyExp1`  
+- `keyExp1`  
   
      Obbligatorio. Espressione che identifica la chiave da usare per determinare i gruppi di elementi. È possibile specificare più di una chiave per specificare una chiave composta.  
   
--   `keyExp2`  
+- `keyExp2`  
   
      Facoltativo. Uno o più tasti aggiuntivi che vengono combinati con `keyExp1` per creare una chiave composta.  
   
--   `aggregateList`  
+- `aggregateList`  
   
      Obbligatorio. Una o più espressioni che identificano come vengono aggregati i gruppi. Per identificare un nome di membro per i risultati raggruppati, usare la parola chiave `Group` , che può essere in uno dei seguenti formati:  
   

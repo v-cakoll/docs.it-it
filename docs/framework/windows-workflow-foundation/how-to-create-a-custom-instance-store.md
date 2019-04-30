@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: Creare un Store di istanza personalizzate'
+title: 'Procedura: Creare un archivio di istanze personalizzato'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
 ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945639"
 ---
-# <a name="how-to-create-a-custom-instance-store"></a>Procedura: Creare un Store di istanza personalizzate
+# <a name="how-to-create-a-custom-instance-store"></a>Procedura: Creare un archivio di istanze personalizzato
 
 In [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] è presente <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un archivio di istanze che usa SQL Server per rendere persistenti i dati del flusso di lavoro. Se l'applicazione deve rendere persistenti i dati del flusso di lavoro in un altro supporto, ad esempio un altro database o un file system, è possibile implementare un archivio di istanze personalizzato. L'archivio di istanze personalizzato viene creato estendendo la classe astratta <xref:System.Runtime.DurableInstancing.InstanceStore> e implementando i metodi obbligatori per l'implementazione. Per un'implementazione completa di un archivio di istanze personalizzato, vedere la [processo di acquisto aziendale](./samples/corporate-purchase-process.md) esempio.
 
