@@ -3,11 +3,11 @@ title: Architettura del flusso di lavoro di Windows
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
 ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945925"
 ---
 # <a name="windows-workflow-architecture"></a>Architettura del flusso di lavoro di Windows
 Windows Workflow Foundation (WF) innalza il livello di astrazione per lo sviluppo di applicazioni interattive con esecuzione prolungata. Le unità di lavoro vengono incapsulate come attività. Le attività vengono eseguite in un ambiente che fornisce funzionalità per il controllo del flusso, gestione delle eccezioni, propagazione degli errori, persistenza dei dati relativi allo stato, caricamento e scaricamento di flussi di lavoro in corso dalla memoria, rilevamento e flusso della transazione.  
@@ -43,10 +43,10 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-life-cycle"></a>Ciclo di vita dell'attività  
  Un'istanza di un'attività viene avviata nello stato <xref:System.Activities.ActivityInstanceState.Executing>. A meno che non si verifichino eccezioni, rimane in questo stato finché non vengono completati l'esecuzione di tutte le attività figlio e qualsiasi altro lavoro in sospeso (ad esempio gli oggetti <xref:System.Activities.Bookmark>); a questo punto passa allo stato <xref:System.Activities.ActivityInstanceState.Closed>. L'elemento padre di un istanza dell'attività può richiedere l'annullamento di un elemento figlio. Se quest'ultimo può essere annullato, viene completato nello stato <xref:System.Activities.ActivityInstanceState.Canceled>. Se durante l'esecuzione viene generata un'eccezione, il runtime inserisce l'attività nello stato <xref:System.Activities.ActivityInstanceState.Faulted> e propaga l'eccezione fino alla catena di attività padre. Di seguito sono riportati i tre stati di completamento di un'attività:  
   
--   **Chiuso:** L'attività ha completato il lavoro ed è stato chiuso.  
+- **Chiuso:** L'attività ha completato il lavoro ed è stato chiuso.  
   
--   **Annullata:** L'attività normalmente ha abbandonato il proprio lavoro ed è stato chiuso. Quando viene immesso questo stato, il lavoro non viene sottoposto a rollback in modo esplicito.  
+- **Annullata:** L'attività normalmente ha abbandonato il proprio lavoro ed è stato chiuso. Quando viene immesso questo stato, il lavoro non viene sottoposto a rollback in modo esplicito.  
   
--   **Con errori:** L'attività ha rilevato un errore ed è stato terminato senza completamento del lavoro.  
+- **Con errori:** L'attività ha rilevato un errore ed è stato terminato senza completamento del lavoro.  
   
  Le attività rimangono nello stato <xref:System.Activities.ActivityInstanceState.Executing> quando vengono rese persistenti o scaricate.

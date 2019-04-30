@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940543"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Procedura: Compilare un'applicazione ASP.NET che può riconoscere attestazioni con l'autenticazione di Windows
 ## <a name="applies-to"></a>Si applica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Web Form ASP.NET®  
+- Web Form ASP.NET®  
   
 ## <a name="summary"></a>Riepilogo  
  Questo argomento include le procedure dettagliate per creare una semplice applicazione Web Form ASP.NET in grado di riconoscere attestazioni che usa l'autenticazione di Windows. Sono inoltre disponibili istruzioni per testare l'applicazione per assicurarsi che le attestazioni vengano presentate quando un utente accede con l'autenticazione di Windows.  
   
 ## <a name="contents"></a>Sommario  
   
--   Obiettivi  
+- Obiettivi  
   
--   Panoramica  
+- Panoramica  
   
--   Riepilogo dei passaggi  
+- Riepilogo dei passaggi  
   
--   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+- Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione di Windows  
+- Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione di Windows  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="objectives"></a>Obiettivi  
   
--   Configurare un'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione di Windows  
+- Configurare un'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione di Windows  
   
--   Testare l'applicazione Web Form ASP.NET per verificare se funziona correttamente  
+- Testare l'applicazione Web Form ASP.NET per verificare se funziona correttamente  
   
 ## <a name="overview"></a>Panoramica  
  In .NET 4.5, WIF e l'autorizzazione basata sulle attestazioni sono diventati parte integrante del framework. In precedenza, per usare le attestazioni da un utente ASP.NET, era necessario installare WIF e quindi effettuare il cast delle interfacce su oggetti Principal come `Thread.CurrentPrincipal` o `HttpContext.Current.User`. Ora le attestazioni vengono gestite automaticamente da questi oggetti Principal.  
@@ -47,11 +47,11 @@ ms.locfileid: "59767968"
   
 ## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+- Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione di Windows  
+- Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione di Windows  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
  In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.  

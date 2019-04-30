@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936669"
 ---
 # <a name="mod-operator-visual-basic"></a>Operatore Mod (Visual Basic)
 Divide due numeri e restituisce solo il resto.  
@@ -70,9 +70,9 @@ End Module
   
  Gli operatori correlati includono quanto segue:  
   
--   Il [\ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) restituisce il quoziente di una divisione. Ad esempio, l'espressione `14 \ 4` restituisce 3.  
+- Il [\ (operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) restituisce il quoziente di una divisione. Ad esempio, l'espressione `14 \ 4` restituisce 3.  
   
--   Il [/ operatore (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto, sotto forma di numero a virgola mobile. Ad esempio, l'espressione `14 / 4` 3.5 viene valutata.  
+- Il [/ operatore (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) restituisce il quoziente completo, incluso il resto, sotto forma di numero a virgola mobile. Ad esempio, l'espressione `14 / 4` 3.5 viene valutata.  
   
 ## <a name="attempted-division-by-zero"></a>Tentativo di divisione per zero  
  Se `number2` restituisce zero, il comportamento del `Mod` operatore dipende dal tipo dei dati degli operandi. Una divisione integrale genera un <xref:System.DivideByZeroException> eccezione. Restituisce una divisione a virgola mobile <xref:System.Double.NaN>.  

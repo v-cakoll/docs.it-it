@@ -13,8 +13,8 @@ ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938067"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Procedura: Creare una sfumatura percorso
 Il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe consente di personalizzare il modo in cui riempire una forma con gradualmente la modifica dei colori. Ad esempio, è possibile specificare un colore per il centro di un percorso e un altro per il limite di un percorso. È anche possibile specificare colori separati per ognuno dei vari punti lungo il bordo di un percorso.  
@@ -26,7 +26,7 @@ Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:Syste
 
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Per compilare un'ellisse con una sfumatura percorso  
   
--   Nell'esempio seguente viene compilato un'ellisse con un pennello a sfumatura. Colore centrale è impostato su blu e il colore del limite è impostato su azzurro. La figura seguente mostra l'ellisse piena.  
+- Nell'esempio seguente viene compilato un'ellisse con un pennello a sfumatura. Colore centrale è impostato su blu e il colore del limite è impostato su azzurro. La figura seguente mostra l'ellisse piena.  
   
      ![Percorso sfumatura riempimento di un'ellisse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
@@ -43,12 +43,12 @@ Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:Syste
   
 ### <a name="to-specify-points-on-the-boundary"></a>Per specificare i punti in corrispondenza del limite  
   
--   Nell'esempio seguente crea un pennello a sfumatura da un percorso a forma di stella. Il codice imposta il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> proprietà, che imposta il colore al centro della stella e impostato su rosso. Il codice imposta quindi il <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> proprietà per specificare diversi colori (archiviati nel `colors` matrice) a singoli punti nel `points` matrice. L'istruzione di codice finale riempie il percorso a forma di stella con pennello a sfumatura.  
+- Nell'esempio seguente crea un pennello a sfumatura da un percorso a forma di stella. Il codice imposta il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> proprietà, che imposta il colore al centro della stella e impostato su rosso. Il codice imposta quindi il <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> proprietà per specificare diversi colori (archiviati nel `colors` matrice) a singoli punti nel `points` matrice. L'istruzione di codice finale riempie il percorso a forma di stella con pennello a sfumatura.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   L'esempio seguente disegna una sfumatura percorso senza un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto nel codice. Il particolare <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> costruttore nell'esempio riceve una matrice di punti, ma non richiede un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Si noti inoltre che il <xref:System.Drawing.Drawing2D.PathGradientBrush> utilizzato per riempire un rettangolo, non un percorso. Il rettangolo è maggiore di tracciato chiuso usata per definire il pennello, in modo da parte del rettangolo non viene disegnato dal pennello. La figura seguente mostra il rettangolo (linea tratteggiata) e la parte del rettangolo disegnato dal pennello a sfumatura: 
+- L'esempio seguente disegna una sfumatura percorso senza un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto nel codice. Il particolare <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> costruttore nell'esempio riceve una matrice di punti, ma non richiede un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto. Si noti inoltre che il <xref:System.Drawing.Drawing2D.PathGradientBrush> utilizzato per riempire un rettangolo, non un percorso. Il rettangolo è maggiore di tracciato chiuso usata per definire il pennello, in modo da parte del rettangolo non viene disegnato dal pennello. La figura seguente mostra il rettangolo (linea tratteggiata) e la parte del rettangolo disegnato dal pennello a sfumatura: 
   
      ![Sfumatura parte disegnato dal pennello a sfumatura.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
@@ -57,7 +57,7 @@ Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:Syste
   
 ### <a name="to-customize-a-path-gradient"></a>Per personalizzare una sfumatura percorso  
   
--   Un modo per personalizzare un pennello a sfumatura consiste nell'impostare relativo <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> proprietà. Le proporzioni del fuoco specificano un percorso interno che si trova all'interno del percorso principale. Colore centrale viene visualizzato ovunque all'interno di tale percorso interno e non solo al punto centrale.  
+- Un modo per personalizzare un pennello a sfumatura consiste nell'impostare relativo <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> proprietà. Le proporzioni del fuoco specificano un percorso interno che si trova all'interno del percorso principale. Colore centrale viene visualizzato ovunque all'interno di tale percorso interno e non solo al punto centrale.  
   
      L'esempio seguente crea un pennello a sfumatura in base a un percorso ellittico. Il codice imposta il colore di contorno impostandolo sul blu, imposta il colore centrale azzurro per e quindi Usa il pennello a sfumatura per riempire il percorso ellittico.  
   
@@ -74,7 +74,7 @@ Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:Syste
   
 ### <a name="to-customize-with-interpolation"></a>Personalizzare con interpolazione  
   
--   Un altro modo per personalizzare un pennello a sfumatura consiste nello specificare una matrice di colori interpolazione e una matrice di posizioni di interpolazione.  
+- Un altro modo per personalizzare un pennello a sfumatura consiste nello specificare una matrice di colori interpolazione e una matrice di posizioni di interpolazione.  
   
      L'esempio seguente crea un pennello a sfumatura basato su un triangolo. Il codice imposta il <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> proprietà del pennello a sfumatura path per specificare una matrice di colori di interpolazione (azzurro verde scuro, blu) e una matrice di posizioni di interpolazione (0, 0.25, 1). Quando si sposta dai limiti del triangolo per il punto centrale, il colore cambia gradualmente da verde a aqua e quindi da aqua impostandolo sul blu. La modifica da verde a aqua avviene in 25 percento della distanza da verde a blu.  
   
@@ -87,7 +87,7 @@ Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:Syste
   
 ### <a name="to-set-the-center-point"></a>Per impostare il punto centrale  
   
--   Per impostazione predefinita, il punto centrale di un pennello a sfumatura è al centro del percorso usato per costruire il pennello. È possibile modificare la posizione del punto centrale impostando il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà del <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
+- Per impostazione predefinita, il punto centrale di un pennello a sfumatura è al centro del percorso usato per costruire il pennello. È possibile modificare la posizione del punto centrale impostando il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà del <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
   
      L'esempio seguente crea un pennello a sfumatura basato su un'ellisse. È il centro dell'ellisse (70, 35), ma il punto centrale di pennello a sfumatura è impostato su (120, 40).  
   
@@ -98,7 +98,7 @@ Gli esempi in questo articolo sono i metodi chiamati da un controllo <xref:Syste
   
      ![Percorso sfumatura con colorato puntini di sospensione e il punto centrale.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
--   È possibile impostare il punto centrale di un pennello a sfumatura in una posizione all'esterno del percorso che è stato usato per costruire il pennello. Nell'esempio seguente sostituisce la chiamata per impostare il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà nel codice precedente.  
+- È possibile impostare il punto centrale di un pennello a sfumatura in una posizione all'esterno del percorso che è stato usato per costruire il pennello. Nell'esempio seguente sostituisce la chiamata per impostare il <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> proprietà nel codice precedente.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  

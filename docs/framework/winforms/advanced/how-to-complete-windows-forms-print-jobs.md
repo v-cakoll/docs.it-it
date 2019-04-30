@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
 ms.openlocfilehash: 256b9a3d8842aaa4b032e67ebac9ca6a9e1ef34a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937852"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Procedura: Completare processi di stampa in Windows Form
 Spesso, elaboratori di testo e altre applicazioni che eseguono processi di stampa fornirà l'opzione per visualizzare un messaggio agli utenti che un processo di stampa è stato completato. È possibile fornire questa funzionalità nei tuoi moduli di Windows tramite la gestione di <xref:System.Drawing.Printing.PrintDocument.EndPrint> eventi del <xref:System.Drawing.Printing.PrintDocument> componente.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949617"
 ---
 # <a name="securing-clients"></a>Protezione di client
 In Windows Communication Foundation (WCF), il servizio impone i requisiti di sicurezza per i client. Ovvero specifica quale modalità di sicurezza utilizzare e se il client deve fornire o meno una credenziale. Il processo di protezione di un client, pertanto, è semplice: utilizzare i metadati ottenuti dal servizio (se è pubblicato) e generare un client. I metadati specificano come configurare il client. Se il servizio richiede al client di fornire una credenziale, è necessario ottenerne una che corrisponda al requisito. In questo argomento viene descritto il processo in modo dettagliato. Per altre informazioni sulla creazione di un servizio sicuro, vedere [Securing Services](../../../docs/framework/wcf/securing-services.md).  
@@ -71,7 +71,7 @@ In Windows Communication Foundation (WCF), il servizio impone i requisiti di sic
   
  Un tipo comune di credenziale è il certificato X.509. È possibile fornire la credenziale in due modi:  
   
--   Tramite la programmazione della credenziale nel codice client (utilizzando il metodo `SetCertificate`).  
+- Tramite la programmazione della credenziale nel codice client (utilizzando il metodo `SetCertificate`).  
   
  Aggiungendo un [ \<comportamenti >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sezione del file di configurazione per il client e l'uso di `clientCredentials` elemento (mostrato sotto).  
   

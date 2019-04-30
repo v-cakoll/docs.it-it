@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 43c40e833e3a250239e9e90667196a2a74a96e0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969962"
 ---
 # <a name="iclrassemblyreferencelist-interface"></a>Interfaccia ICLRAssemblyReferenceList
 Gestisce un elenco di assembly caricati da common language runtime (CLR) e non dall'host.  

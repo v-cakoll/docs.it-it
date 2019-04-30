@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959978"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Dichiarazione di variabili oggetto (Visual Basic)
 Utilizzare un'istruzione di dichiarazione normale per dichiarare una variabile oggetto. Per il tipo di dati è specificare `Object` (vale a dire la [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) o in una classe più specifica da cui l'oggetto deve essere creata.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Vantaggi offerti dall'associazione anticipata  
  Si dichiara una variabile oggetto come una classe specifica offre diversi vantaggi:  
   
--   Controllo automatico dei tipi  
+- Controllo automatico dei tipi  
   
--   È garantito l'accesso a tutti i membri della classe specifico  
+- È garantito l'accesso a tutti i membri della classe specifico  
   
--   Supporto tecnico Microsoft IntelliSense nell'Editor del codice  
+- Supporto tecnico Microsoft IntelliSense nell'Editor del codice  
   
--   Migliorare la leggibilità del codice  
+- Migliorare la leggibilità del codice  
   
--   Numero di errori nel codice  
+- Numero di errori nel codice  
   
--   Gli errori rilevati in fase di compilazione anziché di tempo di esecuzione  
+- Gli errori rilevati in fase di compilazione anziché di tempo di esecuzione  
   
--   Esecuzione di codice più veloce  
+- Esecuzione di codice più veloce  
   
 ## <a name="access-to-object-variable-members"></a>Accesso ai membri delle variabili oggetto  
  Quando `Option Strict` è attivato `On`, una variabile oggetto può accedere solo ai metodi e proprietà della classe con cui è dichiarata. Questa condizione è illustrata nell'esempio seguente.  

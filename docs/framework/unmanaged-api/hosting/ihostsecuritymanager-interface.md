@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957586"
 ---
 # <a name="ihostsecuritymanager-interface"></a>Interfaccia IHostSecurityManager
 Fornisce metodi che consentono l'accesso e controllo sul contesto di sicurezza del thread attualmente in esecuzione.  
@@ -42,13 +42,13 @@ Fornisce metodi che consentono l'accesso e controllo sul contesto di sicurezza d
   
  Common Language Runtime gestisce il contesto di thread gestiti internamente. Viene eseguita una query, specifico del processo `IHostSecurityManager` nelle situazioni seguenti:  
   
--   Nel thread finalizzatore, durante l'esecuzione del finalizzatore.  
+- Nel thread finalizzatore, durante l'esecuzione del finalizzatore.  
   
--   Durante l'esecuzione dei costruttori di classe e modulo.  
+- Durante l'esecuzione dei costruttori di classe e modulo.  
   
--   In corrispondenza di punti asincroni sul thread di lavoro, nelle chiamate al [IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) (metodo).  
+- In corrispondenza di punti asincroni sul thread di lavoro, nelle chiamate al [IHostThreadPoolManager](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) (metodo).  
   
--   Nella manutenzione di porte di completamento i/o.  
+- Nella manutenzione di porte di completamento i/o.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

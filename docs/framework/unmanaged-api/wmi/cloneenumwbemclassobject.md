@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac85ed86ea968fa945e07f95db8977a33c5d12a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61968168"
 ---
-# <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject (funzione)
+# <a name="cloneenumwbemclassobject-function"></a>Funzione CloneEnumWbemClassObject
 Crea una copia logica di un enumeratore mantenendone la posizione corrente in un'enumerazione.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]

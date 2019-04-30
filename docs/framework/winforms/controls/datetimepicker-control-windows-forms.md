@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
 ms.openlocfilehash: 236017834f3a965ee0ddfc1a74121679f086050b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971340"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>Controllo DateTimePicker (Windows Form)
 I moduli di Windows `DateTimePicker` controllo consente all'utente di selezionare un singolo elemento da un elenco di date o ore. Quando usato per rappresentare una data, viene visualizzata in due parti: un elenco di riepilogo a discesa con una data nel testo e una griglia in cui viene visualizzata quando si fa clic sulla freccia giù accanto all'elenco.  

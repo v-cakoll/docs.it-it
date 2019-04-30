@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2903395f5f834f2435b14d0b3f3e8bfe24af2867
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970040"
 ---
 # <a name="iappdomainbindingonappdomain-method"></a>Metodo IAppDomainBinding::OnAppDomain
 Chiamato da common language runtime (CLR) per notificare all'host che è stato creato un dominio dell'applicazione.  

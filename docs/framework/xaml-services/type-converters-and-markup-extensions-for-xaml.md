@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954262"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Convertitori di tipi ed estensioni di markup per XAML
 I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sistemi di tipi XAML e writer XAML per generare componenti dell'oggetto grafico. Anche se condividono alcune caratteristiche, i convertitori di tipi e le estensioni di markup sono rappresentati in modo diverso in un flusso del nodo XAML. In questo set di documentazione, i convertitori di tipi, le estensioni di markup e costrutti simili talvolta vengono detti collettivamente convertitori di valori.  
@@ -22,13 +22,13 @@ I convertitori di tipi e le estensioni di markup sono due tecniche usate dai sis
 ## <a name="value-converters"></a>Convertitori di valori  
  In XAML i convertitori di valori vengono usati per vari scenari. Nell'elenco seguente vengono indicati diversi tipi di convertitori di valori in XAML:  
   
--   Convertitore di tipi  
+- Convertitore di tipi  
   
--   Estensione di markup  
+- Estensione di markup  
   
--   Serializzatore di valori  
+- Serializzatore di valori  
   
--   Classe correlata o classe di supporto che fornisce la logica per una sintassi del testo XAML  
+- Classe correlata o classe di supporto che fornisce la logica per una sintassi del testo XAML  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Convertitori di tipi  

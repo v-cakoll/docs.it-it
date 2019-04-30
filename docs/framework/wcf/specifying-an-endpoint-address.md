@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967856"
 ---
 # <a name="specifying-an-endpoint-address"></a>Specifica di un indirizzo endpoint
 Si verificano tutte le comunicazioni con un servizio Windows Communication Foundation (WCF) tramite i relativi endpoint. Ogni <xref:System.ServiceModel.Description.ServiceEndpoint> contiene una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> e una proprietà <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Il contratto specifica quali operazioni sono disponibili. L'associazione specifica come comunicare con il servizio e l'indirizzo specifica dove trovare il servizio. Ogni endpoint deve avere un indirizzo univoco. L'indirizzo dell'endpoint è rappresentato dalla classe <xref:System.ServiceModel.EndpointAddress>, che contiene un URI (Uniform Resource Identifier), che rappresenta l'indirizzo del servizio, una proprietà <xref:System.ServiceModel.EndpointAddress.Identity%2A>, che rappresenta l'identità di sicurezza del servizio, e una raccolta di proprietà <xref:System.ServiceModel.EndpointAddress.Headers%2A> facoltative. Le intestazioni facoltative forniscono informazioni di indirizzamento più dettagliate che consentono di identificare o interagire con l'endpoint. Ad esempio, le intestazioni possono indicare come elaborare un messaggio in ingresso, dove l'endpoint deve inviare un messaggio di risposta o quale istanza di un servizio usare per elaborare un messaggio in ingresso di un particolare utente, quando sono disponibili più istanze.  
@@ -22,13 +22,13 @@ Si verificano tutte le comunicazioni con un servizio Windows Communication Found
   
  L'indirizzo URI per la maggior parte dei trasporti è costituito da quattro parti. Ad esempio, questo URI, `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` dispone di quattro parti seguenti:  
   
--   Schema: http:  
+- Schema: http:  
   
--   Computer: `www.fabrikam.com`  
+- Computer: `www.fabrikam.com`  
   
--   (Facoltativo) Porta: 322  
+- (Facoltativo) Porta: 322  
   
--   Percorso: /mathservice.svc/secureEndpoint  
+- Percorso: /mathservice.svc/secureEndpoint  
   
  Il modello di riferimento endpoint prevede che ogni riferimento possa includere alcuni parametri di riferimento che aggiungono ulteriori informazioni di identificazione. In WCF, questi parametri per riferimento vengono modellati come istanze del <xref:System.ServiceModel.Channels.AddressHeader> classe.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938631"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Valore letterale CDATA XML (Visual Basic)
 Un valore letterale che rappresenta un <xref:System.Xml.Linq.XCData> oggetto.  
@@ -40,9 +40,9 @@ Un valore letterale che rappresenta un <xref:System.Xml.Linq.XCData> oggetto.
 ## <a name="remarks"></a>Note  
  Le sezioni CDATA XML contengono testo non elaborato che deve essere inclusa, ma non analizzato, con il codice XML che lo contiene. Una sezione CDATA XML può contenere qualsiasi testo. Sono inclusi caratteri XML riservati. La sezione CDATA XML termina con la sequenza "]] >". Ciò implica quanto riportato di seguito:  
   
--   È possibile usare un'espressione incorporata in un valore letterale CDATA XML perché i delimitatori di espressioni incorporate sono contenuto CDATA XML valido.  
+- È possibile usare un'espressione incorporata in un valore letterale CDATA XML perché i delimitatori di espressioni incorporate sono contenuto CDATA XML valido.  
   
--   Le sezioni CDATA XML non possono essere annidate, perché `content` non può contenere il valore "]] >".  
+- Le sezioni CDATA XML non possono essere annidate, perché `content` non può contenere il valore "]] >".  
   
  È possibile assegnare un valore letterale CDATA XML a una variabile o includerlo in un valore letterale elemento XML.  
   

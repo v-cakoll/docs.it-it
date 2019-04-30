@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937683"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procedura: Creare oggetti Graphics per disegnare
 Prima di poter creare linee e forme, il rendering del testo, o visualizzare e manipolare immagini con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario creare un <xref:System.Drawing.Graphics> oggetto. Il <xref:System.Drawing.Graphics> oggetto rappresenta un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie di disegno ed è l'oggetto che viene usato per creare immagini grafiche.  
@@ -31,15 +31,15 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
   
 #### <a name="to-create-a-graphics-object"></a>Per creare un oggetto graphics  
   
--   Riceve un riferimento a un oggetto grafico come parte del <xref:System.Windows.Forms.PaintEventArgs> nella <xref:System.Windows.Forms.Control.Paint> eventi di un form o controllo. Si tratta in genere come si ottiene un riferimento a un oggetto grafico durante la creazione di codice di disegno per un controllo. Allo stesso modo, è possibile ottenere un oggetto grafico come una proprietà del <xref:System.Drawing.Printing.PrintPageEventArgs> quando si gestiscono le <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento per un <xref:System.Drawing.Printing.PrintDocument>.  
+- Riceve un riferimento a un oggetto grafico come parte del <xref:System.Windows.Forms.PaintEventArgs> nella <xref:System.Windows.Forms.Control.Paint> eventi di un form o controllo. Si tratta in genere come si ottiene un riferimento a un oggetto grafico durante la creazione di codice di disegno per un controllo. Allo stesso modo, è possibile ottenere un oggetto grafico come una proprietà del <xref:System.Drawing.Printing.PrintPageEventArgs> quando si gestiscono le <xref:System.Drawing.Printing.PrintDocument.PrintPage> evento per un <xref:System.Drawing.Printing.PrintDocument>.  
   
      -oppure-  
   
--   Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo di un controllo o form per ottenere un riferimento a un <xref:System.Drawing.Graphics> oggetto che rappresenta la superficie di disegno di tale controllo o form. Usare questo metodo se si desidera disegnare su un form o controllo già esistente.  
+- Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo di un controllo o form per ottenere un riferimento a un <xref:System.Drawing.Graphics> oggetto che rappresenta la superficie di disegno di tale controllo o form. Usare questo metodo se si desidera disegnare su un form o controllo già esistente.  
   
      -oppure-  
   
--   Creare un <xref:System.Drawing.Graphics> oggetti da qualsiasi oggetto che eredita da <xref:System.Drawing.Image>. Questo approccio è utile quando si desidera modificare un'immagine già esistente.  
+- Creare un <xref:System.Drawing.Graphics> oggetti da qualsiasi oggetto che eredita da <xref:System.Drawing.Image>. Questo approccio è utile quando si desidera modificare un'immagine già esistente.  
   
      Le sezioni seguenti forniscono informazioni dettagliate su ognuno di questi processi.  
   
@@ -94,7 +94,7 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
   
 #### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>Per creare un oggetto Graphics con il metodo CreateGraphics  
   
--   Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo del form o controllo su cui si desidera eseguire il rendering della grafica.  
+- Chiamare il <xref:System.Windows.Forms.Control.CreateGraphics%2A> metodo del form o controllo su cui si desidera eseguire il rendering della grafica.  
   
     ```vb  
     Dim g as Graphics  
@@ -122,7 +122,7 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
   
 #### <a name="to-create-a-graphics-object-from-an-image"></a>Per creare un oggetto Graphics da un'immagine  
   
--   Chiamare il <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> metodo, specificando il nome della variabile di immagine da cui si desidera creare un <xref:System.Drawing.Graphics> oggetto.  
+- Chiamare il <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> metodo, specificando il nome della variabile di immagine da cui si desidera creare un <xref:System.Drawing.Graphics> oggetto.  
   
      Nell'esempio seguente viene illustrato come utilizzare un <xref:System.Drawing.Bitmap> oggetto:  
   
@@ -149,17 +149,17 @@ Prima di poter creare linee e forme, il rendering del testo, o visualizzare e ma
 ## <a name="drawing-and-manipulating-shapes-and-images"></a>Creazione e modifica di forme e immagini  
  Dopo averlo creato, un <xref:System.Drawing.Graphics> oggetto può essere utilizzato per disegnare linee e forme, il rendering del testo, o visualizzare e modificare le immagini. Gli oggetti principal che vengono usati con il <xref:System.Drawing.Graphics> oggetto sono:  
   
--   Il <xref:System.Drawing.Pen> classe, usato per tracciare linee, la struttura di forme o altre rappresentazioni geometriche di rendering.  
+- Il <xref:System.Drawing.Pen> classe, usato per tracciare linee, la struttura di forme o altre rappresentazioni geometriche di rendering.  
   
--   Il <xref:System.Drawing.Brush> classe, utilizzato per riempire le aree di grafica, ad esempio forme con riempimento, immagini o testo.  
+- Il <xref:System.Drawing.Brush> classe, utilizzato per riempire le aree di grafica, ad esempio forme con riempimento, immagini o testo.  
   
--   Il <xref:System.Drawing.Font> classe, viene fornita una descrizione delle forme da utilizzare durante il rendering di testo.  
+- Il <xref:System.Drawing.Font> classe, viene fornita una descrizione delle forme da utilizzare durante il rendering di testo.  
   
--   Il <xref:System.Drawing.Color> struttura, ovvero rappresenta i colori diversi per la visualizzazione.  
+- Il <xref:System.Drawing.Color> struttura, ovvero rappresenta i colori diversi per la visualizzazione.  
   
 #### <a name="to-use-the-graphics-object-you-have-created"></a>Usare l'oggetto grafico è stato creato  
   
--   Funziona con l'oggetto appropriato elencato in precedenza per disegnare gli elementi necessari.  
+- Funziona con l'oggetto appropriato elencato in precedenza per disegnare gli elementi necessari.  
   
      Per altre informazioni, vedere i seguenti argomenti:  
   

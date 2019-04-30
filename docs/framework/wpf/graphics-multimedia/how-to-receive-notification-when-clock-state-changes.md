@@ -9,11 +9,11 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942136"
 ---
 # <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>Procedura: Ricevere una notifica quando uno stato dell'orologio viene modificato
 Un orologio <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> evento si verifica quando il <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> diventa valido, ad esempio quando l'orologio viene avviato o interrotto. È possibile registrarsi per questo evento con direttamente tramite un <xref:System.Windows.Media.Animation.Clock>, oppure è possibile registrarsi con un <xref:System.Windows.Media.Animation.Timeline>.  

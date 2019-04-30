@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938166"
 ---
 # <a name="graphics-paths-in-gdi"></a>Percorsi di oggetti Graphics in GDI+
 I percorsi sono costituiti dalla combinazione di linee, rettangoli e le curve semplice. Si ricorderà dal [Cenni preliminari sulla grafica vettoriale](vector-graphics-overview.md) che i blocchi predefiniti seguenti hanno dimostrato di essere particolarmente utile per il disegno di immagini:  
   
--   Linee  
+- Linee  
   
--   Rettangoli  
+- Rettangoli  
   
--   Puntini di sospensione  
+- Puntini di sospensione  
   
--   Archi  
+- Archi  
   
--   Poligoni  
+- Poligoni  
   
--   Spline cardinali  
+- Spline cardinali  
   
--   Spline di Bézier  
+- Spline di Bézier  
   
  In GDI+, le <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto consente di raccogliere una sequenza di questi blocchi predefiniti in una singola unità. L'intera sequenza di linee, rettangoli, poligoni e curve possa quindi disegnata con una chiamata ai <xref:System.Drawing.Graphics.DrawPath%2A> metodo del <xref:System.Drawing.Graphics> classe. La figura seguente mostra un percorso creato dalla combinazione di una riga, un arco, una spline di Bézier e una spline di tipo cardinal.  
   

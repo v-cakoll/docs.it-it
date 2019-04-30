@@ -9,11 +9,11 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
 ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937696"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Procedura: Creare figure da linee, curve e forme
 Per una figura di creare, costruire un <xref:System.Drawing.Drawing2D.GraphicsPath>, quindi chiamare i metodi, ad esempio <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> e <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, per aggiungere le primitive nel percorso.  
@@ -21,9 +21,9 @@ Per una figura di creare, costruire un <xref:System.Drawing.Drawing2D.GraphicsPa
 ## <a name="example"></a>Esempio  
  Gli esempi di codice seguente creano i percorsi contenenti cifre:  
   
--   Nel primo esempio crea un percorso che abbia una sola figura. Nella figura è costituito da un singolo arco. Punto finale dell'arco dispone di un angolo di apertura della-180 gradi, in senso antiorario nel sistema di coordinate predefinito.  
+- Nel primo esempio crea un percorso che abbia una sola figura. Nella figura è costituito da un singolo arco. Punto finale dell'arco dispone di un angolo di apertura della-180 gradi, in senso antiorario nel sistema di coordinate predefinito.  
   
--   Nel secondo esempio viene creato un percorso con due cifre. La prima figura fa un arco seguito da una riga. La seconda figura è una riga seguita da una curva seguita da una riga. La prima figura viene lasciata aperta, e la seconda figura è chiusa.  
+- Nel secondo esempio viene creato un percorso con due cifre. La prima figura fa un arco seguito da una riga. La seconda figura è una riga seguita da una curva seguita da una riga. La prima figura viene lasciata aperta, e la seconda figura è chiusa.  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  
