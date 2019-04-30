@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 859abdd713fb19bbb3698d0da72cbff33cfbc6fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995584"
 ---
-# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="fb201-102">Metodo ICorDebugILFrame::GetStackValue</span><span class="sxs-lookup"><span data-stu-id="fb201-102">ICorDebugILFrame::GetStackValue Method</span></span>
-<span data-ttu-id="fb201-103">Questo metodo non è stato implementato.</span><span class="sxs-lookup"><span data-stu-id="fb201-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackvalue-method"></a><span data-ttu-id="3ef33-102">Metodo ICorDebugILFrame::GetStackValue</span><span class="sxs-lookup"><span data-stu-id="3ef33-102">ICorDebugILFrame::GetStackValue Method</span></span>
+<span data-ttu-id="3ef33-103">Questo metodo non è stato implementato.</span><span class="sxs-lookup"><span data-stu-id="3ef33-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb201-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fb201-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ef33-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3ef33-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackValue (  
@@ -36,5 +36,5 @@ HRESULT GetStackValue (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="fb201-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fb201-105">Requirements</span></span>  
- <span data-ttu-id="fb201-106">**Intestazione:** Cordebug. idl, Cordebug. H</span><span class="sxs-lookup"><span data-stu-id="fb201-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="3ef33-105">Requisiti</span><span class="sxs-lookup"><span data-stu-id="3ef33-105">Requirements</span></span>  
+ <span data-ttu-id="3ef33-106">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3ef33-106">**Header:** CorDebug.idl, CorDebug.h</span></span>

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7bbf0e03fc69332f77f3ac34a399a96f638da3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991835"
 ---
-# <a name="icorprofilerinfogetiltonativemapping-method"></a><span data-ttu-id="bfc76-102">Metodo ICorProfilerInfo::GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="bfc76-102">ICorProfilerInfo::GetILToNativeMapping Method</span></span>
-<span data-ttu-id="bfc76-103">Ottiene una mappa dagli offset MSIL (Microsoft Intermediate Language) agli offset nativi per il codice contenuto nella funzione specificata.</span><span class="sxs-lookup"><span data-stu-id="bfc76-103">Gets a map from Microsoft intermediate language (MSIL) offsets to native offsets for the code contained in the specified function.</span></span>  
+# <a name="icorprofilerinfogetiltonativemapping-method"></a><span data-ttu-id="c9fd8-102">Metodo ICorProfilerInfo::GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="c9fd8-102">ICorProfilerInfo::GetILToNativeMapping Method</span></span>
+<span data-ttu-id="c9fd8-103">Ottiene una mappa dagli offset MSIL (Microsoft Intermediate Language) agli offset nativi per il codice contenuto nella funzione specificata.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-103">Gets a map from Microsoft intermediate language (MSIL) offsets to native offsets for the code contained in the specified function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bfc76-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bfc76-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9fd8-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="c9fd8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetILToNativeMapping(  
@@ -38,38 +38,38 @@ HRESULT GetILToNativeMapping(
         COR_DEBUG_IL_TO_NATIVE_MAP map[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bfc76-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="bfc76-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9fd8-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="c9fd8-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="bfc76-106">[in] ID della funzione che contiene il codice.</span><span class="sxs-lookup"><span data-stu-id="bfc76-106">[in] The ID of the function that contains the code.</span></span>  
+ <span data-ttu-id="c9fd8-106">[in] ID della funzione che contiene il codice.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-106">[in] The ID of the function that contains the code.</span></span>  
   
  `cMap`  
- <span data-ttu-id="bfc76-107">[in] Dimensione massima della matrice `map`.</span><span class="sxs-lookup"><span data-stu-id="bfc76-107">[in] The maximum size of the `map` array.</span></span>  
+ <span data-ttu-id="c9fd8-107">[in] Dimensione massima della matrice `map`.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-107">[in] The maximum size of the `map` array.</span></span>  
   
  `pcMap`  
- <span data-ttu-id="bfc76-108">[out] Numero totale di strutture COR_DEBUG_IL_TO_NATIVE_MAP disponibili.</span><span class="sxs-lookup"><span data-stu-id="bfc76-108">[out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.</span></span>  
+ <span data-ttu-id="c9fd8-108">[out] Numero totale di strutture COR_DEBUG_IL_TO_NATIVE_MAP disponibili.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-108">[out] The total number of available COR_DEBUG_IL_TO_NATIVE_MAP structures.</span></span>  
   
  `map`  
- <span data-ttu-id="bfc76-109">[out] Matrice di strutture `COR_DEBUG_IL_TO_NATIVE_MAP`, ognuna delle quali specifica gli offset.</span><span class="sxs-lookup"><span data-stu-id="bfc76-109">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which specifies the offsets.</span></span> <span data-ttu-id="bfc76-110">Dopo il completamento del metodo `GetILToNativeMapping`, `map` conterrà alcune o tutte le strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.</span><span class="sxs-lookup"><span data-stu-id="bfc76-110">After the `GetILToNativeMapping` method returns, `map` will contain some or all of the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span>  
+ <span data-ttu-id="c9fd8-109">[out] Matrice di strutture `COR_DEBUG_IL_TO_NATIVE_MAP`, ognuna delle quali specifica gli offset.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-109">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which specifies the offsets.</span></span> <span data-ttu-id="c9fd8-110">Dopo il completamento del metodo `GetILToNativeMapping`, `map` conterrà alcune o tutte le strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-110">After the `GetILToNativeMapping` method returns, `map` will contain some or all of the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bfc76-111">Note</span><span class="sxs-lookup"><span data-stu-id="bfc76-111">Remarks</span></span>  
- <span data-ttu-id="bfc76-112">Il metodo `GetILToNativeMapping` restituisce una matrice di strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.</span><span class="sxs-lookup"><span data-stu-id="bfc76-112">The `GetILToNativeMapping` method returns an array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="bfc76-113">Per indicare che determinati intervalli di istruzioni native corrispondono ad aree speciali del codice (ad esempio, il prologo della query), può avere una voce nella matrice relativi `ilOffset` campo impostato su un valore di [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumerazione.</span><span class="sxs-lookup"><span data-stu-id="bfc76-113">To convey that certain ranges of native instructions correspond to special regions of code (for example, the prolog), an entry in the array can have its `ilOffset` field set to a value of the [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumeration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9fd8-111">Note</span><span class="sxs-lookup"><span data-stu-id="c9fd8-111">Remarks</span></span>  
+ <span data-ttu-id="c9fd8-112">Il metodo `GetILToNativeMapping` restituisce una matrice di strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-112">The `GetILToNativeMapping` method returns an array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="c9fd8-113">Per indicare che determinati intervalli di istruzioni native corrispondono ad aree speciali del codice (ad esempio, il prologo della query), può avere una voce nella matrice relativi `ilOffset` campo impostato su un valore di [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumerazione.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-113">To convey that certain ranges of native instructions correspond to special regions of code (for example, the prolog), an entry in the array can have its `ilOffset` field set to a value of the [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) enumeration.</span></span>  
   
- <span data-ttu-id="bfc76-114">Dopo il completamento del metodo `GetILToNativeMapping`, è necessario verificare che il buffer `map` sia abbastanza grande per contenere tutte le strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.</span><span class="sxs-lookup"><span data-stu-id="bfc76-114">After `GetILToNativeMapping` returns, you must verify that the `map` buffer was large enough to contain all the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="bfc76-115">A tale scopo, confrontare il valore di `cMap` con il valore del parametro `pcMap`.</span><span class="sxs-lookup"><span data-stu-id="bfc76-115">To do this, compare the value of `cMap` with the value of the `pcMap` parameter.</span></span> <span data-ttu-id="bfc76-116">Se il valore `pcMap`, moltiplicato per la dimensione di una struttura `COR_DEBUG_IL_TO_NATIVE_MAP`, è superiore a `cMap`, allocare un buffer `map` più grande, aggiornare `cMap` con la nuova dimensione e chiamare nuovamente `GetILToNativeMapping`.</span><span class="sxs-lookup"><span data-stu-id="bfc76-116">If the `pcMap` value, when it is multiplied by the size of a `COR_DEBUG_IL_TO_NATIVE_MAP` structure, is larger than `cMap`, allocate a larger `map` buffer, update `cMap` with the new, larger size, and call `GetILToNativeMapping` again.</span></span>  
+ <span data-ttu-id="c9fd8-114">Dopo il completamento del metodo `GetILToNativeMapping`, è necessario verificare che il buffer `map` sia abbastanza grande per contenere tutte le strutture `COR_DEBUG_IL_TO_NATIVE_MAP`.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-114">After `GetILToNativeMapping` returns, you must verify that the `map` buffer was large enough to contain all the `COR_DEBUG_IL_TO_NATIVE_MAP` structures.</span></span> <span data-ttu-id="c9fd8-115">A tale scopo, confrontare il valore di `cMap` con il valore del parametro `pcMap`.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-115">To do this, compare the value of `cMap` with the value of the `pcMap` parameter.</span></span> <span data-ttu-id="c9fd8-116">Se il valore `pcMap`, moltiplicato per la dimensione di una struttura `COR_DEBUG_IL_TO_NATIVE_MAP`, è superiore a `cMap`, allocare un buffer `map` più grande, aggiornare `cMap` con la nuova dimensione e chiamare nuovamente `GetILToNativeMapping`.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-116">If the `pcMap` value, when it is multiplied by the size of a `COR_DEBUG_IL_TO_NATIVE_MAP` structure, is larger than `cMap`, allocate a larger `map` buffer, update `cMap` with the new, larger size, and call `GetILToNativeMapping` again.</span></span>  
   
- <span data-ttu-id="bfc76-117">In alternativa, è possibile chiamare innanzitutto `GetILToNativeMapping` con un buffer `map` di lunghezza zero per ottenere le dimensioni del buffer corrette.</span><span class="sxs-lookup"><span data-stu-id="bfc76-117">Alternatively, you can first call `GetILToNativeMapping` with a zero-length `map` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="bfc76-118">È quindi possibile impostare le dimensioni del buffer sul valore restituito nel parametro `pcMap` e chiamare nuovamente `GetILToNativeMapping`.</span><span class="sxs-lookup"><span data-stu-id="bfc76-118">You can then set the buffer size to the value returned in `pcMap` and call `GetILToNativeMapping` again.</span></span>  
+ <span data-ttu-id="c9fd8-117">In alternativa, è possibile chiamare innanzitutto `GetILToNativeMapping` con un buffer `map` di lunghezza zero per ottenere le dimensioni del buffer corrette.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-117">Alternatively, you can first call `GetILToNativeMapping` with a zero-length `map` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="c9fd8-118">È quindi possibile impostare le dimensioni del buffer sul valore restituito nel parametro `pcMap` e chiamare nuovamente `GetILToNativeMapping`.</span><span class="sxs-lookup"><span data-stu-id="c9fd8-118">You can then set the buffer size to the value returned in `pcMap` and call `GetILToNativeMapping` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bfc76-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bfc76-119">Requirements</span></span>  
- <span data-ttu-id="bfc76-120">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bfc76-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9fd8-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="c9fd8-119">Requirements</span></span>  
+ <span data-ttu-id="c9fd8-120">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9fd8-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bfc76-121">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bfc76-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c9fd8-121">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c9fd8-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bfc76-122">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bfc76-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9fd8-122">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9fd8-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bfc76-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bfc76-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c9fd8-123">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9fd8-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bfc76-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bfc76-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9fd8-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c9fd8-124">See also</span></span>
 
-- [<span data-ttu-id="bfc76-125">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="bfc76-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="bfc76-126">Metodo GetILToNativeMapping2</span><span class="sxs-lookup"><span data-stu-id="bfc76-126">GetILToNativeMapping2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getiltonativemapping2-method.md)
-- [<span data-ttu-id="bfc76-127">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="bfc76-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="bfc76-128">Profilatura</span><span class="sxs-lookup"><span data-stu-id="bfc76-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="c9fd8-125">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="c9fd8-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="c9fd8-126">Metodo GetILToNativeMapping2</span><span class="sxs-lookup"><span data-stu-id="c9fd8-126">GetILToNativeMapping2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getiltonativemapping2-method.md)
+- [<span data-ttu-id="c9fd8-127">Interfacce di profilatura</span><span class="sxs-lookup"><span data-stu-id="c9fd8-127">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="c9fd8-128">Profilatura</span><span class="sxs-lookup"><span data-stu-id="c9fd8-128">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

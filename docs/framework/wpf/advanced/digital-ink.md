@@ -8,18 +8,18 @@ helpviewer_keywords:
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
 ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010560"
 ---
-# <a name="digital-ink"></a><span data-ttu-id="ab9f6-102">Input penna</span><span class="sxs-lookup"><span data-stu-id="ab9f6-102">Digital Ink</span></span>
-<span data-ttu-id="ab9f6-103">In questa sezione descrive l'uso dell'input penna digitale nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ab9f6-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="ab9f6-104">In passato disponibile solo nel SDK di Tablet PC, input penna digitale è ora disponibile in Windows Presentation Foundation di base.</span><span class="sxs-lookup"><span data-stu-id="ab9f6-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="ab9f6-105">Ciò significa che è ora possibile sviluppare applicazioni per Tablet PC complete usando le potenzialità di Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="ab9f6-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
+# <a name="digital-ink"></a><span data-ttu-id="20718-102">Input penna</span><span class="sxs-lookup"><span data-stu-id="20718-102">Digital Ink</span></span>
+<span data-ttu-id="20718-103">In questa sezione descrive l'uso dell'input penna digitale nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="20718-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="20718-104">In passato disponibile solo nel SDK di Tablet PC, input penna digitale è ora disponibile in Windows Presentation Foundation di base.</span><span class="sxs-lookup"><span data-stu-id="20718-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="20718-105">Ciò significa che è ora possibile sviluppare applicazioni per Tablet PC complete usando le potenzialità di Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="20718-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ab9f6-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="ab9f6-106">In This Section</span></span>  
- [<span data-ttu-id="ab9f6-107">Panoramiche</span><span class="sxs-lookup"><span data-stu-id="ab9f6-107">Overviews</span></span>](digital-ink-overviews.md)  
-  [<span data-ttu-id="ab9f6-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="ab9f6-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="20718-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="20718-106">In This Section</span></span>  
+ [<span data-ttu-id="20718-107">Panoramiche</span><span class="sxs-lookup"><span data-stu-id="20718-107">Overviews</span></span>](digital-ink-overviews.md)  
+  [<span data-ttu-id="20718-108">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="20718-108">How-to Topics</span></span>](digital-ink-how-to-topics.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="ab9f6-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="ab9f6-109">Related Sections</span></span>  
- [<span data-ttu-id="ab9f6-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="ab9f6-110">Windows Presentation Foundation</span></span>](../index.md)
+## <a name="related-sections"></a><span data-ttu-id="20718-109">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="20718-109">Related Sections</span></span>  
+ [<span data-ttu-id="20718-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="20718-110">Windows Presentation Foundation</span></span>](../index.md)

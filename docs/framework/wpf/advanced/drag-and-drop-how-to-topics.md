@@ -7,23 +7,23 @@ helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
 ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010436"
 ---
-# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="8f287-102">Procedure relative al trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="8f287-102">Drag and Drop How-to Topics</span></span>
-<span data-ttu-id="8f287-103">Gli esempi seguenti illustrano come eseguire attività comuni usando il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="8f287-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
+# <a name="drag-and-drop-how-to-topics"></a><span data-ttu-id="a7db4-102">Procedure relative al trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="a7db4-102">Drag and Drop How-to Topics</span></span>
+<span data-ttu-id="a7db4-103">Gli esempi seguenti illustrano come eseguire attività comuni usando il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework di trascinamento e rilascio.</span><span class="sxs-lookup"><span data-stu-id="a7db4-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] drag-and-drop framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8f287-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="8f287-104">In This Section</span></span>  
- [<span data-ttu-id="8f287-105">Aprire un file rilasciato in un controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="8f287-105">Open a File That is Dropped on a RichTextBox Control</span></span>](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [<span data-ttu-id="8f287-106">Creare un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="8f287-106">Create a Data Object</span></span>](how-to-create-a-data-object.md)  
- [<span data-ttu-id="8f287-107">Determinare se un formato di dati è presente in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="8f287-107">Determine if a Data Format is Present in a Data Object</span></span>](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [<span data-ttu-id="8f287-108">Elencare i formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="8f287-108">List the Data Formats in a Data Object</span></span>](how-to-list-the-data-formats-in-a-data-object.md)  
- [<span data-ttu-id="8f287-109">Recuperare dati in un formato dati particolare</span><span class="sxs-lookup"><span data-stu-id="8f287-109">Retrieve Data in a Particular Data Format</span></span>](how-to-retrieve-data-in-a-particular-data-format.md)  
- [<span data-ttu-id="8f287-110">Archiviare più formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="8f287-110">Store Multiple Data Formats in a Data Object</span></span>](how-to-store-multiple-data-formats-in-a-data-object.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a7db4-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="a7db4-104">In This Section</span></span>  
+ [<span data-ttu-id="a7db4-105">Aprire un file rilasciato in un controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="a7db4-105">Open a File That is Dropped on a RichTextBox Control</span></span>](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [<span data-ttu-id="a7db4-106">Creare un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a7db4-106">Create a Data Object</span></span>](how-to-create-a-data-object.md)  
+ [<span data-ttu-id="a7db4-107">Determinare se un formato di dati è presente in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a7db4-107">Determine if a Data Format is Present in a Data Object</span></span>](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [<span data-ttu-id="a7db4-108">Elencare i formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a7db4-108">List the Data Formats in a Data Object</span></span>](how-to-list-the-data-formats-in-a-data-object.md)  
+ [<span data-ttu-id="a7db4-109">Recuperare dati in un formato dati particolare</span><span class="sxs-lookup"><span data-stu-id="a7db4-109">Retrieve Data in a Particular Data Format</span></span>](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [<span data-ttu-id="a7db4-110">Archiviare più formati di dati in un oggetto dati</span><span class="sxs-lookup"><span data-stu-id="a7db4-110">Store Multiple Data Formats in a Data Object</span></span>](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8f287-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8f287-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7db4-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a7db4-111">See also</span></span>
 
-- [<span data-ttu-id="8f287-112">Cenni preliminari sul trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="8f287-112">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)
+- [<span data-ttu-id="a7db4-112">Cenni preliminari sul trascinamento della selezione</span><span class="sxs-lookup"><span data-stu-id="a7db4-112">Drag and Drop Overview</span></span>](drag-and-drop-overview.md)
