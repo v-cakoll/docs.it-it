@@ -3,11 +3,11 @@ title: Code di messaggi non recapitabili
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051962"
 ---
 # <a name="dead-letter-queues"></a>Code di messaggi non recapitabili
 Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non è riuscito. Si basa il [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) esempio. In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.
@@ -24,15 +24,15 @@ Questo esempio dimostra come gestire ed elaborare messaggi il cui recapito non �
 
  La coda di messaggi non recapitabili nell'associazione `NetMsmqBinding` è espressa nelle proprietà seguenti:
 
--   Proprietà <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> per esprimere il tipo di coda di messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
+- Proprietà <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> per esprimere il tipo di coda di messaggi non recapitabili richiesta dal client. L'enumerazione contiene i valori seguenti:
 
--   `None`: Coda dei messaggi non recapitabili è richiesto dal client.
+- `None`: Coda dei messaggi non recapitabili è richiesto dal client.
 
--   `System`: La coda del sistema viene usato per archiviare i messaggi non recapitati. La coda di messaggi non recapitabili di sistema è condivisa da tutte le applicazioni in esecuzione nel computer.
+- `System`: La coda del sistema viene usato per archiviare i messaggi non recapitati. La coda di messaggi non recapitabili di sistema è condivisa da tutte le applicazioni in esecuzione nel computer.
 
--   `Custom`: Una coda recapitabili personalizzata specificata utilizzando il <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà viene utilizzata per archiviare i messaggi non recapitati. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
+- `Custom`: Una coda recapitabili personalizzata specificata utilizzando il <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> proprietà viene utilizzata per archiviare i messaggi non recapitati. Questa funzionalità è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)]. Viene usata quando l'applicazione deve usare la propria coda di messaggi non recapitabili invece di condividerla con altre applicazioni in esecuzione nello stesso computer.
 
--   Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Proprietà <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> per esprimere la coda specifica da usare come coda di messaggi non recapitabili. Questa è disponibile solo in [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  In questo esempio, il client invia un gruppo di messaggi al servizio dall'interno dell'ambito di una transazione e specifica un valore arbitrariamente basso per la "durata" di questi messaggi (circa 2 secondi). Il client specifica anche una coda di messaggi non recapitabili personalizzata da usare per accodare i messaggi che sono scaduti.
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.
 
-    1.  Aprire Server Manager in Visual Studio 2012.
+    1. Aprire Server Manager in Visual Studio 2012.
 
-    2.  Espandere la **funzionalità** scheda.
+    2. Espandere la **funzionalità** scheda.
 
-    3.  Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
+    3. Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.
 
-    4.  Verificare i **transazionale** casella.
+    4. Verificare i **transazionale** casella.
 
-    5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
+    5. Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.
 
 3. Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 

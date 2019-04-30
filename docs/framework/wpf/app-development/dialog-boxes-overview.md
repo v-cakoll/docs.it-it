@@ -11,20 +11,20 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052261"
 ---
 # <a name="dialog-boxes-overview"></a>Cenni preliminari sulle finestre di dialogo
 Le applicazioni autonome hanno in genere una finestra principale in cui vengono visualizzati i dati principali su cui opera l'applicazione ed espone la funzionalità di elaborazione dei dati tramite [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] meccanismi come le barre dei menu, barre degli strumenti e le barre di stato. In un'applicazione più complessa sono inoltre disponibili finestre aggiuntive per l'esecuzione delle operazioni riportate di seguito:  
   
--   Visualizzazione di informazioni specifiche agli utenti.  
+- Visualizzazione di informazioni specifiche agli utenti.  
   
--   Raccolta delle informazioni immesse dagli utenti.  
+- Raccolta delle informazioni immesse dagli utenti.  
   
--   Visualizzazione e raccolta di informazioni.  
+- Visualizzazione e raccolta di informazioni.  
   
  Questi tipi di windows sono dette *finestre di dialogo*, e sono disponibili due tipi: modali e non modali.  
   
@@ -122,27 +122,27 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 #### <a name="configuring-a-modal-dialog-box"></a>Configurazione di una finestra di dialogo modale  
  L'interfaccia utente di una finestra di dialogo tipica include gli elementi riportati di seguito:  
   
--   I diversi controlli necessari per raccogliere i dati desiderati.  
+- I diversi controlli necessari per raccogliere i dati desiderati.  
   
--   Visualizzazione di un **OK** pulsante che gli utenti fare clic per chiudere la finestra di dialogo, torna alla funzione e continuano l'elaborazione.  
+- Visualizzazione di un **OK** pulsante che gli utenti fare clic per chiudere la finestra di dialogo, torna alla funzione e continuano l'elaborazione.  
   
--   Visualizzazione di un **annullare** pulsante che gli utenti fanno clic per chiudere la finestra di dialogo e interrompere l'elaborazione da parte della funzione.  
+- Visualizzazione di un **annullare** pulsante che gli utenti fanno clic per chiudere la finestra di dialogo e interrompere l'elaborazione da parte della funzione.  
   
--   Visualizzazione di un **Chiudi** pulsante nella barra del titolo.  
+- Visualizzazione di un **Chiudi** pulsante nella barra del titolo.  
   
--   Un'icona.  
+- Un'icona.  
   
--   Che illustra **Riduci a icona**, **Ingrandisci**, e **Restore** pulsanti.  
+- Che illustra **Riduci a icona**, **Ingrandisci**, e **Restore** pulsanti.  
   
--   Visualizzazione di un **sistema** menu per ridurre al minimo, ingrandire, ripristinare e chiudere la finestra di dialogo.  
+- Visualizzazione di un **sistema** menu per ridurre al minimo, ingrandire, ripristinare e chiudere la finestra di dialogo.  
   
--   L'apertura sopra e al centro della finestra da cui è stata aperta la finestra di dialogo.  
+- L'apertura sopra e al centro della finestra da cui è stata aperta la finestra di dialogo.  
   
--   Poiché le finestre di dialogo devono essere, per quanto possibile, ridimensionabili, per impedire che diventino troppo piccole e per fornire utili dimensioni predefinite, è necessario impostare sia dimensioni minime sia dimensioni predefinite.  
+- Poiché le finestre di dialogo devono essere, per quanto possibile, ridimensionabili, per impedire che diventino troppo piccole e per fornire utili dimensioni predefinite, è necessario impostare sia dimensioni minime sia dimensioni predefinite.  
   
--   Premendo il tasto ESC dovrebbe essere configurato come un tasto di scelta rapida che causa il **annullare** pulsante ai tasti da premere. Questo risultato viene ottenuto impostando il <xref:System.Windows.Controls.Button.IsCancel%2A> proprietà del **annullare** pulsante `true`.  
+- Premendo il tasto ESC dovrebbe essere configurato come un tasto di scelta rapida che causa il **annullare** pulsante ai tasti da premere. Questo risultato viene ottenuto impostando il <xref:System.Windows.Controls.Button.IsCancel%2A> proprietà del **annullare** pulsante `true`.  
   
--   Premendo il tasto INVIO (o a capo) deve essere configurato come un tasto di scelta rapida che causa il **OK** pulsante ai tasti da premere. Questo risultato viene ottenuto impostando il <xref:System.Windows.Controls.Button.IsDefault%2A> proprietà del **OK** pulsante `true`.  
+- Premendo il tasto INVIO (o a capo) deve essere configurato come un tasto di scelta rapida che causa il **OK** pulsante ai tasti da premere. Questo risultato viene ottenuto impostando il <xref:System.Windows.Controls.Button.IsDefault%2A> proprietà del **OK** pulsante `true`.  
   
  Il codice seguente illustra questa configurazione.  
   
@@ -183,13 +183,13 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 #### <a name="validating-user-provided-data"></a>Convalida di dati forniti dall'utente  
  Quando viene aperta una finestra di dialogo e l'utente fornisce i dati necessari, la finestra di dialogo deve garantire che i dati forniti siano validi per i motivi riportati di seguito:  
   
--   Da un punto di vista della sicurezza, tutti gli input devono essere convalidati.  
+- Da un punto di vista della sicurezza, tutti gli input devono essere convalidati.  
   
--   Da un punto di vista specifico del dominio, la convalida dei dati impedisce l'elaborazione di dati errati da parte del codice, che potrebbe potenzialmente generare eccezioni.  
+- Da un punto di vista specifico del dominio, la convalida dei dati impedisce l'elaborazione di dati errati da parte del codice, che potrebbe potenzialmente generare eccezioni.  
   
--   Da un punto di vista dell'esperienza utente, una finestra di dialogo può aiutare l'utente mostrandogli quali dati immessi non sono validi.  
+- Da un punto di vista dell'esperienza utente, una finestra di dialogo può aiutare l'utente mostrandogli quali dati immessi non sono validi.  
   
--   Da un punto di vista delle prestazioni, la convalida dei dati in un'applicazione a più livelli può ridurre il numero di round trip tra il client e i livelli dell'applicazione, in particolare se l'applicazione è composta da servizi Web o database basati su server.  
+- Da un punto di vista delle prestazioni, la convalida dei dati in un'applicazione a più livelli può ridurre il numero di round trip tra il client e i livelli dell'applicazione, in particolare se l'applicazione è composta da servizi Web o database basati su server.  
   
  Per convalidare un controllo associato in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], è necessario definire una regola di convalida e associarlo con l'associazione. Una regola di convalida è una classe personalizzata che deriva da <xref:System.Windows.Controls.ValidationRule>. L'esempio seguente illustra una regola di convalida `MarginValidationRule`, che verifica che un valore associato è un <xref:System.Double> e si trova all'interno di un intervallo specificato.  
   
@@ -329,11 +329,11 @@ Le applicazioni autonome hanno in genere una finestra principale in cui vengono 
 #### <a name="closing-a-modeless-dialog-box"></a>Chiusura di una finestra di dialogo non modale  
  Poiché <xref:System.Windows.Window.DialogResult%2A> non dovrà essere configurata, una finestra di dialogo non modale può essere chiusa utilizzando sistema forniscono meccanismi, inclusi i seguenti:  
   
--   Scegliere il **Chiudi** pulsante nella barra del titolo.  
+- Scegliere il **Chiudi** pulsante nella barra del titolo.  
   
--   ALT + F4.  
+- ALT + F4.  
   
--   Scelta **Close** dalle **sistema** menu.  
+- Scelta **Close** dalle **sistema** menu.  
   
  In alternativa, è possibile chiamare <xref:System.Windows.Window.Close%2A> quando il **Chiudi** si fa clic sul pulsante.  
   

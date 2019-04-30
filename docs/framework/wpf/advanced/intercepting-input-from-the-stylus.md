@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031252"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Intercettazione dell'input dello stilo
 Il <xref:System.Windows.Input.StylusPlugIns> architettura fornisce un meccanismo per l'implementazione del controllo di basso livello tramite <xref:System.Windows.Input.Stylus> input e la creazione di input penna digitale <xref:System.Windows.Ink.Stroke> oggetti. Il <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fornisce un meccanismo per implementare il comportamento personalizzato e applicarlo al flusso di dati provenienti dal dispositivo stilo per prestazioni ottimali.  
   
  In questo argomento sono contenute le seguenti sottosezioni:  
   
--   [Architettura](#Architecture)  
+- [Architettura](#Architecture)  
   
--   [Implementazione di Plug-in dello stilo](#ImplementingStylusPlugins)  
+- [Implementazione di Plug-in dello stilo](#ImplementingStylusPlugins)  
   
--   [Aggiungere il plug-in con un InkCanvas](#AddingYourPluginToAnInkCanvas)  
+- [Aggiungere il plug-in con un InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
--   [Conclusione](#Conclusion)  
+- [Conclusione](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architettura  

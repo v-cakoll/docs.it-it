@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047945"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Procedura: Rendere accessibili a WCF i certificati X.509
 Per rendere accessibile da Windows Communication Foundation (WCF) un certificato X.509, il codice dell'applicazione deve specificare il nome dell'archivio certificati e il percorso. In alcuni casi l'identità del processo deve avere accesso al file contenente la chiave privata associata al certificato X.509. Per ottenere la chiave privata associata con un certificato X.509 in un archivio certificati, WCF deve avere l'autorizzazione per eseguire questa operazione. Per impostazione predefinita solo il proprietario e l'account di sistema possono accedere alla chiave privata di un certificato.  
@@ -23,7 +23,7 @@ Per rendere accessibile da Windows Communication Foundation (WCF) un certificato
   
 1. Assegnare all'account con cui WCF viene eseguito l'accesso in lettura al file contenente la chiave privata associata al certificato X.509.  
   
-    1.  Determinare se WCF richiede l'accesso in lettura alla chiave privata del certificato X.509.  
+    1. Determinare se WCF richiede l'accesso in lettura alla chiave privata del certificato X.509.  
   
          Nella tabella seguente viene indicato dettagliatamente se una chiave privata deve essere disponibile in caso di utilizzo di un certificato X.509.  
   
@@ -34,14 +34,14 @@ Per rendere accessibile da Windows Communication Foundation (WCF) un certificato
         |Crittografia di un messaggio SOAP in uscita.|No|  
         |Decrittografia di un messaggio SOAP in arrivo.|Yes|  
   
-    2.  Determinare il percorso e il nome dell'archivio certificati in cui è archiviato il certificato.  
+    2. Determinare il percorso e il nome dell'archivio certificati in cui è archiviato il certificato.  
   
          L'archivio certificati nel quale il certificato è archiviato è specificato nel codice dell'applicazione o nella configurazione. Nel codice seguente, ad esempio, viene specificato che il certificato si trova nell'archivio certificati `CurrentUser` denominato `My`.  
   
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3.  Determinare dove la chiave privata per il certificato si trova nel computer usando il [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) dello strumento.  
+    3. Determinare dove la chiave privata per il certificato si trova nel computer usando il [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) dello strumento.  
   
          Il [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md) strumento richiede che il nome dell'archivio certificati, percorso dell'archivio certificati e un valore che identifica in modo univoco il certificato. Lo strumento accetta il nome del soggetto del certificato o l'identificazione digitale come identificatore univoco. Per altre informazioni su come determinare l'identificazione personale per un certificato, vedere [come: Recuperare l'identificazione personale di un certificato](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
@@ -51,7 +51,7 @@ Per rendere accessibile da Windows Communication Foundation (WCF) un certificato
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  Determinare l'account di cui WCF è in esecuzione.  
+    4. Determinare l'account di cui WCF è in esecuzione.  
   
          Nella tabella seguente illustra in dettaglio l'account con cui WCF è in esecuzione per un determinato scenario.  
   
@@ -62,7 +62,7 @@ Per rendere accessibile da Windows Communication Foundation (WCF) un certificato
         |Servizio ospitato in IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) o IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]).|SERVIZIO DI RETE|  
         |Servizio ospitato in IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Controllato dall'elemento `<processModel>` nel file Machine.config. L'account predefinito è ASPNET.|  
   
-    5.  Concedere l'accesso in lettura al file che contiene la chiave privata per l'account di cui WCF è in esecuzione, mediante uno strumento quale icacls.exe.  
+    5. Concedere l'accesso in lettura al file che contiene la chiave privata per l'account di cui WCF è in esecuzione, mediante uno strumento quale icacls.exe.  
   
          Esempio di codice seguente consente di modificare l'elenco di controllo di accesso discrezionale (DACL) per il file specificato concedere la lettura di account di servizio di rete (: R) l'accesso al file.  
   

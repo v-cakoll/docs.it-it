@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048049"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debug degli errori di autenticazione di Windows
 Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i processi di sicurezza vengono gestiti dall'interfaccia SSPI (Security Support Provider Interface). Quando si verificano errori di sicurezza a livello SSPI, questi vengono riportati da Windows Communication Foundation (WCF). In questo argomento viene fornito un framework e un insieme di domande per facilitare la diagnosi degli errori.  
@@ -45,13 +45,13 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
   
  In particolare, i quattro tipi di account includono:  
   
--   Utente locale: Profilo utente del computer. Ad esempio: `MachineName\Administrator` o `MachineName\ProfileName`.  
+- Utente locale: Profilo utente del computer. Ad esempio: `MachineName\Administrator` o `MachineName\ProfileName`.  
   
--   Sistema locale: L'account predefinito SYSTEM in un computer non appartenente a un dominio.  
+- Sistema locale: L'account predefinito SYSTEM in un computer non appartenente a un dominio.  
   
--   Utente di dominio: Un account utente in un dominio di Windows. Ad esempio: `DomainName\ProfileName`.  
+- Utente di dominio: Un account utente in un dominio di Windows. Ad esempio: `DomainName\ProfileName`.  
   
--   Computer del dominio: Un processo con identità del computer in esecuzione in un computer aggiunto a un dominio di Windows. Ad esempio: `MachineName\Network Service`.  
+- Computer del dominio: Un processo con identità del computer in esecuzione in un computer aggiunto a un dominio di Windows. Ad esempio: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  La credenziale del servizio viene acquisita quando viene chiamato il metodo <xref:System.ServiceModel.ICommunicationObject.Open%2A> della classe <xref:System.ServiceModel.ServiceHost>. La credenziale del client viene letta ogni volta che il client invia un messaggio.  
@@ -85,15 +85,15 @@ Quando si utilizza l'autenticazione di Windows come meccanismo di sicurezza, i p
   
 2. Richiedere la negoziazione SSPI:  
   
-    1.  Se si utilizzano associazioni standard, impostare la proprietà `NegotiateServiceCredential` su `true`.  
+    1. Se si utilizzano associazioni standard, impostare la proprietà `NegotiateServiceCredential` su `true`.  
   
-    2.  Se si utilizzano associazioni personalizzate, impostare l'attributo `AuthenticationMode` dell'elemento `Security` su `SspiNegotiated`.  
+    2. Se si utilizzano associazioni personalizzate, impostare l'attributo `AuthenticationMode` dell'elemento `Security` su `SspiNegotiated`.  
   
 3. Richiedere che la negoziazione SSPI utilizzi Kerberos impedendo l'utilizzo di NTLM:  
   
-    1.  È possibile eseguire questa operazione nel codice utilizzando l'istruzione seguente: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1. È possibile eseguire questa operazione nel codice utilizzando l'istruzione seguente: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
-    2.  In alternativa, è possibile operare nel file di configurazione impostando l'attributo `allowNtlm` su `false`. Questo attributo è contenuto nel [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
+    2. In alternativa, è possibile operare nel file di configurazione impostando l'attributo `allowNtlm` su `false`. Questo attributo è contenuto nel [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
 ### <a name="ntlm-protocol"></a>Protocollo NTLM  
   

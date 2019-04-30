@@ -3,11 +3,11 @@ title: ForEach non generica
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004913"
 ---
 # <a name="non-generic-foreach"></a>ForEach non generica
 Nella casella degli strumenti di [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] è disponibile un set di attività del flusso di controllo, inclusa <xref:System.Activities.Statements.ForEach%601> che consente di scorrere le raccolte <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Impostare il progetto scelto come progetto di avvio della soluzione:  
   
-    1.  **CodeTestClient** viene illustrato come usare l'attività usando il codice.  
+    1. **CodeTestClient** viene illustrato come usare l'attività usando il codice.  
   
-    2.  **DesignerTestClient** viene illustrato come utilizzare l'attività all'interno della finestra di progettazione.  
+    2. **DesignerTestClient** viene illustrato come utilizzare l'attività all'interno della finestra di progettazione.  
   
 2. Compilare ed eseguire il progetto.  
   

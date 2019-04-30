@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
 ms.openlocfilehash: c97bd891f0bbb58f8b267296b9b53e00a5486622
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047048"
 ---
 # <a name="wcf-feature-details"></a>Dettagli delle funzionalità di WCF
-Windows Communication Foundation (WCF) consente di esercitare un controllo esteso sulle funzioni di messaggistica di un'applicazione. Negli argomenti contenuti in questa sezione vengono descritte in dettaglio le funzionalità disponibili. Per ulteriori informazioni sulla programmazione di base, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) consente un controllo esteso sulle funzioni di messaggistica di un'applicazione. Negli argomenti contenuti in questa sezione vengono descritte in dettaglio le funzionalità disponibili. Per altre informazioni sulla programmazione di base, vedere [programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>In questa sezione  
  [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Viene illustrato come creare e configurare servizi flusso di lavoro.  
   
- [Endpoint: indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Endpoint: Gli indirizzi, associazioni e contratti](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Viene descritto come controllare più aspetti del servizio.  
   
  [Trasferimento e serializzazione dei dati](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
  Viene spiegato come la serializzazione dei dati possa essere adattata per l'interoperatività o la compatibilità futura.  
   
  [Sessioni, istanze e concorrenza](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
- Descrive le modalità di creazione di istanze e sulla sessione di WCF e come selezionare la modalità appropriata per l'applicazione.  
+ Descrive le modalità di creazione di istanze e la sessione di WCF e come selezionare la modalità appropriata per l'applicazione.  
   
  [Trasporti](../../../../docs/framework/wcf/feature-details/transports.md)  
  Viene descritto come configurare il livello di trasporto, il livello più basso dello stack dei canali.  
@@ -54,16 +54,16 @@ Windows Communication Foundation (WCF) consente di esercitare un controllo estes
  Viene descritto l'hosting. Un servizio può essere ospitato da un'altra applicazione o essere indipendente.  
   
  [Interoperabilità e integrazione](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
- Viene descritto come usare WCF per estendere la logica esistente anziché riscriverla, nel caso di un investimento sostanziale nella logica dell'applicazione basata su componenti ospitata in COM+.  
+ Viene descritto come usare WCF per estendere la logica esistente anziché riscriverla, se si dispone di un investimento sostanziale nella logica dell'applicazione basata su componenti ospitata in COM+.  
   
  [Modello di programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- Viene descritto il modello di programmazione WCF che consente agli sviluppatori di esporre operazioni del servizio WCF per gli endpoint non SOAP.  
+ Viene descritto il modello di programmazione Web che consente agli sviluppatori di esporre operazioni del servizio WCF per gli endpoint non SOAP.  
   
  [Diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  Viene descritto il supporto per esporre facilmente feed di diffusione da un servizio WCF.  
   
  [Integrazione AJAX e supporto JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- Viene descritto il supporto per ASP.NET Asynchronous JavaScript e XML (AJAX) e il formato di dati di JavaScript Object Notation (JSON) per consentire i servizi WCF di esporre operazioni ai client AJAX.  
+ Viene descritto il supporto per ASP.NET Asynchronous JavaScript e XML (AJAX) e il formato di dati JavaScript Object Notation (JSON) consentire ai servizi WCF di esporre operazioni ai client AJAX.  
   
  [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  Viene descritto il supporto per consentire ai servizi di essere individuabile in fase di runtime in una modalità interoperativa utilizzando il protocollo WS-Discovery.  

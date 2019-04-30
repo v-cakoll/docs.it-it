@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049271"
 ---
-# <a name="compareto-function"></a>CompareTo (funzione)
+# <a name="compareto-function"></a>Funzione CompareTo
 
 Confronta un oggetto con un altro oggetto di Gestione Windows.
 
@@ -73,7 +73,7 @@ Questa funzione esegue il wrapping di una chiamata per il [IWbemClassObject::Com
 
 I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento di *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice. È possibile specificare le caratteristiche singole coinvolti nel confronto specificando una combinazione bit per bit dei flag seguenti:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | 2 | Ignorare l'origine (server e lo spazio dei nomi da cui provengono). |
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignora tutti i qualificatori (incluso **Key** e **dinamico**) |
@@ -84,7 +84,7 @@ I flag che possono essere passati come il `lEnumFlags` definiti nell'argomento d
 
 In alternativa, è possibile specificare un singolo flag composito, come indicato di seguito:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Prendere in considerazione tutte le funzionalità nel confronto. |
 

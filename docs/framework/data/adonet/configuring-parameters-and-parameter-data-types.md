@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034554"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurazione dei parametri e tipi di dati di parametro
 
@@ -50,33 +50,33 @@ Il tipo del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdns
 
 |Tipo .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boolean|Bit|Booleano|Bit|Byte|
+|<xref:System.Boolean>|Booleano|Bit|Booleano|Bit|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
 |byte[]|Binario|VarBinary. La conversione implicita non riesce se la matrice di byte è maggiore della dimensione massima di VarBinary, che è di 8000 byte. Per le matrici di byte maggiori di 8000 byte, impostare in modo esplicito il <xref:System.Data.SqlDbType>.|VarBinary|Binario|Raw|
 |<xref:System.Char>| |L'inferenza di un oggetto <xref:System.Data.SqlDbType> da char non è supportata.|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da DateTimeOffset non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|||DateTime|
-|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numerico|Numero|
+|<xref:System.Decimal>|Decimale|Decimale|Decimale|Numerico|Number|
 |<xref:System.Double>|Double|Float|Double|Double|Double|
 |<xref:System.Single>|Single|Real|Single|Real|Float|
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
+|<xref:System.Guid>|GUID|UniqueIdentifier|GUID|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Numero|
-|<xref:System.Object>|Oggetto|Variante|Variante|L'inferenza di un oggetto OdbcType da Object non è supportata.|Blob|
-|<xref:System.String>|String|NVarChar. La conversione implicita non riesce se la stringa ha una dimensione superiore a quella massima di NVarChar, che è di 4000 caratteri. Per le stringhe maggiori di 4000 caratteri, impostare in modo esplicito <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
-|<xref:System.TimeSpan>|Time|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da TimeSpan non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Time|DateTime|
+|<xref:System.Object>|Object|Variante|Variante|L'inferenza di un oggetto OdbcType da Object non è supportata.|Blob|
+|<xref:System.String>|Stringa|NVarChar. La conversione implicita non riesce se la stringa ha una dimensione superiore a quella massima di NVarChar, che è di 4000 caratteri. Per le stringhe maggiori di 4000 caratteri, impostare in modo esplicito <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|
+|<xref:System.TimeSpan>|Ora|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da TimeSpan non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Ora|DateTime|
 |<xref:System.UInt16>|UInt16|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt16 non è supportata.|UnsignedSmallInt|Int|UInt16|
 |<xref:System.UInt32>|UInt32|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt32 non è supportata.|UnsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt64 non è supportata.|UnsignedBigInt|Numerico|Numero|
+|<xref:System.UInt64>|UInt64|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da UInt64 non è supportata.|UnsignedBigInt|Numerico|Number|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Valuta|Money|Valuta|L'inferenza di un oggetto `OdbcType` da `Currency` non è supportata.|Numero|
-||Data|Date in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Date non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBDate|Date|DateTime|
+||Valuta|Money|Valuta|L'inferenza di un oggetto `OdbcType` da `Currency` non è supportata.|Number|
+||Data|Date in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Date non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBDate|Data|DateTime|
 ||SByte|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da SByte non è supportata.|TinyInt|L'inferenza di un oggetto `OdbcType` da SByte non è supportata.|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
-||Time|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Time non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Time|DateTime|
-||VarNumeric|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da VarNumeric non è supportata.|VarNumeric|L'inferenza di un oggetto `OdbcType` da VarNumeric non è supportata.|Numero|
+||Ora|Time in SQL Server 2008. L'inferenza di un oggetto <xref:System.Data.SqlDbType> da Time non è supportata nelle versioni di SQL Server precedenti a SQL Server 2008.|DBTime|Ora|DateTime|
+||VarNumeric|L'inferenza di un oggetto <xref:System.Data.SqlDbType> da VarNumeric non è supportata.|VarNumeric|L'inferenza di un oggetto `OdbcType` da VarNumeric non è supportata.|Number|
 |Tipo di oggetto definito dall'utente (oggetto con <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Object o String, a seconda del provider (SqlClient restituisce sempre Object, ODBC restituisce sempre String e il provider di dati gestito OleDb può vedere entrambi|SqlDbType.Udt se <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> è in caso contrario, altrimenti Variant|OleDbType.VarWChar (se il valore è null) in caso contrario OleDbType.Variant.|OdbcType.NVarChar|Non supportato|
 
 > [!NOTE]

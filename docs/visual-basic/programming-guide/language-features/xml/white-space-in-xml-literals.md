@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054939"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Spazi vuoti nei valori letterali XML (Visual Basic)
 Il compilatore Visual Basic include solo i caratteri spazi vuoti significativi da un valore letterale XML durante la creazione di un [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto. I caratteri spazi vuoti non significativi non vengono incorporati.  
@@ -18,11 +18,11 @@ Il compilatore Visual Basic include solo i caratteri spazi vuoti significativi d
 ## <a name="significant-and-insignificant-white-space"></a>Spazi vuoti significativi e non significativi  
  I caratteri spazi vuoti nei valori letterali XML sono significativi solo tre aree:  
   
--   Quando si trovano in un valore di attributo.  
+- Quando si trovano in un valore di attributo.  
   
--   Quando fanno parte di un elemento contenuto di testo e il testo contiene anche altri caratteri.  
+- Quando fanno parte di un elemento contenuto di testo e il testo contiene anche altri caratteri.  
   
--   Quando si trovano in un'espressione incorporata per il contenuto di testo di un elemento.  
+- Quando si trovano in un'espressione incorporata per il contenuto di testo di un elemento.  
   
  In caso contrario, il compilatore vengono considerati spazi vuoti non significativi e non li include nel [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetto per il valore letterale.  
   

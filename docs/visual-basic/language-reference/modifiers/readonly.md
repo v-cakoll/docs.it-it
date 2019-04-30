@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051858"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Specifica che una variabile o una proprietà può essere letto ma non è stato scritta.  
@@ -24,11 +24,11 @@ Specifica che una variabile o una proprietà può essere letto ma non è stato s
   
 ## <a name="rules"></a>Regole  
   
--   **Contesto della dichiarazione.** Si può usare `ReadOnly` solo a livello di modulo. Ciò significa che il contesto della dichiarazione per un `ReadOnly` elemento deve essere una classe, struttura o modulo e non può essere un file di origine, lo spazio dei nomi o procedure.  
+- **Contesto della dichiarazione.** Si può usare `ReadOnly` solo a livello di modulo. Ciò significa che il contesto della dichiarazione per un `ReadOnly` elemento deve essere una classe, struttura o modulo e non può essere un file di origine, lo spazio dei nomi o procedure.  
   
--   **Modificatori combinati.** Non è possibile specificare `ReadOnly` insieme a `Static` nella stessa dichiarazione.  
+- **Modificatori combinati.** Non è possibile specificare `ReadOnly` insieme a `Static` nella stessa dichiarazione.  
   
--   **Assegnazione di un valore.** Utilizzo di codice un `ReadOnly` proprietà non è possibile impostarne il valore. Ma il codice che ha accesso alla risorsa di archiviazione sottostante può assegnare o modificare il valore in qualsiasi momento.  
+- **Assegnazione di un valore.** Utilizzo di codice un `ReadOnly` proprietà non è possibile impostarne il valore. Ma il codice che ha accesso alla risorsa di archiviazione sottostante può assegnare o modificare il valore in qualsiasi momento.  
   
      È possibile assegnare un valore per un `ReadOnly` variabili solo nella relativa dichiarazione o nel costruttore della classe o struttura in cui è definito.  
   

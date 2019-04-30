@@ -9,11 +9,11 @@ ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049817"
 ---
 # <a name="metadata-interfaces"></a>Interfacce di metadati
 Questa sezione descrive le interfacce non gestite che forniscono l'accesso ai metadati esposti dai tipi di .NET Framework, metodi, campi e così via.  
@@ -38,7 +38,7 @@ Questa sezione descrive le interfacce non gestite che forniscono l'accesso ai me
  Fornisce metodi per eseguire il mapping delle librerie dei tipi alle relative firme di metadati e per eseguire la conversione da una all'altra.  
   
  [Interfaccia IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
- `IMetaDataDispenser` è obsoleto. In alternativa, usare `IMetaDataDispenserEx`.  
+ `IMetaDataDispenser` è obsoleto. In alternativa, utilizzare `IMetaDataDispenserEx`.  
   
  [Interfaccia IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  Fornisce metodi che eseguono il mapping di aree di memoria per la creazione o modifica dei metadati.  

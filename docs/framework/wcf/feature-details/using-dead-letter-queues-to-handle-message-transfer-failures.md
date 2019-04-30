@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
 ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050701"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Uso di code di messaggi non recapitabili per gestire errori di trasferimento dei messaggi
 È possibile che i messaggi in coda non vengano recapitati. Tali messaggi con errori vengono registrati in una coda di messaggi non recapitabili. Il mancato recapito può essere dovuto a errori della rete, all'eliminazione di una coda, a una coda completa, a un errore di autenticazione o alla scadenza del tempo disponibile per il recapito.  
@@ -30,18 +30,18 @@ ms.locfileid: "59174616"
   
  L'associazione dispone delle proprietà della coda di messaggi non recapitabili seguenti:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Lettura dalla coda dei messaggi non recapitabili  
  Un'applicazione che legge i messaggi da una coda di messaggi non recapitabili è simile a un servizio WCF che legge da una coda dell'applicazione, ad eccezione delle minime differenze seguenti:  
   
--   Per leggere messaggi da una coda di sistema di messaggi non recapitabili relativi a transazioni, l'URI (Uniform Resource Identifier) deve presentarsi nel formato net.msmq://localhost/system$;DeadXact.  
+- Per leggere messaggi da una coda di sistema di messaggi non recapitabili relativi a transazioni, l'URI (Uniform Resource Identifier) deve presentarsi nel formato net.msmq://localhost/system$;DeadXact.  
   
--   Per leggere messaggi da una coda di sistema di messaggi non recapitabili non relativi a transazioni, l'URI deve presentarsi nel formato net.msmq://localhost/system$;DeadLetter.  
+- Per leggere messaggi da una coda di sistema di messaggi non recapitabili non relativi a transazioni, l'URI deve presentarsi nel formato net.msmq://localhost/system$;DeadLetter.  
   
--   Per leggere messaggi da una coda non recapitabili personalizzata, l'URI deve essere di MSMQ: //localhost/private/< il form\<*custom-dlq-name*> in cui *custom-dlq-name* è il nome dell'oggetto personalizzato coda dei messaggi non recapitabili.  
+- Per leggere messaggi da una coda non recapitabili personalizzata, l'URI deve essere di MSMQ: //localhost/private/< il form\<*custom-dlq-name*> in cui *custom-dlq-name* è il nome dell'oggetto personalizzato coda dei messaggi non recapitabili.  
   
  Per altre informazioni su come le code di indirizzo, vedere [gli endpoint di servizio e indirizzamento delle code](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   

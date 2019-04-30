@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053795"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procedura dettagliata: Gestione degli eventi (Visual Basic)
 Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il primo argomento, [procedura dettagliata: Dichiarazione e generazione di eventi](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), viene illustrato come dichiarare e generare eventi. Questa sezione Usa il form e classi da tale procedura dettagliata descrive come gestire gli eventi quando si verificano.  
@@ -76,7 +76,7 @@ Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il p
   
 #### <a name="to-call-the-longtask-method"></a>Per chiamare il metodo di LongTask  
   
--   Aggiungere il codice seguente al gestore eventi `Button1_Click` :  
+- Aggiungere il codice seguente al gestore eventi `Button1_Click` :  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
@@ -105,7 +105,7 @@ Questo è il secondo di due argomenti che illustrano come usare gli eventi. Il p
   
 #### <a name="to-handle-events-for-a-different-widget"></a>Per gestire gli eventi per un widget diversi  
   
--   Aggiungere la seguente riga di codice per il `Button1_Click` routine, precede la riga che legge `mWidget.LongTask(12.2, 0.33)`:  
+- Aggiungere la seguente riga di codice per il `Button1_Click` routine, precede la riga che legge `mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   

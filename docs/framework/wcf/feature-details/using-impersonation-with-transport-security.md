@@ -3,11 +3,11 @@ title: Utilizzo della rappresentazione con la protezione del trasporto
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
 ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050675"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilizzo della rappresentazione con la protezione del trasporto
 *Rappresentazione* è la capacità di un'applicazione server di assumere l'identità del client. In genere i servizi utilizzano la rappresentazione al momento della convalida dell'accesso alle risorse. L'applicazione server è in esecuzione tramite un account del servizio ma quando il server accetta una connessione client, rappresenta il client. In questo modo i controlli di accesso vengono eseguiti utilizzando le credenziali client. La protezione del trasporto è un meccanismo utilizzato sia per il passaggio delle credenziali che per la protezione della comunicazione tramite quelle credenziali. In questo argomento viene descritto l'utilizzo la sicurezza del trasporto in Windows Communication Foundation (WCF) con la funzionalità di rappresentazione. Per altre informazioni sulla rappresentazione tramite la sicurezza dei messaggi, vedere [delega e rappresentazione](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -33,24 +33,24 @@ ms.locfileid: "59151437"
 ### <a name="named-pipe-transport"></a>Trasporto di named pipe  
  Gli elementi seguenti vengono utilizzati con il trasporto di named pipe:  
   
--   Il trasporto di named pipe è concepito per l'utilizzo solo nel computer locale. Il trasporto di named pipe in WCF non consente in modo esplicito le connessioni tra computer.  
+- Il trasporto di named pipe è concepito per l'utilizzo solo nel computer locale. Il trasporto di named pipe in WCF non consente in modo esplicito le connessioni tra computer.  
   
--   Non è possibile utilizzare le named pipe con livelli di rappresentazione `Impersonate` o `Delegate`. La named pipe non è in grado di imporre la garanzia su computer con questi livelli di rappresentazione.  
+- Non è possibile utilizzare le named pipe con livelli di rappresentazione `Impersonate` o `Delegate`. La named pipe non è in grado di imporre la garanzia su computer con questi livelli di rappresentazione.  
   
  Per altre informazioni su named pipe, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>Trasporto HTTP  
  Le associazioni che utilizzano il trasporto HTTP (<xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.BasicHttpBinding>) supporta numerosi schemi di autenticazione, come illustrato in [informazioni sull'autenticazione HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Il livello di rappresentazione supportato dipende dallo schema di autenticazione. Gli elementi seguenti vengono utilizzati con il trasporto HTTP:  
   
--   Lo schema di autenticazione `Anonymous` ignora la rappresentazione.  
+- Lo schema di autenticazione `Anonymous` ignora la rappresentazione.  
   
--   Il `Basic` schema di autenticazione supporta solo il `Delegate` livello. Tutti i livelli di rappresentazione inferiori vengono aggiornati.  
+- Il `Basic` schema di autenticazione supporta solo il `Delegate` livello. Tutti i livelli di rappresentazione inferiori vengono aggiornati.  
   
--   Lo schema di autenticazione `Digest` supporta solo i livelli `Impersonate` e `Delegate`.  
+- Lo schema di autenticazione `Digest` supporta solo i livelli `Impersonate` e `Delegate`.  
   
--   Lo schema di autenticazione `NTLM`, selezionabile direttamente o tramite negoziazione, supporta solo il livello `Delegate` nel computer locale.  
+- Lo schema di autenticazione `NTLM`, selezionabile direttamente o tramite negoziazione, supporta solo il livello `Delegate` nel computer locale.  
   
--   Lo schema di autenticazione Kerberos, selezionabile solo tramite negoziazione, può essere utilizzato con qualsiasi livello di rappresentazione supportato.  
+- Lo schema di autenticazione Kerberos, selezionabile solo tramite negoziazione, può essere utilizzato con qualsiasi livello di rappresentazione supportato.  
   
  Per altre informazioni sul trasporto HTTP, vedere [scelta di un trasporto](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   

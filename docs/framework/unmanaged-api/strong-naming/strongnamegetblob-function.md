@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e23232b55a841672ee193b980c310995ba688e00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049362"
 ---
 # <a name="strongnamegetblob-function"></a>Funzione StrongNameGetBlob
 Completa il buffer specificato con la rappresentazione binaria del file eseguibile presente all'indirizzo specificato.  

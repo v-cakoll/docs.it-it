@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033085"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Cenni preliminari sui pattern di controllo per l'automazione interfaccia utente
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126360"
 ## <a name="ui-automation-control-pattern-components"></a>Componenti del pattern di controllo di automazione interfaccia utente  
  I pattern di controllo supportano i metodi, le proprietà, gli eventi e le relazioni necessari per definire una parte discreta della funzionalità disponibile in un controllo.  
   
--   La relazione tra un elemento di automazione interfaccia utente e i relativi elementi padre, figlio e di pari livello descrive la struttura dell'elemento all'interno dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
+- La relazione tra un elemento di automazione interfaccia utente e i relativi elementi padre, figlio e di pari livello descrive la struttura dell'elemento all'interno dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
--   I metodi consentono ai client di automazione interfaccia utente di modificare il controllo.  
+- I metodi consentono ai client di automazione interfaccia utente di modificare il controllo.  
   
--   Le proprietà e gli eventi rendono disponibili informazioni sulla funzionalità del pattern di controllo, nonché informazioni sullo stato del controllo.  
+- Le proprietà e gli eventi rendono disponibili informazioni sulla funzionalità del pattern di controllo, nonché informazioni sullo stato del controllo.  
   
  I pattern di controllo si relazionano all' [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] allo stesso modo in cui le interfacce si relazionano agli oggetti [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] . In [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]è possibile eseguire query su oggetto per chiedere quali interfacce sono supportate e quindi usare tali interfacce per accedere alla funzionalità. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]i client di automazione interfaccia utente possono chiedere a un controllo quali pattern di controllo supporta e quindi interagire con il controllo tramite le proprietà, i metodi, gli eventi e le strutture esposti dai pattern di controllo supportati. Ad esempio, per una casella di modifica multiriga i provider di automazione interfaccia utente implementano <xref:System.Windows.Automation.Provider.IScrollProvider>. Quando un client riconosce che una classe <xref:System.Windows.Automation.AutomationElement> supporta il pattern di controllo <xref:System.Windows.Automation.ScrollPattern> , è possibile usare la proprietà, i metodi e gli eventi esposti da tale pattern di controllo per modificare il controllo o accedere alle informazioni sul controllo.  
   

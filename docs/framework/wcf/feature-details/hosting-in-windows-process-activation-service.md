@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039377"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting nel servizio di attivazione dei processi di Windows
 Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la durata dei processi di lavoro che contengono applicazioni che servizi di Windows Communication Foundation (WCF) host. Il modello di processo WAS generalizza il modello di processo [!INCLUDE[iis601](../../../../includes/iis601-md.md)] per il server HTTP rimuovendo la dipendenza da HTTP. In questo modo i servizi WCF da usare HTTP e protocolli non HTTP, ad esempio NET. TCP, in un ambiente di hosting che supporta l'attivazione basata su messaggi e offre la possibilità di ospitare un numero elevato di applicazioni in un determinato computer.  
@@ -18,13 +18,13 @@ Il servizio di attivazione processo Windows (WAS) gestisce l'attivazione e la du
   
  Il modello di processo WAS prevede diverse funzionalità che consentono una modalità di hosting delle applicazioni più efficace e gestibile e in cui le risorse vengono usate in maniera efficiente:  
   
--   L'attivazione basata su messaggi di applicazioni e applicazioni del processo di lavoro viene avviata e interrotta dinamicamente in risposta a elementi di lavoro in ingresso tramite protocolli di rete HTTP e non HTTP.  
+- L'attivazione basata su messaggi di applicazioni e applicazioni del processo di lavoro viene avviata e interrotta dinamicamente in risposta a elementi di lavoro in ingresso tramite protocolli di rete HTTP e non HTTP.  
   
--   Efficace riciclo di applicazioni e processi di lavoro per mantenere l'integrità delle applicazioni in esecuzione.  
+- Efficace riciclo di applicazioni e processi di lavoro per mantenere l'integrità delle applicazioni in esecuzione.  
   
--   Configurazione e gestione centralizzate delle applicazioni.  
+- Configurazione e gestione centralizzate delle applicazioni.  
   
--   Consente alle applicazioni di sfruttare il modello di processo IIS senza richiedere il footprint di distribuzione di un'installazione IIS completa.  
+- Consente alle applicazioni di sfruttare il modello di processo IIS senza richiedere il footprint di distribuzione di un'installazione IIS completa.  
   
  Per altre informazioni sulle funzionalità WAS, vedere [IIS 7.0 Beta: Amministrazione di IIS 7.0 Web](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   

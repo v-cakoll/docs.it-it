@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051819"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Specifica che è possibile scritta una proprietà ma non letto.  
@@ -34,15 +34,15 @@ Specifica che è possibile scritta una proprietà ma non letto.
 > [!IMPORTANT]
 >  Quando si definiscono e utilizzano un `WriteOnly` proprietà, prendere in considerazione le misure di protezione aggiuntive seguenti:  
   
--   **Overriding.** Se la proprietà è un membro di una classe, per impostazione predefinita per consentire [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)e non viene dichiarato `Overridable` o `MustOverride`. Ciò impedisce che una classe derivata effettua l'accesso non desiderato tramite una sostituzione.  
+- **Overriding.** Se la proprietà è un membro di una classe, per impostazione predefinita per consentire [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)e non viene dichiarato `Overridable` o `MustOverride`. Ciò impedisce che una classe derivata effettua l'accesso non desiderato tramite una sostituzione.  
   
--   **Livello di accesso.** Se sono contenuti dati sensibili della proprietà in una o più variabili, dichiararli [privato](../../../visual-basic/language-reference/modifiers/private.md) in modo che nessun altro codice possa accedervi.  
+- **Livello di accesso.** Se sono contenuti dati sensibili della proprietà in una o più variabili, dichiararli [privato](../../../visual-basic/language-reference/modifiers/private.md) in modo che nessun altro codice possa accedervi.  
   
--   **Crittografia.** Store tutti i dati sensibili in forma crittografata piuttosto che in testo normale. Se codice dannoso in qualche modo accede a tale area di memoria, è più difficile apportare uso dei dati. La crittografia è utile anche se è necessario serializzare i dati sensibili.  
+- **Crittografia.** Store tutti i dati sensibili in forma crittografata piuttosto che in testo normale. Se codice dannoso in qualche modo accede a tale area di memoria, è più difficile apportare uso dei dati. La crittografia è utile anche se è necessario serializzare i dati sensibili.  
   
--   **Resetting.** Quando viene terminato la classe, struttura o modulo che definisce la proprietà, ripristinare i dati sensibili ai valori predefiniti o ad altri valori non significativi. Ciò offre protezione aggiuntiva quando tale area di memoria viene liberata per l'accesso generale.  
+- **Resetting.** Quando viene terminato la classe, struttura o modulo che definisce la proprietà, ripristinare i dati sensibili ai valori predefiniti o ad altri valori non significativi. Ciò offre protezione aggiuntiva quando tale area di memoria viene liberata per l'accesso generale.  
   
--   **Persistenza.** Non vengono mantenute eventuali dati sensibili, ad esempio su disco, se è possibile evitarlo. Inoltre, non scrivere tutti i dati riservati negli Appunti.  
+- **Persistenza.** Non vengono mantenute eventuali dati sensibili, ad esempio su disco, se è possibile evitarlo. Inoltre, non scrivere tutti i dati riservati negli Appunti.  
   
  Il `WriteOnly` modificatore può essere usato in questo contesto:  
   

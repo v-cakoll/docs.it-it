@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051637"
 ---
 # <a name="drag-and-drop-overview"></a>Cenni preliminari sul trascinamento della selezione
 Questo argomento fornisce una panoramica del supporto per il trascinamento della selezione nelle applicazioni [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Per trascinamento della selezione si intende di solito un metodo di trasferimento dei dati, in cui si usa un mouse (o un altro dispositivo di puntamento) per selezionare uno o più oggetti, si trascinano questi oggetti su un obiettivo di rilascio desiderato nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e li si rilascia.  
@@ -41,11 +41,11 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 ## <a name="data-transfer"></a>Trasferimento dati  
  Il trascinamento della selezione rientra nell'ambito del trasferimento dei dati. Il trasferimento dei dati include operazioni di trascinamento della selezione e di copia e incolla. Un'operazione di trascinamento della selezione è analoga a un'operazione di copia e incolla o taglia e incolla usata per trasferire dati da un oggetto o un'applicazione a un'altra usando gli Appunti di sistema. Entrambi i tipi di operazioni richiedono:  
   
--   Un oggetto di origine che fornisce i dati.  
+- Un oggetto di origine che fornisce i dati.  
   
--   Un modo per archiviare temporaneamente i dati trasferiti.  
+- Un modo per archiviare temporaneamente i dati trasferiti.  
   
--   Un oggetto di destinazione che riceve i dati.  
+- Un oggetto di destinazione che riceve i dati.  
   
  In un'operazione di copia e incolla, vengono usati gli Appunti di sistema per archiviare temporaneamente i dati trasferiti. In un'operazione di trascinamento della selezione, viene usato un oggetto <xref:System.Windows.DataObject> per archiviare i dati. Concettualmente, un oggetto dati è costituito da una o più coppie di un <xref:System.Object> contenente i dati effettivi e dal corrispondente identificatore di formato dati.  
   
@@ -94,31 +94,31 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Per implementare il trascinamento della selezione di base, completare le seguenti attività:  
   
--   Identificare l'elemento che sarà un'origine di trascinamento. Un'origine di trascinamento può essere un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>.  
+- Identificare l'elemento che sarà un'origine di trascinamento. Un'origine di trascinamento può essere un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>.  
   
--   Creare un gestore eventi nell'origine di trascinamento che avvierà l'operazione di trascinamento della selezione. L'evento è in genere <xref:System.Windows.UIElement.MouseMove>.  
+- Creare un gestore eventi nell'origine di trascinamento che avvierà l'operazione di trascinamento della selezione. L'evento è in genere <xref:System.Windows.UIElement.MouseMove>.  
   
--   Nel gestore eventi dell'origine di trascinamento chiamare il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> per avviare l'operazione di trascinamento della selezione. Nella chiamata a <xref:System.Windows.DragDrop.DoDragDrop%2A> specificare l'origine di trascinamento, i dati da trasferire e gli effetti consentiti.  
+- Nel gestore eventi dell'origine di trascinamento chiamare il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> per avviare l'operazione di trascinamento della selezione. Nella chiamata a <xref:System.Windows.DragDrop.DoDragDrop%2A> specificare l'origine di trascinamento, i dati da trasferire e gli effetti consentiti.  
   
--   Identificare l'elemento che sarà un obiettivo di rilascio. Un obiettivo di rilascio può essere un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>.  
+- Identificare l'elemento che sarà un obiettivo di rilascio. Un obiettivo di rilascio può essere un oggetto <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement>.  
   
--   Nell'obiettivo di rilascio impostare la proprietà <xref:System.Windows.UIElement.AllowDrop%2A> su `true`.  
+- Nell'obiettivo di rilascio impostare la proprietà <xref:System.Windows.UIElement.AllowDrop%2A> su `true`.  
   
--   Nell'obiettivo di rilascio creare un gestore dell'evento <xref:System.Windows.DragDrop.Drop> per elaborare i dati rilasciati.  
+- Nell'obiettivo di rilascio creare un gestore dell'evento <xref:System.Windows.DragDrop.Drop> per elaborare i dati rilasciati.  
   
--   Nel gestore dell'evento <xref:System.Windows.DragDrop.Drop> estrarre i dati da <xref:System.Windows.DragEventArgs> usando i metodi <xref:System.Windows.DataObject.GetDataPresent%2A> e <xref:System.Windows.DataObject.GetData%2A>.  
+- Nel gestore dell'evento <xref:System.Windows.DragDrop.Drop> estrarre i dati da <xref:System.Windows.DragEventArgs> usando i metodi <xref:System.Windows.DataObject.GetDataPresent%2A> e <xref:System.Windows.DataObject.GetData%2A>.  
   
--   Nel gestore dell'evento <xref:System.Windows.DragDrop.Drop> usare i dati per eseguire l'operazione di trascinamento della selezione desiderata.  
+- Nel gestore dell'evento <xref:System.Windows.DragDrop.Drop> usare i dati per eseguire l'operazione di trascinamento della selezione desiderata.  
   
  È possibile migliorare l'implementazione del trascinamento della selezione creando un <xref:System.Windows.DataObject> personalizzato e gestendo eventi di origine di trascinamento e obiettivo di rilascio facoltativi, come mostrato nelle attività seguenti:  
   
--   Per trasferire dati personalizzati o più elementi di dati, creare un <xref:System.Windows.DataObject> da passare al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
+- Per trasferire dati personalizzati o più elementi di dati, creare un <xref:System.Windows.DataObject> da passare al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
   
--   Per eseguire azioni aggiuntive durante un trascinamento, gestire gli eventi <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver> e <xref:System.Windows.DragDrop.DragLeave> nell'obiettivo di rilascio.  
+- Per eseguire azioni aggiuntive durante un trascinamento, gestire gli eventi <xref:System.Windows.DragDrop.DragEnter>, <xref:System.Windows.DragDrop.DragOver> e <xref:System.Windows.DragDrop.DragLeave> nell'obiettivo di rilascio.  
   
--   Per modificare l'aspetto del puntatore del mouse, gestire l'evento <xref:System.Windows.DragDrop.GiveFeedback> nell'origine di trascinamento.  
+- Per modificare l'aspetto del puntatore del mouse, gestire l'evento <xref:System.Windows.DragDrop.GiveFeedback> nell'origine di trascinamento.  
   
--   Per modificare la modalità con cui annullare l'operazione di trascinamento della selezione, gestire l'evento <xref:System.Windows.DragDrop.QueryContinueDrag> nell'origine di trascinamento.  
+- Per modificare la modalità con cui annullare l'operazione di trascinamento della selezione, gestire l'evento <xref:System.Windows.DragDrop.QueryContinueDrag> nell'origine di trascinamento.  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Esempi di trascinamento della selezione  
@@ -129,13 +129,13 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Impostazione di un elemento come origine di trascinamento  
  Un oggetto che è un'origine di trascinamento è responsabile di:  
   
--   Identificare quando si verifica un trascinamento.  
+- Identificare quando si verifica un trascinamento.  
   
--   Avviare l'operazione di trascinamento della selezione.  
+- Avviare l'operazione di trascinamento della selezione.  
   
--   Identificare i dati da trasferire.  
+- Identificare i dati da trasferire.  
   
--   Specificare gli effetti che l'operazione di trascinamento della selezione può avere sui dati trasferiti.  
+- Specificare gli effetti che l'operazione di trascinamento della selezione può avere sui dati trasferiti.  
   
  L'origine di trascinamento può anche fornire all'utente feedback relativo alle azioni consentite (spostamento, copia, nessuna) e può annullare l'operazione di trascinamento della selezione in base a un input utente aggiuntivo, ad esempio la pressione di ESC durante il trascinamento.  
   
@@ -146,11 +146,11 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
   
  Nel gestore dell'evento <xref:System.Windows.UIElement.MouseMove> chiamare il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> per avviare l'operazione di trascinamento della selezione. Il metodo <xref:System.Windows.DragDrop.DoDragDrop%2A> accetta tre parametri:  
   
--   `dragSource`: riferimento all'oggetto dipendenza che è l'origine dei dati trasferiti. Di solito è l'origine dell'evento <xref:System.Windows.UIElement.MouseMove>.  
+- `dragSource`: riferimento all'oggetto dipendenza che è l'origine dei dati trasferiti. Di solito è l'origine dell'evento <xref:System.Windows.UIElement.MouseMove>.  
   
--   `data`: oggetto contenente i dati trasferiti, di cui è stato eseguito il wrapping in un <xref:System.Windows.DataObject>.  
+- `data`: oggetto contenente i dati trasferiti, di cui è stato eseguito il wrapping in un <xref:System.Windows.DataObject>.  
   
--   `allowedEffects`: uno dei valori dell'enumerazione <xref:System.Windows.DragDropEffects>, che specifica gli effetti consentiti dell'operazione di trascinamento della selezione.  
+- `allowedEffects`: uno dei valori dell'enumerazione <xref:System.Windows.DragDropEffects>, che specifica gli effetti consentiti dell'operazione di trascinamento della selezione.  
   
  Qualsiasi oggetto serializzabile può essere passato nel parametro `data`. Se il wrapping dei dati non è già stato eseguito in un <xref:System.Windows.DataObject>, verrà eseguito automaticamente in un nuovo <xref:System.Windows.DataObject>. Per passare più elementi di dati, è necessario creare il <xref:System.Windows.DataObject> manualmente e passarlo al metodo <xref:System.Windows.DragDrop.DoDragDrop%2A>. Per altre informazioni, vedere [Dati e oggetti dati](data-and-data-objects.md).  
   
@@ -171,13 +171,13 @@ Questo argomento fornisce una panoramica del supporto per il trascinamento della
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Impostazione di un elemento come obiettivo di rilascio  
  Un oggetto che è un obiettivo di rilascio è responsabile di:  
   
--   Specificare che è un obiettivo di rilascio valido.  
+- Specificare che è un obiettivo di rilascio valido.  
   
--   Rispondere all'origine di trascinamento quando viene trascinata sulla destinazione.  
+- Rispondere all'origine di trascinamento quando viene trascinata sulla destinazione.  
   
--   Controllare che i dati trasferiti siano in un formato che può ricevere.  
+- Controllare che i dati trasferiti siano in un formato che può ricevere.  
   
--   Elaborare i dati rilasciati.  
+- Elaborare i dati rilasciati.  
   
  Per specificare che un elemento è un obiettivo di rilascio, si imposta la proprietà <xref:System.Windows.UIElement.AllowDrop%2A> su `true`. Gli eventi dell'obiettivo di rilascio verranno quindi generati nell'elemento per poterli gestire. Durante un'operazione di trascinamento della selezione, nell'obiettivo di rilascio si verifica la sequenza di eventi seguente:  
   

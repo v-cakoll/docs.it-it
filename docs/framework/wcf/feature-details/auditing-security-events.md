@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048271"
 ---
 # <a name="auditing-security-events"></a>Controllo degli eventi di sicurezza
 Le applicazioni create con Windows Communication Foundation (WCF) è possono registrare gli eventi di sicurezza (esito positivo, errore o entrambi) con la funzionalità di controllo. Gli eventi vengono scritti nel registro eventi del sistema Windows e possono essere esaminati tramite il Visualizzatore eventi.  
@@ -21,9 +21,9 @@ Le applicazioni create con Windows Communication Foundation (WCF) è possono reg
 ## <a name="audit-level-and-behavior"></a>Livelli e comportamenti di controllo  
  Esistono due livelli di controllo di sicurezza:  
   
--   Livello Autorizzazione servizio, che prevede l'autorizzazione di un chiamante.  
+- Livello Autorizzazione servizio, che prevede l'autorizzazione di un chiamante.  
   
--   Livello di messaggio, in cui WCF controlla la validità di messaggio e autentica il chiamante.  
+- Livello di messaggio, in cui WCF controlla la validità di messaggio e autentica il chiamante.  
   
  È possibile controllare un controllo su entrambi i livelli per esito positivo o negativo, che è noto come il *comportamento di controllo*.  
   

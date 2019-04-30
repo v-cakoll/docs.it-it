@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9257ba57e0d087e3d6b9c7bb995b49a6b814c5f1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040742"
 ---
-# <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet (funzione)
+# <a name="getmethodqualifierset-function"></a>Funzione GetMethodQualifierSet
 
 Recupera il qualificatore impostato per un particolare metodo.
 

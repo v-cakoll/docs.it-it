@@ -3,20 +3,20 @@ title: Generazione di relazioni tra dataset da XML Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034320"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generazione di relazioni tra dataset da XML Schema (XSD)
 In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra due o più colonne creando una relazione padre-figlio. Esistono tre modi per rappresentare un **set di dati** relazione all'interno di uno schema di XML Schema definition language (XSD):  
   
--   Specificare tipi complessi annidati.  
+- Specificare tipi complessi annidati.  
   
--   Usare la **msdata: Relationship** annotazione.  
+- Usare la **msdata: Relationship** annotazione.  
   
--   Specificare un **xs: keyref** senza il **msdata: ConstraintOnly** annotazione.  
+- Specificare un **xs: keyref** senza il **msdata: ConstraintOnly** annotazione.  
   
 ## <a name="nested-complex-types"></a>Tipi complessi annidati  
  Le definizioni di tipi complessi annidati in uno schema indicano le relazioni padre-figlio degli elementi. Il seguente frammento di XML Schema indica che **OrderDetail** è un elemento figlio delle **ordine** elemento.  

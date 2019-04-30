@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
 ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050714"
 ---
 # <a name="transport-quotas"></a>Quote dei trasporti
 Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una connessione sta utilizzando risorse eccessive. Una quota è un limite che impedisce l'utilizzo di risorse aggiuntive quando il valore della quota viene superato. Le quote dei trasporti impediscono attacchi di tipo Denial of Service (DoS) volutamente dannosi o non intenzionali.  
@@ -19,11 +19,11 @@ Le quote dei trasporti sono un meccanismo di criterio per stabilire quando una c
 ## <a name="types-of-transport-quotas"></a>Tipi di quote dei trasporti  
  I trasporti WCF contengono tre tipi di quote:  
   
--   *I timeout* prevenire attacchi denial of service che si basano sul blocco di risorse per un lungo periodo di tempo.  
+- *I timeout* prevenire attacchi denial of service che si basano sul blocco di risorse per un lungo periodo di tempo.  
   
--   *Limiti di allocazione della memoria* impedire un'unica connessione esaurisca esaurimento dello spazio di memoria di sistema e neghi il servizio ad altre connessioni.  
+- *Limiti di allocazione della memoria* impedire un'unica connessione esaurisca esaurimento dello spazio di memoria di sistema e neghi il servizio ad altre connessioni.  
   
--   *Limiti delle dimensioni della raccolta* limitano il consumo di risorse che allocano memoria indirettamente o sono in approvvigionamento limitato.  
+- *Limiti delle dimensioni della raccolta* limitano il consumo di risorse che allocano memoria indirettamente o sono in approvvigionamento limitato.  
   
 ## <a name="transport-quota-descriptions"></a>Descrizioni delle quote dei trasporti  
  Questa sezione descrive le quote dei trasporti disponibili per i trasporti standard di WCF: HTTP (S), TCP/IP e named pipe. I trasporti personalizzati possono esporre le proprie quote configurabili non incluse in questo elenco. Consultare la documentazione per il trasporto personalizzato e quote relative.  

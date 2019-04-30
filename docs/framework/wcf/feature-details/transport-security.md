@@ -3,11 +3,11 @@ title: Protezione del trasporto
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050727"
 ---
 # <a name="transport-security"></a>Protezione del trasporto
 Sicurezza del trasporto in Windows Communication Foundation (WCF) dipende dall'associazione selezionata. Il trasporto implementato dall'associazione determina l'effettivo meccanismo di sicurezza. Negli argomenti contenuti in questa sezione sono illustrati i meccanismi implementati e le rispettive opzioni.  

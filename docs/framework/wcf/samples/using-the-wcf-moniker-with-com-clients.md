@@ -3,11 +3,11 @@ title: Utilizzo del moniker WCF con i client COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051611"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Utilizzo del moniker WCF con i client COM
 Questo esempio viene illustrato come usare il moniker del servizio Windows Communication Foundation (WCF) per integrare servizi Web in ambienti di sviluppo basato su COM, ad esempio Microsoft Office Visual Basic for Applications (Office VBA) o Visual Basic 6.0. L'esempio è costituito da un client Windows Script Host (file con estensione vbs), una libreria di classi di supporto (file con estensione dll) e una libreria di servizi (file con estensione dll) ospitati in Internet Information Services (IIS). Il servizio è un servizio di calcolatrice e il client COM chiama operazioni matematiche, Add, Subtract, Multiply e Divide, nel servizio. L'attività del client è visibile nella finestra di messaggio.  
@@ -43,11 +43,11 @@ public interface ICalculator
   
  Nell'esempio vengono descritti tre approcci alternativi per l'uso del moniker:  
   
--   Contratto tipizzato: il contratto viene registrato come tipo visibile a COM sul computer client.  
+- Contratto tipizzato: il contratto viene registrato come tipo visibile a COM sul computer client.  
   
--   Contratto WSDL: il contratto viene fornito sotto forma di documento WSDL.  
+- Contratto WSDL: il contratto viene fornito sotto forma di documento WSDL.  
   
--   Contratto MEX: il contratto viene recuperato in fase di esecuzione da un endpoint di scambio di metadati (MEX).  
+- Contratto MEX: il contratto viene recuperato in fase di esecuzione da un endpoint di scambio di metadati (MEX).  
   
 ## <a name="typed-contract"></a>Contratto tipizzato  
  Per usare il moniker con un uso del contratto tipizzato, è necessario registrare con COM i tipi per il contratto di servizio forniti degli attribuiti appropriati. In primo luogo, un client deve essere generato utilizzando la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Eseguire il comando seguente da un prompt dei comandi nella directory del client per generare il proxy tipizzato.  
@@ -87,11 +87,11 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  I parametri usati dal moniker specificano:  
   
--   L'indirizzo dell'endpoint del servizio.  
+- L'indirizzo dell'endpoint del servizio.  
   
--   L'associazione che il client dovrebbe usare per connettersi a quell'endpoint. In questo caso, il wsHttpBinding definito dal sistema viene usato anche se le associazioni personalizzate possono essere definite nei file di configurazione del client. Per l'uso con Windows Script Host, l'associazione personalizzata viene definita in un file Cscript.exe.config nella stessa directory di Cscript.exe.  
+- L'associazione che il client dovrebbe usare per connettersi a quell'endpoint. In questo caso, il wsHttpBinding definito dal sistema viene usato anche se le associazioni personalizzate possono essere definite nei file di configurazione del client. Per l'uso con Windows Script Host, l'associazione personalizzata viene definita in un file Cscript.exe.config nella stessa directory di Cscript.exe.  
   
--   Il tipo del contratto è supportato sull'endpoint. Questo è il tipo generato e registrato in precedenza. Poiché lo script di Visual Basic non fornisce un ambiente COM fortemente tipizzato, è necessario specificare un identificatore per il contratto. Questo GUID è l'`interfaceID` da CalcProxy.tlb e può essere visualizzato usando gli strumenti COM, ad esempio il Visualizzatore oggetti OLE/COM (OleView.exe). Per ambienti fortemente tipizzati, ad esempio Office VBA o Visual Basic 6.0, è possibile aggiungere un riferimento esplicito alla libreria dei tipi e dichiarare quindi il tipo dell'oggetto proxy, invece di usare il parametro del contratto. In questo modo si fornisce anche supporto IntelliSense durante lo sviluppo dell'applicazione client.  
+- Il tipo del contratto è supportato sull'endpoint. Questo è il tipo generato e registrato in precedenza. Poiché lo script di Visual Basic non fornisce un ambiente COM fortemente tipizzato, è necessario specificare un identificatore per il contratto. Questo GUID è l'`interfaceID` da CalcProxy.tlb e può essere visualizzato usando gli strumenti COM, ad esempio il Visualizzatore oggetti OLE/COM (OleView.exe). Per ambienti fortemente tipizzati, ad esempio Office VBA o Visual Basic 6.0, è possibile aggiungere un riferimento esplicito alla libreria dei tipi e dichiarare quindi il tipo dell'oggetto proxy, invece di usare il parametro del contratto. In questo modo si fornisce anche supporto IntelliSense durante lo sviluppo dell'applicazione client.  
   
  Una volta costruita l'istanza del proxy con il moniker del servizio, l'applicazione client può chiamare i metodi sul proxy e l'infrastruttura del moniker del servizio può chiamare le operazioni del servizio corrispondenti:  
   
@@ -127,13 +127,13 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  I parametri usati dal moniker specificano:  
   
--   L'indirizzo dell'endpoint del servizio.  
+- L'indirizzo dell'endpoint del servizio.  
   
--   L'associazione che il client deve usare per connettersi con quell'endpoint e lo spazio dei nomi nel quale viene definita quell'associazione. In questo caso, viene usata `wsHttpBinding_ICalculator`.  
+- L'associazione che il client deve usare per connettersi con quell'endpoint e lo spazio dei nomi nel quale viene definita quell'associazione. In questo caso, viene usata `wsHttpBinding_ICalculator`.  
   
--   Il WSDL che definisce il contratto. In questo caso è la stringa letta dal file serviceWsdl.xml.  
+- Il WSDL che definisce il contratto. In questo caso è la stringa letta dal file serviceWsdl.xml.  
   
--   Il nome e lo spazio dei nomi del contratto. Questa identificazione è richiesta perché il WSDL potrebbe contenere più di un contratto.  
+- Il nome e lo spazio dei nomi del contratto. Questa identificazione è richiesta perché il WSDL potrebbe contenere più di un contratto.  
   
     > [!NOTE]
     >  Per impostazione predefinita, i servizi WCF generano file WSDL separati per ogni spazio dei nomi che l'utilizzo. Questi vengono collegati usando il costrutto di importazione di WSDL. Poiché il moniker si aspetta una sola definizione WSDL, il servizio deve usare un solo spazio dei nomi, come illustrato in questo esempio, o i file separati devono essere uniti manualmente.  
@@ -165,13 +165,13 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  I parametri usati dal moniker specificano:  
   
--   L'indirizzo dell'endpoint di scambio di metadati del servizio.  
+- L'indirizzo dell'endpoint di scambio di metadati del servizio.  
   
--   L'indirizzo dell'endpoint del servizio.  
+- L'indirizzo dell'endpoint del servizio.  
   
--   L'associazione che il client deve usare per connettersi con quell'endpoint e lo spazio dei nomi nel quale viene definita quell'associazione. In questo caso, viene usata `wsHttpBinding_ICalculator`.  
+- L'associazione che il client deve usare per connettersi con quell'endpoint e lo spazio dei nomi nel quale viene definita quell'associazione. In questo caso, viene usata `wsHttpBinding_ICalculator`.  
   
--   Il nome e lo spazio dei nomi del contratto. Questa identificazione è richiesta perché il WSDL potrebbe contenere più di un contratto.  
+- Il nome e lo spazio dei nomi del contratto. Questa identificazione è richiesta perché il WSDL potrebbe contenere più di un contratto.  
   
  Una volta costruita l'istanza del proxy con il moniker del servizio, l'applicazione client può chiamare i metodi sul proxy e l'infrastruttura del moniker del servizio può chiamare le operazioni del servizio corrispondenti:  
   
@@ -235,4 +235,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
--   Per motivi di sicurezza, rimuovere la definizione della directory virtuale e le autorizzazioni concesse durante l'installazione quando si è finito di lavorare con gli esempi eseguendo il file batch denominato Cleanupvroot.bat.  
+- Per motivi di sicurezza, rimuovere la definizione della directory virtuale e le autorizzazioni concesse durante l'installazione quando si è finito di lavorare con gli esempi eseguendo il file batch denominato Cleanupvroot.bat.  

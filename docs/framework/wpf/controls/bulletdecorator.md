@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
 ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052664"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> ha due proprietà di contenuto: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> e <xref:System.Windows.Controls.Decorator.Child%2A>. Il <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> proprietà definisce il <xref:System.Windows.UIElement> da usare come punto elenco. Il <xref:System.Windows.Controls.Decorator.Child%2A> proprietà definisce un <xref:System.Windows.UIElement> visivamente in linea con l'elenco puntato.  

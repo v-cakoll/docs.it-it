@@ -3,11 +3,11 @@ title: Panoramica di servizi flusso di lavoro - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
 ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050337"
 ---
 # <a name="workflow-services-overview"></a>Panoramica di servizi flusso di lavoro
 
@@ -58,7 +58,7 @@ Come servizi WCF, servizi flusso di lavoro devono essere ospitati. Servizi WCF u
 
 I servizi flusso di lavoro ospitati in un'applicazione [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] o in un servizio Windows gestito creano un'istanza della classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> e la passano a un'istanza di <xref:System.ServiceModel.Activities.WorkflowService> che contiene la definizione del flusso di lavoro all'interno della proprietà <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>. Una definizione del flusso di lavoro contenente le attività di messaggistica viene esposta come servizio flusso di lavoro.
 
-Per ospitare un servizio flusso di lavoro in IIS o WAS, posizionare il file con estensione xamlx contenente la definizione del servizio flusso di lavoro in una directory virtuale. Un endpoint predefinito (tramite <xref:System.ServiceModel.BasicHttpBinding>) viene creato automaticamente per altre informazioni, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md). È anche possibile posizionare un file Web.config nella directory virtuale per specificare specifici endpoint. Se la definizione del flusso di lavoro si trova in un assembly, è possibile posizionare un file con estensione svc nella directory virtuale e l'assembly del flusso di lavoro nella directory App_Code. Il file con estensione svc deve specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro. Nell'esempio seguente viene mostrato come specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro.
+Per ospitare un servizio flusso di lavoro in IIS o WAS, posizionare il file con estensione xamlx contenente la definizione del servizio flusso di lavoro in una directory virtuale. Un endpoint predefinito (tramite <xref:System.ServiceModel.BasicHttpBinding>) viene creato automaticamente per altre informazioni, vedere [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md). È inoltre possibile posizionare un file Web.config nella directory virtuale per specificare specifici endpoint. Se la definizione del flusso di lavoro si trova in un assembly, è possibile posizionare un file con estensione svc nella directory virtuale e l'assembly del flusso di lavoro nella directory App_Code. Il file con estensione svc deve specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro. Nell'esempio seguente viene mostrato come specificare la factory di host del servizio e la classe che implementa il servizio flusso di lavoro.
 
 ```
 <%@ServiceHost Factory=" System.ServiceModel.Activities.Activation.WorkflowServiceHostFactory

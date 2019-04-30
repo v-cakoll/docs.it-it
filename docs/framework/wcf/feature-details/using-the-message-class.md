@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
 ms.openlocfilehash: d9b1c1242fe2686a66e41b777f904a71898159ea
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050649"
 ---
 # <a name="using-the-message-class"></a>Utilizzo della classe Message
 Il <xref:System.ServiceModel.Channels.Message> classe è di fondamentale importanza per Windows Communication Foundation (WCF). Tutte le comunicazioni tra client e servizi implicano in ultima istanza l'invio e la ricezione di istanze di <xref:System.ServiceModel.Channels.Message>.  
   
  Di norma non si interagisce con la classe <xref:System.ServiceModel.Channels.Message> in modo diretto. Al contrario, i costrutti del modello di servizio WCF, ad esempio contratti dati, i contratti di messaggio e contratti di operazione, vengono utilizzati per descrivere i messaggi in ingresso e in uscita. Tuttavia, in alcuni scenari avanzati, è possibile eseguire la programmazione usando direttamente la classe <xref:System.ServiceModel.Channels.Message>. Ad esempio, può essere necessario usare la classe <xref:System.ServiceModel.Channels.Message>:  
   
--   Quando è necessaria una modalità alternativa per creare il contenuto dei messaggi in uscita (ad esempio, creando un messaggio direttamente da un file sul disco), invece di serializzare oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+- Quando è necessaria una modalità alternativa per creare il contenuto dei messaggi in uscita (ad esempio, creando un messaggio direttamente da un file sul disco), invece di serializzare oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
--   Quando è necessaria una modalità alternativa per usare il contenuto dei messaggi in arrivo (ad esempio, quando si desidera applicare una trasformazione XSLT al contenuto XML non elaborato), invece di eseguire la deserializzazione in oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+- Quando è necessaria una modalità alternativa per usare il contenuto dei messaggi in arrivo (ad esempio, quando si desidera applicare una trasformazione XSLT al contenuto XML non elaborato), invece di eseguire la deserializzazione in oggetti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
--   Quando è necessario gestire i messaggi in modo generico, indipendentemente dal contenuto (ad esempio, per l'indirizzamento o l'inoltro di messaggi durante la creazione di un router, un servizio di bilanciamento del carico o un sistema di pubblicazione-sottoscrizione).  
+- Quando è necessario gestire i messaggi in modo generico, indipendentemente dal contenuto (ad esempio, per l'indirizzamento o l'inoltro di messaggi durante la creazione di un router, un servizio di bilanciamento del carico o un sistema di pubblicazione-sottoscrizione).  
   
  Prima di usare la <xref:System.ServiceModel.Channels.Message> classe, acquisire familiarità con l'architettura di trasferimento dati WCF in [Cenni preliminari sull'architettura di trasferimento dati](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
@@ -30,11 +30,11 @@ Il <xref:System.ServiceModel.Channels.Message> classe è di fondamentale importa
 ## <a name="using-the-message-class-in-operations"></a>Uso della classe Message nelle operazioni  
  È possibile usare la classe <xref:System.ServiceModel.Channels.Message> come parametro di input e/o valore restituito di un'operazione. Se la classe <xref:System.ServiceModel.Channels.Message> viene usata in un punto qualsiasi di un'operazione, si applicano le restrizioni seguenti:  
   
--   L'operazione non può avere qualsiasi parametro `out` o `ref`.  
+- L'operazione non può avere qualsiasi parametro `out` o `ref`.  
   
--   Non può essere presente più di un parametro `input`. Se il parametro è presente, deve essere di tipo Message o contratto di messaggio.  
+- Non può essere presente più di un parametro `input`. Se il parametro è presente, deve essere di tipo Message o contratto di messaggio.  
   
--   Il tipo restituito deve essere `void`, `Message` o un tipo di contratto di messaggio.  
+- Il tipo restituito deve essere `void`, `Message` o un tipo di contratto di messaggio.  
   
  L'esempio di codice seguente contiene un contratto di operazione valido.  
   
@@ -63,8 +63,7 @@ Il <xref:System.ServiceModel.Channels.Message> classe è di fondamentale importa
  Esistono, inoltre, overload `CreateMessage` che accettano una classe <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlDictionaryReader> che rappresenta l'intero messaggio e non solo il corpo. Questi overload accettano anche un parametro `maxSizeOfHeaders` intero. Le intestazioni vengono sempre memorizzate nel buffer in memoria non appena viene creato il messaggio e questo parametro limita la quantità di memorizzazione nel buffer eseguita. È importante impostare questo parametro su un valore sicuro, se il codice XML proviene da un'origine non attendibile, per ridurre la possibilità di un attacco di tipo Denial of Service. Le versioni SOAP e WS-Addressing del messaggio rappresentato dal lettore XML devono corrispondere alle versioni indicate mediante il parametro di versione.  
   
 ## <a name="creating-messages-with-bodywriter"></a>Creazione di messaggi con BodyWriter  
- Un overload `CreateMessage` accetta un'istanza di `BodyWriter` per descrivere il corpo del messaggio. 
-  `BodyWriter` è una classe astratta che può essere derivata per personalizzare la modalità di creazione dei corpi dei messaggi. È possibile creare una classe derivata `BodyWriter` personalizzata per descrivere i corpi dei messaggi nel modo desiderato. È necessario eseguire l'override del metodo `BodyWriter.OnWriteBodyContents` che accetta <xref:System.Xml.XmlDictionaryWriter>. Questo metodo è responsabile della scrittura del corpo.  
+ Un overload `CreateMessage` accetta un'istanza di `BodyWriter` per descrivere il corpo del messaggio. `BodyWriter` è una classe astratta che può essere derivata per personalizzare la modalità di creazione dei corpi dei messaggi. È possibile creare una classe derivata `BodyWriter` personalizzata per descrivere i corpi dei messaggi nel modo desiderato. È necessario eseguire l'override del metodo `BodyWriter.OnWriteBodyContents` che accetta <xref:System.Xml.XmlDictionaryWriter>. Questo metodo è responsabile della scrittura del corpo.  
   
  I body writer possono essere memorizzati nel buffer oppure no (trasmessi). I body writer memorizzati nel buffer possono scrivere il proprio contenuto qualsiasi numero di volte, quelli trasmessi possono invece scrivere il proprio contenuto una sola volta. La proprietà `IsBuffered` indica se un body writer è memorizzato o meno nel buffer. Per impostare questa proprietà per il body writer chiamare il costruttore `BodyWriter` protetto che accetta un parametro booleano `isBuffered`. I body writer supportano la creazione di un body writer memorizzato nel buffer da un body writer non memorizzato nel buffer. È possibile eseguire l'override del metodo `OnCreateBufferedCopy` per personalizzare questo processo. Per impostazione predefinita, viene usato un buffer in memoria contenente il codice XML restituito da `OnWriteBodyContents`. `OnCreateBufferedCopy` accetta un parametro di tipo Integer `maxBufferSize`. Se si esegue l'override di questo metodo, non è necessario creare buffer più grandi della dimensione massima specificata.  
   
@@ -79,11 +78,11 @@ Il <xref:System.ServiceModel.Channels.Message> classe è di fondamentale importa
 ## <a name="extracting-message-body-data"></a>Estrazione di dati del corpo del messaggio  
  La classe `Message` supporta più modalità di estrazione delle informazioni dal proprio corpo. Queste modalità possono essere classificate nelle categorie seguenti:  
   
--   Recupero dell'intero corpo del messaggio scritto tutto in sola volta in un writer XML. Ciò è detto *scrittura di un messaggio*.  
+- Recupero dell'intero corpo del messaggio scritto tutto in sola volta in un writer XML. Ciò è detto *scrittura di un messaggio*.  
   
--   Recupero di un lettore XML sul corpo del messaggio. Questo consente di accedere in seguito al corpo del messaggio un pezzo alla volta, come richiesto. Ciò è detto *lettura di un messaggio*.  
+- Recupero di un lettore XML sul corpo del messaggio. Questo consente di accedere in seguito al corpo del messaggio un pezzo alla volta, come richiesto. Ciò è detto *lettura di un messaggio*.  
   
--   L'intero messaggio, incluso il corpo, può essere copiato in un buffer in memoria di tipo <xref:System.ServiceModel.Channels.MessageBuffer>. Ciò è detto *copia di un messaggio*.  
+- L'intero messaggio, incluso il corpo, può essere copiato in un buffer in memoria di tipo <xref:System.ServiceModel.Channels.MessageBuffer>. Ciò è detto *copia di un messaggio*.  
   
  È possibile accedere al corpo di una classe `Message` una sola volta, indipendentemente dalla modalità di accesso. Un oggetto messaggio ha una proprietà `State`, impostata inizialmente su Creato. I tre metodi di accesso descritti nell'elenco precedente impostano lo stato rispettivamente su Scritto, Letto e Copiato. Inoltre, un metodo `Close` può impostare lo stato su Chiuso, quando il contenuto del corpo del messaggio non è più necessario. Il corpo del messaggio è accessibile solo nello stato Creato e non c'è alcun modo per tornare allo stato Creato dopo che è stato modificato.  
   
@@ -97,9 +96,9 @@ Il <xref:System.ServiceModel.Channels.Message> classe è di fondamentale importa
   
  Due metodi di supporto aggiuntivi scrivono determinati tag di elemento iniziali SOAP. Questi metodi non accedono al corpo del messaggio, pertanto non modificano lo stato del messaggio. Sono inclusi:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> scrive l'elemento del corpo iniziale, ad esempio, `<soap:Body>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> scrive l'elemento del corpo iniziale, ad esempio, `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> scrive l'elemento envelope iniziale, ad esempio, `<soap:Envelope>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> scrive l'elemento envelope iniziale, ad esempio, `<soap:Envelope>`.  
   
  Per scrivere i corrispondenti tag di elemento finali, chiamare `WriteEndElement` sul writer XML corrispondente. È raro che questi metodi vengano chiamati direttamente.  
   
@@ -139,15 +138,15 @@ Il <xref:System.ServiceModel.Channels.Message> classe è di fondamentale importa
 ## <a name="accessing-other-message-parts"></a>Accesso ad altre parti del messaggio  
  Vengono fornite varie proprietà per accedere a informazioni sul messaggio diverse dal contenuto del corpo. Queste proprietà non possono tuttavia essere chiamate dopo la chiusura del messaggio:  
   
--   La proprietà <xref:System.ServiceModel.Channels.Message.Headers%2A> rappresenta le intestazioni del messaggio. Vedere la sezione sul "Uso di intestazioni" più avanti in questo argomento.  
+- La proprietà <xref:System.ServiceModel.Channels.Message.Headers%2A> rappresenta le intestazioni del messaggio. Vedere la sezione sul "Uso di intestazioni" più avanti in questo argomento.  
   
--   La proprietà <xref:System.ServiceModel.Channels.Message.Properties%2A> rappresenta le proprietà del messaggio, che sono pezzi di dati denominati collegati al messaggio che non vengono generalmente generati quando il messaggio viene inviato. Vedere la sezione sull'uso di proprietà più avanti in questo argomento.  
+- La proprietà <xref:System.ServiceModel.Channels.Message.Properties%2A> rappresenta le proprietà del messaggio, che sono pezzi di dati denominati collegati al messaggio che non vengono generalmente generati quando il messaggio viene inviato. Vedere la sezione sull'uso di proprietà più avanti in questo argomento.  
   
--   La proprietà <xref:System.ServiceModel.Channels.Message.Version%2A> indica la versione SOAP e WS-Addressing associata al messaggio o `None` se SOAP è disattivato.  
+- La proprietà <xref:System.ServiceModel.Channels.Message.Version%2A> indica la versione SOAP e WS-Addressing associata al messaggio o `None` se SOAP è disattivato.  
   
--   La proprietà <xref:System.ServiceModel.Channels.Message.IsFault%2A> restituisce `true` se il messaggio e un messaggio di errore SOAP.  
+- La proprietà <xref:System.ServiceModel.Channels.Message.IsFault%2A> restituisce `true` se il messaggio e un messaggio di errore SOAP.  
   
--   La proprietà <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> restituisce `true` se il messaggio è vuoto.  
+- La proprietà <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> restituisce `true` se il messaggio è vuoto.  
   
  È possibile usare il metodo <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> per accedere a un particolare attributo sull'elemento wrapper del corpo, ad esempio, `<soap:Body>`, identificato da un nome e uno spazio dei nomi particolari. Se tale attributo non viene trovato, verrà restituito `null`. Questo metodo può essere chiamato solo quando `Message` si trova nello stato Creato, ovvero quando non si è ancora avuto accesso al corpo del messaggio.  
   

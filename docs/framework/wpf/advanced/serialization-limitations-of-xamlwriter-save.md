@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053431"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitazioni relative alla serializzazione di XamlWriter.Save
 Il [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> può essere utilizzato per serializzare il contenuto di un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] come un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file. Esistono tuttavia limitazioni considerevoli relative alla definizione precisa dell'oggetto della serializzazione. Queste limitazioni vengono esaminate in questo argomento, insieme ad alcune considerazioni generali.  
@@ -36,8 +36,8 @@ Il [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Sys
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Scenari realistici per l'uso di XamlWriter.Save  
  Durante le limitazioni elencate di seguito sono piuttosto rilevanti, esistono ancora diversi scenari appropriati per l'uso di <xref:System.Windows.Markup.XamlWriter.Save%2A> per la serializzazione.  
   
--   Output vettoriale o grafico: L'output dell'area visualizzabile è utilizzabile per riprodurre lo stesso vettore o la stessa grafica se caricato nuovamente.  
+- Output vettoriale o grafico: L'output dell'area visualizzabile è utilizzabile per riprodurre lo stesso vettore o la stessa grafica se caricato nuovamente.  
   
--   Documenti di testo e il flusso completi: Testo e tutti i contenimento di elementi di formattazione e l'elemento all'interno di esso viene mantenuto nell'output. Questo può essere utile per i meccanismi che si avvicinano a una funzionalità degli Appunti.  
+- Documenti di testo e il flusso completi: Testo e tutti i contenimento di elementi di formattazione e l'elemento all'interno di esso viene mantenuto nell'output. Questo può essere utile per i meccanismi che si avvicinano a una funzionalità degli Appunti.  
   
--   Mantenimento dati di oggetti business: Se sono state archiviate dati in elementi personalizzati, ad esempio [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dei dati, purché gli oggetti business seguono base [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] regole, ad esempio fornire costruttori personalizzati e conversione per valori di proprietà per riferimento, questi oggetti business possono essere trasmessi attraverso la serializzazione.
+- Mantenimento dati di oggetti business: Se sono state archiviate dati in elementi personalizzati, ad esempio [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dei dati, purché gli oggetti business seguono base [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] regole, ad esempio fornire costruttori personalizzati e conversione per valori di proprietà per riferimento, questi oggetti business possono essere trasmessi attraverso la serializzazione.

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053158"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Procedura dettagliata: Mapping di proprietà tramite il controllo ElementHost
 
@@ -21,13 +21,13 @@ Questa procedura dettagliata illustra come usare il <xref:System.Windows.Forms.I
 
 Le attività illustrate nella procedura dettagliata sono le seguenti:
 
--   Creazione del progetto.
+- Creazione del progetto.
 
--   Definizione di un nuovo mapping delle proprietà.
+- Definizione di un nuovo mapping delle proprietà.
 
--   Definizione di un mapping delle proprietà predefinito.
+- Definizione di un mapping delle proprietà predefinito.
 
--   Estensione di un mapping delle proprietà predefinito.
+- Estensione di un mapping delle proprietà predefinito.
 
 Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Mapping delle proprietà usando l'esempio di controllo ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
@@ -37,7 +37,7 @@ Al termine, sarà possibile eseguire il mapping [!INCLUDE[TLA#tla_winforms](../.
 
 Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>Creazione del progetto
 
@@ -47,13 +47,13 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 2. Nelle **Esplora soluzioni**, aggiungere i riferimenti ai seguenti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assembly.
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. Copiare il codice seguente nella parte superiore del `Form1` file di codice.
 
@@ -101,7 +101,7 @@ Rimuovere un mapping delle proprietà predefinito chiamando il <xref:System.Wind
 
 ### <a name="to-remove-a-default-property-mapping"></a>Per rimuovere un mapping delle proprietà predefinito
 
--   Copiare il codice seguente nella definizione per il `Form1` classe.
+- Copiare il codice seguente nella definizione per il `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ Rimuovere un mapping delle proprietà predefinito chiamando il <xref:System.Wind
 
 ### <a name="to-extend-a-default-property-mapping"></a>Per estendere un mapping delle proprietà predefinito
 
--   Copiare il codice seguente nella definizione per il `Form1` classe.
+- Copiare il codice seguente nella definizione per il `Form1` classe.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ Rimuovere un mapping delle proprietà predefinito chiamando il <xref:System.Wind
 
      Il `Form1_Load` metodo consente di gestire il <xref:System.Windows.Forms.Form.Load> eventi ed esegue l'inizializzazione seguente.
 
-    -   Crea una [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elemento.
+    - Crea una [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elemento.
 
-    -   Chiama i metodi definiti in precedenza nella procedura dettagliata per impostare i mapping delle proprietà.
+    - Chiama i metodi definiti in precedenza nella procedura dettagliata per impostare i mapping delle proprietà.
 
-    -   Assegna i valori iniziali alle proprietà mappate.
+    - Assegna i valori iniziali alle proprietà mappate.
 
 2. Premere F5 per compilare ed eseguire l'applicazione.
 

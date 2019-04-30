@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033722"
 ---
 # <a name="how-to-map-database-relationships"></a>Procedura: Eseguire il mapping delle relazioni di database
 Qualsiasi relazione tra i dati, che rimane prevedibilmente sempre la stessa, può essere codificata come riferimenti alla proprietà nella classe di entità. Nel database di esempio Northwind, ad esempio, poiché in genere i clienti effettuano ordini, nel modello è sempre presente una relazione tra clienti e ordini.  
@@ -22,11 +22,11 @@ Qualsiasi relazione tra i dati, che rimane prevedibilmente sempre la stessa, pu�
   
  La maggior parte delle relazioni è di tipo uno-a-molti, come nell'esempio riportato più avanti in questo argomento. È anche possibile rappresentare relazioni uno-a-uno e molti-a-molti come segue:  
   
--   Uno a uno: Rappresentare questo tipo di relazione includendo <xref:System.Data.Linq.EntitySet%601> su entrambi i lati.  
+- Uno a uno: Rappresentare questo tipo di relazione includendo <xref:System.Data.Linq.EntitySet%601> su entrambi i lati.  
   
      Si consideri, ad esempio, un `Customer` - `SecurityCode` relazione, creato in modo che il codice di sicurezza del cliente non verrà trovato nel `Customer` tabella ed è accessibile solo da utenti autorizzati.  
   
--   Molti-a-molti: In una relazione molti-a-molti, la chiave primaria della tabella dei collegamenti (anche denominato il *giunzione* tabella) è spesso formata da una combinazione di chiavi esterne delle altre due tabelle.  
+- Molti-a-molti: In una relazione molti-a-molti, la chiave primaria della tabella dei collegamenti (anche denominato il *giunzione* tabella) è spesso formata da una combinazione di chiavi esterne delle altre due tabelle.  
   
      Si consideri, ad esempio, un' `Employee` - `Project` relazione molti-a-molti formate usando tabella dei collegamenti `EmployeeProject`. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è necessario che tale relazione venga modellata usando tre classi:`Employee`, `Project` e `EmployeeProject`. In questo caso la modifica della relazione tra `Employee` e `Project` può apparentemente richiedere un aggiornamento della chiave primaria di `EmployeeProject`. In questa situazione, tuttavia, è preferibile modellare la relazione eliminando una classe `EmployeeProject` esistente e creando una nuova classe `EmployeeProject`.  
   

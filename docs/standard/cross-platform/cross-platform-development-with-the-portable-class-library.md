@@ -10,11 +10,11 @@ ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055056"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Sviluppo multipiattaforma con la libreria di classi portabile
 
@@ -50,13 +50,13 @@ Se si vuole valutare la portabilità degli assembly prima di apportare modifiche
 
 I tipi e i membri disponibili nei progetti Libreria di classi portabile sono limitati da diversi fattori di compatibilità:
 
--   Devono essere condivisi tra le destinazioni selezionate.
+- Devono essere condivisi tra le destinazioni selezionate.
 
--   Devono comportarsi in modo analogo tra le destinazioni.
+- Devono comportarsi in modo analogo tra le destinazioni.
 
--   Non devono essere candidati per la deprecazione.
+- Non devono essere candidati per la deprecazione.
 
--   Devono essere utili in un ambiente portabile, specialmente quando i membri di supporto non lo sono.
+- Devono essere utili in un ambiente portabile, specialmente quando i membri di supporto non lo sono.
 
 Se un membro è supportato in Libreria di classi portabile e per le destinazioni selezionate, verrà visualizzato nel progetto in IntelliSense. Tenere presente, tuttavia, che un'API può essere supportata in Libreria di classi portabile, ma la possibilità di usarla dipende dalle destinazioni selezionate.
 
@@ -78,9 +78,9 @@ Quando si crea un'app Windows universali che fa riferimento a un assembly librer
 
 Quando si distribuisce un'app .NET Framework che fa riferimento a un assembly Libreria di classi portabile, è necessario specificare una dipendenza dalla versione corretta di .NET Framework. Specificando questa dipendenza, ci si assicura che la versione richiesta per l'app sia installata.
 
--   Per creare una dipendenza con la distribuzione ClickOnce: In **Esplora soluzioni**, scegliere il nodo del progetto per il progetto da pubblicare. (Si tratta del progetto che fa riferimento al progetto Libreria di classi portabile.) Nella barra dei menu, scegliere **Project** > **delle proprietà**e quindi scegliere il **pubblica** scheda. Nel **Publish** pagina, scegliere **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
+- Per creare una dipendenza con la distribuzione ClickOnce: Nelle **Esplora soluzioni**, scegliere il nodo del progetto per il progetto da pubblicare. (Si tratta del progetto che fa riferimento al progetto Libreria di classi portabile.) Nella barra dei menu, scegliere **Project** > **delle proprietà**e quindi scegliere il **pubblica** scheda. Nel **Publish** pagina, scegliere **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
 
--   Per creare una dipendenza con un progetto di installazione: nelle **Esplora soluzioni**, scegliere il progetto di installazione. Nella barra dei menu, scegliere **Project** > **delle proprietà** > **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
+- Per creare una dipendenza con un progetto di installazione: Nelle **Esplora soluzioni**, scegliere il progetto di installazione. Nella barra dei menu, scegliere **Project** > **delle proprietà** > **prerequisiti**. Selezionare la versione di .NET Framework richiesta come prerequisito.
 
 Per altre informazioni sulla distribuzione di App .NET Framework, vedere [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054328"
 ---
 # <a name="animation-overview"></a>Cenni preliminari sull'animazione
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337734"
   
  L'animazione in un computer è simile. Un programma che applica una dissolvenza in uscita al disegno di un rettangolo funziona ad esempio nel modo indicato di seguito.  
   
--   Il programma crea un timer.  
+- Il programma crea un timer.  
   
--   Il programma controlla il timer a intervalli stabiliti per rilevare la quantità di tempo trascorso.  
+- Il programma controlla il timer a intervalli stabiliti per rilevare la quantità di tempo trascorso.  
   
--   Ogni volta che il programma controlla il timer, calcola anche il valore di opacità per il rettangolo in base al tempo trascorso.  
+- Ogni volta che il programma controlla il timer, calcola anche il valore di opacità per il rettangolo in base al tempo trascorso.  
   
--   Il programma aggiorna quindi il rettangolo in base al nuovo valore e lo ridisegna.  
+- Il programma aggiorna quindi il rettangolo in base al nuovo valore e lo ridisegna.  
   
  Nelle versioni precedenti a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] gli sviluppatori dovevano creare e gestire i propri sistemi di temporizzazione oppure usare librerie personalizzate speciali. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] include un sistema di temporizzazione efficiente esposto tramite codice gestito e [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e che è integrato nella [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. Le funzionalità disponibili in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] semplificano l'applicazione di animazioni ai controlli e ad altri oggetti grafici.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337734"
   
  Affinché una proprietà disponga di funzionalità di animazione, devono essere soddisfatti i tre requisiti seguenti:  
   
--   Deve essere una proprietà di dipendenza.  
+- Deve essere una proprietà di dipendenza.  
   
--   Deve appartenere a una classe che eredita da <xref:System.Windows.DependencyObject> e implementa la <xref:System.Windows.Media.Animation.IAnimatable> interfaccia.  
+- Deve appartenere a una classe che eredita da <xref:System.Windows.DependencyObject> e implementa la <xref:System.Windows.Media.Animation.IAnimatable> interfaccia.  
   
--   Deve essere disponibile un tipo di animazione compatibile. (Se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non ne fornisce uno, è possibile crearne uno. Vedere le [Cenni preliminari sulle animazioni personalizzate](custom-animations-overview.md).)  
+- Deve essere disponibile un tipo di animazione compatibile. (Se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] non ne fornisce uno, è possibile crearne uno. Vedere le [Cenni preliminari sulle animazioni personalizzate](custom-animations-overview.md).)  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contiene numerosi oggetti <xref:System.Windows.Media.Animation.IAnimatable> proprietà. I controlli quali <xref:System.Windows.Controls.Button> e <xref:System.Windows.Controls.TabControl>e anche <xref:System.Windows.Controls.Panel> e <xref:System.Windows.Shapes.Shape> ereditano oggetti <xref:System.Windows.DependencyObject>. La maggior parte delle proprietà di tali oggetti è rappresentata da proprietà di dipendenza.  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337734"
 ## <a name="animation-types"></a>Tipi di animazione  
  Poiché le animazioni generano valori di proprietà, per i diversi tipi di proprietà esistono tipi di animazione differenti. Per animare una proprietà che accetta un <xref:System.Double>, ad esempio il <xref:System.Windows.FrameworkElement.Width%2A> proprietà di un elemento, usare un'animazione che produca <xref:System.Double> valori. Per animare una proprietà che accetta un <xref:System.Windows.Point>, usare un'animazione che produca <xref:System.Windows.Point> valori e così via. A causa del numero di diversi tipi di proprietà, esistono diverse classi di animazione di <xref:System.Windows.Media.Animation> dello spazio dei nomi. che fortunatamente seguono una convenzione di denominazione rigorosa che ne facilita la differenziazione:  
   
--   \<*Tipo*> animazione  
+- \<*Tipo*> animazione  
   
      Nota come animazione "From/To/By" o "di base", viene applicata tra un valore iniziale e un valore di destinazione o con l'aggiunta di un valore di offset al valore iniziale.  
   
-    -   Per specificare un valore iniziale, impostare la proprietà From dell'animazione.  
+    - Per specificare un valore iniziale, impostare la proprietà From dell'animazione.  
   
-    -   Per specificare un valore finale, impostare la proprietà To dell'animazione.  
+    - Per specificare un valore finale, impostare la proprietà To dell'animazione.  
   
-    -   Per specificare un valore di offset, impostare la proprietà By dell'animazione.  
+    - Per specificare un valore di offset, impostare la proprietà By dell'animazione.  
   
      Gli esempi del presente documento usano queste animazioni perché sono le più semplici. Le animazioni From/To/By sono descritte dettagliatamente in Cenni preliminari sulle animazioni.  
   
--   \<*Type*>AnimationUsingKeyFrames  
+- \<*Type*>AnimationUsingKeyFrames  
   
      Le animazioni basate su fotogrammi chiave sono più efficaci delle animazioni From/To/By perché è possibile specificare un numero qualsiasi di valori di destinazione e controllarne il metodo di interpolazione. Alcuni tipi possono essere animati solo con animazioni basate su fotogrammi chiave. Le animazioni con fotogrammi chiave sono descritte dettagliatamente le [Cenni preliminari sulle animazioni con fotogrammi chiave](key-frame-animations-overview.md).  
   
--   \<*Type*>AnimationUsingPath  
+- \<*Type*>AnimationUsingPath  
   
      Le animazioni basate su tracciato consentono di usare un tracciato geometrico per produrre valori animati.  
   
--   \<*Tipo*> AnimationBase  
+- \<*Tipo*> AnimationBase  
   
      Classe astratta che, quando implementata, anima un \< *tipo*> valore. Questa classe funge da classe base per \< *tipo*> animazione e \< *tipo*> AnimationUsingKeyFrames classi. È necessario gestire direttamente queste classi solo se si vuole creare animazioni personalizzate. In caso contrario, usare una \< *tipo*> Animation o KeyFrame\<*tipo*> animazione.  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59337734"
   
  Assegnazione di un nome a un <xref:System.Windows.FrameworkElement> è diverso dall'assegnazione di un nome per un <xref:System.Windows.Freezable> oggetto. La maggior parte dei controlli e dei pannelli sono elementi del framework, mentre gli oggetti più strettamente grafici, ad esempio pennelli, trasformazioni e geometrie, sono bloccabili. Se non si è certi se un tipo è un <xref:System.Windows.FrameworkElement> o un <xref:System.Windows.Freezable>, fare riferimento al **gerarchia di ereditarietà** sezione della documentazione di riferimento.  
   
--   Per rendere un <xref:System.Windows.FrameworkElement> destinazione di un'animazione, occorre assegnargli un nome impostando relativo <xref:System.Windows.FrameworkElement.Name%2A> proprietà. Nel codice, è necessario usare anche il <xref:System.Windows.FrameworkElement.RegisterName%2A> metodo per registrare il nome dell'elemento con la pagina a cui appartiene.  
+- Per rendere un <xref:System.Windows.FrameworkElement> destinazione di un'animazione, occorre assegnargli un nome impostando relativo <xref:System.Windows.FrameworkElement.Name%2A> proprietà. Nel codice, è necessario usare anche il <xref:System.Windows.FrameworkElement.RegisterName%2A> metodo per registrare il nome dell'elemento con la pagina a cui appartiene.  
   
--   Per rendere un <xref:System.Windows.Freezable> dell'oggetto di destinazione di un'animazione in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], si utilizza il [direttiva X:Name](../../xaml-services/x-name-directive.md) per assegnargli un nome. Nel codice, è sufficiente utilizzare il <xref:System.Windows.FrameworkElement.RegisterName%2A> metodo per registrare l'oggetto con la pagina a cui appartiene.  
+- Per rendere un <xref:System.Windows.Freezable> dell'oggetto di destinazione di un'animazione in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], si utilizza il [direttiva X:Name](../../xaml-services/x-name-directive.md) per assegnargli un nome. Nel codice, è sufficiente utilizzare il <xref:System.Windows.FrameworkElement.RegisterName%2A> metodo per registrare l'oggetto con la pagina a cui appartiene.  
   
  Le sezioni seguenti forniscono un esempio di un elemento di denominazione [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e codice. Per informazioni più dettagliate sulla denominazione e di destinazione, vedere la [Cenni preliminari sugli storyboard](storyboards-overview.md).  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337734"
 ## <a name="animation-samples"></a>Esempi di animazione  
  Gli esempi seguenti consentono di iniziare ad aggiungere animazione alle applicazioni.  
   
--   [Esempio di valori di destinazione dell'animazione From/To/By](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [Esempio di valori di destinazione dell'animazione From/To/By](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      Descrive le diverse impostazioni From/To/By.  
   
--   [Esempio di comportamento temporale di un'animazione](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [Esempio di comportamento temporale di un'animazione](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      Illustra le diverse modalità per controllare il comportamento temporale di un'animazione. Questo esempio illustra anche come associare a dati il valore di destinazione di un'animazione.  
   

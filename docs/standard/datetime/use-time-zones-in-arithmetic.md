@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare fusi orari nella data e ora aritmetico'
+title: "Procedura: Usare fusi orari nell'aritmetica di data e ora"
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026497"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedura: Usare fusi orari nella data e ora aritmetico
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedura: Usare fusi orari nell'aritmetica di data e ora
 
 In genere, quando si esegue Data e ora utilizzando aritmetica <xref:System.DateTime> o <xref:System.DateTimeOffset> valori, il risultato non riflette eventuali regole di rettifica del fuso orario. Questo vale anche quando il fuso orario del valore di data e ora è chiaramente identificabile (ad esempio, quando la <xref:System.DateTime.Kind%2A> è impostata su <xref:System.DateTimeKind.Local>). In questo argomento viene illustrato come eseguire operazioni aritmetiche su valori di data e ora appartenenti a un determinato fuso orario. I risultati delle operazioni aritmetiche rifletteranno le regole di rettifica del fuso orario.
 

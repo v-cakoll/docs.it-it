@@ -6,8 +6,8 @@ ms.openlocfilehash: 72068002572ff82d2f166ffdd79e455cec7a2961
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051429"
 ---
 # <a name="service-identity-sample"></a>Esempio identità del servizio
 Questo esempio di identità del servizio illustra come impostare l'identità di un servizio. In fase di progettazione, un client può recuperare l'identità utilizzando i metadati del servizio e quindi al runtime il client può autenticare l'identità del servizio. Il concetto di identità del servizio serve per consentire a un client di autenticare un servizio prima di chiamare qualsiasi operazione, proteggendo in questo modo il client da chiamate non autenticate. Su una connessione sicura il servizio autentica anche le credenziali di un client prima di consentirgli l'accesso, ma questo non è il punto centrale dell'esempio. Vedere gli esempi nella [Client](../../../../docs/framework/wcf/samples/client.md) che mostrano l'autenticazione server.
@@ -17,11 +17,11 @@ Questo esempio di identità del servizio illustra come impostare l'identità di 
 
  In questo esempio vengono illustrate le funzionalità seguenti:
 
--   Come impostare tipi diversi di identità su endpoint diversi per un servizio. Ogni tipo di identità ha funzionalità diverse. Il tipo di identità da utilizzare dipende dal tipo di credenziali di sicurezza utilizzato sull'associazione dell'endpoint.
+- Come impostare tipi diversi di identità su endpoint diversi per un servizio. Ogni tipo di identità ha funzionalità diverse. Il tipo di identità da utilizzare dipende dal tipo di credenziali di sicurezza utilizzato sull'associazione dell'endpoint.
 
--   L'identità può essere impostata in modo dichiarativo a livello di configurazione o in modo imperativo a livello di codice. In genere, sia per il client che per il servizio, per impostare l'identità, è necessario utilizzare la configurazione.
+- L'identità può essere impostata in modo dichiarativo a livello di configurazione o in modo imperativo a livello di codice. In genere, sia per il client che per il servizio, per impostare l'identità, è necessario utilizzare la configurazione.
 
--   Come impostare un'identità personalizzata in un client Un'identità personalizzata è in genere una personalizzazione di un tipo esistente di identità che consente al client di esaminare le altre informazioni della richiesta fornite nelle credenziali del servizio per prendere decisioni di autorizzazione prima di chiamare il servizio.
+- Come impostare un'identità personalizzata in un client Un'identità personalizzata è in genere una personalizzazione di un tipo esistente di identità che consente al client di esaminare le altre informazioni della richiesta fornite nelle credenziali del servizio per prendere decisioni di autorizzazione prima di chiamare il servizio.
 
     > [!NOTE]
     >  Questo esempio controlla l'identità di un certificato specifico chiamato identity.com e la chiave RSA contenuta al suo interno. Quando si utilizzano i tipi di identità del certificato e di RSA nella configurazione del client, un modo semplice per ottenere questi valori è di controllare il WSDL del servizio dove questi valori vengono serializzati.
@@ -154,7 +154,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 ### <a name="to-clean-up-after-the-sample"></a>Per eseguire la pulizia dopo l'esempio  
   
--   Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
+- Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.  
   
     > [!NOTE]
     >  Questo script non rimuove i certificati del servizio da un client quando si esegue l'esempio tra più computer. Se è stato eseguito gli esempi di Windows Communication Foundation (WCF) che utilizzano certificati in più computer, assicurarsi di cancellare i certificati del servizio che sono stati installati nell'archivio CurrentUser - TrustedPeople. A tale scopo, usare il comando seguente: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Ad esempio: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

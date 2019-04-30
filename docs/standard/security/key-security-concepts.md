@@ -14,11 +14,11 @@ ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018619"
 ---
 # <a name="key-security-concepts"></a>Concetti principali sulla sicurezza
 Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i problemi di sicurezza relativi al codice mobile e per fornire un supporto che consenta di abilitare i componenti per determinare le operazioni per cui gli utenti dispongono di autorizzazioni.  
@@ -35,11 +35,11 @@ Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i pro
 ## <a name="principal"></a>Principal  
  Un'entità rappresenta l'identità e il ruolo di un utente e agisce per conto dell'utente. La sicurezza basata sui ruoli in .NET Framework supporta tre tipi di entità:  
   
--   Le entità generiche rappresentano utenti e ruoli che esistono indipendentemente dai ruoli e dagli utenti di Windows.  
+- Le entità generiche rappresentano utenti e ruoli che esistono indipendentemente dai ruoli e dagli utenti di Windows.  
   
--   Le entità di Windows rappresentano gli utenti di Windows e i relativi ruoli (o i gruppi di Windows). Un'entità di Windows può rappresentare un altro utente, il che significa che l'entità può accedere a una risorsa per conto dell'utente presentando l'identità appartenente a tale utente.  
+- Le entità di Windows rappresentano gli utenti di Windows e i relativi ruoli (o i gruppi di Windows). Un'entità di Windows può rappresentare un altro utente, il che significa che l'entità può accedere a una risorsa per conto dell'utente presentando l'identità appartenente a tale utente.  
   
--   Le entità personalizzate possono essere definite da un'applicazione secondo le modalità richieste dalla specifica applicazione. Possono estendere la nozione di base di identità e di ruoli dell'entità.  
+- Le entità personalizzate possono essere definite da un'applicazione secondo le modalità richieste dalla specifica applicazione. Possono estendere la nozione di base di identità e di ruoli dell'entità.  
   
  Per altre informazioni, vedere [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md).  
   
