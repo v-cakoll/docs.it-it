@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f9d537f7713233d363f7d408b1cef0485d99d981
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000168"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi (funzione)
 
@@ -48,7 +48,7 @@ HRESULT PutClassWmi (
 `lFlags`\
 [in] Una combinazione di flag che influiscono sul comportamento di questa funzione. I valori seguenti vengono definiti nel *WbemCli.h* file di intestazione, oppure è possibile definirle come costanti nel codice:
 
-|Costante  |Valore  |Descrizione  |
+|Costante  |Value  |Descrizione  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Se set, WMI non archivia i qualificatori con la versione modificata. <br> Se non impostato, si presuppone che non viene localizzato con questo oggetto e tutti i qualificatori vengono archiviati con questa istanza. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Creare la classe se non esiste o di sovrascriverlo se esiste già. |

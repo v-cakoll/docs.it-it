@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022415"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilità COM (Visual Basic)
 Il modello COM (Component Object Model) consente a un oggetto di esporre la relativa funzionalità agli altri componenti e alle applicazioni host. La maggior parte del software in uso oggi include oggetti COM. Anche se gli assembly .NET sono la scelta migliore per le nuove applicazioni, in alcuni casi può essere necessario usare oggetti COM. Questa sezione descrive alcuni dei problemi associati alla creazione e utilizzo degli oggetti COM con Visual Basic.  
@@ -19,7 +19,7 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  [Introduzione all'interoperabilità COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Offre una panoramica dell'interoperabilità COM.  
   
- [Procedura: Fare riferimento a oggetti COM da Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
+ [Procedura: Oggetti di riferimento COM da Visual Basic](../../../visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md)  
  Spiega come aggiungere riferimenti agli oggetti COM con librerie dei tipi.  
   
  [Procedura: Utilizzare i controlli ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
@@ -28,7 +28,7 @@ Il modello COM (Component Object Model) consente a un oggetto di esporre la rela
  [Procedura dettagliata: Chiamata delle API di Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Descrive i passaggi della procedura di chiamata delle API che fanno parte del sistema operativo Windows.  
   
- [Procedura: Chiamare API di Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
+ [Procedura: Chiamare le API di Windows](../../../visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md)  
  Illustra come definire e chiamare la funzione `MessageBox` in User32.dll.  
   
  [Procedura: Chiamare una funzione Windows che accetta tipi senza segno](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
 ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009266"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>Cenni preliminari sul controllo TrackBar (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.TrackBar> controllo (talvolta definito "slider") viene usato per spostarsi all'interno di una grande quantità di informazioni o per regolare visivamente un'impostazione numerica. Il <xref:System.Windows.Forms.TrackBar> controllo è costituito da due parti: il controllo thumb, noto anche come un dispositivo di scorrimento e i segni di graduazione. Il controllo thumb è la parte che può essere modificata. La posizione corrisponde alla <xref:System.Windows.Forms.TrackBar.Value%2A> proprietà. I segni di graduazione sono indicatori visivi che sono disposti a intervalli regolari. Consente di spostare l'indicatore di avanzamento in base a incrementi specificati e possono essere allineate orizzontalmente o verticalmente. Ad esempio, è possibile utilizzare l'indicatore di avanzamento per il cursore per il lampeggiamento mouse o frequenza velocità per un sistema di controllo.  

@@ -3,11 +3,11 @@ title: Procedure consigliate per la persistenza
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
 ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005628"
 ---
 # <a name="persistence-best-practices"></a>Procedure consigliate per la persistenza
 In questo documento vengono descritte le procedure consigliate per la progettazione e la configurazione del flusso di lavoro al fine di mantenerne la persistenza.  
@@ -26,34 +26,34 @@ In questo documento vengono descritte le procedure consigliate per la progettazi
 ## <a name="configuration-of-scalability-parameters"></a>Configurazione dei parametri di scalabilità  
  I requisiti relativi alla scalabilità e alle prestazione determinano le impostazioni dei parametri seguenti:  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
+- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
   
  In base allo scenario corrente, tali parametri dovrebbero essere impostati nel modo indicato di seguito.  
   
-### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Scenario: presenza di un numero ridotto di istanze del flusso di lavoro che richiedono un tempo di risposta ottimale  
+### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>Scenario: Un numero ridotto di istanze del flusso di lavoro che richiedono tempi di risposta ottimale  
  In questo scenario tutte le istanze del flusso di lavoro devono rimanere caricate quando diventano inattive. Impostare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> su un valore elevato. Questa impostazione consente di impedire che un'istanza del flusso di lavoro si sposti tra computer. Usare questa impostazione solo se si verifica una o più delle condizioni seguenti:  
   
--   Un'istanza del flusso del lavoro riceve un unico messaggio in tutta la durata.  
+- Un'istanza del flusso del lavoro riceve un unico messaggio in tutta la durata.  
   
--   Tutte le istanze del flusso di lavoro vengono eseguite in un unico computer.  
+- Tutte le istanze del flusso di lavoro vengono eseguite in un unico computer.  
   
--   Tutti i messaggi ricevuti da un'istanza del flusso di lavoro vengono recapitati nello stesso computer.  
+- Tutti i messaggi ricevuti da un'istanza del flusso di lavoro vengono recapitati nello stesso computer.  
   
  Usare attività <xref:System.Activities.Statements.Persist> o impostare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> su 0 per abilitare il recupero dell'istanza del flusso di lavoro dopo eventuali errori dell'host del servizio o del computer.  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Scenario: inattività delle istanze del flusso di lavoro per periodi di tempo prolungati  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Scenario: Inattività delle istanze del flusso di lavoro per lunghi periodi di tempo  
  In questo scenario impostare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> su 0 per rilasciare le risorse il prima possibile.  
   
-### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Scenario: le istanze del flusso di lavoro ricevono più messaggi in un breve periodo di tempo  
+### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Scenario: Le istanze del flusso di lavoro ricevono più messaggi in un breve periodo di tempo  
  In questo scenario impostare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> su 60 secondi se i messaggi vengono ricevuti dallo stesso computer. In questo modo si impedisce che un'istanza del flusso di lavoro venga scaricata e caricata rapidamente e che l'istanza rimanga in memoria per un periodo di tempo eccessivo.  
   
  Impostare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> su 0 e <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> su BasicRetry o AggressiveRetry se tali messaggi possono essere ricevuti da computer diversi. In questo modo l'istanza del flusso di lavoro può essere caricata da un altro computer.  
   
-### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Scenario: il flusso di lavoro usa le attività di ritardo con durate brevi  
+### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Scenario: Flusso di lavoro Usa le attività di ritardo con durate brevi  
  In questo scenario <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> esegue regolarmente il polling sul database di persistenza per istanze che devono essere caricate a causa di un'attività <xref:System.Activities.Statements.Delay> scaduta. Se <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> trova un timer che scadrà nell'intervallo di polling successivo, l'archivio di istanze del flusso di lavoro SQL riduce l'intervallo di polling. Il polling successivo verrà eseguito subito dopo la scadenza del timer. In questo modo si ottiene un'elevata precisione per i timer in esecuzione da più tempo rispetto all'intervallo di polling, impostato da <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>. Per abilitare un'elaborazione corretta di ritardi più brevi, l'istanza del flusso di lavoro deve rimanere in memoria almeno per la durata di un intervallo di polling.  
   
  Impostare <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> su 0 per scrivere la scadenza nel database di persistenza.  

@@ -3,11 +3,11 @@ title: Compatibilità con la funzionalità di trust parziale
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039065"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilità con la funzionalità di trust parziale
 Windows Communication Foundation (WCF) supporta un subset limitato di funzionalità durante l'esecuzione in un ambiente parzialmente attendibile. Le funzionalità supportate in un contesto parzialmente attendibile sono progettate sulla base di uno specifico set di scenari, come descritto nell'argomento [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -15,20 +15,20 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 ## <a name="minimum-permission-requirements"></a>Requisiti di autorizzazione minimi  
  WCF supporta un subset di funzionalità nelle applicazioni in esecuzione in uno dei set di autorizzazioni denominati standard seguenti:  
   
--   Autorizzazioni Attendibilità media  
+- Autorizzazioni Attendibilità media  
   
--   Autorizzazioni Area Internet  
+- Autorizzazioni Area Internet  
   
  Tentativo di utilizzare WCF in applicazioni parzialmente attendibile con autorizzazioni più restrittive può generare eccezioni di sicurezza in fase di esecuzione.  
   
 ## <a name="contracts"></a>Contratti  
  Se eseguiti in ambiente parzialmente attendibile, i contratti sono soggetti alle restrizioni seguenti:  
   
--   La classe del servizio che implementa l'interfaccia `[ServiceContract]` deve essere `public` e presentare un costruttore `public` . Se definisce metodi `[OperationContract]` , questi devono essere `public`. Se invece implementa un'interfaccia `[ServiceContract]` , le implementazioni dei metodi possono essere esplicite o `private`, purché l'interfaccia `[ServiceContract]` sia `public`.  
+- La classe del servizio che implementa l'interfaccia `[ServiceContract]` deve essere `public` e presentare un costruttore `public` . Se definisce metodi `[OperationContract]` , questi devono essere `public`. Se invece implementa un'interfaccia `[ServiceContract]` , le implementazioni dei metodi possono essere esplicite o `private`, purché l'interfaccia `[ServiceContract]` sia `public`.  
   
--   Quando si utilizza l'attributo `[ServiceKnownType]` , il metodo specificato deve essere `public`.  
+- Quando si utilizza l'attributo `[ServiceKnownType]` , il metodo specificato deve essere `public`.  
   
--   Le classi`[MessageContract]` e i relativi membri possono essere `public`. Se la classe `[MessageContract]` viene definita nell'assembly dell'applicazione, può essere `internal` e disporre di membri `internal` .  
+- Le classi`[MessageContract]` e i relativi membri possono essere `public`. Se la classe `[MessageContract]` viene definita nell'assembly dell'applicazione, può essere `internal` e disporre di membri `internal` .  
   
 ## <a name="system-provided-bindings"></a>Associazioni fornite dal sistema  
  Le classi <xref:System.ServiceModel.BasicHttpBinding> e <xref:System.ServiceModel.WebHttpBinding> sono completamente supportate in un ambiente di trust parziale. La classe <xref:System.ServiceModel.WSHttpBinding> è supportata solo per la modalità di sicurezza trasporto.  
@@ -44,11 +44,11 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 ### <a name="encoders"></a>Codificatori  
  Sono consentiti i codificatori seguenti:  
   
--   Codificatore di testo (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
+- Codificatore di testo (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
   
--   Codificatore binario (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).  
+- Codificatore binario (<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>).  
   
--   Codificatore di messaggi Web (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
+- Codificatore di messaggi Web (<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>).  
   
  Non sono supportati codificatori MTOM (Message Transmission Optimization Mechanism).  
   
@@ -61,15 +61,15 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 ## <a name="serialization"></a>Serializzazione  
  Entrambe le classi <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> sono supportate in un ambiente di trust parziale. Tuttavia, l'utilizzo di <xref:System.Runtime.Serialization.DataContractSerializer> è soggetto alle condizioni seguenti:  
   
--   Tutti i tipi `[DataContract]` serializzabili devono essere `public`.  
+- Tutti i tipi `[DataContract]` serializzabili devono essere `public`.  
   
--   Tutti i campi `[DataMember]` o le proprietà in un tipo `[DataContract]` devono essere pubblici e di lettura/scrittura. La serializzazione e deserializzazione dei [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) campi non è supportato durante l'esecuzione di WCF in un'applicazione parzialmente attendibile.  
+- Tutti i campi `[DataMember]` o le proprietà in un tipo `[DataContract]` devono essere pubblici e di lettura/scrittura. La serializzazione e deserializzazione dei [readonly](https://go.microsoft.com/fwlink/?LinkID=98854) campi non è supportato durante l'esecuzione di WCF in un'applicazione parzialmente attendibile.  
   
--   Il modello di programmazione `[Serializable]`/ISerializable non è supportato in ambiente parzialmente attendibile.  
+- Il modello di programmazione `[Serializable]`/ISerializable non è supportato in ambiente parzialmente attendibile.  
   
--   I tipi noti devono essere specificati nel codice o nella configurazione a livello di computer (machine.config). I tipi noti non possono essere specificati nella configurazione a livello di applicazione per motivi di sicurezza.  
+- I tipi noti devono essere specificati nel codice o nella configurazione a livello di computer (machine.config). I tipi noti non possono essere specificati nella configurazione a livello di applicazione per motivi di sicurezza.  
   
--   I tipi che implementano <xref:System.Runtime.Serialization.IObjectReference> generano un'eccezione in un ambiente parzialmente attendibile.  
+- I tipi che implementano <xref:System.Runtime.Serialization.IObjectReference> generano un'eccezione in un ambiente parzialmente attendibile.  
   
  Per altre informazioni sulla sicurezza quando si usa [T:System.Runtime.Serialization.DataContractSerializer](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) in modo sicuro in un'applicazione in ambiente parzialmente attendibile, vedere la sezione sulla serializzazione in <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
@@ -88,9 +88,9 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
 ## <a name="enabling-common-behaviors-to-run"></a>Abilitazione dell'esecuzione dei comportamenti comuni  
  Comportamenti del servizio o dell'endpoint non contrassegnati con il <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attributo (APTCA) aggiunti per il [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) sezione di un file di configurazione non vengono eseguiti quando l'applicazione viene eseguita in attendibilità parziale In questo caso, viene generata alcuna eccezione e ambiente. Per imporre l'esecuzione di comportamenti comuni, è necessario eseguire una delle operazioni seguenti:  
   
--   Contrassegnare il comportamento comune con l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> in modo tale che questo possa essere eseguito se distribuito come applicazione parzialmente attendibile. Si noti che una voce di registro può essere impostata nel computer per impedire l'esecuzione delle assembly APTCA. .  
+- Contrassegnare il comportamento comune con l'attributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> in modo tale che questo possa essere eseguito se distribuito come applicazione parzialmente attendibile. Si noti che una voce di registro può essere impostata nel computer per impedire l'esecuzione delle assembly APTCA. .  
   
--   Verificare che, se l'applicazione viene distribuita come completamente attendibile, gli utenti non possano modificare le impostazioni di sicurezza per l'accesso al codice per eseguire l'applicazione in ambiente parzialmente attendibile. In tal caso, il comportamento non viene eseguito e non viene generata alcuna eccezione. A tale scopo, vedere la **levelfinal** opzione usando [Caspol.exe (strumento di criteri di sicurezza dall'accesso di codice)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
+- Verificare che, se l'applicazione viene distribuita come completamente attendibile, gli utenti non possano modificare le impostazioni di sicurezza per l'accesso al codice per eseguire l'applicazione in ambiente parzialmente attendibile. In tal caso, il comportamento non viene eseguito e non viene generata alcuna eccezione. A tale scopo, vedere la **levelfinal** opzione usando [Caspol.exe (strumento di criteri di sicurezza dall'accesso di codice)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
  Per un esempio di un comportamento comune, vedere [come: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
@@ -115,25 +115,25 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
  Le origini di traccia supportate sono:  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>e <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>e <xref:System.IdentityModel.Tokens>.  
   
  Le origini di traccia seguenti non sono supportate:  
   
--   CardSpace  
+- CardSpace  
   
--   <xref:System.IO.Log>  
+- <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  I membri seguenti dell'enumerazione <xref:System.Diagnostics.TraceOptions> non dovrebbero essere specificati:  
   
--   <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.Callstack?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
+- <xref:System.Diagnostics.TraceOptions.ProcessId?displayProperty=nameWithType>  
   
  Quando si utilizza la traccia in un ambiente di trust parziale, assicurare che l'applicazione disponga di autorizzazioni sufficienti per archiviare l'output del listener di traccia. Ad esempio, quando si utilizza <xref:System.Diagnostics.TextWriterTraceListener> per scrivere output di traccia in un file di testo, assicurare che l'applicazione disponga dell'autorizzazione FileIOPermission necessaria per scrivere correttamente nel file di traccia.  
   
@@ -148,11 +148,11 @@ Windows Communication Foundation (WCF) supporta un subset limitato di funzionali
   
  Se indigo2 viene eseguito in ambiente parzialmente attendibile, le funzionalità aggiuntive seguenti non vengono abilitate:  
   
--   Strumentazione gestione Windows (WMI, Windows Management Instrumentation)  
+- Strumentazione gestione Windows (WMI, Windows Management Instrumentation)  
   
--   La registrazione eventi è abilitata solo parzialmente (vedere la discussione nella sezione **Diagnostica** ).  
+- La registrazione eventi è abilitata solo parzialmente (vedere la discussione nella sezione **Diagnostica** ).  
   
--   Contatori delle prestazioni  
+- Contatori delle prestazioni  
   
  Utilizzo delle funzionalità di WCF che non sono supportati in un ambiente parzialmente attendibile può comportare eccezioni in fase di esecuzione.  
   

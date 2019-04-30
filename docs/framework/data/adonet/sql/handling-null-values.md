@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032474"
 ---
 # <a name="handling-null-values"></a>Gestione dei valori null
 Un valore null in un database relazionale viene usato quando il valore in una colonna è sconosciuto o mancante. Un valore null non è né una stringa vuota (per tipi di dati carattere o data-ora) né un valore zero (per tipi di dati numerici). Nella specifica ANSI SQL-92 si afferma che un valore null deve essere uguale per tutti i tipi di dati, in modo da gestire coerentemente tutti i valori null. Lo spazio dei nomi <xref:System.Data.SqlTypes> offre una semantica di tipo null tramite l'implementazione dell'interfaccia <xref:System.Data.SqlTypes.INullable>. Ciascun tipo di dati nello spazio dei nomi <xref:System.Data.SqlTypes> dispone di una proprietà `IsNull` e di un valore `Null` che può essere assegnato a un'istanza di quel tipo di dati.  
@@ -21,11 +21,11 @@ Un valore null in un database relazionale viene usato quando il valore in una co
 ## <a name="nulls-and-three-valued-logic"></a>Valori null e logica con tre valori  
  La concessione di valori null nelle definizioni di colonna introduce una logica con tre valori nell'applicazione. Un confronto può restituire una delle tre condizioni indicate di seguito:  
   
--   True  
+- True  
   
--   False  
+- False  
   
--   Sconosciuto  
+- Sconosciuto  
   
  Poiché il valore null è considerato come sconosciuto, due valori null confrontati tra loro non vengono considerati uguali. In espressioni che usano operatori aritmetici, se uno degli operandi è un valore null, anche il risultato sarà null.  
   

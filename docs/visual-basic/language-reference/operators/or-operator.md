@@ -16,11 +16,11 @@ helpviewer_keywords:
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
 ms.openlocfilehash: 0277b6f24e62ed5f0cad3dae225c86fffc4c09b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013517"
 ---
 # <a name="or-operator-visual-basic"></a>Operatore Or (Visual Basic)
 Esegue una disgiunzione logica su due `Boolean` espressioni oppure una disgiunzione bit per bit su due espressioni numeriche.  

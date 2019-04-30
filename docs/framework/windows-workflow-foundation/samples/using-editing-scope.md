@@ -3,11 +3,11 @@ title: Utilizzo dell'ambito di modifica
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004770"
 ---
 # <a name="using-editing-scope"></a>Utilizzo dell'ambito di modifica
 In questo esempio viene illustrato come raggruppare un set di modifiche in modo che possano essere annullate in un'unica unità atomica. Per impostazione predefinita, le azioni intraprese da un autore dell'ActivityDesigner vengono integrate automaticamente nel sistema di annullamento/ripristino.  
@@ -28,9 +28,9 @@ In questo esempio viene illustrato come raggruppare un set di modifiche in modo 
   
 2. Fare clic su **aprire l'ambito di modifica**.  
   
-    1.  Questo comando consente di chiamare <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> che crea un ambito di modifica e lo inserisce nello stack di modifica.  
+    1. Questo comando consente di chiamare <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> che crea un ambito di modifica e lo inserisce nello stack di modifica.  
   
-    2.  Vengono quindi aggiunte tre attività all'oggetto <xref:System.Activities.Presentation.Model.ModelItem> selezionato. Notare che se l'ambito di modifica non è stato aperto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, le tre nuove attività vengono visualizzate nell'area di disegno della finestra di progettazione. Poiché questa operazione è ancora in sospeso all'interno di <xref:System.Activities.Presentation.Model.EditingScope>, la finestra di progettazione non viene ancora aggiornata.  
+    2. Vengono quindi aggiunte tre attività all'oggetto <xref:System.Activities.Presentation.Model.ModelItem> selezionato. Notare che se l'ambito di modifica non è stato aperto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, le tre nuove attività vengono visualizzate nell'area di disegno della finestra di progettazione. Poiché questa operazione è ancora in sospeso all'interno di <xref:System.Activities.Presentation.Model.EditingScope>, la finestra di progettazione non viene ancora aggiornata.  
   
 3. Premere **ambito di modifica Chiudi** per eseguire il commit all'ambito di modifica. Nella finestra di progettazione vengono visualizzate tre attività.  
   

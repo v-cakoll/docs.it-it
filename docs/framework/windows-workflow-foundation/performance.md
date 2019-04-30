@@ -3,11 +3,11 @@ title: Prestazioni di Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006936"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Prestazioni di Windows Workflow Foundation 4
 
@@ -41,7 +41,7 @@ ms.locfileid: "57845735"
  In WF3 le attività venivano inizializzate al momento della creazione di un flusso di lavoro. In WF 4 le attività vengono inizializzate solo nel momento in cui vengono eseguite le attività corrispondenti. Dato che non è necessario eseguire le operazioni Initialize/Uninitialize quando viene creata una nuova istanza del flusso di lavoro, il ciclo di vita delle attività risulta più semplice e più efficiente.
 
 ### <a name="control-flow"></a>Flusso di controllo
- In modo analogo a quanto avviene con qualsiasi linguaggio di programmazione, [!INCLUDE[wf1](../../../includes/wf1-md.md)] fornisce il supporto per i flussi di controllo per le definizioni dei flussi di lavoro introducendo un set di attività del flusso di controllo per l'ordinamento in sequenza, l'esecuzione in ciclo, il branching e altri modelli. In WF3, quando è necessario eseguire di nuovo la stessa attività, viene creato un nuovo oggetto <xref:System.Workflow.ComponentModel.ActivityExecutionContext> e l'attività viene duplicata usando una logica di serializzazione e deserializzazione complessa basata su <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Generalmente i flussi di controllo iterativi hanno prestazioni più rallentate rispetto all'esecuzione di una sequenza di attività.
+ In modo analogo a quanto avviene con qualsiasi linguaggio di programmazione, [!INCLUDE[wf1](../../../includes/wf1-md.md)] fornisce il supporto per i flussi di controllo per le definizioni dei flussi di lavoro introducendo un set di attività del flusso di controllo per l'ordinamento in sequenza, l'esecuzione in ciclo, la creazione di rami e altri modelli. In WF3, quando è necessario eseguire di nuovo la stessa attività, viene creato un nuovo oggetto <xref:System.Workflow.ComponentModel.ActivityExecutionContext> e l'attività viene duplicata usando una logica di serializzazione e deserializzazione complessa basata su <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Generalmente i flussi di controllo iterativi hanno prestazioni più rallentate rispetto all'esecuzione di una sequenza di attività.
 
  WF4 li gestisce in modo molto diverso. Prende il modello di attività, crea un nuovo oggetto ActivityInstance e lo aggiunge alla coda dell'utilità di pianificazione. L'intero processo comporta solo la creazione di un oggetto esplicito ed è molto semplice.
 
@@ -191,7 +191,7 @@ Il diagramma seguente illustra il flusso di lavoro di compensazione base. Il flu
 
  Se si collegano i servizi TCP di back-end senza il pool di canali, il servizio di [!INCLUDE[wf1](../../../includes/wf1-md.md)] ha un impatto del 17,2% sulla velocità effettiva.  Con il pool di canali, la riduzione delle prestazioni è di circa il 23,8%.  Per il protocollo HTTP, l'impatto è decisamente inferiore: 4,3% senza il pool e 8,1% con il pool.  È anche importante notare che il pool di canali non risulta particolarmente vantaggioso quando si usa HTTP.
 
- Se è presente un sovraccarico del runtime di WF4 rispetto a un servizio WCF codificato manualmente in questo test, può essere considerato uno scenario peggiore.  I due servizi di back-end in questo test svolgono una quantità minima di lavoro.  In uno scenario end-to-end reale, questi servizi eseguirebbero operazioni più costose, quali chiamate al database, minimizzando l'impatto sulle prestazioni del livello di trasporto.  Tutte queste caratteristiche, insieme ai vantaggi offerti dalle funzionalità di WF4, rendono Workflow Foundation una scelta valida per la creazione di servizi di orchestrazione.
+ Se è presente un sovraccarico del runtime di WF4 rispetto a un servizio WCF codificato manualmente in questo test, può essere considerato uno scenario peggiore.  I due servizi di back-end in questo test svolgono una quantità minima di lavoro.  In uno scenario end-to-end reale, questi servizi eseguirebbero operazioni più costose, quali chiamate al database, minimizzando l'impatto sulle prestazioni del livello di trasporto.  Tutte queste funzionalità, insieme ai vantaggi offerti dalle funzionalità di WF4, rendono Workflow Foundation una scelta valida per la creazione di servizi di orchestrazione.
 
 ## <a name="key-performance-considerations"></a>Considerazioni sulle prestazioni principali
  Le aree funzionali di questa sezione, fatta eccezione per l'interoperabilità, sono notevolmente cambiate in WF4 rispetto a WF3.  Queste differenze influiscono sulla progettazione delle applicazioni flusso di lavoro nonché sulle prestazioni.
@@ -220,7 +220,7 @@ Il diagramma seguente illustra il flusso di lavoro di compensazione base. Il flu
  Nel grafico precedente, latenza fredda si riferisce al caso in cui è non presente <xref:System.ServiceModel.WorkflowServiceHost> per il flusso di lavoro specificato.  In altre parole, la latenza fredda si verifica quando il flusso di lavoro viene usato per la prima volta ed è necessario compilare XOML o XAML.  La latenza calda è il tempo necessario per creare una nuova istanza del flusso di lavoro quando il tipo di flusso di lavoro è già stato compilato.  La complessità del flusso di lavoro non fa molta differenza nel test case di WF4, mentre ha una progressione lineare nel test case di WF3.
 
 #### <a name="correlation-throughput"></a>Velocità effettiva della correlazione
- WF4 offre una nuova funzione di correlazione basata sul contenuto.  WF3 offriva solo la correlazione basata sul contesto.  Correlazione basata sul contesto poteva essere eseguita solo su specifiche associazioni di canale WCF.  Quando vengono usate queste associazioni, l'ID del flusso di lavoro viene inserito nell'intestazione del messaggio.  Il runtime di WF3 poteva identificare un flusso di lavoro solo dall'ID.  Grazie alla correlazione basata sul contenuto, l'autore del flusso di lavoro può creare una chiave di correlazione da un dato pertinente, come un numero di conto o un ID cliente.
+ WF4 offre una nuova funzionalità di correlazione basata sul contenuto.  WF3 offriva solo la correlazione basata sul contesto.  Correlazione basata sul contesto poteva essere eseguita solo su specifiche associazioni di canale WCF.  Quando vengono usate queste associazioni, l'ID del flusso di lavoro viene inserito nell'intestazione del messaggio.  Il runtime di WF3 poteva identificare un flusso di lavoro solo dall'ID.  Grazie alla correlazione basata sul contenuto, l'autore del flusso di lavoro può creare una chiave di correlazione da un dato pertinente, come un numero di conto o un ID cliente.
 
  La correlazione basata sul contesto risulta vantaggiosa in termini di prestazioni in quanto la chiave di correlazione si trova nell'intestazione del messaggio.  La chiave può essere letta dal messaggio senza deserializzare/copiare il messaggio.  Nella correlazione basata sul contenuto, la chiave di correlazione viene archiviata nel corpo del messaggio.  Per individuare la chiave, viene usata un'espressione XPath.  Il costo di questa elaborazione aggiuntiva dipende dalla dimensione del messaggio, dalla profondità della chiave nel corpo del messaggio e dal numero di chiavi.  Questo test confronta la correlazione basata sul contesto con quella basata sul contenuto ed evidenzia la riduzione del livello delle prestazioni in caso di utilizzo di più chiavi.
 
@@ -376,25 +376,25 @@ public class Workflow1 : Activity
 
  Notare che il provider di persistenza SQL di WF4 esegue più lavoro nel livello del database.  Il database SQL può diventare un collo di bottiglia, quindi è importante esaminare la CPU e l'uso del disco.  Quando si esegue il test delle prestazioni delle applicazioni flusso di lavoro, verificare che vengano inclusi i seguenti contatori delle prestazioni:
 
--   PhysicalDisk\\tempo lettura disco %
+- PhysicalDisk\\tempo lettura disco %
 
--   PhysicalDisk\\% tempo disco
+- PhysicalDisk\\% tempo disco
 
--   PhysicalDisk\\ora di scrittura disco %
+- PhysicalDisk\\ora di scrittura disco %
 
--   PhysicalDisk\\% Media Lunghezza coda del disco
+- PhysicalDisk\\% Media Lunghezza coda del disco
 
--   PhysicalDisk\ Lunghezza media lettura coda del disco
+- PhysicalDisk\ Lunghezza media lettura coda del disco
 
--   PhysicalDisk\ Lunghezza media scrittura coda del disco
+- PhysicalDisk\ Lunghezza media scrittura coda del disco
 
--   PhysicalDisk\Lunghezza corrente coda su disco
+- PhysicalDisk\Lunghezza corrente coda su disco
 
--   Informazioni sul processore\\% tempo processore
+- Informazioni sul processore\\% tempo processore
 
--   SQLServer:Latch\Tempo medio attesa latch (ms)
+- SQLServer:Latch\Tempo medio attesa latch (ms)
 
--   SQLServer:Latch\Attese latch/sec
+- SQLServer:Latch\Attese latch/sec
 
 ### <a name="tracking"></a>Rilevamento
  È possibile usare il rilevamento del flusso di lavoro per tener traccia dello stato di avanzamento di un flusso di lavoro.  Le informazioni incluse negli eventi di rilevamento sono determinate da un profilo di rilevamento.  Più è complesso il profilo di rilevamento, più diventa oneroso il rilevamento.
@@ -407,13 +407,13 @@ public class Workflow1 : Activity
 
  I vantaggi dell'approccio che prevede l'uso di ETW per il rilevamento invece di SQL sono i seguenti:
 
--   È possibile tenere la raccolta degli eventi di rilevamento separata da un altro processo.  Ciò offre una maggiore flessibilità nella registrazione degli eventi.
+- È possibile tenere la raccolta degli eventi di rilevamento separata da un altro processo.  Ciò offre una maggiore flessibilità nella registrazione degli eventi.
 
--   Gli eventi di rilevamento ETW vengono combinati facilmente con gli eventi ETW di WCF o altri provider ETW, ad esempio un provider di SQL Server o del kernel.
+- Gli eventi di rilevamento ETW vengono combinati facilmente con gli eventi ETW di WCF o altri provider ETW, ad esempio un provider di SQL Server o del kernel.
 
--   Gli autori del flusso di lavoro non devono modificarlo perché funzioni meglio con una determinata implementazione del rilevamento di rilevamento, quale la modalità batch del servizio di rilevamento SQL di WF3.
+- Gli autori del flusso di lavoro non devono modificarlo perché funzioni meglio con una determinata implementazione del rilevamento di rilevamento, quale la modalità batch del servizio di rilevamento SQL di WF3.
 
--   Un amministratore può attivare o disattivare il rilevamento senza riciclare il processo host.
+- Un amministratore può attivare o disattivare il rilevamento senza riciclare il processo host.
 
  I vantaggi del rilevamento ETW in termini di prestazioni presentano comunque un inconveniente.  Se le risorse del sistema sono molto sotto pressione, gli eventi ETW potrebbero andare persi.  Poiché l'elaborazione degli eventi non prevede il blocco della normale esecuzione dei programmi, non è garantita la trasmissione di tutti gli eventi ETW ai sottoscrittori.  Ciò rende ETW adatto per il monitoraggio dell'integrità ma non per il controllo.
 

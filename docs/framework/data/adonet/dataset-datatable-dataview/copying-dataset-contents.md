@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034429"
 ---
 # <a name="copying-dataset-contents"></a>Copia di contenuti di dataset
 È possibile creare una copia di un <xref:System.Data.DataSet> in modo da poter usare i dati senza influire sui dati originali, o utilizzare un subset dei dati da un **set di dati**. Quando si copia una **set di dati**, è possibile:  
   
--   Creare una copia esatta del **set di dati**, inclusi dello schema, i dati, le informazioni sullo stato di riga e le versioni di riga.  
+- Creare una copia esatta del **set di dati**, inclusi dello schema, i dati, le informazioni sullo stato di riga e le versioni di riga.  
   
--   Creare un **set di dati** che contiene lo schema di esistente **DataSet**, ma solo le righe che sono state modificate. È possibile restituire tutte le righe che sono state modificate oppure specificare un determinato **DataRowState**. Per altre informazioni sugli stati delle righe, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+- Creare un **set di dati** che contiene lo schema di esistente **DataSet**, ma solo le righe che sono state modificate. È possibile restituire tutte le righe che sono state modificate oppure specificare un determinato **DataRowState**. Per altre informazioni sugli stati delle righe, vedere [stati e le versioni delle righe](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
--   Copiare lo schema o struttura relazionale, del **set di dati** solo, senza copiare alcuna riga. È possibile importare le righe in un tipo <xref:System.Data.DataTable> esistente usando il metodo <xref:System.Data.DataTable.ImportRow%2A>.  
+- Copiare lo schema o struttura relazionale, del **set di dati** solo, senza copiare alcuna riga. È possibile importare le righe in un tipo <xref:System.Data.DataTable> esistente usando il metodo <xref:System.Data.DataTable.ImportRow%2A>.  
   
  Per creare una copia esatta del **set di dati** che include lo schema sia dei dati, utilizzare il <xref:System.Data.DataSet.Copy%2A> metodo il **set di dati**. Esempio di codice seguente viene illustrato come creare una copia esatta del **set di dati**.  
   

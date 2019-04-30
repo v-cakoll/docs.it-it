@@ -3,11 +3,11 @@ title: Endpoint SOAP e HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007814"
 ---
 # <a name="soap-and-http-endpoints"></a>Endpoint SOAP e HTTP
 In questo esempio viene illustrato come implementare un servizio basato su RPC e come esporlo nel formato SOAP e il formato "Plain Old XML" (POX) usando il modello di programmazione Web WCF. Vedere le [servizio HTTP di base](../../../../docs/framework/wcf/samples/basic-http-service.md) esempio per altri dettagli sul binding HTTP per il servizio. Questo esempio si concentra sui dettagli che riguardano l'esposizione dello stesso servizio su SOAP e HTTP tramite associazioni diverse.  
@@ -22,11 +22,11 @@ In questo esempio viene illustrato come implementare un servizio basato su RPC e
   
  Il file Web. config configura il servizio WCF con 3 endpoint:  
   
--   L'endpoint ~/service.svc/mex che espone i metadati del servizio per l'accesso da client basati su SOAP.  
+- L'endpoint ~/service.svc/mex che espone i metadati del servizio per l'accesso da client basati su SOAP.  
   
--   L'endpoint ~/service.svc/http che consente ai client di accedere al servizio usando l'associazione HTTP.  
+- L'endpoint ~/service.svc/http che consente ai client di accedere al servizio usando l'associazione HTTP.  
   
--   L'endpoint ~/service.svc/soap che consente ai client di accedere al servizio usando SOAP sull'associazione HTTP.  
+- L'endpoint ~/service.svc/soap che consente ai client di accedere al servizio usando SOAP sull'associazione HTTP.  
   
  L'endpoint HTTP è configurato con una <`webHttp`> endpoint standard che ha `helpEnabled` impostato su `true`. Di conseguenza, il servizio espone una pagina della Guida basata su XHTML in corrispondenza di ~/service.svc/http/help che i client basati su HTTP possono usare per accedere al servizio.  
   

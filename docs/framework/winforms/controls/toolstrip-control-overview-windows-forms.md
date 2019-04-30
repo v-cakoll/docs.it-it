@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009526"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Cenni preliminari sul controllo ToolStrip (Windows Form)
 I moduli di Windows <xref:System.Windows.Forms.ToolStrip> controllo e le classi associate forniscono un framework comune per combinare gli elementi dell'interfaccia utente nelle barre degli strumenti, barre di stato e menu. <xref:System.Windows.Forms.ToolStrip> controlli offrono una ricca esperienza della fase di progettazione che include l'attivazione sul posto e modifica, il layout personalizzato e raggruppamento verticale/orizzontale, ovvero la capacità delle barre degli strumenti di condividere lo spazio orizzontale o verticale.  
@@ -24,19 +24,19 @@ I moduli di Windows <xref:System.Windows.Forms.ToolStrip> controllo e le classi 
 ## <a name="features-of-the-toolstrip-controls"></a>Funzionalità dei controlli ToolStrip  
  Usare il <xref:System.Windows.Forms.ToolStrip> controllo:  
   
--   Presentare un'interfaccia utente comune tra contenitori.  
+- Presentare un'interfaccia utente comune tra contenitori.  
   
--   Creare con facilità personalizzato, impiego frequente barre degli strumenti che supportano avanzate funzionalità di layout e interfaccia utente, ad esempio di ancoraggio, raggruppamento verticale/orizzontale, i pulsanti con testo e immagini, caselle di riepilogo e i controlli, pulsanti di overflow e riordinamento dei runtime di <xref:System.Windows.Forms.ToolStrip> elementi.  
+- Creare con facilità personalizzato, impiego frequente barre degli strumenti che supportano avanzate funzionalità di layout e interfaccia utente, ad esempio di ancoraggio, raggruppamento verticale/orizzontale, i pulsanti con testo e immagini, caselle di riepilogo e i controlli, pulsanti di overflow e riordinamento dei runtime di <xref:System.Windows.Forms.ToolStrip> elementi.  
   
--   Supporto di overflow e il riordinamento degli elementi in fase di esecuzione. La funzionalità di overflow sposta gli elementi in un menu di scelta rapida quando non vi è spazio sufficiente per visualizzarli in un <xref:System.Windows.Forms.ToolStrip>.  
+- Supporto di overflow e il riordinamento degli elementi in fase di esecuzione. La funzionalità di overflow sposta gli elementi in un menu di scelta rapida quando non vi è spazio sufficiente per visualizzarli in un <xref:System.Windows.Forms.ToolStrip>.  
   
--   Supporta l'aspetto tipico e il comportamento del sistema operativo tramite un modello comune per il rendering.  
+- Supporta l'aspetto tipico e il comportamento del sistema operativo tramite un modello comune per il rendering.  
   
--   Gestire gli eventi in modo coerente per tutti i contenitori e gli elementi contenuti, nello stesso modo è possibile gestire gli eventi per altri controlli.  
+- Gestire gli eventi in modo coerente per tutti i contenitori e gli elementi contenuti, nello stesso modo è possibile gestire gli eventi per altri controlli.  
   
--   Trascinare gli elementi da una <xref:System.Windows.Forms.ToolStrip> a un altro o in un <xref:System.Windows.Forms.ToolStrip>.  
+- Trascinare gli elementi da una <xref:System.Windows.Forms.ToolStrip> a un altro o in un <xref:System.Windows.Forms.ToolStrip>.  
   
--   Creare editor di tipi di interfaccia di utente e i controlli elenco a discesa con layout avanzati in un <xref:System.Windows.Forms.ToolStripDropDown>.  
+- Creare editor di tipi di interfaccia di utente e i controlli elenco a discesa con layout avanzati in un <xref:System.Windows.Forms.ToolStripDropDown>.  
   
  Usare la <xref:System.Windows.Forms.ToolStripControlHost> classe da utilizzare altri controlli in un <xref:System.Windows.Forms.ToolStrip> e ottenere <xref:System.Windows.Forms.ToolStrip> funzionalità relativa.  
   

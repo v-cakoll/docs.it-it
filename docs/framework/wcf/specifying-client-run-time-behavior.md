@@ -8,11 +8,11 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935460"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Specifica del comportamento in fase di esecuzione dei client
 I client Windows Communication Foundation (WCF), come servizi Windows Communication Foundation (WCF), possono essere configurati per modificare il comportamento in fase di esecuzione per adattarlo all'applicazione client. Sono disponibili tre attributi per la specifica del comportamento in fase di esecuzione dei client. Gli oggetti callback dei client duplex possono usare gli attributi <xref:System.ServiceModel.CallbackBehaviorAttribute> e <xref:System.ServiceModel.Description.CallbackDebugBehavior> per modificare il proprio comportamento in fase di esecuzione. L'altro attributo, <xref:System.ServiceModel.Description.ClientViaBehavior>, può essere usato per separare la destinazione logica dalla destinazione di rete immediata. Inoltre, i tipi di callback dei client duplex possono usare alcuni dei comportamenti del lato servizi. Per altre informazioni, vedere [che specifica il comportamento di Run-Time Service](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -32,9 +32,9 @@ I client Windows Communication Foundation (WCF), come servizi Windows Communicat
   
  A causa dei problemi di sicurezza coinvolti, è consigliato:  
   
--   Usare un file di configurazione dell'applicazione per impostare il valore della proprietà <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> su `true`.  
+- Usare un file di configurazione dell'applicazione per impostare il valore della proprietà <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> su `true`.  
   
--   Si procede in questo modo solo negli scenari di debug controllati.  
+- Si procede in questo modo solo negli scenari di debug controllati.  
   
  Esempio di codice seguente viene illustrato un client di file di configurazione che indica a WCF di restituire informazioni sulle eccezioni gestite da un client di oggetto di callback nei messaggi SOAP.  
   

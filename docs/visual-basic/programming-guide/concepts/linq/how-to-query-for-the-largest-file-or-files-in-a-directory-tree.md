@@ -3,24 +3,24 @@ title: 'Procedura: Eseguire una query per i File più grande o in un albero di D
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
 ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008902"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Procedura: Eseguire una query per i File più grande o in un albero di Directory (LINQ) (Visual Basic)
 Questo esempio illustra cinque query relative alla dimensione dei file in byte:  
   
--   Come recuperare la dimensione in byte del file più grande.  
+- Come recuperare la dimensione in byte del file più grande.  
   
--   Come recuperare la dimensione in byte del file più piccolo.  
+- Come recuperare la dimensione in byte del file più piccolo.  
   
--   Come recuperare il file più grande o più piccolo dell'oggetto <xref:System.IO.FileInfo> da una o più cartelle in una cartella radice specificata.  
+- Come recuperare il file più grande o più piccolo dell'oggetto <xref:System.IO.FileInfo> da una o più cartelle in una cartella radice specificata.  
   
--   Come recuperare una sequenza, ad esempio i 10 file più grandi.  
+- Come recuperare una sequenza, ad esempio i 10 file più grandi.  
   
--   Come ordinare i file in gruppi in base alla dimensione del file in byte, ignorando i file di dimensione inferiore a un valore specificato.  
+- Come ordinare i file in gruppi in base alla dimensione del file in byte, ignorando i file di dimensione inferiore a un valore specificato.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente contiene cinque query distinte che illustrano come eseguire una query e raggruppare i file in base alle dimensioni in byte. È possibile modificare facilmente questi esempi per basare la query su un'altra proprietà dell'oggetto <xref:System.IO.FileInfo>.  

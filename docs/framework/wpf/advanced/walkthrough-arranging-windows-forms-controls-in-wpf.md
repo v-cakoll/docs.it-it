@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007162"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Procedura dettagliata: Disposizione di controlli Windows Form in WPF
 Questa procedura dettagliata illustra come usare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funzionalità di layout per disporre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controlli in un'applicazione ibrida.  
   
  Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
--   Creazione del progetto.  
+- Creazione del progetto.  
   
--   Uso delle impostazioni di layout predefinite.  
+- Uso delle impostazioni di layout predefinite.  
   
--   Ridimensionamento in base al contenuto.  
+- Ridimensionamento in base al contenuto.  
   
--   Uso del posizionamento assoluto.  
+- Uso del posizionamento assoluto.  
   
--   Specifica esplicita delle dimensioni.  
+- Specifica esplicita delle dimensioni.  
   
--   Impostazione delle proprietà di layout.  
+- Impostazione delle proprietà di layout.  
   
--   Informazioni sulle limitazioni di z order.  
+- Informazioni sulle limitazioni di z order.  
   
--   Ancoraggio.  
+- Ancoraggio.  
   
--   Impostazione della visibilità.  
+- Impostazione della visibilità.  
   
--   Hosting di un controllo che non si adatta.  
+- Hosting di un controllo che non si adatta.  
   
--   Ridimensionamento.  
+- Ridimensionamento.  
   
--   Rotazione.  
+- Rotazione.  
   
--   Impostazione della spaziatura interna e dei margini.  
+- Impostazione della spaziatura interna e dei margini.  
   
--   Uso di contenitori di layout dinamici.  
+- Uso di contenitori di layout dinamici.  
   
  Per un listato di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Arranging Windows Forms Controls in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971).  
   
@@ -64,11 +64,11 @@ Per completare la procedura dettagliata, è necessario Visual Studio.
   
 2. In Esplora soluzioni aggiungere riferimenti agli assembly seguenti.  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. Fare doppio clic sul file MainWindow.xaml per aprirlo nella visualizzazione XAML.  
   

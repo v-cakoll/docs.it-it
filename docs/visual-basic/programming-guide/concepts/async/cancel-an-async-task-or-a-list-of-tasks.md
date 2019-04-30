@@ -3,11 +3,11 @@ title: Annullare un'attività asincrona o un elenco di attività (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
 ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022064"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Annullare un'attività asincrona o un elenco di attività (Visual Basic)
 È possibile impostare un pulsante che consenta di annullare un'applicazione asincrona se non si vuole attendere il suo completamento. Seguendo gli esempi in questo argomento, è possibile aggiungere un pulsante di annullamento di un'applicazione che scarica il contenuto di un sito Web o di un elenco di siti Web.  
@@ -67,14 +67,14 @@ ms.locfileid: "59324760"
   
 3. Apportare le modifiche seguenti nel gestore eventi per il pulsante **Avvio**, `startButton_Click`.  
   
-    -   Creare un'istanza di `CancellationTokenSource`, `cts`.  
+    - Creare un'istanza di `CancellationTokenSource`, `cts`.  
   
         ```vb  
         ' ***Instantiate the CancellationTokenSource.  
         cts = New CancellationTokenSource()  
         ```  
   
-    -   Nella chiamata a `AccessTheWebAsync`, che scarica il contenuto di un sito Web specifico, inviare la proprietà <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> di `cts` come argomento. La proprietà `Token` propaga il messaggio se viene richiesto l'annullamento. Aggiungere un blocco catch che visualizzi un messaggio se l'utente sceglie di annullare l'operazione di download. Il codice seguente illustra le modifiche.  
+    - Nella chiamata a `AccessTheWebAsync`, che scarica il contenuto di un sito Web specifico, inviare la proprietà <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> di `cts` come argomento. La proprietà `Token` propaga il messaggio se viene richiesto l'annullamento. Aggiungere un blocco catch che visualizzi un messaggio se l'utente sceglie di annullare l'operazione di download. Il codice seguente illustra le modifiche.  
   
         ```vb  
         Try  
@@ -250,7 +250,7 @@ ms.locfileid: "59324760"
 ## <a name="BKMK_CompleteExamples"></a> Esempi completi  
  Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.  
   
- È possibile scaricare i progetti da [esempio asincrono: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione).  
+ È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Esempio di codice asincrono: Ottimizzazione dell'applicazione).  
   
 ### <a name="cancel-a-task-example"></a>Esempio di annullamento di un'attività  
  Il codice seguente è il file XAML. vb completo per l'esempio che annulla un'attività singola.  

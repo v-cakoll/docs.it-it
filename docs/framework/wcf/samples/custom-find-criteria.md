@@ -3,11 +3,11 @@ title: Criteri di ricerca personalizzati
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006369"
 ---
 # <a name="custom-find-criteria"></a>Criteri di ricerca personalizzati
 In questo esempio viene illustrato come creare una corrispondenza degli ambiti personalizzata utilizzando la logica e come implementare un servizio di individuazione personalizzato. I client utilizzano la funzionalità di corrispondenza degli ambiti personalizzata per rifinire ed eseguire l'ulteriore compilazione sulla funzionalità di individuazione fornita dal sistema di WCF Discovery. Lo scenario analizzato in questo esempio è il seguente:  
@@ -20,9 +20,9 @@ In questo esempio viene illustrato come creare una corrispondenza degli ambiti p
   
 ## <a name="demonstrates"></a>Dimostrazione  
   
--   Creazione di un servizio di individuazione personalizzato.  
+- Creazione di un servizio di individuazione personalizzato.  
   
--   Implementazione di una corrispondenza degli ambiti personalizzata mediante un algoritmo.  
+- Implementazione di una corrispondenza degli ambiti personalizzata mediante un algoritmo.  
   
 ## <a name="discussion"></a>Discussione  
  Il client esegue la ricerca per il tipo "OR" criteri di corrispondenza. Un servizio risponde se gli ambiti sui relativi endpoint corrispondono a uno qualsiasi degli ambiti forniti dal client. In questo caso, il client esegue la ricerca di un servizio calcolatrice che dispone di uno qualsiasi degli ambiti riportati nell'elenco seguente:  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 ms.openlocfilehash: e4421cbc40cdccc1dbbaeb459cb12fda0ee407cf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022350"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Introduzione all'interoperabilità COM (Visual Basic)
 Il modello COM (Component Object) consente a un oggetto di esporre le proprie funzionalità agli altri componenti e alle applicazioni host. Anche se gli oggetti COM sono state fondamentali per Windows di programmazione per molti anni, le applicazioni progettate per common language runtime (CLR) offrono numerosi vantaggi.  
@@ -28,15 +28,15 @@ Il modello COM (Component Object) consente a un oggetto di esporre le proprie fu
 ## <a name="type-libraries-and-assembly-manifests"></a>Manifesti dell'Assembly e le librerie dei tipi  
  Librerie dei tipi descrivono le caratteristiche degli oggetti COM, ad esempio i nomi dei membri e tipi di dati. Manifesti dell'assembly eseguano la stessa funzione per [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] applicazioni. Includono le informazioni seguenti:  
   
--   Identità dell'assembly, versione, impostazioni cultura e firma digitale.  
+- Identità dell'assembly, versione, impostazioni cultura e firma digitale.  
   
--   File che compongono l'implementazione dell'assembly.  
+- File che compongono l'implementazione dell'assembly.  
   
--   Tipi e risorse che compongono l'assembly. Sono inclusi quelli che vengono esportati da quest'ultimo.  
+- Tipi e risorse che compongono l'assembly. Sono inclusi quelli che vengono esportati da quest'ultimo.  
   
--   Dipendenze in fase di compilazione da altri assembly.  
+- Dipendenze in fase di compilazione da altri assembly.  
   
--   Autorizzazioni necessarie per l'assembly da eseguire in modo corretto.  
+- Autorizzazioni necessarie per l'assembly da eseguire in modo corretto.  
   
  Per altre informazioni sugli assembly e manifesti dell'assembly, vedere [gli assembly in .NET](../../../standard/assembly/index.md).  
   

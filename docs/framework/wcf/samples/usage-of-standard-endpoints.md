@@ -6,8 +6,8 @@ ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006334"
 ---
 # <a name="usage-of-standard-endpoints"></a>Uso di endpoint standard
 
@@ -143,13 +143,13 @@ public class CustomEndpoint : ServiceEndpoint
 
 2. Consentire l'avvio di più progetti.
 
-    1.  Nelle **Esplora soluzioni**, fare doppio clic su soluzione Standard Endpoints, quindi selezionare **proprietà**.
+    1. Nelle **Esplora soluzioni**, fare doppio clic su soluzione Standard Endpoints, quindi selezionare **proprietà**.
 
-    2.  Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.
+    2. Nelle **proprietà comuni**, selezionare **progetto di avvio**, quindi fare clic su **progetti di avvio multipli**.
 
-    3.  Spostare il progetto di servizio all'inizio dell'elenco, con la **azione** impostata su **avviare**.
+    3. Spostare il progetto di servizio all'inizio dell'elenco, con la **azione** impostata su **avviare**.
 
-    4.  Spostare il progetto Client dopo il progetto di servizio, anche con il **azione** impostata su **avviare**.
+    4. Spostare il progetto Client dopo il progetto di servizio, anche con il **azione** impostata su **avviare**.
 
          In questo modo si specifica che il progetto Client viene eseguito dopo il progetto Service.
 

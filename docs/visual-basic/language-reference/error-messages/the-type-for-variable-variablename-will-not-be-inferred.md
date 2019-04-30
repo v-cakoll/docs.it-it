@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013647"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Il tipo della variabile '\<nomevariabile >' non riuscita perché è associato a un campo in un ambito contenitore
 Il tipo della variabile '\<nomevariabile >' non riuscita perché è associato a un campo in un ambito contenitore. Modificare il nome del '\<nomevariabile >', oppure usare il nome completo (ad esempio, 'Me. variablename' o 'Variablename').  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>Per risolvere questo avviso  
   
--   Rendere la variabile di controllo locale modificando il relativo nome a un identificatore che non è anche il nome di un campo della classe.  
+- Rendere la variabile di controllo locale modificando il relativo nome a un identificatore che non è anche il nome di un campo della classe.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Chiarire che la variabile di controllo associata al campo della classe, facendolo precedere dalla `Me.` al nome della variabile.  
+- Chiarire che la variabile di controllo associata al campo della classe, facendolo precedere dalla `Me.` al nome della variabile.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Anziché basarsi sull'inferenza del tipo locale, usare un `As` clausola per specificare un tipo di variabile di controllo ciclo for.  
+- Anziché basarsi sull'inferenza del tipo locale, usare un `As` clausola per specificare un tipo di variabile di controllo ciclo for.  
   
     ```  
     For Index As Integer = 1 To 10  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024690"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Influenza delle impostazioni cultura sulle stringhe in Visual Basic
 Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni sulle impostazioni cultura per eseguire confronti e le conversioni di stringa.  
@@ -29,9 +29,9 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
   
  Il `Str` (converte i numeri in stringhe) e `Val` funzioni (conversione di stringhe in numeri) non utilizzano informazioni sulle impostazioni cultura dell'applicazione durante la conversione tra stringhe e numeri. Al contrario, si riconosce solo il punto (.) come separatore dei decimale valido. Le soluzioni analoghe disponibili sensibili di queste funzioni sono:  
   
--   **Conversioni per cui le impostazioni cultura correnti.** Il `CStr` e `Format` funzioni convertono una stringa, un numero e il `CDbl` e `CInt` funzioni convertono una stringa in un numero.  
+- **Conversioni per cui le impostazioni cultura correnti.** Il `CStr` e `Format` funzioni convertono una stringa, un numero e il `CDbl` e `CInt` funzioni convertono una stringa in un numero.  
   
--   **Conversioni che usano impostazioni cultura specifiche.** Ogni oggetto number presenta una `ToString(IFormatProvider)` metodo che converte un numero in una stringa, e un `Parse(String, IFormatProvider)` metodo che converte una stringa in un numero. Ad esempio, il `Double` tipo fornisce il <xref:System.Double.ToString%28System.IFormatProvider%29> e <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> metodi.  
+- **Conversioni che usano impostazioni cultura specifiche.** Ogni oggetto number presenta una `ToString(IFormatProvider)` metodo che converte un numero in una stringa, e un `Parse(String, IFormatProvider)` metodo che converte una stringa in un numero. Ad esempio, il `Double` tipo fornisce il <xref:System.Double.ToString%28System.IFormatProvider%29> e <xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29> metodi.  
   
  Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Conversion.Str%2A> e <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
@@ -52,9 +52,9 @@ Questa pagina della Guida viene illustrato come Visual Basic Usa informazioni su
 ## <a name="comparing-strings"></a>Confronto di stringhe  
  Esistono due importanti situazioni in cui sono necessari i confronti di stringhe:  
   
--   **L'ordinamento dei dati da visualizzare all'utente.** Usare le operazioni in base alla lingua corrente in modo che le stringhe di ordinamento in modo appropriato.  
+- **L'ordinamento dei dati da visualizzare all'utente.** Usare le operazioni in base alla lingua corrente in modo che le stringhe di ordinamento in modo appropriato.  
   
--   **Determinare se due stringhe dell'applicazione interna corrispondono esattamente (in genere per motivi di sicurezza).** Usare le operazioni che non tengono conto delle impostazioni cultura correnti.  
+- **Determinare se due stringhe dell'applicazione interna corrispondono esattamente (in genere per motivi di sicurezza).** Usare le operazioni che non tengono conto delle impostazioni cultura correnti.  
   
  È possibile eseguire entrambi i tipi di confronti con Visual Basic <xref:Microsoft.VisualBasic.Strings.StrComp%2A> (funzione). Specificare l'opzione facoltativa `Compare` argomento per controllare il tipo di confronto: `Text` per la maggior parte degli input e output `Binary` per determinare le corrispondenze esatte.  
   

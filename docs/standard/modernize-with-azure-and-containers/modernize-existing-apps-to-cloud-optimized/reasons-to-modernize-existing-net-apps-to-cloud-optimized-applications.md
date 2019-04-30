@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
 ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012037"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Motivi per cui rinnovare le app .NET esistenti per le applicazioni ottimizzato per il Cloud
 
@@ -33,13 +33,13 @@ Per ottenere flessibilità, è necessario anche i processi DevOps automatizzati 
 
 Nell'elenco seguente descrive i principi principale o procedure consigliate per le applicazioni ottimizzato per il Cloud. Si noti che è possibile adottare tutti o solo alcuni di questi principi, in un approccio graduale o incrementale:
 
--   **I contenitori**. I contenitori offrono la possibilità di includere le dipendenze dell'applicazione con l'applicazione stessa. Containerizzazione riduce notevolmente il numero di problemi che possono verificarsi quando si distribuisce in ambienti di produzione o di test in ambienti di staging. In definitiva, i contenitori di migliorano la flessibilità di distribuzione delle applicazioni.
+- **I contenitori**. I contenitori offrono la possibilità di includere le dipendenze dell'applicazione con l'applicazione stessa. Containerizzazione riduce notevolmente il numero di problemi che possono verificarsi quando si distribuisce in ambienti di produzione o di test in ambienti di staging. In definitiva, i contenitori di migliorano la flessibilità di distribuzione delle applicazioni.
 
--   **Cloud resilienti e scalabili**. Il cloud offre una piattaforma che è gestito, elastico, scalabile e resiliente. Queste caratteristiche sono fondamentali per ottenere i miglioramenti di costi e fornire elevata disponibile e affidabile delle applicazioni in una distribuzione continua. Servizi gestiti, ad esempio database gestiti, gestiti nella cache come un servizio (CaaS) e archiviazione gestita sono i componenti fondamentali per risolvere i costi di manutenzione dell'applicazione.
+- **Cloud resilienti e scalabili**. Il cloud offre una piattaforma che è gestito, elastico, scalabile e resiliente. Queste caratteristiche sono fondamentali per ottenere i miglioramenti di costi e fornire elevata disponibile e affidabile delle applicazioni in una distribuzione continua. Servizi gestiti, ad esempio database gestiti, gestiti nella cache come un servizio (CaaS) e archiviazione gestita sono i componenti fondamentali per risolvere i costi di manutenzione dell'applicazione.
 
--   **Monitoraggio**. È possibile avere un'applicazione affidabile senza che sia un buon metodo per rilevare e diagnosticare le eccezioni e problemi di prestazioni dell'applicazione. È necessario ottenere informazioni operative dettagliate tramite analitica immediata e gestione delle prestazioni.
+- **Monitoraggio**. È possibile avere un'applicazione affidabile senza che sia un buon metodo per rilevare e diagnosticare le eccezioni e problemi di prestazioni dell'applicazione. È necessario ottenere informazioni operative dettagliate tramite analitica immediata e gestione delle prestazioni.
 
--   **DevOps dalle impostazioni cultura e il recapito continuo**. Adozione di procedure consigliate di DevOps è necessario un cambiamento culturale in cui i team lavorano non è più in silo indipendenti. Pipeline CI/CD sono possibili solo quando esiste un aumento della collaborazione tra lo sviluppo e i team IT, supportati da contenitori e gli strumenti di integrazione continua/recapito Continuo.
+- **DevOps dalle impostazioni cultura e il recapito continuo**. Adozione di procedure consigliate di DevOps è necessario un cambiamento culturale in cui i team lavorano non è più in silo indipendenti. Pipeline CI/CD sono possibili solo quando esiste un aumento della collaborazione tra lo sviluppo e i team IT, supportati da contenitori e gli strumenti di integrazione continua/recapito Continuo.
 
 Figura 4-2 illustra i concetti di base facoltativi di un'applicazione ottimizzato per il Cloud. I più concetti fondamentali di implementare, di readier l'applicazione abbia esito positivo nel soddisfare le aspettative dei clienti.
 
@@ -55,13 +55,13 @@ L'organizzazione può adottare gradualmente le tecnologie e gli approcci. Non è
 
 Mediante la conversione di un'applicazione esistente a un'applicazione ottimizzato per il Cloud (senza riarchitettare o codifica), è possibile ottenere i vantaggi seguenti:
 
--   **Ridurre i costi, poiché viene gestita l'infrastruttura gestita dal provider di servizi cloud**. Ottimizzato per il cloud le applicazioni ottengono i vantaggi del cloud con elasticità out-of-the-box del cloud, scalabilità automatica e la disponibilità elevata. I vantaggi correlati non solo per le funzionalità di calcolo (macchine virtuali e contenitori), ma anche in base alle risorse nel cloud, come DBaaS, CaaS e qualsiasi infrastruttura potrebbe essere necessaria un'applicazione.
+- **Ridurre i costi, poiché viene gestita l'infrastruttura gestita dal provider di servizi cloud**. Ottimizzato per il cloud le applicazioni ottengono i vantaggi del cloud con elasticità out-of-the-box del cloud, scalabilità automatica e la disponibilità elevata. I vantaggi correlati non solo per le funzionalità di calcolo (macchine virtuali e contenitori), ma anche in base alle risorse nel cloud, come DBaaS, CaaS e qualsiasi infrastruttura potrebbe essere necessaria un'applicazione.
 
--   **Infrastruttura e applicazioni resilienti**. Quando esegue la migrazione al cloud, è necessario gestire gli errori temporanei; si verificheranno errori nel cloud. Inoltre, hardware e dell'infrastruttura cloud sono "sostituibili," aumentando opportunità per il tempo di inattività temporaneo. Allo stesso tempo, le funzionalità cloud interno e alcune tecniche di sviluppo di applicazioni che implementano la resilienza e automazione del ripristino rendono molto più semplice per il ripristino da errori imprevisti nel cloud.
+- **Infrastruttura e applicazioni resilienti**. Quando esegue la migrazione al cloud, è necessario gestire gli errori temporanei; si verificheranno errori nel cloud. Inoltre, hardware e dell'infrastruttura cloud sono "sostituibili," aumentando opportunità per il tempo di inattività temporaneo. Allo stesso tempo, le funzionalità cloud interno e alcune tecniche di sviluppo di applicazioni che implementano la resilienza e automazione del ripristino rendono molto più semplice per il ripristino da errori imprevisti nel cloud.
 
--   **Informazioni più dettagliate sulle prestazioni dell'applicazione**. Il cloud come Azure Application Insights è fornire una visualizzazione per la gestione dell'integrità, la registrazione e le notifiche, gli strumenti di monitoraggio. I log di controllo facilitano l'applicazioni di eseguire il debug e di controllo, fondamentali per un'applicazione cloud affidabile.
+- **Informazioni più dettagliate sulle prestazioni dell'applicazione**. Il cloud come Azure Application Insights è fornire una visualizzazione per la gestione dell'integrità, la registrazione e le notifiche, gli strumenti di monitoraggio. I log di controllo facilitano l'applicazioni di eseguire il debug e di controllo, fondamentali per un'applicazione cloud affidabile.
 
--   **Portabilità delle applicazioni, con le distribuzioni di agile**. I contenitori (contenitori Linux o Windows basati sul motore di Docker) offrono la migliore soluzione per evitare un'applicazione bloccata al cloud. Usando i contenitori, gli host Docker e gli agenti di orchestrazione di multi-cloud, puoi spostare da un ambiente e da cloud a un altro. I contenitori di eliminano i conflitti si verifica in genere nelle distribuzioni in qualsiasi ambiente (fase, test o produzione).
+- **Portabilità delle applicazioni, con le distribuzioni di agile**. I contenitori (contenitori Linux o Windows basati sul motore di Docker) offrono la migliore soluzione per evitare un'applicazione bloccata al cloud. Usando i contenitori, gli host Docker e gli agenti di orchestrazione di multi-cloud, puoi spostare da un ambiente e da cloud a un altro. I contenitori di eliminano i conflitti si verifica in genere nelle distribuzioni in qualsiasi ambiente (fase, test o produzione).
 
 Tutti questi vantaggi forniscono in definitiva la riduzione dei costi chiave per il ciclo di vita dell'applicazione end-to-end.
 

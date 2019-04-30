@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017841"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate
 <a name="introduction"></a> Oggetto <xref:System.Windows.Controls.ControlTemplate> specifica la struttura visiva e il comportamento di un controllo. È possibile personalizzare l'aspetto di un controllo assegnando una nuova <xref:System.Windows.Controls.ControlTemplate>. Quando si crea un <xref:System.Windows.Controls.ControlTemplate>, si sostituisce l'aspetto di un controllo esistente senza modificarne la funzionalità. Ad esempio, è possibile rendere i pulsanti nell'applicazione forma rotonda invece della forma quadrata predefinita, ma il pulsante genererà comunque il <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
@@ -64,11 +64,11 @@ Oggetto CheckBox che usa un modello del controllo personalizzato
   
  In questo esempio, la struttura visiva è costituita dalle parti seguenti:  
   
--   Oggetto <xref:System.Windows.Controls.Border> denominate `RootElement` che funge da radice del modello <xref:System.Windows.FrameworkElement>.  
+- Oggetto <xref:System.Windows.Controls.Border> denominate `RootElement` che funge da radice del modello <xref:System.Windows.FrameworkElement>.  
   
--   Oggetto <xref:System.Windows.Controls.Grid> che è un figlio del `RootElement`.  
+- Oggetto <xref:System.Windows.Controls.Grid> che è un figlio del `RootElement`.  
   
--   Oggetto <xref:System.Windows.Controls.ContentPresenter> che consente di visualizzare il contenuto del pulsante. Il <xref:System.Windows.Controls.ContentPresenter> consente a qualsiasi tipo di oggetto da visualizzare.  
+- Oggetto <xref:System.Windows.Controls.ContentPresenter> che consente di visualizzare il contenuto del pulsante. Il <xref:System.Windows.Controls.ContentPresenter> consente a qualsiasi tipo di oggetto da visualizzare.  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ Oggetto CheckBox che usa un modello del controllo personalizzato
   
  Il <xref:System.Windows.Controls.Control> classe definisce diverse proprietà che deve essere utilizzata dal modello del controllo per avere effetto sul controllo quando vengono impostate. Come il <xref:System.Windows.Controls.ControlTemplate> Usa la proprietà dipende dalla proprietà. Il <xref:System.Windows.Controls.ControlTemplate> deve usare la proprietà in uno dei modi seguenti:  
   
--   Un elemento di <xref:System.Windows.Controls.ControlTemplate> modello associato alla proprietà.  
+- Un elemento di <xref:System.Windows.Controls.ControlTemplate> modello associato alla proprietà.  
   
--   Un elemento di <xref:System.Windows.Controls.ControlTemplate> eredita la proprietà da un oggetto padre <xref:System.Windows.FrameworkElement>.  
+- Un elemento di <xref:System.Windows.Controls.ControlTemplate> eredita la proprietà da un oggetto padre <xref:System.Windows.FrameworkElement>.  
   
  La tabella seguente elenca le proprietà visive ereditate da un controllo dal <xref:System.Windows.Controls.Control> classe. Indica anche se il modello del controllo predefinito di un controllo usa il valore della proprietà ereditato o se deve essere associato al modello.  
   
@@ -167,11 +167,11 @@ Pulsante che usa un modello del controllo personalizzato nello stato premuto
   
  È possibile specificare la quantità di tempo impiegato per eseguire la transizione senza problemi un controllo da uno stato a altro mediante l'aggiunta di un'animazione <xref:System.Windows.VisualTransition> gli oggetti per il <xref:System.Windows.Controls.ControlTemplate>. Quando si crea un <xref:System.Windows.VisualTransition>, si specifica uno o più delle operazioni seguenti:  
   
--   Il tempo necessario affinché si verifichi una transizione tra stati.  
+- Il tempo necessario affinché si verifichi una transizione tra stati.  
   
--   Le modifiche aggiuntive nell'aspetto del controllo che si verificano al momento della transizione.  
+- Le modifiche aggiuntive nell'aspetto del controllo che si verificano al momento della transizione.  
   
--   Gli stati di <xref:System.Windows.VisualTransition> viene applicato a.  
+- Gli stati di <xref:System.Windows.VisualTransition> viene applicato a.  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>Impostazione della durata di una transizione  
  È possibile specificare il tempo necessario una transizione impostando il <xref:System.Windows.VisualTransition.GeneratedDuration%2A> proprietà. Nell'esempio precedente è presente un <xref:System.Windows.VisualState> che specifica che il bordo del pulsante diventa trasparente quando viene premuto il pulsante, ma l'animazione richiede troppo tempo per essere visualizzata se il pulsante viene premuto e rilasciato rapidamente. È possibile usare un <xref:System.Windows.VisualTransition> per specificare la quantità di tempo impiegato dal controllo per la transizione allo stato premuto. Nell'esempio seguente viene specificato che il controllo impiega un centesimo di secondo per passare allo stato di pressione.  
@@ -201,13 +201,13 @@ Pulsante che usa un modello del controllo personalizzato nello stato premuto
   
  L'esempio seguente mostra le <xref:System.Windows.VisualStateGroup> per il `CommonStates`. L'esempio definisce un <xref:System.Windows.VisualTransition> per ognuno dei seguenti del pulsante esegue la transizione.  
   
--   Allo stato `Pressed`.  
+- Allo stato `Pressed`.  
   
--   Allo stato `MouseOver`.  
+- Allo stato `MouseOver`.  
   
--   Dallo stato `Pressed` allo stato `MouseOver`.  
+- Dallo stato `Pressed` allo stato `MouseOver`.  
   
--   Dallo stato `MouseOver` allo stato `Normal`.  
+- Dallo stato `MouseOver` allo stato `Normal`.  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ Pulsante che usa un modello del controllo personalizzato nello stato premuto
   
  Un contratto di controllo include tre elementi:  
   
--   Gli elementi visivi usati dalla logica del controllo.  
+- Gli elementi visivi usati dalla logica del controllo.  
   
--   Gli stati del controllo e il gruppo a cui appartiene ogni stato.  
+- Gli stati del controllo e il gruppo a cui appartiene ogni stato.  
   
--   Le proprietà pubbliche che influiscono visivamente sul controllo.  
+- Le proprietà pubbliche che influiscono visivamente sul controllo.  
   
 ### <a name="visual-elements-in-the-control-contract"></a>Elementi visivi nel contratto di controllo  
  In alcuni casi per la logica di un controllo interagisce con un <xref:System.Windows.FrameworkElement> che si trova nel <xref:System.Windows.Controls.ControlTemplate>. Ad esempio, il controllo può gestire un evento di uno dei relativi elementi. Quando un controllo si aspetta di trovare un determinato <xref:System.Windows.FrameworkElement> nella <xref:System.Windows.Controls.ControlTemplate>, deve fornire tali informazioni per il <xref:System.Windows.Controls.ControlTemplate> autore. Il controllo Usa il <xref:System.Windows.TemplatePartAttribute> per indicare il tipo di elemento previsto e quale deve essere il nome dell'elemento. Il <xref:System.Windows.Controls.Button> non ha <xref:System.Windows.FrameworkElement> parti nel relativo contratto di controllo, ma altri controlli, ad esempio il <xref:System.Windows.Controls.ComboBox>, eseguire operazioni.  
@@ -250,9 +250,9 @@ Pulsante che usa un modello del controllo personalizzato nello stato premuto
   
  Quando si crea una <xref:System.Windows.Controls.ControlTemplate>, è spesso più semplice iniziare con un oggetto esistente <xref:System.Windows.Controls.ControlTemplate> e apportarvi modifiche. È possibile eseguire una delle seguenti opzioni per modificare un oggetto esistente <xref:System.Windows.Controls.ControlTemplate>:  
   
--   Utilizzare una finestra di progettazione, ad esempio Expression Blend, che fornisce un'interfaccia utente grafica per la creazione di modelli del controllo. Per altre informazioni, vedere [Applicazione di stili a un controllo che supporta modelli](https://go.microsoft.com/fwlink/?LinkId=161153).  
+- Utilizzare una finestra di progettazione, ad esempio Expression Blend, che fornisce un'interfaccia utente grafica per la creazione di modelli del controllo. Per altre informazioni, vedere [Applicazione di stili a un controllo che supporta modelli](https://go.microsoft.com/fwlink/?LinkId=161153).  
   
--   Ottenere il valore predefinito <xref:System.Windows.Controls.ControlTemplate> e modificarlo. Per trovare i modelli del controllo predefiniti che sono inclusi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Temi WPF predefiniti](https://go.microsoft.com/fwlink/?LinkID=158252).  
+- Ottenere il valore predefinito <xref:System.Windows.Controls.ControlTemplate> e modificarlo. Per trovare i modelli del controllo predefiniti che sono inclusi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Temi WPF predefiniti](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Esempio completo  

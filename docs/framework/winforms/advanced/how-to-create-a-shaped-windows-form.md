@@ -19,11 +19,11 @@ helpviewer_keywords:
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
 ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004380"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>Procedura: Creare un Windows Form con una forma
 In questo esempio viene creato un form una forma ellittica che viene ridimensionato con il modulo.  
@@ -36,7 +36,7 @@ In questo esempio viene creato un form una forma ellittica che viene ridimension
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli spazi dei nomi <xref:System.Windows.Forms> e <xref:System.Drawing>.  
+- Riferimenti agli spazi dei nomi <xref:System.Windows.Forms> e <xref:System.Drawing>.  
   
  Questo esempio sostituisce la <xref:System.Windows.Forms.Control.OnPaint%2A> metodo per modificare la forma del form. Per usare questo codice, copiare la dichiarazione del metodo, nonché il codice di disegno all'interno del metodo.  
   

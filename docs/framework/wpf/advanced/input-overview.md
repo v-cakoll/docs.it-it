@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001557"
 ---
 # <a name="input-overview"></a>Cenni preliminari sull'input
 <a name="introduction"></a> Il [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un potente sottosistema [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] per ottenere input da un'ampia gamma di dispositivi, tra cui il mouse, tastiera, tocco e stilo. Questo argomento descrive i servizi forniti da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e illustra l'architettura dei sistemi di input.
@@ -144,43 +144,43 @@ ms.locfileid: "59320015"
 ### <a name="prerequisites"></a>Prerequisiti
  Per sviluppare un'applicazione che risponde al tocco, sono necessari i componenti seguenti.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   Windows 7.
+- Windows 7.
 
--   Un dispositivo, ad esempio un touchscreen, che supporta Windows Touch.
+- Un dispositivo, ad esempio un touchscreen, che supporta Windows Touch.
 
 ### <a name="terminology"></a>Terminologia
  Quando si parla di tocco, vengono usati i termini seguenti.
 
--   **Tocco** è un tipo di input dell'utente riconosciuto da Windows 7. In genere, il tocco viene generato appoggiando le dita su uno schermo sensibile al tocco. Si noti che dispositivi come i touchpad, diffusi sui computer portatili, non supportano il tocco se il dispositivo si limita a convertire la posizione e il movimento del dito come input del mouse.
+- **Tocco** è un tipo di input dell'utente riconosciuto da Windows 7. In genere, il tocco viene generato appoggiando le dita su uno schermo sensibile al tocco. Si noti che dispositivi come i touchpad, diffusi sui computer portatili, non supportano il tocco se il dispositivo si limita a convertire la posizione e il movimento del dito come input del mouse.
 
--   **Multitocco** è un tocco che si verifica in più punti contemporaneamente. Windows 7 e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supportano l'input multitocco. Ogni volta che il tocco viene trattato nella documentazione relativa a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], i concetti illustrati si applicano al multitocco.
+- **Multitocco** è un tocco che si verifica in più punti contemporaneamente. Windows 7 e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] supportano l'input multitocco. Ogni volta che il tocco viene trattato nella documentazione relativa a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], i concetti illustrati si applicano al multitocco.
 
--   Una **manipolazione** si verifica quando il tocco viene interpretato come azione fisica applicata a un oggetto. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli eventi di manipolazione interpretano l'input come una manipolazione di traslazione, espansione o rotazione.
+- Una **manipolazione** si verifica quando il tocco viene interpretato come azione fisica applicata a un oggetto. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gli eventi di manipolazione interpretano l'input come una manipolazione di traslazione, espansione o rotazione.
 
--   Un `touch device` rappresenta un dispositivo che produce un input tocco, ad esempio un singolo dito su un touchscreen.
+- Un `touch device` rappresenta un dispositivo che produce un input tocco, ad esempio un singolo dito su un touchscreen.
 
 ### <a name="controls-that-respond-to-touch"></a>Controlli che rispondono al tocco
  È possibile scorrere i controlli seguenti trascinando un dito attraverso il controllo, se c'è contenuto non visualizzato.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  Il <xref:System.Windows.Controls.ScrollViewer> definisce il <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> che consente di specificare se Panoramica tramite tocco è abilitata orizzontalmente, verticalmente, entrambe o nessuna delle due proprietà associata. Il <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> proprietà specifica la rapidità di rallentamento dello scorrimento quando l'utente solleva il dito dal touchscreen. Il <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> proprietà associata specifica il rapporto dell'offset per convertire l'offset di manipolazione di scorrimento.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59320015"
 
  Tutte tre le classi definiscono gli eventi seguenti, che hanno un comportamento simile, indipendentemente dalla classe che li definisce.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  Analogamente agli eventi di tastiera e mouse, gli eventi di tocco sono eventi indirizzati. Gli eventi che iniziano con `Preview` sono eventi di tunneling e gli eventi che iniziano con `Touch` sono eventi di bubbling. Per altre informazioni sugli eventi indirizzati, vedere [Cenni preliminari sugli eventi indirizzati](routed-events-overview.md). Quando si gestiscono questi eventi, è possibile ottenere la posizione dell'input, rispetto a qualsiasi elemento chiamando il <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> o <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> (metodo).
 
@@ -232,11 +232,11 @@ ms.locfileid: "59320015"
 ### <a name="manipulation-events"></a>Eventi di manipolazione
  Per i casi in cui un'applicazione consente all'utente di modificare un oggetto, il <xref:System.Windows.UIElement> classe definisce gli eventi di manipolazione. A differenza degli eventi di tocco che segnalano semplicemente la posizione del tocco, gli eventi di manipolazione segnalano come può essere interpretato l'input. Ci sono tre tipi di manipolazioni: traslazione, espansione e rotazione. L'elenco seguente descrive come richiamare i tre tipi di manipolazioni.
 
--   Appoggiare un dito su un oggetto e muovere il dito sul touchscreen per richiamare una manipolazione di traslazione. Ciò comporta in genere lo spostamento dell'oggetto.
+- Appoggiare un dito su un oggetto e muovere il dito sul touchscreen per richiamare una manipolazione di traslazione. Ciò comporta in genere lo spostamento dell'oggetto.
 
--   Appoggiare due dita su un oggetto e avvicinare o allontanare le dita tra loro per richiamare una manipolazione di espansione. Ciò comporta in genere il ridimensionamento dell'oggetto.
+- Appoggiare due dita su un oggetto e avvicinare o allontanare le dita tra loro per richiamare una manipolazione di espansione. Ciò comporta in genere il ridimensionamento dell'oggetto.
 
--   Appoggiare due dita su un oggetto e ruotare le dita una attorno all'altra per richiamare una manipolazione di rotazione. Ciò comporta in genere la rotazione dell'oggetto.
+- Appoggiare due dita su un oggetto e ruotare le dita una attorno all'altra per richiamare una manipolazione di rotazione. Ciò comporta in genere la rotazione dell'oggetto.
 
  Si possono verificare più tipi di manipolazioni contemporaneamente.
 
@@ -246,17 +246,17 @@ ms.locfileid: "59320015"
 
  Il <xref:System.Windows.UIElement> definisce gli eventi di manipolazione seguenti.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  Per impostazione predefinita, un <xref:System.Windows.UIElement> non riceve questi eventi di manipolazione. Per ricevere gli eventi di manipolazione in un <xref:System.Windows.UIElement>, impostare <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> a `true`.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59320015"
 
  L'elenco seguente descrive la relazione tra gli eventi di tocco e gli eventi di manipolazione illustrati nella figura precedente.
 
--   Quando il primo dispositivo touch genera un <xref:System.Windows.UIElement.TouchDown> eventi in un <xref:System.Windows.UIElement>, la logica di manipolazione chiama il <xref:System.Windows.UIElement.CaptureTouch%2A> metodo, che genera il <xref:System.Windows.UIElement.GotTouchCapture> evento.
+- Quando il primo dispositivo touch genera un <xref:System.Windows.UIElement.TouchDown> eventi in un <xref:System.Windows.UIElement>, la logica di manipolazione chiama il <xref:System.Windows.UIElement.CaptureTouch%2A> metodo, che genera il <xref:System.Windows.UIElement.GotTouchCapture> evento.
 
--   Quando la <xref:System.Windows.UIElement.GotTouchCapture> si verifica, la logica di manipolazione chiama il <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> metodo, che genera il <xref:System.Windows.UIElement.ManipulationStarting> evento.
+- Quando la <xref:System.Windows.UIElement.GotTouchCapture> si verifica, la logica di manipolazione chiama il <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> metodo, che genera il <xref:System.Windows.UIElement.ManipulationStarting> evento.
 
--   Quando la <xref:System.Windows.UIElement.TouchMove> si verificano gli eventi, la logica di manipolazione genera il <xref:System.Windows.UIElement.ManipulationDelta> eventi che si verificano prima il <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento.
+- Quando la <xref:System.Windows.UIElement.TouchMove> si verificano gli eventi, la logica di manipolazione genera il <xref:System.Windows.UIElement.ManipulationDelta> eventi che si verificano prima il <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento.
 
--   Quando l'ultimo dispositivo a tocco sull'elemento genera il <xref:System.Windows.UIElement.TouchUp> evento, la logica di manipolazione genera il <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento.
+- Quando l'ultimo dispositivo a tocco sull'elemento genera il <xref:System.Windows.UIElement.TouchUp> evento, la logica di manipolazione genera il <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento.
 
 <a name="focus"></a>
 ## <a name="focus"></a>Stato attivo

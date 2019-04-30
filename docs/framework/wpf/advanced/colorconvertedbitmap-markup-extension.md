@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
 ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010657"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>Estensione del markup ColorConvertedBitmap
 Fornisce un modo per specificare un'origine della bitmap che non dispone di un profilo incorporato. Contesti dei colori o i profili specificati da [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)], come l'origine dell'immagine [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  

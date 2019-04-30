@@ -3,24 +3,24 @@ title: Riallocazione della finestra di progettazione
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
 ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005231"
 ---
 # <a name="designer-rehosting"></a>Riallocazione della finestra di progettazione
 La riallocazione della finestra di progettazione è un scenario comune che si riferisce all'hosting dell'area di progettazione flussi di lavoro all'interno di un'applicazione personalizzata. La maggior parte degli utenti dell'applicazione host usa Visual Studio, tuttavia esistono scenari in cui potrebbe essere utile visualizzare la progettazione flussi di lavoro in un'applicazione:  
   
--   Monitoraggio delle applicazioni: per consentire a un utente finale di visualizzare il processo e i dati di runtime sul processo, ad esempio i dati relativi allo stato attivo attualmente, quelli relativi al tempo di esecuzione dell'aggregazione o altre informazioni su un'istanza del flusso di lavoro.  
+- Monitoraggio delle applicazioni: per consentire a un utente finale di visualizzare il processo e i dati di runtime sul processo, ad esempio i dati relativi allo stato attivo attualmente, quelli relativi al tempo di esecuzione dell'aggregazione o altre informazioni su un'istanza del flusso di lavoro.  
   
--   Applicazioni che consentono a un utente di personalizzare il processo con un set limitato di attività.  
+- Applicazioni che consentono a un utente di personalizzare il processo con un set limitato di attività.  
   
  Per supportare questi tipi di applicazioni, la progettazione flussi di lavoro viene fornita all'interno di .NET Framework e può essere ospitata in un'applicazione WPF o in un'applicazione Windows Form con il codice host WPF appropriato. In questo esempio viene illustrato quanto segue:  
   
--   Riallocazione della progettazione flussi di lavoro.  
+- Riallocazione della progettazione flussi di lavoro.  
   
--   Utilizzo della casella degli strumenti riallocata nonché della griglia delle proprietà.  
+- Utilizzo della casella degli strumenti riallocata nonché della griglia delle proprietà.  
   
 ## <a name="rehosting-the-designer"></a>Riallocazione della progettazione  
  In questo esempio viene illustrato come creare il layout WPF per contenere la finestra di progettazione, visualizzata nel layout della griglia seguente (codice della Casella degli strumenti omesso per motivi di spazio). Si noti la denominazione dei bordi che contengono la finestra di progettazione e la griglia delle proprietà.  

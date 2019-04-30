@@ -3,11 +3,11 @@ title: Utilizzo dell'attività Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004731"
 ---
 # <a name="using-the-pick-activity"></a>Utilizzo dell'attività Pick
 In questo esempio viene illustrato come usare l'attività <xref:System.Activities.Statements.Pick>.
@@ -24,17 +24,17 @@ In questo esempio viene illustrato come usare l'attività <xref:System.Activitie
 
  Versione del flusso di lavoro di progettazione della finestra di progettazione dell'esempio viene illustrato come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
 
--   Program.cs: Include il `Main` funzione che esegue il flusso di lavoro di esempio.
+- Program.cs: Include il `Main` funzione che esegue il flusso di lavoro di esempio.
 
--   ReadString.cs: Un'attività personalizzata che legge alcuni input dalla console.
+- ReadString.cs: Un'attività personalizzata che legge alcuni input dalla console.
 
--   Sequence1.XAML: Un flusso di lavoro creato usando la finestra di progettazione usata da Pick.
+- Sequence1.XAML: Un flusso di lavoro creato usando la finestra di progettazione usata da Pick.
 
  Flusso di lavoro codificato nella versione codificata dell'esempio viene illustrato come creare un flusso di lavoro nella finestra di progettazione. Sono inclusi i file seguenti:
 
--   Program.cs: Include il `Main` funzione che esegue il flusso di lavoro di esempio.
+- Program.cs: Include il `Main` funzione che esegue il flusso di lavoro di esempio.
 
--   ReadString.cs: Un'attività personalizzata che legge alcuni input dalla console.
+- ReadString.cs: Un'attività personalizzata che legge alcuni input dalla console.
 
 #### <a name="to-use-this-sample"></a>Per usare questo esempio
 

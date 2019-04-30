@@ -3,11 +3,11 @@ title: Dati di grandi dimensioni e flussi
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038605"
 ---
 # <a name="large-data-and-streaming"></a>Dati di grandi dimensioni e flussi
 Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione basato su XML. Poiché i dati XML sono comunemente codificati in formato di testo standard definito nel [specifica XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838)connesse, architetti e sviluppatori di sistemi riguarda in genere il footprint di trasmissione (o dimensioni) di messaggi inviati tra la rete e la codifica basata su testo di XML comporta particolari difficoltà per il trasferimento efficiente di dati binari.  
@@ -48,11 +48,11 @@ Windows Communication Foundation (WCF) è un'infrastruttura di comunicazione bas
   
  Lo scenario più comune nel quale si verificano trasferimenti di contenuto costituito da dati di grandi dimensioni è rappresentato dai trasferimenti di oggetti dati binari che:  
   
--   Non possono essere facilmente suddivisi in una sequenza di messaggi.  
+- Non possono essere facilmente suddivisi in una sequenza di messaggi.  
   
--   Devono essere recapitati in maniera tempestiva.  
+- Devono essere recapitati in maniera tempestiva.  
   
--   Non sono disponibili per intero al momento dell'avvio del trasferimento.  
+- Non sono disponibili per intero al momento dell'avvio del trasferimento.  
   
  Per i dati che non presentano questi vincoli, in genere è consigliabile inviare sequenze di messaggi nell'ambito di una sessione, anziché un solo grande messaggio. Per altre informazioni, vedere la sezione "Flusso di dati" più avanti in questo argomento.  
   
@@ -112,9 +112,9 @@ class MyData
   
  Se si utilizza MTOM, il contratto dati precedente viene serializzato secondo le regole seguenti:  
   
--   Se `binaryBuffer` non è `null` e contiene abbastanza dati per giustificare il sovraccarico di esternalizzazione di MTOM (intestazioni MIME e così via) rispetto alla codifica Base64, i dati vengono esternalizzati e trasportati con il messaggio come una parte MIME binaria. Se la soglia non viene superata, i dati vengono codificati con il formato Base64.  
+- Se `binaryBuffer` non è `null` e contiene abbastanza dati per giustificare il sovraccarico di esternalizzazione di MTOM (intestazioni MIME e così via) rispetto alla codifica Base64, i dati vengono esternalizzati e trasportati con il messaggio come una parte MIME binaria. Se la soglia non viene superata, i dati vengono codificati con il formato Base64.  
   
--   La stringa (e tutti gli altri tipi non binari) viene sempre rappresentata come una stringa nel corpo del messaggio, indipendentemente dalle dimensioni.  
+- La stringa (e tutti gli altri tipi non binari) viene sempre rappresentata come una stringa nel corpo del messaggio, indipendentemente dalle dimensioni.  
   
  Sia che si utilizzi un contratto dati esplicito, come illustrato nell'esempio precedente, un elenco di parametri in un'operazione, contratti dati annidati o si trasferisca un oggetto contratto dati in una raccolta, l'effetto sulla codifica MTOM è lo stesso. Le matrici di byte sono sempre candidate per l'ottimizzazione e vengono ottimizzate se le soglie di ottimizzazione vengono soddisfatte.  
   
@@ -129,21 +129,21 @@ class MyData
 ### <a name="restrictions"></a>Restrizioni  
  Quando il flusso è abilitato, è possibile utilizzare un numero significativo di funzionalità di WCF:  
   
--   Non è possibile applicare firme digitali al corpo del messaggio poiché richiedono il calcolo di un hash sull'intero contenuto del messaggio. Con il flusso, il contenuto non è completamente disponibile quando le intestazioni del messaggio vengono create e inviate e, pertanto, non è possibile calcolare una firma digitale.  
+- Non è possibile applicare firme digitali al corpo del messaggio poiché richiedono il calcolo di un hash sull'intero contenuto del messaggio. Con il flusso, il contenuto non è completamente disponibile quando le intestazioni del messaggio vengono create e inviate e, pertanto, non è possibile calcolare una firma digitale.  
   
--   Per verificare che i dati siano stati ricostruiti correttamente, la crittografia dipende dalle firme digitali.  
+- Per verificare che i dati siano stati ricostruiti correttamente, la crittografia dipende dalle firme digitali.  
   
--   Le sessioni affidabili devono memorizzare nel buffer i messaggi inviati sul client per riconsegnare un messaggio qualora si perda durante il trasferimento e devono trattenere i messaggi nel servizio prima di passarli all'implementazione del servizio per preservare l'ordine dei messaggi nel caso in cui i messaggi vengano ricevuti fuori sequenza.  
+- Le sessioni affidabili devono memorizzare nel buffer i messaggi inviati sul client per riconsegnare un messaggio qualora si perda durante il trasferimento e devono trattenere i messaggi nel servizio prima di passarli all'implementazione del servizio per preservare l'ordine dei messaggi nel caso in cui i messaggi vengano ricevuti fuori sequenza.  
   
  A causa di questi vincoli funzionali, è possibile utilizzare solo opzioni di sicurezza a livello di trasporto per il flusso e non è possibile attivare sessioni affidabili. Il flusso è disponibile solo con le associazioni definite dal sistema seguenti:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>  
+- <xref:System.ServiceModel.BasicHttpBinding>  
   
--   <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.NetTcpBinding>  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>  
+- <xref:System.ServiceModel.NetNamedPipeBinding>  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
  Perché i trasporti sottostanti di <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding> possono contare sul recapito affidabile inerente e sul supporto della sessione basato sulla connessione, a differenza di HTTP, in pratica questi vincoli influiscono minimamente su queste due associazioni.  
   
@@ -160,11 +160,11 @@ class MyData
 ### <a name="enabling-streaming"></a>Abilitazione del flusso  
  È possibile abilitare il flusso nei modi seguenti:  
   
--   Inviare e accettare richieste in modalità flusso, e accettare e restituire risposte in modalità di memorizzazione nel buffer (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- Inviare e accettare richieste in modalità flusso, e accettare e restituire risposte in modalità di memorizzazione nel buffer (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
   
--   Inviare e accettare richieste in modalità di memorizzazione nel buffer, e accettare e restituire risposte in modalità flusso (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- Inviare e accettare richieste in modalità di memorizzazione nel buffer, e accettare e restituire risposte in modalità flusso (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
   
--   Inviare e ricevere richieste e risposte in modalità flusso in entrambe le direzioni (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- Inviare e ricevere richieste e risposte in modalità flusso in entrambe le direzioni (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
  È possibile disabilitare il flusso impostando la modalità di trasferimento su <xref:System.ServiceModel.TransferMode.Buffered>, ovvero l'impostazione predefinita per tutte le associazioni. Nel codice seguente viene illustrato come impostare la modalità di trasferimento nella configurazione.  
   

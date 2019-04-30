@@ -12,26 +12,26 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009214"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Risoluzione dei problemi relativi alla modifica di controlli e componenti
 In questo argomento vengono descritti alcuni problemi comuni che si verificano durante lo sviluppo di componenti e controlli. Per altre informazioni, vedere l'argomento relativo alla [programmazione con i componenti](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   Impossibile aggiungere un controllo alla casella degli strumenti  
+- Impossibile aggiungere un controllo alla casella degli strumenti  
   
--   Impossibile eseguire il debug del componente o controllo utente di Windows Forms  
+- Impossibile eseguire il debug del componente o controllo utente di Windows Forms  
   
--   L'evento viene generato due volte nel componente o controllo ereditato  
+- L'evento viene generato due volte nel componente o controllo ereditato  
   
--   Errore in fase di progettazione: "Impossibile creare il componente '*nome del componente*'"  
+- Errore in fase di progettazione: "Impossibile creare il componente '*nome del componente*'"  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   L'icona del componente non appare nella casella degli strumenti  
+- L'icona del componente non appare nella casella degli strumenti  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Impossibile aggiungere un controllo alla casella degli strumenti  
  Se si vuole aggiungere un controllo personalizzato creato in un altro progetto o un controllo di terze parti alla **casella degli strumenti**, è necessario farlo manualmente. Se il progetto corrente include il controllo o il componente, deve automaticamente apparire nella **casella degli strumenti**. Per altre informazioni, vedere [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
@@ -42,11 +42,11 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
   
 2. Nella finestra di dialogo **Scegli elementi della Casella degli strumenti** aggiungere il componente:  
   
-    -   per aggiungere un componente o un controllo di .NET Framework, fare clic sulla scheda **Componenti di .NET Framework**  
+    - per aggiungere un componente o un controllo di .NET Framework, fare clic sulla scheda **Componenti di .NET Framework**  
   
          - oppure -  
   
-    -   per aggiungere un componente COM o un controllo ActiveX, fare clic sulla scheda **Componenti COM**.  
+    - per aggiungere un componente COM o un controllo ActiveX, fare clic sulla scheda **Componenti COM**.  
   
 3. Se il controllo è indicato nella finestra di dialogo, verificare se è selezionato e quindi fare clic su **OK**.  
   
@@ -54,15 +54,15 @@ In questo argomento vengono descritti alcuni problemi comuni che si verificano d
   
 4. Se il controllo non è indicato nella finestra di dialogo, eseguire queste operazioni:  
   
-    1.  Fare clic sul pulsante **Sfoglia**.  
+    1. Fare clic sul pulsante **Sfoglia**.  
   
-    2.  Passare alla cartella che contiene il file DLL in cui si trova il controllo.  
+    2. Passare alla cartella che contiene il file DLL in cui si trova il controllo.  
   
-    3.  Selezionare il file DLL e fare clic su **Apri**.  
+    3. Selezionare il file DLL e fare clic su **Apri**.  
   
          Il controllo viene visualizzato nella finestra di dialogo.  
   
-    4.  Verificare se il controllo è selezionato e quindi fare clic su **OK**.  
+    4. Verificare se il controllo è selezionato e quindi fare clic su **OK**.  
   
          Il controllo viene aggiunto alla **casella degli strumenti**.  
   

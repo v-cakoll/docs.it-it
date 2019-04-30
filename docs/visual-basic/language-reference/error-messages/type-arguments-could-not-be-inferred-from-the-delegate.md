@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
 ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013634"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Impossibile dedurre argomenti tipo dal delegato
 Un'istruzione di assegnazione usa `AddressOf` per assegnare l'indirizzo di un oggetto generico a un delegato, ma non fornisce alcun argomento di tipo alla routine generica.  
@@ -23,7 +23,7 @@ Un'istruzione di assegnazione usa `AddressOf` per assegnare l'indirizzo di un og
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Specificare gli argomenti di tipo per la routine generica nell'espressione `AddressOf` .  
+- Specificare gli argomenti di tipo per la routine generica nell'espressione `AddressOf` .  
   
 ## <a name="see-also"></a>Vedere anche
 

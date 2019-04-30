@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032357"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Memorizzazione nella cache dei client di automazione interfaccia utente
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175825"
 ## <a name="retrieving-cached-properties"></a>Recupero di proprietà memorizzate nella cache  
  È possibile recuperare le proprietà memorizzate nella cache di un elemento con i metodi e le proprietà seguenti.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Se la proprietà richiesta non è nella cache, viene generata un'eccezione.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175825"
 ## <a name="retrieving-cached-control-patterns"></a>Recupero di pattern di controllo memorizzati nella cache  
  È possibile recuperare i pattern di controllo memorizzati nella cache di un elemento con i metodi seguenti.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Se il pattern non è nella cache, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> genera un'eccezione e <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> restituisce `false`.  
   

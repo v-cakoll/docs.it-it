@@ -3,11 +3,11 @@ title: Servizio facciata attendibile
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
 ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007695"
 ---
 # <a name="trusted-facade-service"></a>Servizio facciata attendibile
 In questo esempio di scenario viene illustrato come propagare le informazioni di identità del chiamante da un servizio a un altro servizio mediante Windows Communication Foundation (WCF) dell'infrastruttura di sicurezza.  
@@ -16,11 +16,11 @@ In questo esempio di scenario viene illustrato come propagare le informazioni di
   
  L'esempio è costituito dai componenti seguenti:  
   
--   Client calcolatrice  
+- Client calcolatrice  
   
--   Servizio di facciata calcolatrice  
+- Servizio di facciata calcolatrice  
   
--   Servizio back-end calcolatrice  
+- Servizio back-end calcolatrice  
   
  Il servizio di facciata ha la responsabilità di convalidare la richiesta e autenticare il chiamante. Una volta completate correttamente l'autenticazione e la convalida, inoltra la richiesta al servizio back-end usando il canale di comunicazione controllato dalla rete perimetrale alla rete interna. I servizio di facciata include come parte della richiesta inoltrata informazioni sull'identità del chiamante, in modo che il servizio back-end possa usare queste informazioni nell'elaborazione. L'identità del chiamante viene trasmessa usando un token di sicurezza `Username` all'interno dell'intestazione di `Security` del messaggio. L'esempio Usa l'infrastruttura di sicurezza WCF per trasmettere ed estrarre informazioni dal `Security` intestazione.  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
  Di seguito viene presentata una breve panoramica delle diverse sezioni dei file batch.  
   
--   Creazione del certificato server.  
+- Creazione del certificato server.  
   
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare.  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
   
      La variabile `%SERVER_NAME%` specifica il nome del server. Il valore predefinito è localhost. Il certificato viene archiviato nell'archivio LocalMachine.  
   
--   Installazione del servizio di facciata nell'archivio certificati attendibili del client.  
+- Installazione del servizio di facciata nell'archivio certificati attendibili del client.  
   
      La riga seguente copia il servizio di facciata nell'archivio Persone attendibili del client. Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il popolamento dell'archivio certificati client con il certificato server non è necessario.  
   

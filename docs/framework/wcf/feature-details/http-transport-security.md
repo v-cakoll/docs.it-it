@@ -3,11 +3,11 @@ title: Protezione del trasporto HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000844"
 ---
 # <a name="http-transport-security"></a>Protezione del trasporto HTTP
 Quando si usa HTTP come trasporto, la protezione viene fornita da un'implementazione SSL (Secure Sockets Layer). SSL viene ampiamente usato in Internet per autenticare un servizio presso un client e quindi garantire la riservatezza (crittografia) sul canale. Questo argomento viene illustrato come funziona SSL e come implementarlo in Windows Communication Foundation (WCF).  
@@ -31,9 +31,9 @@ Quando si usa HTTP come trasporto, la protezione viene fornita da un'implementaz
 ## <a name="implementing-ssl-with-wcf"></a>Implementazione di SSL con WCF  
  Sicurezza del trasporto HTTP (o SSL) viene fornito esternamente a WCF. È possibile implementare SSL in due modi; il fattore decisivo dipende dalla modalità di host dell'applicazione:  
   
--   Se si usa Internet Information Services (IIS) dell'host WCF, usare l'infrastruttura IIS per configurare un servizio SSL.  
+- Se si usa Internet Information Services (IIS) dell'host WCF, usare l'infrastruttura IIS per configurare un servizio SSL.  
   
--   Se si sta creando un'applicazione WCF self-hosted, è possibile associare un certificato SSL all'indirizzo usando lo strumento HttpCfg.exe.  
+- Se si sta creando un'applicazione WCF self-hosted, è possibile associare un certificato SSL all'indirizzo usando lo strumento HttpCfg.exe.  
   
 ### <a name="using-iis-for-transport-security"></a>Uso di IIS per la protezione del trasporto  
   

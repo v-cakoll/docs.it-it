@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
 ms.openlocfilehash: 2621ab4db207d1b868fbe3778c30c744201b0506
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033813"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Procedura: Gestire le chiavi composite nelle query
 Alcuni operatori possono accettare un solo argomento. Se l'argomento deve includere più di una colonna del database, è necessario creare un tipo anonimo per rappresentare la combinazione.  

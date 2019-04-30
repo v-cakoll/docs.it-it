@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034398"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Creazione di un oggetto DataTable da un oggetto DataView
 Una volta recuperati i dati da un'origine dati e compilato un tipo <xref:System.Data.DataTable>, è possibile ordinare, filtrare o limitare i dati restituiti senza doverli recuperare nuovamente. Questo è reso possibile dalla classe <xref:System.Data.DataView>. Inoltre, se è necessario creare un nuovo <xref:System.Data.DataTable> dal <xref:System.Data.DataView>, è possibile utilizzare il <xref:System.Data.DataView.ToTable%2A> per copiare tutte le righe e colonne o un subset dei dati in un nuovo metodo <xref:System.Data.DataTable>. Il metodo <xref:System.Data.DataView.ToTable%2A> fornisce gli overload per:  
   
--   Creare un tipo <xref:System.Data.DataTable> contenente colonne che rappresentano un subset delle colonne del tipo <xref:System.Data.DataView>.  
+- Creare un tipo <xref:System.Data.DataTable> contenente colonne che rappresentano un subset delle colonne del tipo <xref:System.Data.DataView>.  
   
--   Creare un <xref:System.Data.DataTable> che include solo righe distinte provenienti dalla <xref:System.Data.DataView>, in modo analogo alla parola chiave DISTINCT in Transact-SQL.  
+- Creare un <xref:System.Data.DataTable> che include solo righe distinte provenienti dalla <xref:System.Data.DataView>, in modo analogo alla parola chiave DISTINCT in Transact-SQL.  
   
 ## <a name="example"></a>Esempio  
  L'esempio di applicazione console seguente crea una <xref:System.Data.DataTable> che contiene i dati dal **Person. Contact** nella tabella di **AdventureWorks** database di esempio. Successivamente, nell'esempio viene creato un controllo ordinato e filtrato <xref:System.Data.DataView> base il <xref:System.Data.DataTable>. Dopo aver visualizzato il contenuto del <xref:System.Data.DataTable> e il <xref:System.Data.DataView>, nell'esempio viene creato un nuovo <xref:System.Data.DataTable> dal <xref:System.Data.DataView> chiamando il <xref:System.Data.DataView.ToTable%2A> metodo, selezionando solo un subset delle colonne disponibili. Infine, viene visualizzato il contenuto del nuovo tipo <xref:System.Data.DataTable>.  

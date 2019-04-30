@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007734"
 ---
 # <a name="tracing-and-message-logging"></a>Traccia e registrazione dei messaggi
 In questo esempio viene illustrato come attivare la traccia e la registrazione dei messaggi. Le tracce risultante e i log dei messaggi vengono visualizzati utilizzando il [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). In questo esempio si basa sul [introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -52,11 +52,11 @@ In questo esempio viene illustrato come attivare la traccia e la registrazione d
   
  È possibile estendere la traccia fornita da ServiceModel creando tracce di attività definite dall'utente. Le tracce di attività definite dall'utente consentono all'utente di creare tracce delle attività per:  
   
--   Raggruppare le tracce in unità logiche di lavoro.  
+- Raggruppare le tracce in unità logiche di lavoro.  
   
--   Correlare le attività tramite trasferimenti e propagazione.  
+- Correlare le attività tramite trasferimenti e propagazione.  
   
--   Ridurre i costi della traccia di WCF (ad esempio, il costo di spazio su disco di un file di log).  
+- Ridurre i costi della traccia di WCF (ad esempio, il costo di spazio su disco di un file di log).  
   
  Per altre informazioni sulla traccia di attività definite dall'utente, vedere la [estendendo traccia](../../../../docs/framework/wcf/samples/extending-tracing.md) esempio.  
   

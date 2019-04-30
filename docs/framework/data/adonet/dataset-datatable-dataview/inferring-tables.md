@@ -3,20 +3,20 @@ title: Deduzione di tabelle
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034255"
 ---
 # <a name="inferring-tables"></a>Deduzione di tabelle
 Durante l'inferenza di uno schema per un tipo <xref:System.Data.DataSet> da un documento XML, ADO.NET determina innanzitutto quali elementi XML rappresentano tabelle. Le strutture XML seguente come risultato una tabella per la **set di dati** dello schema:  
   
--   Elementi con attributi  
+- Elementi con attributi  
   
--   Elementi con elementi figlio  
+- Elementi con elementi figlio  
   
--   Elementi ripetuti  
+- Elementi ripetuti  
   
 ## <a name="elements-with-attributes"></a>Elementi con attributi  
  Gli elementi in cui sono stati specificati degli attributi daranno come risultato delle tabelle inferite. Ad esempio, si consideri il seguente codice XML:  

@@ -3,11 +3,11 @@ title: 'Procedura: Eseguire più richieste Web in parallelo tramite Async e Awai
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021999"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedura: Eseguire più richieste Web in parallelo tramite Async e Await (Visual Basic)
 In un metodo asincrono le attività vengono avviate al momento della creazione. Il [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operatore viene applicato all'attività nel punto nel metodo in cui non è possibile continuare l'elaborazione fino al termine dell'attività. Spesso un'attività viene messa in attesa al momento della creazione, come illustrato nell'esempio seguente.  
@@ -46,11 +46,11 @@ Dim result = Await myTask
   
 1. Per configurare un'applicazione WPF, completare i passaggi seguenti. È possibile trovare istruzioni dettagliate per questi passaggi in [Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-    -   Creare un'applicazione WPF che contenga una casella di testo e un pulsante. Denominare il pulsante `startButton` e la casella di testo `resultsTextBox`.  
+    - Creare un'applicazione WPF che contenga una casella di testo e un pulsante. Denominare il pulsante `startButton` e la casella di testo `resultsTextBox`.  
   
-    -   Aggiunge un riferimento a <xref:System.Net.Http>.  
+    - Aggiunge un riferimento a <xref:System.Net.Http>.  
   
-    -   Nel file XAML. vb, aggiungere un' `Imports` istruzione per `System.Net.Http`.  
+    - Nel file XAML. vb, aggiungere un' `Imports` istruzione per `System.Net.Http`.  
   
 ### <a name="to-add-the-code"></a>Per aggiungere il codice  
   
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. Aggiungere i metodi di supporto seguenti al progetto:  
   
-    -   `ProcessURLAsync` usa un metodo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web come matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
+    - `ProcessURLAsync` usa un metodo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web come matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
   
-    -   `DisplayResults` visualizza il numero di byte della matrice di byte per ogni URL. Questa visualizzazione indica quando ogni attività ha terminato il download.  
+    - `DisplayResults` visualizza il numero di byte della matrice di byte per ogni URL. Questa visualizzazione indica quando ogni attività ha terminato il download.  
   
      Copiare i metodi seguenti e incollarli dopo il `startButton_Click` gestore dell'evento in XAML. vb.  
   
@@ -96,13 +96,13 @@ Dim result = Await myTask
   
 4. Infine, definire il metodo `CreateMultipleTasksAsync`, che esegue i passaggi seguenti.  
   
-    -   Il metodo dichiara un oggetto `HttpClient`, che è necessario per accedere al metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.  
+    - Il metodo dichiara un oggetto `HttpClient`, che è necessario per accedere al metodo <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> in `ProcessURLAsync`.  
   
-    -   Il metodo crea e avvia tre attività di tipo <xref:System.Threading.Tasks.Task%601>, dove `TResult` è un numero intero. Al termine di ogni attività, `DisplayResults` vengono visualizzati l'URL dell'attività e la lunghezza del contenuto scaricato. Poiché le attività sono in esecuzione in modo asincrono, l'ordine in cui vengono visualizzati i risultati potrebbe essere diverso da quello in cui le attività sono stati dichiarate.  
+    - Il metodo crea e avvia tre attività di tipo <xref:System.Threading.Tasks.Task%601>, dove `TResult` è un numero intero. Al termine di ogni attività, `DisplayResults` vengono visualizzati l'URL dell'attività e la lunghezza del contenuto scaricato. Poiché le attività sono in esecuzione in modo asincrono, l'ordine in cui vengono visualizzati i risultati potrebbe essere diverso da quello in cui le attività sono stati dichiarate.  
   
-    -   Il metodo attende il completamento di ogni attività. Ogni operatore `Await` sospende l'esecuzione di `CreateMultipleTasksAsync` finché non viene completata l'attività in attesa. L'operatore recupera anche il valore restituito dalla chiamata a `ProcessURLAsync` da ogni attività completata.  
+    - Il metodo attende il completamento di ogni attività. Ogni operatore `Await` sospende l'esecuzione di `CreateMultipleTasksAsync` finché non viene completata l'attività in attesa. L'operatore recupera anche il valore restituito dalla chiamata a `ProcessURLAsync` da ogni attività completata.  
   
-    -   Quando sono state completate le attività e sono stati recuperati i valori interi, il metodo somma le lunghezze dei siti Web e visualizza il risultato.  
+    - Quando sono state completate le attività e sono stati recuperati i valori interi, il metodo somma le lunghezze dei siti Web e visualizza il risultato.  
   
      Copiare il metodo seguente e incollarlo nella soluzione.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
 ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009071"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Controlli Windows Form usati per elencare opzioni
 È possibile aggiungere un'ampia gamma di controlli a un modulo di Windows se si desidera fornire agli utenti un elenco di opzioni tra cui scegliere. A seconda del livello si desidera limitare gli utenti input, è possibile aggiungere un <xref:System.Windows.Forms.ListBox> (controllo), una <xref:System.Windows.Forms.ComboBox> (controllo), o un <xref:System.Windows.Forms.CheckedListBox> controllo. Usare i collegamenti seguenti per determinare quale controllo più adatto alle proprie esigenze.  

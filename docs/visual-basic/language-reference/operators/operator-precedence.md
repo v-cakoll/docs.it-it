@@ -15,11 +15,11 @@ helpviewer_keywords:
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013530"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Precedenza tra gli operatori in Visual Basic
 Quando si verificano diverse operazioni in un'espressione, ogni parte viene valutata e risolti in un ordine predeterminato chiamato *precedenza degli operatori*.  
@@ -27,13 +27,13 @@ Quando si verificano diverse operazioni in un'espressione, ogni parte viene valu
 ## <a name="precedence-rules"></a>Regole di precedenza  
  Se un'espressione contiene operatori da più di una categoria, vengono valutati in base alle regole seguenti:  
   
--   Gli operatori aritmetici e di concatenazione hanno l'ordine di precedenza descritta nella sezione seguente e tutti hanno la precedenza maggiore rispetto a confronto, logici e operatori bit per bit.  
+- Gli operatori aritmetici e di concatenazione hanno l'ordine di precedenza descritta nella sezione seguente e tutti hanno la precedenza maggiore rispetto a confronto, logici e operatori bit per bit.  
   
--   Tutti gli operatori di confronto hanno uguale precedenza e hanno la precedenza maggiore rispetto agli operatori logici e bit per bit, ma la precedenza inferiore rispetto agli operatori aritmetici e di concatenazione.  
+- Tutti gli operatori di confronto hanno uguale precedenza e hanno la precedenza maggiore rispetto agli operatori logici e bit per bit, ma la precedenza inferiore rispetto agli operatori aritmetici e di concatenazione.  
   
--   Gli operatori logici e bit per bit di ordine di precedenza descritta nella sezione seguente e tutti l'aritmetica, di concatenazione e gli operatori di confronto.  
+- Gli operatori logici e bit per bit di ordine di precedenza descritta nella sezione seguente e tutti l'aritmetica, di concatenazione e gli operatori di confronto.  
   
--   Gli operatori con uguale precedenza vengono valutati da sinistra a destra nell'ordine in cui vengono visualizzati nell'espressione.  
+- Gli operatori con uguale precedenza vengono valutati da sinistra a destra nell'ordine in cui vengono visualizzati nell'espressione.  
   
 ## <a name="precedence-order"></a>Ordine di precedenza  
  Gli operatori vengono valutati nell'ordine di precedenza seguente:  

@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026419"
 ---
 # <a name="extension-methods"></a>Metodi di estensione
 I metodi di estensione sono una funzionalità del linguaggio che consente ai metodi statici di essere chiamato usando la sintassi di chiamata del metodo di istanza. Questi metodi devono richiedere almeno un parametro, che rappresenta l'istanza che è il metodo su cui operare.  
@@ -22,9 +22,9 @@ I metodi di estensione sono una funzionalità del linguaggio che consente ai met
   
  **✓ CONSIDER** utilizzando i metodi di estensione in uno dei seguenti scenari:  
   
--   Per fornire supporto funzionalità rilevanti per ogni implementazione di un'interfaccia, se ha funzionalità possono essere scritti in termini di interfaccia principale. Questo avviene perché le implementazioni concrete in caso contrario, non è possibile assegnare alle interfacce. Ad esempio, il `LINQ to Objects` gli operatori vengono implementati come metodi di estensione per tutti i <xref:System.Collections.Generic.IEnumerable%601> tipi. Di conseguenza, qualsiasi `IEnumerable<>` implementazione è automaticamente abilitata per LINQ.  
+- Per fornire supporto funzionalità rilevanti per ogni implementazione di un'interfaccia, se ha funzionalità possono essere scritti in termini di interfaccia principale. Questo avviene perché le implementazioni concrete in caso contrario, non è possibile assegnare alle interfacce. Ad esempio, il `LINQ to Objects` gli operatori vengono implementati come metodi di estensione per tutti i <xref:System.Collections.Generic.IEnumerable%601> tipi. Di conseguenza, qualsiasi `IEnumerable<>` implementazione è automaticamente abilitata per LINQ.  
   
--   Quando un metodo di istanza introdurrebbe una dipendenza da un tipo, ma tale dipendenza causa l'interruzione delle regole di gestione delle dipendenze. Ad esempio, una dipendenza da <xref:System.String> a <xref:System.Uri?displayProperty=nameWithType> non è auspicabile e pertanto `String.ToUri()` metodo di istanza restituzione `System.Uri` sarebbe una progettazione errata da una prospettiva di gestione delle dipendenze. Un metodo di estensione statico `Uri.ToUri(this string str)` restituzione `System.Uri` sarebbe una progettazione molto migliore.  
+- Quando un metodo di istanza introdurrebbe una dipendenza da un tipo, ma tale dipendenza causa l'interruzione delle regole di gestione delle dipendenze. Ad esempio, una dipendenza da <xref:System.String> a <xref:System.Uri?displayProperty=nameWithType> non è auspicabile e pertanto `String.ToUri()` metodo di istanza restituzione `System.Uri` sarebbe una progettazione errata da una prospettiva di gestione delle dipendenze. Un metodo di estensione statico `Uri.ToUri(this string str)` restituzione `System.Uri` sarebbe una progettazione molto migliore.  
   
  **X AVOID** che definisce i metodi di estensione su <xref:System.Object?displayProperty=nameWithType>.  
   

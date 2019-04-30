@@ -8,11 +8,11 @@ helpviewer_keywords:
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
 ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010559"
 ---
 # <a name="dependency-property-metadata"></a>Metadati delle proprietà di dipendenza
 Il sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] include un sistema di segnalazione dei metadati che va al di là di ciò che è possibile segnalare riguardo una proprietà tramite la reflection o le caratteristiche generali di [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. I metadati di una proprietà di dipendenza possono anche essere assegnati in modo univoco dalla classe che definisce una proprietà di dipendenza, possono essere modificati quando la proprietà di dipendenza viene aggiunta a una classe diversa ed è possibile eseguirne specificatamente l'override tramite tutte le classi derivate che ereditano la proprietà di dipendenza dalla classe di base in fase di definizione.  
@@ -25,11 +25,11 @@ Il sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
 ## <a name="how-dependency-property-metadata-is-used"></a>Come usare i metadati delle proprietà di dipendenza  
  I metadati della proprietà di dipendenza sono un oggetto sul quale è possibile eseguire query per esaminare le caratteristiche di una proprietà di dipendenza. Anche il sistema di proprietà accede frequentemente ai metadati durante l'elaborazione di qualsiasi proprietà di dipendenza. L'oggetto metadati di una proprietà di dipendenza può contenere i seguenti tipi di informazioni:  
   
--   Valore predefinito della proprietà di dipendenza, se non è possibile determinare altri valori per la proprietà di dipendenza in base a valore locale, stile, ereditarietà e così via. Per una discussione dettagliata del ruolo dei valori predefiniti nella precedenza usata dal sistema di proprietà durante l'assegnazione dei valori per le proprietà di dipendenza, vedere [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md).  
+- Valore predefinito della proprietà di dipendenza, se non è possibile determinare altri valori per la proprietà di dipendenza in base a valore locale, stile, ereditarietà e così via. Per una discussione dettagliata del ruolo dei valori predefiniti nella precedenza usata dal sistema di proprietà durante l'assegnazione dei valori per le proprietà di dipendenza, vedere [Precedenza del valore della proprietà di dipendenza](dependency-property-value-precedence.md).  
   
--   I riferimenti a implementazioni di callback che influiscono sui comportamenti di coercizione o di notifica di modifica in base al tipo di proprietario. Notare che questi callback vengono spesso definiti con un livello di accesso non pubblico, pertanto in genere non è possibile ottenere i riferimenti effettivi dai metadati, a meno che i riferimenti non rientrino nell'ambito di accesso consentito. Per altre informazioni sui callback per le proprietà di dipendenza, vedere [Callback e convalida delle proprietà di dipendenza](dependency-property-callbacks-and-validation.md).  
+- I riferimenti a implementazioni di callback che influiscono sui comportamenti di coercizione o di notifica di modifica in base al tipo di proprietario. Notare che questi callback vengono spesso definiti con un livello di accesso non pubblico, pertanto in genere non è possibile ottenere i riferimenti effettivi dai metadati, a meno che i riferimenti non rientrino nell'ambito di accesso consentito. Per altre informazioni sui callback per le proprietà di dipendenza, vedere [Callback e convalida delle proprietà di dipendenza](dependency-property-callbacks-and-validation.md).  
   
--   Se la proprietà di dipendenza in questione viene considerata come una proprietà a livello di framework WPF, i metadati potrebbero contenere caratteristiche della proprietà di dipendenza a livello di framework WPF, che segnalano informazioni e stato per servizi come la logica di ereditarietà delle proprietà e il motore di layout a livello di framework WPF. Per altre informazioni su questo aspetto dei metadati delle proprietà di dipendenza, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
+- Se la proprietà di dipendenza in questione viene considerata come una proprietà a livello di framework WPF, i metadati potrebbero contenere caratteristiche della proprietà di dipendenza a livello di framework WPF, che segnalano informazioni e stato per servizi come la logica di ereditarietà delle proprietà e il motore di layout a livello di framework WPF. Per altre informazioni su questo aspetto dei metadati delle proprietà di dipendenza, vedere [Metadati delle proprietà del framework](framework-property-metadata.md).  
   
 <a name="APIs"></a>   
 ## <a name="metadata-apis"></a>API dei metadati  
@@ -62,15 +62,15 @@ Il sistema di proprietà di [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
   
  Quando si esegue l'override dei metadati, le diverse caratteristiche dei metadati vengono unite oppure sostituite.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> viene unito. Se si aggiunge un nuovo <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, quel callback viene archiviato nei metadati. Se non si specifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> nell'override, il valore di <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> viene promosso come riferimento dal predecessore più vicino che lo aveva specificato nei metadati.  
+- <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> viene unito. Se si aggiunge un nuovo <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, quel callback viene archiviato nei metadati. Se non si specifica un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> nell'override, il valore di <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> viene promosso come riferimento dal predecessore più vicino che lo aveva specificato nei metadati.  
   
--   Il comportamento effettivo della proprietà del sistema per <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> è che le implementazioni di tutti i proprietari di metadati nella gerarchia siano mantenute e aggiunte a una tabella, con ordine di esecuzione dal sistema di proprietà che vengono richiamati per primi i callback della classe più derivata.  
+- Il comportamento effettivo della proprietà del sistema per <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> è che le implementazioni di tutti i proprietari di metadati nella gerarchia siano mantenute e aggiunte a una tabella, con ordine di esecuzione dal sistema di proprietà che vengono richiamati per primi i callback della classe più derivata.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> è stato sostituito. Se non si specifica un <xref:System.Windows.PropertyMetadata.DefaultValue%2A> nell'override, il valore di <xref:System.Windows.PropertyMetadata.DefaultValue%2A> proviene dal predecessore più vicino che lo aveva specificato nei metadati.  
+- <xref:System.Windows.PropertyMetadata.DefaultValue%2A> è stato sostituito. Se non si specifica un <xref:System.Windows.PropertyMetadata.DefaultValue%2A> nell'override, il valore di <xref:System.Windows.PropertyMetadata.DefaultValue%2A> proviene dal predecessore più vicino che lo aveva specificato nei metadati.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> le implementazioni vengono sostituite. Se si aggiunge un nuovo <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, quel callback viene archiviato nei metadati. Se non si specifica un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> nell'override, il valore di <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> viene promosso come riferimento dal predecessore più vicino che lo aveva specificato nei metadati.  
+- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> le implementazioni vengono sostituite. Se si aggiunge un nuovo <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, quel callback viene archiviato nei metadati. Se non si specifica un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> nell'override, il valore di <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> viene promosso come riferimento dal predecessore più vicino che lo aveva specificato nei metadati.  
   
--   Il comportamento del sistema di proprietà è che solo il <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> dei metadati immediati viene richiamato. Nessun riferimento ad altri <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> vengono mantenute le implementazioni della gerarchia.  
+- Il comportamento del sistema di proprietà è che solo il <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> dei metadati immediati viene richiamato. Nessun riferimento ad altri <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> vengono mantenute le implementazioni della gerarchia.  
   
  Questo comportamento viene implementato mediante <xref:System.Windows.PropertyMetadata.Merge%2A>e può essere sottoposto a override nelle classi di metadati derivate.  
   

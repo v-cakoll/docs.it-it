@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014297"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Accesso ai dati nelle applicazioni Visual Basic
 Visual Basic include numerose nuove funzionalità per semplificare lo sviluppo di applicazioni che accedono ai dati. I moduli associati ai dati per applicazioni Windows vengono creati trascinando elementi dalla [finestra Origine dati](/visualstudio/data-tools/add-new-data-sources) nel modulo. I controlli ai dati si associano trascinando elementi dalla **finestra Origini dati** nei controlli esistenti.  

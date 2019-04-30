@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983346"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementazione del pattern di controllo Invoke di automazione interfaccia utente
 > [!NOTE]
@@ -25,30 +25,30 @@ ms.locfileid: "59134784"
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo pattern, tenere presenti le linee guida e le convenzioni seguenti:  
   
--   I controlli implementano <xref:System.Windows.Automation.Provider.IInvokeProvider> se lo stesso comportamento non viene esposto mediante un altro provider di pattern di controllo. Ad esempio, se il metodo <xref:System.Windows.Automation.InvokePattern.Invoke%2A> su un controllo esegue la stessa azione del metodo <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , il controllo non deve implementare <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
+- I controlli implementano <xref:System.Windows.Automation.Provider.IInvokeProvider> se lo stesso comportamento non viene esposto mediante un altro provider di pattern di controllo. Ad esempio, se il metodo <xref:System.Windows.Automation.InvokePattern.Invoke%2A> su un controllo esegue la stessa azione del metodo <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> o <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , il controllo non deve implementare <xref:System.Windows.Automation.Provider.IInvokeProvider>.  
   
--   La chiamata di un controllo viene in genere eseguita facendo clic o doppio clic oppure premendo INVIO, una scelta rapida predefinita da tastiera o una combinazione alternativa di tasti.  
+- La chiamata di un controllo viene in genere eseguita facendo clic o doppio clic oppure premendo INVIO, una scelta rapida predefinita da tastiera o una combinazione alternativa di tasti.  
   
--   Viene generato un evento<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> su un controllo che è stato attivato in risposta a un controllo che esegue l'azione associata. Se possibile, l'evento deve essere generato dopo che il controllo ha completato l'azione ed è stato restituito senza alcun blocco. L'evento Invoked deve essere generato prima che la richiesta Invoke venga gestita negli scenari seguenti:  
+- Viene generato un evento<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> su un controllo che è stato attivato in risposta a un controllo che esegue l'azione associata. Se possibile, l'evento deve essere generato dopo che il controllo ha completato l'azione ed è stato restituito senza alcun blocco. L'evento Invoked deve essere generato prima che la richiesta Invoke venga gestita negli scenari seguenti:  
   
-    -   Non è possibile o conveniente attendere il completamento dell'azione.  
+    - Non è possibile o conveniente attendere il completamento dell'azione.  
   
-    -   L'azione richiede l'intervento dell'utente.  
+    - L'azione richiede l'intervento dell'utente.  
   
-    -   L'azione è dispendiosa a livello di tempo e comporta il blocco del client chiamante un periodo di tempo significativo.  
+    - L'azione è dispendiosa a livello di tempo e comporta il blocco del client chiamante un periodo di tempo significativo.  
   
--   Se il richiamo del controllo è caratterizzato da effetti collaterali significativi, tali effetti collaterali devono essere esposte tramite la proprietà <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> . Ad esempio, anche se il metodo <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> non è associato alla selezione, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> può causare la selezione di un altro controllo.  
+- Se il richiamo del controllo è caratterizzato da effetti collaterali significativi, tali effetti collaterali devono essere esposte tramite la proprietà <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> . Ad esempio, anche se il metodo <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> non è associato alla selezione, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> può causare la selezione di un altro controllo.  
   
--   Gli effetti del passaggio del mouse sopra un elemento in genere non determinano la generazione di un evento Invoke. Tuttavia, i controlli che eseguono un'azione (a differenza di quelli che generano un effetto visivo) basata sullo stato del passaggio del mouse devono supportare il pattern di controllo <xref:System.Windows.Automation.InvokePattern> .  
+- Gli effetti del passaggio del mouse sopra un elemento in genere non determinano la generazione di un evento Invoke. Tuttavia, i controlli che eseguono un'azione (a differenza di quelli che generano un effetto visivo) basata sullo stato del passaggio del mouse devono supportare il pattern di controllo <xref:System.Windows.Automation.InvokePattern> .  
   
 > [!NOTE]
 >  Questa implementazione viene considerata un problema di accessibilità se il controllo può essere chiamato solo come risultato di un effetto collaterale relativo al mouse.  
   
--   La chiamata di un controllo è diversa dalla selezione di un elemento. Tuttavia, a seconda del controllo, come effetto collaterale la chiamata potrebbe causare la selezione dell'elemento. Ad esempio, la chiamata di un elemento dell'elenco di documenti di [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] nella cartella Documenti comporta sia la selezione dell'elemento che l'apertura del documento.  
+- La chiamata di un controllo è diversa dalla selezione di un elemento. Tuttavia, a seconda del controllo, come effetto collaterale la chiamata potrebbe causare la selezione dell'elemento. Ad esempio, la chiamata di un elemento dell'elenco di documenti di [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] nella cartella Documenti comporta sia la selezione dell'elemento che l'apertura del documento.  
   
--   Un elemento può scomparire dall'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] subito dopo essere stato richiamato. Di conseguenza, la richiesta di informazioni dall'elemento fornito dal callback di evento potrebbe avere esito negativo. La prelettura delle informazioni memorizzate nella cache rappresenta la soluzione alternativa consigliata.  
+- Un elemento può scomparire dall'albero [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] subito dopo essere stato richiamato. Di conseguenza, la richiesta di informazioni dall'elemento fornito dal callback di evento potrebbe avere esito negativo. La prelettura delle informazioni memorizzate nella cache rappresenta la soluzione alternativa consigliata.  
   
--   I controlli possono implementare più pattern di controllo. Ad esempio, il controllo Colore riempimento sulla barra degli strumenti dell' [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa sia il pattern di controllo <xref:System.Windows.Automation.InvokePattern> che il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.  
+- I controlli possono implementare più pattern di controllo. Ad esempio, il controllo Colore riempimento sulla barra degli strumenti dell' [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] implementa sia il pattern di controllo <xref:System.Windows.Automation.InvokePattern> che il pattern di controllo <xref:System.Windows.Automation.ExpandCollapsePattern> . <xref:System.Windows.Automation.ExpandCollapsePattern> espone il menu e <xref:System.Windows.Automation.InvokePattern> riempie la selezione attiva con il colore selezionato.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Membri obbligatori per IInvokeProvider  

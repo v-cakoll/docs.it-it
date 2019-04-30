@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991054"
 ---
 # <a name="routing-scenarios"></a>Scenari di routing
 Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare difficile progettare una logica di routing efficiente quando si crea una nuova configurazione da zero.  Esistono tuttavia diversi scenari comuni seguiti dalla maggior parte delle configurazioni dei servizi di routing. Tali scenari possono non essere direttamente applicabili a una configurazione specifica, tuttavia comprendere le modalità di configurazione del servizio di routing per tali scenari consente di acquisire familiarità con le potenzialità del servizio stesso.  
@@ -49,9 +49,9 @@ Sebbene il servizio di routing sia notevolmente personalizzabile, può risultare
 ### <a name="multicast"></a>Multicast  
  Il routing dei messaggi avviene in genere a uno specifico endpoint di destinazione.  Può tuttavia risultare talvolta necessario indirizzare una copia del messaggio a più endpoint di destinazione. Per il routing multicast, è necessario che siano soddisfatte le condizioni seguenti:  
   
--   La forma del canale non deve essere di tipo request/reply (tuttavia può essere unidirezionale o duplex), poiché tale forma impone che l'applicazione client debba ricevere una sola risposta alla richiesta.  
+- La forma del canale non deve essere di tipo request/reply (tuttavia può essere unidirezionale o duplex), poiché tale forma impone che l'applicazione client debba ricevere una sola risposta alla richiesta.  
   
--   Più filtri devono restituire **true** durante la valutazione del messaggio.  
+- Più filtri devono restituire **true** durante la valutazione del messaggio.  
   
  Se vengono soddisfatte queste condizioni, ogni endpoint di destinazione associato a un filtro che restituisce true riceverà una copia del messaggio.  
   

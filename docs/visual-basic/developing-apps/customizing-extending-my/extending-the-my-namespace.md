@@ -9,32 +9,32 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014219"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Estensione dello spazio dei nomi My in Visual Basic
 Il `My` dello spazio dei nomi in Visual Basic espone le proprietà e metodi che consentono di sfruttare facilmente la potenza di .NET Framework. Il `My` dello spazio dei nomi semplifica i problemi di programmazione comuni, riducendo spesso un'attività difficile da una singola riga di codice. Inoltre, il `My` dello spazio dei nomi è completamente estendibile, in modo che sia possibile personalizzare il comportamento di `My` e aggiunta di nuovi servizi alla gerarchia di adattarsi alle esigenze specifiche dell'applicazione. Questo argomento illustra sia come personalizzare i membri esistenti del `My` dello spazio dei nomi e su come aggiungere le classi personalizzate per il `My` dello spazio dei nomi.  
   
  **Contenuto dell'argomento**  
   
--   [Personalizzazione esistenti membri personale Namespace](#customizing)  
+- [Personalizzazione esistenti membri personale Namespace](#customizing)  
   
--   [Aggiunta di membri a oggetti My](#addingtoobjects)  
+- [Aggiunta di membri a oggetti My](#addingtoobjects)  
   
--   [Aggiunta di oggetti personalizzati per il mio Namespace](#addingcustom)  
+- [Aggiunta di oggetti personalizzati per il mio Namespace](#addingcustom)  
   
--   [Aggiunta di membri per il mio Namespace](#addingtonamespace)  
+- [Aggiunta di membri per il mio Namespace](#addingtonamespace)  
   
--   [Aggiunta di eventi a oggetti My personalizzati](#addingevents)  
+- [Aggiunta di eventi a oggetti My personalizzati](#addingevents)  
   
--   [Linee guida di progettazione](#design)  
+- [Linee guida di progettazione](#design)  
   
--   [Progettazione di librerie di classi per My](#designing)  
+- [Progettazione di librerie di classi per My](#designing)  
   
--   [Assemblaggio e distribuzione delle estensioni](#packaging)  
+- [Assemblaggio e distribuzione delle estensioni](#packaging)  
   
 ## <a name="customizing"></a> Personalizzazione esistenti membri personale Namespace  
  Il `My` dello spazio dei nomi in Visual Basic espone frequente informazioni sull'applicazione, il computer e così via. Per un elenco completo degli oggetti nel `My` dello spazio dei nomi, vedere [My Reference](../../../visual-basic/language-reference/keywords/my-reference.md). Potrebbe essere necessario personalizzare i membri esistenti del `My` dello spazio dei nomi in modo da corrispondere meglio le esigenze dell'applicazione. Qualsiasi proprietà di un oggetto nel `My` dello spazio dei nomi che non è di sola lettura può essere impostato su un valore personalizzato.  
@@ -76,22 +76,22 @@ Il `My` dello spazio dei nomi in Visual Basic espone le proprietà e metodi che 
 ## <a name="design"></a> Linee guida di progettazione  
  Quando si sviluppano estensioni per il `My` dello spazio dei nomi, usare le linee guida seguenti per ridurre al minimo i costi di manutenzione dei componenti dell'estensione.  
   
--   **Includere solo la logica dell'estensione.** La logica inclusa nella `My` estensione dello spazio dei nomi deve includere solo il codice necessario per esporre la funzionalità richiesta nel `My` dello spazio dei nomi. Poiché l'estensione risiederanno nei progetti di utente come codice sorgente, aggiornando il componente di estensione comporta un costo di manutenzione elevato e deve essere evitata, se possibile.  
+- **Includere solo la logica dell'estensione.** La logica inclusa nella `My` estensione dello spazio dei nomi deve includere solo il codice necessario per esporre la funzionalità richiesta nel `My` dello spazio dei nomi. Poiché l'estensione risiederanno nei progetti di utente come codice sorgente, aggiornando il componente di estensione comporta un costo di manutenzione elevato e deve essere evitata, se possibile.  
   
--   **Ridurre al minimo i presupposti di progetto.** Quando si creano le estensioni del `My` dello spazio dei nomi, non presupporre un set di riferimenti, imports a livello di progetto o le impostazioni del compilatore specifici (ad esempio, `Option Strict` off). Al contrario, ridurre al minimo le dipendenze e tutti i riferimenti di tipo completi utilizzando il `Global` (parola chiave). Inoltre, assicurarsi che l'estensione venga compilato con `Option Strict` accensione per ridurre al minimo gli errori nell'estensione.  
+- **Ridurre al minimo i presupposti di progetto.** Quando si creano le estensioni del `My` dello spazio dei nomi, non presupporre un set di riferimenti, imports a livello di progetto o le impostazioni del compilatore specifici (ad esempio, `Option Strict` off). Al contrario, ridurre al minimo le dipendenze e tutti i riferimenti di tipo completi utilizzando il `Global` (parola chiave). Inoltre, assicurarsi che l'estensione venga compilato con `Option Strict` accensione per ridurre al minimo gli errori nell'estensione.  
   
--   **Isolare il codice di estensione.** Inserire il codice in un singolo file rende l'estensione consente una semplice distribuzione come un modello di elemento di Visual Studio. Per altre informazioni, vedere "Creazione di pacchetti e distribuzione delle estensioni" più avanti in questo argomento. Inserimento di tutti i `My` codice dell'estensione dello spazio dei nomi in un singolo file o una cartella distinta in un progetto consentirà inoltre gli utenti individuare il `My` estensione dello spazio dei nomi.  
+- **Isolare il codice di estensione.** Inserire il codice in un singolo file rende l'estensione consente una semplice distribuzione come un modello di elemento di Visual Studio. Per altre informazioni, vedere "Creazione di pacchetti e distribuzione delle estensioni" più avanti in questo argomento. Inserimento di tutti i `My` codice dell'estensione dello spazio dei nomi in un singolo file o una cartella distinta in un progetto consentirà inoltre gli utenti individuare il `My` estensione dello spazio dei nomi.  
   
 ## <a name="designing"></a> Progettazione di librerie di classi per My  
  Come avviene con la maggior parte dei modelli a oggetti, alcuni schemi progettuali funzionano in modo efficiente il `My` dello spazio dei nomi e gli altri non lo sono. Quando si progetta un'estensione per il `My` dello spazio dei nomi, prendere in considerazione i principi seguenti:  
   
--   **Metodi senza stati.** Metodi di `My` dello spazio dei nomi deve fornire una soluzione completa per un'attività specifica. Verificare che i valori dei parametri passati al metodo forniscano tutti gli input necessari per completare l'attività particolare. Evitare di creare metodi che si basano sullo stato precedente, ad esempio le connessioni aperte per le risorse.  
+- **Metodi senza stati.** Metodi di `My` dello spazio dei nomi deve fornire una soluzione completa per un'attività specifica. Verificare che i valori dei parametri passati al metodo forniscano tutti gli input necessari per completare l'attività particolare. Evitare di creare metodi che si basano sullo stato precedente, ad esempio le connessioni aperte per le risorse.  
   
--   **Istanze globali.** L'unico stato che viene mantenuto nel `My` dello spazio dei nomi è globale per il progetto. Ad esempio, `My.Application.Info` incapsula lo stato condiviso in tutta l'applicazione.  
+- **Istanze globali.** L'unico stato che viene mantenuto nel `My` dello spazio dei nomi è globale per il progetto. Ad esempio, `My.Application.Info` incapsula lo stato condiviso in tutta l'applicazione.  
   
--   **Tipi di parametri semplici.** Semplificare le operazioni, evitando i tipi di parametri complessi. In alternativa, creare i metodi che uno accetta alcun parametro di input o che accettano tipi di input semplici come stringhe, i tipi primitivi e così via.  
+- **Tipi di parametri semplici.** Semplificare le operazioni, evitando i tipi di parametri complessi. In alternativa, creare i metodi che uno accetta alcun parametro di input o che accettano tipi di input semplici come stringhe, i tipi primitivi e così via.  
   
--   **Metodi factory.** Alcuni tipi sono necessariamente difficile creare un'istanza. Fornisce metodi factory come estensioni per il `My` dello spazio dei nomi consente di individuare più facilmente e utilizzano i tipi che rientrano in questa categoria. Un esempio di un metodo factory che offre risultati ottimali è `My.Computer.FileSystem.OpenTextFileReader`. Esistono diversi tipi di flusso disponibile in .NET Framework. Specificando i file di testo, in particolare, il `OpenTextFileReader` consente all'utente di comprendere il flusso da utilizzare.  
+- **Metodi factory.** Alcuni tipi sono necessariamente difficile creare un'istanza. Fornisce metodi factory come estensioni per il `My` dello spazio dei nomi consente di individuare più facilmente e utilizzano i tipi che rientrano in questa categoria. Un esempio di un metodo factory che offre risultati ottimali è `My.Computer.FileSystem.OpenTextFileReader`. Esistono diversi tipi di flusso disponibile in .NET Framework. Specificando i file di testo, in particolare, il `OpenTextFileReader` consente all'utente di comprendere il flusso da utilizzare.  
   
  Queste linee guida non esclude i principi di progettazione generale per le librerie di classi. Piuttosto, sono le raccomandazioni sono ottimizzate per gli sviluppatori che usano Visual Basic e `My` dello spazio dei nomi. Per i principi di progettazione generale per la creazione di librerie di classi, vedere [linee guida di progettazione di Framework](../../../standard/design-guidelines/index.md).  
   

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022298"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Risoluzione dei problemi relativi all'interoperabilità (Visual Basic)
 Durante l'interazione tra COM e il codice gestito del [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], è possibile riscontrare uno o più dei seguenti problemi comuni.  
@@ -100,11 +100,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> Problemi relativi al controllo ActiveX  
  La maggior parte dei controlli ActiveX che funzionano con Visual Basic 6.0 funzionano con Visual Basic .NET senza problemi. Le principali eccezioni sono controlli contenitore, o controlli visivamente contenenti altri controlli. Alcuni esempi di controlli precedenti che non funzionano correttamente con Visual Studio sono come segue:  
   
--   Controllo di Microsoft Forms 2.0 Frame  
+- Controllo di Microsoft Forms 2.0 Frame  
   
--   Controllo di scorrimento, noto anche come il controllo di selezione  
+- Controllo di scorrimento, noto anche come il controllo di selezione  
   
--   Schede Sheridan  
+- Schede Sheridan  
   
  Sono disponibili solo alcune soluzioni alternative per problemi di controlli ActiveX non supportati. Se si è proprietari del codice sorgente originale, è possibile migrare i controlli esistenti a Visual Studio. In caso contrario, è possibile controllare con fornitori di software per l'aggiornamento. Le versioni compatibili di NET dei controlli da sostituire non supportati controlli ActiveX.  
   

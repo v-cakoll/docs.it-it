@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032253"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>File di dati e di risorse dell'applicazione WPF.
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] le applicazioni spesso dipendono da file che contengono dati non eseguibili, ad esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], immagini, video e audio. Windows Presentation Foundation (WPF) offre un supporto speciale per la configurazione, l'identificazione e l'utilizzo di questi tipi di file di dati, che vengono chiamati i file di dati dell'applicazione. Questo supporto si basa su un set specifico di tipi di file di dati dell'applicazione, che include:  
   
--   **File di risorse**: File di dati che vengono compilati in un file eseguibile o libreria [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **File di risorse**: File di dati che vengono compilati in un file eseguibile o libreria [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
--   **File di contenuto**: File di dati autonomi con un'associazione esplicita a un file eseguibile [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **File di contenuto**: File di dati autonomi con un'associazione esplicita a un file eseguibile [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
--   **File di origine del sito di**: File di dati autonomi che non hanno alcuna associazione con un file eseguibile [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **File di origine del sito di**: File di dati autonomi che non hanno alcuna associazione con un file eseguibile [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
   
  Un'importante distinzione da fare tra questi tre tipi di file riguarda il fatto che i file di risorse e i file di dati sono resi noti in fase di compilazione e pertanto sono conosciuti esplicitamente da un assembly. Per i file del sito di origine, tuttavia, un assembly non può avere alcuna conoscenza della loro del tutto, o una conoscenza implicita tramite un package di [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] riferimento; nel caso di quest'ultimo, non c'è garanzia che il sito del file di origine di cui viene fatto riferimento esista effettivamente.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211926"
   
  I file di risorse devono essere utilizzati nei casi seguenti:  
   
--   Non occorre aggiornare il contenuto del file di risorse dopo la relativa compilazione in un assembly.  
+- Non occorre aggiornare il contenuto del file di risorse dopo la relativa compilazione in un assembly.  
   
--   Si desidera semplificare la complessità di distribuzione dell'applicazione riducendo il numero di dipendenze dei file.  
+- Si desidera semplificare la complessità di distribuzione dell'applicazione riducendo il numero di dipendenze dei file.  
   
--   File di dati dell'applicazione deve essere localizzabile (vedere [WPF Panoramica della globalizzazione e localizzazione](../advanced/wpf-globalization-and-localization-overview.md)).  
+- File di dati dell'applicazione deve essere localizzabile (vedere [WPF Panoramica della globalizzazione e localizzazione](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
 >  I file di risorse descritti in questa sezione sono diversi rispetto a file di risorse descritti [risorse XAML](../advanced/xaml-resources.md) e diverso da quello delle risorse incorporate o collegate descritte [gestire risorse delle applicazioni (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211926"
 ## <a name="site-of-origin-files"></a>File del sito di origine  
  File di risorse hanno una relazione esplicita con gli assembly che vengono distribuiti insieme, come definito dal <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Talvolta, è tuttavia possibile che si debba stabilire una relazione implicita o inesistente tra un assembly e un file di dati dell'applicazione, come nei casi seguenti:  
   
--   Un file non esiste in fase di compilazione.  
+- Un file non esiste in fase di compilazione.  
   
--   I file richiesti dall'assembly non saranno noti fino alla fase di esecuzione.  
+- I file richiesti dall'assembly non saranno noti fino alla fase di esecuzione.  
   
--   Si desidera avere la possibilità di aggiornare i file senza ricompilare l'assembly al quale sono associati.  
+- Si desidera avere la possibilità di aggiornare i file senza ricompilare l'assembly al quale sono associati.  
   
--   L'applicazione utilizza file di dati di grandi dimensioni, ad esempio audio e video, che devono essere scaricati dagli utenti unicamente su richiesta.  
+- L'applicazione utilizza file di dati di grandi dimensioni, ad esempio audio e video, che devono essere scaricati dagli utenti unicamente su richiesta.  
   
  È possibile caricare questi tipi di file mediante l'utilizzo tradizionali [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schemi, ad esempio gli schemi file:/// e http://.  
   

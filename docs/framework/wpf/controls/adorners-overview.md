@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019089"
 ---
 # <a name="adorners-overview"></a>Cenni preliminari sugli strumenti decorativi visuali
 Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.FrameworkElement>, usato per fornire indicazioni visive a un utente. Tra l'altro, è possibile usare gli strumenti decorativi per aggiungere handle funzionali agli elementi o fornire informazioni sullo stato relative a un controllo.  
@@ -23,13 +23,13 @@ Gli strumenti decorativi sono un tipo speciale di <xref:System.Windows.Framework
   
  Applicazioni comuni per gli strumenti decorativi includono:  
   
--   Aggiunta di handle funzionali a un <xref:System.Windows.UIElement> che consentono all'utente di modificare l'elemento in qualche modo (ridimensionare, ruotare, riposizionare e così via).  
+- Aggiunta di handle funzionali a un <xref:System.Windows.UIElement> che consentono all'utente di modificare l'elemento in qualche modo (ridimensionare, ruotare, riposizionare e così via).  
   
--   Fornire indicazioni visive per identificare i vari stati, oppure in risposta a vari eventi.  
+- Fornire indicazioni visive per identificare i vari stati, oppure in risposta a vari eventi.  
   
--   Sovrapporre decorazioni visive su un <xref:System.Windows.UIElement>.  
+- Sovrapporre decorazioni visive su un <xref:System.Windows.UIElement>.  
   
--   Mascherare visivamente o eseguire l'override parzialmente o totalmente una <xref:System.Windows.UIElement>.  
+- Mascherare visivamente o eseguire l'override parzialmente o totalmente una <xref:System.Windows.UIElement>.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un framework di base per la decorazione di elementi visivi. La tabella seguente include i principali tipi usati per la decorazione di oggetti e il relativo scopo. Di seguito sono riportati alcuni esempi di utilizzo.  
   
