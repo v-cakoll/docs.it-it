@@ -10,18 +10,18 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949942"
 ---
 # <a name="lazy-initialization"></a>Inizializzazione differita
 L'*inizializzazione differita* di un oggetto significa che la creazione dell'oggetto viene posticipata finché l'oggetto non viene usato per la prima volta. In questo argomento i termini *inizializzazione differita* e *creazione di istanze differita* sono sinonimi. L'inizializzazione differita viene usata in particolare per migliorare le prestazioni, evitare calcoli superflui e ridurre i requisiti di memoria del programma. Ecco gli scenari più comuni:  
   
--   La creazione di un oggetto è dispendiosa e il programma potrebbe non usarlo. Si supponga, ad esempio, di avere un oggetto `Customer` in memoria che include una proprietà `Orders` contenente una matrice di grandi dimensioni di oggetti `Order`, per la cui inizializzazione è necessaria una connessione di database. Se l'utente non chiede mai di visualizzare gli ordini o di usare i dati in un calcolo, non vi è motivo di usare la memoria di sistema o cicli di calcolo per creare l'oggetto. Usando `Lazy<Orders>` per dichiarare l'oggetto `Orders` per l'inizializzazione differita, è possibile evitare di sprecare risorse di sistema quando l'oggetto non viene usato.  
+- La creazione di un oggetto è dispendiosa e il programma potrebbe non usarlo. Si supponga, ad esempio, di avere un oggetto `Customer` in memoria che include una proprietà `Orders` contenente una matrice di grandi dimensioni di oggetti `Order`, per la cui inizializzazione è necessaria una connessione di database. Se l'utente non chiede mai di visualizzare gli ordini o di usare i dati in un calcolo, non vi è motivo di usare la memoria di sistema o cicli di calcolo per creare l'oggetto. Usando `Lazy<Orders>` per dichiarare l'oggetto `Orders` per l'inizializzazione differita, è possibile evitare di sprecare risorse di sistema quando l'oggetto non viene usato.  
   
--   La creazione di un oggetto è dispendiosa e si vuole posticiparla fino al completamento di altre operazioni dispendiose. Si supponga, ad esempio, che il programma carichi diverse istanze dell'oggetto all'avvio, ma che solo alcune siano necessarie immediatamente. È possibile migliorare le prestazioni di avvio del programma posticipando l'inizializzazione degli oggetti non necessari finché non vengono creati quelli necessari.  
+- La creazione di un oggetto è dispendiosa e si vuole posticiparla fino al completamento di altre operazioni dispendiose. Si supponga, ad esempio, che il programma carichi diverse istanze dell'oggetto all'avvio, ma che solo alcune siano necessarie immediatamente. È possibile migliorare le prestazioni di avvio del programma posticipando l'inizializzazione degli oggetti non necessari finché non vengono creati quelli necessari.  
   
  Benché sia possibile scrivere codice personalizzato per eseguire l'inizializzazione differita, è consigliabile usare <xref:System.Lazy%601>. <xref:System.Lazy%601> e i tipi correlati supportano anche la thread safety e forniscono criteri uniformi di propagazione delle eccezioni.  
   
@@ -128,11 +128,11 @@ L'*inizializzazione differita* di un oggetto significa che la creazione dell'ogg
   
  <xref:System.Threading.ThreadLocal%601> esegue il wrapping del proprio oggetto quasi allo stesso modo di <xref:System.Lazy%601>, con queste importanti differenze:  
   
--   Ogni thread inizializza la variabile di thread locale usando i propri dati privati, che non sono accessibili da altri thread.  
+- Ogni thread inizializza la variabile di thread locale usando i propri dati privati, che non sono accessibili da altri thread.  
   
--   La proprietà <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> è di lettura/scrittura e può essere modificata tutte le volte che è necessario. Questo può influire sulla propagazione delle eccezioni. Ad esempio, un'operazione `get` può generare un'eccezione, ma la successiva può inizializzare correttamente il valore.  
+- La proprietà <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType> è di lettura/scrittura e può essere modificata tutte le volte che è necessario. Questo può influire sulla propagazione delle eccezioni. Ad esempio, un'operazione `get` può generare un'eccezione, ma la successiva può inizializzare correttamente il valore.  
   
--   Se non si specifica alcun delegato di inizializzazione, <xref:System.Threading.ThreadLocal%601> inizializza il tipo con wrapping usando il valore predefinito del tipo. In questo senso, <xref:System.Threading.ThreadLocal%601> è coerente con l'attributo <xref:System.ThreadStaticAttribute>.  
+- Se non si specifica alcun delegato di inizializzazione, <xref:System.Threading.ThreadLocal%601> inizializza il tipo con wrapping usando il valore predefinito del tipo. In questo senso, <xref:System.Threading.ThreadLocal%601> è coerente con l'attributo <xref:System.ThreadStaticAttribute>.  
   
  L'esempio seguente mostra che ogni thread che accede all'istanza `ThreadLocal<int>` ottiene una copia univoca dei dati.  
   

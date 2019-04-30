@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e0e859ba8b6ec247073b0b69b035ea4cf074ab05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939620"
 ---
 # <a name="isymunmanagedmethodgetscopefromoffset-method"></a>Metodo ISymUnmanagedMethod::GetScopeFromOffset
 Ottiene l'ambito lessicale di maggiore inclusione all'interno di questo metodo che racchiude l'offset specificato. Ciò consente di avviare le ricerche di variabili locali.  

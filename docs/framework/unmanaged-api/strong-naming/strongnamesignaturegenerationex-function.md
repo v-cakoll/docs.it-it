@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000233"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>Funzione StrongNameSignatureGenerationEx
 Genera una firma con nome sicuro per l'assembly specificato, in base ai flag specificati.  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Uno o più dei valori seguenti:  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) - ricalcola tutti gli hash per i moduli collegati.  
+- `SN_SIGN_ALL_FILES` (0x00000001) - ricalcola tutti gli hash per i moduli collegati.  
   
--   `SN_TEST_SIGN` (0x00000002) - test la firma dell'assembly.  
+- `SN_TEST_SIGN` (0x00000002) - test la firma dell'assembly.  
   
 ## <a name="return-value"></a>Valore restituito  
  `true` al termine dell'esecuzione; in caso contrario, `false`.  

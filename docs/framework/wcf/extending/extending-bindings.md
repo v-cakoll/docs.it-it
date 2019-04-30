@@ -5,11 +5,11 @@ helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
 ms.openlocfilehash: f631c5df13c5633c22ef1d7179a0b7d135797b3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967596"
 ---
 # <a name="extending-bindings"></a>Estensione delle associazioni
 Le associazioni specificano il trasporto, la codifica e il protocollo necessari per connettersi a un endpoint. Le estensioni di associazione e le associazioni personalizzate implementano le funzionalità personalizzate di comunicazione necessarie per supportare le funzionalità dell'applicazione.  

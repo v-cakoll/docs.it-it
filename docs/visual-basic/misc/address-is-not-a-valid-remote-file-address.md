@@ -3,11 +3,11 @@ title: <address> non è un indirizzo di file remoto valido
 ms.date: 07/20/2015
 ms.assetid: 2c312242-6c42-4754-a1f5-7e801a542604
 ms.openlocfilehash: 65fded4d7f9316cda8724b262216de1ad01f9ee3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940647"
 ---
 # <a name="address-is-not-a-valid-remote-file-address"></a>\<indirizzo > non è un indirizzo di file remoto valido
 \<indirizzo > non è un indirizzo di file remoto valido. Un indirizzo valido deve includere un protocollo, un percorso e un nome file.  
@@ -16,7 +16,7 @@ ms.locfileid: "58039584"
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Controllare l'indirizzo specificato per individuare il punto non corretto quindi fornire le informazioni necessarie.  
+- Controllare l'indirizzo specificato per individuare il punto non corretto quindi fornire le informazioni necessarie.  
   
 ## <a name="see-also"></a>Vedere anche
 

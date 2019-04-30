@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937969"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Procedura: Creare tipi di carattere e famiglie di caratteri
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Raggruppa i tipi di carattere con lo stesso carattere tipografico, ma diversi stili in famiglie di caratteri. Ad esempio, il tipo di carattere Arial contiene i tipi di carattere seguenti:  
   
--   Arial normale  
+- Arial normale  
   
--   Arial in grassetto  
+- Arial in grassetto  
   
--   Arial corsivo  
+- Arial corsivo  
   
--   Arial grassetto corsivo  
+- Arial grassetto corsivo  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono utilizzati quattro stili per creare i gruppi: normale, grassetto, corsivo e grassetto corsivo. Aggettivi, ad esempio *restringere* e *arrotondato* non vengono considerati gli stili, piuttosto fanno parte del nome della famiglia. Ad esempio, Arial ristretto è una famiglia di caratteri con i membri seguenti:  
   
--   Arial normale ridotta  
+- Arial normale ridotta  
   
--   Arial "narrow" grassetto  
+- Arial "narrow" grassetto  
   
--   Corsivo Narrow Arial  
+- Corsivo Narrow Arial  
   
--   Arial Narrow grassetto corsivo  
+- Arial Narrow grassetto corsivo  
   
  Prima di poter creare testo con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], è necessario costruire una <xref:System.Drawing.FontFamily> oggetto e un <xref:System.Drawing.Font> oggetto. Il <xref:System.Drawing.FontFamily> oggetto specifica il carattere tipografico (ad esempio, Arial) e il <xref:System.Drawing.Font> oggetto specifica le dimensioni, stile e unità.  
   

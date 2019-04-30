@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], glossary
 ms.assetid: ab682b2f-3779-45ca-b831-b7c03d7dbb3a
 ms.openlocfilehash: 61d9acab1161302937e240eb8ebb506ca9f1585c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945626"
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>Glossario di Windows Workflow Foundation per .NET Framework 4.5
 
@@ -35,4 +35,4 @@ I termini riportati di seguito sono usati nella documentazione di Windows Workfl
 |convertitore di tipi|Un tipo CLR può essere associato a uno o più tipi derivati di System.ComponentModel.TypeConverter che consentono la conversione di istanze di tipo CLR in e da istanze di altri tipi. Un convertitore di tipi è associato a un tipo CLR usando l'attributo TypeConverterAttribute.  Un attributo TypeConverterAttribute può essere specificato direttamente nel tipo CLR o in una proprietà. Un convertitore di tipi specificato in una proprietà sarà sempre prioritario rispetto a un convertitore di tipi specificato nel tipo CLR della proprietà.|
 |variabile|Rappresenta l'archiviazione di alcuni dati che devono essere salvati per l'accesso in un momento successivo.|
 |flusso di lavoro|Singola attività o albero di attività richiamate da un processo host.|
-|XAML|eXtensible Application Markup Language|
+|XAML|Extensible Application Markup Language|

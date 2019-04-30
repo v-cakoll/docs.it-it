@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940517"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Procedura: Compilare un'applicazione Web ASP.NET MVC che può riconoscere attestazioni con WIF
 ## <a name="applies-to"></a>Si applica a  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   MVC ASP.NET®  
+- MVC ASP.NET®  
   
 ## <a name="summary"></a>Riepilogo  
  Questo argomento include le procedure dettagliate per creare una semplice applicazione Web MVC ASP.NET in grado di riconoscere attestazioni. Sono inoltre disponibili istruzioni su come testare la semplice applicazione Web MVC ASP.NET in grado di riconoscere attestazioni per la corretta implementazione dell'autenticazione basata su attestazioni. La procedura decritta in questo argomento non include istruzioni dettagliate per la creazione di un servizio token di sicurezza e presuppone che il servizio sia già stato configurato.  
   
 ## <a name="contents"></a>Sommario  
   
--   Obiettivi  
+- Obiettivi  
   
--   Riepilogo dei passaggi  
+- Riepilogo dei passaggi  
   
--   Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
+- Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
   
--   Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
+- Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
--   Elementi correlati  
+- Elementi correlati  
   
 ## <a name="objectives"></a>Obiettivi  
   
--   Configurare l'applicazione Web MVC ASP.NET per l'autenticazione basata su attestazioni  
+- Configurare l'applicazione Web MVC ASP.NET per l'autenticazione basata su attestazioni  
   
--   Testare l'applicazione Web MVC ASP.NET in grado di riconoscere attestazioni  
+- Testare l'applicazione Web MVC ASP.NET in grado di riconoscere attestazioni  
   
 ## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
+- Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
   
--   Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
+- Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
--   Passaggio 3: eseguire i test sulla soluzione  
+- Passaggio 3: eseguire i test sulla soluzione  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
  In questo passaggio si creerà una nuova applicazione MVC ASP.NET.  
@@ -218,4 +218,4 @@ ms.locfileid: "59335667"
   
 ## <a name="related-items"></a>Elementi correlati  
   
--   [Procedura: Compilazione in grado di riconoscere attestazioni applicazione Web Form ASP.NET con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [Procedura: Compilazione in grado di riconoscere attestazioni applicazione Web Form ASP.NET con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
