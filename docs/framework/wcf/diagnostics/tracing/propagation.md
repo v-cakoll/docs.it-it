@@ -3,11 +3,11 @@ title: Propagazione
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971379"
 ---
 # <a name="propagation"></a>Propagazione
 In questo argomento viene descritta la propagazione di attività nel modello di traccia di Windows Communication Foundation (WCF).  
@@ -26,11 +26,11 @@ In questo argomento viene descritta la propagazione di attività nel modello di 
 ## <a name="propagation-definition"></a>Definizione di propagazione  
  Il gAId dell'attività M viene propagato all'attività N se si applicano tutte le condizioni seguenti.  
   
--   N viene creato a causa di M  
+- N viene creato a causa di M  
   
--   Il gAId di M è conosciuto a N  
+- Il gAId di M è conosciuto a N  
   
--   Il gAId di N è uguale al gAId di M.  
+- Il gAId di N è uguale al gAId di M.  
   
  Il gAId viene propagato tramite l'intestazione del messaggio ActivityId, come illustrato nell'XML Schema seguente.  
   

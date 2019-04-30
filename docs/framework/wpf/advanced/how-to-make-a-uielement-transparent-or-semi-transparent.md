@@ -8,11 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
 ms.openlocfilehash: 1de9a7e11fee241ecb71242e9808e77b7e5e63b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942870"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Procedura: Rendere trasparente o semitrasparente un oggetto UIElement
 In questo esempio viene illustrato come effettuare una <xref:System.Windows.UIElement> trasparente o semitrasparente. Per rendere un elemento trasparente o semitrasparente, impostare il <xref:System.Windows.UIElement.Opacity%2A> proprietà. Un valore pari `0.0` l'elemento viene reso completamente trasparente, mentre un valore di `1.0` l'elemento viene reso completamente opaco. Un valore di `0.5` rende l'elemento 50% e così via. Un elemento <xref:System.Windows.UIElement.Opacity%2A> è impostata su `1.0` per impostazione predefinita.  

@@ -3,11 +3,11 @@ title: Iteratori (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966174"
 ---
 # <a name="iterators-visual-basic"></a>Iteratori (Visual Basic)
 Un *iteratore* può essere usato per scorrere le raccolte come gli elenchi e le matrici.  
@@ -44,21 +44,21 @@ End Function
   
  **In questo argomento**  
   
--   [Iteratore semplice](#BKMK_SimpleIterator)  
+- [Iteratore semplice](#BKMK_SimpleIterator)  
   
--   [Creazione di una classe Collection](#BKMK_CollectionClass)  
+- [Creazione di una classe Collection](#BKMK_CollectionClass)  
   
--   [Blocchi try](#BKMK_TryBlocks)  
+- [Blocchi try](#BKMK_TryBlocks)  
   
--   [Metodi anonimi](#BKMK_AnonymousMethods)  
+- [Metodi anonimi](#BKMK_AnonymousMethods)  
   
--   [Uso di iteratori con un elenco generico](#BKMK_GenericList)  
+- [Uso di iteratori con un elenco generico](#BKMK_GenericList)  
   
--   [Informazioni sulla sintassi](#BKMK_SyntaxInformation)  
+- [Informazioni sulla sintassi](#BKMK_SyntaxInformation)  
   
--   [Implementazione tecnica](#BKMK_Technical)  
+- [Implementazione tecnica](#BKMK_Technical)  
   
--   [Uso degli iteratori](#BKMK_UseOfIterators)  
+- [Uso degli iteratori](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  Per tutti gli esempi in questo argomento, ad eccezione di esempio di iteratore semplice, includere [importazioni](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) istruzioni per il `System.Collections` e `System.Collections.Generic` gli spazi dei nomi.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> Uso degli iteratori  
  Gli iteratori consentono di mantenere la semplicità di un ciclo `For Each` quando è necessario usare codice complesso per popolare una sequenza di elenco. Ciò può risultare utile per eseguire le operazioni seguenti:  
   
--   Modificare la sequenza di elenco dopo la prima iterazione del ciclo `For Each`.  
+- Modificare la sequenza di elenco dopo la prima iterazione del ciclo `For Each`.  
   
--   Evitare il caricamento completo di un elenco di grandi dimensioni prima della prima iterazione di un ciclo `For Each`. Un esempio è un'operazione di recupero di paging per caricare un batch di righe della tabella. Un altro esempio è il metodo <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, che implementa gli iteratori all'interno di .NET Framework.  
+- Evitare il caricamento completo di un elenco di grandi dimensioni prima della prima iterazione di un ciclo `For Each`. Un esempio è un'operazione di recupero di paging per caricare un batch di righe della tabella. Un altro esempio è il metodo <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, che implementa gli iteratori all'interno di .NET Framework.  
   
--   Incapsulare la generazione dell'elenco nell'iteratore. Nel metodo iteratore è possibile compilare l'elenco e restituire quindi ogni risultato in un ciclo.  
+- Incapsulare la generazione dell'elenco nell'iteratore. Nel metodo iteratore è possibile compilare l'elenco e restituire quindi ogni risultato in un ciclo.  
   
 ## <a name="see-also"></a>Vedere anche
 

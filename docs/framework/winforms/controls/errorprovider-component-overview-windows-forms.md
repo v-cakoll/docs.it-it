@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972031"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Cenni preliminari sul componente ErrorProvider (Windows Form)
 I moduli di Windows [ErrorProvider](errorprovider-component-windows-forms.md) componente viene usato per convalidare l'input dell'utente in un form o controllo. Viene in genere usato in combinazione con la convalida dell'input utente in un form o visualizzare gli errori all'interno di un set di dati. Un provider di errore è un'alternativa migliore rispetto alla visualizzazione di un messaggio di errore in una finestra di messaggio perché una volta che viene chiusa una finestra di messaggio, il messaggio di errore non è più visibile. Il <xref:System.Windows.Forms.ErrorProvider> componente consente di visualizzare un'icona di errore (![icona ErrorProvider](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) accanto al relativo controllo, ad esempio una casella di testo; quando l'utente posiziona il puntatore del mouse su di icona di errore, una descrizione comando verrà visualizzata la stringa di messaggio di errore.  

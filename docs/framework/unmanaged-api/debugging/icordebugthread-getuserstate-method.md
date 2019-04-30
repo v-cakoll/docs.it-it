@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e4deaa3ab4b14fbd32d45841966cfac9e33b9f31
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987072"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>Metodo ICorDebugThread::GetUserState
 Ottiene lo stato corrente dell'ICorDebugThread.  

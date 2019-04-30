@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973284"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversione di tipo relaxed del delegato (Visual Basic)
 Conversione di tipo relaxed del delegato consente di assegnare subroutine e funzioni a delegati o gestori anche quando le relative firme non sono identiche. Pertanto, l'associazione ai delegati diventa coerenti con l'associazione già consentito per le chiamate ai metodi.  
@@ -19,7 +19,7 @@ Conversione di tipo relaxed del delegato consente di assegnare subroutine e funz
 ## <a name="parameters-and-return-type"></a>I parametri e il tipo restituito  
  Al posto di esatta corrispondenza della firma, la conversione di tipo "relaxed" richiede che essere soddisfatte le condizioni seguenti quando si `Option Strict` è impostata su `On`:  
   
--   Deve esistere una conversione verso un dal tipo di dati di ogni parametro del delegato per il tipo di dati del parametro corrispondente della funzione assegnata o `Sub`. Nell'esempio seguente, il delegato `Del1` ha un parametro, un `Integer`. Parametro `m` nell'espressione lambda assegnata espressioni devono presentare un tipo di dati per il quale viene eseguita una conversione widening dal `Integer`, ad esempio `Long` o `Double`.  
+- Deve esistere una conversione verso un dal tipo di dati di ogni parametro del delegato per il tipo di dati del parametro corrispondente della funzione assegnata o `Sub`. Nell'esempio seguente, il delegato `Del1` ha un parametro, un `Integer`. Parametro `m` nell'espressione lambda assegnata espressioni devono presentare un tipo di dati per il quale viene eseguita una conversione widening dal `Integer`, ad esempio `Long` o `Double`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ Conversione di tipo relaxed del delegato consente di assegnare subroutine e funz
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   Deve esistere una conversione verso un nella direzione opposta dal tipo restituito della funzione assegnata o `Sub` nel tipo restituito del delegato. Negli esempi seguenti, deve restituire il corpo di ogni espressione lambda assegnata a un tipo di dati che si amplia in `Integer` perché il tipo restituito di `del1` è `Integer`.  
+- Deve esistere una conversione verso un nella direzione opposta dal tipo restituito della funzione assegnata o `Sub` nel tipo restituito del delegato. Negli esempi seguenti, deve restituire il corpo di ogni espressione lambda assegnata a un tipo di dati che si amplia in `Integer` perché il tipo restituito di `del1` è `Integer`.  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

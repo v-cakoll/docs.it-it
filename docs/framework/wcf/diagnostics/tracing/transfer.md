@@ -3,11 +3,11 @@ title: Trasferimento
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
 ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964489"
 ---
 # <a name="transfer"></a>Trasferimento
 In questo argomento viene descritto il trasferimento nel modello di traccia di attività di Windows Communication Foundation (WCF).  
@@ -35,9 +35,9 @@ In questo argomento viene descritto il trasferimento nel modello di traccia di a
 ## <a name="example-of-transfers"></a>Esempio di trasferimenti  
  Seguono due esempi del trasferimento.  
   
--   Quando si crea un host del servizio, il costruttore ottiene il controllo dal codice chiamante oppure il codice chiamante viene trasferito al costruttore. Al termine dell'esecuzione, il costruttore restituisce il controllo al codice chiamante oppure trasferisce di nuovo l'esecuzione al codice chiamante. Questo è il caso di una relazione annidata.  
+- Quando si crea un host del servizio, il costruttore ottiene il controllo dal codice chiamante oppure il codice chiamante viene trasferito al costruttore. Al termine dell'esecuzione, il costruttore restituisce il controllo al codice chiamante oppure trasferisce di nuovo l'esecuzione al codice chiamante. Questo è il caso di una relazione annidata.  
   
--   Quando un listener inizia a elaborare i dati di trasporto, crea un nuovo thread e consegna all'attività di ricezione byte il contesto appropriato per l'elaborazione, passando controllo e dati. Quando quel thread ha terminato di elaborare la richiesta, l'attività di ricezione byte non passa indietro nulla al listener. In questo caso, vi è un trasferimento in ingresso ma nessun trasferimento in uscita della nuova attività del thread. Le due attività sono correlate ma non annidate.  
+- Quando un listener inizia a elaborare i dati di trasporto, crea un nuovo thread e consegna all'attività di ricezione byte il contesto appropriato per l'elaborazione, passando controllo e dati. Quando quel thread ha terminato di elaborare la richiesta, l'attività di ricezione byte non passa indietro nulla al listener. In questo caso, vi è un trasferimento in ingresso ma nessun trasferimento in uscita della nuova attività del thread. Le due attività sono correlate ma non annidate.  
   
 ## <a name="activity-transfer-sequence"></a>Sequenza di trasferimento di attività  
  Una sequenza di trasferimento di attività ben formata comprende i passaggi seguenti.  

@@ -3,20 +3,20 @@ title: Blocco della sicurezza delle informazioni personali
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989651"
 ---
 # <a name="pii-security-lockdown"></a>Blocco della sicurezza delle informazioni personali
 In questo esempio viene illustrato come controllare diverse funzionalità correlate alla sicurezza di un servizio Windows Communication Foundation (WCF) da:  
   
--   Crittografando informazioni riservate nel file di configurazione di un servizio.  
+- Crittografando informazioni riservate nel file di configurazione di un servizio.  
   
--   Bloccando gli elementi nel file di configurazione in modo che le sottodirectory annidate del servizio non possano eseguire l'override delle impostazioni.  
+- Bloccando gli elementi nel file di configurazione in modo che le sottodirectory annidate del servizio non possano eseguire l'override delle impostazioni.  
   
--   Controllando la registrazione delle informazioni personali (PII) nei log di traccia e dei messaggi.  
+- Controllando la registrazione delle informazioni personali (PII) nei log di traccia e dei messaggi.  
   
 > [!IMPORTANT]
 >  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
@@ -124,9 +124,9 @@ In questo esempio viene illustrato come controllare diverse funzionalità correl
   
  È inoltre possibile crittografare gli elementi del file di configurazione usando DPAPI e RSA. Per altre informazioni, vedere i collegamenti che seguono.  
   
--   [Creazione di applicazioni ASP.NET protette: L'autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Creazione di applicazioni ASP.NET protette: L'autenticazione, autorizzazione e comunicazioni protette](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Procedura: Crittografare le sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Procedura: Crittografare le sezioni di configurazione in ASP.NET 2.0 utilizzando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   

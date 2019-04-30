@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966478"
 ---
 # <a name="capitalization-conventions"></a>Convenzioni per l'utilizzo di maiuscole e minuscole
 Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di case che, quando applicata in modo coerente, verificare gli identificatori per i tipi, membri e parametri di facile lettura.  
@@ -23,9 +23,9 @@ Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di 
 ## <a name="capitalization-rules-for-identifiers"></a>Regole di maiuscole/minuscole per gli identificatori  
  Per differenziare le parole in un identificatore, converte in maiuscolo la prima lettera di ogni parola nell'identificatore. Non usare caratteri di sottolineatura per differenziare le parole o parimenti, in qualsiasi punto negli identificatori. Esistono due modi appropriati da convertire in maiuscolo identificatori, a seconda dell'utilizzo dell'identificatore:  
   
--   Sistema Pascal  
+- Sistema Pascal  
   
--   notazione camel  
+- notazione camel  
   
  La convenzione, il sistema Pascal utilizzata per tutti gli identificatori, ad eccezione di nomi di parametro, converte in maiuscolo il primo carattere di ogni parola (inclusi gli acronimi su due lettere), come illustrato negli esempi seguenti:  
   
@@ -67,7 +67,7 @@ Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di 
   
  Queste sono le parole composte scritte come una parola singola, come endpoint. Ai fini di linee guida per le maiuscole e minuscole, considerare una chiusura parola composta come una singola parola. Usare un dizionario corrente per determinare se una parola composta è scritto in forma chiusa.  
   
-|Convenzione Pascal|Notazione camel|non|  
+|Convenzione Pascal|Notazione camel|not|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  

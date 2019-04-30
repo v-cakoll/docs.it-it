@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
 ms.openlocfilehash: 5b66e60fa2d28528a9e60d20bb101bc2d19bec3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966998"
 ---
 # <a name="user-input-in-windows-forms"></a>Input dell'utente in Windows Form
 Windows Form include un modello di input dell'utente basato sugli eventi generati durante l'elaborazione di messaggi di Windows correlati. Negli argomenti di questa sezione vengono fornite informazioni sugli input dell'utente eseguiti mediante il mouse e la tastiera, con esempi di codice che illustrano come eseguire attività specifiche.  

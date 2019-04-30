@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
 ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971223"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Cenni preliminari sul componente HelpProvider (Windows Form)
 I moduli di Windows [HelpProvider](helpprovider-component-windows-forms.md) componente viene usato per associare un file di Guida HTML Help 1.x (un file. chm creato con HTML Help Workshop o un file con estensione htm) all'applicazione Windows. È possibile visualizzare la Guida in diversi modi:  
   
--   Fornire la Guida sensibile al contesto per i controlli in Windows Form.  
+- Fornire la Guida sensibile al contesto per i controlli in Windows Form.  
   
--   Fornire una Guida sensibile al contesto in una finestra di dialogo particolare o controlli specifici in una finestra di dialogo.  
+- Fornire una Guida sensibile al contesto in una finestra di dialogo particolare o controlli specifici in una finestra di dialogo.  
   
--   Aprire un file della Guida per aree specifiche, ad esempio la pagina principale di un sommario, indice o una funzione di ricerca.  
+- Aprire un file della Guida per aree specifiche, ad esempio la pagina principale di un sommario, indice o una funzione di ricerca.  
   
 ## <a name="using-the-help-provider"></a>Utilizzo del Provider della Guida  
  Aggiunta di un <xref:System.Windows.Forms.HelpProvider> componente al Form Windows consente agli altri controlli nel form per esporre le proprietà della Guida di <xref:System.Windows.Forms.HelpProvider> componente. In questo modo è possibile fornire la Guida per i controlli sul Form Windows. È possibile associare un file della Guida in linea con il <xref:System.Windows.Forms.HelpProvider> componente usando il <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> proprietà. Si specifica il tipo di Guida in linea forniti tramite una chiamata <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> e fornendo un valore compreso il <xref:System.Windows.Forms.HelpNavigator> enumerazione per il controllo specificato. È possibile specificare la parola chiave o un argomento per la Guida chiamando la <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> (metodo).  

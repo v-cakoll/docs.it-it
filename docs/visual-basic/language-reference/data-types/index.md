@@ -38,11 +38,11 @@ helpviewer_keywords:
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
 ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971743"
 ---
 # <a name="data-type-summary-visual-basic"></a>Riepilogo dei tipi di dati (Visual Basic)
 Nella tabella seguente illustra i tipi di dati di Visual Basic, i tipi common language runtime supporto, l'allocazione della memoria nominali e relativi intervalli di valori.  
@@ -77,16 +77,16 @@ Nella tabella seguente illustra i tipi di dati di Visual Basic, i tipi common la
 ## <a name="memory-consumption"></a>Consumo di memoria  
  Quando si dichiara un tipo di dati elementari, non è opportuno presupporre che l'utilizzo della memoria è lo stesso come propria allocazione di archiviazione nominale. Ciò è dovuto alle considerazioni seguenti:  
   
--   **Assegnazione di archiviazione.** Common language runtime può assegnare spazio di archiviazione in base alle caratteristiche della piattaforma su cui è in esecuzione l'applicazione corrente. Se la memoria è quasi esaurita, è possibile comprimere gli elementi dichiarati più vicino al massimo. In altri casi, è possibile allineare gli indirizzi di memoria per i limiti dell'hardware per ottimizzare le prestazioni.  
+- **Assegnazione di archiviazione.** Common language runtime può assegnare spazio di archiviazione in base alle caratteristiche della piattaforma su cui è in esecuzione l'applicazione corrente. Se la memoria è quasi esaurita, è possibile comprimere gli elementi dichiarati più vicino al massimo. In altri casi, è possibile allineare gli indirizzi di memoria per i limiti dell'hardware per ottimizzare le prestazioni.  
   
--   **Larghezza della piattaforma.** Assegnazione di archiviazione in una piattaforma a 64 bit è diverso dall'assegnazione su una piattaforma a 32 bit.  
+- **Larghezza della piattaforma.** Assegnazione di archiviazione in una piattaforma a 64 bit è diverso dall'assegnazione su una piattaforma a 32 bit.  
   
 ### <a name="composite-data-types"></a>Tipi di dati compositi  
  Le stesse considerazioni si applicano a ogni membro di un tipo di dati compositi, ad esempio una struttura o una matrice. È possibile basarsi su sufficiente sommare le allocazioni di archiviazione nominale di membri del tipo. Inoltre, esistono altre considerazioni, ad esempio:  
   
--   **Sovraccarico.** Alcuni tipi compositi hanno requisiti di memoria aggiuntiva. Ad esempio, una matrice Usa la memoria aggiuntiva per la matrice stessa, nonché per ogni dimensione. Su una piattaforma a 32 bit, l'overhead è attualmente 12 byte e a 8 byte per ogni dimensione. In una piattaforma a 64 bit è raddoppiato questo requisito.  
+- **Sovraccarico.** Alcuni tipi compositi hanno requisiti di memoria aggiuntiva. Ad esempio, una matrice Usa la memoria aggiuntiva per la matrice stessa, nonché per ogni dimensione. Su una piattaforma a 32 bit, l'overhead è attualmente 12 byte e a 8 byte per ogni dimensione. In una piattaforma a 64 bit è raddoppiato questo requisito.  
   
--   **Layout di archiviazione.** È possibile tranquillamente presupporre che l'ordine di archiviazione in memoria è lo stesso l'ordine di dichiarazione. È anche possibile fare ipotesi sull'allineamento dei byte, ad esempio un limite di 2 o 4 byte. Se si sta definendo una classe o struttura ed è necessario controllare il layout di archiviazione dei relativi membri, è possibile applicare il <xref:System.Runtime.InteropServices.StructLayoutAttribute> attributo alla classe o struttura.  
+- **Layout di archiviazione.** È possibile tranquillamente presupporre che l'ordine di archiviazione in memoria è lo stesso l'ordine di dichiarazione. È anche possibile fare ipotesi sull'allineamento dei byte, ad esempio un limite di 2 o 4 byte. Se si sta definendo una classe o struttura ed è necessario controllare il layout di archiviazione dei relativi membri, è possibile applicare il <xref:System.Runtime.InteropServices.StructLayoutAttribute> attributo alla classe o struttura.  
   
 ### <a name="object-overhead"></a>Overhead di oggetto  
  Un `Object` che fa riferimento a tutti i dati elementari o compositi di tipo Usa 4 byte oltre ai dati contenuti nel tipo di dati.  

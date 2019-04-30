@@ -3,11 +3,11 @@ title: Validator del certificato X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949916"
 ---
 # <a name="x509-certificate-validator"></a>Validator del certificato X.509
 In questo esempio viene illustrato come implementare un validator del certificato X.509 personalizzato. Questo processo è utile nei casi in cui nessuna delle convalide incorporate del certificato X.509 è appropriata ai requisiti dell'applicazione. In questo esempio viene mostrato un servizio che dispone di un validator personalizzato che accetta certificati autocertificati. Il client utilizza tale certificato per l'autenticazione nel servizio.
@@ -16,11 +16,11 @@ In questo esempio viene illustrato come implementare un validator del certificat
 
  In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seguenti:
 
--   Il client può essere autenticato tramite un certificato X.509.
+- Il client può essere autenticato tramite un certificato X.509.
 
--   Il server convalida le credenziali client a fronte di un validator X509CertificateValidator personalizzato.
+- Il server convalida le credenziali client a fronte di un validator X509CertificateValidator personalizzato.
 
--   Il server viene autenticato tramite il certificato X.509 del server.
+- Il server viene autenticato tramite il certificato X.509 del server.
 
  Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config. L'endpoint è costituito da un indirizzo, un'associazione e un contratto. L'associazione è configurata con una classe standard `wsHttpBinding` che usa per impostazione predefinita `WSSecurity` e l'autenticazione del certificato client. Il comportamento del servizio specifica la modalità personalizzata per la convalida dei certificati X.509 client insieme al tipo di classe del validator. Il comportamento specifica inoltre il certificato server mediante l'elemento serviceCertificate. Il certificato del server deve contenere lo stesso valore per il `SubjectName` come il `findValue` nel [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -254,7 +254,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
  Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
 
--   Creazione del certificato server:
+- Creazione del certificato server:
 
      Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile %SERVER_NAME% specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito è localhost.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato server nell'archivio certificati attendibili del client:
+- Installazione del certificato server nell'archivio certificati attendibili del client:
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario poiché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
 
@@ -276,7 +276,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Creazione del certificato del client:
+- Creazione del certificato del client:
 
      Le righe seguenti del file batch Setup.bat creano il certificato client da utilizzare. La variabile %USER_NAME% specifica il nome del client. Questo valore è impostato su "test1" perché questo è il nome cercato dal codice client. Se si modifica il valore di % USER_NAME% è necessario modificare il valore corrispondente nel file di origine Client.cs e ricompilare il client.
 
@@ -292,7 +292,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato client nell'archivio certificati attendibili del server:
+- Installazione del certificato client nell'archivio certificati attendibili del server:
 
      Le righe seguenti nel file batch Setup.bat copiano il certificato client nell'archivio delle persone attendibile. Questo passaggio è necessario poiché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema server. Se è già disponibile un certificato che è impostato come radice in un certificato radice attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati server con il certificato client non è necessario.
 

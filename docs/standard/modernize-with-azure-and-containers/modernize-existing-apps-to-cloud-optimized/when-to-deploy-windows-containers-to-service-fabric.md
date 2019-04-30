@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973656"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Casi in cui distribuire i contenitori Windows in Service Fabric
 
@@ -17,9 +17,9 @@ Le applicazioni basate su contenitori Windows rapidamente dovrà utilizzare piat
 
 Molte organizzazioni sono sollevamento e spostamento di applicazioni monolitiche esistenti per i contenitori per due motivi:
 
--   Riduzioni dei costi, a causa di consolidamento e la rimozione di hardware esistente o dall'esecuzione di applicazioni su una densità maggiore.
+- Riduzioni dei costi, a causa di consolidamento e la rimozione di hardware esistente o dall'esecuzione di applicazioni su una densità maggiore.
 
--   Un contratto di distribuzione coerente tra sviluppo e operazioni.
+- Un contratto di distribuzione coerente tra sviluppo e operazioni.
 
 Cercando di ottenere riduzioni dei costi è comprensibile, ed è probabile che tutte le organizzazioni sono chasing tale obiettivo. Distribuzione uniforme è più difficile da valutare, ma è ugualmente importante. Un contratto di distribuzione coerente afferma che gli sviluppatori sono liberi di scegliere di usare la tecnologia e adeguato alle esigenze, e il team operativo Ottiene un unico modo per distribuire e gestire le applicazioni. Questo contratto consente di attenuare i problemi della presenza di operazioni di gestire la complessità di molte tecnologie diverse o imporre agli sviluppatori di usare solo alcune delle tecnologie. Essenzialmente, ogni applicazione viene inserita in un'immagine di distribuzione autonoma.
 

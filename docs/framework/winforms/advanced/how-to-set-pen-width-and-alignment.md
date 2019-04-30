@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
 ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967303"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Procedura: Impostare la larghezza e l'allineamento di un oggetto Pen
 Quando si crea un <xref:System.Drawing.Pen>, è possibile fornire la larghezza della penna come uno degli argomenti del costruttore. È anche possibile modificare la larghezza della penna con i <xref:System.Drawing.Pen.Width%2A> proprietà del <xref:System.Drawing.Pen> classe.  
@@ -26,7 +26,7 @@ Quando si crea un <xref:System.Drawing.Pen>, è possibile fornire la larghezza d
   
 ### <a name="to-vary-the-width-of-a-pen"></a>Per variare lo spessore di un oggetto pen  
   
--   Impostare il valore della <xref:System.Drawing.Pen.Alignment%2A> proprietà <xref:System.Drawing.Drawing2D.PenAlignment.Center> (predefinito) per specificare che disegnate con pen verde pixel verrà centrata nella linea teorica. La figura seguente mostra la riga risulta.  
+- Impostare il valore della <xref:System.Drawing.Pen.Alignment%2A> proprietà <xref:System.Drawing.Drawing2D.PenAlignment.Center> (predefinito) per specificare che disegnate con pen verde pixel verrà centrata nella linea teorica. La figura seguente mostra la riga risulta.  
   
      ![Una linea sottile nera con evidenziazione verde.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ Quando si crea un <xref:System.Drawing.Pen>, è possibile fornire la larghezza d
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>Per modificare l'allineamento di un oggetto pen  
   
--   Impostare il valore della <xref:System.Drawing.Pen.Alignment%2A> proprietà <xref:System.Drawing.Drawing2D.PenAlignment.Center> per specificare che verranno centrati i pixel disegnati con pen verde in corrispondenza del limite del rettangolo.  
+- Impostare il valore della <xref:System.Drawing.Pen.Alignment%2A> proprietà <xref:System.Drawing.Drawing2D.PenAlignment.Center> per specificare che verranno centrati i pixel disegnati con pen verde in corrispondenza del limite del rettangolo.  
   
      La figura seguente mostra il rettangolo risulta:
   
@@ -48,7 +48,7 @@ Quando si crea un <xref:System.Drawing.Pen>, è possibile fornire la larghezza d
   
 ### <a name="to-create-an-inset-pen"></a>Per creare la penna di inserimento  
   
--   Modificare l'allineamento della penna verde modificando la terza istruzione nell'esempio di codice precedente come indicato di seguito:  
+- Modificare l'allineamento della penna verde modificando la terza istruzione nell'esempio di codice precedente come indicato di seguito:  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  

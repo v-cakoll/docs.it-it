@@ -17,11 +17,11 @@ helpviewer_keywords:
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
 ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967527"
 ---
 # <a name="matrix-representation-of-transformations"></a>Rappresentazione tramite matrici delle trasformazioni
 Una matrice di n × m è un set di numeri disposti in righe di m e n colonne. La figura seguente mostra le matrici di diverse.  

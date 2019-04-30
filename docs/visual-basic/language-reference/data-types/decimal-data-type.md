@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971769"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Tipo di dati Decimal (Visual Basic)
 Contiene con segno a 128 bit (16 byte) valori che rappresentano numeri integer a 96 bit (12 byte) scalati in base una potenza variabile di 10. Il fattore di scala specifica il numero di cifre a destra del separatore decimale; è compreso tra 0 e 28. Con una scala pari a 0 (nessuna posizione decimale), il massimo valore possibile è + /-79.228.162.514.264.337.593.543.950.335 (+ /-7 .9228162514264337593543950335E + 28). Il valore massimo è + /-7,9228162514264337593543950335 con 28 posizioni decimali, e il più piccolo valore diverso da zero è + /-0,0000000000000000000000000001 (+ /-1E-28).  
@@ -37,13 +37,13 @@ Contiene con segno a 128 bit (16 byte) valori che rappresentano numeri integer a
   
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione  
   
--   **Precisione.** `Decimal` non è un tipo di dati a virgola mobile. Il `Decimal` struttura contiene un valore integer binario, insieme ai bit di segno e un numero intero che specifica quale parte del valore è una frazione decimale fattore di scala. Ne consegue `Decimal` numeri di avere una rappresentazione più precisa in memoria rispetto a tipi a virgola mobile (`Single` e `Double`).  
+- **Precisione.** `Decimal` non è un tipo di dati a virgola mobile. Il `Decimal` struttura contiene un valore integer binario, insieme ai bit di segno e un numero intero che specifica quale parte del valore è una frazione decimale fattore di scala. Ne consegue `Decimal` numeri di avere una rappresentazione più precisa in memoria rispetto a tipi a virgola mobile (`Single` e `Double`).  
   
--   **Prestazioni.** Il `Decimal` tipo di dati è il più lento di tutti i tipi numerici. È opportuno valutare l'importanza della precisione rispetto alle prestazioni prima di scegliere un tipo di dati.  
+- **Prestazioni.** Il `Decimal` tipo di dati è il più lento di tutti i tipi numerici. È opportuno valutare l'importanza della precisione rispetto alle prestazioni prima di scegliere un tipo di dati.  
   
--   **Widening.** Il `Decimal` può ampliarsi nel tipo di dati `Single` o `Double`. Ciò significa che è possibile convertire `Decimal` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
+- **Widening.** Il `Decimal` può ampliarsi nel tipo di dati `Single` o `Double`. Ciò significa che è possibile convertire `Decimal` a uno di questi tipi senza generare un <xref:System.OverflowException?displayProperty=nameWithType> errore.  
   
--   **Zeri finali.** Visual Basic non archivia gli zeri finali in un `Decimal` letterale. Tuttavia, un `Decimal` variabile mantiene gli zeri finali acquisiti dal punto di vista. Questa condizione è illustrata nell'esempio seguente.  
+- **Zeri finali.** Visual Basic non archivia gli zeri finali in un `Decimal` letterale. Tuttavia, un `Decimal` variabile mantiene gli zeri finali acquisiti dal punto di vista. Questa condizione è illustrata nell'esempio seguente.  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ Contiene con segno a 128 bit (16 byte) valori che rappresentano numeri integer a
   
      D1 = profondità 2.375, d2 = 1.625, d3 = 4.000, d4 = 4  
   
--   **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `D` a un valore letterale, se ne determina la conversione nel tipo di dati `Decimal`. Aggiungendo il carattere identificatore di tipo `@` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Decimal`.  
+- **Caratteri tipo.** Aggiungendo il carattere di tipo letterale `D` a un valore letterale, se ne determina la conversione nel tipo di dati `Decimal`. Aggiungendo il carattere identificatore di tipo `@` a qualsiasi identificatore, se ne determina la conversione al tipo di dati `Decimal`.  
   
--   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Decimal?displayProperty=nameWithType>.  
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la struttura <xref:System.Decimal?displayProperty=nameWithType>.  
   
 ## <a name="range"></a>Intervallo  
  Potrebbe essere necessario usare il `D` tipo di carattere per assegnare un valore elevato per un `Decimal` variabile o costante. Questo requisito è perché il compilatore interpreta un valore letterale come `Long` , a meno che un carattere letterale di tipo segue il valore letterale, come illustrato nell'esempio seguente.  

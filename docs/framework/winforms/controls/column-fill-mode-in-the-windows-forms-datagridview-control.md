@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956281"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modalità di riempimento di colonna nel controllo DataGridView Windows Form
 In modalità riempimento delle colonne il controllo <xref:System.Windows.Forms.DataGridView> ridimensiona automaticamente le proprie colonne in modo da occupare tutta la larghezza dell'area di visualizzazione disponibile. Il controllo non visualizza la barra di scorrimento orizzontale se non quando è necessario per mantenere la larghezza di ogni colonna uguale o maggiore al relativo valore della proprietà <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -45,22 +45,22 @@ In modalità riempimento delle colonne il controllo <xref:System.Windows.Forms.D
 ### <a name="comments"></a>Commenti  
  Per usare questa applicazione di esempio:  
   
--   Modificare le dimensioni del form. Osservare il modo in cui cambia la larghezza delle colonne mantenendo le proporzioni indicate dai valori della proprietà <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+- Modificare le dimensioni del form. Osservare il modo in cui cambia la larghezza delle colonne mantenendo le proporzioni indicate dai valori della proprietà <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Modificare le dimensioni delle colonne trascinando i separatori di colonna con il mouse. Osservare il modo in cui cambiano i valori di <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
+- Modificare le dimensioni delle colonne trascinando i separatori di colonna con il mouse. Osservare il modo in cui cambiano i valori di <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
--   Modificare il valore di <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> per una colonna, quindi trascinare per ridimensionare il form. Dopo aver ridotto a sufficienza le dimensioni del form, osservare come i valori di <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> non sono mai minori dei valori di <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
+- Modificare il valore di <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> per una colonna, quindi trascinare per ridimensionare il form. Dopo aver ridotto a sufficienza le dimensioni del form, osservare come i valori di <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> non sono mai minori dei valori di <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
--   Modificare i valori di <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> per tutte le colonne in numeri elevati, in modo che i valori combinati superino la larghezza del controllo. Osservare il modo in cui viene visualizzata la barra di scorrimento orizzontale.  
+- Modificare i valori di <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> per tutte le colonne in numeri elevati, in modo che i valori combinati superino la larghezza del controllo. Osservare il modo in cui viene visualizzata la barra di scorrimento orizzontale.  
   
--   Modificare i valori di <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>per alcune colonne. Osservare l'effetto del ridimensionamento delle colonne o del form.  
+- Modificare i valori di <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>per alcune colonne. Osservare l'effetto del ridimensionamento delle colonne o del form.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
+- Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
   
--   Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
+- Per informazioni sulla compilazione di questo esempio dalla riga di comando per Visual Basic o Visual c#, vedere [compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oppure [con la creazione della riga di comando csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). È anche possibile compilare questo esempio in Visual Studio incollando il codice in un nuovo progetto.  
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962734"
 ---
 # <a name="document-serialization-and-storage"></a>Serializzazione e archiviazione di documenti
 Microsoft .NET Framework fornisce un ambiente avanzato per la creazione e visualizzazione di documenti di alta qualità.  Funzionalità sofisticate che supportano entrambi documenti statici che dinamici e, advanced controlli di visualizzazione combinati con potenti 2D e funzionalità di grafica 3D eseguire applicazioni .NET Framework a un nuovo livello di qualità ed esperienza utente.  La possibilità di gestire in modo flessibile una rappresentazione in memoria di un documento è una funzionalità chiave di .NET Framework e la possibilità di salvare e caricare i documenti da un archivio dati in modo efficiente è l'esigenza di quasi tutte le applicazioni.  Il processo di conversione di un documento da una rappresentazione in memoria interna a un archivio dati esterno è detto serializzazione.  Il processo inverso di lettura di un archivio dati e di creazione dell'istanza in memoria originale è detto deserializzazione.  
@@ -24,19 +24,19 @@ Microsoft .NET Framework fornisce un ambiente avanzato per la creazione e visual
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>Funzionalità dei serializzatori di documenti di .NET Framework 3.0  
   
--   L'accesso diretto agli oggetti documento di alto livello (albero logico e oggetti visivi) consente di archiviare in modo efficiente contenuto impaginato, elementi 2D/3D, immagini, supporti, collegamenti ipertestuali, annotazioni e altro contenuto di supporto.  
+- L'accesso diretto agli oggetti documento di alto livello (albero logico e oggetti visivi) consente di archiviare in modo efficiente contenuto impaginato, elementi 2D/3D, immagini, supporti, collegamenti ipertestuali, annotazioni e altro contenuto di supporto.  
   
--   Operazioni sincrone e asincrone.  
+- Operazioni sincrone e asincrone.  
   
--   Supporto per serializzatori plug-in con funzionalità avanzate:  
+- Supporto per serializzatori plug-in con funzionalità avanzate:  
   
-    -   Accesso a livello di sistema per l'utilizzo da tutte le applicazioni .NET Framework.  
+    - Accesso a livello di sistema per l'utilizzo da tutte le applicazioni .NET Framework.  
   
-    -   Individuazione semplice dei plug-in dell'applicazione.  
+    - Individuazione semplice dei plug-in dell'applicazione.  
   
-    -   Facilità di distribuzione, installazione e aggiornamento per i plug-in di terze parti personalizzati.  
+    - Facilità di distribuzione, installazione e aggiornamento per i plug-in di terze parti personalizzati.  
   
-    -   Supporto dell'interfaccia utente per impostazioni e opzioni di runtime personalizzate.  
+    - Supporto dell'interfaccia utente per impostazioni e opzioni di runtime personalizzate.  
   
 ### <a name="xps-print-path"></a>Percorso di stampa XPS  
  Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] percorso di stampa fornisce inoltre un meccanismo estensibile per la scrittura di documenti tramite l'output di stampa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] funge sia da formato di file di documento che da formato nativo dello spool di stampa per documenti [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  I documenti [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] possono essere inviati direttamente alle stampanti compatibili con [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] senza la necessità di essere convertiti in un formato intermedio.  Vedere [Cenni preliminari sulla stampa](printing-overview.md) per altre informazioni sulle opzioni e le funzionalità dell'output del percorso di stampa.  

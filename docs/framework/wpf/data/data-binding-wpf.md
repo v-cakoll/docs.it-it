@@ -8,11 +8,11 @@ helpviewer_keywords:
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
 ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954193"
 ---
 # <a name="data-binding-wpf"></a>Associazione dati (WPF)
 Associazione di dati di Windows Presentation Foundation (WPF) fornisce un modo semplice e coerente per le applicazioni presentare e interagire con i dati. Gli elementi possono essere associati ai dati da un'ampia gamma di origini dati sotto forma di oggetti common language runtime (CLR) e XML.  

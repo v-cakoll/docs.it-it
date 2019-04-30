@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971714"
 ---
 # <a name="string-data-type-visual-basic"></a>Tipo di dati String (Visual Basic)
 Contiene sequenze di punti di codice (a 2 byte) a 16 bit senza segno quell'intervallo compreso tra 0 e 65535. Ciascuna *punto di codice*, o il codice carattere rappresenta un singolo carattere Unicode. Una stringa può contenere da 0 a circa 2 miliardi (2 ^ 31) i caratteri Unicode.  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>Suggerimenti per la programmazione  
   
--   **Numeri negativi.** Tenere presente che i caratteri inclusi in `String` non firmati e non può rappresentare i valori negativi. In ogni caso, è consigliabile non usare `String` per contenere valori numerici.  
+- **Numeri negativi.** Tenere presente che i caratteri inclusi in `String` non firmati e non può rappresentare i valori negativi. In ogni caso, è consigliabile non usare `String` per contenere valori numerici.  
   
--   **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che caratteri della stringa hanno una larghezza di dati diversi (8 bit) in altri ambienti. Se si passa un argomento di stringa di caratteri a 8 bit a un componente, dichiararlo come `Byte()`, una matrice di `Byte` gli elementi, invece di `String` nel nuovo codice Visual Basic.  
+- **Considerazioni sull'interoperabilità.** Se si prevede l'interazione con componenti non scritti per .NET Framework, ad esempio oggetti COM o di automazione, tenere presente che caratteri della stringa hanno una larghezza di dati diversi (8 bit) in altri ambienti. Se si passa un argomento di stringa di caratteri a 8 bit a un componente, dichiararlo come `Byte()`, una matrice di `Byte` gli elementi, invece di `String` nel nuovo codice Visual Basic.  
   
--   **Caratteri tipo.** Aggiungendo il carattere di tipo identificatore `$` a qualsiasi identificatore, se ne determina la `String` tipo di dati. `String` non include alcun carattere di tipo di valore letterale. Tuttavia, il compilatore considera i valori letterali racchiusi tra virgolette (`" "`) come `String`.  
+- **Caratteri tipo.** Aggiungendo il carattere di tipo identificatore `$` a qualsiasi identificatore, se ne determina la `String` tipo di dati. `String` non include alcun carattere di tipo di valore letterale. Tuttavia, il compilatore considera i valori letterali racchiusi tra virgolette (`" "`) come `String`.  
   
--   **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la <xref:System.String?displayProperty=nameWithType> classe.  
+- **Tipo di Framework.** Il tipo corrispondente in .NET Framework è la <xref:System.String?displayProperty=nameWithType> classe.  
   
 ## <a name="see-also"></a>Vedere anche
 

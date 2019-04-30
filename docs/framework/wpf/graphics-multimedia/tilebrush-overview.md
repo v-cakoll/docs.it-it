@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973750"
 ---
 # <a name="tilebrush-overview"></a>Cenni preliminari sugli oggetti TileBrush
 <xref:System.Windows.Media.TileBrush> gli oggetti forniscono un elevato livello di controllo sulla modalità di un'area con un'immagine <xref:System.Windows.Media.Drawing>, o <xref:System.Windows.Media.Visual>. In questo argomento viene descritto come utilizzare <xref:System.Windows.Media.TileBrush> le funzionalità da ottenere un maggiore controllo sulle modalità di un' <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, o <xref:System.Windows.Media.VisualBrush> disegna un'area.  
@@ -40,11 +40,11 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
 ## <a name="brush-content"></a>Contenuto del pennello  
  Esistono tre tipi diversi di <xref:System.Windows.Media.TileBrush> , ciascuno con un tipo di contenuto diverso.  
   
--   Se il pennello è un' <xref:System.Windows.Media.ImageBrush>, questo contenuto è un'immagine di <xref:System.Windows.Media.ImageBrush.ImageSource%2A> proprietà specifica il contenuto del <xref:System.Windows.Media.ImageBrush>.  
+- Se il pennello è un' <xref:System.Windows.Media.ImageBrush>, questo contenuto è un'immagine di <xref:System.Windows.Media.ImageBrush.ImageSource%2A> proprietà specifica il contenuto del <xref:System.Windows.Media.ImageBrush>.  
   
--   Se il pennello è un <xref:System.Windows.Media.DrawingBrush>, questo contenuto è un disegno. Il <xref:System.Windows.Media.DrawingBrush.Drawing%2A> proprietà specifica il contenuto del <xref:System.Windows.Media.DrawingBrush>.  
+- Se il pennello è un <xref:System.Windows.Media.DrawingBrush>, questo contenuto è un disegno. Il <xref:System.Windows.Media.DrawingBrush.Drawing%2A> proprietà specifica il contenuto del <xref:System.Windows.Media.DrawingBrush>.  
   
--   Se il pennello è un <xref:System.Windows.Media.VisualBrush>, questo contenuto è un oggetto visivo. Il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà specifica il contenuto di <xref:System.Windows.Media.VisualBrush>.  
+- Se il pennello è un <xref:System.Windows.Media.VisualBrush>, questo contenuto è un oggetto visivo. Il <xref:System.Windows.Media.VisualBrush.Visual%2A> proprietà specifica il contenuto di <xref:System.Windows.Media.VisualBrush>.  
   
  È possibile specificare la posizione e dimensioni di <xref:System.Windows.Media.TileBrush> contenuto usando il <xref:System.Windows.Media.TileBrush.Viewbox%2A> proprietà, anche se è comune a lasciare la <xref:System.Windows.Media.TileBrush.Viewbox%2A> impostata sul valore predefinito. Per impostazione predefinita, il <xref:System.Windows.Media.TileBrush.Viewbox%2A> è configurato per contenere completamente il contenuto del pennello. Per altre informazioni sulla configurazione di <xref:System.Windows.Controls.Viewbox>, vedere il <xref:System.Windows.Controls.Viewbox> pagina delle proprietà.  
   
@@ -52,13 +52,13 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
 ## <a name="the-base-tile"></a>Tessera di base  
  Oggetto <xref:System.Windows.Media.TileBrush> proietta il relativo contenuto in una tessera di base. Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà controlla la modalità <xref:System.Windows.Media.TileBrush> contenuto viene adattato per riempire la tessera di base. Il <xref:System.Windows.Media.TileBrush.Stretch%2A> proprietà accetta i valori seguenti, definiti dal <xref:System.Windows.Media.Stretch> enumerazione:  
   
--   <xref:System.Windows.Media.Stretch.None>: Il contenuto del pennello non viene adattato per riempire il riquadro.  
+- <xref:System.Windows.Media.Stretch.None>: Il contenuto del pennello non viene adattato per riempire il riquadro.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Il contenuto del pennello viene ridimensionato per adattarlo alla tessera. Poiché l'altezza e la larghezza del contenuto vengono ridimensionate in modo indipendente, è possibile che non vengano mantenute le proporzioni originali del contenuto. In altre parole, il contenuto del pennello potrebbe essere distorto per adattarsi completamente alla tessera di output.  
+- <xref:System.Windows.Media.Stretch.Fill>: Il contenuto del pennello viene ridimensionato per adattarlo alla tessera. Poiché l'altezza e la larghezza del contenuto vengono ridimensionate in modo indipendente, è possibile che non vengano mantenute le proporzioni originali del contenuto. In altre parole, il contenuto del pennello potrebbe essere distorto per adattarsi completamente alla tessera di output.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Il contenuto del pennello viene ridimensionato in modo da adattarsi completamente alla tessera. Vengono mantenute le proporzioni del contenuto.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Il contenuto del pennello viene ridimensionato in modo da adattarsi completamente alla tessera. Vengono mantenute le proporzioni del contenuto.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Il contenuto del pennello viene ridimensionato in modo da riempire completamente l'area di output, mantenendo le proporzioni originali del contenuto.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Il contenuto del pennello viene ridimensionato in modo da riempire completamente l'area di output, mantenendo le proporzioni originali del contenuto.  
   
  L'immagine seguente illustra i diversi <xref:System.Windows.Media.TileBrush.Stretch%2A> impostazioni.  
   
@@ -99,15 +99,15 @@ Componenti di un oggetto TileBrush con TileMode impostata su Tile
 ### <a name="tiling-behavior"></a>Comportamento dell'affiancamento  
  Oggetto <xref:System.Windows.Media.TileBrush> genera un modello affiancato quando la tessera di base non occupa completamente l'area di output e una modalità di affiancamento quindi <xref:System.Windows.Media.TileMode.None> è specificato. Se tessera un pennello non occupa completamente l'area di output, relativo <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà specifica se la tessera di base deve essere duplicata da riempire l'area di output e, in tal caso, come la tessera di base deve essere duplicato. Il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà accetta i valori seguenti, definiti dal <xref:System.Windows.Media.TileMode> enumerazione:  
   
--   <xref:System.Windows.Media.TileMode.None>: Viene disegnata la tessera di base.  
+- <xref:System.Windows.Media.TileMode.None>: Viene disegnata la tessera di base.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Viene disegnata la tessera di base e l'area rimanente viene riempita ripetendo la tessera di base in modo che il bordo destro di una tessera sia adiacente al margine sinistro della riga successiva e che lo stesso avvenga per superiore e inferiore.  
+- <xref:System.Windows.Media.TileMode.Tile>: Viene disegnata la tessera di base e l'area rimanente viene riempita ripetendo la tessera di base in modo che il bordo destro di una tessera sia adiacente al margine sinistro della riga successiva e che lo stesso avvenga per superiore e inferiore.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Lo stesso come <xref:System.Windows.Media.TileMode.Tile>, ma le colonne alternate di tessere vengono capovolte in senso orizzontale.  
+- <xref:System.Windows.Media.TileMode.FlipX>: Lo stesso come <xref:System.Windows.Media.TileMode.Tile>, ma le colonne alternate di tessere vengono capovolte in senso orizzontale.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Lo stesso come <xref:System.Windows.Media.TileMode.Tile>, ma le righe alternate di tessere vengono capovolte in senso verticale.  
+- <xref:System.Windows.Media.TileMode.FlipY>: Lo stesso come <xref:System.Windows.Media.TileMode.Tile>, ma le righe alternate di tessere vengono capovolte in senso verticale.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Combinazione di <xref:System.Windows.Media.TileMode.FlipX> e <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Combinazione di <xref:System.Windows.Media.TileMode.FlipX> e <xref:System.Windows.Media.TileMode.FlipY>.  
   
  L'immagine seguente illustra le diverse modalità di affiancamento.  
   

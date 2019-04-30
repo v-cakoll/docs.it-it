@@ -3,11 +3,11 @@ title: Introduzione al routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991094"
 ---
 # <a name="routing-introduction"></a>Introduzione al routing
 Il servizio di routing fornisce un intermediario SOAP di collegamento generico in grado di indirizzare i messaggi in base al relativo contenuto. Il servizio di routing consente di creare logica di routing complessa per l'implementazione di scenari quali l'aggregazione dei servizi, il controllo delle versioni dei servizi, il routing prioritario e il routing multicast. Il servizio di routing offre inoltre funzionalità di gestione degli errori che consentono di configurare elenchi di endpoint di backup ai quali vengono inviati i messaggi se si verifica un errore di invio all'endpoint di destinazione primario.  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  Sebbene molte configurazioni del servizio di routing utilizzino logica di filtro esclusiva che indirizza i messaggi a un unico specifico endpoint, potrebbe essere necessario indirizzare il messaggio in questione a più endpoint di destinazione. Per il multicast di un messaggio a più destinazioni, è necessario che siano soddisfatte le condizioni seguenti:  
   
--   La forma del canale non deve essere di tipo request/reply (tuttavia può essere unidirezionale o duplex), poiché l'applicazione client può ricevere una sola risposta alla richiesta.  
+- La forma del canale non deve essere di tipo request/reply (tuttavia può essere unidirezionale o duplex), poiché l'applicazione client può ricevere una sola risposta alla richiesta.  
   
--   Più filtri devono restituire `true` in seguito alla valutazione del messaggio.  
+- Più filtri devono restituire `true` in seguito alla valutazione del messaggio.  
   
  Se vengono soddisfatte queste condizioni, il messaggio viene indirizzato a tutti gli endpoint di tutti i filtri che restituiscono `true`. L'esempio seguente definisce una configurazione di routing che determina i messaggi indirizzati a entrambi gli endpoint se l'indirizzo dell'endpoint nel messaggio è `http://localhost:8000/routingservice/router/rounding`.  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **Elaborazione della richiesta**  
   
--   Ottenere il **MessageVersion** del canale di associazione in uscita.  
+- Ottenere il **MessageVersion** del canale di associazione in uscita.  
   
--   Ottenere il reader del corpo per il messaggio originale.  
+- Ottenere il reader del corpo per il messaggio originale.  
   
--   Creare un nuovo messaggio con la stessa azione, reader del corpo e una nuova **MessageVersion**.  
+- Creare un nuovo messaggio con la stessa azione, reader del corpo e una nuova **MessageVersion**.  
   
--   Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copiare To, From, FaultTo e RelatesTo intestazioni al messaggio di nuovo.  
+- Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copiare To, From, FaultTo e RelatesTo intestazioni al messaggio di nuovo.  
   
--   Copiare tutte le proprietà del messaggio nel nuovo messaggio.  
+- Copiare tutte le proprietà del messaggio nel nuovo messaggio.  
   
--   Archiviare il messaggio di richiesta originale da usare per l'elaborazione della risposta.  
+- Archiviare il messaggio di richiesta originale da usare per l'elaborazione della risposta.  
   
--   Restituire il nuovo messaggio di richiesta.  
+- Restituire il nuovo messaggio di richiesta.  
   
  **Elaborazione delle risposte**  
   
--   Ottenere il **MessageVersion** del messaggio di richiesta originale.  
+- Ottenere il **MessageVersion** del messaggio di richiesta originale.  
   
--   Ottenere il reader del corpo per il messaggio di risposta ricevuto.  
+- Ottenere il reader del corpo per il messaggio di risposta ricevuto.  
   
--   Creare un nuovo messaggio di risposta con la stessa azione, reader del corpo e il **MessageVersion** del messaggio di richiesta originale.  
+- Creare un nuovo messaggio di risposta con la stessa azione, reader del corpo e il **MessageVersion** del messaggio di richiesta originale.  
   
--   Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copiare To, From, FaultTo e RelatesTo intestazioni al messaggio di nuovo.  
+- Se <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> ! = **Addressing. None**, copiare To, From, FaultTo e RelatesTo intestazioni al messaggio di nuovo.  
   
--   Copiare le proprietà del messaggio nel nuovo messaggio.  
+- Copiare le proprietà del messaggio nel nuovo messaggio.  
   
--   Restituire il nuovo messaggio di risposta.  
+- Restituire il nuovo messaggio di risposta.  
   
  Per impostazione predefinita, il **SoapProcessingBehavior** viene aggiunta automaticamente agli endpoint client per il <xref:System.ServiceModel.Routing.RoutingBehavior> all'avvio del servizio; tuttavia, è possibile controllare se l'elaborazione SOAP viene aggiunto a tutti gli endpoint client tramite il <xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A> proprietà. È inoltre possibile aggiungere il comportamento direttamente a un endpoint specifico e abilitare o disabilitare tale comportamento al livello dell'endpoint se è necessario un controllo più granulare dell'elaborazione SOAP.  
   

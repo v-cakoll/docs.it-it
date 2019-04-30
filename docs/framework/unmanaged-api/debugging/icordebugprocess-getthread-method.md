@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994448"
 ---
 # <a name="icordebugprocessgetthread-method"></a>Metodo ICorDebugProcess::GetThread
 Ottiene i thread del processo che ha l'ID del thread specificato del sistema operativo (OS).  

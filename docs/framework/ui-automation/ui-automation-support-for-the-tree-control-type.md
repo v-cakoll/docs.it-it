@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
 ms.openlocfilehash: 001381eddf56022e2b3e934604e42d871a64d730
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996517"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Supporto per automazione interfaccia utente del tipo di controllo Tree
 > [!NOTE]
@@ -33,9 +33,9 @@ ms.locfileid: "59157261"
   
  La visualizzazione controlli dell'albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è costituita da:  
   
--   Elementi con relazione nessuno-a-molti all'interno del contenitore (gli elementi possono basarsi sul tipo di controllo TreeItem, DataItem o altri tipi di controllo).  
+- Elementi con relazione nessuno-a-molti all'interno del contenitore (gli elementi possono basarsi sul tipo di controllo TreeItem, DataItem o altri tipi di controllo).  
   
--   Zero, uno o due barre di scorrimento.  
+- Zero, uno o due barre di scorrimento.  
   
  La visualizzazione contenuto della struttura dell' [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] è composta da elementi con relazione nessuno-a-molti all'interno del contenitore (gli elementi possono basarsi sul tipo di controllo TreeItem, DataItem o altri tipi di controllo).  
   

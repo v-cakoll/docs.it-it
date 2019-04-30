@@ -11,11 +11,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
 ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973303"
 ---
 # <a name="type-promotion-visual-basic"></a>Promozione tipo (Visual Basic)
 Quando si dichiara un elemento di programmazione in un modulo, Visual Basic Alza di livello dell'ambito dello spazio dei nomi che contiene il modulo. Questo è noto come *promozione tipo*.  
@@ -54,9 +54,9 @@ Quando si dichiara un elemento di programmazione in un modulo, Visual Basic Alza
 ## <a name="recommendations"></a>Suggerimenti  
  I consigli seguenti rappresentano una buona norma di programmazione.  
   
--   **Nomi univoci.** Quando si dispone di controllo completo sulla denominazione di elementi di programmazione, è sempre una buona idea utilizzare nomi univoci ovunque. I nomi identici richiedono una qualificazione aggiuntiva e possono rendere difficile leggere il codice. Possono tuttavia portare a piccoli errori e risultati imprevisti.  
+- **Nomi univoci.** Quando si dispone di controllo completo sulla denominazione di elementi di programmazione, è sempre una buona idea utilizzare nomi univoci ovunque. I nomi identici richiedono una qualificazione aggiuntiva e possono rendere difficile leggere il codice. Possono tuttavia portare a piccoli errori e risultati imprevisti.  
   
--   **Nome completo.** Quando si lavora con i moduli e gli altri elementi dello stesso spazio dei nomi, l'approccio più sicuro consiste nell'utilizzare sempre il nome completo per tutti gli elementi di programmazione. Se la promozione del tipo viene annullato per un membro del modulo e non qualificare completamente tale membro, è possibile accedere accidentalmente un elemento di programmazione diversi.  
+- **Nome completo.** Quando si lavora con i moduli e gli altri elementi dello stesso spazio dei nomi, l'approccio più sicuro consiste nell'utilizzare sempre il nome completo per tutti gli elementi di programmazione. Se la promozione del tipo viene annullato per un membro del modulo e non qualificare completamente tale membro, è possibile accedere accidentalmente un elemento di programmazione diversi.  
   
 ## <a name="see-also"></a>Vedere anche
 

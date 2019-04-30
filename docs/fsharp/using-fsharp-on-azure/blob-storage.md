@@ -4,11 +4,11 @@ description: Store dati non strutturati nel cloud con archiviazione Blob di Azur
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982514"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introduzione all'archiviazione Blob di Azure con F\#
 
@@ -242,7 +242,7 @@ Un'app autonoma gratuita di Microsoft che consente di rappresentare facilmente d
 
 ### <a name="related-guides"></a>Guide correlate
 
-- [Introduzione all'archiviazione Blob di Azure nel linguaggio C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Introduzione all'archiviazione Blob di Azure nel linguaggio c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Trasferire dati con l'utilità della riga di comando di AzCopy in Windows](/azure/storage/common/storage-use-azcopy)
 - [Trasferire dati con l'utilità della riga di comando di AzCopy in Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurare le stringhe di connessione di archiviazione di Azure](/azure/storage/common/storage-configure-connection-string)

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946458"
 ---
 # <a name="statements-in-visual-basic"></a>Istruzioni in Visual Basic
 
@@ -156,7 +156,7 @@ In molti casi, è possibile continuare un'istruzione nella riga successiva conse
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    Per altre informazioni, vedere [inizializzatori di oggetto: tipi denominati e anonimi](./objects-and-classes/object-initializers-named-and-anonymous-types.md) oppure [gli inizializzatori di insieme](./collection-initializers/index.md).
+    Per altre informazioni, vedere [gli inizializzatori di oggetto: Tipi denominati e anonimi](./objects-and-classes/object-initializers-named-and-anonymous-types.md) oppure [inizializzatori di insieme](./collection-initializers/index.md).
 
 - Dopo aver aperto di un'espressione incorporata (`<%=`) o prima della chiusura di un'espressione incorporata (`%>`) all'interno di un valore letterale XML. Ad esempio:
 
@@ -196,7 +196,7 @@ In molti casi, è possibile continuare un'istruzione nella riga successiva conse
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   Per altre informazioni, vedere [con... Terminare con l'istruzione](../../../visual-basic/language-reference/statements/with-end-with-statement.md) oppure [inizializzatori di oggetto: tipi denominati e anonimi](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Per altre informazioni, vedere [con... Terminare con l'istruzione](../../../visual-basic/language-reference/statements/with-end-with-statement.md) o [inizializzatori di oggetto: Tipi denominati e anonimi](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 - Dopo un qualificatore di proprietà axis XML (`.` oppure `.@` o `...`). Tuttavia, è necessario includere un carattere di continuazione di riga (`_`) quando si specifica un qualificatore membro quando si usa il `With` (parola chiave). Ad esempio:
 
@@ -247,4 +247,4 @@ Se, dopo aver digitato una riga di codice, viene visualizzata la riga con una so
 |[Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)|Vengono forniti collegamenti alle pagine di riferimento del linguaggio che copre, ad esempio gli operatori di assegnazione `=`, `*=`, e `&=`.|
 |[Operatori ed espressioni](./operators-and-expressions/index.md)|Viene illustrato come combinare elementi e gli operatori per produrre nuovi valori.|
 |[Procedura: Interrompere e combinare istruzioni nel codice](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Viene illustrato come suddividere una singola istruzione in più righe e come eseguire più istruzioni sulla stessa riga.|
-|[Procedura: Etichettare le istruzioni](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Viene illustrato come assegnare un'etichetta di una riga di codice.|
+|[Procedura: etichettare le istruzioni](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Viene illustrato come assegnare un'etichetta di una riga di codice.|

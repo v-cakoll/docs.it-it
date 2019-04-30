@@ -5,11 +5,11 @@ helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
 ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971951"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definizione di tipi personalizzati da utilizzare con i servizi XAML di .NET Framework
 Quando si definiscono tipi personalizzati che sono oggetti business o i tipi che non è una dipendenza su Framework specifici, esistono alcune procedure consigliate per XAML è possibile seguire. Se si seguono queste procedure, dei servizi XAML di .NET Framework e relativi reader XAML e writer XAML può individuare le caratteristiche XAML del tipo in uso e assegnargli rappresentazione appropriata in un flusso di nodi XAML usando il sistema di tipi XAML. In questo argomento descrive le procedure consigliate per le definizioni dei tipi, le definizioni dei membri e assegnazione di attributi CLR di tipi o membri.  
@@ -17,9 +17,9 @@ Quando si definiscono tipi personalizzati che sono oggetti business o i tipi che
 ## <a name="constructor-patterns-and-type-definitions-for-xaml"></a>Modelli di costruttore e definizioni di tipi per XAML  
  Per creare un'istanza come elemento oggetto in XAML, una classe personalizzata deve soddisfare i requisiti seguenti:  
   
--   La classe personalizzata deve essere pubblica e deve esporre un costruttore pubblico (senza parametri) predefinito. Per alcune note riguardanti le strutture, vedere la sezione seguente.  
+- La classe personalizzata deve essere pubblica e deve esporre un costruttore pubblico (senza parametri) predefinito. Per alcune note riguardanti le strutture, vedere la sezione seguente.  
   
--   La classe personalizzata non deve essere una classe annidata. Aggiuntivo "dot" nel percorso del nome completo rende ambiguo la divisione di spazio dei nomi di classe e interferisce con altre funzionalità XAML, ad esempio le proprietà associate.  
+- La classe personalizzata non deve essere una classe annidata. Aggiuntivo "dot" nel percorso del nome completo rende ambiguo la divisione di spazio dei nomi di classe e interferisce con altre funzionalità XAML, ad esempio le proprietà associate.  
   
  Se è possibile creare istanze di un oggetto come elemento oggetto, l'oggetto creato è riempire il form elemento di proprietà di qualsiasi proprietà che accettano l'oggetto come relativo tipo sottostante.  
   
@@ -72,9 +72,9 @@ Quando si definiscono tipi personalizzati che sono oggetti business o i tipi che
   
  `public static object Get` *PropertyName* `(object` `target` `)`  
   
--   L'oggetto `target` può essere specificato come tipo più specifico nell'implementazione. È possibile utilizzare questo per definire l'ambito di utilizzo del membro associabile; gli utilizzi rientrano nell'ambito desiderato genererà le eccezioni di cast non valido che vengono quindi replicate da un errore di analisi XAML. Il nome del parametro `target` non è un requisito, ma è denominato `target` per convenzione nella maggior parte delle implementazioni.  
+- L'oggetto `target` può essere specificato come tipo più specifico nell'implementazione. È possibile utilizzare questo per definire l'ambito di utilizzo del membro associabile; gli utilizzi rientrano nell'ambito desiderato genererà le eccezioni di cast non valido che vengono quindi replicate da un errore di analisi XAML. Il nome del parametro `target` non è un requisito, ma è denominato `target` per convenzione nella maggior parte delle implementazioni.  
   
--   Il valore restituito può essere specificato come tipo più specifico nell'implementazione.  
+- Il valore restituito può essere specificato come tipo più specifico nell'implementazione.  
   
  Per supportare un <xref:System.ComponentModel.TypeConverter> sintassi del testo abilitata per l'utilizzo dell'attributo del membro associabile, applicare <xref:System.ComponentModel.TypeConverterAttribute> per il `Get` *PropertyName* della funzione di accesso. Applicazione al `get` anziché il `set` può sembrare non intuitiva; tuttavia, questa convenzione può supportare il concetto di sola lettura i membri associabili serializzabili, che risulta utile negli scenari di progettazione.  
   
@@ -83,9 +83,9 @@ Quando si definiscono tipi personalizzati che sono oggetti business o i tipi che
   
  `public static void Set` *NomeProprietà* `(object` `target` `, object` `value` `)`  
   
--   Il `target` oggetto può essere specificato come un tipo più specifico nell'implementazione, con lo stesso per la logica e conseguenze come descritto nella sezione precedente.  
+- Il `target` oggetto può essere specificato come un tipo più specifico nell'implementazione, con lo stesso per la logica e conseguenze come descritto nella sezione precedente.  
   
--   L'oggetto `value` può essere specificato come tipo più specifico nell'implementazione.  
+- L'oggetto `value` può essere specificato come tipo più specifico nell'implementazione.  
   
  Tenere presente che il valore per questo metodo è l'input proveniente dall'uso di XAML, in genere sotto forma di attributo. Dalla forma di attributo deve essere presente il supporto di convertitore di tipi di valore per una sintassi del testo e attributo il `Get` *NomeProprietà* della funzione di accesso.  
   

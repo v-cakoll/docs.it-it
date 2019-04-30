@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981942"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Ottimizzazione delle prestazioni: Grafica 2D e creazione di immagini
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un'ampia gamma di funzionalità di grafica 2D e creazione di immagini che possono essere ottimizzate in base ai requisiti dell'applicazione. Questo argomento fornisce informazioni sull'ottimizzazione delle prestazioni in queste aree.  
@@ -34,13 +34,13 @@ ms.locfileid: "59074989"
   
  Esistono quattro tipi di <xref:System.Windows.Media.Drawing> oggetti:  
   
--   <xref:System.Windows.Media.GeometryDrawing> Disegna una forma.  
+- <xref:System.Windows.Media.GeometryDrawing> Disegna una forma.  
   
--   <xref:System.Windows.Media.ImageDrawing> Disegna un'immagine.  
+- <xref:System.Windows.Media.ImageDrawing> Disegna un'immagine.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> Disegna un testo.  
+- <xref:System.Windows.Media.GlyphRunDrawing> Disegna un testo.  
   
--   <xref:System.Windows.Media.DrawingGroup> Esegue altri disegni. Usare un gruppo di disegni per combinare altri disegni in un unico disegno composto.  
+- <xref:System.Windows.Media.DrawingGroup> Esegue altri disegni. Usare un gruppo di disegni per combinare altri disegni in un unico disegno composto.  
   
  Il <xref:System.Windows.Media.GeometryDrawing> oggetto viene usato per eseguire il rendering di contenuto della geometria. Il <xref:System.Windows.Media.Geometry> classi e le classi concrete che ne derivano, come <xref:System.Windows.Media.CombinedGeometry>, <xref:System.Windows.Media.EllipseGeometry>, e <xref:System.Windows.Media.PathGeometry>, forniscono un mezzo per il rendering grafica 2D, nonché fornire hit testing e il supporto di ritaglio. Gli oggetti Geometry possono essere usati per definire, ad esempio, l'area di un controllo o l'area di ritaglio da applicare a un'immagine e possono essere semplici aree, quali rettangoli o cerchi, oppure aree composite create con due o più oggetti Geometry. È possibile creare aree geometriche più complesse combinando <xref:System.Windows.Media.PathSegment>-derivato oggetti, ad esempio <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>, e <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59074989"
   
  Per ottenere prestazioni migliori durante l'uso di immagini, seguire questi consigli:  
   
--   Se l'applicazione richiede la visualizzazione di immagini di anteprima, creare una versione ridotta dell'immagine. Per impostazione predefinita, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] carica l'immagine e la decodifica con le dimensioni originali. Se si vuole soltanto un'immagine di anteprima, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] decodifica comunque l'immagine con le dimensioni originali e successivamente la riduce alle dimensioni di un'anteprima. Per evitare questo inutile sovraccarico, è possibile richiedere a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di decodificare l'immagine con le dimensioni dell'anteprima oppure richiedere a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di caricare direttamente l'immagine di anteprima.  
+- Se l'applicazione richiede la visualizzazione di immagini di anteprima, creare una versione ridotta dell'immagine. Per impostazione predefinita, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] carica l'immagine e la decodifica con le dimensioni originali. Se si vuole soltanto un'immagine di anteprima, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] decodifica comunque l'immagine con le dimensioni originali e successivamente la riduce alle dimensioni di un'anteprima. Per evitare questo inutile sovraccarico, è possibile richiedere a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di decodificare l'immagine con le dimensioni dell'anteprima oppure richiedere a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di caricare direttamente l'immagine di anteprima.  
   
--   Decodificare sempre l'immagine con le dimensioni desiderate e non con quelle predefinite. Richiedere quindi a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire la codifica secondo le dimensioni desiderate e non in base a quelle predefinite. In questo modo è possibile ridurre non solo il working set dell'applicazione ma anche la velocità di esecuzione.  
+- Decodificare sempre l'immagine con le dimensioni desiderate e non con quelle predefinite. Richiedere quindi a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] di eseguire la codifica secondo le dimensioni desiderate e non in base a quelle predefinite. In questo modo è possibile ridurre non solo il working set dell'applicazione ma anche la velocità di esecuzione.  
   
--   Se possibile, combinare le immagini in un'unica immagine, come una pellicola cinematografica composta da più immagini.  
+- Se possibile, combinare le immagini in un'unica immagine, come una pellicola cinematografica composta da più immagini.  
   
--   Per altre informazioni, vedere [Panoramica della creazione dell'immagine](../graphics-multimedia/imaging-overview.md).  
+- Per altre informazioni, vedere [Panoramica della creazione dell'immagine](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  Quando si aggiunge un'animazione alla scala di una bitmap, è possibile che l'algoritmo di ricampionamento delle immagini di alta qualità determini un consumo di risorse di sistema tale da rallentare la frequenza dei fotogrammi, provocando lo stuttering delle animazioni. Impostando il <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> proprietà del <xref:System.Windows.Media.RenderOptions> oggetto <xref:System.Windows.Media.BitmapScalingMode.LowQuality> quando si ridimensiona una bitmap, è possibile creare un'animazione più fluida. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> indica la modalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] motore di rendering per passare da un algoritmo ottimizzato per la qualità a un algoritmo ottimizzato per la velocità durante l'elaborazione di immagini.  

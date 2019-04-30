@@ -3,11 +3,11 @@ title: Concetti di base del flusso di lavoro di Windows
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
 ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945665"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Concetti di base del flusso di lavoro di Windows
 Nello sviluppo del flusso di lavoro in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] vengono usati concetti che potrebbero essere nuovi per alcuni sviluppatori. In questo argomento vengono descritti alcuni dei concetti e la relativa implementazione.  
@@ -22,45 +22,45 @@ Nello sviluppo del flusso di lavoro in [!INCLUDE[netfx_current_long](../../../in
 |-|-|  
 |Variabile|Archivia i dati in un'attività.|  
 |Argomento|Sposta i dati all'interno e all'esterno di un'attività.|  
-|Expression|Attività con un valore restituito elevato usato nelle associazioni degli argomenti.|  
+|Espressione|Attività con un valore restituito elevato usato nelle associazioni degli argomenti.|  
   
 ## <a name="workflow-runtime"></a>Fase di esecuzione flusso di lavoro  
  Il runtime del flusso di lavoro è un ambiente in cui vengono eseguiti i flussi di lavoro. <xref:System.Activities.WorkflowInvoker> è la modalità di base per eseguire un flusso di lavoro. L'host usa l'oggetto <xref:System.Activities.WorkflowInvoker> per eseguire le operazioni seguenti:  
   
--   Per richiamare in modo sincrono un flusso di lavoro.  
+- Per richiamare in modo sincrono un flusso di lavoro.  
   
--   Per fornire input o recuperare output da un flusso di lavoro.  
+- Per fornire input o recuperare output da un flusso di lavoro.  
   
--   Per aggiungere estensioni che devono essere usate dalle attività.  
+- Per aggiungere estensioni che devono essere usate dalle attività.  
   
  L'oggetto <xref:System.Activities.ActivityInstance> è il proxy thread-safe che gli host possono usare per interagire con il runtime. L'host usa l'oggetto <xref:System.Activities.ActivityInstance> per eseguire le operazioni seguenti:  
   
--   Per acquisire un'istanza creandola o caricandola da un archivio di istanze.  
+- Per acquisire un'istanza creandola o caricandola da un archivio di istanze.  
   
--   Per ricevere una notifica sugli eventi del ciclo di vita delle istanze.  
+- Per ricevere una notifica sugli eventi del ciclo di vita delle istanze.  
   
--   Per controllare l'esecuzione del flusso di lavoro.  
+- Per controllare l'esecuzione del flusso di lavoro.  
   
--   Per fornire input o recuperare output da un flusso di lavoro.  
+- Per fornire input o recuperare output da un flusso di lavoro.  
   
--   Per segnalare la continuazione di un flusso di lavoro e passare i valori a tale flusso.  
+- Per segnalare la continuazione di un flusso di lavoro e passare i valori a tale flusso.  
   
--   Per rendere persistenti i dati del flusso di lavoro.  
+- Per rendere persistenti i dati del flusso di lavoro.  
   
--   Per aggiungere estensioni che devono essere usate dalle attività.  
+- Per aggiungere estensioni che devono essere usate dalle attività.  
   
  Le attività accedono all'ambiente di runtime del flusso di lavoro tramite la classe derivata <xref:System.Activities.ActivityContext> appropriata, quale <xref:System.Activities.NativeActivityContext> o <xref:System.Activities.CodeActivityContext>. In questo modo possono risolvere argomenti e variabili, pianificare le attività figlio ed eseguire molte altre operazioni.  
   
-## <a name="services"></a>Services  
+## <a name="services"></a>Servizi  
  I flussi di lavoro rappresentano un modo semplice per implementare e accedere a servizi loosely-coupled usando le attività di messaggistica. Attività di messaggistica sono costruite su WCF e rappresentano il meccanismo principale usato per ottenere i dati dentro e fuori un flusso di lavoro. È possibile comporre insieme attività di messaggistica per modellare qualsiasi tipo di modello di scambio di messaggi desiderato. Per altre informazioni, vedere [attività di messaggistica](../wcf/feature-details/messaging-activities.md). I servizi flusso di lavoro sono ospitati usando la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Per altre informazioni, vedere [Panoramica di servizi flusso di lavoro che ospita](../wcf/feature-details/hosting-workflow-services-overview.md). Per altre informazioni sui servizi del flusso di lavoro vedere [servizi flusso di lavoro](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistenza, scaricamento e flussi di lavoro con esecuzione prolungata  
  Il flusso di lavoro di Windows semplifica la creazione di programmi reattivi con esecuzione prolungata fornendo:  
   
--   Attività che accedono all'input esterno.  
+- Attività che accedono all'input esterno.  
   
--   Possibilità di creare oggetti <xref:System.Activities.Bookmark> che possono essere ripresi da un listener di host.  
+- Possibilità di creare oggetti <xref:System.Activities.Bookmark> che possono essere ripresi da un listener di host.  
   
--   Possibilità di rendere persistenti i dati di un flusso di lavoro e di scaricare quest'ultimo, quindi di ricaricarlo e riattivarlo in risposta alla ripresa di oggetti <xref:System.Activities.Bookmark> in un particolare flusso di lavoro.  
+- Possibilità di rendere persistenti i dati di un flusso di lavoro e di scaricare quest'ultimo, quindi di ricaricarlo e riattivarlo in risposta alla ripresa di oggetti <xref:System.Activities.Bookmark> in un particolare flusso di lavoro.  
   
  Un flusso di lavoro esegue continuamente attività finché non sono terminate o finché tutte le attività attualmente in esecuzione stanno aspettando l'input. In quest'ultimo caso, il flusso di lavoro è inattivo. È normale che i flussi di lavoro che si trovano nello stato di inattività vengono scaricati e ricaricati dall'host per continuare l'esecuzione quando arriva un messaggio. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fornisce la funzionalità per questa funzione e fornisce un criterio estendibile di scaricamento. Per i blocchi di esecuzione che usando dati allo stato volatile o altri dati che non possono essere resi persistenti, un'attività può indicare a un host che non deve essere resa persistente usando l'oggetto <xref:System.Activities.NoPersistHandle>. Un flusso di lavoro può rendere esplicitamente persistenti i propri dati in un supporto di archiviazione durevole tramite l'attività <xref:System.Activities.Statements.Persist>.

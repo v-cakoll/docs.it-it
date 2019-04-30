@@ -3,34 +3,34 @@ title: Servizio di routing
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991044"
 ---
 # <a name="routing-service"></a>Servizio di routing
 Il servizio di routing è un intermediario SOAP generico che funge da router dei messaggi. La funzionalità principale del servizio di routing consiste nella capacità di indirizzare messaggi in base al relativo contenuto, il che rende possibile l'inoltro di un messaggio a un endpoint client in base a un valore presente all'interno del messaggio stesso, nell'intestazione o nel corpo.  
   
  Il <xref:System.ServiceModel.Routing.RoutingService> viene implementato come servizio Windows Communication Foundation (WCF) nel <xref:System.ServiceModel.Routing> dello spazio dei nomi. Il servizio di routing espone uno o più endpoint servizio che ricevono messaggi e quindi indirizza ogni messaggio a uno o più endpoint client in base al contenuto del messaggio stesso. Il servizio offre le funzionalità indicate di seguito.  
   
--   Routing basato sul contenuto  
+- Routing basato sul contenuto  
   
-    -   Aggregazione dei servizi  
+    - Aggregazione dei servizi  
   
-    -   Controllo delle versioni dei servizi  
+    - Controllo delle versioni dei servizi  
   
-    -   Routing prioritario  
+    - Routing prioritario  
   
-    -   Configurazione dinamica  
+    - Configurazione dinamica  
   
--   Bridging del protocollo  
+- Bridging del protocollo  
   
--   Elaborazione SOAP  
+- Elaborazione SOAP  
   
--   Gestione avanzata degli errori  
+- Gestione avanzata degli errori  
   
--   Endpoint di backup  
+- Endpoint di backup  
   
  Mentre è possibile creare un servizio di intermediario che soddisfi uno o più di questi obiettivi, spesso tale implementazione viene associata a uno scenario o una soluzione specifica e non può essere agevolmente applicata alle nuove applicazioni.  
   
@@ -48,13 +48,13 @@ Il servizio di routing è un intermediario SOAP generico che funge da router dei
   
  Il raggruppamento dei filtri messaggi in apposite tabelle consente di costruire logica di routing in grado di gestire più scenari di routing, ad esempio:  
   
--   Aggregazione dei servizi  
+- Aggregazione dei servizi  
   
--   Controllo delle versioni dei servizi  
+- Controllo delle versioni dei servizi  
   
--   Routing prioritario  
+- Routing prioritario  
   
--   Configurazione dinamica  
+- Configurazione dinamica  
   
  Per altre informazioni sui filtri messaggi e le tabelle dei filtri, vedere [Routing Introduction](../../../../docs/framework/wcf/feature-details/routing-introduction.md) e [filtri messaggi](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
@@ -97,13 +97,13 @@ Il servizio di routing è un intermediario SOAP generico che funge da router dei
 ## <a name="streaming"></a>Flusso  
  Il servizio di routing può inviare flussi di messaggi se si imposta l'associazione in modo che supporti i flussi.  Tuttavia, in alcune condizioni potrebbe essere necessario memorizzare i messaggi nel buffer:  
   
--   Multicast (memorizzazione nel buffer per la creazione di copie aggiuntive dei messaggi)  
+- Multicast (memorizzazione nel buffer per la creazione di copie aggiuntive dei messaggi)  
   
--   Failover (memorizzazione nel buffer nel caso che sia necessario inviare il messaggio a un endpoint di backup)  
+- Failover (memorizzazione nel buffer nel caso che sia necessario inviare il messaggio a un endpoint di backup)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly impostato su false (memorizzazione nel buffer per inviare a MessageFilterTable un MessageBuffer in modo che i filtri possano esaminare il corpo del messaggio)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly impostato su false (memorizzazione nel buffer per inviare a MessageFilterTable un MessageBuffer in modo che i filtri possano esaminare il corpo del messaggio)  
   
--   Configurazione dinamica  
+- Configurazione dinamica  
   
 ## <a name="see-also"></a>Vedere anche
 

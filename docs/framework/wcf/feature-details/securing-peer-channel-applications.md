@@ -3,11 +3,11 @@ title: Protezione di applicazioni del canale peer
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
 ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990951"
 ---
 # <a name="securing-peer-channel-applications"></a>Protezione di applicazioni del canale peer
 Analogamente alle altre associazioni in [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` ha la protezione attivata per impostazione predefinita e offre la protezione basata sul trasporto e/o sui messaggi. In questo argomento vengono illustrati questi due tipi di sicurezza. Il tipo di sicurezza viene specificato dal tag della modalità di sicurezza nella specifica dell'associazione (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode` ).  
@@ -15,16 +15,16 @@ Analogamente alle altre associazioni in [!INCLUDE[vstecwinfx](../../../../includ
 ## <a name="transport-based-security"></a>Protezione basata sul trasporto  
  Il canale peer supporta due tipi di credenziali di autenticazione per la protezione del trasporto ed entrambi richiedono l'impostazione della proprietà `ClientCredentialSettings.Peer` sulla `ChannelFactory` associata:  
   
--   Password. I client usano la conoscenza di una password segreta per autenticare le connessioni. Quando viene usato questo tipo di credenziale, `ClientCredentialSettings.Peer.MeshPassword` deve passare una password valida e, facoltativamente, un'istanza di `X509Certificate2`.  
+- Password. I client usano la conoscenza di una password segreta per autenticare le connessioni. Quando viene usato questo tipo di credenziale, `ClientCredentialSettings.Peer.MeshPassword` deve passare una password valida e, facoltativamente, un'istanza di `X509Certificate2`.  
   
--   Certificato. Viene usata l'autenticazione dell'applicazione specifica. Quando viene usato questo tipo di credenziale, è necessario usare un'implementazione concreta di <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication`.  
+- Certificato. Viene usata l'autenticazione dell'applicazione specifica. Quando viene usato questo tipo di credenziale, è necessario usare un'implementazione concreta di <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication`.  
   
 ## <a name="message-based-security"></a>Protezione basata sui messaggi  
  Usando la protezione dei messaggi, un'applicazione può firmare i messaggi in uscita in modo che tutte le parti riceventi possano verificare che il messaggio sia stato inviato da una parte attendibile e non sia stato manomesso. Il canale peer supporta attualmente solo la firma dei messaggi con la credenziale X.509.  
   
 ## <a name="best-practices"></a>Suggerimenti  
   
--   Contenuto della sezione vengono illustrate le procedure consigliate per la protezione di applicazioni del canale peer.  
+- Contenuto della sezione vengono illustrate le procedure consigliate per la protezione di applicazioni del canale peer.  
   
 ### <a name="enable-security-with-peer-channel-applications"></a>Attivare la protezione con le applicazioni del canale peer  
  A causa della natura distribuita dei protocolli del canale peer, è difficile imporre appartenenza, riservatezza e privacy in una rete non protetta. È inoltre importante ricordare di proteggere la comunicazione tra i client e il servizio resolver. In PNRP (Peer Name Resolution Protocol) usare nomi protetti per evitare lo spoofing e altri attacchi comuni. Proteggere un servizio resolver personalizzato attivando la protezione sui client di connessione usati per contattare il servizio resolver, prevedendo entrambe le forme di sicurezza, quella basata sul trasporto e quella basata sui messaggi.  

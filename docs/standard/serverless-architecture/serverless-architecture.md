@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967823"
 ---
-# <a name="serverless-architecture"></a>Architettura senza server
+# <a name="serverless-architecture"></a>Architettura serverless
 
 Esistono molti approcci per l'utilizzo [senza server](http://azure.com/serverless) architetture. In questo capitolo illustra esempi di architetture comuni che si integrano senza server. Vengono inoltre descritti i problemi che possono comportare problemi aggiuntivi o richiedono attenzione aggiuntiva durante l'implementazione senza server. Infine, alcuni esempi di progettazione vengono forniti che illustrano diversi casi d'uso senza server.
 
@@ -19,7 +19,7 @@ Host senza server usano spesso un esistente basato su contenitori o un livello P
 
 ![Architettura di funzioni di Azure](./media/azure-functions-architecture.png)
 
-Il nucleo di processi Web fornisce un contesto di esecuzione per la funzione. Il Runtime di linguaggio esegue gli script, esegue le librerie e ospita il framework per la lingua di destinazione. Ad esempio, Node. js viene usato per eseguire funzioni JavaScript e .NET Framework viene usato per eseguire le funzioni C#. Si apprenderà ulteriori informazioni sulle opzioni di linguaggio e piattaforma più avanti in questo capitolo.
+Il nucleo di processi Web fornisce un contesto di esecuzione per la funzione. Il Runtime di linguaggio esegue gli script, esegue le librerie e ospita il framework per la lingua di destinazione. Ad esempio, Node. js viene usato per eseguire funzioni JavaScript e .NET Framework viene usato per eseguire le funzioni c#. Si apprenderà ulteriori informazioni sulle opzioni di linguaggio e piattaforma più avanti in questo capitolo.
 
 Alcuni progetti possono trarre vantaggio da un "secondo" per approccio senza server. Le applicazioni che si basano su microservizi possono implementare tutti i microservizi tramite la tecnologia senza server. La maggior parte delle App sono ibrido, seguendo una progettazione a più livelli e l'uso senza server per i componenti che hanno un significato perché i componenti sono modulare e scalabile in modo indipendente. Per consentire questi scenari ha senso, questa sezione illustra alcuni esempi comuni di architettura che usano senza server.
 

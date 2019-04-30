@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms]
 ms.assetid: c0f2e231-c5c9-413d-a507-75af2db499b6
 ms.openlocfilehash: 314d386ed69c8c14d90b4fa8abb61f19b0465890
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971973"
 ---
 # <a name="errorprovider-component-windows-forms"></a>Componente ErrorProvider (Windows Form)
 I moduli di Windows `ErrorProvider` componente viene utilizzato per indicare all'utente in modo non invadente che qualcosa non vada. Viene in genere usato in combinazione con la convalida dell'input utente in un form o visualizzare gli errori all'interno di un set di dati.  

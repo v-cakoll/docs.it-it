@@ -3,11 +3,11 @@ title: Applicazioni client di livello intermedio
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
 ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948148"
 ---
 # <a name="middle-tier-client-applications"></a>Applicazioni client di livello intermedio
 In questo argomento vengono illustrati alcuni aspetti specifici per le applicazioni client di livello intermedio che usano Windows Communication Foundation (WCF).  
@@ -17,19 +17,19 @@ In questo argomento vengono illustrati alcuni aspetti specifici per le applicazi
   
  Le applicazioni client di livello intermedio, tuttavia, possono creare rapidamente molti oggetti client WCF e, di conseguenza, esperienza maggiori requisiti di inizializzazione. Per migliorare le prestazioni delle applicazioni di livello intermedio durante le chiamate ai servizi è possibile seguire principalmente due diversi approcci:  
   
--   Memorizzare nella cache l'oggetto client WCF e usarlo di nuovo per le chiamate successive laddove possibile.  
+- Memorizzare nella cache l'oggetto client WCF e usarlo di nuovo per le chiamate successive laddove possibile.  
   
--   Creare un <xref:System.ServiceModel.ChannelFactory%601> dell'oggetto e quindi usare tale oggetto per creare oggetti di canale per ogni chiamata nuovi client WCF.  
+- Creare un <xref:System.ServiceModel.ChannelFactory%601> dell'oggetto e quindi usare tale oggetto per creare oggetti di canale per ogni chiamata nuovi client WCF.  
   
  Quando si seguono queste procedure è opportuno considerare gli aspetti seguenti:  
   
--   Se il servizio gestisce uno stato di specifiche del client tramite una sessione, è possibile riutilizzare il client WCF di livello intermedio con richieste di vari livelli poiché lo stato del servizio è legato a quella del client di livello intermedio.  
+- Se il servizio gestisce uno stato di specifiche del client tramite una sessione, è possibile riutilizzare il client WCF di livello intermedio con richieste di vari livelli poiché lo stato del servizio è legato a quella del client di livello intermedio.  
   
--   Se il servizio deve eseguire l'autenticazione in base al client, è necessario creare un nuovo client per ogni richiesta in ingresso nel livello intermedio anziché riutilizzare il client di livello intermedio WCF (o all'oggetto canale client WCF) perché le credenziali del client di livello intermedio non può essere modificato dopo il client di WCF (o <xref:System.ServiceModel.ChannelFactory%601>) è stato creato.  
+- Se il servizio deve eseguire l'autenticazione in base al client, è necessario creare un nuovo client per ogni richiesta in ingresso nel livello intermedio anziché riutilizzare il client di livello intermedio WCF (o all'oggetto canale client WCF) perché le credenziali del client di livello intermedio non può essere modificato dopo il client di WCF (o <xref:System.ServiceModel.ChannelFactory%601>) è stato creato.  
   
--   Sebbene i canali e i client creati dai canali siano thread-safe, è possibile che non supportino la scrittura di più messaggi in rete contemporaneamente. Se vengono inviati messaggi di grandi dimensioni, in particolare se viene eseguito il flusso, l'operazione di invio potrebbe bloccarsi in attesa del completamento di un'altra operazione di invio. Ciò causa due tipi di problemi: la mancanza di concorrenza e la possibilità di deadlock se il flusso di controllo torna al servizio riutilizzando il canale (ovvero, il client condiviso chiama un servizio il cui percorso di codice comporta un callback al client condiviso). Questo vale indipendentemente dal tipo di client WCF che si riutilizza.  
+- Sebbene i canali e i client creati dai canali siano thread-safe, è possibile che non supportino la scrittura di più messaggi in rete contemporaneamente. Se vengono inviati messaggi di grandi dimensioni, in particolare se viene eseguito il flusso, l'operazione di invio potrebbe bloccarsi in attesa del completamento di un'altra operazione di invio. Ciò causa due tipi di problemi: la mancanza di concorrenza e la possibilità di deadlock se il flusso di controllo torna al servizio riutilizzando il canale (ovvero, il client condiviso chiama un servizio il cui percorso di codice comporta un callback al client condiviso). Questo vale indipendentemente dal tipo di client WCF che si riutilizza.  
   
--   È necessario gestire i canali in stato di errore indipendentemente dal fatto che si condivida o meno il canale. Quando i canali vengono riutilizzati, un canale in stato di errore può tuttavia annullare più richieste o operazioni di invio in sospeso.  
+- È necessario gestire i canali in stato di errore indipendentemente dal fatto che si condivida o meno il canale. Quando i canali vengono riutilizzati, un canale in stato di errore può tuttavia annullare più richieste o operazioni di invio in sospeso.  
   
  Per un esempio che illustra le procedure consigliate per riutilizzare un client per più richieste, vedere [Data Binding in un Client ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md).  
   

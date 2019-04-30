@@ -3,11 +3,11 @@ title: Provider di token rilasciati in modo durevole
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
 ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990210"
 ---
 # <a name="durable-issued-token-provider"></a>Provider di token rilasciati in modo durevole
 Questo esempio illustra come implementare un provider di token rilasciato del client personalizzato.  
@@ -15,21 +15,21 @@ Questo esempio illustra come implementare un provider di token rilasciato del cl
 ## <a name="discussion"></a>Discussione  
  Un provider di token in Windows Communication Foundation (WCF) viene utilizzato per fornire le credenziali all'infrastruttura di sicurezza. In generale, il provider di token esamina la destinazione ed emette credenziali adatte in modo che l'infrastruttura di sicurezza possa proteggere il messaggio. WCF viene fornito con un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] provider di token. I provider di token personalizzati sono utili nei casi seguenti:  
   
--   Se è disponibile un archivio di credenziali con cui il provider di token incluso non è in grado di operare.  
+- Se è disponibile un archivio di credenziali con cui il provider di token incluso non è in grado di operare.  
   
--   Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il client WCF utilizza le credenziali.  
+- Se si desidera fornire un meccanismo personalizzato per la trasformazione delle credenziali dal punto di cui l'utente fornisce i dettagli a quando il client WCF utilizza le credenziali.  
   
--   Se si sta compilando un token personalizzato.  
+- Se si sta compilando un token personalizzato.  
   
  Questo esempio illustra come compilare un provider di token personalizzato che memorizza nella cache token rilasciati da un servizio token di sicurezza (STS, Security Token Service).  
   
  Per riassumere, questo esempio dimostra quanto segue.  
   
--   Come è possibile configurare un client con un provider personalizzato.  
+- Come è possibile configurare un client con un provider personalizzato.  
   
--   Come i token rilasciati possono essere memorizzati nella cache e forniti al client di WCF.  
+- Come i token rilasciati possono essere memorizzati nella cache e forniti al client di WCF.  
   
--   Come viene autenticato il servizio dal client mediante il certificato X.509 del server.  
+- Come viene autenticato il servizio dal client mediante il certificato X.509 del server.  
   
  L'esempio è costituito da un programma console del client (Client.exe), da un programma console del servizio token di sicurezza (Securitytokenservice.exe) e da un programma console del servizio (Service.exe). Il servizio implementa un contratto che definisce un modello di comunicazione richiesta/risposta. Il contratto è definito dall'interfaccia `ICalculator` che espone operazioni matematiche (somma, sottrazione, moltiplicazione e divisione). Il client riceve un token di sicurezza dal servizio token di sicurezza (STS), esegue richieste sincrone al servizio per un'operazione matematica specificata e il servizio risponde fornendo il risultato. L'attività del client è visibile nella finestra della console.  
   

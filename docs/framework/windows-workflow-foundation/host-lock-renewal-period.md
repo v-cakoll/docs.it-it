@@ -3,14 +3,14 @@ title: Host Lock Renewal Period
 ms.date: 03/30/2017
 ms.assetid: f8ba94fc-27e0-4d8e-8f85-50a6d2a3cd43
 ms.openlocfilehash: 91d83259c766120f7e3ffc9e49f1cf1b18c32a18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945613"
 ---
 # <a name="host-lock-renewal-period"></a>Host Lock Renewal Period
-Il **Host Lock Renewal Period** proprietà dell'archivio di istanze del flusso di lavoro SQL consente di specificare il periodo di tempo entro il quale l'host rinnova il blocco su un'istanza del flusso di lavoro. Il blocco rimane valido per Host Lock Renewal Period + 30 secondi. Se l'host non riesce a rinnovare il blocco (ovvero estende il lease) entro questo periodo di tempo, il blocco scade e il provider di persistenza sblocca l'istanza. Il valore di questa proprietà è di tipo TimeSpan nel formato "hh". Il valore minimo consentito è "00: 00:01" (1 secondo). Il valore predefinito di questa proprietà è "00: 00:30" (30 secondi).  
+Il **Host Lock Renewal Period** proprietà la Store di istanza del flusso di lavoro SQL consente di specificare il periodo di tempo entro il quale l'host rinnova il blocco su un'istanza del flusso di lavoro. Il blocco rimane valido per Host Lock Renewal Period + 30 secondi. Se l'host non riesce a rinnovare il blocco (ovvero estende il lease) entro questo periodo di tempo, il blocco scade e il provider di persistenza sblocca l'istanza. Il valore di questa proprietà è di tipo TimeSpan nel formato "hh". Il valore minimo consentito è "00: 00:01" (1 secondo). Il valore predefinito di questa proprietà è "00: 00:30" (30 secondi).  
   
  Questa proprietà è significativa nelle situazioni in cui un host del servizio flusso di lavoro non riesce prima che possa sbloccare un'istanza del servizio flusso di lavoro che possiede. In questo scenario il blocco sull'istanza del servizio flusso di lavoro nel database di persistenza viene rimosso dal provider di persistenza dopo la scadenza del blocco in modo che un altro host del servizio flusso di lavoro in esecuzione nello stesso computer o in un altro computer in una server farm possa acquisire il blocco e caricare l'istanza del servizio flusso di lavoro in memoria per riprendere l'esecuzione dall'ultimo stato persistente.  
   
