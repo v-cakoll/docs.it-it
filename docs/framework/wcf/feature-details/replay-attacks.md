@@ -3,11 +3,11 @@ title: Attacchi di tipo replay
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991146"
 ---
 # <a name="replay-attacks"></a>Attacchi di tipo replay
 Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato copia un flusso di messaggi tra due parti e lo riproduce verso una o più parti. Se l'attacco non viene respinto, i computer colpiti elaborano il flusso come se i messaggi fossero legittimi. Ciò determina una serie di conseguenze negative, ad esempio la creazione di ordini ridondanti di un articolo.  
@@ -17,11 +17,11 @@ Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato co
   
  Attacchi di tipo reflection vengono mitigati per impostazione predefinita perché il modello di servizio WCF aggiunge un ID messaggio firmato ai messaggi di richiesta e richiede un oggetto firmato `relates-to` intestazione nei messaggi di risposta. Risulta di conseguenza impossibile riprodurre il messaggio di richiesta come risposta. Negli scenari che prevedono messaggi affidabili gli attacchi di tipo reflection vengono respinti per i motivi seguenti:  
   
--   Lo schema dei messaggi di creazione di sequenza non corrisponde a quello di creazione di sequenza di risposta.  
+- Lo schema dei messaggi di creazione di sequenza non corrisponde a quello di creazione di sequenza di risposta.  
   
--   Per le sequenze simplex, i messaggi di sequenza inviati dal client non possono essere riprodotti verso il client stesso in quanto quest'ultimo non è in grado di riconoscere tali messaggi.  
+- Per le sequenze simplex, i messaggi di sequenza inviati dal client non possono essere riprodotti verso il client stesso in quanto quest'ultimo non è in grado di riconoscere tali messaggi.  
   
--   Per le sequenze duplex, i due ID di sequenza devono essere univoci. Inoltre, ogni intestazione e corpo della sequenza è firmato. Risulta pertanto impossibile riprodurre un messaggio di sequenza in uscita sottoforma di messaggio di sequenza in ingresso.  
+- Per le sequenze duplex, i due ID di sequenza devono essere univoci. Inoltre, ogni intestazione e corpo della sequenza è firmato. Risulta pertanto impossibile riprodurre un messaggio di sequenza in uscita sottoforma di messaggio di sequenza in ingresso.  
   
  Le uniche associazioni vulnerabili agli attacchi di tipo reflection sono quelle in cui non viene applicata la specifica WS-Addressing, ovvero le associazioni personalizzate in cui la funzionalità WS-Addressing è stata disattivata e in cui si utilizza la protezione basata su chiavi simmetriche. Per impostazione predefinita, l'associazione <xref:System.ServiceModel.BasicHttpBinding> non applica la specifica WS-Addressing. Tuttavia, tale associazione presenta una modalità di sicurezza basata su chiavi simmetriche in grado di respingere gli attacchi di questo tipo.  
   
@@ -32,9 +32,9 @@ Oggetto *attacco di tipo replay* si verifica quando un utente malintenzionato co
   
  Le mitigazioni includono:  
   
--   Usare una modalità di sicurezza dei messaggi che preveda token del contesto di sicurezza con stato. La funzionalità di conversazione protetta può essere attiva o disattivata. Per altre informazioni, vedere [Procedura: Creare un contesto di sicurezza Token per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+- Usare una modalità di sicurezza dei messaggi che preveda token del contesto di sicurezza con stato. La funzionalità di conversazione protetta può essere attiva o disattivata. Per altre informazioni, vedere [Procedura: Creare un contesto di sicurezza Token per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
--   Configurare il servizio in modo che utilizzi un meccanismo di sicurezza a livello di trasporto.  
+- Configurare il servizio in modo che utilizzi un meccanismo di sicurezza a livello di trasporto.  
   
 ## <a name="see-also"></a>Vedere anche
 

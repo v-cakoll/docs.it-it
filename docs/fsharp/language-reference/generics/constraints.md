@@ -3,11 +3,11 @@ title: Vincoli
 description: Informazioni su F# vincoli che si applicano ai parametri di tipo generico per specificare i requisiti per un argomento di tipo in una funzione o un tipo generico.
 ms.date: 05/16/2016
 ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937514"
 ---
 # <a name="constraints"></a>Vincoli
 
@@ -32,7 +32,7 @@ Esistono diversi vincoli diversi, che è possibile applicare per limitare i tipi
 |Vincolo di tipo valore|: uno struct|Il tipo specificato deve essere un tipo di valore .NET.|
 |Vincolo di tipo riferimento|: non struct|Il tipo specificato deve essere un tipo di riferimento .NET.|
 |Vincolo di tipo di enumerazione|: enumerazione&lt;*tipo sottostante*&gt;|Il tipo specificato deve essere un tipo enumerato che contiene il tipo sottostante specificato. non destinato all'uso comune.|
-|Vincolo di delegato|: delegare&lt;*-parametri-tipo di tupla*, *tipo restituito*&gt;|Il tipo specificato deve essere un tipo delegato che contiene gli argomenti specificati e restituire valore. non destinato all'uso comune.|
+|Vincolo di delegato|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|Il tipo specificato deve essere un tipo delegato che contiene gli argomenti specificati e restituire valore. non destinato all'uso comune.|
 |Vincolo di confronto|: confronto|Il tipo specificato deve supportare il confronto.|
 |Vincolo di uguaglianza|: uguaglianza|Il tipo specificato deve supportare l'uguaglianza.|
 |Vincolo non gestito|: non gestito|Il tipo specificato deve essere un tipo non gestito. Tipi non gestiti sono determinati tipi primitivi (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, o `decimal`), tipi di enumerazione `nativeptr<_>`, o una struttura non generica i cui campi sono tutti i tipi non gestiti.|

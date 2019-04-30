@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986479"
 ---
 # <a name="callid-structure"></a>Struttura CALL_ID
 Fornisce informazioni relative a una funzione che viene chiamata un debugger. Vedere le [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfaccia per altre informazioni.  

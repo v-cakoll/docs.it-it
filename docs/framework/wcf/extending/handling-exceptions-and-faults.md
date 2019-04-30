@@ -3,11 +3,11 @@ title: Gestione di eccezioni ed errori
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991408"
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestione di eccezioni ed errori
 Le eccezioni vengono utilizzate per comunicare errori localmente, all'interno del servizio o nell'implementazione del client. Gli errori, d'altra parte, vengono utilizzati per comunicare problemi tra servizi, ad esempio dal server al client o viceversa. Oltre agli errori, i canali del trasporto spesso utilizzano meccanismi specifici per comunicare errori a livello di trasporto. Il trasporto HTTP, ad esempio, utilizza codici di stato, come 404, per comunicare un URL di endpoint inesistente (nessun endpoint al quale restituire un errore). Questo documento è composto da tre sezioni che contengono materiale sussidiario utile per gli autori di canali personalizzati. Nella prima sezione è contenuto materiale sussidiario sulle circostanze e le modalità di definizione e generazione delle eccezioni. Nella seconda sezione sono fornite istruzioni sulla generazione e l'utilizzo di errori. Nella terza sezione viene spiegato come fornire informazioni di traccia per aiutare l'utente del canale personalizzato a risolvere i problemi delle applicazioni in esecuzione.  
@@ -302,16 +302,16 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` restituisce `true` se l'errore è un errore `mustUnderstand`. `WasHeaderNotUnderstood` restituisce `true` se l'intestazione con il nome e lo spazio dei nomi specificati è inclusa nell'errore come intestazione NotUnderstood.  In caso contrario restituirà `false`.  
+ `IsMustUnderstandFault` restituisce `true` se l'errore è un errore `mustUnderstand`. `WasHeaderNotUnderstood` restituisce `true` se l'intestazione con il nome e lo spazio dei nomi specificati è inclusa nell'errore come intestazione NotUnderstood.  In caso contrario, restituirà `false`.  
   
  Se un canale genera un'intestazione contrassegnata con MustUnderstand = true, tale livello deve inoltre implementare il modello API di generazione delle eccezioni e convertire gli errori `mustUnderstand` causati da tale intestazione in un'eccezione più utile, come descritto in precedenza.  
   
 ## <a name="tracing"></a>Traccia  
  In .NET Framework è disponibile un meccanismo per tenere traccia dell'esecuzione del programma che facilita la diagnosi delle applicazioni di produzione o di problemi intermittenti laddove non è possibile allegare semplicemente un debugger ed eseguire il codice. I componenti principali di questo meccanismo si trovano nello spazio dei nomi <xref:System.Diagnostics?displayProperty=nameWithType> e consistono in:  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, origine delle informazioni di traccia da scrivere, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, classe di base astratta per listener concreti che ricevono le informazioni da tracciare da <xref:System.Diagnostics.TraceSource> e le restituiscono a una destinazione specifica del listener. <xref:System.Diagnostics.XmlWriterTraceListener>, ad esempio, restituisce informazioni di traccia a un file XML. <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, infine, che consente all'utente dell'applicazione di controllare il dettaglio della traccia ed è in genere specificato nella configurazione.  
+- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, origine delle informazioni di traccia da scrivere, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, classe di base astratta per listener concreti che ricevono le informazioni da tracciare da <xref:System.Diagnostics.TraceSource> e le restituiscono a una destinazione specifica del listener. <xref:System.Diagnostics.XmlWriterTraceListener>, ad esempio, restituisce informazioni di traccia a un file XML. <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, infine, che consente all'utente dell'applicazione di controllare il dettaglio della traccia ed è in genere specificato nella configurazione.  
   
--   Oltre ai componenti principali, è possibile usare la [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) visualizzare e cercare WCF esegue la traccia. Lo strumento è progettato specificamente per i file di traccia generato da WCF e scritti utilizzando <xref:System.Diagnostics.XmlWriterTraceListener>. Nella figura seguente sono illustrati i vari componenti della traccia.  
+- Oltre ai componenti principali, è possibile usare la [strumento Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) visualizzare e cercare WCF esegue la traccia. Lo strumento è progettato specificamente per i file di traccia generato da WCF e scritti utilizzando <xref:System.Diagnostics.XmlWriterTraceListener>. Nella figura seguente sono illustrati i vari componenti della traccia.  
   
  ![Gestione di eccezioni ed errori](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   

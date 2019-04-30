@@ -3,11 +3,11 @@ title: Esempio di configurazione
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002243"
 ---
 # <a name="configuration-sample"></a>Esempio di configurazione
 Questo esempio illustra l'utilizzo di un file di configurazione per rendere individuabile un servizio.  
@@ -27,15 +27,15 @@ Questo esempio illustra l'utilizzo di un file di configurazione per rendere indi
 ## <a name="service-configuration"></a>Configurazione del servizio  
  Il file di configurazione in questo esempio illustra due funzionalità:  
   
--   Rendere individuabile il servizio su un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.  
+- Rendere individuabile il servizio su un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard.  
   
--   Modificare le informazioni correlate all'individuazione per l'endpoint dell'applicazione del servizio e modificare alcune delle impostazioni correlate all'individuazione nell'endpoint standard.  
+- Modificare le informazioni correlate all'individuazione per l'endpoint dell'applicazione del servizio e modificare alcune delle impostazioni correlate all'individuazione nell'endpoint standard.  
   
  Per abilitare l'individuazione, è necessario effettuare alcune modifiche nel file di configurazione dell'applicazione per il servizio:  
   
--   È necessario aggiungere un endpoint di individuazione all'elemento `<service>`. Si tratta di un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard. Si tratta di un endpoint del sistema che il runtime associa al servizio di individuazione. Il servizio di individuazione è in ascolto dei messaggi su tale endpoint.  
+- È necessario aggiungere un endpoint di individuazione all'elemento `<service>`. Si tratta di un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> standard. Si tratta di un endpoint del sistema che il runtime associa al servizio di individuazione. Il servizio di individuazione è in ascolto dei messaggi su tale endpoint.  
   
--   Un comportamento `<serviceDiscovery>` viene aggiunto alla sezione `<serviceBehaviors>`. Ciò consente al servizio di essere individuato in fase di runtime e l'endpoint di individuazione menzionato in precedenza viene utilizzato per rimanere in ascolto di messaggi `Probe` e `Resolve` di individuazione. Con queste due aggiunte, il servizio è individuabile in corrispondenza dell'endpoint di individuazione specificato.  
+- Un comportamento `<serviceDiscovery>` viene aggiunto alla sezione `<serviceBehaviors>`. Ciò consente al servizio di essere individuato in fase di runtime e l'endpoint di individuazione menzionato in precedenza viene utilizzato per rimanere in ascolto di messaggi `Probe` e `Resolve` di individuazione. Con queste due aggiunte, il servizio è individuabile in corrispondenza dell'endpoint di individuazione specificato.  
   
  Nel frammento di configurazione seguente viene illustrato un servizio con un endpoint dell'applicazione e un endpoint di individuazione definito:  
   

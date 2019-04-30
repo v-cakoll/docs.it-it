@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983268"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementazione del pattern di controllo Selection di automazione interfaccia utente
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59087722"
 ## <a name="implementation-guidelines-and-conventions"></a>Linee guida e convenzioni di implementazione  
  Quando si implementa il pattern di controllo Selection, tenere presenti le linee guida e le convenzioni seguenti:  
   
--   I controlli che implementano <xref:System.Windows.Automation.Provider.ISelectionProvider> consentono la selezione di uno o più elementi figlio. Ad esempio, una casella di riepilogo e le visualizzazioni elenco e struttura ad albero supportano più selezioni, mentre una casella combinata, un dispositivo di scorrimento e un gruppo di pulsanti di opzione supportano solo una selezione.  
+- I controlli che implementano <xref:System.Windows.Automation.Provider.ISelectionProvider> consentono la selezione di uno o più elementi figlio. Ad esempio, una casella di riepilogo e le visualizzazioni elenco e struttura ad albero supportano più selezioni, mentre una casella combinata, un dispositivo di scorrimento e un gruppo di pulsanti di opzione supportano solo una selezione.  
   
--   I controlli che presentano un intervallo minimo, massimo e continuo, ad esempio il controllo dispositivo di scorrimento **Volume** , deve implementare <xref:System.Windows.Automation.Provider.IRangeValueProvider> anziché <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
+- I controlli che presentano un intervallo minimo, massimo e continuo, ad esempio il controllo dispositivo di scorrimento **Volume** , deve implementare <xref:System.Windows.Automation.Provider.IRangeValueProvider> anziché <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
--   I controlli a selezione singola che gestiscono i controlli figlio che implementano <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, ad esempio il dispositivo di scorrimento **Risoluzione schermo** nella finestra di dialogo **Proprietà di visualizzazione** oppure il controllo di selezione **Selezione colori** in [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (illustrato di seguito), devono implementare <xref:System.Windows.Automation.Provider.ISelectionProvider>. I relativi elementi figlio devono implementare <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- I controlli a selezione singola che gestiscono i controlli figlio che implementano <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, ad esempio il dispositivo di scorrimento **Risoluzione schermo** nella finestra di dialogo **Proprietà di visualizzazione** oppure il controllo di selezione **Selezione colori** in [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (illustrato di seguito), devono implementare <xref:System.Windows.Automation.Provider.ISelectionProvider>. I relativi elementi figlio devono implementare <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
  ![Selezione colori con il giallo evidenziato. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Esempio di mapping delle stringhe dei campioni colore  
   
--   I menu non supportano <xref:System.Windows.Automation.SelectionPattern>. Se vengono usate voci di menu che includono testo e grafica, ad esempio gli elementi **Riquadro di anteprima** nel menu **Visualizza** in [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)], e se occorre indicare lo stato, è necessario implementare <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+- I menu non supportano <xref:System.Windows.Automation.SelectionPattern>. Se vengono usate voci di menu che includono testo e grafica, ad esempio gli elementi **Riquadro di anteprima** nel menu **Visualizza** in [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)], e se occorre indicare lo stato, è necessario implementare <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>Membri obbligatori per ISelectionProvider  

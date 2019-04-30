@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: esporre un contratto a client SOAP e Web'
+title: 'Procedura: Esporre un contratto a client SOAP e Web'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000922"
 ---
-# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Procedura: esporre un contratto a client SOAP e Web
+# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Procedura: Esporre un contratto a client SOAP e Web
 
-Per impostazione predefinita, Windows Communication Foundation (WCF) rende disponibili endpoint solo ai client SOAP. Nelle [procedura: creare un servizio HTTP Web WCF base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un endpoint viene reso disponibile ai client non SOAP. Possono verificarsi casi in cui si desidera rendere lo stesso contratto disponibile in entrambi i modi, come endpoint Web e come endpoint SOAP. In questo argomento viene illustrato un esempio di come ottenere tale risultato.
+Per impostazione predefinita, Windows Communication Foundation (WCF) rende disponibili endpoint solo ai client SOAP. In [come: Creare un servizio HTTP Web WCF base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un endpoint viene reso disponibile ai client non SOAP. Possono verificarsi casi in cui si desidera rendere lo stesso contratto disponibile in entrambi i modi, come endpoint Web e come endpoint SOAP. In questo argomento viene illustrato un esempio di come ottenere tale risultato.
 
 ## <a name="to-define-the-service-contract"></a>Per definire il contratto di servizio
 

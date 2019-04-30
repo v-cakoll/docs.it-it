@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
 ms.openlocfilehash: 5e967c1bbe54095cc11e48b014600158da7fe6a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011684"
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Formattazione e stile di base nel controllo DataGridView Windows Form
 Il `DataGridView` controllo rende più semplice definire l'aspetto di base di celle e la formattazione dei valori delle celle. È possibile definire l'aspetto e impostando le proprietà di formattazione stili per le singole celle, per le celle delle righe e colonne specifiche o per tutte le celle nel controllo di `DataGridViewCellStyle` oggetti accessibili tramite diversi `DataGridView` proprietà del controllo. Inoltre, è possibile modificare questi stili dinamicamente in base ai fattori quali il valore di cella tramite la gestione di `CellFormatting` evento.  

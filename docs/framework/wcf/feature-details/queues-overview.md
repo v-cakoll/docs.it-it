@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991252"
 ---
 # <a name="queues-overview"></a>Panoramica delle code
 Contenuto della sezione vengono introdotti i concetti generali e fondamentali alla base delle comunicazioni in coda. Nelle sezioni successive esplorare in dettaglio come i concetti dell'accodamento descritti di seguito si applicano in Windows Communication Foundation (WCF).  
@@ -36,9 +36,9 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
 ## <a name="queues-and-transactions"></a>Code e transazioni  
  Le transazioni consentono di raggruppare un set di operazioni in modo che se si verifica un errore in un'operazione, tutte le operazioni avranno esito negativo. Per un esempio di come usare transazioni, si supponga che una persona utilizzi lo sportello bancomat per trasferire 1.000 euro dal conto di risparmio al conto corrente. Questo passaggio comporta le operazioni seguenti:  
   
--   Prelievo di 1.000 euro dal conto di risparmio.  
+- Prelievo di 1.000 euro dal conto di risparmio.  
   
--   Deposito di 1.000 euro nel conto corrente.  
+- Deposito di 1.000 euro nel conto corrente.  
   
  Se la prima operazione riesce e vengono prelevati 1.000 euro dal conto di risparmio ma la seconda operazione non riesce, i 1.000 euro vengono persi perché sono già stati prelevati dal conto di risparmio. Per preservare un stato valido dei conti, se un'operazione non riesce, entrambe le operazioni devono avere esito negativo.  
   
@@ -59,9 +59,9 @@ Contenuto della sezione vengono introdotti i concetti generali e fondamentali al
   
  Qualsiasi errore, ad esempio un messaggio che non riesce a raggiungere la coda di destinazione o la scadenza della durata del messaggio, deve essere elaborato separatamente. Non è insolito, pertanto, che le applicazioni in coda scrivano due set di logica:  
   
--   La normale logica del client e del servizio per l'invio e la ricezione dei messaggi.  
+- La normale logica del client e del servizio per l'invio e la ricezione dei messaggi.  
   
--   La logica di compensazione per gestire i messaggi dalla trasmissione o dal recapito non riusciti.  
+- La logica di compensazione per gestire i messaggi dalla trasmissione o dal recapito non riusciti.  
   
  Nelle sezioni seguenti vengono esaminati questi concetti.  
   

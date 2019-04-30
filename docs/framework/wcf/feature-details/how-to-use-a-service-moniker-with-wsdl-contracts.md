@@ -3,11 +3,11 @@ title: 'Procedura: Usare un moniker del servizio con i contratti WSDL'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
 ms.openlocfilehash: 2968641538bf0b4d0e136d5784bf69e5e7fcb3a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972887"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Procedura: Usare un moniker del servizio con i contratti WSDL
 In alcune situazioni può essere necessario disporre di un client per l'interoperabilità COM completamente autonomo. Il servizio che si desidera chiamare può non esporre un endpoint MEX e la DLL del client WCF può non essere registrata per l'interoperabilità COM. In questi casi è possibile creare un file WSDL che descriva il servizio e lo passi nel moniker del servizio WCF. In questo argomento viene illustrato come chiamare l'esempio WCF della Guida introduttiva utilizzando un moniker WSDL WCF.  

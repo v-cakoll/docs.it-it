@@ -3,11 +3,11 @@ title: Convalida basata su codice imperativo
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
 ms.openlocfilehash: 333e1e200825dd1fc8ed750abbecbb309da66663
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009773"
 ---
 # <a name="imperative-code-based-validation"></a>Convalida basata su codice imperativo
 
@@ -15,7 +15,7 @@ La convalida basata su codice imperativo fornisce un modo semplice per la conval
   
 ## <a name="using-code-based-validation"></a>Utilizzo della convalida basata su codice
 
-La convalida basata su codice è supportata dalle attività che derivano dagli oggetti <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> e  <xref:System.Activities.NativeActivity>. Il codice di convalida può essere inserito nell'override <xref:System.Activities.CodeActivity.CacheMetadata%2A> e gli errori o gli avvisi di convalida possono essere aggiunti all'argomento dei metadati. Nell'esempio seguente se `Cost` è maggiore di `Price`, ai metadati viene aggiunto un errore di convalida.  
+La convalida basata su codice è supportata dalle attività che derivano dagli oggetti <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> e <xref:System.Activities.NativeActivity>. Il codice di convalida può essere inserito nell'override <xref:System.Activities.CodeActivity.CacheMetadata%2A> e gli errori o gli avvisi di convalida possono essere aggiunti all'argomento dei metadati. Nell'esempio seguente se `Cost` è maggiore di `Price`, ai metadati viene aggiunto un errore di convalida.  
   
 > [!NOTE]
 > Si noti che `Cost` e `Price` non sono argomenti dell'attività, ma proprietà impostate in fase di progettazione. Per questo motivo i valori possono essere convalidati nell'override <xref:System.Activities.CodeActivity.CacheMetadata%2A>. Il valore dei dati passati mediante un argomento non può essere convalidato in fase di progettazione perché i dati non si propagano fino alla fase di esecuzione, ma gli argomenti dell'attività possono essere convalidati per assicurarsi che siano associati usano i gruppi di overload e di attributo `RequiredArgument`. Questo codice di esempio rileva l'attributo `RequiredArgument` per l'argomento `Description` e, se non è associato, viene generato un errore di convalida. Gli argomenti obbligatori vengono analizzati [argomenti necessari e i gruppi di Overload](required-arguments-and-overload-groups.md).  

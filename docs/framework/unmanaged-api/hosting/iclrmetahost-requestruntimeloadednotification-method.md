@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984646"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>Metodo ICLRMetaHost::RequestRuntimeLoadedNotification
 Fornisce una funzione di callback che viene garantita da chiamare quando viene caricata inizialmente una versione di common language runtime (CLR), ma non ancora iniziata. Questo metodo sostituisce le [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) (funzione).  
@@ -49,11 +49,11 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="remarks"></a>Note  
  La richiamata funziona nel modo seguente:  
   
--   Il callback viene richiamato solo quando viene caricato un runtime per la prima volta.  
+- Il callback viene richiamato solo quando viene caricato un runtime per la prima volta.  
   
--   Non viene richiamato il callback per i caricamenti rientranti dello stesso runtime.  
+- Non viene richiamato il callback per i caricamenti rientranti dello stesso runtime.  
   
--   Per i carichi di runtime non rientrante, le chiamate alla funzione di callback vengono serializzate.  
+- Per i carichi di runtime non rientrante, le chiamate alla funzione di callback vengono serializzate.  
   
  La funzione di callback presenta il seguente prototipo:  
   
@@ -66,13 +66,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  I prototipi di funzione di callback sono i seguenti:  
   
--   `pfnCallbackThreadSet`:  
+- `pfnCallbackThreadSet`:  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   `pfnCallbackThreadUnset`:  
+- `pfnCallbackThreadUnset`:  
   
     ```  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
@@ -80,11 +80,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Se l'host si intende caricare o provocare un altro runtime da caricare in modo rientrante, la `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` parametri che vengono messe a disposizione nel callback di funzione deve essere utilizzata nel modo seguente:  
   
--   `pfnCallbackThreadSet` deve essere chiamato dal thread che potrebbe causare un carico di runtime prima del tentativo di un carico di questo tipo.  
+- `pfnCallbackThreadSet` deve essere chiamato dal thread che potrebbe causare un carico di runtime prima del tentativo di un carico di questo tipo.  
   
--   `pfnCallbackThreadUnset` deve essere chiamato quando il thread non è più comporterà un caricamento di runtime (e prima della restituzione dal callback iniziale).  
+- `pfnCallbackThreadUnset` deve essere chiamato quando il thread non è più comporterà un caricamento di runtime (e prima della restituzione dal callback iniziale).  
   
--   `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` sono entrambi non rientrante.  
+- `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` sono entrambi non rientrante.  
   
 > [!NOTE]
 >  Hosting di applicazioni non devono chiamare `pfnCallbackThreadSet` e `pfnCallbackThreadUnset` rientrano nell'ambito del `pCallbackFunction` parametro.  

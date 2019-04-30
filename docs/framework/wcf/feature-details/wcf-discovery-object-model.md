@@ -3,11 +3,11 @@ title: Modello a oggetti WCF Discovery
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935538"
 ---
 # <a name="wcf-discovery-object-model"></a>Modello a oggetti WCF Discovery
 WCF Discovery è costituito da un set di tipi che forniscono un modello di programmazione unificato che consente di scrivere servizi individuabili al runtime e client in grado di trovare e utilizzare tali servizi.  
@@ -22,49 +22,49 @@ WCF Discovery è costituito da un set di tipi che forniscono un modello di progr
 ## <a name="object-model"></a>Modello a oggetti  
  L'API di WCF Discovery definisce le classi seguenti:  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementClient>  
+- <xref:System.ServiceModel.Discovery.AnnouncementClient>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementService>  
+- <xref:System.ServiceModel.Discovery.AnnouncementService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClient>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClient>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
+- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
+- <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryService>  
+- <xref:System.ServiceModel.Discovery.DiscoveryService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
+- <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
   
--   <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
+- <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria>  
+- <xref:System.ServiceModel.Discovery.FindCriteria>  
   
--   <xref:System.ServiceModel.Discovery.FindRequestContext>  
+- <xref:System.ServiceModel.Discovery.FindRequestContext>  
   
--   <xref:System.ServiceModel.Discovery.FindResponse>  
+- <xref:System.ServiceModel.Discovery.FindResponse>  
   
--   <xref:System.ServiceModel.Discovery.ResolveCriteria>  
+- <xref:System.ServiceModel.Discovery.ResolveCriteria>  
   
--   <xref:System.ServiceModel.Discovery.ResolveResponse>  
+- <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
  
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
 ## <a name="announcementclient"></a>AnnouncementClient  
  La classe <xref:System.ServiceModel.Discovery.AnnouncementClient> include metodi sincroni e asincroni per l'invio di messaggi di annuncio. Esistono due tipi di messaggi di annuncio, Hello e Bye. Il messaggio Hello viene inviato per indicare che un servizio è diventato disponibile, mentre il messaggio Bye viene inviato per indicare che un servizio esistente non è più disponibile. Lo sviluppatore crea un'istanza di <xref:System.ServiceModel.Discovery.AnnouncementClient>, passando un'istanza di <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> come parametro costruttore.  

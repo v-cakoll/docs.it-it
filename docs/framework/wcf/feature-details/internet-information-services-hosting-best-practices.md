@@ -3,11 +3,11 @@ title: Procedure consigliate per l'hosting in Internet Information Services (IIS
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
 ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972614"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedure consigliate per l'hosting in Internet Information Services (IIS)
 Questo argomento descrive alcune procedure consigliate per l'hosting di servizi Windows Communication Foundation (WCF).  

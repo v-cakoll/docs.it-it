@@ -3,11 +3,11 @@ title: Chunking del canale
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002367"
 ---
 # <a name="chunking-channel"></a>Chunking del canale
 Quando si inviano messaggi di grandi dimensioni tramite Windows Communication Foundation (WCF), è spesso utile per limitare la quantità di memoria utilizzata per memorizzare nel buffer i messaggi. Una possibile soluzione è di trasmettere il corpo del messaggio (presupponendo che il grosso dei dati è contenuto nel corpo). Tuttavia alcuni protocolli richiedono la memorizzazione nel buffer del messaggio intero. Due esempi sono rappresentati dai protocolli di messaggistica affidabile e di sicurezza. Un'altra possibile soluzione è di suddividere il messaggio in messaggi più piccoli, chiamati blocchi, inviare quei blocchi uno alla volta e ricostruire il messaggio originale sul lato ricevente. L'applicazione stessa può eseguire questa suddivisione in blocchi e ricostruzione oppure può usare un canale personalizzato per eseguire queste operazioni. Nell'esempio relativo al canale per la suddivisione in blocchi viene illustrato come è possibile usare un protocollo personalizzato o un canale su più livelli per suddividere in blocchi e ricostruire i messaggi di grandi dimensioni.  
@@ -240,30 +240,30 @@ interface ITestService
   
  Alcuni dettagli degni di nota:  
   
--   L'operazione Send prima chiama `ThrowIfDisposedOrNotOpened` per assicurarsi che `CommunicationState` sia aperto.  
+- L'operazione Send prima chiama `ThrowIfDisposedOrNotOpened` per assicurarsi che `CommunicationState` sia aperto.  
   
--   L'invio viene sincronizzato in modo che possa essere inviato solo uno messaggio alla volta per ogni sessione. C'è un `ManualResetEvent` denominato `sendingDone` che viene reimpostato quando viene inviato un messaggio suddiviso in blocchi. Una volta inviato il blocco di messaggio finale, l'evento viene impostato. Il metodo Send attende che questo evento venga impostato prima che di tentare di inviare il messaggio in uscita.  
+- L'invio viene sincronizzato in modo che possa essere inviato solo uno messaggio alla volta per ogni sessione. C'è un `ManualResetEvent` denominato `sendingDone` che viene reimpostato quando viene inviato un messaggio suddiviso in blocchi. Una volta inviato il blocco di messaggio finale, l'evento viene impostato. Il metodo Send attende che questo evento venga impostato prima che di tentare di inviare il messaggio in uscita.  
   
--   L'operazione Send blocca `CommunicationObject.ThisLock` per evitare modifiche sincronizzate dello stato durante l'invio. Vedere la documentazione relativa a <xref:System.ServiceModel.Channels.CommunicationObject> per altre informazioni sugli stati di <xref:System.ServiceModel.Channels.CommunicationObject> e sulla macchina a stati.  
+- L'operazione Send blocca `CommunicationObject.ThisLock` per evitare modifiche sincronizzate dello stato durante l'invio. Vedere la documentazione relativa a <xref:System.ServiceModel.Channels.CommunicationObject> per altre informazioni sugli stati di <xref:System.ServiceModel.Channels.CommunicationObject> e sulla macchina a stati.  
   
--   Il timeout passato a Send viene usato come timeout per l'intera operazione di invio, che comprende l'invio di tutti i blocchi.  
+- Il timeout passato a Send viene usato come timeout per l'intera operazione di invio, che comprende l'invio di tutti i blocchi.  
   
--   La progettazione <xref:System.Xml.XmlDictionaryWriter> personalizzata viene scelta per evitare di memorizzare nel buffer l'intero corpo del messaggio originale. Se si dovesse usare un <xref:System.Xml.XmlDictionaryReader> sul corpo usando `message.GetReaderAtBodyContents`, l'intero corpo verrebbe memorizzato nel buffer. Invece, si usa una classe personalizzata <xref:System.Xml.XmlDictionaryWriter> che viene passata a `message.WriteBodyContents`. Quando il messaggio chiama WriteBase64 sul writer, il writer ricostruisce i blocchi in messaggi e li invia usando il canale interno. WriteBase64 si blocca fino a che non viene inviato il blocco.  
+- La progettazione <xref:System.Xml.XmlDictionaryWriter> personalizzata viene scelta per evitare di memorizzare nel buffer l'intero corpo del messaggio originale. Se si dovesse usare un <xref:System.Xml.XmlDictionaryReader> sul corpo usando `message.GetReaderAtBodyContents`, l'intero corpo verrebbe memorizzato nel buffer. Invece, si usa una classe personalizzata <xref:System.Xml.XmlDictionaryWriter> che viene passata a `message.WriteBodyContents`. Quando il messaggio chiama WriteBase64 sul writer, il writer ricostruisce i blocchi in messaggi e li invia usando il canale interno. WriteBase64 si blocca fino a che non viene inviato il blocco.  
   
 ## <a name="implementing-the-receive-operation"></a>Implementazione dell'operazione Receive  
  A livello superiore, l'operazione Receive prima controlla che il messaggio in arrivo non sia `null` e che l'azione sia `ChunkingAction`. Se non vengono soddisfatti entrambi i criteri, Receive restituisce il messaggio immutato. In caso contrario, Receive crea un nuovo `ChunkingReader` su cui viene eseguito il wrapping di un nuovo `ChunkingMessage` (chiamando `GetNewChunkingMessage`). Prima di restituire quel nuovo `ChunkingMessage`, Receive usa un che un thread del pool di thread per eseguire `ReceiveChunkLoop` che chiama `innerChannel.Receive` in un ciclo e consegna i blocchi al `ChunkingReader` fino a ricevere il blocco di messaggio finale o fino a raggiungere il timeout di ricezione.  
   
  Alcuni dettagli degni di nota:  
   
--   Come per l'operazione Send, Receive prima chiama `ThrowIfDisposedOrNotOepned` per assicurarsi che `CommunicationState` sia aperto.  
+- Come per l'operazione Send, Receive prima chiama `ThrowIfDisposedOrNotOepned` per assicurarsi che `CommunicationState` sia aperto.  
   
--   Anche l'operazione Receive viene sincronizzata in modo che si possa ricevere solo un messaggio alla volta dalla sessione. Questo è particolarmente importante perché una volta ricevuto un blocco di messaggio iniziale, si presuppone che tutti i messaggi seguenti ricevuti siano blocchi di questa nuova sequenza di blocchi, fino alla ricezione del blocco di messaggio finale. L'operazione Receive non è in grado di eseguire il pull dei messaggi dal canale interno finché non vengono ricevuti tutti i blocchi che appartengono al messaggio in corso di ricostruzione. Per eseguire questa operazione, Receive usa un `ManualResetEvent` denominato `currentMessageCompleted`, impostato quando viene ricevuto il blocco di messaggio finale e reimpostato quando viene ricevuto un nuovo blocco di messaggio iniziale.  
+- Anche l'operazione Receive viene sincronizzata in modo che si possa ricevere solo un messaggio alla volta dalla sessione. Questo è particolarmente importante perché una volta ricevuto un blocco di messaggio iniziale, si presuppone che tutti i messaggi seguenti ricevuti siano blocchi di questa nuova sequenza di blocchi, fino alla ricezione del blocco di messaggio finale. L'operazione Receive non è in grado di eseguire il pull dei messaggi dal canale interno finché non vengono ricevuti tutti i blocchi che appartengono al messaggio in corso di ricostruzione. Per eseguire questa operazione, Receive usa un `ManualResetEvent` denominato `currentMessageCompleted`, impostato quando viene ricevuto il blocco di messaggio finale e reimpostato quando viene ricevuto un nuovo blocco di messaggio iniziale.  
   
--   A differenza dell'operazione Send, Receive non impedisce le transizioni sincronizzate dello stato durante la ricezione. Ad esempio, è possibile chiamare il metodo Close durante la ricezione. Il metodo attenderà che venga completata la ricezione del messaggio originale o che venga raggiunto il valore di timeout specificato.  
+- A differenza dell'operazione Send, Receive non impedisce le transizioni sincronizzate dello stato durante la ricezione. Ad esempio, è possibile chiamare il metodo Close durante la ricezione. Il metodo attenderà che venga completata la ricezione del messaggio originale o che venga raggiunto il valore di timeout specificato.  
   
--   Il timeout passato a Receive viene usato come timeout per l'intera operazione di ricezione, che comprende la ricezione di tutti i blocchi.  
+- Il timeout passato a Receive viene usato come timeout per l'intera operazione di ricezione, che comprende la ricezione di tutti i blocchi.  
   
--   Se il livello che usa il messaggio sta usando il corpo del messaggio a una velocità inferiore della velocità di arrivo dei blocchi dei messaggi, `ChunkingReader` memorizza nel buffer quei blocchi in arrivo fino al limite specificato da `ChunkingBindingElement.MaxBufferedChunks`. Una volta raggiunto quel limite, non viene eseguito il pull di altri blocchi dal livello inferiore finché non viene usato un blocco memorizzato nel buffer o viene raggiunto il timeout di ricezione.  
+- Se il livello che usa il messaggio sta usando il corpo del messaggio a una velocità inferiore della velocità di arrivo dei blocchi dei messaggi, `ChunkingReader` memorizza nel buffer quei blocchi in arrivo fino al limite specificato da `ChunkingBindingElement.MaxBufferedChunks`. Una volta raggiunto quel limite, non viene eseguito il pull di altri blocchi dal livello inferiore finché non viene usato un blocco memorizzato nel buffer o viene raggiunto il timeout di ricezione.  
   
 ## <a name="communicationobject-overrides"></a>Override di CommunicationObject  
   

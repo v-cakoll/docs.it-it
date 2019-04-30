@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989196"
 ---
 # <a name="icordebugdatatarget-interface"></a>Interfaccia ICorDebugDataTarget
 Fornisce un'interfaccia di callback che consente di accedere a un determinato processo di destinazione.  
@@ -37,13 +37,13 @@ Fornisce un'interfaccia di callback che consente di accedere a un determinato pr
 ## <a name="remarks"></a>Note  
  `ICorDebugDataTarget` e i relativi metodi presentano le caratteristiche seguenti:  
   
--   I servizi di debug chiamare metodi su questa interfaccia per accedere ai dati di memoria e altre nel processo di destinazione.  
+- I servizi di debug chiamare metodi su questa interfaccia per accedere ai dati di memoria e altre nel processo di destinazione.  
   
--   Il client di debugger debba implementare questa interfaccia in modo appropriato per la destinazione specifica (ad esempio, un processo in tempo reale o un dump di memoria).  
+- Il client di debugger debba implementare questa interfaccia in modo appropriato per la destinazione specifica (ad esempio, un processo in tempo reale o un dump di memoria).  
   
--   Il `ICorDebugDataTarget` metodi possono essere richiamati solo dall'interno di metodi implementati in altri `ICorDebug*` interfacce. Ciò garantisce che il client del debugger dispone di controllo su quale thread viene richiamato e la.  
+- Il `ICorDebugDataTarget` metodi possono essere richiamati solo dall'interno di metodi implementati in altri `ICorDebug*` interfacce. Ciò garantisce che il client del debugger dispone di controllo su quale thread viene richiamato e la.  
   
--   Il `ICorDebugDataTarget` implementazione deve restituire sempre informazioni aggiornate sulla destinazione.  
+- Il `ICorDebugDataTarget` implementazione deve restituire sempre informazioni aggiornate sulla destinazione.  
   
  Il processo di destinazione deve essere arrestato e non modificato in alcun modo durante `ICorDebug*` interfacce (e pertanto `ICorDebugDataTarget` metodi) vengono chiamati. Se la destinazione è un processo in tempo reale e il relativo stato cambia, il [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) metodo deve essere chiamata nuovamente per fornire un'istanza di ICorDebugProcess sostitutiva.  
   

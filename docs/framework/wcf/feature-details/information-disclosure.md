@@ -3,11 +3,11 @@ title: Diffusione di informazioni
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
 ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972601"
 ---
 # <a name="information-disclosure"></a>Diffusione di informazioni
 La diffusione di informazioni consente all'autore di un attacco di acquisire informazioni importanti su un sistema. Considerare sempre, pertanto, quali informazioni vengono rivelate e se possono essere utilizzate da un utente malintenzionato. Di seguito vengono elencati i possibili attacchi dovuti alla diffusione di informazioni e per ognuno di essi vengono fornite mitigazioni.  
@@ -32,16 +32,16 @@ La diffusione di informazioni consente all'autore di un attacco di acquisire inf
   
  Le possibili soluzioni sono le seguenti:  
   
--   I riferimenti a servizi sono normalmente considerati attendibili. Assicurarsi, ogni qualvolta si trasferiscono istanze del riferimento al servizio, che non siano stati alterati.  
+- I riferimenti a servizi sono normalmente considerati attendibili. Assicurarsi, ogni qualvolta si trasferiscono istanze del riferimento al servizio, che non siano stati alterati.  
   
--   Alcune applicazioni possono presentare un'esperienza utente che consente di stabilire in modo interattivo l'affidabilità in base ai dati nel riferimento al servizio e ai dati di attendibilità verificati dall'host remoto. WCF fornisce punti di estendibilità per tale funzionalità, ma deve implementati dall'utente.  
+- Alcune applicazioni possono presentare un'esperienza utente che consente di stabilire in modo interattivo l'affidabilità in base ai dati nel riferimento al servizio e ai dati di attendibilità verificati dall'host remoto. WCF fornisce punti di estendibilità per tale funzionalità, ma deve implementati dall'utente.  
   
 ## <a name="ntlm"></a>NTLM  
  Nell'ambiente di dominio Windows, l'autenticazione di Windows utilizza per impostazione predefinita il protocollo Kerberos per autenticare e autorizzare utenti. Se, per qualche ragione, il protocollo Kerberos non può essere utilizzato, come fallback viene utilizzato NT LAN Manager (NTLM). Per disattivare questo comportamento, impostare la proprietà <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> su `false`. Quando si utilizza NTLM è consigliabile prendere in considerazione i problemi seguenti:  
   
--   Il nome utente client viene esposto in NTLM. Se il nome utente deve essere mantenuto riservato, impostare la proprietà `AllowNTLM` nell'associazione su `false`.  
+- Il nome utente client viene esposto in NTLM. Se il nome utente deve essere mantenuto riservato, impostare la proprietà `AllowNTLM` nell'associazione su `false`.  
   
--   L'autenticazione server non viene fornita in NTLM. Il client, pertanto, non è in grado di verificare se la comunicazione sia stata stabilita con il servizio corretto, quando si utilizza NTLM come protocollo di autenticazione.  
+- L'autenticazione server non viene fornita in NTLM. Il client, pertanto, non è in grado di verificare se la comunicazione sia stata stabilita con il servizio corretto, quando si utilizza NTLM come protocollo di autenticazione.  
   
 ### <a name="specifying-client-credentials-or-invalid-identity-forces-ntlm-usage"></a>Specifica di credenziali client o di identità non valide che impongono l'utilizzo di NTLM  
  Quando si crea un client, la specifica di credenziali client senza un nome di dominio o la specifica di un'identità server non valida, provoca l'utilizzo di NTLM al posto del protocollo Kerberos (se la proprietà `AlllowNtlm` è impostata su `true`). Poiché l'autenticazione server non viene eseguita in NTLM, è possibile che le informazioni vengano diffuse.  
