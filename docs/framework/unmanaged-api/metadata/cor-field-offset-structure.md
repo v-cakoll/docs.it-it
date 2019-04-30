@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 820c99de1bdb108a24203a3438b1709ca54490b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046189"
 ---
-# <a name="corfieldoffset-structure"></a><span data-ttu-id="4f353-102">Struttura COR_FIELD_OFFSET</span><span class="sxs-lookup"><span data-stu-id="4f353-102">COR_FIELD_OFFSET Structure</span></span>
-<span data-ttu-id="4f353-103">Archivia l'offset del campo specificato all'interno di una classe.</span><span class="sxs-lookup"><span data-stu-id="4f353-103">Stores the offset, within a class, of the specified field.</span></span>  
+# <a name="corfieldoffset-structure"></a><span data-ttu-id="9023a-102">Struttura COR_FIELD_OFFSET</span><span class="sxs-lookup"><span data-stu-id="9023a-102">COR_FIELD_OFFSET Structure</span></span>
+<span data-ttu-id="9023a-103">Archivia l'offset del campo specificato all'interno di una classe.</span><span class="sxs-lookup"><span data-stu-id="9023a-103">Stores the offset, within a class, of the specified field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f353-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="4f353-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9023a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9023a-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_FIELD_OFFSET {  
@@ -35,25 +35,25 @@ typedef struct COR_FIELD_OFFSET {
 } COR_FIELD_OFFSET;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4f353-105">Membri</span><span class="sxs-lookup"><span data-stu-id="4f353-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9023a-105">Membri</span><span class="sxs-lookup"><span data-stu-id="9023a-105">Members</span></span>  
   
-|<span data-ttu-id="4f353-106">Member</span><span class="sxs-lookup"><span data-stu-id="4f353-106">Member</span></span>|<span data-ttu-id="4f353-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4f353-107">Description</span></span>|  
+|<span data-ttu-id="9023a-106">Member</span><span class="sxs-lookup"><span data-stu-id="9023a-106">Member</span></span>|<span data-ttu-id="9023a-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9023a-107">Description</span></span>|  
 |------------|-----------------|  
-|`ridOfField`|<span data-ttu-id="4f353-108">Un `mdFieldDef` token di metadati che rappresenta il campo.</span><span class="sxs-lookup"><span data-stu-id="4f353-108">An `mdFieldDef` metadata token that represents the field.</span></span>|  
-|`ulOffset`|<span data-ttu-id="4f353-109">Offset del campo nella relativa classe.</span><span class="sxs-lookup"><span data-stu-id="4f353-109">The field's offset within its class.</span></span>|  
+|`ridOfField`|<span data-ttu-id="9023a-108">Un `mdFieldDef` token di metadati che rappresenta il campo.</span><span class="sxs-lookup"><span data-stu-id="9023a-108">An `mdFieldDef` metadata token that represents the field.</span></span>|  
+|`ulOffset`|<span data-ttu-id="9023a-109">Offset del campo nella relativa classe.</span><span class="sxs-lookup"><span data-stu-id="9023a-109">The field's offset within its class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4f353-110">Note</span><span class="sxs-lookup"><span data-stu-id="4f353-110">Remarks</span></span>  
- <span data-ttu-id="4f353-111">[IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) e [SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) metodi accettano un parametro di tipo `COR_FIELD_OFFSET`.</span><span class="sxs-lookup"><span data-stu-id="4f353-111">[IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9023a-110">Note</span><span class="sxs-lookup"><span data-stu-id="9023a-110">Remarks</span></span>  
+ <span data-ttu-id="9023a-111">[IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) e [SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) metodi accettano un parametro di tipo `COR_FIELD_OFFSET`.</span><span class="sxs-lookup"><span data-stu-id="9023a-111">[IMetaDataImport::GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md) and [IMetaDataEmit::SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md) methods take a parameter of type `COR_FIELD_OFFSET`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4f353-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="4f353-112">Requirements</span></span>  
- <span data-ttu-id="4f353-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f353-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9023a-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9023a-112">Requirements</span></span>  
+ <span data-ttu-id="9023a-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9023a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f353-114">**Intestazione:** CorHdr. H, Corprof. idl</span><span class="sxs-lookup"><span data-stu-id="4f353-114">**Header:** CorHdr.h, CorProf.idl</span></span>  
+ <span data-ttu-id="9023a-114">**Intestazione:** CorHdr. H, Corprof. idl</span><span class="sxs-lookup"><span data-stu-id="9023a-114">**Header:** CorHdr.h, CorProf.idl</span></span>  
   
- <span data-ttu-id="4f353-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f353-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9023a-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9023a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f353-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4f353-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9023a-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9023a-116">See also</span></span>
 
-- [<span data-ttu-id="4f353-117">Strutture di metadati</span><span class="sxs-lookup"><span data-stu-id="4f353-117">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [<span data-ttu-id="4f353-118">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="4f353-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="4f353-119">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="4f353-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="9023a-117">Strutture di metadati</span><span class="sxs-lookup"><span data-stu-id="9023a-117">Metadata Structures</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [<span data-ttu-id="9023a-118">Interfaccia IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="9023a-118">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="9023a-119">Interfaccia IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="9023a-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
