@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
 ms.openlocfilehash: 33e07bb655d81c6a802ebdce871a2fed845a5c96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013023"
 ---
 # <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Procedura: Configurare l'unione automatica dei menu per applicazioni con interfaccia a documenti multipli
 La procedura seguente contiene i passaggi di base per la configurazione di unione automatica in un'applicazione di interfaccia a documenti multipli (MDI) con <xref:System.Windows.Forms.MenuStrip>.  

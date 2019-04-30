@@ -6,26 +6,26 @@ helpviewer_keywords:
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
 ms.openlocfilehash: 586d306d0f375241c9382e1e24cf1af75b990ba9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019167"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
 Host di Windows Presentation Foundation (WPF) (PresentationHost.exe) è l'applicazione che consente [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] alle applicazioni di essere ospitate in browser compatibili (inclusi [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] e versioni successive). Per impostazione predefinita, l'Host di Windows Presentation Foundation (WPF) è registrato come la shell e [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] ospitate da browser gestore per [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] contenuto, che include:  
   
--   File [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separati (con estensione xaml) non compilati.  
+- File [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separati (con estensione xaml) non compilati.  
   
--   File [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (con estensione xbap).  
+- File [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (con estensione xbap).  
   
  Per i file di questi tipi, Host di Windows Presentation Foundation (WPF):  
   
--   Avvia l'oggetto registrato [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] gestore per ospitare il contenuto di Windows Presentation Foundation (WPF).  
+- Avvia l'oggetto registrato [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] gestore per ospitare il contenuto di Windows Presentation Foundation (WPF).  
   
--   Carica le versioni corrette degli richiesti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e gli assembly di Windows Presentation Foundation (WPF).  
+- Carica le versioni corrette degli richiesti [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] e gli assembly di Windows Presentation Foundation (WPF).  
   
--   Assicura che siano disponibili i livelli di autorizzazione appropriati per l'area di distribuzione.  
+- Assicura che siano disponibili i livelli di autorizzazione appropriati per l'area di distribuzione.  
   
  Questo argomento descrive i parametri della riga di comando che è possibile utilizzare con PresentationHost.exe.  
   

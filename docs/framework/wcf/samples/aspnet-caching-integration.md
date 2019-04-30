@@ -3,11 +3,11 @@ title: Integrazione della memorizzazione nella cache di ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002729"
 ---
 # <a name="aspnet-caching-integration"></a>Integrazione della memorizzazione nella cache di ASP.NET
 In questo esempio viene descritto come usare la cache di output ASP.NET con il modello di programmazione HTTP Web WCF. In questo argomento viene illustrata la funzionalità di integrazione della cache di output ASP.NET.  
@@ -34,11 +34,11 @@ In questo esempio viene descritto come usare la cache di output ASP.NET con il m
 ## <a name="to-run-the-sample"></a>Per eseguire l'esempio  
  L'esempio è costituito da tre progetti:  
   
--   **Servizio**: Un progetto di applicazione Web che include un servizio WCF HTTP ospitato in ASP.NET.  
+- **Servizio**: Un progetto di applicazione Web che include un servizio WCF HTTP ospitato in ASP.NET.  
   
--   **Client**: Progetto di applicazione console che effettua chiamate al servizio.  
+- **Client**: Progetto di applicazione console che effettua chiamate al servizio.  
   
--   **Common**: Una libreria condivisa che contiene il tipo Customer usato dal servizio e client.  
+- **Common**: Una libreria condivisa che contiene il tipo Customer usato dal servizio e client.  
   
  Quando viene eseguita l'applicazione console Client, il client effettua richieste al servizio e scrive le informazioni pertinenti dalle risposte nella finestra della console.  
   

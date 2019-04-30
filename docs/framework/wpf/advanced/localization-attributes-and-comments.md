@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036231"
 ---
 # <a name="localization-attributes-and-comments"></a>Attributi e commenti di localizzazione
 I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sono proprietà all'interno del codice sorgente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] usate dagli sviluppatori per fornire regole e suggerimenti per la localizzazione. I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contengono due set di informazioni: attributi di localizzabilità e commenti di localizzazione in formato libero. Gli attributi di localizzabilità vengono usati dall'API di localizzazione di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per indicare le risorse da localizzare. I commenti in formato libero comprendono tutte le informazioni che l'autore dell'applicazione vuole includere.  
@@ -27,11 +27,11 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
 3. I valori che è possibile assegnare sono:  
   
-    -   **None**: sia i commenti che gli attributi rimangono nell'assembly e non viene generato alcun file separato.  
+    - **None**: sia i commenti che gli attributi rimangono nell'assembly e non viene generato alcun file separato.  
   
-    -   **CommentsOnly**: dall'assembly vengono rimossi solo i commenti, che vengono inseriti nel LocFile separato.  
+    - **CommentsOnly**: dall'assembly vengono rimossi solo i commenti, che vengono inseriti nel LocFile separato.  
   
-    -   **All**: dall'assembly vengono rimossi sia i commenti che gli attributi, che vengono inseriti entrambi in un LocFile separato.  
+    - **All**: dall'assembly vengono rimossi sia i commenti che gli attributi, che vengono inseriti entrambi in un LocFile separato.  
   
 4. Se le risorse localizzabili vengono estratte da [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], l'API di localizzazione di [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] rispetta gli attributi di localizzabilità.  
   
@@ -74,11 +74,11 @@ I commenti di localizzazione [!INCLUDE[TLA#tla_winclient](../../../../includes/t
   
  Sono disponibili tre tipi di attributi:  
   
--   **Category**. Specifica se un valore può essere modificato con uno strumento del localizzatore. Vedere <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
+- **Category**. Specifica se un valore può essere modificato con uno strumento del localizzatore. Vedere <xref:System.Windows.LocalizabilityAttribute.Category%2A>.  
   
--   **Leggibilità**. Specifica se uno strumento del localizzatore deve essere in grado di leggere (e visualizzare) un valore. Vedere <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
+- **Leggibilità**. Specifica se uno strumento del localizzatore deve essere in grado di leggere (e visualizzare) un valore. Vedere <xref:System.Windows.LocalizabilityAttribute.Readability%2A>.  
   
--   **Modificabilità**. Specifica se uno strumento del localizzatore consente la modifica di un valore. Vedere <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
+- **Modificabilità**. Specifica se uno strumento del localizzatore consente la modifica di un valore. Vedere <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>.  
   
  Questi attributi possono essere specificati in qualsiasi ordine e devono essere delimitati da uno spazio. Nel caso in cui vengano specificati attributi duplicati, l'ultimo sostituisce i precedenti. Ad esempio, Localization.Attributes = "Unmodifiable Modifiable" imposta Modifiability su Modifiable poiché questo è l'ultimo valore.  
   

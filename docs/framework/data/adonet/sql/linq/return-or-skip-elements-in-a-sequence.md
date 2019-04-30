@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033462"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Restituire o ignorare elementi in una sequenza
 Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero specificato di elementi in una sequenza e ignorare quindi gli elementi rimanenti.  
@@ -22,9 +22,9 @@ Usare l'operatore <xref:System.Linq.Queryable.Take%2A> per restituire un numero 
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduce <xref:System.Linq.Queryable.Skip%2A> usando una sottoquery con il codice SQL `NOT EXISTS` clausola. Di seguito vengono elencate le limitazioni di questa conversione.  
   
--   L'argomento deve essere un set. I tipi multiset non sono supportati, anche se ordinati.  
+- L'argomento deve essere un set. I tipi multiset non sono supportati, anche se ordinati.  
   
--   La query generata può essere molto più complessa di quella generata per la query di base a cui viene applicato <xref:System.Linq.Queryable.Skip%2A>. Questa complessità può provocare una riduzione delle prestazioni o il timeout dell'operazione.  
+- La query generata può essere molto più complessa di quella generata per la query di base a cui viene applicato <xref:System.Linq.Queryable.Skip%2A>. Questa complessità può provocare una riduzione delle prestazioni o il timeout dell'operazione.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usato `Take` per selezionare i primi cinque dipendenti assunti in `Employees`. Notare che la raccolta viene prima ordinata per `HireDate`.  

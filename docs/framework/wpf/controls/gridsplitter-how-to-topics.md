@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], GridSplitter
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
 ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054874"
 ---
 # <a name="gridsplitter-how-to-topics"></a>Procedure relative al controllo GridSplitter
 Negli argomenti di questa sezione viene descritto come utilizzare il <xref:System.Windows.Controls.GridSplitter> controllo.  

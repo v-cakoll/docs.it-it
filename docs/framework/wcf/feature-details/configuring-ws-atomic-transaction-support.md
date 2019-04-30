@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048115"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configurazione del supporto transazioni WS-Atomic
 In questo argomento viene descritto come è possibile configurare il supporto WS-AtomicTransaction (WS-AT) usando l'utilità configurazione WS-AT.  
@@ -106,17 +106,17 @@ In questo argomento viene descritto come è possibile configurare il supporto WS
   
 4. Nel **dati valore** casella di input, immettere uno dei seguenti valori validi per specificare il livello di traccia si vuole abilitare.  
   
--   0: disattivato  
+- 0: disattivato  
   
--   1: critico  
+- 1: critico  
   
--   3: errore. Questa opzione rappresenta il valore predefinito.  
+- 3: errore. Questa opzione rappresenta il valore predefinito.  
   
--   7: avviso  
+- 7: avviso  
   
--   15: informazioni  
+- 15: informazioni  
   
--   31: dettagliato  
+- 31: dettagliato  
   
 ## <a name="see-also"></a>Vedere anche
 

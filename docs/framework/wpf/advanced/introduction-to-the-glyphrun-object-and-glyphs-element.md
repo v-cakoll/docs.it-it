@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031304"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introduzione all'oggetto GlyphRun e all'elemento Glyphs
 Questo argomento viene descritto il <xref:System.Windows.Media.GlyphRun> oggetto e il <xref:System.Windows.Documents.Glyphs> elemento.  
@@ -27,13 +27,13 @@ Questo argomento viene descritto il <xref:System.Windows.Media.GlyphRun> oggetto
   
 2. Scenari di stampa.  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] come linguaggio della stampante.  
+    - [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] come linguaggio della stampante.  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
-    -   Driver della stampante precedenti, output delle applicazioni [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] in formato fisso.  
+    - Driver della stampante precedenti, output delle applicazioni [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] in formato fisso.  
   
-    -   Formato dello spooling di stampa.  
+    - Formato dello spooling di stampa.  
   
 3. Rappresentazione di documenti con formato fisso, inclusi i client di versioni precedenti di [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] e altri dispositivi di elaborazione.  
   
@@ -67,15 +67,15 @@ Questo argomento viene descritto il <xref:System.Windows.Media.GlyphRun> oggetto
 ### <a name="indices-property"></a>Proprietà Indices  
  Il <xref:System.Windows.Documents.Glyphs.Indices%2A> proprietà è una stringa di specifiche del glifo. Quando una sequenza di glifi forma un cluster singolo, la specifica del primo glifo nel cluster viene preceduta da una specifica del numero di glifi e di punti di codice combinati per formare il cluster. Il <xref:System.Windows.Documents.Glyphs.Indices%2A> proprietà raccoglie in un'unica stringa le proprietà seguenti.  
   
--   Indici del glifo  
+- Indici del glifo  
   
--   Distanze di avanzamento del glifo  
+- Distanze di avanzamento del glifo  
   
--   Combinazione dei vettori di connessione dei glifi  
+- Combinazione dei vettori di connessione dei glifi  
   
--   Mapping del cluster tra i punti di codice e i glifi  
+- Mapping del cluster tra i punti di codice e i glifi  
   
--   Flag del glifo  
+- Flag del glifo  
   
  Ogni specifica del glifo presenta la forma seguente:  
   

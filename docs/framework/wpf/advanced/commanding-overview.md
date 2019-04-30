@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037089"
 ---
 # <a name="commanding-overview"></a>Cenni preliminari sull'esecuzione di comandi
 <a name="introduction"></a> I comandi sono un meccanismo di input in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] che consente la gestione dell'input a un livello più semantico rispetto all'input dei dispositivi. Sono esempi di comandi le operazioni **Copia**, **Taglia** e **Incolla** disponibili in molte applicazioni.  
@@ -27,15 +27,15 @@ ms.locfileid: "59139035"
   
  Di seguito sono elencate le diverse sezioni di questo argomento:  
   
--   [Cosa sono i comandi?](#commands_at_10000_feet)  
+- [Cosa sono i comandi?](#commands_at_10000_feet)  
   
--   [Esempio di comando semplice in WPF](#simple_command)  
+- [Esempio di comando semplice in WPF](#simple_command)  
   
--   [Quattro concetti principali dell'esecuzione dei comandi WPF](#Four_main_Concepts)  
+- [Quattro concetti principali dell'esecuzione dei comandi WPF](#Four_main_Concepts)  
   
--   [Libreria dei comandi](#Command_Library)  
+- [Libreria dei comandi](#Command_Library)  
   
--   [Creazione di comandi personalizzati](#creating_commands)  
+- [Creazione di comandi personalizzati](#creating_commands)  
   
 <a name="commands_at_10000_feet"></a>   
 ## <a name="what-are-commands"></a>Cosa sono i comandi?  
@@ -60,13 +60,13 @@ ms.locfileid: "59139035"
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Quattro concetti principali dell'esecuzione dei comandi WPF  
  Il modello di comando indirizzato di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può essere suddiviso in quattro concetti principali: il comando, l'origine del comando, la destinazione del comando e l'associazione del comando:  
   
--   Il *comando* è l'azione da eseguire.  
+- Il *comando* è l'azione da eseguire.  
   
--   L'*origine del comando* è l'oggetto che richiama il comando.  
+- L'*origine del comando* è l'oggetto che richiama il comando.  
   
--   La *destinazione del comando* è l'oggetto su cui viene eseguito il comando.  
+- La *destinazione del comando* è l'oggetto su cui viene eseguito il comando.  
   
--   L'*associazione del comando* è l'oggetto che esegue il mapping della logica di comando al comando.  
+- L'*associazione del comando* è l'oggetto che esegue il mapping della logica di comando al comando.  
   
  Nell'esempio precedente, il comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> corrisponde al comando, <xref:System.Windows.Controls.MenuItem> è l'origine del comando, <xref:System.Windows.Controls.TextBox> è la destinazione del comando e l'associazione del comando viene fornita dal controllo <xref:System.Windows.Controls.TextBox>.  È importante notare che non sempre l'oggetto <xref:System.Windows.Input.CommandBinding> viene fornito dal controllo che rappresenta la classe di destinazione del comando.  Molto spesso è lo sviluppatore dell'applicazione che deve creare <xref:System.Windows.Input.CommandBinding>. In altri casi, può esistere un collegamento tra <xref:System.Windows.Input.CommandBinding> e un predecessore della destinazione del comando.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "59139035"
   
  <xref:System.Windows.Input.ICommandSource> espone tre proprietà: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> e <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> è il comando da eseguire quando viene richiamata l'origine del comando.  
+- <xref:System.Windows.Input.ICommandSource.Command%2A> è il comando da eseguire quando viene richiamata l'origine del comando.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> è l'oggetto su cui eseguire il comando.  Si noti che in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] la proprietà <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> in <xref:System.Windows.Input.ICommandSource> è applicabile solo quando <xref:System.Windows.Input.ICommand> è <xref:System.Windows.Input.RoutedCommand>.  Se <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> è impostato su un <xref:System.Windows.Input.ICommandSource> e il comando corrispondente non è un <xref:System.Windows.Input.RoutedCommand>, la destinazione del comando viene ignorata. Se <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> non è impostato, viene rappresentato dall'elemento con lo stato attivo della tastiera.  
+- <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> è l'oggetto su cui eseguire il comando.  Si noti che in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] la proprietà <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> in <xref:System.Windows.Input.ICommandSource> è applicabile solo quando <xref:System.Windows.Input.ICommand> è <xref:System.Windows.Input.RoutedCommand>.  Se <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> è impostato su un <xref:System.Windows.Input.ICommandSource> e il comando corrispondente non è un <xref:System.Windows.Input.RoutedCommand>, la destinazione del comando viene ignorata. Se <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> non è impostato, viene rappresentato dall'elemento con lo stato attivo della tastiera.  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> è un tipo di dati definito dall'utente usato per passare informazioni ai gestori che implementano il comando.  
+- <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> è un tipo di dati definito dall'utente usato per passare informazioni ai gestori che implementano il comando.  
   
  Le classi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che implementano <xref:System.Windows.Input.ICommandSource> sono <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Documents.Hyperlink> e <xref:System.Windows.Input.InputBinding>.  <xref:System.Windows.Controls.Primitives.ButtonBase>, <xref:System.Windows.Controls.MenuItem> e <xref:System.Windows.Documents.Hyperlink> richiamano un comando quando ricevono un clic e <xref:System.Windows.Input.InputBinding> richiama un comando quando l'oggetto <xref:System.Windows.Input.InputGesture> associato viene eseguito.  
   

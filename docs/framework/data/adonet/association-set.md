@@ -3,11 +3,11 @@ title: set di associazioni
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034608"
 ---
 # <a name="association-set"></a>set di associazioni
 Un' *set di associazioni* è un contenitore logico per [association](../../../../docs/framework/data/adonet/association-type.md) istanze dello stesso tipo. Un set di associazioni non è un costrutto di modellazione dati, ovvero non descrive la struttura di dati o relazioni. Un set di associazioni, invece, fornisce un costrutto per un ambiente host o di archiviazione (ad esempio Common Language Runtime o un database SQL Server) per raggruppare le istanze dell'associazione in modo che se ne possa eseguire il mapping a un archivio dati.  
@@ -16,11 +16,11 @@ Un' *set di associazioni* è un contenitore logico per [association](../../../..
   
  Una definizione per un set di associazioni contiene le informazioni seguenti:  
   
--   Il nome del set di associazioni (obbligatorio).  
+- Il nome del set di associazioni (obbligatorio).  
   
--   L'associazione della quale conterrà le istanze (obbligatorio).  
+- L'associazione della quale conterrà le istanze (obbligatorio).  
   
--   Due [estremità del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md).  
+- Due [estremità del set di associazioni](../../../../docs/framework/data/adonet/association-set-end.md).  
   
 ## <a name="example"></a>Esempio  
  Nel diagramma seguente viene illustrato un modello concettuale con due associazioni: `PublishedBy` e `WrittenBy`. Anche se le informazioni sui set di associazioni non sono contenute nel diagramma, nel diagramma successivo viene illustrato un esempio di set di associazioni e di set di entità basato su questo modello.  

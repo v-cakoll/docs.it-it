@@ -6,11 +6,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052131"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Procedura: Accedere ai membri di un oggetto (Visual Basic)
 Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è spesso necessario lavorare con i membri di tale oggetto, ad esempio relativi metodi, proprietà, campi ed eventi. Ad esempio, dopo aver creato un nuovo <xref:System.Windows.Forms.Form> dell'oggetto, si potrebbe voler impostare relativi <xref:System.Windows.Forms.Control.Text%2A> proprietà o chiamata relativo <xref:System.Windows.Forms.Control.Focus%2A> (metodo).  
@@ -20,7 +20,7 @@ Quando si dispone di una variabile oggetto che fa riferimento a un oggetto, è s
   
 #### <a name="to-access-members-of-an-object"></a>Per accedere ai membri di un oggetto  
   
--   Usare l'operatore di accesso ai membri (`.`) tra il nome della variabile oggetto e il nome del membro.  
+- Usare l'operatore di accesso ai membri (`.`) tra il nome della variabile oggetto e il nome del membro.  
   
     ```  
     currentText = newForm.Text  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
 ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023860"
 ---
 # <a name="slider"></a>Slider
 Il <xref:System.Windows.Controls.Slider> consente di selezionare da un intervallo di valori per lo spostamento di un <xref:System.Windows.Controls.Primitives.Thumb> lungo un <xref:System.Windows.Controls.Primitives.Track>.  

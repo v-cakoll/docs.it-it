@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
 ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011420"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Modalità di visualizzazione dati nel controllo DataGridView di Windows Form
 Il <xref:System.Windows.Forms.DataGridView> controllo può visualizzare i dati in tre diverse modalità: associato, non associato e virtuali. Scegliere la modalità più adatta in base alle esigenze.  

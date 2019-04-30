@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 ms.openlocfilehash: f9c90ac93a27f90479ee7225f62afb98a5000fe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047175"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Procedura: Usare la sicurezza del trasporto e le credenziali per il messaggio
 Protezione di un servizio con le credenziali di trasporto e messaggio utilizza il meglio delle modalità di sicurezza di trasporto e messaggio di Windows Communication Foundation (WCF). Complessivamente, le funzionalità di sicurezza a livello di trasporto garantiscono integrità e riservatezza, mentre le funzionalità di sicurezza a livello di messaggio offrono vari tipi di credenziali non disponibili quando si utilizzano meccanismi di sicurezza basati esclusivamente sul livello di trasporto. In questo argomento vengono illustrati i passaggi di base per implementare il trasporto con credenziali messaggio utilizzando le associazioni <xref:System.ServiceModel.WSHttpBinding> e <xref:System.ServiceModel.NetTcpBinding>. Per altre informazioni sull'impostazione della modalità di sicurezza, vedere [come: Impostare la modalità di sicurezza](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  

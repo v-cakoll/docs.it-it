@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052677"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Tipo di '\<nomevariabile >' non può essere dedotto perché i limiti del ciclo e la clausola dell'istruzione non si convertono allo stesso tipo
 È stato scritto un `For...Next` ciclo in cui il compilatore non è possibile dedurre un tipo di dati per la variabile di controllo ciclo perché vengono soddisfatte le condizioni seguenti:  
   
--   Il tipo di dati della variabile di controllo del ciclo non è specificato con una clausola `As` .  
+- Il tipo di dati della variabile di controllo del ciclo non è specificato con una clausola `As` .  
   
--   I limiti del ciclo e la clausola step contengono almeno due tipi di dati.  
+- I limiti del ciclo e la clausola step contengono almeno due tipi di dati.  
   
--   Non esiste alcuna conversione standard tra i tipi di dati.  
+- Non esiste alcuna conversione standard tra i tipi di dati.  
   
  Pertanto, il compilatore non può dedurre il tipo di dati della variabile di controllo del ciclo.  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Modificare i tipi dei limiti del ciclo e passaggio in base alle esigenze in modo che almeno uno di essi è un tipo in cui gli altri ampliarsi. Nell'esempio precedente, modificare il tipo della `stepVar` a `Integer`.  
+- Modificare i tipi dei limiti del ciclo e passaggio in base alle esigenze in modo che almeno uno di essi è un tipo in cui gli altri ampliarsi. Nell'esempio precedente, modificare il tipo della `stepVar` a `Integer`.  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   Usare funzioni di conversione esplicita per convertire i limiti del ciclo e passaggio per i tipi appropriati. Nell'esempio precedente, si applicano i `Val` funzione `stepVar`.  
+- Usare funzioni di conversione esplicita per convertire i limiti del ciclo e passaggio per i tipi appropriati. Nell'esempio precedente, si applicano i `Val` funzione `stepVar`.  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

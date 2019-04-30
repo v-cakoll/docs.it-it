@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039561"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedura: Esporre un feed come Atom e RSS
 Windows Communication Foundation (WCF) consente di creare un servizio che espone un feed di diffusione. In questo argomento viene illustrato come creare un servizio di diffusione che espone un feed di diffusione usando sia Atom 1.0 sia RSS 2.0. Questo servizio espone un endpoint che può restituire uno dei due formati di diffusione. Per motivi di semplicità, il servizio usato in questo esempio è indipendente. In un ambiente di produzione un servizio di questo tipo verrebbe ospitato da IIS o WAS. Per altre informazioni su WCF diverse opzioni di hosting, vedere [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  

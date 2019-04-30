@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043218"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>Metodo IMetaDataEmit::DefineImportMember
 Crea un riferimento al membro specificato di un tipo o un modulo che viene definita all'esterno dell'ambito corrente e definisce un token per tale riferimento.  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  In genere, prima di utilizzare il `DefineImportMember` metodo, è necessario creare, nell'ambito corrente, un riferimento al tipo o un riferimento di modulo per modulo, interfaccia o classe padre del membro di destinazione. Il token di metadati per questo riferimento viene quindi passato nel `tkParent` argomento. Non devi creare un riferimento all'elemento padre del membro di destinazione se che verrà risolto in un secondo momento dal compilatore o del linker. Per concludere:  
   
--   Se il membro di destinazione è un campo o un metodo, usare il [DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) o il [DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) metodo per creare un riferimento di tipo, nell'ambito corrente, per il classe padre o interfaccia padre del membro.  
+- Se il membro di destinazione è un campo o un metodo, usare il [DefineTypeRefByName](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md) o il [DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md) metodo per creare un riferimento di tipo, nell'ambito corrente, per il classe padre o interfaccia padre del membro.  
   
--   Se il membro di destinazione è una funzione globale di variabili o globale (vale a dire, non un membro di una classe o interfaccia), usare il [DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) metodo per creare un riferimento al modulo, nell'ambito corrente, per padre il membro modulo.  
+- Se il membro di destinazione è una funzione globale di variabili o globale (vale a dire, non un membro di una classe o interfaccia), usare il [DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md) metodo per creare un riferimento al modulo, nell'ambito corrente, per padre il membro modulo.  
   
--   Se l'elemento padre del membro di destinazione verrà risolto in un secondo momento dal compilatore o del linker, passare `mdTokenNil` in `tkParent`. L'unico scenario in cui si applica è quando una funzione globale o variabile globale viene importato da un file con estensione obj che infine verrà collegato al modulo corrente e i metadati verranno uniti.  
+- Se l'elemento padre del membro di destinazione verrà risolto in un secondo momento dal compilatore o del linker, passare `mdTokenNil` in `tkParent`. L'unico scenario in cui si applica è quando una funzione globale o variabile globale viene importato da un file con estensione obj che infine verrà collegato al modulo corrente e i metadati verranno uniti.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

@@ -3,11 +3,11 @@ title: Implementazione di un proxy di individuazione
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
 ms.openlocfilehash: 5d9296d8ba70d4c9e8d8339fa3a032d9c4c62826
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047061"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementazione di un proxy di individuazione
 Contenuto della sezione vengono descritti i passaggi necessari per implementare un proxy di individuazione. Un proxy di individuazione è un servizio autonomo che contiene un repository di servizi. I client possono eseguire una query su un proxy di individuazione per cercare servizi individuabili noti al proxy. La modalità di popolamento di un proxy con i servizi dipende dall'implementatore. Un proxy di individuazione può ad esempio connettersi a un repository del servizio esistente e può rendere individuabili tali informazioni, un amministratore può usare un'interfaccia API di gestione per aggiungere servizi individuabili a un proxy o un proxy di individuazione può usare la funzionalità degli annunci per aggiornare la cache interna.  

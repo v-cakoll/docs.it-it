@@ -3,11 +3,11 @@ title: Scenari relativi al canale peer
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
 ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046384"
 ---
 # <a name="peer-channel-scenarios"></a>Scenari relativi al canale peer
 Le API del canale peer supportano gli scenari di sviluppo seguenti.  

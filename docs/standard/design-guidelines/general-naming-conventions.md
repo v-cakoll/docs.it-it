@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: KrzysztofCwalina
 ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026393"
 ---
 # <a name="general-naming-conventions"></a>Convenzioni di denominazione generali
 Questa sezione descrive convenzioni di denominazione generali correlate a scelta delle parole, le linee guida sull'uso di abbreviazioni e gli acronimi e consigli su come evitare di utilizzare nomi specifici del linguaggio.  

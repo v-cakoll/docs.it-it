@@ -3,11 +3,11 @@ title: Configurazione di Internet Information Services 7.0 per Windows Communica
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 ms.openlocfilehash: 53ba48d47d30bd94ae5544920041cd430526223b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039767"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configurazione di Internet Information Services 7.0 per Windows Communication Foundation
 
@@ -22,11 +22,11 @@ Internet Information Services (IIS) 7.0 dispone di una progettazione modulare ch
 
  Questa funzionalità presenta i sottocomponenti seguenti:
 
--   Ambiente .NET
+- Ambiente .NET
 
--   API di configurazione
+- API di configurazione
 
--   Modello di processo
+- Modello di processo
 
  Se si seleziona solo il nodo radice di WAS, il **modello di processo** sottonodo viene selezionata per impostazione predefinita. Si noti che con questa installazione verrà installato solo il servizio WAS poiché non è disponibile alcun supporto per un server Web.
 

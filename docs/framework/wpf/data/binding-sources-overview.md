@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
 ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023780"
 ---
 # <a name="binding-sources-overview"></a>Cenni preliminari sulle origini del binding
 Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui si ottengono i dati. Questo argomento descrive i tipi di oggetti che è possibile usare come origine del binding.  
@@ -42,13 +42,13 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
 ### <a name="other-characteristics"></a>Altre caratteristiche  
  L'elenco seguente indica altri punti importanti.  
   
--   Se si vuole creare l'oggetto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe deve disporre di un costruttore predefinito. In alcuni [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] linguaggi, ad esempio C#, il costruttore predefinito può essere creato automaticamente.  
+- Se si vuole creare l'oggetto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe deve disporre di un costruttore predefinito. In alcuni [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] linguaggi, ad esempio C#, il costruttore predefinito può essere creato automaticamente.  
   
--   Le proprietà usate come proprietà di origine del binding per un binding devono essere proprietà pubbliche della classe. Non è possibile accedere alle proprietà dell'interfaccia definite in modo esplicito a scopo di associazione né alle proprietà protette, private, interne o virtuali prive di un'implementazione di base.  
+- Le proprietà usate come proprietà di origine del binding per un binding devono essere proprietà pubbliche della classe. Non è possibile accedere alle proprietà dell'interfaccia definite in modo esplicito a scopo di associazione né alle proprietà protette, private, interne o virtuali prive di un'implementazione di base.  
   
--   Non è possibile stabilire l'associazione a campi pubblici.  
+- Non è possibile stabilire l'associazione a campi pubblici.  
   
--   Il tipo della proprietà dichiarata nella classe è il tipo passato al binding. Il tipo usato in ultima analisi dal binding dipende tuttavia dal tipo della proprietà della destinazione del binding, non della proprietà di origine del binding. Se è presente una differenza nel tipo, è necessario scrivere un convertitore per gestire la modalità di passaggio iniziale della proprietà personalizzata al binding. Per altre informazioni, vedere <xref:System.Windows.Data.IValueConverter>.  
+- Il tipo della proprietà dichiarata nella classe è il tipo passato al binding. Il tipo usato in ultima analisi dal binding dipende tuttavia dal tipo della proprietà della destinazione del binding, non della proprietà di origine del binding. Se è presente una differenza nel tipo, è necessario scrivere un convertitore per gestire la modalità di passaggio iniziale della proprietà personalizzata al binding. Per altre informazioni, vedere <xref:System.Windows.Data.IValueConverter>.  
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>Uso di oggetti interi come origine del binding  
@@ -80,11 +80,11 @@ Nel data binding l'oggetto origine del binding fa riferimento all'oggetto da cui
   
  Questa tabella descrive punti importanti relativi ai requisiti di autorizzazione per il data binding.  
   
--   Per le proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], il data binding dati funziona purché il motore di binding sia in grado di accedere alla proprietà di origine del binding usando la reflection. In caso contrario, viene generato un avviso relativo all'impossibilità di trovare la proprietà e viene usato il valore di fallback o quello predefinito, se disponibile.  
+- Per le proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], il data binding dati funziona purché il motore di binding sia in grado di accedere alla proprietà di origine del binding usando la reflection. In caso contrario, viene generato un avviso relativo all'impossibilità di trovare la proprietà e viene usato il valore di fallback o quello predefinito, se disponibile.  
   
--   È possibile creare associazioni alle proprietà degli oggetti dinamici definiti in fase di compilazione o di esecuzione.  
+- È possibile creare associazioni alle proprietà degli oggetti dinamici definiti in fase di compilazione o di esecuzione.  
   
--   È sempre possibile stabilire l'associazione alle proprietà di dipendenza.  
+- È sempre possibile stabilire l'associazione alle proprietà di dipendenza.  
   
  Il requisito di autorizzazione per l'associazione [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] è analogo. In una sandbox con attendibilità parziale, <xref:System.Windows.Data.XmlDataProvider> ha esito negativo quando non dispone di autorizzazioni per accedere ai dati specificati.  
   

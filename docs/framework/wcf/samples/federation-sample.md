@@ -3,11 +3,11 @@ title: Esempio di federazione
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051910"
 ---
 # <a name="federation-sample"></a>Esempio di federazione
 Nell'esempio viene illustrata la sicurezza federata.  
@@ -17,13 +17,13 @@ Nell'esempio viene illustrata la sicurezza federata.
   
  Lo scenario è costituito da 4 elementi:  
   
--   Servizio della libreria  
+- Servizio della libreria  
   
--   Servizio token di protezione della libreria  
+- Servizio token di protezione della libreria  
   
--   Servizio token di protezione HomeRealm  
+- Servizio token di protezione HomeRealm  
   
--   Client della libreria  
+- Client della libreria  
   
  Il servizio della libreria supporta due operazioni, `BrowseBooks` e `BuyBook`. Consente accesso anonimo all'operazione `BrowseBooks`, ma richiede accesso autenticato per l'operazione `BuyBooks`. L'autenticazione prende il form di un token pubblicato dal Servizio token di sicurezza della libreria. Il file di configurazione per Servizio della Libreria punta i client al Servizio token di protezione della libreria utilizzando l'`wsFederationHttpBinding`.  
   

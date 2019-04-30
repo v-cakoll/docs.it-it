@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050051"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>Metodo IMetaDataEmit::SetClassLayout
 Completa il layout dei campi per una classe che è stato definito da una chiamata precedente a [metodo DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  Tuttavia, è possibile che i campi disposti in base alla disposizione che non gestiti di codice viene utilizzato. In questo caso, scegliere il layout sequenziale o esplicito e chiamata `SetClassLayout` per completare il layout dei campi:  
   
--   Layout sequenziale: Specificare la dimensione di compressione. Un campo è allineato in base alle dimensioni naturali o la dimensione di compressione, qualunque sia il risultati in più piccoli offset del campo. Impostare `rFieldOffsets` e `ulClassSize` su zero.  
+- Layout sequenziale: Specificare la dimensione di compressione. Un campo è allineato in base alle dimensioni naturali o la dimensione di compressione, qualunque sia il risultati in più piccoli offset del campo. Impostare `rFieldOffsets` e `ulClassSize` su zero.  
   
--   Layout esplicito: Specificare l'offset di ogni campo o specificare le dimensioni di classe e la dimensione di compressione.  
+- Layout esplicito: Specificare l'offset di ogni campo o specificare le dimensioni di classe e la dimensione di compressione.  
   
 ## <a name="requirements"></a>Requisiti  
  **Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  

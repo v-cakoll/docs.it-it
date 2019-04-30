@@ -6,8 +6,8 @@ ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050766"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Risoluzione dei problemi relativi ai messaggi in coda
 In questa sezione contiene domande frequenti e risoluzione dei problemi per l'uso delle code in Windows Communication Foundation (WCF).  
@@ -29,11 +29,11 @@ In questa sezione contiene domande frequenti e risoluzione dei problemi per l'us
   
  **R:** Le funzionalità seguenti sono disponibili in MSMQ 4.0, ma non in MSMQ 3.0:  
   
--   Le code di messaggi non recapitabili personalizzate sono supportate solo in MSMQ 4.0.  
+- Le code di messaggi non recapitabili personalizzate sono supportate solo in MSMQ 4.0.  
   
--   MSMQ 3.0 e 4.0 gestiscono i messaggi non elaborabili in modo diverso.  
+- MSMQ 3.0 e 4.0 gestiscono i messaggi non elaborabili in modo diverso.  
   
--   La lettura transazionale remota è supportata solo in MSMQ 4.0.  
+- La lettura transazionale remota è supportata solo in MSMQ 4.0.  
   
  Per altre informazioni, vedere [differenze nelle funzionalità di Accodamento in Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
@@ -60,19 +60,19 @@ In questa sezione contiene domande frequenti e risoluzione dei problemi per l'us
   
  **R:** Per determinare la risposta, consultare l'elenco di controllo seguente:  
   
--   Controllare che i requisiti della coda transazionale siano compatibili con le garanzie specificate. Tenere presenti i principi seguenti:  
+- Controllare che i requisiti della coda transazionale siano compatibili con le garanzie specificate. Tenere presenti i principi seguenti:  
   
-    -   È possibile inviare messaggi durevoli (datagrammi e sessioni) con "exactly-once" garanzie (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) solo a una coda transazionale.  
+    - È possibile inviare messaggi durevoli (datagrammi e sessioni) con "exactly-once" garanzie (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) solo a una coda transazionale.  
   
-    -   È possibile inviare sessioni solo con assicurazioni "una sola volta".  
+    - È possibile inviare sessioni solo con assicurazioni "una sola volta".  
   
-    -   È necessaria una transazione per ricevere messaggi da una coda transazionale in una sessione.  
+    - È necessaria una transazione per ricevere messaggi da una coda transazionale in una sessione.  
   
-    -   È possibile inviare o ricevere messaggi volatili o durevoli (solo datagrammi) senza garanzie (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) solo a una coda non transazionale.  
+    - È possibile inviare o ricevere messaggi volatili o durevoli (solo datagrammi) senza garanzie (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) solo a una coda non transazionale.  
   
--   Controllare la coda dei messaggi non recapitabili. Se sono presenti messaggi, determinare perché non sono stati recapitati.  
+- Controllare la coda dei messaggi non recapitabili. Se sono presenti messaggi, determinare perché non sono stati recapitati.  
   
--   Verificare la connettività o eventuali problemi di indirizzamento delle code in uscita.  
+- Verificare la connettività o eventuali problemi di indirizzamento delle code in uscita.  
   
  **Q:** È stata specificata una coda non recapitabili personalizzata, ma quando avvia l'applicazione mittente, viene generata un'eccezione che la coda di lettera non consegnata non viene trovata, o l'applicazione mittente non dispone di autorizzazioni per la coda di messaggi non recapitabili. Perché si verifica questa situazione?  
   
@@ -184,17 +184,17 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **R:** Le ragioni possibili sono tre:  
   
--   In modalità di dominio per la ricezione transazionale remota è necessario l'accesso alla rete di Microsoft Distributed Transaction Coordinator (MSDTC). È possibile abilitarla usando **Aggiungi/Rimuovi componenti**.  
+- In modalità di dominio per la ricezione transazionale remota è necessario l'accesso alla rete di Microsoft Distributed Transaction Coordinator (MSDTC). È possibile abilitarla usando **Aggiungi/Rimuovi componenti**.  
   
      ![Screenshot che mostra l'abilitazione di rete DTC accesso.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)  
   
--   Verificare la modalità di autenticazione per la comunicazione con il gestore transazioni. Se si è in modalità gruppo di lavoro, è non necessario selezionare "Nessuna autenticazione". Se si è in modalità di dominio, è necessario selezionare "Necessaria autenticazione reciproca".  
+- Verificare la modalità di autenticazione per la comunicazione con il gestore transazioni. Se si è in modalità gruppo di lavoro, è non necessario selezionare "Nessuna autenticazione". Se si è in modalità di dominio, è necessario selezionare "Necessaria autenticazione reciproca".  
   
      ![Abilitazione delle transazioni XA](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")  
   
--   Assicurarsi che MSDTC sia nell'elenco delle eccezioni nel **Internet Connection Firewall** impostazioni.  
+- Assicurarsi che MSDTC sia nell'elenco delle eccezioni nel **Internet Connection Firewall** impostazioni.  
   
--   Assicurarsi di utilizzare [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ con [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta la lettura transazionale remota. MSMQ con le versioni precedenti di Windows non supporta la lettura transazionale remota.  
+- Assicurarsi di utilizzare [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ con [!INCLUDE[wv](../../../../includes/wv-md.md)] supporta la lettura transazionale remota. MSMQ con le versioni precedenti di Windows non supporta la lettura transazionale remota.  
   
  **Q:** Quando il servizio che legge dalla coda è un servizio di rete, ad esempio, un sito Web host, il motivo per cui ottenere un'eccezione di accesso negato viene generato durante la lettura dalla coda?  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
 ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013296"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Procedura: Selezionare testo nel controllo TextBox di Windows Forms
 È possibile selezionare il testo a livello di codice nei moduli di Windows <xref:System.Windows.Forms.TextBox> controllo. Ad esempio, se si crea una funzione che cerca il testo per una determinata stringa, è possibile selezionare il testo da mostrare all'utente il lettore della posizione della stringa trovata.  

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051169"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Limita le conversioni di tipo di dati implicite per solo conversioni di ampliamento, non consente l'associazione tardiva e la tipizzazione implicita che comporta un `Object` tipo.  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>Note  
  Quando `Option Strict On` o `Option Strict` viene visualizzato in un file, le condizioni seguenti causano un errore in fase di compilazione:  
   
--   Conversioni implicite verso un tipo di dati più piccolo  
+- Conversioni implicite verso un tipo di dati più piccolo  
   
--   Associazione tardiva  
+- Associazione tardiva  
   
--   Tipizzazione implicita che comporta un tipo `Object`  
+- Tipizzazione implicita che comporta un tipo `Object`  
   
 > [!NOTE]
 >  Nelle configurazioni di avviso che è possibile impostare per il [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), sono disponibili tre impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione. Per informazioni su come usare queste impostazioni, vedere [per impostare le configurazioni di avviso nell'IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) più avanti in questo argomento.  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  Quando si imposta `Option Strict` a `On`, Visual Basic controlla i tipi di dati sono specificati per tutti gli elementi di programmazione. Tipi di dati possono essere specificati in modo esplicito o specificati tramite l'inferenza del tipo locale. Specifica dei tipi di dati per tutti gli elementi di programmazione è consigliata, per i motivi seguenti:  
   
--   Consente il supporto IntelliSense per le variabili e parametri. In questo modo è possibile visualizzare le relative proprietà e gli altri membri durante la digitazione di codice.  
+- Consente il supporto IntelliSense per le variabili e parametri. In questo modo è possibile visualizzare le relative proprietà e gli altri membri durante la digitazione di codice.  
   
--   Consente al compilatore di eseguire il controllo dei tipi. Controllo consente di che trovare le istruzioni che possono non riuscire in fase di esecuzione a causa di errori di conversione del tipo. Identifica anche le chiamate ai metodi su oggetti che non supportano tali metodi.  
+- Consente al compilatore di eseguire il controllo dei tipi. Controllo consente di che trovare le istruzioni che possono non riuscire in fase di esecuzione a causa di errori di conversione del tipo. Identifica anche le chiamate ai metodi su oggetti che non supportano tali metodi.  
   
--   Accelera l'esecuzione di codice. Uno dei motivi è che se non si specifica un tipo di dati per un elemento di programmazione, il compilatore Visual Basic assegna il `Object` tipo. Il codice compilato potrebbe essere necessario convertire spostarsi tra `Object` e altri tipi di dati, riducendo le prestazioni.  
+- Accelera l'esecuzione di codice. Uno dei motivi è che se non si specifica un tipo di dati per un elemento di programmazione, il compilatore Visual Basic assegna il `Object` tipo. Il codice compilato potrebbe essere necessario convertire spostarsi tra `Object` e altri tipi di dati, riducendo le prestazioni.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>Errori di conversione di Narrowing implicite  
  Questi errori si verificano in presenza di una conversione implicita verso un tipo di dati più piccolo.  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  Le conversioni che possono causare errori includono le conversioni implicite che si verificano nelle espressioni. Per altre informazioni, vedere i seguenti argomenti:  
   
--   [Operatore +](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [Operatore +](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [Operatore +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [Operatore +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ Operatore (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = (Operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ = (Operatore) (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Tipo di dati Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Tipo di dati Char](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Quando si concatenano le stringhe usando il [& operatore](../../../visual-basic/language-reference/operators/concatenation-operator.md), tutte le conversioni per le stringhe vengono considerate di ampliamento. In modo che queste conversioni non generano un errore di conversione narrowing implicite, anche se `Option Strict` si trova in.  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> Per impostare le configurazioni di avviso nell'IDE  
  Quando si usa la [pagina compilazione, creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) anziché un `Option Strict` istruzione, si ha un maggiore controllo delle condizioni che generano errori. Il **configurazioni avvisi** sezione il **pagina compilazione** dispone di impostazioni che corrispondono alle tre condizioni che causano un errore in fase di compilazione quando `Option Strict` si trova in. Queste impostazioni sono le seguenti:  
   
--   **Conversione implicita**  
+- **Conversione implicita**  
   
--   **Binding tardivo. La chiamata potrebbe non riuscire in fase di esecuzione.**  
+- **Binding tardivo. La chiamata potrebbe non riuscire in fase di esecuzione.**  
   
--   **Tipo implicito. Verrà utilizzato oggetto.**  
+- **Tipo implicito. Verrà utilizzato oggetto.**  
   
  Quando si imposta **Option Strict** su **On**, tutte e tre queste impostazioni di configurazione degli avvisi vengono impostate su **Errore**. Quando si imposta **Option Strict** su **Off**, tutte e tre le impostazioni vengono impostate su **Nessuno**.  
   

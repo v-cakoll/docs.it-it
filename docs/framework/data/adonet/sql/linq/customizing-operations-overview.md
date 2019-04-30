@@ -3,11 +3,11 @@ title: 'Personalizzazione di operazioni: Panoramica'
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
 ms.openlocfilehash: 29fb75271b7bc324d462078e94e4a28534986fba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038088"
 ---
 # <a name="customizing-operations-overview"></a>Personalizzazione di operazioni: Panoramica
 Per impostazione predefinita, in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene generato codice SQL dinamico per le operazioni di inserimento, aggiornamento ed eliminazione basate su mapping. In pratica, tuttavia, la logica di business viene generalmente aggiunta per fornire sicurezza, convalida e così via.  

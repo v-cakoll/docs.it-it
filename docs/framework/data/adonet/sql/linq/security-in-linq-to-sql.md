@@ -3,11 +3,11 @@ title: Sicurezza in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036998"
 ---
 # <a name="security-in-linq-to-sql"></a>Sicurezza in LINQ to SQL
 Quando si esegue la connessione a un database, vi sono sempre problemi relativi alla sicurezza. Sebbene in LINQ to SQL siano disponibili alcune nuove modalità di utilizzo dei dati in SQL Server, non vengono forniti meccanismi di sicurezza aggiuntivi.  
@@ -25,13 +25,13 @@ Quando si esegue la connessione a un database, vi sono sempre problemi relativi 
   
  In assenza della sicurezza integrata, nella stringa di connessione è necessaria una password non crittografata. I modi migliori per proteggere la stringa di connessione, in ordine di rischio crescente, sono i seguenti:  
   
--   Usare la sicurezza integrata.  
+- Usare la sicurezza integrata.  
   
--   Proteggere le stringhe di connessione tramite password e ridurre al minimo i passaggi delle stringhe di connessione.  
+- Proteggere le stringhe di connessione tramite password e ridurre al minimo i passaggi delle stringhe di connessione.  
   
--   Usare una classe <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> anziché una stringa di connessione, in quanto la classe limita la durata dell'esposizione. È possibile creare un'istanza della classe <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> LINQ to SQL usando un oggetto <xref:System.Data.SqlClient.SqlConnection>.  
+- Usare una classe <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> anziché una stringa di connessione, in quanto la classe limita la durata dell'esposizione. È possibile creare un'istanza della classe <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> LINQ to SQL usando un oggetto <xref:System.Data.SqlClient.SqlConnection>.  
   
--   Ridurre al minimo la durata e i punti di contatto per tutte le stringhe di connessione.  
+- Ridurre al minimo la durata e i punti di contatto per tutte le stringhe di connessione.  
   
 ## <a name="see-also"></a>Vedere anche
 

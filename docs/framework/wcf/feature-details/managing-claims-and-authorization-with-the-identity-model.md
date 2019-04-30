@@ -9,11 +9,11 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046632"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestione di attestazioni e autorizzazioni con il modello di identità
 L'autorizzazione è il processo volto a determinare quali entità dispongono delle autorizzazioni per modificare, visualizzare o altrimenti accedere a una risorsa del computer. In un'azienda, ad esempio, è possibile che l'accesso ai file dei dipendenti sia consentito solo ai responsabili. Windows Communication Foundation (WCF) supporta due meccanismi per l'esecuzione del processo di autorizzazione. Il primo meccanismo consente di controllare l'autorizzazione utilizzando costrutti Common Language Runtime (CLR) esistenti. Il secondo è un modello basato sulle attestazioni definito come il *modello di identità*. WCF utilizza il modello di identità per creare attestazioni dai messaggi in ingresso; Classi di modello di identità possono essere esteso per supportare nuovi tipi di attestazione per schemi di autorizzazione personalizzati. In questo argomento viene presentata una panoramica dei principali concetti di programmazione del modello di identità, nonché un elenco delle classi più importanti utilizzate da tale funzionalità.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032001"
 ---
 # <a name="advanced-text-formatting"></a>Formattazione del testo avanzata
 Windows Presentation Foundation (WPF) offre un solido set di [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] per includere testo nell'applicazione. Layout e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], ad esempio <xref:System.Windows.Controls.TextBlock>, fornire i più comuni e gli elementi di utilizzo generale per la presentazione del testo. Disegno [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], ad esempio <xref:System.Windows.Media.GlyphRunDrawing> e <xref:System.Windows.Media.FormattedText>, forniscono un mezzo per includere il testo formattato nei disegni. Al massimo livello avanzato, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornisce un motore per controllare tutti gli aspetti della presentazione del testo, ad esempio gestione degli archivi di testo, la gestione della formattazione e gestione degli oggetti incorporati di formattazione del testo estensibile.  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF) offre un solido set di [!INCLUDE[TLA#tla_a
   
  Per gestire la virtualizzazione dell'archivio di testo, l'archivio di testo deve essere derivato da <xref:System.Windows.Media.TextFormatting.TextSource>. <xref:System.Windows.Media.TextFormatting.TextSource> definisce il metodo che viene utilizzato il formattatore di testo per recuperare le sequenze di testo dall'archivio di testo. <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> è il metodo usato dal formattatore di testo per recuperare il testo viene eseguito usato nella formattazione delle righe. La chiamata a <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> viene effettuata ripetutamente dal formattatore di testo fino a quando non si verifica una delle condizioni seguenti:  
   
--   Oggetto <xref:System.Windows.Media.TextFormatting.TextEndOfLine> o viene restituita una sottoclasse.  
+- Oggetto <xref:System.Windows.Media.TextFormatting.TextEndOfLine> o viene restituita una sottoclasse.  
   
--   La larghezza complessiva delle sequenze di testo supera la larghezza massima della riga specificata nella chiamata per creare il formattatore di testo o la chiamata per il formattatore di testo <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> (metodo).  
+- La larghezza complessiva delle sequenze di testo supera la larghezza massima della riga specificata nella chiamata per creare il formattatore di testo o la chiamata per il formattatore di testo <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> (metodo).  
   
--   Oggetto [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] sequenza di nuova riga, ad esempio "CF", "LF" o "CRLF", viene restituito.  
+- Oggetto [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] sequenza di nuova riga, ad esempio "CF", "LF" o "CRLF", viene restituito.  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>Inserimento delle sequenze di testo  

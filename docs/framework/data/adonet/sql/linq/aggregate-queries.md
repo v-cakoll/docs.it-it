@@ -3,24 +3,24 @@ title: Query di aggregazione
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
 ms.openlocfilehash: ed8624c47ca8e68646f176ff91b63577d64b6d1f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032552"
 ---
 # <a name="aggregate-queries"></a>Query di aggregazione
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sono supportati gli operatori di aggregazione `Average`, `Count`, `Max`, `Min` e `Sum`. Di seguito sono riportate le caratteristiche degli operatori di aggregazione in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
   
--   Le query di aggregazione vengono eseguite immediatamente.  
+- Le query di aggregazione vengono eseguite immediatamente.  
   
      Per altre informazioni, vedere [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
--   Le query di aggregazione restituiscono in genere un numero anziché una raccolta.  
+- Le query di aggregazione restituiscono in genere un numero anziché una raccolta.  
   
      Per altre informazioni, vedere [operazioni di aggregazione](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120)).  
   
--   Non è possibile chiamare aggregati per tipi anonimi.  
+- Non è possibile chiamare aggregati per tipi anonimi.  
   
  Gli esempi negli argomenti riportati di seguito derivano dal database di esempio Northwind. Per altre informazioni, vedere [download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   

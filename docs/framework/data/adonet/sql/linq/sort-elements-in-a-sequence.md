@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
 ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033384"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Ordinare elementi in una sequenza
 Usare l'operatore <xref:System.Linq.Enumerable.OrderBy%2A> per ordinare una sequenza in base a una o più chiavi.  
