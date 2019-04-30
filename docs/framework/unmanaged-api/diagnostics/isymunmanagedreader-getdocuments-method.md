@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: efcf5b6673fbdc37fad99d082f91ab3077abbea9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939464"
 ---
-# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="fdfea-102">Metodo ISymUnmanagedReader::GetDocuments</span><span class="sxs-lookup"><span data-stu-id="fdfea-102">ISymUnmanagedReader::GetDocuments Method</span></span>
-<span data-ttu-id="fdfea-103">Restituisce una matrice di tutti i documenti definiti nell'archivio simboli.</span><span class="sxs-lookup"><span data-stu-id="fdfea-103">Returns an array of all the documents defined in the symbol store.</span></span>  
+# <a name="isymunmanagedreadergetdocuments-method"></a><span data-ttu-id="cc0b2-102">Metodo ISymUnmanagedReader::GetDocuments</span><span class="sxs-lookup"><span data-stu-id="cc0b2-102">ISymUnmanagedReader::GetDocuments Method</span></span>
+<span data-ttu-id="cc0b2-103">Restituisce una matrice di tutti i documenti definiti nell'archivio simboli.</span><span class="sxs-lookup"><span data-stu-id="cc0b2-103">Returns an array of all the documents defined in the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fdfea-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fdfea-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cc0b2-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="cc0b2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocuments (  
@@ -37,22 +37,22 @@ HRESULT GetDocuments (
         length_is (*pcDocs)] ISymUnmanagedDocument *pDocs[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fdfea-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="fdfea-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cc0b2-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="cc0b2-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="fdfea-106">[in] Dimensione della matrice `pDocs`.</span><span class="sxs-lookup"><span data-stu-id="fdfea-106">[in] The size of the `pDocs` array.</span></span>  
+ <span data-ttu-id="cc0b2-106">[in] Dimensione della matrice `pDocs`.</span><span class="sxs-lookup"><span data-stu-id="cc0b2-106">[in] The size of the `pDocs` array.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="fdfea-107">[out] Puntatore a una variabile che riceve la lunghezza della matrice.</span><span class="sxs-lookup"><span data-stu-id="fdfea-107">[out] A pointer to a variable that receives the array length.</span></span>  
+ <span data-ttu-id="cc0b2-107">[out] Puntatore a una variabile che riceve la lunghezza della matrice.</span><span class="sxs-lookup"><span data-stu-id="cc0b2-107">[out] A pointer to a variable that receives the array length.</span></span>  
   
  `pDocs`  
- <span data-ttu-id="fdfea-108">[out] Puntatore a una variabile che riceve la matrice del documento.</span><span class="sxs-lookup"><span data-stu-id="fdfea-108">[out] A pointer to a variable that receives the document array.</span></span>  
+ <span data-ttu-id="cc0b2-108">[out] Puntatore a una variabile che riceve la matrice del documento.</span><span class="sxs-lookup"><span data-stu-id="cc0b2-108">[out] A pointer to a variable that receives the document array.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fdfea-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="fdfea-109">Return Value</span></span>  
- <span data-ttu-id="fdfea-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="fdfea-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cc0b2-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="cc0b2-109">Return Value</span></span>  
+ <span data-ttu-id="cc0b2-110">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="cc0b2-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fdfea-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="fdfea-111">Requirements</span></span>  
- <span data-ttu-id="fdfea-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fdfea-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cc0b2-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="cc0b2-111">Requirements</span></span>  
+ <span data-ttu-id="cc0b2-112">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cc0b2-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fdfea-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fdfea-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc0b2-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cc0b2-113">See also</span></span>
 
-- [<span data-ttu-id="fdfea-114">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="fdfea-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="cc0b2-114">Interfaccia ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="cc0b2-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

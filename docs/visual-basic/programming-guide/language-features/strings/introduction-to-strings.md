@@ -5,25 +5,25 @@ helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
 ms.openlocfilehash: 4da64b1cb25fe1a681e5790aad6abc3a478b229a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938294"
 ---
-# <a name="introduction-to-strings-in-visual-basic"></a><span data-ttu-id="d75d3-102">Introduzione alle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d75d3-102">Introduction to Strings in Visual Basic</span></span>
-<span data-ttu-id="d75d3-103">Questa sezione descrive i concetti fondamentali relativi all'uso delle stringhe in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d75d3-103">This section describes the basic concepts behind using strings in Visual Basic.</span></span>  
+# <a name="introduction-to-strings-in-visual-basic"></a><span data-ttu-id="4453e-102">Introduzione alle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4453e-102">Introduction to Strings in Visual Basic</span></span>
+<span data-ttu-id="4453e-103">Questa sezione descrive i concetti fondamentali relativi all'uso delle stringhe in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4453e-103">This section describes the basic concepts behind using strings in Visual Basic.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d75d3-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d75d3-104">In This Section</span></span>  
- [<span data-ttu-id="d75d3-105">Nozioni fondamentali sulle stringhe</span><span class="sxs-lookup"><span data-stu-id="d75d3-105">String Basics</span></span>](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- <span data-ttu-id="d75d3-106">Introduce i concetti fondamentali relativi all'utilizzo di stringhe e le variabili di stringa.</span><span class="sxs-lookup"><span data-stu-id="d75d3-106">Introduces the basic concepts behind using strings and string variables.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="4453e-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="4453e-104">In This Section</span></span>  
+ [<span data-ttu-id="4453e-105">Nozioni fondamentali sulle stringhe</span><span class="sxs-lookup"><span data-stu-id="4453e-105">String Basics</span></span>](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+ <span data-ttu-id="4453e-106">Introduce i concetti fondamentali relativi all'utilizzo di stringhe e le variabili di stringa.</span><span class="sxs-lookup"><span data-stu-id="4453e-106">Introduces the basic concepts behind using strings and string variables.</span></span>  
   
- [<span data-ttu-id="d75d3-107">Tipi di metodi di manipolazione delle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d75d3-107">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- <span data-ttu-id="d75d3-108">Introduce diversi modi per analizzare e modificare le stringhe.</span><span class="sxs-lookup"><span data-stu-id="d75d3-108">Introduces several different ways to analyze and manipulate strings.</span></span>  
+ [<span data-ttu-id="4453e-107">Tipi di metodi di manipolazione delle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4453e-107">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ <span data-ttu-id="4453e-108">Introduce diversi modi per analizzare e modificare le stringhe.</span><span class="sxs-lookup"><span data-stu-id="4453e-108">Introduces several different ways to analyze and manipulate strings.</span></span>  
   
- [<span data-ttu-id="d75d3-109">Influenza delle impostazioni cultura sulle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d75d3-109">How Culture Affects Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- <span data-ttu-id="d75d3-110">Viene descritto come Visual Basic Usa informazioni sulle impostazioni cultura per eseguire confronti e le conversioni di stringa.</span><span class="sxs-lookup"><span data-stu-id="d75d3-110">Discusses how Visual Basic uses culture information to perform string conversions and comparisons.</span></span>  
+ [<span data-ttu-id="4453e-109">Influenza delle impostazioni cultura sulle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4453e-109">How Culture Affects Strings in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ <span data-ttu-id="4453e-110">Viene descritto come Visual Basic Usa informazioni sulle impostazioni cultura per eseguire confronti e le conversioni di stringa.</span><span class="sxs-lookup"><span data-stu-id="4453e-110">Discusses how Visual Basic uses culture information to perform string conversions and comparisons.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d75d3-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d75d3-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4453e-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4453e-111">See also</span></span>
 
-- [<span data-ttu-id="d75d3-112">Stringhe</span><span class="sxs-lookup"><span data-stu-id="d75d3-112">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [<span data-ttu-id="4453e-112">Stringhe</span><span class="sxs-lookup"><span data-stu-id="4453e-112">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)
