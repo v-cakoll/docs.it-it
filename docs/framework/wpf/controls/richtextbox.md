@@ -8,21 +8,21 @@ helpviewer_keywords:
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
 ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971067"
 ---
-# <a name="richtextbox"></a><span data-ttu-id="bc77a-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="bc77a-102">RichTextBox</span></span>
-<span data-ttu-id="bc77a-103">Il <xref:System.Windows.Controls.RichTextBox> elemento definisce un controllo di modifica con il supporto predefinito per le funzionalità, ad esempio Taglia e Incolla, presentazione del documento avanzata e selezione di contenuto.</span><span class="sxs-lookup"><span data-stu-id="bc77a-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
+# <a name="richtextbox"></a><span data-ttu-id="8a78f-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="8a78f-102">RichTextBox</span></span>
+<span data-ttu-id="8a78f-103">Il <xref:System.Windows.Controls.RichTextBox> elemento definisce un controllo di modifica con il supporto predefinito per le funzionalità, ad esempio Taglia e Incolla, presentazione del documento avanzata e selezione di contenuto.</span><span class="sxs-lookup"><span data-stu-id="8a78f-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bc77a-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="bc77a-104">In This Section</span></span>  
- [<span data-ttu-id="bc77a-105">Cenni preliminari sul controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="bc77a-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
- [<span data-ttu-id="bc77a-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="bc77a-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8a78f-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="8a78f-104">In This Section</span></span>  
+ [<span data-ttu-id="8a78f-105">Cenni preliminari sul controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="8a78f-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
+ [<span data-ttu-id="8a78f-106">Procedure relative alle proprietà</span><span class="sxs-lookup"><span data-stu-id="8a78f-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="bc77a-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bc77a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a78f-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8a78f-107">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="bc77a-108">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="bc77a-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="bc77a-109">Cenni preliminari sui documenti dinamici</span><span class="sxs-lookup"><span data-stu-id="bc77a-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="8a78f-108">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="8a78f-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="8a78f-109">Cenni preliminari sui documenti dinamici</span><span class="sxs-lookup"><span data-stu-id="8a78f-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

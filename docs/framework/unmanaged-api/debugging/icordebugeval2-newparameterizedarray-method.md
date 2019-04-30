@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988987"
 ---
-# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="6fe8e-102">Metodo ICorDebugEval2::NewParameterizedArray</span><span class="sxs-lookup"><span data-stu-id="6fe8e-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
-<span data-ttu-id="6fe8e-103">Consente di allocare una nuova matrice del tipo di elemento specificato e le dimensioni.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-103">Allocates a new array of the specified element type and dimensions.</span></span>  
+# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="0763f-102">Metodo ICorDebugEval2::NewParameterizedArray</span><span class="sxs-lookup"><span data-stu-id="0763f-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
+<span data-ttu-id="0763f-103">Consente di allocare una nuova matrice del tipo di elemento specificato e le dimensioni.</span><span class="sxs-lookup"><span data-stu-id="0763f-103">Allocates a new array of the specified element type and dimensions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fe8e-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6fe8e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0763f-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0763f-104">Syntax</span></span>  
   
 ```  
 HRESULT NewParameterizedArray(  
@@ -38,27 +38,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6fe8e-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6fe8e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0763f-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="0763f-105">Parameters</span></span>  
  `pElementType`  
- <span data-ttu-id="6fe8e-106">[in] Un puntatore a un oggetto ICorDebugType che rappresenta il tipo di elemento memorizzato nella matrice.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
+ <span data-ttu-id="0763f-106">[in] Un puntatore a un oggetto ICorDebugType che rappresenta il tipo di elemento memorizzato nella matrice.</span><span class="sxs-lookup"><span data-stu-id="0763f-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
   
  `rank`  
- <span data-ttu-id="6fe8e-107">[in] Il numero di dimensioni della matrice.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="6fe8e-108">In .NET Framework versione 2.0, questo valore deve essere 1.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
+ <span data-ttu-id="0763f-107">[in] Il numero di dimensioni della matrice.</span><span class="sxs-lookup"><span data-stu-id="0763f-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="0763f-108">In .NET Framework versione 2.0, questo valore deve essere 1.</span><span class="sxs-lookup"><span data-stu-id="0763f-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
   
  `dims`  
- <span data-ttu-id="6fe8e-109">[in] Le dimensioni, in byte, di ogni dimensione della matrice.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
+ <span data-ttu-id="0763f-109">[in] Le dimensioni, in byte, di ogni dimensione della matrice.</span><span class="sxs-lookup"><span data-stu-id="0763f-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
   
  `lowBounds`  
- <span data-ttu-id="6fe8e-110">[in] Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-110">[in] Optional.</span></span> <span data-ttu-id="6fe8e-111">Il limite inferiore di ogni dimensione della matrice.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="6fe8e-112">Se questo valore viene omesso, per ogni dimensione viene utilizzato un limite inferiore pari a zero.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
+ <span data-ttu-id="0763f-110">[in] Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="0763f-110">[in] Optional.</span></span> <span data-ttu-id="0763f-111">Il limite inferiore di ogni dimensione della matrice.</span><span class="sxs-lookup"><span data-stu-id="0763f-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="0763f-112">Se questo valore viene omesso, per ogni dimensione viene utilizzato un limite inferiore pari a zero.</span><span class="sxs-lookup"><span data-stu-id="0763f-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6fe8e-113">Note</span><span class="sxs-lookup"><span data-stu-id="6fe8e-113">Remarks</span></span>  
- <span data-ttu-id="6fe8e-114">Gli elementi della matrice possono essere istanze di un tipo generico.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="6fe8e-115">La matrice viene sempre creata nel dominio dell'applicazione in cui è attualmente in esecuzione il thread.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="6fe8e-116">In .NET Framework 2.0, il valore di `rank` deve essere 1.</span><span class="sxs-lookup"><span data-stu-id="6fe8e-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0763f-113">Note</span><span class="sxs-lookup"><span data-stu-id="0763f-113">Remarks</span></span>  
+ <span data-ttu-id="0763f-114">Gli elementi della matrice possono essere istanze di un tipo generico.</span><span class="sxs-lookup"><span data-stu-id="0763f-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="0763f-115">La matrice viene sempre creata nel dominio dell'applicazione in cui è attualmente in esecuzione il thread.</span><span class="sxs-lookup"><span data-stu-id="0763f-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="0763f-116">In .NET Framework 2.0, il valore di `rank` deve essere 1.</span><span class="sxs-lookup"><span data-stu-id="0763f-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6fe8e-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6fe8e-117">Requirements</span></span>  
- <span data-ttu-id="6fe8e-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6fe8e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0763f-117">Requisiti</span><span class="sxs-lookup"><span data-stu-id="0763f-117">Requirements</span></span>  
+ <span data-ttu-id="0763f-118">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0763f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6fe8e-119">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6fe8e-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0763f-119">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0763f-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6fe8e-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6fe8e-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0763f-120">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0763f-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6fe8e-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fe8e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="0763f-121">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0763f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

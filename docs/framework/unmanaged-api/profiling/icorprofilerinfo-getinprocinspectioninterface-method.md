@@ -18,38 +18,38 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 456dd8aedf11b1b27ee4926988fc615ebb7a76d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991822"
 ---
-# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="bd26d-102">Metodo ICorProfilerInfo::GetInprocInspectionInterface</span><span class="sxs-lookup"><span data-stu-id="bd26d-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
-<span data-ttu-id="bd26d-103">Ottiene un oggetto che è possibile eseguire query per un'interfaccia "ICorDebugProcess".</span><span class="sxs-lookup"><span data-stu-id="bd26d-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="bd26d-104">Questo metodo è obsoleto in .NET Framework versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="bd26d-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfogetinprocinspectioninterface-method"></a><span data-ttu-id="b076e-102">Metodo ICorProfilerInfo::GetInprocInspectionInterface</span><span class="sxs-lookup"><span data-stu-id="b076e-102">ICorProfilerInfo::GetInprocInspectionInterface Method</span></span>
+<span data-ttu-id="b076e-103">Ottiene un oggetto che è possibile eseguire query per un'interfaccia "ICorDebugProcess".</span><span class="sxs-lookup"><span data-stu-id="b076e-103">Gets an object that can be queried for an "ICorDebugProcess" interface.</span></span> <span data-ttu-id="b076e-104">Questo metodo è obsoleto in .NET Framework versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="b076e-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd26d-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="bd26d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b076e-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b076e-105">Syntax</span></span>  
   
 ```  
 HRESULT GetInprocInspectionInterface(  
     [out] IUnknown **ppicd);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bd26d-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="bd26d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b076e-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="b076e-106">Parameters</span></span>  
  `ppicd`  
- <span data-ttu-id="bd26d-107">[out](/cpp/atl/iunknown) oggetto che è possibile cercare un `ICorDebugProcess` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="bd26d-107">[out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.</span></span>  
+ <span data-ttu-id="b076e-107">[out](/cpp/atl/iunknown) oggetto che è possibile cercare un `ICorDebugProcess` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b076e-107">[out](/cpp/atl/iunknown) object that can be queried for an `ICorDebugProcess` interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bd26d-108">Note</span><span class="sxs-lookup"><span data-stu-id="bd26d-108">Remarks</span></span>  
- <span data-ttu-id="bd26d-109">API di debug di common language runtime (CLR) supportata limitato in-process debugging in .NET Framework versione 1.0.</span><span class="sxs-lookup"><span data-stu-id="bd26d-109">The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="bd26d-110">Per attivare un profiler di usare le parti di verifica dell'API di debug, il debug in-process.</span><span class="sxs-lookup"><span data-stu-id="bd26d-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="bd26d-111">In seguito a commenti e suggerimenti dei clienti, debug in-process è stati rimossi da .NET Framework versione 2.0 e sostituito con un set di funzionalità che è più in linea con l'API di profilatura.</span><span class="sxs-lookup"><span data-stu-id="bd26d-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b076e-108">Note</span><span class="sxs-lookup"><span data-stu-id="b076e-108">Remarks</span></span>  
+ <span data-ttu-id="b076e-109">API di debug di common language runtime (CLR) supportata limitato in-process debugging in .NET Framework versione 1.0.</span><span class="sxs-lookup"><span data-stu-id="b076e-109">The common language runtime (CLR) debugging API supported limited in-process debugging in the .NET Framework version 1.0.</span></span> <span data-ttu-id="b076e-110">Per attivare un profiler di usare le parti di verifica dell'API di debug, il debug in-process.</span><span class="sxs-lookup"><span data-stu-id="b076e-110">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="b076e-111">In seguito a commenti e suggerimenti dei clienti, debug in-process è stati rimossi da .NET Framework versione 2.0 e sostituito con un set di funzionalità che è più in linea con l'API di profilatura.</span><span class="sxs-lookup"><span data-stu-id="b076e-111">As a result of customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bd26d-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="bd26d-112">Requirements</span></span>  
- <span data-ttu-id="bd26d-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd26d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b076e-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="b076e-112">Requirements</span></span>  
+ <span data-ttu-id="b076e-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b076e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bd26d-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bd26d-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b076e-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b076e-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bd26d-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bd26d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b076e-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b076e-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bd26d-116">**Versione di .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="bd26d-116">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="b076e-116">**Versione di .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="b076e-116">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bd26d-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bd26d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b076e-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b076e-117">See also</span></span>
 
-- [<span data-ttu-id="bd26d-118">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="bd26d-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="b076e-118">Interfaccia ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="b076e-118">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

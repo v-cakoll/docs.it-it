@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d992ea86b3221af222bb01f1985fe277cea5a2c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988989"
 ---
-# <a name="icordebugevalisactive-method"></a><span data-ttu-id="507cd-102">Metodo ICorDebugEval::IsActive</span><span class="sxs-lookup"><span data-stu-id="507cd-102">ICorDebugEval::IsActive Method</span></span>
-<span data-ttu-id="507cd-103">Ottiene un valore che indica se l'oggetto ICorDebugEval è attualmente in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="507cd-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
+# <a name="icordebugevalisactive-method"></a><span data-ttu-id="95cae-102">Metodo ICorDebugEval::IsActive</span><span class="sxs-lookup"><span data-stu-id="95cae-102">ICorDebugEval::IsActive Method</span></span>
+<span data-ttu-id="95cae-103">Ottiene un valore che indica se l'oggetto ICorDebugEval è attualmente in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="95cae-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="507cd-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="507cd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="95cae-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="95cae-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -35,15 +35,15 @@ HRESULT IsActive (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="507cd-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="507cd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="95cae-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="95cae-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="507cd-106">[out] Puntatore a un valore che indica se questa versione di valutazione è attiva.</span><span class="sxs-lookup"><span data-stu-id="507cd-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
+ <span data-ttu-id="95cae-106">[out] Puntatore a un valore che indica se questa versione di valutazione è attiva.</span><span class="sxs-lookup"><span data-stu-id="95cae-106">[out] Pointer to a value that indicates whether this evaluation is active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="507cd-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="507cd-107">Requirements</span></span>  
- <span data-ttu-id="507cd-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="507cd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="95cae-107">Requisiti</span><span class="sxs-lookup"><span data-stu-id="95cae-107">Requirements</span></span>  
+ <span data-ttu-id="95cae-108">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95cae-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="507cd-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="507cd-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="95cae-109">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="95cae-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="507cd-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="507cd-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="95cae-110">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="95cae-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="507cd-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="507cd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="95cae-111">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95cae-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

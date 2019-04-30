@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91318ea596cc7d6c8a747901fea2749a64aa2623
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995410"
 ---
-# <a name="icordebugmanagedcallbackexception-method"></a><span data-ttu-id="6ae74-102">Metodo ICorDebugManagedCallback::Exception</span><span class="sxs-lookup"><span data-stu-id="6ae74-102">ICorDebugManagedCallback::Exception Method</span></span>
-<span data-ttu-id="6ae74-103">Notifica al debugger che è stata generata un'eccezione dal codice gestito.</span><span class="sxs-lookup"><span data-stu-id="6ae74-103">Notifies the debugger that an exception has been thrown from managed code.</span></span>  
+# <a name="icordebugmanagedcallbackexception-method"></a><span data-ttu-id="e1fe3-102">Metodo ICorDebugManagedCallback::Exception</span><span class="sxs-lookup"><span data-stu-id="e1fe3-102">ICorDebugManagedCallback::Exception Method</span></span>
+<span data-ttu-id="e1fe3-103">Notifica al debugger che è stata generata un'eccezione dal codice gestito.</span><span class="sxs-lookup"><span data-stu-id="e1fe3-103">Notifies the debugger that an exception has been thrown from managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ae74-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6ae74-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1fe3-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e1fe3-104">Syntax</span></span>  
   
 ```  
 HRESULT Exception (  
@@ -37,28 +37,28 @@ HRESULT Exception (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6ae74-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="6ae74-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e1fe3-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="e1fe3-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="6ae74-106">[in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="6ae74-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the exception was thrown.</span></span>  
+ <span data-ttu-id="e1fe3-106">[in] Un puntatore a un oggetto ICorDebugAppDomain che rappresenta il dominio applicazione in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="e1fe3-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain in which the exception was thrown.</span></span>  
   
  `pThread`  
- <span data-ttu-id="6ae74-107">[in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="6ae74-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the exception was thrown.</span></span>  
+ <span data-ttu-id="e1fe3-107">[in] Un puntatore a un oggetto ICorDebugThread che rappresenta il thread in cui è stata generata l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="e1fe3-107">[in] A pointer to an ICorDebugThread object that represents the thread in which the exception was thrown.</span></span>  
   
  `unhandled`  
- <span data-ttu-id="6ae74-108">[in] Se questo valore è `false`, l'eccezione non è ancora stato elaborato dall'applicazione; in caso contrario, l'eccezione viene gestita e interromperà il processo.</span><span class="sxs-lookup"><span data-stu-id="6ae74-108">[in] If this value is `false`, the exception has not yet been processed by the application; otherwise, the exception is unhandled and will terminate the process.</span></span>  
+ <span data-ttu-id="e1fe3-108">[in] Se questo valore è `false`, l'eccezione non è ancora stato elaborato dall'applicazione; in caso contrario, l'eccezione viene gestita e interromperà il processo.</span><span class="sxs-lookup"><span data-stu-id="e1fe3-108">[in] If this value is `false`, the exception has not yet been processed by the application; otherwise, the exception is unhandled and will terminate the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6ae74-109">Note</span><span class="sxs-lookup"><span data-stu-id="6ae74-109">Remarks</span></span>  
- <span data-ttu-id="6ae74-110">L'eccezione specifica può essere recuperato dall'oggetto thread.</span><span class="sxs-lookup"><span data-stu-id="6ae74-110">The specific exception can be retrieved from the thread object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1fe3-109">Note</span><span class="sxs-lookup"><span data-stu-id="e1fe3-109">Remarks</span></span>  
+ <span data-ttu-id="e1fe3-110">L'eccezione specifica può essere recuperato dall'oggetto thread.</span><span class="sxs-lookup"><span data-stu-id="e1fe3-110">The specific exception can be retrieved from the thread object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6ae74-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="6ae74-111">Requirements</span></span>  
- <span data-ttu-id="6ae74-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6ae74-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1fe3-111">Requisiti</span><span class="sxs-lookup"><span data-stu-id="e1fe3-111">Requirements</span></span>  
+ <span data-ttu-id="e1fe3-112">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1fe3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6ae74-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6ae74-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e1fe3-113">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e1fe3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6ae74-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ae74-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e1fe3-114">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1fe3-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6ae74-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6ae74-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e1fe3-115">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1fe3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6ae74-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6ae74-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1fe3-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1fe3-116">See also</span></span>
 
-- [<span data-ttu-id="6ae74-117">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="6ae74-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="e1fe3-117">Interfaccia ICorDebugManagedCallback</span><span class="sxs-lookup"><span data-stu-id="e1fe3-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
