@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 82f2f335299cfd3041dcecc7d176cb77ce54ae96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939672"
 ---
-# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="984ed-102">Metodo ISymUnmanagedENCUpdate::UpdateSymbolStore2</span><span class="sxs-lookup"><span data-stu-id="984ed-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
-<span data-ttu-id="984ed-103">Consente a un compilatore di omettere le funzioni che non sono state modificate dal flusso di programma (PDB) del database, purché le informazioni sulla riga soddisfa i requisiti.</span><span class="sxs-lookup"><span data-stu-id="984ed-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="984ed-104">Le informazioni sulla riga corretto può essere determinati con le informazioni sulla riga PDB precedente e un delta per tutte le righe della funzione.</span><span class="sxs-lookup"><span data-stu-id="984ed-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
+# <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a><span data-ttu-id="dde64-102">Metodo ISymUnmanagedENCUpdate::UpdateSymbolStore2</span><span class="sxs-lookup"><span data-stu-id="dde64-102">ISymUnmanagedENCUpdate::UpdateSymbolStore2 Method</span></span>
+<span data-ttu-id="dde64-103">Consente a un compilatore di omettere le funzioni che non sono state modificate dal flusso di programma (PDB) del database, purché le informazioni sulla riga soddisfa i requisiti.</span><span class="sxs-lookup"><span data-stu-id="dde64-103">Allows a compiler to omit functions that have not been modified from the program database (PDB) stream, provided the line information meets the requirements.</span></span> <span data-ttu-id="dde64-104">Le informazioni sulla riga corretto può essere determinati con le informazioni sulla riga PDB precedente e un delta per tutte le righe della funzione.</span><span class="sxs-lookup"><span data-stu-id="dde64-104">The correct line information can be determined with the old PDB line information and one delta for all lines in the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="984ed-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="984ed-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dde64-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dde64-105">Syntax</span></span>  
   
 ```  
 HRESULT UpdateSymbolStore2(  
@@ -36,22 +36,22 @@ HRESULT UpdateSymbolStore2(
     [in]  ULONG         cDeltaLines);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="984ed-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="984ed-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dde64-106">Parametri</span><span class="sxs-lookup"><span data-stu-id="dde64-106">Parameters</span></span>  
  `pIStream`  
- <span data-ttu-id="984ed-107">[in] Un puntatore a un [IStream](/windows/desktop/api/objidl/nn-objidl-istream) che contiene le informazioni sulla riga.</span><span class="sxs-lookup"><span data-stu-id="984ed-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
+ <span data-ttu-id="dde64-107">[in] Un puntatore a un [IStream](/windows/desktop/api/objidl/nn-objidl-istream) che contiene le informazioni sulla riga.</span><span class="sxs-lookup"><span data-stu-id="dde64-107">[in] A pointer to an [IStream](/windows/desktop/api/objidl/nn-objidl-istream) that contains the line information.</span></span>  
   
  `pDeltaLines`  
- <span data-ttu-id="984ed-108">[in] Un puntatore a un [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) struttura che contiene le righe che sono stati modificati.</span><span class="sxs-lookup"><span data-stu-id="984ed-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
+ <span data-ttu-id="dde64-108">[in] Un puntatore a un [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) struttura che contiene le righe che sono stati modificati.</span><span class="sxs-lookup"><span data-stu-id="dde64-108">[in] A pointer to a [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) structure that contains the lines that have changed.</span></span>  
   
  `cDeltaLines`  
- <span data-ttu-id="984ed-109">[in] Oggetto `ULONG` che rappresenta il numero di righe che sono stati modificati.</span><span class="sxs-lookup"><span data-stu-id="984ed-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
+ <span data-ttu-id="dde64-109">[in] Oggetto `ULONG` che rappresenta il numero di righe che sono stati modificati.</span><span class="sxs-lookup"><span data-stu-id="dde64-109">[in] A `ULONG` that represents the number of lines that have changed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="984ed-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="984ed-110">Return Value</span></span>  
- <span data-ttu-id="984ed-111">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="984ed-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dde64-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="dde64-110">Return Value</span></span>  
+ <span data-ttu-id="dde64-111">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="dde64-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="984ed-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="984ed-112">Requirements</span></span>  
- <span data-ttu-id="984ed-113">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="984ed-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dde64-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="dde64-112">Requirements</span></span>  
+ <span data-ttu-id="dde64-113">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="dde64-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="984ed-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="984ed-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dde64-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dde64-114">See also</span></span>
 
-- [<span data-ttu-id="984ed-115">Interfaccia ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="984ed-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="dde64-115">Interfaccia ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="dde64-115">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

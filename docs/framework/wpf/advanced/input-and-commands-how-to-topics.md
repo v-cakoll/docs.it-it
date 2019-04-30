@@ -8,29 +8,29 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
 ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942779"
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="adc59-102">Procedure relative all'input e ai comandi</span><span class="sxs-lookup"><span data-stu-id="adc59-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="adc59-103">Gli argomenti in questa sezione descrivono come usare l'infrastruttura di input e di esecuzione dei comandi in Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="adc59-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="a82fa-102">Procedure relative all'input e ai comandi</span><span class="sxs-lookup"><span data-stu-id="a82fa-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="a82fa-103">Gli argomenti in questa sezione descrivono come usare l'infrastruttura di input e di esecuzione dei comandi in Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="a82fa-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="adc59-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="adc59-104">In This Section</span></span>  
- [<span data-ttu-id="adc59-105">Attivare un comando</span><span class="sxs-lookup"><span data-stu-id="adc59-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
- [<span data-ttu-id="adc59-106">Modificare il tipo di cursore</span><span class="sxs-lookup"><span data-stu-id="adc59-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="adc59-107">Modificare il colore di un elemento usando eventi di stato attivo</span><span class="sxs-lookup"><span data-stu-id="adc59-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="adc59-108">Applicare un oggetto FocusVisualStyle a un controllo</span><span class="sxs-lookup"><span data-stu-id="adc59-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="adc59-109">Rilevare il momento in cui è stato premuto il tasto INVIO</span><span class="sxs-lookup"><span data-stu-id="adc59-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="adc59-110">Creare un effetto di attivazione usando gli eventi</span><span class="sxs-lookup"><span data-stu-id="adc59-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="adc59-111">Fare in modo che un oggetto segua il puntatore del mouse</span><span class="sxs-lookup"><span data-stu-id="adc59-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="adc59-112">Creare un oggetto RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="adc59-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="adc59-113">Implementare ICommandSource</span><span class="sxs-lookup"><span data-stu-id="adc59-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
- [<span data-ttu-id="adc59-114">Associare un comando a un controllo senza supporto del comando</span><span class="sxs-lookup"><span data-stu-id="adc59-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="adc59-115">Associare un comando a un controllo con supporto dei comandi</span><span class="sxs-lookup"><span data-stu-id="adc59-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a82fa-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="a82fa-104">In This Section</span></span>  
+ [<span data-ttu-id="a82fa-105">Attivare un comando</span><span class="sxs-lookup"><span data-stu-id="a82fa-105">Enable a Command</span></span>](how-to-enable-a-command.md)  
+ [<span data-ttu-id="a82fa-106">Modificare il tipo di cursore</span><span class="sxs-lookup"><span data-stu-id="a82fa-106">Change the Cursor Type</span></span>](how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="a82fa-107">Modificare il colore di un elemento usando eventi di stato attivo</span><span class="sxs-lookup"><span data-stu-id="a82fa-107">Change the Color of an Element Using Focus Events</span></span>](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="a82fa-108">Applicare un oggetto FocusVisualStyle a un controllo</span><span class="sxs-lookup"><span data-stu-id="a82fa-108">Apply a FocusVisualStyle to a Control</span></span>](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="a82fa-109">Rilevare il momento in cui è stato premuto il tasto INVIO</span><span class="sxs-lookup"><span data-stu-id="a82fa-109">Detect When the Enter Key is Pressed</span></span>](how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="a82fa-110">Creare un effetto di attivazione usando gli eventi</span><span class="sxs-lookup"><span data-stu-id="a82fa-110">Create a Rollover Effect Using Events</span></span>](how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="a82fa-111">Fare in modo che un oggetto segua il puntatore del mouse</span><span class="sxs-lookup"><span data-stu-id="a82fa-111">Make an Object Follow the Mouse Pointer</span></span>](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="a82fa-112">Creare un oggetto RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="a82fa-112">Create a RoutedCommand</span></span>](how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="a82fa-113">Implementare ICommandSource</span><span class="sxs-lookup"><span data-stu-id="a82fa-113">Implement ICommandSource</span></span>](how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="a82fa-114">Associare un comando a un controllo senza supporto del comando</span><span class="sxs-lookup"><span data-stu-id="a82fa-114">Hook Up a Command to a Control with No Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="a82fa-115">Associare un comando a un controllo con supporto dei comandi</span><span class="sxs-lookup"><span data-stu-id="a82fa-115">Hook Up a Command to a Control with Command Support</span></span>](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="adc59-116">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="adc59-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a82fa-116">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="a82fa-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -45,4 +45,4 @@ ms.locfileid: "57352386"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="adc59-117">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="adc59-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a82fa-117">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="a82fa-117">Related Sections</span></span>

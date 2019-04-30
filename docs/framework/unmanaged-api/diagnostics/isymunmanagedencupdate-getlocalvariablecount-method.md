@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 11a75ca89a3537ce8ee72e8ba24401800eacff20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939737"
 ---
-# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="876aa-102">Metodo ISymUnmanagedENCUpdate::GetLocalVariableCount</span><span class="sxs-lookup"><span data-stu-id="876aa-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
-<span data-ttu-id="876aa-103">Ottiene il numero di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="876aa-103">Gets the number of local variables.</span></span>  
+# <a name="isymunmanagedencupdategetlocalvariablecount-method"></a><span data-ttu-id="09e6d-102">Metodo ISymUnmanagedENCUpdate::GetLocalVariableCount</span><span class="sxs-lookup"><span data-stu-id="09e6d-102">ISymUnmanagedENCUpdate::GetLocalVariableCount Method</span></span>
+<span data-ttu-id="09e6d-103">Ottiene il numero di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="09e6d-103">Gets the number of local variables.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="876aa-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="876aa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="09e6d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="09e6d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVariableCount(  
@@ -35,19 +35,19 @@ HRESULT GetLocalVariableCount(
     [out] ULONG        *pcLocals);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="876aa-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="876aa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="09e6d-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="09e6d-105">Parameters</span></span>  
  `mdMethodToken`  
- <span data-ttu-id="876aa-106">[in] Il token di metadati dei metodi.</span><span class="sxs-lookup"><span data-stu-id="876aa-106">[in] The metadata token of methods.</span></span>  
+ <span data-ttu-id="09e6d-106">[in] Il token di metadati dei metodi.</span><span class="sxs-lookup"><span data-stu-id="09e6d-106">[in] The metadata token of methods.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="876aa-107">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere il numero di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="876aa-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
+ <span data-ttu-id="09e6d-107">[out] Un puntatore a un `ULONG32` che riceve le dimensioni, in caratteri, del buffer necessaria per contenere il numero di variabili locali.</span><span class="sxs-lookup"><span data-stu-id="09e6d-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the number of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="876aa-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="876aa-108">Return Value</span></span>  
- <span data-ttu-id="876aa-109">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="876aa-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="09e6d-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="09e6d-108">Return Value</span></span>  
+ <span data-ttu-id="09e6d-109">S_OK se il metodo ha esito positivo; in caso contrario, E_FAIL o qualche altro codice di errore.</span><span class="sxs-lookup"><span data-stu-id="09e6d-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="876aa-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="876aa-110">Requirements</span></span>  
- <span data-ttu-id="876aa-111">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="876aa-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="09e6d-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="09e6d-110">Requirements</span></span>  
+ <span data-ttu-id="09e6d-111">**Intestazione:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="09e6d-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="876aa-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="876aa-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="09e6d-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="09e6d-112">See also</span></span>
 
-- [<span data-ttu-id="876aa-113">Interfaccia ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="876aa-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)
+- [<span data-ttu-id="09e6d-113">Interfaccia ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="09e6d-113">ISymUnmanagedENCUpdate Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

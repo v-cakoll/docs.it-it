@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ab7df9b77b1820f291c1b1873b4dfb39e326bc34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939932"
 ---
-# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="5cb5a-102">Metodo ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="5cb5a-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
-<span data-ttu-id="5cb5a-103">Restituisce la riga più vicina che rappresenta un punto di sequenza, data una riga in questo documento che possa o non sia un punto di sequenza.</span><span class="sxs-lookup"><span data-stu-id="5cb5a-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
+# <a name="isymunmanageddocumentfindclosestline-method"></a><span data-ttu-id="33b40-102">Metodo ISymUnmanagedDocument::FindClosestLine</span><span class="sxs-lookup"><span data-stu-id="33b40-102">ISymUnmanagedDocument::FindClosestLine Method</span></span>
+<span data-ttu-id="33b40-103">Restituisce la riga più vicina che rappresenta un punto di sequenza, data una riga in questo documento che possa o non sia un punto di sequenza.</span><span class="sxs-lookup"><span data-stu-id="33b40-103">Returns the closest line that is a sequence point, given a line in this document that may or may not be a sequence point.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cb5a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5cb5a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33b40-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="33b40-104">Syntax</span></span>  
   
 ```  
 HRESULT FindClosestLine(  
@@ -35,16 +35,16 @@ HRESULT FindClosestLine(
     [out, retval] ULONG32*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5cb5a-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="5cb5a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33b40-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="33b40-105">Parameters</span></span>  
  `line`  
- <span data-ttu-id="5cb5a-106">[in] Una riga in questo documento.</span><span class="sxs-lookup"><span data-stu-id="5cb5a-106">[in] A line in this document.</span></span>  
+ <span data-ttu-id="33b40-106">[in] Una riga in questo documento.</span><span class="sxs-lookup"><span data-stu-id="33b40-106">[in] A line in this document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="5cb5a-107">[out] Puntatore a una variabile che riceve la riga.</span><span class="sxs-lookup"><span data-stu-id="5cb5a-107">[out] A pointer to a variable that receives the line.</span></span>  
+ <span data-ttu-id="33b40-107">[out] Puntatore a una variabile che riceve la riga.</span><span class="sxs-lookup"><span data-stu-id="33b40-107">[out] A pointer to a variable that receives the line.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5cb5a-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5cb5a-108">Return Value</span></span>  
- <span data-ttu-id="5cb5a-109">S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="5cb5a-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="33b40-108">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="33b40-108">Return Value</span></span>  
+ <span data-ttu-id="33b40-109">S_OK se il metodo ha esito positivo; in caso contrario, un codice di errore.</span><span class="sxs-lookup"><span data-stu-id="33b40-109">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5cb5a-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5cb5a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33b40-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="33b40-110">See also</span></span>
 
-- [<span data-ttu-id="5cb5a-111">Interfaccia ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="5cb5a-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="33b40-111">Interfaccia ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="33b40-111">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

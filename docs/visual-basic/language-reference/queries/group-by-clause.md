@@ -13,68 +13,68 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945327"
 ---
-# <a name="group-by-clause-visual-basic"></a><span data-ttu-id="8e0b2-102">Clausola Group By (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e0b2-102">Group By Clause (Visual Basic)</span></span>
-<span data-ttu-id="8e0b2-103">Raggruppa gli elementi di un risultato della query.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-103">Groups the elements of a query result.</span></span> <span data-ttu-id="8e0b2-104">Può essere usata anche per applicare funzioni di aggregazione a ogni gruppo.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-104">Can also be used to apply aggregate functions to each group.</span></span> <span data-ttu-id="8e0b2-105">L'operazione di raggruppamento è basata su una o più chiavi.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-105">The grouping operation is based on one or more keys.</span></span>  
+# <a name="group-by-clause-visual-basic"></a><span data-ttu-id="5d0c8-102">Clausola Group By (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d0c8-102">Group By Clause (Visual Basic)</span></span>
+<span data-ttu-id="5d0c8-103">Raggruppa gli elementi di un risultato della query.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-103">Groups the elements of a query result.</span></span> <span data-ttu-id="5d0c8-104">Può essere usata anche per applicare funzioni di aggregazione a ogni gruppo.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-104">Can also be used to apply aggregate functions to each group.</span></span> <span data-ttu-id="5d0c8-105">L'operazione di raggruppamento è basata su una o più chiavi.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-105">The grouping operation is based on one or more keys.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8e0b2-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="8e0b2-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d0c8-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5d0c8-106">Syntax</span></span>  
   
 ```  
 Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]  
   Into aggregateList  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="8e0b2-107">Parti</span><span class="sxs-lookup"><span data-stu-id="8e0b2-107">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="5d0c8-107">Parti</span><span class="sxs-lookup"><span data-stu-id="5d0c8-107">Parts</span></span>  
   
--   <span data-ttu-id="8e0b2-108">`listField1`, `listField2`</span><span class="sxs-lookup"><span data-stu-id="8e0b2-108">`listField1`, `listField2`</span></span>  
+- <span data-ttu-id="5d0c8-108">`listField1`, `listField2`</span><span class="sxs-lookup"><span data-stu-id="5d0c8-108">`listField1`, `listField2`</span></span>  
   
-     <span data-ttu-id="8e0b2-109">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-109">Optional.</span></span> <span data-ttu-id="8e0b2-110">Uno o più campi della variabile o delle variabili di query che identificano in modo esplicito i campi da includere nel risultato raggruppato.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-110">One or more fields of the query variable or variables that explicitly identify the fields to be included in the grouped result.</span></span> <span data-ttu-id="8e0b2-111">Se non sono specificati campi, tutti i campi della variabile o delle variabili di query vengono inclusi nel risultato raggruppato.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-111">If no fields are specified, all fields of the query variable or variables are included in the grouped result.</span></span>  
+     <span data-ttu-id="5d0c8-109">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-109">Optional.</span></span> <span data-ttu-id="5d0c8-110">Uno o più campi della variabile o delle variabili di query che identificano in modo esplicito i campi da includere nel risultato raggruppato.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-110">One or more fields of the query variable or variables that explicitly identify the fields to be included in the grouped result.</span></span> <span data-ttu-id="5d0c8-111">Se non sono specificati campi, tutti i campi della variabile o delle variabili di query vengono inclusi nel risultato raggruppato.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-111">If no fields are specified, all fields of the query variable or variables are included in the grouped result.</span></span>  
   
--   `keyExp1`  
+- `keyExp1`  
   
-     <span data-ttu-id="8e0b2-112">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-112">Required.</span></span> <span data-ttu-id="8e0b2-113">Espressione che identifica la chiave da usare per determinare i gruppi di elementi.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-113">An expression that identifies the key to use to determine the groups of elements.</span></span> <span data-ttu-id="8e0b2-114">È possibile specificare più di una chiave per specificare una chiave composta.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-114">You can specify more than one key to specify a composite key.</span></span>  
+     <span data-ttu-id="5d0c8-112">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-112">Required.</span></span> <span data-ttu-id="5d0c8-113">Espressione che identifica la chiave da usare per determinare i gruppi di elementi.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-113">An expression that identifies the key to use to determine the groups of elements.</span></span> <span data-ttu-id="5d0c8-114">È possibile specificare più di una chiave per specificare una chiave composta.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-114">You can specify more than one key to specify a composite key.</span></span>  
   
--   `keyExp2`  
+- `keyExp2`  
   
-     <span data-ttu-id="8e0b2-115">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-115">Optional.</span></span> <span data-ttu-id="8e0b2-116">Uno o più tasti aggiuntivi che vengono combinati con `keyExp1` per creare una chiave composta.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-116">One or more additional keys that are combined with `keyExp1` to create a composite key.</span></span>  
+     <span data-ttu-id="5d0c8-115">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-115">Optional.</span></span> <span data-ttu-id="5d0c8-116">Uno o più tasti aggiuntivi che vengono combinati con `keyExp1` per creare una chiave composta.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-116">One or more additional keys that are combined with `keyExp1` to create a composite key.</span></span>  
   
--   `aggregateList`  
+- `aggregateList`  
   
-     <span data-ttu-id="8e0b2-117">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-117">Required.</span></span> <span data-ttu-id="8e0b2-118">Una o più espressioni che identificano come vengono aggregati i gruppi.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-118">One or more expressions that identify how the groups are aggregated.</span></span> <span data-ttu-id="8e0b2-119">Per identificare un nome di membro per i risultati raggruppati, usare la parola chiave `Group` , che può essere in uno dei seguenti formati:</span><span class="sxs-lookup"><span data-stu-id="8e0b2-119">To identify a member name for the grouped results, use the `Group` keyword, which can be in either of the following forms:</span></span>  
+     <span data-ttu-id="5d0c8-117">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-117">Required.</span></span> <span data-ttu-id="5d0c8-118">Una o più espressioni che identificano come vengono aggregati i gruppi.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-118">One or more expressions that identify how the groups are aggregated.</span></span> <span data-ttu-id="5d0c8-119">Per identificare un nome di membro per i risultati raggruppati, usare la parola chiave `Group` , che può essere in uno dei seguenti formati:</span><span class="sxs-lookup"><span data-stu-id="5d0c8-119">To identify a member name for the grouped results, use the `Group` keyword, which can be in either of the following forms:</span></span>  
   
     ```  
     Into Group  
     ```  
   
-     <span data-ttu-id="8e0b2-120">-oppure-</span><span class="sxs-lookup"><span data-stu-id="8e0b2-120">-or-</span></span>  
+     <span data-ttu-id="5d0c8-120">-oppure-</span><span class="sxs-lookup"><span data-stu-id="5d0c8-120">-or-</span></span>  
   
     ```  
     Into <alias> = Group  
     ```  
   
-     <span data-ttu-id="8e0b2-121">È anche possibile includere funzioni di aggregazione da applicare al gruppo.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-121">You can also include aggregate functions to apply to the group.</span></span>  
+     <span data-ttu-id="5d0c8-121">È anche possibile includere funzioni di aggregazione da applicare al gruppo.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-121">You can also include aggregate functions to apply to the group.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8e0b2-122">Note</span><span class="sxs-lookup"><span data-stu-id="8e0b2-122">Remarks</span></span>  
- <span data-ttu-id="8e0b2-123">È possibile usare la clausola `Group By` per suddividere i risultati di una query in gruppi.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-123">You can use the `Group By` clause to break the results of a query into groups.</span></span> <span data-ttu-id="8e0b2-124">Il raggruppamento è basato su una chiave o una chiave composta costituita da più chiavi.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-124">The grouping is based on a key or a composite key consisting of multiple keys.</span></span> <span data-ttu-id="8e0b2-125">Gli elementi associati ai valori della chiave corrispondenti vengono inclusi nello stesso gruppo.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-125">Elements that are associated with matching key values are included in the same group.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d0c8-122">Note</span><span class="sxs-lookup"><span data-stu-id="5d0c8-122">Remarks</span></span>  
+ <span data-ttu-id="5d0c8-123">È possibile usare la clausola `Group By` per suddividere i risultati di una query in gruppi.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-123">You can use the `Group By` clause to break the results of a query into groups.</span></span> <span data-ttu-id="5d0c8-124">Il raggruppamento è basato su una chiave o una chiave composta costituita da più chiavi.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-124">The grouping is based on a key or a composite key consisting of multiple keys.</span></span> <span data-ttu-id="5d0c8-125">Gli elementi associati ai valori della chiave corrispondenti vengono inclusi nello stesso gruppo.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-125">Elements that are associated with matching key values are included in the same group.</span></span>  
   
- <span data-ttu-id="8e0b2-126">Per identificare il nome del membro che viene usato per fare riferimento al gruppo, usare il parametro `aggregateList` della clausola `Into` e la parola chiave `Group` .</span><span class="sxs-lookup"><span data-stu-id="8e0b2-126">You use the `aggregateList` parameter of the `Into` clause and the `Group` keyword to identify the member name that is used to reference the group.</span></span> <span data-ttu-id="8e0b2-127">È anche possibile includere funzioni di aggregazione nella clausola `Into` per calcolare i valori per gli elementi raggruppati.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-127">You can also include aggregate functions in the `Into` clause to compute values for the grouped elements.</span></span> <span data-ttu-id="8e0b2-128">Per un elenco di funzioni di aggregazione standard, vedere [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="8e0b2-128">For a list of standard aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
+ <span data-ttu-id="5d0c8-126">Per identificare il nome del membro che viene usato per fare riferimento al gruppo, usare il parametro `aggregateList` della clausola `Into` e la parola chiave `Group` .</span><span class="sxs-lookup"><span data-stu-id="5d0c8-126">You use the `aggregateList` parameter of the `Into` clause and the `Group` keyword to identify the member name that is used to reference the group.</span></span> <span data-ttu-id="5d0c8-127">È anche possibile includere funzioni di aggregazione nella clausola `Into` per calcolare i valori per gli elementi raggruppati.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-127">You can also include aggregate functions in the `Into` clause to compute values for the grouped elements.</span></span> <span data-ttu-id="5d0c8-128">Per un elenco di funzioni di aggregazione standard, vedere [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="5d0c8-128">For a list of standard aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8e0b2-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="8e0b2-129">Example</span></span>  
- <span data-ttu-id="8e0b2-130">L'esempio di codice seguente raggruppa un elenco di clienti in base alla località (paese) e fornisce un conteggio dei clienti in ogni gruppo.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-130">The following code example groups a list of customers based on their location (country) and provides a count of the customers in each group.</span></span> <span data-ttu-id="8e0b2-131">I risultati vengono ordinati in base al nome del paese.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-131">The results are ordered by country name.</span></span> <span data-ttu-id="8e0b2-132">I risultati raggruppati vengono ordinati in base al nome della città.</span><span class="sxs-lookup"><span data-stu-id="8e0b2-132">The grouped results are ordered by city name.</span></span>  
+## <a name="example"></a><span data-ttu-id="5d0c8-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="5d0c8-129">Example</span></span>  
+ <span data-ttu-id="5d0c8-130">L'esempio di codice seguente raggruppa un elenco di clienti in base alla località (paese) e fornisce un conteggio dei clienti in ogni gruppo.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-130">The following code example groups a list of customers based on their location (country) and provides a count of the customers in each group.</span></span> <span data-ttu-id="5d0c8-131">I risultati vengono ordinati in base al nome del paese.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-131">The results are ordered by country name.</span></span> <span data-ttu-id="5d0c8-132">I risultati raggruppati vengono ordinati in base al nome della città.</span><span class="sxs-lookup"><span data-stu-id="5d0c8-132">The grouped results are ordered by city name.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
   
-## <a name="see-also"></a><span data-ttu-id="8e0b2-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8e0b2-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d0c8-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5d0c8-133">See also</span></span>
 
-- [<span data-ttu-id="8e0b2-134">Introduzione a LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8e0b2-134">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="8e0b2-135">Query</span><span class="sxs-lookup"><span data-stu-id="8e0b2-135">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
-- [<span data-ttu-id="8e0b2-136">Clausola Select</span><span class="sxs-lookup"><span data-stu-id="8e0b2-136">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
-- [<span data-ttu-id="8e0b2-137">Clausola From</span><span class="sxs-lookup"><span data-stu-id="8e0b2-137">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
-- [<span data-ttu-id="8e0b2-138">Clausola Order By</span><span class="sxs-lookup"><span data-stu-id="8e0b2-138">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [<span data-ttu-id="8e0b2-139">Clausola Aggregate</span><span class="sxs-lookup"><span data-stu-id="8e0b2-139">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [<span data-ttu-id="8e0b2-140">Clausola Group Join</span><span class="sxs-lookup"><span data-stu-id="8e0b2-140">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [<span data-ttu-id="5d0c8-134">Introduzione a LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5d0c8-134">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="5d0c8-135">Query</span><span class="sxs-lookup"><span data-stu-id="5d0c8-135">Queries</span></span>](../../../visual-basic/language-reference/queries/index.md)
+- [<span data-ttu-id="5d0c8-136">Clausola Select</span><span class="sxs-lookup"><span data-stu-id="5d0c8-136">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)
+- [<span data-ttu-id="5d0c8-137">Clausola From</span><span class="sxs-lookup"><span data-stu-id="5d0c8-137">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)
+- [<span data-ttu-id="5d0c8-138">Clausola Order By</span><span class="sxs-lookup"><span data-stu-id="5d0c8-138">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [<span data-ttu-id="5d0c8-139">Clausola Aggregate</span><span class="sxs-lookup"><span data-stu-id="5d0c8-139">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [<span data-ttu-id="5d0c8-140">Clausola Group Join</span><span class="sxs-lookup"><span data-stu-id="5d0c8-140">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)
