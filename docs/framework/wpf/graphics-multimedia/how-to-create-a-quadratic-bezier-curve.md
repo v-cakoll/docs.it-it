@@ -7,35 +7,35 @@ helpviewer_keywords:
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
 ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054563"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a><span data-ttu-id="7f261-102">Procedura: Creare una curva di Bézier quadratica</span><span class="sxs-lookup"><span data-stu-id="7f261-102">How to: Create a Quadratic Bezier Curve</span></span>
-<span data-ttu-id="7f261-103">In questo esempio viene illustrato come creare una curva di Bézier quadratica.</span><span class="sxs-lookup"><span data-stu-id="7f261-103">This example shows how to create a quadratic Bezier curve.</span></span>  <span data-ttu-id="7f261-104">Per creare una curva di Bézier quadratica, usare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.QuadraticBezierSegment> classi.</span><span class="sxs-lookup"><span data-stu-id="7f261-104">To create a quadratic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.QuadraticBezierSegment> classes.</span></span>  
+# <a name="how-to-create-a-quadratic-bezier-curve"></a><span data-ttu-id="84dfd-102">Procedura: Creare una curva di Bézier quadratica</span><span class="sxs-lookup"><span data-stu-id="84dfd-102">How to: Create a Quadratic Bezier Curve</span></span>
+<span data-ttu-id="84dfd-103">In questo esempio viene illustrato come creare una curva di Bézier quadratica.</span><span class="sxs-lookup"><span data-stu-id="84dfd-103">This example shows how to create a quadratic Bezier curve.</span></span>  <span data-ttu-id="84dfd-104">Per creare una curva di Bézier quadratica, usare il <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, e <xref:System.Windows.Media.QuadraticBezierSegment> classi.</span><span class="sxs-lookup"><span data-stu-id="84dfd-104">To create a quadratic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.QuadraticBezierSegment> classes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f261-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="7f261-105">Example</span></span>  
- <span data-ttu-id="7f261-106">Negli esempi seguenti, una curva di Bézier quadratica viene disegnata da (10, 100) a (300, 100).</span><span class="sxs-lookup"><span data-stu-id="7f261-106">In the following examples, a quadratic Bezier curve is drawn from (10,100) to (300,100).</span></span> <span data-ttu-id="7f261-107">La curva ha un punto di controllo del valore (200, 200).</span><span class="sxs-lookup"><span data-stu-id="7f261-107">The curve has a control point of (200,200).</span></span>  
+## <a name="example"></a><span data-ttu-id="84dfd-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="84dfd-105">Example</span></span>  
+ <span data-ttu-id="84dfd-106">Negli esempi seguenti, una curva di Bézier quadratica viene disegnata da (10, 100) a (300, 100).</span><span class="sxs-lookup"><span data-stu-id="84dfd-106">In the following examples, a quadratic Bezier curve is drawn from (10,100) to (300,100).</span></span> <span data-ttu-id="84dfd-107">La curva ha un punto di controllo del valore (200, 200).</span><span class="sxs-lookup"><span data-stu-id="84dfd-107">The curve has a control point of (200,200).</span></span>  
   
- <span data-ttu-id="7f261-108">[xaml]</span><span class="sxs-lookup"><span data-stu-id="7f261-108">[xaml]</span></span>  
+ <span data-ttu-id="84dfd-108">[xaml]</span><span class="sxs-lookup"><span data-stu-id="84dfd-108">[xaml]</span></span>  
   
- <span data-ttu-id="7f261-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], è possibile usare la sintassi degli attributi per descrivere un tracciato.</span><span class="sxs-lookup"><span data-stu-id="7f261-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
+ <span data-ttu-id="84dfd-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], è possibile usare la sintassi degli attributi per descrivere un tracciato.</span><span class="sxs-lookup"><span data-stu-id="84dfd-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
   
  [!code-xaml[GeometrySample#54](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#54)]  
   
- <span data-ttu-id="7f261-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="7f261-110">[xaml]</span></span>  
+ <span data-ttu-id="84dfd-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="84dfd-110">[xaml]</span></span>  
   
- <span data-ttu-id="7f261-111">(Si noti che questa sintassi di attributo crea effettivamente una <xref:System.Windows.Media.StreamGeometry>, una versione leggera di una <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="7f261-111">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="7f261-112">Per altre informazioni, vedere la pagina [Sintassi di markup del tracciato](path-markup-syntax.md).</span><span class="sxs-lookup"><span data-stu-id="7f261-112">For more information, see the [Path Markup Syntax](path-markup-syntax.md) page.)</span></span>  
+ <span data-ttu-id="84dfd-111">(Si noti che questa sintassi di attributo crea effettivamente una <xref:System.Windows.Media.StreamGeometry>, una versione leggera di una <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="84dfd-111">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="84dfd-112">Per altre informazioni, vedere la pagina [Sintassi di markup del tracciato](path-markup-syntax.md).</span><span class="sxs-lookup"><span data-stu-id="84dfd-112">For more information, see the [Path Markup Syntax](path-markup-syntax.md) page.)</span></span>  
   
- <span data-ttu-id="7f261-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è anche possibile disegnare una curva di Bézier quadratica tramite sintassi degli elementi oggetto.</span><span class="sxs-lookup"><span data-stu-id="7f261-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a quadratic Bezier curve using object element syntax.</span></span> <span data-ttu-id="7f261-114">L'esempio che segue equivale a quello [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] precedente.</span><span class="sxs-lookup"><span data-stu-id="7f261-114">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
+ <span data-ttu-id="84dfd-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è anche possibile disegnare una curva di Bézier quadratica tramite sintassi degli elementi oggetto.</span><span class="sxs-lookup"><span data-stu-id="84dfd-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a quadratic Bezier curve using object element syntax.</span></span> <span data-ttu-id="84dfd-114">L'esempio che segue equivale a quello [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] precedente.</span><span class="sxs-lookup"><span data-stu-id="84dfd-114">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
   
  [!code-xaml[GeometrySample#34](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
- <span data-ttu-id="7f261-115">Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere la pagina [Geometries Sample (esempio di geometrie)](https://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="7f261-115">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="84dfd-115">Questo esempio fa parte di un esempio più esaustivo. Per l'esempio completo, vedere la pagina [Geometries Sample (esempio di geometrie)](https://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="84dfd-115">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f261-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7f261-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84dfd-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="84dfd-116">See also</span></span>
 
-- [<span data-ttu-id="7f261-117">Creare un arco ellittico</span><span class="sxs-lookup"><span data-stu-id="7f261-117">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)
-- [<span data-ttu-id="7f261-118">Creare una curva di Bézier cubica</span><span class="sxs-lookup"><span data-stu-id="7f261-118">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)
+- [<span data-ttu-id="84dfd-117">Creare un arco ellittico</span><span class="sxs-lookup"><span data-stu-id="84dfd-117">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)
+- [<span data-ttu-id="84dfd-118">Creare una curva di Bézier cubica</span><span class="sxs-lookup"><span data-stu-id="84dfd-118">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c07b37e58141f7aff747bd3772be265ae0da42ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62041990"
 ---
-# <a name="icorprofilercallbackobjectallocated-method"></a><span data-ttu-id="13168-102">Metodo ICorProfilerCallback::ObjectAllocated</span><span class="sxs-lookup"><span data-stu-id="13168-102">ICorProfilerCallback::ObjectAllocated Method</span></span>
-<span data-ttu-id="13168-103">Notifica al profiler che è stata allocata memoria all'interno dell'heap per un oggetto.</span><span class="sxs-lookup"><span data-stu-id="13168-103">Notifies the profiler that memory within the heap has been allocated for an object.</span></span>  
+# <a name="icorprofilercallbackobjectallocated-method"></a><span data-ttu-id="61170-102">Metodo ICorProfilerCallback::ObjectAllocated</span><span class="sxs-lookup"><span data-stu-id="61170-102">ICorProfilerCallback::ObjectAllocated Method</span></span>
+<span data-ttu-id="61170-103">Notifica al profiler che è stata allocata memoria all'interno dell'heap per un oggetto.</span><span class="sxs-lookup"><span data-stu-id="61170-103">Notifies the profiler that memory within the heap has been allocated for an object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13168-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="13168-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61170-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="61170-104">Syntax</span></span>  
   
 ```  
 HRESULT ObjectAllocated(  
@@ -35,27 +35,27 @@ HRESULT ObjectAllocated(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="13168-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="13168-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61170-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="61170-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="13168-106">[in] L'ID dell'oggetto per cui è stata allocata memoria.</span><span class="sxs-lookup"><span data-stu-id="13168-106">[in] The ID of the object for which memory was allocated.</span></span>  
+ <span data-ttu-id="61170-106">[in] L'ID dell'oggetto per cui è stata allocata memoria.</span><span class="sxs-lookup"><span data-stu-id="61170-106">[in] The ID of the object for which memory was allocated.</span></span>  
   
  `classId`  
- <span data-ttu-id="13168-107">[in] L'ID della classe di cui l'oggetto è un'istanza.</span><span class="sxs-lookup"><span data-stu-id="13168-107">[in] The ID of the class of which the object is an instance.</span></span>  
+ <span data-ttu-id="61170-107">[in] L'ID della classe di cui l'oggetto è un'istanza.</span><span class="sxs-lookup"><span data-stu-id="61170-107">[in] The ID of the class of which the object is an instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="13168-108">Note</span><span class="sxs-lookup"><span data-stu-id="13168-108">Remarks</span></span>  
- <span data-ttu-id="13168-109">Il `ObjectedAllocated` metodo non viene chiamato per le allocazioni di memoria non gestita o dello stack.</span><span class="sxs-lookup"><span data-stu-id="13168-109">The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory.</span></span> <span data-ttu-id="13168-110">Il `classId` parametro può fare riferimento a una classe nel codice gestito che non è ancora stato caricato.</span><span class="sxs-lookup"><span data-stu-id="13168-110">The `classId` parameter can refer to a class in managed code that has not been loaded yet.</span></span> <span data-ttu-id="13168-111">Il profiler riceverà un callback di caricamento per la classe immediatamente dopo il `ObjectAllocated` callback.</span><span class="sxs-lookup"><span data-stu-id="13168-111">The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="61170-108">Note</span><span class="sxs-lookup"><span data-stu-id="61170-108">Remarks</span></span>  
+ <span data-ttu-id="61170-109">Il `ObjectedAllocated` metodo non viene chiamato per le allocazioni di memoria non gestita o dello stack.</span><span class="sxs-lookup"><span data-stu-id="61170-109">The `ObjectedAllocated` method is not called for allocations from either the stack or unmanaged memory.</span></span> <span data-ttu-id="61170-110">Il `classId` parametro può fare riferimento a una classe nel codice gestito che non è ancora stato caricato.</span><span class="sxs-lookup"><span data-stu-id="61170-110">The `classId` parameter can refer to a class in managed code that has not been loaded yet.</span></span> <span data-ttu-id="61170-111">Il profiler riceverà un callback di caricamento per la classe immediatamente dopo il `ObjectAllocated` callback.</span><span class="sxs-lookup"><span data-stu-id="61170-111">The profiler will receive a class load callback for that class immediately after the `ObjectAllocated` callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13168-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="13168-112">Requirements</span></span>  
- <span data-ttu-id="13168-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13168-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61170-112">Requisiti</span><span class="sxs-lookup"><span data-stu-id="61170-112">Requirements</span></span>  
+ <span data-ttu-id="61170-113">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61170-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13168-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="13168-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="61170-114">**Intestazione:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="61170-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="13168-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13168-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="61170-115">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61170-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="13168-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13168-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="61170-116">**Versioni di .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61170-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13168-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="13168-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61170-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="61170-117">See also</span></span>
 
-- [<span data-ttu-id="13168-118">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="13168-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="13168-119">Metodo ClassLoadStarted</span><span class="sxs-lookup"><span data-stu-id="13168-119">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
-- [<span data-ttu-id="13168-120">Metodo ClassLoadFinished</span><span class="sxs-lookup"><span data-stu-id="13168-120">ClassLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)
+- [<span data-ttu-id="61170-118">Interfaccia ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="61170-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="61170-119">Metodo ClassLoadStarted</span><span class="sxs-lookup"><span data-stu-id="61170-119">ClassLoadStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [<span data-ttu-id="61170-120">Metodo ClassLoadFinished</span><span class="sxs-lookup"><span data-stu-id="61170-120">ClassLoadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)

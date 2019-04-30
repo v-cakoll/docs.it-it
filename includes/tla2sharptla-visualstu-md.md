@@ -1,1 +1,9 @@
-<span data-ttu-id="ce1ac-101">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ce1ac-101">Visual Studio</span></span>
+---
+ms.openlocfilehash: 91b163a97867c591a7ecc9961dd251208ca0ce01
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696406"
+---
+<span data-ttu-id="53d1d-101">Visual Studio</span><span class="sxs-lookup"><span data-stu-id="53d1d-101">Visual Studio</span></span>

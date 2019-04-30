@@ -1,1 +1,9 @@
-<span data-ttu-id="70996-101">applicazioni browser XAML (XBAP)</span><span class="sxs-lookup"><span data-stu-id="70996-101">XAML browser applications (XBAPs)</span></span>
+---
+ms.openlocfilehash: 7c13b1ec15d17eb4383232b3280ba019582bae33
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696506"
+---
+<span data-ttu-id="5afa8-101">applicazioni browser XAML (XBAP)</span><span class="sxs-lookup"><span data-stu-id="5afa8-101">XAML browser applications (XBAPs)</span></span>

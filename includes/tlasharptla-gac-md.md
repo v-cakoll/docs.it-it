@@ -1,1 +1,9 @@
-<span data-ttu-id="9b211-101">Global Assembly Cache (GAC)</span><span class="sxs-lookup"><span data-stu-id="9b211-101">global assembly cache (GAC)</span></span>
+---
+ms.openlocfilehash: defd9b3aabbb23d0bbcbfa17c562365c5a52eb65
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696503"
+---
+<span data-ttu-id="19daa-101">Global Assembly Cache (GAC)</span><span class="sxs-lookup"><span data-stu-id="19daa-101">global assembly cache (GAC)</span></span>

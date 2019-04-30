@@ -14,24 +14,24 @@ ms.openlocfilehash: b3cfcc6c2873dfb0eb95cf7950adc6b2bb73e74c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013361"
 ---
-# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="c414e-102">Procedura: Selezionare un elemento nel controllo ListView di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c414e-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
-<span data-ttu-id="c414e-103">In questo esempio viene illustrato come selezionare a livello di programmazione un elemento in un form Windows <xref:System.Windows.Forms.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="c414e-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="c414e-104">Selezione di un elemento a livello di codice non cambia automaticamente lo stato attivo per il <xref:System.Windows.Forms.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="c414e-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="c414e-105">Per questo motivo, è anche in genere possibile impostare l'elemento come lo stato attivo quando si seleziona un elemento.</span><span class="sxs-lookup"><span data-stu-id="c414e-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="37503-102">Procedura: Selezionare un elemento nel controllo ListView di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="37503-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
+<span data-ttu-id="37503-103">In questo esempio viene illustrato come selezionare a livello di programmazione un elemento in un form Windows <xref:System.Windows.Forms.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="37503-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="37503-104">Selezione di un elemento a livello di codice non cambia automaticamente lo stato attivo per il <xref:System.Windows.Forms.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="37503-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="37503-105">Per questo motivo, è anche in genere possibile impostare l'elemento come lo stato attivo quando si seleziona un elemento.</span><span class="sxs-lookup"><span data-stu-id="37503-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c414e-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="c414e-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="37503-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="37503-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c414e-107">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="c414e-107">Compiling the Code</span></span>  
- <span data-ttu-id="c414e-108">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="c414e-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="37503-107">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="37503-107">Compiling the Code</span></span>  
+ <span data-ttu-id="37503-108">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="37503-108">This example requires:</span></span>  
   
--   <span data-ttu-id="c414e-109">Oggetto <xref:System.Windows.Forms.ListView> controllo denominato `listView1` che contiene almeno un elemento.</span><span class="sxs-lookup"><span data-stu-id="c414e-109">A <xref:System.Windows.Forms.ListView> control named `listView1` that contains at least one item.</span></span>  
+- <span data-ttu-id="37503-109">Oggetto <xref:System.Windows.Forms.ListView> controllo denominato `listView1` che contiene almeno un elemento.</span><span class="sxs-lookup"><span data-stu-id="37503-109">A <xref:System.Windows.Forms.ListView> control named `listView1` that contains at least one item.</span></span>  
   
--   <span data-ttu-id="c414e-110">Riferimenti agli spazi dei nomi <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c414e-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces.</span></span>  
+- <span data-ttu-id="37503-110">Riferimenti agli spazi dei nomi <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="37503-110">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c414e-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c414e-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37503-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="37503-111">See also</span></span>
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>
