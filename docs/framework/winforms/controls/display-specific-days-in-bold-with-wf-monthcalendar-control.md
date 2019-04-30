@@ -12,20 +12,20 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
 ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972081"
 ---
-# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="a6056-102">Procedura: Visualizzare giorni specifici in grassetto con il controllo MonthCalendar di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a6056-102">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>
-<span data-ttu-id="a6056-103">I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo può visualizzare i giorni in grassetto, come le date singolare o ripetute.</span><span class="sxs-lookup"><span data-stu-id="a6056-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control can display days in bold type, either as singular dates or on a repeating basis.</span></span> <span data-ttu-id="a6056-104">È possibile eseguire questa operazione per attirare l'attenzione su date speciali, ad esempio i fine settimana e festivi.</span><span class="sxs-lookup"><span data-stu-id="a6056-104">You might do this to draw attention to special dates, such as holidays and weekends.</span></span>  
+# <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="4c81e-102">Procedura: Visualizzare giorni specifici in grassetto con il controllo MonthCalendar di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4c81e-102">How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control</span></span>
+<span data-ttu-id="4c81e-103">I moduli di Windows <xref:System.Windows.Forms.MonthCalendar> controllo può visualizzare i giorni in grassetto, come le date singolare o ripetute.</span><span class="sxs-lookup"><span data-stu-id="4c81e-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control can display days in bold type, either as singular dates or on a repeating basis.</span></span> <span data-ttu-id="4c81e-104">È possibile eseguire questa operazione per attirare l'attenzione su date speciali, ad esempio i fine settimana e festivi.</span><span class="sxs-lookup"><span data-stu-id="4c81e-104">You might do this to draw attention to special dates, such as holidays and weekends.</span></span>  
   
- <span data-ttu-id="a6056-105">Questa funzionalità è controllata da tre proprietà.</span><span class="sxs-lookup"><span data-stu-id="a6056-105">Three properties control this feature.</span></span> <span data-ttu-id="a6056-106">Il <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> proprietà contiene date singole.</span><span class="sxs-lookup"><span data-stu-id="a6056-106">The <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> property contains single dates.</span></span> <span data-ttu-id="a6056-107">Il <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni anno.</span><span class="sxs-lookup"><span data-stu-id="a6056-107">The <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> property contains dates that appear in bold every year.</span></span> <span data-ttu-id="a6056-108">Il <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni mese.</span><span class="sxs-lookup"><span data-stu-id="a6056-108">The <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> property contains dates that appear in bold every month.</span></span> <span data-ttu-id="a6056-109">Ognuna di queste proprietà contiene una matrice di <xref:System.DateTime> oggetti.</span><span class="sxs-lookup"><span data-stu-id="a6056-109">Each of these properties contains an array of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="a6056-110">Per aggiungere o rimuovere una data da uno di questi elenchi, è necessario aggiungere o rimuovere un <xref:System.DateTime> oggetto.</span><span class="sxs-lookup"><span data-stu-id="a6056-110">To add or remove a date from one of these lists, you must add or remove a <xref:System.DateTime> object.</span></span>  
+ <span data-ttu-id="4c81e-105">Questa funzionalità è controllata da tre proprietà.</span><span class="sxs-lookup"><span data-stu-id="4c81e-105">Three properties control this feature.</span></span> <span data-ttu-id="4c81e-106">Il <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> proprietà contiene date singole.</span><span class="sxs-lookup"><span data-stu-id="4c81e-106">The <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A> property contains single dates.</span></span> <span data-ttu-id="4c81e-107">Il <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni anno.</span><span class="sxs-lookup"><span data-stu-id="4c81e-107">The <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> property contains dates that appear in bold every year.</span></span> <span data-ttu-id="4c81e-108">Il <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> proprietà contiene le date visualizzate in grassetto ogni mese.</span><span class="sxs-lookup"><span data-stu-id="4c81e-108">The <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> property contains dates that appear in bold every month.</span></span> <span data-ttu-id="4c81e-109">Ognuna di queste proprietà contiene una matrice di <xref:System.DateTime> oggetti.</span><span class="sxs-lookup"><span data-stu-id="4c81e-109">Each of these properties contains an array of <xref:System.DateTime> objects.</span></span> <span data-ttu-id="4c81e-110">Per aggiungere o rimuovere una data da uno di questi elenchi, è necessario aggiungere o rimuovere un <xref:System.DateTime> oggetto.</span><span class="sxs-lookup"><span data-stu-id="4c81e-110">To add or remove a date from one of these lists, you must add or remove a <xref:System.DateTime> object.</span></span>  
   
-### <a name="to-make-a-date-appear-in-bold-type"></a><span data-ttu-id="a6056-111">Come è possibile visualizzare una data in grassetto</span><span class="sxs-lookup"><span data-stu-id="a6056-111">To make a date appear in bold type</span></span>  
+### <a name="to-make-a-date-appear-in-bold-type"></a><span data-ttu-id="4c81e-111">Come è possibile visualizzare una data in grassetto</span><span class="sxs-lookup"><span data-stu-id="4c81e-111">To make a date appear in bold type</span></span>  
   
-1. <span data-ttu-id="a6056-112">Creare il <xref:System.DateTime> oggetti.</span><span class="sxs-lookup"><span data-stu-id="a6056-112">Create the <xref:System.DateTime> objects.</span></span>  
+1. <span data-ttu-id="4c81e-112">Creare il <xref:System.DateTime> oggetti.</span><span class="sxs-lookup"><span data-stu-id="4c81e-112">Create the <xref:System.DateTime> objects.</span></span>  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ ms.locfileid: "59343266"
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2. <span data-ttu-id="a6056-113">Per una singola data in grassetto chiamando il <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> metodo il <xref:System.Windows.Forms.MonthCalendar> controllo.</span><span class="sxs-lookup"><span data-stu-id="a6056-113">Make a single date bold by calling the <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, or <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> method of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span>  
+2. <span data-ttu-id="4c81e-113">Per una singola data in grassetto chiamando il <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> metodo il <xref:System.Windows.Forms.MonthCalendar> controllo.</span><span class="sxs-lookup"><span data-stu-id="4c81e-113">Make a single date bold by calling the <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, or <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> method of the <xref:System.Windows.Forms.MonthCalendar> control.</span></span>  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -59,9 +59,9 @@ ms.locfileid: "59343266"
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     <span data-ttu-id="a6056-114">- oppure -</span><span class="sxs-lookup"><span data-stu-id="a6056-114">–or–</span></span>  
+     <span data-ttu-id="4c81e-114">- oppure -</span><span class="sxs-lookup"><span data-stu-id="4c81e-114">–or–</span></span>  
   
-     <span data-ttu-id="a6056-115">Per un set di date in grassetto contemporaneamente mediante la creazione di una matrice di <xref:System.DateTime> oggetti e assegnarlo a una delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="a6056-115">Make a set of dates bold all at once by creating an array of <xref:System.DateTime> objects and assigning it to one of the properties.</span></span>  
+     <span data-ttu-id="4c81e-115">Per un set di date in grassetto contemporaneamente mediante la creazione di una matrice di <xref:System.DateTime> oggetti e assegnarlo a una delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="4c81e-115">Make a set of dates bold all at once by creating an array of <xref:System.DateTime> objects and assigning it to one of the properties.</span></span>  
   
     ```vb  
     Dim VacationDates As DateTime() = {myVacation1, myVacation2}  
@@ -78,9 +78,9 @@ ms.locfileid: "59343266"
     monthCalendar1->BoldedDates = VacationDates;  
     ```  
   
-### <a name="to-make-a-date-appear-in-the-regular-font"></a><span data-ttu-id="a6056-116">Come è possibile visualizzare una data nel tipo di carattere normale</span><span class="sxs-lookup"><span data-stu-id="a6056-116">To make a date appear in the regular font</span></span>  
+### <a name="to-make-a-date-appear-in-the-regular-font"></a><span data-ttu-id="4c81e-116">Come è possibile visualizzare una data nel tipo di carattere normale</span><span class="sxs-lookup"><span data-stu-id="4c81e-116">To make a date appear in the regular font</span></span>  
   
-1. <span data-ttu-id="a6056-117">Visualizzare una singola data in grassetto in caratteri normali chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="a6056-117">Make a single bolded date appear in the regular font by calling the <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, or <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> method.</span></span>  
+1. <span data-ttu-id="4c81e-117">Visualizzare una singola data in grassetto in caratteri normali chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="4c81e-117">Make a single bolded date appear in the regular font by calling the <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, or <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> method.</span></span>  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -97,9 +97,9 @@ ms.locfileid: "59343266"
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     <span data-ttu-id="a6056-118">- oppure -</span><span class="sxs-lookup"><span data-stu-id="a6056-118">–or–</span></span>  
+     <span data-ttu-id="4c81e-118">- oppure -</span><span class="sxs-lookup"><span data-stu-id="4c81e-118">–or–</span></span>  
   
-     <span data-ttu-id="a6056-119">Rimuovere tutte le date in grassetto da uno dei tre elenchi chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="a6056-119">Remove all the bolded dates from one of the three lists by calling the <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, or <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> method.</span></span>  
+     <span data-ttu-id="4c81e-119">Rimuovere tutte le date in grassetto da uno dei tre elenchi chiamando il <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, o <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="4c81e-119">Remove all the bolded dates from one of the three lists by calling the <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>, or <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A> method.</span></span>  
   
     ```vb  
     MonthCalendar1.RemoveAllBoldedDates()  
@@ -113,7 +113,7 @@ ms.locfileid: "59343266"
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2. <span data-ttu-id="a6056-120">Aggiornare l'aspetto del tipo di carattere chiamando il <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="a6056-120">Update the appearance of the font by calling the <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> method.</span></span>  
+2. <span data-ttu-id="4c81e-120">Aggiornare l'aspetto del tipo di carattere chiamando il <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="4c81e-120">Update the appearance of the font by calling the <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> method.</span></span>  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  
@@ -127,9 +127,9 @@ ms.locfileid: "59343266"
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a6056-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a6056-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4c81e-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4c81e-121">See also</span></span>
 
-- [<span data-ttu-id="a6056-122">Controllo MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="a6056-122">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
-- [<span data-ttu-id="a6056-123">Procedura: Selezionare un intervallo di date nel controllo MonthCalendar Windows Form</span><span class="sxs-lookup"><span data-stu-id="a6056-123">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [<span data-ttu-id="a6056-124">Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form</span><span class="sxs-lookup"><span data-stu-id="a6056-124">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
-- [<span data-ttu-id="a6056-125">Procedura: Visualizzare più mesi nel controllo MonthCalendar Windows Form</span><span class="sxs-lookup"><span data-stu-id="a6056-125">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)
+- [<span data-ttu-id="4c81e-122">Controllo MonthCalendar</span><span class="sxs-lookup"><span data-stu-id="4c81e-122">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
+- [<span data-ttu-id="4c81e-123">Procedura: Selezionare un intervallo di date nel controllo MonthCalendar Windows Form</span><span class="sxs-lookup"><span data-stu-id="4c81e-123">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [<span data-ttu-id="4c81e-124">Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form</span><span class="sxs-lookup"><span data-stu-id="4c81e-124">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
+- [<span data-ttu-id="4c81e-125">Procedura: Visualizzare più mesi nel controllo MonthCalendar Windows Form</span><span class="sxs-lookup"><span data-stu-id="4c81e-125">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>](display-more-than-one-month-wf-monthcalendar-control.md)

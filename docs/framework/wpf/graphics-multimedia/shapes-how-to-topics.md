@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973680"
 ---
-# <a name="shapes-how-to-topics"></a><span data-ttu-id="e5c2a-102">Procedure relative agli oggetti Shape</span><span class="sxs-lookup"><span data-stu-id="e5c2a-102">Shapes How-to Topics</span></span>
-<span data-ttu-id="e5c2a-103">Gli argomenti in questa sezione illustrano come usare <xref:System.Windows.Shapes.Shape> oggetti da disegnare forme sullo schermo.</span><span class="sxs-lookup"><span data-stu-id="e5c2a-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
+# <a name="shapes-how-to-topics"></a><span data-ttu-id="d8025-102">Procedure relative agli oggetti Shape</span><span class="sxs-lookup"><span data-stu-id="d8025-102">Shapes How-to Topics</span></span>
+<span data-ttu-id="d8025-103">Gli argomenti in questa sezione illustrano come usare <xref:System.Windows.Shapes.Shape> oggetti da disegnare forme sullo schermo.</span><span class="sxs-lookup"><span data-stu-id="d8025-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e5c2a-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="e5c2a-104">In This Section</span></span>  
- [<span data-ttu-id="e5c2a-105">Disegnare una forma chiusa usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="e5c2a-105">Draw a Closed Shape by Using the Polygon Element</span></span>](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [<span data-ttu-id="e5c2a-106">Disegnare un'ellisse o un cerchio</span><span class="sxs-lookup"><span data-stu-id="e5c2a-106">Draw an Ellipse or a Circle</span></span>](how-to-draw-an-ellipse-or-a-circle.md)  
- [<span data-ttu-id="e5c2a-107">Disegnare una linea</span><span class="sxs-lookup"><span data-stu-id="e5c2a-107">Draw a Line</span></span>](how-to-draw-a-line.md)  
- [<span data-ttu-id="e5c2a-108">Disegnare una polilinea usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="e5c2a-108">Draw a Polyline by Using the Polyline Element</span></span>](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [<span data-ttu-id="e5c2a-109">Disegnare un rettangolo</span><span class="sxs-lookup"><span data-stu-id="e5c2a-109">Draw a Rectangle</span></span>](how-to-draw-a-rectangle.md)  
- [<span data-ttu-id="e5c2a-110">Modificare il delimitatore alla fine di una linea o di un segmento</span><span class="sxs-lookup"><span data-stu-id="e5c2a-110">Modify the Cap at the End of a Line or Segment</span></span>](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d8025-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d8025-104">In This Section</span></span>  
+ [<span data-ttu-id="d8025-105">Disegnare una forma chiusa usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="d8025-105">Draw a Closed Shape by Using the Polygon Element</span></span>](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [<span data-ttu-id="d8025-106">Disegnare un'ellisse o un cerchio</span><span class="sxs-lookup"><span data-stu-id="d8025-106">Draw an Ellipse or a Circle</span></span>](how-to-draw-an-ellipse-or-a-circle.md)  
+ [<span data-ttu-id="d8025-107">Disegnare una linea</span><span class="sxs-lookup"><span data-stu-id="d8025-107">Draw a Line</span></span>](how-to-draw-a-line.md)  
+ [<span data-ttu-id="d8025-108">Disegnare una polilinea usando l'elemento poligono</span><span class="sxs-lookup"><span data-stu-id="d8025-108">Draw a Polyline by Using the Polyline Element</span></span>](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [<span data-ttu-id="d8025-109">Disegnare un rettangolo</span><span class="sxs-lookup"><span data-stu-id="d8025-109">Draw a Rectangle</span></span>](how-to-draw-a-rectangle.md)  
+ [<span data-ttu-id="d8025-110">Modificare il delimitatore alla fine di una linea o di un segmento</span><span class="sxs-lookup"><span data-stu-id="d8025-110">Modify the Cap at the End of a Line or Segment</span></span>](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e5c2a-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e5c2a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8025-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d8025-111">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="e5c2a-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="e5c2a-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="d8025-112">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="d8025-112">Graphics and Multimedia</span></span>](index.md)

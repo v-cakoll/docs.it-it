@@ -18,21 +18,21 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 499ba1887846cc670dc763ec998ef335c17a9ae5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970001"
 ---
-# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="54735-102">Metodo ICatalogServices::NotAutodone</span><span class="sxs-lookup"><span data-stu-id="54735-102">ICatalogServices::NotAutodone Method</span></span>
-<span data-ttu-id="54735-103">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="54735-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icatalogservicesnotautodone-method"></a><span data-ttu-id="fb0df-102">Metodo ICatalogServices::NotAutodone</span><span class="sxs-lookup"><span data-stu-id="fb0df-102">ICatalogServices::NotAutodone Method</span></span>
+<span data-ttu-id="fb0df-103">Questo metodo supporta l'infrastruttura .NET Framework e non può essere utilizzato direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="fb0df-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54735-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="54735-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb0df-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fb0df-104">Syntax</span></span>  
   
 ```  
 HRESULT NotAutodone ( );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="54735-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="54735-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb0df-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fb0df-105">See also</span></span>
 
-- [<span data-ttu-id="54735-106">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="54735-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="fb0df-106">Interfacce di hosting</span><span class="sxs-lookup"><span data-stu-id="fb0df-106">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

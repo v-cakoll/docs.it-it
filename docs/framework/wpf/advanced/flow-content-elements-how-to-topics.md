@@ -8,36 +8,36 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
 ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962526"
 ---
-# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="17488-102">Argomenti sulle procedure relative a elementi di contenuto del flusso</span><span class="sxs-lookup"><span data-stu-id="17488-102">Flow Content Elements How-to Topics</span></span>
-<span data-ttu-id="17488-103">Negli argomenti di questa sezione viene descritto come eseguire attività comuni utilizzando vari elementi di contenuto dinamico e le funzionalità correlate.</span><span class="sxs-lookup"><span data-stu-id="17488-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
+# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="0b110-102">Argomenti sulle procedure relative a elementi di contenuto del flusso</span><span class="sxs-lookup"><span data-stu-id="0b110-102">Flow Content Elements How-to Topics</span></span>
+<span data-ttu-id="0b110-103">Negli argomenti di questa sezione viene descritto come eseguire attività comuni utilizzando vari elementi di contenuto dinamico e le funzionalità correlate.</span><span class="sxs-lookup"><span data-stu-id="0b110-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="17488-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="17488-104">In This Section</span></span>  
- [<span data-ttu-id="17488-105">Regolare la spaziatura tra paragrafi</span><span class="sxs-lookup"><span data-stu-id="17488-105">Adjust Spacing Between Paragraphs</span></span>](how-to-adjust-spacing-between-paragraphs.md)  
- [<span data-ttu-id="17488-106">Compilare oggetti Table a livello di codice</span><span class="sxs-lookup"><span data-stu-id="17488-106">Build a Table Programmatically</span></span>](how-to-build-a-table-programmatically.md)  
- [<span data-ttu-id="17488-107">Modificare l'oggetto FlowDirection del contenuto a livello di codice</span><span class="sxs-lookup"><span data-stu-id="17488-107">Change the FlowDirection of Content Programmatically</span></span>](how-to-change-the-flowdirection-of-content-programmatically.md)  
- [<span data-ttu-id="17488-108">Modificare la proprietà TextWrapping a livello di codice</span><span class="sxs-lookup"><span data-stu-id="17488-108">Change the TextWrapping Property Programmatically</span></span>](how-to-change-the-textwrapping-property-programmatically.md)  
- [<span data-ttu-id="17488-109">Definire un oggetto Table con XAML</span><span class="sxs-lookup"><span data-stu-id="17488-109">Define a Table with XAML</span></span>](how-to-define-a-table-with-xaml.md)  
- [<span data-ttu-id="17488-110">Modificare la tipografia del testo</span><span class="sxs-lookup"><span data-stu-id="17488-110">Alter the Typography of Text</span></span>](how-to-alter-the-typography-of-text.md)  
- [<span data-ttu-id="17488-111">Attivare l'enumerazione TextTrimming</span><span class="sxs-lookup"><span data-stu-id="17488-111">Enable Text Trimming</span></span>](how-to-enable-text-trimming.md)  
- [<span data-ttu-id="17488-112">Inserire un elemento in un testo a livello di codice</span><span class="sxs-lookup"><span data-stu-id="17488-112">Insert an Element Into Text Programmatically</span></span>](how-to-insert-an-element-into-text-programmatically.md)  
- [<span data-ttu-id="17488-113">Modificare elementi di contenuto dinamico tramite la proprietà Blocks</span><span class="sxs-lookup"><span data-stu-id="17488-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [<span data-ttu-id="17488-114">Modificare gli elementi di contenuto del flusso tramite la proprietà Inlines</span><span class="sxs-lookup"><span data-stu-id="17488-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [<span data-ttu-id="17488-115">Modificare un oggetto FlowDocument tramite la proprietà Blocks</span><span class="sxs-lookup"><span data-stu-id="17488-115">Manipulate a FlowDocument through the Blocks Property</span></span>](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [<span data-ttu-id="17488-116">Modificare le colonne di una tabella tramite la proprietà Columns</span><span class="sxs-lookup"><span data-stu-id="17488-116">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)  
- [<span data-ttu-id="17488-117">Modificare i gruppi di righe di una tabella tramite la proprietà RowGroups</span><span class="sxs-lookup"><span data-stu-id="17488-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [<span data-ttu-id="17488-118">Usare elementi di contenuto dinamico</span><span class="sxs-lookup"><span data-stu-id="17488-118">Use Flow Content Elements</span></span>](how-to-use-flow-content-elements.md)  
- [<span data-ttu-id="17488-119">Usare gli attributi di separazione delle colonne di un oggetto FlowDocument</span><span class="sxs-lookup"><span data-stu-id="17488-119">Use FlowDocument Column-Separating Attributes</span></span>](how-to-use-flowdocument-column-separating-attributes.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0b110-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="0b110-104">In This Section</span></span>  
+ [<span data-ttu-id="0b110-105">Regolare la spaziatura tra paragrafi</span><span class="sxs-lookup"><span data-stu-id="0b110-105">Adjust Spacing Between Paragraphs</span></span>](how-to-adjust-spacing-between-paragraphs.md)  
+ [<span data-ttu-id="0b110-106">Compilare oggetti Table a livello di codice</span><span class="sxs-lookup"><span data-stu-id="0b110-106">Build a Table Programmatically</span></span>](how-to-build-a-table-programmatically.md)  
+ [<span data-ttu-id="0b110-107">Modificare l'oggetto FlowDirection del contenuto a livello di codice</span><span class="sxs-lookup"><span data-stu-id="0b110-107">Change the FlowDirection of Content Programmatically</span></span>](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [<span data-ttu-id="0b110-108">Modificare la proprietà TextWrapping a livello di codice</span><span class="sxs-lookup"><span data-stu-id="0b110-108">Change the TextWrapping Property Programmatically</span></span>](how-to-change-the-textwrapping-property-programmatically.md)  
+ [<span data-ttu-id="0b110-109">Definire un oggetto Table con XAML</span><span class="sxs-lookup"><span data-stu-id="0b110-109">Define a Table with XAML</span></span>](how-to-define-a-table-with-xaml.md)  
+ [<span data-ttu-id="0b110-110">Modificare la tipografia del testo</span><span class="sxs-lookup"><span data-stu-id="0b110-110">Alter the Typography of Text</span></span>](how-to-alter-the-typography-of-text.md)  
+ [<span data-ttu-id="0b110-111">Attivare l'enumerazione TextTrimming</span><span class="sxs-lookup"><span data-stu-id="0b110-111">Enable Text Trimming</span></span>](how-to-enable-text-trimming.md)  
+ [<span data-ttu-id="0b110-112">Inserire un elemento in un testo a livello di codice</span><span class="sxs-lookup"><span data-stu-id="0b110-112">Insert an Element Into Text Programmatically</span></span>](how-to-insert-an-element-into-text-programmatically.md)  
+ [<span data-ttu-id="0b110-113">Modificare elementi di contenuto dinamico tramite la proprietà Blocks</span><span class="sxs-lookup"><span data-stu-id="0b110-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [<span data-ttu-id="0b110-114">Modificare gli elementi di contenuto del flusso tramite la proprietà Inlines</span><span class="sxs-lookup"><span data-stu-id="0b110-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [<span data-ttu-id="0b110-115">Modificare un oggetto FlowDocument tramite la proprietà Blocks</span><span class="sxs-lookup"><span data-stu-id="0b110-115">Manipulate a FlowDocument through the Blocks Property</span></span>](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [<span data-ttu-id="0b110-116">Modificare le colonne di una tabella tramite la proprietà Columns</span><span class="sxs-lookup"><span data-stu-id="0b110-116">Manipulate a Table's Columns through the Columns Property</span></span>](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [<span data-ttu-id="0b110-117">Modificare i gruppi di righe di una tabella tramite la proprietà RowGroups</span><span class="sxs-lookup"><span data-stu-id="0b110-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [<span data-ttu-id="0b110-118">Usare elementi di contenuto dinamico</span><span class="sxs-lookup"><span data-stu-id="0b110-118">Use Flow Content Elements</span></span>](how-to-use-flow-content-elements.md)  
+ [<span data-ttu-id="0b110-119">Usare gli attributi di separazione delle colonne di un oggetto FlowDocument</span><span class="sxs-lookup"><span data-stu-id="0b110-119">Use FlowDocument Column-Separating Attributes</span></span>](how-to-use-flowdocument-column-separating-attributes.md)  
   
-## <a name="reference"></a><span data-ttu-id="17488-120">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="17488-120">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="0b110-120">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="0b110-120">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.Inline>  
   
-## <a name="related-sections"></a><span data-ttu-id="17488-121">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="17488-121">Related Sections</span></span>  
- [<span data-ttu-id="17488-122">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="17488-122">Documents in WPF</span></span>](documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="0b110-121">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="0b110-121">Related Sections</span></span>  
+ [<span data-ttu-id="0b110-122">Documenti in WPF</span><span class="sxs-lookup"><span data-stu-id="0b110-122">Documents in WPF</span></span>](documents-in-wpf.md)

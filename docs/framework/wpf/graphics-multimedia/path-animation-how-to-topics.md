@@ -8,30 +8,30 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
 ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973693"
 ---
-# <a name="path-animation-how-to-topics"></a><span data-ttu-id="d12a4-102">Procedure relative all'animazione percorso</span><span class="sxs-lookup"><span data-stu-id="d12a4-102">Path Animation How-to Topics</span></span>
-<span data-ttu-id="d12a4-103">Negli argomenti di questa sezione illustrano come aggiungere un'animazione a un oggetto lungo un tracciato.</span><span class="sxs-lookup"><span data-stu-id="d12a4-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
+# <a name="path-animation-how-to-topics"></a><span data-ttu-id="d1226-102">Procedure relative all'animazione percorso</span><span class="sxs-lookup"><span data-stu-id="d1226-102">Path Animation How-to Topics</span></span>
+<span data-ttu-id="d1226-103">Negli argomenti di questa sezione illustrano come aggiungere un'animazione a un oggetto lungo un tracciato.</span><span class="sxs-lookup"><span data-stu-id="d1226-103">The topics in this section demonstrate how to animate an object along a path.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d12a4-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d12a4-104">In This Section</span></span>  
- [<span data-ttu-id="d12a4-105">Animare un oggetto lungo un tracciato (animazione Double)</span><span class="sxs-lookup"><span data-stu-id="d12a4-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
- [<span data-ttu-id="d12a4-106">Animare un oggetto lungo un tracciato (animazione Point)</span><span class="sxs-lookup"><span data-stu-id="d12a4-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
- [<span data-ttu-id="d12a4-107">Animare un oggetto lungo un tracciato (animazione Matrix)</span><span class="sxs-lookup"><span data-stu-id="d12a4-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [<span data-ttu-id="d12a4-108">Animare un oggetto lungo un percorso (animazione Matrix con accumulazione offset)</span><span class="sxs-lookup"><span data-stu-id="d12a4-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [<span data-ttu-id="d12a4-109">Ruotare un oggetto usando un percorso geometrico (animazione Matrix)</span><span class="sxs-lookup"><span data-stu-id="d12a4-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [<span data-ttu-id="d12a4-110">Ruotare un oggetto usando un percorso geometrico</span><span class="sxs-lookup"><span data-stu-id="d12a4-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d1226-104">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="d1226-104">In This Section</span></span>  
+ [<span data-ttu-id="d1226-105">Animare un oggetto lungo un tracciato (animazione Double)</span><span class="sxs-lookup"><span data-stu-id="d1226-105">Animate an Object Along a Path (Double Animation)</span></span>](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [<span data-ttu-id="d1226-106">Animare un oggetto lungo un tracciato (animazione Point)</span><span class="sxs-lookup"><span data-stu-id="d1226-106">Animate an Object Along a Path (Point Animation)</span></span>](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [<span data-ttu-id="d1226-107">Animare un oggetto lungo un tracciato (animazione Matrix)</span><span class="sxs-lookup"><span data-stu-id="d1226-107">Animate an Object Along a Path (Matrix Animation)</span></span>](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [<span data-ttu-id="d1226-108">Animare un oggetto lungo un percorso (animazione Matrix con accumulazione offset)</span><span class="sxs-lookup"><span data-stu-id="d1226-108">Animate an Object Along a Path (Matrix Animation with Offset Accumulation)</span></span>](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [<span data-ttu-id="d1226-109">Ruotare un oggetto usando un percorso geometrico (animazione Matrix)</span><span class="sxs-lookup"><span data-stu-id="d1226-109">Rotate an Object by Using a Geometric Path (Matrix Animation)</span></span>](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [<span data-ttu-id="d1226-110">Ruotare un oggetto usando un percorso geometrico</span><span class="sxs-lookup"><span data-stu-id="d1226-110">Rotate an Object by Using a Geometric Path</span></span>](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
-## <a name="reference"></a><span data-ttu-id="d12a4-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="d12a4-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d1226-111">Riferimenti</span><span class="sxs-lookup"><span data-stu-id="d1226-111">Reference</span></span>  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a><span data-ttu-id="d12a4-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d12a4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1226-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d1226-112">See also</span></span>
 
-- [<span data-ttu-id="d12a4-113">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="d12a4-113">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="d12a4-114">Cenni preliminari sull'animazione</span><span class="sxs-lookup"><span data-stu-id="d12a4-114">Animation Overview</span></span>](animation-overview.md)
-- [<span data-ttu-id="d12a4-115">Cenni preliminari sulle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d12a4-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)
+- [<span data-ttu-id="d1226-113">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="d1226-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="d1226-114">Cenni preliminari sull'animazione</span><span class="sxs-lookup"><span data-stu-id="d1226-114">Animation Overview</span></span>](animation-overview.md)
+- [<span data-ttu-id="d1226-115">Cenni preliminari sulle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="d1226-115">Key-Frame Animations Overview</span></span>](key-frame-animations-overview.md)

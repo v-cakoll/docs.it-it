@@ -1,1 +1,9 @@
- <span data-ttu-id="5af24-101">IIS</span><span class="sxs-lookup"><span data-stu-id="5af24-101">IIS</span></span> 
+---
+ms.openlocfilehash: 3470a986f1b6d9f3f1715d5a174d8439d63284d9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981451"
+---
+ <span data-ttu-id="a63b5-101">IIS</span><span class="sxs-lookup"><span data-stu-id="a63b5-101">IIS</span></span> 

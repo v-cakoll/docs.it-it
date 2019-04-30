@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987187"
 ---
-# <a name="icordebugthreadgetactivechain-method"></a><span data-ttu-id="9a6bb-102">Metodo ICorDebugThread::GetActiveChain</span><span class="sxs-lookup"><span data-stu-id="9a6bb-102">ICorDebugThread::GetActiveChain Method</span></span>
-<span data-ttu-id="9a6bb-103">Ottiene un puntatore a interfaccia alla catena dello stack (più recente) attiva tohoto objektu ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="9a6bb-103">Gets an interface pointer to the active (most recent) stack chain on this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetactivechain-method"></a><span data-ttu-id="374af-102">Metodo ICorDebugThread::GetActiveChain</span><span class="sxs-lookup"><span data-stu-id="374af-102">ICorDebugThread::GetActiveChain Method</span></span>
+<span data-ttu-id="374af-103">Ottiene un puntatore a interfaccia alla catena dello stack (più recente) attiva tohoto objektu ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="374af-103">Gets an interface pointer to the active (most recent) stack chain on this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9a6bb-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="9a6bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="374af-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="374af-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveChain (  
@@ -35,18 +35,18 @@ HRESULT GetActiveChain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9a6bb-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="9a6bb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="374af-105">Parametri</span><span class="sxs-lookup"><span data-stu-id="374af-105">Parameters</span></span>  
  `ppChain`  
- <span data-ttu-id="9a6bb-106">[out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena dello stack.</span><span class="sxs-lookup"><span data-stu-id="9a6bb-106">[out] A pointer to the address of an ICorDebugChain object that represents the stack chain.</span></span>  
+ <span data-ttu-id="374af-106">[out] Un puntatore all'indirizzo di un oggetto ICorDebugChain che rappresenta la catena dello stack.</span><span class="sxs-lookup"><span data-stu-id="374af-106">[out] A pointer to the address of an ICorDebugChain object that represents the stack chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9a6bb-107">Note</span><span class="sxs-lookup"><span data-stu-id="9a6bb-107">Remarks</span></span>  
- <span data-ttu-id="9a6bb-108">Il `ppChain` parametro è null se nessun catena dello stack è attualmente attivo.</span><span class="sxs-lookup"><span data-stu-id="9a6bb-108">The `ppChain` parameter is null if no stack chain is currently active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="374af-107">Note</span><span class="sxs-lookup"><span data-stu-id="374af-107">Remarks</span></span>  
+ <span data-ttu-id="374af-108">Il `ppChain` parametro è null se nessun catena dello stack è attualmente attivo.</span><span class="sxs-lookup"><span data-stu-id="374af-108">The `ppChain` parameter is null if no stack chain is currently active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9a6bb-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="9a6bb-109">Requirements</span></span>  
- <span data-ttu-id="9a6bb-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a6bb-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="374af-109">Requisiti</span><span class="sxs-lookup"><span data-stu-id="374af-109">Requirements</span></span>  
+ <span data-ttu-id="374af-110">**Piattaforme:** Vedere [Requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="374af-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9a6bb-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9a6bb-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="374af-111">**Intestazione:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="374af-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9a6bb-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9a6bb-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="374af-112">**Libreria:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="374af-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9a6bb-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a6bb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="374af-113">**Versioni di .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="374af-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
