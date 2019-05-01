@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222065"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809531"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Procedura: Eseguire il binding delle proprietà di due controlli
 Questo esempio viene illustrato come associare la proprietà di un controllo di un'istanza a quella di un altro usando il <xref:System.Windows.Data.Binding.ElementName%2A> proprietà.  
@@ -23,9 +23,10 @@ Questo esempio viene illustrato come associare la proprietà di un controllo di 
   
  Dopo il rendering questo esempio avrà l'aspetto seguente:  
   
- ![Un canvas con uno sfondo verde](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **Nota** le proprietà di destinazione del binding (in questo esempio, il <xref:System.Windows.Controls.Panel.Background%2A> proprietà) deve essere una proprietà di dipendenza. Per altre informazioni, vedere la [panoramica del data binding](data-binding-overview.md).  
+![Screenshot che mostra una casella combinata finestra con il valore di colore verde selezionato e un quadrato verde.](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> La proprietà di destinazione del binding (in questo esempio, il <xref:System.Windows.Controls.Panel.Background%2A> proprietà) deve essere una proprietà di dipendenza. Per altre informazioni, vedere la [panoramica del data binding](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Vedere anche
 

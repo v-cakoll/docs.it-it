@@ -3,20 +3,20 @@ title: Panoramica del modulo di autenticazione WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c64bbfc868268fea77d2d17317bfea43aa413b3f
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310252"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808277"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Panoramica del modulo di autenticazione WSFederation
 Windows Identity Foundation (WIF) include il supporto per l'autenticazione federata nelle applicazioni ASP.NET tramite il modulo di autenticazione WS-Federated (WS-FAM, WS-Federated Authentication Module). Questo argomento aiuta capire come funziona l'autenticazione federata e come usarla.  
   
 ### <a name="overview-of-federated-authentication"></a>Panoramica dell'autenticazione federata  
- L'autenticazione federata consente a un servizio token di sicurezza in un dominio di trust di fornire informazioni di autenticazione a un servizio token di sicurezza in un altro dominio di trust quando tra i due domini c'è una relazione di trust. La figura seguente mostra un esempio relativo a questo scenario.  
+ L'autenticazione federata consente a un servizio token di sicurezza in un dominio di trust di fornire informazioni di autenticazione a un servizio token di sicurezza in un altro dominio di trust quando tra i due domini c'è una relazione di trust. Nella figura seguente è riportato un esempio di questo oggetto:  
   
- ![Scenario di autenticazione di federazione](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
+ ![Diagramma che illustra lo scenario di autenticazione federata.](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Un client nel dominio di trust Fabrikam invia una richiesta a un'applicazione relying party nel dominio di trust Contoso.  
   
@@ -50,7 +50,7 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
   
  Il diagramma seguente mostra il flusso generale delle informazioni nel caso del reindirizzamento passivo. La richiesta viene reindirizzata automaticamente tramite il servizio token di sicurezza per stabilire le credenziali senza una pagina di accesso:  
   
- ![Diagramma temporale per l'accesso con reindirizzamento passivo](../../../docs/framework/security/media/signinusingpassiveredirect.gif "SignInUsingPassiveRedirect")  
+ ![Diagramma che mostra Accedi con reindirizzamento passivo.](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  Il diagramma seguente mostra in modo più dettagliato ciò che succede quando l'utente ha eseguito l'autenticazione nel servizio token di sicurezza e i relativi token di sicurezza vengono elaborati da <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>:  
   
@@ -63,9 +63,9 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
 ### <a name="events"></a>Eventi  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> e la relativa classe padre <xref:System.IdentityModel.Services.HttpModuleBase> generano eventi in corrispondenza di varie fasi dell'elaborazione di una richiesta HTTP. È possibile gestire questi eventi nel file `global.asax` dell'applicazione [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
   
--   L'infrastruttura ASP.NET richiama il metodo <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> del modulo per inizializzare il modulo.  
+- L'infrastruttura ASP.NET richiama il metodo <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> del modulo per inizializzare il modulo.  
   
--   L'evento <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> viene generato quando l'infrastruttura ASP.NET richiama il metodo <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> per la prima volta in uno dei moduli dell'applicazione che derivano da <xref:System.IdentityModel.Services.HttpModuleBase>. Questo metodo accede alla proprietà <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> statica, che comporta il caricamento della configurazione dal file Web.config. Questo evento viene generato solo quando si accede a questa proprietà per la prima volta. All'oggetto <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> inizializzato dalla configurazione è possibile accedere tramite la proprietà <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> in un gestore eventi. È possibile usare questo evento per modificare la configurazione prima che venga applicata ai moduli. È possibile aggiungere un gestore per questo evento nel metodo Application_Start:  
+- L'evento <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated?displayProperty=nameWithType> viene generato quando l'infrastruttura ASP.NET richiama il metodo <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> per la prima volta in uno dei moduli dell'applicazione che derivano da <xref:System.IdentityModel.Services.HttpModuleBase>. Questo metodo accede alla proprietà <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> statica, che comporta il caricamento della configurazione dal file Web.config. Questo evento viene generato solo quando si accede a questa proprietà per la prima volta. All'oggetto <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> inizializzato dalla configurazione è possibile accedere tramite la proprietà <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> in un gestore eventi. È possibile usare questo evento per modificare la configurazione prima che venga applicata ai moduli. È possibile aggiungere un gestore per questo evento nel metodo Application_Start:  
   
     ```  
     void Application_Start(object sender, EventArgs e)  
@@ -76,19 +76,19 @@ Windows Identity Foundation (WIF) include il supporto per l'autenticazione feder
   
      Ogni modulo esegue l'override dei metodi astratti <xref:System.IdentityModel.Services.HttpModuleBase.InitializeModule%2A?displayProperty=nameWithType> e <xref:System.IdentityModel.Services.HttpModuleBase.InitializePropertiesFromConfiguration%2A?displayProperty=nameWithType>. Il primo di questi metodi aggiunge i gestori per gli eventi della pipeline ASP.NET rilevanti per il modulo. Nella maggior parte dei casi, è sufficiente l'implementazione predefinita del modulo. Il secondo di questi metodi inizializza le proprietà del modulo dalla relativa proprietà <xref:System.IdentityModel.Services.HttpModuleBase.FederationConfiguration%2A?displayProperty=nameWithType>. Si tratta di una copia della configurazione caricata in precedenza. Potrebbe essere necessario eseguire l'override di questo secondo metodo, se si vuole supportare l'inizializzazione di nuove proprietà dalla configurazione nelle classi derivate da <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> o <xref:System.IdentityModel.Services.SessionAuthenticationModule>. In casi di questo tipo, è anche necessario derivare dagli oggetti di configurazione appropriati per supportare le proprietà di configurazione aggiunte, ad esempio da <xref:System.IdentityModel.Configuration.IdentityConfiguration>, <xref:System.IdentityModel.Services.Configuration.WsFederationConfiguration> o <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>.  
   
--   WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> quando intercetta un token di sicurezza che è stato rilasciato dal servizio token di sicurezza.  
+- WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenReceived> quando intercetta un token di sicurezza che è stato rilasciato dal servizio token di sicurezza.  
   
--   WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> dopo la convalida del token.  
+- WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SecurityTokenValidated> dopo la convalida del token.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> genera l'evento <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> quando crea un token di sicurezza della sessione per l'utente.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> genera l'evento <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenCreated> quando crea un token di sicurezza della sessione per l'utente.  
   
--   <xref:System.IdentityModel.Services.SessionAuthenticationModule> genera l'evento <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> quando intercetta le richieste successive con il cookie contenente il token di sicurezza della sessione.  
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule> genera l'evento <xref:System.IdentityModel.Services.SessionAuthenticationModule.SessionSecurityTokenReceived> quando intercetta le richieste successive con il cookie contenente il token di sicurezza della sessione.  
   
--   Prima di reindirizzare l'utente all'autorità di certificazione, WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>. La richiesta di accesso WS-Federation è disponibile tramite la proprietà <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> dell'oggetto <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> passato nell'evento. È possibile scegliere di modificare la richiesta prima di inviarla all'autorità di certificazione.  
+- Prima di reindirizzare l'utente all'autorità di certificazione, WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>. La richiesta di accesso WS-Federation è disponibile tramite la proprietà <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs.SignInRequestMessage%2A> dell'oggetto <xref:System.IdentityModel.Services.RedirectingToIdentityProviderEventArgs> passato nell'evento. È possibile scegliere di modificare la richiesta prima di inviarla all'autorità di certificazione.  
   
--   WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> quando il cookie è stato scritto correttamente e l'utente ha effettuato l'accesso.  
+- WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignedIn> quando il cookie è stato scritto correttamente e l'utente ha effettuato l'accesso.  
   
--   WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> una volta per ogni sessione quando la sessione viene chiusa per ogni utente. L'evento non viene generato se la sessione viene chiusa sul lato client (ad esempio, eliminando il cookie di sessione). In un ambiente SSO il servizio token di sicurezza del provider di identità può richiedere anche la disconnessione di ogni relying party. Anche in questo caso viene generato l'evento, con il valore di <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> impostato su `true`.  
+- WS-FAM genera l'evento <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut> una volta per ogni sessione quando la sessione viene chiusa per ogni utente. L'evento non viene generato se la sessione viene chiusa sul lato client (ad esempio, eliminando il cookie di sessione). In un ambiente SSO il servizio token di sicurezza del provider di identità può richiedere anche la disconnessione di ogni relying party. Anche in questo caso viene generato l'evento, con il valore di <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> impostato su `true`.  
   
 > [!NOTE]
 >  Non usare la proprietà <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> durante qualsiasi evento generato da <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> o <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Il motivo è che l'impostazione di <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> avviene dopo il processo di autenticazione, mentre gli eventi vengono generati durante il processo di autenticazione.  

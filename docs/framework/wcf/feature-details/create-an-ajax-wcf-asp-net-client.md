@@ -2,14 +2,14 @@
 title: Creare un servizio WCF compatibile con AJAX e un Client ASP.NET in Visual Studio
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024610"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807891"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Procedura: creare un servizio WCF compatibile con AJAX e un client ASP.NET che accede al servizio
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Procedura: Creare un servizio WCF compatibile con AJAX e un Client ASP.NET che accede a servizio
 
 In questo argomento viene illustrato come usare Visual Studio per creare un servizio compatibile con AJAX Windows Communication Foundation (WCF) e un client ASP.NET che accede al servizio.
 
@@ -77,15 +77,15 @@ In questo argomento viene illustrato come usare Visual Studio per creare un serv
 
 4. Nel **origine** consente di visualizzare, aggiungere il codice seguente tra i  **\<ScriptManager >** tag per specificare il percorso del servizio WCF:
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Aggiungere il codice per la funzione Javascript `Calculate()`. Inserire il codice seguente nel **head** sezione di web form:
+5. Aggiungere il codice per la funzione Javascript `Calculate()`. Inserire il codice seguente nel **head** sezione di web form:
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {

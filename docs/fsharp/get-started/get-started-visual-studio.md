@@ -2,12 +2,12 @@
 title: Introduzione a F# in Visual Studio
 description: Informazioni su come usare F# con Visual Studio.
 ms.date: 07/03/2018
-ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331910"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808014"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Introduzione a F# in Visual Studio
 
@@ -25,7 +25,7 @@ Uno dei progetti più semplici in Visual Studio è l'applicazione Console.  Ecco
 
 3. Selezionare uno **app Console per .NET Core** oppure **app Console**.
 
-3. Scegliere il **Okay** pulsante per creare il F# progetto!  A questo punto dovrebbe vedere un F# progetto in Esplora soluzioni.
+4. Scegliere il **Okay** pulsante per creare il F# progetto!  A questo punto dovrebbe vedere un F# progetto in Esplora soluzioni.
 
 ## <a name="writing-your-code"></a>La scrittura del codice
 
@@ -35,7 +35,7 @@ Iniziamo a scrivere del codice prima di tutto.  Assicurarsi che il `Program.fs` 
 
 Nell'esempio di codice precedente, una funzione `square` è stato definito che accetta un input denominato `x` e il risultato viene moltiplicato per se stesso.  Poiché F# viene utilizzato [inferenza del tipo](../language-reference/type-inference.md), il tipo di `x` non deve essere specificato.  Il F# compilatore riconosce i tipi in cui la moltiplicazione è valida e di assegnare un tipo `x` basato sul `square` viene chiamato.  Se si posiziona `square`, si dovrebbe visualizzare quanto segue:
 
-```
+```fsharp
 val square: x:int -> int
 ```
 

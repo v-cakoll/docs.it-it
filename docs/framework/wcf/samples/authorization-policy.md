@@ -2,12 +2,12 @@
 title: Criteri di autorizzazione
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332676"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807978"
 ---
 # <a name="authorization-policy"></a>Criteri di autorizzazione
 
@@ -18,17 +18,17 @@ In questo esempio viene illustrato come implementare i criteri di autorizzazione
 
  In sintesi, nell'esempio viene illustrato in che modo eseguire le operazioni seguenti:
 
--   Il client può essere autenticato utilizzando un nome utente e una password.
+- Il client può essere autenticato utilizzando un nome utente e una password.
 
--   Il client può essere autenticato tramite un certificato X.509.
+- Il client può essere autenticato tramite un certificato X.509.
 
--   Il server verifica le credenziali client rispetto a un validator `UsernamePassword` personalizzato.
+- Il server verifica le credenziali client rispetto a un validator `UsernamePassword` personalizzato.
 
--   Il server viene autenticato tramite il certificato X.509 del server.
+- Il server viene autenticato tramite il certificato X.509 del server.
 
--   Il server può utilizzare <xref:System.ServiceModel.ServiceAuthorizationManager> per controllare l'accesso a determinati metodi nel servizio.
+- Il server può utilizzare <xref:System.ServiceModel.ServiceAuthorizationManager> per controllare l'accesso a determinati metodi nel servizio.
 
--   Come implementare <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
+- Come implementare <xref:System.IdentityModel.Policy.IAuthorizationPolicy>.
 
 Il servizio espone due endpoint per comunicare con il servizio definito mediante il file di configurazione App.config. Ciascun endpoint è costituito da un indirizzo, un binding e un contratto. Un'associazione è configurata con un'associazione `wsHttpBinding` standard che utilizza WS-Security e l'autenticazione del nome utente del client. L'altra associazione è configurata con un'associazione `wsHttpBinding` standard che utilizza WS-Security e l'autenticazione del certificato client. Il [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) specifica che le credenziali dell'utente da utilizzare per l'autenticazione del servizio. Il certificato del server deve contenere lo stesso valore per il `SubjectName` proprietà come il `findValue` attributo il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
@@ -397,9 +397,9 @@ Il file batch Setup.bat incluso in questo esempio consente di configurare il ser
 
 Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.
 
--   Creazione del certificato server.
+- Creazione del certificato server.
 
-     Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile %SERVER_NAME% specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito è localhost.
+    Le righe seguenti del file batch Setup.bat creano il certificato server da usare. La variabile %SERVER_NAME% specifica il nome del server. Modificare questa variabile per specificare nome del server. Il valore predefinito è localhost.
 
     ```
     echo ************
@@ -411,19 +411,19 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato server nell'archivio certificati attendibili del client
+- Installazione del certificato server nell'archivio certificati attendibili del client
 
-     Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
+    Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client. Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client. Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Creazione del certificato del client.
+- Creazione del certificato del client.
 
-     Le righe seguenti del file batch Setup.bat creano il certificato client da utilizzare. La variabile %USER_NAME% specifica il nome del server. Questo valore è impostato su "test1" perché questo è il nome cercato da `IAuthorizationPolicy`. Se si modifica il valore di %USER_NAME%, è necessario modificare il valore corrispondente nel metodo `IAuthorizationPolicy.Evaluate`.
+    Le righe seguenti del file batch Setup.bat creano il certificato client da utilizzare. La variabile %USER_NAME% specifica il nome del server. Questo valore è impostato su "test1" perché questo è il nome cercato da `IAuthorizationPolicy`. Se si modifica il valore di %USER_NAME%, è necessario modificare il valore corrispondente nel metodo `IAuthorizationPolicy.Evaluate`.
 
-     Il certificato viene memorizzato nell'archivio personale nel percorso di archivio CurrentUser.
+    Il certificato viene memorizzato nell'archivio personale nel percorso di archivio CurrentUser.
 
     ```
     echo ************
@@ -432,9 +432,9 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   Installazione del certificato client nell'archivio certificati attendibili del server
+- Installazione del certificato client nell'archivio certificati attendibili del server
 
-     Le righe seguenti nel file batch Setup.bat copiano il certificato client nell'archivio delle persone attendibile. Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema del server. Se è già disponibile un certificato che è impostato come radice in un certificato radice attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati server con il certificato client non è necessario.
+    Le righe seguenti nel file batch Setup.bat copiano il certificato client nell'archivio delle persone attendibile. Questo passaggio è necessario perché i certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema del server. Se è già disponibile un certificato che è impostato come radice in un certificato radice attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati server con il certificato client non è necessario.
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 1. Avviare Client.exe dal *\client\bin*. L'attività del client viene visualizzata nella finestra dell'applicazione console.
 
-  Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Per eseguire l'esempio tra più computer
 
@@ -474,7 +474,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 5. Nel server, eseguire `setup.bat service` nel prompt dei comandi sviluppatore per Visual Studio aperto con privilegi di amministratore.
 
-   In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer e il certificato di servizio viene esportato in un file denominato *CER*.
+    In esecuzione `setup.bat` con il `service` argomento consente di creare un certificato di servizio con il nome di dominio completo del computer e il certificato di servizio viene esportato in un file denominato *CER*.
 
 6. Modificare *Service.exe.config* in modo da riflettere il nuovo nome del certificato (nelle `findValue` attributo il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) che corrisponde al nome di dominio completo del computer. Modificare anche il **computername** nel \<service > /\<baseAddresses > elemento da localhost al nome completo del computer del servizio.
 
@@ -482,7 +482,7 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 8. Nel client, eseguire `setup.bat client` nel prompt dei comandi sviluppatore per Visual Studio aperto con privilegi di amministratore.
 
-   In esecuzione `setup.bat` con il `client` argomento consente di creare un certificato client denominato **test1** e il certificato client viene esportato in un file denominato *CER*.
+    In esecuzione `setup.bat` con il `client` argomento consente di creare un certificato client denominato **test1** e il certificato client viene esportato in un file denominato *CER*.
 
 9. Nel *exe* file nel computer client, modificare il valore dell'indirizzo dell'endpoint affinché corrisponda al nuovo indirizzo del servizio. Eseguire questa operazione sostituendo **localhost** con il nome di dominio completo del server.
 
@@ -490,17 +490,17 @@ Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch
 
 11. Nel client, eseguire *Importservicecert* nel prompt dei comandi sviluppatore per Visual Studio aperto con privilegi di amministratore.
 
-   Questo modo viene importato il certificato del servizio dal file Service CER nel **CurrentUser - TrustedPeople** archiviare.
+    Questo modo viene importato il certificato del servizio dal file Service CER nel **CurrentUser - TrustedPeople** archiviare.
 
 12. Nel server, eseguire *importclientcert. bat* nel prompt dei comandi sviluppatore per Visual Studio aperto con privilegi di amministratore.
 
-   In questo modo il certificato client dal file client CER nel **LocalMachine - TrustedPeople** archiviare.
+    In questo modo il certificato client dal file client CER nel **LocalMachine - TrustedPeople** archiviare.
 
 13. Sul computer server avviare Service.exe dalla finestra del prompt dei comandi.
 
 14. Sul computer client avviare Client.exe da una finestra del prompt dei comandi.
 
-   Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+    Se il client e il servizio non è in grado di comunicare, vedere [suggerimenti per la risoluzione dei problemi per gli esempi di WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>La pulizia dopo il codice di esempio
 

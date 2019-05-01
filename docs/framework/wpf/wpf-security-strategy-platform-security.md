@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfcc11c78ffc408de71c88e2c1c7b0522ffe3732
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212414"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808347"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia di sicurezza di WPF - Sicurezza della piattaforma
 Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi di sicurezza, sfrutta le funzionalità di sicurezza della piattaforma sottostante, che include il sistema operativo, il [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], e [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Questi livelli forniscono a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modello di sicurezza in profondità solido e dettagliato per evitare ogni singola vulnerabilità, come illustrato nella figura seguente:  
   
- ![Illustrazione della sicurezza WPF](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![Diagramma che mostra il modello di sicurezza WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  Nella parte rimanente di questo argomento verranno illustrate le funzionalità specifiche di questi livelli che riguardano in modo specifico [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].  
 
@@ -39,9 +39,9 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  Oltre a una revisione generale e un approfondimento su Windows, esistono tre funzionalità chiave disponibili in [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] verranno illustrate in questo argomento:  
   
--   Compilazione /GS  
+- Compilazione /GS  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>Compilazione /GS  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] offre protezione ricompilando molte librerie di sistema principali, incluse tutte le dipendenze [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] quali [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], per limitare i sovraccarichi del buffer. A tale scopo, è necessario usare il parametro /GS con il compilatore da riga di comando di C/C++. Anche se i sovraccarichi del buffer dovrebbero essere evitati in modo esplicito, la compilazione /GS rappresenta un esempio di difesa da potenziali vulnerabilità create accidentalmente o intenzionalmente.  
@@ -66,9 +66,9 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  Un modo per proteggersi da una tale minaccia per la sicurezza consiste nell'eseguire le applicazioni con la quantità minima necessaria di privilegi. Questo concetto è noto come il principio dei privilegi minimi ed è una funzionalità principale del sistema operativo [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]. Tale funzionalità è nota come Controllo dell'account utente (UAC, User Account Control) e viene usata da [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] in due modi principali:  
   
--   Per eseguire la maggior parte delle applicazioni con privilegi UAC per impostazione predefinita, anche se l'utente è un amministratore. Solo le applicazioni che richiedono i privilegi di amministratore verranno eseguite con i privilegi di amministratore. Per essere eseguite con i privilegi di amministratore, le applicazioni devono essere contrassegnate in modo esplicito nel manifesto dell'applicazione o come voce nei criteri di sicurezza.  
+- Per eseguire la maggior parte delle applicazioni con privilegi UAC per impostazione predefinita, anche se l'utente è un amministratore. Solo le applicazioni che richiedono i privilegi di amministratore verranno eseguite con i privilegi di amministratore. Per essere eseguite con i privilegi di amministratore, le applicazioni devono essere contrassegnate in modo esplicito nel manifesto dell'applicazione o come voce nei criteri di sicurezza.  
   
--   Per fornire soluzioni di compatibilità come la virtualizzazione. Molte applicazioni, ad esempio, provano a scrivere in percorsi limitati, come C:\Programmi. Per le applicazioni eseguite in ambito UAC, esiste un percorso alternativo specifico di ogni utente in cui è possibile scrivere senza disporre dei privilegi di amministratore. Per le applicazioni eseguite in ambito UAC, il percorso C:\Programmi viene virtualizzato affinché le applicazioni scrivano direttamente nel percorso alternativo specifico di ogni utente. Questa soluzione di compatibilità consente di eseguire molte applicazioni che in passato non sarebbe stato possibile eseguire in base al principio UAC.  
+- Per fornire soluzioni di compatibilità come la virtualizzazione. Molte applicazioni, ad esempio, provano a scrivere in percorsi limitati, come C:\Programmi. Per le applicazioni eseguite in ambito UAC, esiste un percorso alternativo specifico di ogni utente in cui è possibile scrivere senza disporre dei privilegi di amministratore. Per le applicazioni eseguite in ambito UAC, il percorso C:\Programmi viene virtualizzato affinché le applicazioni scrivano direttamente nel percorso alternativo specifico di ogni utente. Questa soluzione di compatibilità consente di eseguire molte applicazioni che in passato non sarebbe stato possibile eseguire in base al principio UAC.  
   
 #### <a name="code-integrity-checks"></a>Controlli di integrità del codice  
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] incorpora controlli di integrità del codice più accurati per impedire che venga introdotto codice dannoso nei file di sistema o nel kernel in fase di esecuzione/caricamento. Questo va oltre la protezione dei file di sistema.  
@@ -100,11 +100,11 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  Le applicazioni gestite vengono compilate in Microsoft Intermediate Language (MSIL). Quando vengono eseguiti metodi in un'applicazione gestita, il relativo MSIL viene compilato in codice nativo tramite la compilazione JIT. La compilazione JIT include un processo di verifica riguardante molte regole di sicurezza e affidabilità per garantire che il codice:  
   
--   non violi contratti di tipo  
+- non violi contratti di tipo  
   
--   non causi sovraccarichi del buffer  
+- non causi sovraccarichi del buffer  
   
--   non acceda alla memoria in modo irregolare o eccessivo.  
+- non acceda alla memoria in modo irregolare o eccessivo.  
   
  Il codice gestito che non rispetta le regole di verifica non verrà eseguito, a meno che non venga considerato codice attendibile.  
   
@@ -116,29 +116,29 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  Le autorizzazioni concesse a un'applicazione gestita da [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] all'avvio vengono collettivamente definite set di autorizzazioni e tale set è determinato dalle evidenze fornite dall'applicazione. Per le applicazioni [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], le evidenze fornite sono il percorso, o area, da cui vengono avviate. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] identifica le aree seguenti:  
   
--   **Risorse del computer**. Applicazioni avviate dal computer client (completamente attendibili).  
+- **Risorse del computer**. Applicazioni avviate dal computer client (completamente attendibili).  
   
--   **Intranet locale**. Applicazioni avviate da Intranet (parzialmente attendibili).  
+- **Intranet locale**. Applicazioni avviate da Intranet (parzialmente attendibili).  
   
--   **Internet**. Applicazioni avviate da Internet (meno attendibili).  
+- **Internet**. Applicazioni avviate da Internet (meno attendibili).  
   
--   **Siti attendibili**. Applicazioni identificate da un utente come attendibili (meno attendibili).  
+- **Siti attendibili**. Applicazioni identificate da un utente come attendibili (meno attendibili).  
   
--   **Siti non attendibili**. Applicazioni identificate da un utente come non attendibili (non attendibili).  
+- **Siti non attendibili**. Applicazioni identificate da un utente come non attendibili (non attendibili).  
   
  Per ognuna di queste zone, [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] fornisce un set di autorizzazioni predefinito che include le autorizzazioni corrispondenti al livello di attendibilità associato a ognuna, Sono inclusi:  
   
--   **FullTrust**. Per le applicazioni avviate dal **My Computer** zona. Sono concesse tutte le autorizzazioni possibili.  
+- **FullTrust**. Per le applicazioni avviate dal **My Computer** zona. Sono concesse tutte le autorizzazioni possibili.  
   
--   **LocalIntranet**. Per le applicazioni avviate dal **Intranet locale** zona. Viene concesso un sottoinsieme di autorizzazioni per fornire un accesso moderato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, accesso dell'interfaccia utente senza restrizioni, finestre di dialogo di file senza restrizioni, reflection limitata, accesso limitato alle variabili di ambiente. Le autorizzazioni per risorse critiche come il Registro di sistema non vengono concesse.  
+- **LocalIntranet**. Per le applicazioni avviate dal **Intranet locale** zona. Viene concesso un sottoinsieme di autorizzazioni per fornire un accesso moderato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, accesso dell'interfaccia utente senza restrizioni, finestre di dialogo di file senza restrizioni, reflection limitata, accesso limitato alle variabili di ambiente. Le autorizzazioni per risorse critiche come il Registro di sistema non vengono concesse.  
   
--   **Internet**. Per le applicazioni avviate dal **Internet** oppure **siti attendibili** zona. Viene concesso un sottoinsieme di autorizzazioni per fornire accesso limitato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, solo apertura di file e interfaccia utente limitata. Sostanzialmente, questo set di autorizzazioni isola le applicazioni dal computer client.  
+- **Internet**. Per le applicazioni avviate dal **Internet** oppure **siti attendibili** zona. Viene concesso un sottoinsieme di autorizzazioni per fornire accesso limitato alle risorse di un computer client, tra cui spazio di memorizzazione isolato, solo apertura di file e interfaccia utente limitata. Sostanzialmente, questo set di autorizzazioni isola le applicazioni dal computer client.  
   
  Applicazioni identificate come provenienti dal **siti non attendibili** zona non concede alcuna autorizzazione dal [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] affatto. Di conseguenza, queste non dispongono di alcun set di autorizzazioni predefinito.  
   
- La figura seguente illustra la relazione tra aree, set di autorizzazioni, autorizzazioni e risorse.  
+ Nella figura seguente illustra la relazione tra le zone, set di autorizzazioni, autorizzazioni e le risorse:  
   
- ![Set di autorizzazioni CAS](./media/caspermissionsets.png "CASPermissionSets")  
+ ![Diagramma che mostra i set di autorizzazioni CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
  Le restrizioni della sandbox di sicurezza dell'area Internet sono ugualmente applicabili a qualsiasi codice che un'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] importa da una libreria di sistema, compreso [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. In questo modo, ogni frammento di codice viene bloccato, anche [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Purtroppo, per poter essere eseguita, un'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] deve eseguire funzionalità che richiedono molte più autorizzazioni rispetto a quelle abilitate dalla sandbox di sicurezza dell'area Internet.  
   
@@ -149,11 +149,11 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  Per eseguire questa applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], il codice [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sottostante deve eseguire molte più funzionalità di quelle disponibili all'applicazione [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] chiamante, tra cui:  
   
--   Creazione di un handle di finestra (hWnd) per il rendering  
+- Creazione di un handle di finestra (hWnd) per il rendering  
   
--   Invio di messaggi  
+- Invio di messaggi  
   
--   Caricamento del tipo di carattere Tahoma  
+- Caricamento del tipo di carattere Tahoma  
   
  Da un punto di vista della sicurezza, consentire l'accesso diretto a queste operazioni dall'applicazione eseguita in una sandbox avrebbe conseguenze devastanti.  
   
@@ -190,11 +190,11 @@ Anche se Windows Presentation Foundation (WPF) offre un'ampia gamma di servizi d
   
  Prima di [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], gli utenti potevano riscontrare le situazioni elencate di seguito:  
   
--   Finestre popup casuali.  
+- Finestre popup casuali.  
   
--   Reindirizzamento di script non chiaro.  
+- Reindirizzamento di script non chiaro.  
   
--   Numerose finestre di dialogo di sicurezza in alcuni siti Web.  
+- Numerose finestre di dialogo di sicurezza in alcuni siti Web.  
   
  In alcuni casi, i siti Web non attendibili provano a ingannare gli utenti effettuando lo spoofing della [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] di installazione o visualizzando ripetutamente una finestra di dialogo di installazione di [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)], anche se l'utente la ha annullata. Tramite queste tecniche, è possibile che un numero significativo di utenti sia stato indotto a prendere decisioni che hanno causato l'installazione di applicazioni spyware.  
   

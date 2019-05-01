@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343597"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807966"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Introduzione a input penna in WPF
 
@@ -104,7 +104,7 @@ Tutte le funzionalità WPF è possibile accedere dal codice procedurale. Seguire
 
 1. Aggiungere riferimenti agli assembly PresentationCore, PresentationFramework e WindowsBase facendo clic su **riferimenti** nelle **Esplora soluzioni** e scegliendo **Aggiungi riferimento**.
 
-   ![Gestione di riferimenti che mostra PresentationCore e PresentationFramework](./media/getting-started-with-ink/references.png)
+   ![Gestione di riferimenti che mostra PresentationCore e PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. Compilare l'applicazione premendo **F5**.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517838"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773930"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procedura: Sviluppare un servizio dati WCF in esecuzione in IIS
 
@@ -23,9 +23,9 @@ Questo argomento illustra come usare WCF Data Services per creare un servizio da
 > [!NOTE]
 > Per creare il servizio dati Northwind, è necessario installare il database di esempio Northwind nel computer locale. Per scaricare questo database di esempio, vedere la pagina di download dei [database di esempio per SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
- In questo argomento viene illustrato come creare un servizio dati tramite il provider di Entity Framework. Sono disponibili altri provider di servizi dati. Per altre informazioni, vedere [provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
+In questo argomento viene illustrato come creare un servizio dati tramite il provider di Entity Framework. Sono disponibili altri provider di servizi dati. Per altre informazioni, vedere [provider di servizi dati](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso alle risorse del servizio dati. Per altre informazioni, vedere [Procedura: Abilitare l'accesso al servizio dati](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+Dopo aver creato il servizio, è necessario fornire in modo esplicito l'accesso alle risorse del servizio dati. Per altre informazioni, vedere [Procedura: Abilitare l'accesso al servizio dati](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Creare l'applicazione web ASP.NET che viene eseguita in IIS
 
@@ -35,7 +35,7 @@ Questo argomento illustra come usare WCF Data Services per creare un servizio da
 
 3. Selezionare il **applicazione Web ASP.NET** modello.
 
-1. Immettere `NorthwindService` come il nome del progetto.
+4. Immettere `NorthwindService` come il nome del progetto.
 
 5. Fare clic su **OK**.
 
@@ -47,13 +47,13 @@ Questo argomento illustra come usare WCF Data Services per creare un servizio da
 
 9. Dal prompt dei comandi aperto con privilegi di amministratore, eseguire uno dei comandi seguenti (a seconda del sistema operativo):
 
-    -   sistemi a 32 bit:
+    - sistemi a 32 bit:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   sistemi a 64 bit:
+    - sistemi a 64 bit:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ Questo argomento illustra come usare WCF Data Services per creare un servizio da
 
 10. Dal prompt dei comandi aperto con privilegi di amministratore, eseguire uno dei comandi seguenti (a seconda del sistema operativo):
 
-    -   sistemi a 32 bit:
+    - sistemi a 32 bit:
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   sistemi a 64 bit:
+    - sistemi a 64 bit:
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ Questo argomento illustra come usare WCF Data Services per creare un servizio da
 
 5. Connettere il modello di dati al database effettuando una delle operazioni seguenti e quindi fare clic su **successivo**:
 
-    -   Se non hai una connessione al database già configurata, fare clic su **nuova connessione** e creare una nuova connessione. Per altre informazioni, vedere [Procedura: Creare connessioni a database di SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). A questa istanza di SQL Server deve essere collegato il database Northwind di esempio.
+    - Se non hai una connessione al database già configurata, fare clic su **nuova connessione** e creare una nuova connessione. Per altre informazioni, vedere [Procedura: Creare connessioni a database di SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). A questa istanza di SQL Server deve essere collegato il database Northwind di esempio.
 
          \- oppure -
 
-    -   Se si dispone di una connessione al database già configurata per connettersi al database Northwind, selezionarla dall'elenco delle connessioni.
+    - Se si dispone di una connessione al database già configurata per connettersi al database Northwind, selezionarla dall'elenco delle connessioni.
 
 6. Nella pagina finale della procedura guidata, selezionare le caselle di controllo relative a tutte le tabelle nel database e deselezionare le caselle di controllo relative a visualizzazioni e stored procedure.
 

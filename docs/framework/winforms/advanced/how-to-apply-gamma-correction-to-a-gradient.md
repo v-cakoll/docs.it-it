@@ -8,12 +8,12 @@ helpviewer_keywords:
 - gradient brushes [Windows Forms], gamma correction
 - gradients [Windows Forms], gamma correction
 ms.assetid: da4690e7-5fac-4fd2-b3f0-5cb35c165b92
-ms.openlocfilehash: 066ccc649105018d20cb86b6e576a1a238e0dc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e812e441233c1d29a67dac639048e20a659549f0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973266"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809470"
 ---
 # <a name="how-to-apply-gamma-correction-to-a-gradient"></a>Procedura: Applicare la correzione gamma a una sfumatura
 È possibile abilitare la correzione gamma per un pennello sfumato lineare impostando la proprietà del pennello <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> proprietà `true`. È possibile disabilitare la correzione gamma impostando il <xref:System.Drawing.Drawing2D.LinearGradientBrush.GammaCorrection%2A> proprietà `false`. La correzione gamma è disabilitata per impostazione predefinita.  
@@ -24,7 +24,7 @@ Nell'esempio seguente è un metodo che viene chiamato da un controllo <xref:Syst
   
  La figura seguente mostra i due rettangoli colorati. Il rettangolo superiore che non dispone di correzione gamma, viene visualizzato scuro al centro. Il rettangolo nella parte inferiore che include la correzione gamma, sembra avere ulteriori intensità uniforme.  
   
- ![Sfumatura](./media/gammagradient1.png "gammagradient1")  
+ ![Due riempimento sfumatura rettangoli, con e senza la correzione gamma.](./media/how-to-apply-gamma-correction-to-a-gradient/two-rectangles-gamma-gradient.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingaGradientBrush#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#31)]  
