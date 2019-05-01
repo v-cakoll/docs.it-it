@@ -69,7 +69,7 @@ Senza Docker, se erano necessari altri framework, funzionalità o dipendenze non
 
 Il supporto dei contenitori in Visual Studio 2017 offre la possibilità di includere ciò che si vuole nell'ambiente dell'applicazione, come illustrato in figura 4-4. Dal momento che l'esecuzione avviene in un contenitore, se si aggiunge una dipendenza all'applicazione, è possibile includere tale dipendenza nel Dockerfile o nell'immagine Docker.
 
-Come illustrato anche nella figura 4-4, il flusso di pubblicazione esegue il push di un'immagine con un registro contenitori. Può trattarsi del Registro contenitori di Azure (un registro vicino alle distribuzioni in Azure e protetto dai gruppi e dagli account di Azure Active Directory) oppure di qualsiasi altro registro di Docker, come l'hub Docker o un registro locale.
+Come illustrato anche nella figura 4-4, il flusso di pubblicazione esegue il push di un'immagine con un registro contenitori. Può trattarsi del Registro Azure Container (un registro vicino alle distribuzioni in Azure e protetto dai gruppi e dagli account di Azure Active Directory) oppure di qualsiasi altro registro di Docker, come l'hub Docker o un registro locale.
 
 >[!div class="step-by-step"]
 >[Precedente](index.md)

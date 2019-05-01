@@ -48,7 +48,7 @@ Le app Web del servizio app offrono una piattaforma completamente gestita, ottim
 
 Il servizio app di Azure è la scelta ottimale per la maggior parte delle applicazioni Web. La gestione e la distribuzione sono integrate nella piattaforma e i siti possono essere ridimensionati rapidamente per gestire volumi di traffico elevati, mentre il bilanciamento e la gestione del traffico incorporati garantiscono una disponibilità elevata. È possibile spostare facilmente siti esistenti al servizio app di Azure con uno strumento di migrazione online, usare un'app open source dalla Raccolta di app Web o creare un nuovo sito usando il framework e gli strumenti preferiti. La funzionalità Processi Web semplifica l'aggiunta dell'elaborazione di processi in background all'app Web del servizio app.
 
-### <a name="azure-kubernetes-service"></a>Servizio Kubernetes di Azure
+### <a name="azure-kubernetes-service"></a>Servizio Azure Kubernetes
 
 Il servizio Azure Kubernetes gestisce l'ambiente Kubernetes ospitato, rendendo veloce e facile distribuire e gestire applicazioni in contenitori senza competenze nell'orchestrazione di contenitori. Elimina inoltre il carico delle operazioni in corso e la manutenzione con il provisioning, l'aggiornamento e il ridimensionamento delle risorse su richiesta, senza portare offline le applicazioni.
 
@@ -59,7 +59,7 @@ Il servizio Azure Kubernetes riduce la complessità e i costi operativi di gesti
 - Piano di controllo ospitato di riparazione automatica (master).
 - Risparmio sui costi: vengono addebitati solo i costi di esecuzione dei nodi dei pool di agenti.
 
-Grazie alla gestione dei nodi nel cluster del servizio Azure Kubernetes da parte di Azure, non è più necessario eseguire molte attività manualmente, ad esempio gli aggiornamenti del cluster. Poiché Azure gestisce queste attività di manutenzione critiche per l'utente, AKS non fornisce accesso diretto (ad esempio con SSH) al cluster.
+Grazie alla gestione dei nodi nel cluster del servizio Azure Kubernetes da parte di Azure, non è più necessario eseguire molte attività manualmente, ad esempio gli aggiornamenti del cluster. Poiché Azure gestisce queste attività di manutenzione critiche per l'utente, il servizio Azure Kubernetes non fornisce accesso diretto (ad esempio con SSH) al cluster.
 
 ### <a name="azure-service-fabric"></a>Azure Service Fabric
 
@@ -71,7 +71,7 @@ Se un'applicazione esistente richiede modifiche sostanziali per l'esecuzione nel
 
 #### <a name="feature-comparison"></a>Confronto tra funzionalità
 
-| Funzionalità                                                                                    | Servizio app | Contenitori (AKS) | Service Fabric | Macchina virtuale |
+| Funzionalità                                                                                    | Servizio app | Contenitori (servizio Azure Kubernetes) | Service Fabric | Macchina virtuale |
 | ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
 | Distribuzione quasi immediata                                                                    | x           | x                | x              |                 |
 | Scalabilità verticale a computer più grandi senza ridistribuzione                                               | x           | x                | x              |                 |
@@ -124,7 +124,7 @@ La figura 11-2 illustra un'architettura di riferimento di esempio. Questo diagra
 - Confronto tra Servizio app di Azure, Macchine virtuali, Service Fabric e Servizi cloud\
   <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
-- Introduzione a servizio Kubernetes di Azure (AKS)\
+- Introduzione a servizio Azure Kubernetes\
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
