@@ -4,56 +4,54 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 766b95163f164ec76135b964115069b6855ceebf
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297928"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807877"
 ---
-# <a name="object-variable-or-with-block-variable-not-set"></a><span data-ttu-id="54372-102">Variabile oggetto o variabile del blocco With non impostata</span><span class="sxs-lookup"><span data-stu-id="54372-102">Object variable or With block variable not set</span></span>
-<span data-ttu-id="54372-103">Riferimento a una variabile oggetto non valido.</span><span class="sxs-lookup"><span data-stu-id="54372-103">An invalid object variable is being referenced.</span></span>   <span data-ttu-id="54372-104">L'errore può essere determinato da numerose cause:</span><span class="sxs-lookup"><span data-stu-id="54372-104">This error can occur for several reasons:</span></span>  
-  
--   <span data-ttu-id="54372-105">Una variabile è stata dichiarata senza specificare un tipo.</span><span class="sxs-lookup"><span data-stu-id="54372-105">A variable was declared without specifying a type.</span></span> <span data-ttu-id="54372-106">Se una variabile viene dichiarata senza specificare un tipo, per impostazione predefinita per digitare `Object`.</span><span class="sxs-lookup"><span data-stu-id="54372-106">If a variable is declared without specifying a type, it defaults to type `Object`.</span></span>  
-  
-     <span data-ttu-id="54372-107">Ad esempio, una variabile dichiarata con `Dim x` saranno di tipo `Object;` una variabile dichiarata con `Dim x As String` saranno di tipo `String`.</span><span class="sxs-lookup"><span data-stu-id="54372-107">For example, a variable declared with `Dim x` would be of type `Object;` a variable declared with `Dim x As String` would be of type `String`.</span></span>  
-  
+# <a name="object-variable-or-with-block-variable-not-set"></a><span data-ttu-id="7756a-102">Variabile oggetto o variabile del blocco With non impostata</span><span class="sxs-lookup"><span data-stu-id="7756a-102">Object variable or With block variable not set</span></span>
+<span data-ttu-id="7756a-103">Riferimento a una variabile oggetto non valido.</span><span class="sxs-lookup"><span data-stu-id="7756a-103">An invalid object variable is being referenced.</span></span>   <span data-ttu-id="7756a-104">L'errore può essere determinato da numerose cause:</span><span class="sxs-lookup"><span data-stu-id="7756a-104">This error can occur for several reasons:</span></span>
+
+- <span data-ttu-id="7756a-105">Una variabile è stata dichiarata senza specificare un tipo.</span><span class="sxs-lookup"><span data-stu-id="7756a-105">A variable was declared without specifying a type.</span></span> <span data-ttu-id="7756a-106">Se una variabile viene dichiarata senza specificare un tipo, per impostazione predefinita per digitare `Object`.</span><span class="sxs-lookup"><span data-stu-id="7756a-106">If a variable is declared without specifying a type, it defaults to type `Object`.</span></span>
+
+    <span data-ttu-id="7756a-107">Ad esempio, una variabile dichiarata con `Dim x` saranno di tipo `Object;` una variabile dichiarata con `Dim x As String` saranno di tipo `String`.</span><span class="sxs-lookup"><span data-stu-id="7756a-107">For example, a variable declared with `Dim x` would be of type `Object;` a variable declared with `Dim x As String` would be of type `String`.</span></span>
+
     > [!TIP]
-    >  <span data-ttu-id="54372-108">Il `Option Strict` istruzione la tipizzazione implicita che comporta un `Object` tipo.</span><span class="sxs-lookup"><span data-stu-id="54372-108">The `Option Strict` statement disallows implicit typing that results in an `Object` type.</span></span> <span data-ttu-id="54372-109">Se si omette il tipo, si verificherà un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="54372-109">If you omit the type, a compile-time error will occur.</span></span> <span data-ttu-id="54372-110">Visualizzare [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="54372-110">See [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span>  
-  
--   <span data-ttu-id="54372-111">Si sta provando a fare riferimento a un oggetto che è stato impostato su `Nothing`</span><span class="sxs-lookup"><span data-stu-id="54372-111">You are attempting to reference an object that has been set to `Nothing`</span></span>  
-  
-     <span data-ttu-id="54372-112">.</span><span class="sxs-lookup"><span data-stu-id="54372-112">.</span></span>  
-  
--   <span data-ttu-id="54372-113">Si sta tentando di accedere a un elemento di una variabile di matrice che non è stata dichiarata in modo corretto.</span><span class="sxs-lookup"><span data-stu-id="54372-113">You are attempting to access an element of an array variable that wasn't properly declared.</span></span>  
-  
-     <span data-ttu-id="54372-114">Ad esempio, una matrice dichiarata come `products() As String` attiveranno l'errore se si tenta di fare riferimento a un elemento della matrice `products(3) = "Widget"`.</span><span class="sxs-lookup"><span data-stu-id="54372-114">For example, an array declared as `products() As String` will trigger the error if you try to reference an element of the array `products(3) = "Widget"`.</span></span> <span data-ttu-id="54372-115">La matrice dispone di alcun elemento e viene considerata come un oggetto.</span><span class="sxs-lookup"><span data-stu-id="54372-115">The array has no elements and is treated as an object.</span></span>  
-  
--   <span data-ttu-id="54372-116">Sta tentando di accedere a codice all'interno di un `With...End With` blocco prima che il blocco è stato inizializzato.</span><span class="sxs-lookup"><span data-stu-id="54372-116">You are attempting to access code within a `With...End With` block before the block has been initialized.</span></span>   <span data-ttu-id="54372-117">Oggetto `With...End With` blocco deve essere inizializzato mediante l'esecuzione di `With` punto di ingresso di istruzione.</span><span class="sxs-lookup"><span data-stu-id="54372-117">A `With...End With` block must be initialized by executing the `With` statement entry point.</span></span>  
-  
+    >  <span data-ttu-id="7756a-108">Il `Option Strict` istruzione la tipizzazione implicita che comporta un `Object` tipo.</span><span class="sxs-lookup"><span data-stu-id="7756a-108">The `Option Strict` statement disallows implicit typing that results in an `Object` type.</span></span> <span data-ttu-id="7756a-109">Se si omette il tipo, si verificherà un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="7756a-109">If you omit the type, a compile-time error will occur.</span></span> <span data-ttu-id="7756a-110">Visualizzare [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="7756a-110">See [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span>
+
+- <span data-ttu-id="7756a-111">Si sta provando a fare riferimento a un oggetto che è stato impostato su `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="7756a-111">You are attempting to reference an object that has been set to `Nothing`.</span></span>
+
+- <span data-ttu-id="7756a-112">Si sta tentando di accedere a un elemento di una variabile di matrice che non è stata dichiarata in modo corretto.</span><span class="sxs-lookup"><span data-stu-id="7756a-112">You are attempting to access an element of an array variable that wasn't properly declared.</span></span>
+
+    <span data-ttu-id="7756a-113">Ad esempio, una matrice dichiarata come `products() As String` attiveranno l'errore se si tenta di fare riferimento a un elemento della matrice `products(3) = "Widget"`.</span><span class="sxs-lookup"><span data-stu-id="7756a-113">For example, an array declared as `products() As String` will trigger the error if you try to reference an element of the array `products(3) = "Widget"`.</span></span> <span data-ttu-id="7756a-114">La matrice dispone di alcun elemento e viene considerata come un oggetto.</span><span class="sxs-lookup"><span data-stu-id="7756a-114">The array has no elements and is treated as an object.</span></span>
+
+- <span data-ttu-id="7756a-115">Sta tentando di accedere a codice all'interno di un `With...End With` blocco prima che il blocco è stato inizializzato.</span><span class="sxs-lookup"><span data-stu-id="7756a-115">You are attempting to access code within a `With...End With` block before the block has been initialized.</span></span>   <span data-ttu-id="7756a-116">Oggetto `With...End With` blocco deve essere inizializzato mediante l'esecuzione di `With` punto di ingresso di istruzione.</span><span class="sxs-lookup"><span data-stu-id="7756a-116">A `With...End With` block must be initialized by executing the `With` statement entry point.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="54372-118">Nelle versioni precedenti di Visual Basic o VBA questo errore è stato attivato anche assegnando un valore a una variabile senza usare la `Set` parola chiave (`x = "name"` invece di `Set x = "name"`).</span><span class="sxs-lookup"><span data-stu-id="54372-118">In earlier versions of Visual Basic or VBA this error was also triggered by assigning a value to a variable without using the `Set` keyword (`x = "name"` instead of `Set x = "name"`).</span></span> <span data-ttu-id="54372-119">Il `Set` parola chiave non è più valido in Visual Basic .net.</span><span class="sxs-lookup"><span data-stu-id="54372-119">The `Set` keyword is no longer valid in Visual Basic .Net.</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="54372-120">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="54372-120">To correct this error</span></span>  
-  
-1. <span data-ttu-id="54372-121">Impostare `Option Strict` a `On` aggiungendo il codice seguente all'inizio del file:</span><span class="sxs-lookup"><span data-stu-id="54372-121">Set `Option Strict` to `On` by adding the following code to the beginning of the file:</span></span>  
-  
-```vb  
-Option Strict On  
-```  
+> <span data-ttu-id="7756a-117">Nelle versioni precedenti di Visual Basic o VBA questo errore è stato attivato anche assegnando un valore a una variabile senza usare la `Set` parola chiave (`x = "name"` invece di `Set x = "name"`).</span><span class="sxs-lookup"><span data-stu-id="7756a-117">In earlier versions of Visual Basic or VBA this error was also triggered by assigning a value to a variable without using the `Set` keyword (`x = "name"` instead of `Set x = "name"`).</span></span> <span data-ttu-id="7756a-118">Il `Set` parola chiave non è più valido in Visual Basic .net.</span><span class="sxs-lookup"><span data-stu-id="7756a-118">The `Set` keyword is no longer valid in Visual Basic .Net.</span></span>
 
-     When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
-  
-2. <span data-ttu-id="54372-122">Se non si vuole abilitare `Option Strict`, il codice per tutte le variabili che sono stati specificati senza un tipo di ricerca (`Dim x` invece di `Dim x As String`) e aggiungere il tipo desiderato alla dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="54372-122">If you don't want to enable `Option Strict`, search your code for any variables that were specified without a type (`Dim x` instead of `Dim x As String`) and add the intended type to the declaration.</span></span>  
-  
-3. <span data-ttu-id="54372-123">Assicurarsi che invece non si fa riferimento a una variabile oggetto che è stata impostata su `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="54372-123">Make sure you aren't referring to  an object variable that has been set to `Nothing`.</span></span>  <span data-ttu-id="54372-124">Eseguire ricerche nel codice per la parola chiave `Nothing`e modificare il codice in modo che l'oggetto non è impostato su `Nothing` fino a quando non dopo che si è fatto riferimento.</span><span class="sxs-lookup"><span data-stu-id="54372-124">Search your code for the keyword `Nothing`, and revise your code so that the object isn't set to `Nothing` until after you have referenced it.</span></span>  
-  
-4. <span data-ttu-id="54372-125">Assicurarsi che tutte le variabili di matrice vengono dimensionate prima di accedervi.</span><span class="sxs-lookup"><span data-stu-id="54372-125">Make sure that any array  variables are dimensioned before you access them.</span></span> <span data-ttu-id="54372-126">È possibile assegnare una dimensione al momento della creazione della matrice (`Dim x(5) As String` invece di `Dim x() As String`), oppure usare il `ReDim` parola chiave per impostare le dimensioni della matrice prima che si accede.</span><span class="sxs-lookup"><span data-stu-id="54372-126">You can either assign a dimension when you first create the array (`Dim x(5) As String` instead of `Dim x() As String`), or use the `ReDim` keyword to set the dimensions of the array before you first access it.</span></span>  
-  
-5. <span data-ttu-id="54372-127">Assicurarsi che il `With` blocco viene inizializzato tramite l'esecuzione di `With` punto di ingresso di istruzione.</span><span class="sxs-lookup"><span data-stu-id="54372-127">Make sure your `With` block is initialized by executing the `With` statement entry point.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="54372-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="54372-128">See also</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="7756a-119">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="7756a-119">To correct this error</span></span>
 
-- [<span data-ttu-id="54372-129">Dichiarazione di variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="54372-129">Object Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [<span data-ttu-id="54372-130">Istruzione ReDim</span><span class="sxs-lookup"><span data-stu-id="54372-130">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [<span data-ttu-id="54372-131">Istruzione With...End With</span><span class="sxs-lookup"><span data-stu-id="54372-131">With...End With Statement</span></span>](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+1. <span data-ttu-id="7756a-120">Impostare `Option Strict` a `On` aggiungendo il codice seguente all'inizio del file:</span><span class="sxs-lookup"><span data-stu-id="7756a-120">Set `Option Strict` to `On` by adding the following code to the beginning of the file:</span></span>
+
+    ```vb
+    Option Strict On
+    ```
+
+    <span data-ttu-id="7756a-121">Quando si esegue il progetto, verrà visualizzato un errore del compilatore nel **elenco errori** per qualsiasi variabile che è stata specificata senza un tipo.</span><span class="sxs-lookup"><span data-stu-id="7756a-121">When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.</span></span>
+
+2. <span data-ttu-id="7756a-122">Se non si vuole abilitare `Option Strict`, il codice per tutte le variabili che sono stati specificati senza un tipo di ricerca (`Dim x` invece di `Dim x As String`) e aggiungere il tipo desiderato alla dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="7756a-122">If you don't want to enable `Option Strict`, search your code for any variables that were specified without a type (`Dim x` instead of `Dim x As String`) and add the intended type to the declaration.</span></span>
+
+3. <span data-ttu-id="7756a-123">Assicurarsi che invece non si fa riferimento a una variabile oggetto che è stata impostata su `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="7756a-123">Make sure you aren't referring to  an object variable that has been set to `Nothing`.</span></span>  <span data-ttu-id="7756a-124">Eseguire ricerche nel codice per la parola chiave `Nothing`e modificare il codice in modo che l'oggetto non è impostato su `Nothing` fino a quando non dopo che si è fatto riferimento.</span><span class="sxs-lookup"><span data-stu-id="7756a-124">Search your code for the keyword `Nothing`, and revise your code so that the object isn't set to `Nothing` until after you have referenced it.</span></span>
+
+4. <span data-ttu-id="7756a-125">Assicurarsi che tutte le variabili di matrice vengono dimensionate prima di accedervi.</span><span class="sxs-lookup"><span data-stu-id="7756a-125">Make sure that any array  variables are dimensioned before you access them.</span></span> <span data-ttu-id="7756a-126">È possibile assegnare una dimensione al momento della creazione della matrice (`Dim x(5) As String` invece di `Dim x() As String`), oppure usare il `ReDim` parola chiave per impostare le dimensioni della matrice prima che si accede.</span><span class="sxs-lookup"><span data-stu-id="7756a-126">You can either assign a dimension when you first create the array (`Dim x(5) As String` instead of `Dim x() As String`), or use the `ReDim` keyword to set the dimensions of the array before you first access it.</span></span>
+
+5. <span data-ttu-id="7756a-127">Assicurarsi che il `With` blocco viene inizializzato tramite l'esecuzione di `With` punto di ingresso di istruzione.</span><span class="sxs-lookup"><span data-stu-id="7756a-127">Make sure your `With` block is initialized by executing the `With` statement entry point.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="7756a-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7756a-128">See also</span></span>
+
+- [<span data-ttu-id="7756a-129">Dichiarazione di variabili oggetto</span><span class="sxs-lookup"><span data-stu-id="7756a-129">Object Variable Declaration</span></span>](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [<span data-ttu-id="7756a-130">Istruzione ReDim</span><span class="sxs-lookup"><span data-stu-id="7756a-130">ReDim Statement</span></span>](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [<span data-ttu-id="7756a-131">Istruzione With...End With</span><span class="sxs-lookup"><span data-stu-id="7756a-131">With...End With Statement</span></span>](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
