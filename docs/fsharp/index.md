@@ -42,7 +42,7 @@ La guida F# fornisce molte risorse per apprendere il linguaggio F#.
 
 [F# per divertimento e profitto](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) è un libro completo e dettagliato sull'apprendimento di F#. Contenuto e autore sono molto apprezzati dalla comunità F#. I destinatari sono principalmente gli sviluppatori con conoscenze della programmazione orientata agli oggetti.
 
-[F# Programmazione Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) è un wikibook sulla formazione F#, creato dalla comunità F#. I destinatari sono persone che hanno familiarità con F#, con un dell'oggetto orientato alla programmazione in background.
+[Wikibook di programmazione F#](https://en.wikibooks.org/wiki/F_Sharp_Programming) è un wikibook sulla formazione F#, creato dalla comunità F#. I destinatari sono persone che hanno familiarità con F# e con un background di programmazione orientata a oggetti.
 
 ## <a name="learn-f-through-videos"></a>Formazione F# tramite video
 
